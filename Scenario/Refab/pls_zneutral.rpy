@@ -10,13 +10,13 @@ label alt_day3_router_dv:
     if alt_day3_dv_evening:
         "Поворочавшись, я улыбнулся посетившей мои сны Алисе."
         if lp_dv >= 11:
-        "Мне снилась Алиса…"
-        window hide
-        if alt_day3_dv_evening:
-            $ routetag = "dv7dl"
-            jump alt_day4_dv_7dl_start
-        else:
-            jump alt_day3_router_un
+            "Мне снилась Алиса…"
+            window hide
+            if alt_day3_dv_evening:
+                $ routetag = "dv7dl"
+                jump alt_day4_dv_7dl_start
+            else:
+                jump alt_day3_router_un
             
 label alt_day3_router_un:
     if lp_un >= 12 or (lp_un >= 11 and alt_day1_sl_conv):
@@ -64,28 +64,33 @@ label alt_day3_router_neutral:
     else:
          jump alt_day4_neu_begin
          
-         
 label alt_day4_neu_begin:
+    call alt_day4_neu_us_vars
     if alt_day3_dv_evening:
         call alt_day4_neu_dv #Эксклюзивный вход для Алисы
+        pause(1)
     elif alt_day3_technoquest_st3 == 2:
         call alt_day4_neu_aid #Точка входа для медпункта, описание.
+        pause(1)
         if alt_day3_un_med_help != 0:
             call alt_day4_neu_aid_un
             pause(1)
             if alt_day4_neu_transit == 11:
-                jump alt_day4_un_cl_dinner
-        pause(1)
-        call alt_day4_neu_aid_sl
-        if alt_day4_neu_transit == 2:
-            jump alt_day4_sl_cl_shurik
-        pause(1)
+                jump alt_day4_un_cl_dinner #s прописать label в ун-кл
+        #s прописать условие
+            call alt_day4_neu_aid_sl
+            pause(1)
+            if alt_day4_neu_transit == 2:
+                jump alt_day4_sl_cl_shurik #s прописать label в сл-кл
         call alt_day4_neu_aid_generic
         pause(1)
         if alt_day4_neu_transit == 6:
             call alt_day4_neu_mt
-        else:
+            pause(1)
+        elif alt_day4_neu_transit == 5:
             call alt_day4_neu_us
+            pause(1)
+
     else:
         call alt_day4_neu_home #Домик ведёт к Ульянке, Ольге, Лене и Мику. 
         pause(1)
@@ -96,6 +101,7 @@ label alt_day4_neu_begin:
                 jump alt_day4_un_7dl_dinner
             else:
                 call alt_day4_neu_mt
+                pause(1)
         elif alt_day3_mi_date:
             call alt_day4_neu_mi
             pause(1)
@@ -104,13 +110,17 @@ label alt_day4_neu_begin:
             pause(1)
             if alt_day4_neu_transit == 6:
                 call alt_day4_neu_mt
+                pause(1)
             else:
                 call alt_day4_neu_us
-    pause(1)        
+                pause(1)
     call alt_day4_neu_dinner #На обеде подводим итоги
     pause(1)
     call alt_day4_neu_curl
     pause(1)
+    if herc:
+        return
+        #jump alt_day4_noir_start
     call alt_day4_neu_lunch 
     pause(1)
     call alt_day4_neu_supper
@@ -118,20 +128,93 @@ label alt_day4_neu_begin:
     if alt_day4_neu_transit == 6:
         call alt_day4_neu_map_me_mt_house
         pause(1)
-        #if alt_day4_neu_mt_diary #Флаг для просмотра дневника
+        if alt_day4_neu_mt_diary:
+            call alt_day4_neu_mt_diary_vol1
+            pause(1)
     elif alt_day4_neu_transit == 5:   
         call alt_day4_neu_map_hideout
         pause(1)
-        if not alt_day4_neu_mt:
+        if alt_day2_us_escape and lp_us >= 0 and us_pt >= 0:
             call alt_day4_neu_map_meadow
+            pause(1)
     else:
         call alt_day4_neu_map_dining_hall
-    pause(1)
+        pause(1)
     call alt_day4_neu_sleeptime
     pause(1)
     jump alt_day5_neu_begin
     
 label alt_day5_neu_begin:
+    call alt_day5_neu_us_vars
+    call alt_day5_mt_7dl_vars
+    call alt_day5_us_7dl_vars
+    call alt_day5_neu_start
+    pause(1)
+    call alt_day5_neu_breakfast
+    pause(1)
+    if alt_day5_neu_candle == 1:
+        call alt_day5_neu_along
+        pause(1)
+        call alt_day5_neu_cndl
+        pause(1)
+    elif alt_day5_neu_candle == 2:
+        call alt_day5_neu_cndl
+        pause(1)
+    else:
+        call alt_day5_neu_gaming
+        pause(1)
+    call alt_day5_neu_dinner
+    pause(1)
+    call alt_day5_neu_mi_estrade
+    pause(1)
+    #if neudachnik:
+    call alt_day5_neu_lunch
+    pause(1)
+    #elif ogonyok:
+        #call alt_day5_neu_ogonyok
+        #payse(1)
+    call alt_day5_neu_evening
+    pause(1)
+    call alt_day5_neu_campfire_doom
+    pause(1)
+    if mt_pt < 7 and us_pt < 5 and d3_pt < 5:
+        call alt_day5_neu_fail
+        pause(1)
+        return
+    call alt_day5_neu_sleepnight
+    pause(1)
+    if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
+        if mt_pt >= 7 and alt_day5_neu_mt_voyeur != 0:
+            call alt_day5_neu_mt_selector
+            pause(1)
+            if alt_day5_neu_mt_diary:
+                call alt_day5_neu_mt_retrib
+            elif alt_day5_mt_7dl_hentai:
+                call alt_day5_neu_mt_tea_party
+            jump alt_day6_mt_7dl_start
+        else:
+            call alt_day5_neu_selector
+            pause(1)
+            if routetag == "us7dl":
+                jump alt_day6_us_7dl_start
+            else:
+                jump alt_day6_neu_d3_start
+    elif mt_pt < max(d3_pt, us_pt):
+        call alt_day5_neu_selector
+        pause(1)
+        if routetag == "us7dl":
+            jump alt_day6_us_7dl_start
+        else:
+            jump alt_day6_neu_d3_start
+    else:
+        call alt_day5_neu_mt_selector
+        pause(1)
+        if alt_day5_neu_mt_diary:
+            call alt_day5_neu_mt_retrib
+        elif alt_day5_mt_7dl_hentai:
+            call alt_day5_neu_mt_tea_party
+        jump alt_day6_mt_7dl_start
+    
     #День 5: утро??? В обед неудачник отправляется следить за Славей, Огонёк идёт на Карьер рядом с лесом памяти, там встречает Лену и запускает новую стадию огоньков и длится это до ужина. В полдник неудачник отправляется по картошку, следит за ругающейся Алисой. Ужин, неудачник отправляется на костёр, там делится с Ульянкой картохой(или нет, как сам захочет), "Огонёк" рассказывает од, что прознал, куда сбежала Лена, и почему её никто не нашёл, на костре наблюдает за вспышкой агрессии Алисы и шутит на эту тему - мол, ревнует Ульянку. Далее "неудачник" просыпается дома, далее идёт описание нескольких месяцев прозябания, но однажды в квартире разносится новый звонок, приглашающий на очередную встречу, и в зависимости от выбора  можно либо встретить мелочь на обратном пути, либо вернуться домой, пр хватив по пути пару бутылок удивительно дешёвого джина. Глоток, ещё глоток, слепота, метил, "ты пойдёшь со мной?" Огонёк же уходит на д6.    
     jump alt_day6_neu_begin
     
@@ -141,12 +224,12 @@ label alt_day6_neu_begin:
 label alt_day7_neu_begin:
     call alt_day7_neu_departure
     pause(1)
-    If alt_day6_neu_var1:
+    if alt_day6_neu_var1:
         call alt_day7_neu_ending_good
-    elIf alt_day6_neu_var2:
+    elif alt_day6_neu_var2:
         call alt_day7_neu_ending_bad
-    elIf alt_day6_neu_var3:
+    elif alt_day6_neu_var3:
         call alt_day7_neu_ending_mi
-    else alt_day6_neu_var4:
+    else:
         call alt_day7_neu_ending_d3
 return
