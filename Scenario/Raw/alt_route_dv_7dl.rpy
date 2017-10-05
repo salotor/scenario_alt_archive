@@ -6450,7 +6450,7 @@ label alt_day5_dv_7dl_night:
     scene black
 
     "Дурацкая погоня эта – сначала от Алиски, потом за ней."
-    if alt_day4_dv_7dl_vodka or alt_day4_dv_7dl_portwine
+    if alt_day4_dv_7dl_vodka or alt_day4_dv_7dl_portwine:
         "Как ей в голову пришло, что я детдомовский? У меня что клеймо «дурак» на лбу набито?"
     window hide
     scene cg wtf_end_of_day  with dissolve
