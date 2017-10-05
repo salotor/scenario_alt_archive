@@ -172,7 +172,7 @@ label sdl_menu:
                     "Рут находится в разработке."
                     return
                 "Одиночка":
-                    jump alt_day4_neu_start
+                    jump alt_day4_neu_begin
         "Концовки":
             label alt_endings:
                 with fade
