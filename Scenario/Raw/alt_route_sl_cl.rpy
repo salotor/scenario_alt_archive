@@ -9361,7 +9361,7 @@ label alt_day6_sl_ba_quest1:
     window hide
     play sound sfx_door_squeak_light
     pause(1)
-    scene bg int_old_building_day_uvao_7dl at zenterright
+    scene bg int_old_building_day_7dl at zenterright
     show sl smile pioneer at cright
     with dissolve
     play music nowyouseeme fadein 3
@@ -9399,7 +9399,7 @@ label alt_day6_sl_ba_quest1:
     "Действовала она как всегда, споро и с огоньком — вот технологические отверстия перевязаны проволокой, вот на приваренных петлях появляется красивый «бантик» всё из той же проволоки."
     "Закрывшийся навесной замок завершил натюрморт."
     window hide
-    scene bg int_old_building_day_uvao_7dl at zexitright
+    scene bg int_old_building_day_7dl at zexitright
     show sl smile pioneer at cright
     with dissolve
     sl "Готово. Можно возвращаться."
