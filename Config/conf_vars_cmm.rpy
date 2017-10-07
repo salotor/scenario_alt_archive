@@ -81,7 +81,7 @@ label scenario__alt_sevendl:
 # ------------------------------------------------
 
     call alt_day0_vars
-jump alt_day0_prologue
+jump choose_waifu_7dl
 
 label alt_day0_vars: #Переменные нулевого дня
     $ alt_day_binder = 0
