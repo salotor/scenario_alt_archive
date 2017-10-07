@@ -814,12 +814,20 @@
     
 #music
 #Новьё
+    $ shib_mono = get_music_7dl("shib_mono.ogg") #Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
+    $ shib_stereo = get_music_7dl("shib_stereo.ogg") #Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
+    
+    
+    $ intro1 = get_music_7dl("intro1.ogg") #薄情連鎖
     
     $ seven_summer_days = get_music_7dl("seven_summer_days.ogg") #April Rain - Seven Summer Days
     #Эксклюзив от дождиков - реквием 7дл.
     
     $ unfulfilled = get_music_7dl("unfulfilled.ogg") #April Rain - Unfulfilled
     #Эксклюзив от дождиков - Несбывшееся.
+    
+    $ exodus = get_music_7dl("Exodus.ogg") #April Rain - Exodus
+    #Эксклюзив от дождиков - Исход.
     
     $ runaway = get_music_7dl("runaway.ogg") #The Neighbourhood - Sweater Weather (Instrumental)
     #Под шумок, втягивая голову в плечи, но всё равно, на кураже, смеясь от глупого и неправильного счастья - вперёд! Только вперёд!
