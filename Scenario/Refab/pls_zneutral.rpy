@@ -167,12 +167,10 @@ label alt_day5_neu_begin:
     pause(1)
     call alt_day5_neu_mi_estrade
     pause(1)
-    #if neudachnik:
     call alt_day5_neu_lunch
     pause(1)
-    #elif ogonyok:
-        #call alt_day5_neu_ogonyok
-        #payse(1)
+    call alt_day5_neu_supper
+    pause(1)
     call alt_day5_neu_evening
     pause(1)
     call alt_day5_neu_campfire_doom
