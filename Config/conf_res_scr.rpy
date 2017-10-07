@@ -490,8 +490,6 @@ init -1001 python:
 init -999 python:
     def get_image_7dl(file):
         return "scenario_alt/Pics/%s" % (file)
-    def get_image_uvao_7dl(file):
-        return "scenario_alt/DLC/UVAO/Pics/%s" % (file)
         
 init -998 python:
     def get_sfx_7dl(file):
@@ -500,10 +498,6 @@ init -998 python:
         return "scenario_alt/Sound/ambience/%s" % (file)
     def get_music_7dl(file):
         return "scenario_alt/Sound/music/%s" % (file)
-    def get_sfx_uvao_7dl(file):
-        return "scenario_alt/DLC/UVAO/Sound/sfx/%s" % (file)
-    def get_music_uvao_7dl(file):
-        return "scenario_alt/DLC/UVAO/Sound/music/%s" % (file)
         
 init -997 python:
     def get_sprite_7dl(file):
