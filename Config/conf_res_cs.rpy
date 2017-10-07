@@ -81,12 +81,40 @@
             "Играть самостоятельно.":
                 jump alt_day2_participate
             "Победа в финале." if persistent.altCardsWon3:
-                $ alt_day2_f1 = renpy.random.randint(1, 7)
+                menu:
+                    "Лена.":
+                        $ alt_day2_f1 = 1
+                    "Славя.":
+                        $ alt_day2_f1 = 2
+                    "Алиса.":
+                        $ alt_day2_f1 = 3
+                    "Мику.":
+                        $ alt_day2_f1 = 4
+                    "Ульяна.":
+                        $ alt_day2_f1 = 5
+                    "Шурик.":
+                        $ alt_day2_f1 = 6
+                    "Женя.":
+                        $ alt_day2_f1 = 7
                 $ alt_day2_round3 = 2
                 $ karma += 10
                 jump alt_day2_final_win
             "Поражение в финале." if persistent.altCardsWon2:
-                $ alt_day2_f1 = renpy.random.randint(1, 7)
+                menu:
+                    "Лена.":
+                        $ alt_day2_f1 = 1
+                    "Славя.":
+                        $ alt_day2_f1 = 2
+                    "Алиса.":
+                        $ alt_day2_f1 = 3
+                    "Мику.":
+                        $ alt_day2_f1 = 4
+                    "Ульяна.":
+                        $ alt_day2_f1 = 5
+                    "Шурик.":
+                        $ alt_day2_f1 = 6
+                    "Женя.":
+                        $ alt_day2_f1 = 7
                 $ alt_day2_round3 = 1
                 $ karma -= 10
                 jump alt_day2_final_fail
