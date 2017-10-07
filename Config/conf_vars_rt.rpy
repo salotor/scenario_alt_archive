@@ -52,6 +52,7 @@ label alt_day4_neu_us_vars:
     $ alt_day4_neu_sl_pup = False
     $ alt_day4_neu_siesta = False
     $ alt_day4_neu_bay = False
+    $ alt_day4_neu_us_stardust = False #переменная для Огоньков
     return
     
 label alt_day5_neu_us_vars:

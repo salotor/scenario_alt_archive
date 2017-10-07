@@ -81,12 +81,40 @@
             "Играть самостоятельно.":
                 jump alt_day2_participate
             "Победа в финале." if persistent.altCardsWon3:
-                $ alt_day2_f1 = renpy.random.randint(1, 7)
+                menu:
+                    "Лена.":
+                        $ alt_day2_f1 = 1
+                    "Славя.":
+                        $ alt_day2_f1 = 2
+                    "Алиса.":
+                        $ alt_day2_f1 = 3
+                    "Мику.":
+                        $ alt_day2_f1 = 4
+                    "Ульяна.":
+                        $ alt_day2_f1 = 5
+                    "Шурик.":
+                        $ alt_day2_f1 = 6
+                    "Женя.":
+                        $ alt_day2_f1 = 7
                 $ alt_day2_round3 = 2
                 $ karma += 10
                 jump alt_day2_final_win
             "Поражение в финале." if persistent.altCardsWon2:
-                $ alt_day2_f1 = renpy.random.randint(1, 7)
+                menu:
+                    "Лена.":
+                        $ alt_day2_f1 = 1
+                    "Славя.":
+                        $ alt_day2_f1 = 2
+                    "Алиса.":
+                        $ alt_day2_f1 = 3
+                    "Мику.":
+                        $ alt_day2_f1 = 4
+                    "Ульяна.":
+                        $ alt_day2_f1 = 5
+                    "Шурик.":
+                        $ alt_day2_f1 = 6
+                    "Женя.":
+                        $ alt_day2_f1 = 7
                 $ alt_day2_round3 = 1
                 $ karma -= 10
                 jump alt_day2_final_fail
@@ -1177,11 +1205,11 @@ label alt_day2_semifinal:
         "Я отрицательно покачал головой."
         if alt_day2_dv_bet_approve:
             me "У нас же спор, помнишь? Ты разбивала!"
-			show us sad pioneer with dspr
-			us "Спор — это да."
-			us "Но играть будем по моим правилам!"
-			me "Что бы это значило?!"
-			show us laugh pioneer with dspr
+            show us sad pioneer with dspr
+            us "Спор — это да."
+            us "Но играть будем по моим правилам!"
+            me "Что бы это значило?!"
+            show us laugh pioneer with dspr
         us "Просто я ничего не поняла и не запомнила."
         
     if alt_day2_hf2 == 6:

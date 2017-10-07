@@ -84,6 +84,7 @@ label scenario__alt_sevendl:
 jump alt_day0_prologue
 
 label alt_day0_vars: #Переменные нулевого дня
+    $ alt_day_binder = 0
     $ semen_str = 10
     $ alt_dlc_active = False
     $ herc = False

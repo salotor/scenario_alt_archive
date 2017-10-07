@@ -1805,7 +1805,7 @@ label alt_day5_uvao_road_to_old_camp:
     dreamgirl "Штанишки не намочил?"
     th "Что, я трус какой? Нас такой ерундой не запугаешь!"
     window hide
-    scene bg int_old_building_day_uvao_7dl with fade
+    scene bg int_old_building_day_7dl with fade
 
     "Внутри оказалось не так темно, как я ожидал. Солнечные лучи нет-нет, да и пробирались через дыры в потолке и разбитые окна."
     "Здание выглядело необитаемым, но осмотреть его на предмет признаков жизни стоило."
@@ -2650,7 +2650,7 @@ label alt_day5_uvao_true_back:
     stop ambience fadeout 1
     $ day_time()
     $ persistent.sprite_time = "day"
-    scene bg int_old_building_day_uvao_7dl with flash
+    scene bg int_old_building_day_7dl with flash
 
     play ambience ambience_forest_day fadein 3
     "После темноты подземелий свет ножом резал глаза.{w} Проморгавшись, я огляделся и, стараясь не поднимать лишнего шума, откинул крышку люка."
@@ -3275,7 +3275,7 @@ label alt_day5_uvao_mines_sh_capture_debug: #Хомутаем Шурика и о
     $ meet('mt', 'Голос')
     $ day_time()
     $ persistent.sprite_time = "day"
-    scene bg int_old_building_day_uvao_7dl with flash
+    scene bg int_old_building_day_7dl with flash
     play ambience ambience_forest_day fadein 3
 
     show uv shocked with dissolve
@@ -3425,7 +3425,7 @@ label alt_day5_parking_back:
     $ day_time()
     $ routetag = "uv"
     $ alt_chapter(5, u"Юля. Пикник")
-    scene bg int_old_building_day_uvao_7dl
+    scene bg int_old_building_day_7dl
     show uv grin
     with dissolve
 
@@ -3628,7 +3628,7 @@ label alt_day5_parking_back:
     th "Кажется, Юля свято уверовала в мою способность открывать всё железное… Забавно."
     me "Давай я попробую."
     window hide
-    scene bg int_mine_exit_day_7dl with dissolve
+    scene bg int_hence_day_7dl with dissolve
 
     "Поднявшись по узкой шахте, я оказался перед металлической решёткой с вваренным в неё замком."
     "Как ни странно, но ключ подошёл, хотя провернуть его до конца мне долго не удавалось."
