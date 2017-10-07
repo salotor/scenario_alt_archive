@@ -1205,11 +1205,11 @@ label alt_day2_semifinal:
         "Я отрицательно покачал головой."
         if alt_day2_dv_bet_approve:
             me "У нас же спор, помнишь? Ты разбивала!"
-			show us sad pioneer with dspr
-			us "Спор — это да."
-			us "Но играть будем по моим правилам!"
-			me "Что бы это значило?!"
-			show us laugh pioneer with dspr
+            show us sad pioneer with dspr
+            us "Спор — это да."
+            us "Но играть будем по моим правилам!"
+            me "Что бы это значило?!"
+            show us laugh pioneer with dspr
         us "Просто я ничего не поняла и не запомнила."
         
     if alt_day2_hf2 == 6:

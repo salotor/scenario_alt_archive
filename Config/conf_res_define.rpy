@@ -264,7 +264,8 @@
     image bg ext_bathhouse_day_7dl = get_image_7dl("bg/ext_bathhouse_day_7dl.jpg")
     image bg ext_boathouse_sunset_7dl = get_image_7dl("bg/ext_boathouse_sunset_7dl.jpg")
     
-    image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.png")
+    image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.jpg")
+#    image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.png")
     image bg ext_clubs_sunset_rain_7dl = get_image_7dl("bg/ext_clubs_sunset_rain_7dl.jpg")
     image bg ext_countryside_day_7dl = get_image_7dl("bg/outro/ext_countryside_day_7dl.jpg")
     
@@ -402,8 +403,10 @@
     image bg int_sam_room_7dl = get_image_7dl("bg/int_sam_room_7dl.png")
     image bg int_shed_day_7dl = get_image_7dl("bg/int_warehouse_day_7dl.png")
     image bg int_shed_night_7dl = get_image_7dl("bg/int_warehouse_night_7dl.png")
-    image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.jpg")
-    image bg int_sporthall_night_7dl = get_image_7dl("bg/int_sporthall_night_7dl.jpg")
+    image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.png")
+    image bg int_sporthall_night_7dl = get_image_7dl("bg/int_sporthall_night_7dl.png")
+#    image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.jpg")
+#    image bg int_sporthall_night_7dl = get_image_7dl("bg/int_sporthall_night_7dl.jpg")
     image bg int_store_7dl = get_image_7dl("bg/int_store_7dl.png")
     
     image bg int_toilet_7dl = get_image_7dl("bg/outro/int_toilet_7dl.jpg")
@@ -555,7 +558,8 @@
     image cg d7_mi_letter_rain_tears_7dl = get_image_7dl("cg/d7_mi_letter_rain_tears_7dl.jpg")
     image cg d7_mi_meeting_7dl = get_image_7dl("cg/d7_mi_meeting_7dl.jpg")
     image cg d7_mi_ramen_7dl = get_image_7dl("cg/d7_mi_ramen_7dl.jpg")
-    image cg d7_mi_reenter_7dl = get_image_7dl("cg/d7_mi_reenter_7dl.png")
+    image cg d7_mi_reenter_7dl = get_image_7dl("cg/d7_mi_reenter_7dl.jpg")
+#    image cg d7_mi_reenter_7dl = get_image_7dl("cg/d7_mi_reenter_7dl.png")
     image cg d7_mi_shesgone_7dl = get_image_7dl("cg/d7_mi_shesgone_7dl.jpg") #Свежачок от Макса
     image cg d7_mi_sparkle_7dl = get_image_7dl("cg/d7_mi_sparkle_7dl.jpg")
     image cg d7_mi_sunk_7dl = get_image_7dl("cg/d7_mi_sunk_7dl.jpg")
@@ -577,7 +581,8 @@
     image cg d7_us_pixie_7dl = get_image_7dl("cg/d7_us_pixie_7dl.png")
     #image cg d7_us_no_mans_land_7dl = get_image_7dl("cg/d7_us_no_mans_land_7dl.png")
     
-    image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.png")
+    image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.jpg")
+#    image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.png")
     image cg d7_bus_night_7dl = get_image_7dl("cg/d7_bus_night_7dl.jpg")
     
 #Турнир
