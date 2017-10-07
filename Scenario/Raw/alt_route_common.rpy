@@ -26490,7 +26490,8 @@ label alt_day3_dance_dance2: #Танец 2, либо медпункт, либо 
                 if alt_dlc_active:
                     call alt_day3_uvao_ch3
                     pause(1)
-                    jump alt_day3_sleeptime
+                    if alt_day3_uvao_spotted:
+                        jump alt_day3_sleeptime
                 mt "Особеннно после всего случившегося."
                 "ЧЕГО СЛУЧИВШЕГОСЯ?"
                 me "Напоминаю, что в домик к себе подселили меня вы."
