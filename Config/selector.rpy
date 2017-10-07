@@ -221,7 +221,7 @@ label sdl_menu:
                     return
                 "Одиночка":
                     stop ambience fadeout 2
-                    jump alt_day4_neu_start
+                    jump alt_day4_neu_begin
         "Концовки":
             label alt_endings:
                 with fade
