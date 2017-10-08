@@ -4564,11 +4564,8 @@ label alt_day1_bus_start:
     scene bg ext_road_day
     play ambience ambience_camp_entrance_day fadein 3
     th "Если понадобится, вспомню. {w}Сейчас у меня дела куда более насущные."
-    menu:
-        "Включить DLC?":
-            $ alt_dlc_active = True
-        "Играть в обычную 7дл":
-            pass
+    if persistent.uv_dlc_on_7dl:
+        $ alt_dlc_active = True
     "Я ведь спал, я точно знаю — ко мне опять приходила та девочка и спрашивала, пойду ли я с ней."
     "И вот я здесь. {w}Значит, пошёл."
     th "Что же это за девочка?{w} И что ей может быть нужно от меня?"
@@ -26490,7 +26487,8 @@ label alt_day3_dance_dance2: #Танец 2, либо медпункт, либо 
                 if alt_dlc_active:
                     call alt_day3_uvao_ch3
                     pause(1)
-                    jump alt_day3_sleeptime
+                    if alt_day3_uvao_spotted:
+                        jump alt_day3_sleeptime
                 mt "Особеннно после всего случившегося."
                 "ЧЕГО СЛУЧИВШЕГОСЯ?"
                 me "Напоминаю, что в домик к себе подселили меня вы."

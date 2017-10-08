@@ -81,7 +81,7 @@ label scenario__alt_sevendl:
 # ------------------------------------------------
 
     call alt_day0_vars
-jump alt_day0_prologue
+jump choose_waifu_7dl
 
 label alt_day0_vars: #Переменные нулевого дня
     $ alt_day_binder = 0
@@ -226,8 +226,8 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_un_date = False 
     $ alt_day3_un_event = False
     $ alt_day3_un_med_help = False
-    $ alt_day3_un_strip_pool_sp = 0
-    $ alt_day3_un_strip_pool_un = 0
+    $ alt_day3_un_strip_pool_sp = 5
+    $ alt_day3_un_strip_pool_un = 5
     $ alt_day3_un_invite = 0
     $ alt_day3_us_bugs = 0
     $ alt_day3_us_invite = False

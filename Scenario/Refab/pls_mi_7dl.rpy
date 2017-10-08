@@ -47,7 +47,7 @@ label alt_day5_mi_7dl_start:
     pause(1)
     call alt_day5_mi_7dl_router
     pause(1)
-    if persistent.mi_7dl_good_human or persistent.mi_good_star:
+    if persistent.mi_7dl_good_human or persistent.mi_7dl_good_star:
         call alt_day5_mi_7dl_lost
         pause(1)
         if alt_day5_mi_7dl_voyeur:
