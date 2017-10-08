@@ -1456,8 +1456,9 @@ label alt_day0_d3_prologue:
     
 label alt_day0_opening:
     $ renpy.pause(2, hard=True)
-    if alt_day_binder == 2: #Далее по тексту используется неравенство, править не буду, хрен с ним.
-        play music music_list["opening"] fadein 5
+    if alt_day_binder == 2:
+        #play music music_list["opening"] fadein 5
+        play music intro1 fadein 5
     else:
         play music es_downmix fadein 5
     scene black 
