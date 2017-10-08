@@ -4564,11 +4564,8 @@ label alt_day1_bus_start:
     scene bg ext_road_day
     play ambience ambience_camp_entrance_day fadein 3
     th "Если понадобится, вспомню. {w}Сейчас у меня дела куда более насущные."
-    menu:
-        "Включить DLC?":
-            $ alt_dlc_active = True
-        "Играть в обычную 7дл":
-            pass
+    if persistent.uv_dlc_on_7dl:
+        $ alt_dlc_active = True
     "Я ведь спал, я точно знаю — ко мне опять приходила та девочка и спрашивала, пойду ли я с ней."
     "И вот я здесь. {w}Значит, пошёл."
     th "Что же это за девочка?{w} И что ей может быть нужно от меня?"
