@@ -257,8 +257,8 @@ init:
     #Общие фразы
     image sdl_achv_delA_7dl = Text(" Обнулить\nпрохождения", style="sdl_achvlistA_de_kurz")
     image sdl_achv_delB_7dl = Text(" Обнулить\nпрохождения", style="sdl_achvlistB_de_kurz")
-    image sdl_achv_extA_7dl = Text(" Выход в\nглавное меню", style="sdl_achvlistA_de_kurz")
-    image sdl_achv_extB_7dl = Text(" Выход в\nглавное меню", style="sdl_achvlistB_de_kurz")
+    image sdl_achv_extA_7dl = Text(" Выход\n в меню", style="sdl_achvlistA_de_kurz")
+    image sdl_achv_extB_7dl = Text(" Выход\n в меню", style="sdl_achvlistB_de_kurz")
     
     image sdl_achv_need_routeA = Text("Рут не дописан", style="sdl_achvlistB_de_st")
     image sdl_achv_jumpchkA = Text(" Перейти\nна концовку", style="sdl_achvlistB_de_st")

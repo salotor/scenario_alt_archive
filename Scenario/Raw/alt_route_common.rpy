@@ -1456,8 +1456,9 @@ label alt_day0_d3_prologue:
     
 label alt_day0_opening:
     $ renpy.pause(2, hard=True)
-    if alt_day_binder == 2: #Далее по тексту используется неравенство, править не буду, хрен с ним.
-        play music music_list["opening"] fadein 5
+    if alt_day_binder == 2:
+        #play music music_list["opening"] fadein 5
+        play music intro1 fadein 5
     else:
         play music es_downmix fadein 5
     scene black 
@@ -4564,11 +4565,8 @@ label alt_day1_bus_start:
     scene bg ext_road_day
     play ambience ambience_camp_entrance_day fadein 3
     th "Если понадобится, вспомню. {w}Сейчас у меня дела куда более насущные."
-    menu:
-        "Включить DLC?":
-            $ alt_dlc_active = True
-        "Играть в обычную 7дл":
-            pass
+    if persistent.uv_dlc_on_7dl:
+        $ alt_dlc_active = True
     "Я ведь спал, я точно знаю — ко мне опять приходила та девочка и спрашивала, пойду ли я с ней."
     "И вот я здесь. {w}Значит, пошёл."
     th "Что же это за девочка?{w} И что ей может быть нужно от меня?"
