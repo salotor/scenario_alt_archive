@@ -3,9 +3,9 @@
     $ make_names_unknown_7dl()
     $ th_prefix = "«"
     $ th_suffix = "»"
-    play music music_list["drown"] fadein 3
     $ renpy.pause(3)
     scene black
+    play music music_list["drown"] fadein 3
     $ plthr = u"Выбор"
     with fade
     show spill_red with dspr
@@ -36,7 +36,6 @@
         scene black with fade2
         show alt_credits timeskip0 with dissolve2:
             pos (200,540)
-    $ renpy.pause(4, hard=True)
     with dissolve2
     window hide
     
