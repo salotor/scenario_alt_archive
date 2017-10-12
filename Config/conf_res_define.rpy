@@ -264,8 +264,7 @@
     image bg ext_bathhouse_day_7dl = get_image_7dl("bg/ext_bathhouse_day_7dl.jpg")
     image bg ext_boathouse_sunset_7dl = get_image_7dl("bg/ext_boathouse_sunset_7dl.jpg")
     
-    image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.jpg")
-#    image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.png")
+    image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.png")
     image bg ext_clubs_sunset_rain_7dl = get_image_7dl("bg/ext_clubs_sunset_rain_7dl.jpg")
     image bg ext_countryside_day_7dl = get_image_7dl("bg/outro/ext_countryside_day_7dl.jpg")
     
@@ -306,6 +305,7 @@
     
     image bg ext_road_sunset_7dl = get_image_7dl("bg/ext_road_sunset_7dl.jpg")
     image bg ext_road_winter_7dl = get_image_7dl("bg/outro/ext_road_winter_7dl.jpg")
+    image bg ext_railbridge_sunset_7dl = get_image_7dl("bg/outro/ext_railbridge_sunset_7dl.png")
     
     image bg ext_sandpit_day_7dl = get_image_7dl("bg/ext_sandpit_day_7dl.png")
     image bg ext_stairs_day_7dl = get_image_7dl("bg/ext_stairs_day_7dl.jpg")
@@ -825,7 +825,7 @@
     $ shib_stereo = get_music_7dl("shib_stereo.ogg") #Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
     
     
-    $ intro1 = get_music_7dl("intro1.ogg") #薄情連鎖
+    $ intro2 = get_music_7dl("intro2.ogg")
     
     $ seven_summer_days = get_music_7dl("seven_summer_days.ogg") #April Rain - Seven Summer Days
     #Эксклюзив от дождиков - реквием 7дл.
