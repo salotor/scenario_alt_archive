@@ -1033,6 +1033,7 @@ label alt_day0_start_loki:
     stop ambience
     stop sound_loop
     "Ксана назначила встречу в ЦПКиО."
+    play ambience ambience_night_city fadein 3
     "Где-то рядом с катком, сказала, что будет ждать меня у самой коробки."
     "Мой подарок на Новый Год. Подарок победителю в игре, где победитель теряет всё."
     "Чего-то такого и я ждал — Локи ведь тоже не очень хорошо кончил."
@@ -1456,11 +1457,10 @@ label alt_day0_d3_prologue:
     
 label alt_day0_opening:
     $ renpy.pause(2, hard=True)
-    if alt_day_binder == 2:
-        #play music music_list["opening"] fadein 5
-        play music intro1 fadein 5
+    if alt_day_binder != 1:
+        play music intro2 fadein 5
     else:
-        play music es_downmix fadein 5
+        play music seven_summer_days fadein 5
     scene black 
     $ renpy.pause(3, hard=True)
     scene op_back 
