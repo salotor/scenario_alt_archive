@@ -134,14 +134,20 @@ label alt_day4_neu_begin:
     elif alt_day4_neu_transit == 5:   
         call alt_day4_neu_map_hideout
         pause(1)
-        if alt_day2_us_escape and lp_us >= 0 and us_pt >= 0:
-            call alt_day4_neu_map_meadow
+        if alt_day2_us_escape and lp_us >= 0 and us_pt >= 0: #s уточнить условия
+            call alt_day4_neu_us_guards
             pause(1)
+            if alt_day4_neu_us_pixies:
+                call alt_day4_neu_us_launch
+                pause(1)
     else:
         call alt_day4_neu_map_dining_hall
         pause(1)
     call alt_day4_neu_sleeptime
     pause(1)
+    if alt_day4_neu_us_pixies:
+        call alt_day5_morningdream
+        pause(1)
     jump alt_day5_neu_begin
     
 label alt_day5_neu_begin:
