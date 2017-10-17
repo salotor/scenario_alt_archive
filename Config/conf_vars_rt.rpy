@@ -116,6 +116,7 @@ label alt_day5_mi_dj_vars:
     return
     
 label alt_day6_mi_dj_vars:
+    $ alt_day6_mi_dj_sonic_agreed = False
     $ alt_day6_mi_dj_sl_evil = False
     $ alt_day6_mi_dj_dv_evil = False
     $ alt_day6_mi_dj_me_evil = False
