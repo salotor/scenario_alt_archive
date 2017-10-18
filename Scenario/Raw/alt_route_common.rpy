@@ -77,7 +77,7 @@ label alt_day0_start:
         "Так всё и начиналось.":
             $ plthr = u"Дрищ"
             $ alt_chapter0()
-            play sound role_drisch fadein 3
+            play sound role_drisch
             $ renpy.pause(4, hard=True)
             with fade2
         "Но я не уверен точно.":
@@ -419,7 +419,7 @@ label alt_day0_start_herc:
         "Так всё и начиналось.":
             $ plthr = u"Герк"
             $ alt_chapter0()
-            play sound role_herc fadein 3
+            play sound role_herc
             $ renpy.pause(4, hard=True)
             with fade2
         "Но я не уверен точно.":
@@ -719,7 +719,7 @@ label alt_day0_start_loki:
         "Так всё и начиналось.":
             $ plthr = u"Локи"
             $ alt_chapter0()
-            play sound role_loki fadein 3
+            play sound role_loki
             $ renpy.pause(4, hard=True)
             with dissolve2
         "Но я не уверен точно…":
