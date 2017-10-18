@@ -1247,7 +1247,7 @@
         
             me "Войдите."
             play music music_list["my_daily_life"] fadein 5
-            th "Первый больной - в студию!."
+            th "Первый больной - в студию!.."
             play sound sfx_open_door_clubs
             with None
             show sl normal pioneer at center 
