@@ -431,7 +431,7 @@ label alt_day6_mt_7dl_morning:
     "Может показаться странным, но я и в самом деле крайне бесконфликтный человек."
     th "А что, поход на пляж — это какого-то рода поощрение?"
     dreamgirl "А нет?"
-    if alt_day1_sl_conv or alt_day_binder == 1:
+    if alt_day1_sl_conv or alt_day_binder == 1 or not (herc or loki):
         dreamgirl "Ты только представь её в купальнике? Там же явно всё по заветам Ильича!"
     else:
         dreamgirl "Могу напомнить, как она выглядит в своём бронебойном бикини."
@@ -1776,7 +1776,7 @@ label alt_day6_mt_7dl_dinner:
     show us smile sport
     with dissolve
     us "Первая остановка! Ничего не вспоминаешь?"
-    if not alt_day1_sl_conv or (alt_day_binder != 1):
+    if not alt_day1_sl_conv and (alt_day_binder != 1):
         if not (herc or loki):
             me "Здесь вы меня облили, две бандитки!"
         else:
