@@ -8960,7 +8960,7 @@ label alt_day6_mi_7dl_discoteque:
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_lamp = true
+                    $ persistent.alt_lamp = True
                     return
                 elif herc:
                     stop sound_loop
@@ -8987,7 +8987,7 @@ label alt_day6_mi_7dl_discoteque:
                     play sound aunl
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
-                    $ persistent.alt_lamp = true
+                    $ persistent.alt_lamp = True
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif loki:
@@ -9023,7 +9023,7 @@ label alt_day6_mi_7dl_discoteque:
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(4.4, hard=True)
-                    $ persistent.alt_lamp = true
+                    $ persistent.alt_lamp = True
                     return
             "Думаю, не стоит.":
                 me "Если у меня дыра в голове — значит, она там не просто так."
@@ -11698,7 +11698,7 @@ label alt_day7_mi_7dl_postscriptum:
     show acm_logo_mi_bitter_truth with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
-    $ persistent.alt_mi_7dl_ps = true
+    $ persistent.alt_mi_7dl_ps = True
     return
  
 label alt_day7_mi_7dl_dam_CPU:

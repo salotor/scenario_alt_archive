@@ -2632,7 +2632,7 @@ label alt_day6_mt_7dl_choice:
                         show acm_logo_me_lamp with moveinright:
                             pos (1600, 1020)
                         $ renpy.pause(7.4, hard=True)
-                        $ persistent.alt_lamp = true
+                        $ persistent.alt_lamp = True
                         return
                     elif herc:
                         show expression D3_intro("bg int_store_7dl") with fade
@@ -2656,7 +2656,7 @@ label alt_day6_mt_7dl_choice:
                         show acm_logo_me_lamp with moveinright:
                             pos (1600, 1020)
                         $ renpy.pause(7.4, hard=True)
-                        $ persistent.alt_lamp = true
+                        $ persistent.alt_lamp = True
                         return
                     elif loki:
                         play music herc_death fadein 5
@@ -2695,7 +2695,7 @@ label alt_day6_mt_7dl_choice:
                         show acm_logo_me_lamp with moveinright:
                             pos (1600, 1020)
                         $ renpy.pause(7.4, hard=True)
-                        $ persistent.alt_lamp = true
+                        $ persistent.alt_lamp = True
                         return
 label alt_day6_mt_7dl_declare:
     $ persistent.sprite_time = "night"
