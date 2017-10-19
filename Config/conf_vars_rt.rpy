@@ -206,6 +206,8 @@ label alt_day4_dv_7dl_vars:
     $ alt_day4_dv_7dl_ba_conv = False
     $ alt_day4_dv_7dl_drank_vodka = False
     $ alt_day4_dv_7dl_hentai = False
+    $ alt_day4_dv_7dl_help_cs = False
+    $ alt_day4_dv_7dl_aidpost = False
     return
     
 label alt_day6_dv_7dl_vars:
@@ -221,6 +223,9 @@ label alt_day6_dv_7dl_vars:
     $ alt_day7_dv_7dl_check = 0
     $ alt_day6_dv_7dl_escape_convince = False
     $ alt_day7_dv_7dl_brace = 0
+    $ alt_day6_dv_7dl_sl_help_agree = False
+    $ alt_day6_dv_7dl_catapult= False
+    $ alt_day7_dv_7dl_loki_catapult = False
     return
     
 label alt_day4_uvao_vars:
