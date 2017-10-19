@@ -21375,7 +21375,7 @@ label alt_day3_eventAf_music_club:
                     show acm_logo_me_deep with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_deep = true
+                    $ persistent.alt_deep = True
                     scene black
                     show gameover
                     with gopr
@@ -21410,7 +21410,7 @@ label alt_day3_eventAf_music_club:
                     show acm_logo_me_deep with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_deep = true
+                    $ persistent.alt_deep = True
                     scene black
                     show gameover
                     with gopr
@@ -21441,7 +21441,7 @@ label alt_day3_eventAf_music_club:
                     show gameover
                     with gopr
                     pause(3)
-                    $ persistent.alt_deep = true
+                    $ persistent.alt_deep = True
                     return
             "Не просыпаться":
                 me "Нет. Нет? Нет!"
@@ -24710,7 +24710,7 @@ label alt_day3_dv_reunion:
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
-        $ persistent.alt_deep = true
+        $ persistent.alt_deep = True
         with vpunch
     elif herc:
         play music herc_death fadein 5
@@ -24737,7 +24737,7 @@ label alt_day3_dv_reunion:
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
-        $ persistent.alt_deep = true
+        $ persistent.alt_deep = True
         with vpunch
     else:
         scene bg int_intro_liaz_7dl with fade
@@ -24759,7 +24759,7 @@ label alt_day3_dv_reunion:
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
-        $ persistent.alt_deep = true
+        $ persistent.alt_deep = True
         with vpunch
     window hide
     scene black
@@ -24791,7 +24791,7 @@ label alt_day3_dv_stayhere:
         show acm_logo_me_qte with moveinright:
             pos (1600, 1020)
         $ renpy.pause(9.4, hard=True)
-    $ persistent.alt_qte = true
+    $ persistent.alt_qte = True
     $ night_time()
     with vpunch
     stop music

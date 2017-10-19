@@ -3938,7 +3938,7 @@ label alt_day5_sl_start:
                 show alt_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
-                $ persistent.alt_lamp = true
+                $ persistent.alt_lamp = True
                 scene gameover with flash
                 with vpunch
                 return
@@ -3963,7 +3963,7 @@ label alt_day5_sl_start:
                 show alt_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
-                $ persistent.alt_lamp = true
+                $ persistent.alt_lamp = True
                 scene gameover with flash
                 with vpunch
                 return
@@ -3979,7 +3979,7 @@ label alt_day5_sl_start:
                 show alt_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
-                $ persistent.alt_lamp = true
+                $ persistent.alt_lamp = True
                 scene gameover with flash
                 with vpunch
                 return
