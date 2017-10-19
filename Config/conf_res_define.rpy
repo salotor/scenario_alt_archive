@@ -264,7 +264,7 @@
     image bg ext_bathhouse_day_7dl = get_image_7dl("bg/ext_bathhouse_day_7dl.jpg")
     image bg ext_boathouse_sunset_7dl = get_image_7dl("bg/ext_boathouse_sunset_7dl.jpg")
     
-    image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.png")
+    image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.jpg") # тут новая картинка планируется, как я понял. У старой jpg, пока для тестирования так пусть будет, иначе на текущей версии крашится.
     image bg ext_clubs_sunset_rain_7dl = get_image_7dl("bg/ext_clubs_sunset_rain_7dl.jpg")
     image bg ext_countryside_day_7dl = get_image_7dl("bg/outro/ext_countryside_day_7dl.jpg")
     
@@ -526,7 +526,7 @@
     #image cg d6_us_lost_road_7dl = get_image_7dl("cg/d6_us_lost_road_7dl.png")
     
     image cg d7_dv_alice_dj_7dl = get_image_7dl("cg/d7_dv_alice_dj_7dl.jpg")
-    image cg d7_dv_looney_7dl = get_image_7dl("cg/d7_dv_looney_7dl.jpg")
+    image cg d7_dv_looney_7dl = get_image_7dl("cg/d7_dv_looney_7dl.png")
     image cg d7_dv_addic_happy_7dl = get_image_7dl("cg/d7_dv_addic_happy_7dl.jpg")
     image cg d7_dv_bed_7dl = get_image_7dl("cg/d7_dv_bed_7dl.jpg")
     image cg d7_dv_ep_red_7dl = get_image_7dl("cg/d7_dv_ep_red_7dl.jpg")
