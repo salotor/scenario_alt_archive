@@ -101,6 +101,7 @@ label alt_day1_vars: #Переменные первого дня
     $ alt_day1_alt_chase = False
     $ alt_day1_alt_us_robbed = False
     $ alt_day1_alt_robbery = False
+    $ alt_day1_alt_sl_conv = False
     $ alt_day1_dv_feed = False
     $ alt_day1_el_followed = False
     $ alt_day1_sam_paniqued = False
