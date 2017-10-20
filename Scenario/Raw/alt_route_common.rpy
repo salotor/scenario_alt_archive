@@ -9272,7 +9272,7 @@ label alt_day2_event_clubs:
         dv "Этот. Как его… Шурик."
 
     if alt_day2_lib_done:
-        if  if alt_day2_rendezvous == 5 or alt_day2_rendezvous == 4 or alt_day2_rendezvous == 22:
+        if alt_day2_rendezvous == 5 or alt_day2_rendezvous == 4 or alt_day2_rendezvous == 22:
             me "Шурик? Хм… Выглядит логично. Его вполне может заинтересовать кибернетика."
             me "Постой! Так говоря, что будет {i}у себя{/i}, Шурик имел в виду клуб?"
         else:
@@ -13453,11 +13453,11 @@ label alt_day2_mapEv_prepare:
     
     $ set_zone_alt2('dv_us_house_alt2', 'alt_day2_eventEv_dv_us_house')
     $ set_zone_alt2('un_mi_house_alt2', 'alt_day2_eventEv_un_mi_house')
-    if lp_un >= 7 and (loki or herc):
+    if lp_un >= 6 and (loki or herc):
         $ set_chibi_alt2('un_mi_house_alt2', 'un')
     $ set_zone_alt2('dining_hall_alt2', 'alt_day2_eventEv_dining_hall')
     $ set_zone_alt2('court_alt2', 'alt_day2_eventEv_sport_area')
-    if lp_un >= 7 and not (herc or loki):
+    if lp_un >= 6 and not (herc or loki):
         $ set_chibi_alt2('court_alt2', 'un')
     $ set_zone_alt2('me_mt_house_alt2', 'alt_day2_eventEv_me_mt_house')
     $ set_chibi_alt2('me_mt_house_alt2', 'mt')
@@ -13536,7 +13536,7 @@ label alt_day2_eventEv_un_mi_house:
         "Не так, как это в тех лагерях, к каким привык я, где если ты не назначаешь девочке встречу, то рискуешь разбудить всю её палату в двадцать человек."
         "Я прямо воочию представил себе эдакого Ромэо в семейных труселях в «розово сердинько», с розой в зубах и резиновых сапогах с бутылкой «трёх топоров» за голенищем."
         
-    if lp_un >= 7:
+    if lp_un >= 6:
         if loki:
             $ lp_un += 2
             window hide
@@ -13578,7 +13578,7 @@ label alt_day2_eventEv_dining_hall:
 
 label alt_day2_eventEv_sport_area:
     scene bg ext_playground_sunset with fade
-    if lp_un >= 7:
+    if lp_un >= 6:
         if not (herc or loki):
             if alt_day_binder != 1:
                 $ lp_un += 1
@@ -14956,7 +14956,7 @@ label alt_day2_un_loki_date:
     show un surprise pioneer with dissolve
     un "Как это… Совсем нет?"
     "Рассказать ей о своём феерическом пробуждении?"
-    if atl_day_binder != 1:
+    if alt_day_binder != 1:
         "О своих выкрутасах возле автобуса?"
     "А что, вдруг, оценит?"
     me "Так уж получилось… что я приехал в лагерь… без вещей."

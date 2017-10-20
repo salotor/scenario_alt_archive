@@ -22,7 +22,7 @@ label alt_day3_router_un:
     if lp_un >= 12 or (lp_un >= 11 and alt_day1_sl_conv):
         "Мне снилась Лена…"
         window hide
-    if (alt_day3_un_med_help == 1) and (lp_un >= 12):
+    if (alt_day3_un_med_help == 1) and (lp_un >= 13):
         $ routetag = "un7dl"
         jump alt_day4_un_7dl_start
     elif (alt_day2_date == 132) and (alt_day3_dancing == 132):
@@ -98,10 +98,19 @@ label alt_day4_neu_begin:
             call alt_day4_neu_un
             pause(1)
             if alt_day4_neu_transit == 1:
+                $ mt_pt = 0
+                $ d3_pt = 0
+                $ us_pt = 0
                 jump alt_day4_un_7dl_dinner
             else:
-                call alt_day4_neu_mt
+                call alt_day4_neu_sl
                 pause(1)
+                if alt_day4_neu_transit == 6:
+                    call alt_day4_neu_mt
+                    pause(1)
+                else:
+                    call alt_day4_neu_us
+                    pause(1)
         elif alt_day3_mi_date:
             call alt_day4_neu_mi
             pause(1)
@@ -125,20 +134,20 @@ label alt_day4_neu_begin:
     pause(1)
     call alt_day4_neu_supper
     pause(1)
-    if alt_day4_neu_transit == 6:
+    if alt_day4_neu_transit == 6 or alt_day4_neu_transit == 5:
         call alt_day4_neu_map_me_mt_house
         pause(1)
         if alt_day4_neu_mt_diary:
             call alt_day4_neu_mt_diary_vol1
             pause(1)
-    elif alt_day4_neu_transit == 5:   
-        call alt_day4_neu_map_hideout
-        pause(1)
-        call alt_day4_neu_us_guards
-        pause(1)
-        if alt_day4_neu_us_pixies:
-            call alt_day4_neu_us_launch
+        else:   
+            call alt_day4_neu_map_hideout
             pause(1)
+            call alt_day4_neu_us_guards
+            pause(1)
+            if alt_day4_neu_us_pixies:
+                call alt_day4_neu_us_launch
+                pause(1)
     else:
         call alt_day4_neu_map_dining_hall
         pause(1)
