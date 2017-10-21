@@ -168,10 +168,17 @@ label alt_day5_neu_begin:
     else:
         call alt_day5_neu_gaming
         pause(1)
+        if alt_day4_neu_us_pixies:
+            call alt_day5_neu_us_morning
+            pause(1)
     call alt_day5_neu_dinner
     pause(1)
-    call alt_day5_neu_mi_estrade
-    pause(1)
+    if alt_day4_neu_us_pixies:
+        call alt_day5_neu_us_career
+        pause(1)
+    else:
+        call alt_day5_neu_mi_estrade
+        pause(1)
     call alt_day5_neu_lunch
     pause(1)
     call alt_day5_neu_supper
