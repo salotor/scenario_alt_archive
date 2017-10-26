@@ -4823,7 +4823,6 @@ label alt_day4_neu_mt_diary_vol1:
     nvl clear
     stop music fadeout 3
     $ set_mode_adv()
-    
     $ persistent.sprite_time = "night"
     $ night_time
     scene bg int_house_of_mt_night

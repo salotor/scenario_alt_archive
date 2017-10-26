@@ -252,7 +252,7 @@
     image bg ext_stand3_prolog_7dl = im.MatrixColor(get_image_7dl("bg/ext_stand_pr_7dl.jpg"), im.matrix.tint(0.82, 0.84, 1.0))
     
 #Задники
-    image bg ext_adductius_7dl = get_image_7dl("bg/ext_adductius_7dl.jpg")
+    image bg ext_adductius_7dl = get_image_7dl("bg/ext_adductius_7dl.png")
     image bg ext_admins_day_7dl = get_image_7dl("bg/ext_admins_day_7dl.jpg")
     image bg ext_admins_night_7dl = get_image_7dl("bg/ext_admins_night_7dl.jpg")
     image bg ext_admins_rain_7dl = get_image_7dl("bg/ext_admins_rain_7dl.jpg")
@@ -263,6 +263,8 @@
     image bg ext_bus1_7dl = get_image_7dl("bg/ext_bus1_7dl.jpg")
     image bg ext_bathhouse_day_7dl = get_image_7dl("bg/ext_bathhouse_day_7dl.jpg")
     image bg ext_boathouse_sunset_7dl = get_image_7dl("bg/ext_boathouse_sunset_7dl.jpg")
+    image bg ext_busstop_dust_7dl = get_image_7dl("bg/ext_busstop_dust_7d.png")
+    image bg ext_busstop_sun_7dl = get_image_7dl("bg/ext_busstop_sun_7dl.png")
     
     image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.png")
     image bg ext_clubs_sunset_rain_7dl = get_image_7dl("bg/ext_clubs_sunset_rain_7dl.jpg")
@@ -334,7 +336,7 @@
     image bg ext_un_hideout_sunset_7dl = get_image_7dl("bg/ext_un_hideout_sunset_7dl.png")
     image bg ext_un_house_with_un_7dl = get_image_7dl("bg/ext_un_house_with_un_7dl.jpg")
     
-    image bg ext_volley_court_7dl = get_image_7dl("bg/ext_volley_court_7dl.jpg")
+    image bg ext_volley_court_7dl = get_image_7dl("bg/ext_volley_court_7dl.png")
     
     image bg ext_warehouse_day_7dl = get_image_7dl("bg/ext_warehouse_day_7dl.jpg")
     image bg ext_warehouse2_day_7dl = get_image_7dl("bg/ext_warehouse2_day_7dl.jpg")
@@ -377,7 +379,7 @@
     
     image bg int_hence_day_7dl = get_image_7dl("bg/int_hence_day_7dl.jpg")
     image bg int_hence_night_7dl = get_image_7dl("bg/int_hence_night_7dl.jpg")
-    image bg int_home_lift_7dl = get_image_7dl("bg/int_home_lift_7dl.jpg")
+    image bg int_home_lift_7dl = get_image_7dl("bg/int_home_lift_7dl.png")
     image bg int_hospital_hall_day_7dl = get_image_7dl("bg/int_hospital_hall_day_7dl.jpg")
     
     image bg int_intro_liaz_7dl = get_image_7dl("bg/int_intro_liaz_7dl.jpg")
@@ -397,6 +399,7 @@
     image bg int_opened_door_7dl = get_image_7dl("bg/outro/int_opened_door_7dl.jpg")
     
     image bg int_plats_7dl = get_image_7dl("bg/outro/int_plats_7dl.jpg")
+    image bg int_potato_storage_7d = get_image_7dl("bg/int_potato_storage_7d.png")
     image bg int_refinery_7dl = get_image_7dl("bg/int_refinery_7dl.png")
     
     image bg int_sam_house_clean_7dl = get_image_7dl("bg/int_sam_house_clean_7dl.jpg")
@@ -405,8 +408,8 @@
     image bg int_shed_night_7dl = get_image_7dl("bg/int_warehouse_night_7dl.png")
     image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.png")
     image bg int_sporthall_night_7dl = get_image_7dl("bg/int_sporthall_night_7dl.png")
-#    image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.jpg")
-#    image bg int_sporthall_night_7dl = get_image_7dl("bg/int_sporthall_night_7dl.jpg")
+    image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.jpg")
+    image bg int_sporthall_night_7dl = get_image_7dl("bg/int_sporthall_night_7dl.jpg")
     image bg int_store_7dl = get_image_7dl("bg/int_store_7dl.png")
     
     image bg int_toilet_7dl = get_image_7dl("bg/outro/int_toilet_7dl.jpg")
