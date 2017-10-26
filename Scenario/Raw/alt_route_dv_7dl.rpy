@@ -10072,7 +10072,7 @@ label alt_day6_dv_7dl_dance:
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_lamp = true
+                    $ persistent.alt_lamp = True
                     return
                 elif herc:
                     scene black with fade
@@ -10096,7 +10096,7 @@ label alt_day6_dv_7dl_dance:
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_lamp = true
+                    $ persistent.alt_lamp = True
                     return
                 elif loki:
                     play music herc_death fadein 5
@@ -10136,7 +10136,7 @@ label alt_day6_dv_7dl_dance:
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(4.4, hard=True)
-                    $ persistent.alt_lamp = true
+                    $ persistent.alt_lamp = True
                     return
         window hide
         scene anim_square_party with dissolve

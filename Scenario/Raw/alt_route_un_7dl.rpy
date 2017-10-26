@@ -9038,7 +9038,7 @@ label alt_day6_un_7dl_letmeout:
     show acm_logo_me_lamp with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
-    $ persistent.alt_lamp = true
+    $ persistent.alt_lamp = True
     return
 
 label alt_day6_un_7dl_dance:
