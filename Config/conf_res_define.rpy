@@ -1,4 +1,8 @@
 ﻿init:
+    transform center:
+        xalign 0.5
+        yalign 0.0
+
     transform voy_left:
         xalign 0.0
         xanchor 0.5
