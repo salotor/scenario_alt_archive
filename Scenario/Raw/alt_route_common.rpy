@@ -26014,7 +26014,7 @@ label alt_day3_dance_dance2:
             "Прощебетала Мику, уводя меня прочь."
             "Я даже возразить ничего не успел."
             scene anim_square_party
-            jump alt_day3_choose3
+            jump alt_day3_choose3 #s может, отправлять Сёму прямиком на танец с Мику?
         menu:
             "Помочь им":
                 if alt_day3_dancing == 2:
@@ -26110,7 +26110,7 @@ label alt_day3_dance_dance2:
         scene anim_square_party with dissolve
         play music music_list["raindrops"] fadein 3
         menu:
-            "Танцевать с Алисой":
+            "Танцевать с Алисой" if alt_day3_dancing != 32:
                 call alt_day3_lp_checker(alt_dater = dv)
                 if alt_day3_dv_dj:
                     if alt_day3_dancing == 3:
@@ -26173,6 +26173,7 @@ label alt_day3_dance_dance2:
                         "Потом рассмеялась и, воздев голову, прошествовала к пульту — подходило время следующей песни."
                         hide dv with dissolve
                 else:
+                    $ alt_day3_dancing = 32
                     "Алиска так и не пришла. Похоже, придётся мне либо искать другую кандидатуру, либо сычевать."
                     jump alt_day3_choose3
             "Танцевать со Славей":
@@ -26346,7 +26347,7 @@ label alt_day3_dance_dance2:
                 dreamgirl "Просто подумай как следует — чего тебе на самом деле хочется?" 
                 if alt_day3_mi_date and (alt_day2_date == 4):
                     jump alt_day3_mi_7dl_init
-            "Танцевать с Леной":
+            "Танцевать с Леной" if alt_day3_dancing != 12:
                 if (herc or loki) and (alt_day3_un_med_help != 1):
                     call alt_day3_lp_checker(alt_dater = un)
                     if alt_day3_dancing == 1:
@@ -26389,7 +26390,8 @@ label alt_day3_dance_dance2:
                         "То, что возбуждает и сводит с ума любовников всего мира — если, разумеется, они успели принять душ прежде, чем перейти непосредственно к действиям."
                         "Впрочем, ничего гарантировать не могу — мои знания на этот счёт в большинстве своём чисто теоретические."
                     hide un with dissolve
-                else:
+                elif alt_day3_dancing == 1:
+                    $ alt_day3_dancing = 12
                     "Я думал пригласить Лену ещё раз, но как ни выглядывал её — нигде не мог найти. Нигде."
                     th "Она, помнится, что-то про медпункт говорила. Неужели уже ушла?"
                     "Пришлось смириться и поискать себе другую кандидатуру."
