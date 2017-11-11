@@ -442,8 +442,7 @@
     image bg int_shed_night_7dl = get_image_7dl("bg/int_warehouse_night_7dl.png")
     image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.png")
     image bg int_sporthall_night_7dl = get_image_7dl("bg/int_sporthall_night_7dl.png")
-    image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.jpg")
-    image bg int_sporthall_night_7dl = get_image_7dl("bg/int_sporthall_night_7dl.jpg")
+    #пнг же выше уже заданы
     image bg int_store_7dl = get_image_7dl("bg/int_store_7dl.png")
     
     image bg int_toilet_7dl = get_image_7dl("bg/outro/int_toilet_7dl.jpg")
