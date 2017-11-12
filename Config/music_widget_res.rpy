@@ -78,7 +78,7 @@ init 1:
     $ music_list_7dl["Sergey Eybog – Raindrops"] = "scenario_alt/sound/sfx/raindrops_radio.ogg"
     $ music_list_7dl["Qrown - Gokagetu"] = "scenario_alt/Sound/music/red_lights.ogg"
     $ music_list_7dl["Moonlight - Electric Cello (Inspired by Beethoven) - The Piano Guys"] = "scenario_alt/Sound/music/refuse_to_believe.ogg"
-    $ music_list_7dl[u"Неизвестный трек"] = "scenario_alt/Sound/music/refuse_to_replay.ogg" 
+    $ music_list_7dl[u"Oi Va Voi - Yesterday's Mistakes"] = "scenario_alt/Sound/music/refuse_to_replay.ogg" 
     $ music_list_7dl["KPM Music - Change Times"] = "scenario_alt/Sound/music/rewind.ogg"
     $ music_list_7dl["Jan Cyrka - The Right Road"] = "scenario_alt/Sound/music/rightroad.ogg"
     $ music_list_7dl["Heavenly - The Ritual"] = "scenario_alt/Sound/music/ritual2.ogg"

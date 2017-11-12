@@ -353,6 +353,7 @@ label widgets_on_off_7dl:
             renpy.utter_restart()
 
 label start_7dl:
+    call alt_day0_vars
     call alt_day0_prologue
     jump choose_waifu_7dl
  

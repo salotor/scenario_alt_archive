@@ -1,6 +1,8 @@
 ﻿label alt_day4_un_fz_start:
     pause(1)
     call alt_day4_un_fz_vars
+    call alt_day4_neu_us_vars # для тарнзита на сыча
+    call alt_day4_sl_cl_vars # для транзита на Славю
     pause(1)
     stop ambience 
     $ persistent.sprite_time = "prolog"
@@ -5236,7 +5238,7 @@ label alt_day4_fz_xroad:
         scene bg int_mine_exit_night_light
         with dissolve
         "Славя полезла первой, как многознайка."
-        if alt_day1_sl_keys_took != 0:
+        if alt_day1_sl_keys_took != 1:
             "К тому же, у неё была связка ключей ото всего в лагере."
         "Ну, а я изо всех сил старался не подглядывать."
         "Получалось, если честно, с трудом."
@@ -5676,7 +5678,7 @@ label alt_day4_fz_xroad:
         stop ambience fadeout 3
         window hide
         $ persistent.sprite_time = "sunset"
-        scene bg ext_square_sunset
+        scene bg ext_square_night
         with dissolve
         play ambience ambience_camp_center_night fadein 3
     
