@@ -107,12 +107,12 @@ label scenario__alt__test:
     scene bg int_dining_hall_day with fade
     window show
     
-    $ plthr = u"Локи"                       # играем за Локи
-    $ loki = True
-    $ herc = False
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars
+    $ plthr = u"Локи"                       # играем за Локи
+    $ loki = True
+    $ herc = False
     $ alt_day2_dv_bet_approve = True        # спорим с Алисой
     $ alt_day2_dv_harass = False
     $ alt_day2_walk = 0                     # метим карты
@@ -3210,12 +3210,12 @@ label alt_day2_checking_scores:
             show el normal pioneer far at left
             el "Семён выигрывает у %(alt_name_my_rival_r)s со счётом %(alt_day2_my_win)d-%(alt_day2_rival_win)d."
             window hide
-            if (alt_tournament_state == "1_round_start") or alt_day2_revanche:                  # если первый тур ИЛИ реванш 
-                jump alt_day2_participate_win_end_new                                           # победа в 1 туре
+            if alt_tournament_state == "final_start":                                           # если финал
+                jump alt_day2_final_win_end_new                                                 # победа в финале
             elif alt_tournament_state == "semifinal_start":                                     # если полуфинал
                 jump alt_day2_semifinal_win_end_new                                             # победа в полуфинале
-            elif alt_tournament_state == "final_start":                                         # если финал
-                jump alt_day2_final_win_end_new                                                 # победа в финале
+            elif (alt_tournament_state == "1_round_start") or alt_day2_revanche:                # если первый тур ИЛИ реванш 
+                jump alt_day2_participate_win_end_new                                           # победа в 1 туре                
     else:                                                                                       # соперник выигрывает
         window show
         call alt_day2_current_game_end_compare_hands                                            # сравнение комбинаций по итогам игры
@@ -3234,22 +3234,25 @@ label alt_day2_checking_scores:
             show el normal pioneer far at left
             el "%(alt_name_my_rival_i)s одерживает победу со счётом %(alt_day2_rival_win)d-%(alt_day2_my_win)d."
             window hide
-            if (alt_tournament_state == "1_round_start") or alt_day2_revanche:                  # если первый тур ИЛИ реванш 
-                jump alt_day2_participate_fail_end_new                                          # поражение в 1 туре
+            if alt_tournament_state == "final_start":                                           # если финал
+                jump alt_day2_final_fail_end_new                                                # поражение в финале
             elif alt_tournament_state == "semifinal_start":                                     # если полуфинал
                 jump alt_day2_semifinal_fail_end_new                                            # поражение в полуфинале
-            elif alt_tournament_state == "final_start":                                         # если финал
-                jump alt_day2_final_fail_end_new                                                # поражение в финале
+            elif (alt_tournament_state == "1_round_start") or alt_day2_revanche:                # если первый тур ИЛИ реванш 
+                jump alt_day2_participate_fail_end_new                                          # поражение в 1 туре                
+
 
 #-----------------------------------------------------------------------------------
 # Возвращаемся к обратно к игре на соответствующий этап
-label alt_day2_transition_to_game:                                                      # переход к игре
-    if (alt_tournament_state == "1_round_start") or alt_day2_revanche:                  # если первый тур ИЛИ реванш 
-        jump alt_day2_1_tour_re_game                                                    # играем 1 тур
-    elif alt_tournament_state == "semifinal_start":                                     # если полуфинал
-        jump alt_day2_semifinal_re_game                                               # играем полуфинал
-    elif alt_tournament_state == "final_start":                                         # если финал
+label alt_day2_transition_to_game:                                                    # переход к игре
+    if alt_tournament_state == "final_start":                                         # если финал
         jump alt_day2_final_re_game                                                   # играем финал
+    elif alt_tournament_state == "semifinal_start":                                   # если полуфинал
+        jump alt_day2_semifinal_re_game                                               # играем полуфинал
+    elif (alt_tournament_state == "1_round_start") or alt_day2_revanche:              # если первый тур ИЛИ реванш
+        jump alt_day2_1_tour_re_game                                                  # играем 1 тур
+
+
         
 #-----------------------------------------------------------------------------------
 # Результат ИГРЫ (сравниваем и оцениваем комбинации)
