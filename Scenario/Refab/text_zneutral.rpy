@@ -1220,7 +1220,7 @@ label alt_day4_neu_un:
     play sound sfx_open_dooor_campus_1
     pause(1)
     scene bg ext_house_of_un_day at zenterright
-    show mt laugh pioneer2 at cright
+    show mt laugh pioneer at cright
     with dissolve
     mt "А вот и он, кстати."
     me "Э… Здрасть."
@@ -3824,7 +3824,7 @@ label alt_day4_neu_us_launch:#Запуск кораблика
         us "И поезд."
         window hide
         scene expression Desat("cg d2_us_trainhop_7dl")
-        show anim prolog
+        scene anim prolog_2
         with dissolve
         us "Помнишь?"
         "Я машинально кивнул."
@@ -3863,7 +3863,7 @@ label alt_day4_neu_us_launch:#Запуск кораблика
     else:
         window hide
         scene expression Desat("cg d2_us_trainhop_7dl")
-        show anim prolog
+        scene anim prolog_2
         with dissolve
         us "Я пробовала. И с тобой тоже. Помнишь поезд?"
         me "Но мы же…"
@@ -6548,7 +6548,7 @@ label alt_day5_neu_us_career:
         th "Нет?"
         dreamgirl "Мне тоже так показалось! Итак, поехали!"
         window hide
-        scene expressiond Notch("bg ext_backroad_day_7dl") with dissolve #s в define фон не прописан
+        scene expression Notch("bg ext_backroad_day_7dl") with dissolve
         "И на смену умудрённому опытом, глупому старому мне пришёл кто-то, кого я почти забыл."
         "Кто-то, кем я был однажды - именно его глаза смотрели на меня из зеркала в первый же мой день здесь."
         "Именно его."
