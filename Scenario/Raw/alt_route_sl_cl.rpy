@@ -3192,7 +3192,7 @@ label alt_day5_sl_start:
         with touch
     elif alt_day5_sl_tan == dv:
         scene expression Sepia("anim prolog1")
-        show dv guilty at left
+        show dv guilty pioneer at left
         show prologue_dream
         with touch
     elif alt_day5_sl_tan == sl:
@@ -3935,7 +3935,7 @@ label alt_day5_sl_start:
                 window hide
                 stop sound_loop fadeout 0
                 play sound aunl
-                show alt_logo_me_lamp with moveinright:
+                show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 $ persistent.alt_lamp = True
@@ -3960,7 +3960,7 @@ label alt_day5_sl_start:
                 window hide
                 stop sound_loop fadeout 0
                 play sound aunl
-                show alt_logo_me_lamp with moveinright:
+                show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 $ persistent.alt_lamp = True
@@ -3976,7 +3976,7 @@ label alt_day5_sl_start:
                 play sound sfx_water_emerge
                 stop sound_loop fadeout 0
                 play sound aunl
-                show alt_logo_me_lamp with moveinright:
+                show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 $ persistent.alt_lamp = True
