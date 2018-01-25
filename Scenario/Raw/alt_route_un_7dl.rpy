@@ -8228,7 +8228,7 @@ label alt_day6_un_7dl_dinner:
     "В косо и криво вырезанном сердечке поместилось её имя и мои инициалы. Хулиганство, конечно, глупо и неправильно, но…"
     "Может быть, однажды я вернусь сюда, и…"
     window hide
-    scene d5_un_carrier_7dl
+    scene cg d5_un_carrier_7dl
     pause(.2)
     scene bg ext_sandpit_day_7dl
     with fade
