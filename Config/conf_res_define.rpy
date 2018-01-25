@@ -1,4 +1,8 @@
 ﻿init:
+    transform center:
+        xalign 0.5
+        yalign 0.0
+
     transform voy_left:
         xalign 0.0
         xanchor 0.5
@@ -252,17 +256,21 @@
     image bg ext_stand3_prolog_7dl = im.MatrixColor(get_image_7dl("bg/ext_stand_pr_7dl.jpg"), im.matrix.tint(0.82, 0.84, 1.0))
     
 #Задники
-    image bg ext_adductius_7dl = get_image_7dl("bg/ext_adductius_7dl.jpg")
+    image bg ext_adductius_7dl = get_image_7dl("bg/ext_adductius_7dl.png")
     image bg ext_admins_day_7dl = get_image_7dl("bg/ext_admins_day_7dl.jpg")
     image bg ext_admins_night_7dl = get_image_7dl("bg/ext_admins_night_7dl.jpg")
     image bg ext_admins_rain_7dl = get_image_7dl("bg/ext_admins_rain_7dl.jpg")
     image bg ext_aidpost_sunset_7dl = get_image_7dl("bg/ext_med_sunset_7dl.jpg")
     image bg ext_aidpost2_sunset_7dl = get_image_7dl("bg/ext_med2_sunset_7dl.jpg")
     
-    image bg ext_beach2_day_7dl = get_image_7dl("bg/ext_beach2_day_7dl.jpg")
-    image bg ext_bus1_7dl = get_image_7dl("bg/ext_bus1_7dl.jpg")
     image bg ext_bathhouse_day_7dl = get_image_7dl("bg/ext_bathhouse_day_7dl.jpg")
+    image bg ext_backroad_day_7dl = get_image_7dl("bg/ext_backroad_day_7dl.png")
+    image bg ext_beach2_day_7dl = get_image_7dl("bg/ext_beach2_day_7dl.jpg")
     image bg ext_boathouse_sunset_7dl = get_image_7dl("bg/ext_boathouse_sunset_7dl.jpg")
+    image bg ext_boathouse_alt_day_7dl = get_image_7dl("bg/ext_boathouse_alt_day_7dl.png")
+    image bg ext_bus1_7dl = get_image_7dl("bg/ext_bus1_7dl.jpg")
+    image bg ext_busstop_dust_7dl = get_image_7dl("bg/ext_busstop_dust_7d.png")
+    image bg ext_busstop_sun_7dl = get_image_7dl("bg/ext_busstop_sun_7dl.png")
     
     image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.png")
     image bg ext_clubs_sunset_rain_7dl = get_image_7dl("bg/ext_clubs_sunset_rain_7dl.jpg")
@@ -334,7 +342,7 @@
     image bg ext_un_hideout_sunset_7dl = get_image_7dl("bg/ext_un_hideout_sunset_7dl.png")
     image bg ext_un_house_with_un_7dl = get_image_7dl("bg/ext_un_house_with_un_7dl.jpg")
     
-    image bg ext_volley_court_7dl = get_image_7dl("bg/ext_volley_court_7dl.jpg")
+    image bg ext_volley_court_7dl = get_image_7dl("bg/ext_volley_court_7dl.png")
     
     image bg ext_warehouse_day_7dl = get_image_7dl("bg/ext_warehouse_day_7dl.jpg")
     image bg ext_warehouse2_day_7dl = get_image_7dl("bg/ext_warehouse2_day_7dl.jpg")
@@ -377,7 +385,7 @@
     
     image bg int_hence_day_7dl = get_image_7dl("bg/int_hence_day_7dl.jpg")
     image bg int_hence_night_7dl = get_image_7dl("bg/int_hence_night_7dl.jpg")
-    image bg int_home_lift_7dl = get_image_7dl("bg/int_home_lift_7dl.jpg")
+    image bg int_home_lift_7dl = get_image_7dl("bg/int_home_lift_7dl.png")
     image bg int_hospital_hall_day_7dl = get_image_7dl("bg/int_hospital_hall_day_7dl.jpg")
     
     image bg int_intro_liaz_7dl = get_image_7dl("bg/int_intro_liaz_7dl.jpg")
@@ -397,6 +405,7 @@
     image bg int_opened_door_7dl = get_image_7dl("bg/outro/int_opened_door_7dl.jpg")
     
     image bg int_plats_7dl = get_image_7dl("bg/outro/int_plats_7dl.jpg")
+    image bg int_potato_storage_7dl = get_image_7dl("bg/int_potato_storage_7dl.png")
     image bg int_refinery_7dl = get_image_7dl("bg/int_refinery_7dl.png")
     
     image bg int_sam_house_clean_7dl = get_image_7dl("bg/int_sam_house_clean_7dl.jpg")
@@ -405,8 +414,6 @@
     image bg int_shed_night_7dl = get_image_7dl("bg/int_warehouse_night_7dl.png")
     image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.png")
     image bg int_sporthall_night_7dl = get_image_7dl("bg/int_sporthall_night_7dl.png")
-#    image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.jpg")
-#    image bg int_sporthall_night_7dl = get_image_7dl("bg/int_sporthall_night_7dl.jpg")
     image bg int_store_7dl = get_image_7dl("bg/int_store_7dl.png")
     
     image bg int_toilet_7dl = get_image_7dl("bg/outro/int_toilet_7dl.jpg")
@@ -526,7 +533,7 @@
     #image cg d6_us_lost_road_7dl = get_image_7dl("cg/d6_us_lost_road_7dl.png")
     
     image cg d7_dv_alice_dj_7dl = get_image_7dl("cg/d7_dv_alice_dj_7dl.jpg")
-    image cg d7_dv_looney_7dl = get_image_7dl("cg/d7_dv_looney_7dl.jpg")
+    image cg d7_dv_looney_7dl = get_image_7dl("cg/d7_dv_looney_7dl.png")
     image cg d7_dv_addic_happy_7dl = get_image_7dl("cg/d7_dv_addic_happy_7dl.jpg")
     image cg d7_dv_bed_7dl = get_image_7dl("cg/d7_dv_bed_7dl.jpg")
     image cg d7_dv_ep_red_7dl = get_image_7dl("cg/d7_dv_ep_red_7dl.jpg")
@@ -825,35 +832,30 @@
     $ shib_stereo = get_music_7dl("shib_stereo.ogg") #Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
     
     
+    $ intro1 = get_music_7dl("intro1.ogg")
+    $ intro11 = get_music_7dl("intro11.ogg")
     $ intro2 = get_music_7dl("intro2.ogg")
     
     $ seven_summer_days = get_music_7dl("seven_summer_days.ogg") #April Rain - Seven Summer Days
-    #Эксклюзив от дождиков - реквием 7дл.
-    
-    $ unfulfilled = get_music_7dl("unfulfilled.ogg") #April Rain - Unfulfilled
-    #Эксклюзив от дождиков - Несбывшееся.
-    
-    $ exodus = get_music_7dl("Exodus.ogg") #April Rain - Exodus
-    #Эксклюзив от дождиков - Исход.
-    
-    $ runaway = get_music_7dl("runaway.ogg") #The Neighbourhood - Sweater Weather (Instrumental)
-    #Под шумок, втягивая голову в плечи, но всё равно, на кураже, смеясь от глупого и неправильного счастья - вперёд! Только вперёд!
-    
-    $ thousand_little_things = get_music_7dl("thousand_little_things.ogg") #Hans Zimmer - Rain Man Theme
-    #Тысяча мелочей. Идём куда-то, куда - не знаем, зачем? Найти б себя на полках в "тысяче мелочей", отыскать путь обратно, откуда мы вышли, но взляд замерзает, а солнце всё выше.
-    
-    $  my_only_hope= get_music_7dl("my_only_hope.ogg") #Kristofferson - Where do tears go
-    #Моя единственная надежда. Моя история длиной в целую жизнь - когда и где произошло так, что я перестал понимать, как до сих пор справлялся без тебя? Каким потоком однажды меня прибило к берегам страны Сказок? Но сегодня и сейчас, десять лет спустя, я чувствую тебя сквозь стены и на любом расстоянии, я плачу твоими слезами и смеюсь твоей улыбкой. Я говорю тебе - спасибо.
-    
-    $ Redemption = get_music_7dl("Redemption.ogg") #Mitchell Broom - Redemption
-    #Искупление. Спекталь начинается.
-    
-    $ escape_2 = get_music_7dl("escape_2.ogg") #Josh Kramer feat. Tina Guo -  Where The Light Goes
-    #Туда, куда уходят огоньки.
-    $ temptation = get_music_7dl("temptation.ogg") #DeepCosmo - DvaTri
-    #Искушение.
 
-    
+    $ unfulfilled = get_music_7dl("unfulfilled.ogg") #April Rain - Unfulfilled
+
+    $ exodus = get_music_7dl("Exodus.ogg") #April Rain - Exodus
+
+    $ runaway = get_music_7dl("runaway.ogg") #The Neighbourhood - Sweater Weather (Instrumental)
+
+    $ thousand_little_things = get_music_7dl("thousand_little_things.ogg") #Hans Zimmer - Rain Man Theme
+
+    $  my_only_hope= get_music_7dl("my_only_hope.ogg") #Kristofferson - Where do tears go
+
+    $ Redemption = get_music_7dl("Redemption.ogg") #Mitchell Broom - Redemption
+
+    $ escape_2 = get_music_7dl("escape_2.ogg") #Josh Kramer feat. Tina Guo -  Where The Light Goes
+
+    $ temptation = get_music_7dl("temptation.ogg") #DeepCosmo - DvaTri
+
+
+
     $ alice_theme = get_music_7dl("alice_theme.ogg")
     $ afraid_of_destiny = get_music_7dl("afraid_of_destiny.ogg")
     $ anglegrinder = get_music_7dl("anglegrinder.ogg")

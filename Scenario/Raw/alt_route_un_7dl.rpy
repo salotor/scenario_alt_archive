@@ -2435,7 +2435,7 @@ label alt_day4_un_7dl_dinner:
                 "Задумчиво изучая ладошку, сказала Лена."
                 "Правильно истолковав намёк, я ухватил её за руку и потянул в сторону столовой."
                 jump alt_day4_un_7dl_launch
-        elif alt_day2_club_join_badmin:
+        elif alt_day2_club_join_badmin: # перед этим нужна вариация по alt_day4_neu_transit == 1, чтобы транзитчик 2 раза подряд не играл в бадминтон
             show un smile pioneer with dspr
             "Ты разве забыл? Мы же на бадминтон записаны оба. Сегодня чётное число — значит, теннисисты отдыхают, а мы играем."
             me "Точно! Значит, коробка полностью в нашем распоряжении?"
@@ -8228,7 +8228,7 @@ label alt_day6_un_7dl_dinner:
     "В косо и криво вырезанном сердечке поместилось её имя и мои инициалы. Хулиганство, конечно, глупо и неправильно, но…"
     "Может быть, однажды я вернусь сюда, и…"
     window hide
-    scene d5_un_carrier_7dl
+    scene cg d5_un_carrier_7dl
     pause(.2)
     scene bg ext_sandpit_day_7dl
     with fade
@@ -10918,7 +10918,9 @@ label alt_day7_un_7dl_epilogue_rt:
     "В которой не было абсолютно ничего."
     
 label alt_day7_un_7dl_selector:
-    if karma >= 75:
+    if alt_day4_neu_transit == 1:
+        jump alt_day7_un_7dl_ussr
+    elif karma >= 75:
         menu:
             "Ну уж чёрта с два!":
                 "Я перебрался на водительское место и, немного подумав, вспомнил, где какая педаль расположена."
