@@ -5428,7 +5428,7 @@ label alt_day5_mi_7dl_firecamp:
     window hide
     stop ambience fadeout 2
     $ persistent.sprite_time = "sunset"
-    scene bg ext_path_sunset
+    scene bg ext_backroad_day_7dl
     show mt sad pioneer
     with dissolve
     play ambience ambience_forest_evening fadein 3

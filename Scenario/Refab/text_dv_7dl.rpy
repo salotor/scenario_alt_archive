@@ -5715,7 +5715,7 @@ label alt_day5_dv_7dl_supper:
     "Ну, или не гадость, а… {w}Даже не знаю — как получать садистское удовлетворение, кормя кого-то касторкой."
     window hide
     $ persistent.sprite_time = "sunset"
-    scene bg ext_path_sunset
+    scene bg ext_backroad_day_7dl
     with dissolve
     play ambience ambience_forest_evening fadein 3
 

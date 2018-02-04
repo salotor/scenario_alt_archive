@@ -6757,7 +6757,7 @@ label alt_day5_un_7dl_supper:
     window hide
     stop ambience fadeout 2
     $ persistent.sprite_time = "sunset"
-    scene bg ext_path_sunset
+    scene bg ext_backroad_day_7dl
     with dissolve
     play ambience ambience_forest_evening fadein 3
 

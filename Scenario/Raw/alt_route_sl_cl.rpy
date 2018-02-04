@@ -6906,7 +6906,7 @@ label alt_day5_sl_supper:
     sl "У тебя нет?"
     "Я промолчал."
     window hide
-    scene bg ext_path_sunset
+    scene bg ext_backroad_day_7dl
     play ambience ambience_forest_evening fadein 3
 
     "Просто понимаешь, что иногда мудрее всего просто принять собственное невежество или чёрствость."
@@ -7176,7 +7176,7 @@ label alt_day5_sl_fire:
     window hide
     play ambience ambience_forest_night fadein 3
     $ persistent.sprite_time = "night"
-    scene bg ext_path_night
+    scene bg ext_backdoor_night_7dl
     with fade2
 
     "Обратно нас отпустили только под честное слово Слави, что с нами ничего не случится и вообще."

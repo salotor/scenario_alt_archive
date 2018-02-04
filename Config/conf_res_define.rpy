@@ -293,6 +293,8 @@
     image bg ext_aidpost_sunset_7dl = get_image_7dl("bg/ext_med_sunset_7dl.jpg")
     image bg ext_aidpost2_sunset_7dl = get_image_7dl("bg/ext_med2_sunset_7dl.jpg")
     
+    image bg ext_backdoor_day_7dl = get_image_7dl("bg/ext_backdoor_day_7dl")
+    image bg ext_backdoor_night_7dl = get_image_7dl("bg/ext_backdoor_night_7dl")
     image bg ext_bathhouse_day_7dl = get_image_7dl("bg/ext_bathhouse_day_7dl.jpg")
     image bg ext_backroad_day_7dl = get_image_7dl("bg/ext_backroad_day_7dl.png")
     image bg ext_beach2_day_7dl = get_image_7dl("bg/ext_beach2_day_7dl.jpg")
@@ -309,8 +311,9 @@
     image bg ext_dining_hall_near_snowy_day_7dl = get_image_7dl("bg/outro/ext_dining_hall_near_snowy_day_7dl.jpg")
     
     image bg ext_earth_7dl = get_image_7dl("bg/outro/ext_earth_7dl.jpg")
-    image bg ext_entrance_night_clear_7dl = get_image_7dl("bg/ext_entrance_night_clear_7dl.jpg")
-    image bg ext_entrance_night_clear_closed_7dl = get_image_7dl("bg/ext_entrance_night_clear_closed_7dl.jpg")
+    
+    image bg ext_entrance_night_clear_7dl = get_image_7dl("bg/ext_entrance_night_clear_7dl.png")
+    image bg ext_entrance_night_clear_closed_7dl = get_image_7dl("bg/ext_entrance_night_clear_closed_7dl.png")
     image bg ext_entrance_winter_7dl = get_image_7dl("bg/outro/ext_entrance_winter_7dl.jpg")
     
     image bg ext_graveyard_rain_7dl = get_image_7dl("bg/outro/ext_graveyard_rain_7dl.jpg")
@@ -363,7 +366,7 @@
     image bg ext_square_sunset2_7dl = get_image_7dl("bg/ext_square_sunset2_7dl.jpg")
     image bg ext_square_sunset3_7dl = get_image_7dl("bg/ext_square_sunset3_7dl.jpg")
     
-    image bg ext_townscape_ph_day_7dl = get_image_7dl("bg/ext_townscape_ph_day_7dl.jpg")
+    image bg ext_townscape_ph_day_7dl = get_image_7dl("bg/ext_townscape_ph_day_7dl.png")
     image bg ext_tennis_court_7dl = get_image_7dl("bg/ext_tennis_court_7dl.jpg")
     image bg ext_underwater_7dl = get_image_7dl("bg/ext_underwater_7dl.jpg")
     
