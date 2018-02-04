@@ -505,7 +505,9 @@
     image cg d5_un_film_7dl = get_image_7dl("cg/d5_un_film_7dl.jpg")
     image cg d5_un_boat_7dl = get_image_7dl("cg/d5_un_boat_7dl.jpg")
     image cg d5_un_bed_7dl = get_image_7dl("cg/d5_un_bed_7dl.jpg")
+    image cg d5_us_rendezvous_7dl = get_image_7dl("cg/d5_us_rendezvous_7dl.png")
     image cg d5_us_sneakpeak_7dl = get_image_7dl("cg/d5_us_sneakpeak_7dl.png")
+    
     
     #image cg d5_us_baseball_7dl = get_image_7dl("cg/d5_us_baseball_7dl.png")
     
