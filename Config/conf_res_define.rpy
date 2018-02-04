@@ -1,6 +1,36 @@
 ﻿init:
+    transform fleft:
+        xalign 0.16
+        xanchor 0.5
+        yalign 0.0
+
+    transform left:
+        xalign 0.28
+        xanchor 0.5
+        yalign 0.0
+
+    transform cleft:
+        xalign 0.355
+        xanchor 0.5
+        yalign 0.0
+
     transform center:
         xalign 0.5
+        yalign 0.0
+
+    transform cright:
+        xalign 0.645
+        xanchor 0.5
+        yalign 0.0
+
+    transform right:
+        xalign 0.72
+        xanchor 0.5
+        yalign 0.0
+
+    transform fright:
+        xalign 0.84
+        xanchor 0.5
         yalign 0.0
 
     transform voy_left:

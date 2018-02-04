@@ -472,7 +472,7 @@ label alt_day6_mt_7dl_morning:
     "Даже если там окажется что-нибудь банальное, вроде глажки белья, я уже достаточно заинтригован, чтобы подписаться и на такое."
     th "Или…"
     window hide
-    scene bg ext_warehouse2_day_7dl with fdiam
+    scene bg ext_warehouse_day_7dl with fdiam
     play ambience ambience_camp_center_day fadein 3
     "К моменту, когда я добрался до склада, Славя уже была там."
     "Она, согнувшись, колдовала над замком, а меня вдруг посетила пугающе очевидная мысль:"
@@ -2435,7 +2435,7 @@ label alt_day6_mt_7dl_choice:
     dreamgirl "Думаешь, пора?"
     th "Наверное…"
     sl "Семён!"
-    "Слова Слави прервали концентрацию и я, вздрогнув, поднял глаза."
+    "Слова Слави прервали медитацию и я, вздрогнув, открыл глаза."
     window hide
     if alt_day5_mt_7dl_hentai:
         scene bg ext_stairs_night_7dl with dissolve

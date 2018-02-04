@@ -84,6 +84,20 @@ label scenario__alt_sevendl:
 jump choose_waifu_7dl
 
 label alt_day0_vars: #Переменные нулевого дня
+    $ lp_mi = 0
+    $ lp_sl = 0
+    $ lp_un = 0
+    $ lp_us = 0
+    $ lp_dv = 0
+    $ karma = 0
+    $ plthr = u"none"
+    $ alt_sp = 0
+    $ alt_spt = 0
+    $ alt_hpt = 0
+    $ mt_pt = 0
+    $ d3_pt = 0
+    $ us_pt = 0
+    
     $ alt_day_binder = 0
     $ semen_str = 10
     $ alt_dlc_active = False

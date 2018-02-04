@@ -1,6 +1,8 @@
 ﻿label alt_day4_un_fz_start:
     pause(1)
     call alt_day4_un_fz_vars
+    call alt_day4_neu_us_vars
+    call alt_day4_sl_cl_vars
     pause(1)
     stop ambience 
     $ persistent.sprite_time = "prolog"
@@ -5236,7 +5238,7 @@ label alt_day4_fz_xroad:
         scene bg int_mine_exit_night_light
         with dissolve
         "Славя полезла первой, как многознайка."
-        if alt_day1_sl_keys_took != 0:
+        if alt_day1_sl_keys_took != 1:
             "К тому же, у неё была связка ключей ото всего в лагере."
         "Ну, а я изо всех сил старался не подглядывать."
         "Получалось, если честно, с трудом."
@@ -5322,7 +5324,7 @@ label alt_day4_fz_xroad:
         "Краткий сон на жёстком подействовал облагораживающе, и я спустил ноги на землю, готовый двигаться."
         window hide
         $ persistent.sprite_time = "sunset"
-        scene bg ext_square_sunset
+        scene bg ext_square_night
         with dissolve
         show sl smile pioneer close at center  
         with dissolve
