@@ -3,7 +3,6 @@
     call alt_day4_un_fz_vars
     call alt_day4_neu_us_vars
     call alt_day4_sl_cl_vars
->>>>>>> master
     pause(1)
     stop ambience 
     $ persistent.sprite_time = "prolog"
