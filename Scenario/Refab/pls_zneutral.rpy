@@ -66,9 +66,9 @@ label alt_day3_router_neutral:
          
 label alt_day4_neu_begin:
     call alt_day4_neu_us_vars
-    call alt_day4_sl_cl_vars # для транзита на Славю
-    call alt_day4_un_7dl_vars # для транзита на Лену
-    call alt_day4_un_fz_vars # для транзита с ФЗ на сыча
+    call alt_day4_sl_cl_vars
+    call alt_day4_un_7dl_vars
+    call alt_day4_un_fz_vars
     if alt_day3_dv_evening:
         call alt_day4_neu_dv #Эксклюзивный вход для Алисы
         pause(1)

@@ -2486,7 +2486,6 @@ label alt_day4_un_7dl_dinner:
         scene bg ext_tennis_court_7dl
         show un normal pioneer 
         with dissolve
-    
         "Она поколдовала с дверью, запирающей корт, и приглашающе махнула рукой."
         me "А это вообще можно?"
         show un laugh pioneer with dspr
@@ -2494,8 +2493,9 @@ label alt_day4_un_7dl_dinner:
         un "Борис Александрович обычно тренирует группу по мере формирования, поэтому мы можем поиграть немного."
         me "Поиграть?"
         show un grin pioneer with dspr
-        un "Ты мне тогда показал, как правильно подавать верхом, и я довольно быстро руку набила."
-        un "Поэтому не жди лёгкой победы!"
+        if alt_day2_date == 1:
+            un "Ты мне тогда показал, как правильно подавать верхом, и я довольно быстро руку набила."
+            un "Поэтому не жди лёгкой победы!"
         "Сходив к стенду, Лена вытащила две ракетки — в этот раз вполне себе серьёзные, плетёные, а не та пластмассовая ерунда, с которой она пыталась руку набить — и, немного поковыряв мешки, обнаружила бесхозный воланчик."
         un "Живём!"
         "Кинув мне ракетку, пионерка заняла место по ту сторону сетки и, приняв позу «машашарапова», азартно кивнула:"
@@ -6797,7 +6797,7 @@ label alt_day5_un_7dl_supper:
     window hide
     stop ambience fadeout 2
     $ persistent.sprite_time = "sunset"
-    scene bg ext_path_sunset
+    scene bg ext_backroad_day_7dl
     with dissolve
     play ambience ambience_forest_evening fadein 3
 
@@ -8274,7 +8274,7 @@ label alt_day6_un_7dl_dinner:
     "В косо и криво вырезанном сердечке поместилось её имя и мои инициалы. Хулиганство, конечно, глупо и неправильно, но…"
     "Может быть, однажды я вернусь сюда, и…"
     window hide
-    scene d5_un_carrier_7dl
+    scene cg d5_un_carrier_7dl
     pause(.2)
     scene bg ext_sandpit_day_7dl
     with fade
@@ -8923,7 +8923,7 @@ label alt_day6_un_7dl_supper:
                     "Славя прикусила губу."
                     sl "Ты безумец. Ты чёртов эгоист."
                     "Её глаза блеснули, и она, двигаясь как скверно собранная марионетка, собрала с песка мешок, развернулась и…"
-                    show sl smile2 pioneer with dspr
+                    show sl sad pioneer with dspr
                     "На секунду мне показалось, что в чистый раствор шума прибоя вплелось рыдание. "
                     hide sl with dissolve
                     "И мы остались вдвоём с Леной."

@@ -97,6 +97,7 @@ label alt_day0_vars: #Переменные нулевого дня
     $ mt_pt = 0
     $ d3_pt = 0
     $ us_pt = 0
+
     $ alt_day_binder = 0
     $ semen_str = 10
     $ alt_dlc_active = False
