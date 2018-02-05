@@ -1,8 +1,8 @@
 ﻿label alt_day4_un_fz_start:
     pause(1)
     call alt_day4_un_fz_vars
-    call alt_day4_neu_us_vars # для тарнзита на сыча
-    call alt_day4_sl_cl_vars # для транзита на Славю
+    call alt_day4_neu_us_vars
+    call alt_day4_sl_cl_vars
     pause(1)
     stop ambience 
     $ persistent.sprite_time = "prolog"
@@ -5324,7 +5324,7 @@ label alt_day4_fz_xroad:
         "Краткий сон на жёстком подействовал облагораживающе, и я спустил ноги на землю, готовый двигаться."
         window hide
         $ persistent.sprite_time = "sunset"
-        scene bg ext_square_sunset
+        scene bg ext_square_night
         with dissolve
         show sl smile pioneer close at center  
         with dissolve

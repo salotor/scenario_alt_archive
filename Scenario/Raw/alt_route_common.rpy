@@ -1105,7 +1105,7 @@ label alt_day0_d3_prologue:
     scene anim prolog_2
     with dissolve2
     window hide
-    play music my_onlyhope fadein 3
+    play music my_only_hope fadein 3
     #TODO
     voice "Прости."
     "Хруст фаланг под опускающейся ногой, закованной в лакированный штиблет."
@@ -2021,6 +2021,9 @@ label alt_day1_alt_A:
     "Вдруг предупредила она, притормозив на повороте."
     "Меня тронула её забота."
     "В голову пришло, что она, возможно, не такая уж и злая."
+    window hide
+    scene bg ext_boathouse_alt_day_7dl
+    with fade
     dv "Пришли."
     "Мы стояли на дальнем правом причальном углу, отделённом от берега громадой здания дебаркадера, здесь крыша нависала над головой до самых перил."
     dv "Да, это то самое место."
@@ -2153,7 +2156,7 @@ label alt_day1_alt_A:
     extend ", устремился вниз."
     "Первая ступень унижения."
     "С крыши тут же донёсся жизнерадостный смех, и рядом со мной приземлилась она."
-    scene bg ext_boathouse_day at zenterleft
+    scene bg ext_boathouse_alt_day_7dl at zenterleft
     show dv normal pioneer2 at cleft
     with dissolve
     play music music_list["doomed_to_be_defeated"] fadein 0
@@ -2201,7 +2204,7 @@ label alt_day1_alt_A:
                 pos (747,250)
         with Shake((0, 0, 0, 0), 2.0, dist=50)
         $ renpy.pause(2, hard=True)
-        scene bg ext_boathouse_day with flash
+        scene bg ext_boathouse_alt_day_7dl with flash
     
         me "И не подходи ко мне больше."
         show dv surprise pioneer2 far with dspr
@@ -2256,12 +2259,12 @@ label alt_day1_alt_A:
         "Наконец, тело вспомнило как шевелиться, а лёгкие – как дышать."
         "И, стараясь сохранить остатки собственного достоинства, я поднялся."
         window hide
-        scene bg ext_boathouse_day with dissolve
+        scene bg ext_boathouse_alt_day_7dl with dissolve
     
     else:
         "Девушка стояла и улыбалась мне, будто ожидая, что я её сейчас похвалю за невероятно смешную шутку."
     if herc:
-        scene bg ext_boathouse_day at zenterright
+        scene bg ext_boathouse_alt_day_7dl at zenterright
         show dv laugh pioneer2 at cright
         with dissolve
         menu:
@@ -2352,7 +2355,7 @@ label alt_day1_alt_A:
     show sl angry pioneer at left with dspr
     "Алиса стремительно отняла руки и спрятала их за спиной."
     window hide
-    scene expression Noon("bg ext_boathouse_day") at zenterright
+    scene expression Noon("bg ext_boathouse_alt_day_7dl") at zenterright
     show sl smile pioneer at right
     with dissolve
     show name_sl with flash:
@@ -26110,7 +26113,7 @@ label alt_day3_dance_dance2:
         scene anim_square_party with dissolve
         play music music_list["raindrops"] fadein 3
         menu:
-            "Танцевать с Алисой":
+            "Танцевать с Алисой": if alt_day3_dancing != 32:
                 call alt_day3_lp_checker(alt_dater = dv)
                 if alt_day3_dv_dj:
                     if alt_day3_dancing == 3:
@@ -26173,6 +26176,7 @@ label alt_day3_dance_dance2:
                         "Потом рассмеялась и, воздев голову, прошествовала к пульту — подходило время следующей песни."
                         hide dv with dissolve
                 else:
+                    $ alt_day3_dancing = 32
                     "Алиска так и не пришла. Похоже, придётся мне либо искать другую кандидатуру, либо сычевать."
                     jump alt_day3_choose3
             "Танцевать со Славей":
@@ -26389,7 +26393,8 @@ label alt_day3_dance_dance2:
                         "То, что возбуждает и сводит с ума любовников всего мира — если, разумеется, они успели принять душ прежде, чем перейти непосредственно к действиям."
                         "Впрочем, ничего гарантировать не могу — мои знания на этот счёт в большинстве своём чисто теоретические."
                     hide un with dissolve
-                else:
+                elif alt_day3_dancing == 1:
+                    $ alt_day3_dancing = 12
                     "Я думал пригласить Лену ещё раз, но как ни выглядывал её — нигде не мог найти. Нигде."
                     th "Она, помнится, что-то про медпункт говорила. Неужели уже ушла?"
                     "Пришлось смириться и поискать себе другую кандидатуру."

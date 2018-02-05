@@ -1,8 +1,8 @@
 ﻿label alt_day4_sl_start:
     pause(1)
     call alt_day4_sl_cl_vars
-    call alt_day4_un_fz_vars # для транзита с ФЗ
-    call alt_day4_neu_us_vars # для транзита с сыча
+    call alt_day4_un_fz_vars
+    call alt_day4_neu_us_vars
     pause(1)
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -3194,7 +3194,7 @@ label alt_day5_sl_start:
         with touch
     elif alt_day5_sl_tan == dv:
         scene expression Sepia("anim prolog1")
-        show dv guilty at left
+        show dv guilty pioneer at left
         show prologue_dream
         with touch
     elif alt_day5_sl_tan == sl:
@@ -3937,7 +3937,7 @@ label alt_day5_sl_start:
                 window hide
                 stop sound_loop fadeout 0
                 play sound aunl
-                show alt_logo_me_lamp with moveinright:
+                show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 $ persistent.alt_lamp = True
@@ -3962,7 +3962,7 @@ label alt_day5_sl_start:
                 window hide
                 stop sound_loop fadeout 0
                 play sound aunl
-                show alt_logo_me_lamp with moveinright:
+                show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 $ persistent.alt_lamp = True
@@ -3978,7 +3978,7 @@ label alt_day5_sl_start:
                 play sound sfx_water_emerge
                 stop sound_loop fadeout 0
                 play sound aunl
-                show alt_logo_me_lamp with moveinright:
+                show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 $ persistent.alt_lamp = True
@@ -4923,8 +4923,8 @@ label alt_day5_sl_start:
     me "Да будет что-нибудь."
     scene white with diam
     "Коль скоро ни на что моей малахольной силы не хватало, кроме как на движение фотонов и электронов, стал свет и электричество."
-    "Под ногами гудело что-то, мимо с огромной скоростью проносились какие-то огромные объёкты, и я вспомнил свои вчерашние рассуждения об абсолютной остановке." # "Остановка" осталась где-то в версии 0.24, теперь таких мыслей у Семёна в 4 дне нет.
-    "Наверное, я сейчас и в самом деле стою."
+    "Да будет свет, да."
+    "Под ногами гудело что-то, мимо с огромной скоростью проносились какие-то огромные объёкты."
     "Или мы?"
     window hide
     scene bg ext_sky_7dl with dissolve
@@ -6906,7 +6906,7 @@ label alt_day5_sl_supper:
     sl "У тебя нет?"
     "Я промолчал."
     window hide
-    scene bg ext_path_sunset
+    scene bg ext_backroad_day_7dl
     play ambience ambience_forest_evening fadein 3
 
     "Просто понимаешь, что иногда мудрее всего просто принять собственное невежество или чёрствость."
@@ -7176,7 +7176,7 @@ label alt_day5_sl_fire:
     window hide
     play ambience ambience_forest_night fadein 3
     $ persistent.sprite_time = "night"
-    scene bg ext_path_night
+    scene bg ext_backdoor_night_7dl
     with fade2
 
     "Обратно нас отпустили только под честное слово Слави, что с нами ничего не случится и вообще."
