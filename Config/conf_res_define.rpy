@@ -868,6 +868,7 @@
     
     
     $ intro1 = get_music_7dl("intro1.ogg")
+    $ more_than_alive = get_music_7dl("more_than_alive.ogg")
     $ intro11 = get_music_7dl("intro11.ogg")
     $ intro2 = get_music_7dl("intro2.ogg")
     
