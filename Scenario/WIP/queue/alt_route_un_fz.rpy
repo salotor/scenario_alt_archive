@@ -5678,7 +5678,7 @@ label alt_day4_fz_xroad:
         stop ambience fadeout 3
         window hide
         $ persistent.sprite_time = "sunset"
-        scene bg ext_square_sunset
+        scene bg ext_square_night
         with dissolve
         play ambience ambience_camp_center_night fadein 3
     
