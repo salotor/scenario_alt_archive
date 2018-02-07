@@ -104,6 +104,8 @@ label alt_day4_neu_begin:
                 $ mt_pt = 0
                 $ d3_pt = 0
                 $ us_pt = 0
+                if persistent.hentai_un_old_7dl:
+                    $ alt_un_old_hentai = True
                 jump alt_day4_un_7dl_dinner
             else:
                 call alt_day4_neu_sl
