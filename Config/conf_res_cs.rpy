@@ -2060,6 +2060,7 @@ label alt_day2_final_fail:
         
     elif alt_day2_f1 == 5:
         $ lp_us += 1
+        play music genki fadein 3
         "Как известно, в карты везёт новичкам и дурачкам."
         "Так как мы все здесь новички, мы были в равных условиях."
         "Но кое-кому перепало на один шанс больше!"
@@ -2126,6 +2127,9 @@ label alt_day2_final_fail:
         "Закричал Сыроежкин ей вслед."
         "По-моему, это всё-таки любовь."
         sh "Эл, всё, она ушла. Упокойся."
+    window hide
+    stop music fadeout 3
+    with fade
     jump alt_day2_supper    
     
 label alt_day2_final_draw:
