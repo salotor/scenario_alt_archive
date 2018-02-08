@@ -1,8 +1,8 @@
 ﻿label alt_day4_sl_start:
     pause(1)
     call alt_day4_sl_cl_vars
-    call alt_day4_un_fz_vars # для транзита с ФЗ
-    call alt_day4_neu_us_vars # для транзита с сыча
+    call alt_day4_un_fz_vars
+    call alt_day4_neu_us_vars
     pause(1)
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -446,6 +446,8 @@
     hide cs
     with flash
     "Они удалились, оставив меня в одиночестве."
+    
+label alt_day4_sl_cl_shurik:
     "Вот так оно всё и происходит."
     "О тебе не забывают, нет.{w} И не отодвигают на обочину."
     "Просто периодически демонстрируют тебе то, насколько ты теперь ущербен, что даже в столовую тебе путь заказан, ибо перегруз и вообще.{w} Трудовой подвиг и слава героям, ага."
@@ -3194,7 +3196,7 @@ label alt_day5_sl_start:
         with touch
     elif alt_day5_sl_tan == dv:
         scene expression Sepia("anim prolog1")
-        show dv guilty at left
+        show dv guilty pioneer at left
         show prologue_dream
         with touch
     elif alt_day5_sl_tan == sl:
@@ -3937,7 +3939,7 @@ label alt_day5_sl_start:
                 window hide
                 stop sound_loop fadeout 0
                 play sound aunl
-                show alt_logo_me_lamp with moveinright:
+                show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 $ persistent.alt_lamp = True
@@ -3962,7 +3964,7 @@ label alt_day5_sl_start:
                 window hide
                 stop sound_loop fadeout 0
                 play sound aunl
-                show alt_logo_me_lamp with moveinright:
+                show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 $ persistent.alt_lamp = True
@@ -3978,7 +3980,7 @@ label alt_day5_sl_start:
                 play sound sfx_water_emerge
                 stop sound_loop fadeout 0
                 play sound aunl
-                show alt_logo_me_lamp with moveinright:
+                show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 $ persistent.alt_lamp = True
@@ -4923,8 +4925,8 @@ label alt_day5_sl_start:
     me "Да будет что-нибудь."
     scene white with diam
     "Коль скоро ни на что моей малахольной силы не хватало, кроме как на движение фотонов и электронов, стал свет и электричество."
-    "Под ногами гудело что-то, мимо с огромной скоростью проносились какие-то огромные объёкты, и я вспомнил свои вчерашние рассуждения об абсолютной остановке." # "Остановка" осталась где-то в версии 0.24, теперь таких мыслей у Семёна в 4 дне нет.
-    "Наверное, я сейчас и в самом деле стою."
+    "Да будет свет, да."
+    "Под ногами гудело что-то, мимо с огромной скоростью проносились какие-то огромные объёкты."
     "Или мы?"
     window hide
     scene bg ext_sky_7dl with dissolve
@@ -6906,7 +6908,7 @@ label alt_day5_sl_supper:
     sl "У тебя нет?"
     "Я промолчал."
     window hide
-    scene bg ext_path_sunset
+    scene bg ext_backroad_day_7dl
     play ambience ambience_forest_evening fadein 3
 
     "Просто понимаешь, что иногда мудрее всего просто принять собственное невежество или чёрствость."
@@ -7148,6 +7150,9 @@ label alt_day5_sl_fire:
     "Виола кивнула."
     show cs normal with dspr 
     cs "Так что проси своих товарищей, чтобы отнесли тебя в лагерь."
+    show cs normal at left with moveinleft
+    show ml sick pioneer at right with zenterright
+    with dissolve
     ml "Но я же…"
     cs "Или, если чувствуешь в себе силы, прыгай на одной ноге. Сумеешь допрыгать до лагеря?"
     "Прикинув свои силы, кудряш покачал головой."
@@ -7156,18 +7161,22 @@ label alt_day5_sl_fire:
     me "Почему же?"
     show cs smile with dspr 
     cs "Потому что он взял самоотвод на время костра. Его присутствие здесь не обязательно… В отличие от моего."
-    hide cs with dissolve
+    show ml normal pioneer
+    hide cs 
+    with dissolve
     "Она кивнула и отошла к Ольге, о чём-то с той заговорив."
     me "Дела…"
     "Вздохнул я."
     me "Ладно, полезай на закорки."
     "Велел я."
     me "Раз уж я сегодня здоровый и грузоподъёмный."
+    show ml unsured pioneer with dspr
     "Кудрявый в сомнении посмотрел на меня и замотал головой."
     me "Ладно."
     "Я пожал плечами."
     me "Тогда иди пешком. Точнее, прыгай пешком."
     "Немного подумав и повздыхав, пионер всё же принял моё предложение."
+    hide ml with dissolve
     "Ну да, ну да, как будто у него был хоть какой-нибудь выбор."
     show sl normal pioneer with dspr 
     sl "Кажется, ты сегодня котируешься в качестве грузчика?"
@@ -7176,13 +7185,13 @@ label alt_day5_sl_fire:
     window hide
     play ambience ambience_forest_night fadein 3
     $ persistent.sprite_time = "night"
-    scene bg ext_path_night
+    scene bg ext_backdoor_night_7dl
     with fade2
 
     "Обратно нас отпустили только под честное слово Слави, что с нами ничего не случится и вообще."
     "Виола даже обещать не стала — её, похоже, забавляло кидать людей в условия, им напрочь враждебные, и смотреть, как человек будет выплывать."
     "И это притом, что шла она вместе с нами!"
-    "Мы выстроились гуськом — первой шла Славя с фонарём: после первой же кротовины она включила фонарь и полностью посвятила себя слежению за дорогой."
+    "Мы выстроились гуськом — в авангарде шла Славя с фонарём: после первой же кротовины она включила фонарь и полностью посвятила себя слежению за дорогой."
     "Потому что кротовина ладно, а что если там снова дырка на нижний ярус?"
     sl "Семён, когда дойдём до лагеря, я на полчасика отлучусь, ладно?"
     "Я кивнул."
@@ -7211,7 +7220,7 @@ label alt_day5_sl_fire:
     if alt_day4_fz_sh != 2:
         me "Скажи-как, Даня, а вот вчера не ты ли, случаем, вожатой кнопку на стул подложил?"
         "Ответом мне было красноречивое молчание."
-    th "Не происходит ли сейчас так, что я спасаю Ульянку в брюках?"
+    th "Не происходит ли сейчас так, что я спасаю Ульянку в штанах?"
     "Появилась в голове непрошенная мысль."
     th "Но разве жизнь-здоровье даже Ульяны не бесценны?"
     show dreamgirl_overlay with dspr 
@@ -7357,7 +7366,7 @@ label alt_day5_sl_fire:
     "Ещё бы чуть-чуть — и вера Слави в меня, а попутно и в человечество в целом, могла бы пошатнуться."
     "На улице опять собрался мелкий дождик, тот, что я называю питерским — когда в воздухе просто витает некая водянистая взвесь, доступная всем ветрам, плюющая на гравитацию и герметичность одежды."
     "Тучи, выжавшиеся им, уже давным-давно разметало ветром, и сверху скалился не то Скорпион, не то ещё какая экзотическая живность — я астрономией никогда не увлекался, но небо было незнакомым."
-    show sl normal pioneer with dspr 
+    show sl normal pioneer with dissolve
     sl "Присядем?"
     "Славя сняла у меня со спины что-то и, скомкав это, бросила в мусорное ведро."
     "Кажется, её совершенно дождь не беспокоил."
@@ -11080,7 +11089,7 @@ label alt_day6_sl_true_route:
         dreamgirl "Что хорошего ты сделал в том лагере, в несбыточных, тепличных условиях — аллювии для супергероев всех мастей — о чём сможешь вспомнить и гордиться лет через пять?"
         dreamgirl "Исключая то, что ты закономерно влюбился и теперь ради неё и правда готов горы своротить."
         me "А этого мало?"
-        show pi with dissolve
+        show pi normal with dissolve
         dreamgirl "Да только ведь любовь живёт три года, да и Славя твоя… Не факт что существует."
         dreamgirl "То есть, ты выбрался из болота ради того, чтобы встать в тени Слави. В тени несуществующей девушки, которой тоже иногда хочется сильного мужского под жилеткой и «кто хозяин в доме»."
         if herc:
@@ -11103,7 +11112,7 @@ label alt_day6_sl_true_route:
         dreamgirl "Ты носишь ауру неудачника. Знаешь, как дети, которых постоянно все бьют. Откуда дети знают, кого можно бить, а кого нельзя? Они чувствуют её. "
         window hide
         scene bg semen_room_window with dissolve
-        show pi with dissolve
+        show pi normal with dissolve
         dreamgirl "Ты выбрал сам эту петлю, ты знаешь это, да?"
         dreamgirl "Сдаться и сломаться. А запала лагеря не хватит надолго."
         dreamgirl "Полгода, край год. А однажды твоя валькирия встретит тебя на улице. И отвернётся — потому что ты нелюдим, небрит, угрюм и на лбу набрякла ненависть."
@@ -11228,7 +11237,7 @@ label alt_day6_sl_true_route:
         scene black with diam
         pause(1)
         scene bg ext_warehouse_night_7dl
-        show pi
+        show pi normal
         show prologue_dream
         with dissolve
         "В мешке слышно слабое шевеление, а я не могу, не смею рассказать всего, чтобы не повлиять как-то на решение."
@@ -14502,7 +14511,7 @@ label alt_day7_sl_beach:
     mt "Скажите «Сыыыр»!"
     show dv normal pioneer far at fleft
     show un normal pioneer far at fright
-    show pi far at left
+    show pi normal far at left
     show sl normal pioneer far at cleft
     show mi normal pioneer far at right
     show el normal pioneer far at cright behind mi

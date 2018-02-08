@@ -1105,7 +1105,7 @@ label alt_day0_d3_prologue:
     scene anim prolog_2
     with dissolve2
     window hide
-    play music my_onlyhope fadein 3
+    play music my_only_hope fadein 3
     #TODO
     voice "Прости."
     "Хруст фаланг под опускающейся ногой, закованной в лакированный штиблет."
@@ -2021,6 +2021,9 @@ label alt_day1_alt_A:
     "Вдруг предупредила она, притормозив на повороте."
     "Меня тронула её забота."
     "В голову пришло, что она, возможно, не такая уж и злая."
+    window hide
+    scene bg ext_boathouse_alt_day_7dl
+    with fade
     dv "Пришли."
     "Мы стояли на дальнем правом причальном углу, отделённом от берега громадой здания дебаркадера, здесь крыша нависала над головой до самых перил."
     dv "Да, это то самое место."
@@ -2153,7 +2156,7 @@ label alt_day1_alt_A:
     extend ", устремился вниз."
     "Первая ступень унижения."
     "С крыши тут же донёсся жизнерадостный смех, и рядом со мной приземлилась она."
-    scene bg ext_boathouse_day at zenterleft
+    scene bg ext_boathouse_alt_day_7dl at zenterleft
     show dv normal pioneer2 at cleft
     with dissolve
     play music music_list["doomed_to_be_defeated"] fadein 0
@@ -2201,7 +2204,7 @@ label alt_day1_alt_A:
                 pos (747,250)
         with Shake((0, 0, 0, 0), 2.0, dist=50)
         $ renpy.pause(2, hard=True)
-        scene bg ext_boathouse_day with flash
+        scene bg ext_boathouse_alt_day_7dl with flash
     
         me "И не подходи ко мне больше."
         show dv surprise pioneer2 far with dspr
@@ -2256,12 +2259,12 @@ label alt_day1_alt_A:
         "Наконец, тело вспомнило как шевелиться, а лёгкие – как дышать."
         "И, стараясь сохранить остатки собственного достоинства, я поднялся."
         window hide
-        scene bg ext_boathouse_day with dissolve
+        scene bg ext_boathouse_alt_day_7dl with dissolve
     
     else:
         "Девушка стояла и улыбалась мне, будто ожидая, что я её сейчас похвалю за невероятно смешную шутку."
     if herc:
-        scene bg ext_boathouse_day at zenterright
+        scene bg ext_boathouse_alt_day_7dl at zenterright
         show dv laugh pioneer2 at cright
         with dissolve
         menu:
@@ -2352,7 +2355,7 @@ label alt_day1_alt_A:
     show sl angry pioneer at left with dspr
     "Алиса стремительно отняла руки и спрятала их за спиной."
     window hide
-    scene expression Noon("bg ext_boathouse_day") at zenterright
+    scene expression Noon("bg ext_boathouse_alt_day_7dl") at zenterright
     show sl smile pioneer at right
     with dissolve
     show name_sl with flash:
@@ -9039,6 +9042,7 @@ label alt_day2_inmusic:
         me "Что именно?"
         mi "Ну… Если вкратце, то браслет-косичку. Она для меня довольно много значит."
         me "Кумухимо?"
+        show me shy pioneer with dspr
         mi "А ты и такие вещи знаешь?"
         "Как-то по-новому посмотрела на меня японка."
         mi "Да, его. Ты что-то знаешь?"
@@ -11934,16 +11938,18 @@ label alt_day2_grand_escape:
     "Я похолодел. {w}Нет, нет-нет-нет."
     "И вообще, транссиб выглядит иначе. Он фирмовый."
     "А это просто обычный… да… простой. Локальный, можно сказать, маршрут. Не знаю, там, например, возят уголь из шахт в кочегарки. Или ещё что…"
-    hide us
-    "Убаюканный перестуком колёс, я сам не заметил как уснул."
+    "Или... сахар, во!"
     window hide
+    hide us
+    with fade2
+    "Убаюканный перестуком колёс, я сам не заметил как уснул."
     show blink with dissolve
     $ renpy.pause(3)
     stop music
     play music music_list["orchid"] fadein 7
 
     "Разбудил меня голос Ольги Дмитриевны:"
-    scene cg d3_us_library_4
+    scene cg d3_us_library_4 with dissolve
     mt "Семён…"
     mt "Мне мало было за вас краснеть в столовой, вы теперь ещё и сбежать придумали?!"
     dv "Ишь, милуются, голубки."
@@ -13111,6 +13117,15 @@ label alt_day2_supper:
     play ambience ambience_dining_hall_full
     play music music_list["smooth_machine"] fadein 3
     "Поскольку турнир занял довольно много времени, Ольга Дмитриевна объявила, что все остаются тут же, на ужин."
+    if alt_day2_f1 == 5:
+        "Ульяна начала было кричать и возмущаться, что без призов ужинать не будет."
+        "Но её быстро успокоили, пообещав раздачу после ужина."
+        show mt angry pioneer with dissolve
+        mt "И то, только тем, кто будет себя хорошо вести!"
+        "Заявила вожатая."
+        mt "Тем, кто будет безобразничать не достанется ничего!"
+        "Ульяна нахмурилась, но неохотно кивнула и заняла место за столом."
+        "Несколько секунд поизучав её, вожатая, наконец махнула рукой, подзывая дежурных и добровольцев."
     "Славя, Женя и ещё несколько девочек пошли на кухню за едой."
     "А Электроник с Шуриком и кучей малышей принялись расставлять столы на их законные места."
     window hide
@@ -18099,21 +18114,26 @@ label alt_day3_bf_duty:
     voice "Ох, вы уже справились?"
     "Донеслось с кухни."
     voice "Ладненько! А у нас как раз машинка заканчивает. Вы проходите."
-    show us normal sport
+    show us normal sport with dspr
     us "Вы проходите!"
     "Передразнила Ульянка. Получилось неожиданно смешно."
     "Сама кухня тоже уже блестела — видимо, детей сюда не пускали, убирались собственными силами."
+    play ambience ambience_elevator fadein 2
     "Огромные плиты потрескивали, остывая, в дальней комнате — судя по обилию кранов, посудомойной — уже сохли котлы, а большинство работников ушли."
     "Осталась только та самая тётка-повар, имя которой я спросить забыл, а сейчас уже и вовсе неловко было спрашивать."
     us "Что это за гул?"
     "Спросила Ульянка, невзначай  прячась мне за спину."
     voice "Это машинка наша работает, не бойтесь."
+    window hide
+    play sound sfx_open_door_1
+    pause(1)
+    scene bg int_potato_storage_7dl with dissolve
     "С этими словами тётка отперла дверь, и нашему взгляду явилось металлическое чудовище, лязгающее пастью и вибрирующее так, будто улетит сейчас!"
     voice "Картофелечистка."
     "Гордо сказала провожатая."
     voice "Одна из передовых."
     us "А мы что тут делаем тогда?"
-    show us sad sport
+    show us sad sport with dspr
     me "Мы с тобой будем на глазки охотиться."
     me "Потому что «передовая картофелечистка» этому не обучена."
     "Усмехнулся я."
@@ -18122,12 +18142,13 @@ label alt_day3_bf_duty:
     voice "Малая пусть садится сюда, здесь ей будет удобно. Тебе я табуретку или ящик какой сейчас соображу."
     voice "Ножи на столе, наливайте один из котлов на треть водой и работайте."
     voice "Когда закончите — скажите, я зайду и приму работу. Всё понятно?"
-    show us smile sport
+    show us smile sport with dspr
     us "Так точно, тётя повар!"
     voice "Не просто повар, но — шеф-повар! Скоро буду, мальчик, можешь пока стоя поработать. Если хочешь."
     "Она вышла, оставляя нас с Ульяной наедине."
     me "Ну-ка, расскажи, приходилось чистить картошку?"
-    show us dontlike sport
+    stop ambience
+    show us dontlike sport with dspr
     us "Ты это серьёзно? Мне уже четырнадцать!"
     me "Не вижу связи. Я же не про водку или сигареты спрашиваю…"
     "Я задумался, как бы это выразиться яснее."
@@ -23010,6 +23031,7 @@ label alt_day3_eventAf_dining_hall:
             hide mt
             "Она скрылась из виду, а через пять минут, уложив инвентарь обратно на крюки, за ней последовал и я."
             "Есть хотелось страшно!"
+            stop music fadeout 3
             jump alt_day3_supper
     stop music fadeout 3
     window hide
@@ -24206,6 +24228,7 @@ label alt_day3_supper:
     $ alt_chapter(3, u"Ужин")
     scene bg int_dining_hall_people_day with fade2
     play ambience ambience_dining_hall_full fadein 2
+    play music music_list["smooth_machine"] fadein 3
     "Столовая была полна народа."
     if alt_day3_mi_invite2:
         "Рядом с Мику мгновенно уселась жужелица, и начала что-то выговаривать ей."
@@ -26110,7 +26133,7 @@ label alt_day3_dance_dance2:
         scene anim_square_party with dissolve
         play music music_list["raindrops"] fadein 3
         menu:
-            "Танцевать с Алисой":
+            "Танцевать с Алисой" if alt_day3_dancing != 32:
                 call alt_day3_lp_checker(alt_dater = dv)
                 if alt_day3_dv_dj:
                     if alt_day3_dancing == 3:
@@ -26173,6 +26196,7 @@ label alt_day3_dance_dance2:
                         "Потом рассмеялась и, воздев голову, прошествовала к пульту — подходило время следующей песни."
                         hide dv with dissolve
                 else:
+                    $ alt_day3_dancing = 32
                     "Алиска так и не пришла. Похоже, придётся мне либо искать другую кандидатуру, либо сычевать."
                     jump alt_day3_choose3
             "Танцевать со Славей":
@@ -26389,7 +26413,8 @@ label alt_day3_dance_dance2:
                         "То, что возбуждает и сводит с ума любовников всего мира — если, разумеется, они успели принять душ прежде, чем перейти непосредственно к действиям."
                         "Впрочем, ничего гарантировать не могу — мои знания на этот счёт в большинстве своём чисто теоретические."
                     hide un with dissolve
-                else:
+                elif alt_day3_dancing == 1:
+                    $ alt_day3_dancing = 12
                     "Я думал пригласить Лену ещё раз, но как ни выглядывал её — нигде не мог найти. Нигде."
                     th "Она, помнится, что-то про медпункт говорила. Неужели уже ушла?"
                     "Пришлось смириться и поискать себе другую кандидатуру."
@@ -26827,6 +26852,7 @@ label alt_day3_mt_scare:
     "Я несколько раз поскользнулся на вечерней росе и чуть не заработал себе асфальтовую болезнь — и спасся ценой ссаженных ладоней и перемазанной травой рубашки."
     window hide
     scene bg ext_boathouse_night with dissolve
+    play ambience ambience_boat_station_night fadein 3
     play sound breath fadein 9
     "Выскочив на пристань, я остановился, переводя дух."
     "Ульянка уже упрыгала куда-то в темноте, а я побрёл по мосткам к дальнему углу понтонов — это место я облюбовал ещё в первый день."

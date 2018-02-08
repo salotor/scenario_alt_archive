@@ -5428,7 +5428,7 @@ label alt_day5_mi_7dl_firecamp:
     window hide
     stop ambience fadeout 2
     $ persistent.sprite_time = "sunset"
-    scene bg ext_path_sunset
+    scene bg ext_backroad_day_7dl
     show mt sad pioneer
     with dissolve
     play ambience ambience_forest_evening fadein 3
@@ -11419,7 +11419,7 @@ label alt_day7_mi_7dl_postscriptum:
     "Я жутко стеснялся, но был столь же жутко горд — как же, Она разговаривает именно со мной, а не с кем-нибудь другим!"
     "А не… Этот день был только наш — мы ушли ото всех, конец мая, я привык много ходить, девушка привыкла много двигаться, мы обошли всю Сосновую Поляну и не устали — ни от прогулки, ни друг от друга."
     window hide
-    scene bg ext_busstop_sun_7d with fade
+    scene bg ext_busstop_sun_7dl with fade
     mi "Я теперь буду приезжать."
     "Целуя меня в лоб, пообещала Она."
     mi "Я тебя нашла. Я буду."
