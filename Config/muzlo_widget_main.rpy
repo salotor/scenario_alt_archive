@@ -1,5 +1,5 @@
 init:
-    $ filters["muzlo"] = u"Музыка в 7ДЛ"
+    $ filters["muzlo"] = u"Виджет отображения музыки 7ДЛ"
 
 python early:
     def muzlo():
@@ -24,21 +24,22 @@ python early:
                     ui.text(check_muzlo(m), style="button_text", size=13)
                 elif m in music_list_7dl.values():
                     ui.text(check_muzlo_7dl(m), style="button_text", size=13)
-                elif m not in music_list_7dl.values():
+                elif m not in music_list_7dl.values() and m not in music_list.values():
                     if (m == music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"][0] or 
                         m == music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"][1] or 
                             m == music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"][2]):
                                 ui.text("%s" % "С. Ейбог feat. Liru - Everlasting Summer", style="button_text", size=13)
-                    elif (m == music_list_7dl["KPM Music - Bass Renaissaince"][0] or 
+                    elif (m == music_list_7dl["KPM Music - Bass Renaissaince"][0] or
                         m == music_list_7dl["KPM Music - Bass Renaissaince"][1]):
                             ui.text("%s" % "KPM Music - Bass Renaissaince", style="button_text", size=13)
-                elif m == None:
-                    get_mus_7dl('ambience')
-                    if a == "scenario_alt/Sound/ambience/ambience_safe.ogg":
-                        ui.text("%s" % "Mikko Tarmia - Back Hall (Amnesia OST)", style="button_text", size=13)
-                    else: 
-                        ui.text("%s" % "Нет музыки", style="button_text", size=13)
-                else:
-                    ui.text("%s" % "Неизвестный трек", style="button_text", size=13)
+                    elif m == None:
+                        get_mus_7dl('ambience')
+                        if m == "../441054187/scenario_alt/Sound/ambience/ambience_safe.ogg":
+                            ui.text("%s" % "Mikko Tarmia - Back Hall (Amnesia OST)", style="button_text", size=13)
+                        else: 
+                            ui.text("%s" % "Нет музыки", style="button_text", size=13)
+                    else:
+                        ui.text("%s" % "Неизвестный трек", style="button_text", size=13)
+                
         config.overlay_functions.append(editoverlay)
 
