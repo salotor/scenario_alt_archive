@@ -16,10 +16,10 @@
     #Анимка спичек
     image match_lights: 
         contains: 
-            'scenario_alt/DLC/UVAO/Pics/matches_tone.png' # оранжевенькая тонировка путь 1
+            get_image_7dl('matches_tone.png') # оранжевенькая тонировка путь 1
             additive 1.0
         contains: 
-            'scenario_alt/DLC/UVAO/Pics/matches_lightmask.png' # путь2
+            get_image_7dl('matches_lightmask.png') # путь2
             xalign 0.5 yalign 1.0 
             function random_zoom # дрожание огонька
             repeat
@@ -32,10 +32,10 @@
                 contains: 
                     'bg int_mine_crossroad' with fade2 
                 contains: 
-                    'scenario_alt/DLC/UVAO/Pics/matches_tone.png' #путь3
+                    get_image_7dl('matches_tone.png') #путь3
                     additive 1.0
                 contains: 
-                    'scenario_alt/DLC/UVAO/Pics/matches_lightmask.png' #путь4
+                    get_image_7dl('matches_lightmask.png') #путь4
                     xalign 0.5 yalign 1.0 
                     function random_zoom
                     repeat            
@@ -45,14 +45,13 @@
             repeat
                    
 #cg
-    image cg d4_uv_pioner_lib_hiding_7dl = get_image_uvao_7dl("cg/d4_uv_pioner_lib_hiding_7dl.jpg")
-    image cg d5_uv_photo_city_7dl = get_image_uvao_7dl("cg/d5_uv_photo_city_7dl.jpg")
-    image cg d5_uv_photo_galaxy_7dl = get_image_uvao_7dl("cg/d5_uv_photo_galaxy_7dl.jpg")
-    image cg d4_uv_bunker_hentai_7dl = get_image_uvao_7dl("cg/d4_uv_bunker_hentai_7dl.jpg")
-    # Кошочка авторства Орики
-    image uv_new_hentai1 = "images/1080/cg/epilogue_uv_hentai_1.jpg"
-    image uv_new_hentai2 = "images/1080/cg/epilogue_uv_hentai_2.jpg"
-
+    image cg d4_uv_pioner_lib_hiding_7dl = get_image_7dl("cg/d4_uv_pioner_lib_hiding_7dl.jpg")
+    image cg d5_uv_photo_city_7dl = get_image_7dl("cg/d5_uv_photo_city_7dl.jpg")
+    image cg d5_uv_photo_galaxy_7dl = get_image_7dl("cg/d5_uv_photo_galaxy_7dl.jpg")
+    image cg d5_uv_bunker_hentai_7dl = get_image_7dl("cg/d5_uv_bunker_hentai_7dl.jpg")
+    # Кошочка авторства Орики 
+    image cg d5_uv_new_hentai1_7dl = get_image_7dl("cg/d5_epilogue_uv_hentai_1_7dl.jpg")
+    image cg d5_uv_new_hentai2_7dl = get_image_7dl("cg/d5_epilogue_uv_hentai_2_7dl.jpg")
     
 #sounds
     $ phone_vibro = get_sfx_uvao_7dl("vibration-smartphone.ogg")
