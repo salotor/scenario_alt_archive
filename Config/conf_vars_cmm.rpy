@@ -22,42 +22,76 @@ init 2:
     $ timeskip12 = "Ты потерялся, малыш?"
     $ alt_credits_text = "Команда Soviet Games (IIchan Eroge Team) благодарит вас за время, уделённое игре!\n\nБлагодарности:\n\nPyTom'у за движок Ren'Py.\n\nСайту freesounds.org за бесплатные звуки.\n\nСайтам iichan.hk и 2ch.hk.\n\nВсем, кто помогал работать над игрой.\n\nВсем, кто нас поддерживал все эти годы, ждал и верил!\n\n7ДЛ\n\nBeta-test:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor.\n\nОСОБЫЕ БЛАГОДАРНОСТИ:\n\nMannych - за колоритного физрука!\n\nEldhenn - за адаптацию игры в Steam.\n\nPeregarrett, Chess - за кошко-рут.\n\nЛенофаг Простой, Ravsii - за идеи и помощь их реализации.\n\nNuttyprof, openplace - за новую карту лагеря.\n\nМакс Смолев(sorasora) - за новые cg-сценки и стиль БЛ.\n\nАлексей - за фоны и модели.\n\nGoodbyeNona - за супер-фоны!\n\nRINA-SAN, ☆ FairyApple ☆ - за вдохновение и неконтролируемые приступы позитива!\n\nВсем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ.\n"
     
+    # custom speakers
+    
     $ colors['ba'] = {'night': (88, 18, 67, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
+    $ names['ba'] = u'Физрук'
     $ store.names_list.append('ba')
     
     $ colors['sak'] = {'night': (44, 12, 67, 255), 'sunset': (66, 18, 100, 255), 'day': (176, 10, 192, 255), 'prolog': (75, 34, 100, 255)}
+    $ names['sak'] = u'Японец'
     $ store.names_list.append('sak')
     
     $ colors['ai'] = {'night': (44, 12, 67, 255), 'sunset': (66, 18, 100, 255), 'day': (176, 10, 192, 255), 'prolog': (34, 150, 100, 255)}
+    $ names['ai'] = u'Мужчина'    
     $ store.names_list.append('ai')
     
     #Камео мисс Селезнёвой
     $ colors['ase'] = {'night': (97, 10, 10, 255), 'sunset': (137, 14, 14, 255), 'day': (236, 66, 66, 255), 'prolog': (137, 14, 14, 255)}
+    $ names['ase'] = u'Алиса'
     $ store.names_list.append('ase')
     
     $ colors['we'] = {'night': (67, 23, 111, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
+    $ names['we'] = u'Все вместе'
     $ store.names_list.append('we')
     
     $ colors['ml'] = {'night': (20, 69, 68, 255), 'sunset': (32, 106, 104, 255), 'day': (74, 200, 147, 255), 'prolog': (50, 20, 80, 255)}
+    $ names['ml'] = u'Мальчик'
     $ store.names_list.append('ml')
     
     $ colors['ml2'] = {'night': (20, 46, 68, 255), 'sunset': (32, 73, 104, 255), 'day': (74, 170, 147, 255), 'prolog': (32, 75, 106, 255)}
+    $ names['ml2'] = u'Мальчик2'
     $ store.names_list.append('ml2')
     
     $ colors['ml3'] = {'night': (30, 46, 68, 255), 'sunset': (48, 73, 104, 255), 'day': (107, 170, 147, 255), 'prolog': (48, 75, 106, 255)}
+    $ names['ml3'] = u'Мальчик3'
     $ store.names_list.append('ml3')
     
     $ colors['voice1'] = {'night': (159, 8, 73, 255), 'sunset': (196, 7, 92, 255), 'day': (255, 136, 192, 255), 'prolog': (196, 7, 124, 255)}
+    $ names['voice1'] = u'Продавщица'
     $ store.names_list.append('voice1')
     
     $ colors['bb'] = {'night': (159, 8, 73, 255), 'sunset': (196, 7, 92, 255), 'day': (255, 136, 192, 255), 'prolog': (196, 7, 124, 255)}
+    $ names['bb'] = u'Начальник'
     $ store.names_list.append('bb')
     
     $ colors['icq'] = {'night': (6, 62, 14, 255), 'sunset': (10, 91, 20, 255), 'day': (10, 204, 10, 255), 'prolog': (10, 91, 30, 255)}
+    $ names['icq'] = u'Собеседник'
     $ store.names_list.append('icq')
     #Резерв
     #$ colors['ann'] = {'night': (15, 159, 14, 255), 'sunset': (10, 217, 16, 255), 'day': (170, 254, 160, 255), 'prolog': (10, 215, 30, 255)}
     #$ store.names_list.append('ann')
+    
+    # steam. недостающие дефайны, пусть пока будут тут
+    $ colors['voices'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (192, 192, 192, 255), 'prolog': (192, 192, 192, 255)}
+    $ names['voices'] = u'Голоса'
+    $ store.names_list.append('voices')
+    
+    $ colors['ai'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (192, 192, 192, 255), 'prolog': (192, 192, 192, 255)}
+    $ names['ai'] = u'Говоров'
+    $ store.names_list.append('ai')
+    
+    $ colors['kids'] = {'night': (235, 120, 131, 255), 'sunset': (235, 120, 131, 255), 'day': (235, 120, 131, 255), 'prolog': (235, 120, 131, 255)}
+    $ names['kids'] = u'Малышня'
+    $ store.names_list.append('kids')
+    
+    $ colors['dy'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (56, 90, 107, 255), 'prolog': (192, 192, 192, 255)}
+    $ names['dy'] = u'Голос из динамика'
+    $ store.names_list.append('dy')
+    $ reload_names()
+    
+    # steam. сохраняем все существующие дескрипторы персонажей (возможно включая из других модов)
+    $ preserve_names()
     
     $ lp_mi = 0
     $ lp_sl = 0

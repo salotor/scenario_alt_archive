@@ -155,44 +155,44 @@
         repeat
         
     image anim_intro_recall:
-        "images/1080/bg/semen_room.jpg"
+        "images/bg/semen_room.jpg"
         pause 0.1
-        "images/1080/bg/semen_room_window.jpg"
+        "images/bg/semen_room_window.jpg"
         pause 0.1
-        "images/1080/anim/intro_1.jpg"
+        "images/anim/intro_1.jpg"
         pause 0.1
-        "images/1080/anim/intro_2.jpg"
+        "images/anim/intro_2.jpg"
         pause 0.1
-        "images/1080/anim/intro_3.jpg"
+        "images/anim/intro_3.jpg"
         pause 0.1
-        "images/1080/anim/intro_4.jpg"
+        "images/anim/intro_4.jpg"
         pause 0.1
-        "images/1080/anim/intro_5.jpg"
+        "images/anim/intro_5.jpg"
         pause 0.1
-        "images/1080/anim/intro_6.jpg"
+        "images/anim/intro_6.jpg"
         pause 0.1
-        "images/1080/anim/intro_8.jpg"
+        "images/anim/intro_8.jpg"
         pause 0.1
-        "images/1080/anim/prolog_2.jpg"
+        "images/anim/prolog_2.jpg"
         pause 0.1
-        "images/1080/anim/prolog_1.jpg"
+        "images/anim/prolog_1.jpg"
         pause 0.1
-        "images/1080/anim/intro_9.jpg"
+        "images/anim/intro_9.jpg"
         pause 0.1
-        "images/1080/anim/intro_10.jpg"
+        "images/anim/intro_10.jpg"
         pause 0.1
-        "images/1080/anim/intro_11.jpg"
+        "images/anim/intro_11.jpg"
         pause 0.1
-        "images/1080/anim/intro_13.jpg"
+        "images/anim/intro_13.jpg"
         pause 0.1
-        "images/1080/bg/intro_xx.jpg"
+        "images/bg/intro_xx.jpg"
         pause 0.1
         repeat
         
     image anim_square_party:
-        "images/1080/bg/ext_square_night_party.jpg" with Dissolve(.5) 
+        "images/bg/ext_square_night_party.jpg" with Dissolve(.5) 
         pause 0.6
-        "images/1080/bg/ext_square_night_party2.jpg" with Dissolve(.5) 
+        "images/bg/ext_square_night_party2.jpg" with Dissolve(.5) 
         pause 0.6
         repeat
         

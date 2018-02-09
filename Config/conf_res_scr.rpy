@@ -156,9 +156,41 @@ init -2 python:
     def meet(who, name):
         set_name(who,name)
 
-    def set_name(who,name):
-            gl = globals()
-            gl[who+"_name"] = name
+    def set_name(who, name):
+        # как вариант: можно сохранять имена под префиксом и при загрузке сейва 7дл их вытаскивать оттуда, без префикса        
+        #bakname = "bakname_" + who
+        global store
+        
+        store.names[who] = name
+        gl = globals()
+        gl[who + "_name"] = store.names[who]
+    
+    def preserve_names():
+        # steam. в общем нашёл я метод обойтись без этого мерзкого трюка с кастомными именами и mass replace.
+        # эта функция вызывается по окончании загрузки 7ДЛ (но ДО момента переименования персонажей) и записывает существующие данные дескрипторов.
+        global store
+        global names_list_bak
+        global names_bak
+        global colors_bak
+        
+        # Кодеры! Ахтунг! При запуске мода на любой ноу-стим версии БЛ, использующей RenPy ДО версии 6.99.9, здесь будет вылет.
+        # Чтобы его не было, используйте старый метод rollback (см. класс RevertableList) или вообще не используйте откат имён.
+        
+        names_list_bak = store.names_list._compress(store.names_list._clean())
+        names_bak = store.names._compress(store.names._clean())
+        colors_bak = store.colors._compress(store.colors._clean())
+
+    def revert_names():
+        # Откатываем все кастомные имена, чтобы они не появлялись при загрузке других модов в случае если до этого был загружен 7ДЛ
+        global store
+        global names_list_bak
+        global names_bak
+        global colors_bak
+        
+        store.names_list._rollback(names_list_bak)
+        store.names._rollback(names_bak)
+        store.colors._rollback(colors_bak)
+        
 init -265 python: 
     #Пресеты с возможностью настройки
     def Noir(id, brightness = -0.4, tint_r = 0.2126, tint_g = 0.7152, tint_b = 0.0722, saturation = 0.5):
@@ -471,7 +503,7 @@ init -5 python:
             subargs = list()
             for arg in argv:
                 if isinstance(arg, str): #просто file
-                    subarg = (_default_sprites_path, arg)
+                    subarg = (default_7dl_path + 'Pics/Sprites/', arg)
                 else: # (path, file)
                     subarg = arg;
                 subargs.append( subarg[0] + '/' + dst +'/' + subarg[1] ) # 'images/1080/sprites/normal/dv/dv_1_coat.png'
@@ -486,6 +518,8 @@ init 52 python:
             data["chibi"] = None
         
 init -1001 python:
+    # steam: здесь указатель на папку с модом содержащий айдишник
+    default_7dl_path = '../441054187/scenario_alt/'
     def disable_all_chibi():
         global global_zones
         for name,data in global_zones.iteritems():
@@ -493,21 +527,27 @@ init -1001 python:
             
 init -999 python:
     def get_image_7dl(file):
-        return "scenario_alt/Pics/%s" % (file)
+        return default_7dl_path+"Pics/%s" % (file)
+    # steam: pics_extra importers 
+    def get_image_extra7dl(file):
+        return default_7dl_path+"pics_extra/%s" % (file)
+    def get_sprite_extra7dl(file):
+        return get_image_extra7dl("sprites/%s" % (file))
         
 init -998 python:
     def get_sfx_7dl(file):
-        return "scenario_alt/Sound/sfx/%s" % (file)
+        return default_7dl_path+"Sound/sfx/%s" % (file)
     def get_ambience_7dl(file):
-        return "scenario_alt/Sound/ambience/%s" % (file)
+        return default_7dl_path+"Sound/ambience/%s" % (file)
     def get_music_7dl(file):
-        return "scenario_alt/Sound/music/%s" % (file)
+        return default_7dl_path+"Sound/music/%s" % (file)
         
 init -997 python:
     def get_sprite_7dl(file):
-        return "scenario_alt/Pics/sprites/%s" % (file)
+        return default_7dl_path+"Pics/sprites/%s" % (file)
+        # ori - оригинал
     def get_sprite_ori(file):
-        return "images/1080/sprites/%s" % (file)
+        return "images/sprites/%s" % (file)
         
     
     store.map_chibi = {
