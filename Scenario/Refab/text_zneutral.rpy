@@ -5559,7 +5559,7 @@ label alt_day5_neu_arrest:
     play ambience ambience_rain fadein 3
     play music to_the_sunrise fadein 3
     scene bg ext_clubs_sunset_rain_7dl
-    show mt at cleft with zenterleft
+    show mt at zenterleft
     with dissolve
     mt "Катерина обнаружила их вчера перед отбоем, возвращающимися из-за территории лагеря."
     "Сообщила девушка, махнув рукой в сторону крыльца, на котором я приметил знакомые уже фигурки."
@@ -5567,7 +5567,7 @@ label alt_day5_neu_arrest:
     "Отнюдь."
     me "Привет."
     show mt smile pioneer at left with moveinleft
-    show ml dontcare pioneer at right with zenterright
+    show ml dontcare pioneer at zenterright
     with dissolve
     "Даня молча помахал мне рукой, когда мы, поднявшись на крылечко, немного потеснили их тёплую компанию."
     mt "Это хорошо, что вы знакомы. Так вот, ситуация такая: их уже не первый раз ловят сбегающими, но правила у нас жёсткие."
@@ -5868,7 +5868,7 @@ label alt_day5_neu_arrest:
     pause(1)
     "Наш разговор прервал сигнал горна, несущийся из раструба прямо над крыльцом, и появившаяся Ольга Дмитриевна."
     scene bg int_clubs_male_day
-    show mt smile pioneer with zentercenter
+    show mt smile pioneer at zentercenter
     with dissolve
     mt "По случаю обеда арестантам объявляется досрочная амнистия!"
     "Весело прокричала она, заглянув в дверь."
@@ -6993,7 +6993,7 @@ label alt_day5_neu_us_career:
     scene expression Desat1("bg ext_square_day") with dissolve
     "А дома…"
     if loki:
-        "Дома музыка в наушниках, крепко забитая трубка и виски за пятьсот рублей из ближайшей «Дикси»".
+        "Дома музыка в наушниках, крепко забитая трубка и виски за пятьсот рублей из ближайшей «Дикси»."
         "Просто потому, что иначе засыпать уже не получается."
         "Лет восемь как не получается."
         "Что дальше?"
