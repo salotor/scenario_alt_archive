@@ -10914,7 +10914,7 @@ label alt_day2_dubstep:
             "Я усмехнулся и отключил микрофон."
             window hide
             $ disable_current_zone_alt1()
-            jump alt_day2_map
+            jump alt_day2_dinner
 
 label alt_day2_event_square:
     $ persistent.sprite_time = "day"
@@ -17714,6 +17714,10 @@ label alt_day3_bf:
                 "Она вдруг резко засобиралась и, подхватив поднос, встала из-за стола."
                 "Я поднялся вслед за ней и вышел из столовой."
                 window hide
+                if alt_day3_duty:
+                    jump alt_day3_bf_duty
+                else:
+                    jump alt_day3_map_prepare
         "Со Славей" if alt_day2_sl_guilty == 2:
             label alt_day3_sl_bf:
                 call alt_day3_lp_checker(alt_dater = sl)
@@ -18064,12 +18068,20 @@ label alt_day3_bf:
                 "Она ещё раз ослепительно улыбнулась и поднялась из-за стола."
                 "Я поднялся вслед за ней и вышел из столовой."
                 window hide
+                if alt_day3_duty:
+                    jump alt_day3_bf_duty
+                else:
+                    jump alt_day3_map_prepare
         "Одному":
             scene expression Noir("bg int_dining_hall_people_sunset", brightness = -0.4, saturation = -0.4) at zentercenter
             "Решив, что глупости глупостями, а поглощать пищу следует в спокойной атмосфере, я решил есть один."
             "За несколько минут моя тарелка опустела — похоже, что я здорово проголодался за ночь!"
             window hide
-    stop ambience fadeout 3
+            stop ambience fadeout 3
+            if alt_day3_duty:
+                jump alt_day3_bf_duty
+            else:
+                jump alt_day3_map_prepare
     
 label alt_day3_bf_duty:
     scene bg int_dining_hall_day with dissolve

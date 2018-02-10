@@ -112,7 +112,7 @@ label alt_day6_dv_7dl_start:
         call alt_day6_dv_7dl_sleeptime
         pause(1)
     else: 
-        if alt_day1_sl_keys_took != 0:
+        if alt_day1_sl_keys_took == 1 or alt_day1_sl_keys_took == 3 or alt_day4_dv_7dl_extra_key:
             if alt_day6_dv_7dl_sl_route:
                 if alt_day4_dv_7dl_extra_key:
                     $ alt_day6_dv_7dl_key_hentai = 100
