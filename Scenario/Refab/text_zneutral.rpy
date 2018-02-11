@@ -5559,7 +5559,7 @@ label alt_day5_neu_arrest:
     play ambience ambience_rain fadein 3
     play music to_the_sunrise fadein 3
     scene bg ext_clubs_sunset_rain_7dl
-    show mt at zenterleft
+    show mt normal pioneer at zenterleft
     with dissolve
     mt "Катерина обнаружила их вчера перед отбоем, возвращающимися из-за территории лагеря."
     "Сообщила девушка, махнув рукой в сторону крыльца, на котором я приметил знакомые уже фигурки."
