@@ -4688,7 +4688,7 @@ label alt_day4_neu_map_dining_hall:
     window hide
     return
     
-label alt_day4_neu_sleeptime: #s нужна ветка для неудачника - самобичевателя. Нафига она там нужна?
+label alt_day4_neu_sleeptime: #s нужна ветка для неудачника - самобичевателя. Нафига она там нужна? Потому что слишком резкая смена настроения после фейла с Огоньками: буквально только что Семён думал, что он - низачем, он не может себя называть человеком, а тут радуется тому, что "домой" пришёл.
     if not alt_day4_neu_mt_diary:
         $ night_time ()
         $ persistent.sprite_time = "night"
