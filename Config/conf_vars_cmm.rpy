@@ -244,4 +244,6 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_us_bugs = 0
     $ alt_day3_us_invite = False
     $ alt_day3_uvao_spotted = False
+    $ alt_day3_ladder_phys = 0
+    $ alt_day3_ladder_mt = 0
     return

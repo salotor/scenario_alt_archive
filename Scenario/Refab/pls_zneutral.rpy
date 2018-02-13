@@ -84,6 +84,9 @@ label alt_day4_neu_begin:
             call alt_day4_neu_aid_sl
             pause(1)
             if alt_day4_neu_transit == 2:
+                $ mt_pt = 0
+                $ d3_pt = 0
+                $ us_pt = 0
                 jump alt_day4_sl_cl_shurik
         else:
             call alt_day4_neu_aid_generic
@@ -119,6 +122,9 @@ label alt_day4_neu_begin:
             pause(1)
             if alt_day4_neu_transit == 6:
                 call alt_day4_neu_mt
+                pause(1)
+            elif alt_day4_neu_transit == 5:
+                call alt_day4_neu_us
                 pause(1)
     call alt_day4_neu_dinner #На обеде подводим итоги
     pause(1)
@@ -193,7 +199,7 @@ label alt_day5_neu_begin:
         if alt_day4_neu_us_pixies == 3:
             $ routetag = "us7dl_good"
             jump alt_day6_us_px_start
-        elif us_pt > 4:
+        elif us_pt > 4: # по этой ветке максимум 4 пт набралось
             $ routetag = "us7dl_bad"
             jump alt_day6_us_7dl_start_plain
     else:
@@ -218,7 +224,7 @@ label alt_day5_neu_begin:
             elif alt_day5_mt_7dl_hentai:
                 call alt_day5_neu_mt_tea_party
             jump alt_day6_mt_7dl_start
-        elif us_pt > 4:
+        elif us_pt > 4: # а сюда теперь сложновато попасть - нужен утренний ивент 4 дня не с Ульяной, чтобы потом при наборе пт не улететь на ветку огоньков, либо недобор ЛП (фейл переодевания, недобор одного пт)/ отсутствие побега во 2 дне, чтобы зафейлить огоньки на встрече с гвардией. Первый вариант - чистый подгон действий под требуемый результат, второй - более реальный, но тоже требует подготовки условий заранее.
             $ routetag = "us7dl_bad"
             jump alt_day6_us_7dl_start_plain
 jump alt_day6_neu_begin

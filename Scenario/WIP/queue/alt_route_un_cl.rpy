@@ -17,7 +17,7 @@
     window hide
     return
  
- label alt_day4_un_cl_dinner:
+label alt_day4_un_cl_dinner:
     $ persistent.sprite_time = "day"
     $ day_time()
     $ alt_chapter(4, u"Лена. Обед")
