@@ -188,10 +188,14 @@ label alt_day5_neu_begin:
         else:
             call alt_day5_neu_us_hungry
             pause(1)
-            call alt_day5_neu_us_cleaning
-            pause(1)
         call alt_day5_neu_us_sleetptime
         pause(1)
+        if alt_day4_neu_us_pixies == 3:
+            $ routetag = "us7dl_good"
+            jump alt_day6_us_px_start
+        elif us_pt > 4:
+            $ routetag = "us7dl_bad"
+            jump alt_day6_us_7dl_start_plain
     else:
         call alt_day5_neu_mi_estrade
         pause(1)
@@ -214,10 +218,7 @@ label alt_day5_neu_begin:
             elif alt_day5_mt_7dl_hentai:
                 call alt_day5_neu_mt_tea_party
             jump alt_day6_mt_7dl_start
-        elif alt_day4_neu_us_pixies == 3:
-            $ routetag = "us7dl_good"
-            jump alt_day6_us_7dl_start_pixies
-        elif us_pt > 5:
+        elif us_pt > 4:
             $ routetag = "us7dl_bad"
             jump alt_day6_us_7dl_start_plain
 jump alt_day6_neu_begin
