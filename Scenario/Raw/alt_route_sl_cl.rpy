@@ -11237,7 +11237,7 @@ label alt_day6_sl_true_route:
         scene black with diam
         pause(1)
         scene bg ext_warehouse_night_7dl
-        show pi normal
+        show pi
         show prologue_dream
         with dissolve
         "В мешке слышно слабое шевеление, а я не могу, не смею рассказать всего, чтобы не повлиять как-то на решение."

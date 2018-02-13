@@ -123,6 +123,9 @@ label alt_day4_neu_begin:
             if alt_day4_neu_transit == 6:
                 call alt_day4_neu_mt
                 pause(1)
+            elif alt_day4_neu_transit == 5:
+                call alt_day4_neu_us
+                pause(1)
     call alt_day4_neu_dinner #На обеде подводим итоги
     pause(1)
     call alt_day4_neu_curl
