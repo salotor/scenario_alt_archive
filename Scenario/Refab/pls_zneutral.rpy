@@ -84,6 +84,9 @@ label alt_day4_neu_begin:
             call alt_day4_neu_aid_sl
             pause(1)
             if alt_day4_neu_transit == 2:
+                $ mt_pt = 0
+                $ d3_pt = 0
+                $ us_pt = 0
                 jump alt_day4_sl_cl_shurik
         else:
             call alt_day4_neu_aid_generic
