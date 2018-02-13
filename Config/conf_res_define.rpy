@@ -862,8 +862,8 @@
     
 #music
 #Новьё
-    $ shib_mono = get_music_7dl("shib_mono.ogg") #Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
-    $ shib_stereo = get_music_7dl("shib_stereo.ogg") #Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
+    $ shib_mono = get_music_7dl("shib_mono.ogg") # Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
+    $ shib_stereo = get_music_7dl("shib_stereo.ogg") # Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
     
     
     $ intro1 = get_music_7dl("intro1.ogg")
@@ -1048,7 +1048,7 @@
     $ youareours = get_music_7dl("youareours.ogg")
     $ youre_not_real = get_music_7dl("youre_not_real.ogg")
     
-#sfx
+# sfx
     $ apple_bite = get_sfx_7dl("apple_bite.ogg")
     $ aunl = get_sfx_7dl("aunl.ogg")
     $ bed_squeak = get_sfx_7dl("bed_squeak.ogg")

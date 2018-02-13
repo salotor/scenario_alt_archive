@@ -54,7 +54,7 @@
     image uv_new_hentai2 = "images/1080/cg/epilogue_uv_hentai_2.jpg"
 
     
-#sounds
+# sounds
     $ phone_vibro = get_sfx_uvao_7dl("vibration-smartphone.ogg")
     $ match_lights = get_sfx_uvao_7dl("lighting-a-match.ogg")
     $ silence = get_sfx_uvao_7dl("silence_4sec.ogg")

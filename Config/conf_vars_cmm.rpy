@@ -102,7 +102,6 @@ label alt_day0_vars: #Переменные нулевого дня
     $ us_pt = 0
 
     $ alt_day_binder = 0
-    $ semen_str = 10
     $ alt_dlc_active = False
     $ herc = False
     $ loki = False
@@ -216,11 +215,6 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_dv_guitar_lesson = False
     $ alt_day3_dv_invite = False
     $ alt_day3_dv_rejected = False
-    $ alt_day3_ladder_phys = 0
-    $ alt_day3_ladder_ph_loser = False
-    $ alt_day3_ladder_mt = 0
-    $ alt_day3_ladder_mt_loser = False
-    $ alt_day3_ladder_us = 0
     $ alt_day3_mi_date = False
     $ alt_day3_mi_dj = False 
     $ alt_day3_mi_event = False

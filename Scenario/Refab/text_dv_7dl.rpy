@@ -13786,12 +13786,10 @@ label alt_day7_dv_7dl_bad_end:
     
     "И проказы мелкой егозы."
     window hide
-    if alt_day_binder != 1 and not alt_day1_sl_conv: #s а оно здесь к чему?
-        scene cg d1_sl_dinner
-    elif alt_day3_duty:
+    if alt_day3_duty:
         scene cg d3_potato_2
     else:
-        scene cg d5_us_ghost_2 #По возможности допилить микро-цгшку со спичечным коробком, в будущем пригодится для УС-рута.
+        scene cg d5_us_ghost_2
     show prologue_dream
     with fade
 

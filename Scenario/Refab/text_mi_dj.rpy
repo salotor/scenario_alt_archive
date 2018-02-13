@@ -452,7 +452,6 @@ label alt_day4_mi_dj_morning:
     scene black
     play music music_list["my_daily_life"]
     if alt_day4_mi_dj_hedg:
-        $ semen_str = semen_str - 1
         voice "Семён! Вставай! Семён!"
         "Кажется, это был тот самый момент."
         "Я вдруг осознал, о, уверяю, осознал в полной мере значение выражения «готов убить ради пары минут сна»."

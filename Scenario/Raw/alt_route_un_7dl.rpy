@@ -4622,8 +4622,8 @@ label alt_day5_un_7dl_breakfast:
                     un "Я твой подвиг по переноске Алисы тоже запечатлела."
                 elif loki:
                     un "Я твою встречу Алисы и Ульяны тоже нарисовала."
-                else:
-                    un "Я вашу беготню с Электроником тоже нарисовала." #s разве не к alt_day1_el_followed относится? видимо, речь идёт о беготне без штанов до склада
+                elif alt_day1_el_followed:
+                    un "Я вашу беготню с Электроником тоже нарисовала."
             else:
                 un "И то, как тебя Славя за руку тащит, я тоже нарисовала!"
         else:
@@ -10302,7 +10302,7 @@ label alt_day7_un_7dl_start:
         if alt_day5_un_7dl_sl_un_washing or alt_day4_un_7dl_dv_us_explosives:
             $ alt_day7_un_7dl_rnm = alt_day7_un_7dl_rnm*1.1
         if alt_day5_un_7dl_sl_un_washing and alt_day4_un_7dl_dv_us_explosives:
-            $ alt_day7_un_7dl_rnm = alt_day7_un_7dl_rnm*1.2 #s коэффициенты умножаются, итого можно получить 1.32 при наличии обоих флагов, не многовато ли?
+            $ alt_day7_un_7dl_rnm = alt_day7_un_7dl_rnm*1.2
         if persistent.mt_7dl_good:
             $ alt_day7_un_7dl_rnm = alt_day7_un_7dl_rnm*0.9
         if alt_day7_un_7dl_rnm <= 75:
