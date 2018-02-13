@@ -11089,7 +11089,7 @@ label alt_day6_sl_true_route:
         dreamgirl "Что хорошего ты сделал в том лагере, в несбыточных, тепличных условиях — аллювии для супергероев всех мастей — о чём сможешь вспомнить и гордиться лет через пять?"
         dreamgirl "Исключая то, что ты закономерно влюбился и теперь ради неё и правда готов горы своротить."
         me "А этого мало?"
-        show pi normal with dissolve
+        show pi with dissolve
         dreamgirl "Да только ведь любовь живёт три года, да и Славя твоя… Не факт что существует."
         dreamgirl "То есть, ты выбрался из болота ради того, чтобы встать в тени Слави. В тени несуществующей девушки, которой тоже иногда хочется сильного мужского под жилеткой и «кто хозяин в доме»."
         if herc:
@@ -11112,7 +11112,7 @@ label alt_day6_sl_true_route:
         dreamgirl "Ты носишь ауру неудачника. Знаешь, как дети, которых постоянно все бьют. Откуда дети знают, кого можно бить, а кого нельзя? Они чувствуют её. "
         window hide
         scene bg semen_room_window with dissolve
-        show pi normal with dissolve
+        show pi with dissolve
         dreamgirl "Ты выбрал сам эту петлю, ты знаешь это, да?"
         dreamgirl "Сдаться и сломаться. А запала лагеря не хватит надолго."
         dreamgirl "Полгода, край год. А однажды твоя валькирия встретит тебя на улице. И отвернётся — потому что ты нелюдим, небрит, угрюм и на лбу набрякла ненависть."
@@ -11237,7 +11237,7 @@ label alt_day6_sl_true_route:
         scene black with diam
         pause(1)
         scene bg ext_warehouse_night_7dl
-        show pi normal
+        show pi
         show prologue_dream
         with dissolve
         "В мешке слышно слабое шевеление, а я не могу, не смею рассказать всего, чтобы не повлиять как-то на решение."
@@ -12194,7 +12194,7 @@ label alt_day6_sl_sh_tug:
     me "Что ж вы сами тогда…"
     me "Не пьёте."
     "Виола вскочила, изо всех сил грохнув костяшками об оргалит стола."
-    show cs sad with dissolve
+    show cs sad with dissolve # нужна замена
     cs "Потому что я дура и виновата. Я должна страдать."
     cs "Письмо видел?"
     "Я покачал головой."
@@ -14511,7 +14511,7 @@ label alt_day7_sl_beach:
     mt "Скажите «Сыыыр»!"
     show dv normal pioneer far at fleft
     show un normal pioneer far at fright
-    show pi normal far at left
+    show pi far at left
     show sl normal pioneer far at cleft
     show mi normal pioneer far at right
     show el normal pioneer far at cright behind mi
