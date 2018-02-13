@@ -25041,7 +25041,7 @@ label alt_day3_dance_dance:
     "Уверенно заключил я."
     show el serious pioneer at cleft with dspr
     el "И ничего мы не боимся, мы вообще!"
-    if herc alt_day3_technoquest_st1:
+    if herc and alt_day3_technoquest_st1:
         me "Значит, сил не хватает затащить какую-нибудь железку наверх."
         
     "Они синхронно покачали головами."
