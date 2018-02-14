@@ -20676,7 +20676,7 @@ label alt_day3_eventAf_clubs_ladder:
     $ alt_day3_technoquest_st2 = True
     el "К кому пойдёшь?"
     if herc:
-        me "К физруку":
+        me "К физруку"
         window hide
         scene bg ext_playground_day with fade
         play ambience ambience_soccer_play_background fadeout 2
