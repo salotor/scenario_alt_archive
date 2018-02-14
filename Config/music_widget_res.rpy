@@ -137,15 +137,15 @@ init 1:
     
     $ music_list_7dl["April Rain – Exodus "] = "scenario_alt/Sound/music/Exodus.ogg"
     $ music_list_7dl["Неизвестный трек"] = "scenario_alt/Sound/music/escape_2.ogg"
-    $ music_list_7dl["Olafur arnalds – So Close (feat. Arnor Dan) 1"] = "scenario_alt/Sound/music/intro2.ogg"
-    $ music_list_7dl["Olafur arnalds – So Close (feat. Arnor Dan) 2"] = "scenario_alt/Sound/music/intro1.ogg"
+    $ music_list_7dl["Olafur arnalds – So Close (feat. Arnor Dan) 2"] = "scenario_alt/Sound/music/intro2.ogg"
+    $ music_list_7dl["Olafur arnalds – So Close (feat. Arnor Dan) 1"] = "scenario_alt/Sound/music/intro1.ogg"
     $ music_list_7dl["Неизвестный трек"] = "scenario_alt/Sound/music/more_than_alive.ogg"
     $ music_list_7dl["Неизвестный трек"] = "scenario_alt/Sound/music/my_only_hope.ogg"
     $ music_list_7dl["Mitchell Broom – Redemption"] = "scenario_alt/Sound/music/Redemption.ogg"
     $ music_list_7dl["The Neighbourhood - Sweater Weather"] = "scenario_alt/Sound/music/runaway.ogg" # кавер?
     $ music_list_7dl["April Rain – 7 дней лета"] = "scenario_alt/Sound/music/seven_summer_days.ogg"
-    $ music_list_7dl["3L - 紅涙にしづむは供人の憂い"] = "scenario_alt/Sound/music/shib_mono.ogg" # Это вообще напишется?
-    $ music_list_7dl["3L - 紅涙にしづむは供人の憂い"] = "scenario_alt/Sound/music/shib_stereo.ogg" # Это вообще напишется?
+    $ music_list_7dl["3L - 紅涙にしづむは供人の憂い 1"] = "scenario_alt/Sound/music/shib_mono.ogg" # Это вообще напишется?
+    $ music_list_7dl["3L - 紅涙にしづむは供人の憂い 2"] = "scenario_alt/Sound/music/shib_stereo.ogg" # Это вообще напишется?
     $ music_list_7dl["DeepCosmo - DVATRI"] = "scenario_alt/Sound/music/temptation.ogg"
     $ music_list_7dl["Неизвестный трек"] = "scenario_alt/Sound/music/thousand_little_things .ogg"
     $ music_list_7dl["April Rain – Мы будем жить"] = "scenario_alt/Sound/music/unfulfilled.ogg"
