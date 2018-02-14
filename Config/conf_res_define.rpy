@@ -1,6 +1,36 @@
 ﻿init:
+    transform fleft:
+        xalign 0.16
+        xanchor 0.5
+        yalign 0.0
+
+    transform left:
+        xalign 0.28
+        xanchor 0.5
+        yalign 0.0
+
+    transform cleft:
+        xalign 0.355
+        xanchor 0.5
+        yalign 0.0
+
     transform center:
         xalign 0.5
+        yalign 0.0
+
+    transform cright:
+        xalign 0.645
+        xanchor 0.5
+        yalign 0.0
+
+    transform right:
+        xalign 0.72
+        xanchor 0.5
+        yalign 0.0
+
+    transform fright:
+        xalign 0.84
+        xanchor 0.5
         yalign 0.0
 
     transform voy_left:
@@ -263,6 +293,8 @@
     image bg ext_aidpost_sunset_7dl = get_image_7dl("bg/ext_med_sunset_7dl.jpg")
     image bg ext_aidpost2_sunset_7dl = get_image_7dl("bg/ext_med2_sunset_7dl.jpg")
     
+    image bg ext_backdoor_day_7dl = get_image_7dl("bg/ext_backdoor_day_7dl.png")
+    image bg ext_backdoor_night_7dl = get_image_7dl("bg/ext_backdoor_night_7dl.png")
     image bg ext_bathhouse_day_7dl = get_image_7dl("bg/ext_bathhouse_day_7dl.jpg")
     image bg ext_backroad_day_7dl = get_image_7dl("bg/ext_backroad_day_7dl.png")
     image bg ext_beach2_day_7dl = get_image_7dl("bg/ext_beach2_day_7dl.jpg")
@@ -279,8 +311,9 @@
     image bg ext_dining_hall_near_snowy_day_7dl = get_image_7dl("bg/outro/ext_dining_hall_near_snowy_day_7dl.jpg")
     
     image bg ext_earth_7dl = get_image_7dl("bg/outro/ext_earth_7dl.jpg")
-    image bg ext_entrance_night_clear_7dl = get_image_7dl("bg/ext_entrance_night_clear_7dl.jpg")
-    image bg ext_entrance_night_clear_closed_7dl = get_image_7dl("bg/ext_entrance_night_clear_closed_7dl.jpg")
+    
+    image bg ext_entrance_night_clear_7dl = get_image_7dl("bg/ext_entrance_night_clear_7dl.png")
+    image bg ext_entrance_night_clear_closed_7dl = get_image_7dl("bg/ext_entrance_night_clear_closed_7dl.png")
     image bg ext_entrance_winter_7dl = get_image_7dl("bg/outro/ext_entrance_winter_7dl.jpg")
     
     image bg ext_graveyard_rain_7dl = get_image_7dl("bg/outro/ext_graveyard_rain_7dl.jpg")
@@ -333,7 +366,7 @@
     image bg ext_square_sunset2_7dl = get_image_7dl("bg/ext_square_sunset2_7dl.jpg")
     image bg ext_square_sunset3_7dl = get_image_7dl("bg/ext_square_sunset3_7dl.jpg")
     
-    image bg ext_townscape_ph_day_7dl = get_image_7dl("bg/ext_townscape_ph_day_7dl.jpg")
+    image bg ext_townscape_ph_day_7dl = get_image_7dl("bg/ext_townscape_ph_day_7dl.png")
     image bg ext_tennis_court_7dl = get_image_7dl("bg/ext_tennis_court_7dl.jpg")
     image bg ext_underwater_7dl = get_image_7dl("bg/ext_underwater_7dl.jpg")
     
@@ -505,7 +538,9 @@
     image cg d5_un_film_7dl = get_image_7dl("cg/d5_un_film_7dl.jpg")
     image cg d5_un_boat_7dl = get_image_7dl("cg/d5_un_boat_7dl.jpg")
     image cg d5_un_bed_7dl = get_image_7dl("cg/d5_un_bed_7dl.jpg")
+    image cg d5_us_rendezvous_7dl = get_image_7dl("cg/d5_us_rendezvous_7dl.png")
     image cg d5_us_sneakpeak_7dl = get_image_7dl("cg/d5_us_sneakpeak_7dl.png")
+    
     
     #image cg d5_us_baseball_7dl = get_image_7dl("cg/d5_us_baseball_7dl.png")
     
@@ -565,8 +600,7 @@
     image cg d7_mi_letter_rain_tears_7dl = get_image_7dl("cg/d7_mi_letter_rain_tears_7dl.jpg")
     image cg d7_mi_meeting_7dl = get_image_7dl("cg/d7_mi_meeting_7dl.jpg")
     image cg d7_mi_ramen_7dl = get_image_7dl("cg/d7_mi_ramen_7dl.jpg")
-    image cg d7_mi_reenter_7dl = get_image_7dl("cg/d7_mi_reenter_7dl.jpg")
-#    image cg d7_mi_reenter_7dl = get_image_7dl("cg/d7_mi_reenter_7dl.png")
+    image cg d7_mi_reenter_7dl = get_image_7dl("cg/d7_mi_reenter_7dl.png")
     image cg d7_mi_shesgone_7dl = get_image_7dl("cg/d7_mi_shesgone_7dl.jpg") #Свежачок от Макса
     image cg d7_mi_sparkle_7dl = get_image_7dl("cg/d7_mi_sparkle_7dl.jpg")
     image cg d7_mi_sunk_7dl = get_image_7dl("cg/d7_mi_sunk_7dl.jpg")
@@ -828,11 +862,12 @@
     
 #music
 #Новьё
-    $ shib_mono = get_music_7dl("shib_mono.ogg") #Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
-    $ shib_stereo = get_music_7dl("shib_stereo.ogg") #Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
+    $ shib_mono = get_music_7dl("shib_mono.ogg") # Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
+    $ shib_stereo = get_music_7dl("shib_stereo.ogg") # Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
     
     
     $ intro1 = get_music_7dl("intro1.ogg")
+    $ more_than_alive = get_music_7dl("more_than_alive.ogg")
     $ intro11 = get_music_7dl("intro11.ogg")
     $ intro2 = get_music_7dl("intro2.ogg")
     
@@ -1013,7 +1048,7 @@
     $ youareours = get_music_7dl("youareours.ogg")
     $ youre_not_real = get_music_7dl("youre_not_real.ogg")
     
-#sfx
+# sfx
     $ apple_bite = get_sfx_7dl("apple_bite.ogg")
     $ aunl = get_sfx_7dl("aunl.ogg")
     $ bed_squeak = get_sfx_7dl("bed_squeak.ogg")

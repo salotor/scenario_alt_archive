@@ -860,7 +860,7 @@ label alt_day2_participate_win:
                         $ lp_dv += 1
                         show dv rage pioneer2 with dspr
                         "Алиса надулась, набычилась…"
-                        me "Разделал как бог черепаху!"
+                        me "Разделал как Рандом черепаху!"
                         "Не удивлюсь, если она сейчас придумает ещё какую-нибудь гадость, только чтобы уязвить меня."
                         show dv angry pioneer2 with dspr
                         "Но она меня удивила."
@@ -1018,7 +1018,7 @@ label alt_day2_participate_win:
                 "А вот эта угроза была уже посерьёзнее, дежурить по столовой одному мне совершенно не улыбалось."
             else:
                 us "Ах так! Тогда я всем расскажу про тебя и Двачевскую!"
-                if alt_day2_dv_bet_approve:
+                if alt_day2_dv_bet_approve and (loki or herc):
                     me "Мелкая нахалка, не смей! Это только наш с ней спор, ты только разрубала!"
                     "Ульяна только улыбнулась."
                 else:
@@ -1204,7 +1204,9 @@ label alt_day2_semifinal:
         me "Не буду."
         "Я отрицательно покачал головой."
         if alt_day2_dv_bet_approve:
-            me "У нас же спор, помнишь? Ты разбивала!"
+            me "У нас же спор, помнишь?"
+            if loki or herc:
+                extend "Ты разбивала!"
             show us sad pioneer with dspr
             us "Спор — это да."
             us "Но играть будем по моим правилам!"
@@ -2060,6 +2062,7 @@ label alt_day2_final_fail:
         
     elif alt_day2_f1 == 5:
         $ lp_us += 1
+        play music genki fadein 3
         "Как известно, в карты везёт новичкам и дурачкам."
         "Так как мы все здесь новички, мы были в равных условиях."
         "Но кое-кому перепало на один шанс больше!"
@@ -2126,6 +2129,9 @@ label alt_day2_final_fail:
         "Закричал Сыроежкин ей вслед."
         "По-моему, это всё-таки любовь."
         sh "Эл, всё, она ушла. Упокойся."
+    window hide
+    stop music fadeout 3
+    with fade
     jump alt_day2_supper    
     
 label alt_day2_final_draw:
