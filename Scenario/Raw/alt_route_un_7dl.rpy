@@ -7905,7 +7905,7 @@ label alt_day6_un_7dl:
         mi "Ты снова заговариваешь мне зубы."
         "Рассмеялась она."
         me "Вроде того. Ты не видела соседку? У меня дело к ней…"
-        if not (alt_day2_club_join_nwsppr and not(herk or loki)) and not(loki and (persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf)): # У Дрища-газетчика рассказ про Алёну, а у Локи работа руками. Остальным Мику угрожает на пляже.
+        if not (alt_day2_club_join_nwsppr and not(herc or loki)) and not(loki and (persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf)): # У Дрища-газетчика рассказ про Алёну, а у Локи работа руками. Остальным Мику угрожает на пляже.
             "Посвящать Мику в подробности — тем более, после вчерашнего… Она ведь может и привести угрозу в исполнение, если узнает, что я проморгал своё счастье."
     
         show mi surprise pioneer at center 
@@ -8542,7 +8542,7 @@ label alt_day6_un_7dl_dinner:
     show dv sad pioneer with dspr
     dv "Чья бы корова мычала."
     me "Что?"
-    if (alt_day2_club_join_nwsppr and not(herk or loki)) or (loki and (alt_day1_sl_keys_took == 1 or alt_day1_sl_keys_took == 3)): # остальные были относительно на виду
+    if (alt_day2_club_join_nwsppr and not(herc or loki)) or (loki and (alt_day1_sl_keys_took == 1 or alt_day1_sl_keys_took == 3)): # остальные были относительно на виду
         dv "Сам-то вчера где весь день был? Только на костёр явился."
         me "Нуууу…"
         th "Так я тебе и сказал!"
