@@ -8649,7 +8649,7 @@ label alt_day6_un_7dl_dinner:
         me "Нуууу…"
         th "Так я тебе и сказал!"
         dv "Вот для меня разница небольшая: вчера вас двоих весь день не было — сегодня её одной."
-    elif alt_day2_club_join_nwsppr and not(herk or loki):
+    elif alt_day2_club_join_nwsppr and not(herc or loki):
         dv "Что слышал."
         dv "Ты вчера где весь день лазил?"
         dv "Тебя вожатая между прочим искала."

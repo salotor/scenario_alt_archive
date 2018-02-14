@@ -10141,7 +10141,7 @@ label alt_day6_mi_dj_dance2_fail:
             "Чувствовать себя идиотом мне не привыкать."
             "В самом худшем случае надо мной посмеются те, чьё мнение меня не заботит."
             "А в лучшем…"
-            if alt_day5_mi_dj_voyeur = 4 and (alt_day5_mi_dj_forgive or not alt_day5_mi_dj_favorite_song):
+            if alt_day5_mi_dj_voyeur == 4 and (alt_day5_mi_dj_forgive or not alt_day5_mi_dj_favorite_song):
                 "Где мы там условились встретиться?"
                 "Я похлопал по карманам, и один из них отозвался бумажным хрустом."
                 "Своего рода стоп-кран для момента, когда меня снова затянет в омут."
