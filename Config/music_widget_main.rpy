@@ -32,6 +32,9 @@ python early:
                     elif (m == music_list_7dl["KPM Music - Bass Renaissaince"][0] or 
                         m == music_list_7dl["KPM Music - Bass Renaissaince"][1]):
                             ui.text("%s" % "KPM Music - Bass Renaissaince", style="button_text", size=13)
+                    elif (m == music_list_7dl["Scorpions - Still Loving you"][0] or 
+                        m == music_list_7dl["Scorpions - Still Loving you"][1]):
+                            ui.text("%s" % "Scorpions - Still Loving you", style="button_text", size=13)
                 elif m == None:
                     get_mus_7dl('ambience')
                     if a == "scenario_alt/Sound/ambience/ambience_safe.ogg":
