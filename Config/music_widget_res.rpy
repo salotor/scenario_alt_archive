@@ -1,7 +1,9 @@
 init 1:
     $ music_list_7dl = {}
     $ music_list_7dl["Denis Stelmakh - Afraid of Destiny"] = "scenario_alt/Sound/music/afraid_of_destiny.ogg"
-    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"] = (["scenario_alt/Sound/music/alice_theme.ogg", "scenario_alt/Sound/music/es_downmix.ogg", "scenario_alt/Sound/music/Everlasting_Summer_Alice.ogg"])
+    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer 1"] = "scenario_alt/Sound/music/alice_theme.ogg"
+    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer 2"] = "scenario_alt/Sound/music/es_downmix.ogg"
+    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer 3"] = "scenario_alt/Sound/music/Everlasting_Summer_Alice.ogg"
     $ music_list_7dl["Josh Powell - Anglegrinder"] = "scenario_alt/Sound/music/anglegrinder.ogg"
     $ music_list_7dl["I am waiting for you last summer - Surrender"] = "scenario_alt/Sound/music/are_you_there.ogg"
     $ music_list_7dl["Josh Powell - Creeping up"] = "scenario_alt/Sound/music/areyouabully.ogg"
@@ -39,7 +41,8 @@ init 1:
     $ music_list_7dl[u"Ганджу - I want magic"] = "scenario_alt/Sound/music/iwantmagic.ogg"
     $ music_list_7dl["Eels - I Need Some Sleep (Piano Cover)"] = "scenario_alt/Sound/music/kiss_you.ogg"
     $ music_list_7dl["Digital Elvis & Zero – Theme from the Ocean (OST Достучаться до небес)"] = "scenario_alt/Sound/music/knock.ogg"
-    $ music_list_7dl["ALyosha - Sweet People караоке(минус)"] = (["scenario_alt/Sound/music/last_pixie.ogg", "scenario_alt/Sound/music/thousand_of_pixies.ogg"])
+    $ music_list_7dl["ALyosha - Sweet People караоке(минус) 1"] = "scenario_alt/Sound/music/last_pixie.ogg"
+    $ music_list_7dl["ALyosha - Sweet People караоке(минус) 2"] = "scenario_alt/Sound/music/thousand_of_pixies.ogg"
     $ music_list_7dl["Hatsune Miku feat. Kz (LiveTune) - Last Night Good Night guitar cover"] = "scenario_alt/Sound/music/lastlight_guitar.ogg"
     $ music_list_7dl["Hatsune Miku - Last Night Good Night (piano cover by Lee Keng Tat)"] = "scenario_alt/Sound/music/lastlight_piano.ogg"
     $ music_list_7dl["Arn Andersson - Annihilation"] = "scenario_alt/Sound/music/laugh_throught_the_universe.ogg"
@@ -71,7 +74,8 @@ init 1:
     $ music_list_7dl["IA - Outer Science"] = "scenario_alt/Sound/music/Outer_Science.ogg"
     $ music_list_7dl["Micheal Ortega - Night of rain"] = "scenario_alt/Sound/music/pathways.ogg"
     $ music_list_7dl["Slava Jamm feat. Please Reprise - WTCS11"] = "scenario_alt/Sound/music/Please_Reprise.ogg"
-    $ music_list_7dl["KPM Music - Bass Renaissaince"] = (["scenario_alt/Sound/music/polyhymnia_intro.ogg", "scenario_alt/Sound/music/polyhymnia_main.ogg"])
+    $ music_list_7dl["KPM Music - Bass Renaissaince 1"] = "scenario_alt/Sound/music/polyhymnia_intro.ogg"
+    $ music_list_7dl["KPM Music - Bass Renaissaince 2"] = "scenario_alt/Sound/music/polyhymnia_main.ogg"
     $ music_list_7dl["PPK - Resurrection"] = "scenario_alt/Sound/music/ppk.ogg"
     $ music_list_7dl["Marilyn Manson - Coma White (acoustic cover)"] = "scenario_alt/Sound/music/prologue_1.ogg"
     $ music_list_7dl["Arn Andersson & Nights Amore - Farewell Life"] = "scenario_alt/Sound/music/promise_to_meet_you.ogg"
@@ -84,7 +88,8 @@ init 1:
     $ music_list_7dl["Heavenly - The Ritual"] = "scenario_alt/Sound/music/ritual2.ogg"
     $ music_list_7dl["Olexandr Ignatov - Sad Piano"] = "scenario_alt/Sound/music/Sad_Piano.ogg"
     $ music_list_7dl["19's Sound Factory - Dear (Music Box Cover)"] = "scenario_alt/Sound/music/sam_lullaby.ogg"
-    $ music_list_7dl["Scorpions - Still Loving you"] = (["scenario_alt/Sound/music/scorpions.ogg", "scenario_alt/Sound/music/stilllovingyou.ogg"])
+    $ music_list_7dl["Scorpions - Still Loving you 1"] = "scenario_alt/Sound/music/scorpions.ogg"
+    $ music_list_7dl["Scorpions - Still Loving you 2"] = "scenario_alt/Sound/music/stilllovingyou.ogg"
     $ music_list_7dl[u"DeepCosmo - День космонавтики"] = "scenario_alt/Sound/music/sh_ai_rejuv.ogg"
     $ music_list_7dl["Sting - Shape of my heart (instrumental)"] = "scenario_alt/Sound/music/shape_of_my_heart.ogg"
     $ music_list_7dl["KPM Music - She has gone"] = "scenario_alt/Sound/music/shehasgone.ogg"
@@ -129,3 +134,18 @@ init 1:
     $ music_list_7dl["Michael John Gordon - The end (Wolfenstein The Old Blood OST)"] = "scenario_alt/Sound/music/you_were_late.ogg"
     $ music_list_7dl["Kári Sigurðsson - Stay"] = "scenario_alt/Sound/music/youareours.ogg"
     $ music_list_7dl["Ólafur Arnalds - This Place Was A Shelter"] = "scenario_alt/Sound/music/youre_not_real.ogg"
+    
+    $ music_list_7dl["April Rain – Exodus "] = "scenario_alt/Sound/music/Exodus.ogg"
+    $ music_list_7dl["Неизвестный трек"] = "scenario_alt/Sound/music/escape_2.ogg"
+    $ music_list_7dl["Olafur arnalds – So Close (feat. Arnor Dan) 1"] = "scenario_alt/Sound/music/intro2.ogg"
+    $ music_list_7dl["Olafur arnalds – So Close (feat. Arnor Dan) 2"] = "scenario_alt/Sound/music/intro1.ogg"
+    $ music_list_7dl["Неизвестный трек"] = "scenario_alt/Sound/music/more_than_alive.ogg"
+    $ music_list_7dl["Неизвестный трек"] = "scenario_alt/Sound/music/my_only_hope.ogg"
+    $ music_list_7dl["Mitchell Broom – Redemption"] = "scenario_alt/Sound/music/Redemption.ogg"
+    $ music_list_7dl["The Neighbourhood - Sweater Weather"] = "scenario_alt/Sound/music/runaway.ogg" # кавер?
+    $ music_list_7dl["April Rain – 7 дней лета"] = "scenario_alt/Sound/music/seven_summer_days.ogg"
+    $ music_list_7dl["3L - 紅涙にしづむは供人の憂い"] = "scenario_alt/Sound/music/shib_mono.ogg" # Это вообще напишется?
+    $ music_list_7dl["3L - 紅涙にしづむは供人の憂い"] = "scenario_alt/Sound/music/shib_stereo.ogg" # Это вообще напишется?
+    $ music_list_7dl["DeepCosmo - DVATRI"] = "scenario_alt/Sound/music/temptation.ogg"
+    $ music_list_7dl["Неизвестный трек"] = "scenario_alt/Sound/music/thousand_little_things .ogg"
+    $ music_list_7dl["April Rain – Мы будем жить"] = "scenario_alt/Sound/music/unfulfilled.ogg"
