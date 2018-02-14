@@ -40,7 +40,6 @@ label alt_day6_mt_7dl_vars:
     
 label alt_day4_neu_us_vars:
     $ alt_day4_neu_transit = 0
-    $ alt_day4_fz_sh = 0
     $ alt_day4_neu_us_snake = False
     $ alt_day4_neu_back_pack = False
     $ alt_day4_neu_date = 0
@@ -65,7 +64,6 @@ label alt_day5_neu_us_vars:
     return
     
 label alt_day4_sl_cl_vars:
-    $ alt_day4_fz_sh = 0
     $ alt_day4_sl_un_rej = False
     $ alt_day4_sl_tut_iz = False
     $ alt_day4_sl_tut = False
@@ -160,18 +158,6 @@ label alt_day6_un_7dl_vars:
     return
     
 label alt_day4_un_fz_vars:
-    $ alt_day4_sl_lf_solo = 0
-    $ alt_day4_sl_tut_iz = False
-    $ alt_day4_sl_un_rej = False
-
-    $ alt_day4_neu_mt_volley = False
-    $ alt_day4_neu_mt_diary = False
-    $ alt_day4_neu_us_snake = False
-    $ alt_day4_neu_date = 0
-    $ alt_day4_neu_mt_songs = False
-    $ alt_day4_neu_mt_fire = False
-    $ alt_day4_neu_mt_volonteer = False
-
     $ alt_day4_fz_play = 0
     $ alt_day4_fz_cards = False
     $ alt_day4_fz_sl_walk = False
@@ -207,6 +193,8 @@ label alt_day4_dv_7dl_vars:
     $ alt_day4_dv_7dl_ba_conv = False
     $ alt_day4_dv_7dl_drank_vodka = False
     $ alt_day4_dv_7dl_hentai = False
+    $ alt_day4_dv_7dl_help_cs = False
+    $ alt_day4_dv_7dl_aidpost = False
     return
     
 label alt_day6_dv_7dl_vars:
@@ -222,6 +210,9 @@ label alt_day6_dv_7dl_vars:
     $ alt_day7_dv_7dl_check = 0
     $ alt_day6_dv_7dl_escape_convince = False
     $ alt_day7_dv_7dl_brace = 0
+    $ alt_day6_dv_7dl_sl_help_agree = False
+    $ alt_day6_dv_7dl_catapult= False
+    $ alt_day7_dv_7dl_loki_catapult = False
     return
     
 label alt_day4_uvao_vars:

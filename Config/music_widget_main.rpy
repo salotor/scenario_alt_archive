@@ -25,12 +25,12 @@ python early:
                 elif m in music_list_7dl.values():
                     ui.text(check_muzlo_7dl(m), style="button_text", size=13)
                 elif m not in music_list_7dl.values():
-                    if m == music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"][0] or 
+                    if (m == music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"][0] or 
                         m == music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"][1] or 
-                            m == music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"][2]:
+                            m == music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"][2]):
                                 ui.text("%s" % "С. Ейбог feat. Liru - Everlasting Summer", style="button_text", size=13)
-                    elif m == music_list_7dl["KPM Music - Bass Renaissaince"][0] or 
-                        m == music_list_7dl["KPM Music - Bass Renaissaince"][1]:
+                    elif (m == music_list_7dl["KPM Music - Bass Renaissaince"][0] or 
+                        m == music_list_7dl["KPM Music - Bass Renaissaince"][1]):
                             ui.text("%s" % "KPM Music - Bass Renaissaince", style="button_text", size=13)
                 elif m == None:
                     get_mus_7dl('ambience')
