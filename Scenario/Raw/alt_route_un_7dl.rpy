@@ -8009,9 +8009,6 @@ label alt_day6_un_7dl:
         mi "Ты снова заговариваешь мне зубы."
         "Рассмеялась она."
         me "Вроде того. Ты не видела соседку? У меня дело к ней…"
-        if not (alt_day2_club_join_nwsppr and not(herk or loki)) and not(loki and (persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf)): 
-            "Посвящать Мику в подробности — тем более, после вчерашнего… Она ведь может и привести угрозу в исполнение, если узнает, что я проморгал своё счастье."
-    
         show mi surprise pioneer at center 
         with dspr
         mi "Да нет. Она на линейке не была, и на завтраке не была, а потом я ушла в кружок, готовиться к концерту, и замоталась."
@@ -8647,11 +8644,17 @@ label alt_day6_un_7dl_dinner:
     show dv sad pioneer with dspr
     dv "Чья бы корова мычала."
     me "Что?"
-    if (alt_day2_club_join_nwsppr and not(herk or loki)) or (loki and (alt_day1_sl_keys_took == 1 or alt_day1_sl_keys_took == 3)):
+    if loki and (alt_day1_sl_keys_took == 1) or (alt_day1_sl_keys_took == 3):
         dv "Сам-то вчера где весь день был? Только на костёр явился."
         me "Нуууу…"
         th "Так я тебе и сказал!"
         dv "Вот для меня разница небольшая: вчера вас двоих весь день не было — сегодня её одной."
+    elif alt_day2_club_join_nwsppr and not(herk or loki):
+        dv "Что слышал."
+        dv "Ты вчера где весь день лазил?"
+        dv "Тебя вожатая между прочим искала."
+        me "Ну…"
+        dv "Гну."
     else:
         dv "Проехали."
     dv "Вернётся твоя Джульетта — никуда не денется."
