@@ -60,7 +60,7 @@ label alt_day3_router_neutral:
         $ routetag = "uv"
         "Сон был тревожным…"
         window hide
-        jump alt_day4_start_uvao #Начало ЮВАО-рута
+        jump alt_day4_start_uvao
     else:
          jump alt_day4_neu_begin
          
@@ -70,20 +70,23 @@ label alt_day4_neu_begin:
     call alt_day4_un_7dl_vars
     call alt_day4_un_fz_vars
     if alt_day3_dv_evening:
-        call alt_day4_neu_dv #Эксклюзивный вход для Алисы
+        call alt_day4_neu_dv
         pause(1)
     elif alt_day3_technoquest_st3 == 2:
-        call alt_day4_neu_aid #Точка входа для медпункта, описание.
+        call alt_day4_neu_aid
         pause(1)
         if alt_day3_un_med_help != 0:
             call alt_day4_neu_aid_un
             pause(1)
             if alt_day4_neu_transit == 11:
-                jump alt_day4_un_cl_dinner #s прописать label в ун-кл
+                jump alt_day4_un_cl_dinner
         elif alt_day3_sl_day_event2 or (lp_sl >= 13):
             call alt_day4_neu_aid_sl
             pause(1)
             if alt_day4_neu_transit == 2:
+                $ mt_pt = 0
+                $ d3_pt = 0
+                $ us_pt = 0
                 jump alt_day4_sl_cl_shurik
         else:
             call alt_day4_neu_aid_generic
@@ -120,6 +123,9 @@ label alt_day4_neu_begin:
             if alt_day4_neu_transit == 6:
                 call alt_day4_neu_mt
                 pause(1)
+            elif alt_day4_neu_transit == 5:
+                call alt_day4_neu_us
+                pause(1)
     call alt_day4_neu_dinner #На обеде подводим итоги
     pause(1)
     call alt_day4_neu_curl
@@ -137,12 +143,15 @@ label alt_day4_neu_begin:
         if alt_day4_neu_mt_diary:
             call alt_day4_neu_mt_diary_vol1
             pause(1)
-        else:
+        elif alt_day4_neu_us_snake:
             call alt_day4_neu_us_guards
             pause(1)
             if alt_day4_neu_us_pixies:
                 call alt_day4_neu_us_launch
                 pause(1)
+        else:
+            call alt_day4_neu_map_dining_hall
+            pause(1)
     else:
         call alt_day4_neu_map_dining_hall
         pause(1)
@@ -188,10 +197,14 @@ label alt_day5_neu_begin:
         else:
             call alt_day5_neu_us_hungry
             pause(1)
-            call alt_day5_neu_us_cleaning
-            pause(1)
         call alt_day5_neu_us_sleetptime
         pause(1)
+        if alt_day4_neu_us_pixies == 3:
+            $ routetag = "us7dl_good"
+            jump alt_day6_us_px_start
+        elif us_pt >= 4:
+            $ routetag = "us7dl_bad"
+            jump alt_day6_us_7dl_start_plain
     else:
         call alt_day5_neu_mi_estrade
         pause(1)
@@ -214,10 +227,7 @@ label alt_day5_neu_begin:
             elif alt_day5_mt_7dl_hentai:
                 call alt_day5_neu_mt_tea_party
             jump alt_day6_mt_7dl_start
-        elif alt_day4_neu_us_pixies == 3:
-            $ routetag = "us7dl_good"
-            jump alt_day6_us_7dl_start_pixies
-        elif us_pt > 5:
+        elif us_pt >= 4:
             $ routetag = "us7dl_bad"
             jump alt_day6_us_7dl_start_plain
 jump alt_day6_neu_begin

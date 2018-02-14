@@ -8,7 +8,7 @@ init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
     $ timeskip_come = "Ты пойдёшь со мной?"
-    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Ульяна-7дл. Побег."
+    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Ульяна-7дл. Побег. Дни 6-7"
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
     $ timeskip3 = "Я скучаю…"
     $ timeskip4 = "Я хочу к тебе…"
@@ -136,7 +136,6 @@ label alt_day0_vars: #Переменные нулевого дня
     $ us_pt = 0
 
     $ alt_day_binder = 0
-    $ semen_str = 10
     $ alt_dlc_active = False
     $ herc = False
     $ loki = False
@@ -250,11 +249,6 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_dv_guitar_lesson = False
     $ alt_day3_dv_invite = False
     $ alt_day3_dv_rejected = False
-    $ alt_day3_ladder_phys = 0
-    $ alt_day3_ladder_ph_loser = False
-    $ alt_day3_ladder_mt = 0
-    $ alt_day3_ladder_mt_loser = False
-    $ alt_day3_ladder_us = 0
     $ alt_day3_mi_date = False
     $ alt_day3_mi_dj = False 
     $ alt_day3_mi_event = False
@@ -284,4 +278,6 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_us_bugs = 0
     $ alt_day3_us_invite = False
     $ alt_day3_uvao_spotted = False
+    $ alt_day3_ladder_phys = 0
+    $ alt_day3_ladder_mt = 0
     return

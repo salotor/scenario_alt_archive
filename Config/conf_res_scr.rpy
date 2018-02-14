@@ -221,16 +221,9 @@ init -265 python:
         return im.MatrixColor(ImageReference(id), im.matrix.brightness(0.2) * im.matrix.tint(1.0, 0.94, 0.82))
     def HomeCity(id):
         return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.1) * im.matrix.tint(0.82, 0.84, 1.0))
-        
-    #Издевательства над фонцами, цг и грейном
+
     def filmetile(bitmap, opacity=0.1):
         return im.Tile(im.Alpha(bitmap,opacity))
-    
-#Инструкция для дырявой головы:
-#scene expression Noir("ext_bus1_7dl")   # параметры "по умолчанию"
-#scene expression Noir("ext_bus1_7dl", brightness = -0.3, tint_r = 0.7, tint_g = 0.4, tint_b = 0.3, saturation = -0.3)  #меняем все параметры
-#scene expression Noir("ext_bus1_7dl", brightness = -0.3, saturation = -0.3)  #меняем отдельные параметры
-        
 
 init -6 python:
     def alt_chapter0():

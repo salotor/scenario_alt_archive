@@ -53,7 +53,7 @@
     image cg d5_uv_new_hentai1_7dl = get_image_7dl("cg/d5_epilogue_uv_hentai_1_7dl.jpg")
     image cg d5_uv_new_hentai2_7dl = get_image_7dl("cg/d5_epilogue_uv_hentai_2_7dl.jpg")
     
-#sounds
+# sounds
     $ phone_vibro = get_sfx_uvao_7dl("vibration-smartphone.ogg")
     $ match_lights = get_sfx_uvao_7dl("lighting-a-match.ogg")
     $ silence = get_sfx_uvao_7dl("silence_4sec.ogg")
