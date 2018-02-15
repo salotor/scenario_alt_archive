@@ -468,7 +468,7 @@ label sdl_achvlist_mi_Author:
                 hover_sound sdl_achv_click
                 hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
                 unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
-                action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"), Hide("sdl_mi_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_mi_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("choose_waifu_7dl")]
+                action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"),Hide("sdl_mi_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_mi_cl_inactive", transition=Dissolve(0.5)), Jump("choose_waifu_7dl")]
 # ------------------------------------------------   
 ######################МИКУ-7ДЛ######################################
 label sdl_achvlist_mi7dl_Author:
@@ -1055,7 +1055,7 @@ label sdl_achvlist_dv_Author:
                 hover_sound sdl_achv_click
                 hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
                 unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
-                action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"), Hide("sdl_mi_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_mi_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("choose_waifu_7dl")]
+                action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"), Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_dv_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_dv_dj_inactive", transition=Dissolve(0.5)), Jump("choose_waifu_7dl")]
 # ------------------------------------------------   
 ######################АЛИСА-7ДЛ######################################
 label sdl_achvlist_dv7dl_Author:
@@ -1485,7 +1485,7 @@ label sdl_achvlist_sl_Author:
                 hover_sound sdl_achv_click
                 hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
                 unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
-                action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"), Hide("sdl_mi_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_mi_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("choose_waifu_7dl")]
+                action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"), Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Jump("choose_waifu_7dl")]
 # ------------------------------------------------   
 ######################СЛАВЯ-7ДЛ######################################
 label sdl_achvlist_sl7dl_Author:
@@ -1985,7 +1985,7 @@ label sdl_achvlist_un_Author:
                 hover_sound sdl_achv_click
                 hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
                 unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
-                action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"), Hide("sdl_mi_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_mi_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("choose_waifu_7dl")]
+                action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"), Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)),Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_un_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_un_fz_inactive", transition=Dissolve(0.5)), Jump("choose_waifu_7dl")]
 # ------------------------------------------------  
 ######################\\\\ЛЕНА-7ДЛ\\\\######################################
 label sdl_achvlist_un7dl_Author:
@@ -2575,7 +2575,7 @@ label sdl_achvlist_me_Author:
                 hover_sound sdl_achv_click
                 hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
                 unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
-                action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"), Hide("sdl_mi_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_mi_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("choose_waifu_7dl")]
+                action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"),  Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)),Hide("sdl_logo_inactive", transition=Dissolve(0.5)),Hide("sdl_me_no_inactive", transition=Dissolve(0.5)),Hide("sdl_me_sm_inactive", transition=Dissolve(0.5)), Jump("choose_waifu_7dl")]
 # ------------------------------------------------   
 ######################Д3-РУТ######################################
 label sdl_achvlist_med3r_Author:
