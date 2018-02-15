@@ -204,7 +204,7 @@ label alt_day5_neu_begin:
             jump alt_day6_us_px_start
         elif us_pt >= 4:
             $ routetag = "us7dl_bad"
-            jump alt_day6_us_7dl_start_plain
+            jump alt_day6_us_7dl_start
     else:
         call alt_day5_neu_mi_estrade
         pause(1)

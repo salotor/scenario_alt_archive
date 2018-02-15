@@ -115,7 +115,7 @@ label alt_day7_mi_7dl_start:
     #Роутер концовок
     if alt_day6_mi_7dl_left:
         if alt_day5_mi_7dl_voyeur:
-            if and herc:
+            if herc:
                 $ routetag = "mi7dlcas"
             elif loki:
                 $ routetag = "mi7dlcas"
