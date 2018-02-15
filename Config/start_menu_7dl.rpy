@@ -332,6 +332,7 @@ label choose_waifu_7dl: # done
         #jump start_menu_7dl
 
 label start_7dl:
+    call alt_day0_vars
     call alt_day0_prologue
     jump choose_waifu_7dl
 
