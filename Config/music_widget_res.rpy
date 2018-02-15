@@ -108,10 +108,7 @@ init 1:
     $ music_list_7dl[u"Владимир Розанов - С запада на восток"] = "scenario_alt/Sound/music/to_the_sunrise.ogg"
     $ music_list_7dl["Broove - [oove]Heartbeats"] = "scenario_alt/Sound/music/too_quiet.ogg"
     $ music_list_7dl["Vflower - Close to you (feat. Justin Ly)"] = "scenario_alt/Sound/music/uncertainity.ogg"
-    if config.version == "1.2":
-        $ music_list_7dl["Alt-J - Intro"] = "../441054187/scenario_alt/Sound/music/uneven_me.ogg"
-    else:
-        $ music_list_7dl["April Rain - Violent Passion Surrogate"] = "scenario_alt/Sound/music/uneven_me.ogg" 
+    $ music_list_7dl["April Rain - Violent Passion Surrogate"] = "scenario_alt/Sound/music/uneven_me.ogg" 
     $ music_list_7dl["Audiomachine - Unfinished Life"] = "scenario_alt/Sound/music/unfinished_life.ogg"
     $ music_list_7dl["Martin O'Donnel - Unforgotten"] = "scenario_alt/Sound/music/Unforgotten.ogg"
     $ music_list_7dl["The Ring OST - Samara's Song(Piano Cover)"] = "scenario_alt/Sound/music/unholy_you.ogg"
