@@ -216,7 +216,7 @@ label alt_day4_mi_7dl_ch2:
     cs "Всё. С добрым утром!"
     "Поздоровалась она и заглушила мотор."
     window hide
-    scene bg ext_hospitapl_close_7dl
+    scene bg ext_hospital2_away_day_7dl
     with dissolve
     play ambience ambience_town_day fadein 3
     play music music_list["my_daily_life"] fadein 5

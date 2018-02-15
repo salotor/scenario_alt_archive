@@ -301,7 +301,7 @@
     image bg ext_boathouse_sunset_7dl = get_image_7dl("bg/ext_boathouse_sunset_7dl.jpg")
     image bg ext_boathouse_alt_day_7dl = get_image_7dl("bg/ext_boathouse_alt_day_7dl.png")
     image bg ext_bus1_7dl = get_image_7dl("bg/ext_bus1_7dl.jpg")
-    image bg ext_busstop_dust_7dl = get_image_7dl("bg/ext_busstop_dust_7d.png")
+    image bg ext_busstop_dust_7dl = get_image_7dl("bg/ext_busstop_dust_7dl.png")
     image bg ext_busstop_sun_7dl = get_image_7dl("bg/ext_busstop_sun_7dl.png")
     
     image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.png")
@@ -320,7 +320,6 @@
     
     image bg ext_hospital2_away_day_7dl = get_image_7dl("bg/ext_hospital2_away_day_7dl.jpg")
     image bg ext_hospital2_away_night_7dl = get_image_7dl("bg/ext_hospital2_away_night_7dl.jpg")
-    image bg ext_hospitapl_close_7dl = get_image_7dl("bg/ext_hospitapl_close_7dl.png")
     image bg ext_houses_night_7dl = get_image_7dl("bg/ext_houses_night_7dl.jpg")
     image bg ext_houses_rainy_day_7dl = get_image_7dl("bg/ext_houses_rainy_day_7dl.jpg")
     image bg ext_houses_snowy_day_7dl = get_image_7dl("bg/outro/ext_houses_snowy_day_7dl.jpg")
