@@ -621,8 +621,8 @@
     image cg d7_us_pixie_7dl = get_image_7dl("cg/d7_us_pixie_7dl.png")
     #image cg d7_us_no_mans_land_7dl = get_image_7dl("cg/d7_us_no_mans_land_7dl.png")
     
-    image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.jpg")
-#    image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.png")
+    #image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.jpg")
+    #image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.png")
     image cg d7_bus_night_7dl = get_image_7dl("cg/d7_bus_night_7dl.jpg")
     
 #Турнир
