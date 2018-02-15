@@ -36,6 +36,7 @@
         scene black with fade2
         show alt_credits timeskip0 with dissolve2:
             pos (200,540)
+    $ renpy.pause(2, hard=True)
     with dissolve2
     window hide
     

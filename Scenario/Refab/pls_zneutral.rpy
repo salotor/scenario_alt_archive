@@ -216,6 +216,8 @@ label alt_day5_neu_begin:
         pause(1)
         call alt_day5_neu_campfire_doom
         pause(1)
+        if mt_pt < 7 and us_pt < 4 and d3_pt < 5:
+            return
         call alt_day5_neu_sleepnight
         pause(1)
         if mt_pt >= 7 and alt_day5_neu_mt_voyeur != 0:
@@ -230,6 +232,7 @@ label alt_day5_neu_begin:
         elif us_pt >= 4:
             $ routetag = "us7dl_bad"
             jump alt_day6_us_7dl_start_plain
+return
 jump alt_day6_neu_begin
     
 label alt_day6_neu_begin:
