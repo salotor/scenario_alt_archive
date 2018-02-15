@@ -141,8 +141,8 @@ init 1:
     $ music_list_7dl["Mitchell Broom – Redemption"] = "../441054187/scenario_alt/Sound/music/Redemption.ogg"
     $ music_list_7dl["The Neighbourhood - Sweater Weather"] = "../441054187/scenario_alt/Sound/music/runaway.ogg" # кавер?
     $ music_list_7dl["April Rain – 7 дней лета"] = "../441054187/scenario_alt/Sound/music/seven_summer_days.ogg"
-    $ music_list_7dl["3L - 紅涙にしづむは供人の憂い 1"] = "../441054187/scenario_alt/Sound/music/shib_mono.ogg" # Это вообще напишется?
-    $ music_list_7dl["3L - 紅涙にしづむは供人の憂い 2"] = "../441054187/scenario_alt/Sound/music/shib_stereo.ogg" # Это вообще напишется?
+    $ music_list_7dl["3L - Kōrui ni shi dzumu wa tomobito no urei 1"] = "../441054187/scenario_alt/Sound/music/shib_mono.ogg" # Это вообще напишется?
+    $ music_list_7dl["3L - Kōrui ni shi dzumu wa tomobito no urei 2"] = "../441054187/scenario_alt/Sound/music/shib_stereo.ogg" # Это вообще напишется?
     $ music_list_7dl["DeepCosmo - DVATRI"] = "../441054187/scenario_alt/Sound/music/temptation.ogg"
     $ music_list_7dl["Неизвестный трек"] = "../441054187/scenario_alt/Sound/music/thousand_little_things .ogg"
     $ music_list_7dl["April Rain – Мы будем жить"] = "../441054187/scenario_alt/Sound/music/unfulfilled.ogg"
