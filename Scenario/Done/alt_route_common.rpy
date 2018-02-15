@@ -26246,7 +26246,7 @@ label alt_day3_dance_dance2:
                 dreamgirl "Просто подумай как следует — чего тебе на самом деле хочется?" 
                 if alt_day3_mi_date and (alt_day2_date == 4):
                     jump alt_day3_mi_7dl_init
-            "Танцевать с Леной":
+            "Танцевать с Леной" if alt_day3_dancing != 12:
                 if (herc or loki) and (alt_day3_un_med_help != 1):
                     call alt_day3_lp_checker(alt_dater = un)
                     if alt_day3_dancing == 1:
