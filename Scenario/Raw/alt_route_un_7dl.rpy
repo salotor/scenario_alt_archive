@@ -10458,7 +10458,7 @@ label alt_day7_un_7dl_start:
         jump alt_day7_un_7dl_epilogue
     elif routetag == "un7dlbad":
         jump alt_day7_un_7dl_epilogue_bad
-    elif routetag = "un7":
+    elif routetag = "un":
         jump alt_day7_un_7dl_true
 
 label alt_day7_un_7dl_epilogue:
