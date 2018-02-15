@@ -4915,7 +4915,7 @@ label alt_day7_mt_7dl_good:
         show laptop_dv_bad_dr
     with dissolve
     play sound_loop sfx_keyboard_mouse_computer_noise fadein 3
-    "13 марта 2017-го года."
+    "13 марта 2018-го года."
     "Сегодня я ночую дома последний раз, а завтра меня ждёт поезд в город, где я никого не знаю."
     "И никто не знает меня."
     window hide
