@@ -26,6 +26,7 @@
     if persistent.us_7dl_good:
         show acm_u
     with dissolve2
+    pause(3)
     if alt_day_binder == 1:
         show cg d7_trio_7dl with flash
         $ renpy.pause(.4)

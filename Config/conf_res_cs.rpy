@@ -1039,12 +1039,12 @@ label alt_day2_participate_win:
                         jump alt_day2_semifinal
                     "Ладно. Как хочешь.":
                         $ lp_us += 1
-                        $ alt_day2_revanche = true
+                        $ alt_day2_revanche = True
                         jump alt_day2_tournament_start
             elif not alt_day2_revanche:
                 "Я вздохнул."
                 me "Уговорила. Дам тебе ещё один шанс."
-                $ alt_day2_revanche = true
+                $ alt_day2_revanche = True
                 jump alt_day2_tournament_start
             else:
                 me "Я крепко об этом пожалею, но…  Рассказывай."

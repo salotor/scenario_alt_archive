@@ -9585,7 +9585,7 @@ label alt_day6_un_7dl_sleeptime:
     "Пока, наконец и меня не сморил сон."
     window hide
     stop ambience fadeout 3
-    $ pause(3)
+    pause(3)
     $ alt_day7_un_7dl_rnm = lp_un * 4
     if alt_day5_un_7dl_sl_un_washing or alt_day4_un_7dl_dv_us_explosives:
         $ alt_day7_un_7dl_rnm = alt_day7_un_7dl_rnm*1.1
@@ -10454,11 +10454,11 @@ label alt_day7_un_7dl_start:
     stop music fadeout 5
     me "Прости. Просто прости."
     "Я положил ладонь ей на лоб и пригладил выбившиеся волосы."
-    if routetag = "un7dlgood":
+    if routetag == "un7dlgood":
         jump alt_day7_un_7dl_epilogue
     elif routetag == "un7dlbad":
         jump alt_day7_un_7dl_epilogue_bad
-    elif routetag = "un":
+    elif routetag == "un":
         jump alt_day7_un_7dl_true
 
 label alt_day7_un_7dl_epilogue:
@@ -11623,7 +11623,7 @@ label alt_day7_un_7dl_rf:
     return
     
 label alt_day7_un_7dl_true:
-    if routetag = "un":
+    if routetag == "un":
         label alt_day7_un_7dl_true1:
             "Мне столько хотелось сделать и столько сказать."
         "Но я нем и у меня лишь сожаления."
@@ -12068,7 +12068,7 @@ label alt_day7_un_7dl_true:
         show un normal modern with dspr
         un "И почему тебе не живётся своей собственной жизнью?"
         me "Потому что в ней нет тебя. А видеть тебя во снах ещё хуже."
-        show un sad modern with dspr
+        show un sorrow modern with dspr
         un "Тебе дали второй шанс, а ты плюнул создателю в морду."
         un "Почему ты такой невозможный человек, Семён?"
         "Я пожал плечами."
@@ -12085,6 +12085,7 @@ label alt_day7_un_7dl_true:
         show alt_credits timeskip_come with dissolve2:
             pos (747,115)
         with flash
+        $ persistent.un_7dl_true_transit = True
     else:
         $ prolog_time()
         scene black with fade
@@ -12158,6 +12159,7 @@ label alt_day7_un_7dl_true:
         "Ни той, что любила так, что была готова решительно на всё."
         "А я этого не заслужил."
         "Что гораздо хуже: я этого не хотел."
+        $ persistent.un_7dl_true = True
     with dissolve
     play sound aunl
     stop sound_loop fadeout 3
@@ -12165,7 +12167,7 @@ label alt_day7_un_7dl_true:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.un_7dl_true = True
+    
     call alt_7dl_titles
     pause(1)
     return

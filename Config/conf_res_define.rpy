@@ -801,6 +801,7 @@
     image acm_logo_un_good2 = get_image_7dl("gui/acm_logo_un_good2.png")
     image acm_logo_un_shelter = get_image_7dl("gui/acm_logo_un_shelter.png")
     image acm_logo_un_sui = get_image_7dl("gui/acm_logo_un_sui.png")
+    image acm_logo_un_transit = get_image_7dl("gui/acm_logo_un_transit.png")
     
     image achieve_beagod = get_image_7dl("gui/achieve_beagod.png")
     image acm_logo = get_image_7dl("gui/acm_logo1.png") #Логотип сюжета
