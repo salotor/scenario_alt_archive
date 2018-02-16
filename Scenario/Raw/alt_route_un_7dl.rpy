@@ -12085,6 +12085,7 @@ label alt_day7_un_7dl_true:
         show alt_credits timeskip_come with dissolve2:
             pos (747,115)
         with flash
+        $ persistent.un_7dl_true_transit = True
     else:
         $ prolog_time()
         scene black with fade
@@ -12158,6 +12159,7 @@ label alt_day7_un_7dl_true:
         "Ни той, что любила так, что была готова решительно на всё."
         "А я этого не заслужил."
         "Что гораздо хуже: я этого не хотел."
+        $ persistent.un_7dl_true = True
     with dissolve
     play sound aunl
     stop sound_loop fadeout 3
@@ -12165,7 +12167,7 @@ label alt_day7_un_7dl_true:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.un_7dl_true = True
+    
     call alt_7dl_titles
     pause(1)
     return
