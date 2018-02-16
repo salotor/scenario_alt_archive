@@ -9585,7 +9585,7 @@ label alt_day6_un_7dl_sleeptime:
     "Пока, наконец и меня не сморил сон."
     window hide
     stop ambience fadeout 3
-    $ pause(3)
+    pause(3)
     $ alt_day7_un_7dl_rnm = lp_un * 4
     if alt_day5_un_7dl_sl_un_washing or alt_day4_un_7dl_dv_us_explosives:
         $ alt_day7_un_7dl_rnm = alt_day7_un_7dl_rnm*1.1
@@ -10454,11 +10454,11 @@ label alt_day7_un_7dl_start:
     stop music fadeout 5
     me "Прости. Просто прости."
     "Я положил ладонь ей на лоб и пригладил выбившиеся волосы."
-    if routetag = "un7dlgood":
+    if routetag == "un7dlgood":
         jump alt_day7_un_7dl_epilogue
     elif routetag == "un7dlbad":
         jump alt_day7_un_7dl_epilogue_bad
-    elif routetag = "un":
+    elif routetag == "un":
         jump alt_day7_un_7dl_true
 
 label alt_day7_un_7dl_epilogue:
@@ -11623,7 +11623,7 @@ label alt_day7_un_7dl_rf:
     return
     
 label alt_day7_un_7dl_true:
-    if routetag = "un":
+    if routetag == "un":
         label alt_day7_un_7dl_true1:
             "Мне столько хотелось сделать и столько сказать."
         "Но я нем и у меня лишь сожаления."
