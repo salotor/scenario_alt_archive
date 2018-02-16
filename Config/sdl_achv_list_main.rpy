@@ -319,6 +319,8 @@ screen sdl_achv_rejc_RF_sl:
 #Надписи концовок Лена
 screen sdl_achv_true_un:
     add "sdl_achv_true_un" xcenter 700 ycenter 840 
+screen sdl_achv_true_un_transit:
+    add "sdl_achv_true_un_transit" xcenter 700 ycenter 840 
 screen sdl_achv_bad_un:
     add "sdl_achv_bad_un" xcenter 700 ycenter 840 
 screen sdl_achv_good_US_un:
@@ -2008,34 +2010,43 @@ label sdl_achvlist_un7dl_Author:
         show de_info_inactive1 with dissolve:
             pos (590, 40)
     else:
-        pass
+        pass 
+    #ТруЪ-транзит
+    if persistent.un_7dl_true_transit: 
+        show acm_logo_un_transit  with dissolve:
+            xcenter 800 ycenter 130 
+        show de_check_inactive1 with dissolve:
+            pos (590, 104)
+    else:
+        show de_achiv_lock1 with dissolve:
+            xcenter 800 ycenter 130
     #Гуд-СССР
     if persistent.un_7dl_good_ussr:
         show acm_logo_un_good2  with dissolve:
-            xcenter 800 ycenter 130 
+            xcenter 800 ycenter 194 
         show de_check_inactive2 with dissolve:
-            pos (590, 104)
+            pos (590, 168)
     else:
         show de_achiv_lock2 with dissolve:
-            xcenter 800 ycenter 130
+            xcenter 800 ycenter 194
     #Гуд-РФ
     if persistent.un_7dl_good_rf:
         show acm_logo_un_good  with dissolve:
-            xcenter 800 ycenter 194  
+            xcenter 800 ycenter 258  
         show de_check_inactive3 with dissolve:
-            pos (590, 168)
+            pos (590, 232)
     else:
         show de_achiv_lock3 with dissolve:
-            xcenter 800 ycenter 194
+            xcenter 800 ycenter 258
     #Бэд
     if persistent.un_7dl_bad:
         show acm_logo_un_sui  with dissolve:
-            xcenter 800 ycenter 258 
+            xcenter 800 ycenter 322 
         show de_check_inactive4 with dissolve:
-            pos (590, 232)
+            pos (590, 296)
     else:
         show de_achiv_lock4 with dissolve:
-            xcenter 800 ycenter 258          
+            xcenter 800 ycenter 322          
     call screen sdl_achvlist_un7dl_Author
 # ------------------------------------------------  
 screen sdl_achvlist_un7dl_Author:
@@ -2069,32 +2080,42 @@ screen sdl_achvlist_un7dl_Author:
                 hovered [Show ("de_info_active1", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_mt_named_olga", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_mt_named_olga", transition=Dissolve(0.5))]
                 action [Hide("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_mt_named_olga", transition=Dissolve(0.5))]   
-        hotspot ((650,104, 300, 52)): #Гуд-СССР
+        hotspot ((650,104, 300, 52)): #ТруЪ-транзит
+            hovered [Show("sdl_achv_true_un_transit", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_true_un_transit", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_true_un_transit", transition=Dissolve(0.5))]
+        if persistent.un_7dl_true_transit:
+            hotspot ((590,104, 50, 52)): #Тру-концовка транзитчика
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active2", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active2", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                action [Hide("sdl_un_cl_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_un_7dlA", transition=Dissolve(1.0)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Hide("sdl_un_fz_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)),  Hide("de_check_active2", transition=Dissolve(0.5)),Jump("alt_day7_un_7dl_true1")]
+        hotspot ((650,168, 300, 52)): #Гуд-СССР
             hovered [Show("sdl_achv_good_US_un", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_good_US_un", transition=Dissolve(0.5))]
             action [Show("sdl_achv_good_US_un", transition=Dissolve(0.5))] 
         if persistent.un_7dl_good_ussr:
-            hotspot ((590, 104, 50, 52)): #UdSSR-Gut-Ende-Jump
+            hotspot ((590, 168, 50, 52)): #UdSSR-Gut-Ende-Jump
                 hover_sound sdl_achv_click
                 hovered [Show ("de_check_active2", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_check_active2", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 action [Hide("sdl_un_cl_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_un_7dlA", transition=Dissolve(1.0)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Hide("sdl_un_fz_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)),  Hide("de_check_active2", transition=Dissolve(0.5)),Jump("alt_day7_un_7dl_ussr")]
-        hotspot ((650,168, 300, 52)): #Гуд-РФ     
+        hotspot ((650,232, 300, 52)): #Гуд-РФ     
             hovered [Show("sdl_achv_good_RF_un", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_good_RF_un", transition=Dissolve(0.5))]
             action [Show("sdl_achv_good_RF_un", transition=Dissolve(0.5))] 
         if persistent.un_7dl_good_rf:
-            hotspot ((590, 168, 50, 52)): #RF-Gut-Ende-Jump
+            hotspot ((590, 232, 50, 52)): #RF-Gut-Ende-Jump
                 hover_sound sdl_achv_click
                 hovered [Show ("de_check_active3", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_check_active3", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 action [Hide("sdl_un_cl_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_un_7dlA", transition=Dissolve(1.0)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Hide("sdl_un_fz_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)),  Hide("de_check_active3", transition=Dissolve(0.5)),Jump("alt_day7_un_7dl_rf")]
-        hotspot ((650,232, 300, 52)): #Бэд
+        hotspot ((650,296, 300, 52)): #Бэд
             hovered [Show("sdl_achv_bad_un", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_bad_un", transition=Dissolve(0.5))]
             action [Show("sdl_achv_bad_un", transition=Dissolve(0.5))] 
         if persistent.un_7dl_bad:
-            hotspot ((590, 232, 50, 52)): #Schlecht-Ende-Jump
+            hotspot ((590, 296, 50, 52)): #Schlecht-Ende-Jump
                 hover_sound sdl_achv_click
                 hovered [Show ("de_check_active4", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_check_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
@@ -2930,6 +2951,7 @@ label sdl_achvlist_un7dl_clear_Author:
     $ persistent.un_7dl_good_ussr = False
     $ persistent.un_7dl_good_rf = False
     $ persistent.un_7dl_true = False
+    $ persistent.un_7dl_true_transit = False
     $ persistent.un_7dl_bad = False
     call screen sdl_achvlist_un7dl_Author
 # ------------------------------------------------ 
