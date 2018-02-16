@@ -9585,7 +9585,7 @@ label alt_day6_un_7dl_sleeptime:
     "Пока, наконец и меня не сморил сон."
     window hide
     stop ambience fadeout 3
-    $ pause(3)
+    pause(3)
     $ alt_day7_un_7dl_rnm = lp_un * 4
     if alt_day5_un_7dl_sl_un_washing or alt_day4_un_7dl_dv_us_explosives:
         $ alt_day7_un_7dl_rnm = alt_day7_un_7dl_rnm*1.1
