@@ -12068,7 +12068,7 @@ label alt_day7_un_7dl_true:
         show un normal modern with dspr
         un "И почему тебе не живётся своей собственной жизнью?"
         me "Потому что в ней нет тебя. А видеть тебя во снах ещё хуже."
-        show un sad modern with dspr
+        show un sorrow modern with dspr
         un "Тебе дали второй шанс, а ты плюнул создателю в морду."
         un "Почему ты такой невозможный человек, Семён?"
         "Я пожал плечами."
