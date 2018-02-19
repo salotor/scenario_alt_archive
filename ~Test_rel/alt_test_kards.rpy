@@ -803,7 +803,7 @@ label alt_day2_participate_new:
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ /ВОПРОС
 
         if alt_table_no != places_my_table[2]:                                          # если номер стола — НЕ свой
-            $ alt_day2_gamblers_1_tour[2*alt_table_no — renpy.random.choice([1,2])].winner = True  # тогда один из игроков (рандомно) — победитель в этапе
+            $ alt_day2_gamblers_1_tour[2*alt_table_no - renpy.random.choice([1,2])].winner = True  # тогда один из игроков (рандомно) — победитель в этапе
             $ renpy.block_rollback()                                                                # блокируем роллбак
         $ alt_table_no += 1                                                             # следующий стол
     if not alt_day2_detour_1_tour:                                                  # если НЕ пропуск 1 тура

@@ -25,6 +25,8 @@
         
 label scenario__sdl_selector:
 
+    $ make_names_unknown_7dl()
+
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars

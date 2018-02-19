@@ -959,7 +959,7 @@ init 3 python:
         if table_no <= 4:                                                       # если № стола 1..4
             m = table_no                                                        # указатель — по номеру стола
         else:
-            m = table_no — 4                                                    # указатель = номер стола — 4
+            m = table_no - 4                                                    # указатель = номер стола — 4
         gambler_winner = gamblers[2*m-2].name[winner_case]                      # получаем имя победителя в нужном падеже
         winner_take = gamblers[2*m-2].take                                      # получаем ник победителя
         loser_take = gamblers[2*m-1].take                                       # получаем ник проигравшего
