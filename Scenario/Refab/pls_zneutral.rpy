@@ -231,7 +231,7 @@ label alt_day5_neu_begin:
             jump alt_day6_mt_7dl_start
         elif us_pt >= 4:
             $ routetag = "us7dl_bad"
-            jump alt_day6_us_7dl_start_plain
+            jump alt_day6_us_7dl_start
 return
 jump alt_day6_neu_begin
     
