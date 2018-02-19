@@ -302,6 +302,7 @@ init:
     # ------------------------------------------------
     #Концовки-описание (Лена расцветка)
     image sdl_achv_true_un = Text("Истинная\nконцовка", style="sdl_achvlistA_un_st")
+    image sdl_achv_true_un_transit = Text("Истинная\nконцовка-транзит", style="sdl_achvlistA_un_st")
     image sdl_achv_bad_un = Text(" Плохая\nконцовка", style="sdl_achvlistA_un_st")
     image sdl_achv_good_US_un = Text("  Хорошая \nСССР-концовка", style="sdl_achvlistA_un_st")
     image sdl_achv_good_RF_un = Text(" Хорошая \nРФ-концовка", style="sdl_achvlistA_un_st")

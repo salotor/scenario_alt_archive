@@ -7151,7 +7151,7 @@ label alt_day5_sl_fire:
     show cs normal with dspr 
     cs "Так что проси своих товарищей, чтобы отнесли тебя в лагерь."
     show cs normal at left with moveinleft
-    show ml sick pioneer at right with zenterright
+    show ml sick pioneer at zenterright
     with dissolve
     ml "Но я же…"
     cs "Или, если чувствуешь в себе силы, прыгай на одной ноге. Сумеешь допрыгать до лагеря?"
