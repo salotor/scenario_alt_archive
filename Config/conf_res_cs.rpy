@@ -2196,7 +2196,7 @@ label alt_day2_final_win:
         "Не слушая больше то, что она мне говорит, я поднялся."
         "И пошёл к доске, где Электроник уже писал моё имя."
         "Моё!"
-        if alt_day2_dv_bet_approve:
+        if alt_day2_dv_bet_approve or alt_day2_dv_harass:
             th "И пусть только рыжая стерлядь попробует что-нибудь там вякнуть."
         show dv smile pioneer2 with dissolve
         if alt_day2_dv_harass:
