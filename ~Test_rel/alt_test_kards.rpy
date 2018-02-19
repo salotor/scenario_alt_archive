@@ -1,83 +1,83 @@
 ﻿# ***********************************************************************************************
 #                                           НЕ ЗАБЫТЬ !!!!
 # ***********************************************************************************************
-#                          переменные турнира по другим дням (временное согласование - в конце)
+#                          переменные турнира по другим дням (временное согласование — в конце)
 # alt_route_common
-# - строки 14532, 14537, 15024, 15175: 
-#   alt_pe == 1                             >>   alt_my_rival_1_tour.take == 'un'                - Соперник в 1 туре - Лена
+# — строки 14532, 14537, 15024, 15175: 
+#   alt_pe == 1                             >>   alt_my_rival_1_tour.take == 'un'                — Соперник в 1 туре — Лена
 #
-# - строка 15026:
-#   alt_day2_hf2 == 1                       >>   alt_day2_gamblers_result['un'] in [2,11]        - Лена, как минимум, добралась до полуфинала 
+# — строка 15026:
+#   alt_day2_hf2 == 1                       >>   alt_day2_gamblers_result['un'] in [2,11]        — Лена, как минимум, добралась до полуфинала 
 #
-# - строка 16530:
-#   alt_day2_hf2 == 5 & alt_day2_round3 != 0 >>   alt_my_rival_semifinal.take == 'us'             - Ульяна - соперник в полуфинале + Сэм выиграл
+# — строка 16530:
+#   alt_day2_hf2 == 5 & alt_day2_round3 != 0 >>   alt_my_rival_semifinal.take == 'us'             — Ульяна — соперник в полуфинале + Сэм выиграл
 #                                               + alt_day2_gamblers_result['me'] >= 21
-# - строки 12461, 12475, 12499:
-#   alt_day2_f1 == 5 & alt_day2_round3 == 1 >>   alt_day2_gamblers_result['us'] == 22            - Ульяна выиграла турнир
+# — строки 12461, 12475, 12499:
+#   alt_day2_f1 == 5 & alt_day2_round3 == 1 >>   alt_day2_gamblers_result['us'] == 22            — Ульяна выиграла турнир
 #
-# - строка 12488:
-#   alt_day2_f1 == 4                        >>   alt_day2_gamblers_result['mi'] >= 21            - Мику вышла в финал
+# — строка 12488:
+#   alt_day2_f1 == 4                        >>   alt_day2_gamblers_result['mi'] >= 21            — Мику вышла в финал
 #
-# - строка 15029:
-#   alt_day2_f1 == 1                        >>   alt_day2_gamblers_result['un'] >= 21            - Лена, как минимум, вышла в финал
+# — строка 15029:
+#   alt_day2_f1 == 1                        >>   alt_day2_gamblers_result['un'] >= 21            — Лена, как минимум, вышла в финал
 #
-# - строка 26152:
-#   alt_day2_round3 != 0 & alt_day2_f1 == 1 >>   alt_day2_gamblers_result['un'] >= 21            - Лена, как минимум, вышла в финал
-#   при изменённом турнире в этом выражении alt_day2_round3 != 0 - не нужно. Сэм турнир смотрит до конца.
+# — строка 26152:
+#   alt_day2_round3 != 0 & alt_day2_f1 == 1 >>   alt_day2_gamblers_result['un'] >= 21            — Лена, как минимум, вышла в финал
+#   при изменённом турнире в этом выражении alt_day2_round3 != 0 — не нужно. Сэм турнир смотрит до конца.
 #
-# - строки 12558, 13464, 12980:
-#   alt_day2_round3 == 2                    >>   alt_day2_gamblers_result['me'] == 22            - Семён выиграл турнир
+# — строки 12558, 13464, 12980:
+#   alt_day2_round3 == 2                    >>   alt_day2_gamblers_result['me'] == 22            — Семён выиграл турнир
 #
-# - строка 12578:
-#   ((alt_day2_round1 == 1) or (alt_day2_round2 == 1)) >> alt_day2_gamblers_result['me'] < 12    - Семён проиграл в 1 или 2 туре
+# — строка 12578:
+#   ((alt_day2_round1 == 1) or (alt_day2_round2 == 1)) >> alt_day2_gamblers_result['me'] < 12    — Семён проиграл в 1 или 2 туре
 #
-# - строка 14532:                                   (с учётом, что соперник - Лена)
-#   alt_day2_round1 == 1                    >>  alt_day2_gamblers_result['me'] == 1              - Семён проиграл в 1 туре
+# — строка 14532:                                   (с учётом, что соперник — Лена)
+#   alt_day2_round1 == 1                    >>  alt_day2_gamblers_result['me'] == 1              — Семён проиграл в 1 туре
 #       
-# - строка 14537:                                   (с учётом, что соперник - Лена)
-#   alt_day2_round2 != 1                    >>  alt_day2_gamblers_result['me'] >= 2              - Семён как минимум, выиграл в 1 туре
+# — строка 14537:                                   (с учётом, что соперник — Лена)
+#   alt_day2_round2 != 1                    >>  alt_day2_gamblers_result['me'] >= 2              — Семён как минимум, выиграл в 1 туре
 #
-# - строки 15024, 15175:                            (с учётом, что соперник - Лена)
-#   alt_day2_fail == 1                      >>   alt_day2_gamblers_result['un'] > 2              - Семён проиграл в 1 туре Лене БЕЗ РЕВАНША
+# — строки 15024, 15175:                            (с учётом, что соперник — Лена)
+#   alt_day2_fail == 1                      >>   alt_day2_gamblers_result['un'] > 2              — Семён проиграл в 1 туре Лене БЕЗ РЕВАНША
 #       
-# - строки 12980, 13461, 15388, 15396, 19998: 
-#   alt_day2_dv_bet_won == 2 - нигде не присваивается, предположительно - она прошла дальше в турнире
+# — строки 12980, 13461, 15388, 15396, 19998: 
+#   alt_day2_dv_bet_won == 2 — нигде не присваивается, предположительно — она прошла дальше в турнире
 #   alt_day2_dv_bet_won == 2               >>    alt_day2_gamblers_result['me'] < alt_day2_gamblers_result['dv'] 
-#                                                or alt_day2_gamblers_result['me'] == 1             - Алиса с Семеном наравне или прошла дальше
+#                                                or alt_day2_gamblers_result['me'] == 1             — Алиса с Семеном наравне или прошла дальше
 #
 # alt_route_sl_cl
-# - строка 14315:
-#   alt_day2_f1 == 4 & alt_day2_round3 == 1 >>   alt_my_rival_final.take == 'mi'                    - Мику - соперник в финале + Сэм выиграл
+# — строка 14315:
+#   alt_day2_f1 == 4 & alt_day2_round3 == 1 >>   alt_my_rival_final.take == 'mi'                    — Мику — соперник в финале + Сэм выиграл
 #                                              + alt_day2_gamblers_result['me'] == 22
 #
 # alt_route_mi_cl
-# - строка 248:
-#   alt_day2_fail != 1                      >>  alt_day2_gamblers_result['me'] > 1                  - по крайней мере, Семён не проиграл в 1 туре
+# — строка 248:
+#   alt_day2_fail != 1                      >>  alt_day2_gamblers_result['me'] > 1                  — по крайней мере, Семён не проиграл в 1 туре
 #
-# - строка 859:
-#   alt_day2_round3 == 2                    >>  alt_day2_gamblers_result['me'] == 22                - Семён выиграл турнир
+# — строка 859:
+#   alt_day2_round3 == 2                    >>  alt_day2_gamblers_result['me'] == 22                — Семён выиграл турнир
 # 
 #   
 # alt_route_un_fz
-# - строка 943:
-#   alt_day2_fail == 1                      >>  alt_my_rival_1_tour.take == 'un'                    - Семён проиграл Лене в 1 туре.
+# — строка 943:
+#   alt_day2_fail == 1                      >>  alt_my_rival_1_tour.take == 'un'                    — Семён проиграл Лене в 1 туре.
 #                                             + alt_day2_gamblers_result['me'] == 1
-#                           При этом далее есть фраза - "хотя она далеко и не прошла" - это не факт, Лена может и выиграть турнир, вообще-то.
+#                           При этом далее есть фраза — "хотя она далеко и не прошла" — это не факт, Лена может и выиграть турнир, вообще-то.
 #       
 #
 # alt_route_me_zneutral
-# - строка 799:
-#   alt_day2_dv_bet_won != 1                >>  alt_day2_gamblers_result['me'] <= 21                - Семён не выиграл турнир
+# — строка 799:
+#   alt_day2_dv_bet_won != 1                >>  alt_day2_gamblers_result['me'] <= 21                — Семён не выиграл турнир
 #       
 # ***********************************************************************************************
 
 
 
 # *************************************************************************************************************** УДАЛИТЬ
-# Этот кусок кода удалить - он нужен для отдельного входа в турнир
+# Этот кусок кода удалить — он нужен для отдельного входа в турнир
 init 2:
     $ mods["scenario__alt__test"] = u">== '7 Дней Лета'. Турнир. Проверка. ==<"
-    $ mod_tags["scenario__alt__test"] = ["length:test","gameplay:test","protagonist:male","special:TEST","character:7ДЛ - ТЕСТ"]
+    $ mod_tags["scenario__alt__test"] = ["length:test","gameplay:test","protagonist:male","special:TEST","character:7ДЛ — ТЕСТ"]
     
 label scenario__alt__test:
     $ init_map_zones_alt1()
@@ -122,7 +122,7 @@ label scenario__alt__test:
     $ lp_sl = 6
     
     "Проверка турнира."
-    "{b}Играем за Локи; метим карты; спорим с Алисой; всем девчонкам - по 6 ЛП.{/b}"
+    "{b}Играем за Локи; метим карты; спорим с Алисой; всем девчонкам — по 6 ЛП.{/b}"
     window hide
     
 # *************************************************************************************************************** /УДАЛИТЬ
@@ -298,7 +298,7 @@ label alt_day2_cards_tournament:
             "Я комбинации знаю, и подсказки не нужны":
                 $ alt_hint_poker_contractual = False
                 jump alt_day2_poker_rules_known
-    else:                                                       # если ещё правил не читали - читаем.
+    else:                                                       # если ещё правил не читали — читаем.
         pass
 
 label alt_day2_poker_rules_reading:
@@ -322,11 +322,11 @@ label alt_day2_poker_rules_reading:
     if persistent.font_size == 'small':
         "{space=15}например: {b}{color=#009833}9{image=suit_utan_S} 8{image=suit_utan_S} 7{image=suit_utan_S} 6{image=suit_utan_S} 5{image=suit_utan_S}{/color}{/b}. Туз может как начинать порядок (роял-флеш),{nw}"
         "{space=15}так и заканчивать его: {b}{color=#009833}5{image=suit_uvao_S} 4{image=suit_uvao_S} 3{image=suit_uvao_S} 2{image=suit_uvao_S} Т{image=suit_uvao_S}{/color}{/b}."
-        "{space=15}Комбинации карт {b}{color=#FF6600}2{image=suit_ussr_S} Т{image=suit_ussr_S} К{image=suit_ussr_S} Д{image=suit_ussr_S} В{image=suit_ussr_S}{/color}{/b} или {b}{color=#FF6600}4{image=suit_2ch_S} 3{image=suit_2ch_S} 2{image=suit_2ch_S} Т{image=suit_2ch_S} К{image=suit_2ch_S}{/color}{/b} - не являются стрит-флешами.{nw}"
+        "{space=15}Комбинации карт {b}{color=#FF6600}2{image=suit_ussr_S} Т{image=suit_ussr_S} К{image=suit_ussr_S} Д{image=suit_ussr_S} В{image=suit_ussr_S}{/color}{/b} или {b}{color=#FF6600}4{image=suit_2ch_S} 3{image=suit_2ch_S} 2{image=suit_2ch_S} Т{image=suit_2ch_S} К{image=suit_2ch_S}{/color}{/b} — не являются стрит-флешами.{nw}"
     elif persistent.font_size == 'large':
         "{space=15}например: {b}{color=#009833}9{image=suit_utan_L} 8{image=suit_utan_L} 7{image=suit_utan_L} 6{image=suit_utan_L} 5{image=suit_utan_L}{/color}{/b}. Туз может как начинать порядок (роял-флеш),{nw}"
         "{space=15}так и заканчивать его: {b}{color=#009833}5{image=suit_uvao_L} 4{image=suit_uvao_L} 3{image=suit_uvao_L} 2{image=suit_uvao_L} Т{image=suit_uvao_L}{/color}{/b}."
-        "{space=15}Комбинации карт {b}{color=#FF6600}2{image=suit_ussr_L} Т{image=suit_ussr_L} К{image=suit_ussr_L} Д{image=suit_ussr_L} В{image=suit_ussr_L}{/color}{/b} или {b}{color=#FF6600}4{image=suit_2ch_L} 3{image=suit_2ch_L} 2{image=suit_2ch_L} Т{image=suit_2ch_L} К{image=suit_2ch_L}{/color}{/b} - не являются стрит-флешами.{nw}"
+        "{space=15}Комбинации карт {b}{color=#FF6600}2{image=suit_ussr_L} Т{image=suit_ussr_L} К{image=suit_ussr_L} Д{image=suit_ussr_L} В{image=suit_ussr_L}{/color}{/b} или {b}{color=#FF6600}4{image=suit_2ch_L} 3{image=suit_2ch_L} 2{image=suit_2ch_L} Т{image=suit_2ch_L} К{image=suit_2ch_L}{/color}{/b} — не являются стрит-флешами.{nw}"
     "{space=15}Если на руках у игрока оказывается {b}шесть{/b} карт по порядку, младшая карта игнорируется."
     "{space=15}Если у двух игроков одновременно на руках оказывается стрит-флеш, выигрывает тот,{nw}"
     "{space=15}у кого комбинация начинается с карты более высокого достоинства."
@@ -370,8 +370,8 @@ label alt_day2_poker_rules_reading:
         "- {b}Флеш{/b} (англ. {i}flush{/i} — «масть»): пять карт одной масти, например: {b}{color=#009833}К{image=suit_utan_S} В{image=suit_utan_S} 8{image=suit_utan_S} 4{image=suit_utan_S} 3{image=suit_utan_S}{/b}.{nw}"
     elif persistent.font_size == 'large':
         "- {b}Флеш{/b} (англ. {i}flush{/i} — «масть»): пять карт одной масти, например: {b}{color=#009833}К{image=suit_utan_L} В{image=suit_utan_L} 8{image=suit_utan_L} 4{image=suit_utan_L} 3{image=suit_utan_L}{/b}.{nw}"
-    "{space=15}Такую комбинацию для оценки называют «флеш от короля» - старшей карты комбинации."
-    "{space=15}Самая старшая комбинация - с  тузом.{nw}"
+    "{space=15}Такую комбинацию для оценки называют «флеш от короля» — старшей карты комбинации."
+    "{space=15}Самая старшая комбинация — с  тузом.{nw}"
     "{space=15}Если на руках оказывается {b}шесть{/b} карт одной масти, младшая карта комбинации игнорируется."
     "{space=15}Если у обоих соперников на руках будет такая комбинация, преимущество отдаётся тому,{nw}"
     "{space=15}у кого старшая карта в комбинации окажется более высокого достоинства."
@@ -396,7 +396,7 @@ label alt_day2_poker_rules_reading:
         "{space=15}Вышеприведённая комбинация является самым младшим стритом; самый старший стрит -{nw}"
         "{space=15}это стрит от туза: {b}{color=#FF6600}Т{image=suit_ussr_L} {color=#009833}К{image=suit_uvao_L} {color=#FF6600}Д{image=suit_2ch_L} В{image=suit_2ch_L} 10{image=suit_ussr_L}{/color}{/color}{/b}."
     "{space=15}При одновременном наличии стритов у двух игроков победитель определяется по старшей{nw}"
-    "{space=15}карте комбинации; если и старшие карты окажутся одинаковыми - объявляется ничья.{nw}"
+    "{space=15}карте комбинации; если и старшие карты окажутся одинаковыми — объявляется ничья.{nw}"
     ""
     
     $ renpy.pause (1)
@@ -679,21 +679,21 @@ label alt_day2_tournament_prep_new:
  # ---------------------------------------------------------------------------------
 label alt_day2_tournament_tour_1_new:
     $ alt_tournament_state = "1_round_start"                                                # устанавливаем начало 1-го раунда
-    $ alt_day2_gamblers_begin = alt_gamblers_shuffler()                                     # вызываем рандомизатор - получаем список игроков, отсортированный по уcловным номерам.
+    $ alt_day2_gamblers_begin = alt_gamblers_shuffler()                                     # вызываем рандомизатор — получаем список игроков, отсортированный по уcловным номерам.
     $ alt_my_rival_1_tour = alt_get_me_rival(alt_day2_gamblers_begin)                       # узнаём своего соперника
     $ alt_name_my_rival_i = alt_my_rival_1_tour.name['i']                                   # узнаём ИМЯ своего соперника (в именительном падеже)
     $ alt_name_my_rival_r = alt_my_rival_1_tour.name['r']                                   # узнаём ИМЯ своего соперника (в родительном падеже)
     $ alt_name_my_rival_d = alt_my_rival_1_tour.name['d']                                   # узнаём ИМЯ своего соперника (в дательном падеже)
     $ alt_name_my_rival_v = alt_my_rival_1_tour.name['v']                                   # узнаём ИМЯ своего соперника (в винительном падеже)
     $ alt_name_my_rival_t = alt_my_rival_1_tour.name['t']                                   # узнаём ИМЯ своего соперника (в творительном падеже)
-    $ alt_spr_my_rival = alt_my_rival_1_tour.take                                           # получаем спрайт соперника - заголовок
+    $ alt_spr_my_rival = alt_my_rival_1_tour.take                                           # получаем спрайт соперника — заголовок
     $ alt_emo_my_rival = alt_sprites_rival_recognition[alt_spr_my_rival][0]                 # эмоция (строка)
     $ alt_clot_my_rival = alt_sprites_rival_recognition[alt_spr_my_rival][1]                # одежда (строка)
     $ alt_pos_my_rival = alt_sprites_rival_recognition[alt_spr_my_rival][2]                 # положение
     $ alt_nick_my_rival = alt_my_rival_1_tour.nick                                          # получаем характер соперника (для диалога)
  # ---------------------------------------------------------------------------------
     scene bg int_dining_hall_sunset
-    $ renpy.fix_rollback()                                                                  # фиксируем выбор - "откатом" поменять будет нельзя
+    $ renpy.fix_rollback()                                                                  # фиксируем выбор — "откатом" поменять будет нельзя
     window show
     "Мне в оппоненты рандом послал {w}%(alt_name_my_rival_v)s."                             # называем своего соперника
     
@@ -768,7 +768,7 @@ label alt_day2_tournament_tour_1_new:
     
 label alt_day2_participate_new:
     $ alt_day2_gamblers_1_tour = alt_gamblers_arrange(alt_day2_gamblers_begin)      # получаем список игроков, рассаженных по столам попарно (1 тур)
-    $ renpy.fix_rollback()                                                          # фиксируем выбор - "откатом" поменять будет нельзя
+    $ renpy.fix_rollback()                                                          # фиксируем выбор — "откатом" поменять будет нельзя
     $ places_my_table = alt_get_my_table(alt_day2_gamblers_1_tour)                  # Стол Семёна = [место Семёна, место соперника, № их стола]
     
     if not alt_day2_detour_1_tour:                                                  # если НЕ пропуск 1 тура
@@ -776,19 +776,19 @@ label alt_day2_participate_new:
         window show
         "Пока суд да дело, я решил разузнать, какая диспозиция сложилась на игровом поле."
         $ alt_mstt = 9
-        call show_tournament_table                                                  # показываем турнирную таблицу - ПУСТУЮ
+        call show_tournament_table                                                  # показываем турнирную таблицу — ПУСТУЮ
         window show
         
     $ alt_table_no = 1                                                              # № стола = 1 (начинаем с первого)
     $ alt_mstt = 0                                                                  # обнуляем глобальный счетчик таблицы
-    $ alt_random_box_1 = range(1,len(alt_table_affiliation)+1)                      # черный ящик - список от 1 до длины представлений столов +1
+    $ alt_random_box_1 = range(1,len(alt_table_affiliation)+1)                      # черный ящик — список от 1 до длины представлений столов +1
     while alt_table_no <= 4:                                                        # перебираем столы от 1 до 4
         if not alt_day2_detour_1_tour:                                              # если НЕ пропуск 1 тура
-            $ sitting_at_table,gambler_upper,gambler_lower,must_taunt = alt_declare_tournament_tables(alt_table_no)  #расссадка, игроки, таунты - по номеру стола
+            $ sitting_at_table,gambler_upper,gambler_lower,must_taunt = alt_declare_tournament_tables(alt_table_no)  #расссадка, игроки, таунты — по номеру стола
             "%(sitting_at_table)s"
-            call show_tournament_table                                                  # переход по метке - вызов очередной фишки
+            call show_tournament_table                                                  # переход по метке — вызов очередной фишки
             extend " %(gambler_upper)s"                                                 # выводим в окно имя верхнего игрока
-            call show_tournament_table                                                  # переход по метке - вызов очередной фишки
+            call show_tournament_table                                                  # переход по метке — вызов очередной фишки
             extend " и %(gambler_lower)s."                                              # выводим в окно имя нижего игрока
             if must_taunt != None:                                                      # если таунт есть
                 "%(must_taunt)s"                                                        # выводим его
@@ -799,11 +799,11 @@ label alt_day2_participate_new:
             elif alt_table_no == 2 and places_my_table[2] == 1:                                             
                 "Со вторым столом разобрались, кто-то из них сегодня не дойдёт до финала."
                 
-# для всех столов такое или только для первого - ? если для всех - можно перенести в функцию
+# для всех столов такое или только для первого — ? если для всех — можно перенести в функцию
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ /ВОПРОС
 
-        if alt_table_no != places_my_table[2]:                                          # если номер стола - НЕ свой
-            $ alt_day2_gamblers_1_tour[2*alt_table_no - renpy.random.choice([1,2])].winner = True  # тогда один из игроков (рандомно) - победитель в этапе
+        if alt_table_no != places_my_table[2]:                                          # если номер стола — НЕ свой
+            $ alt_day2_gamblers_1_tour[2*alt_table_no — renpy.random.choice([1,2])].winner = True  # тогда один из игроков (рандомно) — победитель в этапе
             $ renpy.block_rollback()                                                                # блокируем роллбак
         $ alt_table_no += 1                                                             # следующий стол
     if not alt_day2_detour_1_tour:                                                  # если НЕ пропуск 1 тура
@@ -817,44 +817,44 @@ label alt_day2_participate_new:
     elif alt_day2_detour_semifinal:                                             # если пропуск полуфинала
         jump alt_day2_participate_win_end_new                                   # переход на победу в 1 туре
     
-label alt_day2_tournament_start_new:                                            # начало 1 тура - сюда переходим при реванше
+label alt_day2_tournament_start_new:                                            # начало 1 тура — сюда переходим при реванше
     call alt_day2_stipulation_new                                               # определяемся, кто первый ходит
     
 #-------------------------------------------------------------------------------------------------
-    # первоначальные "настройки" игроков - могут меняться по результатам игры
-    # 'defense' - защита, 'gamble' - риск, 'succumb' - слив, 'foolplay' - рандом
-    # вероятность ошибки: 1 = 80%, .... 4 = 20%, 5 - ошибок нет.
+    # первоначальные "настройки" игроков — могут меняться по результатам игры
+    # 'defense' — защита, 'gamble' — риск, 'succumb' — слив, 'foolplay' — рандом
+    # вероятность ошибки: 1 = 80%, .... 4 = 20%, 5 — ошибок нет.
     
     if alt_my_rival_1_tour.take == 'un':                                                    # Лена старается проиграть
         $ alt_day2_gambler_behavior = 'succumb'
         if not alt_day2_revanche:                                                           # еcли НЕ реванш
-            $ alt_day2_gambler_skill = 3                                                    # ошибок - 40%(3)
+            $ alt_day2_gambler_skill = 3                                                    # ошибок — 40%(3)
         else:                                                                               # еcли РЕВАНШ
-            $ alt_day2_gambler_skill = 4                                                    # ошибок - 20%(4) 
-    elif alt_my_rival_1_tour.take == 'sl':                                                  # Славя будет защищаться, ошибок - 40%(3)
+            $ alt_day2_gambler_skill = 4                                                    # ошибок — 20%(4) 
+    elif alt_my_rival_1_tour.take == 'sl':                                                  # Славя будет защищаться, ошибок — 40%(3)
         $ alt_day2_gambler_behavior = 'defense'
         $ alt_day2_gambler_skill = 3
-    elif alt_my_rival_1_tour.take == 'dv':                                                  # Алиса рискует, ошибок - 80%(4)
+    elif alt_my_rival_1_tour.take == 'dv':                                                  # Алиса рискует, ошибок — 80%(4)
         $ alt_day2_gambler_behavior = 'gamble'
         $ alt_day2_gambler_skill = 4
-    elif alt_my_rival_1_tour.take == 'mi':                                                  # Мику будет защищаться, ошибок - 60%(3)
+    elif alt_my_rival_1_tour.take == 'mi':                                                  # Мику будет защищаться, ошибок — 60%(3)
         $ alt_day2_gambler_behavior = 'defense'
         $ alt_day2_gambler_skill = 3
     elif alt_my_rival_1_tour.take == 'us':                                                  # Ульяна будет защищаться
         $ alt_day2_gambler_behavior = 'defense'
         if not alt_day2_revanche:                                                           # еcли НЕ реванш
-            $ alt_day2_gambler_skill = 1                                                    # ошибок - 80%(1)
+            $ alt_day2_gambler_skill = 1                                                    # ошибок — 80%(1)
         else:                                                                               # еcли РЕВАНШ
-            $ alt_day2_gambler_skill = 2                                                    # ошибок - 60%(2)
+            $ alt_day2_gambler_skill = 2                                                    # ошибок — 60%(2)
     elif alt_my_rival_1_tour.take == 'sh':                                                  # Шурик экспериментирует, так что может и рискнуть, и защищаться, и слить; ошибки 40%(3)
-        $ alt_day2_experiment = ['defense','gamble','succumb']                              # у него своя кухня - набор из возможных вариантов
+        $ alt_day2_experiment = ['defense','gamble','succumb']                              # у него своя кухня — набор из возможных вариантов
         $ alt_day2_gambler_skill = 3
     elif alt_my_rival_1_tour.take == 'mz':                                                  # Женя играет рандомно, как в классике, ошибки = 5
         $ alt_day2_gambler_behavior = 'foolplay'
         $ alt_day2_gambler_skill = 5
 #-------------------------------------------------------------------------------------------------
 
-label alt_day2_1_tour_re_game:                                                              # игра 1 тура - сюда возвращаемся на повторную игру 
+label alt_day2_1_tour_re_game:                                                              # игра 1 тура — сюда возвращаемся на повторную игру 
     $ alt_my_poker_hand = None
     $ alt_rival_poker_hand = None
     
@@ -891,27 +891,27 @@ label alt_day2_1_tour_re_game:                                                  
             rival = CardGameRivalWiseUsual(mz_avatar_set, u"Женя", alt_day2_gambler_behavior, alt_day2_gambler_skill)
 # ************************************************************************************
 
-    $ alt_hint_poker = alt_hint_poker_contractual                                           # подсказки комбинаций - по просмору правил
+    $ alt_hint_poker = alt_hint_poker_contractual                                           # подсказки комбинаций — по просмору правил
     jump cards_gameloop_wise_alt                                                            # переход карточный стол
 
 #-------------------------------------------------------------------------------------------------
 label alt_day2_participate_fail_end_new:
     $ alt_day2_result_tour = 1                                              # Семён проиграл в 1 туре
     if alt_day2_revanche:                                               # если был реванш
-        if alt_my_rival_1_tour.take == 'un':                            # если соперник - Лена
+        if alt_my_rival_1_tour.take == 'un':                            # если соперник — Лена
             "Ну вот, чего я и добивался."
             "Подмигнув Лене, я поднялся и раскланялся."
             me "Я проиграл. Простите."
             "И удалился — до ужина было ещё полчаса, а голова у меня уже серьёзно гудела от шума толпы."
 
-        elif alt_my_rival_1_tour.take == 'us':                          # если соперник - Ульяна
+        elif alt_my_rival_1_tour.take == 'us':                          # если соперник — Ульяна
             "Пожав плечами, я встал из-за стола, оставляя в одиночестве что-то восторженно вопящую Ульянку."
             "Переигровки, реванши… Я утратил интерес к игре."
             "Даже не стал досматривать события в полуфинале и финале."
         else:                                                           # ... а может быть кто-то ещё
             pass
             
-            # ТОDO - Обсчёт переменных - кто и как сыграл - для проверки по другим дням
+            # ТОDO — Обсчёт переменных — кто и как сыграл — для проверки по другим дням
             
             
         jump alt_day2_prepare_transition_to_supper                                            # после неудачного реванша -> переход на ужин
@@ -973,10 +973,10 @@ label alt_day2_participate_fail_end_new:
         sl "Но я же просто за компанию играть села!"
         sl "Я вообще карты не люблю."
         show sl sad pioneer with dissolve
-        me "А что поделаешь. {w}Записалась - так действуй до конца!"
+        me "А что поделаешь. {w}Записалась — так действуй до конца!"
         me "К тому же, мне очень хочется, чтобы сегодня ты победила. Сумеешь?"
         "Славя неуверенно кивнула, а я поднялся и показал ей большой палец."
-        "Чуточку уверенности в себе вне привычной сферы обитания - вот что ей нужно."
+        "Чуточку уверенности в себе вне привычной сферы обитания — вот что ей нужно."
 
     elif alt_my_rival_1_tour.take == 'dv':
         if alt_day2_dv_bet_approve:
@@ -1021,7 +1021,7 @@ label alt_day2_participate_fail_end_new:
         mi "Ой, какое счастье! А то мне никогда-никогда не везло в картах, я и решила, что это не моё, а тут попросили, я и согласилась."
         mi "Я даже не думала, что сумею победить! А ты не обижаешься? А то хочешь, переиграем, мне не жалко! Нет, правда-правда не обижаешься?"
         show mi smile pioneer with dissolve
-        mi "Просто я не хочу, чтобы мне было хорошо за счёт других, это плохо, мне всегда па говорил, что счастья на чужих слезах не построишь."
+        mi "Просто я не хочу, чтобы мне было хорошо за счёт других, это плохо, мне всегда Па говорил, что счастья на чужих слезах не построишь."
         me "Всё в порядке. Ты здорово играешь, поэтому и победила."
         me "Удачи тебе в полуфинале."
         "Пожелал я и, отвернувшись, удалился."
@@ -1070,7 +1070,7 @@ label alt_day2_participate_fail_end_new:
 
     scene bg int_dining_hall_sunset
     window show
-    "А ситуация между тем, складывалась следующая:"
+    "А ситуация, между тем, складывалась следующая:"
     window hide
     $ renpy.pause(.5)
     call alt_day2_1_tour_analizer                                                   # Вызов анализатора 1 раунда
@@ -1079,7 +1079,7 @@ label alt_day2_participate_fail_end_new:
     stop music fadeout 3
     window hide
     $ alt_drawing_of_detour()                                                       # вызываем рандомизатор пропуска полуфинала и финала
-    $ renpy.fix_rollback()                                                          # фиксируем выбор - "откатом" поменять будет нельзя
+    $ renpy.fix_rollback()                                                          # фиксируем выбор — "откатом" поменять будет нельзя
     jump alt_day2_semifinal_new                                                     # переход в полуфинал ?
 #------------------------------------------------------------------------------------------------
 label alt_day2_participate_win_end_new:
@@ -1091,12 +1091,12 @@ label alt_day2_participate_win_end_new:
     $ alt_tournament_state = "1_round_end"                                  # устанавливаем конец 1-го раунда
     
 # ------------------------------------------------------------------------- 
-# ЕСЛИ Славя, Мику или Шурик и НЕ скип тура - итоги ДО диалогов
+# ЕСЛИ Славя, Мику или Шурик и НЕ скип тура — итоги ДО диалогов
     if (alt_my_rival_1_tour.take in ['sl','mi','sh']) and not alt_day2_detour_semifinal:
         scene bg int_dining_hall_sunset
         window show
         "Первый тур закончился."
-        "Ситуация между тем, складывалась следующая:"
+        "Ситуация, между тем, складывалась следующая:"
         call alt_day2_1_tour_analizer                                                   # вызываем анализатор 1 тура
         $ renpy.block_rollback()                                                          # блокируем роллбак
 # ------------------------------------------------------------------------- 
@@ -1129,12 +1129,12 @@ label alt_day2_participate_win_end_new:
                         me "Может, ещё разок?"
                         show el normal pioneer far at left
                     el "Я же сказал — никаких переигровок!"
-                    me "А это не переигровка, это…это… Фальстарт!"
+                    me "А это не переигровка, это… Это… Фальстарт!"
                     "Он неприязненно посмотрел на меня."
                     el "Ладно, давайте ещё раз!"
                     hide el with dissolve
                     window hide
-                    $ alt_day2_my_win = alt_day2_rival_win = alt_day2_game_played_out = 0           # обнуляем результат турнира - если реванш
+                    $ alt_day2_my_win = alt_day2_rival_win = alt_day2_game_played_out = 0           # обнуляем результат турнира — если реванш
                     jump alt_day2_tournament_start_new
                 "Ничего не делать":
                     pass
@@ -1148,7 +1148,7 @@ label alt_day2_participate_win_end_new:
         "Она встала из-за стола и исчезла за болельщиками."
         hide un with dissolve
         
-# TODO - пропуск диалогов - надо, если надо - где ???
+# TODO — пропуск диалогов — надо, если надо — где ???
 # ====================================================== ОТСЕБЯТИНА. Пропускаем часть диалога, если "выиграли" 1 тур скипом
         if not alt_day2_detour_semifinal:
 # =======================================
@@ -1160,7 +1160,7 @@ label alt_day2_participate_win_end_new:
             th "Я буду радоваться победе так, как буду радоваться только в финале, когда раскатаю эту рыжую нахалку с сухим счётом!"
             dreamgirl "Нет, ну ты и правда герой. Спору нет."
             dreamgirl "Может, следовало дать девочке выиграть? Она и так выглядит не самой счастливой, а ты выбил из-под неё остатки почвы."
-            dreamgirl "И как оно по ощущения? Стоило того?"
+            dreamgirl "И как оно по ощущениям? Стоило того?"
             th "Я сказал  — заткнись."
             show blinking with dissolve
             "У меня цель не ободрить каждого сирого, а утереть нос одной рыжей зазнайке!"
@@ -1224,7 +1224,7 @@ label alt_day2_participate_win_end_new:
             dreamgirl "Носкиллер рандомный."
             th "Помолчи. Ты ничего не понимаешь."
             th "Это вопрос индивидуального престижа. {w}Я буду двигаться в финал."
-            if alt_result_dv_1_tour == 4:                                                       # Дваче в другом полуфинале, если в 1/2 с Семёном - как-то не того...
+            if alt_result_dv_1_tour == 4:                                                       # Дваче в другом полуфинале, если в 1/2 с Семёном — как-то не того...
                 extend " И раскатаю там рыжее хамло с нулевым счётом."                          # добавлено по логике, править
             elif alt_result_dv_1_tour == 3:                                                              # Дваче в 1/2 к Семёну
                 extend" И раскатаю там соперника с нулевым счётом."                               # добавлено по логике, править
@@ -1245,7 +1245,7 @@ label alt_day2_participate_win_end_new:
             elif alt_result_dv_1_tour == 3:                                                              # Дваче в 1/2 к Семёну
                 th "Между прочим, у нас сейчас как раз будет шанс стреножить Рыжевскую в полуфинале."
                 dreamgirl "Ну да, это нам, конечно, повезло."
-                dreamgirl "Но лучше приготовься к суровому испытанию - просто так она тебе победу не отдаст!"
+                dreamgirl "Но лучше приготовься к суровому испытанию — просто так она тебе победу не отдаст!"
             elif alt_result_dv_1_tour == 2:                                                                 # Дваче слетела в 1 туре 
                 "Я усмехнулся."
                 th "А даже если и слечу."
@@ -1258,7 +1258,7 @@ label alt_day2_participate_win_end_new:
         show dv sad pioneer2 with dspr
         "Алиска облажалась."
         "Ха. Ха. Ха."
-        "Её вид - это то, что не купишь ни за какие мастеркарды с визами."
+        "Её вид — это то, что не купишь ни за какие мастеркарды с визами."
         "Поистине бесценное зрелище!"
         
 # ====================================================== ОТСЕБЯТИНА. Пропускаем часть диалога, если "выиграли" 1 тур скипом
@@ -1273,7 +1273,7 @@ label alt_day2_participate_win_end_new:
                             $ lp_dv += 1
                             show dv rage pioneer2 with dspr
                             "Алиса надулась, набычилась…"
-                            me "Разделал как бог черепаху!"
+                            me "Разделал как Рандом черепаху!"
                             "Не удивлюсь, если она сейчас придумает ещё какую-нибудь гадость, только чтобы уязвить меня."
                             show dv angry pioneer2 with dspr
                             "Но она меня удивила."
@@ -1364,8 +1364,8 @@ label alt_day2_participate_win_end_new:
         
             "Не могу сказать, что пришлось потрудиться."
             "По мне, так это было чистое везение."
-            "Хотя, конечно, моя карма и везение - это слова-антонимы."
-            "Я - ходячее олицетворение закона Мэрфи."
+            "Хотя, конечно, моя карма и везение — это слова-антонимы."
+            "Я — ходячее олицетворение закона Мэрфи."
             dreamgirl "Ну да, ну да. {w}А то, что ты вытянул билет даже не на миллион, а на новую жизнь, это мы в расчёт как бы не берём, да?"
             th "Ты о попадании в лагерь? "
             th "Я не могу назвать это везением в прямом смысле этого слова."
@@ -1437,7 +1437,7 @@ label alt_day2_participate_win_end_new:
                     "А вот эта угроза была уже посерьёзнее, дежурить по столовой одному мне совершенно не улыбалось."
                 else:
                     us "Ах так! Тогда я всем расскажу про тебя и Двачевскую!"
-                    if alt_day2_dv_bet_approve:
+                    if alt_day2_dv_bet_approve and (loki or herc):
                         me "Мелкая нахалка, не смей! Это только наш с ней спор, ты только разрубала!"
                         "Ульяна только улыбнулась."
                     else:
@@ -1458,12 +1458,16 @@ label alt_day2_participate_win_end_new:
                             jump alt_day2_1_tour_end                                                 # В ПОЛУФИНАЛ
                         "Ладно. Как хочешь.":
                             $ lp_us += 1
-                else:
+                elif not alt_day2_revanche:
                     "Я вздохнул."
-                me " Уговорила. Дам тебе ещё один шанс."
+                    me "Уговорила. Дам тебе ещё один шанс."
+                else:
+                    me "Я крепко об этом пожалею, но…  Рассказывай."
+                    "Я поднялся из-за стола."
+                    jump alt_day2_1_tour_end                                                 # В ПОЛУФИНАЛ
                 window hide
                 $ alt_day2_revanche = True
-                $ alt_day2_my_win = alt_day2_rival_win = alt_day2_game_played_out = 0                   # обнуляем результат турнира - если реванш
+                $ alt_day2_my_win = alt_day2_rival_win = alt_day2_game_played_out = 0                   # обнуляем результат турнира — если реванш
                 jump alt_day2_tournament_start_new                                                      # НА ПЕРЕИГРОВКУ
             else:
                 me "Можешь делать как хочешь, но ты проиграла."
@@ -1521,7 +1525,7 @@ label alt_day2_participate_win_end_new:
     elif alt_my_rival_1_tour.take == 'mz':
         "Библиотекарше не повезло."
         "Похоже, что там совсем грустно всё было в плане опыта игры в карты."
-        "Ну и правильно, с кем руку-то набьёшь, если твой лучший друг - это даже не книга."
+        "Ну и правильно, с кем руку-то набьёшь, если твой лучший друг — это даже не книга."
         "А подушка."
         "Буркнув нечто невразумительное, она поднялась и исчезла."
 # ............................................ \\диалоги
@@ -1529,12 +1533,12 @@ label alt_day2_participate_win_end_new:
     
 # -------------------------------------------------------------------------
 label alt_day2_1_tour_end:
-# ЕСЛИ НЕ Славя, Мику или Шурик ИЛИ при скипе - итоги после диалогов
+# ЕСЛИ НЕ Славя, Мику или Шурик ИЛИ при скипе — итоги после диалогов
     if (alt_my_rival_1_tour.take not in ['sl','mi','sh']) or alt_day2_detour_semifinal:
         scene bg int_dining_hall_sunset
         window show
         "Первый тур закончился."
-        "Ситуация между тем, складывалась следующая:"
+        "Ситуация, между тем, складывалась следующая:"
         call alt_day2_1_tour_analizer                                                       # вызываем анализатор 1 тура
         $ renpy.block_rollback()                                                          # блокируем роллбак
     scene bg int_dining_hall_sunset with dissolve
@@ -1565,7 +1569,7 @@ label alt_day2_semifinal_new:
         $ alt_name_my_rival_v = alt_my_rival_semifinal.name['v']                                        # узнаём ИМЯ своего соперника (в винительном падеже)
         $ alt_name_my_rival_t = alt_my_rival_semifinal.name['t']                                        # узнаём ИМЯ своего соперника (в творительном падеже)
     
-        $ alt_spr_my_rival = alt_my_rival_semifinal.take                                                # получаем спрайт соперника - заголовок
+        $ alt_spr_my_rival = alt_my_rival_semifinal.take                                                # получаем спрайт соперника — заголовок
         $ alt_emo_my_rival = alt_sprites_rival_recognition[alt_spr_my_rival][0]                         # эмоция (строка)
         $ alt_clot_my_rival = alt_sprites_rival_recognition[alt_spr_my_rival][1]                        # одежда (строка)
         $ alt_pos_my_rival = alt_sprites_rival_recognition[alt_spr_my_rival][2]                         # положение
@@ -1588,9 +1592,9 @@ label alt_day2_semifinal_new:
     else:                                                                                               # продули в 1 туре
         $ alt_table_no = 5
     "И если верить этой таблице, то в полуфинале встречаются четыре игрока."
-    $ alt_random_box_1 = range(1,len(alt_table_affiliation)+1)                                      # черный ящик - список от 1 до длины представлений столов +1
+    $ alt_random_box_1 = range(1,len(alt_table_affiliation)+1)                                      # черный ящик — список от 1 до длины представлений столов +1
     while alt_table_no <= 6:                                                                        # перебираем столы от 5 по 6
-        $ sitting_at_table,gambler_upper,gambler_lower,must_taunt = alt_declare_tournament_tables(alt_table_no)  #расссадка, игроки, таунты - по номеру стола
+        $ sitting_at_table,gambler_upper,gambler_lower,must_taunt = alt_declare_tournament_tables(alt_table_no)  #расссадка, игроки, таунты — по номеру стола
         "%(sitting_at_table)s"
         call show_tournament_table
         extend " %(gambler_upper)s"                                                                 # выводим в окно имя верхнего игрока
@@ -1599,15 +1603,15 @@ label alt_day2_semifinal_new:
         if must_taunt != None:                                                                      # если таунт есть
             "%(must_taunt)s"                                                                        # выводим его
         if alt_day2_result_tour != 1:                                                                       # если не продули в 1 туре
-            if alt_table_no != places_my_table[2]:                                                          # если номер стола - НЕ свой
-                $ alt_day2_gamblers_semifinal[2*(alt_table_no-4)-renpy.random.choice([1,2])].winner = True  # тогда один из игроков (рандомно) - победитель в этапе
+            if alt_table_no != places_my_table[2]:                                                          # если номер стола — НЕ свой
+                $ alt_day2_gamblers_semifinal[2*(alt_table_no-4)-renpy.random.choice([1,2])].winner = True  # тогда один из игроков (рандомно) — победитель в этапе
                 $ renpy.block_rollback()
         $ alt_table_no += 1
         
     if alt_day2_result_tour == 1:                                                               # если продули в 1 туре
         $ alt_tournament_state = "semifinal_end"                                                # устанавливаем конец полуфинала
         $ alt_drawing_of_detour_semifinal()
-        $ renpy.fix_rollback()                                                                  # фиксируем выбор - "откатом" поменять будет нельзя
+        $ renpy.fix_rollback()                                                                  # фиксируем выбор — "откатом" поменять будет нельзя
         jump alt_day2_semifinal_detour                                                          # и переходим в конец проигрыша в 1/2
 
     scene bg int_dining_hall_sunset
@@ -1658,9 +1662,9 @@ label alt_day2_semifinal_new:
         th "Дуракам везёт, да?"
         show mi normal pioneer with dspr
         mi "Ой, а почему ты делаешь такое лицо, как будто я тебя смертельно утомила? Я же не специально, просто ты такой интересный, и всё время молчишь."
-        th "Спокойствие. {w}Терпение - добродетель."
+        th "Спокойствие. {w}Терпение — добродетель."
         "Мику говорила так, будто в её языке отсутствовали знаки препинания."
-        "Но во время матча она сосредоточенно молчала - я отметил этот момент."
+        "Но во время матча она сосредоточенно молчала — я отметил этот момент."
     
     elif alt_my_rival_semifinal.take == 'us':
         "Напротив меня уселась Ульянка."
@@ -1672,13 +1676,15 @@ label alt_day2_semifinal_new:
         us "Я хочу всех победить!"
         me "Не буду."
         "Я отрицательно покачал головой."
-        if alt_day2_dv_bet_approve and not alt_day2_dv_harass:
-            me "У нас же спор, помнишь? Ты разбивала!"
-        show us sad pioneer with dspr
-        us "Спор - это да."
-        us "Но играть будем по моим правилам!"
-        me "Что бы это значило?!"
-        show us laugh pioneer with dspr
+        if alt_day2_dv_bet_approve:
+            me "У нас же спор, помнишь?"
+            if loki or herc:
+                extend "Ты разбивала!"
+            show us sad pioneer with dspr
+            us "Спор — это да."
+            us "Но играть будем по моим правилам!"
+            me "Что бы это значило?!"
+            show us laugh pioneer with dspr
         us "Просто я ничего не поняла и не запомнила."
         
     elif alt_my_rival_semifinal.take == 'sh':
@@ -1719,37 +1725,37 @@ label alt_day2_semifinal_new:
 label alt_day2_semifinal_start_new:                                                     # начало полуфинала
     call alt_day2_stipulation_new                                                       # определяемся, кто первый ходит
     
-    # первоначальные "настройки" игроков - могут меняться по результатам игры
-    # 'defense' - защита, 'gamble' - риск, 'succumb' - слив, 'foolplay' - рандом
-    # вероятность ошибки: 1 = 80%, .... 4 = 20%, 5 - ошибок нет.
+    # первоначальные "настройки" игроков — могут меняться по результатам игры
+    # 'defense' — защита, 'gamble' — риск, 'succumb' — слив, 'foolplay' — рандом
+    # вероятность ошибки: 1 = 80%, .... 4 = 20%, 5 — ошибок нет.
     
     if alt_my_rival_semifinal.take == 'un':                                                    # В отличие от 1 тура....... 
         if not alt_day2_dv_bet_approve:                                                         # если с Алисой не спорить
             $ alt_day2_gambler_behavior = 'gamble'                                              # Лена пытается... рискнуть ? почему нет ?
-            $ alt_day2_gambler_skill = 3                                                        # правда, ошибок многовато - 40%(3) 
+            $ alt_day2_gambler_skill = 3                                                        # правда, ошибок многовато — 40%(3) 
         else:
-            $ alt_day2_gambler_behavior = 'succumb'                                             # Если поспорить - то также игра в поддавки
-            $ alt_day2_gambler_skill = 4                                                        # может ошибиться  - 20%(4)
-    elif alt_my_rival_semifinal.take == 'sl':                                                  # Славя будет защищаться, ошибок - 40%(3)
+            $ alt_day2_gambler_behavior = 'succumb'                                             # Если поспорить — то также игра в поддавки
+            $ alt_day2_gambler_skill = 4                                                        # может ошибиться  — 20%(4)
+    elif alt_my_rival_semifinal.take == 'sl':                                                  # Славя будет защищаться, ошибок — 40%(3)
         $ alt_day2_gambler_behavior = 'defense'
         $ alt_day2_gambler_skill = 3
-    elif alt_my_rival_semifinal.take == 'dv':                                                  # Алиса рискует, ошибок - 80%(4)
+    elif alt_my_rival_semifinal.take == 'dv':                                                  # Алиса рискует, ошибок — 80%(4)
         $ alt_day2_gambler_behavior = 'gamble'
         $ alt_day2_gambler_skill = 4
-    elif alt_my_rival_semifinal.take == 'mi':                                                  # Мику будет защищаться, ошибок - 20%(4)
+    elif alt_my_rival_semifinal.take == 'mi':                                                  # Мику будет защищаться, ошибок — 20%(4)
         $ alt_day2_gambler_behavior = 'defense'
         $ alt_day2_gambler_skill = 4
     elif alt_my_rival_semifinal.take == 'us':                                                  # Ульяна будет защищаться по-своему
         $ alt_day2_gambler_behavior = 'defense'
-        $ alt_day2_gambler_skill = 3                                                            # ошибок - 40%(3)
+        $ alt_day2_gambler_skill = 3                                                            # ошибок — 40%(3)
     elif alt_my_rival_semifinal.take == 'sh':                                                  # Шурик экспериментирует, так что может и рискнуть, и защищаться, и слить; ошибки 20%(4)
-        $ alt_day2_experiment = ['defense','gamble','succumb']                                  # у него своя кухня - набор из возможных вариантов
+        $ alt_day2_experiment = ['defense','gamble','succumb']                                  # у него своя кухня — набор из возможных вариантов
         $ alt_day2_gambler_skill = 4
     elif alt_my_rival_semifinal.take == 'mz':                                                  # Женя играет рандомно, как в классике, ошибки = 5
         $ alt_day2_gambler_behavior = 'foolplay'
         $ alt_day2_gambler_skill = 5
 
-label alt_day2_semifinal_re_game:                                                           # игра в полуфинале - сюда возвращаемся на повторную игру 
+label alt_day2_semifinal_re_game:                                                           # игра в полуфинале — сюда возвращаемся на повторную игру 
     $ alt_my_poker_hand = None
     $ alt_rival_poker_hand = None
 
@@ -1789,7 +1795,7 @@ label alt_day2_semifinal_re_game:                                               
             
 # ************************************************************************************
 
-    $ alt_hint_poker = alt_hint_poker_contractual                                           # подсказки комбинаций - по просмору правил
+    $ alt_hint_poker = alt_hint_poker_contractual                                           # подсказки комбинаций — по просмору правил
     jump cards_gameloop_wise_alt                                                            # переход карточный стол
                     
 #-------------------------------------------------------------------------------------------------
@@ -1813,7 +1819,7 @@ label alt_day2_semifinal_fail_end_new:
             un "И зачем ты это сделал?"
             "Спросила она, смотря на меня с явно выраженной неприязнью."
             me "Извини?"
-            un "Думаешь, я не слышала о вашем с Алисой маленькой «пари»?"
+            un "Думаешь, я не слышала о вашем с Алисой маленьком «пари»?"
             un "Так и выигрывал бы!"
             if alt_day2_walk == 0:
                 th "Да я и планировал. Даже карты пометил. Но…"
@@ -1833,7 +1839,7 @@ label alt_day2_semifinal_fail_end_new:
         "В наступившей тишине попросила Лена."
         un "Мой соперник поддавался."
         show dv grin pioneer2 at left with dissolve
-        dv "Поддавался - значит, сам дурак."
+        dv "Поддавался — значит, сам дурак."
         "Фыркнула Алиса."
         "Ну да, она-то знает, что на кону."
         show un serious pioneer with dissolve
@@ -1856,7 +1862,7 @@ label alt_day2_semifinal_fail_end_new:
         me "Не любишь карты?"
         sl "Нет. Я другие игры люблю."
         "Она сморщилась, будто съела нечто кислое."
-        "А я поднялся - меня ждала волнительная роль болельщика за финалистов."
+        "А я поднялся — меня ждала волнительная роль болельщика за финалистов."
 
     elif alt_my_rival_semifinal.take == 'dv':
         if alt_day2_dv_bet_approve:
@@ -1871,7 +1877,7 @@ label alt_day2_semifinal_fail_end_new:
             me "Не получится."
             show dv surprise pioneer2 with dspr
             dv "Почему?"
-            me "Потому что если ты вытащишь меня на трибуны, никто в жизни не поверит, что мне хватило сил справиться с тобой и - что ты там говорила?"
+            me "Потому что если ты вытащишь меня на трибуны, никто в жизни не поверит, что мне хватило сил справиться с тобой и — что ты там говорила?"
             show dv laugh pioneer2 with dspr
             dv "Да. Ну…"
             "Ей пришла в голову мысль."
@@ -1982,7 +1988,7 @@ label alt_day2_semifinal_win_end_new:
         "Жаль только, что иногда даже старания изо всех сил решительно недостаточно."
         "Ведь ты играешь против батьки!"
         un "Блин! Я почти выиграла!"
-        "Вот они злобятся, и кричат, и ножками мотылькают, и невдомёк им, почему окружающим там смешно."
+        "Вот они злобятся, и кричат, и ножками мотылькают, и невдомёк им, почему окружающим так смешно."
         me "Хочешь реванш?"
         un "Нееет, реванш это не то."
         "Вздохнула она."
@@ -2001,7 +2007,7 @@ label alt_day2_semifinal_win_end_new:
         "Да нет, быть не может."
         "Это просто я надышался запахов из столовой, и меня разбирает галлюцинациями."
         me "Двачевскую!"
-        "Алиса покосилась на меня - мол, кто поминает имя моё всуе - но промолчала."
+        "Алиса покосилась на меня — мол, кто поминает имя моё всуе — но промолчала."
         "А я, не объясняя ничего больше, отправился за стол местных небожителей."
         hide un with dissolve
         "Меня ждал финал!"
@@ -2039,7 +2045,7 @@ label alt_day2_semifinal_win_end_new:
             me "С позорным поражением тебя!"
             $ lp_dv += 1
             "По-моему, она меня всё-таки обругала матом."
-            "Не могу сказать - её перекосило так, что я расхохотался."
+            "Не могу сказать — её перекосило так, что я расхохотался."
         else:
             "Я молча встал и направился к столу финалистов."
             "У меня нет времени на детсадовскую возню с неудачниками."
@@ -2047,7 +2053,7 @@ label alt_day2_semifinal_win_end_new:
     elif alt_my_rival_semifinal.take == 'mi':
         show mi dontlike pioneer with dspr
         "Мику определённо не была в восторге от того, что я победил."
-        "Похоже, она начала худо-бедно разбираться в правилах - и тут на тебе."
+        "Похоже, она начала худо-бедно разбираться в правилах — и тут на тебе."
         "Humiliating Defeat."
         "Наткнулась на меня."
         mi "В следующий раз победа будет моя!"
@@ -2095,7 +2101,7 @@ label alt_day2_semifinal_win_end_new:
     elif alt_my_rival_semifinal.take == 'sh':
         show sh normal pioneer with dspr
         "Шурик кивнул мне и поднялся."
-        "Не знаю, впечатлил его мой навык игры, в которую я играю второй раз в жизни (первый раз - в четвертьфинале) или нет."
+        "Не знаю, впечатлил его мой навык игры, в которую я играю второй раз в жизни (первый раз — в четвертьфинале) или нет."
         "Так или иначе, он достаточно равнодушно отнёсся к поражению."
         show sh smile pioneer with dspr
         sh "Насчёт клуба кибернетиков, если вдруг что…"
@@ -2126,7 +2132,7 @@ label alt_day2_final_new:
     $ alt_tournament_state = "final_start"                                                      # устанавливаем начало финала
     if alt_day2_result_tour == 1:                                                               # Если продул в 1 туре
         $ alt_drawing_of_detour_final()                                                         # вызываем рандомизатор
-        $ renpy.fix_rollback()                                                                  # фиксируем выбор - "откатом" поменять будет нельзя
+        $ renpy.fix_rollback()                                                                  # фиксируем выбор — "откатом" поменять будет нельзя
 # -----------------------------------------------------------------------
     $ alt_my_rival_final, alt_index_rival_final = alt_get_me_rival_final(alt_day2_gamblers_final,alt_rival_final)      # узнаём второго соперника в финале и его индекс  в рассадке
     
@@ -2136,7 +2142,7 @@ label alt_day2_final_new:
     $ alt_name_my_rival_v = alt_my_rival_final.name['v']                                   # узнаём ИМЯ второго финалиста (в винительном падеже)
     $ alt_name_my_rival_t = alt_my_rival_final.name['t']                                   # узнаём ИМЯ второго финалиста (в творительном падеже)
 
-    $ alt_spr_my_rival = alt_my_rival_final.take                                                # получаем спрайт соперника - заголовок
+    $ alt_spr_my_rival = alt_my_rival_final.take                                                # получаем спрайт соперника — заголовок
     $ alt_emo_my_rival = alt_sprites_rival_recognition[alt_spr_my_rival][0]                     # эмоция (строка)
     $ alt_clot_my_rival = alt_sprites_rival_recognition[alt_spr_my_rival][1]                    # одежда (строка)
     $ alt_pos_my_rival = alt_sprites_rival_recognition[alt_spr_my_rival][2]                     # положение
@@ -2144,11 +2150,11 @@ label alt_day2_final_new:
     $ alt_nick_my_rival = alt_my_rival_final.nick                                               # получаем характер соперника (для диалога)
 # -----------------------------------------------------------------------
 
-    # ================================================ НЕМНОГО ОТСЕБЯТИНЫ - пересаживаемся за финальный стол.
+    # ================================================ НЕМНОГО ОТСЕБЯТИНЫ — пересаживаемся за финальный стол.
     window show
     el "Полуфиналы завершены, победители встречаются в финале!"
     $ alt_mstt = 2                                                                              
-    call show_tournament_table                                                                  # показать таблицу - итоги полуфинала
+    call show_tournament_table                                                                  # показать таблицу — итоги полуфинала
     
 # ----------------------------------------------------------------------------------------------------
 label alt_day2_final_choice_new:
@@ -2176,7 +2182,7 @@ label alt_day2_final_choice_new:
             "Шурик? Хм. Это будет интересный бой."
         elif alt_my_rival_final.take == 'mz':
             "Жужелица."
-            "Может быть, и скрипит о том, что играть не хочет, но - блин, она же в финале!"
+            "Может быть, и скрипит о том, что играть не хочет, но — блин, она же в финале!"
             "Придётся потрудиться."
 # .......................................... /ДИАЛОГИ
 
@@ -2199,10 +2205,10 @@ label alt_day2_final_choice_new:
         jump alt_day2_final_start_new                                                              # играем финал
 # ----------------------------------------------------------------------------------------------------
     else:                                                                                      # Семён продул в 1/2
-        $ alt_name_rival_final = alt_rival_final.name['i']                                     # Получаем имя финалиста - кому Семён проиграл
+        $ alt_name_rival_final = alt_rival_final.name['i']                                     # Получаем имя финалиста — кому Семён проиграл
         if alt_day2_result_tour == 1:                                                           # Если продул в 1 туре
             if alt_rival_final.take == alt_my_rival_1_tour.take:                                # соперник в 1 туре и финале тот же
-                "В финал выходит мой соперник в первом коне - %(alt_name_rival_final)s"
+                "В финал выходит мой соперник в первом коне — %(alt_name_rival_final)s"
             else:
                 if alt_my_rival_1_tour.take == 'sh':
                     "Шурик, мой удачливый соперник, в полуфинале проиграл."
@@ -2222,7 +2228,7 @@ label alt_day2_final_choice_new:
         if alt_my_rival_final.take == 'un':
             extend "Лену и попытается обыграть её."
         elif alt_my_rival_final.take == 'sl':
-            extend "Славю и докажет всем, что блондинка - это диагноз."
+            extend "Славю и докажет всем, что блондинка — это диагноз."
         elif alt_my_rival_final.take == 'dv':
             if alt_rival_final.take == 'us':
                 extend "… Алису? Так они с самого начала это планировали?!"
@@ -2244,12 +2250,12 @@ label alt_day2_final_choice_new:
             "Во. Жужелица."
 # .......................................... /ДИАЛОГИ
 
-        $ alt_day2_gamblers_final[renpy.random.choice([0,1])].winner = True                                    #  один из игроков (рандомно) - победитель в финале
+        $ alt_day2_gamblers_final[renpy.random.choice([0,1])].winner = True                                    #  один из игроков (рандомно) — победитель в финале
         $ alt_tournament_state = "final_end"
         call alt_day2_final_analizer
         $ renpy.block_rollback()                                                                                # блокируем роллбак
         
-    # TODO - что-либо сказать бы по этому поводу - поздравления победителю и все такое
+    # TODO — что-либо сказать бы по этому поводу — поздравления победителю и все такое
         
         jump alt_day2_prepare_transition_to_supper
 # ------------------------------------------------------------------------------------------------------------------------------
@@ -2258,14 +2264,14 @@ label alt_day2_final_start_new:
     call alt_day2_checking_scores
     call alt_day2_stipulation_new                                                       # определяемся, кто первый ходит
 # ----------------------------------------------------------------------------
-    # первоначальные "настройки" игроков - могут меняться по результатам игры
-    # 'defense' - защита, 'gamble' - риск, 'succumb' - слив, 'foolplay' - рандом
-    # вероятность ошибки: 1 = 80%, .... 4 = 20%, 5 - ошибок нет.
+    # первоначальные "настройки" игроков — могут меняться по результатам игры
+    # 'defense' — защита, 'gamble' — риск, 'succumb' — слив, 'foolplay' — рандом
+    # вероятность ошибки: 1 = 80%, .... 4 = 20%, 5 — ошибок нет.
     
-    if alt_my_rival_final.take == 'un':                                                    # Добрались сюда - так что нефиг, Лена защищается
+    if alt_my_rival_final.take == 'un':                                                    # Добрались сюда — так что нефиг, Лена защищается
         $ alt_day2_gambler_behavior = 'defense'
-        $ alt_day2_gambler_skill = 4                                                       # ошибоки, правда, есть - 20%(4) 
-    elif alt_my_rival_final.take == 'sl':                                                  # Славя будет защищаться, может ошибиться - 20%(4)
+        $ alt_day2_gambler_skill = 4                                                       # ошибоки, правда, есть — 20%(4) 
+    elif alt_my_rival_final.take == 'sl':                                                  # Славя будет защищаться, может ошибиться — 20%(4)
         $ alt_day2_gambler_behavior = 'defense'
         $ alt_day2_gambler_skill = 4
     elif alt_my_rival_final.take == 'dv':                                                  # Алиса рискует, поблажек не будет
@@ -2276,9 +2282,9 @@ label alt_day2_final_start_new:
         $ alt_day2_gambler_skill = 5
     elif alt_my_rival_final.take == 'us':                                                  # Ульяна к финалу научилась играть и будет защищаться, но с ошибками 40% (3)
         $ alt_day2_gambler_behavior = 'defense'
-        $ alt_day2_gambler_skill = 3                                                       # ошибок - 40%(3)
-    elif alt_my_rival_final.take == 'sh':                                                  # Шурик экспериментирует по-прежнему, но без слива, и без ошибок - научился уже поди
-        $ alt_day2_experiment = ['defense','gamble']                                       # у него своя кухня - набор из возможных вариантов
+        $ alt_day2_gambler_skill = 3                                                       # ошибок — 40%(3)
+    elif alt_my_rival_final.take == 'sh':                                                  # Шурик экспериментирует по-прежнему, но без слива, и без ошибок — научился уже поди
+        $ alt_day2_experiment = ['defense','gamble']                                       # у него своя кухня — набор из возможных вариантов
         $ alt_day2_gambler_skill = 5
     elif alt_my_rival_final.take == 'mz':                                                  # Женя играет рандомно, как в классике, ошибки = 5
         $ alt_day2_gambler_behavior = 'foolplay'
@@ -2342,7 +2348,7 @@ label alt_day2_final_start_new:
     window hide
 # ------------------------------------------------------------------------------------------------------------------------------
 
-label alt_day2_final_re_game:                                                           # игра в финале - сюда возвращаемся на повторную игру 
+label alt_day2_final_re_game:                                                           # игра в финале — сюда возвращаемся на повторную игру 
     $ alt_my_poker_hand = None
     $ alt_rival_poker_hand = None
 
@@ -2366,13 +2372,13 @@ label alt_day2_final_re_game:                                                   
         elif alt_my_rival_final.take == 'us':
             rival = CardGameRivalWiseUsual(us_avatar_set, u"Ульяна", alt_day2_gambler_behavior, alt_day2_gambler_skill) # К финалу Ульянка уже и играть научиться должна бы
         elif alt_my_rival_final.take == 'sh':
-            alt_day2_gambler_behavior = renpy.random.choice(alt_day2_experiment)                                             # а вот в финале - не удаляем вариант, а выбираем
+            alt_day2_gambler_behavior = renpy.random.choice(alt_day2_experiment)                                             # а вот в финале — не удаляем вариант, а выбираем
             rival = CardGameRivalWiseUsual(sh_avatar_set, u"Шурик", alt_day2_gambler_behavior, alt_day2_gambler_skill)
         elif alt_my_rival_final.take == 'mz':
             rival = CardGameRivalWiseUsual(mz_avatar_set, alt_day2_gambler_behavior, alt_day2_gambler_skill)           # Женя играет рандомно, как в классике
 # ************************************************************************************
 
-    $ alt_hint_poker = alt_hint_poker_contractual                                           # подсказки комбинаций - по просмору правил
+    $ alt_hint_poker = alt_hint_poker_contractual                                           # подсказки комбинаций — по просмору правил
     jump cards_gameloop_wise_alt                                                            # переход карточный стол
     
 #-------------------------------------------------------------------------------------------------
@@ -2382,9 +2388,9 @@ label alt_day2_final_fail_end_new:
     scene bg int_dining_hall_sunset with dissolve
     $ persistent.altCardsWon2_new = True
 
-    if alt_day2_gamblers_final[0].take != 'me':                             # если 1-й игрок - НЕ Семён
+    if alt_day2_gamblers_final[0].take != 'me':                             # если 1-й игрок — НЕ Семён
         $ alt_day2_gamblers_final[0].winner = True                          # он и выиграл
-    else:                                                                   # если 2-й игрок - НЕ Семён
+    else:                                                                   # если 2-й игрок — НЕ Семён
         $ alt_day2_gamblers_final[1].winner = True                          # он и выиграл
     $ alt_tournament_state = "final_end"                                    # устанавливаем конец финала
     
@@ -2408,7 +2414,7 @@ label alt_day2_final_fail_end_new:
         "А произошло рождение легенды, +50 к опыту, новый уровень и разблокировка уверенности в себе!"
         show un cry_smile pioneer with dspr
         "Лена смотрела на меня долго, неотрывно, и у неё тряслись руки."
-        "Я молчу, она молчит, а вокруг нас как будто выросла некая отталкивающая стенка, защищающая нас - но лишь пока мы вместе."
+        "Я молчу, она молчит, а вокруг нас как будто выросла некая отталкивающая стенка, защищающая нас — но лишь пока мы вместе."
         "Как будто два человека, каждый из которых неполон в одиночестве, вместе они намного сильнее, чем если просто сложить их характеристики."
         "Я не могу сказать сейчас, поддавался ли я, или играл в полную силу, но просто прийти сюда уже было хорошей идеей, сторицей окупившейся этими мгновениями."
         dreamgirl "Не влюбись в неё, барин, вы знакомы меньше суток."
@@ -2422,7 +2428,7 @@ label alt_day2_final_fail_end_new:
         th "А значит, буду наслаждаться неведением."
         th "Ибо оно и есть истинное блаженство."
         "Не знать плохого о любимых, не понимать смысл текста красивой песни на японском, не думать об удобрениях для клубники и яблонь, не понимать, что красивая шубка означает смерть животного."
-        "Здесь и сейчас - на долю малую секунды - просто влюбиться, пасть жертвой ситуации, настроения и атмосферы."
+        "Здесь и сейчас — на долю малую секунды — просто влюбиться, пасть жертвой ситуации, настроения и атмосферы."
         window hide
         with fade
         window show
@@ -2430,7 +2436,7 @@ label alt_day2_final_fail_end_new:
         me "Поздравляю с победой."
         "Улыбнулся я."
         show un shy pioneer with dspr
-        un "С-спасибо..."
+        un "С-спасибо…"
         "Её имя уже внесли в список победителей, и завтра, скорее всего, заставят поднимать флаг, как самую активную участницу."
         "Ведь нельзя же занять первое место, не принимая активного участия."
         "Правда?"
@@ -2447,12 +2453,12 @@ label alt_day2_final_fail_end_new:
         "Славя застонала и уронила голову на сложенные руки."
         play music music_list["forest_maiden"] fadein 5
         sl "Вы хотя бы пытались?"
-        me "Я - старался!"
+        me "Я — старался!"
         show sl normal pioneer with dspr
         sl "Семен, пожалуйста."
         "Она нахмурилась."
-        sl "Хуже меня нет игрока в карты, а я заняла... Ах, зачем я вообще согласилась!"
-        me "Но мы же..."
+        sl "Хуже меня нет игрока в карты, а я заняла… Ах, зачем я вообще согласилась!"
+        me "Но мы же…"
         sl "Вам что, и правда было настолько всё равно, что вы даже поленились немного постараться?"
         show sl sad pioneer with dspr
         sl "Я очень, очень расстроена."
@@ -2473,7 +2479,7 @@ label alt_day2_final_fail_end_new:
         $ lp_dv = lp_dv/2
         if loki:
             "Проиграть было забавно."
-            "С любой из сторон, как ни крути, я оказывался в выигрыше - в случае победы мне удастся немного заткнуть Двачевскую."
+            "С любой из сторон, как ни крути, я оказывался в выигрыше — в случае победы мне удастся немного заткнуть Двачевскую."
             dreamgirl "Ровно до того момента, пока она не созреет для новой шалости."
             th "Этого достаточно."
             "А в случае поражения она устроит мне пиар-акцию в духе «Сёма едет, прячьте тёлок.»"
@@ -2487,7 +2493,7 @@ label alt_day2_final_fail_end_new:
                 th "Несмотря даже на то, что я пометил карты."
             "Появилось это противное чувство, что сейчас на меня начнут показывать пальцем и шептаться «Смотрите, это он! Да, он! Он облажался.»"
             "Я двинулся прочь от стола, не поднимая ни на кого глаз."
-            "Особенно - на Алису."
+            "Особенно — на Алису."
             "Её взгляд буквально жёг мне спину."
         if alt_day2_dv_bet_approve:                                                 # Спорил
             th "Я проиграл пари."
@@ -2498,8 +2504,8 @@ label alt_day2_final_fail_end_new:
                 th "Может, сбежать из лагеря, пока не поздно?"
         else:                                                                       # НЕ спорил
             if alt_day2_dv_harass:                                                  # Если лапал
-                "И теперь, если она расскажет всем, что я её лапал - это же правдой будет, да?"
-                "Как говорил мой батя в трудных ситуациях - не упс, а йопс."
+                "И теперь, если она расскажет всем, что я её лапал — это же правдой будет, да?"
+                "Как говорил мой батя в трудных ситуациях — не упс, а йопс."
             else:                                                                   # НЕ лапал
                 "Хотя я не спорил с Двачевской, она теперь вполне может рассказать всем то, что она напридумывала на крыльце."
                 "И ей поверят. Как обычно верят любому победителю."
@@ -2587,8 +2593,8 @@ label alt_day2_final_fail_end_new:
         "Пробормотал я."
         show mi smile pioneer with dspr
         mi "Я не так часто выхожу из клуба, потому что всем постоянно что-то надо, все куда-то спешат и говорят мне «потом поговорим!»."
-        mi "А я не хочу потом, я сейчас хочу! И сейчас пока я победитель, вы все должны меня слушать и не ругаться, что я много болтаю!"
-        th "Дефицит внимания, ласки, тепла и заботы... А я ещё себя хикикомори считал."
+        mi "А я не хочу потом, я сейчас хочу! И сейчас, пока я победитель, вы все должны меня слушать и не ругаться, что я много болтаю!"
+        th "Дефицит внимания, ласки, тепла и заботы… А я ещё себя хикикомори считал."
         me "А кричать-то зачем?"
         "Оказаться в финале для меня уже было изрядным достижением, поэтому я не особо расстраивался насчёт проигрыша."
         play music tender_song fadein 3
@@ -2619,7 +2625,7 @@ label alt_day2_final_fail_end_new:
         hide mt
         hide dv
         with dissolve
-        "Так что ещё минут пять - и обе ловчих свалились рядом со столами, а она всё продолжала и продолжала петь, делая в воздухе странные, стригущие движение пальцами."
+        "Так что ещё минут пять — и обе ловчих свалились рядом со столами, а она всё продолжала и продолжала петь, делая в воздухе странные, стригущие движение пальцами."
         "Отчего-то от таких движений, да ещё в исполнении ультрамаринового маникюра неприятно-холодно ёкало в животе."
         show mi normal pioneer far at center with easeinleft
         window hide
@@ -2638,6 +2644,7 @@ label alt_day2_final_fail_end_new:
 
     elif alt_my_rival_final.take == 'us':
         $ lp_us += 1
+        play music genki fadein 3
         "Как известно, в карты везёт новичкам и дурачкам."
         "Так как мы все здесь новички, мы были в равных условиях."
         "Но кое-кому перепало на один шанс больше!"
@@ -2681,9 +2688,8 @@ label alt_day2_final_fail_end_new:
         us "Да? Ну-ка подробнее, пожалуйста, о достоинствах, а то я не расслышала."
         un "Тебе бы только о похабностях слушать."
         sl "Лена, а ты бы сама немного думала, что говоришь в присутствии ребёнка."
-        mi "Эй, мне уже шестнадцать."
         us "Эй, мне уже четырнадцать."
-        un "Э..."
+        un "Э…"
         sl "Да-да, ты тут о достоинствах Шурика разглагольствовала. "
         dv "Девочки, а что это вы тут обсуждаете, и без меня."
         un "Ой, потеряйся, Двачевская, кошмарище лесное, додумалась новичка сиськами запугивать."
@@ -2716,19 +2722,21 @@ label alt_day2_final_fail_end_new:
         sh "Эл, всё, она ушла. Упокойся."
 # ............................................ \\диалоги
     window hide
+    stop music fadeout 3
     jump alt_day2_prepare_transition_to_supper                        # пошли ужинать
 
 #-------------------------------------------------------------------------------------------------
 label alt_day2_final_win_end_new:
     $ alt_day2_result_tour = 22                                             # Семён выиграл в финале
+    $ lp_dv += 1
     
     if not alt_day2_detour_final:                                          # если НЕ пропуск финала
         $ persistent.altCardsWonRivals_new[alt_spr_my_rival] = True        # Выиграли у этого соперника
     $ persistent.altCardsWon3_new = True                                           
     
-    if alt_day2_gamblers_final[0].take == 'me':                             # если 1-й игрок - Семён
+    if alt_day2_gamblers_final[0].take == 'me':                             # если 1-й игрок — Семён
         $ alt_day2_gamblers_final[0].winner = True                            # он и выиграл
-    else:                                                                   # если 2-й игрок - Семён
+    else:                                                                   # если 2-й игрок — Семён
         $ alt_day2_gamblers_final[1].winner = True                            # он и выиграл
     $ alt_tournament_state = "final_end"                                   # устанавливаем конец финала
     
@@ -2795,7 +2803,7 @@ label alt_day2_final_win_end_new:
         "Победил?!"
         me "Да!"
         "Бросив над головой карты, рявкнул я:"
-        me "Я - победитель!!!" with vpunch
+        me "Я — победитель!!!" with vpunch
         show sl normal pioneer with dspr
         "Почему-то здесь и сейчас хотелось вести себя так, как душа лежит."
         "Не так, как правила того требуют, или «что же люди скажут»."
@@ -2806,7 +2814,7 @@ label alt_day2_final_win_end_new:
         "Звонко произнесла она."
         "Её глаза сияли."
         sl "Ты победитель турнира."
-        sl "Ты - победитель."
+        sl "Ты — победитель."
         "Как в боксе, она стоит рядом со мной."
         "Хватает меня за запястье."
         "И тянет к небу поднятой рукой"
@@ -2859,7 +2867,7 @@ label alt_day2_final_win_end_new:
             th "Я выиграл пари!!!"
         show dv smile pioneer2 with dissolve
         if alt_day2_dv_harass:
-            "Алиса была готова на месте провалиться - до такой степени она покраснела."
+            "Алиса была готова на месте провалиться — до такой степени она покраснела."
             "Поймав её взгляд, я подмигнул, сделав препохабнейшую морду лица."
             show dv rage pioneer2 with dissolve
             "Её перекосило."
@@ -2875,6 +2883,7 @@ label alt_day2_final_win_end_new:
 
     elif alt_my_rival_final.take == 'mi':
         $ lp_mi += 2
+        $ alt_day2_mi_snap = True
         play music tellyourworld fadein 3
         show mi smile pioneer with dspr
         mi "Ты и правда победил! Ты молодец!"
@@ -2904,7 +2913,7 @@ label alt_day2_final_win_end_new:
         show ba smile uniform with dspr
         ba "Для тебя, малая, сколько влезет."
         "Из ниоткуда в его руках появился жёсткий коричневый чехол для фотоаппарата, а оттуда…"
-        "Старый добрый «компакт-автомат», пленочный, чёрно-белый."
+        "Старый добрый «компакт-автомат», пленочный."
         "Я чуть было не сказал «раритет», но видно было, что машинка рабочая."
         ba "Только без вспышки сегодня, так что становитесь как-нибудь, где посветлее."
         "Мику улыбнулась и развернула кипучую деятельность, тормоша всех и переставляя."
@@ -2927,34 +2936,27 @@ label alt_day2_final_win_end_new:
         mi "Смелее же, ну!"
         "Она нетерпеливо пошевелила плечиком."
         "И я, вздохнув, положил ей на плечо руку."
-        "Неловко - как и чувствовал себя - неловко."
+        "Неловко — как и чувствовал себя — неловко."
         "Свисающая кисть, нечувствительные пальцы."
         "Как фотографировался бы с другом, а не с девушкой."
         "До меня слишком поздно дошло, что девушку надо обнимать за талию, а не вот так."
+        window hide
+        scene cg d2_mi_me_polaroid_7dl
+        with dissolve
         "Но… поздно!"
         window hide
-        show pi at center behind mi
-        with diam
         play sound snap
-        $ renpy.pause(1)
-        scene white
+        scene expression Sepia("cg d2_mi_me_polaroid_7dl")
+        show PolariodFrame
+        with flash
         $ renpy.pause(3)
-        scene
-        call show_tournament_table
-        show pi at center
-        show mi normal pioneer at cleft 
-        with diam
-        window show
         me "Сыыыр."
-        hide pi
-        scene bg int_dining_hall_sunset
-        show mi happy pioneer
-        with dissolve
         "Запоздало опомнился я."
         mi "Хи-хи-хи."
         mi "Сенечка, ты чудо."
         "Она рассмеялась и убежала."
         window hide
+        scene bg int_dining_hall_sunset with dissolve
 
     elif alt_my_rival_final.take == 'us':
         $ lp_us -= 1
@@ -3068,7 +3070,7 @@ label alt_day2_stipulation_new:
     alt_nick_my_rival "Кто первый ходит?"
     window hide
     
-# TODO - убрать лишние пункты меню
+# TODO — убрать лишние пункты меню
     menu:
         "Камень, ножницы, бумага?":
             label alt_day2_RPS: 
@@ -3078,7 +3080,7 @@ label alt_day2_stipulation_new:
                     renpy.transition(dspr)
                 call RPS_game(alt_opp = alt_nick_my_rival)
                 if RPS_winner == 1:
-                    me "%(alt_name_my_rival_i)s, первый ход - твой."
+                    me "%(alt_name_my_rival_i)s, первый ход — твой."
                     $ alt_whose_first_move = 'rival'
                 elif RPS_winner == 0:
                     jump alt_day2_RPS
@@ -3097,10 +3099,10 @@ label alt_day2_stipulation_new:
                 extend "мне."
             window hide
             
-        "Ты (первый ход - %(alt_name_my_rival_r)s)":
+        "Ты (первый ход — %(alt_name_my_rival_r)s)":
             $ alt_whose_first_move = 'rival'
             
-        "Я (первый ход - Семёна)":
+        "Я (первый ход — Семёна)":
             $ alt_whose_first_move = 'player'
 
     return
@@ -3141,7 +3143,7 @@ label alt_day2_checking_scores:
     scene bg int_dining_hall_sunset with dissolve
     if alt_day2_my_win == alt_day2_rival_win:                                                   # если счёт равный
         if alt_day2_game_played_out == 0:                                                       # ещё не играли (0:0)
-            if alt_day2_gamblers_final[0].take == 'me':                                         # если 1-й игрок - Семён
+            if alt_day2_gamblers_final[0].take == 'me':                                         # если 1-й игрок — Семён
                 $ alt_day2_upper_gambler_name = "Семёном"
                 $ alt_day2_bottom_gambler_name = alt_name_my_rival_t
             else:
@@ -3159,7 +3161,7 @@ label alt_day2_checking_scores:
             call alt_day2_current_game_end_compare_hands                                        # сравнение комбинаций по итогам игры
             show el serious pioneer far at left
             el "Итак, по итогам двух игр у нас пока ничья; победитель определится в решающей игре."
-            el "А кто будет ходить первым - сейчас разыграем, и поможет нам в этом портативный генератор случайных чисел."
+            el "А кто будет ходить первым — сейчас разыграем, и поможет нам в этом портативный генератор случайных чисел."
             "Электроник выудил из кармана монету."
             el "Орёл? Решка?"
             menu:
@@ -3183,7 +3185,7 @@ label alt_day2_checking_scores:
                     extend " как и во второй игре."
                 $ alt_whose_first_move = 'rival'
             else:
-                el "Мимо. Так что первый ход - твой,"
+                el "Мимо. Так что первый ход — твой,"
                 if alt_whose_first_move == 'player':
                     extend " как и во второй игре."
                 else:
@@ -3225,7 +3227,7 @@ label alt_day2_checking_scores:
                 el "В следующей игре первым будет ходить Семён."
                 $ alt_whose_first_move = 'player'                                               # то первым ходит Семён
             else:                                                                               # если ходил Семён
-                el "%(alt_name_my_rival_i)s, теперь первый ход - твой."
+                el "%(alt_name_my_rival_i)s, теперь первый ход — твой."
                 $ alt_whose_first_move = 'rival'                                                # то первым ходит соперник
             window hide
             scene bg int_dining_hall_sunset with dissolve 
@@ -3285,13 +3287,13 @@ label alt_day2_current_game_end_compare_hands:                                  
     return
         
 #-----------------------------------------------------------------------------------
-# TODO - диалоги по итогам очередной игры (выиграл/проиграл-сравнял счёт)
-# сортировка - сначала по персонажам, потом - по ситуациям (0-проверка, 1 - Семён выиграл 1-ю, 2 - Семен сравнял счёт, 3 - соперник выиграл 1-ю, 4 - соперник сравнял счёт)
+# TODO — диалоги по итогам очередной игры (выиграл/проиграл-сравнял счёт)
+# сортировка — сначала по персонажам, потом — по ситуациям (0-проверка, 1 — Семён выиграл 1-ю, 2 — Семен сравнял счёт, 3 — соперник выиграл 1-ю, 4 — соперник сравнял счёт)
 # ---------------------------------------------------------
-# если диалоги по объему будут небольшими и без спрайтов - можно будет перебросить их в словарь
-# если нет - лучше тут пусть и остаются
+# если диалоги по объему будут небольшими и без спрайтов — можно будет перебросить их в словарь
+# если нет — лучше тут пусть и остаются
 
-# TODO - тут же "накручиваем" скилл соперникам по итогам очередной игры, (если не надо - убрать)
+# TODO — тут же "накручиваем" скилл соперникам по итогам очередной игры, (если не надо — убрать)
 
 label alt_day2_current_game_ending_dialogs:
 # Лена
@@ -3445,7 +3447,7 @@ label alt_day2_current_game_ending_dialogs:
             
 # Шурик
     elif alt_spr_my_rival == 'sh':
-        $ alt_day2_gambler_skill += 1                     # увеличиваем навык - Шурику без вариантов
+        $ alt_day2_gambler_skill += 1                     # увеличиваем навык — Шурику без вариантов
         if alt_day2_current_rout_status == 1:                   # если Семён выиграл первый раз
         
             show sh surprise pioneer at cright with dspr
@@ -3470,7 +3472,7 @@ label alt_day2_current_game_ending_dialogs:
             th "(Шурик сравнял счёт в партии)."
             sh "{i}(Следует обмен мнениями по этому поводу).{/i}"
             
-# ============================================================= ВОПРОС - эксперименты Шурика -?
+# ============================================================= ВОПРОС — эксперименты Шурика -?
         if alt_day2_current_rout_status in [3,4]:                               # Если Шурик выиграл игру
             if alt_day2_gambler_behavior == 'defense':                          # если Шурик защищался
                 sh "Ага, «защитный» алгоритм работает; это радует."
@@ -3564,7 +3566,7 @@ label alt_day2_summary_poker_round:
             "У %(alt_name_my_rival_r)s %(alt_day2_stage_tournament)s я выиграл «всухую», без особых проблем."
         else:
             if alt_spr_my_rival == 'sh':                        # Шурик
-                "В %(alt_day2_stage_tournament)s %(alt_name_my_rival_i)s проявил упорство - потребовалась решающая игра."
+                "В %(alt_day2_stage_tournament)s %(alt_name_my_rival_i)s проявил упорство — потребовалась решающая игра."
                 "Тем не менее я выиграл, хотя не скажу, что это было просто."
             else:                                               # девчонки
                 "%(alt_name_my_rival_i)s оказала упорное сопротивление и даже смогла выиграть у меня один раз."
@@ -3581,14 +3583,14 @@ label alt_day2_1_tour_analizer:
     call show_tournament_table                                                          #  показываем исходное положение ??? сортируем игроков ???
     $ alt_result_dv_1_tour = alt_get_result_dv(alt_day2_gamblers_1_tour)                # а где там наша ДваЧе?
     $ renpy.pause(1)
-    $ alt_random_box_1 = range(1,len(alt_table_winner)+1)                          # черный ящик 1 - список от 1 до длины победителей +1
-    $ alt_random_box_2 = range(1,len(alt_table_loser)+1)                          # черный ящик 2 - список от 1 до длины проигравших +1
+    $ alt_random_box_1 = range(1,len(alt_table_winner)+1)                          # черный ящик 1 — список от 1 до длины победителей +1
+    $ alt_random_box_2 = range(1,len(alt_table_loser)+1)                          # черный ящик 2 — список от 1 до длины проигравших +1
     window show
     while alt_table_no <= 4:                                                # перебираем столы от 1 до 4
-    #результат, игроки, высказывания - по номеру стола
+    #результат, игроки, высказывания — по номеру стола
         $ results_at_table,gambler_win,winner_remark,loser_preface,loser_remark = alt_declare_results_tables(alt_table_no, alt_day2_gamblers_1_tour) 
         "%(results_at_table)s"                                                          # оглашаем результат за столом
-        call show_tournament_table                                                      # переход по метке - вызов очередной фишки
+        call show_tournament_table                                                      # переход по метке — вызов очередной фишки
         extend " %(gambler_win)s."                                                      # выводим в окно имя победителя
         $ a_c_i = 0                                                                     # счетчик фраз
         while a_c_i < len(winner_remark):                                               # пока счетчик фраз меньше их количества
@@ -3600,7 +3602,7 @@ label alt_day2_1_tour_analizer:
                 "%(alt_gambler_remark)s"                                                # выводим фразу "от автора"
             $ a_c_i += 1                                                                # увеличиваем счетчик фраз
         "%(loser_preface)s"                                                             # выводим проигравшего
-        call show_tournament_table                                                      # переход по метке - вызов очередной фишки
+        call show_tournament_table                                                      # переход по метке — вызов очередной фишки
         $ a_c_i = 0                                                                     # счетчик фраз
         while a_c_i < len(loser_remark):                                                # пока счетчик фраз меньше их количества
             $ alt_gambler_saying = loser_remark[a_c_i][0]                               # кто говорит
@@ -3621,14 +3623,14 @@ label alt_day2_semifinal_analizer:
     $ alt_mstt = 0                                                                      # обнуляем глобальный счетчик таблицы
     call show_tournament_table                                                          #  показываем исходное положение ??? сортируем игроков ???
     $ renpy.pause(1)
-    $ alt_random_box_1 = range(1,len(alt_table_winner)+1)                               # черный ящик 1 - список от 1 до длины победителей +1
-    $ alt_random_box_2 = range(1,len(alt_table_loser)+1)                                # черный ящик 2 - список от 1 до длины проигравших +1
+    $ alt_random_box_1 = range(1,len(alt_table_winner)+1)                               # черный ящик 1 — список от 1 до длины победителей +1
+    $ alt_random_box_2 = range(1,len(alt_table_loser)+1)                                # черный ящик 2 — список от 1 до длины проигравших +1
     window show
     while alt_table_no <= 6:                                                            # перебираем столы 5-6
-    #результат, игроки, высказывания - по номеру стола
+    #результат, игроки, высказывания — по номеру стола
         $ results_at_table,gambler_win,winner_remark,loser_preface,loser_remark = alt_declare_results_tables(alt_table_no, alt_day2_gamblers_semifinal)
         "%(results_at_table)s"                                                          # оглашаем результат за столом
-        call show_tournament_table                                                      # переход по метке - вызов очередной фишки
+        call show_tournament_table                                                      # переход по метке — вызов очередной фишки
         extend " %(gambler_win)s."                                                      # выводим в окно имя победителя
         $ a_c_i = 0                                                                     # счетчик фраз
         while a_c_i < len(winner_remark):                                               # пока счетчик фраз меньше их количества
@@ -3640,7 +3642,7 @@ label alt_day2_semifinal_analizer:
                 "%(alt_gambler_remark)s"                                                # выводим фразу "от автора"
             $ a_c_i += 1                                                                # увеличиваем счетчик фраз
         "%(loser_preface)s"                                                             # выводим проигравшего
-        call show_tournament_table                                                      # переход по метке - вызов очередной фишки
+        call show_tournament_table                                                      # переход по метке — вызов очередной фишки
         $ a_c_i = 0                                                                     # счетчик фраз
         while a_c_i < len(loser_remark):                                                # пока счетчик фраз меньше их количества
             $ alt_gambler_saying = loser_remark[a_c_i][0]                               # кто говорит
@@ -3676,16 +3678,16 @@ label alt_day2_final_analizer:
     else:
         $ alt_pronomen_final_loser = "она"
         
-    $ winner_remark, loser_remark = alt_declare_results_final(alt_take_tournament_winner, alt_take_tournament_loser) # вызываем функцию на финал - фразы победителя, проигравшего - по их никам.
+    $ winner_remark, loser_remark = alt_declare_results_final(alt_take_tournament_winner, alt_take_tournament_loser) # вызываем функцию на финал — фразы победителя, проигравшего — по их никам.
     
 
 # ========================================================================== отсебятина
-# TODO Окончание тура - под переделку фраз ????
+# TODO Окончание тура — под переделку фраз ????
 
     el "Итак, турнир окончен."
     "Вспомнил о своих обязанностях организатор."
     $ alt_mstt = 0
-    el "Поздравляем нашего победителя - %(alt_name_tournament_winner)s!"
+    el "Поздравляем нашего победителя — %(alt_name_tournament_winner)s!"
     play sound sfx_concert_applause
     call show_tournament_table                                                          # двигаем победителя
     $ renpy.pause(0.2, hard=True)
@@ -3721,7 +3723,7 @@ label alt_day2_final_analizer:
 
 
 # --------------------------------------------------------------------------
-# Подготовка перехода на ужин: - очистка слоя, разблокировка роллбака
+# Подготовка перехода на ужин: — очистка слоя, разблокировка роллбака
 label alt_day2_prepare_transition_to_supper:
     window hide
     python:
@@ -3745,24 +3747,24 @@ label alt_day2_prepare_transition_to_supper:
         
 # -------------------------------------------------------------------------
 # УБРАТЬ после согласования переменных
-    if alt_my_rival_1_tour.take == 'un':                # Если соперник в 1 туре - Лена
+    if alt_my_rival_1_tour.take == 'un':                # Если соперник в 1 туре — Лена
         $ alt_pe = 1
         if alt_day2_gamblers_result['un'] > 2:          # .. и если её результат больше 2
             $ alt_day2_fail = 1
     if alt_day2_gamblers_result['un'] in [2,11]:        # Лена, как минимум, добралась до полуфинала
         $ alt_day2_hf2 = 1
-    if alt_my_rival_semifinal.take == 'us':             # Ульяна - соперник в полуфинале
+    if alt_my_rival_semifinal.take == 'us':             # Ульяна — соперник в полуфинале
         $ alt_day2_hf2 = 5
         if alt_day2_gamblers_result['me'] >= 21:        # и если Семён её победил
             $ alt_day2_round3 = 1
-    if alt_day2_gamblers_result['us'] == 22:            # Ульяна - победитель турнира
+    if alt_day2_gamblers_result['us'] == 22:            # Ульяна — победитель турнира
         $ alt_day2_f1 = 5
         $ alt_day2_round3 = 1
     if alt_day2_gamblers_result['mi'] >= 21:            # Мику, как минимум, вышла в финал
         $ alt_day2_f1 = 4
     if alt_day2_gamblers_result['un'] >= 21:            # Лена, как минимум, вышла в финал
         $ alt_day2_f1 = 1
-        if alt_day2_gamblers_result['me'] == 21:        # А дальше немного плясок с бубном - для правильного выхода на строку
+        if alt_day2_gamblers_result['me'] == 21:        # А дальше немного плясок с бубном — для правильного выхода на строку
             $ alt_day2_round3 = 1
         elif alt_day2_gamblers_result['me'] < 20:
             $ alt_day2_round3 = 3
@@ -3775,7 +3777,7 @@ label alt_day2_prepare_transition_to_supper:
         $ alt_day2_round2 = 1
     if (alt_day2_gamblers_result['me'] < alt_day2_gamblers_result['dv']) or (alt_day2_gamblers_result['me'] == 1):
         $ alt_day2_dv_bet_won = 2                       # Алиса прошла дальше Семёна или наравне (напр, оба продули в 1 туре или 1\2)
-    if alt_my_rival_final.take == 'mi':                 # Мику - соперник Семёна в финале
+    if alt_my_rival_final.take == 'mi':                 # Мику — соперник Семёна в финале
         $ alt_day2_f1 = 4
     if alt_day2_gamblers_result['me'] > 1:              # Семён, по крайней мере, не проиграл в 1 туре
         $ alt_day2_fail = 0
