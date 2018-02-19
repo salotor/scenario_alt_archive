@@ -301,7 +301,7 @@
     image bg ext_boathouse_sunset_7dl = get_image_7dl("bg/ext_boathouse_sunset_7dl.jpg")
     image bg ext_boathouse_alt_day_7dl = get_image_7dl("bg/ext_boathouse_alt_day_7dl.png")
     image bg ext_bus1_7dl = get_image_7dl("bg/ext_bus1_7dl.jpg")
-    image bg ext_busstop_dust_7dl = get_image_7dl("bg/ext_busstop_dust_7d.png")
+    image bg ext_busstop_dust_7dl = get_image_7dl("bg/ext_busstop_dust_7dl.png")
     image bg ext_busstop_sun_7dl = get_image_7dl("bg/ext_busstop_sun_7dl.png")
     
     image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.png")
@@ -320,7 +320,6 @@
     
     image bg ext_hospital2_away_day_7dl = get_image_7dl("bg/ext_hospital2_away_day_7dl.jpg")
     image bg ext_hospital2_away_night_7dl = get_image_7dl("bg/ext_hospital2_away_night_7dl.jpg")
-    image bg ext_hospitapl_close_7dl = get_image_7dl("bg/ext_hospitapl_close_7dl.png")
     image bg ext_houses_night_7dl = get_image_7dl("bg/ext_houses_night_7dl.jpg")
     image bg ext_houses_rainy_day_7dl = get_image_7dl("bg/ext_houses_rainy_day_7dl.jpg")
     image bg ext_houses_snowy_day_7dl = get_image_7dl("bg/outro/ext_houses_snowy_day_7dl.jpg")
@@ -622,8 +621,8 @@
     image cg d7_us_pixie_7dl = get_image_7dl("cg/d7_us_pixie_7dl.png")
     #image cg d7_us_no_mans_land_7dl = get_image_7dl("cg/d7_us_no_mans_land_7dl.png")
     
-    image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.jpg")
-#    image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.png")
+    #image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.jpg")
+    #image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.png")
     image cg d7_bus_night_7dl = get_image_7dl("cg/d7_bus_night_7dl.jpg")
     
 #Турнир
@@ -802,6 +801,7 @@
     image acm_logo_un_good2 = get_image_7dl("gui/acm_logo_un_good2.png")
     image acm_logo_un_shelter = get_image_7dl("gui/acm_logo_un_shelter.png")
     image acm_logo_un_sui = get_image_7dl("gui/acm_logo_un_sui.png")
+    image acm_logo_un_transit = get_image_7dl("gui/acm_logo_un_transit.png")
     
     image achieve_beagod = get_image_7dl("gui/achieve_beagod.png")
     image acm_logo = get_image_7dl("gui/acm_logo1.png") #Логотип сюжета

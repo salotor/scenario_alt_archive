@@ -1,8 +1,8 @@
 init:
-    $ filters["muzlo"] = u"Музыка в 7ДЛ"
+    $ filters["music_widget_7dl"] = u"Музыка в 7ДЛ"
 
 python early:
-    def muzlo():
+    def music_widget_7dl():
         def check_muzlo(value):   
             for k, v in music_list.items():
                 if v == value:
@@ -24,17 +24,9 @@ python early:
                     ui.text(check_muzlo(m), style="button_text", size=13)
                 elif m in music_list_7dl.values():
                     ui.text(check_muzlo_7dl(m), style="button_text", size=13)
-                elif m not in music_list_7dl.values():
-                    if (m == music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"][0] or 
-                        m == music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"][1] or 
-                            m == music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"][2]):
-                                ui.text("%s" % "С. Ейбог feat. Liru - Everlasting Summer", style="button_text", size=13)
-                    elif (m == music_list_7dl["KPM Music - Bass Renaissaince"][0] or 
-                        m == music_list_7dl["KPM Music - Bass Renaissaince"][1]):
-                            ui.text("%s" % "KPM Music - Bass Renaissaince", style="button_text", size=13)
                 elif m == None:
                     get_mus_7dl('ambience')
-                    if a == "scenario_alt/Sound/ambience/ambience_safe.ogg":
+                    if m == "scenario_alt/Sound/ambience/ambience_safe.ogg":
                         ui.text("%s" % "Mikko Tarmia - Back Hall (Amnesia OST)", style="button_text", size=13)
                     else: 
                         ui.text("%s" % "Нет музыки", style="button_text", size=13)

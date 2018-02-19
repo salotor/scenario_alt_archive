@@ -24,28 +24,7 @@
         repeat
         
 label scenario__sdl_selector:
-    $ make_names_unknown_7dl()
-    $ th_prefix = "«"
-    $ th_suffix = "»"
-    $ init_map_zones_alt1()
-    $ init_map_zones_alt2()
-    $ alt_save_release_no = alt_release_no
-    $ lp_mi = 0
-    $ lp_sl = 0
-    $ lp_un = 0
-    $ lp_us = 0
-    $ lp_dv = 0
-    $ karma = 0
-    $ plthr = u"none"
-    $ alt_sp = 0
-    $ alt_spt = 0
-    $ alt_hpt = 0
-    $ mt_pt = 0
-    $ d3_pt = 0
-    $ us_pt = 0
 
-    play ambience ambience_safe fadein 5
-    
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars
@@ -73,7 +52,11 @@ label scenario__sdl_selector:
     call alt_day4_mi_cl_vars
     call alt_day4_dv_7dl_vars
     call alt_day6_dv_7dl_vars
-
+    
+    $ plthr = u"Тест"
+    
+    play ambience ambience_safe fadein 5
+    
 label sdl_menu:
     scene scenery with dissolve
     menu:
@@ -113,7 +96,7 @@ label sdl_menu:
                             $ alt_day3_mi_dj = True
                             
                             stop ambience fadeout 2
-                            jump alt_day3_slots
+                            jump alt_day4_mi_dj_start
                         "7дл":
                             menu:
                                 "День 4. Едем в город вместе?":
@@ -157,7 +140,7 @@ label sdl_menu:
                             "Рут находится в разработке."
                             $ renpy.pause(1)
                             stop ambience fadeout 2
-                            jump alt_day3_slots
+                            jump sdl_menu
                 "Алиса":
                     $ routetag = "dv7dl"
                     $ lp_dv = 14
@@ -166,16 +149,16 @@ label sdl_menu:
                             "Рут находится в разработке."
                             $ renpy.pause(1)
                             stop ambience fadeout 2
-                            jump alt_day3_slots
+                            jump sdl_menu
                         "7дл":
                             $ alt_day3_event3 = 33
                             stop ambience fadeout 2
-                            jump alt_day3_slots
+                            jump alt_day4_dv_7dl_start
                         "Классик":
                             "Рут находится в разработке."
                             $ renpy.pause(1)
                             stop ambience fadeout 2
-                            jump alt_day3_slots
+                            jump sdl_menu
                     
                 "Славя":
                     $ alt_day3_event2 = 22
@@ -187,12 +170,12 @@ label sdl_menu:
                             "Рут находится в разработке."
                             $ renpy.pause(1)
                             stop ambience fadeout 2
-                            jump alt_day3_slots
+                            jump sdl_menu
                         "Классик":
                             $ alt_day3_technoquest_st3 = 2
                             $ routetag = "sl"
                             stop ambience fadeout 2
-                            jump alt_day3_slots
+                            jump alt_day4_sl_start
                 "Лена":
                     $ lp_un += 14
                     $ routetag = "un7dl"
@@ -201,16 +184,16 @@ label sdl_menu:
                             $ alt_day2_date = 132
                             $ alt_day3_dancing = 132
                             stop ambience fadeout 2
-                            jump alt_day3_slots
+                            jump alt_day4_un_fz_start
                         "7дл":
                             $ alt_day3_event2 = 12
                             stop ambience fadeout 2
-                            jump alt_day3_slots
+                            jump alt_day4_un_7dl_start
                         "Классик":
                             "Рут находится в разработке."
                             $ renpy.pause(1)
                             stop ambience fadeout 2
-                            jump alt_day3_slots
+                            jump sdl_menu
                     
                 "Ольга":
                     $ mt_pt += 8
@@ -218,7 +201,9 @@ label sdl_menu:
                     jump alt_day6_mt_7dl_start
                 "Ульяна":
                     "Рут находится в разработке."
-                    return
+                    $ renpy.pause(1)
+                    stop ambience fadeout 2
+                    jump sdl_menu
                 "Одиночка":
                     stop ambience fadeout 2
                     jump alt_day4_neu_begin
