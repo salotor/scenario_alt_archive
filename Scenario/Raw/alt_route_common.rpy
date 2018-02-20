@@ -9625,7 +9625,7 @@ label alt_day2_event_sport_area:
     "Нет, на футболе он явно быть не может — игра стихийная. {w=.3}В бадминтон тренировать королевишен? {w=.3}Сомневаюсь. {w=.3}Волейбол? Кстати, возможно, но я там не вижу никого… "
     play sound sfx_soccer_ball_kick
     extend "И я резко нагнулся, пропуская мяч мимо!"
-    if (alt_day1_sl_keys_took == 1) and (alt_day2_rendezvous == 2):
+    if ((alt_day1_sl_keys_took == 1) or (alt_day2_sl_guilty != 0)) and (alt_day2_rendezvous == 2):
         us "Эй!"
         me "Чего тебе?"
         show us sad sport with dspr
@@ -9670,7 +9670,7 @@ label alt_day2_event_sport_area:
     $ persistent.sprite_time = "sunset"
     $ sunset_time
     play music music_list["went_fishing_caught_a_girl"] fadein 5
-    if (alt_day1_sl_keys_took != 0) and (alt_day2_rendezvous == 2):
+    if ((alt_day1_sl_keys_took == 1) or (alt_day2_sl_guilty != 0)) and (alt_day2_rendezvous == 2):
         "Славя была права!"
     else:
         "Ульянка была права!"
