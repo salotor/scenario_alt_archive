@@ -9450,18 +9450,22 @@ label alt_day2_event_clubs:
             "Мне вдруг пришло в голову, что именно таким образом и вырастает самая махровая бюрократия, когда ради ничего не значащей подписи, люди дают тебе право вертеть ими как заблагорассудится."
             "Поэтому я ответил максимально нейтрально."
             me "Слушай, ты, меня, конечно, извини, но я не могу."
-            if alt_day2_club_join_musc and alt_day2_club_join_nwsppr:
-                extend " Да и к Мику тоже."
-            elif alt_day2_club_join_musc:
-                extend " У Мику в клубе."
-            elif alt_day2_club_join_footbal:
-                extend " И физрук меня прибьёт, если узнает, что я предпочёл ваш кружок футболу."
-            elif alt_day2_club_join_volley:
-                extend " И физрук меня прибьёт, если узнает, что я предпочёл ваш кружок волейболу."
-                if alt_day2_rendezvous == 2:
-                    me "Да и Славя не оценит."
-            elif alt_day2_club_join_badmin:
-                extend " И физрук меня прибьёт, если узнает, что я предпочёл ваш кружок бадминтону."
+            if alt_day2_club_join_nwsppr or alt_day2_club_join_musc or alt_day2_club_join_footbal or alt_day2_club_join_volley or alt_day2_club_join_badmin:
+                me "Я уже записался" #s отсебятина
+                if alt_day2_club_join_nwsppr:
+                    extend " в стенгазету." #s отсебятина
+                    if alt_day2_club_join_musc:
+                        extend " Да и к Мику тоже."
+                elif alt_day2_club_join_musc:
+                    extend " у Мику в клубе."
+                elif alt_day2_club_join_footbal:
+                    extend ", и физрук меня прибьёт, если узнает, что я предпочёл ваш кружок футболу."
+                elif alt_day2_club_join_volley:
+                    extend ", и физрук меня прибьёт, если узнает, что я предпочёл ваш кружок волейболу."
+                    if alt_day2_rendezvous == 2:
+                        extend " Да и Славя не оценит."
+                elif alt_day2_club_join_badmin:
+                    extend ", и физрук меня прибьёт, если узнает, что я предпочёл ваш кружок бадминтону."
             else:
                 me "Я никуда не записался ещё, и не хочу. {w=0.2}Для начала в лагере осмотрюсь."
                 sh "Думаешь?"
