@@ -2235,7 +2235,7 @@ label alt_day2_final_choice_new:
             else:
                 extend "Алису и попробует уцелеть в этой схватке."
         elif alt_my_rival_final.take == 'mi':
-            extend "Мику. {w}Не думаю, что там будет много проблем. Хотя японка и добралась до финала."
+            extend " Мику. {w}Не думаю, что там будет много проблем. Хотя японка и добралась до финала."
         elif alt_my_rival_final.take == 'us':
             if alt_rival_final.take == 'dv':
                 extend "Ульянку."
