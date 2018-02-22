@@ -113,7 +113,7 @@ label alt_day4_neu_begin:
                 $ us_pt = 0
                 if persistent.hentai_un_old_7dl:
                     $ alt_un_old_hentai = True
-                jump alt_day4_un_7dl_dinner
+                jump alt_day4_un_7dl_start
         elif alt_day3_mi_date:
             call alt_day4_neu_mi
             pause(1)

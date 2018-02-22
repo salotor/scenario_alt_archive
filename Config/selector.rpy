@@ -25,8 +25,6 @@
         
 label scenario__sdl_selector:
 
-    $ make_names_unknown_7dl()
-
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars
@@ -188,9 +186,44 @@ label sdl_menu:
                             stop ambience fadeout 2
                             jump alt_day4_un_fz_start
                         "7дл":
-                            $ alt_day3_event2 = 12
+                            menu:
+                                "Карма"
+                                "10":
+                                    $ karma = 10
+                                "30":
+                                    $ karma = 30
+                                "100":
+                                    $ karma = 100
+                            menu:
+                                "Герк":
+                                    $ herc = True
+                                "Дрищ":
+                                    pass
+                                "Локи":
+                                    $ loki = True
+                            menu:
+                                "Ключи"
+                                "Есть":
+                                    $ alt_day1_sl_keys_took = 1
+                                "Нет":
+                                    pass
+                            menu:
+                                "Газета"
+                                "Записан":
+                                    $ alt_day2_club_join_nwsppr = True
+                                "Нет":
+                                    pass 
+                            menu:
+                                "Транзит?"
+                                "Да":
+                                    $ alt_day4_neu_transit = 1
+                                "Нет":
+                                    $ alt_day4_neu_transit = 0
+                                    $ alt_day3_un_med_help = 1
                             stop ambience fadeout 2
+                            $ meet('ml','Даня') # а то вылет на шашках
                             jump alt_day4_un_7dl_start
+
                         "Классик":
                             "Рут находится в разработке."
                             $ renpy.pause(1)
