@@ -9283,11 +9283,7 @@ label alt_day2_event_clubs:
         else:
             th "Этот парень в очках… Шурик. Он что-то про клуб говорил."
     else:
-<<<<<<< HEAD
-        if alt_day2_rendezvous == 5 and alt_day2_rendezvous == 4 or alt_day2_rendezvous == 22:
-=======
         if alt_day2_rendezvous == 1 and alt_day2_rendezvous == 2 or alt_day2_rendezvous == 3:
->>>>>>> pr/44
             me "Шурик? Какой Шурик?"
         if alt_day2_rendezvous == 1:
             un "Он здесь старший. И в стенгазете."
