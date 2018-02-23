@@ -2773,7 +2773,7 @@ label alt_day2_final_win_end_new:
         call show_tournament_table
         window show
         "Моё!"
-        if alt_day2_dv_bet_approve:
+        if alt_day2_dv_bet_approve or alt_day2_dv_harass:
             th "И пусть только рыжая стерлядь попробует что-нибудь там вякнуть."
         window hide
         scene bg int_dining_hall_sunset with dissolve
