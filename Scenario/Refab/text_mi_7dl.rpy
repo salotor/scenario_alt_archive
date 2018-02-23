@@ -1230,7 +1230,6 @@ label alt_day4_mi_7dl_ch5b:
     play music unholy_you fadein 3
     $ meet ('sak','Японец')
     sak "Здравствуйте, Мику-кун."
-    hide mi with dspr
     "Я резко обернулся — за рулём кажущегося здесь неуместным «Мицубиси» сидел…"
     show sak normal suit at right with dspr
     show mi normal pioneer with dspr
@@ -1257,7 +1256,7 @@ label alt_day4_mi_7dl_ch5b:
     sak "Но кое-что произошло всё же."
     hide sak with dspr
     "Он отвернулся в салон, а несколько секунд спустя явил нашему вниманию какую-то блестящую пластинку, на которой парой кандзи было написано очень знакомое мне имя."
-    show sak normal suit at right behind mi with dspr
+    show sak normal suit at right with dspr
     show mi surprise pioneer with dspr
     mi "Серьезно?! Но они же сказали, что у нас очередь как минимум до октября!"
     sak "Всё так, Мику-кун, но вашу запись видел премьер, так что лейбл любезно согласился подвинуть очередь."
@@ -1518,7 +1517,7 @@ label alt_day4_mi_7dl_ch6:
         "В растерянности я огляделся."
         "Мику почему-то так и сидела на крылечке собственного дома вместо того, чтобы добросовестно отсыпаться."
         "Наконец, японец закончил беседу — судя по раздосадованному виду, так и не добившись от вожатой того, чего хотел, и отошёл к Мику."
-    show sak normal suit at right with dspr
+    show sak normal suit at left with dspr
     show mi sad pioneer with dspr
     sak "Собирайтесь, Мику-кун."
     sak "Нас ждёт дорога."
@@ -1539,7 +1538,7 @@ label alt_day4_mi_7dl_ch6:
     mt "Извините, товарищ Сакишита."
     "Раздался голос вожатой."
     play music music_list["always_ready"] fadein 3
-    show sak unsured suit at right with dspr
+    show sak unsured suit at left with dspr
     show mi surprise pioneer with dspr
     mt "Я, безусловно, рада, что у Мику там что-то где-то случилось, и всё такое прочее. {w}Но я не могу отдать ребёнка незнакомому человеку."
     mt "Даже если сама Мику за него поручается."
@@ -1554,7 +1553,7 @@ label alt_day4_mi_7dl_ch6:
         "Теперь он увеличился многократно."
     "Теперь он пробегает по инстанциям до самого конца смены, и у нас будет ещё несколько дней!"
     "Сакишита определённо умел держать удар."
-    show sak treat suit at right with dspr
+    show sak treat suit at left with dspr
     "Он вежливо поклонился."
     sak "Я понимаю."
     "Но не было похоже, что сдался."
@@ -1566,9 +1565,9 @@ label alt_day4_mi_7dl_ch6:
     mt "Родительский день заканчивается через два с половиной часа — попрошу вас освободить к тому времени территорию ПЛ."
     sak "Понял вас."
     "Покорно кивнул японец."
-    show sak normal suit at right with dspr
+    show sak normal suit at left with dspr
     "Настроен он оказался весьма решительно — достав из кармана бандуру, в которой я с удивлением признал спутниковый телефон, тут же набрал номер, начинающийся с единицы, и отдал туда несколько коротких приказаний."
-    show sak smile suit at right with dspr
+    show sak smile suit at left with dspr
     "Выслушал ответ и, растянув губы в узкой улыбке, сложил антенну, спрятал трубку во внутренний карман пиджака и снова обратился к нам:"
     sak "Разрешение заказано и идёт телексом. Я заберу его на почте и вернусь за Хатсуне-сан."
     mt "Счастливого пути."
@@ -1577,9 +1576,9 @@ label alt_day4_mi_7dl_ch6:
     
     if not alt_day3_mi_donor:
         sak "Не извольте беспокоиться. Будут. Мику-кун, я думал устроить прощальный вечер, но, похоже, вы намерены уходить только со скандалом."
-        show sak treat suit at right with dspr
+        show sak treat suit at left with dspr
         "Он поклонился."
-        show sak normal suit at right with dspr
+        show sak normal suit at left with dspr
         sak "Я не знаю, как русские празднуют чью-то удачу —  но точно уверен, что здесь это тоже пользуется популярностью."
         show mi surprise pioneer with dspr
         mi "О чём вы говорите?"
