@@ -7694,7 +7694,8 @@ label alt_day2_start:
     window hide
     show blink
     pause(3)
-    $ persistent.sprite_time = "day"
+    $ persistent.sprite_time = "sunset"
+    $ sunset_time()
     scene bg ext_washstand_day
     with dissolve
     "Так. Стоп."
