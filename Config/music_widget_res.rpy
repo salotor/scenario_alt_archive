@@ -111,7 +111,7 @@ init 1:
     $ music_list_7dl["Zack Hamsey - The way"] = "scenario_alt/Sound/music/the_way.ogg" 
     $ music_list_7dl["April Rain - Exploring yourself with a knife"] = "scenario_alt/Sound/music/tilltheend.ogg"
     $ music_list_7dl[u"Владимир Розанов - С запада на восток"] = "scenario_alt/Sound/music/to_the_sunrise.ogg"
-    $ music_list_7dl["Broove - [oove]Heartbeats"] = "scenario_alt/Sound/music/too_quiet.ogg"
+    $ music_list_7dl["Broove - |oove|Heartbeats"] = "scenario_alt/Sound/music/too_quiet.ogg"
     $ music_list_7dl["Vflower - Close to you (feat. Justin Ly)"] = "scenario_alt/Sound/music/uncertainity.ogg"
     $ music_list_7dl["April Rain - Violent Passion Surrogate"] = "scenario_alt/Sound/music/uneven_me.ogg" 
     $ music_list_7dl["Audiomachine - Unfinished Life"] = "scenario_alt/Sound/music/unfinished_life.ogg"

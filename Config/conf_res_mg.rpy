@@ -736,4 +736,4 @@ label alt_cotocombs_map:
     #85 - влево в 84, вниз в 75
     #88 - вверх в лагерь (комната с лестницей)
 label alt_catac_tile2:
-    $ alt_catac_tile2 = true
+    $ alt_catac_tile2 = True

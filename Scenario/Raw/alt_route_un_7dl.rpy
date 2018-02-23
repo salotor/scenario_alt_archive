@@ -12163,8 +12163,12 @@ label alt_day7_un_7dl_true:
     with dissolve
     play sound aunl
     stop sound_loop fadeout 3
-    show acm_logo_un_shelter with moveinright:
-        pos (1600, 1020)
+    if routetag == "un":
+        show acm_logo_un_transit with moveinright:
+            pos (1600, 1020)
+    else:
+        show acm_logo_un_shelter with moveinright:
+            pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     
