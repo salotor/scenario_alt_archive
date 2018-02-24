@@ -1,8 +1,8 @@
 ﻿label alt_day6_us_7dl_start:
     if routetag == "us7dl_good":
-        call alt_day6_us_px_begin:
+        call alt_day6_us_px_begin
     else:
-        call alt_day6_us_7dl_begin:
+        call alt_day6_us_7dl_begin
     pause(1)
     call alt_day6_us_px_begin
     pause(1)
@@ -87,8 +87,8 @@ label alt_day7_us_px_start:
                 call alt_day7_us_px_heathrow
             return
         else:
-        call alt_day7_us_px_mourning
-        pause(1)
+            call alt_day7_us_px_mourning
+            pause(1)
     else:
         call alt_day7_us_px_wastelands
     pause(1)

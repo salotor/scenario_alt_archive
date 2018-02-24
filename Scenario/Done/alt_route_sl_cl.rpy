@@ -8886,6 +8886,7 @@ label alt_day6_sl_morgen:
     "До столовой мы добрались. Ну, как добрались."
     "Даже на первую ступеньку крыльца встать успели, прежде чем появилось очередное непреодолимое препятствие."
     ml "Семён!"
+    show ml sad pioneer at right with dissolve
     "Сзади стоял вчерашний пионер, которого я вёз на собственном горбу — кудрявый молодой человек с лукавыми глазами, выдающими в нём большого любителя каверз."
     "Сейчас он, однако, совсем не был в настроении шутить — был весь каким-то помятым, встревоженным."
     "Видимо, и правда что-то серьёзное произошло."
@@ -8895,10 +8896,12 @@ label alt_day6_sl_morgen:
     "Он кинул машинальный взгляд на ногу, где поперёк голеностопа был наклеен пластырь, и отрицательно покачал головой."
     show sl normal pioneer at left with dissolve
     "Славя обернулась."
+    show ml surprise pioneer at right with dissolve
     ml "Тебя Виолетта в медпункт зовёт, там такое! Такое!"
     me "Какое?"
     "Непреклонно спросил я."
     me "Вообще-то, я питаться шёл."
+    show ml normal pioneer at right with dissolve
     show sl serious pioneer with dspr
     sl "Подождёт."
     "В тон мне ответила Славя."
@@ -8960,9 +8963,11 @@ label alt_day6_sl_morgen:
     hide sh with moveoutleft
     "Какая-то бессвязная нелепица."
     cs "Даниил, ты тоже выйди."
+    show ml unsured pioneer at right with dissolve
     ml "Да я же как лучше!"
     cs "Даниил."
     ml "Иду-иду."
+    hide ml with dissolve
     stop music fadeout 3
     play sound sfx_open_door_strong
     show sl normal pioneer at right with dissolve
