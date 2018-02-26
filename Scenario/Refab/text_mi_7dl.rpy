@@ -1250,14 +1250,14 @@ label alt_day4_mi_7dl_ch5b:
     sak "Я заехал сюда заправить машину и переночевать, так как на обратном пути не будет времени на отдых."
     show mi sad pioneer with dspr
     mi "Что-то случилось? Что-то с Па?"
-    show sak sight suit with dspr
+    show sak sigh suit with dspr
     sak "Нет-нет, Мику-кун, с вашим отцом всё хорошо."
     "Поспешил успокоить её японец."
     sak "Но кое-что произошло всё же."
     "Он отвернулся в салон, а несколько секунд спустя явил нашему вниманию какую-то блестящую пластинку, на которой парой кандзи было написано очень знакомое мне имя."
     show mi surprise pioneer with dspr
     mi "Серьезно?! Но они же сказали, что у нас очередь как минимум до октября!"
-    show sak suit with dspr
+    show sak normal suit with dspr
     sak "Всё так, Мику-кун, но вашу запись видел премьер, так что лейбл любезно согласился подвинуть очередь."
     mi "И я…"
     "Растерянно произнесла Мику."
@@ -1281,7 +1281,7 @@ label alt_day4_mi_7dl_ch5b:
     mi "Да не беспокойся на этот счёт."
     "Понятливо кивнула японка."
     mi "Я — работодатель Сакишиты-сан, ему невыгодно вредить мне."
-    show sak caml suit with dspr
+    show sak calm suit with dspr
     sak "Мику-кун, вы идёте?"
     "Снова позвал доставучий японец."
     stop music fadeout 3
@@ -1318,6 +1318,7 @@ label alt_day4_mi_7dl_ch52:
     "Тот наклонил голову в ответ, признавая справедливость слов девочки."
     sak "В таком случае, я отправлюсь в лагерь, чтобы утрясти все формальности, и буду ожидать вас там. До скорой встречи."
     "Поклонившись ещё раз, он вернулся в машину."
+    hide sak with dspr
     play sound sfx_intro_bus_engine_start
     window hide
     with fade
@@ -1513,6 +1514,7 @@ label alt_day4_mi_7dl_ch6:
         "Мику почему-то так и сидела на крылечке собственного дома вместо того, чтобы добросовестно отсыпаться."
         "Наконец, японец закончил беседу — судя по раздосадованному виду, так и не добившись от вожатой того, чего хотел, и отошёл к Мику."
     show sak normal suit at right with dissolve
+    show mi sad pioneer with dspr
     sak "Собирайтесь, Мику-кун."
     sak "Нас ждёт дорога."
     "И я понял вдруг, что такое отчаяние."
@@ -1562,7 +1564,7 @@ label alt_day4_mi_7dl_ch6:
     "Покорно кивнул японец."
     "Настроен он оказался весьма решительно — достав из кармана бандуру, в которой я с удивлением признал спутниковый телефон, тут же набрал номер, начинающийся с единицы, и отдал туда несколько коротких приказаний."
     "Выслушал ответ и, растянув губы в узкой улыбке, сложил антенну, спрятал трубку во внутренний карман пиджака и снова обратился к нам:"
-    show sak pain suit with dapr
+    show sak smile suit with dspr #s у меня две гипотезы: pain здесь just for lulz, либо по ошибке. Поправил до выяснения обстоятельств.
     sak "Разрешение заказано и идёт телексом. Я заберу его на почте и вернусь за Хатсуне-сан."
     mt "Счастливого пути."
     "Пожелала Ольга."
@@ -1610,7 +1612,6 @@ label alt_day4_mi_7dl_ch6:
         with dissolve2
         $ sunset_time()
         play ambience ambience_camp_entrance_day fadein 3
-        hide sak with dissolve
         "Покачивая головой, Сакишита отправился прочь с территории."
         "На всякий случай, мы оба решили проконтролировать, чтобы он обязательно уехал."
         "Впрочем, этот дядька, похоже, был самых строгих правил."
@@ -7947,8 +7948,8 @@ label alt_day6_mi_7dl_miku_farewell_finale:
                     show alt_letter timeskip10 at truecenter with zoomin
                     window hide
                     play music emptiness fadein 3
-                    $ persistent.mi_7dl_true = True
                     play sound aunl
+                    $ persistent.mi_7dl_true = True
                     show acm_logo_mi_thank_you with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -8981,10 +8982,10 @@ label alt_day6_mi_7dl_discoteque:
                     "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
                     window hide
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_lamp = True
                     return
                 elif herc:
                     stop sound_loop
@@ -9009,9 +9010,9 @@ label alt_day6_mi_7dl_discoteque:
                     play sound sfx_bodyfall_1
                     stop sound_loop fadeout 0
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
-                    $ persistent.alt_lamp = True
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif loki:
@@ -9044,10 +9045,10 @@ label alt_day6_mi_7dl_discoteque:
                     th "Ксана. {w}Ненавижу."
                     window hide
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(4.4, hard=True)
-                    $ persistent.alt_lamp = True
                     return
             "Думаю, не стоит.":
                 me "Если у меня дыра в голове — значит, она там не просто так."
@@ -10618,7 +10619,6 @@ label alt_day7_mi_7dl_happy_again:
     "Не оставят. {w}Меня оставила Она — а после этого любое одиночество не пугает совсем."
     "Я вдруг понял, что ещё пара минут ожидания — и я с ума сбегу!"
     "Вскочил, достал из кармана пальто сигареты (за это утро уже улетела пачка, и, похоже, не последняя), бросил пальто обратно на сиденье."
-    hide sak
     play sound sfx_open_door_strong
     pause(1)
     scene expression Dawn("bg int_opened_door_7dl")
@@ -10689,8 +10689,8 @@ label alt_day7_mi_7dl_happy_again:
     me "Не надоест."
     me "Никогда."
     play music sam_lullaby fadein 3
-    $ persistent.mi_7dl_neutral_human = True
     play sound aunl
+    $ persistent.mi_7dl_neutral_human = True
     show acm_logo_mi_happy_again with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -10866,8 +10866,8 @@ label alt_day7_mi_7dl_liar:
     with fade
     "А то, что ледяной снег в морду, так даже удобнее."
     "Честнее."
-    $ persistent.mi_7dl_bad_human = True
     play sound aunl
+    $ persistent.mi_7dl_bad_human = True
     show acm_logo_mi_liar with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11031,8 +11031,8 @@ label alt_day7_mi_7dl_dark_dreams:
     "Кроме разве что одного."
     show mi smile casual with dissolve
     "Я перестану видеть эти унылые сны."
-    $ persistent.mi_7dl_good_human = True
     play sound aunl
+    $ persistent.mi_7dl_good_human = True
     show acm_logo_mi_dark_dreams with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11167,8 +11167,8 @@ label alt_day7_mi_7dl_club27:
     nvl clear
     stop sound_loop
     $ set_mode_adv()
-    $ persistent.mi_7dl_neutral_star = True
     play sound aunl
+    $ persistent.mi_7dl_neutral_star = True
     show acm_logo_mi_club27 with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11300,8 +11300,8 @@ label alt_day7_mi_7dl_sparkle:
     "Мягко улыбнулись цифровые губы."
     me "Да…"
     "Какая теперь разница?"
-    $ persistent.mi_7dl_good_star = True
     play sound aunl
+    $ persistent.mi_7dl_good_star = True
     show acm_logo_mi_sparkle with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11724,10 +11724,10 @@ label alt_day7_mi_7dl_postscriptum:
     stop sound_loop
     $ renpy.pause(3)
     play sound aunl
+    $ persistent.alt_mi_7dl_ps = True
     show acm_logo_mi_bitter_truth with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
-    $ persistent.alt_mi_7dl_ps = True
     return
  
 label alt_day7_mi_7dl_dam_CPU:
@@ -11856,8 +11856,8 @@ label alt_day7_mi_7dl_dam_CPU:
     stop music fadeout 5
     mi "Сенечка."
     play music emptiness fadein 3
-    $ persistent.mi_7dl_bad_star = True
     play sound aunl
+    $ persistent.mi_7dl_bad_star = True
     show acm_logo_mi_dam_cpu with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12004,8 +12004,8 @@ label alt_day7_mi_7dl_unlike:
     mi "Тем, что у меня грудь меньше."
     mi "И тем, конечно, что она тебя совсем-совсем не любит."
     play music happy_ending fadein 3
-    $ persistent.mi_7dl_herc_exc = True
     play sound aunl
+    $ persistent.mi_7dl_herc_exc = True
     show acm_logo_mi_unlike with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12200,8 +12200,8 @@ label alt_day7_mi_7dl_sinthetic:
         pos (747,105)
     $ renpy.pause(3, hard=True)
     
-    $ persistent.mi_7dl_loki_exc = True
     play sound aunl
+    $ persistent.mi_7dl_loki_exc = True
     show acm_logo_mi_come with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12351,8 +12351,8 @@ label alt_day7_mi_7dl_come_back:
     scene bg int_musclub_day with dissolve
     me "В-ваташи ва?"
     play music emptiness fadein 3
-    $ persistent.mi_7dl_dr_exc = True
     play sound aunl
+    $ persistent.mi_7dl_dr_exc = True
     show acm_logo_mi_watashi with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

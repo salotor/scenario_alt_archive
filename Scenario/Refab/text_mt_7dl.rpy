@@ -1,6 +1,4 @@
-﻿label alt_day6_mt_7dl_start:
-    call alt_day6_mt_7dl_vars
-    pause(1)
+﻿label alt_day6_mt_7dl_begin:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(6, u"Ольга. Утро")
@@ -397,6 +395,7 @@
     window hide
     stop ambience fadeout 5
     stop music fadeout 3
+    return
     
 label alt_day6_mt_7dl_morning:
     $ persistent.sprite_time = "day"
@@ -483,10 +482,7 @@ label alt_day6_mt_7dl_morning:
     "Я огляделся."
     window hide
     with fade
-    if alt_day5_mt_7dl_hentai:
-        jump alt_day6_mt_7dl_dv_morning
-    else:
-        jump alt_day6_mt_7dl_un_morning
+    return
     
 label alt_day6_mt_7dl_dv_morning:
     "И заметил куда-то крадущуюся Алису."
@@ -705,7 +701,7 @@ label alt_day6_mt_7dl_dv_morning:
     "Что есть и здесь своя какая-то непонятная правда, отворачиваться от которой я просто не имею права."
     "Вот и бежал, пьяные глаза, сбитое дыхание."
     stop music fadeout 3
-    jump alt_day6_mt_7dl_retail
+    return
 
 label alt_day6_mt_7dl_un_morning:
     play music out_of_painkillers fadein 3
@@ -964,7 +960,7 @@ label alt_day6_mt_7dl_un_morning:
     "В меня бросили картинкой, на которой из головы человечка почему-то росла пальма."
     dreamgirl "Ладно… Если ты так считаешь."
     stop music fadeout 3
-    jump alt_day6_mt_7dl_retail
+    return
     
 label alt_day6_mt_7dl_retail:
     window hide
@@ -1011,10 +1007,7 @@ label alt_day6_mt_7dl_retail:
     show mt normal pioneer
     with dissolve
     play ambience ambience_int_cabin_day fadein 3
-    if alt_day5_mt_7dl_hentai:
-        jump alt_day6_mt_7dl_retail_px
-    else:
-        jump alt_day6_mt_7dl_retail_vg
+    return
         
 label alt_day6_mt_7dl_retail_px:
     "Вожатая сидела на кровати, старательно сложив руки на коленях."
@@ -1112,7 +1105,7 @@ label alt_day6_mt_7dl_retail_px:
     "Похоже, она окончательно взяла себя в руки."
     mt "Поговорим позже, хорошо?"
     "Она помахала мне и направилась к выходу."
-    jump alt_day6_mt_7dl_declaration0
+    return
 
 label alt_day6_mt_7dl_retail_vg:
     "Ольга стояла на табуретке, сосредоточенно роясь в верхнем отделении шкафа."
@@ -1146,7 +1139,7 @@ label alt_day6_mt_7dl_retail_vg:
     "Я покачал головой."
     mt "Хорошо."
     window hide
-    jump alt_day6_mt_7dl_forgive
+    return
     
 label alt_day6_mt_7dl_declaration0:
     menu:
@@ -1233,7 +1226,7 @@ label alt_day6_mt_7dl_declaration0:
             "Наушники нашли своё место в ушах, а файл с едва слышимым щелчком начал своё воспроизведение."
             window hide
             with fade2
-    jump alt_day6_mt_7dl_memento
+    return
     
 label alt_day6_mt_7dl_forgive:
     "Ольга хотела было выйти, но я остановил её вопросом:"
@@ -1296,8 +1289,7 @@ label alt_day6_mt_7dl_forgive:
     "И снова слушал. А перед глазами…"
     stop music fadeout 3
     window hide
-    if alt_day4_neu_mt_diary and alt_day5_neu_mt_diary:
-        jump alt_day6_mt_7dl_diary3
+    return
 
 label alt_day6_mt_7dl_memento:
     $ persistent.sprite_time = "day"
@@ -1565,7 +1557,7 @@ label alt_day6_mt_7dl_memento:
     window hide
     scene black with fade
     pause(1)
-    jump alt_day6_mt_7dl_dinner
+    return
     
 label alt_day6_mt_7dl_diary3:
     $ persistent.sprite_time = "day"
@@ -1663,6 +1655,7 @@ label alt_day6_mt_7dl_diary3:
     "Мне предстояло очень много исправить сегодня, и сил для этого понадобится — уйма!"
     stop music fadeout 3
     stop ambience fadeout 3
+    return
     
 label alt_day6_mt_7dl_dinner:
     $ persistent.sprite_time = "day"
@@ -1967,6 +1960,7 @@ label alt_day6_mt_7dl_dinner:
     "Кажется, с ностальгией пора сворачиваться — со стороны клуба со страшной скоростью нёсся монолог одной красивой, но чудовищно болтливой японки."
     window hide
     scene black with fade
+    return
 
 label alt_day6_mt_7dl_concert:
     $ persistent.sprite_time = "day"
@@ -2337,7 +2331,8 @@ label alt_day6_mt_7dl_concert:
     "Так или иначе, если мы хотели поужинать, следовало бы поторопиться."
     window hide
     stop ambience fadeout 3
-    with fade 
+    with fade
+    return
 
 label alt_day6_mt_7dl_supper:
     $ persistent.sprite_time = "sunset"
@@ -2367,10 +2362,7 @@ label alt_day6_mt_7dl_supper:
     "Молчал всё то время, что до меня доходило всё это."
     "Молчал всё время, что пытался снова научиться дышать."
     th "Что ж, теперь очень многое становилось намного понятнее."
-    if mt_pt <= 13:
-        jump alt_day6_mt_7dl_choice
-    else:
-        jump alt_day6_mt_7dl_declare
+    return
         
 label alt_day6_mt_7dl_choice:
     "Фактически, настолько понятнее, что я всерьёз подумывал о том, чтобы пуститься в бега."
@@ -2536,155 +2528,159 @@ label alt_day6_mt_7dl_choice:
         me "Разумеется, хочу."
         sl "Ну так, и…"
         me "Ладно, ты права. {w}Меня здесь и правда не держит ничего."
-        jump alt_day6_mt_7dl_catha
+        return
     else:
         menu:
-                "Вообще-то, есть кое-кто важный.":
-                    $ mt_pt += 1
-                    "Ответил я."
-                    me "И хоть это не твоё дело, я отвечаю: да, она очень много для меня значит."
-                    me "Ты даже не представляешь, сколько."
-                    sl "Да нет…"
-                    show sl sad dress far with dissolve
-                    sl "Очень даже представляю."
-                    "Она перекинула мешок, который всё это время держала перед собой, за спину."
-                    sl "Очень… Даже…"
-                    hide sl with diam
-                    "Сгорбилась и пошла прочь."
-                    "Как будто я должен был стать её чудесным, но маловероятным спасением."
-                    "И она не возлагала на меня слишком больших надежд."
-                    "Просто никаких других у неё просто не оставалось."
-                    sl "Удачи тебе… Вам."
-                    "Донёс ветер её слова."
-                    window hide
-                    scene black with fade
-                    stop sound_loop
-                    $ alt_day6_mt_7dl_lms = True
-                "Я не знаю…":
-                    me "Наверное…"
-                    sl "Значит, ты готов?"
-                    me "Да, чёрт возьми!"
-                    show sl normal dress close with flash
-                    sl "Тогда слушай внимательно:"
-                    "Славя наклонилась ко мне и заговорила…"
-                    stop ambience fadeout 2
-                    label alt_day6_mt_7dl_catha:
-                        $ prolog_time()
-                        $ renpy.pause(2)
-                        if herc:
-                            show expression D3_intro("bg int_store_7dl")
-                        elif loki:
-                            show expression D3_intro("bg ext_winterpark_7dl")
-                        else:
-                            show expression D3_intro("bg int_intro_liaz_7dl")
-                    show anim_grain
-                    with dissolve
-                    $ persistent.sprite_time = "night"
-                    show blink
-                    "То ли реальность попыла, то ли это просто слёзы, но на секундочку я вдруг перестал видеть окружение."
-                    if not (herc or loki):
-                        play sound_loop sfx_intro_bus_engine_loop fadein 3
-                        "Вообще перестал воспринимать действительность."
-                        "Только Славя, которая так и продолжала говорить что-то, оставалась моим островком стабильности в этом беснующемся хаосе."
-                        "И, я сам не зная зачем, то ли вцепился в неё, то ли, намертво прикрепил её к себе."
-                        "И открыл глаза в автобусе."
-                        scene bg intro_xx
-                        show sl surprise dress
-                        with flash
-                        "И мы вывалились на ледяное сиденье ЛиАЗа. Я — и всё ещё сжимающая мою руку никогда не существовавшая Славя."
-                        sl "Значит, это не враки?!"
-                        "Славя пребывала в определённом шоке."
-                        "Который не помешал ей вскочить с кресла и подбежать к двери, когда на одном из домов удалось разглядеть стилизованное изображение кошачьей лапы."
-                        "И надпись: «Ветлечебница»."
-                        sl "А откройте, пожалуйста!"
-                        "Попросила она."
-                        "И было в этом что-то — то ли в голосе её, то ли в лёгком летнем платьице, что водитель безропотно остановил автобус и раскрыл двери-гармошку."
-                        hide sl with dissolve
-                        "И Славя навсегда исчезла из моей жизни, не бросив и взгляда на прощание."
-                        "Как будто воспользовалась мной, и я утратил ценность."
-                        window hide
-                        scene bg ext_city_night_7dl with dissolve2
-                        "Привычное утилитарное отношение, которое я только и жду от людей."
-                        "Поэтому я даже не удивился."
-                        "Хотя и было жутко больно не ошибиться."
-                        "Наверное, потому, когда автобус занесло на мосту, я даже не испугался."
-                        th "Ожидаемо."
-                        stop sound_loop
-                        play sound sfx_shoulder_dive_water
-                        pause(1)
-                        scene anim_underwater
-                        "Сказал я сам себе."
-                        th "Ожидаемо."
-                        scene gameover with flash
-                        play sound aunl
-                        show acm_logo_me_lamp with moveinright:
-                            pos (1600, 1020)
-                        $ renpy.pause(7.4, hard=True)
-                        $ persistent.alt_lamp = True
-                        return
-                    elif herc:
-                        show expression D3_intro("bg int_store_7dl") with fade
-                        "Я даже не успел удивиться или испугаться."
-                        "Возможно, потому, что всё ещё частично пребывал в несбыточном краю, куда и уходит любое детство."
-                        "Неделя там — ценой жизни здесь?"
-                        "Почему мне кажется, что не такая уж это и большая цена?"
-                        window hide
-                        play sound makarych fadein 0
-                        scene bg int_store_7dl
-                        show anim_grain
-                        with fade
-                        th "И всё-таки…"
-                        "Последней мыслью в гаснущем сознании высветился вопрос."
-                        th "Зачем Славе так отчаянно требовалось сюда?"
-                        window hide
-                        play sound sfx_bodyfall_1
-                        scene gameover with flash
-                        stop sound_loop fadeout 0
-                        play sound aunl
-                        show acm_logo_me_lamp with moveinright:
-                            pos (1600, 1020)
-                        $ renpy.pause(7.4, hard=True)
-                        $ persistent.alt_lamp = True
-                        return
-                    elif loki:
-                        play music herc_death fadein 5
-                        show blink  with dissolve
-                        show expression D3_intro("bg ext_winterpark_7dl") with fade
-                        $ renpy.pause(1.5)
-                        "Всё началось шесть дней назад."
-                        "Или пару минут — по меркам этой вселенной?"
-                        "Я бы хотел себе смерти во сне, лёгкой и светлой."
-                        "Но вышло как вышло."
-                        window hide
-                        scene bg ext_winterpark_7dl
-                        show prologue_dream
-                        with fade
-                        sl "Семён?!"
-                        "Меня аккуратно перевернули на спину."
-                        "Сверху донёсся сдавленный возглас."
-                        sl "Господи… Почему же ты сказал, ты же…"
-                        "Славя дрожала на холодном ветру в своём легком платьице, но не обращала на него внимания, пытаясь помочь хоть как-то."
-                        sl "Ты не имел права, слышишь, ты? {w}Я никогда бы не решилась, если бы знала… Кто-нибудь!!!"
-                        window hide
-                        with fade2
-                        "Закричала она, срывая связки."
-                        sl "Помогите! {w}Здесь человек умирает! Пожалуйста!"
-                        th "Снежная королева поцеловала Кая еще раз, и он позабыл и Герду, и бабушку, и всех домашних."
-                        "И в Ледяном Замке кусочки льда сами сложились нужным словом, и я улыбнулся тому, насколько это было правильно."
-                        window hide
-                        show blink
-                        "А потом была только ледяная темнота."
-                        "И Вечность."
-                        window hide
-                        scene black with fade2
-                        pause(5)
-                        scene gameover with flash
-                        play sound aunl
-                        show acm_logo_me_lamp with moveinright:
-                            pos (1600, 1020)
-                        $ renpy.pause(7.4, hard=True)
-                        $ persistent.alt_lamp = True
-                        return
+            "Вообще-то, есть кое-кто важный.":
+                $ mt_pt += 1
+                "Ответил я."
+                me "И хоть это не твоё дело, я отвечаю: да, она очень много для меня значит."
+                me "Ты даже не представляешь, сколько."
+                sl "Да нет…"
+                show sl sad dress far with dissolve
+                sl "Очень даже представляю."
+                "Она перекинула мешок, который всё это время держала перед собой, за спину."
+                sl "Очень… Даже…"
+                hide sl with diam
+                "Сгорбилась и пошла прочь."
+                "Как будто я должен был стать её чудесным, но маловероятным спасением."
+                "И она не возлагала на меня слишком больших надежд."
+                "Просто никаких других у неё просто не оставалось."
+                sl "Удачи тебе… Вам."
+                "Донёс ветер её слова."
+                window hide
+                scene black with fade
+                stop sound_loop
+                $ alt_day6_mt_7dl_lms = True
+                return
+            "Я не знаю…":
+                me "Наверное…"
+                sl "Значит, ты готов?"
+                me "Да, чёрт возьми!"
+                show sl normal dress close with flash
+                sl "Тогда слушай внимательно:"
+                "Славя наклонилась ко мне и заговорила…"
+                stop ambience fadeout 2
+                return
+
+label alt_day6_mt_7dl_catha:
+    $ prolog_time()
+    $ renpy.pause(2)
+    if herc:
+        show expression D3_intro("bg int_store_7dl")
+    elif loki:
+        show expression D3_intro("bg ext_winterpark_7dl")
+    else:
+        show expression D3_intro("bg int_intro_liaz_7dl")
+    show anim_grain
+    with dissolve
+    $ persistent.sprite_time = "night"
+    show blink
+    "То ли реальность попыла, то ли это просто слёзы, но на секундочку я вдруг перестал видеть окружение."
+    if not (herc or loki):
+        play sound_loop sfx_intro_bus_engine_loop fadein 3
+        "Вообще перестал воспринимать действительность."
+        "Только Славя, которая так и продолжала говорить что-то, оставалась моим островком стабильности в этом беснующемся хаосе."
+        "И, я сам не зная зачем, то ли вцепился в неё, то ли, намертво прикрепил её к себе."
+        "И открыл глаза в автобусе."
+        scene bg intro_xx
+        show sl surprise dress
+        with flash
+        "И мы вывалились на ледяное сиденье ЛиАЗа. Я — и всё ещё сжимающая мою руку никогда не существовавшая Славя."
+        sl "Значит, это не враки?!"
+        "Славя пребывала в определённом шоке."
+        "Который не помешал ей вскочить с кресла и подбежать к двери, когда на одном из домов удалось разглядеть стилизованное изображение кошачьей лапы."
+        "И надпись: «Ветлечебница»."
+        sl "А откройте, пожалуйста!"
+        "Попросила она."
+        "И было в этом что-то — то ли в голосе её, то ли в лёгком летнем платьице, что водитель безропотно остановил автобус и раскрыл двери-гармошку."
+        hide sl with dissolve
+        "И Славя навсегда исчезла из моей жизни, не бросив и взгляда на прощание."
+        "Как будто воспользовалась мной, и я утратил ценность."
+        window hide
+        scene bg ext_city_night_7dl with dissolve2
+        "Привычное утилитарное отношение, которое я только и жду от людей."
+        "Поэтому я даже не удивился."
+        "Хотя и было жутко больно не ошибиться."
+        "Наверное, потому, когда автобус занесло на мосту, я даже не испугался."
+        th "Ожидаемо."
+        stop sound_loop
+        play sound sfx_shoulder_dive_water
+        pause(1)
+        scene anim_underwater
+        "Сказал я сам себе."
+        th "Ожидаемо."
+        scene gameover with flash
+        play sound aunl
+        $ persistent.alt_lamp = True
+        show acm_logo_me_lamp with moveinright:
+            pos (1600, 1020)
+        $ renpy.pause(7.4, hard=True)
+        return
+    elif herc:
+        show expression D3_intro("bg int_store_7dl") with fade
+        "Я даже не успел удивиться или испугаться."
+        "Возможно, потому, что всё ещё частично пребывал в несбыточном краю, куда и уходит любое детство."
+        "Неделя там — ценой жизни здесь?"
+        "Почему мне кажется, что не такая уж это и большая цена?"
+        window hide
+        play sound makarych fadein 0
+        scene bg int_store_7dl
+        show anim_grain
+        with fade
+        th "И всё-таки…"
+        "Последней мыслью в гаснущем сознании высветился вопрос."
+        th "Зачем Славе так отчаянно требовалось сюда?"
+        window hide
+        play sound sfx_bodyfall_1
+        scene gameover with flash
+        stop sound_loop fadeout 0
+        play sound aunl
+        $ persistent.alt_lamp = True
+        show acm_logo_me_lamp with moveinright:
+            pos (1600, 1020)
+        $ renpy.pause(7.4, hard=True)
+        return
+    elif loki:
+        play music herc_death fadein 5
+        show blink  with dissolve
+        show expression D3_intro("bg ext_winterpark_7dl") with fade
+        $ renpy.pause(1.5)
+        "Всё началось шесть дней назад."
+        "Или пару минут — по меркам этой вселенной?"
+        "Я бы хотел себе смерти во сне, лёгкой и светлой."
+        "Но вышло как вышло."
+        window hide
+        scene bg ext_winterpark_7dl
+        show prologue_dream
+        with fade
+        sl "Семён?!"
+        "Меня аккуратно перевернули на спину."
+        "Сверху донёсся сдавленный возглас."
+        sl "Господи… Почему же ты сказал, ты же…"
+        "Славя дрожала на холодном ветру в своём легком платьице, но не обращала на него внимания, пытаясь помочь хоть как-то."
+        sl "Ты не имел права, слышишь, ты? {w}Я никогда бы не решилась, если бы знала… Кто-нибудь!!!"
+        window hide
+        with fade2
+        "Закричала она, срывая связки."
+        sl "Помогите! {w}Здесь человек умирает! Пожалуйста!"
+        th "Снежная королева поцеловала Кая еще раз, и он позабыл и Герду, и бабушку, и всех домашних."
+        "И в Ледяном Замке кусочки льда сами сложились нужным словом, и я улыбнулся тому, насколько это было правильно."
+        window hide
+        show blink
+        "А потом была только ледяная темнота."
+        "И Вечность."
+        window hide
+        scene black with fade2
+        pause(5)
+        scene gameover with flash
+        play sound aunl
+        $ persistent.alt_lamp = True
+        show acm_logo_me_lamp with moveinright:
+            pos (1600, 1020)
+        $ renpy.pause(7.4, hard=True)
+        return
+
 label alt_day6_mt_7dl_declare:
     $ persistent.sprite_time = "night"
     $ night_time()
@@ -2969,6 +2965,7 @@ label alt_day6_mt_7dl_declare:
     scene black with fade
     stop music fadeout 3
     stop ambience fadeout 3
+    return
     
 label alt_day6_mt_7dl_nighttime:
     $ persistent.sprite_time = "night"
@@ -3244,8 +3241,9 @@ label alt_day6_mt_7dl_nighttime:
     "Приятная тяжесть, которая успокаивает куда лучше всех таблеток на свете."
     window hide
     stop ambience fadeout 3
+    return
 
-label alt_day7_mt_7dl_start:
+label alt_day7_mt_7dl_begin:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(7, u"Ольга. Утро")
@@ -3323,6 +3321,7 @@ label alt_day7_mt_7dl_start:
     stop ambience fadeout 6
     window hide
     with fade
+    return
     
 label alt_day7_mt_7dl_morning:
     scene bg ext_house_of_mt_sunset with dissolve
@@ -3680,6 +3679,7 @@ label alt_day7_mt_7dl_morning:
     stop ambience fadeout 6
     window hide
     with fade
+    return
 
 label alt_day7_mt_7dl_conclude:
     $ persistent.sprite_time = "day"
@@ -3802,6 +3802,7 @@ label alt_day7_mt_7dl_conclude:
     stop music fadeout 3
     stop ambience fadeout 6
     window hide
+    return
 
 label alt_day7_mt_7dl_byes:
     $ persistent.sprite_time = "day"
@@ -4028,13 +4029,7 @@ label alt_day7_mt_7dl_byes:
     th "Например?"
     stop music fadeout 3
     dreamgirl "А ты открой глазки да посмотри."
-    if alt_day5_mt_7dl_hentai:
-        jump alt_day7_mt_7dl_dv_bye
-    else:
-        if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
-            jump alt_day7_mt_7dl_un_fz_bye
-        else:
-            jump alt_day7_mt_7dl_un_bye
+    return
     
 label alt_day7_mt_7dl_dv_bye:
     show dv smile sport with dissolve
@@ -4164,7 +4159,7 @@ label alt_day7_mt_7dl_dv_bye:
     stop music fadeout 8
     window hide
     with fade2
-    jump alt_day7_mt_7dl_departure
+    return
 
 label alt_day7_mt_7dl_un_bye:
     "Я и открыл."
@@ -4292,7 +4287,7 @@ label alt_day7_mt_7dl_un_bye:
     "Она погладила меня по щеке и исчезла."
     hide un with dissolve
     stop music fadeout 3
-    jump alt_day7_mt_7dl_departure
+    return
     
 label alt_day7_mt_7dl_un_fz_bye:
     "Прислушавшись к совету внутреннего голоса, я открыл глаза."
@@ -4375,7 +4370,7 @@ label alt_day7_mt_7dl_un_fz_bye:
     un "Будь счастлив. Прощай."
     hide un with dissolve
     stop music fadeout 3    
-    jump alt_day7_mt_7dl_departure
+    return
     
 label alt_day7_mt_7dl_departure:
     "Я всё ещё пребывал в раздумьях относительно сегодняшних гостей, когда меня без особой ласки подёргали за плечо."
@@ -4664,22 +4659,19 @@ label alt_day7_mt_7dl_departure:
         stop ambience fadeout 6
         window hide
         with fade
-        jump alt_day7_mt_7dl_router
+        menu:
+            "Прошлое важнее.":
+                $ alt_day7_mt_7dl_pt = 1
+                return
+            "Будущее важнее.":
+                $ alt_day7_mt_7dl_pt = 2
+                return
     else:
         $ alt_day7_mt_7dl_pt = 0
         "На миг стало жутко, дух захватило как в бесконечном падении…"
         window hide
         with flash
-        jump alt_day7_mt_7dl_loopback
-
-label alt_day7_mt_7dl_router:
-    menu:
-        "Прошлое важнее.":
-            $ alt_day7_mt_7dl_pt = 1
-            jump alt_day7_mt_7dl_loopthru
-        "Будущее важнее.":
-            $ alt_day7_mt_7dl_pt = 2
-            jump alt_day7_mt_7dl_loopback
+        return
 
 label alt_day7_mt_7dl_loopback:
     $ alt_chapter(7, u"Ольга. Выбор: будущее")
@@ -4770,10 +4762,7 @@ label alt_day7_mt_7dl_loopback:
     stop ambience fadeout 6
     window hide
     with fade
-    if (mt_pt >= 13) and (alt_day2_date == 6) and (alt_day3_dancing == 5) and alt_day4_neu_mt_fire:
-        jump alt_day7_mt_7dl_good
-    else:
-        jump alt_day7_mt_7dl_bad
+    return
         
 label alt_day7_mt_7dl_good:
     $ persistent.sprite_time = "day"
@@ -5053,8 +5042,6 @@ label alt_day7_mt_7dl_good:
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
-    if alt_day_binder == 1:
-        call alt_day7_mt_7dl_postscriptum
     return
 
 label alt_day7_mt_7dl_bad:
@@ -5181,8 +5168,8 @@ label alt_day7_mt_7dl_bad:
         "Дальше я думал только об этом."
     with dissolve
     play sound aunl
-    $ persistent.mt_7dl_bad = True
     stop sound_loop fadeout 3
+    $ persistent.mt_7dl_bad = True
     show acm_logo_mt_cause with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -5267,10 +5254,7 @@ label alt_day7_mt_7dl_loopthru:
     stop ambience fadeout 6
     window hide
     with fade
-    if mt_pt >= 15 and (alt_day2_date == 6) and alt_day5_neu_mt_diary and alt_day4_neu_mt_diary:
-        jump alt_day7_mt_7dl_true
-    else:
-        jump alt_day7_mt_7dl_ever_after
+    return
 
 label alt_day7_mt_7dl_ever_after:
     $ persistent.sprite_time = "day"
