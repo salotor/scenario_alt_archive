@@ -9212,10 +9212,10 @@ label alt_day6_un_7dl_letmeout:
     window hide
     scene gameover with flash
     play sound aunl
+    $ persistent.alt_lamp = True
     show acm_logo_me_lamp with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
-    $ persistent.alt_lamp = True
     return
 
 label alt_day6_un_7dl_dance:
@@ -10992,12 +10992,12 @@ label alt_day7_un_7dl_epilogue_bad:
     $ renpy.pause(4.4, hard=True)
     stop sound_loop fadeout 0
     play sound aunl
+    $ persistent.un_7dl_bad = True
     show acm_logo_un_sui with moveinright:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
     play music danceagain fadein 5
     with vpunch
-    $ persistent.un_7dl_bad = True
     call alt_7dl_titles
     $ renpy.pause(2)
     return
@@ -11301,11 +11301,11 @@ label alt_day7_un_7dl_ussr:
     show blackout_exh
     with dspr
     play sound aunl
+    $ persistent.un_7dl_good_ussr = True
     show acm_logo_un_good2 with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.un_7dl_good_ussr = True
     call alt_7dl_titles
     $ renpy.pause(2)
     return
@@ -11564,11 +11564,11 @@ label alt_day7_un_7dl_rf:
     window hide
     $ set_mode_adv()
     play sound aunl
+    $ persistent.un_7dl_good_rf = True
     show acm_logo_un_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.un_7dl_good_rf = True
     call alt_7dl_titles
     $ renpy.pause(2.4, hard=True)
     if alt_day_binder == 1:
@@ -12086,10 +12086,10 @@ label alt_day7_un_7dl_true1:
     show alt_credits timeskip_come with dissolve2:
         pos (747,115)
     with flash
-    $ persistent.un_7dl_true_transit = True
     with dissolve
     play sound aunl
     stop sound_loop fadeout 3
+    $ persistent.un_7dl_true_transit = True
     show acm_logo_un_transit with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12171,10 +12171,10 @@ label alt_day7_un_7dl_true:
     "Ни той, что любила так, что была готова решительно на всё."
     "А я этого не заслужил."
     "Что гораздо хуже: я этого не хотел."
-    $ persistent.un_7dl_true = True
     with dissolve
     play sound aunl
     stop sound_loop fadeout 3
+    $ persistent.un_7dl_true = True
     show acm_logo_un_shelter with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

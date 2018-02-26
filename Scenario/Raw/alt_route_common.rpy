@@ -21617,10 +21617,10 @@ label alt_day3_eventAf_music_club:
                     window hide
                     stop sound_loop fadeout 0
                     play sound aunl
+                    $ persistent.alt_deep = True
                     show acm_logo_me_deep with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_deep = True
                     scene black
                     show gameover
                     with gopr
@@ -21652,10 +21652,10 @@ label alt_day3_eventAf_music_club:
                     window hide
                     stop sound_loop fadeout 0
                     play sound aunl
+                    $ persistent.alt_deep = True
                     show acm_logo_me_deep with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_deep = True
                     scene black
                     show gameover
                     with gopr
@@ -21681,12 +21681,12 @@ label alt_day3_eventAf_music_club:
                     "И как бесконечные полторы секунды невесомости спустя, мы боком ударились о поверхность грязной чёрной воды."
                     play sound sfx_water_emerge
                     window hide
+                    $ persistent.alt_deep = True
                     show acm_logo_me_deep with moveinright:
+                    pause(3)
                     scene black
                     show gameover
                     with gopr
-                    pause(3)
-                    $ persistent.alt_deep = True
                     return
             "Не просыпаться":
                 me "Нет. Нет? Нет!"
@@ -24602,10 +24602,10 @@ label alt_day3_dv_reunion:
         "Надеюсь, в следующей жизни у меня будет шанс всё исправить."
         window hide
         play sound aunl
+        $ persistent.alt_deep = True
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
-        $ persistent.alt_deep = True
         with vpunch
     elif herc:
         play music herc_death fadein 5
@@ -24629,10 +24629,10 @@ label alt_day3_dv_reunion:
         play sound sfx_bodyfall_1
         stop sound_loop fadeout 0
         play sound aunl
+        $ persistent.alt_deep = True
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
-        $ persistent.alt_deep = True
         with vpunch
     else:
         scene bg int_intro_liaz_7dl with fade
@@ -24651,10 +24651,10 @@ label alt_day3_dv_reunion:
         "Не страшно, не жутко, не интересно. Просто вяло любопытно."
         window hide
         play sound aunl
+        $ persistent.alt_deep = True
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
-        $ persistent.alt_deep = True
         with vpunch
     window hide
     scene black
