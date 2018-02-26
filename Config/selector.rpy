@@ -72,6 +72,19 @@ label scenario__sdl_selector:
 label sdl_menu:
     scene scenery with dissolve
     menu:
+        "Выбранный лейбл":
+            stop ambience fadeout 2
+            $ meet('mi','Мику')
+            $ meet('us','Ульяна')
+            $ meet('sl','Славя')
+            $ meet('dv','Алиса')
+            $ meet('mt','Ольга Дмитриевна')
+            $ meet('un','Лена')
+            $ meet('cs','Виола')
+            $ meet('el','Электроник')
+            $ meet('sh','Шурик')
+            $ meet('ba','Саныч')
+            #jump alt_test
         "Руты.":
             menu:
                 "С самого начала?":
