@@ -10087,10 +10087,10 @@ label alt_day6_dv_7dl_escape_convince:
         "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
         window hide
         play sound aunl
+        $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
-        $ persistent.alt_lamp = True
         return
     elif herc:
         scene black with fade
@@ -10111,10 +10111,10 @@ label alt_day6_dv_7dl_escape_convince:
         play sound sfx_bodyfall_1
         stop sound_loop fadeout 0
         play sound aunl
+        $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
-        $ persistent.alt_lamp = True
         return
     elif loki:
         play music herc_death fadein 5
@@ -10151,10 +10151,10 @@ label alt_day6_dv_7dl_escape_convince:
         "Пусть знают, я ушёл светло и ни о чём не жалел."
         window hide
         play sound aunl
+        $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
-        $ persistent.alt_lamp = True
         return
 
 
@@ -12552,10 +12552,10 @@ label alt_day7_dv_7dl_tulpa_end:
         pos (747,105)
     stop sound_loop fadeout 0
     play sound aunl
+    $ persistent.dv_7dl_tulpa = True
     show acm_logo_dv_tulpa with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
-    $ persistent.dv_7dl_tulpa = True
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -12971,11 +12971,11 @@ label alt_day7_dv_7dl_ussr_epilogue:
     window hide
     stop sound_loop fadeout 0
     play sound aunl
+    $ persistent.dv_7dl_good_ussr = True
     show acm_logo_dv_ussr_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.dv_7dl_good_ussr = True
     call alt_7dl_titles
     $ renpy.pause(2)
     return
@@ -13165,11 +13165,11 @@ label alt_day7_dv_7dl_rf_epilogue:
     "Но Алиса… {w}Алиса значила куда больше."
     stop ambience fadeout 3
     play sound aunl
+    $ persistent.dv_7dl_good_ussr_rf = True
     show acm_logo_dv_morethanlife with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.dv_7dl_good_ussr_rf = True
     call alt_7dl_titles
     $ renpy.pause(2)
     if alt_day_binder == 1:
@@ -13404,11 +13404,11 @@ label alt_day7_dv_7dl_rej_ussr_end:
     window hide
     stop sound_loop fadeout 0
     play sound aunl
+    $ persistent.dv_7dl_reject_ussr = True
     show acm_logo_dv_tillend with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.dv_7dl_reject_ussr = True
     play music walkingaway fadein 3
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -13551,11 +13551,11 @@ label alt_day7_dv_7dl_rej_rf_end:
     $ set_mode_adv()
     scene cg d7_dv_ep_red_7dl with dissolve
     play sound aunl
+    $ persistent.dv_7dl_reject_rf = True
     show acm_logo_dv_gohome with moveinright:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
     with vpunch
-    $ persistent.dv_7dl_reject_rf = True
     play music walkingaway fadein 3
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -13679,8 +13679,8 @@ label alt_day7_dv_7dl_un_end:
     "Где-то далеко-далеко, вышедшая на крылечко в летний полдень очень красивая девочка взгрустнула на полсекунды, сама не понимая, почему — а из-за ворот лагеря, где она отдыхала, взревел мотором «Икарус», доставивший вожатую и почту от родителей."
     "И укатил прочь."
     window hide
-    $ persistent.dv_7dl_un = True
     play sound aunl
+    $ persistent.dv_7dl_un = True
     show acm_logo_dv_meetmethere with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -13884,9 +13884,7 @@ label alt_day7_dv_7dl_bad_end:
     "И я нихренашеньки, ну нихренашеньки не могу — ни сам, ни в толпе, ни со стимулом, ни из вредности."
     "Человек, выживший в сказке, которую он не заслужил."
     window hide
-    $ persistent.dv_7dl_bad = True
     if alt_day7_dv_7dl_check == 5:
-        $ persistent.dv_7dl_bad_mt = True
         $ meet('mt','Олька')
         $ persistent.sprite_time = "night"
         $ day_time()
@@ -13930,6 +13928,7 @@ label alt_day7_dv_7dl_bad_end:
         voices "Здрав… жалам… товарищ директор!"
         window hide
         play sound aunl
+        $ persistent.dv_7dl_bad_mt = True
         show acm_logo_dv_drunk with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -13939,6 +13938,7 @@ label alt_day7_dv_7dl_bad_end:
         return
     else:
         play sound aunl
+        $ persistent.dv_7dl_bad = True
         show acm_logo_dv_theresnoway with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)

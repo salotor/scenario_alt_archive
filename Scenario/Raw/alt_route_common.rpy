@@ -5499,7 +5499,7 @@ label alt_day1_mod_tan:
     "Домик был забавным — такие обычно рисуют дети: треугольный, с одной дверкой."
     "Это, да ещё и отвоёвывающие себе пространство кусты сирени, сложились в удивительной красоты натюрморт, достойный кисти любого художника."
     th "Или пейзаж?"
-    if not herc or loki:
+    if not (herc or loki):
         dreamgirl "Или портрет?"
         th "Ну тебя!"
     sl "Что стоишь? Пойдём!"
@@ -7822,7 +7822,7 @@ label alt_day2_lineup:
     with dissolve
     "Она отвела меня на несколько метров правее, почти к самой трибуне и вытянулась во фрунт. Поневоле, я последовал её примеру, встав в шеренгу рядом с ней."
     "Попытавшись на секунду представить себя настоящим пионером, я потерпел сокрушительное поражение — сознание буксовало и отказывалось видеть меня в  постоянном галстуке и рубашечке."
-    "Да я даже в офисе из-за этого работал Рандом если год жизни — не мог заставить себя снять свитер."
+    "Да я даже в офисе из-за этого работал дай Рандом если год жизни — не мог заставить себя снять свитер."
     "Это не считая того, что я староват для пионерии."
     "Волей-неволей, мысли переключились на куда более приятные материи."
     "Я покосился на замершую рядом Славю."
@@ -9284,7 +9284,7 @@ label alt_day2_event_clubs:
         else:
             th "Этот парень в очках… Шурик. Он что-то про клуб говорил."
     else:
-        if alt_day2_rendezvous == 5 and alt_day2_rendezvous != 4 or alt_day2_rendezvous == 22:
+        if alt_day2_rendezvous == 1 and alt_day2_rendezvous == 2 or alt_day2_rendezvous == 3:
             me "Шурик? Какой Шурик?"
         if alt_day2_rendezvous == 1:
             un "Он здесь старший. И в стенгазете."
@@ -9451,18 +9451,22 @@ label alt_day2_event_clubs:
             "Мне вдруг пришло в голову, что именно таким образом и вырастает самая махровая бюрократия, когда ради ничего не значащей подписи, люди дают тебе право вертеть ими как заблагорассудится."
             "Поэтому я ответил максимально нейтрально."
             me "Слушай, ты, меня, конечно, извини, но я не могу."
-            if alt_day2_club_join_musc and alt_day2_club_join_nwsppr:
-                extend " Да и к Мику тоже."
-            elif alt_day2_club_join_musc:
-                extend " У Мику в клубе."
-            elif alt_day2_club_join_footbal:
-                extend " И физрук меня прибьёт, если узнает, что я предпочёл ваш кружок футболу."
-            elif alt_day2_club_join_volley:
-                extend " И физрук меня прибьёт, если узнает, что я предпочёл ваш кружок волейболу."
-                if alt_day2_rendezvous == 2:
-                    me "Да и Славя не оценит."
-            elif alt_day2_club_join_badmin:
-                extend " И физрук меня прибьёт, если узнает, что я предпочёл ваш кружок бадминтону."
+            if alt_day2_club_join_nwsppr or alt_day2_club_join_musc or alt_day2_club_join_footbal or alt_day2_club_join_volley or alt_day2_club_join_badmin:
+                me "Я уже записался" #s отсебятина
+                if alt_day2_club_join_nwsppr:
+                    extend " в стенгазету." #s отсебятина
+                    if alt_day2_club_join_musc:
+                        extend " Да и к Мику тоже."
+                elif alt_day2_club_join_musc:
+                    extend " у Мику в клубе."
+                elif alt_day2_club_join_footbal:
+                    extend ", и физрук меня прибьёт, если узнает, что я предпочёл ваш кружок футболу."
+                elif alt_day2_club_join_volley:
+                    extend ", и физрук меня прибьёт, если узнает, что я предпочёл ваш кружок волейболу."
+                    if alt_day2_rendezvous == 2:
+                        extend " Да и Славя не оценит."
+                elif alt_day2_club_join_badmin:
+                    extend ", и физрук меня прибьёт, если узнает, что я предпочёл ваш кружок бадминтону."
             else:
                 me "Я никуда не записался ещё, и не хочу. {w=0.2}Для начала в лагере осмотрюсь."
                 sh "Думаешь?"
@@ -9622,7 +9626,7 @@ label alt_day2_event_sport_area:
     "Нет, на футболе он явно быть не может — игра стихийная. {w=.3}В бадминтон тренировать королевишен? {w=.3}Сомневаюсь. {w=.3}Волейбол? Кстати, возможно, но я там не вижу никого… "
     play sound sfx_soccer_ball_kick
     extend "И я резко нагнулся, пропуская мяч мимо!"
-    if (alt_day1_sl_keys_took == 1) and (alt_day2_rendezvous == 2):
+    if ((alt_day1_sl_keys_took == 1) or (alt_day2_sl_guilty != 0)) and (alt_day2_rendezvous == 2):
         us "Эй!"
         me "Чего тебе?"
         show us sad sport with dspr
@@ -9667,7 +9671,7 @@ label alt_day2_event_sport_area:
     $ persistent.sprite_time = "sunset"
     $ sunset_time
     play music music_list["went_fishing_caught_a_girl"] fadein 5
-    if (alt_day1_sl_keys_took != 0) and (alt_day2_rendezvous == 2):
+    if ((alt_day1_sl_keys_took == 1) or (alt_day2_sl_guilty != 0)) and (alt_day2_rendezvous == 2):
         "Славя была права!"
     else:
         "Ульянка была права!"
@@ -10869,7 +10873,7 @@ label alt_day2_dubstep:
         "Ульянка повела плечами, будто сбрасывая оцепенение, и несколько мгновений спустя опять превратилась в девочку-метеор."
         show us smile sport with dissolve
         us "Дискотека-дискотека, Семён сделал дискотеку!"
-        "Мы отключили аппаратуру и неторопливо двинулись в сторону столовой."
+        "Мы отключили аппаратуру и неторопливо двинулись в сторону столовой." # а дальше "очкарик отключит"
         me "Дискотека завтра."
         us "Ну да, сравнил. Что играет там, и то, что играло здесь."
         if alt_day2_rendezvous != 3:
@@ -10924,13 +10928,14 @@ label alt_day2_event_square:
     if alt_day2_rendezvous == 2:
         if alt_day1_sl_keys_took == 1:
             if alt_day2_phys_done:
+                show us normal sport with dspr
                 us "Медленно же вы!"
                 "Окрикнула нас Ульяна."
                 us "Ольдмитривна уже ушла!"
                 us "Поищите в домике!"
                 "Кивком поблагодарив девочку, мы направились ко мне домой."
             else:
-                "Я уже совсем было собрался уходить и уводить Славю за собой, когда нас окликнули."
+                "Я уже совсем было собрался уходить и уводить Славю за собой, когда нас окликнули." #s не стыкуется с предыдущим текстом, если между первым и вторым посещениями площади были в другом месте
                 us "Эй, эй! Стойте!"
                 show sl normal pioneer at cleft
                 show us normal sport far at cright
@@ -11274,7 +11279,7 @@ label alt_day2_dinner:
     "Я с ужасом прикинул, во что мне выльется полноценное принятие в ряды отряда. {w}Но на голодный желудок такие материи обдумывать решительно не хотелось."
     th "Вовремя же я успел!"
     if alt_day2_loki_minijack:
-        me "Надо бы всё отключить…"
+        me "Надо бы всё отключить…" # до этого сами отключили
         "Забеспокоился я."
         show dv normal pioneer2 with dspr
         dv "Не беспокойся, очкарик отключит всё."
@@ -11282,12 +11287,12 @@ label alt_day2_dinner:
         us "Шурик!"
         "Сообщила Ульяна."
         us "Неужели не встретил до сих пор?"
-    if not alt_day2_lib_done and not alt_day2_club_done:
-        me "Да нет."
-        us "Его ты точно ни с кем не спутаешь!"
-        $ meet('sh','Шурик')
-    else:
-        me "Ну почему же…"
+        if not alt_day2_lib_done and not alt_day2_club_done:
+            me "Да нет."
+            us "Его ты точно ни с кем не спутаешь!"
+            $ meet('sh','Шурик')
+        else:
+            me "Ну почему же…"
     dv "Ну вот и заканчивай плакать, пошли обедать уже."
     window hide
     $ persistent.sprite_time = "day"
@@ -12430,7 +12435,7 @@ label alt_day2_tournament:
     mt "Под вашу ответственность!"
     "Я покрутил ключ в пальцах и спрятал его в карман шорт…"
     "А потом медленно-медленно поднял голову…"
-    "До меня вдруг дошло, что мне сейчас придётся искать что-то в вещах — личных вещах! — девушки, которая лишь чуть-чуть старше меня настоящего."
+    "До меня вдруг дошло, что мне сейчас придётся искать что-то в вещах — личных вещах! — девушки, которая лишь чуть-чуть младше меня настоящего."
     "Удивительно, но Ольга просто спокойно улыбнулась мне."
     show mt normal  pioneer at right with dspr
     th "Кажется, именно это она и имела в виду, когда говорила, что ни она меня, ни я её стесняться не будем. Не маленькие."
@@ -12786,7 +12791,7 @@ label alt_day2_ultim:
     show dv laugh pioneer2
     "Вот тут она от души расхохоталась."
     dv "…лапал!"
-    if alt_day2_rendezvous == 2 and alt_day2_med_done and alt_day1_us_shotted:
+    if (alt_day2_rendezvous == 2) and alt_day2_med_done and alt_day1_us_shotted:
         me "А что с твоей «стрелой»?"
         dv "Стрелой?"
         me "Ага. Ты мне всыпать хотела за то, что твою мелкую подружку подстрелил."
@@ -16129,14 +16134,14 @@ label alt_day2_slot_dv2:
     th "Заслужил."
     "Она вышла из воды чуть позже меня и, нимало не стесняясь, встала рядом и улыбнулась."
     "И ни угрозы, ни злости в этой улыбке не было."
-    if  alt_day2_dv_bet_won == 2:
+    if alt_day2_dv_bet_won == 0:
         dv "Плаваешь ты лучше, чем в карты играешь!"
         "Угу. В стиле дикого суслика."
         me "Я поддавался!"
         dv "Ну да, ну да…"
     else:
         pass
-    dv "Поздравляю."
+    dv "Поздравляю." #s с чем?
     if alt_day2_dv_bet_won == 0:
         dv " Только не думай, что я тебе простила тот косяк в столовой."
     else:
@@ -21612,10 +21617,10 @@ label alt_day3_eventAf_music_club:
                     window hide
                     stop sound_loop fadeout 0
                     play sound aunl
+                    $ persistent.alt_deep = True
                     show acm_logo_me_deep with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_deep = True
                     scene black
                     show gameover
                     with gopr
@@ -21647,10 +21652,10 @@ label alt_day3_eventAf_music_club:
                     window hide
                     stop sound_loop fadeout 0
                     play sound aunl
+                    $ persistent.alt_deep = True
                     show acm_logo_me_deep with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_deep = True
                     scene black
                     show gameover
                     with gopr
@@ -21676,12 +21681,12 @@ label alt_day3_eventAf_music_club:
                     "И как бесконечные полторы секунды невесомости спустя, мы боком ударились о поверхность грязной чёрной воды."
                     play sound sfx_water_emerge
                     window hide
+                    $ persistent.alt_deep = True
                     show acm_logo_me_deep with moveinright:
+                    pause(3)
                     scene black
                     show gameover
                     with gopr
-                    pause(3)
-                    $ persistent.alt_deep = True
                     return
             "Не просыпаться":
                 me "Нет. Нет? Нет!"
@@ -23698,6 +23703,7 @@ label alt_day3_eventAf_library:
                 "Я посмотрел на часы — пора было и поужинать."
             "Не помогать":
                 me "Извините, Виола, сегодня никак не получится."
+                show un normal pioneer with dissolve
                 "Я замямлил что-то невнятное про то, что Ольга Дмитриевна просила помочь и вообще."
                 "А Виола стояла и всепонимающим взглядом просвечивала меня, казалось, насквозь."
                 cs "Что ж, жаль."
@@ -24361,7 +24367,7 @@ label alt_day3_rockstar:
         show dv shy pioneer2 with dspr
         dv "Не хочешь попробовать сыграть?"
         play music music_list["get_to_know_me_better"] fadein 5
-        me "Да я как-то в музыке не очень…"
+        me "Да я как-то в музыке не очень…" # может вилку для Локи?
         dv "Да тут легко, вот смотри."
         "Кажется, здесь был какой-то собственный интерес."
         "Не знаю, что она задумала — но мне это что-то не очень нравится. Может, уйти, пока не поздно?"
@@ -24596,10 +24602,10 @@ label alt_day3_dv_reunion:
         "Надеюсь, в следующей жизни у меня будет шанс всё исправить."
         window hide
         play sound aunl
+        $ persistent.alt_deep = True
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
-        $ persistent.alt_deep = True
         with vpunch
     elif herc:
         play music herc_death fadein 5
@@ -24623,10 +24629,10 @@ label alt_day3_dv_reunion:
         play sound sfx_bodyfall_1
         stop sound_loop fadeout 0
         play sound aunl
+        $ persistent.alt_deep = True
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
-        $ persistent.alt_deep = True
         with vpunch
     else:
         scene bg int_intro_liaz_7dl with fade
@@ -24645,10 +24651,10 @@ label alt_day3_dv_reunion:
         "Не страшно, не жутко, не интересно. Просто вяло любопытно."
         window hide
         play sound aunl
+        $ persistent.alt_deep = True
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
-        $ persistent.alt_deep = True
         with vpunch
     window hide
     scene black

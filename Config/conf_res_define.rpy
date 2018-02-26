@@ -335,7 +335,7 @@
     
     image bg ext_musclub_night_7dl = get_image_7dl("bg/ext_musclub_night_7dl.jpg")
     image bg ext_musclub_snowy_day_7dl = get_image_7dl("bg/outro/ext_musclub_snowy_day_7dl.jpg")
-    image bg ext_mv2_7dl = get_image_7dl("bg/outru/ext_mv2_7dl.jpg")
+    image bg ext_mv2_7dl = get_image_7dl("bg/outro/ext_mv2_7dl.jpg")
     
     image bg ext_night_sky_7dl = get_image_7dl("bg/ext_night_sky_7dl.jpg")
     

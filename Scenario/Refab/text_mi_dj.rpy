@@ -10228,10 +10228,10 @@ label alt_day6_mi_dj_dance2_fail:
                     "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
                     window hide
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_lamp = True
                     return
                 elif herc:
                     scene bg int_store_7dl with fade
@@ -10252,9 +10252,9 @@ label alt_day6_mi_dj_dance2_fail:
                     play sound sfx_bodyfall_1
                     stop sound_loop fadeout 0
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
-                    $ persistent.alt_lamp = True
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif loki:
@@ -10288,10 +10288,10 @@ label alt_day6_mi_dj_dance2_fail:
                     th "Мику… До встречи."
                     window hide
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_lamp = True
                     return
             show unblink
             scene bg ext_warehouse_night_7dl
@@ -12090,8 +12090,8 @@ label alt_day7_mi_dj_bad_end:
     window hide
     scene black
     play music emptiness fadein 3
-    $ persistent.mi_dj_bad = True
     play sound aunl
+    $ persistent.mi_dj_bad = True
     show acm_logo_mi_new_happy with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12260,8 +12260,8 @@ label alt_day7_mi_dj_true_end:
     me "Или мне следует называть тебя Намики?"
     stop ambience
     window hide
-    $ persistent.mi_dj_true = True
     play sound aunl
+    $ persistent.mi_dj_true = True
     show acm_logo_mi_namiki with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12634,8 +12634,8 @@ label alt_day7_mi_dj_jp_good_end:
     mi "Обязательно дождись!"
     hide mi with dissolve
     window hide
-    $ persistent.mi_dj_good_jap = True
     play sound aunl
+    $ persistent.mi_dj_good_jap = True
     show acm_logo_mi_ricochet with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12967,8 +12967,8 @@ label alt_day7_mi_dj_rf_good_end:
     window hide
     stop ambience
     window hide
-    $ persistent.mi_dj_good_rf = True
     play sound aunl
+    $ persistent.mi_dj_good_rf = True
     show acm_logo_mi_allyours with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
