@@ -116,16 +116,13 @@ label alt_day6_us_7dl_revelations:
     pause(1)
     call alt_day6_us_7dl_dinner
     pause(1)
-    if alt_day6_us_7dl_mi_friends == 2:
-        call alt_day6_us_7dl_soundcheck
-    elif alt_day6_us_7dl_sl_friends == 2:
-        call alt_day6_us_7dl_memory_forest 
-    else:
-        call alt_day6_us_7dl_snake
-    pause(1)
     if (alt_day6_us_7dl_mi_friends == 2) or (alt_day6_us_7dl_sl_friends == 2):
+        call alt_day6_us_7dl_soundcheck
+        pause(1)
         call alt_day6_us_7dl_concert
     else:
+        call alt_day6_us_7dl_snake
+        pause(1)
         call alt_day6_us_7dl_rendezvous
     pause(1)
     call alt_day6_us_7dl_supper

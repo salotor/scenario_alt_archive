@@ -16002,7 +16002,7 @@ label alt_day7_sl_loop:
     "В раздумьях, я поднялся и машинально направился в сторону медпункта — так много времени я провёл там за последние дни."
     th "А теперь вот оказывается, что не провёл. Да и вовсе не там."
     window hide
-    scene expression Dawn("ext_aidpost_day") with dissolve
+    scene expression Dawn("bg ext_aidpost_day") with dissolve
     me "Никогда не проснётся."
     "Пробормотал себе под нос я."
     "Саныч вздохнул."
