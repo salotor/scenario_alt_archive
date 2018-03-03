@@ -1765,7 +1765,7 @@ screen sdl_achvlist_slclt_Author:
                 hover_sound sdl_achv_click
                 hovered [Show ("de_check_active6", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_check_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
-                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_cltA", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_active", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)),  Hide("de_check_active6", transition=Dissolve(0.5)),Jump("alt_day7_sl_rf")]   
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_cltA", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_active", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)),  Hide("de_check_active6", transition=Dissolve(0.5)),Jump("alt_day7_sl_rf_good")]   
         hotspot ((650,424, 300, 52)): #Реджект-РФ
             hovered [Show("sdl_achv_rejc_RF_sl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_rejc_RF_sl", transition=Dissolve(0.5))]
