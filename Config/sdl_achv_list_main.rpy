@@ -2743,7 +2743,7 @@ label sdl_achvlist_mesmt_Author:
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     #Ламповость
-    if renpy.seen_image("acm_logo_me_lamp"):
+    if persistent.alt_lamp == True:
         show acm_logo_me_lamp  with dissolve:
             xcenter 800 ycenter 66 
         show de_check_inactive1 with dissolve:
@@ -2752,7 +2752,7 @@ label sdl_achvlist_mesmt_Author:
         show de_achiv_lock1 with dissolve:
             xcenter 800 ycenter 66
     #Глубина
-    if renpy.seen_image("acm_logo_me_deep"):
+    if persistent.alt_deep == True:
         show acm_logo_me_deep  with dissolve:
             xcenter 800 ycenter 130 
         show de_check_inactive2 with dissolve:
@@ -2761,14 +2761,14 @@ label sdl_achvlist_mesmt_Author:
         show de_achiv_lock2 with dissolve:
             xcenter 800 ycenter 130
     #QTE
-    if renpy.seen_image("acm_logo_me_qte"):
+    if persistent.alt_qte == True:
         show acm_logo_me_qte  with dissolve:
             xcenter 800 ycenter 194  
     else:
         show de_achiv_lock3 with dissolve:
             xcenter 800 ycenter 194
     #Горькая правда
-    if renpy.seen_image("acm_logo_mi_bitter_truth"):
+    if persistent.alt_mi_7dl_ps == True:
         show acm_logo_mi_bitter_truth  with dissolve:
             xcenter 800 ycenter 258 
         show de_check_inactive4 with dissolve:
