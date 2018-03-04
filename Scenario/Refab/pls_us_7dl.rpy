@@ -1,10 +1,10 @@
 ﻿label alt_day6_us_7dl_start:
+    call alt_day6_us_7dl_vars
+    pause(1)
     if routetag == "us7dl_good":
         call alt_day6_us_px_begin
     else:
         call alt_day6_us_7dl_begin
-    pause(1)
-    call alt_day6_us_px_begin
     pause(1)
     call alt_day6_us_7dl_exercises
     pause(1)
@@ -16,9 +16,9 @@
         if alt_day6_us_7dl_mi_friends == 2:
             call alt_day_us_7dl_preps
         elif alt_day6_us_7dl_sl_friends == 2:
-            call alt_day7_us_7dl_warehouse
+            call alt_day6_us_7dl_warehouse
         else:
-            call alt_day7_us_7dl_un_met
+            call alt_day6_us_7dl_un_met
         pause(1)
         call alt_day6_us_7dl_dinner
         pause(1)
@@ -28,7 +28,7 @@
             call alt_day6_us_7dl_button
         pause(1)
         if us_pt <= 4:
-            call alt_day6_us_7dl_concert
+            pass
         else:
             call alt_day6_us_7dl_rendezvous
         pause(1)
@@ -47,8 +47,6 @@
             call alt_day6_us_px_far_gate
     pause(1)
     call alt_day6_us_7dl_concert
-    pause(1)
-    call alt_day6_us_7dl_supper
     pause(1)
     call alt_day6_us_7dl_supper
     pause(1)
