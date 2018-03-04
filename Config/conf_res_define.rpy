@@ -335,7 +335,7 @@
     
     image bg ext_musclub_night_7dl = get_image_7dl("bg/ext_musclub_night_7dl.jpg")
     image bg ext_musclub_snowy_day_7dl = get_image_7dl("bg/outro/ext_musclub_snowy_day_7dl.jpg")
-    image bg ext_mv2_7dl = get_image_7dl("bg/ext_mv2_7dl.jpg")
+    image bg ext_mv2_7dl = get_image_7dl("bg/outro/ext_mv2_7dl.jpg")
     
     image bg ext_night_sky_7dl = get_image_7dl("bg/ext_night_sky_7dl.jpg")
     
@@ -442,8 +442,8 @@
     
     image bg int_sam_house_clean_7dl = get_image_7dl("bg/int_sam_house_clean_7dl.jpg")
     image bg int_sam_room_7dl = get_image_7dl("bg/int_sam_room_7dl.png")
-    image bg int_shed_day_7dl = get_image_7dl("bg/int_warehouse_day_7dl.png")
-    image bg int_shed_night_7dl = get_image_7dl("bg/int_warehouse_night_7dl.png")
+    image bg int_warehouse_day_7dl = get_image_7dl("bg/int_warehouse_day_7dl.png")
+    image bg int_warehouse_night_7dl = get_image_7dl("bg/int_warehouse_night_7dl.png")
     image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.png")
     image bg int_sporthall_night_7dl = get_image_7dl("bg/int_sporthall_night_7dl.png")
     image bg int_store_7dl = get_image_7dl("bg/int_store_7dl.png")
@@ -803,6 +803,12 @@
     image acm_logo_un_sui = get_image_7dl("gui/acm_logo_un_sui.png")
     image acm_logo_un_transit = get_image_7dl("gui/acm_logo_un_transit.png")
     
+    image acm_logo_us_bad = get_image_7dl("gui/acm_logo_us_bad.png")
+    image acm_logo_us_fairytale = get_image_7dl("gui/acm_logo_us_fairytale.png")
+    image acm_logo_us_hi = get_image_7dl("gui/acm_logo_us_hi.png")
+    image acm_logo_us_openup = get_image_7dl("gui/acm_logo_us_openup.png")
+    image acm_logo_us_semische = get_image_7dl("gui/acm_logo_us_semische.png")
+    
     image achieve_beagod = get_image_7dl("gui/achieve_beagod.png")
     image acm_logo = get_image_7dl("gui/acm_logo1.png") #Логотип сюжета
     
@@ -855,42 +861,13 @@
     $ ambience_railroad = get_ambience_7dl("railroad_ambience.ogg")
     $ ambience_rain = get_ambience_7dl("ambience_rain_loop.ogg")
     $ ambience_safe = get_ambience_7dl("ambience_safe.ogg")
-    $ ambience_town_day = get_ambience_7dl("ambience_town_day.ogg")
-    $ ambience_volley = get_ambience_7dl("ambience_volley.ogg")
     $ ambience_salute = get_ambience_7dl("ambience_salute.ogg")
+    $ ambience_town_day = get_ambience_7dl("ambience_town_day.ogg")
+    $ ambience_underwater = get_ambience_7dl("ambience_underwater.ogg")
+    $ ambience_volley = get_ambience_7dl("ambience_volley.ogg")
     
     
 #music
-#Новьё
-    $ shib_mono = get_music_7dl("shib_mono.ogg") # Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
-    $ shib_stereo = get_music_7dl("shib_stereo.ogg") # Shibayan Records feat 3L - 紅涙にしづむは供人の憂い
-    
-    
-    $ intro1 = get_music_7dl("intro1.ogg")
-    $ more_than_alive = get_music_7dl("more_than_alive.ogg")
-    $ intro11 = get_music_7dl("intro11.ogg")
-    $ intro2 = get_music_7dl("intro2.ogg")
-    
-    $ seven_summer_days = get_music_7dl("seven_summer_days.ogg") #April Rain - Seven Summer Days
-
-    $ unfulfilled = get_music_7dl("unfulfilled.ogg") #April Rain - Unfulfilled
-
-    $ exodus = get_music_7dl("Exodus.ogg") #April Rain - Exodus
-
-    $ runaway = get_music_7dl("runaway.ogg") #The Neighbourhood - Sweater Weather (Instrumental)
-
-    $ thousand_little_things = get_music_7dl("thousand_little_things.ogg") #Hans Zimmer - Rain Man Theme
-
-    $  my_only_hope= get_music_7dl("my_only_hope.ogg") #Kristofferson - Where do tears go
-
-    $ Redemption = get_music_7dl("Redemption.ogg") #Mitchell Broom - Redemption
-
-    $ escape_2 = get_music_7dl("escape_2.ogg") #Josh Kramer feat. Tina Guo -  Where The Light Goes
-
-    $ temptation = get_music_7dl("temptation.ogg") #DeepCosmo - DvaTri
-
-
-
     $ alice_theme = get_music_7dl("alice_theme.ogg")
     $ afraid_of_destiny = get_music_7dl("afraid_of_destiny.ogg")
     $ anglegrinder = get_music_7dl("anglegrinder.ogg")
@@ -899,6 +876,7 @@
     $ ask_you_out = get_music_7dl("ask_you_out.ogg")
     
     $ bad_apple = get_music_7dl("bad_apple.ogg")
+    $ beat_symphonic = get_music_7dl("beat_symphonic.ogg")
     $ beth = get_music_7dl("beth.ogg")
     $ betray_vol1 = get_music_7dl("betray_vol1.ogg")
     $ but_why = get_music_7dl("but_why.ogg")
@@ -917,8 +895,11 @@
     $ deadman = get_music_7dl("deadman.ogg")
     $ dead_silence = get_music_7dl("dead_silence.ogg")
     $ dedicated = get_music_7dl("dedicated.ogg")
+    $ deep_inside = get_music_7dl("deep_inside.ogg")
     $ dropit = get_music_7dl("dropit.ogg")
     $ dv_guitar = get_music_7dl("dv_guitar.ogg")
+    $ escape_2 = get_music_7dl("escape_2.ogg")
+    $ exodus = get_music_7dl("Exodus.ogg")
     
     $ emptiness = get_music_7dl("emptiness.ogg")
     $ es_downmix = get_music_7dl("es_downmix.ogg")
@@ -931,16 +912,20 @@
     $ frostwithoutyou = get_music_7dl("frostwithoutyou.ogg")
     
     $ genki = get_music_7dl("genki.ogg")
+    $ guitar_under_the_window = get_music_7dl("guitar_under_the_window.ogg")
     $ groovie = get_music_7dl("groovie.ogg")
     $ gonna_be_ok = get_music_7dl("gonna_be_ok.ogg")
     
     $ happy_ending = get_music_7dl("happy_ending.ogg")
     $ herc_death = get_music_7dl("herc_death.ogg")
-    
-    $ iwantmagic = get_music_7dl("iwantmagic.ogg")
-    $ iamsadiamsorry3 = get_music_7dl("iamsadiamsorry3.ogg")#Сценка с ОД
+        
+    $ iamagod2 = get_music_7dl("iamagod2.ogg")
+    $ iamsadiamsorry3 = get_music_7dl("iamsadiamsorry3.ogg")
     $ iamsadiamsorry2 = get_music_7dl("iamsadiamsorry2.ogg")
     $ iamsadiamsorry = get_music_7dl("iamsadiamsorry.ogg")
+    $ intro1 = get_music_7dl("intro1.ogg")
+    $ intro2 = get_music_7dl("intro2.ogg")
+    $ iwantmagic = get_music_7dl("iwantmagic.ogg")
     
     $ knock = get_music_7dl("knock.ogg")
     $ kiss_you = get_music_7dl("kiss_you.ogg")
@@ -961,12 +946,14 @@
     $ lunar_anguish = get_music_7dl("lunar_anguish.ogg")
     $ lyrica_sg = get_music_7dl("lyrica_sg.ogg")
     $ lynn = get_music_7dl("lynn.ogg")
-    
+
     $ mammal = get_music_7dl("mammal.ogg")
     $ meetmethere_tts = get_music_7dl("meetmethere_tts.ogg")
     $ me2ost = get_music_7dl("me2ost.ogg")
     $ melancholy_sun = get_music_7dl("melancholy_sun.ogg")
     $ misery = get_music_7dl("misery.ogg")
+    $ more_than_alive = get_music_7dl("more_than_alive.ogg")
+    $ my_only_hope= get_music_7dl("my_only_hope.ogg")
     
     $ nookie = get_music_7dl("nookie.ogg")
     $ no_hope_left = get_music_7dl("no_hope_left.ogg")
@@ -980,53 +967,63 @@
     
     $ pathways = get_music_7dl("pathways.ogg")
     $ Please_Reprise = get_music_7dl("Please_Reprise.ogg")
+    $ pixies_playing = get_music_7dl("pixies_playing.ogg")
     $ polyhymnia_intro = get_music_7dl("polyhymnia_intro.ogg")
     $ polyhymnia_main = get_music_7dl("polyhymnia_main.ogg")
     $ ppk = get_music_7dl("ppk.ogg")
     $ prologue_1 = get_music_7dl("prologue_1.ogg")
     $ promise_to_meet_you = get_music_7dl("promise_to_meet_you.ogg")
-    
-    
+
+    $ Redemption = get_music_7dl("Redemption.ogg")
     $ red_lights = get_music_7dl("red_lights.ogg")
     $ refuse_to_believe = get_music_7dl("refuse_to_believe.ogg")
     $ refuse_to_replay = get_music_7dl("refuse_to_replay.ogg")
     $ rewind = get_music_7dl("rewind.ogg")
     $ rightroad = get_music_7dl("rightroad.ogg")
     $ ritual2 = get_music_7dl("ritual2.ogg")
+    $ runaway = get_music_7dl("runaway.ogg")
     
     $ Sad_Piano = get_music_7dl("Sad_Piano.ogg")
     $ sam_lullaby = get_music_7dl("sam_lullaby.ogg")
     $ scorpions = get_music_7dl("scorpions.ogg")
+    $ Semische = get_music_7dl("Semische.ogg")
+    $ seven_summer_days = get_music_7dl("seven_summer_days.ogg")
     $ sign_of_blood = get_music_7dl("sign_of_blood.ogg")
     $ silent_angel = get_music_7dl("silent_angel.ogg")
     $ sh_ai_rejuv = get_music_7dl("sh_ai_rejuv.ogg")
     $ shape_of_my_heart = get_music_7dl("shape_of_my_heart.ogg")
     $ sheiscool = get_music_7dl("sheiscool.ogg")
     $ shehasgone = get_music_7dl("shehasgone.ogg")
+    $ shib_mono = get_music_7dl("shib_mono.ogg")
+    $ shib_stereo = get_music_7dl("shib_stereo.ogg")
     $ shivers = get_music_7dl("shivers.ogg")
     $ slavyas_fantazm = get_music_7dl("slavyas_fantazm.ogg")
     $ sky_feather = get_music_7dl("sky_feather.ogg")
     $ sneakupon = get_music_7dl("sneakupon.ogg")
-    $ so_cold = get_music_7dl("so_cold.ogg")#Мику и антагонизм
+    $ so_cold = get_music_7dl("so_cold.ogg")
     $ so_lonely = get_music_7dl("so_lonely.ogg")
     $ someone_like_you_guitar = get_music_7dl("someone_like_you_guitar.ogg")
     $ splin = get_music_7dl("splin1.ogg")
     $ stilllovingyou = get_music_7dl("stilllovingyou.ogg")
     $ summer_ends_soon2 = get_music_7dl("summer_ends_soon2.ogg")
-    
+
     $ take_my_hand = get_music_7dl("take_my_hand.ogg")
     $ tears_of = get_music_7dl("tears_of.ogg")
     $ tellyourworld = get_music_7dl("tellyourworld.ogg")
+    $ temptation = get_music_7dl("temptation.ogg")
     $ tender_song = get_music_7dl("tender_song.ogg")
     $ there_you_are = get_music_7dl("loop_there_you_are!.ogg")
     $ the_way = get_music_7dl("the_way.ogg")
+    $ thousand_little_things = get_music_7dl("thousand_little_things.ogg")
     $ thousand_of_pixies = get_music_7dl("thousand_of_pixies.ogg")
     $ tilltheend = get_music_7dl("tilltheend.ogg")
+    $ timetowakeup = get_music_7dl("timetowakeup.ogg")
     $ to_the_sunrise = get_music_7dl("to_the_sunrise.ogg")
     $ too_quiet = get_music_7dl("too_quiet.ogg")
     
     $ uncertainity = get_music_7dl("uncertainity.ogg")
-    $ uneven_me = get_music_7dl("uneven_me.ogg")#Мятущаяся душа
+    $ unfulfilled = get_music_7dl("unfulfilled.ogg")
+    $ uneven_me = get_music_7dl("uneven_me.ogg")
     $ unfinished_life = get_music_7dl("unfinished_life.ogg")
     $ unforgotten = get_music_7dl("unforgotten.ogg")
     $ unholy_you = get_music_7dl("unholy_you.ogg")
@@ -1037,6 +1034,7 @@
     $ walkingaway = get_music_7dl("walkingaway.ogg")
     $ what_am_i_doing_here = get_music_7dl("what_am_i_doing_here.ogg")
     $ what_cost = get_music_7dl("what_cost.ogg")
+    $ whatnow = get_music_7dl("whatnow.ogg")
     $ wheres_wonderland = get_music_7dl("wheres_wonderland.ogg")
     $ will_you = get_music_7dl("will_you.ogg")
     $ wonderful_faraway = get_music_7dl("wonderful_faraway.ogg")
@@ -1078,6 +1076,7 @@
     $ sigh_out = get_sfx_7dl("sigh_out.ogg")
     $ snap = get_sfx_7dl("snap.ogg")
     $ stahp = get_sfx_7dl("stahp.ogg")
+    $ tearing = get_sfx_7dl("tearing.ogg")
     $ tousche = get_sfx_7dl("tousche.ogg")
     $ train_depart = get_sfx_7dl("train_depart.ogg")
     $ train_income = get_sfx_7dl("train_income.ogg")

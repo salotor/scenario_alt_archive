@@ -2612,10 +2612,10 @@ label alt_day6_mt_7dl_catha:
         th "Ожидаемо."
         scene gameover with flash
         play sound aunl
+        $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
-        $ persistent.alt_lamp = True
         return
     elif herc:
         show expression D3_intro("bg int_store_7dl") with fade
@@ -2636,10 +2636,10 @@ label alt_day6_mt_7dl_catha:
         scene gameover with flash
         stop sound_loop fadeout 0
         play sound aunl
+        $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
-        $ persistent.alt_lamp = True
         return
     elif loki:
         play music herc_death fadein 5
@@ -2675,10 +2675,10 @@ label alt_day6_mt_7dl_catha:
         pause(5)
         scene gameover with flash
         play sound aunl
+        $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
-        $ persistent.alt_lamp = True
         return
 
 label alt_day6_mt_7dl_declare:
@@ -5168,8 +5168,8 @@ label alt_day7_mt_7dl_bad:
         "Дальше я думал только об этом."
     with dissolve
     play sound aunl
-    $ persistent.mt_7dl_bad = True
     stop sound_loop fadeout 3
+    $ persistent.mt_7dl_bad = True
     show acm_logo_mt_cause with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -5387,8 +5387,7 @@ label alt_day7_mt_7dl_true:
     stop ambience fadeout 3
     play music are_you_there fadein 3
     window hide
-    #TODO: тот самый посёлок городского типа день (улица, прямо тротуар, слева проезжая часть, справа трехэтажные домики, в дальней перспективе по правую можно углядеть узнаваемую вывеску кафе-мороженого) scene bg ext_pgt_day
-    scene anim prolog_1
+    scene bg ext_townscape_ph_day_7dl
     show mt normal pioneer
     with dissolve
     mt "Она права, Сёмыч."

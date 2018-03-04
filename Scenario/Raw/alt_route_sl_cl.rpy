@@ -3939,10 +3939,10 @@ label alt_day5_sl_start:
                 window hide
                 stop sound_loop fadeout 0
                 play sound aunl
+                $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
-                $ persistent.alt_lamp = True
                 scene gameover with flash
                 with vpunch
                 return
@@ -3964,10 +3964,10 @@ label alt_day5_sl_start:
                 window hide
                 stop sound_loop fadeout 0
                 play sound aunl
+                $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
-                $ persistent.alt_lamp = True
                 scene gameover with flash
                 with vpunch
                 return
@@ -3980,10 +3980,10 @@ label alt_day5_sl_start:
                 play sound sfx_water_emerge
                 stop sound_loop fadeout 0
                 play sound aunl
+                $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
-                $ persistent.alt_lamp = True
                 scene gameover with flash
                 with vpunch
                 return
@@ -8886,6 +8886,7 @@ label alt_day6_sl_morgen:
     "До столовой мы добрались. Ну, как добрались."
     "Даже на первую ступеньку крыльца встать успели, прежде чем появилось очередное непреодолимое препятствие."
     ml "Семён!"
+    show ml sad pioneer at right with dissolve
     "Сзади стоял вчерашний пионер, которого я вёз на собственном горбу — кудрявый молодой человек с лукавыми глазами, выдающими в нём большого любителя каверз."
     "Сейчас он, однако, совсем не был в настроении шутить — был весь каким-то помятым, встревоженным."
     "Видимо, и правда что-то серьёзное произошло."
@@ -8895,10 +8896,12 @@ label alt_day6_sl_morgen:
     "Он кинул машинальный взгляд на ногу, где поперёк голеностопа был наклеен пластырь, и отрицательно покачал головой."
     show sl normal pioneer at left with dissolve
     "Славя обернулась."
+    show ml surprise pioneer at right with dissolve
     ml "Тебя Виолетта в медпункт зовёт, там такое! Такое!"
     me "Какое?"
     "Непреклонно спросил я."
     me "Вообще-то, я питаться шёл."
+    show ml normal pioneer at right with dissolve
     show sl serious pioneer with dspr
     sl "Подождёт."
     "В тон мне ответила Славя."
@@ -8960,9 +8963,11 @@ label alt_day6_sl_morgen:
     hide sh with moveoutleft
     "Какая-то бессвязная нелепица."
     cs "Даниил, ты тоже выйди."
+    show ml unsured pioneer at right with dissolve
     ml "Да я же как лучше!"
     cs "Даниил."
     ml "Иду-иду."
+    hide ml with dissolve
     stop music fadeout 3
     play sound sfx_open_door_strong
     show sl normal pioneer at right with dissolve
@@ -15275,6 +15280,7 @@ label alt_day7_sl_dinner:
                 sl "Я не хочу, чтобы ты уезжал злой на меня. {w}Пожалуйста."
                 me "Я не злой."
                 "Бусидо това сину котото мицукэтари."
+                "Путь самурая ведёт к смерти."
                 "Не будем обезображивать посмертный гипсовой слепок злостью, паникой и разочарованием."
                 sl "Я не знаю, как это должно помочь тебе… {w}Нам."
                 sl "Но возьми, пожалуйста. {w} Это очень важно."
@@ -16001,7 +16007,7 @@ label alt_day7_sl_loop:
     "В раздумьях, я поднялся и машинально направился в сторону медпункта — так много времени я провёл там за последние дни."
     th "А теперь вот оказывается, что не провёл. Да и вовсе не там."
     window hide
-    scene expression Dawn("ext_aidpost_day") with dissolve
+    scene expression Dawn("bg ext_aidpost_day") with dissolve
     me "Никогда не проснётся."
     "Пробормотал себе под нос я."
     "Саныч вздохнул."
@@ -16257,11 +16263,11 @@ label alt_day7_sl_loop:
                 "В свои права вступал новый день, а с ним — и новые надежды!"
                 window hide
                 play sound aunl
+                $ persistent.sl_cl_int_ok = True
                 show acm_logo_sl_ok with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 with vpunch
-                $ persistent.sl_cl_int_ok = True
                 call alt_7dl_titles
                 return
             "У меня всё ещё остались долги":
@@ -16370,11 +16376,11 @@ label alt_day7_sl_loop:
         "Подмигнул я."
         window hide
         play sound aunl
+    $ persistent.sl_cl_int_good = True
     show acm_logo_sl_fantazm with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.sl_cl_int_good = True
     call alt_7dl_titles
     return
     
@@ -16393,11 +16399,11 @@ label alt_day7_sl_lone:
     "В безликое сетевое существование."
     window hide
     play sound aunl
+    $ persistent.sl_cl_int_bad = True
     show acm_logo_sl_lone with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.sl_cl_int_bad = True
     call alt_7dl_titles
     pause(2)
     return
@@ -16496,6 +16502,8 @@ label alt_day7_sl_good:
     $ set_mode_adv()
     scene anim prolog_1
     play music rightroad fadein 3
+    $ persistent.sprite_time = "day"
+    $ day_time()
     voice "Семён Семёныч?"
     "Несмело поинтересовался ломкий юношеский басок."
     th "Чё пристал…"
@@ -16583,11 +16591,11 @@ label alt_day7_sl_good:
     sl "Как стараться будешь."
     window hide
     play sound aunl
+    $ persistent.sl_cl_good_ussr = True
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.sl_cl_good_ussr = True
     call alt_7dl_titles
     $ renpy.pause(2)
     jump alt_day8_sl_postscriptum
@@ -16650,12 +16658,15 @@ label alt_day7_sl_rf_good:
     "А мне этого нельзя."
     "У меня же пятьдесят мегабит за четыреста рублей, удобное просиженное кресло и ресурсы, заканчивающиеся на букву «Ч» и оттого звучащие грубее, чем они есть на самом деле."
     "Рисовач. Выживач. Болтач."
+    stop music fadeout 3
     window hide
     play ambience ambience_cold_wind_loop fadein 3
     scene bg ext_winterpark_7dl
     with dissolve
     "Но, возможно, однажды из приоткрытой двери можно будет расслышать, как ломкий голосок старательно выводит мелодию и моей души?"
+    window hide
     with fade
+    play music pixies_playing fadein 3
     "Она так и стояла там, где я её и ожидал увидеть."
     "Как будто здесь всегда и была."
     "Только глянула мельком, окатила льдом тоски и затаённого ожидания — будто и не чаяла уже встретить."
@@ -16715,9 +16726,11 @@ label alt_day7_sl_rf_good:
     sl "Но…"
     "Не слушая её возражений, я дотащил её до уже поджидавшего нас мотора и, втолкнув девушку в салон, приземлился рядом с водителем, скомандовал:"
     me "В ЗАГС!"
+    stop music fadeout 3
     window hide
     scene anim intro_2
     with dissolve
+    play music happy_ending fadein 3
     "Славя на заднем сиденье пискнула и затихла."
     "Возможно, если бы я снова ходил вокруг да около в своём обычном духе, никогда бы этого не случилось."
     "Но я устал, мне страшно, а в правом наушнике бессмертный бард предрекает, как кончится лето, и выглядит это форменным идиотизмом на фоне обледенелого асфальта."
@@ -16730,14 +16743,15 @@ label alt_day7_sl_rf_good:
     "И я, не ведая уже сомнений, развернулся и положил ей пальцы на губы."
     me "В конце концов, после того, что ты со мной сделала, ты должна выйти за меня замуж. {w}Гони, шеф, гони, у меня тут счастье заднюю включило!"
     "Водитель рассмеялся и прибавил ходу."
-    "Улицы размазались от скорости, сливаясь в неясные, дрожащие стены туннеля с конечной точкой в той реальности, которую я, похоже, заслужил, из неплотно прикрытой форточки в лицо прыгнул порыв морозного ветра, и я подумал: неужели  я пытаюсь вспомнить, что такое сомнения?"
+    "Улицы размазались от скорости, сливаясь в неясные, дрожащие стены туннеля с конечной точкой в той реальности, которую я, похоже, заслужил, из неплотно прикрытой форточки в лицо прыгнул порыв морозного ветра, и я подумал:"
+    th "Неужели  я пытаюсь вспомнить, что такое сомнения?"
     window hide
     play sound aunl
+    $ persistent.sl_cl_good_rf = True
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.sl_cl_good_rf = True
     call alt_7dl_titles
     $ renpy.pause(2)
     jump alt_day8_sl_postscriptum
@@ -16898,11 +16912,11 @@ label alt_day7_sl_reject_same:
     me "И что ты — всё-таки — не сон."
     window hide
     play sound aunl
+    $ persistent.sl_cl_reject_same = True
     show acm_logo_sl_same_place with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.sl_cl_reject_same = True
     call alt_7dl_titles
     pause(1)
     return 
@@ -17096,11 +17110,11 @@ label alt_day7_sl_reject_late:
     window hide
     play sound aunl
     stop ambience fadeout 4
+    $ persistent.sl_cl_reject_late = True
     show acm_logo_sl_too_late with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.sl_cl_reject_late = True
     call alt_7dl_titles
     pause(1)
     return
@@ -17188,8 +17202,8 @@ label alt_day7_sl_cl_bad:
     "Меня мучила всего одна мысль:"
     "Неужели мы оба ошиблись?"
     window hide
-    $ persistent.sl_cl_bad = True
     play sound aunl
+    $ persistent.sl_cl_bad = True
     show acm_logo_sl_bad with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -17294,7 +17308,6 @@ label alt_day7_sl_rf2:
     dy "Станция метро «Ломоносовская»!"
     "Выдохнули динамики и выпустили меня в Новый Год, в новую жизнь."
     "В новую надежду."
-    stop music fadeout 3
     window hide
     $ set_mode_nvl()
     scene black with dissolve
@@ -17348,13 +17361,13 @@ label alt_day7_sl_rf2:
     window hide
     play sound aunl
     play music refuse_to_replay fadein 3
+    $ persistent.sl_cl_good_rf2 = True
     show acm_logo_sl_worth with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2)
-    $ persistent.sl_cl_good_rf2 = True
     return
     
 label alt_day7_d3_rejuv:

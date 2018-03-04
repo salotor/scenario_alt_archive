@@ -1553,7 +1553,7 @@ label alt_day4_un_7dl_dinner:
     "Я удержал Лену за руку, когда она, прикончив свою пайку, попыталась подняться и побежать куда-то дальше."
     me "Давай сначала решим: куда пойдём и что там делать станем?"
     show un serious pioneer with dspr
-    un "А мне казалось, мы уже решили…"
+    un "А мне казалось, мы уже решили…" #s транзитчик в подобном разговоре не участвовал. Ниже под if'ами также есть отсылки к обсуждениям планов, которых не было. 
     me "И всё-таки!"
     un "Ну…"
     "Она посмотрела на меня."
@@ -4420,7 +4420,7 @@ label alt_day5_un_7dl_cleaning:
     stop music fadeout 3
     window hide
     play ambience ambience_camp_center_day fadein 5
-    scene bg int_shed_day_7dl with dissolve 
+    scene bg int_warehouse_day_7dl with dissolve 
     if alt_day_binder != 1:
         "С прошлого моего визита здесь ничего не изменилось."
     "Уходящие вдаль полки с формой, бельём и постелями, рохля по правому краю и заставленный коробками закуток, судя по всему — служащий убежищем кастелянше."
@@ -9212,10 +9212,10 @@ label alt_day6_un_7dl_letmeout:
     window hide
     scene gameover with flash
     play sound aunl
+    $ persistent.alt_lamp = True
     show acm_logo_me_lamp with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
-    $ persistent.alt_lamp = True
     return
 
 label alt_day6_un_7dl_dance:
@@ -9466,19 +9466,19 @@ label alt_day6_un_7dl_dance:
         scene cg d6_un_evening_0_2_7dl
         with dissolve
         un "Вот как?"
-        me "Нет, вместо этого я однажды просто туда отправлюсь?"
+        me "Нет, вместо этого я однажды просто туда отправлюсь."
         un "Хорошая мечта."
         me "Это не мечта."
         "Покачал головой я."
         me "Это план-намерение."
         un "Какой целеустремлённый молодой человек…"
-        "В голову пришло вдруго, что если бы не тот подслушанный у домика разговор, мы бы не сидели так, вместе."
+        "В голову пришло вдруг, что если бы не тот подслушанный у домика разговор, мы бы не сидели так, вместе."
         "И по спине продрало холодом от ощущения, что где-то в иной Вселенной некий Семён сидит на лавочке совсем один."
         "И так жалко стало его, что я скрыл печаль за глупой репликой:"
         me "Держись меня, ещё и не то будет."
         "Лена промолчала, хотя немой вопрос повис в воздухе."
         "Незнакомые чужие звёзды так и кружили над нами."
-        "А в западной части, что ещё была пусть и едва заметно, но налита бордовым, можно было разглядеть, как три звезды причудливо замерла друг против друга."
+        "А в западной части, что ещё была пусть и едва заметно, но налита бордовым, можно было разглядеть, как три звезды причудливо замерли друг против друга."
         "Одна была побольше и находилась внизу."
         "Две поменьше."
         me "Смотри, как забавно сложились."
@@ -10992,12 +10992,12 @@ label alt_day7_un_7dl_epilogue_bad:
     $ renpy.pause(4.4, hard=True)
     stop sound_loop fadeout 0
     play sound aunl
+    $ persistent.un_7dl_bad = True
     show acm_logo_un_sui with moveinright:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
     play music danceagain fadein 5
     with vpunch
-    $ persistent.un_7dl_bad = True
     call alt_7dl_titles
     $ renpy.pause(2)
     return
@@ -11301,11 +11301,11 @@ label alt_day7_un_7dl_ussr:
     show blackout_exh
     with dspr
     play sound aunl
+    $ persistent.un_7dl_good_ussr = True
     show acm_logo_un_good2 with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.un_7dl_good_ussr = True
     call alt_7dl_titles
     $ renpy.pause(2)
     return
@@ -11564,11 +11564,11 @@ label alt_day7_un_7dl_rf:
     window hide
     $ set_mode_adv()
     play sound aunl
+    $ persistent.un_7dl_good_rf = True
     show acm_logo_un_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    $ persistent.un_7dl_good_rf = True
     call alt_7dl_titles
     $ renpy.pause(2.4, hard=True)
     if alt_day_binder == 1:
@@ -11902,7 +11902,7 @@ label alt_day7_un_7dl_true1:
     scene bg int_epilogue_bg_7dl
     nvl clear
     "Не очень хорошего качества, явно отпечатанная с плёнки."
-    "На ней крупным планом было сфотографированно надгробие."
+    "На ней крупным планом было снято надгробие."
     "С именем, которое подарило мне жизнь."
     "И захотелось заорать от боли, от ощущения неправильности происходящего."
     "Но кому это когда могло помочь?"
@@ -11954,7 +11954,7 @@ label alt_day7_un_7dl_true1:
     "Я обомлел от сумасшедшего счастья и страха от того, что это всё лишь снится мне."
     un "А ты кого ожидал увидеть? Генсека Икари?"
     un "Можешь потрогать, если призраков боишься."
-    "Я поднялся и подойдя к ней, несмело протянул руку."
+    "Я поднялся и, подойдя к ней, несмело протянул руку."
     me "Лена."
     "Её щека была живой и тёплой. А зубы клацнули в опасной близости от пальцев."
     un "Лена, Лена."
@@ -12086,10 +12086,10 @@ label alt_day7_un_7dl_true1:
     show alt_credits timeskip_come with dissolve2:
         pos (747,115)
     with flash
-    $ persistent.un_7dl_true_transit = True
     with dissolve
     play sound aunl
     stop sound_loop fadeout 3
+    $ persistent.un_7dl_true_transit = True
     show acm_logo_un_transit with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12171,10 +12171,10 @@ label alt_day7_un_7dl_true:
     "Ни той, что любила так, что была готова решительно на всё."
     "А я этого не заслужил."
     "Что гораздо хуже: я этого не хотел."
-    $ persistent.un_7dl_true = True
     with dissolve
     play sound aunl
     stop sound_loop fadeout 3
+    $ persistent.un_7dl_true = True
     show acm_logo_un_shelter with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

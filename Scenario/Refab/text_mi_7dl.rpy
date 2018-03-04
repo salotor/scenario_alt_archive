@@ -1230,9 +1230,7 @@ label alt_day4_mi_7dl_ch5b:
     play music unholy_you fadein 3
     $ meet ('sak','Японец')
     sak "Здравствуйте, Мику-кун."
-    hide mi with dspr
     "Я резко обернулся — за рулём кажущегося здесь неуместным «Мицубиси» сидел…"
-    show sak normal suit at right with dspr
     show mi normal pioneer with dspr
     mi "Здравствуйте, Сакишита-сан."
     $ meet ('sak','Сакишита')
@@ -1243,37 +1241,35 @@ label alt_day4_mi_7dl_ch5b:
     mi "Этот, как ты выразился, «хрен» — мой агент. Пожалуйста, не надо ему хамить — мне ещё с ним работать."
     "Тихо попросила она."
     "Пришлось соглашаться."
-    show sak sad suit at right with dspr
     sak "Мику-кун, вас тяжело было найти, в России никто не знает дороги, все хотят только показывать направления."
-    show sak normal suit at right with dspr
+    "Он выбрался из машины и подошёл к нам, оказавшись удивительно высоким для японца - почти с меня ростом."
+    show sak normal suit at zenterleft
+    show mi normal pioneer at right
+    with move
     sak "К счастью, Говоров-сан подробно объяснил мне, как найти этот лагерь."
     sak "Я заехал сюда заправить машину и переночевать, так как на обратном пути не будет времени на отдых."
     show mi sad pioneer with dspr
     mi "Что-то случилось? Что-то с Па?"
-    show sak scared suit at right with dspr
+    show sak sigh suit with dspr
     sak "Нет-нет, Мику-кун, с вашим отцом всё хорошо."
     "Поспешил успокоить её японец."
-    show sak normal suit at right with dspr
     sak "Но кое-что произошло всё же."
-    hide sak with dspr
     "Он отвернулся в салон, а несколько секунд спустя явил нашему вниманию какую-то блестящую пластинку, на которой парой кандзи было написано очень знакомое мне имя."
-    show sak normal suit at right behind mi with dspr
     show mi surprise pioneer with dspr
     mi "Серьезно?! Но они же сказали, что у нас очередь как минимум до октября!"
+    show sak normal suit with dspr
     sak "Всё так, Мику-кун, но вашу запись видел премьер, так что лейбл любезно согласился подвинуть очередь."
     mi "И я…"
     "Растерянно произнесла Мику."
-    show sak smile suit at right with dspr
+    show sak smile suit with dspr
     sak "Всё верно."
     "Растянул узкие губы в улыбке Сакишита."
     sak "Мы отправляемся домой."
-    show sak normal suit at right with dspr
     show mi dontlike pioneer with dspr
     mi "А как же мои вещи, моя техника?"
     "Уж не знаю, из вежливости ли или ещё по каким-то соображениям, но они оба продолжали общаться на почти безукоризненном русском."
-    show sak dontlike suit at right with dspr
     "Только сейчас, когда Сакишита позволил себе ругательство на японском, я обратил на это внимание."
-    show sak normal suit at right with dspr
+    show sak dontlike suit with dspr
     sak "Мику-кун, разумеется, я довезу вас до места пребывания, и мы заберём всё вам необходимое. Просто поторопитесь, пожалуйста."
     me "Мику, я не уверен, что это хорошая идея."
     "Засомневался я."
@@ -1285,6 +1281,7 @@ label alt_day4_mi_7dl_ch5b:
     mi "Да не беспокойся на этот счёт."
     "Понятливо кивнула японка."
     mi "Я — работодатель Сакишиты-сан, ему невыгодно вредить мне."
+    show sak calm suit with dspr
     sak "Мику-кун, вы идёте?"
     "Снова позвал доставучий японец."
     stop music fadeout 3
@@ -1317,11 +1314,9 @@ label alt_day4_mi_7dl_ch52:
     mi "Но, наверное, ты прав."
     "Она поклонилась японцу:"
     mi "Простите, Сакишита-сан, но мы должны найти нашего старшего, я не могу с вами ехать."
-    show sak treat suit at right with dspr #smile?
+    show sak sad suit with dspr
     "Тот наклонил голову в ответ, признавая справедливость слов девочки."
-    show sak normal suit at right with dspr
     sak "В таком случае, я отправлюсь в лагерь, чтобы утрясти все формальности, и буду ожидать вас там. До скорой встречи."
-    show sak treat suit at right with dspr #smile?
     "Поклонившись ещё раз, он вернулся в машину."
     hide sak with dspr
     play sound sfx_intro_bus_engine_start
@@ -1518,7 +1513,7 @@ label alt_day4_mi_7dl_ch6:
         "В растерянности я огляделся."
         "Мику почему-то так и сидела на крылечке собственного дома вместо того, чтобы добросовестно отсыпаться."
         "Наконец, японец закончил беседу — судя по раздосадованному виду, так и не добившись от вожатой того, чего хотел, и отошёл к Мику."
-    show sak normal suit at right with dspr
+    show sak normal suit at right with dissolve
     show mi sad pioneer with dspr
     sak "Собирайтесь, Мику-кун."
     sak "Нас ждёт дорога."
@@ -1539,10 +1534,10 @@ label alt_day4_mi_7dl_ch6:
     mt "Извините, товарищ Сакишита."
     "Раздался голос вожатой."
     play music music_list["always_ready"] fadein 3
-    show sak unsured suit at right with dspr
     show mi surprise pioneer with dspr
     mt "Я, безусловно, рада, что у Мику там что-то где-то случилось, и всё такое прочее. {w}Но я не могу отдать ребёнка незнакомому человеку."
     mt "Даже если сама Мику за него поручается."
+    show sak treat suit with dspr
     sak "Простите?"
     show mt angry pioneer with dspr
     mt "А что непонятного? Везите разрешение от отца и справку из облОНО, тогда и поговорим."
@@ -1554,7 +1549,7 @@ label alt_day4_mi_7dl_ch6:
         "Теперь он увеличился многократно."
     "Теперь он пробегает по инстанциям до самого конца смены, и у нас будет ещё несколько дней!"
     "Сакишита определённо умел держать удар."
-    show sak treat suit at right with dspr
+    show sak sorrow suit with dspr
     "Он вежливо поклонился."
     sak "Я понимаю."
     "Но не было похоже, что сдался."
@@ -1564,12 +1559,12 @@ label alt_day4_mi_7dl_ch6:
     mt "Привезёте разрешение — тогда и поговорим, а пока…"
     "Она посмотрела на часы:"
     mt "Родительский день заканчивается через два с половиной часа — попрошу вас освободить к тому времени территорию ПЛ."
+    show sak normal suit with dspr
     sak "Понял вас."
     "Покорно кивнул японец."
-    show sak normal suit at right with dspr
     "Настроен он оказался весьма решительно — достав из кармана бандуру, в которой я с удивлением признал спутниковый телефон, тут же набрал номер, начинающийся с единицы, и отдал туда несколько коротких приказаний."
-    show sak smile suit at right with dspr
     "Выслушал ответ и, растянув губы в узкой улыбке, сложил антенну, спрятал трубку во внутренний карман пиджака и снова обратился к нам:"
+    show sak smile suit with dspr #s у меня две гипотезы: pain здесь just for lulz, либо по ошибке. Поправил до выяснения обстоятельств.
     sak "Разрешение заказано и идёт телексом. Я заберу его на почте и вернусь за Хатсуне-сан."
     mt "Счастливого пути."
     "Пожелала Ольга."
@@ -1577,12 +1572,12 @@ label alt_day4_mi_7dl_ch6:
     
     if not alt_day3_mi_donor:
         sak "Не извольте беспокоиться. Будут. Мику-кун, я думал устроить прощальный вечер, но, похоже, вы намерены уходить только со скандалом."
-        show sak treat suit at right with dspr
         "Он поклонился."
-        show sak normal suit at right with dspr
+        show sak unsured suit with dspr
         sak "Я не знаю, как русские празднуют чью-то удачу —  но точно уверен, что здесь это тоже пользуется популярностью."
         show mi surprise pioneer with dspr
         mi "О чём вы говорите?"
+        show sak normal suit with dspr
         sak "Если вам не очень трудно, проводите меня к моей машине, пожалуйста."
         sak "И захватите с собой кого-нибудь — например, можете вашего друга."
         window hide
@@ -1596,15 +1591,18 @@ label alt_day4_mi_7dl_ch6:
         "Ещё чуть-чуть — и горн позовёт пионеров на ужин."
         "Японский внедорожник стоял в теньке, наглухо задраенный — нетрудно было догадаться, какая душегубка стояла в салоне."
         "Но японец, не поморщившись, забрался в салон и открыл багажник изнутри."
-        show sak smile suit with dspr
+        show sak normal suit with dspr
         sak "Пожалуйста. Забирайте. Используйте, как сочтёте нужным."
         "Мику направилась в обход машины, а я на всякий случай подстраховал её."
         "В багажнике внедорожника была какая-то серая цилиндрическая штука, которую Мику мгновенно и сцапала."
-        show mi smile pioneer at left with dspr
+        show sak normal suit at left
+        show mi smile pioneer at zenterright
+        with dissolve
         mi "Спасибо вам, Сакишита-сан!"
         "Она легонько поклонилась, демонстрируя свою признательность."
         sak "Не за что. Я ещё вернусь. И надеюсь на благоразумие с вашей стороны."
-        hide sak with dspr
+        hide sak
+        with dissolve
         "Он захлопнул багажник, обошёл машину и прыгнул за руль."
     else:
         window hide
@@ -7950,8 +7948,8 @@ label alt_day6_mi_7dl_miku_farewell_finale:
                     show alt_letter timeskip10 at truecenter with zoomin
                     window hide
                     play music emptiness fadein 3
-                    $ persistent.mi_7dl_true = True
                     play sound aunl
+                    $ persistent.mi_7dl_true = True
                     show acm_logo_mi_thank_you with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -8984,10 +8982,10 @@ label alt_day6_mi_7dl_discoteque:
                     "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
                     window hide
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_lamp = True
                     return
                 elif herc:
                     stop sound_loop
@@ -9012,9 +9010,9 @@ label alt_day6_mi_7dl_discoteque:
                     play sound sfx_bodyfall_1
                     stop sound_loop fadeout 0
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
-                    $ persistent.alt_lamp = True
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif loki:
@@ -9047,10 +9045,10 @@ label alt_day6_mi_7dl_discoteque:
                     th "Ксана. {w}Ненавижу."
                     window hide
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(4.4, hard=True)
-                    $ persistent.alt_lamp = True
                     return
             "Думаю, не стоит.":
                 me "Если у меня дыра в голове — значит, она там не просто так."
@@ -9399,7 +9397,7 @@ label alt_day6_mi_7dl_discoteque:
         window hide
         play sound sfx_open_dooor_campus_1
         if alt_day1_sl_keys_took == 1:
-            scene bg int_shed_night_7dl
+            scene bg int_warehouse_night_7dl
             $ alt_hpt += 1
             if alt_day5_mi_7dl_kiss:
                 $ alt_hpt += 1
@@ -10582,7 +10580,6 @@ label alt_day7_mi_7dl_happy_again:
     "Шансы… Минимальны."
     "За спиной остался суматошный перегон-перелёт, имена, сверки, впопыхах оформленные документы — как оказалось, двух приглашений от резидентов было достаточно, дальше надо было просто приехать за билетами…"
     "Но сейчас всё это звучало так, будто меня кто-то с силой подтолкнул по вектору времени, набив взамен голову впопыхах же сфабрикованными воспоминаниями."
-    show sak sigh suit with dspr
     "Хотя сухопарого старика, сидящего рядом со мной, я помнил чуть лучше, чем события последних дней."
     "Вернее, имени-то как раз не знал. Только фамилию."
     "Сакишита-сан, агент, продюсер и нянька одной знакомой мне девушки."
@@ -10593,7 +10590,7 @@ label alt_day7_mi_7dl_happy_again:
     with fade
     $ meet('sak','Сакишита')
     me "Никакой надежды, да?"
-    show sak calm suit with dspr
+    show sak scared suit with dissolve
     sak "Я не знаю, Семён-сан."
     "Вежливо ответил Сакишита."
     sak "Но мы нашли самого лучшего врача, какого только смогли, а он сказал прямо: «Подготовьте мальчика»."
@@ -10601,28 +10598,28 @@ label alt_day7_mi_7dl_happy_again:
     with fade
     "Мальчика — да."
     "Я не знаю, где и что сломалось, но в пальто на заднем сиденье открыл глаза совсем не издёрганный, старый я — нет, я вернулся в некотором роде полностью, тем, кем меня помнила Мику."
+    show sak normal suit with dspr
     sak "Как видите, я с вами предельно откровеннен — вы сильный, обязательно выдержите."
     "Он помолчал и добавил вполголоса."
-    show sak sorrow suit with dspr
     sak "Иначе же Мику-сан и не выбрала бы вас. {w}Мужайтесь."
     me "Да."
     th "Я держусь, конечно. Этому меня хорошо выучили — держаться."
     "Я держусь, хотя и не имею права на чудо."
     "Но во мне теплится крохотная надежда."
     th "Возможно, право на чудо есть у Мику?"
-    #play music refuse_to_believe fadein 3
+    play music refuse_to_believe fadein 3
     window hide
     with fade2
     me "Но если вдруг что — я же совсем один останусь."
+    show sak calm suit with dspr
     sak "На этот счёт не беспокойтесь."
     "Сакишита и бровью не повёл."
     sak "Говоров-сан… отец Мику-сан, и я сам — мы обещаем, что не оставим вас."
     th "Всё равно. Как они могут попробовать заменить Её?"
     "Не оставят. {w}Меня оставила Она — а после этого любое одиночество не пугает совсем."
     "Я вдруг понял, что ещё пара минут ожидания — и я с ума сбегу!"
-    hide sak with dspr
     "Вскочил, достал из кармана пальто сигареты (за это утро уже улетела пачка, и, похоже, не последняя), бросил пальто обратно на сиденье."
-    play sound sfx_open_door_2
+    play sound sfx_open_door_strong
     pause(1)
     scene expression Dawn("bg int_opened_door_7dl")
     "Одновременно с этим с другого конца фойе резко распахнулась дверь, впуская в комнату сноп ослепляюще яркого закатного солнечного света."
@@ -10692,8 +10689,8 @@ label alt_day7_mi_7dl_happy_again:
     me "Не надоест."
     me "Никогда."
     play music sam_lullaby fadein 3
-    $ persistent.mi_7dl_neutral_human = True
     play sound aunl
+    $ persistent.mi_7dl_neutral_human = True
     show acm_logo_mi_happy_again with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -10869,8 +10866,8 @@ label alt_day7_mi_7dl_liar:
     with fade
     "А то, что ледяной снег в морду, так даже удобнее."
     "Честнее."
-    $ persistent.mi_7dl_bad_human = True
     play sound aunl
+    $ persistent.mi_7dl_bad_human = True
     show acm_logo_mi_liar with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11034,8 +11031,8 @@ label alt_day7_mi_7dl_dark_dreams:
     "Кроме разве что одного."
     show mi smile casual with dissolve
     "Я перестану видеть эти унылые сны."
-    $ persistent.mi_7dl_good_human = True
     play sound aunl
+    $ persistent.mi_7dl_good_human = True
     show acm_logo_mi_dark_dreams with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11170,8 +11167,8 @@ label alt_day7_mi_7dl_club27:
     nvl clear
     stop sound_loop
     $ set_mode_adv()
-    $ persistent.mi_7dl_neutral_star = True
     play sound aunl
+    $ persistent.mi_7dl_neutral_star = True
     show acm_logo_mi_club27 with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11303,8 +11300,8 @@ label alt_day7_mi_7dl_sparkle:
     "Мягко улыбнулись цифровые губы."
     me "Да…"
     "Какая теперь разница?"
-    $ persistent.mi_7dl_good_star = True
     play sound aunl
+    $ persistent.mi_7dl_good_star = True
     show acm_logo_mi_sparkle with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11727,10 +11724,10 @@ label alt_day7_mi_7dl_postscriptum:
     stop sound_loop
     $ renpy.pause(3)
     play sound aunl
+    $ persistent.alt_mi_7dl_ps = True
     show acm_logo_mi_bitter_truth with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
-    $ persistent.alt_mi_7dl_ps = True
     return
  
 label alt_day7_mi_7dl_dam_CPU:
@@ -11859,8 +11856,8 @@ label alt_day7_mi_7dl_dam_CPU:
     stop music fadeout 5
     mi "Сенечка."
     play music emptiness fadein 3
-    $ persistent.mi_7dl_bad_star = True
     play sound aunl
+    $ persistent.mi_7dl_bad_star = True
     show acm_logo_mi_dam_cpu with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12007,8 +12004,8 @@ label alt_day7_mi_7dl_unlike:
     mi "Тем, что у меня грудь меньше."
     mi "И тем, конечно, что она тебя совсем-совсем не любит."
     play music happy_ending fadein 3
-    $ persistent.mi_7dl_herc_exc = True
     play sound aunl
+    $ persistent.mi_7dl_herc_exc = True
     show acm_logo_mi_unlike with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12203,8 +12200,8 @@ label alt_day7_mi_7dl_sinthetic:
         pos (747,105)
     $ renpy.pause(3, hard=True)
     
-    $ persistent.mi_7dl_loki_exc = True
     play sound aunl
+    $ persistent.mi_7dl_loki_exc = True
     show acm_logo_mi_come with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12354,8 +12351,8 @@ label alt_day7_mi_7dl_come_back:
     scene bg int_musclub_day with dissolve
     me "В-ваташи ва?"
     play music emptiness fadein 3
-    $ persistent.mi_7dl_dr_exc = True
     play sound aunl
+    $ persistent.mi_7dl_dr_exc = True
     show acm_logo_mi_watashi with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

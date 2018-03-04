@@ -215,6 +215,21 @@ label alt_day6_dv_7dl_vars:
     $ alt_day7_dv_7dl_loki_catapult = False
     return
     
+label alt_day6_us_7dl_vars:
+    $ alt_day6_us_7dl_mi_friends = False
+    $ alt_day6_us_7dl_sl_friends = False
+    $ alt_day6_us_7dl_un_friends = False
+    $ alt_day6_us_7dl_dance_mt = False
+    return
+    
+label alt_day6_us_px_vars:    
+    $ alt_day6_us_px_sl_join = False
+    return
+    
+label alt_day7_us_px_vars:
+    $ alt_day7_us_px_escaped = False
+    return
+    
 label alt_day4_uvao_vars:
     $ alt_uvao_true = False
     $ alt_uvao_D4_viola_morning = False

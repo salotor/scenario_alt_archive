@@ -440,7 +440,7 @@ label alt_day4_uvao_garlands_removal:
     "Я поволок гирлянды внутрь."
     stop ambience fadeout 0
     window hide
-    scene bg int_shed_day_7dl with dissolve
+    scene bg int_warehouse_day_7dl with dissolve
     $ persistent.sprite_time = "sunset"
     $ renpy.pause(2)
     show sl normal pioneer far at left with dissolve
