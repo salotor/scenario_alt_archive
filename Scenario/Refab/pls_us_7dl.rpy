@@ -6,8 +6,6 @@
     else:
         call alt_day6_us_7dl_begin
     pause(1)
-    call alt_day6_us_px_begin
-    pause(1)
     call alt_day6_us_7dl_exercises
     pause(1)
     call alt_day6_us_7dl_breakfast
