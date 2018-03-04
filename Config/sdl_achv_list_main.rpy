@@ -1765,7 +1765,7 @@ screen sdl_achvlist_slclt_Author:
                 hover_sound sdl_achv_click
                 hovered [Show ("de_check_active6", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_check_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
-                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_cltA", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_active", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)),  Hide("de_check_active6", transition=Dissolve(0.5)),Jump("alt_day7_sl_rf")]   
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_cltA", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_active", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)),  Hide("de_check_active6", transition=Dissolve(0.5)),Jump("alt_day7_sl_rf_good")]   
         hotspot ((650,424, 300, 52)): #Реджект-РФ
             hovered [Show("sdl_achv_rejc_RF_sl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_rejc_RF_sl", transition=Dissolve(0.5))]
@@ -2743,7 +2743,7 @@ label sdl_achvlist_mesmt_Author:
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     #Ламповость
-    if renpy.seen_image("acm_logo_me_lamp"):
+    if persistent.alt_lamp == True:
         show acm_logo_me_lamp  with dissolve:
             xcenter 800 ycenter 66 
         show de_check_inactive1 with dissolve:
@@ -2752,7 +2752,7 @@ label sdl_achvlist_mesmt_Author:
         show de_achiv_lock1 with dissolve:
             xcenter 800 ycenter 66
     #Глубина
-    if renpy.seen_image("acm_logo_me_deep"):
+    if persistent.alt_deep == True:
         show acm_logo_me_deep  with dissolve:
             xcenter 800 ycenter 130 
         show de_check_inactive2 with dissolve:
@@ -2761,14 +2761,14 @@ label sdl_achvlist_mesmt_Author:
         show de_achiv_lock2 with dissolve:
             xcenter 800 ycenter 130
     #QTE
-    if renpy.seen_image("acm_logo_me_qte"):
+    if persistent.alt_qte == True:
         show acm_logo_me_qte  with dissolve:
             xcenter 800 ycenter 194  
     else:
         show de_achiv_lock3 with dissolve:
             xcenter 800 ycenter 194
     #Горькая правда
-    if renpy.seen_image("acm_logo_mi_bitter_truth"):
+    if persistent.alt_mi_7dl_ps == True:
         show acm_logo_mi_bitter_truth  with dissolve:
             xcenter 800 ycenter 258 
         show de_check_inactive4 with dissolve:
