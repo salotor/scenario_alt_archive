@@ -788,7 +788,7 @@ label alt_day6_us_7dl_helping:#Помощь по лагерю
     me "А кого тогда?"
     "Снова ноль реакции."
     me "Что-то случилось?"
-    show us normal pioneer with disslove
+    show us normal pioneer with dissolve
     us "Разве обязательно должно что-то случиться?"
     me "Просто ты какая-то… Я не знаю. Странная?"
     us "Я думаю просто."
@@ -878,6 +878,9 @@ label alt_day6_us_7dl_helping:#Помощь по лагерю
     show blink
     hide us
     with dspq
+    pause(3)
+    scene bg ext_dining_hall_near_day
+    show unblink
     "А когда открыл глаза, обнаружил, что остался в одиночестве."
     "Только отголоски смеха донеслись откуда-то из-за спины."
     me "Дела…"
@@ -1349,7 +1352,7 @@ label alt_day_us_7dl_preps:#Мику - подготовка
     "Я фыркнул."
     th "Похоже, это будет то ещё утро…"
     mi "Сеня, не бухти! Ты сам пришёл и предложил свою помощь."
-    show mi grin pioneer close with movei
+    show mi grin pioneer close with move
     "Она подошла ко мне поближе и поправила галстук."
     mi "Обратного пути неееет! А теперь — к кибернетикам! За шнурами и пультом."
     stop music fadeout 3
@@ -1460,7 +1463,7 @@ label alt_day_us_7dl_preps:#Мику - подготовка
     el "Прошу!"
     "Пригласил он, отперев замок."
     "Переглянувшись с Мику, мы с трудом пробрались через баррикады и подошли к нему."
-    show el normal pioneer with dissolve
+    show el normal pioneer behind mi with dissolve # ?
     el "Вся аппаратура хранится здесь, ничего другого нигде нет."
     el "Вам что именно нужно?"
     show mi smile pioneer at zenterright with dissolve
@@ -1740,6 +1743,7 @@ label alt_day6_us_7dl_warehouse:#Славя, помощь.
     window hide
     with fade
     "Короче говоря, свиданием здесь не пахло."
+    $ persistent.sprite_time = "day"
     show sl smile swim at zenterleft
     show mi smile swim at zenterright
     with dissolve
@@ -1815,7 +1819,7 @@ label alt_day6_us_7dl_warehouse:#Славя, помощь.
     with fade
     return
     
-label alt_day6_un_7dl_met:#Поиски Лены
+label alt_day6_us_7dl_un_met:#Поиски Лены
     $ persistent.sprite_time = "day"
     $ day_time()
     scene bg ext_square_day with dissolve
@@ -2268,7 +2272,7 @@ label alt_day6_us_7dl_dinner:#Обед-7dl
         "Мику цвела и пахла."
         dreamgirl "Ты её нюхал, что ли?"
         th "Ну, в смысле, как майская роза."
-        show mi happy pioneer at zenteleft
+        show mi happy pioneer at zenterleft
         with dissolve
         th "Счастливая, румяная, довольная…"
         dreamgirl "Счастливая."
@@ -2951,7 +2955,7 @@ label alt_day6_us_7dl_button:#Ульяна-пуговица
     stop music fadeout 3
     window hide
     scene bg ext_square_day 
-    show us laugh2 pioneer
+    show us laugh2 sport
     with dissolve
     play music music_list["went_fishing_caught_a_girl"] fadein 3
     us "Сёмыч, если будешь делать такое лицо, я отведу тебя к Виоле, чтобы дала тебе слабительного."
@@ -3305,7 +3309,7 @@ label alt_day6_us_7dl_button:#Ульяна-пуговица
                 us "Бу!"
                 "Сказало оно голосом Ульянки."
                 "И я от неожиданности разжал руки."
-                play sound sfx_alisa_falls_novoice
+                play sound sfx_bush_body_fall
                 "Со вскриком полетел вниз."
                 dreamgirl "Чем отличается падение с первого этажа от падения с десятого этажа?"
                 "Вставил шпильку внутренний голос."
@@ -3447,7 +3451,7 @@ label alt_day6_us_7dl_button:#Ульяна-пуговица
     "Изнутри невнятно что-то ответили, и вожатая окончательно взъярилась:"
     show mt rage pioneer with dspr
     mt "Я что-то непонятно сказала?! На выход марш!"
-    show dv guilty pioneer2 at zenteleft
+    show dv guilty pioneer2 at zenterleft
     with dissolve
     th "Похоже, ходить сегодня Ульяне с голым задом."
     "Заключил я."
@@ -3766,7 +3770,7 @@ label alt_day6_us_7dl_rendezvous:#Ульяна-рандеву
     window hide
     play sound sfx_open_dooor_campus_1
     pause(1)
-    scene bg ext_house_of_dv_day
+    scene bg int_house_of_dv_day
     with dissolve
     "Когда я оказался внутри, моему взгляду предстала прелюбопытнейшая картина."
     "Ульяна кверху пятой точкой, с головой забравшаяся под кровать."
@@ -5085,7 +5089,7 @@ label alt_day6_us_7dl_supper:#Ужин
         "К счастью, человек разумный обладает способностью низводить все раздражающие звуки до уровня фонового шума."
     else:
         "Ульяна хотела было ввинтиться в толпу, распихать всех локтями да коленями, но я остановил её, положив руку на плечо."
-        show us dontlike pioneer with dspr
+        show us dontlike sport with dspr
         us "Что?"
         "Я кивнул на приближающуюся вожатую."
         "Провоцировать конфликт не хотелось, так как нам тут же припомнят наше постоянное отсутствие на лагерных мероприятиях."
@@ -5668,13 +5672,13 @@ label alt_day6_us_7dl_disco:#Дискотека
         "Она походила на дикого зверька, который напрочь разочаровался в доброте людей."
         "И теперь лишь от меня зависело — сумею ли я вновь приручить её."
         th "И надо ли это мне вообще?"
-        show us normal dress with dissolve
+        show un normal dress with dissolve
         un "Это моё второе любимое место в лагере."
         "Лена окинула руками раскинувшийся дикий пляж, низбегающий ленивыми волнами от одиноко растущей кривой сосны."
         un "Я смотрю на волны и успокаиваюсь."
         un "Никого сюда не водила. Никогда."
         me "Значит, я здесь пионер? Первооткрыватель?"
-        show us shy dress with dspr
+        show un shy dress with dspr
         un "Только не подумай, что я говорю это всем."
         un "Мне вообще очень, очень тяжело разговаривать с тобой вот так, глаза в глаза."
         me "Отвернись?"
@@ -6213,7 +6217,7 @@ label alt_day6_us_7dl_tea:#Беседа на крылечке
     "Что это? Бабий бунт?"
     me "Уж разъясните тугодуму. Если не слишком сложно."
     show mt smile dress
-    show mt normal sport
+    show us normal sport
     with dissolve
     mt "Всё очень просто, я не отношусь к вам, как к детям."
     mt "Отношусь к вам как…"
