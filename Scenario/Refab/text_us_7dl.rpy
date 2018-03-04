@@ -2497,7 +2497,7 @@ label alt_day6_us_7dl_soundcheck:#Мику - саунд-чек
     mi "Рядом с тобой магнитофон, включи его! Сейчас посмотрим, как я звучу."
     stop music fadeout 3
     $ volume(0.3, "sound")
-    play music music_list["miku_song_voice"} fadein 3
+    play music music_list["miku_song_voice"] fadein 3
     "Покорно кивнув, я исполнил и это требование."
     "Кажется, я здесь задержусь."
     "Японка забегала по сцене, высвобождая себе место под «подышать», как она сама выразилась."
