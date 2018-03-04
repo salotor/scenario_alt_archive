@@ -5387,8 +5387,7 @@ label alt_day7_mt_7dl_true:
     stop ambience fadeout 3
     play music are_you_there fadein 3
     window hide
-    #TODO: тот самый посёлок городского типа день (улица, прямо тротуар, слева проезжая часть, справа трехэтажные домики, в дальней перспективе по правую можно углядеть узнаваемую вывеску кафе-мороженого) scene bg ext_pgt_day
-    scene anim prolog_1
+    scene bg ext_townscape_ph_day_7dl
     show mt normal pioneer
     with dissolve
     mt "Она права, Сёмыч."

@@ -4420,7 +4420,7 @@ label alt_day5_un_7dl_cleaning:
     stop music fadeout 3
     window hide
     play ambience ambience_camp_center_day fadein 5
-    scene bg int_shed_day_7dl with dissolve 
+    scene bg int_warehouse_day_7dl with dissolve 
     if alt_day_binder != 1:
         "С прошлого моего визита здесь ничего не изменилось."
     "Уходящие вдаль полки с формой, бельём и постелями, рохля по правому краю и заставленный коробками закуток, судя по всему — служащий убежищем кастелянше."

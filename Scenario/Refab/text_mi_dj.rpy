@@ -1251,7 +1251,7 @@ label alt_day4_mi_dj_cleaning:
         sl "Войдите!"
         "Позвала Славя изнутри."
         window hide
-        scene bg int_shed_day_7dl
+        scene bg int_warehouse_day_7dl
         show sl normal pioneer
         with dissolve
     
@@ -11152,7 +11152,7 @@ label alt_day7_mi_dj_badfeel:
     cs "Ага. Живот."
     me "А что в этом такого-то?"
     show cs normal glasses with dspr
-    "Отложив инструмент в сторонку, Виолетта взяла очки и, держа их на манер монокля, внимательно осмотрела каждого из нас."
+    "Отложив инструмент в сторонку, Виолетта взяла очки и, держа их на манер лорнета, внимательно осмотрела каждого из нас."
     cs "А ты уверен, что у тебя живот заболел?"
     me "Я же говорю вам!"
     show cs smile glasses with dspr

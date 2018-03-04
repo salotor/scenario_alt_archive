@@ -10251,7 +10251,7 @@ label alt_day6_dv_7dl_sl_dancing:
         sl "К тому же, девушкам отказывать нельзя."
     "Она остановилась на месте, которое приглянулось ей чему-то пуще прочих и развернулась ко мне."
     window hide
-    #старая версия пати-площади
+    scene anim_square_party
     show sl shy dress close
     with dissolve
 

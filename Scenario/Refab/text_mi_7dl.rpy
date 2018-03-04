@@ -9397,7 +9397,7 @@ label alt_day6_mi_7dl_discoteque:
         window hide
         play sound sfx_open_dooor_campus_1
         if alt_day1_sl_keys_took == 1:
-            scene bg int_shed_night_7dl
+            scene bg int_warehouse_night_7dl
             $ alt_hpt += 1
             if alt_day5_mi_7dl_kiss:
                 $ alt_hpt += 1
