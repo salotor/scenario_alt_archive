@@ -1,4 +1,6 @@
 ﻿label alt_day6_us_7dl_start:
+    call alt_day6_us_7dl_vars
+    pause(1)
     if routetag == "us7dl_good":
         call alt_day6_us_px_begin
     else:
