@@ -355,7 +355,11 @@ label sdl_menu:
                         menu:
                             "{color=#ff0000}Тульпа (эксклюзив){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_dv_7dl_loki
+                                call alt_day7_dv_7dl_loki
+                                pause(1)
+                                call alt_day7_dv_7dl_tulpa_end
+                                pause(1)
+                                return
                             "{color=#d16bed}Meet me there (транзитная){/color}":
                                 stop ambience fadeout 2
                                 jump alt_day7_dv_7dl_un_end
