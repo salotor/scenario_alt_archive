@@ -24,14 +24,15 @@
         pause(1)
         if (alt_day6_us_7dl_mi_friends == 2) or (alt_day6_us_7dl_sl_friends == 2):
             call alt_day6_us_7dl_soundcheck
+            pause(1)
+            call alt_day6_us_7dl_concert
         else:
             call alt_day6_us_7dl_button
-        pause(1)
-        if us_pt <= 4:
-            pass
-        else:
-            call alt_day6_us_7dl_rendezvous
-        pause(1)
+            pause(1)
+            if alt_day6_us_7dl_help:
+                call alt_day6_us_7dl_rendezvous
+            else:
+                call alt_day6_us_7dl_concert
     else:
         call alt_day6_us_px_carrier
         pause(1)
@@ -45,8 +46,8 @@
             pause(1)
         else:
             call alt_day6_us_px_far_gate
-    pause(1)
-    call alt_day6_us_7dl_concert
+        pause(1)
+        call alt_day6_us_7dl_concert
     pause(1)
     call alt_day6_us_7dl_supper
     pause(1)
