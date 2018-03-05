@@ -10766,13 +10766,11 @@ label alt_day7_mi_dj_alone:
     play ambience ambience_int_cabin_evening fadein 2
     if alt_day6_mi_dj_letmeout:
         $ routetag = "mi7dlbad"
-        $ alt_chapter(7, u"Мику. DJ. Эпилог")
     elif alt_day6_mi_dj_letmestay:
         $ routetag = "mi7true"
-        $ alt_chapter(7, u"Мику. DJ. Эпилог")
     elif alt_day6_mi_dj_no_hentai:
         $ routetag = "mi7dl"
-        $ alt_chapter(7, u"Мику. DJ. Эпилог")
+    $ alt_chapter(7, u"Мику. DJ. Эпилог")
     window hide
     stop ambience fadeout 2
     $ persistent.sprite_time = "sunset"
@@ -10966,7 +10964,7 @@ label alt_day7_mi_dj_alone:
     me "Действительно…"
     me "И всё-таки. Я же видел ваши сейфуку — они более чем пристойные. Спортивная форма им под стать."
     show mi laugh pioneer with dspr
-    mi "Сенечка, ты, конечно, извини, но я в обычную школу уже года два как не хожу. И занимаюсь я по индивидуальной программе." # А в 7дл руте с 12 лет. Или различия между рутами допустимы?
+    mi "Сенечка, ты, конечно, извини, но я в обычную школу уже несколько лет как не хожу. И занимаюсь я по индивидуальной программе."
     mi "В том, что удобнее всего."
     "Боюсь, если она при мне это «самое удобное» наденет и начнёт свои тренировки."
     "Я покрылся мурашками."

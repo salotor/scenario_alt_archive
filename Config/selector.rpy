@@ -66,6 +66,9 @@ label scenario__sdl_selector:
     call alt_day4_mi_cl_vars
     call alt_day4_dv_7dl_vars
     call alt_day6_dv_7dl_vars
+    call alt_day6_us_px_vars
+    call alt_day6_us_7dl_vars
+    call alt_day7_us_px_vars
     
     play ambience ambience_safe fadein 5
     
@@ -113,6 +116,73 @@ label sdl_menu:
                                     $ plthr = u"Дрищ"
                             stop ambience fadeout 2
                             jump alt_day1_alt_M
+                "Ульяна":
+                    menu:
+                        "Начало дня":
+                            $ loki = True
+                            $ plthr = u"Локи"
+                            $ us_pt += 5
+                            menu:
+                                "7дл":
+                                    $ routetag = "us7dl_bad"
+                                "7дл после столовой":
+                                    $ routetag = "us7dl_bad"
+                                    $ alt_day4_neu_us_pixies == 2
+                                "Огоньки":
+                                    $ routetag = "us7dl_good"
+                                    $ alt_day4_neu_us_pixies == 3
+                            jump alt_day6_us_7dl_start
+                        "Отдельные сцены":
+                            $ plthr = u"Дрищ"
+                            menu:
+                                "Утро":
+                                    menu:
+                                        "Зарядка":
+                                            call alt_day6_us_7dl_exercises
+                                        "Завтрак":
+                                            call alt_day6_us_7dl_breakfast
+                                        "7дл - помощь по лагерю":
+                                            call alt_day6_us_7dl_helping
+                                        "7дл - помощь Мику":
+                                            call alt_day_us_7dl_preps
+                                        "7дл - помощь Славе":
+                                            call alt_day6_us_7dl_warehouse
+                                        "7дл - поиски Лены":
+                                            call alt_day6_us_7dl_un_met
+                                "День":
+                                    menu:
+                                        "Обед":
+                                            call alt_day6_us_7dl_dinner
+                                        "7дл - саундчек":
+                                            call alt_day6_us_7dl_soundcheck
+                                        "7дл - Ульяна - пуговица":
+                                            call alt_day6_us_7dl_button
+                                        "7дл - Ульяна - рандеву":
+                                            call alt_day6_us_7dl_rendezvous
+                                        "Огоньки - карьер":
+                                            call alt_day6_us_px_carrier
+                                        "Огоньки - обед":
+                                            call alt_day6_us_px_dinner
+                                        "Огоньки - Лена":
+                                            call alt_day6_us_px_Lena
+                                        "Огьньки - Славя":
+                                            call alt_day6_us_px_party_sl
+                                        "Огоньки - дальние ворота":
+                                            call alt_day6_us_px_far_gate
+                                "Вечер":
+                                    menu:
+                                        "7дл - концерт":
+                                            call alt_day6_us_7dl_concert
+                                        "7дл - ужин":
+                                            call alt_day6_us_7dl_supper
+                                        "7дл - танцы":
+                                            call alt_day6_us_7dl_disco
+                                        "Огоньки - чаепитие":
+                                            call alt_day6_us_7dl_tea
+                                        "Огоньки - вечер у пристани.":
+                                            call alt_day6_us_px_afterwords
+                                        "Отбой":
+                                            call alt_day6_us_7dl_sleeptime
                 "Мику":
                     $ lp_mi += 14
                     $ routetag = "mi7dl"
