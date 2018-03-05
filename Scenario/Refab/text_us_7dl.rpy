@@ -1052,7 +1052,7 @@ label alt_day6_us_7dl_helping:
             $ alt_day6_us_7dl_mi_friends = 2
             $ alt_day6_us_7dl_sl_friends = False
             
-        "Возьму метлу, пожалуй." if alt_day4_neu_us_pixies != 0:
+        "Возьму метлу, пожалуй." if us_pt > 4:
             "Задумчиво сообщил я."
             me "Надо бы мне кое-что обдумать, а это хорошо за монотонным трудом."
             show sl laugh pioneer with dspr

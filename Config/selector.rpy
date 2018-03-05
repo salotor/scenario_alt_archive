@@ -118,26 +118,29 @@ label sdl_menu:
                             jump alt_day1_alt_M
                 "Ульяна":
                     menu:
-                        "Начало дня"
-                        $ us_pt += 1
-                        menu:
-                            "7дл":
-                                $ routetag = "us7dl_bad"
-                            "7дл после столовой":
-                                $ routetag = "us7dl_bad"
-                                $ alt_day4_neu_us_pixies == 2
-                            "Огоньки":
-                                $ routetag = "us7dl_good"
-                                $ alt_day4_neu_us_pixies == 3
+                        "Начало дня":
+                            $ loki = True
+                            $ plthr = u"Локи"
+                            $ us_pt += 5
+                            menu:
+                                "7дл":
+                                    $ routetag = "us7dl_bad"
+                                "7дл после столовой":
+                                    $ routetag = "us7dl_bad"
+                                    $ alt_day4_neu_us_pixies == 2
+                                "Огоньки":
+                                    $ routetag = "us7dl_good"
+                                    $ alt_day4_neu_us_pixies == 3
                             jump alt_day6_us_7dl_start
-                        "Отдельные сцены"
+                        "Отдельные сцены":
+                            $ plthr = u"Дрищ"
                             menu:
                                 "Утро":
                                     menu:
                                         "Зарядка":
                                             call alt_day6_us_7dl_exercises
                                         "Завтрак":
-                                        call alt_day6_us_7dl_breakfast
+                                            call alt_day6_us_7dl_breakfast
                                         "7дл - помощь по лагерю":
                                             call alt_day6_us_7dl_helping
                                         "7дл - помощь Мику":
