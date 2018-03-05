@@ -499,6 +499,7 @@
     image cg d4_hatch_night_7dl = get_image_7dl("cg/d4_hatch_night_7dl.jpg")
     image cg d4_hatch_night_open_7dl = get_image_7dl("cg/d4_hatch_night_open_7dl.jpg")
     image cg d4_lineup_no_un_7dl = get_image_7dl("cg/d4_lineup_no_un_7dl.jpg")
+    image cg d4_lineup_no_us_7dl = get_image_7dl("cg/d4_lineup_no_un_us_7dl.jpg")
     
     image cg d4_mi_dj_dancing_7dl = get_image_7dl("cg/d4_mi_dj_dancing_7dl.jpg")
     image cg d4_mi_dj_lib0_7dl = get_image_7dl("cg/d4_mi_dj_lib0_7dl.jpg")
