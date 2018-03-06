@@ -4663,7 +4663,7 @@ label alt_day6_us_7dl_concert:
     with dissolve
     play ambience ambience_medium_crowd_outdoors fadein 2
     play music lastlight_piano
-    if alt_day4_neu_us_pixies == 2:
+    if alt_day4_neu_us_pixies == 3:
         "Концерт."
         "Просто концерт, посвящённый закрытию лагеря — дети выступают перед другими отрядами, показывают, что заготовили — и как рыба в воде в этой катавасии самой счастливой остаётся Мику, которой уж точно не нужны никакие побеги и приключения."
         "Зачем ей это, когда у неё есть адреналин сцены?"
