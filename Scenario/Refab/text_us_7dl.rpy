@@ -7095,7 +7095,7 @@ label alt_day7_us_7dl_begin:
             play sound_loop sfx_water_sink_stream fadein 1
             "Мы с Мику обменялись взглядями и, синхронно наклонившись над раковинами, заработали щётками."
             stop sound_loop
-     window hide
+    window hide
     show spill_red with dspr
     $ renpy.pause(2, hard=True)
     show spill_gray with dspr
