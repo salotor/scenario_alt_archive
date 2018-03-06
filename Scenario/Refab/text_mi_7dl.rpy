@@ -6260,7 +6260,7 @@ label alt_day6_mi_7dl_soul:
     "И казалось иногда, что счастье и осталось как раз в тех коротких штанишках, откуда ты успешно вырос, а они — вот, только-только догнали: тринадцать-четырнадцать лет, когда что-то значат слова «дружба» и «взаимовыручка»."
     window hide
     with fade
-    "Так или иначе, час спустя мы выбрались на полянку, самый центр в которой заняло с целое с виду здание из дранки и кирпича."
+    "Так или иначе, час спустя мы выбрались на полянку, самый центр которой заняло целое с виду здание из дранки и кирпича."
     "Но если первый этаж стоял довольно прочно и ещё лет десять простоять с виду собирался, то на втором тут и там зияли провалы в стенах, кое-где крыша покосилась и просела внутрь, а внешние лестницы раскрутились как проржавевшие пружинки из заводной игрушки."
     "Верными клевретами полусгнившему гиганту выступало то, что некогда называлось игровой площадкой — несколько шарнирных каруселей, парные качельки, навесы со столами для пинг-понга…"
     "С другой стороны можно было разглядеть бетонный желоб и остатки колонки-водокачки — там был аналог нашего рукомойника."
@@ -7689,7 +7689,7 @@ label alt_day6_mi_7dl_miku_sakishita:
     mi "Я хотела друга. И хотела не надоедать ему. {w}Ты почти убедил меня в том, что это ты."
     th "Просто надоел я тебе, глупая девчонка."
     if alt_day5_mi_7dl_voyeur:
-        extend " {w}Спроси кого угодно — отношения после секса не заканчиваются. Зуб даю!"
+        extend " Спроси кого угодно — отношения после секса не заканчиваются. Зуб даю!"
     "Разумеется, ничего такого я не произнёс вслух."
     "Пересохшее горло лишь выдавило:"
     me "Мне без тебя уже никак."
@@ -7948,8 +7948,8 @@ label alt_day6_mi_7dl_miku_farewell_finale:
                     show alt_letter timeskip10 at truecenter with zoomin
                     window hide
                     play music emptiness fadein 3
-                    $ persistent.mi_7dl_true = True
                     play sound aunl
+                    $ persistent.mi_7dl_true = True
                     show acm_logo_mi_thank_you with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -8982,10 +8982,10 @@ label alt_day6_mi_7dl_discoteque:
                     "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
                     window hide
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
-                    $ persistent.alt_lamp = True
                     return
                 elif herc:
                     stop sound_loop
@@ -9010,9 +9010,9 @@ label alt_day6_mi_7dl_discoteque:
                     play sound sfx_bodyfall_1
                     stop sound_loop fadeout 0
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
-                    $ persistent.alt_lamp = True
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif loki:
@@ -9045,10 +9045,10 @@ label alt_day6_mi_7dl_discoteque:
                     th "Ксана. {w}Ненавижу."
                     window hide
                     play sound aunl
+                    $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(4.4, hard=True)
-                    $ persistent.alt_lamp = True
                     return
             "Думаю, не стоит.":
                 me "Если у меня дыра в голове — значит, она там не просто так."
@@ -9397,7 +9397,7 @@ label alt_day6_mi_7dl_discoteque:
         window hide
         play sound sfx_open_dooor_campus_1
         if alt_day1_sl_keys_took == 1:
-            scene bg int_shed_night_7dl
+            scene bg int_warehouse_night_7dl
             $ alt_hpt += 1
             if alt_day5_mi_7dl_kiss:
                 $ alt_hpt += 1
@@ -10689,8 +10689,8 @@ label alt_day7_mi_7dl_happy_again:
     me "Не надоест."
     me "Никогда."
     play music sam_lullaby fadein 3
-    $ persistent.mi_7dl_neutral_human = True
     play sound aunl
+    $ persistent.mi_7dl_neutral_human = True
     show acm_logo_mi_happy_again with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -10866,8 +10866,8 @@ label alt_day7_mi_7dl_liar:
     with fade
     "А то, что ледяной снег в морду, так даже удобнее."
     "Честнее."
-    $ persistent.mi_7dl_bad_human = True
     play sound aunl
+    $ persistent.mi_7dl_bad_human = True
     show acm_logo_mi_liar with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11031,8 +11031,8 @@ label alt_day7_mi_7dl_dark_dreams:
     "Кроме разве что одного."
     show mi smile casual with dissolve
     "Я перестану видеть эти унылые сны."
-    $ persistent.mi_7dl_good_human = True
     play sound aunl
+    $ persistent.mi_7dl_good_human = True
     show acm_logo_mi_dark_dreams with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11167,8 +11167,8 @@ label alt_day7_mi_7dl_club27:
     nvl clear
     stop sound_loop
     $ set_mode_adv()
-    $ persistent.mi_7dl_neutral_star = True
     play sound aunl
+    $ persistent.mi_7dl_neutral_star = True
     show acm_logo_mi_club27 with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11300,8 +11300,8 @@ label alt_day7_mi_7dl_sparkle:
     "Мягко улыбнулись цифровые губы."
     me "Да…"
     "Какая теперь разница?"
-    $ persistent.mi_7dl_good_star = True
     play sound aunl
+    $ persistent.mi_7dl_good_star = True
     show acm_logo_mi_sparkle with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11724,10 +11724,10 @@ label alt_day7_mi_7dl_postscriptum:
     stop sound_loop
     $ renpy.pause(3)
     play sound aunl
+    $ persistent.alt_mi_7dl_ps = True
     show acm_logo_mi_bitter_truth with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
-    $ persistent.alt_mi_7dl_ps = True
     return
  
 label alt_day7_mi_7dl_dam_CPU:
@@ -11856,8 +11856,8 @@ label alt_day7_mi_7dl_dam_CPU:
     stop music fadeout 5
     mi "Сенечка."
     play music emptiness fadein 3
-    $ persistent.mi_7dl_bad_star = True
     play sound aunl
+    $ persistent.mi_7dl_bad_star = True
     show acm_logo_mi_dam_cpu with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12004,8 +12004,8 @@ label alt_day7_mi_7dl_unlike:
     mi "Тем, что у меня грудь меньше."
     mi "И тем, конечно, что она тебя совсем-совсем не любит."
     play music happy_ending fadein 3
-    $ persistent.mi_7dl_herc_exc = True
     play sound aunl
+    $ persistent.mi_7dl_herc_exc = True
     show acm_logo_mi_unlike with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12200,8 +12200,8 @@ label alt_day7_mi_7dl_sinthetic:
         pos (747,105)
     $ renpy.pause(3, hard=True)
     
-    $ persistent.mi_7dl_loki_exc = True
     play sound aunl
+    $ persistent.mi_7dl_loki_exc = True
     show acm_logo_mi_come with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12351,8 +12351,8 @@ label alt_day7_mi_7dl_come_back:
     scene bg int_musclub_day with dissolve
     me "В-ваташи ва?"
     play music emptiness fadein 3
-    $ persistent.mi_7dl_dr_exc = True
     play sound aunl
+    $ persistent.mi_7dl_dr_exc = True
     show acm_logo_mi_watashi with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

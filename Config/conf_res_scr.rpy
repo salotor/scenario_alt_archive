@@ -383,8 +383,19 @@ init -5 python:
             renpy.show("us smile sport", at_list=[left])
             renpy.transition(moveinleft)
             renpy.pause(2.0)
+            
+        elif routetag == "us7dl_good_surp":
+            renpy.show("us surp sport", at_list=[left])
+            renpy.transition(moveinleft)
+            renpy.pause(2.0)
+            
         elif routetag == "us7dl_bad":
             renpy.show("us normal pioneer", at_list=[left])
+            renpy.transition(moveinleft)
+            renpy.pause(2.0)
+            
+        elif routetag == "us7dl_bad_laugh":
+            renpy.show("us laugh pioneer", at_list=[left])
             renpy.transition(moveinleft)
             renpy.pause(2.0)
             
