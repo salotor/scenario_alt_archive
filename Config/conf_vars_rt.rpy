@@ -220,7 +220,7 @@ label alt_day6_us_7dl_vars:
     $ alt_day6_us_7dl_sl_friends = False
     $ alt_day6_us_7dl_un_friends = False
     $ alt_day6_us_7dl_dance_mt = False
-    $ alt_day6_us_7dl_help = False
+    $ alt_day6_us_7dl_tr = False
     return
     
 label alt_day6_us_px_vars:    
