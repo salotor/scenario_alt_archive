@@ -29,7 +29,7 @@
         else:
             call alt_day6_us_7dl_button
             pause(1)
-            if alt_day6_us_7dl_help:
+            if alt_day6_us_7dl_tr:
                 call alt_day6_us_7dl_rendezvous
             else:
                 call alt_day6_us_7dl_concert
