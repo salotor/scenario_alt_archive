@@ -4752,7 +4752,7 @@ label alt_day4_neu_sleeptime:
         "Я за сегодня узнал столько, сколько не успел за прошлые три дня."
     elif us_pt >= 3:
         th "Я подружился с Ульянкой…"
-        if alt_day4_neu_us_pixies:
+        if alt_day4_neu_us_pixies != 0:
             "Был допущен в святая святых."
     elif mt_pt >= 2: 
         th "Наконец-то подружился с Ольгой…"
@@ -5060,7 +5060,7 @@ label alt_day5_neu_start:
         stop music fadeout 3
         stop ambience fadeout 3
         return
-    elif alt_day4_neu_us_pixies:
+    elif alt_day4_neu_us_pixies != 0:
         scene expression Desat("bg int_house_of_mt_sunset")
         with dissolve
         mt "Семён, что это с тобой?"
@@ -8447,6 +8447,7 @@ label alt_day5_neu_us_warm_evening:
     return
 
 label alt_day5_neu_us_hungry:
+    $ alt_day4_neu_us_pixies = 3
     "Я вздохнул."
     me "Как на духу."
     me "Разве что чая могу предложить."
@@ -9023,7 +9024,6 @@ label alt_day5_neu_us_sleetptime:
         "Несколько не тот собеседник, у которого можно найти ответы на такие вопросы."
         "Так что я накрыл Ульяну покрывалом, подоткнул уголок и на цыпочках вышел вон."
         "Меня ждала моя кроватка и, несомненно, самые сладкие сны."
-        $ alt_day4_neu_us_pixies = 3
     else:
         "М-даааа…"
         "Сегодняшний день… Это было что-то с чем-то."
