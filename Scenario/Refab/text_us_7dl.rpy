@@ -2191,7 +2191,7 @@ label alt_day6_us_7dl_un_met:
     "Сев на самом краю откоса, свесив ноги между столбиков перил вниз, я задумался."
     "Прикрыл глаза."
     "И прислушиваясь к звуку затихающих вдали шагов, поймал себя на мысли, что отчего-то очень хочу, чтобы вечер наступил побыстрее."
-    $ alt_day6_us_7dl_un_friends = True
+    $ alt_day6_us_7dl_un_friends = 2
     window hide
     stop music fadeout 3
     stop ambience fadeout 3
@@ -4663,7 +4663,7 @@ label alt_day6_us_7dl_concert:
     with dissolve
     play ambience ambience_medium_crowd_outdoors fadein 2
     play music lastlight_piano
-    if alt_day4_neu_us_pixies == 2:
+    if alt_day4_neu_us_pixies == 3:
         "Концерт."
         "Просто концерт, посвящённый закрытию лагеря — дети выступают перед другими отрядами, показывают, что заготовили — и как рыба в воде в этой катавасии самой счастливой остаётся Мику, которой уж точно не нужны никакие побеги и приключения."
         "Зачем ей это, когда у неё есть адреналин сцены?"
@@ -6797,7 +6797,9 @@ label alt_day6_us_7dl_sleeptime:
     "Я закрыл глаза."
     "Перед глазами разворачивались картины дня уходящего."
     window hide
-    if alt_day6_us_7dl_un_friends != 0:
+    if alt_day6_us_7dl_tr:
+        "Тут должна быть Ульянка"
+    elif alt_day6_us_7dl_un_friends != 0:
         scene cg d5_un_island
         show prologue_dream
         with dissolve
@@ -6805,7 +6807,7 @@ label alt_day6_us_7dl_sleeptime:
         if alt_day6_us_7dl_un_friends == 3:
             "И её удивительная решимость."
             "Или это мы оба постарались?"
-    elif alt_day6_us_7dl_mi_friends == 2:
+    elif alt_day6_us_7dl_mi_friends >= 2:
         scene cg d3_mi_dance_close_7dl
         show prologue_dream
         with dissolve
