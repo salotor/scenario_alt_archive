@@ -199,7 +199,7 @@ label alt_day5_neu_begin:
             pause(1)
         call alt_day5_neu_us_sleetptime
         pause(1)
-        if alt_day4_neu_us_pixies == 2:
+        if alt_day4_neu_us_pixies == 3:
             $ routetag = "us7dl_good"
         else:
             $ routetag = "us7dl_bad"
