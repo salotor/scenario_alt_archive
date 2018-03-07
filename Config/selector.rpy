@@ -125,7 +125,7 @@ label sdl_menu:
                             menu:
                                 "7дл":
                                     $ routetag = "us7dl_bad"
-                                "7дл после столовой":
+                                "7дл после пряток":
                                     $ routetag = "us7dl_bad"
                                     $ alt_day4_neu_us_pixies == 2
                                 "Огоньки":
