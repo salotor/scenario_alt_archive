@@ -1,6 +1,4 @@
 ﻿label alt_day6_us_px_begin:
-    call alt_day6_us_px_vars
-    call alt_day6_us_7dl_vars
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(6, u"Огоньки. Утро")
