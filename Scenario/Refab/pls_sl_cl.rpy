@@ -55,7 +55,7 @@ label alt_day5_sl_start:
     $ alt_chapter(5, u"Славя. Утро.")
     call alt_day5_sl_begin # может разбить на несколько?
     pause(1)
-    if alt_day5_sl_cl_catapult: # новая переменная
+    if karma == -7:
         return
     $ persistent.sprite_time = "day"
     $ day_time()

@@ -76,7 +76,6 @@ label alt_day4_sl_cl_vars:
 label alt_day5_sl_cl_vars:
     $ alt_day5_sl_extra_house = False
     $ alt_day5_sl_tan = False
-    $ alt_day5_sl_cl_catapult = False
     return
     
 label alt_day6_sl_cl_vars:
