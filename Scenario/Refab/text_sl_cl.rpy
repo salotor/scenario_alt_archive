@@ -1,12 +1,4 @@
-﻿label alt_day4_sl_start:
-    pause(1)
-    call alt_day4_sl_cl_vars
-    call alt_day4_un_fz_vars
-    call alt_day4_neu_us_vars
-    pause(1)
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(4, u"Славя. Утро.")
+﻿label alt_day4_sl_begin:
     scene expression Dawn("bg int_aidpost_day") with dissolve
     play music music_list["timid_girl"] fadein 3
     play ambience ambience_medstation_inside_day fadein 3
@@ -275,7 +267,7 @@
     "Славя кивнула."
     sl "Между прочим, и правда хотела медициной заниматься.{w} А потом ветеринаром стать."
     me "А сейчас?"
-    if (alt_day2_walk == 2) and loki:
+    if (alt_day2_walk == 2) and not herc:
         sl "Ну, как ты говорил…"
         "Пальцы девочки машинально теребили косу."
         sl "Спасателем…"
@@ -283,7 +275,7 @@
         sl "Краеведением, наверное.{w} Или экологией."
     sl "Я хочу помогать на том уровне, где моя помощь будет нужна.{w} Не лечить отдельно взятого зверя, а следить, чтобы ему нечем было болеть."
     show sl normal pioneer with dspr
-    if not loki:
+    if herc:
         dreamgirl "Ну надо же.{w} И будет у нас ещё один претендент на естественнонаучную Нобелевку.{w} По экологии."
         th "Почему бы нет? Если уж Мишаня получил свою — известно за что — пусть и эта девочка будет оценена."
     sl "Будет сложно, но я постараюсь.{w} Мне кажется, это моё, это та самая точка приложения силы."
@@ -446,6 +438,8 @@
     hide cs
     with flash
     "Они удалились, оставив меня в одиночестве."
+    window hide
+    return
     
 label alt_day4_sl_cl_shurik:
     "Вот так оно всё и происходит."
@@ -547,7 +541,7 @@ label alt_day4_sl_cl_shurik:
             sh "Ну, ты хотя бы можешь просто постоять там рядом, чтобы мы сравнили впечатления?"
             me "Прости, нет."
             $ alt_day4_sl_tut_iz = True
-            jump alt_day4_sl_laundry
+            return
         "Надеюсь, эти бездельники уже разошлись." if loki:
             "Мне было очень любопытно, что там произошло у Шурика."
             "А там ещё такая интересная штука."
@@ -850,8 +844,8 @@ label alt_day4_sl_cl_shurik:
     window hide
     stop ambience
     stop music fadeout 3
-    jump alt_day4_sl_supper
-    
+    return
+
 label alt_day4_sl_laundry:
     scene bg ext_aidpost_day with dissolve
     play music music_list["drown"] fadein 3
@@ -1050,13 +1044,11 @@ label alt_day4_sl_laundry:
     window hide
     stop music
     stop ambience
+    return
+
 label alt_day4_sl_supper:
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(4, u"Славя. Ужин.")
     scene bg int_dining_hall_people_sunset with dissolve
     play ambience ambience_dining_hall_full fadein 3
-
     play music music_list["two_glasses_of_melancholy"] fadein 1
     "По левую руку от раздачи висела колонка, сейчас транслирующая нечто бравурно-патриотическое, и вытянулась шеренга пионеров с подносами."
     "Всё верно, родители разбежались, те, кого они закормили, отсыпаются по домикам, а особо голодные потянулись сюда в поисках провианта."
@@ -1150,7 +1142,6 @@ label alt_day4_sl_supper:
     "Сверкнула глазами девочка."
     sl "Меня так воспитывали всю мою жизнь, и я так буду воспитывать своих детей."
     me "Суровый манифест, что я могу сказать.{w} Не пробовала баллотиро…"
-
     "Я не договорил — прямиком к нашему столу тащила поднос Леночка Тихонова, в полном соответствии со своей фамилией, тихоня и себе на уме."
     show bg int_dining_hall_people_sunset at enterleft
     show sl normal pioneer at right with moveinright
@@ -1195,14 +1186,13 @@ label alt_day4_sl_supper:
         sl "Семён, не спорь, пожалуйста. {w}Ты ведёшь себя как ребёнок."
         "Я только вздохнул."
         "Что мне ещё оставалось."
-        jump alt_day4_sl_party_up
+        return
     sl "Я всё равно на вечер от забот отпросилась, чтобы составить компанию нашему ветерану-инвалиду, поэтому совершенно свободна."
     me "Отпросилась от забот? Разве ты этим не на общественных началах занимаешься?"
     show sl smile pioneer with dspr
     sl "Вообще, да.{w} Но предупредить вожатую, чтобы не рассчитывала на меня сегодня, стоило."
     window hide
     with fade2
-
     th "Простите, Оленька Дмитриевна, но сегодня вы на мне не поездите.{w} Логика уровня цвета волос Слави."
     th "Но не я этот мир создавал, не мне его и менять, а Славю он, хвала рандому, устраивает именно таким."
     menu:
@@ -1291,7 +1281,9 @@ label alt_day4_sl_supper:
             th "При этом свято убеждены в том, что я последую их указаниям."
             "Сразу хочется светло-светло улыбнуться и задушевным тоном попросить:"
             "Заставь меня."
-            
+    window hide
+    return
+
 label alt_day4_sl_party_up:
     show mt normal pioneer at center
     show un normal pioneer at left
@@ -1454,12 +1446,10 @@ label alt_day4_sl_party_up:
                     "Она приглашающе махнула рукой:"
                     sl "Пошли с нами!"
                     $ alt_day4_sl_lf_solo = 3 #Нас нашли и взяли с собой.
-                    jump alt_day4_sl_lf_coop
         elif alt_day4_sl_un_rej:
             "Я спрятался от спешащих девочек, кажется, вовсе не смотрящих по сторонам, и неспешно двинулся в ту же сторону."
             "Мои поиски увенчаются успехом!"
             $ alt_day4_sl_lf_solo = 1
-
     else:
         me "Пошли."
         "Сказал я, вставая."
@@ -1477,7 +1467,6 @@ label alt_day4_sl_party_up:
         scene bg ext_dining_hall_near_sunset
         play sound sfx_open_door_clubs
         with dissolve
-    
         "Пионеры выкатывались на улицу, будто опасаясь, что задержавшихся заставят дежурить вне очереди — и между прочим, вполне обоснованно."
         play ambience ambience_camp_center_evening
         "Так или иначе, пять минут спустя, вооружившись фонариком и неизвестно откуда взявшейся у вожатой верёвкой, мы выдвинулись на поиски."
@@ -1525,13 +1514,11 @@ label alt_day4_sl_party_up:
         "Славя кивнула, пробурчав нечто вроде «чёртов гордец и упрямец», и вернулась на прежний курс."
         "Фонарик она отдала мне, когда я настоял на том, чтобы мне разрешили «поиграться»."
         "Лена скромно молчала, двигаясь по другую сторону от Слави — меня она, кажется, отчаянно стеснялась."
-        window hide
-        with fade
+    window hide
+    with fade
+    return
         
 label alt_day4_sl_lf_coop:
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(4, u"Славя. Поиски.")
     scene bg ext_path_sunset with dissolve
     if alt_day4_sl_lf_solo != 1:
         "Не знаю, наверное, в условиях заданного Славей темпа мы бы и правда добрались бы до старого лагеря за полчаса, не больше."
@@ -1596,15 +1583,13 @@ label alt_day4_sl_lf_coop:
     stop music
     stop ambience
     scene black
+    return
     
 label alt_day4_sl_old_camp:
-    $ persistent.sprite_time = "night"
-    $ night_time()
     scene bg ext_old_building_night
     with diam
     play ambience ambience_old_camp_outside fadein 3
     play music music_list["sunny_day"] fadein 5
-
     "Оно было окружено тем, что с известной долей воображения можно было бы назвать детской игровой площадкой."
     "Судя по разбросанным тут и там бетонным блокам, когда-то здание окружала приличная стенка, призванная не столько защитить пионеров от враждебной окружающей среды, сколько оборонить враждебную окружающую от пионеров."
     me "И это всё? Весь лагерь?"
@@ -1659,7 +1644,7 @@ label alt_day4_sl_old_camp:
             scene black with fade
             "Я думаю, что героем этой картины ужасов я не стану!"
             "Я развернулся и, показав старому лесу спину, задал стрекача."
-            jump alt_day4_sl_wh_night
+            $ alt_day4_sl_wh = True
         else:
             menu:
                 "Покойся с миром, дорогой очкарик.":
@@ -1668,13 +1653,13 @@ label alt_day4_sl_old_camp:
                     "А я за тебя потом отомщу."
                     "Я развернулся и, стараясь выглядеть независимо, отправился обратно в лагерь."
                     "Удавалось мне это с трудом — каждая минута, проведённая рядом с этим чёртовым домом, заряжала меня таким адреналином, что бежать и бежать теперь до лагеря!"
-                    jump alt_day4_sl_wh_night
+                    $ alt_day4_sl_wh = True
                 "Шурик, если тебя здесь нет…":
                     $ alt_sp += 1
                     $ karma += 20
-        $ alt_day4_sl_lf_solo = 2
-        stop ambience fadeout 2
-        th "Молись, очкарик, грядёт большой абзац."
+                    $ alt_day4_sl_lf_solo = 2
+                    stop ambience fadeout 2
+                    th "Молись, очкарик, грядёт большой абзац."
     else:
         show un normal pioneer at left with dissolve
         un "Сам лагерь был вокруг."
@@ -1733,12 +1718,12 @@ label alt_day4_sl_old_camp:
         show sl normal pioneer far at cright with dissolve
         sl "Пойдёмте!{w} Нам ещё Сашу искать."
         "Позвала она."
-
     window hide
-    $ persistent.sprite_time = "night"
+    return
+    
+label alt_day4_sl_old_camp2:
     scene bg int_old_building_night
     with dissolve
-
     play music nowyouseeme fadein 3
     "Скрип двери показался очень, очень жутким в опускающихся потёмках."
     if alt_day4_sl_lf_solo == 2:
@@ -1974,7 +1959,6 @@ label alt_day4_sl_old_camp:
     window hide
     $ persistent.sprite = "night"
     scene bg int_catacomb_door_fullbright_7dl
-
     "Как будто прямиком перенесённая сюда из какого-нибудь Убежища-111."
     "Такая же тяжёлая, большая, солидная. {w}Разве что не круглая."
     "Будто в пику всем эти серьёзным кнопкам, противовандальным петлям и огромному поворотному колесу, выкрашена дверь была в весёленький голубенький цвет, поверх которого угрожающе-жёлтым был нанесён трафаретный значок радиационной опасности."
@@ -2039,7 +2023,6 @@ label alt_day4_sl_old_camp:
         me "Используй это, Люк."
         sl "Да, спасибо."
         me "Три…"
-
     "В этот раз всё прошло без сучка без задоринки."
     if alt_day4_sl_lf_solo == 2:
         "Правда в какой-то момент я расслышал какое-то шебуршание со стороны коробки зуммера."
@@ -2055,7 +2038,6 @@ label alt_day4_sl_old_camp:
     scene bg int_catacombs_living
     show cotocomb_lighter
     with flash
-
     play ambience ambience_safe
     extend ", нашему взгляду предстал миниатюрный рай для отшельника."
     "Полностью укомплектованная, отлаженная и пугающе самодостаточная система."
@@ -2107,7 +2089,6 @@ label alt_day4_sl_old_camp:
         me "Владей и помни мою доброту."
         un "Спасибо."
         "Пряча глаза, ответила она.{w} Кажется, чувствовала себя немного виноватой за то, что так и не приняла участие в увлекательном аттракционе под названием «открой дверь в бомбоубежище»."
-
     me "Очевидно, Шурика здесь нет.{w} Под кроватью искать глупо."
     if alt_day4_sl_lf_solo == 2:
         dreamgirl "Но ты на всякий случай загляни!"
@@ -2118,9 +2099,7 @@ label alt_day4_sl_old_camp:
         show sl normal pioneer at left with dissolve
         sl "Да!{w} Мы идём дальше."
         me "Дальше? Разве это не…"
-
     "Бомбоубежища обычно делали в слепых тупиках — это облегчало решение некоторых инженерных проблем с вентиляцией и энергоподводом.{w} Но здесь…"
-
     "Я обратил внимание на вторую дверь."
     "Эта дверь была абсолютным близнецом той, что пустила нас сюда.{w} Поэтому комментарии были излишни, но я на всякий случай напомнил:"
     hide un
@@ -2133,7 +2112,6 @@ label alt_day4_sl_old_camp:
         "Не имело значения, найдём ли мы что-нибудь."
         "Я оказался в парадоксальной гипотетической ситуации, в существование которой никогда не верил — момент, когда процесс важнее самой цели.{w} Сам факт приключения был важнее результата поисков."
         "И благодарности за создание этого парадокса отходят непосредственной, милой и очень красивой девочке с необычным именем."
-        
     if alt_day4_sl_lf_solo == 2:
         "Эту кнопку застопорить оказалось гораздо проще — тем более, что и кое-какие инструменты оказались под рукой."
     else:
@@ -2147,7 +2125,6 @@ label alt_day4_sl_old_camp:
     scene bg int_catacombs_entrance
     show d4_cat_door_frame
     with dissolve
-
     th "Мотивирует, ничего не скажешь."
     if alt_day4_sl_lf_solo == 2:
         me "Не сходить с ума, это просто туннель по образу и подобию."
@@ -2180,7 +2157,6 @@ label alt_day4_sl_old_camp:
     else:
         scene cg d4_catac with dissolve
     play ambience ambience_catacombs fadein 3
-
     "И сделал первый шаг в новый коридор."
     "Видимо, это изначально так и строилось — бункер и два туннеля в разные стороны."
     "Ориентиров не было, но я попробовал примерно прикинуть, куда и что."
@@ -2214,7 +2190,6 @@ label alt_day4_sl_old_camp:
     $ persistent.sprite_time = "night"
     scene bg int_catacombs_hole
     with diam
-
     "В полу зиял заметный такой пролом.{w} До того края дырки нечего было и пытаться допрыгнуть."
     if alt_day4_sl_lf_solo == 2:
         "Хотя я на всякий случай окинул его внимательным взглядом."
@@ -2254,7 +2229,6 @@ label alt_day4_sl_old_camp:
     scene black with fade
     play sound sfx_simon_fall_1
     $ renpy.pause(1)
-
     "Кажется, я…"
     stop music fadeout 3
     stop ambience fadeout 2
@@ -2288,7 +2262,6 @@ label alt_day4_sl_old_camp:
         $ persistent.sprite_time = "night"
         scene bg int_mine
         with flash
-    
         "Моему взгляду предстало самое начало туннеля шахты, судя по деревянным крепям, старой и не очень богатой."
         "Путь назад перекрывала куча обломков."
         "Я попробовал забраться и посмотреть что там, но быстро съехал обратно."
@@ -2403,7 +2376,6 @@ label alt_day4_sl_old_camp:
             "А потом время и контроль перестали иметь значение."
             window hide
             scene black with fade
-        
             "Мир погрузился во мрак."
             "А несколько секунд спустя из темноты начали протаивать горящие линии, образующие квадраты и перекрестия — как будто перед мысленным взглядом проявлялась карта местности."
             show alt_cat_map_wireframe at truecenter with dissolve
@@ -2422,7 +2394,6 @@ label alt_day4_sl_old_camp:
                 me "Похоже, я знаю, куда нам идти."
     window hide
     scene bg int_mine with dissolve
-
     "Наконец, мытарства по подземельям закончились."
     if alt_day4_sl_lf_solo == 2:
         "Чуть ли не падая от усталости, я вышел в один из закутков."
@@ -2434,7 +2405,6 @@ label alt_day4_sl_old_camp:
     $ persistent.sprite_time = "night"
     scene bg int_mine_door
     with fade
-
     me "Разнообразие…"
     "Всё, что сумело выдавить пересохшее горло."
     if alt_day4_sl_lf_solo == 2:
@@ -2459,7 +2429,6 @@ label alt_day4_sl_old_camp:
     $ persistent.sprite_time = "night"
     scene bg int_mine_room
     with dissolve
-
     if alt_day4_sl_lf_solo == 2:
         "Луч фонаря упёрся в противоположную стенку небольшой комнаты."
     else:
@@ -2641,13 +2610,11 @@ label alt_day4_sl_old_camp:
     window hide
     scene cg d4_sh_met_7dl
     with flash
-
     me "Добро пожаловать снова в ряды разумных."
     "Протянул я руку, которую Шурик несмело пожал."
     me "И давай уже выбираться отсюда."
     window hide
     scene bg int_mine_room
-
     if alt_day4_sl_lf_solo == 2:
         show sh normal pioneer with dspr
         sh "Семён, небольшая просьба, пока мы ещё не вернулись."
@@ -2675,7 +2642,6 @@ label alt_day4_sl_old_camp:
     $ persistent.sprite_time = "night"
     scene bg int_mine_room
     with dissolve
-
     if alt_day4_sl_lf_solo == 2:
         "Шурик не соврал — выход был рядом, всего в двух комнатах."
     else:
@@ -2692,7 +2658,6 @@ label alt_day4_sl_old_camp:
     stop ambience
     scene bg ext_square_night with dissolve
     play ambience ambience_camp_center_night
-
     "А я вылез последним."
     "И долго ловил отвисшую челюсть, когда понял, что в результате всех наших перипетий мы оказались там же, откуда и начинали свой путь."
     "В центре лагеря!"
@@ -2707,7 +2672,7 @@ label alt_day4_sl_old_camp:
         me "Идём к Виолетте вместе, пусть посмотрит: что там приключилось."
         me "И царапину обработать будет нелишним."
         "Шурик вздохнул и сник."
-        jump alt_day4_sl_cs_night
+        return
     else:
         sh "Ребят, я, пожалуй, пойду.{w} Побеспокою врача нашего."
         me "В три часа ночи? Удачи."
@@ -2756,14 +2721,12 @@ label alt_day4_sl_old_camp:
     sl "Холодно, ты простудишься."
     window hide
     scene stars
-
     "Я уселся на скамейку и увлёк её за собой."
     sl "Да и… Голова твоя."
     "На плечо опустилось что-то тяжёлое."
     sl "Нельзя же… наверное."
     window hide
     scene cg d4_sl_sleeping_7dl with dissolve
-
     "Славя положила голову мне на плечо и прикрыла глаза."
     sl "Неправильно это…"
     me "Но я же сегодня совершил подвиг."
@@ -2796,7 +2759,6 @@ label alt_day4_sl_old_camp:
     scene bg ext_square_sunset
     show sl sad pioneer with dspr
     with dissolve
-
     sl "Мы как два бродяжки, заночевали на скамейках."
     me "И пусть хоть кто-нибудь попробует нас в этом обвинить."
     "Хотелось сказать ей какую-нибудь глупость, романтическую, кажущуюся важной сейчас."
@@ -2821,15 +2783,12 @@ label alt_day4_sl_old_camp:
     scene black
     stop music fadeout 3
     stop ambience fadeout 5
-    jump alt_day4_sl_cs_night
+    return
     
 label alt_day4_sl_wh_night:
-    $ persistent.sprite_time = "night"
-    $ night_time()
     scene bg ext_path2_night with dissolve
     play music nowyouseeme fadein 3
     play ambience ambience_forest_night
-
     "Недовольный собой, я двигался домой."
     "Честно сказать, я и так сделал куда больше, чем планировал."
     "Никто не ставил передо мной задачи забраться в подземелья и там долго и упорно искать кого-то."
@@ -2908,7 +2867,6 @@ label alt_day4_sl_wh_night:
                 $ persistent.sprite_time = "night"
                 scene bg ext_polyana_night with dissolve
                 play sound sfx_hiding_in_bush
-            
                 extend " костровая поляна."
                 th "Активисточка ходит ночью, чтобы пожечь в лесу костёр?"
                 dreamgirl "Я могу, конечно, ошибаться, но, кажется, на завтрашний вечер назначен лагерный костёр."
@@ -2949,7 +2907,6 @@ label alt_day4_sl_wh_night:
                 "Остранённо подумал я."
                 window hide
                 with fade
-            
                 "Я продолжал скучать, Славя продолжал читать что-то."
                 "Ничего интересного, кроме её ножек, открытых полностью."
                 "Ножек."
@@ -2982,14 +2939,12 @@ label alt_day4_sl_wh_night:
                 window hide
                 play sound sfx_thunder_crack
                 scene white with flash
-            
                 "С абсолютно сухого неба грохануло молнией."
                 "И я ослеп."
                 stop music fadeout 3
                 play music dropit fadein 3
                 window hide
                 scene expression Noir("bg ext_polyana_night")
-            
                 "А когда пришёл в себя, то понял, что если прямо здесь и прямо сейчас не возьму её, стоящую там же, смотрящую прямо на меня сквозь еловые лапы…"
                 "То разорвусь — там, внизу, куда, кажется, собралась вся энергия тела."
                 show sl normal dress with dissolve
@@ -3029,7 +2984,6 @@ label alt_day4_sl_wh_night:
                 "А ей ещё и больно."
                 "И уснём в гнезде из разорванной формы и её рубахи."
                 "Я — опустошённый, она — заполненная."
-                
                 dreamgirl "Нет!" with vpunch
                 scene white
                 with flash_red
@@ -3041,28 +2995,28 @@ label alt_day4_sl_wh_night:
                 window hide
                 scene expression Noir("bg ext_polyana_sunset")
                 with fade
-            
                 "Славя выглядела не просто удивлённой, а шокированной — как будто ты уже положил голову на колоду, а у палача вдруг сломался топор."
                 "А потом чёрная пелена застлала мне глаза и я потерял сознание."
                 window hide
                 stop music fadeout 3
-                jump alt_day5_sl_wh_start
+                $ alt_day5_sl_wh_transit = True
+                return
             "Нафиг все тени.":
                 "Сон. Вот что имеет значение."
     else:
         "Всё верно."
         "Так и поступлю."
         "Я помотал тяжёлой головой и направился в лагерь."
+    window hide
+    return
         
 label alt_day4_sl_cs_night:
     play music lastlight_guitar fadein 3
-    $ persistent.sprite_time = "day"
     window hide
     scene bg int_aidpost_night
     show genda_portrait
     show cs normal
     with dissolve
-
     if alt_day4_sl_lf_solo == 2:
         "Виола дремала, уронив голову на руки, сложенные на столе."
         "Но при звуках наших шагов встрепенулась и подняла голову."
@@ -3137,14 +3091,9 @@ label alt_day4_sl_cs_night:
     scene black
     stop music
     stop ambience
+    return
 
-label alt_day5_sl_start:
-    pause(1)
-    call alt_day5_sl_cl_vars
-    pause(1)
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(5, u"Славя. Утро.")
+label alt_day5_sl_begin:
     play music so_cold fadein 3
     scene bg int_sam_house_clean_7dl
     show prologue_dream
@@ -3428,7 +3377,6 @@ label alt_day5_sl_start:
     scene expression Desat("bg int_house_of_sl_day") at zenterleft
     show sl happy sport at cleft
     with dissolve
-
     "Она даже не пыталась вырваться, а в глазах её плескался безграничный азарт."
     sl "Зачем-то ты ведь лазишь у меня под майкой?"
     me "Прости."
@@ -3744,7 +3692,6 @@ label alt_day5_sl_start:
     #scene bg int_dining_hall_sunset
     scene anim prolog_1
     with dissolve
-
     #scene bg int_administration_day with dissolve
     "Так ничего и не надумав, я продолжал пришиблено плестись в тылу здоровяка."
     "Мы добрались до здания администрации."
@@ -3793,7 +3740,6 @@ label alt_day5_sl_start:
     hide mt
     hide cs
     with dissolve
-    
     "Моего взгляда она старательно избегала."
     bb "Ну, вот и свиделись."
     "Тускло улыбнулся смутно знакомый мужчина с растрёпанной причёской и запавшими, усталыми глазами в красной паутинке."
@@ -3875,6 +3821,7 @@ label alt_day5_sl_start:
     bb "Если же нет… Тогда извини."
     menu:
         "Да знаете…":
+            $ alt_day5_sl_cl_catapult = True
             stop ambience
             "Не то, чтобы я прям горел желанием уехать, особенно сейчас, после свеже-established отношений."
             "Но, похоже, мне и правда лучше показаться доктору."
@@ -3910,10 +3857,8 @@ label alt_day5_sl_start:
             $ persistent.sprite_time = "sunset" 
             $ sunset_time()
             scene bg ext_admins_rain_7dl with dissolve
-        
             "Старик вывел меня на улицу, где шумел так и не унявшийся дождь, и усадил в представительскую «Чайку»."
             "Я уснул, едва за мной закрылась дверь."
-        
             scene black
             $ prolog_time()
             play music herc_death fadein 5
@@ -3927,7 +3872,6 @@ label alt_day5_sl_start:
                 "Особенно, если бороться приходиться с такой вот бесславной кончиной."
                 window hide
                 play sound makarych fadein 0
-            
                 "Расширяющиеся газы толкают свинцовый шарик — отличие от огнестрельного оружия только в технических деталях."
                 $ persistent.sprite_time = "sunset" 
                 scene black with fade
@@ -4059,7 +4003,6 @@ label alt_day5_sl_start:
             me "Мне теперь лечь на бок и заснуть, пока остальные бегают и ищут пропавшего? {w}Хорошенького же вы обо мне мнения!"
             show dreamgirl_overlay
             dreamgirl  "Отдельно хотелось бы поблагодарить киноакадемию, и…"
-            
         show mt normal pioneer with dspr
         mt "Ладно, не дуйся. {w}Хочешь завтра флаг поднимать?"
         me "НЕТ!" with vpunch
@@ -4079,7 +4022,6 @@ label alt_day5_sl_start:
     $ sunset_time()
     scene bg ext_admins_rain_7dl with dissolve
     play ambience ambience_rain fadein 3
-
     "Мы вышли в промозглое июльское утро."
     "Иногда мне кажется, что я ношу за собой дождь как мантию. {w}Серую мантию — лакмус свинцового колера моей души."
     "И здесь, среди лета, я ничуть не удивился тому, что непогода всё-таки догнала меня."
@@ -4129,12 +4071,10 @@ label alt_day5_sl_start:
     $ persistent.sprite_time = "sunset" 
     $ sunset_time()
     scene bg int_dining_hall_people_rain_7dl with dissolve
-
     "В столовой было немноголюдно."
     "Даже отмена ежедневных режимных моментов и всяческие послабления из-за дождя не могли заставить пионеров выбраться из-под одеял."
     "Известно, что в дождь спится слаще."
     "Лагерь потихоньку возвращался к бытию — самые голодные пионеры всё-таки нашли в себе силы и добирались к храму чревоугодия."
-    
     show sl normal pioneer with dspr 
     sl "Ну что, как сходил?"
     "Она опустилась на скамейку рядом со мной."
@@ -4166,7 +4106,6 @@ label alt_day5_sl_start:
         me "Гуделки?"
         sl "Я не знаю деталей, но у кибернетиков опять что-то поломалось, что-то опасное, вот они и…"
     "Ну и третий листок был точной копией моей благодарности. Разве что без пафосной геральдики на подложке."
-    
     show sl smile pioneer with dspr 
     sl "Ты теперь на особом счету."
     "Улыбнулась девушка."
@@ -4216,7 +4155,6 @@ label alt_day5_sl_start:
     show rain_overlay
     play ambience ambience_rain
     with dissolve
-
     "На стенде уже висела какая-то бумажка явно медицинского толка."
     "И было на этой бумажке…"
     "Объявление о том, что пионерам первого отряда после обеда будет прочитана лекция по половому созреванию."
@@ -4473,7 +4411,6 @@ label alt_day5_sl_start:
             hide un with easeoutleft
             "Лена вздрогнула и, втянув голову в плечи, заспешила прочь."
             dreamgirl "Ещё один закрытый гештальт. {w}От-ме-ча-ю!"
-            
         else:
             "Кажется, намёков она не понимает напрочь."
             me "Послушай."
@@ -4581,7 +4518,6 @@ label alt_day5_sl_start:
     scene bg int_mine_crossroad
     with dissolve
     play ambience ambience_catacombs_stones fadein 3
-
     #call alt_cotocombs #Ленивая жопа никак не сподобится дописать несчастную днд-бродилку.
     "Здесь всё было абсолютно ожидаемым — узкоколейка для вывоза ископаемых, крюки на крепях под фонарь."
     "Дальше по туннелю можно было обнаружить и брошенные спецовки, почти новое кайло, лишь самую чуточку погнутое, и фигурный стеклянный абажур для керосиновой лампы."
@@ -4794,7 +4730,6 @@ label alt_day5_sl_start:
     stop sound_loop
     window hide
     scene cg d4_fz_catac_sl_7dl with dissolve
-
     "Смазаный свет фонарика отразился в чьих-то огромных, чёрных, практически без белка, глазах, двинулся дальше."
     "Меня парализовало от страха."
     "Я повёл фонарём назад."
@@ -4979,7 +4914,6 @@ label alt_day5_sl_start:
     show unblink
     scene expression Desat("bg int_mine_room2_7dl")
     with dissolve
-
     play ambience ambience_safe
     "Я находился в каком-то полутёмном помещении, лежа на чём-то мягком."
     show sl angry pioneer with dspr 
@@ -5157,13 +5091,11 @@ label alt_day5_sl_start:
     window hide
     scene bg int_mine_water_7dl at zentercenter
     with dissolve
-
     "А второй намертво затоплен."
     th "Некогда думать, ходу!"
     me "Не тот поворот, назад!"
     window hide
     scene bg int_mine at zexitcenter
-
     "Честно сказать, я очень удивлялся тому, что мы, двигаясь непонятно как в каких-то раскопках на неровной почве, до сих пор умудрялись сохранять мобильность, никто не повредил ногу и даже не упал."
     "Если бы я попробовал провернуть подобное при любых других условиях, закончилось бы всё как минимум крупной шишкой на лбу."
     "Если не чем похуже."
@@ -5178,7 +5110,6 @@ label alt_day5_sl_start:
     play music music_list["mystery_girl_v2"] fadein 3
     window hide
     scene bg int_mine_heart_7dl at zentercenter with dissolve
-
     "Мы затормозили, со всего маху вбежав в какое-то полукруглое помещение."
     "Больше всего это походило на приоткрытую пасть дракона."
     "Причём видом изнутри, как будто мы стояли на огромном каменном языке."
@@ -5188,7 +5119,6 @@ label alt_day5_sl_start:
     "Кристаллы светились слабым зелено-белым люминесцентным светом, и я погасил фонарик."
     window hide
     scene expression Noir("bg int_mine_heart_7dl", brightness = 0.6, tint_r = 0.2126, tint_g = 0.9152, tint_b = 0.7722, saturation = -0.2) with dissolve
-
     show sl normal pioneer with dspr 
     sl "Давай взглянем поближе."
     "Славя обогнула меня и поспешила к «пасти»."
@@ -5443,7 +5373,6 @@ label alt_day5_sl_start:
     th "И от этой твари мы бегали?!"
     me "Не подозревал в тебе такой кровожадности!"
     "Восхитился я."
-    
     show sl normal pioneer with dspr 
     sl "Прости. Нервы что-то."
     "Нервы? Значит, если вдруг что… Если нервы…"
@@ -5453,7 +5382,6 @@ label alt_day5_sl_start:
     "Вторая уникальная возможность после способности отстраниться от жизни социума — это способность аутировать даже на бегу."
     window hide
     scene bg int_mine_door with dissolve
-
     "Пока я вяло ужасался злобной Славяне, мы галопом по Европам пронеслись через всю северную зону шахт."
     if alt_day4_sl_lf_solo == 1:
         "Ещё минута, и световое пятно заметалось по крашеным доскам тяжёлой даже с виду двери в забой."
@@ -5472,7 +5400,6 @@ label alt_day5_sl_start:
     play sound sfx_metal_door_large_close_basement
     window hide
     scene bg int_mine_room with dissolve
-
     "Покачав головой, я зашёл вслед за девушкой и захлопнул дверь за собой."
     th "Надо бы закрыть её."
     "Решение логичное."
@@ -5494,7 +5421,6 @@ label alt_day5_sl_start:
     "Она сделала шаг навстречу."
     sl "Решительнее."
     show sl smile2 pioneer close with dissolve
-
     sl "Мы встречаемся, и это всё равно должно произойти."
     "Девушка закусила губу и, поймав мой подбородок двумя пальцами, потянулась ко мне."
     "А во мне, внутри где-то, что-то сладко заныло."
@@ -5563,7 +5489,6 @@ label alt_day5_sl_start:
     "Мы открыли дверь к лестнице."
     window hide
     scene bg int_hence_day_7dl with dissolve
-
     "Славя снова полезла первой."
     "В этот раз меня никто особо не бесил, не смущал и не мешал сделать то, что хотелось."
     sl "Семён, если будешь так пялиться, ты во мне дырку просмотришь."
@@ -5582,7 +5507,6 @@ label alt_day5_sl_start:
     $ day_time()
     play sound sfx_open_metal_hatch
     scene bg ext_square_day with dissolve
-
     play ambience ambience_camp_center_day fadein 5
     "Отойдя к ближайшей скамейке, остановились посидеть и отдышаться."
     "Наш обед от нас точно не убежит."
@@ -5667,13 +5591,11 @@ label alt_day5_sl_start:
     "Сумасшедшее напряжение, наконец, отпустило тело."
     window hide
     stop music
-    stop ambience 
+    stop ambience
+    return
     
 label alt_day5_sl_dinner:
-    $ persistent.sprite_time = "day"
-    $ day_time()
     play music music_list["everyday_theme"] fadein 5
-    $ alt_chapter(5, u"Славя. Обед.")
     scene expression Dawn("bg ext_dining_hall_near_day") with dissolve
     play ambience ambience_camp_center_day fadein 3
     "Доктора Виолетту ожидали к трём часам, поэтому первые-вторые отряды не спешили расходиться после обеда."
@@ -6164,7 +6086,6 @@ label alt_day5_sl_dinner:
     hide sl with dspr
     "И исчезла."
     "В зале же Саныч и Ольга Дмитриевна расставляли столы, уныло переругиваясь между собой."
-    
     show ba evil uniform at left
     with dissolve
     ba "Психолух, значит? Детский, да?"
@@ -6193,7 +6114,6 @@ label alt_day5_sl_dinner:
     window hide
     scene bg ext_path_day with dissolve
     play ambience ambience_forest_day fadein 3
-
     "Теперь, когда стало известно, что в окрестностях обитают не только птицы и насекомые, но и какие-то другие непонятные твари, которых не успел распугать человек, лично мне перестало быть здесь так уютно и мирно, как дома."
     "Не то, чтобы страшно, но раньше я без колебаний мог бы заночевать в лесу под открытым небом."
     "Вот до какой степени меня расположило окружение."
@@ -6428,7 +6348,6 @@ label alt_day5_sl_dinner:
     scene bg ext_polyana_day
     with dissolve
     play ambience ambience_forest_day fadein 3
-
     play music music_list["two_glasses_of_melancholy"] fadein 1
     "Деревья расступились, и мы вышли на костровую поляну."
     "Наконец-то. {w}Ещё минут десять в таком режиме, и я начал бы сомневаться в такой уж большой ценности всех этих приготовлений."
@@ -6668,15 +6587,12 @@ label alt_day5_sl_dinner:
     stop music fadeout 3
     stop ambience
     window hide
+    return
     
 label alt_day5_sl_supper:
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(5, u"Славя. Ужин.")
     scene bg int_dining_hall_people_sunset
     with dissolve
     play ambience ambience_medium_crowd_indoors_1 fadein 3
-
     play music tilltheend fadein 5
     "Столовая гудела как растревоженный улей."
     "Все пионеры были в предвкушении похода, и я мимолётно порадовался за них."
@@ -6780,7 +6696,6 @@ label alt_day5_sl_supper:
     $ sunset_time()
     scene bg int_house_of_mt_sunset with blind_d
     play ambience ambience_int_cabin_day fadein 3
-
     "Телефон вполне логично берём с собой, есть желание поймать кадр со Славяной — сейчас каждое такое застывшее мгновение почему-то преисполняется необъяснимого значения."
     "Всё верно, дорогой твоему сердцу человек способен превратить любую вещь в объект твоего фетиша."
     "Но я по делу."
@@ -6796,7 +6711,6 @@ label alt_day5_sl_supper:
     play sound sfx_open_door_2
     pause(1)
     scene bg ext_square_sunset with dissolve
-
     "Пионеры уже собрались на площади, выстроившись на линейке, а Ульянка, забравшись на трибуну, кидала оттуда зиги."
     th "Не понял?!"
     "Я пригляделся."
@@ -6910,7 +6824,6 @@ label alt_day5_sl_supper:
     window hide
     scene bg ext_backroad_day_7dl
     play ambience ambience_forest_evening fadein 3
-
     "Просто понимаешь, что иногда мудрее всего просто принять собственное невежество или чёрствость."
     th "Если тебе нравится, я потерплю сколько надо."
     "Я не мог сказать точно, каким, с моей точки зрения, было бы правильное поведение парочки."
@@ -6990,14 +6903,11 @@ label alt_day5_sl_supper:
     th "Кого когда это волновало. {w}Хотя, похоже, вполне понимают."
     "Славя, кажется, ничего не заметила."
     window hide
+    return
     
 label alt_day5_sl_fire:
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(5, u"Славя. Костёр.")
     scene bg ext_polyana_sunset
     with dissolve
-
     play music lastlight_guitar fadein 3
     "Ещё несколько минут — и взгляду открылась поляна."
     "Кажется, я начал понимать логику действий Слави."
@@ -7105,7 +7015,6 @@ label alt_day5_sl_fire:
     "Интуиция меня не подвела — судя по всему, Алиса должна была организовать шумовое отвлечение, покуда Ульяна занимается собственно воплощением замысла."
     window hide
     scene cg d5_us_ghost with diam
-
     "А что за замысел — стало понятно чуть ли не с первого взгляда."
     "Потому что среди «сокровищ», аккуратно выложенных на землю, взрывалось, дымило или пачкало в той или иной мере решительно всё."
     "Судя по всему, готовились они основательно и долго."
@@ -7187,7 +7096,6 @@ label alt_day5_sl_fire:
     $ persistent.sprite_time = "night"
     scene bg ext_backdoor_night_7dl
     with fade2
-
     "Обратно нас отпустили только под честное слово Слави, что с нами ничего не случится и вообще."
     "Виола даже обещать не стала — её, похоже, забавляло кидать людей в условия, им напрочь враждебные, и смотреть, как человек будет выплывать."
     "И это притом, что шла она вместе с нами!"
@@ -7236,7 +7144,6 @@ label alt_day5_sl_fire:
     play music iwantmagic fadein 3
     scene bg ext_entrance_night_clear_7dl
     with dissolve
-
     "Между тем мы уже добрались до ворот лагеря."
     "Даня на спине притих и обмяк — судя по всему, его укачало."
     stop music fadeout 3
@@ -7361,7 +7268,6 @@ label alt_day5_sl_fire:
     scene bg ext_aidpost_night
     with dissolve
     play ambience ambience_camp_center_night fadein 3
-
     play music lonesome_shepherd
     "Ещё бы чуть-чуть — и вера Слави в меня, а попутно и в человечество в целом, могла бы пошатнуться."
     "На улице опять собрался мелкий дождик, тот, что я называю питерским — когда в воздухе просто витает некая водянистая взвесь, доступная всем ветрам, плюющая на гравитацию и герметичность одежды."
@@ -7581,14 +7487,11 @@ label alt_day5_sl_fire:
     stop ambience fadeout 3
     window hide
     scene black
+    return
     
 label alt_day5_sl_night:
-    $ persistent.sprite_time = "night"
-    $ night_time()
-    $ alt_chapter(5, u"Славя. Ночь.")
     scene bg ext_lake_night_7dl
     with dissolve
-
     play ambience ambience_lake_shore_night fadein 3
     play music music_list["forest_maiden"] fadein 2
     "Славя навещала меня уже под самый занавес, так что к моменту, когда меня выставили из владений свет Церновны, кое-кто уже наблюдал свой первый сон."
@@ -7623,7 +7526,6 @@ label alt_day5_sl_night:
     me "…и я подумал, что я буду грустить без тебя."
     "Продолжил я так, будто она меня не перебивала."
     "Она так и не надела галстук с момента, когда мы огораживали яму. Да и я пребывал в расхристанном виде."
-    
     "Странно даже, что вожатая не сделала ей замечания."
     "А потом всем стало не до того."
     sl "Слово сказано."
@@ -7847,7 +7749,6 @@ label alt_day5_sl_night:
     me "А теперь пора по домам и баиньки."
     stop music
     stop sound_loop
-
     window hide
     scene bg ext_path_night
     play ambience ambience_forest_night
@@ -7913,7 +7814,6 @@ label alt_day5_sl_night:
     "Мы подошли к створкам, закрытым уже на замок."
     window hide
     scene bg ext_entrance_night_clear_closed_7dl with dissolve
-
     sl "Секунду."
     "Простой полукруглый ключ ей удалось обнаружить при лунном свете меньше чем за минуту."
     "Я был уверен, что она нашла бы его и в полной темноте, с закрытыми глазами, просто на ощупь."
@@ -7921,7 +7821,6 @@ label alt_day5_sl_night:
     pause(1)
     scene bg ext_entrance_night_clear_7dl with dissolve
     play ambience ambience_camp_entrance_night fadein 3
-
     me "Не впервые вторгаешься в частные владения?"
     "Пошутил я."
     show sl normal pioneer with dspr 
@@ -7932,7 +7831,6 @@ label alt_day5_sl_night:
     window hide
     scene bg ext_clubs_night with dissolve
     play ambience ambience_camp_center_night
-
     "Со стороны клубов не слышно было ни странных шумов, ни гудения."
     "Славя закрыла замок и кивнула."
     show sl normal pioneer with dspr 
@@ -7955,7 +7853,6 @@ label alt_day5_sl_night:
     "Скотина озабоченная."
     window hide
     scene bg ext_houses_night_7dl with dissolve
-
     show sl smile2 pioneer with dspr
     "Славе было направо, мне прямо."
     sl "Ну… Это был очень длинный день."
@@ -7990,7 +7887,6 @@ label alt_day5_sl_night:
                 play sound sfx_open_door_kick
                 scene bg int_extra_house_7dl with flash
                 play ambience ambience_int_cabin_night fadein 2
-            
                 play music music_list["i_dont_blame_you"] fadein 1
                 $ lp_sl += 1
                 $ alt_sp += 1
@@ -8060,70 +7956,63 @@ label alt_day5_sl_night:
                 stop music fadeout 3
                 stop ambience
                 scene black
+                return
             "Тогда до завтра?":
-                jump alt_day5_sl_farewell
+                pass
     else:
         me "До завтра?"
-        label alt_day5_sl_farewell:
-            sl "Сладких снов."
-        "Шепнула она."
-        me "А нельзя мне к тебе?"
-        show sl normal pioneer with dspr 
-        sl "Нет, Сёмушка."
-        "С сожалением покачала головой."
-        sl "Сегодня Женя ночует дома, так что никаких приводов мальчиков."
-        "И вдребезги расколотила мои мечты."
-        me "Грусть."
-        "Вздохнул я."
-        me "Тогда до завтра?"
-        hide sl with dissolve
-        "Кивнув мне, девочка растаяла в темноте."
-        "А я поплёлся домой."
-        "Вожатая уже точно спит, надо действовать тихо и наверняка."
-        window hide
-        scene bg ext_house_of_mt_night_without_light with dissolve
+    sl "Сладких снов."
+    "Шепнула она."
+    me "А нельзя мне к тебе?"
+    show sl normal pioneer with dspr 
+    sl "Нет, Сёмушка."
+    "С сожалением покачала головой."
+    sl "Сегодня Женя ночует дома, так что никаких приводов мальчиков."
+    "И вдребезги расколотила мои мечты."
+    me "Грусть."
+    "Вздохнул я."
+    me "Тогда до завтра?"
+    hide sl with dissolve
+    "Кивнув мне, девочка растаяла в темноте."
+    "А я поплёлся домой."
+    "Вожатая уже точно спит, надо действовать тихо и наверняка."
+    window hide
+    scene bg ext_house_of_mt_night_without_light with dissolve
+    "Свет был уже погашен — и в окнах, и в фонаре над дверью."
+    "В отличие от меня-бездельника, вожатая даже лёжа на боку несёт постоянную ответственность за своих обормотов."
+    "Если ты достаточно толстокож, это сугубо фиолетово, но толстокожие не идут в вожатые — этим деятелям куда проще будет протирать штаны в каком-нибудь конструкторском бюро с четырьмя положенными неделями отпуска ежегодно."
+    "Я толкнул дверь и зашёл в домик."
+    window hide
+    play sound sfx_open_dooor_campus_2
+    pause(1)
+    scene bg int_house_of_mt_night2
+    with dissolve
+    "Ольга Дмитриевна замоталась в простыню с головой, видимо, в целях борьбы с зудящими над ухом кровососами."
+    "На скрипнувшую дверь не среагировала никак, и я решил, что пронесло, разделся и нырнул под одеяло."
+    mt "Семён…"
+    "Позвала она."
+    me "Да?"
+    mt "Откуда так поздно?"
+    me "Ээээ…"
+    mt "Тебя уже выписали разве?"
+    "Когда мы пошли на костёр, её это не интересовало!"
+    me "Вроде того."
+    window hide
+    scene cg wtf_end_of_day with fade
+    mt "А. Виолетта Церновна говорила мне что-то об этом."
+    mt "Выписали?"
+    me "Угу."
+    mt "Ясно. Спокойной ночи тогда."
+    "Она отвернулась к стене."
+    "А я, не открывая глаз, одними губами произнёс в потолок."
+    me "Спасибо, Виола."
+    "А через минуту уже спал."
+    stop music fadeout 4
+    stop ambience
+    window hide
+    return
     
-        "Свет был уже погашен — и в окнах, и в фонаре над дверью."
-        "В отличие от меня-бездельника, вожатая даже лёжа на боку несёт постоянную ответственность за своих обормотов."
-        "Если ты достаточно толстокож, это сугубо фиолетово, но толстокожие не идут в вожатые — этим деятелям куда проще будет протирать штаны в каком-нибудь конструкторском бюро с четырьмя положенными неделями отпуска ежегодно."
-        "Я толкнул дверь и зашёл в домик."
-        window hide
-        play sound sfx_open_dooor_campus_2
-        pause(1)
-        scene bg int_house_of_mt_night2
-        with dissolve
-        "Ольга Дмитриевна замоталась в простыню с головой, видимо, в целях борьбы с зудящими над ухом кровососами."
-        "На скрипнувшую дверь не среагировала никак, и я решил, что пронесло, разделся и нырнул под одеяло."
-        mt "Семён…"
-        "Позвала она."
-        me "Да?"
-        mt "Откуда так поздно?"
-        me "Ээээ…"
-        mt "Тебя уже выписали разве?"
-        "Когда мы пошли на костёр, её это не интересовало!"
-        me "Вроде того."
-        window hide
-        scene cg wtf_end_of_day with fade
-        mt "А. Виолетта Церновна говорила мне что-то об этом."
-        mt "Выписали?"
-        me "Угу."
-        mt "Ясно. Спокойной ночи тогда."
-        "Она отвернулась к стене."
-        "А я, не открывая глаз, одними губами произнёс в потолок."
-        me "Спасибо, Виола."
-        "А через минуту уже спал."
-        stop music fadeout 4
-        stop ambience
-        window hide
-        
-
-label alt_day6_sl_start:
-    pause(1)
-    call alt_day6_sl_cl_vars
-    pause(1)
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(6, u"Славя. Утро.")
+label alt_day6_sl_begin:
     if alt_day5_sl_extra_house and not alt_day4_sl_tut_iz:
         play music music_list["she_is_kind"] fadein 3
         scene expression Dawn("cg d5_sl_bed_7dl") with dissolve
@@ -8228,7 +8117,6 @@ label alt_day6_sl_start:
         play sound sfx_open_dooor_campus_1
         pause(1)
         scene bg ext_houses_sunset with dissolve
-    
         play ambience ambience_camp_center_evening fadein 3
         "И захлопнули дверь за собой."
         me "Ты серьёзно собираешься купаться сейчас?!"
@@ -8391,7 +8279,6 @@ label alt_day6_sl_start:
         pause(1)
         scene bg int_attic2_day_7dl with dissolve
         play ambience ambience_medstation_inside_day fadein 3
-    
         "А через секунду уже были в помещении."
         "Славя тут же отправилась куда-то вглубь полутёмного помещения, оставляя за мной право следовать за Госпожой."
         sl "Дядя Боря  — последний мастодонт, он застал ещё переезд со старой площадки, той, где вожатая… {w}Ну…"
@@ -8727,7 +8614,6 @@ label alt_day6_sl_start:
             scene bg int_hence_day_7dl
             show prologue_dream
             with flash_red
-        
             "Наша неразлучная троица — Слепой, Ведьма, Бестия. Улыбаемся в камеру, молодые, белозубые, счастливые."
             "Бестию похоронил вражеский коммандо, с которым она зачем-то сошлась в рукопашной, Ведьму я прогнал сам, думая, что механизм самоуничтожения сработает как надо."
             "А Слепой ползёт вниз по лестнице, истекая кровью из чёрт знает в какой раз уже раскрывшихся ран."
@@ -8870,6 +8756,7 @@ label alt_day6_sl_start:
     stop music fadeout 3
     stop ambience
     scene black
+    return
     
 label alt_day6_sl_morgen:
     $ persistent.sprite_time = "day"
@@ -8944,7 +8831,6 @@ label alt_day6_sl_morgen:
     scene bg int_aidpost_day
     with dissolve
     play ambience ambience_medstation_inside_day fadein 3
-
     "В медпункте, кроме нашей весёлой компании, оказался ещё и Шурик."
     "Он сидел на кушетке, прижимая к носу мокрое полотенце."
     th "Кто это ему приложил, интересно?"
@@ -9078,6 +8964,7 @@ label alt_day6_sl_morgen:
     stop music
     stop ambience
     window hide
+    return
     
 label alt_day6_sl_ba_quest1:
     play music music_list["what_do_you_think_of_me"] fadein 3
@@ -9542,11 +9429,9 @@ label alt_day6_sl_ba_quest1:
     stop music fadeout 3
     stop ambience
     scene black
+    return
         
 label alt_day6_sl_dinner:
-    $ persistent.sprite_time = "day"
-    $ day_time()
-    $ alt_chapter(6, u"Славя. Обед.")
     play music music_list["everyday_theme"] fadein 3
     scene bg int_dining_hall_day
     play ambience ambience_dining_hall_empty fadein 3
@@ -9723,7 +9608,9 @@ label alt_day6_sl_dinner:
                 "А единственное место, где можно переодеться…"
                 "Я улыбнулся и вышел на улицу."
                 $ alt_day6_sl_shirt = True
-                
+    window hide
+    return
+  
 label alt_day6_sl_amp_list:
     play music music_list["so_good_to_be_careless"] fadein 5
     window hide
@@ -10006,17 +9893,15 @@ label alt_day6_sl_amp_list:
     play sound sfx_open_door_2
     pause(1)
     scene bg ext_musclub_day with dissolve
-
     play ambience ambience_camp_center_day
     "Фыркнув себе под нос, я вышел из клуба."
     window hide
     stop music
     stop ambience
     scene black with fade
+    return
 
 label alt_day6_sl_amp_club:
-    $ persistent.sprite_time = "day"
-    $ day_time()
     scene bg ext_clubs_day with diam
     play music music_list["silhouette_in_sunset"] fadein 3
     "Когда я наконец сумел добраться до клуба, на часах уже основательно так перевалило за три часа."
@@ -10044,7 +9929,8 @@ label alt_day6_sl_amp_club:
         play sound sfx_scary_sting
         "У меня ёкнуло сердце."
         "Прямо под ней, неловко опираясь головой о ножку стола, лежала…"
-        jump alt_day6_sl_ambulance
+        window hide
+        return
     else:
         "И только глухая доска стала причиной того, что я до сих пор не разглядел самого интересного фрагмента картины."
         window hide
@@ -10096,7 +9982,8 @@ label alt_day6_sl_amp_club:
             play sound sfx_table_hit
             "Стук вышел какой-то деревянный."
             "Очень, очень скверный стук."
-            jump alt_day6_sl_ambulance
+            window hide
+            return
         else:
             "Но откуда-то взялись силы сделать ещё один крохотный шажок."
             "Крохотный — но достаточный для того, чтобы Славя упала…"
@@ -10284,6 +10171,7 @@ label alt_day6_sl_amp_club:
             scene bg ext_clubs_day
             with dissolve
             play ambience ambience_camp_center_day
+            return
             
 label alt_day6_sl_true_route:
     "Тут-то нас и перехватили."
@@ -10795,11 +10683,12 @@ label alt_day6_sl_true_route:
             "Поторопил её я. Счёт и правда перешёл на минуты."
             $ lp_sl += 1
             $ alt_sp += 1
-            jump alt_day6_sl_regular_arc
+            return
         "Не смей сдаваться!":
             me "Если ты так раскиснешь сейчас — мы точно ничего не успеем!"
             $ lp_sl += 2
             $ alt_sp += 2
+            $ karma = 7
         "Я обязательно вернусь за тобой.":
             $ lp_sl = 0
             "Меня всего перекосило от дутой фальши этой фразы."
@@ -10828,532 +10717,534 @@ label alt_day6_sl_true_route:
         "Она отдала мне коробку и я, прячась от кольнувшей сердце иголки, вцепился в неровные, резаные края."
         "Контуры мира плыли, но не из-за каких-то моих способностей."
         "Просто Персунов Семён, тридцать без малого, сыч и одиночка, плакал как маленький ребенок от мысли, что его сказка заканчивается."
-        label alt_day6_sl_cl_become_a_hero:
-            me "Прощай…"
-            "Выдохнул я."
-        window hide
-        stop music fadeout 4
-        stop ambience
-        $ prolog_time()
-        scene bg ext_winterpark_7dl
-        show spill_red
-        with dissolve
-        play ambience ambience_cold_wind_loop fadein 3
-        "И открыл глаза в своём мире одиночества и холодного снега под отмерзающими крыльями."
-        "Изображение плыло и двоилось, внутри что-то очень нехорошо перекатывалось, но сейчас меня это не волновало."
-        play music lynn fadeout 3
-        "Я встал на четвереньки и, сплюнув юшку на белое полотно, изрытое отпечатками сорок третьего размера, пополз."
-        window hide
-        scene expression Desat1("bg ext_winterpark_7dl"):
-            xalign .5 yalign .6 zoom 1.0
-            linear .3 xalign .5 yalign .55 zoom 1.05
-            linear .3 xalign .55 yalign .6 zoom 1.1
-        with vpunch
-        "Воображая себя не то героем Алексея Маресьева, не то Джоэлом из «Сияния», не то кем-то ещё, чья жизнь обратилась вот в такой вот путь, сквозь ватное непослушание тела, лютую стужу и заливающую глаза кровь."
-        "Я должен был сдаться."
-        window hide
-        scene expression Desat1("bg ext_winterpark_7dl"):
-            xalign .55 yalign .6 zoom 1.1
-            linear .3 xalign .55 yalign .55 zoom 1.15
-            linear .3 xalign .4 yalign .6 zoom 1.2
-        with vpunch
-        "Я должен был лечь и сдохнуть в снегу прямо там."
-        "Но сейчас передо мной по снегу скользила картонная коробка — не было сил подняться или как-то ещё нести её, поэтому я просто толкал её перед собой головой."
-        "Шаг."
-        "Это уже было со мной однажды."
-        "Ещё шаг."
-        "Всё это было со мной."
-        "Ещё…"
-        "Только руку грело тёплое, неуверенное внимание грустной девочки с огромными зелёными глазами."
-        "А может быть, это была рыжая молния, до слёз боящаяся нелюбви?"
-        "Да нет, конечно."
-        "Это была весёлая девушка с невозможно длинными аквамариновыми волосами, что смотрит со сцены в зал глазами, полными слёз одиночества."
-        "А я бросил их всех."
-        "Наверное, Славя и правда отчаялась, раз решила прибегнуть к таком дикому способу спасения."
-        window hide
-        with fade
-        "Глупая, думала, туда — и сразу обратно, успеть! Успеть!"
-        "Куда обратно, если сейчас очевидна входная плата за семь дней лета."
-        "Я растянулся мордой в наст, ударившись расквашенным носом."
-        "Боль могла бы отрезвить, если бы она была хотя бы чуть-чуть ярче всей прочей боли."
-        "Хуже всего только боль где-то под рёбрами, там, куда не достать никакими гриндерсами."
-        "Потому что в этот раз я не беру её с собой."
-        window hide
-        scene expression Desat("bg ext_winterpark_7dl"):
-            xalign .6 yalign .4 zoom 1.0
-            linear .3 xalign .55 yalign .55 zoom 1.05
-            linear .3 xalign .6 yalign .6 zoom 1.1
-        with vpunch
-        "Шаг."
-        scene stars
-        show expression D3_intro("bg ext_camp_entrance_day")
-        show prologue_dream
-        with dissolve
-        "Лагерь."
-        "Шаг."
-        scene stars
-        if alt_day5_sl_extra_house:
-            show expression D3_intro("cg d5_sl_moon_7dl")
-        else:
-            show expression D3_intro("cg d1_sl_dinner_day_7dl")
-        show prologue_dream
-        with dissolve
-        "Славя."
-        "Шаг."
-        "Пират проснулся от холода и заскулил, а я, не умея, не зная, как ему помочь, шептал что-то успокаивающее, толкая и толкая коробку перед собой."
-        "Я был повеса, не умеющий извиняться, глядя человеку в глаза."
-        "Я был враль, неспособный на честность и непредвзятость."
-        window hide
-        scene expression Desat1("bg ext_winterpark_7dl"):
-            xalign .5 yalign .6 zoom 1.2
-            linear .3 xalign .55 yalign .55 zoom 1.25
-            linear .3 xalign .6 yalign .6 zoom 1.3
-        with vpunch
-        show blackout_exh3
-        with fade
-        "Я был никто, уничтоживший дело всей жизни человека, которому не повезло отбить у меня девушку."
-        "Поэтому был полностью согласен с приговором Асгарда."
-        "Поэтому оставил Сигюн в прошлом мире и явился на лобное место с пустыми руками и чистым сердцем."
-        "Но я хотел бы в качестве последнего желания перед казнью попросить о небольшой отсрочке."
-        "Я просто должен закончить начатое."
-        window hide
-        scene bg ext_winterpark_7dl:
-            xalign .6 yalign .6 zoom 1.3
-            easeout .6 xalign .6 yalign .8 zoom 1.5
-        with vpunch
-        play sound2 sfx_bodyfall_1
-        pause(2)
-        scene stars
-        show snow
-        window hide
-        with fade
-        voice "Дим, смотри, что это?"
-        voice "Мужчина, с вами всё в порядке?"
-        "Сквозь мерцающее марево я разглядел два чёрных силуэта, склонившихся надо мной."
-        "Видимо, к моей просьбе прислушались?"
-        "Провидение могло бы толкнуть меня в другую сторону, и я толкал бы коробку куда-нибудь в рощу, где нас нашли бы к весне, замёрзших, но мёртвых задолго до того."
-        voice "Не шевелитесь, пожалуйста. Я медбрат, я окажу вам первую меди…"
-        "Меня перевернули на спину и осеклись. Судя по сдавленному возгласу, видок у меня был тот ещё."
-        "Надо же, хватает ещё сил юморить. А их и так немного."
-        me "Помогите… П-пирату."
-        "Выдохнул я, наконец, отпуская сознание."
-        "И уже откуда-то сверху, будто сменив угол обзора, но почему-то без единого звука видел, как мечутся вокруг две фигурки, как достают из коробки белоснежного щенка с чёрной пуговкой-носом, слушают его, хватаются за голову и попарно хватают телефоны."
-        "Ещё двадцать минут — и где-то в трёхстах метрах у ворот рявкнула сиреной красно-белая машина, и её пропустили на территорию парка культуры и отдыха."
-        "Из неё на снег выскочила бригада специального назначения — ангелы в белых халатах, спасители судеб человеческих."
-        window hide
-        show expression D3_intro("cg d7_sl_gonna_be_ok_7dl") behind snow
-        with dissolve
-        "Двое побежали к раскидавшемуся по снегу телу со сплошным синяком вместо лица, ещё один подошёл к девушке, держащей щенка, и осторожно забрал у неё животинку."
-        "Послушал, посмотрел, кивнул ободряюще — ничего такого, с чем он не справился бы."
-        "Простая интоксикация — плёвое дело для хорошего ветеринара."
-        "Пират сильный, он обязательно справится!"
-        "А это значит, что всё будет хо-ро-шо."
-        show blackout_exh
-        with dissolve
-        play sound aunl
-        $ persistent.sl_cl_cata = True
-        show acm_logo_sl_be_ok with moveinright:
-            pos (1600, 1020)
-        $ renpy.pause(7.4, hard=True)
-        call alt_7dl_titles
-        $ renpy.pause(2)
-        return
-    elif alt_sp >= 6 and (persistent.sl_cl_good_rf or persistent.sl_cl_good_rf2 or persistent.sl_cl_good_ussr):
-        label alt_day6_sl_intellectual:
-            $ persistent.sprite_time = "prolog"
-            $ prolog_time()
-            play music uncertainity fadein 3
-            scene bg ext_square_day at zenterright
-            show ba em1 uniform with dissolve
-            ba "Вообще-то, если ехать быстро, то вполне успеете."
-            "Раздался над головой усталый бас, и я медленно поднял голову."
-        "Саныч."
-        "Потрепали его последние дни, потрепали."
-        "А да кто из нас без шрамов."
-        "При всей моей неприязни к этому человеку, я должен был признать — он работал на детей и для детей."
-        "Даже не ради собственного эго, если уж на то пошло."
-        "Я понял, что Саныч, по сути, немолод. {w}Возможно, самый старый из всех, кто есть в лагере."
-        if alt_day5_sl_extra_house:
-            "Точно, Славя ещё говорила, что он уходит на покой."
-            "По состоянию здоровья — но и по возрасту тоже."
-        me "Но разве вас не увезли?"
-        ba "Увезли. Дали час на сбор вещей."
-        "Он огляделся по сторонам."
-        ba "Но у меня оказалось очень немного вещей."
-        show ba smile uniform with dissolve
-        ba "Мы едем? Если едем, то пошли."
-        "Он подкинул в руке ключ."
-        cs "Бориска, если опять поцарапаешь мне машину, взыщу по полной."
-        "Донёсся голос медсестры."
-        ba "Верну лучше, чем была."
-        "Он подмигнул нам и направился к столовой."
-        window hide
-        scene bg ext_road_sunset_7dl with dissolve
-        play sound sfx_intro_bus_engine_start
-        $ renpy.pause(3)
-        play sound_loop sfx_intro_bus_engine_loop fadein 3
-        $ set_mode_nvl()
-        "Нас не было и нет, мы пустота — мираж. И каждый новый день — такой же, как вчера."
-        "А прямо сейчас — только постоянная тряска, крики страха с заднего сиденья и прилипшая к отметке «200» стрелка спидометра да надрывный вой форсированного движка."
-        "Мы летели над разбитой дорогой со скоростью, не предусмотренной никакими правилами и предписаниями."
-        "Авантюра чистой воды."
-        "Которая ничем не могла быть объяснена, кроме глупости водителя."
-        "Или спасаемой жизнью."
-        "Быстрее, ещё быстрее."
-        "По пути приходилось несколько раз уворачиваться от едущих куда-то грузовиков с песком, и едва ли их водители успевали понять что происходит — белый метеор приближался, обдавал воем движка и скрывался за горизонтом."
-        "А я сам, вглядываясь в стелющийся под колёса асфальт, собственным взглядом, собственным желанием будто прижимал нас к дороге, весь уже там — где есть кто-то, кто смог бы помочь нам."
-        "А значит…"
-        "Низко стелясь над перемолотым временем асфальтом, наперегонки со смертью — сами ежеминутно рискуя разбиться в лепёшку."
-        nvl clear
-        "Мы добрались до города меньше, чем за два часа."
-        "И это были самые долгие два часа в моей жизни."
-        "Я устал переживать, устал бояться, просто устал и всё, о чём мечтаю — это чтобы всё уже закончилось."
-        "Но «Волга» уже с грохотом пересекает городскую черту, сигналами клаксона и гулом мотора распугивая голубей и малышню."
-        stop ambience
-        stop sound_loop
-        "Ветеринар нашёлся в верхней части города, мы успели к самому завершению смены — у нас тут же отняли Пирата и попросили нас подождать за закрытой дверью."
-        voice "Всё будет хорошо."
-        "Пообещала дебелая тётка-ветеринар с добрыми, усталыми глазами человека, привыкшего спасать чужое счастье."
-        voice "Просто не надо вам сейчас смотреть. Я позову."
-        nvl clear
-        scene cg d4_sl_sleeping_7dl with dissolve
-        "Сумасшедшее напряжение последних нескольких дней, постоянный недосып, усталость…"
-        sl "Мы сделали это."
-        me "Да. Сделали."
-        "Криво улыбнулся я."
-        "А она положила мне голову на плечо."
-        "Подумалось ещё, что было бы неплохо погладить её по волосам — чёртов фетишист."
-        "Или хотя бы поцеловать в висок."
-        "Но я проделал такой долгий путь. Я даже сбежал из лагеря вместе с лучшей девочкой этой чёртовой реальности."
-        "Так что если вы не против…"
-        stop music fadeout 3
-        nvl clear
-        $ prolog_time()
-        window hide
-        scene bg int_sam_house_clean_7dl with dissolve
-        $ set_mode_adv()
-        play music misery fadein 3
-        "Я проснулся от того, что включился монитор и меня ослепило ярким светом белоснежного фона окошка скайпа."
-        "Очередной бот, неизвестно каким образом нашедший меня в сети."
-        "Некакая Киска1337, желающая продемонстрировать мне свои сомнительные прелести, ведь её так возбуждает бумажнопакетоголовый дурачок у меня на аватаре."
-        "А всего-то и надо, что сходить по присланной ссылке."
-        "Обычно я открываю по соседству окно с ботом и копирую им фразы, пока не надоест."
-        "Но сейчас что-то не хотелось."
-        "Сейчас между монитором и мной стояли лица, люди — живые, куда реальнее той реальности, чем та, в которой я живу."
-        "Как я умудрился их выдумать, увидеть во сне?"
-        "У меня всегда были проблемы с фантазией, я человек-шаблон, человек-алгоритм…"
-        if herc:
-            "И тогда Семён Сычёв"
-        else:
-            "И тогда Семён Персунов"
-        extend ", пока ещё Сёмушка, пока ещё нужный и важный — безнадёжно застрявший в прошлом чужой земли, поднял голову и увидел, как тают дымными тенями те, кого он любил, ненавидел."
-        "Выдумал."
-        "Уходит Миронова Ольга, вожатая, в панаме, в белоснежной рубашке с ромбиком отличницы, фигуристая, принципиальная, добрая."
-        "Тает Коломийцев Борис, держащий за руку Коллайдер Виолу — две струйки дыма, в пурпуре и серебре, переплелись сизыми объятьями со стороны фильтра, со стороны угля."
-        "Уходят Мику, Алиса, Лена, прекрасные, как летнее солнце в небе фантастического лагеря, что никогда не существовал."
-        "Остался только Я."
-        "Я, сидящий в кресле перед экраном, съёжившийся, сгорбившийся, щурящийся на белый фон."
-        "Я, опирающийся локтями о колени в подземке, везущей в никуда."
-        if herc:
-            "Я, выкашливающий остатки нежелания заканчиваться так бесславно, на грязном полу магазинчика с алкоголем и спиртным."
-        else:
-            "Я, тонущий как слепой котёнок, и не пытающийся трепыхаться."
-            "Слишком уж давно мечтал о смерти и слишком большим грехом почитал суицид — мог ли я упустить такую шикарную возможность?"
-        show pi smile with dissolve
-        dreamgirl "Ну что, как тебе экскурс в несуществующее?"
-        "Ехидством в голове альтер-эго можно было разъесть бетонные сваи близнецов."
-        dreamgirl "Была хоть польза от твоего огуливания красотки с косой или ты так, за титьки подержаться?"
-        dreamgirl "Не подумай, что я докапываюсь на ровном месте, просто мне интересно, какой смысл вообще был ступать на самую трудную дорожку, если в результате ты оказался здесь же, откуда начинал."
-        dreamgirl "Хотя у тебя тут почище, как я погляжу. Тоже ничего себе прогресс."
-        dreamgirl "Сам убирался?"
-        me "Да. {w}Я понял всю ценность людей. Хотя это неправильно как-то звучит. Как будто я их на рынке покупаю."
-        me "Вот так — я понял всю их бесценность. Каждого человека по отдельности, всех вместе, коллектива, социума."
-        me "Я не скажу, что полюбил людей, но ценить их — научился."
-        "Я говорил, обращаясь больше к себе, чем к Нему."
-        "А возможно, к тому сгустку тумана, что так и висел в углу комнаты, там, где вопреки всем законам рассеивания света всё равно была непроглядная тень."
-        "И не знал, зачем я говорю это."
-        dreamgirl "Иными словами, ты понял то, что должен был понять ещё в первом классе."
-        dreamgirl "Не самый впечатляющий показатель."
-        me "Но я хочу помогать людям."
-        dreamgirl "Да? Как?"
-        if herc:
-            dreamgirl "Раздашь им получку за последнее дежурство?"
-        elif loki:
-            dreamgirl "Много ты им напомогаешь на свои учительские гроши?"
-        else:
-            dreamgirl "Пойдёшь раздашь свой заработок со фриланса?"
-        me "Я пока не знаю."
-        dreamgirl "А кто знает? Дурацкое желание — помогать. Ты никому помочь не можешь, ты себе помочь не в состоянии."
-        dreamgirl "Стандартный, быстро увлекающийся и столь же быстро остывающий дурачок, вдохновившийся примером."
-        dreamgirl "Дурак, а дурак, ты меня слышишь?"
-        me "Слышу."
-        dreamgirl "Славя твоя этому жизнь отдаст, учиться будет тому, как лучше всего помогать людям, и у неё никогда не будет другой жизни, кроме жизней других людей."
-        dreamgirl "Тебе этот прайс не по карману."
-        me "Я был рядом со Славей, когда она перестала справляться, ясно тебе? Она надеялась на меня."
-        dreamgirl "Велика важность — утешить плачущую девушку."
-        dreamgirl "Что хорошего ты сделал в том лагере, в несбыточных, тепличных условиях — аллювии для супергероев всех мастей — о чём сможешь вспомнить и гордиться лет через пять?"
-        dreamgirl "Исключая то, что ты закономерно влюбился и теперь ради неё и правда готов горы своротить."
-        me "А этого мало?"
-        show pi with dissolve
-        dreamgirl "Да только ведь любовь живёт три года, да и Славя твоя… Не факт что существует."
-        dreamgirl "То есть, ты выбрался из болота ради того, чтобы встать в тени Слави. В тени несуществующей девушки, которой тоже иногда хочется сильного мужского под жилеткой и «кто хозяин в доме»."
-        if herc:
-            dreamgirl "Ты всю жизнь пытался сбежать от горькой памяти собственных поражений."
-            dreamgirl "По сути, нескольких неурядиц, что должны были лишь укрепить, сделать сильнее, а вместо этого заставили сесть на пенёк и заплакать."
-            dreamgirl "Ветеран горячей точки, почти журналист, почти музыкант. Фуфло."
-        elif loki:
-            dreamgirl "Посвятил свою жизнь чтобы подгадить человеку, который оказался большим мужиком, чем ты."
-            dreamgirl "Даже имя себе взял — Лооооки. {w}Дешёвка из комиссионного магазина."
-        else:
-            dreamgirl "Всю жизнь бежал от переломанной  в аварии жизни — а пришёл к новой, зато выдуманной."
-            dreamgirl "Даже своё призвание — и то нашёл дурацкое. Помощник по лагерю? Ты серьёзно? Метёлок начальник и ключей командир?"
-        me "Я стал лучше."
-        "Я всё ещё обращался к тени в углу."
-        me "Я больше не вернусь к старой жизни, слышишь?! Я изменился."
-        dreamgirl "Ты выжил в пионерском лагере. Практически, прошёл невероятно сложную игру, где самым трудным было не умереть со скуки."
-        dreamgirl "И теперь считаешь, что победителей не судят. Ведь ты же победитель, верно?"
-        dreamgirl "Победятел."
-        me "Я восстановлюсь в ВУЗе, я попробую сначала, чтобы тебе не пришлось стыдиться меня, если однажды встретишь на улице!"
-        dreamgirl "Ты носишь ауру неудачника. Знаешь, как дети, которых постоянно все бьют. Откуда дети знают, кого можно бить, а кого нельзя? Они чувствуют её. "
-        window hide
-        scene bg semen_room_window with dissolve
-        show pi with dissolve
-        dreamgirl "Ты выбрал сам эту петлю, ты знаешь это, да?"
-        dreamgirl "Сдаться и сломаться. А запала лагеря не хватит надолго."
-        dreamgirl "Полгода, край год. А однажды твоя валькирия встретит тебя на улице. И отвернётся — потому что ты нелюдим, небрит, угрюм и на лбу набрякла ненависть."
-        dreamgirl "Ты уже сейчас потенциально он. {w}Потому что у тебя никого нет. И единственный твой собеседник — это твоя шизофрения."
-        "Мой внутренний-внешний собеседник поднялся с дивана, оказавшись копией меня, разве что глаз у него не было в буквальном смысле слова."
-        "Да губы кривились в намертво привязшей саркастической ухмылке."
-        "За окнами проорали сирены полицейского экипажа, наверху грохануло чем-то тяжёлым, из соседнего двора донеслись переливы дешёвой, визгливой автосигнализации."
-        "Жизнь продолжалась, протекала сквозь меня, переливаясь на ледяном стекле утеплённых окон, что так и не заменил на стеклопакеты, всю жизнь клеил бумагой."
-        "И не хотелось уже возвращаться куда-то, переделывать что-то, менять, мешать, выбирать, творить — к чёрту. Я закончился."
-        "И только его правда была кругом, язвы этакой: я классический неудачник, в жизни которого ничего никогда не происходит и не произойдёт."
-        stop music fadeout 3
-        window hide
-        scene black
-        play music gonna_be_ok fadein 3
-        play sound sfx_intro_bus_engine_start
-        $ renpy.pause(3)
-        play sound_loop sfx_intro_bus_engine_loop fadein 3
-        $ set_mode_adv()
-        scene anim intro_9
-        show prologue_dream
-        with fade
-        "Забиться в тёмный угол и досидеть там до звонка, ожидая, когда же наконец отпустят в небытие."
-        "Память понемногу осыпалась невесомым пеплом, гонимым ледяным декабрьским ветром."
-        "Плеер сдох. Телефон на последнем издыхании."
-        "Зато дата правильная — 28 декабря 2018-го года."
-        "Первая ступенька в небо."
-        "Что там дальше? Краснопузый ЛиАЗ с совковой попсой в салоне?"
-        window hide
-        $ renpy.pause(2)
-        scene anim intro_10
-        show prologue_dream
-        with fade
-        play sound sfx_intro_bus_door_open
-        $ renpy.pause(3, hard=True)
-        scene anim intro_11
-        with fade
-        $ renpy.pause(1, hard=True)
-        stop sound_loop fadeout 4
-        scene anim intro_13
-        show prologue_dream
-        with fade2
-        $ renpy.pause(3, hard=True)
-        scene bg intro_xx
-        show prologue_dream
-        with fade
-        "Забавно почувствовать себя пророком, зная наперёд всё, что произойдёт."
-        "Как будто кто-то бросил отсверком тень будущего мне на сознание."
-        "И я считаю секунды до того, как произойдёт что-то, что уже успел подсознательно отметить — повернувшуюся женщину, прыгающего ребёнка, сигнализацию машины, сработавшую от снежка в лобовое."
-        "Даже полусорванную рекламу на развязке отметил."
-        "Так, но это, наверное, всё будет попозже?"
-        "Для начала неплохо было бы просто дойти до остановки."
-        window hide
-        play sound sfx_intro_bus_stop_steps
-        $ renpy.pause(3, hard=True)
-        scene anim intro_4
-        show prologue_dream
-        with fade
-        "Я сам не знал, что делал на улице, но сидеть дома почему-то казалось кощунственным."
-        "Будто нечто властное поселилось внутри меня и тянуло, тянуло вперёд."
-        "Когда? А вот это отдельный вопрос."
-        "Я думаю, тогда, когда раздвоение личности исчезло, я перестал слышать его голос — то есть, вообще слышать, и внутри, и снаружи. Всё, моё сердитое, ядовитое альтер эго почило в бозе, прозит!"
-        "Поэтому я иду, безуспешно пытаясь спрятаться от мороза под пальто, не предназначенным для такой температуры."
-        "Верно, верно, дрищ должен страдать."
-        window hide
-        scene anim intro_3
-        show prologue_dream
-        with fade
-        "Вот и страдал сначала до подъезда."
-        "А потом мимо привычных, въевшихся в память многоэтажек — по заснеженным улицам, где холодно от одного только взгляда на замерзающие в воздухе лучи фонарей."
-        stop music fadeout 3
-        window hide
-        scene bg bus_stop with diam
-        $ renpy.pause(2)
-        scene bg intro_xx with fade
-        play sound_loop sfx_bus_interior_moving fadein 4
-        voice "Ой, простите, пожалуйста, я вас не сильно зашибла?"
-        me "Не сильнее, чем Маша Медведя."
-        "Привычно ответил я, не открывая глаз."
-        me "Главное, чтобы привычкой не стало."
-        voice "А почему вы так спокойно к этому относитесь?"
-        "Я пожал плечами и открыл глаза."
-        window hide
-        play music tilltheend
-        scene bg ext_square_night
-        show un sad pioneer
-        show prologue_dream
-        with dissolve
-        sl "Лена?"
-        un "Привет, Славушка…"
-        "Она казалась ненормально бодрой и весёлой."
-        un "Я вот тут шла и шла."
-        "Она улыбнулась."
-        un "А меня бросили."
-        "С трудом сдерживаемые рыдания прорвались наружу, она опала там же, где стояла — я еле-еле успел подхватить её у земли."
-        sl "Как бросили?! Ты же говорила, что вы после лагеря собирались…"
-        un "Похоже… Похоже, что это я собиралась. А он как будто проснулся."
-        "Она всхлипнула."
-        un "Я пошла на карьер, чтобы оставить там наше сердечко, а когда вернулась…"
-        show un cry pioneer with dspr
-        un "Я так не могу больше. Если он несвободный, зачем вообще что-то было начинать? Так же нельзя!"
-        window hide
-        scene bg ext_aidpost_night
-        show un serious pioneer
-        show prologue_dream
-        with dissolve
-        un "Ещё и ты. Объясни, зачем ты вообще вмешиваешься?"
-        sl "Ты моя подруга. И мне очень важно, чтобы с тобой всё было хорошо."
-        un "Ты не видишь, что ничего хорошо не получается?"
-        un "Можно я уже закончу всё? Устала я от боли."
-        "Она выглядела задёрганной, замученной, и с губ естественно сорвались слова — неправильные, некрасивые, но они были единственным, что способно сейчас помочь."
-        sl "Хорошо, ты можешь закончить. {w}Но просто по дружбе сделай мне одолжение, пожалуйста."
-        un "Какое?"
-        sl "Дай миру шанс, последний, единственный."
-        sl "Мы приедем сюда в следующем году, и ты попробуешь в последний раз. Хорошо?"
-        show un normal pioneer with dspr
-        un "И если не получится, ты больше не станешь мне мешать?"
-        sl "Обещаю. Я даже не останусь на пересменок."
-        un "Поклянись."
-        "И я клянусь."
-        "Я знаю, что эту клятву нарушить не сумею — Лена знает, чем заставить поклясться, не зря же мы с детства дружим."
-        window hide
-        scene black with diam
-        pause(1)
-        scene bg ext_warehouse_night_7dl
-        show pi
-        show prologue_dream
-        with dissolve
-        "В мешке слышно слабое шевеление, а я не могу, не смею рассказать всего, чтобы не повлиять как-то на решение."
-        "Моё право — донести знание."
-        "Настаивать или заставлять я не могу. Не смею. Тем более, от боли чужого несостоявшегося счастья я потом просто стоять на ногах не смогу."
-        "А он смотрит спокойно и отрешённо как-то — он вообще ничего не чувствует, похоже."
-        me "Да. Я не против вернуться домой."
-        with fade
-        "Он забирает мою руку в свою, забирает руку Алисы, зачем-то увязавшейся с нами, и…"
-        "Всё зря. Мы изобразили дурацкую сцену, встав в круг, но ничего не произошло — как будто он ещё не закончил здесь всего, что должен был."
-        "Он не закончил."
-        "А вот Пират…"
-        with fade
-        "Я выскакиваю из автобуса, моя остановка — мне очень горько от того, что мне пришлось сделать."
-        "Очень стыдно, что пришлось выламывать руку, но…"
-        "Моё внимание привлекает мигающая жёлто-оранжевым неоном вывеска, изображающая стилизованный отпечаток собачьей лапы."
-        "Моя остановка."
-        window hide
-        scene black with diam
-        pause(2)
-        scene cg d6_sl_clean_7dl
-        show prologue_dream
-        with dissolve
-        "Шурх. Шурх."
-        "Иногда я просто сдаюсь. Я сажусь на попу и беззвучно вою в тёмный потолок склада."
-        "Мне страшно от того, что все усилия пусты."
-        "Метла разгоняет клубы пыли, листья, бумажки, обёртки от конфет."
-        "Мне больно от того, что я слишком поздно — узнаю? Вспоминаю? Понимаю? Я не знаю, как это назвать, но знание просто приходит ко мне."
-        "Как это было с Леной, с Алисой, с Мику, с Олей."
-        "Пусть уж лучше сидит здесь, на скамейке, под приглядом."
-        "Как это происходит сейчас, пока я старательно отворачиваюсь от него, пряча непрошенные слёзы — мне не хватило нахальства прямо попросить его вернуться домой, значит, я теперь косвенно отвечаю и за его счастье."
-        "Надо бы завтра заставить его хотя бы попытаться помириться с Алисой."
-        window hide
-        scene bg ext_city_night_7dl
-        show prologue_dream
-        with dissolve
-        "Он стоит на экскалаторе ступенькой ниже, смотрит снизу вверх."
-        "Наверное, хотел устроить романтическое «глаза в глаза», балбес. {w}Про трёхдюймовую шпильку, надо понимать, он забыл."
-        "Телефон жужжит, принимая сообщение, но я не успеваю прочесть его — у меня тут же отнимают аппарат, читают, что-то пишут в ответ и, полностью отключив, возвращают."
-        "Чуть позже я читаю: «Вообще, у неё есть молодой человек. Надеюсь, понятно?!»"
-        "Ох уж, эта ревность."
-        "Ох уж, эти Олины шуточки."
-        window hide
-        scene anim intro_1
-        show prologue_dream
-        with fade
-        $ renpy.pause(3, hard=True)
-        scene anim intro_2 
-        show prologue_dream
-        with fade
-        play sound sfx_intro_bus_stop_steps
-        $ renpy.pause(3, hard=True)
-        scene anim intro_3
-        show prologue_dream
-        with fade
-        "Всё это в прошлом — сейчас я лежу на горячем сталепластике капота, бессильно пытаясь сделать вдох."
-        "Понимаю, что между бампером и столбом места действительно маловато для человеческого тела, значит, всё куда грустнее, чем казалось."
-        sl "Почему так неправильно всё, Сёмушка?"
-        "Самое глупое, что можно было сказать, угасая."
-        window hide
-        scene black with fade
-        pause(2)
-        $ renpy.pause(1, hard=True)
-        stop sound_loop fadeout 4
-        scene anim intro_13 
-        with fade2
-        $ renpy.pause(3, hard=True)
-        scene bg intro_xx 
-        with fade
-        me "Наверное, потому, что я уже спас вас, уклоняться поздно."
-        "Девушка улыбнулась:"
-        voice "Ну и забавный же вы. Как вас зовут?"
-        me "Моё имя Семён."
-        voice "Семён?"
-        "Она попробовала звучание имени."
-        voice "Семён как Сёмушка?"
-        menu:
-            "Да, как Сёмушка.":
-                window hide 
-                scene anim intro_8
-                "Этой улыбке невозможно было сопротивляться."
-                me "Сёмушка."
-                "Кивнул я."
-                jump alt_day7_sl_fear
-            "Нет, как Семён.":
-                "Сёмушкой меня могла называть всего одна девушка."
-                "Только ей было можно."
-                "Плевать на то, что её не существует."
-                window hide 
-                scene anim intro_8
-                "Девушка немного погрустнела:"
-                voice "Простите, пожалуйста. Я не знала, что у вас плохое настроение."
-                me "Да ничего."
-                "Я пожал плечами и вернулся к себе на место над колесом, заткнув уши наушниками."
-                "Немного посомневавшись, она не стала садиться рядом, а ушла на заднюю площадку — я проводил её взглядом."
-                "И, схватившись за поручень, встала там."
-                "Наверное, обиделась."
-                "Плевать. У меня старая школа, старая закалка — девушки не нужны, никто не нужен, ото всех только проблемы."
-                "Когда-то я считал иначе."
-                "И очень больно обжёгся на этом."
-                "В памяти застарелым ожогом вспыхнул промозглый июльский полдень в далёкой-далёкой стране."
-                "И я затряс головой, старательно прогоняя воспоминания."
-                th "Где ж теперь моя шиза, когда она так нужна?"
-                "Издевательства издевательствами, но чёрную память от памяти светлой моё психическое расстройство отделяло замечательно."
-                "Правда закончилось всё ядовитым монологом у меня в квартире — видимо, я и в самом деле безнадёжен."
-                "В голову вдруг пришло, что я понятия не имею, куда еду."
-                "И зачем?"
-                "Так что на ближайшей остановке я вскочил и вышел из салона."
-                jump alt_day7_sl_lone
+    window hide
+    return
+
+label alt_day6_sl_cl_become_a_hero:
+    me "Прощай…"
+    "Выдохнул я."
+    window hide
+    stop music fadeout 4
+    stop ambience
+    $ prolog_time()
+    scene bg ext_winterpark_7dl
+    show spill_red
+    with dissolve
+    play ambience ambience_cold_wind_loop fadein 3
+    "И открыл глаза в своём мире одиночества и холодного снега под отмерзающими крыльями."
+    "Изображение плыло и двоилось, внутри что-то очень нехорошо перекатывалось, но сейчас меня это не волновало."
+    play music lynn fadeout 3
+    "Я встал на четвереньки и, сплюнув юшку на белое полотно, изрытое отпечатками сорок третьего размера, пополз."
+    window hide
+    scene expression Desat1("bg ext_winterpark_7dl"):
+        xalign .5 yalign .6 zoom 1.0
+        linear .3 xalign .5 yalign .55 zoom 1.05
+        linear .3 xalign .55 yalign .6 zoom 1.1
+    with vpunch
+    "Воображая себя не то героем Алексея Маресьева, не то Джоэлом из «Сияния», не то кем-то ещё, чья жизнь обратилась вот в такой вот путь, сквозь ватное непослушание тела, лютую стужу и заливающую глаза кровь."
+    "Я должен был сдаться."
+    window hide
+    scene expression Desat1("bg ext_winterpark_7dl"):
+        xalign .55 yalign .6 zoom 1.1
+        linear .3 xalign .55 yalign .55 zoom 1.15
+        linear .3 xalign .4 yalign .6 zoom 1.2
+    with vpunch
+    "Я должен был лечь и сдохнуть в снегу прямо там."
+    "Но сейчас передо мной по снегу скользила картонная коробка — не было сил подняться или как-то ещё нести её, поэтому я просто толкал её перед собой головой."
+    "Шаг."
+    "Это уже было со мной однажды."
+    "Ещё шаг."
+    "Всё это было со мной."
+    "Ещё…"
+    "Только руку грело тёплое, неуверенное внимание грустной девочки с огромными зелёными глазами."
+    "А может быть, это была рыжая молния, до слёз боящаяся нелюбви?"
+    "Да нет, конечно."
+    "Это была весёлая девушка с невозможно длинными аквамариновыми волосами, что смотрит со сцены в зал глазами, полными слёз одиночества."
+    "А я бросил их всех."
+    "Наверное, Славя и правда отчаялась, раз решила прибегнуть к таком дикому способу спасения."
+    window hide
+    with fade
+    "Глупая, думала, туда — и сразу обратно, успеть! Успеть!"
+    "Куда обратно, если сейчас очевидна входная плата за семь дней лета."
+    "Я растянулся мордой в наст, ударившись расквашенным носом."
+    "Боль могла бы отрезвить, если бы она была хотя бы чуть-чуть ярче всей прочей боли."
+    "Хуже всего только боль где-то под рёбрами, там, куда не достать никакими гриндерсами."
+    "Потому что в этот раз я не беру её с собой."
+    window hide
+    scene expression Desat("bg ext_winterpark_7dl"):
+        xalign .6 yalign .4 zoom 1.0
+        linear .3 xalign .55 yalign .55 zoom 1.05
+        linear .3 xalign .6 yalign .6 zoom 1.1
+    with vpunch
+    "Шаг."
+    scene stars
+    show expression D3_intro("bg ext_camp_entrance_day")
+    show prologue_dream
+    with dissolve
+    "Лагерь."
+    "Шаг."
+    scene stars
+    if alt_day5_sl_extra_house:
+        show expression D3_intro("cg d5_sl_moon_7dl")
     else:
-        jump alt_day6_sl_regular_arc
+        show expression D3_intro("cg d1_sl_dinner_day_7dl")
+    show prologue_dream
+    with dissolve
+    "Славя."
+    "Шаг."
+    "Пират проснулся от холода и заскулил, а я, не умея, не зная, как ему помочь, шептал что-то успокаивающее, толкая и толкая коробку перед собой."
+    "Я был повеса, не умеющий извиняться, глядя человеку в глаза."
+    "Я был враль, неспособный на честность и непредвзятость."
+    window hide
+    scene expression Desat1("bg ext_winterpark_7dl"):
+        xalign .5 yalign .6 zoom 1.2
+        linear .3 xalign .55 yalign .55 zoom 1.25
+        linear .3 xalign .6 yalign .6 zoom 1.3
+    with vpunch
+    show blackout_exh3
+    with fade
+    "Я был никто, уничтоживший дело всей жизни человека, которому не повезло отбить у меня девушку."
+    "Поэтому был полностью согласен с приговором Асгарда."
+    "Поэтому оставил Сигюн в прошлом мире и явился на лобное место с пустыми руками и чистым сердцем."
+    "Но я хотел бы в качестве последнего желания перед казнью попросить о небольшой отсрочке."
+    "Я просто должен закончить начатое."
+    window hide
+    scene bg ext_winterpark_7dl:
+        xalign .6 yalign .6 zoom 1.3
+        easeout .6 xalign .6 yalign .8 zoom 1.5
+    with vpunch
+    play sound2 sfx_bodyfall_1
+    pause(2)
+    scene stars
+    show snow
+    window hide
+    with fade
+    voice "Дим, смотри, что это?"
+    voice "Мужчина, с вами всё в порядке?"
+    "Сквозь мерцающее марево я разглядел два чёрных силуэта, склонившихся надо мной."
+    "Видимо, к моей просьбе прислушались?"
+    "Провидение могло бы толкнуть меня в другую сторону, и я толкал бы коробку куда-нибудь в рощу, где нас нашли бы к весне, замёрзших, но мёртвых задолго до того."
+    voice "Не шевелитесь, пожалуйста. Я медбрат, я окажу вам первую меди…"
+    "Меня перевернули на спину и осеклись. Судя по сдавленному возгласу, видок у меня был тот ещё."
+    "Надо же, хватает ещё сил юморить. А их и так немного."
+    me "Помогите… П-пирату."
+    "Выдохнул я, наконец, отпуская сознание."
+    "И уже откуда-то сверху, будто сменив угол обзора, но почему-то без единого звука видел, как мечутся вокруг две фигурки, как достают из коробки белоснежного щенка с чёрной пуговкой-носом, слушают его, хватаются за голову и попарно хватают телефоны."
+    "Ещё двадцать минут — и где-то в трёхстах метрах у ворот рявкнула сиреной красно-белая машина, и её пропустили на территорию парка культуры и отдыха."
+    "Из неё на снег выскочила бригада специального назначения — ангелы в белых халатах, спасители судеб человеческих."
+    window hide
+    show expression D3_intro("cg d7_sl_gonna_be_ok_7dl") behind snow
+    with dissolve
+    "Двое побежали к раскидавшемуся по снегу телу со сплошным синяком вместо лица, ещё один подошёл к девушке, держащей щенка, и осторожно забрал у неё животинку."
+    "Послушал, посмотрел, кивнул ободряюще — ничего такого, с чем он не справился бы."
+    "Простая интоксикация — плёвое дело для хорошего ветеринара."
+    "Пират сильный, он обязательно справится!"
+    "А это значит, что всё будет хо-ро-шо."
+    show blackout_exh
+    with dissolve
+    play sound aunl
+    $ persistent.sl_cl_cata = True
+    show acm_logo_sl_be_ok with moveinright:
+        pos (1600, 1020)
+    $ renpy.pause(7.4, hard=True)
+    call alt_7dl_titles
+    $ renpy.pause(2)
+    return
+
+label alt_day6_sl_intellectual:
+    play music uncertainity fadein 3
+    scene bg ext_square_day at zenterright
+    show ba em1 uniform with dissolve
+    ba "Вообще-то, если ехать быстро, то вполне успеете."
+    "Раздался над головой усталый бас, и я медленно поднял голову."
+    "Саныч."
+    "Потрепали его последние дни, потрепали."
+    "А да кто из нас без шрамов."
+    "При всей моей неприязни к этому человеку, я должен был признать — он работал на детей и для детей."
+    "Даже не ради собственного эго, если уж на то пошло."
+    "Я понял, что Саныч, по сути, немолод. {w}Возможно, самый старый из всех, кто есть в лагере."
+    if alt_day5_sl_extra_house:
+        "Точно, Славя ещё говорила, что он уходит на покой."
+        "По состоянию здоровья — но и по возрасту тоже."
+    me "Но разве вас не увезли?"
+    ba "Увезли. Дали час на сбор вещей."
+    "Он огляделся по сторонам."
+    ba "Но у меня оказалось очень немного вещей."
+    show ba smile uniform with dissolve
+    ba "Мы едем? Если едем, то пошли."
+    "Он подкинул в руке ключ."
+    cs "Бориска, если опять поцарапаешь мне машину, взыщу по полной."
+    "Донёсся голос медсестры."
+    ba "Верну лучше, чем была."
+    "Он подмигнул нам и направился к столовой."
+    window hide
+    scene bg ext_road_sunset_7dl with dissolve
+    play sound sfx_intro_bus_engine_start
+    $ renpy.pause(3)
+    play sound_loop sfx_intro_bus_engine_loop fadein 3
+    $ set_mode_nvl()
+    "Нас не было и нет, мы пустота — мираж. И каждый новый день — такой же, как вчера."
+    "А прямо сейчас — только постоянная тряска, крики страха с заднего сиденья и прилипшая к отметке «200» стрелка спидометра да надрывный вой форсированного движка."
+    "Мы летели над разбитой дорогой со скоростью, не предусмотренной никакими правилами и предписаниями."
+    "Авантюра чистой воды."
+    "Которая ничем не могла быть объяснена, кроме глупости водителя."
+    "Или спасаемой жизнью."
+    "Быстрее, ещё быстрее."
+    "По пути приходилось несколько раз уворачиваться от едущих куда-то грузовиков с песком, и едва ли их водители успевали понять что происходит — белый метеор приближался, обдавал воем движка и скрывался за горизонтом."
+    "А я сам, вглядываясь в стелющийся под колёса асфальт, собственным взглядом, собственным желанием будто прижимал нас к дороге, весь уже там — где есть кто-то, кто смог бы помочь нам."
+    "А значит…"
+    "Низко стелясь над перемолотым временем асфальтом, наперегонки со смертью — сами ежеминутно рискуя разбиться в лепёшку."
+    nvl clear
+    "Мы добрались до города меньше, чем за два часа."
+    "И это были самые долгие два часа в моей жизни."
+    "Я устал переживать, устал бояться, просто устал и всё, о чём мечтаю — это чтобы всё уже закончилось."
+    "Но «Волга» уже с грохотом пересекает городскую черту, сигналами клаксона и гулом мотора распугивая голубей и малышню."
+    stop ambience
+    stop sound_loop
+    "Ветеринар нашёлся в верхней части города, мы успели к самому завершению смены — у нас тут же отняли Пирата и попросили нас подождать за закрытой дверью."
+    voice "Всё будет хорошо."
+    "Пообещала дебелая тётка-ветеринар с добрыми, усталыми глазами человека, привыкшего спасать чужое счастье."
+    voice "Просто не надо вам сейчас смотреть. Я позову."
+    nvl clear
+    scene cg d4_sl_sleeping_7dl with dissolve
+    "Сумасшедшее напряжение последних нескольких дней, постоянный недосып, усталость…"
+    sl "Мы сделали это."
+    me "Да. Сделали."
+    "Криво улыбнулся я."
+    "А она положила мне голову на плечо."
+    "Подумалось ещё, что было бы неплохо погладить её по волосам — чёртов фетишист."
+    "Или хотя бы поцеловать в висок."
+    "Но я проделал такой долгий путь. Я даже сбежал из лагеря вместе с лучшей девочкой этой чёртовой реальности."
+    "Так что если вы не против…"
+    stop music fadeout 3
+    nvl clear
+    $ prolog_time()
+    window hide
+    scene bg int_sam_house_clean_7dl with dissolve
+    $ set_mode_adv()
+    play music misery fadein 3
+    "Я проснулся от того, что включился монитор и меня ослепило ярким светом белоснежного фона окошка скайпа."
+    "Очередной бот, неизвестно каким образом нашедший меня в сети."
+    "Некакая Киска1337, желающая продемонстрировать мне свои сомнительные прелести, ведь её так возбуждает бумажнопакетоголовый дурачок у меня на аватаре."
+    "А всего-то и надо, что сходить по присланной ссылке."
+    "Обычно я открываю по соседству окно с ботом и копирую им фразы, пока не надоест."
+    "Но сейчас что-то не хотелось."
+    "Сейчас между монитором и мной стояли лица, люди — живые, куда реальнее той реальности, чем та, в которой я живу."
+    "Как я умудрился их выдумать, увидеть во сне?"
+    "У меня всегда были проблемы с фантазией, я человек-шаблон, человек-алгоритм…"
+    if herc:
+        "И тогда Семён Сычёв"
+    else:
+        "И тогда Семён Персунов"
+    extend ", пока ещё Сёмушка, пока ещё нужный и важный — безнадёжно застрявший в прошлом чужой земли, поднял голову и увидел, как тают дымными тенями те, кого он любил, ненавидел."
+    "Выдумал."
+    "Уходит Миронова Ольга, вожатая, в панаме, в белоснежной рубашке с ромбиком отличницы, фигуристая, принципиальная, добрая."
+    "Тает Коломийцев Борис, держащий за руку Коллайдер Виолу — две струйки дыма, в пурпуре и серебре, переплелись сизыми объятьями со стороны фильтра, со стороны угля."
+    "Уходят Мику, Алиса, Лена, прекрасные, как летнее солнце в небе фантастического лагеря, что никогда не существовал."
+    "Остался только Я."
+    "Я, сидящий в кресле перед экраном, съёжившийся, сгорбившийся, щурящийся на белый фон."
+    "Я, опирающийся локтями о колени в подземке, везущей в никуда."
+    if herc:
+        "Я, выкашливающий остатки нежелания заканчиваться так бесславно, на грязном полу магазинчика с алкоголем и спиртным."
+    else:
+        "Я, тонущий как слепой котёнок, и не пытающийся трепыхаться."
+        "Слишком уж давно мечтал о смерти и слишком большим грехом почитал суицид — мог ли я упустить такую шикарную возможность?"
+    show pi smile with dissolve
+    dreamgirl "Ну что, как тебе экскурс в несуществующее?"
+    "Ехидством в голове альтер-эго можно было разъесть бетонные сваи близнецов."
+    dreamgirl "Была хоть польза от твоего огуливания красотки с косой или ты так, за титьки подержаться?"
+    dreamgirl "Не подумай, что я докапываюсь на ровном месте, просто мне интересно, какой смысл вообще был ступать на самую трудную дорожку, если в результате ты оказался здесь же, откуда начинал."
+    dreamgirl "Хотя у тебя тут почище, как я погляжу. Тоже ничего себе прогресс."
+    dreamgirl "Сам убирался?"
+    me "Да. {w}Я понял всю ценность людей. Хотя это неправильно как-то звучит. Как будто я их на рынке покупаю."
+    me "Вот так — я понял всю их бесценность. Каждого человека по отдельности, всех вместе, коллектива, социума."
+    me "Я не скажу, что полюбил людей, но ценить их — научился."
+    "Я говорил, обращаясь больше к себе, чем к Нему."
+    "А возможно, к тому сгустку тумана, что так и висел в углу комнаты, там, где вопреки всем законам рассеивания света всё равно была непроглядная тень."
+    "И не знал, зачем я говорю это."
+    dreamgirl "Иными словами, ты понял то, что должен был понять ещё в первом классе."
+    dreamgirl "Не самый впечатляющий показатель."
+    me "Но я хочу помогать людям."
+    dreamgirl "Да? Как?"
+    if herc:
+        dreamgirl "Раздашь им получку за последнее дежурство?"
+    elif loki:
+        dreamgirl "Много ты им напомогаешь на свои учительские гроши?"
+    else:
+        dreamgirl "Пойдёшь раздашь свой заработок со фриланса?"
+    me "Я пока не знаю."
+    dreamgirl "А кто знает? Дурацкое желание — помогать. Ты никому помочь не можешь, ты себе помочь не в состоянии."
+    dreamgirl "Стандартный, быстро увлекающийся и столь же быстро остывающий дурачок, вдохновившийся примером."
+    dreamgirl "Дурак, а дурак, ты меня слышишь?"
+    me "Слышу."
+    dreamgirl "Славя твоя этому жизнь отдаст, учиться будет тому, как лучше всего помогать людям, и у неё никогда не будет другой жизни, кроме жизней других людей."
+    dreamgirl "Тебе этот прайс не по карману."
+    me "Я был рядом со Славей, когда она перестала справляться, ясно тебе? Она надеялась на меня."
+    dreamgirl "Велика важность — утешить плачущую девушку."
+    dreamgirl "Что хорошего ты сделал в том лагере, в несбыточных, тепличных условиях — аллювии для супергероев всех мастей — о чём сможешь вспомнить и гордиться лет через пять?"
+    dreamgirl "Исключая то, что ты закономерно влюбился и теперь ради неё и правда готов горы своротить."
+    me "А этого мало?"
+    show pi with dissolve
+    dreamgirl "Да только ведь любовь живёт три года, да и Славя твоя… Не факт что существует."
+    dreamgirl "То есть, ты выбрался из болота ради того, чтобы встать в тени Слави. В тени несуществующей девушки, которой тоже иногда хочется сильного мужского под жилеткой и «кто хозяин в доме»."
+    if herc:
+        dreamgirl "Ты всю жизнь пытался сбежать от горькой памяти собственных поражений."
+        dreamgirl "По сути, нескольких неурядиц, что должны были лишь укрепить, сделать сильнее, а вместо этого заставили сесть на пенёк и заплакать."
+        dreamgirl "Ветеран горячей точки, почти журналист, почти музыкант. Фуфло."
+    elif loki:
+        dreamgirl "Посвятил свою жизнь чтобы подгадить человеку, который оказался большим мужиком, чем ты."
+        dreamgirl "Даже имя себе взял — Лооооки. {w}Дешёвка из комиссионного магазина."
+    else:
+        dreamgirl "Всю жизнь бежал от переломанной  в аварии жизни — а пришёл к новой, зато выдуманной."
+        dreamgirl "Даже своё призвание — и то нашёл дурацкое. Помощник по лагерю? Ты серьёзно? Метёлок начальник и ключей командир?"
+    me "Я стал лучше."
+    "Я всё ещё обращался к тени в углу."
+    me "Я больше не вернусь к старой жизни, слышишь?! Я изменился."
+    dreamgirl "Ты выжил в пионерском лагере. Практически, прошёл невероятно сложную игру, где самым трудным было не умереть со скуки."
+    dreamgirl "И теперь считаешь, что победителей не судят. Ведь ты же победитель, верно?"
+    dreamgirl "Победятел."
+    me "Я восстановлюсь в ВУЗе, я попробую сначала, чтобы тебе не пришлось стыдиться меня, если однажды встретишь на улице!"
+    dreamgirl "Ты носишь ауру неудачника. Знаешь, как дети, которых постоянно все бьют. Откуда дети знают, кого можно бить, а кого нельзя? Они чувствуют её. "
+    window hide
+    scene bg semen_room_window with dissolve
+    show pi with dissolve
+    dreamgirl "Ты выбрал сам эту петлю, ты знаешь это, да?"
+    dreamgirl "Сдаться и сломаться. А запала лагеря не хватит надолго."
+    dreamgirl "Полгода, край год. А однажды твоя валькирия встретит тебя на улице. И отвернётся — потому что ты нелюдим, небрит, угрюм и на лбу набрякла ненависть."
+    dreamgirl "Ты уже сейчас потенциально он. {w}Потому что у тебя никого нет. И единственный твой собеседник — это твоя шизофрения."
+    "Мой внутренний-внешний собеседник поднялся с дивана, оказавшись копией меня, разве что глаз у него не было в буквальном смысле слова."
+    "Да губы кривились в намертво привязшей саркастической ухмылке."
+    "За окнами проорали сирены полицейского экипажа, наверху грохануло чем-то тяжёлым, из соседнего двора донеслись переливы дешёвой, визгливой автосигнализации."
+    "Жизнь продолжалась, протекала сквозь меня, переливаясь на ледяном стекле утеплённых окон, что так и не заменил на стеклопакеты, всю жизнь клеил бумагой."
+    "И не хотелось уже возвращаться куда-то, переделывать что-то, менять, мешать, выбирать, творить — к чёрту. Я закончился."
+    "И только его правда была кругом, язвы этакой: я классический неудачник, в жизни которого ничего никогда не происходит и не произойдёт."
+    stop music fadeout 3
+    window hide
+    scene black
+    play music gonna_be_ok fadein 3
+    play sound sfx_intro_bus_engine_start
+    $ renpy.pause(3)
+    play sound_loop sfx_intro_bus_engine_loop fadein 3
+    $ set_mode_adv()
+    scene anim intro_9
+    show prologue_dream
+    with fade
+    "Забиться в тёмный угол и досидеть там до звонка, ожидая, когда же наконец отпустят в небытие."
+    "Память понемногу осыпалась невесомым пеплом, гонимым ледяным декабрьским ветром."
+    "Плеер сдох. Телефон на последнем издыхании."
+    "Зато дата правильная — 28 декабря 2018-го года."
+    "Первая ступенька в небо."
+    "Что там дальше? Краснопузый ЛиАЗ с совковой попсой в салоне?"
+    window hide
+    $ renpy.pause(2)
+    scene anim intro_10
+    show prologue_dream
+    with fade
+    play sound sfx_intro_bus_door_open
+    $ renpy.pause(3, hard=True)
+    scene anim intro_11
+    with fade
+    $ renpy.pause(1, hard=True)
+    stop sound_loop fadeout 4
+    scene anim intro_13
+    show prologue_dream
+    with fade2
+    $ renpy.pause(3, hard=True)
+    scene bg intro_xx
+    show prologue_dream
+    with fade
+    "Забавно почувствовать себя пророком, зная наперёд всё, что произойдёт."
+    "Как будто кто-то бросил отсверком тень будущего мне на сознание."
+    "И я считаю секунды до того, как произойдёт что-то, что уже успел подсознательно отметить — повернувшуюся женщину, прыгающего ребёнка, сигнализацию машины, сработавшую от снежка в лобовое."
+    "Даже полусорванную рекламу на развязке отметил."
+    "Так, но это, наверное, всё будет попозже?"
+    "Для начала неплохо было бы просто дойти до остановки."
+    window hide
+    play sound sfx_intro_bus_stop_steps
+    $ renpy.pause(3, hard=True)
+    scene anim intro_4
+    show prologue_dream
+    with fade
+    "Я сам не знал, что делал на улице, но сидеть дома почему-то казалось кощунственным."
+    "Будто нечто властное поселилось внутри меня и тянуло, тянуло вперёд."
+    "Когда? А вот это отдельный вопрос."
+    "Я думаю, тогда, когда раздвоение личности исчезло, я перестал слышать его голос — то есть, вообще слышать, и внутри, и снаружи. Всё, моё сердитое, ядовитое альтер эго почило в бозе, прозит!"
+    "Поэтому я иду, безуспешно пытаясь спрятаться от мороза под пальто, не предназначенным для такой температуры."
+    "Верно, верно, дрищ должен страдать."
+    window hide
+    scene anim intro_3
+    show prologue_dream
+    with fade
+    "Вот и страдал сначала до подъезда."
+    "А потом мимо привычных, въевшихся в память многоэтажек — по заснеженным улицам, где холодно от одного только взгляда на замерзающие в воздухе лучи фонарей."
+    stop music fadeout 3
+    window hide
+    scene bg bus_stop with diam
+    $ renpy.pause(2)
+    scene bg intro_xx with fade
+    play sound_loop sfx_bus_interior_moving fadein 4
+    voice "Ой, простите, пожалуйста, я вас не сильно зашибла?"
+    me "Не сильнее, чем Маша Медведя."
+    "Привычно ответил я, не открывая глаз."
+    me "Главное, чтобы привычкой не стало."
+    voice "А почему вы так спокойно к этому относитесь?"
+    "Я пожал плечами и открыл глаза."
+    window hide
+    play music tilltheend
+    scene bg ext_square_night
+    show un sad pioneer
+    show prologue_dream
+    with dissolve
+    sl "Лена?"
+    un "Привет, Славушка…"
+    "Она казалась ненормально бодрой и весёлой."
+    un "Я вот тут шла и шла."
+    "Она улыбнулась."
+    un "А меня бросили."
+    "С трудом сдерживаемые рыдания прорвались наружу, она опала там же, где стояла — я еле-еле успел подхватить её у земли."
+    sl "Как бросили?! Ты же говорила, что вы после лагеря собирались…"
+    un "Похоже… Похоже, что это я собиралась. А он как будто проснулся."
+    "Она всхлипнула."
+    un "Я пошла на карьер, чтобы оставить там наше сердечко, а когда вернулась…"
+    show un cry pioneer with dspr
+    un "Я так не могу больше. Если он несвободный, зачем вообще что-то было начинать? Так же нельзя!"
+    window hide
+    scene bg ext_aidpost_night
+    show un serious pioneer
+    show prologue_dream
+    with dissolve
+    un "Ещё и ты. Объясни, зачем ты вообще вмешиваешься?"
+    sl "Ты моя подруга. И мне очень важно, чтобы с тобой всё было хорошо."
+    un "Ты не видишь, что ничего хорошо не получается?"
+    un "Можно я уже закончу всё? Устала я от боли."
+    "Она выглядела задёрганной, замученной, и с губ естественно сорвались слова — неправильные, некрасивые, но они были единственным, что способно сейчас помочь."
+    sl "Хорошо, ты можешь закончить. {w}Но просто по дружбе сделай мне одолжение, пожалуйста."
+    un "Какое?"
+    sl "Дай миру шанс, последний, единственный."
+    sl "Мы приедем сюда в следующем году, и ты попробуешь в последний раз. Хорошо?"
+    show un normal pioneer with dspr
+    un "И если не получится, ты больше не станешь мне мешать?"
+    sl "Обещаю. Я даже не останусь на пересменок."
+    un "Поклянись."
+    "И я клянусь."
+    "Я знаю, что эту клятву нарушить не сумею — Лена знает, чем заставить поклясться, не зря же мы с детства дружим."
+    window hide
+    scene black with diam
+    pause(1)
+    scene bg ext_warehouse_night_7dl
+    show pi
+    show prologue_dream
+    with dissolve
+    "В мешке слышно слабое шевеление, а я не могу, не смею рассказать всего, чтобы не повлиять как-то на решение."
+    "Моё право — донести знание."
+    "Настаивать или заставлять я не могу. Не смею. Тем более, от боли чужого несостоявшегося счастья я потом просто стоять на ногах не смогу."
+    "А он смотрит спокойно и отрешённо как-то — он вообще ничего не чувствует, похоже."
+    me "Да. Я не против вернуться домой."
+    with fade
+    "Он забирает мою руку в свою, забирает руку Алисы, зачем-то увязавшейся с нами, и…"
+    "Всё зря. Мы изобразили дурацкую сцену, встав в круг, но ничего не произошло — как будто он ещё не закончил здесь всего, что должен был."
+    "Он не закончил."
+    "А вот Пират…"
+    with fade
+    "Я выскакиваю из автобуса, моя остановка — мне очень горько от того, что мне пришлось сделать."
+    "Очень стыдно, что пришлось выламывать руку, но…"
+    "Моё внимание привлекает мигающая жёлто-оранжевым неоном вывеска, изображающая стилизованный отпечаток собачьей лапы."
+    "Моя остановка."
+    window hide
+    scene black with diam
+    pause(2)
+    scene cg d6_sl_clean_7dl
+    show prologue_dream
+    with dissolve
+    "Шурх. Шурх."
+    "Иногда я просто сдаюсь. Я сажусь на попу и беззвучно вою в тёмный потолок склада."
+    "Мне страшно от того, что все усилия пусты."
+    "Метла разгоняет клубы пыли, листья, бумажки, обёртки от конфет."
+    "Мне больно от того, что я слишком поздно — узнаю? Вспоминаю? Понимаю? Я не знаю, как это назвать, но знание просто приходит ко мне."
+    "Как это было с Леной, с Алисой, с Мику, с Олей."
+    "Пусть уж лучше сидит здесь, на скамейке, под приглядом."
+    "Как это происходит сейчас, пока я старательно отворачиваюсь от него, пряча непрошенные слёзы — мне не хватило нахальства прямо попросить его вернуться домой, значит, я теперь косвенно отвечаю и за его счастье."
+    "Надо бы завтра заставить его хотя бы попытаться помириться с Алисой."
+    window hide
+    scene bg ext_city_night_7dl
+    show prologue_dream
+    with dissolve
+    "Он стоит на экскалаторе ступенькой ниже, смотрит снизу вверх."
+    "Наверное, хотел устроить романтическое «глаза в глаза», балбес. {w}Про трёхдюймовую шпильку, надо понимать, он забыл."
+    "Телефон жужжит, принимая сообщение, но я не успеваю прочесть его — у меня тут же отнимают аппарат, читают, что-то пишут в ответ и, полностью отключив, возвращают."
+    "Чуть позже я читаю: «Вообще, у неё есть молодой человек. Надеюсь, понятно?!»"
+    "Ох уж, эта ревность."
+    "Ох уж, эти Олины шуточки."
+    window hide
+    scene anim intro_1
+    show prologue_dream
+    with fade
+    $ renpy.pause(3, hard=True)
+    scene anim intro_2 
+    show prologue_dream
+    with fade
+    play sound sfx_intro_bus_stop_steps
+    $ renpy.pause(3, hard=True)
+    scene anim intro_3
+    show prologue_dream
+    with fade
+    "Всё это в прошлом — сейчас я лежу на горячем сталепластике капота, бессильно пытаясь сделать вдох."
+    "Понимаю, что между бампером и столбом места действительно маловато для человеческого тела, значит, всё куда грустнее, чем казалось."
+    sl "Почему так неправильно всё, Сёмушка?"
+    "Самое глупое, что можно было сказать, угасая."
+    window hide
+    scene black with fade
+    pause(2)
+    $ renpy.pause(1, hard=True)
+    stop sound_loop fadeout 4
+    scene anim intro_13 
+    with fade2
+    $ renpy.pause(3, hard=True)
+    scene bg intro_xx 
+    with fade
+    me "Наверное, потому, что я уже спас вас, уклоняться поздно."
+    "Девушка улыбнулась:"
+    voice "Ну и забавный же вы. Как вас зовут?"
+    me "Моё имя Семён."
+    voice "Семён?"
+    "Она попробовала звучание имени."
+    voice "Семён как Сёмушка?"
+    menu:
+        "Да, как Сёмушка.":
+            window hide 
+            scene anim intro_8
+            "Этой улыбке невозможно было сопротивляться."
+            me "Сёмушка."
+            "Кивнул я."
+            $ karma = 77
+        "Нет, как Семён.":
+            "Сёмушкой меня могла называть всего одна девушка."
+            "Только ей было можно."
+            "Плевать на то, что её не существует."
+            window hide 
+            scene anim intro_8
+            "Девушка немного погрустнела:"
+            voice "Простите, пожалуйста. Я не знала, что у вас плохое настроение."
+            me "Да ничего."
+            "Я пожал плечами и вернулся к себе на место над колесом, заткнув уши наушниками."
+            "Немного посомневавшись, она не стала садиться рядом, а ушла на заднюю площадку — я проводил её взглядом."
+            "И, схватившись за поручень, встала там."
+            "Наверное, обиделась."
+            "Плевать. У меня старая школа, старая закалка — девушки не нужны, никто не нужен, ото всех только проблемы."
+            "Когда-то я считал иначе."
+            "И очень больно обжёгся на этом."
+            "В памяти застарелым ожогом вспыхнул промозглый июльский полдень в далёкой-далёкой стране."
+            "И я затряс головой, старательно прогоняя воспоминания."
+            th "Где ж теперь моя шиза, когда она так нужна?"
+            "Издевательства издевательствами, но чёрную память от памяти светлой моё психическое расстройство отделяло замечательно."
+            "Правда закончилось всё ядовитым монологом у меня в квартире — видимо, я и в самом деле безнадёжен."
+            "В голову вдруг пришло, что я понятия не имею, куда еду."
+            "И зачем?"
+            "Так что на ближайшей остановке я вскочил и вышел из салона."
+    window hide
+    return
+
+
 label alt_day6_sl_ambulance:
     play music music_list["you_lost_me"] fadein 3
     me "Славя?!"
@@ -11526,8 +11417,8 @@ label alt_day6_sl_ambulance:
     stop ambience
     window hide
     scene black with fade
+    return
     
-
 label alt_day6_sl_concert:
     scene bg ext_stage_big_day
     play ambience ambience_camp_center_day fadein 3
@@ -11795,7 +11686,6 @@ label alt_day6_sl_concert:
                 stop music fadeout 3
                 play sound sfx_open_door_strong
                 pause(1)
-                
     else:
         $ alt_day6_sl_repel = False
         me "У меня дело. Которое я никому доверить не могу."
@@ -11869,11 +11759,9 @@ label alt_day6_sl_concert:
     with fade
     "Побежал!"
     stop ambience fadeout 2
-
     "Надо рассказать!"
     window hide
     scene black with fade
-
     "Пока я ещё что-то помню!"
     window hide
     scene black 
@@ -11881,7 +11769,6 @@ label alt_day6_sl_concert:
         xalign .5 yalign .5 zoom 1.0
         linear 2 rotate -15
     play sound2 sfx_bodyfall_1
-
     scene black with fade
     "Пока я…"
     scene black 
@@ -12137,11 +12024,9 @@ label alt_day6_sl_concert:
     stop ambience
     pause(2)
     scene black
+    return
 
 label alt_day6_sl_sh_tug:
-    $ persistent.sprite_time = "night"
-    $ night_time()
-    $ alt_chapter(6, u"Славя. Снова один.")
     scene bg ext_clubs_night
     play music unforgotten fadein 3
     "Люди гуляли, смеялись, любили."
@@ -12243,7 +12128,7 @@ label alt_day6_sl_sh_tug:
     "Поэтому будет мудрым прислушаться к совету Виолетты Церновны."
     stop music fadeout 3
     $ alt_day6_sl_arc = 1
-    jump alt_day7_sl_start
+    return
     
 label alt_day6_sl_regular_arc:
     sl "Знаешь."
@@ -12334,11 +12219,11 @@ label alt_day6_sl_regular_arc:
             dreamgirl "Если бы не твоя ненаглядная — там бы и пристроился!"
     th "Всё, закрыли тему."
     th "У меня есть Славя, и у неё сейчас и без того тяжёлая ситуация, чтобы ещё меня ловить на интересах к чужому панцу."
+    window hide
+    return
     
 label alt_day6_sl_hala:
     window hide
-    $ alt_chapter(6, u"Славя. Концерт.")
-    $ persistent.sprite_time = "day"
     scene bg ext_stage_normal_day
     with dissolve
     stop music fadeout 3
@@ -12423,7 +12308,6 @@ label alt_day6_sl_hala:
     "Я продолжал сидеть."
     window hide
     scene bg ext_stage_big_clear_day_7dl with fade
-
     "Мику ещё несколько раз поднималась на сцену — она принимала участие в нескольких номерах других отрядов."
     "У летнего детского сада она к тому же подвизалась в качестве хореографа."
     "Она была занята, она была при деле — и счастлива — при любимом деле."
@@ -12439,7 +12323,6 @@ label alt_day6_sl_hala:
     stop music fadeout 3
     window hide
     scene bg ext_square_day with dissolve
- 
     play music lynn fadein 3
     "Звериное чутьё, рефлексы, что позволяют уклониться от удара когтями, выжить там, где выживать не полагается."
     "После того, как я вышел на площадь, именно чутьё фактически силой повернуло меня куда-то в сторону — в кусты, на тропинку, путь старожилов."
@@ -12470,7 +12353,6 @@ label alt_day6_sl_hala:
     "Обращаясь в никуда, произнесла она."
     window hide
     scene bg ext_sky_7dl with dissolve
-
     sl "Жизнь. Самая прекрасная сила в мире."
     sl "Я хотела бы, чтобы мы были друзьями. Чтобы ты встречал меня вечерами, когда я возвращаюсь с учёбы или работы, уставшая, но счастливая от того, что меня ждут дома."
     sl "Чтобы с момента знакомства — и до тех пор, пока один из нас не уйдёт в пустоту, в великое Ничто."
@@ -13016,14 +12898,11 @@ label alt_day6_sl_hala:
     stop music fadeout 3
     stop ambience fadeout 3
     window hide
+    return
     
 label alt_day6_sl_dance:
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(6, u"Славя. Танцы")
     scene anim_square_preparty with dissolve
     play music music_list["lightness"] fadein 5
-
     "Дорожка вилась, вилась и вывела меня сюда, в этот вечер, наедине с грядущим отъездом и неизвестно чем, ожидающим после него."
     "Разумеется, фантастики хватает и в моей жизни — вспомнить хотя бы, как я сюда угодил."
     "А это прецедент. Где один, там и второй."
@@ -13205,6 +13084,7 @@ label alt_day6_sl_dance:
     "Я хотел было сказать что-то ещё, но Славя была рядом, и гораздо важнее было улыбнуться ей, наплевав на то, что кто-то где-то неправ."
     play music stilllovingyou fadein 4
     window hide
+    return
     
 label alt_day6_sl_dancing:
     "Песня-легенда, песня-история."
@@ -13294,12 +13174,9 @@ label alt_day6_sl_dancing:
     stop music fadeout 3
     "Конечно же, я согласился."
     window hide
+    return
     
 label alt_day6_sl_debarkader:
-    $ persistent.sprite_time = "night"
-    $ night_time()
-    $ alt_chapter(6, u"Славя. Ночь.")
-    pause(1)
     scene bg ext_boathouse_night with dissolve
     play ambience ambience_boat_station_night fadein 3
     play music silent_angel fadein 3
@@ -13410,11 +13287,9 @@ label alt_day6_sl_debarkader:
     window hide
     stop music fadeout 3
     stop ambience
+    return
 
-label alt_day7_sl_start:
-    pause(1)
-    call alt_day7_sl_cl_vars
-    pause(1)
+label alt_day7_sl_begin:
     if alt_day4_sl_tut_iz:
         play music vampire fadein 3
         scene bg int_mine_room
@@ -13893,10 +13768,9 @@ label alt_day7_sl_start:
     window hide
     stop music fadeout 3
     scene black with fade
+    return
 
 label alt_day7_sl_breakfast:
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
     scene bg int_dining_hall_people_sunset with dissolve
     play ambience ambience_dining_hall_full fadein 3
     play music tilltheend fadein 3
@@ -13999,34 +13873,9 @@ label alt_day7_sl_breakfast:
     "Но всё это потом — сейчас надо хотя бы просто обойти лагерь, запомнить здесь всё."
     window hide
     stop ambience
-    
-label alt_day7_sl_bl_tt_map:
-    $ persistent.sprite_time = "day"
-    $ day_time()
-    $ disable_all_zones_alt2()
-    $ disable_all_chibi_alt2()
-    $ set_zone_alt2('admin_house_alt2', 'alt_day7_sl_admins')
-    $ set_zone_alt2('kyber_club_alt2', 'alt_day7_sl_clubs')
-    $ set_zone_alt2('dining_hall_alt2', 'alt_day7_sl_dining_hall')
-    $ set_zone_alt2('volleyball_alt2', 'alt_day7_sl_volleyball_alt')
-    $ set_zone_alt2('estrade_alt2', 'alt_day7_sl_estrade')
-    $ alt_day7_sl_map_progress = 0
-    
+    return
 
-label alt_day7_sl_map:
-    play music music_list["smooth_machine"] fadein 2
-    if alt_day7_sl_map_progress > 4:
-        $ set_zone_alt2('square_alt2', 'alt_day7_sl_square')
-        if alt_day6_sl_arc != 1:
-            $ set_zone_alt2('boat_station_alt2', 'alt_day7_sl_boat_station')
-        else:
-            $ set_zone_alt2('beach_alt2', 'alt_day7_sl_beach')
-    scene black with fade
-    $ show_map_alt2()
-    
-    
-label alt_day7_sl_admins:
-    $ alt_day7_sl_code = True
+label alt_day7_sl_admins1:
     scene bg ext_admins_day_7dl with dissolve
     play ambience ambience_camp_center_day
     "Святая святых лагеря."
@@ -14042,11 +13891,9 @@ label alt_day7_sl_admins:
     "Я спрятал бумажку в карман и отправился дальше."
     stop ambience fadeout 3
     window hide
-    $  alt_day7_sl_map_progress += 1
-    $ disable_current_zone_alt2()
-    jump alt_day7_sl_map
+    return
     
-label alt_day7_sl_square:
+label alt_day7_sl_square1:
     window hide
     scene bg ext_square_day with dissolve
     play ambience ambience_camp_center_day
@@ -14199,11 +14046,9 @@ label alt_day7_sl_square:
         "Я не Тайлер Дёрден, оставляющий на холодильнике следы, нагар и копоть, но и я кое-что понимаю в отсроченной смерти."
     "Кивнув самому себе, я вернулся обратно к лестнице и выбрался на улицу."
     stop ambience
-    $  alt_day7_sl_map_progress += 1
-    $ disable_current_zone_alt2()
-    jump alt_day7_sl_beach
-    
-label alt_day7_sl_clubs:
+    return
+
+label alt_day7_sl_clubs1:
     scene bg ext_clubs_day with dissolve
     play ambience ambience_camp_entrance_day fadein 3
     "Попинывая шишки и мелкие камешки, я шёл в сторону ворот, подумывая, нельзя ли там расписаться где-нибудь."
@@ -14247,11 +14092,9 @@ label alt_day7_sl_clubs:
     "Настроение, только-только начавшее было выправляться, снова было бесповоротно испорчено."
     stop ambience fadeout 3
     window hide
-    $  alt_day7_sl_map_progress += 1
-    $ disable_current_zone_alt2()
-    jump alt_day7_sl_map
+    return
     
-label alt_day7_sl_dining_hall:
+label alt_day7_sl_dining_hall1:
     scene bg ext_dining_hall_away_day with dissolve
     play ambience ambience_camp_center_day
     "Я не очень понимал, что делаю здесь — но воспоминания штука упрямая."
@@ -14266,11 +14109,9 @@ label alt_day7_sl_dining_hall:
     "Усмехнувшись своим мыслям, я окинул взглядом здание столовой, как следует его запоминая, и заспешил дальше."
     stop ambience
     window hide
-    $  alt_day7_sl_map_progress += 1
-    $ disable_current_zone_alt2()
-    jump alt_day7_sl_map
-    
-label alt_day7_sl_sport_area:
+    return
+
+label alt_day7_sl_sport_area1:
     scene bg ext_playground2_7dl with dissolve
     play ambience ambience_soccer_play_background fadeout 2
     "Епархия Саныча — большого, грузного, язвительного человека."
@@ -14280,11 +14121,10 @@ label alt_day7_sl_sport_area:
         "Сейчас уже стало чуть понятнее, что не с потолка эта вечная сонливость взялась."
     "Кто бы мог подумать, что именно в этим медведем будет связана такая странная, непонятная история?"
     "Я проверил двери крытого — заперто — и отправился дальше."
-    $  alt_day7_sl_map_progress += 1
-    $ disable_current_zone_alt2()
-    jump alt_day7_sl_map
+    window hide
+    return
 
-label alt_day7_sl_volleyball_alt:
+label alt_day7_sl_volleyball_alt1:
     play ambience ambience_camp_center_day
     scene bg ext_volley_court_7dl
     "Волейбольная площадка."
@@ -14298,11 +14138,9 @@ label alt_day7_sl_volleyball_alt:
     "Вздохнув, я ушёл оттуда."
     window hide
     stop ambience fadeout 3
-    $  alt_day7_sl_map_progress += 1
-    $ disable_current_zone_alt2()
-    jump alt_day7_sl_map
+    return
     
-label alt_day7_sl_estrade:
+label alt_day7_sl_estrade1:
     scene bg ext_stage_big_day with dissolve
     play ambience ambience_camp_center_day
     "У эстрады было тихо — сейчас, когда здесь не проходил концерт, никому не было интересно глазеть на восьмиугольник крытой сцены."
@@ -14342,11 +14180,9 @@ label alt_day7_sl_estrade:
     "Когда Мику закончила петь и шутливо раскланялась, я засвистел, затопал, захлопал и от души поблагодарил девушку."
     "Ещё одно действительно хорошее воспоминание."
     window hide
-    $  alt_day7_sl_map_progress += 1
-    $ disable_current_zone_alt2()
-    jump alt_day7_sl_map
+    return
     
-label alt_day7_sl_boat_station:
+label alt_day7_sl_boat_station1:
     scene bg ext_boathouse_day with dissolve
     play ambience ambience_boat_station_day fadein 3
     "Я прошёл по понтонам на дальний конец причала."
@@ -14371,6 +14207,7 @@ label alt_day7_sl_boat_station:
     "То самое, да."
     window hide
     with dissolve
+    return
 
 label alt_day7_sl_beach:
     $ day_time()
@@ -14575,6 +14412,7 @@ label alt_day7_sl_beach:
     window hide
     stop music fadeout 3
     stop ambience fadeout 3
+    return
 
 label alt_day7_sl_dinner:
     window hide
@@ -14721,6 +14559,7 @@ label alt_day7_sl_dinner:
     if (lp_sl >= 18) or (alt_sp >= 6):
         menu:
             "За то и любима.":
+                $ karma = 777
                 scene bg ext_admins_day_7dl with flash
                 show mt surprise pioneer at zenterleft
                 mt "Семён? Что ты…"
@@ -14994,12 +14833,6 @@ label alt_day7_sl_dinner:
                 "Я не хочу. Мне нельзя."
                 "Если я засну, мне…"
                 "На этой мысли я выключился."
-                window hide
-                if lp_sl >= 18:
-                    jump alt_day7_sl_good
-                elif alt_sp >= 6:
-                    $ set_mode_adv()
-                    jump alt_day7_sl_rf_good
             "Как всё невовремя.":
                 play music beth
                 th "Надо же, первая размолвка, и под занавес."
@@ -15376,7 +15209,7 @@ label alt_day7_sl_dinner:
                             "Пойдём-ка попробуем."
                             "И, делая шаг, я улыбнулся:"
                             me "Даже не думай потеряться."
-                            jump alt_day7_sl_rf_good
+                            $ karma = 77
                         "Посмотреть в салоне повнимательнее":
                             "Успею ещё наружу."
                             "Тем более, что на верхней полочке обнаружился мой старый добрый рюкзак."
@@ -15385,7 +15218,6 @@ label alt_day7_sl_dinner:
                             "И вовремя — он тут же зазвонил!"
                             me "Не понял…"
                             "Я поднёс трубку к уху."
-                            jump alt_day7_sl_rf2
                 else:
                     window hide
                     stop ambience fadeout 2
@@ -15489,7 +15321,6 @@ label alt_day7_sl_dinner:
                         "Я пожал плечами, глубоко вздохнул и улыбнулся."
                         "И делая шаг в пустоту, произнёс одними губами:"
                         me "Я больше не хочу быть один."
-                        jump alt_day7_sl_reject_late
                     elif lp_sl >= 18:
                         "Я откинулся на кресле и прикрыл глаза."
                         "Моя остановка — конечная. {w}Обе остановки."
@@ -15497,15 +15328,13 @@ label alt_day7_sl_dinner:
                         "Так что разбудите меня, когда прибудем."
                         "В глубине сердца затухал окончательно задушенный инстинкт самосохранения."
                         me "Хочу быть вместе с ней."
-                        jump alt_day7_sl_reject_same
             "К этому всё и шло.":
                 stop ambience fadeout 3
                 pass
-    jump alt_day7_sl_cl_bad
+    window hide
+    return
 
 label alt_day8_sl_postscriptum:
-    $ persistent.sprite_time = "prolog"
-    $ prolog_time()
     window hide
     $ set_mode_nvl()
     scene anim_digi
@@ -15582,10 +15411,6 @@ label alt_day8_sl_postscriptum:
     return
 
 label alt_day7_sl_fear:
-    $ routetag = "sltrue"
-    $ persistent.sprite_time = "prolog"
-    $ prolog_time()
-    $ alt_chapter(7, u"Славя. Фантазм.")
     window hide
     $ set_mode_nvl()
     scene bg bus_stop with dissolve
@@ -15641,11 +15466,10 @@ label alt_day7_sl_fear:
     stop music fadeout 3
     window hide
     with fade
+    return
 
 label alt_day7_sl_1996:
     play music music_list["a_promise_from_distant_days_v2"] fadein 3
-    $ persistent.sprite_time = "day"
-    $ day_time()
     $ renpy.pause(3)
     play sound_loop sfx_intro_bus_engine_loop fadein 3
     "И не понял, в какой момент мои воспоминания оказались явью."
@@ -15711,7 +15535,7 @@ label alt_day7_sl_1996:
             "Он замер, ожидая от меня какой-то пакости, но я, тихо поблагодарив его, отвернулся к окну."
             stop music fadeout 3
             $ set_mode_adv()
-            jump alt_day7_sl_loop
+            $ karma = 777
         "А куда девушка делась?":
             $ prolog_time()
             voice "Девушка?"
@@ -15728,8 +15552,9 @@ label alt_day7_sl_1996:
             me "Боюсь, это не та тема, которую я готов обсуждать с первой же встречной."
             stop music fadeout 3
             $ set_mode_adv()
-            jump alt_day7_sl_lone
-            
+    window hide
+    return
+
 label alt_day7_sl_loop:
     "Я честно решил, что ослышался."
     "Потом — что надо мной подшутили."
@@ -16150,232 +15975,235 @@ label alt_day7_sl_loop:
     if persistent.sl_cl_int_good:
         menu:
             "Мне снилась Славя…":
-                scene black 
-                label alt_day7_sl_will:
-                    "Ну что? Те же, там же?"
-                    "История началась в рифму, диковинным стихом, укладывающим в одну строчку одиночество, счастье и нежелание сдаваться."
-                "Нежелание оставаться в одиночестве."
-                play music shape_of_my_heart
-                scene stars with dissolve2
-                "{i}И катись — бутылкой по автостраде. Оглушённой, пластиковой, простой.{/i}"
-                "Вот и катился… Интересно — а что получилось бы у нас — с той Славей."
-                "С… Не знаю даже, как это сказать. Настоящей?"
-                "Тихие слёзы-молитва о том, чтобы успеть, до боли сжатая рука — и безграничная надежда, вера. {w}В то, что всё получится."
-                "У кого повернётся язык называть голубоглазое счастье, что заснуло у меня на плече — ненастоящим?"
-                "Мы были вместе — просто на одном из судьбокрёстков со мной ушла её душа, её суть."
-                "А тело-физическая оболочка осталась на месте."
-                show expression D3_intro("bg ext_road_night") with dissolve
-                "{i}Посидели час, разошлись, не глядя — никаких «останься» или «постой».{/i}"
-                "Дурацкая история с непонятными гуделками, спецслужбами, мирами и прочей чушью там, где уместен только счастливый смех влюблённых."
-                "Понимаете?"
-                "Не слёзы в несущейся под двести «Волге» и молитвы всем силам, чтобы крохотная жизнь не угасла."
-                "Не боль под сердцем, позволяющая мне запросто открывать глаза в чужую вселенную от понимания, {b}кого{/b} больше нет."
-                "А тепло ладони, блеск глаз и «долго и счастливо»."
-                scene stars
-                show expression D3_intro("bg semen_room_window")
-                with dissolve
-                "Я запутался и мне страшно."
-                "Я ничего и никогда не понимал во всех эти вселенных, мета-вселенных и прочей чуши."
-                "Всё, чего я хотел…"
-                if herc:
-                    "Это капельку справедливости и чуть-чуть правды."
-                elif loki:
-                    "Это поверить в человека снова."
-                else:
-                    "Это просто, чтобы меня оставили в покое."
-                    "Или хотя бы простили."
-                "И человека, которым смогу дышать."
-                "А единственная девушка, которая могла бы выполнить моё желание так, как это понимаю я — в буквальном смысле этого слова…"
-                "Она перестала быть."
-                "Светло, как и жила. Без страха, понимая, что ничего не может исправить."
-                "Я вспомнил свой сон — вчерашний или происшедший миллионы лет назад?"
-                "Про парня, рассказывающего пространству про Ассоль, уставшую ждать паруса."
-                "Про то, что он всегда хотел, чтобы однажды на горизонте блеснула алая точка."
-                "И про его исполнившееся желание."
-                "А значит… Значит, и у Слави было так же?"
-                "Не мгновенно?"
-                "Может ли случиться такая фантастическая вещь, что Славя оставила мне послание?"
-                "Если она и правда настолько любила, что согласилась сделать главный героем своей вселенной."
-                "Возможно, я требую слишком многого."
-                "Но мне и правда очень важно понять."
-                "Какова воля той, что не дожила даже до нашего первого поцелуя?"
-                "Бегала за мной, наступала на горло собственной песне, чувствуя меня рядом."
-                "Пробуждая и сама чувствуя жгучий интерес."
-                "Чего она хотела?"
-                "О чём мечтала?"
-                "Но как узнать об этом?"
-                "И правда… Как?"
-                "Как узнать волю Вселенной, что без дураков… любит? В прямом смысле."
-                "Как?"
-                "Голову скрутило болью."
-                th "Нужно просто…"
-                "Спросить."
-                "Вселенную по имени Славушка."
-                me "Так какова же была твоя последняя воля, пока ты была ещё человеком?"
-                window hide
-                scene white with flash
-                "И в обжигающе ледяной белизне протаяло:"
-                "{i}Страшно хочется, чтоб она тебя обожала.{/i}"
-                scene stars
-                show expression D3_intro("cg d4_sl_sleeping_7dl")
-                with dissolve
-                "{i}Баловала и берегла.{/i}"
-                "Отозвалась пустота."
-                $ volume(0.3, 'music')
-                window hide
-                scene cg d4_sl_sleeping_7dl with flash
-                play sound nesmogla fadein 2
-                "Стишок, что когда-то я так и не прочитал ей."
-                $ volume(0.9, 'music')
-                "Послание языком памяти."
-                "Темнота несуществования расступилась."
-                "И я оказался там, откуда меня так бесцеремонно вытащил разорвавший циклы Саныч."
-                "На банкетке в коридоре."
-                me "Чтобы я действительно…"
-                "Одними губами произнёс я в слепой потолок."
-                "Под плечом уже тяжело-тепло, и рядом свернулось родное, тревожно смотрящее сны в ожидании."
-                sl "Что?"
-                me "Нет… Нет. Ничего."
-                "И последним словом, последним аккордом. Самой последней волей."
-                "Завершающим vale письма…"
-                show alt_letter timeskip11 at truecenter with zoomin
-                $ renpy.pause(3, hard=True)
-                scene cg d4_sl_sleeping_7dl with dissolve
-                "А я часто-часто моргаю в дырчатые панели звукоизоляции потолка, стараясь не разреветься."
-                me "Не смогла…"
-                "Зачем-то внятно произношу я."
-                window hide
-                with flash_red
-                th "Кто не смогла, чего не смогла?"
-                th "Ведь всё же хорошо. Правда?"
-                th "Наверное, просто испереживался за состояние — Слави, Пирата… Да и просто."
-                me "Откуда-то строчки всплыли. А откуда — не помню."
-                "Ответил я, старательно пряча в памяти невесть откуда взявшуюся дыру."
-                "Наверное, просто приснился очень страшный сон, о котором я уже забыл."
-                "Как и непонятные эти слова…"
-                play sound sfx_open_door_kick
-                "Тяжёлая дверь распахнулась, оттуда полился жёлтый свет, кто-то знакомо, отрывисто тявкнул, и Славя рядом зашевелилась, просыпаясь окончательно."
-                "Я погладил её по плечу и коснулся волос губами."
-                "Впереди ещё целый месяц лета."
-                "И во взрослую жизнь совсем необязательно спешить."
-                "Я задвинул на задний план непонятно откуда взявшийся образ недвижимой, безмятежной Слави, лежащей на кушетке — видимо, разыгралось воображение."
-                "И встал навстречу докторше."
-                "В свои права вступал новый день, а с ним — и новые надежды!"
-                window hide
-                play sound aunl
-                $ persistent.sl_cl_int_ok = True
-                show acm_logo_sl_ok with moveinright:
-                    pos (1600, 1020)
-                $ renpy.pause(7.4, hard=True)
-                with vpunch
-                call alt_7dl_titles
-                return
+                $ karma = 7777
             "У меня всё ещё остались долги":
                 pass
-    label alt_day7_sl_duty:
-        $ night_time()
-        play ambience ambience_camp_entrance_night fadein 3
-        scene bg ext_entrance_night_clear_7dl
-        show prologue_dream
-        with dissolve
-        play sound_loop sfx_far_steps fadein 1
-        "И то самое мгновение, почему-то очень-очень знакомое, пахнущее разогретым ржавым железом, темнотой и солью, окутало меня."
-        "Мгновение, к которому мы стремимся всю жизнь для того, чтобы улыбнуться и поприветствовать старого друга."
-        "Боли уже не было. Страха тоже."
-        "А в кромешней тишине далеко слышались удары босых пяток об асфальт."
-        "И из-под копны густых каштановых волос проглянули кошачьи ушки."
-        play music music_list["mystery_girl_v2"] fadein 3
-        scene bg ext_entrance_night_clear_7dl
-        show uvao_d1 at left
-        show prologue_dream
-        with dspr
-        dreamgirl "Всё-таки решил пойти?"
-        "Улыбнулась она."
-        me "Приведи меня к Славе."
-        "Попросил я."
-        "Девушка улыбнулась и, взяв меня под локоток, строго приказала:"
-        dreamgirl "Иди со мной строго шаг в шаг."
-        me "Это важно?"
-        dreamgirl "Очень!"
-        me "Что-то произойдёт не так, если я не пойду с тобой в шаг."
-        dreamgirl "Конечно!"
-        "Она распахнула глаза."
-        dreamgirl "Я расстроюсь, нападу на тебя и искусаю. Страшно? То-то же!"
-        dreamgirl "Пошли."
-        window hide
-        scene bg ext_entrance_night_clear_7dl at zenterleft
-        show uv normal at cleft
-        with dissolve
-        dreamgirl "Слушай, а ты почему не удивляешься, не спрашиваешь, кто я и откуда?"
-        me "Зачем?"
-        show uv upset with dspr
-        dreamgirl "Балда! Я же девушка! Мне внимание подавай и всякое такое!"
-        me "Ты не девушка, притворюшка. "
-        show uv surprise with dspr
-        dreamgirl "Нет? А кто я ?"
-        me "Ты — дух-проводник. {w}Хотя не спорю, все у тебя как у девушки, даже… кхм… Ты поняла, короче."
-        dreamgirl "Все такие умные пошли!"
-        show uv upset with dspr
-        "Возмутилась она."
-        dreamgirl "И куда теперь податься бедному Харону?"
-        me "Оставайся где ты есть. Ты — самый очаровательный Харон во всех вселенных."
-        show uv smile with dspr
-        dreamgirl "Правда?"
-        me "Зуб даю!"
-        show uv normal with dspr
-        dreamgirl "Верю на слово!"
-        window hide
-        scene bg ext_entrance_night_clear_7dl with flash
-        with vpunch
-        dreamgirl "Ну, бывай!"
-        "Мне погрозили пальцем, поцеловали в щёку и, развернув спиной, выписали напутственного пенделя."
-        window hide
-        scene bg ext_entrance_night_clear_7dl with flash
-        pause(1)
-        scene bg ext_camp_entrance_sunset with flash
-        pause(1)
-        scene bg ext_camp_entrance_day with flash
-        $ day_time
-        $ persistent.sprite_time = "day"
-        "И я понять ничего не успел."
-        sl "Привет. А что ты тут делаешь?"
-        "Очаровательно улыбнулось моё личное солнце, мой объект молитв и воздыханий."
-        "И я, улыбнувшись, поднял голову."
-        show sl normal pioneer with dspr
-        me "Автобус давно приехал?"
-        "В тон ответил ей я."
-        me "Знаешь, подумал — а ну как вы забеспокоитесь, где я пропадаю."
-        show sl serious pioneer with dspr
-        sl "Мы и забеспокоились!"
-        me "Пошлёте кого-нибудь встретить. {w}И я с ним подружусь."
-        me "Знаешь, как это здорово — когда ты можешь с кем-то подружиться на ровном месте."
-        show sl smile pioneer with dspr
-        "Славя улыбнулась, подтверждая, что да — действительно, неплохо."
-        me "А вы взяли, да и прислали самого очаровательного."
-        me "Так что я повременю, пожалуй, с дружбой."
-        show sl normal pioneer with dspr
-        "Тут улыбка девушки несколько подувяла — хотя говорил я предсказуемые банальности."
-        show sl surprise pioneer with dspr
-        sl "Ты не хочешь со мной подружиться?!"
-        "Переспросила она."
-        "Я мог её понять — такое противодействие сразу с порога!"
-        me "Я, пожалуй, сразу влюблюсь. Ты не против, чтобы я в тебя влюбился?"
-        "Спросил я, и она расхохоталась:"
-        show sl laugh pioneer with dspr
-        sl "Ха! Это звучит так сумасшедше, что может и сработать."
-        sl "Я — Славяна. Но ты зови меня Славей, меня все так зовут."
-        show sl happy pioneer with dspr
-        me "Ладно. А ты тогда называй меня «дорогой»."
-        sl "Что, и в паспорте так написано?"
-        me "Так, мы ещё не настолько близко знакомы, чтобы я пустил тебя к себе в паспорт."
-        show sl normal pioneer with dspr
-        sl "Ладно… дорогой."
-        "Отсмеявшись, сказала Славя."
-        sl "Тебе показать, как к вожатой добраться, или ты уже всё сам с усам?"
-        me "А можно я вместо этого пойду Пирата потискаю?"
-        "Подмигнул я."
-        window hide
-        play sound aunl
+    return
+
+label alt_day7_sl_will:
+    "Ну что? Те же, там же?"
+    "История началась в рифму, диковинным стихом, укладывающим в одну строчку одиночество, счастье и нежелание сдаваться."
+    "Нежелание оставаться в одиночестве."
+    play music shape_of_my_heart
+    scene stars with dissolve2
+    "{i}И катись — бутылкой по автостраде. Оглушённой, пластиковой, простой.{/i}"
+    "Вот и катился… Интересно — а что получилось бы у нас — с той Славей."
+    "С… Не знаю даже, как это сказать. Настоящей?"
+    "Тихие слёзы-молитва о том, чтобы успеть, до боли сжатая рука — и безграничная надежда, вера. {w}В то, что всё получится."
+    "У кого повернётся язык называть голубоглазое счастье, что заснуло у меня на плече — ненастоящим?"
+    "Мы были вместе — просто на одном из судьбокрёстков со мной ушла её душа, её суть."
+    "А тело-физическая оболочка осталась на месте."
+    show expression D3_intro("bg ext_road_night") with dissolve
+    "{i}Посидели час, разошлись, не глядя — никаких «останься» или «постой».{/i}"
+    "Дурацкая история с непонятными гуделками, спецслужбами, мирами и прочей чушью там, где уместен только счастливый смех влюблённых."
+    "Понимаете?"
+    "Не слёзы в несущейся под двести «Волге» и молитвы всем силам, чтобы крохотная жизнь не угасла."
+    "Не боль под сердцем, позволяющая мне запросто открывать глаза в чужую вселенную от понимания, {b}кого{/b} больше нет."
+    "А тепло ладони, блеск глаз и «долго и счастливо»."
+    scene stars
+    show expression D3_intro("bg semen_room_window")
+    with dissolve
+    "Я запутался и мне страшно."
+    "Я ничего и никогда не понимал во всех эти вселенных, мета-вселенных и прочей чуши."
+    "Всё, чего я хотел…"
+    if herc:
+        "Это капельку справедливости и чуть-чуть правды."
+    elif loki:
+        "Это поверить в человека снова."
+    else:
+        "Это просто, чтобы меня оставили в покое."
+        "Или хотя бы простили."
+    "И человека, которым смогу дышать."
+    "А единственная девушка, которая могла бы выполнить моё желание так, как это понимаю я — в буквальном смысле этого слова…"
+    "Она перестала быть."
+    "Светло, как и жила. Без страха, понимая, что ничего не может исправить."
+    "Я вспомнил свой сон — вчерашний или происшедший миллионы лет назад?"
+    "Про парня, рассказывающего пространству про Ассоль, уставшую ждать паруса."
+    "Про то, что он всегда хотел, чтобы однажды на горизонте блеснула алая точка."
+    "И про его исполнившееся желание."
+    "А значит… Значит, и у Слави было так же?"
+    "Не мгновенно?"
+    "Может ли случиться такая фантастическая вещь, что Славя оставила мне послание?"
+    "Если она и правда настолько любила, что согласилась сделать главный героем своей вселенной."
+    "Возможно, я требую слишком многого."
+    "Но мне и правда очень важно понять."
+    "Какова воля той, что не дожила даже до нашего первого поцелуя?"
+    "Бегала за мной, наступала на горло собственной песне, чувствуя меня рядом."
+    "Пробуждая и сама чувствуя жгучий интерес."
+    "Чего она хотела?"
+    "О чём мечтала?"
+    "Но как узнать об этом?"
+    "И правда… Как?"
+    "Как узнать волю Вселенной, что без дураков… любит? В прямом смысле."
+    "Как?"
+    "Голову скрутило болью."
+    th "Нужно просто…"
+    "Спросить."
+    "Вселенную по имени Славушка."
+    me "Так какова же была твоя последняя воля, пока ты была ещё человеком?"
+    window hide
+    scene white with flash
+    "И в обжигающе ледяной белизне протаяло:"
+    "{i}Страшно хочется, чтоб она тебя обожала.{/i}"
+    scene stars
+    show expression D3_intro("cg d4_sl_sleeping_7dl")
+    with dissolve
+    "{i}Баловала и берегла.{/i}"
+    "Отозвалась пустота."
+    $ volume(0.3, 'music')
+    window hide
+    scene cg d4_sl_sleeping_7dl with flash
+    play sound nesmogla fadein 2
+    "Стишок, что когда-то я так и не прочитал ей."
+    $ volume(0.9, 'music')
+    "Послание языком памяти."
+    "Темнота несуществования расступилась."
+    "И я оказался там, откуда меня так бесцеремонно вытащил разорвавший циклы Саныч."
+    "На банкетке в коридоре."
+    me "Чтобы я действительно…"
+    "Одними губами произнёс я в слепой потолок."
+    "Под плечом уже тяжело-тепло, и рядом свернулось родное, тревожно смотрящее сны в ожидании."
+    sl "Что?"
+    me "Нет… Нет. Ничего."
+    "И последним словом, последним аккордом. Самой последней волей."
+    "Завершающим vale письма…"
+    show alt_letter timeskip11 at truecenter with zoomin
+    $ renpy.pause(3, hard=True)
+    scene cg d4_sl_sleeping_7dl with dissolve
+    "А я часто-часто моргаю в дырчатые панели звукоизоляции потолка, стараясь не разреветься."
+    me "Не смогла…"
+    "Зачем-то внятно произношу я."
+    window hide
+    with flash_red
+    th "Кто не смогла, чего не смогла?"
+    th "Ведь всё же хорошо. Правда?"
+    th "Наверное, просто испереживался за состояние — Слави, Пирата… Да и просто."
+    me "Откуда-то строчки всплыли. А откуда — не помню."
+    "Ответил я, старательно пряча в памяти невесть откуда взявшуюся дыру."
+    "Наверное, просто приснился очень страшный сон, о котором я уже забыл."
+    "Как и непонятные эти слова…"
+    play sound sfx_open_door_kick
+    "Тяжёлая дверь распахнулась, оттуда полился жёлтый свет, кто-то знакомо, отрывисто тявкнул, и Славя рядом зашевелилась, просыпаясь окончательно."
+    "Я погладил её по плечу и коснулся волос губами."
+    "Впереди ещё целый месяц лета."
+    "И во взрослую жизнь совсем необязательно спешить."
+    "Я задвинул на задний план непонятно откуда взявшийся образ недвижимой, безмятежной Слави, лежащей на кушетке — видимо, разыгралось воображение."
+    "И встал навстречу докторше."
+    "В свои права вступал новый день, а с ним — и новые надежды!"
+    window hide
+    play sound aunl
+    $ persistent.sl_cl_int_ok = True
+    show acm_logo_sl_ok with moveinright:
+        pos (1600, 1020)
+    $ renpy.pause(7.4, hard=True)
+    with vpunch
+    call alt_7dl_titles
+    return
+
+label alt_day7_sl_duty:
+    $ night_time()
+    play ambience ambience_camp_entrance_night fadein 3
+    scene bg ext_entrance_night_clear_7dl
+    show prologue_dream
+    with dissolve
+    play sound_loop sfx_far_steps fadein 1
+    "И то самое мгновение, почему-то очень-очень знакомое, пахнущее разогретым ржавым железом, темнотой и солью, окутало меня."
+    "Мгновение, к которому мы стремимся всю жизнь для того, чтобы улыбнуться и поприветствовать старого друга."
+    "Боли уже не было. Страха тоже."
+    "А в кромешней тишине далеко слышались удары босых пяток об асфальт."
+    "И из-под копны густых каштановых волос проглянули кошачьи ушки."
+    play music music_list["mystery_girl_v2"] fadein 3
+    scene bg ext_entrance_night_clear_7dl
+    show uvao_d1 at left
+    show prologue_dream
+    with dspr
+    dreamgirl "Всё-таки решил пойти?"
+    "Улыбнулась она."
+    me "Приведи меня к Славе."
+    "Попросил я."
+    "Девушка улыбнулась и, взяв меня под локоток, строго приказала:"
+    dreamgirl "Иди со мной строго шаг в шаг."
+    me "Это важно?"
+    dreamgirl "Очень!"
+    me "Что-то произойдёт не так, если я не пойду с тобой в шаг."
+    dreamgirl "Конечно!"
+    "Она распахнула глаза."
+    dreamgirl "Я расстроюсь, нападу на тебя и искусаю. Страшно? То-то же!"
+    dreamgirl "Пошли."
+    window hide
+    scene bg ext_entrance_night_clear_7dl at zenterleft
+    show uv normal at cleft
+    with dissolve
+    dreamgirl "Слушай, а ты почему не удивляешься, не спрашиваешь, кто я и откуда?"
+    me "Зачем?"
+    show uv upset with dspr
+    dreamgirl "Балда! Я же девушка! Мне внимание подавай и всякое такое!"
+    me "Ты не девушка, притворюшка. "
+    show uv surprise with dspr
+    dreamgirl "Нет? А кто я ?"
+    me "Ты — дух-проводник. {w}Хотя не спорю, все у тебя как у девушки, даже… кхм… Ты поняла, короче."
+    dreamgirl "Все такие умные пошли!"
+    show uv upset with dspr
+    "Возмутилась она."
+    dreamgirl "И куда теперь податься бедному Харону?"
+    me "Оставайся где ты есть. Ты — самый очаровательный Харон во всех вселенных."
+    show uv smile with dspr
+    dreamgirl "Правда?"
+    me "Зуб даю!"
+    show uv normal with dspr
+    dreamgirl "Верю на слово!"
+    window hide
+    scene bg ext_entrance_night_clear_7dl with flash
+    with vpunch
+    dreamgirl "Ну, бывай!"
+    "Мне погрозили пальцем, поцеловали в щёку и, развернув спиной, выписали напутственного пенделя."
+    window hide
+    scene bg ext_entrance_night_clear_7dl with flash
+    pause(1)
+    scene bg ext_camp_entrance_sunset with flash
+    pause(1)
+    scene bg ext_camp_entrance_day with flash
+    $ day_time
+    $ persistent.sprite_time = "day"
+    "И я понять ничего не успел."
+    sl "Привет. А что ты тут делаешь?"
+    "Очаровательно улыбнулось моё личное солнце, мой объект молитв и воздыханий."
+    "И я, улыбнувшись, поднял голову."
+    show sl normal pioneer with dspr
+    me "Автобус давно приехал?"
+    "В тон ответил ей я."
+    me "Знаешь, подумал — а ну как вы забеспокоитесь, где я пропадаю."
+    show sl serious pioneer with dspr
+    sl "Мы и забеспокоились!"
+    me "Пошлёте кого-нибудь встретить. {w}И я с ним подружусь."
+    me "Знаешь, как это здорово — когда ты можешь с кем-то подружиться на ровном месте."
+    show sl smile pioneer with dspr
+    "Славя улыбнулась, подтверждая, что да — действительно, неплохо."
+    me "А вы взяли, да и прислали самого очаровательного."
+    me "Так что я повременю, пожалуй, с дружбой."
+    show sl normal pioneer with dspr
+    "Тут улыбка девушки несколько подувяла — хотя говорил я предсказуемые банальности."
+    show sl surprise pioneer with dspr
+    sl "Ты не хочешь со мной подружиться?!"
+    "Переспросила она."
+    "Я мог её понять — такое противодействие сразу с порога!"
+    me "Я, пожалуй, сразу влюблюсь. Ты не против, чтобы я в тебя влюбился?"
+    "Спросил я, и она расхохоталась:"
+    show sl laugh pioneer with dspr
+    sl "Ха! Это звучит так сумасшедше, что может и сработать."
+    sl "Я — Славяна. Но ты зови меня Славей, меня все так зовут."
+    show sl happy pioneer with dspr
+    me "Ладно. А ты тогда называй меня «дорогой»."
+    sl "Что, и в паспорте так написано?"
+    me "Так, мы ещё не настолько близко знакомы, чтобы я пустил тебя к себе в паспорт."
+    show sl normal pioneer with dspr
+    sl "Ладно… дорогой."
+    "Отсмеявшись, сказала Славя."
+    sl "Тебе показать, как к вожатой добраться, или ты уже всё сам с усам?"
+    me "А можно я вместо этого пойду Пирата потискаю?"
+    "Подмигнул я."
+    window hide
+    play sound aunl
     $ persistent.sl_cl_int_good = True
     show acm_logo_sl_fantazm with moveinright:
         pos (1600, 1020)
@@ -16598,9 +16426,10 @@ label alt_day7_sl_good:
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2)
-    jump alt_day8_sl_postscriptum
+    return
     
 label alt_day7_sl_rf_good:
+    $ set_mode_adv()
     play music are_you_there fadein 3
     $ persistent.sprite_time = "day"
     $ prolog_time()
@@ -16754,7 +16583,7 @@ label alt_day7_sl_rf_good:
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2)
-    jump alt_day8_sl_postscriptum
+    return
     
 label alt_day7_sl_reject_same:
     window hide
@@ -17003,57 +16832,66 @@ label alt_day7_sl_reject_late:
     voice "А теперь как ни идёт, всё улыбается."
     voice "За собой ухаживать стал — я и подумала, взялся за ум наш Сёмушка."
     voice "Нашёл себе любушку."
-    $ alt_day7_sl_gl = ('dv', 'un', 'mi', 'us')
-    $ alt_day7_sl_lp_counter = max( [eval('lp_'+w) for w in alt_day7_sl_gl] )
-    $ alt_day7_sl_lp_top = [w for w in alt_day7_sl_gl if eval('lp_'+w) == alt_day7_sl_lp_counter]
-    $ alt_day7_sl_lp_top_id = alt_day7_sl_lp_top[0] if alt_day7_sl_lp_counter >= 1 and len(alt_day7_sl_lp_top)==1 else 'mt'
-    jump expression 'alt_day7_sl_rej_{}'.format(alt_day7_sl_lp_top_id)
-    label alt_day7_sl_rej_dv:
-        voice "И однажды пришла к нему."
-        voice "Высокая, стройная, в красном пальто — красивая-красивая."
-        voice "Барабанила в дверь кулаками, а когда он открыл, поцеловала прямо на пороге, дала собраться и увела с собой."
-        voice "Неделю где-то назад."
-        sl "Алиса…"
-        jump alt_day7_sl_rej_end
-    label alt_day7_sl_rej_un:
-        voice "Ходил-ходил гоголем, а тут однажды ушёл как обычно, погулять — в феврале, что ли, было — а вернулся не один."
-        voice "Девочка такая, до пятидесяти лет будет как девочка выглядеть."
-        voice "Глазищи — ух, огромные, колдовские. Зе-ле-ну-щие."
-        voice "В начале октября свадьбу сыграли, уехали — наверное, в медовый месяц."
-        sl "Лена…"
-        jump alt_day7_sl_rej_end
-    label alt_day7_sl_rej_us:
-        voice "И правда — такая красота, что лучше бы не видеть."
-        "В сердцах высказала баба Аля."
-        voice "Ночью, в три часа, под окнами — приехала на машине, совсем о людях не думает!"
-        voice "И музыку играла! На гитаре!"
-        sl "Неужели Алиса?.."
-        voice "Да хоть Алиса, хоть не Алиса — я после этой проказницы красноголовой полночи ворочалась…"
-        voice "Всё напевала «Взвейтесь кострами»."
-        voice "А в конце сентября уехали куда-то вдвоём."
-        voice "Так с тех пор и не вернулись."
-        sl "Ульяна?"
-        jump alt_day7_sl_rej_end
-    label alt_day7_sl_rej_mi:
-        voice "И правда, нашёл."
-        voice "На прошлой неделе, представляешь, приехал автобус — большой, иностранный, с йёроглифами, с какими-то мультиками нарисованными."
-        voice "Все побежали смотреть, а у меня окно во двор — вот и смотрю: выходит оттуда девочка-тростиночка."
-        voice "Мама моя, худющая, подержаться не за что, зато с волосами до земли."
-        voice "Побежала в подъезд, звонилась, звонилась, а когда Сёмушка открыл…"
-        voice "Эх, нет бы, какую себе нормальную девушку подыскал, вроде тебя."
-        sl "Мику…"
-        jump alt_day7_sl_rej_end
-    label alt_day7_sl_rej_mt:
-        voice "Вернее, это она его нашла."
-        voice "Эх, раньше-то, в моё время — парни так себя не вели."
-        voice "Слыханное ли дело — на седьмой этаж на пожарной лестнице, а с виду такая серьёзная, взрослая!"
-        voice "И всё — квартира теперь пустая, Сёмушка переехал к ней."
-        sl "Как она хоть выглядела?"
-        voice "Я и говорю — взрослая такая, разглядеть не успела, только волосы длинные, каштановые, да голос такой — командирский. Как она кричала «Семёёёёён»!"
-        sl "Ольга…"
-    label alt_day7_sl_rej_end:
-        stop music fadeout 3
-        "Выдохнула девушка."
+    window hide
+    return
+
+label alt_day7_sl_rej_dv:
+    voice "И однажды пришла к нему."
+    voice "Высокая, стройная, в красном пальто — красивая-красивая."
+    voice "Барабанила в дверь кулаками, а когда он открыл, поцеловала прямо на пороге, дала собраться и увела с собой."
+    voice "Неделю где-то назад."
+    sl "Алиса…"
+    window hide
+    return
+
+label alt_day7_sl_rej_un:
+    voice "Ходил-ходил гоголем, а тут однажды ушёл как обычно, погулять — в феврале, что ли, было — а вернулся не один."
+    voice "Девочка такая, до пятидесяти лет будет как девочка выглядеть."
+    voice "Глазищи — ух, огромные, колдовские. Зе-ле-ну-щие."
+    voice "В начале октября свадьбу сыграли, уехали — наверное, в медовый месяц."
+    sl "Лена…"
+    window hide
+    return
+
+label alt_day7_sl_rej_us:
+    voice "И правда — такая красота, что лучше бы не видеть."
+    "В сердцах высказала баба Аля."
+    voice "Ночью, в три часа, под окнами — приехала на машине, совсем о людях не думает!"
+    voice "И музыку играла! На гитаре!"
+    sl "Неужели Алиса?.."
+    voice "Да хоть Алиса, хоть не Алиса — я после этой проказницы красноголовой полночи ворочалась…"
+    voice "Всё напевала «Взвейтесь кострами»."
+    voice "А в конце сентября уехали куда-то вдвоём."
+    voice "Так с тех пор и не вернулись."
+    sl "Ульяна?"
+    window hide
+    return
+
+label alt_day7_sl_rej_mi:
+    voice "И правда, нашёл."
+    voice "На прошлой неделе, представляешь, приехал автобус — большой, иностранный, с йёроглифами, с какими-то мультиками нарисованными."
+    voice "Все побежали смотреть, а у меня окно во двор — вот и смотрю: выходит оттуда девочка-тростиночка."
+    voice "Мама моя, худющая, подержаться не за что, зато с волосами до земли."
+    voice "Побежала в подъезд, звонилась, звонилась, а когда Сёмушка открыл…"
+    voice "Эх, нет бы, какую себе нормальную девушку подыскал, вроде тебя."
+    sl "Мику…"
+    window hide
+    return
+
+label alt_day7_sl_rej_mt:
+    voice "Вернее, это она его нашла."
+    voice "Эх, раньше-то, в моё время — парни так себя не вели."
+    voice "Слыханное ли дело — на седьмой этаж на пожарной лестнице, а с виду такая серьёзная, взрослая!"
+    voice "И всё — квартира теперь пустая, Сёмушка переехал к ней."
+    sl "Как она хоть выглядела?"
+    voice "Я и говорю — взрослая такая, разглядеть не успела, только волосы длинные, каштановые, да голос такой — командирский. Как она кричала «Семёёёёён»!"
+    sl "Ольга…"
+    window hide
+    return
+
+label alt_day7_sl_rej_end:
+    stop music fadeout 3
+    "Выдохнула девушка."
     voice "Так ты её знаешь?"
     sl "Знала…"
     play music you_were_late fadein 3
@@ -17210,11 +17048,7 @@ label alt_day7_sl_cl_bad:
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2)
-    if alt_day6_sl_arc == 1:
-        jump alt_day8_sl_postscriptum
-    else:
-        pause(1)
-        return
+    return
         
 label alt_day7_sl_rf2:
     window hide

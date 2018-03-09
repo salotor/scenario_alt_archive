@@ -87,7 +87,7 @@ label alt_day4_neu_begin:
                 $ mt_pt = 0
                 $ d3_pt = 0
                 $ us_pt = 0
-                jump alt_day4_sl_cl_shurik
+                jump alt_day4_sl_start
         else:
             call alt_day4_neu_aid_generic
             pause(1)
