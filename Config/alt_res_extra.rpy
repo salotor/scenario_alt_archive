@@ -8,6 +8,8 @@ image cg wtf_end_of_day = get_image_extra7dl("cg/wtf_end_of_day.jpg")
 
 image bg ext_house_of_el_day = get_image_extra7dl("bg/ext_house_of_el_day.jpg")
 image bg ext_house_of_el_night = get_image_extra7dl("bg/ext_house_of_el_night.jpg")
+image bg ext_stand = get_image_extra7dl("bg/ext_stand.jpg")
+image bg ext_stand_2 = get_image_extra7dl("bg/ext_stand_2.jpg")
 image bg ext_stage_big_day = get_image_extra7dl("bg/ext_stage_big_day.jpg")
 image bg int_house_of_mt_noitem_day = get_image_extra7dl("bg/int_house_of_mt_noitem_day.jpg")
 image bg ext_aidpost_sunset = get_image_extra7dl("bg/ext_aidpost_sunset.jpg")
