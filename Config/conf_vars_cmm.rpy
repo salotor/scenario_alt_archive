@@ -90,9 +90,6 @@ init 2:
     $ store.names_list.append('dy')
     $ reload_names()
     
-    # steam. сохраняем все существующие дескрипторы персонажей (возможно включая из других модов)
-    $ preserve_names()
-    
     $ lp_mi = 0
     $ lp_sl = 0
     $ lp_un = 0

@@ -164,32 +164,6 @@ init -2 python:
         store.names[who] = name
         gl = globals()
         gl[who + "_name"] = store.names[who]
-    
-    def preserve_names():
-        # steam. в общем нашёл я метод обойтись без этого мерзкого трюка с кастомными именами и mass replace.
-        # эта функция вызывается по окончании загрузки 7ДЛ (но ДО момента переименования персонажей) и записывает существующие данные дескрипторов.
-        global store
-        global names_list_bak
-        global names_bak
-        global colors_bak
-        
-        # Кодеры! Ахтунг! При запуске мода на любой ноу-стим версии БЛ, использующей RenPy ДО версии 6.99.9, здесь будет вылет.
-        # Чтобы его не было, используйте старый метод rollback (см. класс RevertableList) или вообще не используйте откат имён.
-        
-        names_list_bak = store.names_list._compress(store.names_list._clean())
-        names_bak = store.names._compress(store.names._clean())
-        colors_bak = store.colors._compress(store.colors._clean())
-
-    def revert_names():
-        # Откатываем все кастомные имена, чтобы они не появлялись при загрузке других модов в случае если до этого был загружен 7ДЛ
-        global store
-        global names_list_bak
-        global names_bak
-        global colors_bak
-        
-        store.names_list._rollback(names_list_bak)
-        store.names._rollback(names_bak)
-        store.colors._rollback(colors_bak)
         
 init -265 python: 
     #Пресеты с возможностью настройки
@@ -523,7 +497,7 @@ init 52 python:
         
 init -1001 python:
     # steam: здесь указатель на папку с модом содержащий айдишник
-    default_7dl_path = '../441054187/scenario_alt/'
+    default_7dl_path = 'mods/scenario_alt/'
     def disable_all_chibi():
         global global_zones
         for name,data in global_zones.iteritems():
