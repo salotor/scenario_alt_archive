@@ -181,6 +181,8 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_sup = 0
     $ alt_day2_cardgame_block_rollback = False
     $ alt_day2_olga_help = False
+    $ alt_day2_slot_us_cake = False
+    $ alt_day2_cake = False
     #Переменные для турнира
     $ alt_day2_round1 = 0 #0 не участвовал, 1 проиграл, если победил то -V-
     $ alt_day2_round2 = 0 #0 не участвовал, 1 проиграл, если победил, то -V-
