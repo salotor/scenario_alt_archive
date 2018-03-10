@@ -223,7 +223,7 @@ label alt_day6_us_7dl_vars:
     $ alt_day6_us_7dl_tr = False
     return
     
-label alt_day6_us_px_vars:    
+label alt_day6_us_px_vars:
     $ alt_day6_us_px_sl_join = False
     return
     
