@@ -69,6 +69,8 @@ label alt_day4_sl_cl_vars:
     $ alt_day4_sl_tut = False
     $ alt_day4_sl_tut_lf = False
     $ alt_day4_sl_lf_solo = 0
+    $ alt_day4_sl_wh = False
+    $ alt_day5_sl_wh_transit = False
     return
     
 label alt_day5_sl_cl_vars:
