@@ -4,7 +4,7 @@
     $ alt_chapter(6, u"Огоньки. Утро")
     play music unfulfilled fadein 5
     play ambience ambience_int_cabin_day fadein 2
-    scene bg int_house_of_mt_sunset
+    scene anim prolog_1
     with dissolve
     "Мне снился какой-то странный сон ночью."
     "Тот самый, что забываешь ещё быстрее, чем сознание нехотя возвращается в тебя."
@@ -28,6 +28,7 @@
     "Иначе заболеет."
     "Потому я заглянул внутрь себя — где резвились и играли два крохотных пасынка солнца и улыбнулся им:"
     me "Тай-тай…"
+    scene bg int_house_of_mt_sunset
     mt "И тебе с добрым утром."
     "Послышалось с соседней кровати."
     if alt_day4_neu_us_pixies == 3:
