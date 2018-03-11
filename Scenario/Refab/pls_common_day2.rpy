@@ -85,14 +85,26 @@
             call alt_day2_sup2
             pause(1)
             if alt_day2_dv_chased:
-                call alt_day2_eventEv_beach
+                call alt_day2_eventEv_beach1
+                pause(1)
+                if lp_dv > 3 and alt_day2_dv_bet_approve:
+                    $ alt_day2_date = 3
+                    call alt_day2_slot_dv
+                else:
+                    pass
             else:
                 call alt_day2_mapEv_prepare
     else:
         call alt_day2_sup2
         pause(1)
         if alt_day2_dv_chased:
-            call alt_day2_eventEv_beach
+            call alt_day2_eventEv_beach1
+            pause(1)
+            if lp_dv > 3 and alt_day2_dv_bet_approve:
+                $ alt_day2_date = 3
+                call alt_day2_slot_dv
+            else:
+                pass
         else:
             call alt_day2_mapEv_prepare
     pause(1)

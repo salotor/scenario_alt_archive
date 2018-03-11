@@ -248,4 +248,8 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_uvao_spotted = False
     $ alt_day3_ladder_phys = 0
     $ alt_day3_ladder_mt = 0
+    $ alt_day3_technoquest_st3_help = False
+    $ alt_day3_un_fz_evening = False
+    $ alt_day3_dv_rep = False
+    $ alt_day3_un_fz_dinner = False
     return

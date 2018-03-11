@@ -107,20 +107,11 @@ label alt_day2_eventEv_sport_area:
 
 label alt_day2_eventEv_beach:
     call alt_day2_eventEv_beach1
-    pause(1)
-    if alt_day2_dv_chased:
-        if lp_dv > 3 and alt_day2_dv_bet_approve:
-            $ alt_day2_date = 3
-            call alt_day2_slot_dv
-            return
-        else:
-            pass
     if alt_day2_round3 == 2 and alt_day2_dv_bet_approve:
         $ alt_day2_date = 3
         $ disable_current_zone_alt2()
         call alt_day2_slot_dv
         return
-    window hide
     $ disable_current_zone_alt2()
     jump alt_day2_mapEv
 
