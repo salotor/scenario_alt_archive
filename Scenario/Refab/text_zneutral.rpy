@@ -9030,7 +9030,7 @@ label alt_day5_neu_us_sleetptime:
         "Так что я накрыл Ульяну покрывалом, подоткнул уголок и на цыпочках вышел вон."
         "Меня ждала моя кроватка и, несомненно, самые сладкие сны."
     else:
-		scene bg ext_house_of_mt_night_without_light with fade
+        scene bg ext_house_of_mt_night_without_light with fade
         "М-даааа…"
         "Сегодняшний день… Это было что-то с чем-то."
         "Возможно, мне стоило бы вести себя как-то по-другому?"
