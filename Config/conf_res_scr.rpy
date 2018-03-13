@@ -554,7 +554,6 @@ init -998 python:
 init -997 python:
     def get_sprite_7dl(file):
         return default_7dl_path+"Pics/sprites/%s" % (file)
-        # ori - оригинал
     def get_sprite_ori(file):
         return "images/sprites/%s" % (file)
         
