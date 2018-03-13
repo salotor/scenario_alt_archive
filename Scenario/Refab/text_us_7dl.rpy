@@ -6514,7 +6514,8 @@ label alt_day6_us_7dl_tea:
     "Помахала мне рукой Ольга."
     mt "Присоединяйся к нашей тёплой компании."
     if alt_day6_us_7dl_tr:
-        show us smile dress with dspr
+        show us smile dress at zenterright
+        show mt normal dress at cleft with move
         us "Ты меня преследуешь, что ли?"
         "Хихикнула из шезлонга Ульяна."
         me "Да, бегаю за тобой, и кричу, и умоляю дать ладошку облобызать!"
@@ -6523,15 +6524,14 @@ label alt_day6_us_7dl_tea:
         mt "Ты мне пионерку не порти!"
         me "Да она сама кого хочешь…"
     else:
-        show us dontlike dress with dspr
+        show us dontlike dress at zenterright
+        show mt normal dress at cleft with move
         us "Нужен он тут больно."
         "Фыркнула из гамака до сих пор не замеченная Ульяна."
         me "И тебе привет, мелкая."
         "Она не обратила на меня внимания."
         "И это после всего, что мы пережили вместе!"
         th "А что мы пережили? Да дофига всего!"
-    show us normal sport at zenterright
-    show mt normal dress at cleft
     with move
     "Они явно спорили о чём-то, пока не появился я, и ни одна из сторон не вышла удовлетворённой."
     "Потому продолжили спор сразу же, как только с любезностями было покончено."
