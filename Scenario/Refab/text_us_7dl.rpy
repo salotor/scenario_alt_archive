@@ -3062,7 +3062,7 @@ label alt_day6_us_7dl_button:
     us "Толстый и ленивый невзрослый Сёмыч!"
     me "Прекрати."
     "Ульяна хихикнула."
-    show us laugh smile with dspr
+    show us smile sport with dspr
     "Потом вдруг шикнула."
     us "Стой, похоже мы на месте."
     "Мы остановились у слепого окна, забранного листом какой-то бумаги."
@@ -3432,7 +3432,7 @@ label alt_day6_us_7dl_button:
                 "Я шёл карать и наказывать."
                 show us shy sport with dspr
                 "Кажется, нечто подобное читалось в моих глазах, так как Ульянка, повернувшись ко мне и состроив мордашку очаровательной маленькой девочки"
-                show us supr2 sport with dspr
+                show us surp2 sport with dspr
                 extend ", охнула и отступила."
                 show us grin sport with dspr
                 "А потом, хитро подмигнув мне, развернулась и, взяв короткий разбег…"
@@ -5705,7 +5705,7 @@ label alt_day6_us_7dl_disco:
         us "Синяка теперь не будет."
         me "Это не твоя заслуга."
         "Ульяна удивилась:"
-        show us supr dress at zenterleft
+        show us surp1 dress at zenterleft
         us "Как не моя?"
         us "А кто тебя, по-твоему, туда отвёл?"
         me "Ты не отвела! Я вообще, за тобой гнался."
