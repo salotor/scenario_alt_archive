@@ -495,6 +495,7 @@ init 52 python:
             data["chibi"] = None
         
 init -1001 python:
+    default_7dl_path = 'scenario_alt/'
     def disable_all_chibi():
         global global_zones
         for name,data in global_zones.iteritems():
@@ -502,19 +503,19 @@ init -1001 python:
             
 init -999 python:
     def get_image_7dl(file):
-        return "scenario_alt/Pics/%s" % (file)
+        return default_7dl_path+"Pics/%s" % (file)
         
 init -998 python:
     def get_sfx_7dl(file):
-        return "scenario_alt/Sound/sfx/%s" % (file)
+        return default_7dl_path+"Sound/sfx/%s" % (file)
     def get_ambience_7dl(file):
-        return "scenario_alt/Sound/ambience/%s" % (file)
+        return default_7dl_path+"Sound/ambience/%s" % (file)
     def get_music_7dl(file):
-        return "scenario_alt/Sound/music/%s" % (file)
+        return default_7dl_path+"Sound/music/%s" % (file)
         
 init -997 python:
     def get_sprite_7dl(file):
-        return "scenario_alt/Pics/sprites/%s" % (file)
+        return default_7dl_path+"Pics/sprites/%s" % (file)
     def get_sprite_ori(file):
         return "images/1080/sprites/%s" % (file)
         
