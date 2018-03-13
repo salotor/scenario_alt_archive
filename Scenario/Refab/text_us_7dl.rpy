@@ -3359,17 +3359,17 @@ label alt_day6_us_7dl_button:
                 "Карниз неторопливо пополз к моему подбородку."
                 "Белый, хоть и грязный."
                 "И вот уже оказавшись наверху, я понял, что белый здесь не только карниз."
-                scene black with fade
+                scene black with dissolve
                 "Из полумрака комнаты на меня смотрело нечто белое и бесформенное."
                 play sound sfx_scary_sting
-                with flash_red
+                with flash2_red
                 us "Бу!"
                 "Сказало оно голосом Ульянки."
                 "И я от неожиданности разжал руки."
-                with vpunch
                 play sound sfx_bush_body_fall
+                with vpunch
+                scene bg ext_clubs_day with dissolve
                 "Со вскриком полетел вниз."
-                scene bg ext_clubs_day
                 dreamgirl "Чем отличается падение с первого этажа от падения с десятого этажа?"
                 "Вставил шпильку внутренний голос."
                 "Я пребольно ударился мягким местом и едва-едва не зашиб копчик."
