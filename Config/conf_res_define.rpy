@@ -114,6 +114,7 @@
 #Наши транзиты, с блекджеком и разными цветами.
     $ flash_cyan = Fade(1, 0, 1, color="#1fa")
     $ fade_red = Fade(2, 2, 2, color="#f11")
+    $ flash2_red = Fade(0.5, 0, 0.5, color="#f11")
     $ flash_pink = Fade(1, 0, 1, color="#e25")
     
     $ diam = ImageDissolve(im.Tile(get_image_7dl("gui/pattern.jpg")), 1.1, 1)
@@ -835,9 +836,7 @@
     image cotocomb_lighter = get_sprite_7dl("misc/cotocomb_lighter.png")
     image d4_cat_door_frame = get_sprite_7dl("misc/d4_cat_door_frame.png")
     image d6_miku_cries = get_sprite_7dl("misc/d6_miku_cries.png")
-    #image d3_miku_dance = get_sprite_7dl("misc/d3_miku_dance.png") - TODO: под заказ
-    #image d3_miku_dance_blush = get_sprite_7dl("misc/d3_miku_dance_blush.png")
-    #image d3_miku_dance_bordo = get_sprite_7dl("misc/d3_miku_dance_bordo.png")
+    image mouth_dull = get_sprite_7dl("misc/mouth_dull.png")
     image mi_ru = get_sprite_7dl("misc/mi_ru.png")
     image mt_bus = get_sprite_7dl("misc/mt_bus.png")
     image uvao_d1 = get_sprite_7dl("misc/uvao_d1.png")

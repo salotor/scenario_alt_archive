@@ -399,6 +399,11 @@ init -5 python:
             renpy.transition(moveinleft)
             renpy.pause(2.0)
             
+        elif routetag == "us7dl_bad_sad":
+            renpy.show("us sad pioneer", at_list=[left])
+            renpy.transition(moveinleft)
+            renpy.pause(2.0)
+            
         elif routetag == "uv_unknown": #Кошочку еще не знаем
             renpy.show("uv black silhouette", at_list=[left])
             renpy.transition(moveinleft)
