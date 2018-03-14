@@ -2122,7 +2122,7 @@ label alt_day5_uvao_hentai_scene:
     stop music fadeout 4
     uv "А потом уже вот так!"
     "Она вскочила и ловким, по-кошачьи гибким движением избавилась от платья, под которым не было больше ничего лишнего."
-    scene cg d4_uv_bunker_hentai_7dl with dissolve    
+    scene black with dissolve    
     play music music_list["into_the_unknown"] fadein 3
     "Потом встала на четвереньки и повернулась ко мне, при этом хитро поглядывая через плечо, на манер избушки, так сказать. К стене передом, к Семёну задом."
     dreamgirl "Ну, убедился?"
