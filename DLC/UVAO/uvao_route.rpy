@@ -2396,7 +2396,7 @@ label alt_day5_uvao_hentai_sleep:
     th "Крупный заказчик, высшее общество, мать его. Падкое на всяческую экзотику, которую я им, собственно, и поставляю. И с того мы все имеем кусок хлеба с маслом и икрой. Так что собираемся и идём работать."
     window hide
     show bg int_sleep_hentai_office_7dl behind prologue_dream with fade3
-    hide int_sleep_hentai_office2
+    hide int_sleep_hentai_office2_7dl
 
     me "Добрый вечер, господа! Сейчас, буквально через минуту, подойдут наши девочки, которых мы выбрали для вашей вечеринки. А я пока расскажу о правилах и условиях."
     voice "Короче, Склифосовский!"
@@ -2424,7 +2424,7 @@ label alt_day5_uvao_hentai_sleep:
     hide dv with dissolve
     hide mi with dissolve
     show bg int_sleep_hentai_office2_7dl behind prologue_dream with fade3
-    hide int_sleep_hentai_office
+    hide int_sleep_hentai_office_7dl
     "Покончив с формальностями и проводив кошечек до лимузина, я вернулся в кабинет. Неплохой куш нам сегодня обломился!{w} Я подмигнул Юрию Куклачёву, грозящему мне пальцем из фоторамки на столе, вытянулся в удобном кресле и прикрыл глаза."
     stop music fadeout 3
     window hide
