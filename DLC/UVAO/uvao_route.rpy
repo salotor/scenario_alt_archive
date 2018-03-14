@@ -1805,7 +1805,7 @@ label alt_day5_uvao_road_to_old_camp:
     dreamgirl "Штанишки не намочил?"
     th "Что, я трус какой? Нас такой ерундой не запугаешь!"
     window hide
-    scene bg int_old_building_day_uvao_7dl with fade
+    scene bg int_old_building_day_7dl with fade
 
     "Внутри оказалось не так темно, как я ожидал. Солнечные лучи нет-нет, да и пробирались через дыры в потолке и разбитые окна."
     "Здание выглядело необитаемым, но осмотреть его на предмет признаков жизни стоило."
@@ -2122,7 +2122,7 @@ label alt_day5_uvao_hentai_scene:
     stop music fadeout 4
     uv "А потом уже вот так!"
     "Она вскочила и ловким, по-кошачьи гибким движением избавилась от платья, под которым не было больше ничего лишнего."
-    scene cg d5_uv_bunker_hentai_7dl with dissolve #steam
+    scene black with dissolve    
     play music music_list["into_the_unknown"] fadein 3
     "Потом встала на четвереньки и повернулась ко мне, при этом хитро поглядывая через плечо, на манер избушки, так сказать. К стене передом, к Семёну задом."
     dreamgirl "Ну, убедился?"
@@ -2141,7 +2141,7 @@ label alt_day5_uvao_hentai_scene:
     "Руки сами собой легли на её талию, притянули к себе."
     uv "Мрррррра-а-у-у-у!"
     "Одобрительно протянула она и соблазнительно прогнулась."
-    scene cg d5_uv_new_hentai1_7dl with dissolve #steam
+    scene uv_new_hentai1 with dissolve
     th "Будь я котом, я бы просто взял её зубами за шкирку и хардкорно отымел…"
     dreamgirl "Как будто что-то плохое. Да и она вряд ли будет против."
     th "Цыц. Я пытаюсь не посрамить гордое звание Гомо Сапиенса в первом контакте с иной расой!"
@@ -2152,7 +2152,7 @@ label alt_day5_uvao_hentai_scene:
     dreamgirl "Это означает: «Ну не тяни уже!». Ваш К.О."
     "Желание девочки - закон. А уж кошкодевочки… Я в единый миг освободился от всего, что мешало мне ниже пояса, и, прицелившись…"
     dreamgirl "На ладонь ниже хвоста. Не промахнись, Ястребиный Глаз."
-    scene cg d5_uv_bunker_hentai2_7dl with dissolve  #steam
+    scene uv_new_hentai2 with dissolve
     uv "Мааааауууу…"
     "…единым махом скользнул внутрь."
     "Она со вздохом качнулась сначала от меня, потом обратно… И снова… И снова, вовлекая меня во всё ускоряющийся ритм движения."
@@ -2242,7 +2242,7 @@ label alt_day5_uvao_evade_hentai_scene:
         "Вспышка, Юля подскочила от неожиданности, а я скорее полез в телефон посмотреть снимок."
         window hide
         play sound sfx_scary_sting
-        scene cg d5_uv_photo_city_7dl with dissolve #steam
+        scene cg d5_uv_photo_city_7dl with dissolve
         $ renpy.pause(2, hard=True)
         scene bg int_catacombs_living with dissolve
         show uv surprise2 at center with dissolve
@@ -2650,7 +2650,7 @@ label alt_day5_uvao_true_back:
     stop ambience fadeout 1
     $ day_time()
     $ persistent.sprite_time = "day"
-    scene bg int_old_building_day_uvao_7dl with flash
+    scene bg int_old_building_day_7dl with flash
 
     play ambience ambience_forest_day fadein 3
     "После темноты подземелий свет ножом резал глаза.{w} Проморгавшись, я огляделся и, стараясь не поднимать лишнего шума, откинул крышку люка."
@@ -3275,7 +3275,7 @@ label alt_day5_uvao_mines_sh_capture_debug: #Хомутаем Шурика и о
     $ meet('mt', 'Голос')
     $ day_time()
     $ persistent.sprite_time = "day"
-    scene bg int_old_building_day_uvao_7dl with flash
+    scene bg int_old_building_day_7dl with flash
     play ambience ambience_forest_day fadein 3
 
     show uv shocked with dissolve
@@ -3425,7 +3425,7 @@ label alt_day5_parking_back:
     $ day_time()
     $ routetag = "uv"
     $ alt_chapter(5, u"Юля. Пикник")
-    scene bg int_old_building_day_uvao_7dl
+    scene bg int_old_building_day_7dl
     show uv grin
     with dissolve
 
@@ -3628,7 +3628,7 @@ label alt_day5_parking_back:
     th "Кажется, Юля свято уверовала в мою способность открывать всё железное… Забавно."
     me "Давай я попробую."
     window hide
-    scene bg int_mine_exit_day_7dl with dissolve #steam
+    scene bg int_hence_day_7dl with dissolve
 
     "Поднявшись по узкой шахте, я оказался перед металлической решёткой с вваренным в неё замком."
     "Как ни странно, но ключ подошёл, хотя провернуть его до конца мне долго не удавалось."
