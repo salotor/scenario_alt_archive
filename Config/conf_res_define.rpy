@@ -114,6 +114,7 @@
 #Наши транзиты, с блекджеком и разными цветами.
     $ flash_cyan = Fade(1, 0, 1, color="#1fa")
     $ fade_red = Fade(2, 2, 2, color="#f11")
+    $ flash2_red = Fade(0.5, 0, 0.5, color="#f11")
     $ flash_pink = Fade(1, 0, 1, color="#e25")
     
     $ diam = ImageDissolve(im.Tile(get_image_7dl("gui/pattern.jpg")), 1.1, 1)
@@ -1025,7 +1026,7 @@
     $ unfulfilled = get_music_7dl("unfulfilled.ogg")
     $ uneven_me = get_music_7dl("uneven_me.ogg")
     $ unfinished_life = get_music_7dl("unfinished_life.ogg")
-    $ unforgotten = get_music_7dl("unforgotten.ogg")
+    $ unforgotten = get_music_7dl("unforgotten.ogg")#регистр
     $ unholy_you = get_music_7dl("unholy_you.ogg")
     
     $ vale = get_music_7dl("vale.ogg")
