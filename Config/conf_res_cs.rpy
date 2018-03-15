@@ -475,12 +475,12 @@ label alt_day2_participate_fail:
         "Подмигнув Лене, я поднялся и раскланялся."
         me "Я проиграл. Простите."
         "И удалился — до ужина было ещё полчаса, а голова у меня уже серьёзно гудела от шума толпы."
-        jump alt_day2_supper
+        return
     elif alt_day2_revanche and (alt_pe == 5):
         "Пожав плечами, я встал из-за стола, оставляя в одиночестве что-то восторженно вопящую Ульянку."
         "Переигровки, реванши… Я утратил интерес к игре."
         "Даже не стал досматривать события в полуфинале и финале."
-        jump alt_day2_supper
+        return
     else:
         pass
     $ persistent.altCardsFail = True
@@ -698,7 +698,7 @@ label alt_day2_participate_fail:
     stop ambience
     stop music fadeout 3
     window hide
-    jump alt_day2_supper
+    return
 
 label alt_day2_participate_win:
     $ persistent.altCardsWon1 = True
@@ -1543,7 +1543,7 @@ label alt_day2_semifinal_fail:
     stop ambience
     stop music fadeout 3
     window hide
-    jump alt_day2_supper
+    return
 
 label alt_day2_semifinal_draw:
     $ show_cards()
@@ -1997,7 +1997,7 @@ label alt_day2_final_fail:
             mt "Ты совсем не умеешь играть в карты…"
             "Такого позора я ещё никогда не испытывал…"
         window hide
-        jump alt_day2_supper
+        return
     elif alt_day2_f1 == 4:
         play music ourfirstmet fadein 3
         show mi happy pioneer with dspr
@@ -2132,7 +2132,7 @@ label alt_day2_final_fail:
     window hide
     stop music fadeout 3
     with fade
-    jump alt_day2_supper    
+    return    
     
 label alt_day2_final_draw:
     $ show_cards()
@@ -2449,7 +2449,7 @@ label alt_day2_final_win:
         "Сейчас-то ей никто не поверит."
         "И это, пожалуй, радует больше всего."
         window hide
-    jump alt_day2_supper
+    return
 
 label alt_day2_qf_analizer:
     scene bg int_dining_hall_sunset
