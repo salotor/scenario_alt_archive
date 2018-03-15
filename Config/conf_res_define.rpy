@@ -952,6 +952,7 @@
     $ me2ost = get_music_7dl("me2ost.ogg")
     $ melancholy_sun = get_music_7dl("melancholy_sun.ogg")
     $ misery = get_music_7dl("misery.ogg")
+    $ moment = get_music_7dl("moment.ogg")
     $ more_than_alive = get_music_7dl("more_than_alive.ogg")
     $ my_only_hope= get_music_7dl("my_only_hope.ogg")
     
@@ -1025,7 +1026,7 @@
     $ unfulfilled = get_music_7dl("unfulfilled.ogg")
     $ uneven_me = get_music_7dl("uneven_me.ogg")
     $ unfinished_life = get_music_7dl("unfinished_life.ogg")
-    $ unforgotten = get_music_7dl("Unforgotten.ogg")
+    $ unforgotten = get_music_7dl("unforgotten.ogg")#регистр
     $ unholy_you = get_music_7dl("unholy_you.ogg")
     
     $ vale = get_music_7dl("vale.ogg")
@@ -1050,13 +1051,17 @@
     $ apple_bite = get_sfx_7dl("apple_bite.ogg")
     $ aunl = get_sfx_7dl("aunl.ogg")
     $ bed_squeak = get_sfx_7dl("bed_squeak.ogg")
+    $ brake = get_sfx_7dl("brake.ogg")
     $ breath = get_sfx_7dl("breath.ogg")
     $ blanket = get_sfx_7dl("blanket.ogg")
+    $ car_passing = get_sfx_7dl("car_passing.ogg")
     $ deagle_shot = get_sfx_7dl("deagle_shot.ogg")
     $ eat_horn = get_sfx_7dl("eat_horn.ogg")
+    $ footsteps_grass = get_sfx_7dl("footsteps_grass.ogg")
     $ ghmm = get_sfx_7dl("ghm.ogg")
     $ hedgehog = get_sfx_7dl("hedgehog.ogg")
     $ highfive = get_sfx_7dl("highfive.ogg")
+    $ intro_dr = get_sfx_7dl("intro_dr.ogg")
     $ KBtyping = get_sfx_7dl("KBtyping.ogg")
     $ kissing_sound = get_sfx_7dl("kissing_sound.ogg")
     $ makarych = get_sfx_7dl("makarych.ogg")
@@ -1068,6 +1073,7 @@
     $ pup_bark = get_sfx_7dl("pup_bark.ogg")
     $ push_the_button = get_sfx_7dl("push_the_button.ogg")
     $ raindrops_radio = get_sfx_7dl("raindrops_radio.ogg")
+    $ reverse_bell = get_sfx_7dl("reverse_bell.ogg")
     $ ringtone = get_sfx_7dl("ringtone.ogg")
     #Озвучка заголовка роли by Noir Сычёв
     $ role_drisch = get_sfx_7dl("role_drisch.ogg")

@@ -69,5 +69,5 @@ label alt_day5_mi_dj_estrade:
     if alt_day5_mi_dj_necessary_done < 1: # как и нахрена оно тут?
         play music music_list["two_glasses_of_melancholy"] fadein 2
     else:
-        stop music
+        stop music fadeout 6
     jump alt_day5_mi_dj_map
