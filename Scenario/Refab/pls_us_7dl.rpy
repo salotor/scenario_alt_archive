@@ -147,10 +147,10 @@ label alt_day7_us_7dl_start:
         $ persistent.sprite_time = "prolog"
         $ prolog_time()
         $ alt_chapter(7, u"Ульяна. 7ДЛ. Эпилог")
-        if persistent.us_7dl_un and alt_day6_us_7dl_tr:
-                call alt_day7_us_7dl_ever_after
-                pause(1)
-                return
+        if persistent.us_7dl_un and alt_day6_us_7dl_tr: # это нормально, что выход сюда полностью блокирует alt_day7_us_7dl_reunite? И or persistent.us_7dl_mi в проверке не хватает.
+            call alt_day7_us_7dl_ever_after
+            pause(1)
+            return
         call alt_day7_us_7dl_wakeup
         pause(1)
         if alt_day6_us_7dl_tr:
