@@ -234,6 +234,7 @@ label alt_day5_neu_begin:
 label alt_day6_neu_begin:
     call alt_day6_neu_start
     pause(1)
+    return
     jump alt_day7_neu_begin
 
 label alt_day7_neu_begin:
