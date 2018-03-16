@@ -7353,7 +7353,7 @@ label alt_day7_us_7dl_breakfast:
             me "Не перехвали."
             "Борясь с подступающим дежавю попросил я."
             me "Я просто стараюсь поступать по совести."
-            show mi us laugh pioneer with dspr
+            show mi laugh pioneer with dspr
             mi "Ой, ты заговорил почти совсем как Славя!"
             me "Мимикрирую."
             "Согласился я."
@@ -7401,7 +7401,7 @@ label alt_day7_us_7dl_breakfast:
             me "Вот уж что меня меньше всего заботит."
             "Пробормотал я."
             me "Ты мне скажи, если кто будет пальцем тыкать — я им пальчики-то пообломаю."
-            show um serious pioneer with dspr
+            show un serious pioneer with dspr
             un "Какая трогательная реакция."
             "Она не повела и бровью, видимо, готовилась именно к такому ответу."
             "Или, напротив, ждала, что я буду мяться и мямлить?"
@@ -7622,11 +7622,11 @@ label alt_day7_us_7dl_rendezvous2:#Рандеву
             us "Ой, и не подумаю."
         "Ульяна преувеличенно бережно убрала фотографии в карман."
         me "А для меня ничего нет?"
-        show ba em1 pioneer with dspr
+        show ba em1 uniform with dspr
         ba "А ты, дрищ, разве чем-то прославиться успел?"
         "Я пожал плечами."
         me "Может, и успел. А может, и нет."
-        show ba smile pioneer with dspr
+        show ba smile uniform with dspr
         ba "Не куксись, дрищ. Вот. Есть и для тебя подарочек."
         "Он протянул мне ещё влажный снимок."
         "Что я на нём обнаружил?"
@@ -8164,7 +8164,7 @@ label alt_day7_us_7dl_rendezvous2:#Рандеву
         scene bg ext_house_of_un_day
         with dissolve
         play ambience ambience_camp_center_day fadein 6
-        play music Exodus fadein 3
+        play music exodus fadein 3
         "Она вытолкала меня из домика, ничего не понимающего в самых расстроенных чувствах."
         me "И что это было?"
         "Спросил я у раскалённого неба."
@@ -8561,7 +8561,7 @@ label alt_day7_us_7dl_packing:#Сычесборы
     hide sl with dissolve
     "Послушно кивнув, испарилась и Славя."
     "А у меня появился новый собеседник."
-    show ba norm uniform with dissolve
+    show ba normal uniform with dissolve
     ba "Ничего у них не бывает по-человечески, верно глаголю, дрищ?"
     me "У меня имя есть."
     show ba smile uniform with dspr
@@ -9137,7 +9137,7 @@ label alt_day7_us_7dl_leaving:#Ещё немного — и домой. Вот �
             "Передо мной стояла живая, нормальная и совсем не прозрачная Ульянка."
             me "Ульяна…"
             "Она вскочила на ноги, огляделась:"
-            show us normrl sport with dspr
+            show us normal sport with dspr
             us "Неужели, получилось?"
             me "Получилось?"
             "Мы были всё ещё вдвоём в одном автобусе, и никого не было вокруг нас."
@@ -9556,7 +9556,7 @@ label alt_day7_us_7dl_wakeup:#Пробуждение дома
         "Всем было бы только лучше."
         "Все только бы порадовались да помянули не чокаясь."
     window hide
-    scene bg int_sam_room
+    scene bg int_sam_room_7dl
     with dissolve
     if alt_day6_us_7dl_tr:
         "Но я стараюсь особо не тосковать, я хорохорюсь и держу хвост пистолетом."
@@ -9820,7 +9820,7 @@ label alt_day7_us_7dl_mikuforever:
     "Это было до такой степени на меня не похоже…"
     stop ambience fadeout 6
     window hide
-    scene bg int_sam_room
+    scene bg int_sam_room_7dl
     with dissolve
     "Большинство людей вокруг уже спали."
     "Пора было и мне, наверное…"
@@ -9874,12 +9874,12 @@ label alt_day7_us_7dl_mikuforever:
     show mi sad casual with dspr
     mi "Сеня, у меня и правда нет времени. Вот совсем."
     me "Да ты можешь хотя бы сказать, где ты была целый год?!"
-    show mi laugh causal with dissolve
+    show mi laugh casual with dissolve
     mi "Там же, куда мы сейчас отправляемся!"
     "Не слушая больше моих возражений, он схватила меня и потащила за собой."
     mi "И в этот раз ты едешь со мной?"
     me "Да куда?"
-    show mi normal causal with dissolve
+    show mi normal casual with dissolve
     mi "В «Совёнок», Сенечка."
     "В груди перехватило что-то, все слова враз забылись."
     "Я ступил на первую ступеньку автобуса."
@@ -10387,7 +10387,7 @@ label alt_day7_us_7dl_ever_after:
     stop ambience fadeout 6
     stop sound_loop fadeout 5
     window hide
-    scene bg int_sam_room
+    scene bg int_sam_room_7dl
     with dissolve
     play ambience sfx_street_traffic_outside fadein 2
     play music thousand_little_things fadein 3
@@ -10614,7 +10614,7 @@ label alt_day7_us_7dl_ever_after:
     "Она покачала головой."
     stop music fadeout 5
     window hide
-    scene bg int_sam_room
+    scene bg int_sam_room_7dl
     with dissolve
     play music out_of_your_tier fadein 3
     us "Со мной всё не так просто, Сёмыч."
@@ -10695,7 +10695,7 @@ label alt_day7_us_7dl_ever_after:
     stop music fadeout 5
     nvl clear
     $ set_mode_adv()
-    scene bg int_sam_room
+    scene bg int_sam_room_7dl
     show us normal sport
     with dissolve
     play music pixies_playing fadein 3
@@ -10741,7 +10741,7 @@ label alt_day7_us_7dl_ever_after:
     window hide
     with fade
     show us smile sport with dissolve
-    play music Exodus fadein 3
+    play music exodus fadein 3
     us "В этом году я хотела пойти на дорогу, но снова встретила тебя."
     show us shy sport with dspr
     us "А тебя уже не интересовало это всё."
@@ -10821,7 +10821,7 @@ label alt_day7_us_7dl_ever_after:
     uv "Целуйтесь и плодитесь, что вам надо ещё?"
     uv "Нет, давай умрём! Давай пострадаем и просрём всё, чего добились!"
     show uv dontlike at right
-    show us dontlike at zenterleft
+    show us dontlike sport at zenterleft
     with move
     us "А кто вы такая вообще, тётенька?"
     "Только сейчас я обратил внимание на то, что до сих пор сжимаю в руке ладошку Ульяны."
@@ -10937,7 +10937,7 @@ label alt_day7_us_7dl_ever_after:
     window hide
     $ persistent.sprite_time = "night"
     $ night_time()
-    scene expressiond Notch("bg ext_busstop_dust_7dl")
+    scene expression Notch("bg ext_busstop_dust_7dl")
     with dissolve
     show us smile sport with dspr
     us "Сёмыч, а мы знаешь где?"
@@ -11028,8 +11028,9 @@ label alt_day7_us_7dl_ever_after:
     "Мы долго смотрим друг на друга, а затем хохочем."
     $ persistent.us_7dl_true = True
     play sound aunl
-    show acm_logo_us_true with moveinright:
-        pos (1600, 1020)
+# нужно действительное название лого
+#    show acm_logo_us_true with moveinright:
+#        pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
