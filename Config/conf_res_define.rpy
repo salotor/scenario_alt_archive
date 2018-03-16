@@ -426,6 +426,7 @@
     image bg int_looney_bin_7dl = get_image_7dl("bg/int_looney_bin_7dl.jpg")
     image bg int_looney_bin_nightmare_7dl = get_image_7dl("bg/int_looney_bin_nightmare_7dl.jpg")
     
+    image bg int_mine_exit_day_7dl = get_image_7dl("bg/int_mine_exit_day_7dl.jpg")
     image bg int_mine_heart_7dl = get_image_7dl("bg/int_mine_heart_7dl.jpg")
     image bg int_mine_halt_left_7dl = get_image_7dl("bg/int_mine_halt_left_7dl.jpg")
     image bg int_mine_room2_7dl = get_image_7dl("bg/int_mine_room2_7dl.jpg")
