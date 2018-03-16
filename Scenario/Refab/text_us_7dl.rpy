@@ -7115,14 +7115,9 @@ label alt_day7_us_7dl_begin:
             "Мы с Мику обменялись взглядами и, синхронно наклонившись над раковинами, заработали щётками."
             stop sound_loop
     window hide
-    show spill_red with dspr
-    $ renpy.pause(2, hard=True)
-    show spill_gray with dspr
-    $ renpy.pause(2, hard=True)
-    show alt_credits timeskip_dev at truecenter with dissolve2
-    $ renpy.pause(4, hard=True)
-    with dissolve2
-    window hide
+    stop music fadeout 3
+    stop ambience fadeout 3
+    with fade
     return
 
 label alt_day7_us_7dl_breakfast:
