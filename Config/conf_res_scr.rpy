@@ -528,7 +528,7 @@ init 52 python:
         
 init -1001 python:
     # steam: здесь указатель на папку с модом содержащий айдишник
-    default_7dl_path = '../441054187/scenario_alt/'
+    default_7dl_path = 'mods/scenario_alt/'
     def disable_all_chibi():
         global global_zones
         for name,data in global_zones.iteritems():
