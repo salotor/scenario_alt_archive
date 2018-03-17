@@ -3342,8 +3342,8 @@ label alt_day6_us_7dl_button:
                 "Сказало оно голосом Ульянки."
                 "И я от неожиданности разжал руки."
                 play sound sfx_bush_body_fall
-                with vpunch
                 scene bg ext_clubs_day with dissolve
+                with vpunch
                 "Со вскриком полетел вниз."
                 dreamgirl "Чем отличается падение с первого этажа от падения с десятого этажа?"
                 "Вставил шпильку внутренний голос."
