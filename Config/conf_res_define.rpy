@@ -1043,6 +1043,7 @@
     $ you_are_star = get_music_7dl("you_are_star.ogg")
     $ youareours = get_music_7dl("youareours.ogg")
     $ youre_not_real = get_music_7dl("youre_not_real.ogg")
+    $ your_life = get_music_7dl("your_life.ogg")
     
 # sfx
     $ apple_bite = get_sfx_7dl("apple_bite.ogg")
