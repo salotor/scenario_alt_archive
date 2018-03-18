@@ -11048,6 +11048,9 @@ label alt_day7_us_7dl_ever_after:
     us "Спасибо."
     window hide
     scene bg ext_road_day
+    show us sad sport 
+    with dissolve
+    $ renpy.pause(2)
     show us normal old
     with dissolve2
     "Когда мы вышли на дорогу, Ульяна уже успела немного измениться."
