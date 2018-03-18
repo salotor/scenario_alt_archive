@@ -426,6 +426,7 @@
     image bg int_looney_bin_7dl = get_image_7dl("bg/int_looney_bin_7dl.jpg")
     image bg int_looney_bin_nightmare_7dl = get_image_7dl("bg/int_looney_bin_nightmare_7dl.jpg")
     
+    image bg int_mine_exit_day_7dl = get_image_7dl("bg/int_mine_exit_day_7dl.jpg")
     image bg int_mine_heart_7dl = get_image_7dl("bg/int_mine_heart_7dl.jpg")
     image bg int_mine_halt_left_7dl = get_image_7dl("bg/int_mine_halt_left_7dl.jpg")
     image bg int_mine_room2_7dl = get_image_7dl("bg/int_mine_room2_7dl.jpg")
@@ -1023,7 +1024,7 @@
     $ unfulfilled = get_music_7dl("unfulfilled.ogg")
     $ uneven_me = get_music_7dl("uneven_me.ogg")
     $ unfinished_life = get_music_7dl("unfinished_life.ogg")
-    $ unforgotten = get_music_7dl("unforgotten.ogg")#регистр
+    $ unforgotten = get_music_7dl("Unforgotten.ogg")
     $ unholy_you = get_music_7dl("unholy_you.ogg")
     
     $ vale = get_music_7dl("vale.ogg")

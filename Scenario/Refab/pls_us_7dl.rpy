@@ -32,10 +32,7 @@
         else:
             call alt_day6_us_px_far_gate
         pause(1)
-        if alt_day4_neu_us_pixies == 3:
-            $ alt_chapter(6, u"Огоньки. Концерт")
-        else:
-            $ alt_chapter(6, u"Ульяна. 7дл. Концерт")
+        $ alt_chapter(6, u"Огоньки. Концерт")
         call alt_day6_us_7dl_concert
     else:
         $ alt_chapter(6, u"Ульяна. 7ДЛ. Утро.")
@@ -62,6 +59,7 @@
                 $ alt_chapter(6, u"Ульяна. 7дл. Ррромантика")
                 call alt_day6_us_7dl_rendezvous
             else:
+                $ alt_chapter(6, u"Ульяна. 7дл. Концерт")
                 call alt_day6_us_7dl_concert
     pause(1)
     $ persistent.sprite_time = "sunset"
@@ -106,7 +104,6 @@ label alt_day7_us_7dl_start:
         $ alt_chapter(7, u"Ульяна. 7ДЛ. Утро")
     call alt_day7_us_7dl_begin
     pause(1)
-    return
     call alt_day7_us_7dl_breakfast
     pause(1)
     $ persistent.sprite_time = "day"
