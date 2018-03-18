@@ -11031,9 +11031,8 @@ label alt_day7_us_7dl_ever_after:
     window hide
     $ persistent.us_7dl_true = True
     play sound aunl
-# нужно действительное название лого
-#    show acm_logo_us_true with moveinright:
-#        pos (1600, 1020)
+    show acm_logo_us_true with moveinright:
+        pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
