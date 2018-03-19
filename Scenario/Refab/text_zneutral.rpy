@@ -10463,6 +10463,7 @@ label alt_day5_neu_campfire_doom:
             $ karma += 25
             $ mt_pt += 1
             $ us_pt += 1
+            $ alt_day5_neu_us_potato = True
             play music there_you_are fadein 3
             $ volume (0.9,'ambience')
             "Не то чтобы я чего-то такого хотел или пытался подружиться с мелкой."

@@ -517,9 +517,9 @@
     image dv_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
     
 #Ульяна
-    image us tr1 = im.MatrixColor(im.Composite((1050, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_dress.png'), (0, 0), get_sprite_ori('normal/us/us_1_normal.png')), im.matrix.tint(0.5, 0.5, 0.5)* im.matrix.opacity(0.5) )
+    image us tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_normal.png')), im.matrix.tint(0.5, 0.5, 0.5)* im.matrix.opacity(0.5) )
     
-    image us tr2 = im.MatrixColor(im.Composite((1050, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_dress.png'), (0, 0), get_sprite_ori('normal/us/us_1_normal.png')), im.matrix.tint(0.3, 0.3, 0.3)* im.matrix.opacity(0.3) )
+    image us tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_normal.png')), im.matrix.tint(0.3, 0.3, 0.3)* im.matrix.opacity(0.3) )
 #Кошонка-распашонка 1
     image uv black silhouette = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/uv/uv_1_body.png'), (0, 0), get_sprite_ori('normal/uv/uv_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
     
