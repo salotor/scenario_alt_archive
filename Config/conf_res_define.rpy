@@ -806,6 +806,7 @@
     image acm_logo_us_fairytale = get_image_7dl("gui/acm_logo_us_fairytale.png")
     image acm_logo_us_hi = get_image_7dl("gui/acm_logo_us_hi.png")
     image acm_logo_us_openup = get_image_7dl("gui/acm_logo_us_openup.png")
+    image acm_logo_us_px = get_image_7dl("gui/acm_logo_us_px.png")
     image acm_logo_us_semische = get_image_7dl("gui/acm_logo_us_semische.png")
     image acm_logo_us_true = get_image_7dl("gui/acm_logo_us_true.png")
     

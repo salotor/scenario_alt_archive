@@ -118,71 +118,171 @@ label sdl_menu:
                             jump alt_day1_alt_M
                 "Ульяна":
                     menu:
-                        "Начало дня":
-                            $ loki = True
-                            $ plthr = u"Локи"
-                            $ us_pt += 5
+                        "День 6":
                             menu:
-                                "7дл":
-                                    $ routetag = "us7dl_bad"
-                                "7дл после пряток":
-                                    $ routetag = "us7dl_bad"
-                                    $ alt_day4_neu_us_pixies == 2
-                                "Огоньки":
-                                    $ routetag = "us7dl_good"
-                                    $ alt_day4_neu_us_pixies == 3
-                            jump alt_day6_us_7dl_start
-                        "Отдельные сцены":
-                            $ plthr = u"Дрищ"
+                                "Начало дня":
+                                    $ loki = True
+                                    $ plthr = u"Локи"
+                                    $ us_pt += 5
+                                    menu:
+                                        "7дл":
+                                            $ routetag = "us7dl_bad"
+                                        "7дл после пряток":
+                                            $ routetag = "us7dl_bad"
+                                            $ alt_day4_neu_us_pixies == 2
+                                        "Огоньки":
+                                            $ routetag = "us7dl_good"
+                                            $ alt_day4_neu_us_pixies == 3
+                                    jump alt_day6_us_7dl_start
+                                "Отдельные сцены":
+                                    $ plthr = u"Дрищ"
+                                    menu:
+                                        "Утро":
+                                            menu:
+                                                "Зарядка":
+                                                    call alt_day6_us_7dl_exercises
+                                                "Завтрак":
+                                                    call alt_day6_us_7dl_breakfast
+                                                "7дл - помощь по лагерю":
+                                                    call alt_day6_us_7dl_helping
+                                                "7дл - помощь Мику":
+                                                    call alt_day_us_7dl_preps
+                                                "7дл - помощь Славе":
+                                                    call alt_day6_us_7dl_warehouse
+                                                "7дл - поиски Лены":
+                                                    call alt_day6_us_7dl_un_met
+                                        "День":
+                                            menu:
+                                                "Обед":
+                                                    call alt_day6_us_7dl_dinner
+                                                "7дл - саундчек":
+                                                    call alt_day6_us_7dl_soundcheck
+                                                "7дл - Ульяна - пуговица":
+                                                    call alt_day6_us_7dl_button
+                                                "7дл - Ульяна - рандеву":
+                                                    call alt_day6_us_7dl_rendezvous
+                                                "Огоньки - карьер":
+                                                    call alt_day6_us_px_carrier
+                                                "Огоньки - обед":
+                                                    call alt_day6_us_px_dinner
+                                                "Огоньки - Лена":
+                                                    call alt_day6_us_px_Lena
+                                                "Огьньки - Славя":
+                                                    call alt_day6_us_px_party_sl
+                                                "Огоньки - дальние ворота":
+                                                    call alt_day6_us_px_far_gate
+                                        "Вечер":
+                                            menu:
+                                                "7дл - концерт":
+                                                    call alt_day6_us_7dl_concert
+                                                "7дл - ужин":
+                                                    call alt_day6_us_7dl_supper
+                                                "7дл - танцы":
+                                                    call alt_day6_us_7dl_disco
+                                                "Огоньки - чаепитие":
+                                                    call alt_day6_us_7dl_tea
+                                                "Огоньки - вечер у пристани.":
+                                                    call alt_day6_us_px_afterwords
+                                                "Отбой":
+                                                    call alt_day6_us_7dl_sleeptime
+                        "День 7, ЭПИЛОГ":
+                            call alt_day6_us_px_vars
+                            call alt_day6_us_7dl_vars
+                            call alt_day7_us_px_vars
                             menu:
-                                "Утро":
+                                "С самого начала, Огоньки":
                                     menu:
-                                        "Зарядка":
-                                            call alt_day6_us_7dl_exercises
-                                        "Завтрак":
-                                            call alt_day6_us_7dl_breakfast
-                                        "7дл - помощь по лагерю":
-                                            call alt_day6_us_7dl_helping
-                                        "7дл - помощь Мику":
-                                            call alt_day_us_7dl_preps
-                                        "7дл - помощь Славе":
-                                            call alt_day6_us_7dl_warehouse
-                                        "7дл - поиски Лены":
-                                            call alt_day6_us_7dl_un_met
-                                "День":
+                                        "Со Славей":
+                                            $ alt_day6_us_px_sl_join = True
+                                        "Без Слави":
+                                            $ alt_day6_us_px_sl_join = False
+                                     $ alt_day4_neu_us_pixies = 3
+                                    jump alt_day7_us_7dl_start
+                                "С самого начала, 7дл":
                                     menu:
-                                        "Обед":
-                                            call alt_day6_us_7dl_dinner
-                                        "7дл - саундчек":
-                                            call alt_day6_us_7dl_soundcheck
-                                        "7дл - Ульяна - пуговица":
-                                            call alt_day6_us_7dl_button
-                                        "7дл - Ульяна - рандеву":
-                                            call alt_day6_us_7dl_rendezvous
-                                        "Огоньки - карьер":
-                                            call alt_day6_us_px_carrier
-                                        "Огоньки - обед":
-                                            call alt_day6_us_px_dinner
-                                        "Огоньки - Лена":
-                                            call alt_day6_us_px_Lena
-                                        "Огьньки - Славя":
-                                            call alt_day6_us_px_party_sl
-                                        "Огоньки - дальние ворота":
-                                            call alt_day6_us_px_far_gate
-                                "Вечер":
+                                        "Подветка Мику":
+                                            $ alt_day6_us_7dl_mi_friends = 3
+                                        "Подветка Лены":
+                                            $ alt_day6_us_7dl_mi_friends = 3
+                                        "Главная подветка":
+                                            $ alt_day6_us_7dl_tr = True
+                                    jump alt_day7_us_7dl_start
+                                "Выбор сцен":
+                                    $ alt_day6_us_7dl_tr = True
                                     menu:
-                                        "7дл - концерт":
-                                            call alt_day6_us_7dl_concert
-                                        "7дл - ужин":
-                                            call alt_day6_us_7dl_supper
-                                        "7дл - танцы":
-                                            call alt_day6_us_7dl_disco
-                                        "Огоньки - чаепитие":
-                                            call alt_day6_us_7dl_tea
-                                        "Огоньки - вечер у пристани.":
-                                            call alt_day6_us_px_afterwords
-                                        "Отбой":
-                                            call alt_day6_us_7dl_sleeptime
+                                        "Утро(гл. ветка)":
+                                            call alt_day7_us_7dl_begin
+                                        "Завтрак (гл. ветка)":
+                                            call alt_day7_us_7dl_begin
+                                        "Побег (огоньки)":
+                                            menu:
+                                                "Со Славей.":
+                                                    $ alt_day6_us_px_sl_join = True
+                                                    call alt_day7_us_px_escape
+                                                "Без Слави":
+                                                    call alt_day7_us_px_escape
+                                                "Автобус":
+                                                    call alt_day7_us_px_bus
+                                                "Пустоши":
+                                                    call alt_day7_us_px_bus
+                                                "История сказки (эпилог)":
+                                                    call alt_day7_us_px_fairytale
+                                                "Возвращение в лагерь со Славей":
+                                                    $ alt_day6_us_px_sl_join = True
+                                                    call alt_day7_us_px_mourning
+                                                "Возвращение в лагерь без Слави":
+                                                    call alt_day7_us_px_mourning
+                                        "Утреннее рандеву":
+                                            menu:
+                                                "С Ульянкой":
+                                                    $ alt_day6_us_7dl_tr
+                                                    call alt_day7_us_7dl_rendezvous2
+                                                "С Мику":
+                                                    $ alt_day6_us_7dl_mi_friends = 3
+                                                    call alt_day7_us_7dl_rendezvous2
+                                                "С Леной":
+                                                    $ alt_day6_us_7dl_un_friends = 3
+                                                    call alt_day7_us_7dl_rendezvous2
+                                                "С вещами":
+                                                    call alt_day7_us_7dl_packing
+                                        "Огоньки, отъезд":
+                                            menu:
+                                                "Эпилог":
+                                                    $ loki = True
+                                                    call alt_day7_us_px_dejavu
+                                                "Концовка Локи":
+                                                    $ loki = True
+                                                    call alt_day7_us_px_runaway
+                                                "Концовка Дрища":
+                                                    call alt_day7_us_px_runaway
+                                        "7дл, отъезд":
+                                            menu:
+                                                "С Ульяной":
+                                                    $ alt_day6_us_7dl_tr
+                                                    call alt_day7_us_7dl_leaving
+                                                "С Мику":
+                                                    $ alt_day6_us_7dl_mi_friends = 3
+                                                    call alt_day7_us_7dl_leaving
+                                                "С Леной":
+                                                    $ alt_day6_us_7dl_un_friends = 3
+                                                    call alt_day7_us_7dl_leaving
+                                        "7дл, эпилоги":
+                                            menu:
+                                                "Пробуждение":
+                                                    $ alt_day6_us_7dl_tr
+                                                    call alt_day7_us_7dl_wakeup
+                                                "Ульяна, хорошая концовка":
+                                                    $ alt_day6_us_7dl_tr
+                                                    call alt_day7_us_7dl_reunite
+                                                "Концовка Мику":
+                                                    $ alt_day6_us_7dl_mi_friends = 3
+                                                    call alt_day7_us_7dl_mikuforever
+                                                "Концовка Лены":
+                                                    $ alt_day6_us_7dl_un_friends = 3
+                                                    call alt_day7_us_7dl_lenaforever
+                                                "Плохая концовка":
+                                                    call alt_day7_us_7dl_bad
+                                            
                 "Мику":
                     $ lp_mi += 14
                     $ routetag = "mi7dl"
