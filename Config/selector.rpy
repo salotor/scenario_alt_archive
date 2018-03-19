@@ -208,7 +208,7 @@ label sdl_menu:
                                         "Подветка Мику":
                                             $ alt_day6_us_7dl_mi_friends = 3
                                         "Подветка Лены":
-                                            $ alt_day6_us_7dl_mi_friends = 3
+                                            $ alt_day6_us_7dl_un_friends = 3
                                         "Главная подветка":
                                             $ alt_day6_us_7dl_tr = True
                                     jump alt_day7_us_7dl_start
@@ -425,11 +425,6 @@ label sdl_menu:
                     $ mt_pt += 8
                     stop ambience fadeout 2
                     jump alt_day6_mt_7dl_start
-                "Ульяна":
-                    "Рут находится в разработке."
-                    $ renpy.pause(1)
-                    stop ambience fadeout 2
-                    jump sdl_menu
                 "Одиночка":
                     stop ambience fadeout 2
                     jump alt_day4_neu_begin
@@ -665,7 +660,24 @@ label sdl_menu:
                                     stop ambience fadeout 2
                                     jump alt_day7_mt_7dl_true
                     "Ульяна":
-                        "Рут находится в разработке."
+                        menu:
+                            "{color=#ff0000}Ульяна, хорошая концовка.{/color}":
+                                $ alt_day6_us_7dl_tr
+                                call alt_day7_us_7dl_reunite
+                            "{color=#aced6b}Ульяна, Концовка Мику.{/color}":
+                                $ alt_day6_us_7dl_mi_friends = 3
+                                call alt_day7_us_7dl_mikuforever
+                            "{color=#9894e0}Ульяна, Концовка Лены.{/color}":
+                                $ alt_day6_us_7dl_un_friends = 3
+                                call alt_day7_us_7dl_lenaforever
+                            "{color=#ed6b6b}Ульяна, Плохая концовка.{/color}":
+                                call alt_day7_us_7dl_bad
+                            "{color=#ffff00}Огоньки, Истинная концовка.{/color}":
+                                call alt_day7_us_px_dejavu
+                            "{color=#ffff11}Огоньки, Хорошая концовка.{/color}":
+                                call alt_day7_us_px_fairytale
+                            "{color=#6beded}Ульяна, Истинная концовка.{/color}":
+                                call alt_day7_us_7dl_ever_after
                         $ renpy.pause(1)
                         stop ambience fadeout 2
                         jump alt_endings
