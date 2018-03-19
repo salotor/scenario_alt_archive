@@ -112,7 +112,7 @@ label alt_day7_us_7dl_start:
         call alt_day7_us_px_escape
         if alt_day6_us_px_sl_join:
             pause(1)
-            $ alt_chapter(7, u"Огоньки. Старый автобус")
+            $ alt_chapter(7, u"Огоньки. Автобус")
             call alt_day7_us_px_bus
             pause(1)
             if alt_day7_us_px_escaped:
