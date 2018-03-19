@@ -97,14 +97,14 @@ label alt_day7_us_7dl_start:
     else:
         if alt_day6_us_7dl_tr:
             $ routetag = "us7dl_bad_laugh"
-        elif (alt_day6_us_7dl_mi_friends == 3) or (alt_day6_us_7dl_un_friends == 3):
+        elif (alt_day6_us_7dl_mi_friends == 3) or (alt_day6_us_7dl_mi_friends == 3):
             $ routetag = "us7dl_bad"
         else:
             $ routetag = "us7dl_bad_sad"
         $ alt_chapter(7, u"Ульяна. 7ДЛ. Утро")
     call alt_day7_us_7dl_begin
     pause(1)
-    call alt_day7_us_7dl_breakfast
+    call alt_day7_us_7dl_begin
     pause(1)
     $ persistent.sprite_time = "day"
     $ day_time()
@@ -116,7 +116,7 @@ label alt_day7_us_7dl_start:
             call alt_day7_us_px_bus
             pause(1)
             if alt_day7_us_px_escaped:
-                call alt_day7_us_px_wastelands
+                call alt_day7_us_px_bus
                 pause(1)
                 $ persistent.sprite_time = "prolog"
                 $ prolog_time()
@@ -127,42 +127,37 @@ label alt_day7_us_7dl_start:
                 call alt_day7_us_px_mourning
         else:
             call alt_day7_us_px_mourning
-    elif alt_day6_us_7dl_tr or (alt_day6_us_7dl_mi_friends == 3) or (alt_day6_us_7dl_un_friends == 3):
-        call alt_day7_us_7dl_rendezvous2
-    else:
-        call alt_day7_us_7dl_packing
-    pause(1)
-    if alt_day4_neu_us_pixies == 3:
         $ persistent.sprite_time = "prolog"
         $ prolog_time()
         $ alt_chapter(7, u"Огоньки. Эпилог")
         call alt_day7_us_px_dejavu
         pause(1)
-        if loki:
-            call alt_day7_us_px_runaway
-        else:
-            call alt_day7_us_px_realvu
+        return
+    elif alt_day6_us_7dl_tr or (alt_day6_us_7dl_mi_friends == 3) or (alt_day6_us_7dl_un_friends == 3):
+        call alt_day7_us_7dl_rendezvous2
     else:
-        $ alt_chapter(7, u"Ульяна. 7ДЛ. Отъезд")
-        call alt_day7_us_7dl_leaving
-        $ persistent.sprite_time = "prolog"
-        $ prolog_time()
-        $ alt_chapter(7, u"Ульяна. 7ДЛ. Эпилог")
-        if (persistent.us_7dl_un or persistent.us_7dl_mi) and (persistent.us_px_rf_good1 or persistent.us_px_rf_good2) and (alt_day4_neu_us_pixies != 0) and alt_day6_us_7dl_tr :
-                $ alt_chapter(7, u"Ульяна. Спасибо.")
-                call alt_day7_us_7dl_ever_after
-                pause(1)
-                return
-        call alt_day7_us_7dl_wakeup
-        pause(1)
-        if alt_day6_us_7dl_tr:
-            call alt_day7_us_7dl_reunite
+        call alt_day7_us_7dl_packing
+    pause(1)
+    $ alt_chapter(7, u"Ульяна. 7ДЛ. Отъезд")
+    call alt_day7_us_7dl_leaving
+    $ persistent.sprite_time = "prolog"
+    $ prolog_time()
+    $ alt_chapter(7, u"Ульяна. 7ДЛ. Эпилог")
+    if (persistent.us_7dl_un or persistent.us_7dl_mi) and persistent.us_px_rf_good and (alt_day4_neu_us_pixies != 0) and alt_day6_us_7dl_tr :
+            $ alt_chapter(7, u"Ульяна. Спасибо.")
+            call alt_day7_us_7dl_ever_after
+            pause(1)
+            return
+    call alt_day7_us_7dl_wakeup
+    pause(1)
+    if alt_day6_us_7dl_tr:
+        call alt_day7_us_7dl_reunite
+    else:
+        if alt_day6_us_7dl_mi_friends == 3:
+            call alt_day7_us_7dl_mikuforever
+        elif alt_day6_us_7dl_un_friends == 3:
+            call alt_day7_us_7dl_lenaforever
         else:
-            if alt_day6_us_7dl_mi_friends == 3:
-                call alt_day7_us_7dl_mikuforever
-            elif alt_day6_us_7dl_un_friends == 3:
-                call alt_day7_us_7dl_lenaforever
-            else:
-                call alt_day7_us_7dl_verses
+            call alt_day7_us_7dl_bad
     pause(1)
     return
