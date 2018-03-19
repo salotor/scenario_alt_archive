@@ -1,5 +1,5 @@
 ﻿init :
-    $ mods["scenario__sdl_selector"] = u"7ДЛ концовки"
+    $ mods["scenario__sdl_selector"] = u"Селектор 7дл"
     $ mod_tags["scenario__sdl_selector"] = ["length:days","gameplay:vn","protagonist:male"]
     
     image scenery:
@@ -118,12 +118,18 @@ label sdl_menu:
                             jump alt_day1_alt_M
                 "Ульяна":
                     menu:
+                        "Локи":
+                            $ loki = True
+                            $ plthr = u"Локи"
+                            $ us_pt += 5
+                        "Дрищ":
+                            $ plthr = u"Дрищ"
+                            $ us_pt += 5
+                            pause(1)
+                    menu:
                         "День 6":
                             menu:
                                 "Начало дня":
-                                    $ loki = True
-                                    $ plthr = u"Локи"
-                                    $ us_pt += 5
                                     menu:
                                         "7дл":
                                             $ routetag = "us7dl_bad"
@@ -135,7 +141,6 @@ label sdl_menu:
                                             $ alt_day4_neu_us_pixies == 3
                                     jump alt_day6_us_7dl_start
                                 "Отдельные сцены":
-                                    $ plthr = u"Дрищ"
                                     menu:
                                         "Утро":
                                             menu:
@@ -196,7 +201,7 @@ label sdl_menu:
                                             $ alt_day6_us_px_sl_join = True
                                         "Без Слави":
                                             $ alt_day6_us_px_sl_join = False
-                                     $ alt_day4_neu_us_pixies = 3
+                                    $ alt_day4_neu_us_pixies = 3
                                     jump alt_day7_us_7dl_start
                                 "С самого начала, 7дл":
                                     menu:
@@ -246,15 +251,7 @@ label sdl_menu:
                                                 "С вещами":
                                                     call alt_day7_us_7dl_packing
                                         "Огоньки, отъезд":
-                                            menu:
-                                                "Эпилог":
-                                                    $ loki = True
-                                                    call alt_day7_us_px_dejavu
-                                                "Концовка Локи":
-                                                    $ loki = True
-                                                    call alt_day7_us_px_runaway
-                                                "Концовка Дрища":
-                                                    call alt_day7_us_px_runaway
+                                            call alt_day7_us_px_dejavu
                                         "7дл, отъезд":
                                             menu:
                                                 "С Ульяной":
