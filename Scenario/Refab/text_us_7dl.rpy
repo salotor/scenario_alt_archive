@@ -1311,6 +1311,7 @@ label alt_day_us_7dl_preps:
     mi "Очень!"
     mi "Хочешь послушать?"
     me "Ну… Давай."
+    stop music fadeout 3
     "Мику отошла к магнитофону и, поискав там, поставила плёнку."
     play music shib_stereo fadein 3
     "Некоторое время ничего не происходило, видимо, шло пустое место, а потом зазвучала музыка, которая никак не могла принадлежать этому миру и времени."
@@ -1393,7 +1394,7 @@ label alt_day_us_7dl_preps:
     play ambience ambience_clubs_inside_day fadein 1
     "И сцена, открывшаяся нам, полностью отвечала на вопрос обо всех странностях!"
     if alt_day3_technoquest_st3 == 2:
-        show el normal pioneer at zenterright
+        show el normal pioneer at cright
         show sh normal pioneer at right
         with dissolve
         "Шурик и Электроник притулились в уголке за столом, что-то там паяя и скручивая."
@@ -1443,7 +1444,7 @@ label alt_day_us_7dl_preps:
         hide sh with dissolve
         "В этот раз среагировало всё мужское население клуба, кинулось ловить нашу прекрасную старлетку."
         "Повезло, разумеется, мне."
-        show mi angry pioneer at zenterleft with dissolve
+        show mi angry pioneer with dissolve
         mi "Шурик, Сеня! Немедленно прекратите."
         "Сердито потребовала японка, даже не пытаясь слезть с моих рук."
         "Собственно, её и поставить некуда было — всё было перегорожено."
@@ -1451,7 +1452,7 @@ label alt_day_us_7dl_preps:
         "Шурик упорно смотрел мимо меня, потому в беседу включился Электроник:"
     else:
         mi "Серёжа, а зачем ты всё заставил?"
-    show el sad pioneer at zenterright with dissolve
+    show el sad pioneer with dissolve
     el "Да вот, видишь, начальник лагеря распорядился, чтобы мы потеснились немного."
     el "А им же —"
     "Он махнул рукой в сторону прислушивающихся к нам малышей."
