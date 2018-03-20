@@ -85,7 +85,6 @@ label scenario__alt__test:
     $ alt_save_release_no = "00.x.0"
     $ bak_release_no = alt_release_no
     $ alt_release_no = "00.x.0"
-    $ make_names_unknown()
     $ th_prefix = "«"
     $ th_suffix = "»"
     $ alt_day0_prologue = True
