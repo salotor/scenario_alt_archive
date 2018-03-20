@@ -321,7 +321,7 @@ init:
     #Концовки-описание (Ульянка расцветка)
     image sdl_achv_good_us_px = Text("Хорошая\nконцовка Огоньков", style="sdl_achvlistA_us_st")
     image sdl_achv_true_us_px = Text("Истинная\nконцовка Огоньков", style="sdl_achvlistA_us_st")
-    image sdl_achv_bad_us_7dl = Text("Плохая\nконцовка", style="sdl_achvlistA_us_st")
+    image sdl_achv_bad_us_7dl = Text("Плохая\n7дл концовка", style="sdl_achvlistA_us_st")
     image sdl_achv_good_us_7dl = Text("Хорошая\n7дл концовка", style="sdl_achvlistA_us_st")
     image sdl_achv_true_us_7dl = Text("Истинная\n7дл концовка", style="sdl_achvlistA_us_st")
     image sdl_achv_us_un = Text("Концовка\n Лены", style="sdl_achvlistA_us_st")

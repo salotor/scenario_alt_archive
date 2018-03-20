@@ -677,9 +677,9 @@ label sdl_menu:
                             "{color=#ed6b6b}Ульяна, Плохая концовка.{/color}":
                                 call alt_day7_us_7dl_bad
                             "{color=#ffff00}Огоньки, Истинная концовка.{/color}":
-                                call alt_day7_us_px_dejavu
-                            "{color=#ffff11}Огоньки, Хорошая концовка.{/color}":
                                 call alt_day7_us_px_fairytale
+                            "{color=#ffff11}Огоньки, Хорошая концовка.{/color}":
+                                call alt_day7_us_px_dejavu
                             "{color=#6beded}Ульяна, Истинная концовка.{/color}":
                                 call alt_day7_us_7dl_ever_after
                         $ renpy.pause(1)
