@@ -476,7 +476,7 @@ label alt_day4_un_7dl_breakfast:
                 scene bg int_dining_hall_people_sunset
                 show un surprise pioneer at left
                 with guess_off
-                un "Не думала, что мой голос на алискин похож."
+                un "Не думала, что мой голос на Алискин похож."
                 "Удивилась девочка, садясь со мной рядом."
             "Кто-кто. Лена!":
                 $ lp_un += 1
