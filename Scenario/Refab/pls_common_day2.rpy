@@ -69,14 +69,14 @@
     $ alt_chapter(2, u"Турнир")
     call alt_day2_cards
     pause(1)
-    call alt_day2_tournament_prep # добавить в турнир return вместо jump alt_day2_supper
+    call alt_day2_tournament_prep
     pause(1)
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(2, u"Ужин")
     call alt_day2_supper
     pause(1)
-    if alt_day2_slot_us_cake: # новая переменная
+    if alt_day2_slot_us_cake:
         call alt_day2_slot_us_try
         pause(1)
         if lp_us > 1:
@@ -84,31 +84,31 @@
         else:
             call alt_day2_sup2
             pause(1)
-            if alt_day2_dv_chased:
+            if alt_day2_sl_chased:
+                call alt_day2_slot_sl
+            elif alt_day2_dv_chased:
                 call alt_day2_eventEv_beach1
                 pause(1)
-                if alt_day2_sl_chased:
-                    call alt_day2_slot_sl
-                elif lp_dv > 3 and alt_day2_dv_bet_approve:
+                if lp_dv > 3 and alt_day2_dv_bet_approve:
                     $ alt_day2_date = 3
                     call alt_day2_slot_dv
                 else:
-                    pass
+                    call alt_day2_mapEv_prepare
             else:
                 call alt_day2_mapEv_prepare
     else:
         call alt_day2_sup2
         pause(1)
-        if alt_day2_dv_chased:
+        if alt_day2_sl_chased:
+            call alt_day2_slot_sl
+        elif alt_day2_dv_chased:
             call alt_day2_eventEv_beach1
             pause(1)
-            if alt_day2_sl_chased:
-                call alt_day2_slot_sl
-            elif lp_dv > 3 and alt_day2_dv_bet_approve:
+            if lp_dv > 3 and alt_day2_dv_bet_approve:
                 $ alt_day2_date = 3
                 call alt_day2_slot_dv
             else:
-                pass
+                call alt_day2_mapEv_prepare
         else:
             call alt_day2_mapEv_prepare
     pause(1)
