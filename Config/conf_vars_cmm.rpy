@@ -234,6 +234,7 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_revanche = False
     $ alt_day3_us_shenan = False
     $ alt_day3_duty = False
+    $ alt_day2_sl_chased = False
     return
     
 label alt_day3_vars: #Переменные третьего дня
