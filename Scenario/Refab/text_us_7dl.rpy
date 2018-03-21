@@ -1174,7 +1174,6 @@ label alt_day_us_7dl_preps:
     "И ослеп на мгновение на контрасте с ярко освещённым музыкальным залом и темнотой каморки."
     "Единственным источником освещения была подвешенная к потолку лампочка."
     "И это всё, что я успел заметить."
-    
     "Так как в одно мгновение я всё ещё стоял, приглядываясь, а в другой момент…"
     "На меня бросилось какое-то чудище!"
     play sound sfx_scary_sting
@@ -1393,8 +1392,8 @@ label alt_day_us_7dl_preps:
     play ambience ambience_clubs_inside_day fadein 1
     "И сцена, открывшаяся нам, полностью отвечала на вопрос обо всех странностях!"
     if alt_day3_technoquest_st3 == 2:
-        show el normal pioneer at zenterright
-        show sh normal pioneer at right
+        show el normal pioneer at cright
+        show sh normal pioneer at fright
         with dissolve
         "Шурик и Электроник притулились в уголке за столом, что-то там паяя и скручивая."
     else:
@@ -1429,7 +1428,7 @@ label alt_day_us_7dl_preps:
         "Третьего стула под ногой нет!"
         "Я со всего маху поставил ногу на пустоту, запнулся…"
         window hide
-        scene bg ext_clubs_night:
+        scene bg ext_clubs_night: # ночная версия клубов СНАРУЖИ. Ночной версии внутри нет. Плюс не возвращается исходный фон.
             zoom 1.0 xalign 0.5 yalign 0.45
             linear 0.3 zoom 1.3 xalign 0.5 yalign 0.15
         "И со всего маху приложился мордой об стол."
