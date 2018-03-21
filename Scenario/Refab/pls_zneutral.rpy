@@ -178,11 +178,11 @@ label alt_day5_neu_begin:
     elif alt_day5_neu_candle == 2:
         call alt_day5_neu_cndl
         pause(1)
+    elif alt_day5_neu_candle == 3:
+        call alt_day5_neu_gaming
+        pause(1)
     elif alt_day4_neu_us_pixies:
         call alt_day5_neu_arrest
-        pause(1)
-    else:
-        call alt_day5_neu_gaming
         pause(1)
     call alt_day5_neu_dinner
     pause(1)
@@ -204,6 +204,8 @@ label alt_day5_neu_begin:
         else:
             $ routetag = "us7dl_bad"
         jump alt_day6_us_7dl_start
+        pause(1)
+        return
     else:
         call alt_day5_neu_mi_estrade
         pause(1)
@@ -229,6 +231,8 @@ label alt_day5_neu_begin:
         elif us_pt >= 4:
             $ routetag = "us7dl_bad"
             jump alt_day6_us_7dl_start
+            pause(1)
+            return
     jump alt_day6_neu_begin
     
 label alt_day6_neu_begin:

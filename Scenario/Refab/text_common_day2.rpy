@@ -1082,7 +1082,7 @@ label alt_day2_convoy:
             hide un with dissolve
             window hide
             $ alt_day2_rendezvous = 6
-            jump alt_day2_convoy # придётся оставить так
+            jump alt_day2_convoy
         "Я сам.":
             scene expression Noir("bg ext_dining_hall_near_day", brightness = -0.4, saturation = -0.4) at zentercenter
             "Что я, маленький, что ли?"
@@ -1899,9 +1899,9 @@ label alt_day2_event_clubs1:
             "Поэтому я ответил максимально нейтрально."
             me "Слушай, ты, меня, конечно, извини, но я не могу."
             if alt_day2_club_join_nwsppr or alt_day2_club_join_musc or alt_day2_club_join_footbal or alt_day2_club_join_volley or alt_day2_club_join_badmin:
-                me "Я уже записался" #s отсебятина
+                me "Я уже записался"
                 if alt_day2_club_join_nwsppr:
-                    extend " в стенгазету." #s отсебятина
+                    extend " в стенгазету."
                     if alt_day2_club_join_musc:
                         extend " Да и к Мику тоже."
                 elif alt_day2_club_join_musc:
@@ -3272,7 +3272,6 @@ label alt_day2_dubstep2:
     "Ульянка повела плечами, будто сбрасывая оцепенение, и несколько мгновений спустя опять превратилась в девочку-метеор."
     show us smile sport with dissolve
     us "Дискотека-дискотека, Семён сделал дискотеку!"
-    "Мы отключили аппаратуру и неторопливо двинулись в сторону столовой." # а дальше "очкарик отключит"
     me "Дискотека завтра."
     us "Ну да, сравнил. Что играет там, и то, что играло здесь."
     if alt_day2_rendezvous != 3:
@@ -3316,7 +3315,7 @@ label alt_day2_phone:
     th "Советская техника и ламповый звук."
     "Я усмехнулся и отключил микрофон."
     window hide
-    $ disable_current_zone_alt1() # ?
+    $ disable_current_zone_alt1() 
     return
 
 label alt_day2_event_square1:
@@ -3333,7 +3332,7 @@ label alt_day2_event_square1:
                 us "Поищите в домике!"
                 "Кивком поблагодарив девочку, мы направились ко мне домой."
             else:
-                "Я уже совсем было собрался уходить и уводить Славю за собой, когда нас окликнули." #s не стыкуется с предыдущим текстом, если между первым и вторым посещениями площади были в другом месте
+                "На площади делать было нечего, мы уже совсем было собрались уходить, как услышали голос."
                 us "Эй, эй! Стойте!"
                 show sl normal pioneer at cleft
                 show us normal sport far at cright
@@ -3667,7 +3666,7 @@ label alt_day2_dinner:
     "Я с ужасом прикинул, во что мне выльется полноценное принятие в ряды отряда. {w}Но на голодный желудок такие материи обдумывать решительно не хотелось."
     th "Вовремя же я успел!"
     if alt_day2_loki_minijack:
-        me "Надо бы всё отключить…" # до этого сами отключили
+        me "Надо бы всё отключить…"
         "Забеспокоился я."
         show dv normal pioneer2 with dspr
         dv "Не беспокойся, очкарик отключит всё."
@@ -3682,6 +3681,8 @@ label alt_day2_dinner:
         else:
             me "Ну почему же…"
         dv "Ну вот и заканчивай плакать, пошли обедать уже."
+        me "Ну уж нет."
+        "Я отправился к аппаратуре и последовательно обесточил всё."
     window hide
     $ persistent.sprite_time = "day"
     $ day_time()
@@ -5627,7 +5628,7 @@ label alt_day2_sup2:
                     dv "Ты и в самом деле тормоз."
                     hide dv with easeoutleft
                     "А я еще долго стоял на крыльце и задумчиво смотрел в сторону, куда скрылась Алиса."
-                if lp_sl >= 8: # не работает
+                if lp_sl 7= 8:
                     "А пока я провожал рыжую взглядом, заметил на площади куда-то направляющуюся Славю."
                     "Вид она имела самый деловитый."
                     menu:
@@ -8293,7 +8294,7 @@ label alt_day2_slot_dv:
         dv "Ну да, ну да…"
     else:
         pass
-    dv "Поздравляю." #s с чем?
+    dv "Поздравляю."
     if alt_day2_dv_bet_won == 0:
         dv " Только не думай, что я тебе простила тот косяк в столовой."
     else:

@@ -30,7 +30,6 @@ label scenario__sdl_selector:
     $ alt_save_release_no = "00.x.0"
     $ bak_release_no = alt_release_no
     $ alt_release_no = "00.x.0"
-    $ make_names_unknown()
     $ th_prefix = "«"
     $ th_suffix = "»"
     $ alt_day0_prologue = True
@@ -76,7 +75,6 @@ label sdl_menu:
     scene scenery with dissolve
     menu:
         "Выбранный лейбл":
-            stop ambience fadeout 2
             $ meet('mi','Мику')
             $ meet('us','Ульяна')
             $ meet('sl','Славя')
@@ -87,7 +85,8 @@ label sdl_menu:
             $ meet('el','Электроник')
             $ meet('sh','Шурик')
             $ meet('ba','Саныч')
-            #jump alt_test
+            stop ambience fadeout 2
+            jump alt_test
         "Руты.":
             menu:
                 "С самого начала?":
@@ -139,60 +138,85 @@ label sdl_menu:
                                         "Огоньки":
                                             $ routetag = "us7dl_good"
                                             $ alt_day4_neu_us_pixies == 3
+                                    stop ambience fadeout 2
                                     jump alt_day6_us_7dl_start
                                 "Отдельные сцены":
                                     menu:
                                         "Утро":
                                             menu:
                                                 "Зарядка":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_exercises
                                                 "Завтрак":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_breakfast
                                                 "7дл - помощь по лагерю":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_helping
                                                 "7дл - помощь Мику":
+                                                    stop ambience fadeout 2
                                                     call alt_day_us_7dl_preps
                                                 "7дл - помощь Славе":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_warehouse
                                                 "7дл - поиски Лены":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_un_met
                                         "День":
                                             menu:
                                                 "Обед":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_dinner
                                                 "7дл - саундчек":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_soundcheck
                                                 "7дл - Ульяна - пуговица":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_button
                                                 "7дл - Ульяна - рандеву":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_rendezvous
                                                 "Огоньки - карьер":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_px_carrier
                                                 "Огоньки - обед":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_px_dinner
                                                 "Огоньки - Лена":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_px_Lena
                                                 "Огьньки - Славя":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_px_party_sl
                                                 "Огоньки - дальние ворота":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_px_far_gate
                                         "Вечер":
                                             menu:
                                                 "7дл - концерт":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_concert
                                                 "7дл - ужин":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_supper
                                                 "7дл - танцы":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_disco
                                                 "Огоньки - чаепитие":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_tea
                                                 "Огоньки - вечер у пристани.":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_px_afterwords
                                                 "Отбой":
+                                                    stop ambience fadeout 2
                                                     call alt_day6_us_7dl_sleeptime
                         "День 7, ЭПИЛОГ":
+                            stop ambience fadeout 2
                             call alt_day6_us_px_vars
+                            stop ambience fadeout 2
                             call alt_day6_us_7dl_vars
+                            stop ambience fadeout 2
                             call alt_day7_us_px_vars
                             menu:
                                 "С самого начала, Огоньки":
@@ -202,6 +226,7 @@ label sdl_menu:
                                         "Без Слави":
                                             $ alt_day6_us_px_sl_join = False
                                     $ alt_day4_neu_us_pixies = 3
+                                    stop ambience fadeout 2
                                     jump alt_day7_us_7dl_start
                                 "С самого начала, 7дл":
                                     menu:
@@ -216,68 +241,90 @@ label sdl_menu:
                                     $ alt_day6_us_7dl_tr = True
                                     menu:
                                         "Утро(гл. ветка)":
+                                            stop ambience fadeout 2
                                             call alt_day7_us_7dl_begin
                                         "Завтрак (гл. ветка)":
+                                            stop ambience fadeout 2
                                             call alt_day7_us_7dl_begin
                                         "Побег (огоньки)":
                                             menu:
                                                 "Со Славей.":
                                                     $ alt_day6_us_px_sl_join = True
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_px_escape
                                                 "Без Слави":
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_px_escape
                                                 "Автобус":
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_px_bus
                                                 "Пустоши":
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_px_bus
                                                 "История сказки (эпилог)":
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_px_fairytale
                                                 "Возвращение в лагерь со Славей":
                                                     $ alt_day6_us_px_sl_join = True
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_px_mourning
                                                 "Возвращение в лагерь без Слави":
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_px_mourning
                                         "Утреннее рандеву":
                                             menu:
                                                 "С Ульянкой":
                                                     $ alt_day6_us_7dl_tr
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_rendezvous2
                                                 "С Мику":
                                                     $ alt_day6_us_7dl_mi_friends = 3
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_rendezvous2
                                                 "С Леной":
                                                     $ alt_day6_us_7dl_un_friends = 3
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_rendezvous2
                                                 "С вещами":
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_packing
                                         "Огоньки, отъезд":
+                                            stop ambience fadeout 2
                                             call alt_day7_us_px_dejavu
                                         "7дл, отъезд":
                                             menu:
                                                 "С Ульяной":
                                                     $ alt_day6_us_7dl_tr
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_leaving
                                                 "С Мику":
                                                     $ alt_day6_us_7dl_mi_friends = 3
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_leaving
                                                 "С Леной":
                                                     $ alt_day6_us_7dl_un_friends = 3
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_leaving
                                         "7дл, эпилоги":
                                             menu:
                                                 "Пробуждение":
                                                     $ alt_day6_us_7dl_tr
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_wakeup
                                                 "Ульяна, хорошая концовка":
                                                     $ alt_day6_us_7dl_tr
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_reunite
                                                 "Концовка Мику":
                                                     $ alt_day6_us_7dl_mi_friends = 3
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_mikuforever
                                                 "Концовка Лены":
                                                     $ alt_day6_us_7dl_un_friends = 3
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_lenaforever
                                                 "Плохая концовка":
+                                                    stop ambience fadeout 2
                                                     call alt_day7_us_7dl_bad
                                             
                 "Мику":
@@ -519,6 +566,7 @@ label sdl_menu:
                                 stop ambience fadeout 2
                                 call alt_day7_dv_7dl_loki
                                 pause(1)
+                                stop ambience fadeout 2
                                 call alt_day7_dv_7dl_tulpa_end
                                 pause(1)
                                 return
@@ -591,7 +639,6 @@ label sdl_menu:
                                 menu:
                                     "Эпилог.":
                                         stop ambience fadeout 2
-                                        stop ambience fadeout 2
                                         jump alt_day7_un_7dl_epilogue
                                     "{color=#9894e0}Вся жизнь впереди (хорошая){/color}":
                                         stop ambience fadeout 2
@@ -663,20 +710,27 @@ label sdl_menu:
                         menu:
                             "{color=#ff0000}Ульяна, хорошая концовка.{/color}":
                                 $ alt_day6_us_7dl_tr
+                                stop ambience fadeout 2
                                 call alt_day7_us_7dl_reunite
                             "{color=#aced6b}Ульяна, Концовка Мику.{/color}":
                                 $ alt_day6_us_7dl_mi_friends = 3
+                                stop ambience fadeout 2
                                 call alt_day7_us_7dl_mikuforever
                             "{color=#9894e0}Ульяна, Концовка Лены.{/color}":
                                 $ alt_day6_us_7dl_un_friends = 3
+                                stop ambience fadeout 2
                                 call alt_day7_us_7dl_lenaforever
                             "{color=#ed6b6b}Ульяна, Плохая концовка.{/color}":
+                                stop ambience fadeout 2
                                 call alt_day7_us_7dl_bad
                             "{color=#ffff00}Огоньки, Истинная концовка.{/color}":
+                                stop ambience fadeout 2
                                 call alt_day7_us_px_fairytale
                             "{color=#ffff11}Огоньки, Хорошая концовка.{/color}":
+                                stop ambience fadeout 2
                                 call alt_day7_us_px_dejavu
                             "{color=#6beded}Ульяна, Истинная концовка.{/color}":
+                                stop ambience fadeout 2
                                 call alt_day7_us_7dl_ever_after
                         $ renpy.pause(1)
                         stop ambience fadeout 2
