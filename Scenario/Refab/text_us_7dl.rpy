@@ -4601,7 +4601,7 @@ label alt_day6_us_px_party_sl:
     us "Но мы по делу!"
     sl "По какому же?"
     us "Мы знаем, куда Лена сбегает каждый год, поэтому идём её возвращать!"
-    show sl sad pioneer with sdpr
+    show sl sad pioneer with dspr
     "Славя тяжело вздохнула:"
     sl "Хватит уже сочинять. Куда вы собрались?"
     show us calml sport with dspr
