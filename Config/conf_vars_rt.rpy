@@ -220,7 +220,6 @@ label alt_day6_dv_7dl_vars:
     $ alt_day6_dv_7dl_escape_convince = False
     $ alt_day7_dv_7dl_brace = 0
     $ alt_day6_dv_7dl_sl_help_agree = False
-    $ alt_day6_dv_7dl_catapult= False
     $ alt_day7_dv_7dl_loki_catapult = False
     return
     
