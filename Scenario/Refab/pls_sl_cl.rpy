@@ -55,7 +55,7 @@ label alt_day5_sl_start:
     $ alt_chapter(5, u"Славя. Утро.")
     call alt_day5_sl_begin # может разбить на несколько?
     pause(1)
-    if karma == -7:
+    if alt_day_catapult == 1:
         return
     $ persistent.sprite_time = "day"
     $ day_time()
@@ -122,13 +122,13 @@ label alt_day6_sl_start:
             call alt_day6_sl_cl_become_a_hero
             pause(1)
             return
-        if karma == 7:
+        if alt_day6_sl_int == 1:
             if alt_sp >= 6 and (persistent.sl_cl_good_rf or persistent.sl_cl_good_rf2 or persistent.sl_cl_good_ussr):
                 $ persistent.sprite_time = "prolog"
                 $ prolog_time()
                 call alt_day6_sl_intellectual
                 pause(1)
-                if karma == 77:
+                if alt_day6_sl_int == 2:
                     $ routetag = "sltrue"
                     $ persistent.sprite_time = "prolog"
                     $ prolog_time()
@@ -139,10 +139,10 @@ label alt_day6_sl_start:
                     $ day_time()
                     call alt_day7_sl_1996
                     pause(1)
-                    if karma == 777:
+                    if alt_day6_sl_int == 3:
                         call alt_day7_sl_loop
                         pause(1)
-                        if karma == 7777:
+                        if alt_day6_sl_int == 4:
                             call alt_day7_sl_will
                             pause(1)
                             return
@@ -186,7 +186,7 @@ label alt_day7_sl_start:
     pause(1)
     call alt_day7_sl_dinner
     if (lp_sl >= 18) or (alt_sp >= 6):
-        if karma == 777:
+        if alt_day6_sl_good == 1:
             if lp_sl >= 18:
                 call alt_day7_sl_good
             elif alt_sp >= 6:
@@ -197,7 +197,7 @@ label alt_day7_sl_start:
             call alt_day8_sl_postscriptum
         else:
             if alt_day6_sl_arc == 1 and lp_sl > 20:
-                if karma == 77:
+                if alt_day6_sl_good == 2:
                     call alt_day7_sl_rf_good
                 else:
                     call alt_day7_sl_rf2

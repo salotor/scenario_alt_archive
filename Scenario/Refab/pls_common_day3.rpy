@@ -57,7 +57,7 @@
         call alt_day3_aftermath
         pause(1)
         call alt_day3_nightmare
-        if karma == -7:
+        if alt_day_catapult == 1:
             return
         pause(1)
         $ persistent.sprite_time = "sunset"

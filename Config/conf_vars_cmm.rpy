@@ -100,7 +100,7 @@ label alt_day0_vars: #Переменные нулевого дня
     $ mt_pt = 0
     $ d3_pt = 0
     $ us_pt = 0
-
+    $ alt_day_catapult = 0
     $ alt_day_binder = 0
     $ alt_dlc_active = False
     $ herc = False

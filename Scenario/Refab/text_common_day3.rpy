@@ -4738,7 +4738,7 @@ label alt_day3_nightmare:
     "Пробуждение через три… {w}две…"
     menu:
         "Проснуться":
-            $ karma = -7
+            $ alt_day_catapult = 1
             if herc:
                 scene black
                 $ prolog_time()
