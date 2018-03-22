@@ -385,7 +385,7 @@ init -5 python:
             renpy.pause(2.0)
             
         elif routetag == "us7dl_good_surp":
-            renpy.show("us surp sport", at_list=[left])
+            renpy.show("us surp1 sport", at_list=[left])
             renpy.transition(moveinleft)
             renpy.pause(2.0)
             

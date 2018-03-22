@@ -1,8 +1,8 @@
 ﻿#Мод пилится на базе нетленки от АБЦБ - его сюжет и подача мне куда симпатичнее оригинальной стори.
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
-    $ alt_release_no = "0.32.c"
-    $ alt_compatible_release_no = ["0.00.x", "0.32.c"] 
+    $ alt_release_no = "0.33.a"
+    $ alt_compatible_release_no = ["0.00.x", "0.33.a"] 
 
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
@@ -20,7 +20,7 @@ init 2:
     $ timeskip10 = "Спасибо…"
     $ timeskip11 = "Прощай."
     $ timeskip12 = "Ты потерялся, малыш?"
-    $ alt_credits_text = "Команда 7 дней лета (7дл-кун сотоварищи) благодарит вас за время, уделённое игре!\n\nБлагодарности:\n\nЛюдям, ловившим ошибки, баги и нелогичности, альфа-, бета- и гамма-тестерам.\n\nBeta-test:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nОСОБЫЕ БЛАГОДАРНОСТИ:\n\nMannych - за колоритного физрука!\n\nEldhenn - за адаптацию игры в Steam.\n\nPeregarrett, Chess - за кошко-рут.\n\nЛенофаг Простой, Ravsii - за идеи и помощь их реализации.\n\nNuttyprof, openplace - за новую карту лагеря.\n\nМакс Смолев(sorasora) - за новые cg-сценки и стиль БЛ.\n\nАлексей - за фоны и модели.\n\nGoodbyeNona - за супер-фоны!\n\nRINA-SAN, ☆ FairyApple ☆ - за вдохновение и неконтролируемые приступы позитива!\n\nВсем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ.\n"
+    $ alt_credits_text = "Команда 7 дней лета (7дл-кун сотоварищи) благодарит вас за время, уделённое игре!\n\nБлагодарности:\n\nЛюдям, ловившим ошибки, баги и нелогичности, альфа-, бета- и гамма-тестерам.\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nОСОБЫЕ БЛАГОДАРНОСТИ:\n\nMannych - за колоритного физрука!\n\nEldhenn - за адаптацию игры в Steam.\n\nPeregarrett, Chess - за кошко-рут.\n\nЛенофаг Простой, Ravsii - за идеи и помощь их реализации.\n\nNuttyprof, openplace - за новую карту лагеря.\n\nМакс Смолев(sorasora) - за новые cg-сценки и стиль БЛ.\n\nАлексей - за фоны и модели.\n\nGoodbyeNona - за супер-фоны!\n\nRINA-SAN, ☆ FairyApple ☆ - за вдохновение и неконтролируемые приступы позитива!\n\nВсем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ.\n"
     
     # custom speakers
     
@@ -234,6 +234,7 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_revanche = False
     $ alt_day3_us_shenan = False
     $ alt_day3_duty = False
+    $ alt_day2_sl_chased = False
     return
     
 label alt_day3_vars: #Переменные третьего дня

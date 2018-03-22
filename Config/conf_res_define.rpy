@@ -567,8 +567,6 @@
     image cg d6_un_evening_0_1_7dl = get_image_7dl("cg/d6_un_evening_0_1_7dl.jpg")
     image cg d6_un_evening_0_2_7dl = get_image_7dl("cg/d6_un_evening_0_2_7dl.jpg")
     
-    #image cg d6_us_lost_road_7dl = get_image_7dl("cg/d6_us_lost_road_7dl.png")
-    
     image cg d7_dv_alice_dj_7dl = get_image_7dl("cg/d7_dv_alice_dj_7dl.jpg")
     image cg d7_dv_looney_7dl = get_image_7dl("cg/d7_dv_looney_7dl.png")
     image cg d7_dv_addic_happy_7dl = get_image_7dl("cg/d7_dv_addic_happy_7dl.jpg")
@@ -589,6 +587,8 @@
     image cg d7_mi_club27_7dl = get_image_7dl("cg/d7_mi_club27_7dl.jpg")
     image cg d7_mi_epilogue_7dl = get_image_7dl("cg/d7_mi_epilogue_7dl.jpg")
     image cg d7_mi_farewell_7dl = get_image_7dl("cg/d7_mi_farewell_7dl.jpg")
+    image cg d7_mi_ghost_7dl = get_image_7dl("cg/d7_mi_ghost_7dl.jpg")
+    
     image cg d7_mi_hugs_7dl = get_image_7dl("cg/d7_mi_hugs_7dl.jpg")
     
     image cg d7_mi_hands_tight_7dl = get_image_7dl("cg/d7_mi_hands_tight_7dl.jpg")
@@ -620,12 +620,10 @@
     image cg d7_un_epilogue_d2_7dl = get_image_7dl("cg/d7_un_epilogue_d2_7dl.jpg")
     image cg d7_un_reanimation_7dl = get_image_7dl("cg/d7_un_reanimation_7dl.jpg")
     
-    #image cg d7_us_bus_stop_7dl = get_image_7dl("cg/d7_us_bus_stop_7dl.png")
     image cg d7_us_pixie_7dl = get_image_7dl("cg/d7_us_pixie_7dl.png")
-    #image cg d7_us_no_mans_land_7dl = get_image_7dl("cg/d7_us_no_mans_land_7dl.png")
+    image cg d7_us_tai_tai_7dl = get_image_7dl("cg/d7_us_tai_tai_7dl.jpg")
+
     
-    #image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.jpg")
-    #image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.png")
     image cg d7_bus_night_7dl = get_image_7dl("cg/d7_bus_night_7dl.jpg")
     
 #Турнир
@@ -810,7 +808,9 @@
     image acm_logo_us_fairytale = get_image_7dl("gui/acm_logo_us_fairytale.png")
     image acm_logo_us_hi = get_image_7dl("gui/acm_logo_us_hi.png")
     image acm_logo_us_openup = get_image_7dl("gui/acm_logo_us_openup.png")
+    image acm_logo_us_px = get_image_7dl("gui/acm_logo_us_px.png")
     image acm_logo_us_semische = get_image_7dl("gui/acm_logo_us_semische.png")
+    image acm_logo_us_true = get_image_7dl("gui/acm_logo_us_true.png")
     
     image achieve_beagod = get_image_7dl("gui/achieve_beagod.png")
     image acm_logo = get_image_7dl("gui/acm_logo1.png") #Логотип сюжета
@@ -1047,6 +1047,7 @@
     $ you_are_star = get_music_7dl("you_are_star.ogg")
     $ youareours = get_music_7dl("youareours.ogg")
     $ youre_not_real = get_music_7dl("youre_not_real.ogg")
+    $ your_life = get_music_7dl("your_life.ogg")
     
 # sfx
     $ apple_bite = get_sfx_7dl("apple_bite.ogg")

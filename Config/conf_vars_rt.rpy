@@ -61,6 +61,7 @@ label alt_day5_neu_us_vars:
     $ alt_day5_neu_mt_voyeur = 0
     $ alt_day5_neu_sl_voyeur = False
     $ alt_day5_neu_us_stores = False
+    $ alt_day5_neu_us_potato = False
     return
     
 label alt_day4_sl_cl_vars:
