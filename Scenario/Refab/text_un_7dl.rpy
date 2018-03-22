@@ -9038,10 +9038,11 @@ label alt_day6_un_7dl_supper:
     if karma < 0:
         "И я отпустил себя."
         window hide
+        $ alt_day_catapult = 1
         return
     menu:
         "И я отпустил себя.":
-            $ karma = -9000
+            $ alt_day_catapult = 1
             window hide
             return
         "Я не знаю…":
@@ -9055,7 +9056,7 @@ label alt_day6_un_7dl_supper:
                 "Нет, мне не плевать.":
                     sl "В таком случае…"
                     sl "Пошли."
-                    $ karma = -9000
+                    $ alt_day_catapult = 1
                     window hide
                     return
                 "Домой? Но Лена…":
@@ -11145,7 +11146,7 @@ label alt_day7_un_7dl_epilogue_rt:
                 "А даже если бы и… После этого вопроса следовали бы другие, вытаскивающие наружу то, о чём я никогда не знал и не помнил."
                 "Но незнание никого и никогда не освобождало от ответственности."
                 "Я свернулся клубком на кресле и закрыл глаза."
-                $ karma = 9000
+                $ alt_day7_un_7dl_true_end = True
                 window hide
                 return
             "Ты пойдёшь со мной?":

@@ -86,6 +86,8 @@ label alt_day6_sl_cl_vars:
     $ alt_day6_sl_cl_rt = False
     $ alt_day6_sl_cl_int_pt = 0
     $ alt_day6_sl_cl_fin = 0
+    $ alt_day6_sl_int = 0
+    $ alt_day6_sl_good = 0
     return
     
 label alt_day7_sl_cl_vars:
@@ -160,6 +162,10 @@ label alt_day6_un_7dl_vars:
     $ alt_day6_un_7dl_agreed = False
     return
     
+label alt_day7_un_7dl_vars:
+    $ alt_day7_un_7dl_true_end = False
+    return
+
 label alt_day4_un_fz_vars:
     $ alt_day4_fz_play = 0
     $ alt_day4_fz_cards = False
@@ -214,7 +220,6 @@ label alt_day6_dv_7dl_vars:
     $ alt_day6_dv_7dl_escape_convince = False
     $ alt_day7_dv_7dl_brace = 0
     $ alt_day6_dv_7dl_sl_help_agree = False
-    $ alt_day6_dv_7dl_catapult= False
     $ alt_day7_dv_7dl_loki_catapult = False
     return
     

@@ -141,7 +141,7 @@ label alt_day0_start1:
         call alt_day0_start_h
     else:
         call alt_day0_start_d
-    if karma == -7:
+    if alt_day_catapult == 1:
         call alt_day0_epic_fail
         return
     jump alt_day0_opening
