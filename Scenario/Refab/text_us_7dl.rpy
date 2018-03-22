@@ -12109,7 +12109,7 @@ label alt_day7_us_px_mourning:
         sl "Ты слышал это?"
         me "Слышал что?"
         sl "Вот…"
-        $ volume(0.3, "sfx")
+        $ volume(0.3, "sound")
         play sound sfx_bus_honk
         "Я прислушался…"
         me "Похоже на гудок автобуса."
