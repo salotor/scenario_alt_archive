@@ -9517,7 +9517,7 @@ label alt_day7_us_7dl_wakeup:
     scene bg ext_city_night_7dl
     with dissolve
     play ambience ambience_cold_wind_loop fadein 3
-    play music uneven_me fadein 3
+    play music fsl_tn fadein 3
     if alt_day6_us_7dl_un_friends == 3:
         "Моя ледяная, нелюдимая осень."
     else:
