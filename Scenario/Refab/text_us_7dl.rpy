@@ -2193,7 +2193,7 @@ label alt_day6_us_7dl_dinner:
     "На обеде было людно и дурно."
     "Думать было тошно о том, чтобы ввинтиться в это благолепие и гам."
     "Тем более, после сегодняшнего утра."
-    if alt_day6_us_7dl_mi_friends != 0:
+    if alt_day6_us_7dl_mi_friends == 2:
         "Мику уселась рядом со мной, не дожидаясь приглашения."
         show mi smile pioneer at zenterleft with dissolve
         mi "Не всё успели, конечно."
@@ -2270,7 +2270,7 @@ label alt_day6_us_7dl_dinner:
         "Мику надулась и задрала нос, но суп доела и, составив грязные тарелки в окошко мойки, вышла на улицу."
         hide mi with dissolve
         "Качая головой, за ней вслед вышел и я."
-    elif alt_day6_us_7dl_sl_friends != 0:
+    elif alt_day6_us_7dl_sl_friends == 2:
         "Две жуткие, вредные читерши, успевшие уже спеться и сыграться, сейчас сидели напротив меня."
         "Вдвоём."
         th "Вот так и делай добро людям."
@@ -4601,7 +4601,7 @@ label alt_day6_us_px_party_sl:
     us "Но мы по делу!"
     sl "По какому же?"
     us "Мы знаем, куда Лена сбегает каждый год, поэтому идём её возвращать!"
-    show sl sad pioneer with sdpr
+    show sl sad pioneer with dspr
     "Славя тяжело вздохнула:"
     sl "Хватит уже сочинять. Куда вы собрались?"
     show us calml sport with dspr
@@ -9517,7 +9517,7 @@ label alt_day7_us_7dl_wakeup:
     scene bg ext_city_night_7dl
     with dissolve
     play ambience ambience_cold_wind_loop fadein 3
-    play music uneven_me fadein 3
+    play music fsl_tn fadein 3
     if alt_day6_us_7dl_un_friends == 3:
         "Моя ледяная, нелюдимая осень."
     else:

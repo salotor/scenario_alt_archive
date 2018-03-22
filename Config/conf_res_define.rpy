@@ -911,6 +911,7 @@
     $ finale_farewell = get_music_7dl("finale_farewell.ogg")
     $ forgive_or_what = get_music_7dl("forgive_or_what.ogg")
     $ frostwithoutyou = get_music_7dl("frostwithoutyou.ogg")
+    $ fsl_tn = get_music_7dl("fsl_tn.ogg")
     
     $ genki = get_music_7dl("genki.ogg")
     $ guitar_under_the_window = get_music_7dl("guitar_under_the_window.ogg")
