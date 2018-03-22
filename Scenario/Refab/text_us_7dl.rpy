@@ -2460,8 +2460,9 @@ label alt_day6_us_7dl_soundcheck:
     scene bg ext_square_day with dissolve
     play ambience ambience_camp_center_day fadein 3
     play music breath_me fadein 3
-    "Очень секретной, да."
-    "Я направился к эстраде!"
+    if alt_day6_us_7dl_sl_friends == 2:
+        "Очень секретной, да."
+        "Я направился к эстраде!"
     "Чтобы внести ясность — нисколечко я восторга не испытывал от того, что мне придётся битый час находиться под пристальным перекрёстным вниманием целой кучи народа."
     if alt_day6_us_7dl_mi_friends == 2:
         "Хотя должен признать, что утро, проведённое с Мику, нельзя назвать скучным и обыденным."
