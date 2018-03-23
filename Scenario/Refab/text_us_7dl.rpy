@@ -12128,7 +12128,7 @@ label alt_day7_us_px_mourning:
             repeat
         with dissolve
         "Она с места стартанула в сторону площади, а я припустил вслед за ней."
-        $ volume(0.8, "sfx")
+        $ volume(0.8, "sound")
         window hide
         scene bg ext_square_day with flash:
             pos (0,0) 
