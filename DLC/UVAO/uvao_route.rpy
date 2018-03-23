@@ -2122,7 +2122,7 @@ label alt_day5_uvao_hentai_scene:
     stop music fadeout 4
     uv "А потом уже вот так!"
     "Она вскочила и ловким, по-кошачьи гибким движением избавилась от платья, под которым не было больше ничего лишнего."
-    scene cg d5_uv_bunker_hentai_7dl with dissolve #steam
+    scene black with dissolve    
     play music music_list["into_the_unknown"] fadein 3
     "Потом встала на четвереньки и повернулась ко мне, при этом хитро поглядывая через плечо, на манер избушки, так сказать. К стене передом, к Семёну задом."
     dreamgirl "Ну, убедился?"
@@ -3025,7 +3025,7 @@ label alt_day5_uvao_from_mines_to_dinner:
     "Юля улыбнулась и ответила:"
     uv "Принесёшь ещё булочек? Я буду ждать."
     window hide
-    scene bg int_mine_exit
+    scene bg int_mine_exit_day_7dl
     with dissolve
 
     "Я кивнул ей и полез наверх. Поднявшись, я дал глазам немного времени, чтобы немного привыкнуть к льющемуся сквозь решётку яркому солнечному свету, а потом выбрался наружу."

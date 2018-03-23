@@ -1,14 +1,14 @@
 ﻿#Мод пилится на базе нетленки от АБЦБ - его сюжет и подача мне куда симпатичнее оригинальной стори.
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
-    $ alt_release_no = "0.32.c"
-    $ alt_compatible_release_no = ["0.00.x", "0.32.c"] 
+    $ alt_release_no = "0.33.b"
+    $ alt_compatible_release_no = ["0.00.x", "0.33.b"] 
 
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
     $ timeskip_come = "Ты пойдёшь со мной?"
-    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Ульяна-7дл. Эпилог."
+    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 4."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
     $ timeskip3 = "Я скучаю…"
     $ timeskip4 = "Я хочу к тебе…"
@@ -20,7 +20,7 @@ init 2:
     $ timeskip10 = "Спасибо…"
     $ timeskip11 = "Прощай."
     $ timeskip12 = "Ты потерялся, малыш?"
-    $ alt_credits_text = "Команда 7 дней лета (7дл-кун сотоварищи) благодарит вас за время, уделённое игре!\n\nБлагодарности:\n\nЛюдям, ловившим ошибки, баги и нелогичности, альфа-, бета- и гамма-тестерам.\n\nBeta-test:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nОСОБЫЕ БЛАГОДАРНОСТИ:\n\nMannych - за колоритного физрука!\n\nEldhenn - за адаптацию игры в Steam.\n\nPeregarrett, Chess - за кошко-рут.\n\nЛенофаг Простой, Ravsii - за идеи и помощь их реализации.\n\nNuttyprof, openplace - за новую карту лагеря.\n\nМакс Смолев(sorasora) - за новые cg-сценки и стиль БЛ.\n\nАлексей - за фоны и модели.\n\nGoodbyeNona - за супер-фоны!\n\nRINA-SAN, ☆ FairyApple ☆ - за вдохновение и неконтролируемые приступы позитива!\n\nВсем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ.\n"
+    $ alt_credits_text = "Команда 7 дней лета (7дл-кун сотоварищи) благодарит вас за время, уделённое игре!\n\nБлагодарности:\n\nЛюдям, ловившим ошибки, баги и нелогичности, альфа-, бета- и гамма-тестерам.\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nОСОБЫЕ БЛАГОДАРНОСТИ:\n\nMannych - за колоритного физрука!\n\nEldhenn - за адаптацию игры в Steam.\n\nPeregarrett, Chess - за кошко-рут.\n\nЛенофаг Простой, Ravsii - за идеи и помощь их реализации.\n\nNuttyprof, openplace - за новую карту лагеря.\n\nМакс Смолев(sorasora) - за новые cg-сценки и стиль БЛ.\n\nАлексей - за фоны и модели.\n\nGoodbyeNona - за супер-фоны!\n\nRINA-SAN, ☆ FairyApple ☆ - за вдохновение и неконтролируемые приступы позитива!\n\nВсем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ.\n"
     
     # custom speakers
     
@@ -131,7 +131,7 @@ label alt_day0_vars: #Переменные нулевого дня
     $ mt_pt = 0
     $ d3_pt = 0
     $ us_pt = 0
-
+    $ alt_day_catapult = 0
     $ alt_day_binder = 0
     $ alt_dlc_active = False
     $ herc = False
@@ -212,6 +212,8 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_sup = 0
     $ alt_day2_cardgame_block_rollback = False
     $ alt_day2_olga_help = False
+    $ alt_day2_slot_us_cake = False
+    $ alt_day2_cake = False
     #Переменные для турнира
     $ alt_day2_round1 = 0 #0 не участвовал, 1 проиграл, если победил то -V-
     $ alt_day2_round2 = 0 #0 не участвовал, 1 проиграл, если победил, то -V-
@@ -229,6 +231,7 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_revanche = False
     $ alt_day3_us_shenan = False
     $ alt_day3_duty = False
+    $ alt_day2_sl_chased = False
     return
     
 label alt_day3_vars: #Переменные третьего дня
@@ -277,4 +280,8 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_uvao_spotted = False
     $ alt_day3_ladder_phys = 0
     $ alt_day3_ladder_mt = 0
+    $ alt_day3_technoquest_st3_help = False
+    $ alt_day3_un_fz_evening = False
+    $ alt_day3_dv_rep = False
+    $ alt_day3_un_fz_dinner = False
     return

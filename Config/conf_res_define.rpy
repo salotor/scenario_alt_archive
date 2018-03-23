@@ -114,6 +114,7 @@
 #Наши транзиты, с блекджеком и разными цветами.
     $ flash_cyan = Fade(1, 0, 1, color="#1fa")
     $ fade_red = Fade(2, 2, 2, color="#f11")
+    $ flash2_red = Fade(0.5, 0, 0.5, color="#f11")
     $ flash_pink = Fade(1, 0, 1, color="#e25")
     
     $ diam = ImageDissolve(im.Tile(get_image_7dl("gui/pattern.jpg")), 1.1, 1)
@@ -425,6 +426,7 @@
     image bg int_looney_bin_7dl = get_image_7dl("bg/int_looney_bin_7dl.jpg")
     image bg int_looney_bin_nightmare_7dl = get_image_7dl("bg/int_looney_bin_nightmare_7dl.jpg")
     
+    image bg int_mine_exit_day_7dl = get_image_7dl("bg/int_mine_exit_day_7dl.jpg")
     image bg int_mine_heart_7dl = get_image_7dl("bg/int_mine_heart_7dl.jpg")
     image bg int_mine_halt_left_7dl = get_image_7dl("bg/int_mine_halt_left_7dl.jpg")
     image bg int_mine_room2_7dl = get_image_7dl("bg/int_mine_room2_7dl.jpg")
@@ -565,8 +567,6 @@
     image cg d6_un_evening_0_1_7dl = get_image_7dl("cg/d6_un_evening_0_1_7dl.jpg")
     image cg d6_un_evening_0_2_7dl = get_image_7dl("cg/d6_un_evening_0_2_7dl.jpg")
     
-    #image cg d6_us_lost_road_7dl = get_image_7dl("cg/d6_us_lost_road_7dl.png")
-    
     image cg d7_dv_alice_dj_7dl = get_image_7dl("cg/d7_dv_alice_dj_7dl.jpg")
     image cg d7_dv_looney_7dl = get_image_7dl("cg/d7_dv_looney_7dl.png")
     image cg d7_dv_addic_happy_7dl = get_image_7dl("cg/d7_dv_addic_happy_7dl.jpg")
@@ -587,6 +587,8 @@
     image cg d7_mi_club27_7dl = get_image_7dl("cg/d7_mi_club27_7dl.jpg")
     image cg d7_mi_epilogue_7dl = get_image_7dl("cg/d7_mi_epilogue_7dl.jpg")
     image cg d7_mi_farewell_7dl = get_image_7dl("cg/d7_mi_farewell_7dl.jpg")
+    image cg d7_mi_ghost_7dl = get_image_7dl("cg/d7_mi_ghost_7dl.jpg")
+    
     image cg d7_mi_hugs_7dl = get_image_7dl("cg/d7_mi_hugs_7dl.jpg")
     
     image cg d7_mi_hands_tight_7dl = get_image_7dl("cg/d7_mi_hands_tight_7dl.jpg")
@@ -618,12 +620,10 @@
     image cg d7_un_epilogue_d2_7dl = get_image_7dl("cg/d7_un_epilogue_d2_7dl.jpg")
     image cg d7_un_reanimation_7dl = get_image_7dl("cg/d7_un_reanimation_7dl.jpg")
     
-    #image cg d7_us_bus_stop_7dl = get_image_7dl("cg/d7_us_bus_stop_7dl.png")
     image cg d7_us_pixie_7dl = get_image_7dl("cg/d7_us_pixie_7dl.png")
-    #image cg d7_us_no_mans_land_7dl = get_image_7dl("cg/d7_us_no_mans_land_7dl.png")
+    image cg d7_us_tai_tai_7dl = get_image_7dl("cg/d7_us_tai_tai_7dl.jpg")
+
     
-    #image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.jpg")
-    #image cg d7_walkman_7dl = get_image_7dl("cg/d7_walkman_7dl.png")
     image cg d7_bus_night_7dl = get_image_7dl("cg/d7_bus_night_7dl.jpg")
     
 #Турнир
@@ -808,7 +808,9 @@
     image acm_logo_us_fairytale = get_image_7dl("gui/acm_logo_us_fairytale.png")
     image acm_logo_us_hi = get_image_7dl("gui/acm_logo_us_hi.png")
     image acm_logo_us_openup = get_image_7dl("gui/acm_logo_us_openup.png")
+    image acm_logo_us_px = get_image_7dl("gui/acm_logo_us_px.png")
     image acm_logo_us_semische = get_image_7dl("gui/acm_logo_us_semische.png")
+    image acm_logo_us_true = get_image_7dl("gui/acm_logo_us_true.png")
     
     image achieve_beagod = get_image_7dl("gui/achieve_beagod.png")
     image acm_logo = get_image_7dl("gui/acm_logo1.png") #Логотип сюжета
@@ -835,9 +837,7 @@
     image cotocomb_lighter = get_sprite_7dl("misc/cotocomb_lighter.png")
     image d4_cat_door_frame = get_sprite_7dl("misc/d4_cat_door_frame.png")
     image d6_miku_cries = get_sprite_7dl("misc/d6_miku_cries.png")
-    #image d3_miku_dance = get_sprite_7dl("misc/d3_miku_dance.png") - TODO: под заказ
-    #image d3_miku_dance_blush = get_sprite_7dl("misc/d3_miku_dance_blush.png")
-    #image d3_miku_dance_bordo = get_sprite_7dl("misc/d3_miku_dance_bordo.png")
+    image mouth_dull = get_sprite_7dl("misc/mouth_dull.png")
     image mi_ru = get_sprite_7dl("misc/mi_ru.png")
     image mt_bus = get_sprite_7dl("misc/mt_bus.png")
     image uvao_d1 = get_sprite_7dl("misc/uvao_d1.png")
@@ -911,6 +911,7 @@
     $ finale_farewell = get_music_7dl("finale_farewell.ogg")
     $ forgive_or_what = get_music_7dl("forgive_or_what.ogg")
     $ frostwithoutyou = get_music_7dl("frostwithoutyou.ogg")
+    $ fsl_tn = get_music_7dl("fsl_tn.ogg")
     
     $ genki = get_music_7dl("genki.ogg")
     $ guitar_under_the_window = get_music_7dl("guitar_under_the_window.ogg")
@@ -953,6 +954,7 @@
     $ me2ost = get_music_7dl("me2ost.ogg")
     $ melancholy_sun = get_music_7dl("melancholy_sun.ogg")
     $ misery = get_music_7dl("misery.ogg")
+    $ moment = get_music_7dl("moment.ogg")
     $ more_than_alive = get_music_7dl("more_than_alive.ogg")
     $ my_only_hope= get_music_7dl("my_only_hope.ogg")
     
@@ -1026,7 +1028,7 @@
     $ unfulfilled = get_music_7dl("unfulfilled.ogg")
     $ uneven_me = get_music_7dl("uneven_me.ogg")
     $ unfinished_life = get_music_7dl("unfinished_life.ogg")
-    $ unforgotten = get_music_7dl("unforgotten.ogg")
+    $ unforgotten = get_music_7dl("Unforgotten.ogg")
     $ unholy_you = get_music_7dl("unholy_you.ogg")
     
     $ vale = get_music_7dl("vale.ogg")
@@ -1046,18 +1048,23 @@
     $ you_are_star = get_music_7dl("you_are_star.ogg")
     $ youareours = get_music_7dl("youareours.ogg")
     $ youre_not_real = get_music_7dl("youre_not_real.ogg")
+    $ your_life = get_music_7dl("your_life.ogg")
     
 # sfx
     $ apple_bite = get_sfx_7dl("apple_bite.ogg")
     $ aunl = get_sfx_7dl("aunl.ogg")
     $ bed_squeak = get_sfx_7dl("bed_squeak.ogg")
+    $ brake = get_sfx_7dl("brake.ogg")
     $ breath = get_sfx_7dl("breath.ogg")
     $ blanket = get_sfx_7dl("blanket.ogg")
+    $ car_passing = get_sfx_7dl("car_passing.ogg")
     $ deagle_shot = get_sfx_7dl("deagle_shot.ogg")
     $ eat_horn = get_sfx_7dl("eat_horn.ogg")
+    $ footsteps_grass = get_sfx_7dl("footsteps_grass.ogg")
     $ ghmm = get_sfx_7dl("ghm.ogg")
     $ hedgehog = get_sfx_7dl("hedgehog.ogg")
     $ highfive = get_sfx_7dl("highfive.ogg")
+    $ intro_dr = get_sfx_7dl("intro_dr.ogg")
     $ KBtyping = get_sfx_7dl("KBtyping.ogg")
     $ kissing_sound = get_sfx_7dl("kissing_sound.ogg")
     $ makarych = get_sfx_7dl("makarych.ogg")
@@ -1069,6 +1076,7 @@
     $ pup_bark = get_sfx_7dl("pup_bark.ogg")
     $ push_the_button = get_sfx_7dl("push_the_button.ogg")
     $ raindrops_radio = get_sfx_7dl("raindrops_radio.ogg")
+    $ reverse_bell = get_sfx_7dl("reverse_bell.ogg")
     $ ringtone = get_sfx_7dl("ringtone.ogg")
     #Озвучка заголовка роли by Noir Сычёв
     $ role_drisch = get_sfx_7dl("role_drisch.ogg")

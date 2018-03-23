@@ -61,6 +61,7 @@ label alt_day5_neu_us_vars:
     $ alt_day5_neu_mt_voyeur = 0
     $ alt_day5_neu_sl_voyeur = False
     $ alt_day5_neu_us_stores = False
+    $ alt_day5_neu_us_potato = False
     return
     
 label alt_day4_sl_cl_vars:
@@ -69,6 +70,8 @@ label alt_day4_sl_cl_vars:
     $ alt_day4_sl_tut = False
     $ alt_day4_sl_tut_lf = False
     $ alt_day4_sl_lf_solo = 0
+    $ alt_day4_sl_wh = False
+    $ alt_day5_sl_wh_transit = False
     return
     
 label alt_day5_sl_cl_vars:
@@ -83,6 +86,8 @@ label alt_day6_sl_cl_vars:
     $ alt_day6_sl_cl_rt = False
     $ alt_day6_sl_cl_int_pt = 0
     $ alt_day6_sl_cl_fin = 0
+    $ alt_day6_sl_int = 0
+    $ alt_day6_sl_good = 0
     return
     
 label alt_day7_sl_cl_vars:
@@ -157,6 +162,10 @@ label alt_day6_un_7dl_vars:
     $ alt_day6_un_7dl_agreed = False
     return
     
+label alt_day7_un_7dl_vars:
+    $ alt_day7_un_7dl_true_end = False
+    return
+
 label alt_day4_un_fz_vars:
     $ alt_day4_fz_play = 0
     $ alt_day4_fz_cards = False
@@ -211,7 +220,6 @@ label alt_day6_dv_7dl_vars:
     $ alt_day6_dv_7dl_escape_convince = False
     $ alt_day7_dv_7dl_brace = 0
     $ alt_day6_dv_7dl_sl_help_agree = False
-    $ alt_day6_dv_7dl_catapult= False
     $ alt_day7_dv_7dl_loki_catapult = False
     return
     
@@ -223,7 +231,7 @@ label alt_day6_us_7dl_vars:
     $ alt_day6_us_7dl_tr = False
     return
     
-label alt_day6_us_px_vars:    
+label alt_day6_us_px_vars:
     $ alt_day6_us_px_sl_join = False
     return
     

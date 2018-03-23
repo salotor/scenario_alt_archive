@@ -48,10 +48,17 @@
     image cg d4_uv_pioner_lib_hiding_7dl = get_image_uvao_7dl("cg/d4_uv_pioner_lib_hiding_7dl.jpg")
     image cg d5_uv_photo_city_7dl = get_image_uvao_7dl("cg/d5_uv_photo_city_7dl.jpg")
     image cg d5_uv_photo_galaxy_7dl = get_image_uvao_7dl("cg/d5_uv_photo_galaxy_7dl.jpg")
+<<<<<<< HEAD
     image cg d5_uv_bunker_hentai_7dl = get_image_uvao_7dl("cg/d5_uv_bunker_hentai_7dl.jpg")
     # Кошочка авторства Орики 
     image cg d5_uv_new_hentai1_7dl = get_image_uvao_7dl("cg/d5_epilogue_uv_hentai_1_7dl.jpg")
     image cg d5_uv_new_hentai2_7dl = get_image_uvao_7dl("cg/d5_epilogue_uv_hentai_2_7dl.jpg")
+=======
+    # Кошочка авторства Орики
+    image uv_new_hentai1 = "images/1080/cg/epilogue_uv_hentai_1.jpg"
+    image uv_new_hentai2 = "images/1080/cg/epilogue_uv_hentai_2.jpg"
+
+>>>>>>> master
     
 # sounds
     $ phone_vibro = get_sfx_uvao_7dl("vibration-smartphone.ogg")
