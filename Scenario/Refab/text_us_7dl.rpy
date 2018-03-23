@@ -3936,7 +3936,7 @@ label alt_day6_us_7dl_rendezvous:
         me "И где она?"
         us "Съедена!"
         "Съязвила Ульяна, не отворачиваясь от утюга."
-        if if alt_day5_neu_us_potato:
+        if alt_day5_neu_us_potato:
             us "Стала бы я брать у тебя картошку вчера на костре, если бы у меня был запас провизии?"
     show us normal sport with dspr
     us "Нет еды, нет."
