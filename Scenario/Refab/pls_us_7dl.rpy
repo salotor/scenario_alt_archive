@@ -27,7 +27,6 @@
         pause(1)
         if persistent.us_7dl_good:
             call alt_day6_us_px_party_sl
-            $ alt_day6_us_px_sl_join = True
             pause(1)
         else:
             call alt_day6_us_px_far_gate

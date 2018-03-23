@@ -107,7 +107,7 @@ label alt_day6_un_7dl_start:
     pause(1)
     call alt_day6_un_7dl_supper
     pause(1)
-    if karma < 0:
+    if alt_day_catapult == 1:
         call alt_day6_un_7dl_letmeout
         pause(1)
         return
@@ -133,6 +133,7 @@ label alt_day6_un_7dl_start:
     
 
 label alt_day7_un_7dl_start:
+    call alt_day7_un_7dl_vars
     pause(1)
     call alt_day7_un_7dl_begin
     pause(1)
@@ -143,7 +144,7 @@ label alt_day7_un_7dl_start:
         pause(1)
         call alt_day7_un_7dl_epilogue_rt
         pause(1)
-        if karma == 9000:
+        if alt_day7_un_7dl_true_end:
             call alt_day7_un_7dl_true
             pause(1)
         elif karma >= 75:
