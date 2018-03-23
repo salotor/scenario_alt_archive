@@ -91,7 +91,7 @@ label alt_day6_dv_7dl_start:
     pause(1)
     call alt_day6_dv_7dl_dance
     pause(1)
-    if alt_day6_dv_7dl_catapult: # новая переменная
+    if alt_day_catapult == 1:
         call alt_day6_dv_7dl_escape_convince
         return
     if alt_day6_dv_7dl_transit:

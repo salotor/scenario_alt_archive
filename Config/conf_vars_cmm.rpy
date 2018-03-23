@@ -1,14 +1,14 @@
 ﻿#Мод пилится на базе нетленки от АБЦБ - его сюжет и подача мне куда симпатичнее оригинальной стори.
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
-    $ alt_release_no = "0.33.a"
-    $ alt_compatible_release_no = ["0.00.x", "0.33.a"] 
+    $ alt_release_no = "0.33.b"
+    $ alt_compatible_release_no = ["0.00.x", "0.33.b"] 
 
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
     $ timeskip_come = "Ты пойдёшь со мной?"
-    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Ульяна-7дл. Эпилог."
+    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 4."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
     $ timeskip3 = "Я скучаю…"
     $ timeskip4 = "Я хочу к тебе…"
@@ -134,7 +134,7 @@ label alt_day0_vars: #Переменные нулевого дня
     $ mt_pt = 0
     $ d3_pt = 0
     $ us_pt = 0
-
+    $ alt_day_catapult = 0
     $ alt_day_binder = 0
     $ alt_dlc_active = False
     $ herc = False
