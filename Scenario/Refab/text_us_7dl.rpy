@@ -10586,7 +10586,7 @@ label alt_day7_us_7dl_ever_after:
     "Я только рукой махнул и отправился умываться."
     "Где-то в запасниках должна быть пенка и запасной плед."
     "А если повезёт, то и раскладушка."
-    stop muisic fadeout 6
+    stop music fadeout 6
     window hide 
     scene anim prolog_15
     with diam
