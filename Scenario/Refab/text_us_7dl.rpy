@@ -2596,7 +2596,7 @@ label alt_day6_us_7dl_soundcheck:
     "Девушка вдруг рявкнула куда-то в сторону сцены."
     mi "Дэн, на меня гляди, ясно тебе!"
     show ml upset pioneer at fright with dissolve
-    if (alt_day4_neu_us_pixies != 0 and loki) or alt_day4_neu_us_pixies == 2::
+    if (alt_day4_neu_us_pixies != 0 and loki) or alt_day4_neu_us_pixies == 2:
         "Невесть как оказавшийся здесь Данечка вздохнул, на противоходе хитро подмигнув мне левым глазом."
     else:
         "Обозванный ей «Дэном» красноглазый пионер неохотно кивнул."
