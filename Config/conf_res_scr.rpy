@@ -432,7 +432,7 @@ init -5 python:
         dn = (u"7ДЛ:День %d") % (alt_day_number)
 # ----------------------------------------------------------------------
 # в имя сохраняемого файла добавим номер релиза игры
-        sdn = (u"7ДЛ v.%s :День %d") % (alt_release_no, alt_day_number)
+        sdn = (u"7ДЛ v.%s: День %d") % (alt_release_no, alt_day_number)
 # -----------------------------------------------------------------------
         save_name = ((sdn) + (u" - ")) + (alt_chapter_name)
         if persistent.sprite_time == "prolog":

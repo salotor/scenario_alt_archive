@@ -106,6 +106,7 @@ init 2:
     $ mt_pt = 0
     $ d3_pt = 0
     $ us_pt = 0
+
 label scenario__alt_sevendl:
 # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
 # ------------------------------------------------
@@ -117,7 +118,6 @@ label scenario__alt_sevendl:
     $ alt_save_release_no = alt_release_no
 # ------------------------------------------------
 
-    call alt_day0_vars
 jump choose_waifu_7dl
 
 label alt_day0_vars: #Переменные нулевого дня
@@ -142,6 +142,9 @@ label alt_day0_vars: #Переменные нулевого дня
     $ d3 = False
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
+    $ make_names_unknown_7dl()
+    $ th_prefix = "«"
+    $ th_suffix = "»"
     if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
     return
