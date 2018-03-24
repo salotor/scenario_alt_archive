@@ -295,6 +295,9 @@ screen media_7dl(): # done, TODO gallery and music room
             action NullAction()
         
 label choose_waifu_7dl: # done
+    stop music
+    stop sound
+    stop sound_loop
     #if len(list_waifu_7dl) == 6:
     if len(list_waifu_7dl) == 3:
         $ list_waifu_7dl = []
