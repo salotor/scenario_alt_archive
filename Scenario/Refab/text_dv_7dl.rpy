@@ -10010,7 +10010,7 @@ label alt_day6_dv_7dl_dance:
             hide sl
             scene anim_square_party with dissolve
         else:
-            $ alt_day_catapult = True 
+            $ alt_day_catapult = 1 
     return
 
 label alt_day6_dv_7dl_escape_convince:
