@@ -1,8 +1,5 @@
 ﻿label alt_day0_prologue:
     $ alt_chapter0()
-    $ make_names_unknown_7dl()
-    $ th_prefix = "«"
-    $ th_suffix = "»"
     $ renpy.pause(3)
     scene black
     play music music_list["drown"] fadein 3

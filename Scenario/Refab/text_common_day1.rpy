@@ -971,7 +971,6 @@ label alt_day0_start_l:
     
 label alt_day0_d3_prologue:
     $ plthr = u"Септим"
-    $ alt_chapter0()
     play sound wakeup fadein 3
     $ renpy.pause(4, hard=True)
     $ prolog_time()
