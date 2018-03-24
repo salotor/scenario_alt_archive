@@ -1,9 +1,9 @@
 ﻿label alt_day0_prologue:
-    $ alt_chapter0()
     $ renpy.pause(3)
     scene black
     play music music_list["drown"] fadein 3
     $ plthr = u"Выбор"
+    $ alt_chapter0()
     with fade
     show spill_red with dspr
     $ renpy.pause(2, hard=True)
