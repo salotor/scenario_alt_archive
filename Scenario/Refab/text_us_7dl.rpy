@@ -1449,7 +1449,7 @@ label alt_day_us_7dl_preps:
         "Шурик упорно смотрел мимо меня, потому в беседу включился Электроник:"
     else:
         mi "Серёжа, а зачем ты всё заставил?"
-    show el sad pioneer at zenterright with dissolve
+    show el sad pioneer at right with dissolve
     el "Да вот, видишь, начальник лагеря распорядился, чтобы мы потеснились немного."
     el "А им же —"
     "Он махнул рукой в сторону прислушивающихся к нам малышей."
@@ -1546,7 +1546,7 @@ label alt_day_us_7dl_preps:
     
 label alt_day6_us_7dl_warehouse:
     play ambience ambience_camp_center_night
-    play music silent_angel fadein 3
+    play music old_kiss fadein 3
     scene bg ext_warehouse_day_7dl
     with dissolve
     me "Задался последний день отпуска, что и говорить."
@@ -7732,7 +7732,7 @@ label alt_day7_us_7dl_rendezvous2:
         with move
         "Она подбежала к выбирающемуся из чулана физруку."
         ba "Кое-что есть. С тобой десяток почти, но все я тебе не дам."
-        show us dontlike pioneer with dspr
+        show us dontlike far pioneer with dspr
         us "Почемуууу? На них я, они мои!"
         show ba normal uniform with dspr
         ba "Потому что лучшие пойдут в лагерный архив! Ты же хочешь найти себя потом в альбоме?"
@@ -7746,7 +7746,7 @@ label alt_day7_us_7dl_rendezvous2:
         if alt_day_binder != 1 and not alt_day1_sl_conv:
             if loki:
                 "Ульяна сцапала фотографию и, всмотревшись, покраснела."
-                show us shy pioneer with dspr
+                show us shy pioneer far with dspr
                 us "Ну вы и жук, дядя Боря! Как специально стояли!"
                 me "Что там?"
                 "Мне стало любопытно."
@@ -9847,7 +9847,7 @@ label alt_day7_us_7dl_mikuforever:
     scene expression Desat("bg ext_city_night_7dl")
     $ set_mode_nvl()
     "Я очень скоро понял, что вернулся не совсем туда, куда должен был."
-    "Понять это оказалось крайне легко, по первым нескольким месяцем моей жизни здесь."
+    "Понять это оказалось крайне легко, по первым нескольким месяцам моей жизни здесь."
     "Вернее сказать, по первым двум…"
     "Ну не должен человек выживать в той ситуации, в которой оказался я!"
     "Так не бывает, потому что не бывает в принципе!"
