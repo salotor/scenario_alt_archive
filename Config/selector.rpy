@@ -27,21 +27,9 @@ label scenario__sdl_selector:
 
     $ init_map_zones_alt1()
     $ init_map_zones_alt2()
-    $ alt_save_release_no = "00.x.0"
-    $ bak_release_no = alt_release_no
-    $ alt_release_no = "00.x.0"
-    $ th_prefix = "«"
-    $ th_suffix = "»"
-    $ alt_day0_prologue = True
-    $ plthr = u"Тест"
+    $ alt_save_release_no = alt_release_no
     $ day_time()
     $ persistent.sprite_time = "day"
-    $ make_names_unknown_7dl()
-    
-    $ persistent.altCardsFail = True
-    $ persistent.altCardsWon1 = True
-    $ persistent.altCardsWon2 = True
-    $ persistent.altCardsWon3 = True
 
     call alt_day0_vars
     call alt_day1_vars
@@ -74,6 +62,7 @@ label scenario__sdl_selector:
     call alt_day6_us_7dl_vars
     call alt_day7_us_px_vars
     
+    $ plthr = u"Дрищ"
     play ambience ambience_safe fadein 5
     
 label sdl_menu:
