@@ -69,8 +69,8 @@
         $ alt_chapter(6, u"Ульяна. 7ДЛ. Вечер")
     call alt_day6_us_7dl_supper
     pause(1)
-    $ persistent.sprite_time = "night"
-    $ night_time()
+    $ persistent.sprite_time = "sunset"
+    $ sunset_time()
     call alt_day6_us_7dl_disco
     pause(1)
     if alt_day4_neu_us_pixies == 2:
