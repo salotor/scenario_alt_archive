@@ -894,7 +894,6 @@
     $ dance_with_me_piano = get_music_7dl("dance_with_me_piano.ogg")
     $ deadman = get_music_7dl("deadman.ogg")
     $ dead_silence = get_music_7dl("dead_silence.ogg")
-    $ dedicated = get_music_7dl("dedicated.ogg")
     $ deep_inside = get_music_7dl("deep_inside.ogg")
     $ dropit = get_music_7dl("dropit.ogg")
     $ dv_guitar = get_music_7dl("dv_guitar.ogg")
@@ -904,7 +903,6 @@
     $ emptiness = get_music_7dl("emptiness.ogg")
     $ es_downmix = get_music_7dl("es_downmix.ogg")
     $ Everlasting_Summer_Alice = get_music_7dl("Everlasting_Summer_Alice.ogg")
-    $ expose_the_hero = get_music_7dl("expose_the_hero.ogg")
     
     $ feel_you_inside = get_music_7dl("feel_you_inside.ogg")
     $ finale_farewell = get_music_7dl("finale_farewell.ogg")
@@ -997,7 +995,6 @@
     $ shehasgone = get_music_7dl("shehasgone.ogg")
     $ shib_mono = get_music_7dl("shib_mono.ogg")
     $ shib_stereo = get_music_7dl("shib_stereo.ogg")
-    $ shivers = get_music_7dl("shivers.ogg")
     $ slavyas_fantazm = get_music_7dl("slavyas_fantazm.ogg")
     $ sky_feather = get_music_7dl("sky_feather.ogg")
     $ sneakupon = get_music_7dl("sneakupon.ogg")
