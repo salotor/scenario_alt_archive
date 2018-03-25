@@ -61,7 +61,7 @@ label scenario__sdl_selector:
     call alt_day6_us_px_vars
     call alt_day6_us_7dl_vars
     call alt_day7_us_px_vars
-    
+    $ make_names_unknown_7dl()
     $ plthr = u"Дрищ"
     play ambience ambience_safe fadein 5
     
