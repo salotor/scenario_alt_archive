@@ -54,7 +54,7 @@ init 1:
 
     $ music_list_7dl["Неизвестный трек"] = default_7dl_path+"Sound/music/iamagod2.ogg"
     $ music_list_7dl["Michael Ortega - Sad Piano For a Broken Heart"] = default_7dl_path+"Sound/music/iamsadiamsorry.ogg"
-    $ music_list_7dl["Ainset - Romantic scor (inakrin's mix)"] = default_7dl_path+"Sound/music/iamsadiamsorry2.ogg"
+    $ music_list_7dl["Ainset - Romantic score (inakrin's mix)"] = default_7dl_path+"Sound/music/iamsadiamsorry2.ogg"
     $ music_list_7dl["I am waiting for you last summer - Neon fever"] = default_7dl_path+"Sound/music/iamsadiamsorry3.ogg"
     $ music_list_7dl["Olafur arnalds – So Close (feat. Arnor Dan) 2"] = default_7dl_path+"Sound/music/intro2.ogg"
     $ music_list_7dl["Olafur arnalds – So Close (feat. Arnor Dan) 1"] = default_7dl_path+"Sound/music/intro1.ogg"
