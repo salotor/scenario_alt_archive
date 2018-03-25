@@ -108,7 +108,8 @@ label sdl_menu:
                                 "Дрищ":
                                     $ plthr = u"Дрищ"
                             stop ambience fadeout 2
-                            jump alt_day1_alt_M
+                            $ alt_day_binder = 1
+                            jump alt_day1_start
                 "Ульяна":
                     menu:
                         "Локи":
