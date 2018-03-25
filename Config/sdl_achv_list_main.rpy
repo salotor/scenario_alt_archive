@@ -1,27 +1,4 @@
 label scenario__sdl_achvlist_Author:
-    $ make_names_unknown_sdl_achv()
-    $ th_prefix = "«"
-    $ th_suffix = "»"
-    $ init_map_zones_alt1()
-    $ init_map_zones_alt2()
-    $ alt_save_release_no = alt_release_no
-    $ lp_mi = 0
-    $ lp_sl = 0
-    $ lp_un = 0
-    $ lp_us = 0
-    $ lp_dv = 0
-    $ karma = 0
-    $ plthr = u"none"
-    $ alt_sp = 0
-    $ alt_spt = 0
-    $ alt_hpt = 0
-    $ mt_pt = 0
-    $ d3_pt = 0
-    $ us_pt = 0
-    play ambience ambience_safe fadein 5
-    
-# ------------------------------------------------
-# Вызываем все переменные (во избежание)  
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars
@@ -49,6 +26,14 @@ label scenario__sdl_achvlist_Author:
     call alt_day4_mi_cl_vars
     call alt_day4_dv_7dl_vars
     call alt_day6_dv_7dl_vars
+    call alt_day6_us_px_vars
+    call alt_day6_us_7dl_vars
+    call alt_day7_us_px_vars
+    
+    $ day_time()
+    $ persistent.sprite_time = "day"
+    $ plthr = u"Достижения"
+    play ambience ambience_safe fadein 5
         
 # ------------------------------------------------
 # Показываем первоначальный фон
