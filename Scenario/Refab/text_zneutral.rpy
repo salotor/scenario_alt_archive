@@ -2786,7 +2786,7 @@ label alt_day4_neu_lunch:
             "Рявкнул Саныч, свистнув в свисток."
             "И — вот она! Началась жесть!"
             show un smile sport far at fleft
-            show mt normal pioneer far at left behind un
+            show mt normal sport at left
             show ba normal uniform at cleft behind mt
             with moveinleft
             show us smile sport far at fright
