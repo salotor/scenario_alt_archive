@@ -879,7 +879,6 @@
     $ bad_apple = get_music_7dl("bad_apple.ogg")
     $ beat_symphonic = get_music_7dl("beat_symphonic.ogg")
     $ beth = get_music_7dl("beth.ogg")
-    $ betray_vol1 = get_music_7dl("betray_vol1.ogg")
     $ but_why = get_music_7dl("but_why.ogg")
     $ breath_again = get_music_7dl("breath_again.ogg")
     $ breath_me = get_music_7dl("breath_me.ogg")
@@ -899,9 +898,9 @@
     $ deep_inside = get_music_7dl("deep_inside.ogg")
     $ dropit = get_music_7dl("dropit.ogg")
     $ dv_guitar = get_music_7dl("dv_guitar.ogg")
+
     $ escape_2 = get_music_7dl("escape_2.ogg")
     $ exodus = get_music_7dl("Exodus.ogg")
-    
     $ emptiness = get_music_7dl("emptiness.ogg")
     $ es_downmix = get_music_7dl("es_downmix.ogg")
     $ Everlasting_Summer_Alice = get_music_7dl("Everlasting_Summer_Alice.ogg")
@@ -941,7 +940,6 @@
     $ liliac_ball = get_music_7dl("liliac_ball.ogg")
     $ loki_on_3 = get_music_7dl("loki_on_3.ogg")
     $ lullaby2 = get_music_7dl("lullaby2.ogg")
-    
     $ lost_without_you = get_music_7dl("lost_without_you.ogg")
     $ longing = get_music_7dl("longing.ogg")
     $ ltyh = get_music_7dl("ltyh.ogg")
