@@ -2713,10 +2713,11 @@ label alt_day4_neu_lunch:
             show ftl_anim with vpunch
             "Я нагнулся и, подобрав все шишки, упавшие рядом со мной, запустил обратно в мелкую."
             hide ftl_anim
+            label alt_test:
             "Она с визгом поспешила укрыться за сосной потолще."
             "Но меня не обманешь — её «ракеты» полностью демаскировали рыжую, так что я, стараясь ступать бесшумно, двинулся в обход позиций соперника."
             "И…"
-            show mt normal pioneer far at zenterright with dissolve
+            show mt normal sport at zenterright with dissolve
             mt "Развлекаетесь?"
             "Пум!" with vpunch
             "Последняя шишка прилетела мне в лоб!"
@@ -2726,7 +2727,7 @@ label alt_day4_neu_lunch:
             mt "Давай играть, победитель!"
             "Ольга резко хлопнула по мячу."
             "Да, накачала она его на совесть."
-            show un normal sport far at left
+            show un normal sport at left
             with dissolve
             un "Эм… Ольга Дмитриевна?"
             mt "Хорошо, что ты здесь, Лена. {w}Будешь со мной в команде."
@@ -2740,7 +2741,7 @@ label alt_day4_neu_lunch:
             "Зато она была шустрой, и порой казалось, что на площадке орудует сторукое существо."
             us "Эй, новичок, не спи!"
             "Мелкая вытащила ещё один невозможный мяч и отпасовала мне, а я, пользуясь тем, что попрыгучести и мне не занимать, перетолкнул мяч через сетку, позволяя тому упасть на той стороне поля."
-            show mt normal pioneer far at fleft behind un with dissolve
+            show mt smile sport at fleft with dissolve
             mt "Ну ты и жук!"
             "Восхищённо протянула Ольга."
             th "В бою, как в любви, все средства хороши."
@@ -2753,7 +2754,7 @@ label alt_day4_neu_lunch:
             "Недовольная Алиса, скрипя зубами, подчинилась."
             mt "Давай-давай, не куксись! {w}Физкультура полезна!"
             show un smile sport far at fleft
-            show mt normal pioneer far at left behind un
+            show mt normal sport at left
             show ba normal uniform at cleft behind mt
             with moveinleft
             show us smile sport far at fright
@@ -2772,7 +2773,7 @@ label alt_day4_neu_lunch:
             scene bg ext_volley_court_7dl with dspr
             show blackout_exh
             play music anglegrinder fadein 3
-            scene cg d4_volley_rage_7dl with flash
+            scene cg d4_volley_rage_7dl with flash # обновить фон на Харви
             with vpunch
             $ renpy.pause (1)
             show dv_us_volley with vpunch

@@ -83,7 +83,7 @@ init 1:
     $ music_list_7dl["For The Stars - Meet Me There(Silent Owl Cover)"] = default_7dl_path+"Sound/music/meetmethere_tts.ogg"
     $ music_list_7dl["Marcus D - Kindred Spirit"] = default_7dl_path+"Sound/music/melancholy_sun.ogg"
     $ music_list_7dl[u"Алексей Омельчук - Надежда"] = default_7dl_path+"Sound/music/misery.ogg"
-    $ music_list_7dl[u"Олег Анофриев - Есть Только Миг (OST "Земля Санникова")"] = default_7dl_path+"Sound/music/moment.ogg"
+    $ music_list_7dl[u"Олег Анофриев - Есть Только Миг (OST «Земля Санникова»)"] = default_7dl_path+"Sound/music/moment.ogg"
     $ music_list_7dl["Tom Day - Our World"] = default_7dl_path+"Sound/music/more_than_alive.ogg"
     $ music_list_7dl["Mark Morgan - My Chrysalis Higwayman"] = default_7dl_path+"Sound/music/my_chrysalis_highwayman.ogg"
     $ music_list_7dl["Kristofferson - Where do tears go"] = default_7dl_path+"Sound/music/my_only_hope.ogg"
