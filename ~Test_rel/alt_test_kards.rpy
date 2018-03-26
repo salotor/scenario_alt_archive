@@ -1343,9 +1343,11 @@ label alt_day2_participate_win_end_new:
                     show mi shy pioneer with dspr
                     mi "А разве так можно?"
                     me "Нет, но… Кому какое дело?"
+                    show el dontlike pioneer at left with dissolve
                     el "Мне есть дело!"
                     "Ответил появившийся из ниоткуда Электроник."
                     el "Ты победил, пожалте за полуфинальный столик!"
+                    hide el with dissolve
                     "Блин."
                     "Моя улыбка вышла извиняющейся."
                     me "Тогда увидимся."
@@ -1425,9 +1427,11 @@ label alt_day2_participate_win_end_new:
             me "Я тоже. {w}Ты проиграла, я победил. Всё честно."
             us "Переиграем! Только ты теперь поддавайся, слышишь?"
             us "Я должна победить и забрать главный приз!"
+            show el dontlike pioneer at left with dissolve
             "Её крики привлекли внимание Электроника."
             el "Никаких переигровок!"
             el "Один матч, три раунда, проигравший выбывает."
+            hide el with dissolve
             "Ульяна и бровью не повела."
             show us angry pioneer with dspr
             us "Ты должен проиграть! Должен! Понял! "
@@ -1559,6 +1563,7 @@ label alt_day2_1_tour_end:
 label alt_day2_semifinal_new:
     scene bg int_dining_hall_sunset
     window show
+    show el smile pioneer at left with dissolve
     el "Итак!"
     "Подал голос Электроник, явно гордящийся своей ролью мастер-церемонимейстера."
     el "Первый тур окончен, победители встречаются во втором туре!"
@@ -2159,6 +2164,7 @@ label alt_day2_final_new:
 #внимание: аналогично верхнему
     # ================================================ НЕМНОГО ОТСЕБЯТИНЫ — пересаживаемся за финальный стол.
     window show
+    show el smile pioneer at left with dissolve
     el "Полуфиналы завершены, победители встречаются в финале!"
     $ alt_mstt = 2                                                                              
     call show_tournament_table                                                                  # показать таблицу — итоги полуфинала
@@ -3692,7 +3698,7 @@ label alt_day2_final_analizer:
     $ winner_remark, loser_remark = alt_declare_results_final(alt_take_tournament_winner, alt_take_tournament_loser) # вызываем функцию на финал — фразы победителя, проигравшего — по их никам.
     
 
-#внимание: далее идёт текст авторства тов. nuttyprof
+#внимание: далее идёт текст авторства тов. nuttyprof. Ещё нужно будет подумать над переходами, если мы не участвовали в турнире (вылетели раньше)
 # ========================================================================== отсебятина
 # TODO Окончание тура — под переделку фраз ????
 

@@ -2,7 +2,7 @@ init 1:
     $ music_list_7dl = {}
 
     $ music_list_7dl["Denis Stelmakh - Afraid of Destiny"] = default_7dl_path+"Sound/music/afraid_of_destiny.ogg"
-    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer 1"] = default_7dl_path+"Sound/music/alice_theme.ogg"
+    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer (cut 1)"] = default_7dl_path+"Sound/music/alice_theme.ogg"
     $ music_list_7dl["Josh Powell - Anglegrinder"] = default_7dl_path+"Sound/music/anglegrinder.ogg"
     $ music_list_7dl["I am waiting for you last summer - Surrender"] = default_7dl_path+"Sound/music/are_you_there.ogg"
     $ music_list_7dl["Josh Powell - Creeping up"] = default_7dl_path+"Sound/music/areyouabully.ogg"
@@ -31,9 +31,9 @@ init 1:
     $ music_list_7dl[u"Алексей Омельчук - Гитарный трек 11"] = default_7dl_path+"Sound/music/dv_guitar.ogg"
 
     $ music_list_7dl[u"Владимир Зеленцов - Emptiness"] = default_7dl_path+"Sound/music/emptiness.ogg"
-    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer 2"] = default_7dl_path+"Sound/music/es_downmix.ogg"
+    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer (cut 2)"] = default_7dl_path+"Sound/music/es_downmix.ogg"
     $ music_list_7dl["Josh Kramer (feat. Tina Guo) - Where The Light Goes"] = default_7dl_path+"Sound/music/escape_2.ogg"
-    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer 3"] = default_7dl_path+"Sound/music/Everlasting_Summer_Alice.ogg"
+    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"] = default_7dl_path+"Sound/music/Everlasting_Summer_Alice.ogg"
     $ music_list_7dl["April Rain – Exodus "] = default_7dl_path+"Sound/music/Exodus.ogg"
 
     $ music_list_7dl["Stefano Mocini - Inside"] = default_7dl_path+"Sound/music/feel_you_inside.ogg"
@@ -61,7 +61,7 @@ init 1:
     $ music_list_7dl["Eels - I Need Some Sleep (Piano Cover)"] = default_7dl_path+"Sound/music/kiss_you.ogg"
     $ music_list_7dl["Digital Elvis & Zero – Theme from the Ocean (OST Достучаться до небес)"] = default_7dl_path+"Sound/music/knock.ogg"
 
-    $ music_list_7dl["ALyosha - Sweet People караоке(минус) 1"] = default_7dl_path+"Sound/music/last_pixie.ogg"
+    $ music_list_7dl["ALyosha - Sweet People караоке (минус) (cut)"] = default_7dl_path+"Sound/music/last_pixie.ogg"
     $ music_list_7dl["Hatsune Miku feat. Kz (LiveTune) - Last Night Good Night guitar cover"] = default_7dl_path+"Sound/music/lastlight_guitar.ogg"
     $ music_list_7dl["Hatsune Miku - Last Night Good Night (piano cover by Lee Keng Tat)"] = default_7dl_path+"Sound/music/lastlight_piano.ogg"
     $ music_list_7dl["Arn Andersson - Annihilation"] = default_7dl_path+"Sound/music/laugh_throught_the_universe.ogg"
@@ -147,7 +147,7 @@ init 1:
     $ music_list_7dl["Camelia - Splatter Party (feat. Hatsune Miku)"] = default_7dl_path+"Sound/music/tender_song.ogg"
     $ music_list_7dl["Zack Hamsey - The way"] = default_7dl_path+"Sound/music/the_way.ogg" 
     $ music_list_7dl["Hans Zimmer - Rain Man Theme"] = default_7dl_path+"Sound/music/thousand_little_things.ogg"
-    $ music_list_7dl["ALyosha - Sweet People караоке(минус) 2"] = default_7dl_path+"Sound/music/thousand_of_pixies.ogg"
+    $ music_list_7dl["ALyosha - Sweet People караоке (минус)"] = default_7dl_path+"Sound/music/thousand_of_pixies.ogg"
     $ music_list_7dl["April Rain - Exploring yourself with a knife"] = default_7dl_path+"Sound/music/tilltheend.ogg"
     $ music_list_7dl["Tim McMorris - Translation (Inspirational One)"] = default_7dl_path+"Sound/music/timetowakeup.ogg"
     $ music_list_7dl[u"Владимир Розанов - С запада на восток"] = default_7dl_path+"Sound/music/to_the_sunrise.ogg"
