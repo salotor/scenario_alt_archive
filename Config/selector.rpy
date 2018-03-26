@@ -61,7 +61,7 @@ label scenario__sdl_selector:
     call alt_day6_us_px_vars
     call alt_day6_us_7dl_vars
     call alt_day7_us_px_vars
-    
+    $ make_names_unknown_7dl()
     $ plthr = u"Дрищ"
     play ambience ambience_safe fadein 5
     
@@ -108,7 +108,8 @@ label sdl_menu:
                                 "Дрищ":
                                     $ plthr = u"Дрищ"
                             stop ambience fadeout 2
-                            jump alt_day1_alt_M
+                            $ alt_day_binder = 1
+                            jump alt_day1_start
                 "Ульяна":
                     menu:
                         "Локи":
