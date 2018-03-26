@@ -3091,7 +3091,7 @@ label alt_day2_stipulation_new:
             $ alt_whose_first_move = renpy.random.choice(['rival', 'player'])
             $ renpy.pause(1)
             window show
-            me "Сомнительная честь сделать первый ход выпала "
+            "Сомнительная честь сделать первый ход выпала "
             if alt_whose_first_move == 'rival':
                 extend "%(alt_name_my_rival_d)s."
             elif alt_whose_first_move == 'player':
