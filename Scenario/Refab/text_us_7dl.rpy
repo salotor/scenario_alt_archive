@@ -2706,7 +2706,7 @@ label alt_day6_us_7dl_soundcheck:
     "Пришло в голову."
     th "С чего б? Не такая уж Семён птица, чтобы за него стесняться."
     dreamgirl "Самокритичность — это очень хорошо. Но не скатывайся до самоуничижения."
-    if (alt_day2_date == 4) or alt_day3_mi_invite2
+    if (alt_day2_date == 4) or alt_day3_mi_invite2:
         th "Да мы с ней знакомы-то… Без году неделю."
     else:
         th "Нет, что не так? Мы с ней общаемся день да маленько."
@@ -12905,4 +12905,4 @@ label alt_day7_us_px_dejavu:
     play music happy_ending fadein 1
     call alt_7dl_titles
     $ renpy.pause(2)
-    returnn
+    return
