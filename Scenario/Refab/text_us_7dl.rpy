@@ -348,9 +348,9 @@ label alt_day6_us_7dl_exercises:
     "А вот её соседку по комнате разглядеть не удавалось никак."
     "Появилось даже подозрение, что Мику специально пришла подменить Лену на случай, если нас вдруг начнут считать по головам."
     hide mi with dissolve
-    show ml sick pioneer at zenterleft
-    with dissolve
     if (alt_day4_neu_us_pixies != 0 and loki) or alt_day4_neu_us_pixies == 2:
+        show ml sick pioneer at zenterleft
+        with dissolve
         "Данечка сотоварищи тоже были здесь."
         "Оно и ожидаемо: будущий смотритель маяка должен быть в форме."
         "Хотя по Данечкиному лицу было заметно, что в гробу он такую форму видал."
