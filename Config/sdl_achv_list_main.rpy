@@ -1,27 +1,4 @@
 label scenario__sdl_achvlist_Author:
-    $ make_names_unknown_sdl_achv()
-    $ th_prefix = "«"
-    $ th_suffix = "»"
-    $ init_map_zones_alt1()
-    $ init_map_zones_alt2()
-    $ alt_save_release_no = alt_release_no
-    $ lp_mi = 0
-    $ lp_sl = 0
-    $ lp_un = 0
-    $ lp_us = 0
-    $ lp_dv = 0
-    $ karma = 0
-    $ plthr = u"none"
-    $ alt_sp = 0
-    $ alt_spt = 0
-    $ alt_hpt = 0
-    $ mt_pt = 0
-    $ d3_pt = 0
-    $ us_pt = 0
-    play ambience ambience_safe fadein 5
-    
-# ------------------------------------------------
-# Вызываем все переменные (во избежание)  
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars
@@ -49,6 +26,14 @@ label scenario__sdl_achvlist_Author:
     call alt_day4_mi_cl_vars
     call alt_day4_dv_7dl_vars
     call alt_day6_dv_7dl_vars
+    call alt_day6_us_px_vars
+    call alt_day6_us_7dl_vars
+    call alt_day7_us_px_vars
+    
+    $ day_time()
+    $ persistent.sprite_time = "day"
+    $ plthr = u"Достижения"
+    play ambience ambience_safe fadein 5
         
 # ------------------------------------------------
 # Показываем первоначальный фон
@@ -3044,12 +3029,12 @@ label sdl_achvlist_mi7dl_clear_Author:
     $ persistent.mi_7dl_herc_exc = False
     $ persistent.mi_7dl_loki_exc = False
     $ persistent.mi_7dl_dr_exc = False
-    call screen sdl_achvlist_mi7dl_Author
+    call sdl_achvlist_mi_Author
 # ------------------------------------------------ 
 ######################МИКУ-КЛАССИК######################################
 label sdl_achvlist_miclt_clear_Author:
     #Нужны флаги
-    call screen sdl_achvlist_miclt_Author
+    call sdl_achvlist_mi_Author
 # ------------------------------------------------ 
 ######################МИКУ-ДИДЖЕЙ######################################
 label sdl_achvlist_midjt_clear_Author:
@@ -3057,7 +3042,7 @@ label sdl_achvlist_midjt_clear_Author:
     $ persistent.mi_dj_good_jap = False
     $ persistent.mi_dj_good_rf = False
     $ persistent.mi_dj_bad = False
-    call screen sdl_achvlist_midjt_Author
+    call sdl_achvlist_mi_Author
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\БЛОК АЛИСЫ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
 ######################АЛИСА-7ДЛ######################################
 label sdl_achvlist_dv7dl_clear_Author:
@@ -3069,22 +3054,22 @@ label sdl_achvlist_dv7dl_clear_Author:
     $ persistent.dv_7dl_un = False
     $ persistent.dv_7dl_tulpa = False
     $ persistent.dv_7dl_bad = False
-    call screen sdl_achvlist_dv7dl_Author
+    call sdl_achvlist_dv_Author
 # ------------------------------------------------ 
 ######################АЛИСА-КЛАССИК######################################
 label sdl_achvlist_dvclt_clear_Author:
     #Нужны флаги
-    call screen sdl_achvlist_dvclt_Author
+    call sdl_achvlist_dv_Author
 # ------------------------------------------------ 
 ######################АЛИСА-ДИДЖЕЙ######################################
 label sdl_achvlist_dvdjt_clear_Author:
     #Нужны флаги
-    call screen sdl_achvlist_dvdjt_Author
+    call sdl_achvlist_dv_Author
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\БЛОК СЛАВИ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
 ######################СЛАВЯ-7ДЛ######################################
 label sdl_achvlist_sl7dl_clear_Author:
     #Нужны флаги
-    call screen sdl_achvlist_sl7dl_Author
+    call sdl_achvlist_sl_Author
 # ------------------------------------------------ 
 ######################СЛАВЯ-КЛАССИК######################################
 label sdl_achvlist_slclt_clear_Author:
@@ -3098,12 +3083,12 @@ label sdl_achvlist_slclt_clear_Author:
     $ persistent.sl_cl_reject_late = False
     $ persistent.sl_cl_cata = False
     $ persistent.sl_cl_bad = False
-    call screen sdl_achvlist_slclt_Author
+    call sdl_achvlist_sl_Author
 # ------------------------------------------------ 
 ######################СЛАВЯ-ВЕДЬМА######################################
 label sdl_achvlist_slwht_clear_Author:
     #Нужны флаги
-    call screen sdl_achvlist_slwht_Author
+    call sdl_achvlist_sl_Author
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\БЛОК ЛЕНЫ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
 ######################ЛЕНА-7ДЛ######################################
 label sdl_achvlist_un7dl_clear_Author:
@@ -3112,24 +3097,24 @@ label sdl_achvlist_un7dl_clear_Author:
     $ persistent.un_7dl_true = False
     $ persistent.un_7dl_true_transit = False
     $ persistent.un_7dl_bad = False
-    call screen sdl_achvlist_un7dl_Author
+    call sdl_achvlist_un_Author
 # ------------------------------------------------ 
 ######################ЛЕНА-КЛАССИК######################################
 label sdl_achvlist_uncl_clear_Author:
     #Нужны флаги
-    call screen sdl_achvlist_unclt_Author
+    call sdl_achvlist_un_Author
 # ------------------------------------------------ 
 ######################ЛЕНА-ФЗ######################################
 label sdl_achvlist_unfz_clear_Author:
     #Нужны флаги
-    call screen sdl_achvlist_unfzd_Author
+    call sdl_achvlist_un_Author
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\БЛОК ОЛЬГИ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
 label sdl_achvlist_mt7dl_clear_Author:
     $ persistent.mt_7dl_true = False
     $ persistent.mt_7dl_good = False
     $ persistent.mt_7dl_neutral = False
     $ persistent.mt_7dl_bad = False
-    call screen sdl_achvlist_mt7dl_Author
+    call sdl_achvlist_mt_Author
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\БЛОК УЛЬЯНЫ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
 label sdl_achvlist_us7dl_clear_Author:
     $ persistent.us_px_rf_good = False
@@ -3139,17 +3124,17 @@ label sdl_achvlist_us7dl_clear_Author:
     $ persistent.us_7dl_true = False
     $ persistent.us_7dl_un = False
     $ persistent.us_7dl_mi = False
-    call screen sdl_achvlist_us7dl_Author
+    call sdl_achvlist_us_Author
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\БЛОК ОДИНОЧКИ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
 ######################Д3-РУТ######################################
 label sdl_achvlist_med3r_clear_Author:
     #Нужны флаги
-    call screen sdl_achvlist_med3r_Author
+    call sdl_achvlist_me_Author
 # ------------------------------------------------ 
 ######################НУАР-РУТ######################################
 label sdl_achvlist_menoi_clear_Author:
     #Нужны флаги
-    call screen sdl_achvlist_menoi_Author
+    call sdl_achvlist_me_Author
     
 ##|||||||||||||||||||||||||||||||||||ДУБЛИ КОНЦОВОК||||||||||||||||||||||||||||||||||||||||||||||||      
 label alt_achvA_mi7dl_true:
