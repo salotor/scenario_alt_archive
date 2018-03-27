@@ -10826,7 +10826,7 @@ label alt_day7_us_7dl_ever_after:
     "Я приложил руку к пустой голове — мол, на том и стоим!"
     us "Здесь нужна женская рука."
     me "Не смеши, женщина."
-    show us grin sport close with move
+    show us grin sport with move
     us "Да. Женщина."
     "Показала язык Ульянка."
     "Белое и красное: алая футболка, алые волосы — и серебристый лунный свет от заглядывающего в окошко месяца."
@@ -11011,7 +11011,7 @@ label alt_day7_us_7dl_ever_after:
     us "А ты — старый дед."
     "Расхохоталась она."
     me "Спасибо. Очень приятно."
-    show us smile sport close with dspr
+    show us smile sport with dspr
     us "Не дуйся."
     "Она уселась рядом со мной на диване и ткнула кулачком в бок."
     us "Ты тоже очень хороший дяденька."
@@ -11021,7 +11021,7 @@ label alt_day7_us_7dl_ever_after:
     me "Хорошо. А что с тобой тогда?"
     me "И если мы вернулись домой, то почему я жив и с тобой болтаю сейчас?"
     us "В этом-то и дело, Сёмыч."
-    show us normal sport close with dspr
+    show us normal sport with dspr
     "Ульяна перестала улыбаться и выглядела неподдельно серьёзной."
     us "Мы не у тебя дома сейчас. И вернуться не можем."
     stop music fadeout 5
@@ -11029,12 +11029,12 @@ label alt_day7_us_7dl_ever_after:
     "Она покачала головой."
     window hide
     scene bg int_sam_room_7dl
-    show us normal sport close
+    show us normal sport
     with dissolve
     play music out_of_your_tier fadein 3
     us "Со мной всё не так просто, Сёмыч."
     me "Да уж, непросто — и не дома, и вернуться нельзя, ещё и ты со своими загадками…"
-    show us sad sport close with dspr
+    show us sad sport with dspr
     us "Помолчи и послушай, хорошо?"
     "Тихо попросила маленькая женщина, и я заткнулся."
     "Ульяна же, поколебавшись, села на дальний угол дивана, подобрала ноги под себя."
@@ -11052,10 +11052,10 @@ label alt_day7_us_7dl_ever_after:
     me "Стёртыми?"
     us "Люди, подвергшиеся полному стиранию личности."
     me "И за что такому можно подвергнуться? Ты же никого не убила?"
-    show us smile sport close with dspr
+    show us smile sport with dspr
     us "Разве что саму себя."
     "Горько усмехнулась девочка."
-    show us sad sport close with dspr
+    show us sad sport with dspr
     us "Хронологически мне далеко не 14, на которые я выгляжу."
     us "А вот биологически, и по умственному развитию…"
     me "Ты говоришь как взрослый человек."
@@ -11112,7 +11112,7 @@ label alt_day7_us_7dl_ever_after:
     nvl clear
     $ set_mode_adv()
     scene bg int_sam_room_7dl
-    show us normal sport close
+    show us normal sport
     with dissolve
     play music pixies_playing fadein 3
     us "И её подопечного, некоего пионера Персунова."
@@ -11125,7 +11125,7 @@ label alt_day7_us_7dl_ever_after:
     us "Похоже на то."
     us "Только мы были тому свидетелями."
     me "Как в него кто-то… кхм… вселяется?"
-    show us sad sport close with dspr
+    show us sad sport with dspr
     "Ульяна кивнула."
     us "Когда он приехал, это был просто мальчик-мажор, богатые родители, импортные джинсы…"
     us "Говорил странные вещи, верил в то, что доллар спасёт человечество."
@@ -11155,17 +11155,17 @@ label alt_day7_us_7dl_ever_after:
     us "Выход на дорогу открыт только детям. Только они способны интуитивно делать правильный выбор и делать правильные шаги."
     window hide
     with fade
-    show us smile sport close with dissolve
+    show us smile sport with dissolve
     us "В этом году я хотела пойти на дорогу, но снова встретила тебя."
-    show us shy sport close with dspr
+    show us shy sport with dspr
     us "А тебя уже не интересовало это всё."
     us "Ты стал слишком взрослым."
-    show us shy2 sport close with dspr
+    show us shy2 sport with dspr
     us "И я, похоже, тоже."
     me "Так а зачем тебе вообще было всё это нужно? Это такая игра?"
-    show us dontlike sport close with dspr
+    show us dontlike sport with dspr
     us "Сам ты игра!"
-    show us normal sport close with dspr
+    show us normal sport with dspr
     us "Мне важно понять, что загадала та, первая я."
     us "Получилось ли у неё.{w} А я не готова умереть или убить тебя, чтобы просто проверить."
     us "Да и не сработает это.{w} Я просто временно замещу кого-то в одном из миров, где есть моё подобие."
@@ -11173,7 +11173,7 @@ label alt_day7_us_7dl_ever_after:
     me "М-да…"
     "Почесал затылок я, выслушав весь этот бред."
     me "Так и что нам делать теперь?"
-    show us normal sport close with dspr
+    show us normal sport with dspr
     us "Я не знаю, Сёмыч. Я хотела бы, чтобы ты не пропадал никуда."
     us "Но… У меня есть желание, и ты можешь помочь его исполнить."
     me "Махнуть палочкой и крикнуть «сим-салабим»?"
@@ -12090,7 +12090,7 @@ label alt_day7_us_px_bus:
             with fade
             us "Ура!"
             "Ульяна подскочила, втолкнула меня в салон и протащила к сиденью над колесом."
-            show us laugh sport close at right with dissolve
+            show us laugh sport at right with dissolve
             us "Самый лучший обзор. Гарантирую это."
             "Наверное… Что же она хотела мне показать, интересно?"
             show un normal pioneer at left with dissolve
