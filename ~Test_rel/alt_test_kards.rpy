@@ -1343,7 +1343,7 @@ label alt_day2_participate_win_end_new:
                     show mi shy pioneer with dspr
                     mi "А разве так можно?"
                     me "Нет, но… Кому какое дело?"
-                    show el dontlike pioneer at left with dissolve
+                    show el serious pioneer at left with dissolve
                     el "Мне есть дело!"
                     "Ответил появившийся из ниоткуда Электроник."
                     el "Ты победил, пожалте за полуфинальный столик!"
@@ -1427,7 +1427,7 @@ label alt_day2_participate_win_end_new:
             me "Я тоже. {w}Ты проиграла, я победил. Всё честно."
             us "Переиграем! Только ты теперь поддавайся, слышишь?"
             us "Я должна победить и забрать главный приз!"
-            show el dontlike pioneer at left with dissolve
+            show el serious pioneer at left with dissolve
             "Её крики привлекли внимание Электроника."
             el "Никаких переигровок!"
             el "Один матч, три раунда, проигравший выбывает."

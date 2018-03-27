@@ -11055,7 +11055,7 @@ label alt_day7_us_7dl_ever_after:
     show us smile sport close with dspr
     us "Разве что саму себя."
     "Горько усмехнулась девочка."
-    show us smile sad close with dspr
+    show us sad close with dspr
     us "Хронологически мне далеко не 14, на которые я выгляжу."
     us "А вот биологически, и по умственному развитию…"
     me "Ты говоришь как взрослый человек."
