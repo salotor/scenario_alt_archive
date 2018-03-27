@@ -12528,6 +12528,7 @@ label alt_day7_us_px_mourning:
     with dissolve
     play ambience ambience_camp_entrance_day fadein 3
     if alt_day6_us_px_sl_join:
+        show sl normal pioneer with dissolve
         sl "Смотри! Смотри!"
         "Я резко обернулся, смотря туда, куда она указывала."
     else:
@@ -12540,6 +12541,7 @@ label alt_day7_us_px_mourning:
     with dissolve
     "Вдали едва заметной точкой карабкался к горизонту автобус."
     if alt_day6_us_px_sl_join:
+        show sl surprise pioneer with dissolve
         sl "Они уехали… Уехали без нас!"
         me "Уехали."
         hide sl with dissolve
@@ -12548,6 +12550,8 @@ label alt_day7_us_px_mourning:
         "Она была чужая, а потому руки свои распускать я даже не думал."
         "В конце концов, она сильная."
         "Справится."
+        show sl sad pioneer
+        with dissolve
         sl "И что теперь?"
         "Глухо проговорила она."
         me "Следующая смена через неделю, подумаешь."
@@ -12568,9 +12572,12 @@ label alt_day7_us_px_mourning:
     ba "Для персонала столовая всё ещё работает."
     "Как и все в этом лагере, Саныч передвигался абсолютно бесшумно."
     "Вот и сейчас он возник у меня за плечом, заставив вздрогнуть."
-    show us normal sport at fleft
-    show un normal pioneer at cleft
-    with move
+    if alt_day6_us_px_sl_join:
+        show sl normal pioneer with dspr
+    else:
+        show us normal sport at fleft
+        show un normal pioneer at cleft
+        with move
     show ba evil uniform at fright with dissolve
     ba "Но сначала надо решить одну небольшую проблему."
     me "У нас уже есть одна."
@@ -12588,8 +12595,11 @@ label alt_day7_us_px_mourning:
     "Я сделал и это."
     play sound sfx_lena_hits_alisa
     with vpunch
-    show us fear sport
-    show un shocked pioneer
+    if alt_day6_us_px_sl_join:
+        show sl scared pioneer
+    else:
+        show us fear sport
+        show un shocked pioneer
     with flash_red
     "И он коротко, без замаха, пробил мне прямо в середину ладоней."
     "Я отшатнулся, в голове загудело как в колоколе."
@@ -12600,9 +12610,12 @@ label alt_day7_us_px_mourning:
     ba "Это тебе за то, что единственный мужик в этом вертепе, а ведёшь себя как олень."
     ba "Вот и получи по рогам."
     ba "Теперь же о бабах…"
-    show us sad sport
-    show un sad pioneer
-    with dspr
+    if alt_day6_us_px_sl_join:
+        show sl sad pioneer
+    else:
+        show us sad sport
+        show un sad pioneer
+    with dissolve
     "Он отвернулся от меня и заговорил."
     "Нет, он не использовал обсценную лексику, не переходил на личности и в целом вёл себя корректно."
     "Но при всём том умудрился ни разу не повториться, а попутно — втоптать в грязь любую самооценку."
@@ -12630,7 +12643,7 @@ label alt_day7_us_px_mourning:
         "Славя, видимо, чувствуя комплекс вины, не выходила из домика, чем-то занимаясь там в одиночестве."
         "Я тоже сидел у себя, глушил несладкий чай и смотрел в окно."
         "Успел прочитать «Белые Ночи», обнаруженные у вожатой на полочке."
-        "У меня в голове не укладывалось, как могли просто взять и уехать, оставить нас здесь?"
+        "У меня в голове не укладывалось, как они могли просто взять и уехать, оставить нас здесь?"
         "Но, похоже, я всё-таки чего-то не знал об этом времени, об этом мире."
     else:
         "Мы собрались в доме Ульяны и смотрели через окно, как дождь и ветер хлещут Генду, как скрипят доски крыши…"
@@ -12648,7 +12661,7 @@ label alt_day7_us_px_mourning:
     if alt_day6_us_px_sl_join:
         "Славя немного пришла в себя и на мои взгляды отвечала неизменной улыбкой."
         "Должно быть, однажды она будет вспоминать об этом случай, как о забавном приключении."
-        "С присущей ей лёгкостью характера, она способна смеяться даже над собой."
+        "С присущей ей лёгкостью характера она способна смеяться даже над собой."
         "А вот я? Смогу ли?"
         "И не знал ответа."
     else:
