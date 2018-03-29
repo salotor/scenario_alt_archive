@@ -2772,7 +2772,7 @@ label alt_day4_neu_lunch:
             scene bg ext_volley_court_7dl with dspr
             show blackout_exh
             play music anglegrinder fadein 3
-            scene cg d4_volley_rage_7dl with flash # обновить фон на Харви
+            scene cg d4_volley_rage_7dl with flash
             with vpunch
             $ renpy.pause (1)
             show dv_us_volley with vpunch
@@ -7087,7 +7087,7 @@ label alt_day5_neu_us_career:
     with dissolve
     pause(1)
     show ml normal pioneer with dissolve
-    "Я проходил мимо клубов, оттуда вывернул знакомый мне уже мальчик." # возможно, пропущено "когда" перед "оттуда"
+    "Я проходил мимо клубов, когда оттуда вывернул знакомый мне уже мальчик."
     ml "Ой."
     me "Снова привет."
     "Помахал рукой я."
