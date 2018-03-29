@@ -14347,7 +14347,7 @@ label alt_day7_sl_beach:
     mt "Скажите «Сыыыр»!"
     show dv normal pioneer far at fleft
     show un normal pioneer far at fright
-    show pi normal far at left
+    show pi far at left
     show sl normal pioneer far at cleft
     show mi normal pioneer far at right
     show el normal pioneer far at cright behind mi
