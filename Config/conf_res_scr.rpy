@@ -154,11 +154,12 @@ init -2 python:
         set_name('sak',u"Старик")
 
     def meet(who, name):
-        set_name(who,name)
+        set_name(who, name)
 
-    def set_name(who,name):
+    def set_name(who, name):
             gl = globals()
-            gl[who+"_name"] = name
+            gl[who + "_name"] = name
+
 init -265 python: 
     #Пресеты с возможностью настройки
     def Noir(id, brightness = -0.4, tint_r = 0.2126, tint_g = 0.7152, tint_b = 0.0722, saturation = 0.5):
