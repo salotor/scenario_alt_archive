@@ -155,6 +155,7 @@ init -2 python:
         set_name('sak',u"Старик")
         set_name('me',u"Семён")
         set_name('pi',u"Пионер")
+        set_name('dreamgirl',u"…")
         set_name('voice',u"Голос")
         set_name('voices',u"Голоса")
 
