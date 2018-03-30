@@ -481,6 +481,7 @@
     
     image cg d3_dv_alice_dj80_7dl = get_image_7dl("cg/d3_dv_alice_dj80_7dl.jpg")
     image cg d3_disco_no_un_7dl = get_image_7dl("cg/d3_disco_no_un_7dl.jpg")
+    image cg d3_mi_dance_afar_bordo_7dl = get_image_7dl("cg/d3_mi_dance_afar_bordo_7dl.jpg")
     image cg d3_mi_dance_afar_7dl = get_image_7dl("cg/d3_mi_dance_afar_7dl.jpg")
     image cg d3_mi_dance_close_7dl = get_image_7dl("cg/d3_mi_dance_close_7dl.jpg")
     image cg d3_me_mirror_white_7dl = get_image_7dl("cg/d3_me_mirror_white_7dl.jpg")
