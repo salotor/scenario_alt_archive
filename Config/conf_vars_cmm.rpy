@@ -36,6 +36,7 @@ init 2:
     $ colors['ase'] = {'night': (97, 10, 10, 255), 'sunset': (137, 14, 14, 255), 'day': (236, 66, 66, 255), 'prolog': (137, 14, 14, 255)}
     $ store.names_list.append('ase')
     
+    #Толпа - не используется
     $ colors['we'] = {'night': (67, 23, 111, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
     $ store.names_list.append('we')
     
