@@ -146,7 +146,8 @@
     "Она явно непроста. И что-то знает. Надо только раскрутить её на разговор. Но как?"
     if not (herc or loki) and not alt_day1_sl_conv and (alt_day_binder != 1):
         mt "Семён, что за кошмар у тебя на шее?"
-        show mt normal pioneer
+        show mt normal pioneer with dspr
+        me "Э… Галстук?"
     else:
         mt "Семён! А где твой галстук?"
         me "В комнате. Я на себя эту удавку добровольно не надену."

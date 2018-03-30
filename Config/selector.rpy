@@ -79,9 +79,12 @@ label sdl_menu:
             $ meet('el','Электроник')
             $ meet('sh','Шурик')
             $ meet('ba','Саныч')
+            $ persistent.altCardsWon1 = True
+            $ persistent.altCardsWon2 = True
+            $ persistent.altCardsWon3 = True
             stop ambience fadeout 2
             jump alt_test
-        "Руты.":
+        "Руты":
             menu:
                 "С самого начала?":
                     menu:

@@ -4,9 +4,8 @@ init:
 python early:
     def widget__7dl_widget():
         def editoverlay():
-            if plthr == u"none":
-                ui.button(clicked=None, xpos=0.0, xanchor=0.0, ypos=2, xpadding=6, xminimum=600)
-                ui.text("%s" % ("Несовместимые данные"), style="button_text", size=13)
+            if plthr == u"none" or plthr == u"Выбор" or plthr == u"Достижения":
+                return
             else:
                 ui.button(clicked=None, xpos=0.16, xanchor=0.0, ypos=2, xpadding=6, xminimum=200)
                 ui.text("%s" % (save_name), style="button_text", size=13)

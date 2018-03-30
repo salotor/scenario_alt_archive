@@ -2,7 +2,7 @@
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
     $ alt_release_no = "0.33.b"
-    $ alt_compatible_release_no = ["0.00.x", "0.33.b"] 
+    $ alt_compatible_release_no = ["0.00.x", "0.33.c"] 
 
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
