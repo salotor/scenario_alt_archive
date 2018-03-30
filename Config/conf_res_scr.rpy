@@ -134,6 +134,7 @@ init -2 python:
         set_name('we',u"Толпа")
         set_name('ml',u"Мальчик")
         set_name('ml2',u"Мальчик")
+        set_name('ml3',u"Мальчик")
         set_name('voice1',u"Продавщица")
         set_name('kids',u"Дети")
         set_name('dy',u"Динамики")
