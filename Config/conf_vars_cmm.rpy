@@ -1,8 +1,9 @@
 ﻿#Мод пилится на базе нетленки от АБЦБ - его сюжет и подача мне куда симпатичнее оригинальной стори.
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
-    $ alt_release_no = "0.33.b"
-    $ alt_compatible_release_no = ["0.00.x", "0.33.b"] 
+    $ alt_release_no = "0.33.c"
+    $ alt_compatible_release_no = ["0.00.x", "0.33.c"] 
+    $ plthr = u"none"
 
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
@@ -41,6 +42,7 @@ init 2:
     $ names['ase'] = u'Алиса'
     $ store.names_list.append('ase')
     
+    #Толпа - не используется
     $ colors['we'] = {'night': (67, 23, 111, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
     $ names['we'] = u'Все вместе'
     $ store.names_list.append('we')
@@ -77,10 +79,6 @@ init 2:
     $ names['voices'] = u'Голоса'
     $ store.names_list.append('voices')
     
-    $ colors['ai'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (192, 192, 192, 255), 'prolog': (192, 192, 192, 255)}
-    $ names['ai'] = u'Говоров'
-    $ store.names_list.append('ai')
-    
     $ colors['kids'] = {'night': (235, 120, 131, 255), 'sunset': (235, 120, 131, 255), 'day': (235, 120, 131, 255), 'prolog': (235, 120, 131, 255)}
     $ names['kids'] = u'Малышня'
     $ store.names_list.append('kids')
@@ -88,25 +86,7 @@ init 2:
     $ colors['dy'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (56, 90, 107, 255), 'prolog': (192, 192, 192, 255)}
     $ names['dy'] = u'Голос из динамика'
     $ store.names_list.append('dy')
-    $ reload_names()
     
-    # steam. сохраняем все существующие дескрипторы персонажей (возможно включая из других модов)
-    $ preserve_names()
-    
-    $ lp_mi = 0
-    $ lp_sl = 0
-    $ lp_un = 0
-    $ lp_us = 0
-    $ lp_dv = 0
-    $ karma = 0
-    $ plthr = u"none"
-    $ alt_sp = 0
-    $ alt_spt = 0
-    $ alt_hpt = 0
-    $ mt_pt = 0
-    $ d3_pt = 0
-    $ us_pt = 0
-
 label scenario__alt_sevendl:
 # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
 # ------------------------------------------------
@@ -147,6 +127,40 @@ label alt_day0_vars: #Переменные нулевого дня
     $ th_suffix = "»"
     if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
+
+    python:
+        alt_meet = { # свой список каналов спикеров для повторного вызова meet() при загрузке сохранения
+        'ba':          u"Физрук",
+        'ase':         u"Алиса",
+        'we':          u"Толпа", # не используется
+        'ml':          u"Мальчик",
+        'ml2':         u"Мальчик",
+        'ml3':         u"Мальчик",
+        'voice1':      u"Продавщица",
+        'kids':        u"Дети",
+        'dy':          u"Динамики",
+        'icq':         u"Собеседник",
+        'el':          u"Кудрявый",
+        'un':          u"Грустяша",
+        'dv':          u"Рыжая",
+        'sl':          u"Блондинка",
+        'us':          u"Мелкая",
+        'mt':          u"Вожатая",
+        'cs':          u"Медсестра",
+        'mz':          u"Очкарик",
+        'mi':          u"Японка",
+        'uv':          u"Котэ",
+        'bb':          u"Начальник",
+        'sh':          u"Очкарик",
+        'ai':          u"Мужчина",
+        'sak':         u"Старик",
+        'me':          u"Семён",
+        'pi':          u"Пионер",
+        'dreamgirl':   u"…",
+        'voice':       u"Голос",
+        'voices':      u"Голоса"
+        }
+
     return
     
 label alt_day1_vars: #Переменные первого дня

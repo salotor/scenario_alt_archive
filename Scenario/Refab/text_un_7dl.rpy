@@ -467,12 +467,14 @@ label alt_day4_un_7dl_breakfast:
         $ renpy.pause(2)
         "Потому первая же реакция на то, что кто-то закрыл мне сзади глаза ладонями, была в прогнозируемом духе «ну и у кого там челюсть лишняя»."
         $ meet('un','Девочка')
+        $ alt_meet['un'] = u"Девочка"
         un "Угадай, кто?!"
         menu:
             "Алиса, ты?":
                 $ lp_un -= 1
                 $ karma -= 10
                 $ meet('un','Лена')
+                $ alt_meet['un'] = u"Лена"
                 scene bg int_dining_hall_people_sunset
                 show un surprise pioneer at left
                 with guess_off
@@ -481,6 +483,7 @@ label alt_day4_un_7dl_breakfast:
             "Кто-кто. Лена!":
                 $ lp_un += 1
                 $ meet('un','Лена')
+                $ alt_meet['un'] = u"Лена"
                 scene bg int_dining_hall_people_sunset
                 show un smile2 pioneer at left
                 with guess_off
@@ -490,6 +493,7 @@ label alt_day4_un_7dl_breakfast:
             "Вячеслав Андреевич, прекратите баловаться!":
                 $ karma += 15
                 $ meet('un','Лена')
+                $ alt_meet['un'] = u"Лена"
                 "За спиной раздался сдавленный хохот"
                 scene bg int_dining_hall_people_sunset
                 show un laugh pioneer at left
@@ -11711,6 +11715,7 @@ label alt_day7_un_7dl_true1:
     "Ощущение испачканности, изнасилованности какой-то не оставляло меня."
     th "И кто мешал, спрашивается, сделать всё правильно?"
     $ meet('uv','Девушка')
+    $ alt_meet['uv'] = u"Девушка"
     uv "А ты умеешь… правильно?"
     me "Что?"
     show uv smile at left with dissolve
