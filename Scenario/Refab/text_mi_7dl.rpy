@@ -1429,6 +1429,7 @@ label alt_day4_mi_7dl_ch6:
         "Я не стал к ним подходить — во избежание."
         "Мне повезло уже обнаружить Мику — та плелась по тропинке от умывальников и вид имела самый унылый."
         $ meet('sak','Сакишита')
+        $ alt_meet_7dl['sak'] = u"Сакишита"
         window hide
         scene bg ext_house_of_un_day
         show mi sad pioneer
@@ -10592,6 +10593,7 @@ label alt_day7_mi_7dl_happy_again:
     window hide
     with fade
     $ meet('sak','Сакишита')
+    $ alt_meet_7dl['sak'] = u"Сакишита"
     me "Никакой надежды, да?"
     show sak scared suit with dissolve
     sak "Я не знаю, Семён-сан."
@@ -10642,6 +10644,7 @@ label alt_day7_mi_7dl_happy_again:
     extend "и человек, от которого зависело столько, столько…"
     window hide
     $ meet('ai','Говоров')
+    $ alt_meet_7dl['ai'] = u"Говоров"
     "Отец Мику, мой возможный тесть — Говоров Архип Андреевич."
     "Говоров-сама, Фудзита-сан."
     "До сих пор мы ни разу не виделись, со всеми делами мне помогал Сакишита."
@@ -10725,7 +10728,9 @@ label alt_day7_mi_7dl_liar:
     window hide
     scene expression Notch("bg ext_khruschevka_day_7dl") with dissolve
     $ meet('ml','Пижон')
+    $ alt_meet_7dl['ml'] = u"Пижон"
     $ meet('ml2','Мелкий')
+    $ alt_meet_7dl['ml2'] = u"Мелкий"
     ml "И что, ты тоже веришь в эту чушь?"
     "Издевательски протянул парень в ветровке — один в один той же, что была на Мику с автобуса."
     "Тоже в тренде, скотина… Пижон."
