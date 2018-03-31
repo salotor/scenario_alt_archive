@@ -327,10 +327,6 @@ init:
     image sdl_achv_us_un = Text("Концовка\n Лены", style="sdl_achvlistA_us_st")
     image sdl_achv_us_mi = Text("Концовка\n Мику", style="sdl_achvlistA_us_st")
     
-    
-    
-    
-    
     # ------------------------------------------------
     ##\\\\\\\\\\\\\\\\\\\\\\\\\ЗВУК\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     #SFX
@@ -338,29 +334,3 @@ init:
     $ sdl_achv_click = get_sfx_7dl("ach_list/sdl_achv_click.ogg")
     $ sdl_achv_info = get_sfx_7dl("ach_list/sdl_achv_info.ogg")
     $ sdl_achv_pagina = get_sfx_7dl("ach_list/sdl_achv_pagina.ogg")
-    
-    
-# ------------------------------------------------
-##\\\\\\\\\\\\\\\\\\\\\\\\\ПЕРЕЗАПУСК АЛЬТЕРНАТИВНЫХ ИМЁН\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\    
-init -2 python:
-    def make_names_unknown_sdl_achv():
-        global store
-        set_name('ba',u"Физрук")
-        set_name('ase',u"Алиса")
-        set_name('we',u"Толпа")
-        set_name('ml',u"Мальчик")
-        set_name('ml2',u"Мальчик")
-        set_name('voice1',u"Продавщица")
-        set_name('kids',u"Дети")
-        set_name('dy',u"Динамики")
-        set_name('icq',u"Собеседник")
-        set_name('bb',u"Начальник")
-        set_name('ai',u"Мужчина")
-        set_name('sak',u"Старик")
-
-    def meet(who, name):
-        set_name(who,name)
-
-    def set_name(who,name):
-            gl = globals()
-            gl[who+"_name"] = name

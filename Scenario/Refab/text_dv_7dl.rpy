@@ -3427,6 +3427,7 @@ label alt_day4_dv_7dl_roadtrip:
             "Он заспешил к выкрашенному ярко-синей краской домику, где  было освещённое окошечко, спрятанное за решёткой."
             voice "Зин! Зин!"
             $ meet('voice1','Продавщица')
+            $ alt_meet['voice1'] = u"Продавщица"
             "Он забарабанил по решётке."
             voice1 "Чё тебе, пьянь?"
             "Спустя пять минут в окошке появилось недовольное заспанное лицо с бигудями."
@@ -6530,6 +6531,7 @@ label alt_day6_dv_7dl_begin:
     "Коварный Саныч ночью лазит в водонапорную башню и вываливает туда пару тонн льда из рефрижератора в столовой."
     th "Точно он, больше некому! Я имею в виду, почему бы ещё воде быть такой ледяной?! Я не верю в ключи {i}такой{/i} температуры."
     $ meet('us','Хриплый голос')
+    $ alt_meet['us'] = u"Хриплый голос"
     us "Опять он орёт."
     "Донеслось откуда-то из-за плеча."
     me "От рыжей слышу."
@@ -6544,6 +6546,7 @@ label alt_day6_dv_7dl_begin:
     "Но я с успехом справился и с этой задачей — наконец-то можно было лицезреть того, кто там меня поприветствовал столь оригинальным образом."
     show us smile sport with dissolve
     $ meet('us','Ульяна')
+    $ alt_meet['us'] = u"Ульяна"
     us "Привет."
     show us laugh2 sport with dspr
     "Осклабилась Ульяна, отдёрнув мокрую руку."
@@ -10010,7 +10013,7 @@ label alt_day6_dv_7dl_dance:
             hide sl
             scene anim_square_party with dissolve
         else:
-            $ alt_day6_dv_7dl_catapult = True 
+            $ alt_day_catapult = 1 
     return
 
 label alt_day6_dv_7dl_escape_convince:
@@ -13884,6 +13887,7 @@ label alt_day7_dv_7dl_bad_end:
     window hide
     if alt_day7_dv_7dl_check == 5:
         $ meet('mt','Олька')
+        $ alt_meet['mt'] = u"Олька"
         $ persistent.sprite_time = "night"
         $ day_time()
         scene bg int_caffee_day_7dl with dissolve

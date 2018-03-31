@@ -131,9 +131,10 @@ init -2 python:
         global store
         set_name('ba',u"Физрук")
         set_name('ase',u"Алиса")
-        set_name('we',u"Толпа")
+        set_name('we',u"Толпа") # не используется
         set_name('ml',u"Мальчик")
         set_name('ml2',u"Мальчик")
+        set_name('ml3',u"Мальчик")
         set_name('voice1',u"Продавщица")
         set_name('kids',u"Дети")
         set_name('dy',u"Динамики")
@@ -152,19 +153,21 @@ init -2 python:
         set_name('sh',u"Очкарик")
         set_name('ai',u"Мужчина")
         set_name('sak',u"Старик")
+        set_name('me',u"Семён")
+        set_name('pi',u"Пионер")
+        set_name('dreamgirl',u"…")
+        set_name('voice',u"Голос")
+        set_name('voices',u"Голоса")
 
     def meet(who, name):
-        set_name(who,name)
+        set_name(who, name)
 
     def set_name(who, name):
-        # как вариант: можно сохранять имена под префиксом и при загрузке сейва 7дл их вытаскивать оттуда, без префикса        
-        #bakname = "bakname_" + who
         global store
-        
         store.names[who] = name
         gl = globals()
         gl[who + "_name"] = store.names[who]
-        
+
 init -265 python: 
     #Пресеты с возможностью настройки
     def Noir(id, brightness = -0.4, tint_r = 0.2126, tint_g = 0.7152, tint_b = 0.0722, saturation = 0.5):
@@ -406,7 +409,7 @@ init -5 python:
         dn = (u"7ДЛ:День %d") % (alt_day_number)
 # ----------------------------------------------------------------------
 # в имя сохраняемого файла добавим номер релиза игры
-        sdn = (u"7ДЛ v.%s :День %d") % (alt_release_no, alt_day_number)
+        sdn = (u"7ДЛ v.%s: День %d") % (alt_release_no, alt_day_number)
 # -----------------------------------------------------------------------
         save_name = ((sdn) + (u" - ")) + (alt_chapter_name)
         if persistent.sprite_time == "prolog":
@@ -528,7 +531,10 @@ init -998 python:
 init -997 python:
     def get_sprite_7dl(file):
         return default_7dl_path+"Pics/sprites/%s" % (file)
+<<<<<<< HEAD
         # ori - оригинал
+=======
+>>>>>>> 1.2-Steam-standalone
     def get_sprite_ori(file):
         return "images/sprites/%s" % (file)
         

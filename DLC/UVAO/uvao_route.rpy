@@ -1075,6 +1075,7 @@ label alt_day4_uvao_meet_Yulia_after_lunch:
     scene bg ext_house_of_mt_day with dissolve:
         zoom 2.5 xalign 0.7 yalign 0.55
     $ meet('uv','Существо')
+    $ alt_meet['uv'] = u"Существо"
     show uv dontlike close at center
 
     play music music_list["mystery_girl_v2"] fadein 5
@@ -1132,6 +1133,7 @@ label alt_day4_uvao_meet_Yulia_after_lunch:
     "Она немного подумала."
     uv "Хотя раньше меня Юлей называли. Наверное, и тебе можно. Если хочешь."
     $ meet('uv','Юля')
+    $ alt_meet['uv'] = u"Юля"
     "Мне показалось, что беседа начала ей надоедать и я поспешил сменить тему, ляпнув первое, что пришло в голову:"
     me "А ты здесь что-нибудь искала, да?"
     uv "Интересно было, что там в домике. В других я уже бывала, а тут всё время заперто."
@@ -1665,6 +1667,7 @@ label alt_day5_uvao_getting_up:
         "Голос продолжал неумолимо ввинчиваться в голову, а плечо неумолимо продолжали трясти, и мне пришлось-таки открыть глаза."
         show mt angry pioneer close at center with dissolve
         $ meet('mt','Ольга Дмитриевна')
+        $ alt_meet['mt'] = u"Ольга Дмитриевна"
         "Надо мной нависало недовольное лицо Ольги."
         me "Ох… Ольга Дмитриевна… Что случилось?"
         mt "Семён, вставай давай!"
@@ -1805,7 +1808,7 @@ label alt_day5_uvao_road_to_old_camp:
     dreamgirl "Штанишки не намочил?"
     th "Что, я трус какой? Нас такой ерундой не запугаешь!"
     window hide
-    scene bg int_old_building_day_uvao_7dl with fade
+    scene bg int_old_building_day_7dl with fade
 
     "Внутри оказалось не так темно, как я ожидал. Солнечные лучи нет-нет, да и пробирались через дыры в потолке и разбитые окна."
     "Здание выглядело необитаемым, но осмотреть его на предмет признаков жизни стоило."
@@ -2141,7 +2144,7 @@ label alt_day5_uvao_hentai_scene:
     "Руки сами собой легли на её талию, притянули к себе."
     uv "Мрррррра-а-у-у-у!"
     "Одобрительно протянула она и соблазнительно прогнулась."
-    scene cg d5_uv_new_hentai1_7dl with dissolve #steam
+    scene uv_new_hentai1 with dissolve
     th "Будь я котом, я бы просто взял её зубами за шкирку и хардкорно отымел…"
     dreamgirl "Как будто что-то плохое. Да и она вряд ли будет против."
     th "Цыц. Я пытаюсь не посрамить гордое звание Гомо Сапиенса в первом контакте с иной расой!"
@@ -2152,7 +2155,7 @@ label alt_day5_uvao_hentai_scene:
     dreamgirl "Это означает: «Ну не тяни уже!». Ваш К.О."
     "Желание девочки - закон. А уж кошкодевочки… Я в единый миг освободился от всего, что мешало мне ниже пояса, и, прицелившись…"
     dreamgirl "На ладонь ниже хвоста. Не промахнись, Ястребиный Глаз."
-    scene cg d5_uv_bunker_hentai2_7dl with dissolve  #steam
+    scene uv_new_hentai2 with dissolve
     uv "Мааааауууу…"
     "…единым махом скользнул внутрь."
     "Она со вздохом качнулась сначала от меня, потом обратно… И снова… И снова, вовлекая меня во всё ускоряющийся ритм движения."
@@ -2242,7 +2245,7 @@ label alt_day5_uvao_evade_hentai_scene:
         "Вспышка, Юля подскочила от неожиданности, а я скорее полез в телефон посмотреть снимок."
         window hide
         play sound sfx_scary_sting
-        scene cg d5_uv_photo_city_7dl with dissolve #steam
+        scene cg d5_uv_photo_city_7dl with dissolve
         $ renpy.pause(2, hard=True)
         scene bg int_catacombs_living with dissolve
         show uv surprise2 at center with dissolve
@@ -2650,7 +2653,7 @@ label alt_day5_uvao_true_back:
     stop ambience fadeout 1
     $ day_time()
     $ persistent.sprite_time = "day"
-    scene bg int_old_building_day_uvao_7dl with flash
+    scene bg int_old_building_day_7dl with flash
 
     play ambience ambience_forest_day fadein 3
     "После темноты подземелий свет ножом резал глаза.{w} Проморгавшись, я огляделся и, стараясь не поднимать лишнего шума, откинул крышку люка."
@@ -3275,7 +3278,7 @@ label alt_day5_uvao_mines_sh_capture_debug: #Хомутаем Шурика и о
     $ meet('mt', 'Голос')
     $ day_time()
     $ persistent.sprite_time = "day"
-    scene bg int_old_building_day_uvao_7dl with flash
+    scene bg int_old_building_day_7dl with flash
     play ambience ambience_forest_day fadein 3
 
     show uv shocked with dissolve
@@ -3288,6 +3291,7 @@ label alt_day5_uvao_mines_sh_capture_debug: #Хомутаем Шурика и о
     "Мы с Юлей подобрались к окну и одновременно выглянули в щель между досками."
     window hide
     $ meet('mt','Ольга Дмитриевна')
+    $ alt_meet['mt'] = u"Ольга Дмитриевна"
     scene bg ext_old_building_day_7dl
     show mt pioneer normal veryfar:
         xalign 0.3 yalign 0.999 zoom 0.7
@@ -3425,7 +3429,7 @@ label alt_day5_parking_back:
     $ day_time()
     $ routetag = "uv"
     $ alt_chapter(5, u"Юля. Пикник")
-    scene bg int_old_building_day_uvao_7dl
+    scene bg int_old_building_day_7dl
     show uv grin
     with dissolve
 
@@ -3628,7 +3632,7 @@ label alt_day5_parking_back:
     th "Кажется, Юля свято уверовала в мою способность открывать всё железное… Забавно."
     me "Давай я попробую."
     window hide
-    scene bg int_mine_exit_day_7dl with dissolve #steam
+    scene bg int_hence_day_7dl with dissolve
 
     "Поднявшись по узкой шахте, я оказался перед металлической решёткой с вваренным в неё замком."
     "Как ни странно, но ключ подошёл, хотя провернуть его до конца мне долго не удавалось."
