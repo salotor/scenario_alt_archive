@@ -131,9 +131,10 @@ init -2 python:
         global store
         set_name('ba',u"Физрук")
         set_name('ase',u"Алиса")
-        set_name('we',u"Толпа")
+        set_name('we',u"Толпа") # не используется
         set_name('ml',u"Мальчик")
         set_name('ml2',u"Мальчик")
+        set_name('ml3',u"Мальчик")
         set_name('voice1',u"Продавщица")
         set_name('kids',u"Дети")
         set_name('dy',u"Динамики")
@@ -152,9 +153,14 @@ init -2 python:
         set_name('sh',u"Очкарик")
         set_name('ai',u"Мужчина")
         set_name('sak',u"Старик")
+        set_name('me',u"Семён")
+        set_name('pi',u"Пионер")
+        set_name('dreamgirl',u"…")
+        set_name('voice',u"Голос")
+        set_name('voices',u"Голоса")
 
     def meet(who, name):
-        set_name(who,name)
+        set_name(who, name)
 
     def set_name(who, name):
         # как вариант: можно сохранять имена под префиксом и при загрузке сейва 7дл их вытаскивать оттуда, без префикса        
