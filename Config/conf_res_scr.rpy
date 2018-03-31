@@ -531,10 +531,6 @@ init -998 python:
 init -997 python:
     def get_sprite_7dl(file):
         return default_7dl_path+"Pics/sprites/%s" % (file)
-<<<<<<< HEAD
-        # ori - оригинал
-=======
->>>>>>> 1.2-Steam-standalone
     def get_sprite_ori(file):
         return "images/sprites/%s" % (file)
         
