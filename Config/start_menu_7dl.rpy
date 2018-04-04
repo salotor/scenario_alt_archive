@@ -19,7 +19,17 @@ init 1: # done
     image bg un_bg_day_7dl = get_image_7dl("gui/menu_main/un_bg_day.png")
     image bg un_bg_night_7dl = get_image_7dl("gui/menu_main/un_bg_night.png")
     image bg us_bg_7dl = get_image_7dl("gui/menu_main/us_bg.png")
-         
+    python:
+        style.log_button = Style(style.button)
+        style.log_button.child = None
+        style.log_button.focus_mask = None
+        style.log_button.background  = None
+        style.log_button_text = Style(style.normal_day)
+        style.log_button_text.selected_color = "#115bc0"
+        style.log_button_text.hover_color = "#115bc0"
+        style.log_button_text.selected_color = "#b6ff00"
+        style.log_button_text.hover_color = "#b6ff00"
+    
 init 9001 python: # done
     def add_lp_widget_7dl():
         for i in persistent.filters:
@@ -41,6 +51,38 @@ transform left_menu_7dl(xal, yal): # done
     xalign -0.1
     alpha 0.0
     easein 1 xalign xal alpha 1.0
+
+screen alt_wip1:
+    modal True
+    add get_image("gui/o_rly/base.png")
+    text "РАЗДЕЛ «МУЗЫКА» НАХОДИТСЯ В РАЗРАБОТКЕ":
+        text_align 0.5
+        yalign 0.46
+        xalign 0.5
+        color "#64483c"
+        size 30
+    textbutton _("OK"):
+        text_size 60
+        style "log_button"
+        yalign 0.65
+        xalign 0.5
+        action Hide("alt_wip1")
+
+screen alt_wip2:
+    modal True
+    add get_image("gui/o_rly/base.png")
+    text "РАЗДЕЛ «ГАЛЕРЕЯ» НАХОДИТСЯ В РАЗРАБОТКЕ":
+        text_align 0.5
+        yalign 0.46
+        xalign 0.5
+        color "#64483c"
+        size 30
+    textbutton _("OK"):
+        text_size 60
+        style "log_button"
+        yalign 0.65
+        xalign 0.5
+        action Hide("alt_wip2")
     
 screen settings_widget_lp_on_7dl(): # done
     add get_image_7dl("gui/menu_elem/settings/settings_wdglp_on.png")
@@ -290,9 +332,9 @@ screen media_7dl(): # done, TODO gallery and music room
     imagemap:   
         auto get_image_7dl("gui/menu_elem/media/media_%s.png")
         hotspot(1333, 224, 540, 160):
-            action NullAction()
+            clicked [Show("alt_wip1", transition=Dissolve(0.2))]
         hotspot(1218, 394, 700, 700):
-            action NullAction()
+            clicked [Show("alt_wip2", transition=Dissolve(0.2))]
         
 label choose_waifu_7dl: # done
     stop music
