@@ -70,6 +70,42 @@ transform left_menu_7dl(xal, yal): # done
     alpha 0.0
     easein 1 xalign xal alpha 1.0
     
+screen alt_wip1:
+    modal True
+    add get_image("gui/o_rly/base.png")
+    text "РАЗДЕЛ «МУЗЫКА» НАХОДИТСЯ В РАЗРАБОТКЕ":
+        text_align 0.5
+        yalign 0.46
+        xalign 0.5
+        color "#64483c"
+        font header_font
+        size 30
+    textbutton _("OK"):
+        text_size 60
+        style "log_button"
+        text_style "settings_link"
+        yalign 0.65
+        xalign 0.5
+        action Hide("alt_wip1")
+
+screen alt_wip2:
+    modal True
+    add get_image("gui/o_rly/base.png")
+    text "РАЗДЕЛ «ГАЛЕРЕЯ» НАХОДИТСЯ В РАЗРАБОТКЕ":
+        text_align 0.5
+        yalign 0.46
+        xalign 0.5
+        color "#64483c"
+        font header_font
+        size 30
+    textbutton _("OK"):
+        text_size 60
+        style "log_button"
+        text_style "settings_link"
+        yalign 0.65
+        xalign 0.5
+        action Hide("alt_wip2")
+        
 screen settings_widget_lp_on_7dl(): # done
     add get_image_7dl("gui/menu_elem/settings/settings_wdglp_on.png")
     
@@ -298,10 +334,10 @@ screen media_7dl(): # done, TODO gallery and music room
         auto get_image_7dl("gui/menu_elem/media/media_%s.png")
         hotspot(1333, 224, 540, 160):
             hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
-            clicked NullAction()
+            clicked [Show("alt_wip1", transition=Dissolve(0.2))]
         hotspot(1218, 394, 700, 700):
             hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
-            clicked NullAction()
+            clicked [Show("alt_wip2", transition=Dissolve(0.2))]
         
 label choose_waifu_7dl: # done
     stop music
