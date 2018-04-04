@@ -1,8 +1,9 @@
 ﻿#Мод пилится на базе нетленки от АБЦБ - его сюжет и подача мне куда симпатичнее оригинальной стори.
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
-    $ alt_release_no = "0.33.b"
+    $ alt_release_no = "0.33.c"
     $ alt_compatible_release_no = ["0.00.x", "0.33.c"] 
+    $ plthr = u"none"
 
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
@@ -35,6 +36,7 @@ init 2:
     $ colors['ase'] = {'night': (97, 10, 10, 255), 'sunset': (137, 14, 14, 255), 'day': (236, 66, 66, 255), 'prolog': (137, 14, 14, 255)}
     $ store.names_list.append('ase')
     
+    #Толпа - не используется
     $ colors['we'] = {'night': (67, 23, 111, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
     $ store.names_list.append('we')
     
@@ -59,20 +61,6 @@ init 2:
     #$ colors['ann'] = {'night': (15, 159, 14, 255), 'sunset': (10, 217, 16, 255), 'day': (170, 254, 160, 255), 'prolog': (10, 215, 30, 255)}
     #$ store.names_list.append('ann')
     
-    $ lp_mi = 0
-    $ lp_sl = 0
-    $ lp_un = 0
-    $ lp_us = 0
-    $ lp_dv = 0
-    $ karma = 0
-    $ plthr = u"none"
-    $ alt_sp = 0
-    $ alt_spt = 0
-    $ alt_hpt = 0
-    $ mt_pt = 0
-    $ d3_pt = 0
-    $ us_pt = 0
-
 label scenario__alt_sevendl:
 # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
 # ------------------------------------------------
