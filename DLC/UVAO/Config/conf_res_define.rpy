@@ -49,8 +49,8 @@
     image cg d5_uv_photo_city_7dl = get_image_uvao_7dl("cg/d5_uv_photo_city_7dl.jpg")
     image cg d5_uv_photo_galaxy_7dl = get_image_uvao_7dl("cg/d5_uv_photo_galaxy_7dl.jpg")
     # Кошочка авторства Орики
-    image uv_new_hentai1 = "images/1080/cg/epilogue_uv_hentai_1.jpg"
-    image uv_new_hentai2 = "images/1080/cg/epilogue_uv_hentai_2.jpg"
+    image uv_new_hentai1 = get_image("cg/epilogue_uv_hentai_1.jpg")
+    image uv_new_hentai2 = get_image("cg/epilogue_uv_hentai_2.jpg")
 
     
 # sounds
