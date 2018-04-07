@@ -19,21 +19,27 @@
         $ day_time()
         call alt_day4_fz_dv_dinner
     call alt_day4_fz_lost_coun
-
+    pause(1)
+    $ persistent.sprite_time = "sunset"
+    $ sunset_time()
+    $ alt_chapter(4, u"Лена. ФЗ. Вечер.")
     call alt_day5_fz_supper
- 
+    pause(1)
+    $ persistent.sprite_time = "sunset"
+    $ sunset_time()
+    $ alt_chapter(4, u"Лена. ФЗ. Шурик.")
     call alt_day4_fz_sh_choose
-
+    pause(1)
     call alt_day4_fz_sh_menu
-       
+    pause(1)
     call alt_day4_fz_old_camp
-
+    pause(1)
     call alt_day4_fz_xroad
-    
+    pause(1)
     call alt_day4_fz_exit
-
+    pause(1)
     call alt_day4_fz_herbs
-    
+    pause(1)
     if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
         jump alt_day5_fz_start
     elif alt_day4_fz_sh == 2:
@@ -44,17 +50,15 @@
         jump alt_day5_dv_start
 
 label alt_day5_fz_start:
+    $ persistent.sprite_time = "sunset"
+    $ sunset_time()
+    $ alt_chapter(5, u"Лена. ФЗ. Утро.")
     call alt_day5_fz_begin
+    pause(1)
     if routetag == "mt7dl":
         jump alt_day5_neu_begin
     else:
         return
-
-
-
-
-
-
 
 
 
