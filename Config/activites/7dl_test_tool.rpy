@@ -1,4 +1,4 @@
-﻿init :
+﻿init:
     $ mods["scenario__sdl_selector"] = u"Селектор 7дл"
     $ mod_tags["scenario__sdl_selector"] = ["length:days","gameplay:vn","protagonist:male"]
     
