@@ -8174,8 +8174,10 @@ label alt_day6_mi_dj_forgiveness:
     "Проломившись через очередные кусты, мы вышли прямиком к домику, который я делил с вожатой."
     show mi normal pioneer with dspr
     $ meet('mi','Намики')
+    $ alt_meet['mi'] = u"Намики"
     mi "Любопытно-любопытно, что ты там мне приготовил."
     $ meet('mi','Мику')
+    $ alt_meet['mi'] = u"Мику"
     "Промурлыкала японка, деловито таща меня за собой на буксире."
     window hide
     play sound sfx_open_dooor_campus_2
