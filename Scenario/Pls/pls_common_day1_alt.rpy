@@ -1,4 +1,4 @@
-﻿label alt_day1_start:
+﻿label alt_day1_alt_start:
     call alt_day1_vars
     $ persistent.sprite_time = "day"
     $ night_time()

@@ -260,7 +260,3 @@ label alt_day4_sl_7dl_vars:
 label alt_day6_sl_7dl_vars:
     $ alt_day6_sl_7dl_transit = False
     return
-    
-label alt_day6_us_7dl_vars:
-    $ alt_day6_us_7dl_tr = False
-    return

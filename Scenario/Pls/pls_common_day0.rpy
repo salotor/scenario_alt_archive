@@ -184,7 +184,7 @@ label alt_day0_opening:
     with dissolve2
     stop music fadeout 5
     $ renpy.pause(5, hard=True)
-    if alt_day_binder == 1
+    if alt_day_binder == 1:
         jump alt_day1_alt_start
     else:
         jump alt_day1_start

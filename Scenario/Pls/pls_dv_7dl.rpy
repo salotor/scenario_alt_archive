@@ -73,7 +73,7 @@ label alt_day5_dv_7dl_start:
     pause(1)
     call alt_day5_dv_7dl_lunch
     pause(1)
-     $ persistent.sprite_time = "sunset"
+    $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(5, u"Алиса. 7ДЛ. Вечер")
     call alt_day5_dv_7dl_supper

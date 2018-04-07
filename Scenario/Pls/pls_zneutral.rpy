@@ -172,8 +172,9 @@ label alt_day5_neu_begin:
         $ alt_chapter(5, u"Одиночка. Костёр")
         call alt_day5_neu_campfire_doom
         pause(1)
-        call alt_day5_neu_sleepnight
-        pause(1)
+        if not (mt_pt >= 7 and alt_day5_neu_mt_voyeur != 0): # Наверное так, но я не уверен. Без проверки Семён сначала спать ложится, а потом дневник читает / вожатую хентаит, что точно не есть правильно.
+            call alt_day5_neu_sleepnight
+            pause(1)
         if mt_pt >= 7 and alt_day5_neu_mt_voyeur != 0:
             $ routetag = "mt7dl"
             call alt_day5_neu_mt_selector

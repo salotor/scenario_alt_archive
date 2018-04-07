@@ -5,22 +5,22 @@
     $ night_time()
     call alt_day1_begin
     pause(1)
-   $ persistent.sprite_time = "day"
+    $ persistent.sprite_time = "day"
     $ day_time()
     $ alt_chapter(1, u"Пробуждение")
     call alt_day1_bus_start
     pause(1)
-    $ alt_chapter(1, u"Прибытие")
-    call alt_day1_arrival
-    pause(1)
     $ alt_chapter(1, u"Первое знакомство")
     call alt_day1_firts_met
+    pause(1)
+    $ alt_chapter(1, u"Прибытие")
+    call alt_day1_arrival
     if not alt_day1_sl_conv:
         if herc or loki:
-        call alt_day1_chase1
-        $ alt_chapter(1, u"Пристань")
-        call alt_day1_dock
-        pause(1)
+            call alt_day1_chase1
+            $ alt_chapter(1, u"Пристань")
+            call alt_day1_dock
+            pause(1)
     $ alt_chapter(1, u"Вожатая")
     call alt_day1_mod_tan
     pause(1)
