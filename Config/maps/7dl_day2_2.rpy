@@ -69,14 +69,10 @@ label alt_day2_eventEv_un_mi_house:
     pause(1)
     if lp_un >= 6:
         if loki:
-            $ lp_un += 2
-            window hide
             call alt_day2_un_loki_date
             window hide
             return
         elif herc:
-            $ lp_un += 2
-            window hide
             call alt_day2_un_herc_date
             window hide
             return
