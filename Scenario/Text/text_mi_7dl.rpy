@@ -9628,7 +9628,7 @@ label alt_day7_mi_7dl_begin:
     with fade
     return
 
-label alt_day7_mi_7dl_wakeup
+label alt_day7_mi_7dl_wakeup:
     if alt_day6_mi_7dl_left:
         scene bg int_house_of_mt_sunset with dissolve
         play ambience ambience_int_cabin_evening fadein 1
