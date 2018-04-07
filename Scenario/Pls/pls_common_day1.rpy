@@ -10,11 +10,11 @@
     $ alt_chapter(1, u"Пробуждение")
     call alt_day1_bus_start
     pause(1)
-    $ alt_chapter(1, u"Прибытие")
-    call alt_day1_arrival
-    pause(1)
     $ alt_chapter(1, u"Первое знакомство")
     call alt_day1_firts_met
+    pause(1)
+    $ alt_chapter(1, u"Прибытие")
+    call alt_day1_arrival
     if not alt_day1_sl_conv:
         if herc or loki:
             call alt_day1_chase1
