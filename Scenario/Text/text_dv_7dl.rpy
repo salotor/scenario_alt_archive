@@ -490,8 +490,8 @@
     me "А что, нельзя как-нибудь…"
     show dv normal pioneer2 at cright with dissolve
     dv "Нельзя. Придём, пожжём костерок, поиграем на гитаре. Романтика!"
-    "Она пыталась выглядеть искушённой и циничной, последнее слово произнесла с эдаким снисходительным видом. Правильно, какая уж там романтика, в семнадцать-то лет!
-    Я спрятал улыбку и серьёзно кивнул."
+    "Она пыталась выглядеть искушённой и циничной, последнее слово произнесла с эдаким снисходительным видом. Правильно, какая уж там романтика, в семнадцать-то лет!"
+    "Я спрятал улыбку и серьёзно кивнул."
     me "Картошку берём? Печь."
     dv "Нет. Ты что, не наелся?" 
     show dv smile pioneer2 with dissolve
@@ -518,7 +518,8 @@
     "Молча миновав просматриваемую территорию, мы вломились в кусты черемухи и обнаружили там недостроенный сектор кирпичного забора, временно забранный рабицей."
     "Ну да, а как известно, нет ничего более постоянного, чем временные меры. Я подсадил девочек, передал им гитару и перебрался сам, спрыгнув уже за территорией лагеря."
     play sound sfx_uliana_jumps_down
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -957,7 +958,8 @@ label alt_day4_dv_7dl_forest:
     "По-другому, скорее всего, не умеет, отсюда и общая шкиданутость. Не научили папа с мамой и шебутные подружки."
     "Я усмехнулся."
     th "О да, зная Лену — она, конечно, много чему научить сможет. Но только не выражать собственные эмоции. Cаму бы кто поднатаскал."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -1357,7 +1359,8 @@ label alt_day4_dv_7dl_silent_hour:
             me "Так что владей!"
             $ alt_day4_dv_7dl_walkman_presented = True
             $ lp_dv += 1
-            stop music fadeout 6
+            stop music fadeout 3
+            stop ambience fadeout 6
             window hide
             with fade
             return
@@ -2316,7 +2319,8 @@ label alt_day4_dv_7dl_silent_hour:
             show dv cry pioneer2 with dissolve
             "Почему-то сейчас она казалась какой-то… Не знаю. Бледной?"
             "Скорее, зелёной."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -2346,7 +2350,8 @@ label alt_day4_dv_7dl_append:
             else:
                 "Да только ключей вот нет…"
                 "Похоже, придётся сделать набег на медикаменты вожатой."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -2502,7 +2507,8 @@ label alt_day4_dv_7dl_mt_aid:
     dv "Если ты имеешь в виду, пойду ли я ужинать — ответ положительный."
     show dv laugh pioneer2 at center with dissolve
     dv "И только попробуй сесть куда-нибудь не рядом!"
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -2936,7 +2942,8 @@ label alt_day4_dv_7dl_aidpost:
             $ alt_day4_dv_7dl_vodka = True
             "Мы завернули с собой ещё пяток ношпин на всякий пожарный и захлопнули дверь."
             "Время уже вплотную приближалось к ужину."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -3071,7 +3078,8 @@ label alt_day4_dv_7dl_supper:
     "А тут — убить день не на компьютерные игрушки или социальные сети, а на подготовку к чему-то хорошему…"
     "Я поймал себя на мысли, что… Горжусь собой!"
     "Та самая приятная усталость, которая возможна лишь после того, как выложишься весь в попытках сделать что-то хорошее."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -3192,7 +3200,8 @@ label alt_day4_dv_7dl_sleeptime:
     scene black 
     with fade3
     "Уже выключаясь, я попросил, чтобы она приснилась мне."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -3439,7 +3448,8 @@ label alt_day4_dv_7dl_roadtrip:
             voice "И тебе долгих лет жизни."
             "Ухмыльнулся он, развернулся и ушёл."
             "Всегда хотел уметь так. {w}Настолько показательно невсерьёз относиться ко всему — это сродни искусству."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -3497,7 +3507,8 @@ label alt_day4_dv_7dl_alco:
     "Она рассмеялась и, отойдя назад на пару шагов, поманила меня за собой."
     cs "Шевелись."
     "Я немного задержался у машины, и, после пары секунд раздумий, упрятал портвейн в чемодан Шурика. Почему нет? В тряпках оно будет защищено, а носильщик оного чемодана известен заранее."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -3543,7 +3554,8 @@ label alt_day4_dv_7dl_back_to_camp:
     cs "Тронулись, что ли?"
     "И мы тронулись. Часов до четырёх мы ехали, перебрасываясь односложными  фразами, а после меня выключило."
     show blinking
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -3622,7 +3634,8 @@ label alt_day5_dv_7dl_alco_morning:
     scene expression Desat("bg int_house_of_mt_sunset") with fade
     "Я прошмыгнул под одеяло и, блаженно потянувшись, затих."
     "Спать."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -3833,7 +3846,8 @@ label alt_day5_dv_7dl_begin:
     "Вздохнув, я направил стопы в сторону домика — коротать время и готовиться к огоньку."
     dreamgirl "Когда ещё представится возможность узнать чуть-чуть об окружающих пионерах!"
     "Спорить с такой логикой не хотелось, поэтому спустя ровно полтора часа я уже стоял перед дверями, ведущими в клуб."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -4128,7 +4142,8 @@ label alt_day5_dv_7dl_roadtrip:
     "Вздохнув, кибернетик поднялся и поплёлся в каморку за партией стульев. Ему работать, мне пить чай. Немного подумав, я долил заварки так, что от крепости во рту вязать стало. Зато сон удалось успешно загнать на задворки сознания."
     "Тихо, спокойно, если не считать погромыхивания из подсобного помещения. Для полноты кайфа не хватает только Рыжевской, но раз у нас мероприятие – думаю, она явится."
     "Импровизированный завтрак подошёл к концу – и вовремя."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -4556,7 +4571,8 @@ label alt_day5_dv_7dl_candle:
     window hide
     scene bg ext_clubs_day with flash
     "Как наскипидаренный, я вылетел прочь из клуба, бросив через плечо нечто невразумительное."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -5087,7 +5103,8 @@ label alt_day5_dv_7dl_dinner:
         play sound eat_horn fadein 3
         "Меня спас сигнал горна."
         "Развернувшись на месте, Алиса ушла, оставив меня в одиночестве."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -5448,7 +5465,8 @@ label alt_day5_dv_7dl_lunch:
     "Фыркнула мелкая и вытерла мокрые руки о мою рубашку."
     us "Пошли жратеньки."
     me "Яволь."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -5728,7 +5746,8 @@ label alt_day5_dv_7dl_supper:
     "И канула в подпространство."
     th "Её-то, пожалуй, обидишь."
     th "Не дразнится, и то хлеб."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -6061,7 +6080,8 @@ label alt_day5_dv_7dl_evening:
     th "Некогда!"
     "Взяв низкий старт, я кинулся вслед за Алисой."
     "Надеюсь, не облажался с направлением."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -6438,7 +6458,8 @@ label alt_day5_dv_7dl_night:
     "Финальный прогон, концерт, танцы… Трудный день, да?"
     "Очень."
     "Сдерживаемая до поры тёплая, уютная темнота хлынула в сознание."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -7145,7 +7166,8 @@ label alt_day6_dv_7dl_begin:
     me "Алиса, дверь придержи. Спасибо."
     play sound sfx_open_door_kick
     "Я протиснулся мимо неё в столовую."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -7841,7 +7863,8 @@ label alt_day6_dv_7dl_breakfast:
     with dissolve
     "Я мгновенно собрался и выскочил за дверь! Я бежал так, будто за мной гонятся все черти преисподней, разве что только не вилял, опасаясь стрельбы в затылок."
     "Ни одной лишней секунды оставаться у микрофонной стойки я не собирался!"
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -7994,7 +8017,8 @@ label alt_day6_dv_7dl_dinner:
             $ alt_day6_dv_7dl_mi_route = True
             $ lp_un += 1
             window hide
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -8092,7 +8116,8 @@ label alt_day6_dv_7dl_sl:
                 me "Да иди, иди… Сразу бы сказала, что купаться не хочешь."
                 "Не говоря больше ни слова, я поднялся и поспешил вслед Славе."
                 hide dv with dissolve
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -8202,7 +8227,8 @@ label alt_day6_dv_7dl_sl_help:
     show sl normal sport with dspr
     sl "Сидишь?"
     "Остановилась рядом Славя."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -8709,7 +8735,8 @@ label alt_day6_dv_7dl_sl_help2:
             dv "Разумеется, нет!"
             "Я только вздохнул."
             "Что я ещё мог на это ответить?"
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -8846,7 +8873,8 @@ label alt_day6_dv_7dl_un:
     
         "В лагерь мы успели практически одновременно с открытием концерта."
         "Алиса убежала куда-то вниз — видимо, к себе в домик, а мы с Леной пошли на эстраду."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -8994,7 +9022,8 @@ label alt_day6_dv_7dl_hl_failer2:
     dreamgirl "Давно ли ты стал таким ответственным?"
     th "Всю жизнь был."
     $ alt_day6_dv_7dl_transit = True
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -9689,7 +9718,8 @@ label alt_day6_dv_7dl_concert:
         "Проворчал я."
         me "Понятия не знаю, на что ты опять надулась, но фига с два я за тобой буду бегать. Адью."
     "Раскланявшись в дверях со Славей и Мику, я вышел на улицу."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -9982,7 +10012,8 @@ label alt_day6_dv_7dl_dance:
             scene anim_square_party with dissolve
         else:
             $ alt_day_catapult = 1 
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -10209,7 +10240,8 @@ label alt_day6_dv_7dl_escape_convince:
         "Я отшатнулся, перехватив взгляд Жужелицы на себе."
         th "Свят-свят-свят!"
         "Украдкой перекрестив спину пригласившему её Электронику, я перевёл дух и утёр испарину со лба."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -10415,7 +10447,8 @@ label alt_day6_dv_7dl_sl_dancing:
     sl "Ступай-ка ты умываться и баюшкать, ладно? Завтра отъезд, перед ним хорошо бы выспаться."
     "Я кивнул и последовал её совету."
     play music music_list["a_promise_from_distant_days"] fadein 3
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -10492,7 +10525,8 @@ label alt_day6_dv_7dl_un_dancing:
     "Я смотрел ей в спину и не ощущал ровным счётом ничего."
     "Как будто меня подняли за ноги и вытрясли из карманов всё, что я мог испытывать в этот момент."
     "Дискотека потихоньку подходила к концу, и меня не стали останавливать, когда я побрёл искать политического убежища в родном домике."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -10565,7 +10599,8 @@ label alt_day6_dv_7dl_mt_dancing:
         "И вожатая, звонко поцеловав меня в щёку, ретировалась."
         hide mt
     "Пока вечер не стал ещё более томным, я поспешил развернуться и спрятаться в собственном домике."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -10684,7 +10719,8 @@ label alt_day6_dv_7dl_dv_dancing:
     "Она схватила меня за руку и потащила за собой прочь с танцплощадки."
     me "Куда ты меня тащишь?!"
     dv "Будить верблюд{b}а{/b}, пока лежит. Бегоооом!"
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -10775,7 +10811,8 @@ label alt_day6_dv_7dl_non_love:
     "Вопреки даже тому, что мы с Алисой танцевали каждый медленный танец."
     "А может, и благодаря этому…"
     "Так или иначе, мне здорово полегчало, когда мучениям был положен конец."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -10967,7 +11004,8 @@ label alt_day6_dv_7dl_love_scene:
         "Вместо ответа я её поцеловал:"
         me "Догадайся."
         "И, взмахнув рукой, зашагал на север."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -11164,7 +11202,8 @@ label alt_day6_dv_7dl_sleeptime:
             window hide
             play sound sfx_click_2
             scene bg int_house_of_mt_night2 with dissolve
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -11320,7 +11359,8 @@ label alt_day7_dv_7dl_begin:
     show unblink
     scene bg int_house_of_mt_sunset with dissolve
     "И я открыл глаза у себя в домике."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -11457,7 +11497,8 @@ label alt_day7_dv_7dl_router:
     with dissolve
     "Как-то мимо внимания пролетел и завтрак, и попытки немного выстроить пионеров."
     "Мы всё равно сбивались в неорганизованное стадо."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -11571,7 +11612,8 @@ label alt_day7_dv_7dl_un:
     th "Ну вот, несколько дней я себе выгадал — а дальше провались оно всё."
     "Поставив таким образом точку, я поднялся и зашагал к лагерю."
     $ alt_day7_dv_7dl_check = 4
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -11770,7 +11812,8 @@ label alt_day7_dv_7dl_sl:
     me "Как прикажете, мэм!"
     "Улыбнулся я."
     $ alt_day7_dv_7dl_check = 22
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -11838,7 +11881,8 @@ label alt_day7_dv_7dl_mt:
     "Не слушая больше укоров внутреннего голоса, я пошёл в домик, собирать своё барахло."
     "Правда, оно всё уместилось у меня на плечах да по карманам."
     "А то, что не вместилось — то уместил рюкзак."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -12268,7 +12312,8 @@ label alt_day7_dv_7dl_dv:
     else:
         dv "В автобусе!"
         "Она махнула рукой и скрылась за домиками."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -12319,7 +12364,8 @@ label alt_day7_dv_7dl_loki:
     me "Никуда без печалек."
     me "Всё шутишь… А давай… Давай попробуем вернуться?"
     dv "То есть?"
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -12715,7 +12761,8 @@ label alt_day7_dv_7dl_bus:
     stop ambience fadeout 2
     $ persistent.sprite_time = "night"
     scene bg int_bus_people_night
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -12844,7 +12891,8 @@ label alt_day7_dv_7dl_ending_router:
         "Я так и уснул, чувствуя плечом тепло Лены."
     else:
         "И я уснул."
-    stop music fadeout 6
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
     with fade
     return
