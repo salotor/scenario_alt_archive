@@ -11,9 +11,10 @@
     $ alt_chapter(2, u"Завтрак")
     call alt_day2_bf
     pause(1)
-    call alt_day2_guide
-    pause(1)
-    if alt_day1_un_dated != 1:
+    if alt_day1_un_dated == 1:
+        call alt_day2_guide
+        pause(1)
+    else:
         call alt_day2_convoy
         pause(1)
     call alt_day2_map_prepare
