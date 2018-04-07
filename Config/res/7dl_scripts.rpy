@@ -532,7 +532,7 @@ init -997 python:
     def get_sprite_7dl(file):
         return default_7dl_path+"Pics/sprites/%s" % (file)
     def get_sprite_ori(file):
-        return "images/sprites/%s" % (file)
+        return get_image("sprites/%s") % (file)
         
     
     store.map_chibi = {

@@ -3,23 +3,23 @@
     $ mod_tags["scenario__sdl_selector"] = ["length:days","gameplay:vn","protagonist:male"]
     
     image scenery:
-        "images/anim/prolog_2.jpg" with Dissolve(.5) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.5) 
         pause 2.6
-        "images/anim/prolog_1.jpg" with Dissolve(.5) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.5) 
         pause 0.6
         repeat
         
     image scenery2:
-        "images/anim/prolog_2.jpg" with Dissolve(.4) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.4) 
         pause 2.0
-        "images/anim/prolog_1.jpg" with Dissolve(.4) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.4) 
         pause 0.4
         repeat    
         
     image scenery3:
-        "images/anim/prolog_2.jpg" with Dissolve(.25) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.25) 
         pause 1.4
-        "images/anim/prolog_1.jpg" with Dissolve(.25) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.25) 
         pause 0.25
         repeat
         
