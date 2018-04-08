@@ -1052,7 +1052,7 @@
     $ music_7dl["your_life"] = get_music_7dl("your_life_7dl.ogg")
     
 # sfx
-    $ music_list = {}
+    $ sfx_7dl = {}
 
     $ sfx_7dl["apple_bite"] = get_sfx_7dl("apple_bite_7dl.ogg")
     $ sfx_7dl["aunl"] = get_sfx_7dl("aunl_7dl.ogg")
