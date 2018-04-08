@@ -361,7 +361,7 @@ label alt_day0_start_h:
     "Дистанция прямого рывка."
     "Я верю в то, что всё это когда-нибудь закончится."
     stop music fadeout 3
-    play sound makarych_7dl fadein 0
+    play sound sfx_7dl["makarych"] fadein 0
     window hide
     scene believe_in_pain with flash_red
     with fade2
@@ -566,7 +566,7 @@ label alt_day0_start_h:
     stop sound_loop
     stop ambience
     window hide
-    play sound makarych_7dl fadein 0
+    play sound sfx_7dl["makarych"] fadein 0
     "В общем, день определённо не задался."
     window hide
     scene bg ext_entrance_night_clear_7dl
@@ -971,7 +971,7 @@ label alt_day0_start_l:
     
 label alt_day0_d3_prologue:
     $ plthr = u"Септим"
-    play sound wakeup_7dl fadein 3
+    play sound sfx_7dl["wakeup"] fadein 3
     $ renpy.pause(4, hard=True)
     $ prolog_time()
     $ renpy.pause(2, hard=True)
@@ -1350,7 +1350,7 @@ label alt_day0_epic_fail:
         "Мы согласны умирать ради тех, кого любим, ради тех, кто сможет жить после нас."
         "Чего ради умираю я?"
         window hide
-        play sound makarych_7dl fadein 0
+        play sound sfx_7dl["makarych"] fadein 0
         "Газовый баллончик подал давление на свинцовый шарик, и маленькая круглая смерть вошла в мягкие ткани рядом с глазом. И ещё одна — в самый центр лба."
         scene black with fade
         "Ради чего? Ради бутылки водки?"

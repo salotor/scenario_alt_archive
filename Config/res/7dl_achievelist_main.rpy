@@ -3181,11 +3181,11 @@ label alt_achvA_mi7dl_true:
     window hide
     scene expression SS_com("cg d6_mi_vyluthere_7dl")
     show anim_grain
-    play sound white_noise_7dl
+    play sound sfx_7dl["white_noise"]
     pause(1)
     scene expression SS_com("cg d6_mi_vyluthere_7dl")
     show anim_grain
-    play sound white_noise_7dl
+    play sound sfx_7dl["white_noise"]
     scene white with flash
     "Что такое - думать."
     window hide
@@ -3215,7 +3215,7 @@ label alt_achvA_mi7dl_true:
     "Ты обещал, что…"
     scene expression SS_com("bg ext_adductius_7dl")
     show anim_grain
-    play sound white_noise_7dl
+    play sound sfx_7dl["white_noise"]
     scene white with flash
     "Сегодня двадцать седьмое октября."
     "Я никогда не умру и ничего не забуду."
@@ -3247,7 +3247,7 @@ label alt_achvA_mi7dl_true:
     "Ты. Всё ещё. Не приходишь."
     scene expression Desat("cg d5_mi_conv_7dl")
     show anim_grain
-    play sound white_noise_7dl
+    play sound sfx_7dl["white_noise"]
     pause(.2)
     play sound sfx_head_heartbeat
     mi "Сеня-сан, зачем тебе вся эта аппаратура?"
@@ -3354,7 +3354,7 @@ label alt_achvA_mi7dl_true:
     window hide
     play music music_7dl["emptiness"] fadein 3
     $ persistent.mi_7dl_true = True
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     show acm_logo_mi_thank_you with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

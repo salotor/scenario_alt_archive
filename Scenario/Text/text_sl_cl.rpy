@@ -960,7 +960,7 @@ label alt_day4_sl_laundry:
     "Хорошая девочка. {w}Только нет у неё будущего, как у солдата."
     "Потому что создана она не защищать, а воссоздавать."
     "Я присел и бросился на неё."
-    play sound deagle_shot_7dl fadein 0
+    play sound sfx_7dl["deagle_shot"] fadein 0
     "Со сломанной ногой мой спектакль выглядел сомнительным даже для меня, но «соком» в её руках отрывисто кашлянул."
     "А мне в грудь забили острый, раскалённый гвоздь."
     "Славя отступила на шаг назад, зажав рот руками, неверяще глядя на собственные руки. {w}Её глаза округлились от ужаса."
@@ -3234,7 +3234,7 @@ label alt_day5_sl_begin:
     "Больше всего сейчас нравилось именно лежать вот так и смотреть в потолок."
     "А лучше закрыть глаза и отключиться  ещё ровно на столько же, на сколько бездействовал до этого."
     "Я ненавижу слово «спать» — и ёжусь всякий раз, когда услышу «марш в кровать, уже десятый час»."
-    play sound bed_squeak_7dl fadein 0
+    play sound sfx_7dl["bed_squeak"] fadein 0
     "Слева донесся скрип, вздох, и я скосил глаза в сторону шума."
     "И с трудом подавил желание вскочить, вскрикнуть или каким-либо другим образом изничтожить волшебство момента."
     "Потому что на соседней кровати, раскидав руки, улыбалась во сне…"
@@ -3884,7 +3884,7 @@ label alt_day5_sl_begin:
                 "Даже самой большой воли к жизни иногда недостаточно."
                 "Особенно, если бороться приходиться с такой вот бесславной кончиной."
                 window hide
-                play sound makarych_7dl fadein 0
+                play sound sfx_7dl["makarych"] fadein 0
                 "Расширяющиеся газы толкают свинцовый шарик — отличие от огнестрельного оружия только в технических деталях."
                 $ persistent.sprite_time = "sunset" 
                 scene black with fade
@@ -3895,7 +3895,7 @@ label alt_day5_sl_begin:
                 "Значит, мне пора."
                 window hide
                 stop sound_loop fadeout 0
-                play sound aunl_7dl
+                play sound sfx_7dl["aunl"]
                 $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
@@ -3920,7 +3920,7 @@ label alt_day5_sl_begin:
                 "И выдохнуть остатки жизни."
                 window hide
                 stop sound_loop fadeout 0
-                play sound aunl_7dl
+                play sound sfx_7dl["aunl"]
                 $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
@@ -3936,7 +3936,7 @@ label alt_day5_sl_begin:
                 "В конце концов, обо мне и так никто не помнил, даже когда я был живой."
                 play sound sfx_water_emerge
                 stop sound_loop fadeout 0
-                play sound aunl_7dl
+                play sound sfx_7dl["aunl"]
                 $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
@@ -8115,7 +8115,7 @@ label alt_day6_sl_begin:
         "Лениво спросил я, наблюдая за мечущейся туда-сюда девушкой."
         "Иногда попадались такие соблазнительные ракурсы…"
         "Но я иссох, иссяк и вообще было бы неплохо лечь поспать."
-        play sound blanket_7dl fadein 0
+        play sound sfx_7dl["blanket"] fadein 0
         "Но злая активистка бросила в меня одеждой."
         "Сама она к этому моменту уже полностью облачилась и даже неизвестно откуда добыла галстук."
         "Присела на край кровати и, вглядевшись мне в глаза, крепко, с оттяжкой, поцеловала."
@@ -10866,7 +10866,7 @@ label alt_day6_sl_cl_become_a_hero:
     "А это значит, что всё будет хо-ро-шо."
     show blackout_exh
     with dissolve
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_cata = True
     show acm_logo_sl_be_ok with moveinright:
         pos (1600, 1020)
@@ -15996,7 +15996,7 @@ label alt_day7_sl_loop:
         "Я запнулся, и урод успел повернуться в мою сторону."
         stop ambience
         window hide
-        play sound makarych_7dl fadein 0
+        play sound sfx_7dl["makarych"] fadein 0
         scene believe_in_pain with flash_red
         "Проблема, не имеющая решения, мотивы надоевшей песни."
     elif loki:
@@ -16126,7 +16126,7 @@ label alt_day7_sl_will:
     $ volume(0.3, 'music')
     window hide
     scene cg d4_sl_sleeping_7dl with flash
-    play sound nesmogla_7dl fadein 2
+    play sound sfx_7dl["nesmogla"] fadein 2
     "Стишок, что когда-то я так и не прочитал ей."
     $ volume(0.9, 'music')
     "Послание языком памяти."
@@ -16164,7 +16164,7 @@ label alt_day7_sl_will:
     "И встал навстречу докторше."
     "В свои права вступал новый день, а с ним — и новые надежды!"
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_int_ok = True
     show acm_logo_sl_ok with moveinright:
         pos (1600, 1020)
@@ -16276,7 +16276,7 @@ label alt_day7_sl_duty:
     me "А можно я вместо этого пойду Пирата потискаю?"
     "Подмигнул я."
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_int_good = True
     show acm_logo_sl_fantazm with moveinright:
         pos (1600, 1020)
@@ -16299,7 +16299,7 @@ label alt_day7_sl_lone:
     "Туда, где нет никаких сложностей и люди не делают больно друг другу."
     "В безликое сетевое существование."
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_int_bad = True
     show acm_logo_sl_lone with moveinright:
         pos (1600, 1020)
@@ -16490,7 +16490,7 @@ label alt_day7_sl_good:
     "Она хихикнула:"
     sl "Как стараться будешь."
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_good_ussr = True
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
@@ -16506,7 +16506,7 @@ label alt_day7_sl_rf_good:
     $ persistent.sprite_time = "day"
     $ prolog_time()
     scene bg int_plats_7dl with flash
-    play ambience train_depart_7dl fadein 3
+    play ambience sfx_7dl["train_depart"] fadein 3
     "Шаг. {w}Шаг."
     "Мне нравились фильмы про Данилу Багрова — было в них что-то такое странное, пропитанное насквозь неизбывностью и тоской."
     "Безрадостно звучали и они, и звуки их музыкального сопровождения."
@@ -16647,7 +16647,7 @@ label alt_day7_sl_rf_good:
     "Улицы размазались от скорости, сливаясь в неясные, дрожащие стены туннеля с конечной точкой в той реальности, которую я, похоже, заслужил, из неплотно прикрытой форточки в лицо прыгнул порыв морозного ветра, и я подумал:"
     th "Неужели  я пытаюсь вспомнить, что такое сомнения?"
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_good_rf = True
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
@@ -16812,7 +16812,7 @@ label alt_day7_sl_reject_same:
     "Я взял её ладони и поцеловал каждую."
     me "И что ты — всё-таки — не сон."
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_reject_same = True
     show acm_logo_sl_same_place with moveinright:
         pos (1600, 1020)
@@ -17016,12 +17016,12 @@ label alt_day7_sl_rej_end:
     scene expression Sepia("bg int_plats_7dl")
     show anim_grain
     with fade
-    play ambience train_depart_7dl fadein 3
+    play ambience sfx_7dl["train_depart"] fadein 3
     "А она сидела в своем плаце, и мёртвыми незрячими глазами смотрела сквозь бегущие назад развилки путей, столбы, километровые отметки, дома, людей, людей, людей…"
     "Ничем не примечательная симпатичная девушка с золотыми волосами, заплетёнными в две косы, с голубым взглядом мечтателя, успевшая уже истереться из памяти того, к кому она так спешила."
     "Плачущая от невыносимой боли в сердце девушка в холодном плацкартном вагоне, уезжающая из чужого ей города."
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     stop ambience fadeout 4
     $ persistent.sl_cl_reject_late = True
     show acm_logo_sl_too_late with moveinright:
@@ -17115,7 +17115,7 @@ label alt_day7_sl_cl_bad:
     "Меня мучила всего одна мысль:"
     "Неужели мы оба ошиблись?"
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_bad = True
     show acm_logo_sl_bad with moveinright:
         pos (1600, 1020)
@@ -17268,7 +17268,7 @@ label alt_day7_sl_rf2:
     "Рассмеялась Славя."
     sl "Ни за что не угадаешь, что я тебе приготовила!"
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     play music music_7dl["refuse_to_replay"] fadein 3
     $ persistent.sl_cl_good_rf2 = True
     show acm_logo_sl_worth with moveinright:

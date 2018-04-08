@@ -2218,7 +2218,7 @@ label alt_day4_mi_xroad:
     play music music_list["pile"] fadein 1
 
     "Он замахнулся арматурой."
-    play sound mpbt_7dl
+    play sound sfx_7dl["mpbt"]
     with flash
 
     "Как и вчера…Время встало."
@@ -3084,7 +3084,7 @@ label alt_day4_mi2sl_mi:
     me "Один… Три!"
     window hide
     $ renpy.pause(4.4, hard=True)
-    play sound snap_7dl fadein 0
+    play sound sfx_7dl["snap"] fadein 0
     scene white with flash
     $ renpy.pause(9.4, hard=True)
 
@@ -3437,7 +3437,7 @@ label alt_day4_mi_date:
         show mi happy pioneer at center
         window hide
         $ renpy.pause(4.4, hard=True)
-        play sound snap_7dl fadein 0
+        play sound sfx_7dl["snap"] fadein 0
         scene white with flash
         $ renpy.pause(2.4, hard=True)
     
@@ -3593,7 +3593,7 @@ label alt_day5_mi_start:
     $ alt_chapter(5, u"Мику. Утро.")
     window hide
     play music music_list["raindrops"] fadein 3
-    play sound_loop ambience_rain_7dl fadein 5
+    play sound_loop sfx_7dl["ambience_rain"] fadein 5
     scene bg ext_houses_rainy_day_7dl with dissolve
     $ renpy.pause(4, hard=True)
     show wet1

@@ -1228,7 +1228,7 @@ label alt_day6_mt_7dl_declaration0:
             "На карте был один-единственный файл."
             "Wav, записанный явно с диктофона моего телефона."
             dreamgirl "Ну!"
-            play sound push_the_button_7dl fadein 3
+            play sound sfx_7dl["push_the_button"] fadein 3
             "Нет, это не запись, это мой внутренний голос балуется."
             th "Уймись, чахотка, а то я так никогда не решусь."
             dreamgirl "Всё-всё…"
@@ -2619,7 +2619,7 @@ label alt_day6_mt_7dl_catha:
         "Сказал я сам себе."
         th "Ожидаемо."
         scene gameover with flash
-        play sound aunl_7dl
+        play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
@@ -2632,7 +2632,7 @@ label alt_day6_mt_7dl_catha:
         "Неделя там — ценой жизни здесь?"
         "Почему мне кажется, что не такая уж это и большая цена?"
         window hide
-        play sound makarych_7dl fadein 0
+        play sound sfx_7dl["makarych"] fadein 0
         scene bg int_store_7dl
         show anim_grain
         with fade
@@ -2643,7 +2643,7 @@ label alt_day6_mt_7dl_catha:
         play sound sfx_bodyfall_1
         scene gameover with flash
         stop sound_loop fadeout 0
-        play sound aunl_7dl
+        play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
@@ -2682,7 +2682,7 @@ label alt_day6_mt_7dl_catha:
         scene black with fade2
         pause(5)
         scene gameover with flash
-        play sound aunl_7dl
+        play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
@@ -5039,7 +5039,7 @@ label alt_day7_mt_7dl_good:
     window hide
     stop ambience
     stop sound_loop
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_good = True
     show acm_logo_mt_named_olga with moveinright:
         pos (1600, 1020)
@@ -5171,7 +5171,7 @@ label alt_day7_mt_7dl_bad:
         th "Ну, например…"
         "Дальше я думал только об этом."
     with dissolve
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
     $ persistent.mt_7dl_bad = True
     show acm_logo_mt_cause with moveinright:
@@ -5286,7 +5286,7 @@ label alt_day7_mt_7dl_ever_after:
     if herc:
         "И застыл на грязном полу магазинчика."
         stop ambience fadeout 3
-        play sound makarych_7dl fadein 0
+        play sound sfx_7dl["makarych"] fadein 0
         scene bg int_store_7dl with fade
         $ renpy.pause(1)
         show expression D3_intro("bg ext_countryside_day_7dl")
@@ -5357,7 +5357,7 @@ label alt_day7_mt_7dl_ever_after:
     window hide
     scene black with fade
     $ renpy.pause(2)
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_neutral = True
     show acm_logo_mt_ever_after with moveinright:
         pos (1600, 1020)
@@ -5431,7 +5431,7 @@ label alt_day7_mt_7dl_true:
     mt "По праву памяти."
     show blackout_exh
     with dissolve
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_true = True
     show acm_logo_mt_ending with moveinright:
         pos (1600, 1020)

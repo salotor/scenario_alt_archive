@@ -159,7 +159,7 @@
         "Гадина должна страдать."
         "Порыскав глазами, я нашёл подходящий предмет — им оказалось велосипедное колесо около кровати Ульяны."
         "И, размахнувшись как следует"
-        play sound window_glass_break_7dl
+        play sound sfx_7dl["window_glass_break"]
         with hpunch
         extend ", вышиб стёкла вместе с рамами."
         "Плюнув на пол на прощание, вскочил на подоконник и был таков."
@@ -2209,7 +2209,7 @@ label alt_day4_neu_lunch:
         "Твёрдое, зелёное, пахнет яблоком."
         "Я протёр фрукт о рукав."
         "На вкус…"
-        play sound apple_bite_7dl
+        play sound sfx_7dl["apple_bite"]
         "Тоже яблоко!"
         scene bg int_aidpost_day
         dreamgirl "И ты так просто его съел. {w}А вдруг оно отравлено?!"
@@ -2790,7 +2790,7 @@ label alt_day4_neu_lunch:
             un "Где!"
             "Лена взвизгнула и неловко подпрыгнула на месте, пытаясь одновременно отряхнуться."
             dv "Здесь!"
-            play sound volley_hit_7dl
+            play sound sfx_7dl["volley_hit"]
             "И Алиса, вознесясь в прыжке чуть ли не на километр, вколотила мяч почти вертикально вниз по ту сторону сетки."
             window hide
             scene bg ext_volley_court_7dl
@@ -4627,7 +4627,7 @@ label alt_day4_neu_map_dining_hall:
             "Нам ничего не оставалось, как проследовать за ней."
             window hide
             scene bg ext_house_of_dv_night with dissolve
-            play sound breath_7dl
+            play sound sfx_7dl["breath"]
             show dv normal pioneer2 at left with dspr
         
             me "Не ожидал от тебя такой пошлости, если честно."
@@ -5027,7 +5027,7 @@ label alt_day5_morningdream:
     
 label alt_day5_neu_start:
     play music music_7dl["too_quiet"] fadein 3
-    play sound_loop ambience_rain_7dl fadein 5
+    play sound_loop sfx_7dl["ambience_rain"] fadein 5
     if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
         scene bg int_aidpost_day with dissolve
         play ambience ambience_medstation_inside_day fadein 5
@@ -5896,7 +5896,7 @@ label alt_day5_neu_arrest:
     me "Где он только это научился?"
     ml2 "Всегда умел."
     stop music fadeout 5
-    play sound eat_horn_7dl
+    play sound sfx_7dl["eat_horn"]
     play sound sfx_open_door_clubs_2
     pause(1)
     "Наш разговор прервал сигнал горна, несущийся из раструба прямо над крыльцом, и появившаяся Ольга Дмитриевна."
@@ -9702,7 +9702,7 @@ label alt_day5_neu_lunch:
     with dissolve
     $ renpy.pause (1)
     play ambience ambience_forest_day fadein 1
-    play sound breath_7dl fadein 3
+    play sound sfx_7dl["breath"] fadein 3
     "Всё, бобик сдох."
     "Меня хватило минут на пятнадцать такого спурта, после чего ноги отказались слушаться."
     "В боку ощутимо закололо, а перед глазами потемнело."

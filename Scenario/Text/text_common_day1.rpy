@@ -236,7 +236,7 @@ label alt_day1_bus_start:
     "Смежные частоты. {w} Глухо."
     th "Ладно, дальше."
     $ volume (0.2,'sound_loop')
-    play sound white_noise_7dl fadeout 2
+    play sound sfx_7dl["white_noise"] fadeout 2
     "Я с грехом пополам пристроил наушники в ушах и переключил плеер в режим радиосканера."
     "FM-диапазон. {w} Глухо. {w} АМ-диапазон. {w} Глухо."
     stop sound
@@ -2067,7 +2067,7 @@ label alt_day1_chase:
             scene bg ext_path_sunset with dissolve
             $ renpy.pause (1)
             play ambience ambience_forest_day fadein 1
-            play sound breath_7dl fadein 3
+            play sound sfx_7dl["breath"] fadein 3
         
             "Пробежав весь лагерь насквозь, я начал понимать, что где-то разминулся с жертвой."
             "Я остановился, со злостью ударив кулаком по дереву, и, согнувшись, попробовал восстановить дыхание."

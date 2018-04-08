@@ -882,7 +882,7 @@ label alt_day1_alt_S:
     with dissolve
     sl "Да? {w}Спасибо. Я стараюсь придать помещению жилой вид, где это возможно, но сам понимаешь."
     "Наконец, она вытащила из шкафа комплект пионерской формы и кинула его мне."
-    play sound blanket_7dl fadein 0
+    play sound sfx_7dl["blanket"] fadein 0
     sl "Надеюсь, не ошиблась с размером. {w}Одевайся."
     me "Э… Ты не могла бы…"
     "Девушка понятливо улыбнулась и открыла дверцу шкафа, разделяя себя и меня."
@@ -1409,7 +1409,7 @@ label alt_day1_alt_L:
             th "Поймал!"
             "В прыжке, сделавшем честь иному голкиперу, я поймал ценный груз в воздухе."
             
-            play sound breath_7dl fadein 3
+            play sound sfx_7dl["breath"] fadein 3
             stop music fadeout 3
             if not (herc or loki):
                 th "Умён, гад."
@@ -2200,7 +2200,7 @@ label alt_day1_alt_U:
     me "Ладно."
     "Я ещё пожалею об этом."
     me "Давай попробуем."
-    play sound stahp_7dl
+    play sound sfx_7dl["stahp"]
     stop music fadeout 3
     $ renpy.pause(1, hard=True)
     show us grin sport with flash
@@ -2289,7 +2289,7 @@ label alt_day1_alt_U:
             me "Ну… Понеслась."
             window hide
             scene bg ext_dining_hall_near_sunset with dissolve
-            play sound metal_hit_on_metal_7dl
+            play sound sfx_7dl["metal_hit_on_metal"]
         
             "Подбежав к дверям столовой, я что было сил заколотил по ним подобранным орудием."
             "Грохот стоял страшный!"
@@ -2337,7 +2337,7 @@ label alt_day1_alt_U:
             stop music fadeout 3
             "Я закрыл глаза."
             play music music_list["everyday_theme"] fadein 3
-            play sound pouring_7dl
+            play sound sfx_7dl["pouring"]
             "А открыл их, когда мне на колени посыпалось нечто твёрдое и не сказать чтобы сыпучее."
             show us laugh sport with dspr
             us "Не спи, замёрзнешь!"
@@ -2476,7 +2476,7 @@ label alt_day1_alt_ev_A_S:
     play ambience ambience_camp_center_night
     "Мы шли немного по другому маршруту, чуть обходя столовую со стороны, и, сказать по правде, если бы я не знал абсолютно точно, что это столовая, я бы её не узнал."
     "Не то чтобы у меня был прогрессирующий топографический кретинизм, но всё-таки."
-    play sound pup_bark_7dl
+    play sound sfx_7dl["pup_bark"]
     show sl normal pioneer with dissolve
     "Славя резко остановилась."
     sl "Слышал?"

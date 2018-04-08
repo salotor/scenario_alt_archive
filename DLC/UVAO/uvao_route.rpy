@@ -1701,7 +1701,7 @@ label alt_day5_uvao_getting_up:
         "После этого она освободила наконец помещение. Вздохнув, я встал и принялся одеваться."
         "В пакете оказались несколько сдобных булок со вчерашнего ужина. Недолго думая, я сунул пакет в рюкзак."
     else:
-        play sound_loop phone_vibro_7dl fadein 2
+        play sound_loop sfx_7dl["phone_vibro"] fadein 2
         "Проснулся я от какого-то неприятного жужжания."
         th "Вибровызов…"
         "Не открывая глаз, привычно потянулся было вправо, чтобы добраться до стола и заткнуть этот чёртов телефон…{w} И уткнулся носом в стену!"
@@ -1985,7 +1985,7 @@ label alt_day5_uvao_tunnel:
     "Подобрав свою находку, я вставил её в колесо кремальеры."
     me "Дайте мне точку опоры, иииии…"
     "И ни хрена. Я надавил ещё сильнее, потом навалился всем телом, надеясь сдвинуть-таки заржавевший механизм. Тщетно."
-    play sound breath_7dl fadein 1
+    play sound sfx_7dl["breath"] fadein 1
     "Переводя дух, я снова огляделся. Глаза остановились на чёрной коробочке сбоку от двери - от кремальеры не дотянуться.{w} Под откидной крышкой обнаружилась кнопка без опознавательных знаков."
     stop sound fadeout 5
     "Немного подумав, я надавил кнопку, преодолевая усилие неожиданно тугой пружины…"
@@ -2232,7 +2232,7 @@ label alt_day5_uvao_evade_hentai_scene:
             linear 0.8 zoom 1.0 xalign 0.5 yalign 0.5
         window hide
         $ renpy.pause(2, hard=True)
-        play sound snap_7dl fadein 0
+        play sound sfx_7dl["snap"] fadein 0
         scene white with flash
         $ renpy.pause(2, hard=True)
         scene bg int_catacombs_living
@@ -2789,7 +2789,7 @@ label alt_day5_uvao_true_back:
     play ambience ambience_int_cabin_day fadein 1
     play sound sfx_close_door_campus_1
     "Ольги Дмитриевны не было видно, и я вошел, закрыв за собой дверь."
-    play sound eat_horn_7dl fadein 2
+    play sound sfx_7dl["eat_horn"] fadein 2
     "В этот же момент раздался горн, призывавший пионеров всех возрастов трапезничать."
     stop sound fadeout 2
     "Особо не церемонясь, я бросил рюкзак возле своей тумбочки и, выйдя из домика, направился к столовой."
@@ -2887,7 +2887,7 @@ label alt_day5_uvao_mines_begin:
         me "Юля, подожди-ка минутку."
         "Вытащив из кармана заветный коробок, я наощупь достал из него спичку." 
     window hide
-    play sound match_lights_7dl
+    play sound sfx_7dl["match_lights"]
     scene bg int_mine_crossroad
     show match_lights_7dl
     show uv normal at center behind match_lights_7dl
@@ -2914,7 +2914,7 @@ label alt_day5_uvao_mines_begin:
     uv "Налево."
     "Я зажёг ещё одну спичку."
     window hide
-    play sound match_lights_7dl
+    play sound sfx_7dl["match_lights"]
     scene bg int_mine_crossroad
     show match_lights_7dl
     show uv normal at center behind match_lights_7dl
@@ -2938,7 +2938,7 @@ label alt_day5_uvao_mines_begin:
         "Вдруг резко сказала Юля."
         "Я застыл столбом в ожидании следующих указаний."
         uv "Там опять кто-то есть."
-        play sound match_lights_7dl
+        play sound sfx_7dl["match_lights"]
         window hide
         scene bg int_mine_crossroad
         show match_lights_7dl
@@ -2976,7 +2976,7 @@ label alt_day5_uvao_from_mines_to_dinner:
     "Юля отпустила мою руку и пошла куда-то вперёд."
     th "Интересно, куда же это мы «пришли»?"
     window hide
-    play sound match_lights_7dl
+    play sound sfx_7dl["match_lights"]
     scene bg int_mine_door
     show uv normal at center
     with flash
@@ -3053,7 +3053,7 @@ label alt_day5_uvao_from_mines_to_dinner:
     "Она обвела меня более пристальным взглядом и снова повторила вопрос:"
     un "Где ты был?"
     me "Я… Ну, это…"
-    play sound eat_horn_7dl fadein 3 
+    play sound sfx_7dl["eat_horn"] fadein 3 
     "В голове проносились тысячи отмазок, одна нелепее другой, но тут вдруг прозвучал спасительный сигнал на обед."
     th "Фух, пронесло."
     stop sound fadeout 2
@@ -3084,7 +3084,7 @@ label alt_day5_uvao_mines_sh:
     uv "Он там, дальше."
     "Первым делом я решил осмотреться, куда же это Шурик нас притащил."
     window hide
-    play sound match_lights_7dl
+    play sound sfx_7dl["match_lights"]
     scene bg int_mine_halt
     show match_lights_7dl   
     show uv dontlike at center behind match_lights_7dl
@@ -3710,7 +3710,7 @@ label alt_day5_parking_back:
         linear 0.8 zoom 1.0 xalign 0.5 yalign 0.5
     window hide
     $ renpy.pause(2, hard=True)
-    play sound snap_7dl fadein 0
+    play sound sfx_7dl["snap"] fadein 0
     scene white with flash
     $ renpy.pause(2, hard=True)
     scene bg ext_camp_entrance_sunset
@@ -3781,7 +3781,7 @@ label alt_day5_parking_back:
     with dissolve
     play ambience ambience_camp_center_evening fadein 1
 
-    play sound eat_horn_7dl fadein 2
+    play sound sfx_7dl["eat_horn"] fadein 2
     "Сигнал к ужину настиг нас на площади. К этому времени я уже немного поостыл."
     stop sound fadeout 2
     th "Вообще, если подумать, то надо сначала поужинать, а потом уже ругаться с Ольгой, или с кем там ещё придётся."
@@ -4411,7 +4411,7 @@ label alt_day5_capture_sh_together:
     scene bg ext_path_day with dissolve
 
     "Постепенно тропинка расширилась и идти стало немного легче, но к этому времени мы с Электроником успели изрядно вымотаться."
-    play sound_loop breath_7dl fadein 5
+    play sound_loop sfx_7dl["breath"] fadein 5
     "Потные ладони упорно пытались соскользнуть с запястий, уставшие пальцы норовили разжаться, спину ломило."
     "Рука Шурика давила мне на шею. Оттягивающее наши руки седалище Шурика тоже не пробуждало бурной радости."
     dreamgirl "Лучше бы вы девочку какую несли! Славю, скажем. Или ту же Лену - её, кстати, есть за что - она вам, балбесам, жизнь спасла…{w} Да хоть вожатую - всё приятнее было бы!"
@@ -4574,7 +4574,7 @@ label alt_day5_capture_sh_together:
     scene bg ext_dining_hall_away_sunset with dissolve2
 
     "Плюхнувшись на скамейку недалеко от входа, я откинулся на спинку и наконец-то расслабился."
-    play sound eat_horn_7dl fadein 2
+    play sound sfx_7dl["eat_horn"] fadein 2
     "Впрочем, долго отдыхать мне было не суждено - через несколько минут с небес прогремели трубы, зовущие пионеров вкусить вечернюю трапезу."
     stop sound fadeout 2
     "Вздохнув, я поднялся и повёл свой организм питаться."

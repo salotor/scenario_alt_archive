@@ -955,7 +955,7 @@ label alt_day4_un_7dl_declaration:
     show un shy pioneer with dspr
     stop music fadeout 3
     dreamgirl "You and me baby ain't nothin' but mammals!{w} So let's do it like they do on the Discovery Channel!"
-    play sound mammal_7dl fadein 1
+    play sound sfx_7dl["mammal"] fadein 1
     "Чёртова эйдетическая память воспроизвела всё, вплоть до дурацкой ритмики песенки."
     "Память и немного либидо."
     "Я остановился и перевёл дух."
@@ -2154,7 +2154,7 @@ label alt_day4_un_7dl_dinner:
         me "Один… Три!"
         window hide
         $ renpy.pause(4.4, hard=True)
-        play sound snap_7dl fadein 0
+        play sound sfx_7dl["snap"] fadein 0
         scene white with flash
         $ renpy.pause(3.4, hard=True)
     
@@ -4437,7 +4437,7 @@ label alt_day5_un_7dl_cleaning:
     th "Ну тебя в баню."
     dreamgirl "К слову о банях — было бы неплохо сполоснуться. Узнай, где здесь душ или шаечками размахивают, потому что на месте Лены я бы такого чумазоида к телу точно подпускать не решилась."
     th "А что не так-то?"
-    play sound blanket_7dl fadein 0
+    play sound sfx_7dl["blanket"] fadein 0
     "Я скомкал рубашку и запулил трёхочковый в корзину у входа."
     th "Я сейчас переоденусь, умоюсь и…"
     dreamgirl "…и останусь потным, вонючим и три дня не мывшимся?"
@@ -8813,7 +8813,7 @@ label alt_day6_un_7dl_dinner:
         un "P.S.:раз уж там всё равно бездельничаешь, захвати и мне что-нибудь с ужина, хорошо?"
         me "Спасибо что поинтересовались моим мнением!"
         "Язвительно ответил я пустому воздуху, тщательно разрывая записку на мелкие клочки и отпуская их по ветру."
-        play sound eat_horn_7dl
+        play sound sfx_7dl["eat_horn"]
         "Я склонялся к тому, чтобы наплевать на постскриптумы и просто-напросто утащить беглянку в столовую — туда, где она сможет нормально поесть."
         "Но горн расставил всё по местам."
         "Вздохнув, я поплёлся в столовую, гадая, чего бы эдакого можно утащить голодной девочке."
@@ -9194,7 +9194,7 @@ label alt_day6_un_7dl_letmeout:
         "Свинцовый шарик проколол растянувшееся донельзя мгновение и нашёл своё место у меня во лбу."
         "Свинцовая равнодушная слеза замерзшего питерского неба."
         window hide
-        play sound makarych_7dl fadein 0
+        play sound sfx_7dl["makarych"] fadein 0
         scene black with fade
         play sound sfx_bodyfall_1
     elif loki:
@@ -9216,7 +9216,7 @@ label alt_day6_un_7dl_letmeout:
         "И закрыл глаза."
     window hide
     scene gameover with flash
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.alt_lamp = True
     show acm_logo_me_lamp with moveinright:
         pos (1600, 1020)
@@ -9713,7 +9713,7 @@ label alt_day7_un_7dl_begin:
     show prologue_dream
     "Я сидел как парализованный, а в монитор изнутри ударило что-то, оставляя за собой змеистые трещины."
     "Что-то рвалось наружу, в мой мир. Что-то…"
-    play sound ringtone_7dl fadein 8
+    play sound sfx_7dl["ringtone"] fadein 8
     stop sound_loop 
     "ПРОСНИСЬ!"
     "Зазвонил сотовый – я выключил его."
@@ -9725,7 +9725,7 @@ label alt_day7_un_7dl_begin:
     play sound sfx_home_phone_take
     th "Кто это может быть? {w}Кто знает мой городской?"
     "Я поднёс трубку к уху."
-    play sound wakeup_7dl
+    play sound sfx_7dl["wakeup"]
     dreamgirl "Проснись."
     th "А ведь я же знаю этот голос."
     th "Этот голос ежедневно шлёт проклятья свинцовому небу и хрипит у ларька, требуя пачку «Диабло Неро»."
@@ -10983,7 +10983,7 @@ label alt_day7_un_7dl_epilogue_bad:
         un "Обязательно."
         window hide
     window hide
-    play sound mpbt_7dl fadein 6
+    play sound sfx_7dl["mpbt"] fadein 6
     scene white
     show spill_red
     with flash
@@ -10995,7 +10995,7 @@ label alt_day7_un_7dl_epilogue_bad:
     with flash
     $ renpy.pause(4.4, hard=True)
     stop sound_loop fadeout 0
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.un_7dl_bad = True
     show acm_logo_un_sui with moveinright:
         pos (1600, 1020)
@@ -11301,13 +11301,13 @@ label alt_day7_un_7dl_ussr:
         linear 0.5 zoom 1.0 xalign 0.6 yalign 0.5
     "Впереди — вся жизнь!"
     window hide
-    play sound snap_7dl fadein 0
+    play sound sfx_7dl["snap"] fadein 0
     scene white with flash
     $ renpy.pause(3.4, hard=True)
     scene bg ext_earth_7dl
     show blackout_exh
     with dspr
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.un_7dl_good_ussr = True
     show acm_logo_un_good2 with moveinright:
         pos (1600, 1020)
@@ -11570,7 +11570,7 @@ label alt_day7_un_7dl_rf:
     scene black
     window hide
     $ set_mode_adv()
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.un_7dl_good_rf = True
     show acm_logo_un_good with moveinright:
         pos (1600, 1020)
@@ -11845,7 +11845,7 @@ label alt_day7_un_7dl_true1:
     with fade
     stop music fadeout 3
     stop ambience fadeout 3
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
     $ renpy.pause(7.4, hard=True)
     with vpunch
@@ -12098,7 +12098,7 @@ label alt_day7_un_7dl_true1:
         pos (747,115)
     with flash
     with dissolve
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
     $ persistent.un_7dl_true_transit = True
     show acm_logo_un_transit with moveinright:
@@ -12183,7 +12183,7 @@ label alt_day7_un_7dl_true:
     "А я этого не заслужил."
     "Что гораздо хуже: я этого не хотел."
     with dissolve
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
     $ persistent.un_7dl_true = True
     show acm_logo_un_shelter with moveinright:

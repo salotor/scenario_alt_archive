@@ -3198,7 +3198,7 @@ label alt_day6_us_7dl_button:
     me "Ну, давай."
     me "На голову становись, давай! Три…"
     "Она рванулась вперёд, и тишину лагеря прорезал ощутимо слышимый рвущийся звук."
-    play sound tearing_7dl fadein 0
+    play sound sfx_7dl["tearing"] fadein 0
     dreamgirl "Четыре."
     "Что-то твёрдое упало мне на голову."
     "А мгновением спустя Ульяна рыбкой исчезла в окне."
@@ -3826,7 +3826,7 @@ label alt_day6_us_7dl_rendezvous:
     "Я мокр, жалок и противен самому себе."
     "Так что теперь имею полное право на уединение."
     stop music fadeout 3
-    play sound blanket_7dl fadein 0
+    play sound sfx_7dl["blanket"] fadein 0
     show us normal sport
     with dissolve
     us "Вот."
@@ -4177,7 +4177,7 @@ label alt_day6_us_7dl_rendezvous:
         "Я уже не скрывал улыбки."
         hide us
         with flash_pink
-        play sound kissing_sound_7dl #TODO CG d6_us_kiss
+        play sound sfx_7dl["kissing_sound"] #TODO CG d6_us_kiss
         show us shy sport with dissolve
         me "Вот и всё, а ты боялась."
         us "Скотинец ты, Сёмыч. Скотинец. Первый поцелуй, а ты…"
@@ -4212,7 +4212,7 @@ label alt_day6_us_7dl_rendezvous:
         "Ульяна фыркнула."
     show us smile sport with dspr
     us "Лови."
-    play sound blanket_7dl
+    play sound sfx_7dl["blanket"]
     "Выглаженная рубашка приятно пахла — как может пахнуть только свежевыглаженная рубашка."
     "Но самое главное — она была тёплой, немятой и даже относительно чистой."
     me "Умничка ты, Ульяна. Спасибо!"
@@ -9129,7 +9129,7 @@ label alt_day7_us_7dl_leaving:#Ещё немного — и домой. Вот �
         me "Сейчас вылетит птичка…"
         window hide
         $ renpy.pause(4.4, hard=True)
-        play sound snap_7dl fadein 0
+        play sound sfx_7dl["snap"] fadein 0
         scene white with flash
         $ renpy.pause(4.4, hard=True)
         window hide
@@ -9169,7 +9169,7 @@ label alt_day7_us_7dl_leaving:#Ещё немного — и домой. Вот �
         show un smile dress with dspr
         window hide
         $ renpy.pause(4.4, hard=True)
-        play sound snap_7dl fadein 0
+        play sound sfx_7dl["snap"] fadein 0
         scene white with flash
         $ renpy.pause(4.4, hard=True)
         window hide
@@ -10293,7 +10293,7 @@ label alt_day7_us_7dl_mikuforever:
     "Я ступил на первую ступеньку автобуса."
     window hide
     $ persistent.us_7dl_mi = True
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_openup with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -10524,7 +10524,7 @@ label alt_day7_us_7dl_lenaforever:
     un "С моей сестрой."
     window hide
     $ persistent.us_7dl_un = True
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_hi with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -10679,7 +10679,7 @@ label alt_day7_us_7dl_reunite:
     us "Пошли, Сёмище! А то билетов не хватит!"
     window hide
     $ persistent.us_7dl_good = True
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_semische with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -10758,7 +10758,7 @@ label alt_day7_us_7dl_reunite:
 label alt_day7_us_7dl_ever_after:
     play music music_7dl["ask_you_out"] fadein 3
     play ambience ambience_cold_wind_loop fadein 6
-    play sound_loop ambience_night_city_7dl fadein 6
+    play sound_loop sfx_7dl["ambience_night_city"] fadein 6
     scene anim intro_2
     with dissolve
     "Город красится перед выходом в люди."
@@ -10780,7 +10780,7 @@ label alt_day7_us_7dl_ever_after:
     "{i}От субъектов, живущих в домах, до фасадов домов.{/i}" 
     "{i}От разнузданных авторов до охреневших читателей.{/i}" 
     "{i}От бессмысленных слов до немых, бессловесных томов…{/i}"
-    play sound brake_7dl fadein 4
+    play sound sfx_7dl["brake"] fadein 4
     "А я, двигаясь как скверно сделанная марионетка, повернулся в сторону растущего капота жемчужного «Гетц», зажмурил глаза, готовясь к столкновению…"
     with vpunch
     "И тут меня дёрнуло за руку, да так, что чуть запястье не сломало!"
@@ -10815,7 +10815,7 @@ label alt_day7_us_7dl_ever_after:
     "Немного согревшись, она с жадным любопытством оглядела окрестности."
     us "Мы у тебя дома?"
     me "Практически."
-    play sound car_passing_7dl 
+    play sound sfx_7dl["car_passing"] 
     "Пешком отсюда до моей берлоги было всего ничего — пять минут."
     "Возможно, располагайся остановка чуть дальше, я бы так никогда в жизни и не выбрался на улицу."
     "И не произошло бы этой глупой, случайной истории."
@@ -10907,7 +10907,7 @@ label alt_day7_us_7dl_ever_after:
     scene anim prolog_4
     with dissolve
     "И тут я вспомнил всё."
-    play sound reverse_bell_7dl
+    play sound sfx_7dl["reverse_bell"]
     "Но в расстеленной и смятой постели не было никого."
     "Ни-ко-го!"
     "Я чуть не поседел от ужаса."
@@ -11257,7 +11257,7 @@ label alt_day7_us_7dl_ever_after:
     "Я расслабился, восстанавливая в памяти ощущения, предшествующие моему пробуждению в раскалённом «Икарусе», выдохнул, и…"
     $ persistent.sprite_time = "day"
     $ day_time()
-    play sound intro_dr_7dl fadein 6
+    play sound sfx_7dl["intro_dr"] fadein 6
     window hide
     scene bg ext_railbridge_sunset_7dl
     show uv dontlike
@@ -11426,7 +11426,7 @@ label alt_day7_us_7dl_ever_after:
     "Но автобус, подхвативший нас в ночи, вышвырнул уже в утро."
     $ persistent.sprite_time = "day"
     $ day_time()
-    play sound footsteps_grass_7dl
+    play sound sfx_7dl["footsteps_grass"]
     scene bg ext_road_day
     with touch
     "И мы идём, держась за руки, идём туда, откуда всё началось."
@@ -11451,7 +11451,7 @@ label alt_day7_us_7dl_ever_after:
     "Вернее, это для нас с ней этот лагерь был старым."
     "А здесь — единственным."
     "Место, где растянуты тенты, на каруселях гудит детвора, а одна красноволосая малявка обнимает брата за шею…"
-    play sound footsteps_grass_7dl
+    play sound sfx_7dl["footsteps_grass"]
     us "Тшшш."
     "Ульяна отступает на шаг, не поворачиваясь, и заступает мне дорогу."
     us "Не надо. Я теперь всё поняла, всё видела."
@@ -11482,7 +11482,7 @@ label alt_day7_us_7dl_ever_after:
     "Мы долго смотрим друг на друга, а затем хохочем."
     window hide
     $ persistent.us_7dl_true = True
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_true with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11654,7 +11654,7 @@ label alt_day7_us_7dl_bad:
     show spill_red with dspr
     window hide
     $ persistent.us_7dl_bad = True
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_bad with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12426,7 +12426,7 @@ label alt_day7_us_px_fairytale:
     "И его лето будет бесконечным."
     window hide
     $ persistent.us_px_true = True
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_fairytale with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12663,7 +12663,7 @@ label alt_day7_us_px_mourning:
     ba "А сейчас марш на обед — и по домам. По области объявлено штормовое предупреждение."
     stop music fadeout 5
     window hide
-    play sound_loop ambience_rain_7dl fadein 5
+    play sound_loop sfx_7dl["ambience_rain"] fadein 5
     scene bg ext_houses_rainy_day_7dl with dissolve
     with dissolve
     play music music_7dl["what_cost"] fadein 3
@@ -12991,7 +12991,7 @@ label alt_day7_us_px_dejavu:
         me "Тай-тай…"
     window hide
     $ persistent.us_px_rf_good = True
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_px with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

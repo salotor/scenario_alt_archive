@@ -171,7 +171,7 @@ label alt_day4_mi_dj_hedg_hunt:
     "Мику распахнула свои и без того огромные глаза ещё шире."
     mi "Как будто кто-то ходит вокруг и нюхает!"
     $ volume(0.5, "ambience")
-    play sound hedgehog_7dl fadein 6
+    play sound sfx_7dl["hedgehog"] fadein 6
     "И будто подтверждая её слова, откуда-то за пределами домика раздались характерные сопящие звуки."
     play music music_list["so_good_to_be_careless"] fadein 3
     show mi scared pioneer with dspr
@@ -272,7 +272,7 @@ label alt_day4_mi_dj_hedg_hunt:
     "И вот тут-то не поможет ни сценическое настоящее, ни прошлое, где тебя зовут «Отчаянная Мику»."
     "Ты либо вверяешь свою жизнь и безопасность человеку, и это звучит красноречивее всех слов на свете."
     "Либо не вверяешь."
-    play sound hedgehog_7dl fadein 0
+    play sound sfx_7dl["hedgehog"] fadein 0
     hide mi with dissolve
     "В глазах защипало, и хвала рандому, что я успел скрыться за «бочкой»."
     "Из-под домика донёсся знакомый топоток — несмотря на все мои попытки двигаться бесшумно, моя будущая добыча меня учуяла."
@@ -280,7 +280,7 @@ label alt_day4_mi_dj_hedg_hunt:
     "Я набрал в грудь побольше воздуха."
     stop music fadeout 3
     me "Мику! Давай."
-    play sound miku_stomping_7dl fadein 6
+    play sound sfx_7dl["miku_stomping"] fadein 6
     "С той стороны донёсся шум — Мику старательно и изо всех сил лупила каблуками бетонные плиты."
     "А я, наоборот, замер."
     "Шли секунды, и…"
@@ -336,7 +336,7 @@ label alt_day4_mi_dj_hedg_hunt:
 
     "Я пронёсся мимо умывальников, через небольшую рощицу и, наконец, вырулил по направлению к притихшему в ночи зданию музыкального кружка."
     "И хотя двигался я намного быстрее добычи, мне приходилось то и дело останавливаться и искать в темноте светлый силуэт."
-    play sound breath_7dl fadein 3
+    play sound sfx_7dl["breath"] fadein 3
     "Но здесь жертве скрываться было некуда — она как крейсер неслась, оставляя за собой заметный шлейф из распрямляющейся травы."
     "Если бы не одна проблемка."
     "Как в той задаче про Ахиллеса и черепаху, я дал слишком большую фору, и если я что-нибудь не придумаю как можно быстрее, то всё это будет зря — хыщник доберётся до здания клубов, и…"
@@ -2247,7 +2247,7 @@ label alt_day4_mi_dj_repetition:
     me "Улыбочку…"
     window hide
     $ renpy.pause(4.4, hard=True)
-    play sound snap_7dl fadein 0
+    play sound sfx_7dl["snap"] fadein 0
     scene white with flash
     $ renpy.pause(4.4, hard=True)
 
@@ -2326,7 +2326,7 @@ label alt_day4_mi_dj_repetition:
     un "Чтобы галочку поставить!"
     un "Тебе, объездившему всю Америку, такие мечты, наверное, кажутся глупыми…"
     stop music fadeout 6
-    play sound eat_horn_7dl fadein 5
+    play sound sfx_7dl["eat_horn"] fadein 5
     me "Да нет. Ты есть идешь?"
     show un smile pioneer close with dissolve
     un "Я-то иду. А вот тебе явно придётся заглянуть к умывальникам."
@@ -4679,7 +4679,7 @@ label alt_day5_mi_dj_dinner:
     dreamgirl "А если риск? Если там и правда борода, прокуренный свитер и жевательное внимание пополам с пивом?"
     th "Значит, просто иногда надо уметь сойти с ума."
     "Не слушая больше реплик подсознания, я настропалил лыжи к музыкальному клубу."
-    play sound eat_horn_7dl fadein 6
+    play sound sfx_7dl["eat_horn"] fadein 6
     "Но горн решил, что все извинения должны быть отложены на потом."
     "Впрочем…"
     stop music
@@ -6089,7 +6089,7 @@ label alt_day5_mi_dj_voyeur_2:
         if alt_day3_technoquest_st1 or alt_day3_technoquest_st2:
             "Она так и не догадалась отпустить меня."
             "А на меня вдруг напал какой-то ступор."
-            play sound kissing_sound_7dl fadein 4
+            play sound sfx_7dl["kissing_sound"] fadein 4
             "И когда Алиса, улыбнувшись, крепко поцеловала меня — я нисколечко не удивился."
             $ alt_day5_mi_dj_dv_kissing = True
         "Фактически, я отошёл от шока, только тогда, когда меня с хохотом вытолкала в промокшей одежде вон из душа."
@@ -6508,7 +6508,7 @@ label alt_day5_mi_dj_evening_club2:
         mi"… Чуть… "
         "На пути встало какое-то препятствие, и как ни старался, я не мог…"
         "К счастью, японка быстро сообразила, и привстала на локтях, чуть приподняв бёдра, быстрым, отрывистым движением, прижалась сама, прижала меня."
-        play sound sigh_out_7dl
+        play sound sfx_7dl["sigh_out"]
         "И, забывшись, вскрикнула."
         me "Тихо-тихо, милая."
         "Я закрыл её губы поцелуем."
@@ -6989,11 +6989,11 @@ label alt_day6_mi_dj_neutral:
     me "Я был бы просто счастлив."
     "Выдохнул я ей в макушку."
     stop music
-    play sound highfive_7dl fadein 0
+    play sound sfx_7dl["highfive"] fadein 0
     pause(1)
-    play sound highfive_7dl fadein 0
+    play sound sfx_7dl["highfive"] fadein 0
     pause(1)
-    play sound highfive_7dl fadein 0
+    play sound sfx_7dl["highfive"] fadein 0
     "Мику в испуге отпрянула, а я обратил внимание на подкравшуюся в своём стиле Ольгу Дмитриевну."
     hide mi
     show mt smile pioneer with dspr
@@ -8557,7 +8557,7 @@ label alt_day6_mi_dj_tale:
         linear 0.8 zoom 1.0 xalign 0.5 yalign 0.30
     window hide
     $ renpy.pause(1.4, hard=True)
-    play sound snap_7dl fadein 0
+    play sound sfx_7dl["snap"] fadein 0
     scene white with flash
     $ renpy.pause(1.4, hard=True)
     scene bg ext_boathouse_day
@@ -10290,7 +10290,7 @@ label alt_day6_mi_dj_dance2_fail:
                     play sound sfx_water_emerge
                     "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
                     window hide
-                    play sound aunl_7dl
+                    play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
@@ -10306,7 +10306,7 @@ label alt_day6_mi_dj_dance2_fail:
                     "Ради безрадостного и безысходного бытия?"
                     "Ради своей пули в голове."
                     window hide
-                    play sound makarych_7dl fadein 0
+                    play sound sfx_7dl["makarych"] fadein 0
                     
                     scene black with fade
                     "Место встречи изменить нельзя — Зинка, пьянь с травматом, и я — с дырой в пустой голове."
@@ -10314,7 +10314,7 @@ label alt_day6_mi_dj_dance2_fail:
                     window hide
                     play sound sfx_bodyfall_1
                     stop sound_loop fadeout 0
-                    play sound aunl_7dl
+                    play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
@@ -10350,7 +10350,7 @@ label alt_day6_mi_dj_dance2_fail:
                     with fade2
                     th "Мику… До встречи."
                     window hide
-                    play sound aunl_7dl
+                    play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
@@ -11439,7 +11439,7 @@ label alt_day7_mi_dj_preparations:
     me "Зимние ботинки да свитер с джинсами — придётся их надеть, ведь я сдам форму."
     show mi smile pioneer at center with dspr
     mi "Точно, ещё же форму сдать надо. А то я к ней привыкла за столько времени."
-    play sound blanket_7dl
+    play sound sfx_7dl["blanket"]
     "Как ни хотелось мне немного подержать в руках бельё, вполне возможно, хранящее запах девичьего тела, может, даже понюхать — при Мику делать это я не решился."
     "Ещё обзовёт извращенцем и поколотит."
     "И будет права, в целом. Но что поделать, если для меня запахи всегда значили практически столько же, сколько зрение, вкус или звук?"
@@ -12151,7 +12151,7 @@ label alt_day7_mi_dj_bad_end:
     window hide
     scene black
     play music music_7dl["emptiness"] fadein 3
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_bad = True
     show acm_logo_mi_new_happy with moveinright:
         pos (1600, 1020)
@@ -12319,7 +12319,7 @@ label alt_day7_mi_dj_true_end:
     me "Или мне следует называть тебя Намики?"
     stop ambience
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_true = True
     show acm_logo_mi_namiki with moveinright:
         pos (1600, 1020)
@@ -12691,7 +12691,7 @@ label alt_day7_mi_dj_jp_good_end:
     mi "Обязательно дождись!"
     hide mi with dissolve
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_good_jap = True
     show acm_logo_mi_ricochet with moveinright:
         pos (1600, 1020)
@@ -12897,7 +12897,7 @@ label alt_day7_mi_dj_rf_good_end:
     "Шепнул я в никуда."
     $ volume (0.0,'music')
     stop sound_loop
-    play sound ringtone_7dl
+    play sound sfx_7dl["ringtone"]
     $ renpy.pause(3)
     "Телефон зазвонил — номер чей-то незнакомый."
     "Впрочем, я уже очень давно не утруждал себя запоминаниями номеров. Чей-то МТС, питерский…"
@@ -13022,7 +13022,7 @@ label alt_day7_mi_dj_rf_good_end:
     window hide
     stop ambience
     window hide
-    play sound aunl_7dl
+    play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_good_rf = True
     show acm_logo_mi_allyours with moveinright:
         pos (1600, 1020)
