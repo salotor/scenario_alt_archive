@@ -297,7 +297,7 @@
 label alt_day1_alt_A:
     scene black
     dv "Ну и долго ещё собираешься изображать припадочного?"
-    play music sheiscool_7dl fadein 3
+    play music music_7dl["sheiscool"] fadein 3
     "Раздался новый голос."
     "Голос дерзкий, решительный."
     "Я почему-то сразу представил себе его обладательницу рыжей и злой."
@@ -949,7 +949,7 @@ label alt_day1_alt_S:
     $ renpy.pause(1, hard=True)
     window hide
     scene anim prolog_1 with fade2
-    play music rewind_7dl fadein 3
+    play music music_7dl["rewind"] fadein 3
     "Наверное, каждый из нас хотя бы раз в жизни задумывался о такой вещи, как второй шанс."
     "Существует два типа людей из тех, что не сидят на месте ровно: первые пытаются построить сияющее будущее, вторые пытаются искупить грехи прошлого."
     "Я слишком долго оставался в стороне."
@@ -1220,7 +1220,7 @@ label alt_day1_alt_L:
     if alt_day1_alt_sl_conv:
         "Я хотел было подремать, сидя на тёплых ступеньках, но не прошло и десятки минут, как интуиция подала сигнал о том, что рядом кто-то есть."
         show unblink
-    play music take_my_hand_7dl fadein 5
+    play music music_7dl["take_my_hand"] fadein 5
     window hide
     scene expression Noon("bg ext_house_of_sl_day") at zenterleft
     show un smile2 pioneer at cleft
@@ -1338,7 +1338,7 @@ label alt_day1_alt_L:
     hide un with pixellate
     menu:
         "За ними!":
-            play music anglegrinder_7dl fadein 3
+            play music music_7dl["anglegrinder"] fadein 3
             $ alt_day1_alt_chase = True
             $ lp_un += 1
             th "Поймаю — закопаю."
@@ -1479,7 +1479,7 @@ label alt_day1_alt_L:
             "Я кивнул и последовал за ней."
         "А… Что?":
             $ lp_mi += 1
-            play music unforgotten_7dl fadein 3
+            play music music_7dl["unforgotten"] fadein 3
             "Пока я глазами хлопал, вора и след простыл."
             "И Лены тоже."
             ml "Раззява!"
@@ -1544,7 +1544,7 @@ label alt_day1_alt_L:
             th "Наверное, всё же база — книги не очень любят прямой солнечный свет."
             "Уши уловили гитарные переборы, и я подошёл поближе."
             "Гитара доносилась из-за двери, я потянул было руку открыть её."
-            play music ourfirstmet_7dl fadein 2
+            play music music_7dl["ourfirstmet"] fadein 2
             scene bg ext_musclub_day at zentercenter
             show mi shocked pioneer
             with flash
@@ -1751,7 +1751,7 @@ label alt_day1_alt_O:
     me "Но я посторонний человек здесь, я ехал…"
     
     "Куда я ехал и зачем, почему-то из памяти выпало, поэтому я заткнулся."
-    play music wheres_wonderland_7dl fadein 3
+    play music music_7dl["wheres_wonderland"] fadein 3
     mt "Охохо, и за что мне несчастье такое."
     "Вздохнула вожатая."
     "Она села на стул со стороны кровати и кивком указала мне на другой."
@@ -2171,7 +2171,7 @@ label alt_day1_alt_U:
     "И сейчас лучше немного потрудиться и побыть немного резким — это в будущем сэкономит кучу нервных клеток."
     us "Да?"
     "Девочка вздохнула."
-    play music shehasgone_7dl fadein 5
+    play music music_7dl["shehasgone"] fadein 5
     show us sad sport with dspr
     us "И правда, глупо было надеяться."
     "Она погрустнела."
@@ -2204,7 +2204,7 @@ label alt_day1_alt_U:
     stop music fadeout 3
     $ renpy.pause(1, hard=True)
     show us grin sport with flash
-    play music genki_7dl fadein 3
+    play music music_7dl["genki"] fadein 3
     us "Правда?"
     menu:
         "Обойдёшься.":

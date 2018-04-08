@@ -1029,15 +1029,15 @@ label alt_day4_mi_visit_sick:
             window hide
             menu:
                 "Дабстепчику бы!":
-                    play music polyhymnia_main_7dl
+                    play music music_7dl["polyhymnia_main"]
                 
                     extend " в раскалённом воздухе поплыли сверхтяжёлые басы."
                 "Что-нибудь потяжелее!":
-                    play music nookie_7dl
+                    play music music_7dl["nookie"]
                 
                     extend " сонное царство всколыхнуло агрессивными рифами."
                 "Что-нибудь для души!":
-                    play music knock_7dl
+                    play music music_7dl["knock"]
                 
                     extend " в эфир отправилась медленная, грустная композиция с моей родины."
                 "Оставить играть.":

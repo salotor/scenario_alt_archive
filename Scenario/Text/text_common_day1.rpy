@@ -1,5 +1,5 @@
 ﻿label alt_day1_begin:
-    play music areyouabully_7dl fadein 2
+    play music music_7dl["areyouabully"] fadein 2
     play sound sfx_shoulder_dive_water
     scene anim_underwater
     show blackout_exh
@@ -482,7 +482,7 @@ label alt_day1_firts_met:
     if alt_day1_sl_conv:
         show sl normal pioneer with dissolve
     "Потому что взгляду моему открылась картина, что преследовала меня всю мою сознательную жизнь!"
-    play music dead_silence_7dl fadein 3
+    play music music_7dl["dead_silence"] fadein 3
     scene expression Dawn("bg ext_entrance_night_clear_7dl")
     show anim_grain
     with touch
@@ -899,7 +899,7 @@ label alt_day1_arrival:
         "Я махнул рукой и усмехнулся."
         th "Сам виноват, сам."
         "Рядом была крайне перспективная скамеечка, куда я и устроился, предварительно выжав на себе свитер."
-        play music so_cold_7dl fadein 3
+        play music music_7dl["so_cold"] fadein 3
         "Сохнуть!"
         "К счастью, для таких вот моментов неминуемого унижения, у меня, как у супергероя «Человека-Неудачника», существовал антикризисный набор."
         "Чуть-чуть самобичевания, чуть-чуть чёрного юмора и море самоиронии."
@@ -1791,7 +1791,7 @@ label alt_day1_soccer_d1:
     else:
         "Можно подумать, счастье — в количестве подтягиваний."
         "Поняв, что на «слабо» я не ведусь, девочка хотела было вернуться к игре, но её прервал сигнал горна."
-    play music eat_horn_7dl fadein 3 
+    play music music_7dl["eat_horn"] fadein 3 
     us "Бегом до столовой! Кто последний, тот тухлый помидор!"
     hide us with dissolve
     "Дети загалдели и, толкаясь, бросились по направлению к столовой."
@@ -2586,7 +2586,7 @@ label alt_day1_lena:
     if alt_day_binder != 1:
         play music music_list["lets_be_friends"] fadein 5
     else:
-        play music take_my_hand_7dl fadein 4
+        play music music_7dl["take_my_hand"] fadein 4
 
     th "Лена."
     "Она не столько читала, сколько сидела, прикрыв глаза, и что-то беззвучно говорила."
@@ -2947,7 +2947,7 @@ label alt_day1_un_stay:
 label alt_day1_sleep:
     window hide
     scene bg ext_square_night with dissolve
-    play music melancholy_sun_7dl fadein 3
+    play music music_7dl["melancholy_sun"] fadein 3
     "Вечер — тёплый, добрый, мой."
     "Возможно, сегодня произошло всё не так, как я планировал, не так, как я хотел."
     "Но это и не важно!"

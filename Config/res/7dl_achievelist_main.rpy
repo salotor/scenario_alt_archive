@@ -3140,7 +3140,7 @@ label sdl_achvlist_menoi_clear_Author:
 label alt_achvA_mi7dl_true:
     scene anim intro_16 with dsps
     play ambience ambience_camp_entrance_day fadein 3
-    play music iwantmagic_7dl fadein 3
+    play music music_7dl["iwantmagic"] fadein 3
     $ alt_day7_mi_7dl_trait = 3
     "Размышлять не стоило."
     "Незачем оно было."
@@ -3171,7 +3171,7 @@ label alt_achvA_mi7dl_true:
     stop sound_loop fadeout 0
     show blink
     scene black
-    play music sh_ai_rejuv_7dl fadein 3
+    play music music_7dl["sh_ai_rejuv"] fadein 3
     $ persistent.sprite_time = "prolog"
     $ prolog_time()
     "Я не знаю, что дальше будет со мной."
@@ -3352,7 +3352,7 @@ label alt_achvA_mi7dl_true:
     scene black 
     show alt_letter timeskip10 at truecenter with zoomin
     window hide
-    play music emptiness_7dl fadein 3
+    play music music_7dl["emptiness"] fadein 3
     $ persistent.mi_7dl_true = True
     play sound aunl_7dl
     show acm_logo_mi_thank_you with moveinright:

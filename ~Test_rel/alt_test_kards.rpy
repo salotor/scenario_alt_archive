@@ -2422,7 +2422,7 @@ label alt_day2_final_fail_end_new:
     
 # ............................................ ДИАЛОГИ
     if alt_my_rival_final.take == 'un':
-        play music take_my_hand_7dl fadein 3
+        play music music_7dl["take_my_hand"] fadein 3
         $ lp_un += 1
         show un surprise pioneer with dspr
         "Кажется, Лена ещё не до конца поняла, что именно сейчас произошло."
@@ -2596,7 +2596,7 @@ label alt_day2_final_fail_end_new:
             "Такого позора я ещё никогда не испытывал…"
 
     elif alt_my_rival_final.take == 'mi':
-        play music ourfirstmet_7dl fadein 3
+        play music music_7dl["ourfirstmet"] fadein 3
         show mi happy pioneer with dspr
         $ lp_mi += 1
         $ karma += 10
@@ -2612,7 +2612,7 @@ label alt_day2_final_fail_end_new:
         th "Дефицит внимания, ласки, тепла и заботы… А я ещё себя хикикомори считал."
         me "А кричать-то зачем?"
         "Оказаться в финале для меня уже было изрядным достижением, поэтому я не особо расстраивался насчёт проигрыша."
-        play music tender_song_7dl fadein 3
+        play music music_7dl["tender_song"] fadein 3
         "А Мику вдруг воздела к небу пальчик."
         show mi happy pioneer with dspr
         mi "Ой, а я знаю, кажется! Да! Мне только что идея в голову пришла! Я…"
@@ -2659,7 +2659,7 @@ label alt_day2_final_fail_end_new:
 
     elif alt_my_rival_final.take == 'us':
         $ lp_us += 1
-        play music genki_7dl fadein 3
+        play music music_7dl["genki"] fadein 3
         "Как известно, в карты везёт новичкам и дурачкам."
         "Так как мы все здесь новички, мы были в равных условиях."
         "Но кое-кому перепало на один шанс больше!"
@@ -2767,7 +2767,7 @@ label alt_day2_final_win_end_new:
 
 # ............................................ ДИАЛОГИ
     if alt_my_rival_final.take == 'un':
-        play music take_my_hand_7dl fadein 3
+        play music music_7dl["take_my_hand"] fadein 3
         show un shy pioneer with dissolve
         un "К-кажется, в-всё."
         me "Что?"
@@ -2812,7 +2812,7 @@ label alt_day2_final_win_end_new:
 
     elif alt_my_rival_final.take == 'sl':
         $ lp_sl += 1
-        play music Please_Reprise_7dl fadein 3
+        play music music_7dl["Please_Reprise"] fadein 3
         show sl smile pioneer with dspr
         "Я победил?"
         "Победил?!"
@@ -2858,7 +2858,7 @@ label alt_day2_final_win_end_new:
 
     elif alt_my_rival_final.take == 'dv':
         $ lp_dv += 1
-        play music sheiscool_7dl fadein 3
+        play music music_7dl["sheiscool"] fadein 3
         th "Я выиграл!"
         th "Выиграл?"
         th "Выиграл!!!"
@@ -2899,7 +2899,7 @@ label alt_day2_final_win_end_new:
     elif alt_my_rival_final.take == 'mi':
         $ lp_mi += 2
         $ alt_day2_mi_snap = True
-        play music tellyourworld_7dl fadein 3
+        play music music_7dl["tellyourworld"] fadein 3
         show mi smile pioneer with dspr
         mi "Ты и правда победил! Ты молодец!"
         "Воскликнула она."
@@ -2980,7 +2980,7 @@ label alt_day2_final_win_end_new:
         th "Выиграл!!!"
         "Бац!" with vpunch
         with flash_red
-        play music genki_7dl fadein 3
+        play music music_7dl["genki"] fadein 3
         show us calml pioneer with dspr
         us "И ничего ты не выиграл!"
         "Она хмуро смотрела на меня снизу вверх."
@@ -3005,7 +3005,7 @@ label alt_day2_final_win_end_new:
         hide dv with dissolve
 
     elif alt_my_rival_final.take == 'sh':
-        play music dead_silence_7dl fadein 3
+        play music music_7dl["dead_silence"] fadein 3
         show sh rage pioneer with dspr
         sh "Значит, победил?"
         "Медленно произнёс он."

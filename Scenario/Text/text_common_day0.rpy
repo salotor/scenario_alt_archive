@@ -6,7 +6,7 @@
     scene anim prolog_2
     with dissolve2
     window hide
-    play music tilltheend_7dl fadein 3
+    play music music_7dl["tilltheend"] fadein 3
     "Я снова кричал во сне."
     "Кричал, кричал — и проснулся от собственного крика, не от страха, не от звука, а от ощущения, мало похожего на человеческие переживания."
     "Я был воплощением смертного — там, по ту сторону невероятно голубых грёз, желаний и веры в светлое — пускай не «завтра» — пускай, «через годик»."
@@ -120,7 +120,7 @@
     $ set_mode_nvl()
     scene bg semen_room_window 
     play sound_loop sfx_street_traffic_outside fadein 2
-    play music ringtone_7dl
+    play music music_7dl["ringtone"]
     $ renpy.pause(3)
     "Мобильный на столе зажужжал, привлекая моё внимание."
     "Спасаясь от почти ощутимого треска реальности по швам, я вцепился в трубку."
@@ -153,7 +153,7 @@
     scene anim intro_3 
     with fade
     $ volume(0.3, 'music')
-    play music prologue_1_7dl 
+    play music music_7dl["prologue_1"] 
     $ renpy.pause(3, hard=True)
     scene anim intro_4 
     with fade
@@ -188,7 +188,7 @@
     with fade
     $ renpy.pause(1)
     $ set_mode_nvl()
-    play music lonesome_shepherd_7dl
+    play music music_7dl["lonesome_shepherd"]
     "Моё первое двенадцатое апреля — то самое, которое я запомнил."
     "Меня куда-то ведёт отец, держа за руку, из динамиков вещает Левитан, а с экрана машет рукой какая-то улыбающаяся женщина с орденами."
     "И не верится в то, что это космонавт — они же небожители. Они обитают там, где кончается воздух и начинается Вселенная. Как эта маленькая женщина может быть тем серебристым чудом, что показывали всем нам в фильмах?"
@@ -334,7 +334,7 @@ label alt_day0_start_h:
     scene black
     show spill_gray
     with dissolve
-    play music vampire_7dl fadein 3
+    play music music_7dl["vampire"] fadein 3
     "Существует не так много вещей, по-настоящему заслуживающих веры."
     me "Остынь, чувак!"
     "Я верю в смерть."
@@ -367,7 +367,7 @@ label alt_day0_start_h:
     with fade2
     $ renpy.pause(3, hard=True)
     "День не задался с самого утра."
-    play music prologue_1_7dl 
+    play music music_7dl["prologue_1"] 
     window hide
     scene bg semen_room
     "В холодильнике было шаром покати, а из двух последних яиц, что предназначались мне на завтрак, одно оказалось тухлым."
@@ -452,7 +452,7 @@ label alt_day0_start_h:
     "Как обычно, в моменты вынужденного безделья, мало-помалу начал углубляться в воспоминания."
     window hide
     $ volume(1.0, 'music')
-    play music tilltheend_7dl fadein 3
+    play music music_7dl["tilltheend"] fadein 3
     $ renpy.pause(3)
     scene anim prolog_2 
     with fade
@@ -674,7 +674,7 @@ label alt_day0_start_l:
     scene anim intro_3 
     show blind1_1
     with fade
-    play music prologue_1_7dl 
+    play music music_7dl["prologue_1"] 
     hide blind1_1
     show blind1_2
     with dissolve
@@ -831,7 +831,7 @@ label alt_day0_start_l:
     scene anim prolog_5
     with fade
     stop music fadeout 4
-    play music beth_7dl fadein 3
+    play music music_7dl["beth"] fadein 3
     play sound_loop sfx_street_traffic_outside fadein 2
     "Во мне что-то сломалось. Куда-то делся внутренний яростный огонь, что мог бы сделать меня карающей дланью, толкнуть на преступление, на глупости."
     "Я стал тенью себя прежнего, но не сдался. Лишив меня дела всей жизни, ублюдок таким образом дал мне новое."
@@ -978,7 +978,7 @@ label alt_day0_d3_prologue:
     scene anim prolog_2
     with dissolve2
     window hide
-    play music my_only_hope_7dl fadein 3
+    play music music_7dl["my_only_hope"] fadein 3
     #TODO
     voice "Прости."
     "Хруст фаланг под опускающейся ногой, закованной в лакированный штиблет."
@@ -1044,7 +1044,7 @@ label alt_day0_d3_prologue:
     scene anim intro_3 
     show blind1_1
     with fade
-    play music prologue_1_7dl 
+    play music music_7dl["prologue_1"] 
     hide blind1_1
     show blind1_2
     with dissolve
@@ -1200,7 +1200,7 @@ label alt_day0_d3_prologue:
     scene anim prolog_5
     with fade
     stop music fadeout 4
-    play music beth_7dl fadein 3
+    play music music_7dl["beth"] fadein 3
     play sound_loop sfx_street_traffic_outside fadein 2
     "Во мне что-то сломалось. Куда-то делся внутренний яростный огонь, что мог бы сделать меня карающей дланью, толкнуть на преступление, на глупости."
     "Я стал тенью себя прежнего, но не сдался. Лишив меня дела всей жизни, ублюдок таким образом дал мне новое."
@@ -1326,7 +1326,7 @@ label alt_day0_epic_fail:
     stop music fadeout 3
     stop ambience
     stop sound_loop
-    play music herc_death_7dl fadein 3
+    play music music_7dl["herc_death"] fadein 3
     if loki:
         "Холода больше не было."
         scene cg d7_sl_gonna_be_ok_7dl
