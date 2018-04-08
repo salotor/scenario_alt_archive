@@ -117,41 +117,41 @@
     $ flash2_red = Fade(0.5, 0, 0.5, color="#f11")
     $ flash_pink = Fade(1, 0, 1, color="#e25")
     
-    $ diam = ImageDissolve(im.Tile(get_image_7dl("gui/pattern.jpg")), 1.1, 1)
-    $ fdiam = ImageDissolve(im.Tile(get_image_7dl("gui/pattern.jpg")), 0.4, 1)
-    $ fulldiam = MultipleTransition([False,fdiam,get_image_7dl("gui/digi1.jpg"),fdiam,True])
+    $ diam = ImageDissolve(im.Tile(get_image_7dl("gui/transit/pattern.jpg")), 1.1, 1)
+    $ fdiam = ImageDissolve(im.Tile(get_image_7dl("gui/transit/pattern.jpg")), 0.4, 1)
+    $ fulldiam = MultipleTransition([False,fdiam,get_image_7dl("screens/digi1.jpg"),fdiam,True])
     
     $ gopr = ImageDissolve(im.Tile(get_image_7dl("gui/blackout_go.png")), 0.95, 1)
-    $ swradar = ImageDissolve(im.Tile(get_image_7dl("gui/blackout3.jpg")), 0.95, 1)
+    $ swradar = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout3.jpg")), 0.95, 1)
     $ joff = MultipleTransition([False,swradar,Solid("#000"),swradar,True])
-    $ swradarr = ImageDissolve(im.Tile(get_image_7dl("gui/blackout32.jpg")), 0.95, 1)
+    $ swradarr = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout32.jpg")), 0.95, 1)
     $ joffr = MultipleTransition([False,swradarr,Solid("#000"),swradarr,True])
     
-    $ blind_d = ImageDissolve(im.Tile(get_image_7dl("gui/roof_ks.jpg")), 1.3)
-    $ blinds_l = ImageDissolve(im.Tile(get_image_7dl("gui/roof_ks2.jpg")), 0.6)
-    $ blinds_r = ImageDissolve(im.Tile(get_image_7dl("gui/roof_ks3.jpg")), 0.7)
+    $ blind_d = ImageDissolve(im.Tile(get_image_7dl("gui/transit/roof_ks.jpg")), 1.3)
+    $ blinds_l = ImageDissolve(im.Tile(get_image_7dl("gui/transit/roof_ks2.jpg")), 0.6)
+    $ blinds_r = ImageDissolve(im.Tile(get_image_7dl("gui/transit/roof_ks3.jpg")), 0.7)
     
     $ blind_l = MultipleTransition([False,blinds_l,Solid("#011"),blinds_r,True])
     $ blind_r = MultipleTransition([False,blinds_r,Solid("#011"),blinds_l,True])
-    $ touch = ImageDissolve(im.Tile(get_image_7dl("gui/pattern2.jpg")), 0.9, 1)
+    $ touch = ImageDissolve(im.Tile(get_image_7dl("gui/transit/pattern2.jpg")), 0.9, 1)
     $ dspq = Dissolve(0.04, alpha=True)
     $ dsps = Dissolve(3.0, alpha=True)
-    $ guess_on = ImageDissolve(get_image_7dl("blackpalm.png"), 0.25, ramplen=256, reverse=True)
-    $ guess_off = ImageDissolve(get_image_7dl("blackpalm.png"), 0.3, ramplen=256)
+    $ guess_on = ImageDissolve(get_image_7dl("screens/blackpalm.png"), 0.25, ramplen=256, reverse=True)
+    $ guess_off = ImageDissolve(get_image_7dl("screens/blackpalm.png"), 0.3, ramplen=256)
 #Анимы
     image anim_digi:
-        get_image_7dl("gui/digi1.jpg")  with Dissolve(1.5) 
+        get_image_7dl("screens/digi1.jpg")  with Dissolve(1.5) 
         pause 1.5
-        get_image_7dl("gui/digi2.jpg")  with Dissolve(1.5) 
+        get_image_7dl("screens/digi2.jpg")  with Dissolve(1.5) 
         pause 1.5
         repeat
     
     image anim_grain: #Смэртельный номер: тянем картинку, делаем прозрачной и запускаем в секвенцию - и всё в коде!
-        filmetile(get_image_7dl("gui/alt_noise1.png"))
+        filmetile(get_image_7dl("screens/alt_noise1.png"))
         pause 0.1
-        filmetile(get_image_7dl("gui/alt_noise2.png"))
+        filmetile(get_image_7dl("screens/alt_noise2.png"))
         pause 0.1
-        filmetile(get_image_7dl("gui/alt_noise3.png"))
+        filmetile(get_image_7dl("screens/alt_noise3.png"))
         pause 0.1
         repeat
         
@@ -205,15 +205,15 @@
         repeat
     
     image uv_bus:
-        get_sprite_7dl("misc/uv_alt1.png")
+        get_sprite_7dl("screens/uv_alt1.png")
         pause 0.5
-        get_sprite_7dl("misc/uv_alt2.png") 
+        get_sprite_7dl("screens/uv_alt2.png") 
         pause 0.5
-        get_sprite_7dl("misc/uv_alt3.png")
+        get_sprite_7dl("screens/uv_alt3.png")
         pause 0.5
-        get_sprite_7dl("misc/uv_alt2.png")
+        get_sprite_7dl("screens/uv_alt2.png")
         pause 0.5
-        get_sprite_7dl("misc/uv_alt1.png")
+        get_sprite_7dl("screens/uv_alt1.png")
         pause 0.5
     
     image anim_underwater:
@@ -230,55 +230,55 @@
         repeat
     
     image salute = LiveComposite((1920,1080),
-                                  (0,0), salute_main(get_image_7dl("spoloh1.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh11.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh2.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh21.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh3.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh1.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh11.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh2.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh21.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh3.png")),
 
-                                  (0,0), salute_main(get_image_7dl("spoloh4.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh41.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh5.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh51.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh6.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh61.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh7.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh71.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh4.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh41.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh5.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh51.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh6.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh61.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh7.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh71.png")),
 
-                                  (0,0), salute_main(get_image_7dl("spoloh91.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh9.png")))
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh91.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh9.png")))
 
     
     image timer_anim: 
-        get_image_7dl("gui/win.png") 
+        get_image_7dl("sprites/custom/win_7dl.png") 
         0.1 #Задержка
-        get_image_7dl("gui/win2.png")
+        get_image_7dl("sprites/custom/win2_7dl.png")
         0.1
-        get_image_7dl("gui/win3.png")
+        get_image_7dl("sprites/custom/win3_7dl.png")
         0.1
         repeat # Не убирать
         
     image ftl_anim: 
-        get_image_7dl("gui/ftl1.png") 
+        get_image_7dl("screens/ftl1.png") 
         0.1 #Задержка
-        get_image_7dl("gui/ftl2.png")
+        get_image_7dl("screens/ftl2.png")
         0.1
-        get_image_7dl("gui/ftl3.png")
+        get_image_7dl("screens/ftl3.png")
         0.1
         repeat # Не убирать
         
     image un serious dress anim: 
-        get_sprite_7dl("misc/un_3_dress_serious_1.png") 
+        get_sprite_7dl("screens/un_3_dress_serious_1.png") 
         8.0 #Задержка
-        get_sprite_7dl("misc/un_3_dress_serious_2.png")
+        get_sprite_7dl("screens/un_3_dress_serious_2.png")
         0.1
-        get_sprite_7dl("misc/un_3_dress_serious_1.png") 
+        get_sprite_7dl("screens/un_3_dress_serious_1.png") 
         4.0 #Задержка
-        get_sprite_7dl("misc/un_3_dress_serious_2.png")
+        get_sprite_7dl("screens/un_3_dress_serious_2.png")
         0.15
-        get_sprite_7dl("misc/un_3_dress_serious_1.png") 
+        get_sprite_7dl("screens/un_3_dress_serious_1.png") 
         7.0 #Задержка
-        get_sprite_7dl("misc/un_3_dress_serious_2.png")
+        get_sprite_7dl("screens/un_3_dress_serious_2.png")
         0.1
         repeat # Не убирать
 #Заставки
@@ -633,8 +633,8 @@
     image alt_tournament_bg = get_image_7dl("gui/tournament/alt_tournament_bg.png")
     image sal_black = Solid("#00000000")
     image sal_splash = Solid("#FFFFFF66")
-    image alt_KS_censor = get_image_7dl("alt_KS_censor.png")
-    image alt_KS_censor2 = get_image_7dl("alt_KS_censor2.png")
+    image alt_KS_censor = get_image_7dl("screens/alt_KS_censor.png")
+    image alt_KS_censor2 = get_image_7dl("screens/alt_KS_censor2.png")
     
     
     image dv_playon = get_image_7dl("gui/tournament/dv_playon.png")
@@ -661,7 +661,7 @@
     image blind4_2 = get_image_7dl("gui/intro/blind4_2.png")
     image blind4_3 = get_image_7dl("gui/intro/blind4_3.png")
     image blind4_4 = get_image_7dl("gui/intro/blind4_4.png")
-    image ldb_blind = get_image_7dl("gui/ldb_blind.png")
+    image ldb_blind = get_image_7dl("sprites/custom/ldb_blind_7dl.png")
 #Интро
     image believe_in_pain = get_image_7dl("gui/intro/believe_in_pain.jpg")
     image gameover = get_image_7dl("gui/intro/gameover.jpg")
@@ -682,17 +682,17 @@
     image name_mt = get_image_7dl("gui/intro/name_mt.png")
     image name_sl = get_image_7dl("gui/intro/name_sl.png")
     image name_us = get_image_7dl("gui/intro/name_us.png")
-    image rain_overlay = get_image_7dl("gui/rain_overlay.png")
+    image rain_overlay = get_image_7dl("screens/rain_overlay.png")
     image intro_transparent = get_image_7dl("gui/intro/intro_transparent.png")
 
 #Элементы интерфейса
-    image blackout = get_image_7dl("gui/blackout.png")
-    image blackout2 = get_image_7dl("gui/blackout2.png")
-    image blackout_exh = get_image_7dl("gui/blackout_exh.png")
-    image blackout_exh2 = get_image_7dl("gui/blackout_exh2.png")
-    image blackout_exh3 = get_image_7dl("gui/blackout_exh3.png")
-    image genda_portrait = get_image_7dl("gui/genda_portrait.png")
-    image gfx bokeh = get_image_7dl("gui/splatter.png")
+    image blackout = get_image_7dl("gui/transit/blackout.png")
+    image blackout2 = get_image_7dl("gui/transit/blackout2.png")
+    image blackout_exh = get_image_7dl("gui/transit/blackout_exh.png")
+    image blackout_exh2 = get_image_7dl("gui/transit/blackout_exh2.png")
+    image blackout_exh3 = get_image_7dl("gui/transit/blackout_exh3.png")
+    image genda_portrait = get_image_7dl("sprites/custom/genda_portrait_7dl.png")
+    image gfx bokeh = get_image_7dl("screens/splatter.png")
     
     image anim_exhausted: 
         get_image_7dl("gui/blackout_exh2.png")
@@ -713,7 +713,7 @@
 
 #Скачки по карте
     image dvsem_el = get_image_7dl("gui/maps/dvsem_el.png")
-    image eye_s = get_image_7dl("gui/eye_s.png")
+    image eye_s = get_image_7dl("sprites/custom/eye_s_7dl.png")
 #Сотик
     image frame = get_image_7dl("gui/phone/frame.png")
     image cam_ui = get_image_7dl("gui/phone/cam_ui.png")
@@ -754,75 +754,75 @@
     image sam_scissor = get_image_7dl("gui/rps/sam_scissor.png")
     
 #Ачивы+лого 
-    image acm_logo_dv_drunk = get_image_7dl("gui/acm_logo_dv_drunk.png")
-    image acm_logo_dv_gohome = get_image_7dl("gui/acm_logo_dv_gohome.png")
-    image acm_logo_dv_meetmethere = get_image_7dl("gui/acm_logo_dv_meetmethere.png")
-    image acm_logo_dv_morethanlife = get_image_7dl("gui/acm_logo_dv_morethanlife.png")
-    image acm_logo_dv_theresnoway = get_image_7dl("gui/acm_logo_dv_theresnoway.png")
-    image acm_logo_dv_tillend = get_image_7dl("gui/acm_logo_dv_tillend.png")
-    image acm_logo_dv_tulpa = get_image_7dl("gui/acm_logo_dv_tulpa.png")
-    image acm_logo_me_lamp = get_image_7dl("gui/acm_logo_me_lamp.png") 
-    image acm_logo_dv_ussr_good = get_image_7dl("gui/acm_logo_dv_ussr_good.png")
+    image acm_logo_dv_drunk = get_image_7dl("gui/acm/acm_logo_dv_drunk_7dl.png")
+    image acm_logo_dv_gohome = get_image_7dl("gui/acm/acm_logo_dv_gohome_7dl.png")
+    image acm_logo_dv_meetmethere = get_image_7dl("gui/acm/acm_logo_dv_meetmethere_7dl.png")
+    image acm_logo_dv_morethanlife = get_image_7dl("gui/acm/acm_logo_dv_morethanlife_7dl.png")
+    image acm_logo_dv_theresnoway = get_image_7dl("gui/acm/acm_logo_dv_theresnoway_7dl.png")
+    image acm_logo_dv_tillend = get_image_7dl("gui/acm/acm_logo_dv_tillend_7dl.png")
+    image acm_logo_dv_tulpa = get_image_7dl("gui/acm/acm_logo_dv_tulpa_7dl.png")
+    image acm_logo_me_lamp = get_image_7dl("gui/acm/acm_logo_me_lamp_7dl.png") 
+    image acm_logo_dv_ussr_good = get_image_7dl("gui/acm/acm_logo_dv_ussr_good_7dl.png")
     
-    image acm_logo_me_deep = get_image_7dl("gui/acm_logo_me_deep.png")
-    image acm_logo_me_lamp = get_image_7dl("gui/acm_logo_me_lamp.png")
-    image acm_logo_me_qte = get_image_7dl("gui/acm_logo_me_qte.png")
+    image acm_logo_me_deep = get_image_7dl("gui/acm/acm_logo_me_deep_7dl.png")
+    image acm_logo_me_lamp = get_image_7dl("gui/acm/acm_logo_me_lamp_7dl.png")
+    image acm_logo_me_qte = get_image_7dl("gui/acm/acm_logo_me_qte_7dl.png")
     
-    image acm_logo_mi_allyours = get_image_7dl("gui/acm_logo_mi_allyours.png")
-    image acm_logo_mi_namiki = get_image_7dl("gui/acm_logo_mi_namiki.png")
-    image acm_logo_mi_new_happy = get_image_7dl("gui/acm_logo_mi_new_happy.png")
-    image acm_logo_mi_ricochet = get_image_7dl("gui/acm_logo_mi_ricochet.png")
-    image acm_logo_mi_ungood = get_image_7dl("gui/acm_logo_mi_ungood.png")
+    image acm_logo_mi_allyours = get_image_7dl("gui/acm/acm_logo_mi_allyours_7dl.png")
+    image acm_logo_mi_namiki = get_image_7dl("gui/acm/acm_logo_mi_namiki_7dl.png")
+    image acm_logo_mi_new_happy = get_image_7dl("gui/acm/acm_logo_mi_new_happy_7dl.png")
+    image acm_logo_mi_ricochet = get_image_7dl("gui/acm/acm_logo_mi_ricochet_7dl.png")
+    image acm_logo_mi_ungood = get_image_7dl("gui/acm/acm_logo_mi_ungood_7dl.png")
     
-    image acm_logo_mi_happy_again = get_image_7dl("gui/acm_logo_mi_happy_again.png")
-    image acm_logo_mi_liar = get_image_7dl("gui/acm_logo_mi_liar.png")
-    image acm_logo_mi_dark_dreams = get_image_7dl("gui/acm_logo_mi_dark_dreams.png")
-    image acm_logo_mi_club27 = get_image_7dl("gui/acm_logo_mi_club27.png")
-    image acm_logo_mi_sparkle = get_image_7dl("gui/acm_logo_mi_sparkle.png")
-    image acm_logo_mi_bitter_truth = get_image_7dl("gui/acm_logo_mi_bitter_truth.png")
-    image acm_logo_mi_dam_cpu = get_image_7dl("gui/acm_logo_mi_dam_cpu.png")
-    image acm_logo_mi_unlike = get_image_7dl("gui/acm_logo_mi_unlike.png")
-    image acm_logo_mi_come = get_image_7dl("gui/acm_logo_mi_come.png")
-    image acm_logo_mi_watashi = get_image_7dl("gui/acm_logo_mi_watashi.png")
-    image acm_logo_mi_thank_you = get_image_7dl("gui/acm_logo_mi_thank_you.png")
+    image acm_logo_mi_happy_again = get_image_7dl("gui/acm/acm_logo_mi_happy_again_7dl.png")
+    image acm_logo_mi_liar = get_image_7dl("gui/acm/acm_logo_mi_liar_7dl.png")
+    image acm_logo_mi_dark_dreams = get_image_7dl("gui/acm/acm_logo_mi_dark_dreams_7dl.png")
+    image acm_logo_mi_club27 = get_image_7dl("gui/acm/acm_logo_mi_club27_7dl.png")
+    image acm_logo_mi_sparkle = get_image_7dl("gui/acm/acm_logo_mi_sparkle_7dl.png")
+    image acm_logo_mi_bitter_truth = get_image_7dl("gui/acm/acm_logo_mi_bitter_truth_7dl.png")
+    image acm_logo_mi_dam_cpu = get_image_7dl("gui/acm/acm_logo_mi_dam_cpu_7dl.png")
+    image acm_logo_mi_unlike = get_image_7dl("gui/acm/acm_logo_mi_unlike_7dl.png")
+    image acm_logo_mi_come = get_image_7dl("gui/acm/acm_logo_mi_come_7dl.png")
+    image acm_logo_mi_watashi = get_image_7dl("gui/acm/acm_logo_mi_watashi_7dl.png")
+    image acm_logo_mi_thank_you = get_image_7dl("gui/acm/acm_logo_mi_thank_you_7dl.png")
     
-    image acm_logo_mt_cause = get_image_7dl("gui/acm_logo_mt_cause.png")
-    image acm_logo_mt_ending = get_image_7dl("gui/acm_logo_mt_ending.png")
-    image acm_logo_mt_ever_after = get_image_7dl("gui/acm_logo_mt_ever_after.png")
-    image acm_logo_mt_named_olga = get_image_7dl("gui/acm_logo_mt_named_olga.png")
+    image acm_logo_mt_cause = get_image_7dl("gui/acm/acm_logo_mt_cause_7dl.png")
+    image acm_logo_mt_ending = get_image_7dl("gui/acm/acm_logo_mt_ending_7dl.png")
+    image acm_logo_mt_ever_after = get_image_7dl("gui/acm/acm_logo_mt_ever_after_7dl.png")
+    image acm_logo_mt_named_olga = get_image_7dl("gui/acm/acm_logo_mt_named_olga_7dl.png")
     
-    image acm_logo_sl_bad = get_image_7dl("gui/acm_logo_sl_bad.png")
-    image acm_logo_sl_be_ok = get_image_7dl("gui/acm_logo_sl_be_ok.png")
-    image acm_logo_sl_fantazm = get_image_7dl("gui/acm_logo_sl_fantazm.png")
-    image acm_logo_sl_good = get_image_7dl("gui/acm_logo_sl_good.png")
-    image acm_logo_sl_lone = get_image_7dl("gui/acm_logo_sl_lone.png")
-    image acm_logo_sl_ok = get_image_7dl("gui/acm_logo_sl_ok.png")
-    image acm_logo_sl_same_place = get_image_7dl("gui/acm_logo_sl_same_place.png")
-    image acm_logo_sl_too_late = get_image_7dl("gui/acm_logo_sl_too_late.png")
-    image acm_logo_sl_worth = get_image_7dl("gui/acm_logo_sl_worth.png")
+    image acm_logo_sl_bad = get_image_7dl("gui/acm/acm_logo_sl_bad_7dl.png")
+    image acm_logo_sl_be_ok = get_image_7dl("gui/acm/acm_logo_sl_be_ok_7dl.png")
+    image acm_logo_sl_fantazm = get_image_7dl("gui/acm/acm_logo_sl_fantazm_7dl.png")
+    image acm_logo_sl_good = get_image_7dl("gui/acm/acm_logo_sl_good_7dl.png")
+    image acm_logo_sl_lone = get_image_7dl("gui/acm/acm_logo_sl_lone_7dl.png")
+    image acm_logo_sl_ok = get_image_7dl("gui/acm/acm_logo_sl_ok_7dl.png")
+    image acm_logo_sl_same_place = get_image_7dl("gui/acm/acm_logo_sl_same_place_7dl.png")
+    image acm_logo_sl_too_late = get_image_7dl("gui/acm/acm_logo_sl_too_late_7dl.png")
+    image acm_logo_sl_worth = get_image_7dl("gui/acm/acm_logo_sl_worth_7dl.png")
     
-    image acm_logo_un_good = get_image_7dl("gui/acm_logo_un_good.png")
-    image acm_logo_un_good2 = get_image_7dl("gui/acm_logo_un_good2.png")
-    image acm_logo_un_shelter = get_image_7dl("gui/acm_logo_un_shelter.png")
-    image acm_logo_un_sui = get_image_7dl("gui/acm_logo_un_sui.png")
-    image acm_logo_un_transit = get_image_7dl("gui/acm_logo_un_transit.png")
+    image acm_logo_un_good = get_image_7dl("gui/acm/acm_logo_un_good_7dl.png")
+    image acm_logo_un_good2 = get_image_7dl("gui/acm/acm_logo_un_good2_7dl.png")
+    image acm_logo_un_shelter = get_image_7dl("gui/acm/acm_logo_un_shelter_7dl.png")
+    image acm_logo_un_sui = get_image_7dl("gui/acm/acm_logo_un_sui_7dl.png")
+    image acm_logo_un_transit = get_image_7dl("gui/acm/acm_logo_un_transit_7dl.png")
     
-    image acm_logo_us_bad = get_image_7dl("gui/acm_logo_us_bad.png")
-    image acm_logo_us_fairytale = get_image_7dl("gui/acm_logo_us_fairytale.png")
-    image acm_logo_us_hi = get_image_7dl("gui/acm_logo_us_hi.png")
-    image acm_logo_us_openup = get_image_7dl("gui/acm_logo_us_openup.png")
-    image acm_logo_us_px = get_image_7dl("gui/acm_logo_us_px.png")
-    image acm_logo_us_semische = get_image_7dl("gui/acm_logo_us_semische.png")
-    image acm_logo_us_true = get_image_7dl("gui/acm_logo_us_true.png")
+    image acm_logo_us_bad = get_image_7dl("gui/acm/acm_logo_us_bad_7dl.png")
+    image acm_logo_us_fairytale = get_image_7dl("gui/acm/acm_logo_us_fairytale_7dl.png")
+    image acm_logo_us_hi = get_image_7dl("gui/acm/acm_logo_us_hi_7dl.png")
+    image acm_logo_us_openup = get_image_7dl("gui/acm/acm_logo_us_openup_7dl.png")
+    image acm_logo_us_px = get_image_7dl("gui/acm/acm_logo_us_px_7dl.png")
+    image acm_logo_us_semische = get_image_7dl("gui/acm/acm_logo_us_semische_7dl.png")
+    image acm_logo_us_true = get_image_7dl("gui/acm/acm_logo_us_true_7dl.png")
     
-    image achieve_beagod = get_image_7dl("gui/achieve_beagod.png")
-    image acm_logo = get_image_7dl("gui/acm_logo1.png") #Логотип сюжета
+    image achieve_beagod = get_image_7dl("gui/acm/achieve_beagod_7dl.png")
+    image acm_logo = get_image_7dl("gui/acm/acm_logo1_7dl.png") #Логотип сюжета
     
-    image myst_mh = get_image_7dl("gui/myst_mh.png")
+    image myst_mh = get_image_7dl("sprites/custom/myst_mh_7dl.png")
     
-    image dreamgirl_overlay = get_image_7dl("gui/dreamgirl_overlay.png")
-    image wet1 = get_image_7dl("gui/wet1.png")
-    image volley_fight = get_image_7dl("gui/volley_fight.png")
+    image dreamgirl_overlay = get_image_7dl("screens/dreamgirl_overlay.png")
+    image wet1 = get_image_7dl("screens/wet1.png")
+    image volley_fight = get_image_7dl("sprites/custom/volley_fight_7dl.png")
     
 #Картинки с использованием прозрачности и прочая спрайтовость
     image dv normal flipped = Transform("dv normal pioneer", xzoom=-1.0)
@@ -832,22 +832,22 @@
     #image d3_miku_dance_blush flipped = Transform("d3_miku_dance_blush", xzoom=-1.0)
     image uv shade3 sized = Transform("uv shade3", zoom=.4)
     image uv shade4 sized = Transform("uv shade4", zoom=.4)
-    image digi_pad = get_sprite_7dl("misc/digi_pad.png")
-    image hands_together = get_sprite_7dl("misc/hands_together.png")
-    image hands_together_tight = get_sprite_7dl("misc/hands_together_tight.png")
-    image sl_trench = get_sprite_7dl("misc/sl_trench.png")
-    image sl_trench2 = get_sprite_7dl("misc/sl_trench2.png")
-    image cotocomb_lighter = get_sprite_7dl("misc/cotocomb_lighter.png")
-    image d4_cat_door_frame = get_sprite_7dl("misc/d4_cat_door_frame.png")
-    image d6_miku_cries = get_sprite_7dl("misc/d6_miku_cries.png")
-    image mouth_dull = get_sprite_7dl("misc/mouth_dull.png")
-    image mi_ru = get_sprite_7dl("misc/mi_ru.png")
-    image mt_bus = get_sprite_7dl("misc/mt_bus.png")
-    image uvao_d1 = get_sprite_7dl("misc/uvao_d1.png")
-    image dv_mt = get_sprite_7dl("misc/dv_mt.png")
-    image backpack = get_sprite_7dl("misc/backpack.png")
-    image backpack_tiny = get_sprite_7dl("misc/backpack_tiny.png")
-    image dv_us_volley = get_sprite_7dl("misc/dv_us_volley.png")
+    image digi_pad = get_sprite_7dl("screens/digi_pad.png")
+    image hands_together = get_sprite_7dl("screens/hands_together.png")
+    image hands_together_tight = get_sprite_7dl("screens/hands_together_tight.png")
+    image sl_trench = get_sprite_7dl("screens/sl_trench.png")
+    image sl_trench2 = get_sprite_7dl("screens/sl_trench2.png")
+    image cotocomb_lighter = get_sprite_7dl("screens/cotocomb_lighter.png")
+    image d4_cat_door_frame = get_sprite_7dl("screens/d4_cat_door_frame.png")
+    image d6_miku_cries = get_sprite_7dl("screens/d6_miku_cries.png")
+    image mouth_dull = get_sprite_7dl("screens/mouth_dull.png")
+    image mi_ru = get_sprite_7dl("screens/mi_ru.png")
+    image mt_bus = get_sprite_7dl("screens/mt_bus.png")
+    image uvao_d1 = get_sprite_7dl("screens/uvao_d1.png")
+    image dv_mt = get_sprite_7dl("screens/dv_mt.png")
+    image backpack = get_sprite_7dl("screens/backpack.png")
+    image backpack_tiny = get_sprite_7dl("screens/backpack_tiny.png")
+    image dv_us_volley = get_sprite_7dl("screens/dv_us_volley.png")
     
 #Dnd
     image alt_cat_map_wireframe = get_image_7dl("gui/dnd/alt_cat_map_wireframe.png")
