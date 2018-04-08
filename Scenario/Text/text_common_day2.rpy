@@ -18,7 +18,7 @@
     mt "Ты будешь подниматься?"
     "Горестно вздохнув по безвозвратно почившей утренней эротике, я отвернулся и смежил веки."
     window hide
-    play sound mpbt_7dl
+    play sound sfx_7dl["mpbt"]
     pause(1)
     scene bg int_house_of_mt_sunset
     with blind_l
@@ -396,7 +396,7 @@ label alt_day2_lineup:
     "Я отошёл в сторону — мы добрались до середины мачты — и подъём продолжился. Это волшебство флага, когда он поднимается, за ним смотрят все. Даже те, кто его недолюбливает или откровенно не уважает."
     "Я видел как задирается нос Двачевской, как Ульянка поднимает подбородок, даже отряд, откуда был последний выкрик — все единодушно провожали взглядом поднимающееся знамя."
     "И вот наконец верхняя точка. И будто ожидая этого, жестяной рупор заиграл сигнал горна, священный для любого голодного пионера."
-    play music eat_horn_7dl fadein 3 
+    play music sfx_7dl["eat_horn"] fadein 3 
     play ambience ambience_camp_center_evening
     "Пионеры одновременно сделали «напра…», и, дождавшись отмашки Ольги, организованным строем поотрядно двинулись питаться."
     "Я было направился вслед за ними…"
@@ -652,7 +652,7 @@ label alt_day2_bf:
             "Какое, всё-таки, счастье, что я мстительная тварь!"
             "Не увернулась ни одна мерзавка!"
         "Сесть с Леной":
-            play music take_my_hand_7dl fadein 1
+            play music music_7dl["take_my_hand"] fadein 1
             $ lp_un += 1
             $ alt_day2_bf_un = True
             if not alt_day1_un_ignored:
@@ -3064,7 +3064,7 @@ label alt_day2_dubstep2:
     show us smile sport
     us "Эй, а что ты тут делаешь?"
     "Мелкая егоза, кажется, наигралась досыта и теперь решила подоставать меня."
-    play sound ghmm_7dl
+    play sound sfx_7dl["ghmm"]
     "Я щёлкнул пальцами:"
     me "Музыку крутить собираюсь."
     show us laugh2 sport
@@ -3087,7 +3087,7 @@ label alt_day2_dubstep2:
     "…воспитанного на пластинках…"
     "…даже максимальная громкость звука максимум доставит лёгкое неудовольствие. Но у меня свой совершенно особый сюрпризец:"
     stop music fadeout 3
-    play music polyhymnia_intro_7dl fadein 3
+    play music music_7dl["polyhymnia_intro"] fadein 3
     us "Фе-е-е-е!"
     "Она сморщилась так, будто откусила незрелое яблоко."
     us "Ты что, классику слушать собрался?"
@@ -3102,7 +3102,7 @@ label alt_day2_dubstep2:
     "Она уже отвернулась, чтобы уйти, и тут в партию вступил БАС!"
     stop music
     $ alt_day2_ph = True
-    play music polyhymnia_main_7dl
+    play music music_7dl["polyhymnia_main"]
     scene bg ext_stage_near_clear_7dl:
         linear 0.1 zoom 1.1 xalign 0.5 yalign 0.5
     show us surp2 sport with easeoutbottom
@@ -3195,7 +3195,7 @@ label alt_day2_dubstep2:
     us "А то!"
     "Я покрутил ещё несколько электронных треков — их было не очень много, и все проверенные временем. Но, как и любой другой владелец аудиодевайса, очень скоро понял, что настроения для мозговыносящего инфразвука никакого. Тогда может…"
     "Басы смолкли, их сменил гитарный перебор, в который органично вплёлся голос Саши Васильева."
-    play music splin_7dl fadein 1
+    play music music_7dl["splin"] fadein 1
     if (alt_day2_rendezvous != 3) and (alt_day2_rendezvous != 5):
         "Моё внимание привлекло движение на скамейках, там кто-то сидел. К сожалению, я в очередной раз оказался против солнца, поэтому не мог разглядеть. Но когда «Сплина» сменили «Скорпионс», а тех Мэнсон, подтверждая шизофреничность моего плейлиста, мой зритель встал и подошёл к сцене."
         show dv normal pioneer2 at cleft
@@ -3251,7 +3251,7 @@ label alt_day2_dubstep2:
         dv "Да плевать я хотела. Усилитель отключи."
         $ lp_dv -= 3
         "Я послушно щёлкнул тумблером."
-        play music eat_horn_7dl fadein 5
+        play music sfx_7dl["eat_horn"] fadein 5
         "А там и горн поспел…"
         if alt_day2_rendezvous == 4:
             "А склероз надо лечить."
@@ -3266,7 +3266,7 @@ label alt_day2_dubstep2:
     dv "Пожалуйста…"
     me "Ладно."
     stop music fadeout 3
-    play music eat_horn_7dl fadein 3 
+    play music sfx_7dl["eat_horn"] fadein 3 
     "Я запустил было музыку, когда из рупоров полились сигналы сбора к обеду."
     me "Пошли."
     "Я потянул руку к тумблеру."
@@ -3346,7 +3346,7 @@ label alt_day2_phone:
     "Как часто и как глубоко надо дышать."
     th "Да какая разница. Надо расслабиться, организм всё куда лучше сознания знает и умеет."
     "Проблема в том лишь, что на публике в организме очень часто включаются извращённые механизмы, отдающие бразды правления телом сознанию."
-    play sound ghmm_7dl
+    play sound sfx_7dl["ghmm"]
     me "Гм…"
     "Микрофон немного пофонил, но моё покашливание воспроизвёл чисто."
     th "Советская техника и ламповый звук."
@@ -3426,7 +3426,7 @@ label alt_day2_event_square1:
             sl "Ольга Дмитриевна, у меня ключей нет!"
             "Наконец, решилась Славя."
             "Она втянула голову в плечи, опасаясь справедливого разноса."
-            play music areyouabully_7dl fadein 3
+            play music music_7dl["areyouabully"] fadein 3
             show mt angry pioneer with dspr
             mt "Что ты сказала, девочка?"
             "Тихо зверея, начала вожатая."
@@ -4305,7 +4305,7 @@ label alt_day2_grand_escape:
     "Так, собрались."
     window hide
     show cg d4_catac_us with fade
-    play sound train_income_7dl
+    play sound sfx_7dl["train_income"]
     "Я сидел в самых тёмных кустах, чтобы нельзя было разглядеть из кабины машиниста, и считал секунды."
     "Времени у нас будет мало, поезд хоть и идёт с малой скоростью, для нас и такая может оказаться чрезмерной."
     "Поэтому крайне важно среагировать вовремя."
@@ -4317,7 +4317,7 @@ label alt_day2_grand_escape:
     stop music fadeout 3
     "Дистанция пятьдесят."
     me "Марш!"
-    play music runaway_7dl fadein 3
+    play music music_7dl["runaway"] fadein 3
     window hide
     scene cg d2_us_trainhop_7dl:
         pos (0,0) 
@@ -4567,7 +4567,7 @@ label alt_day2_siesta:
         stop sound_loop fadeout 2
         stop ambience fadeout 2
     elif alt_day2_rendezvous == 3:
-        play music sheiscool_7dl fadein 3
+        play music music_7dl["sheiscool"] fadein 3
         show cg d5_dv_island
         show prologue_dream
         with fade
@@ -4593,7 +4593,7 @@ label alt_day2_siesta:
         stop sound_loop fadeout 2
         stop ambience fadeout 2
     elif alt_day2_rendezvous == 2:
-        play music unforgotten_7dl fadein 3
+        play music music_7dl["unforgotten"] fadein 3
         show cg d3_sl_dance
         show prologue_dream
         with fade
@@ -4614,7 +4614,7 @@ label alt_day2_siesta:
         stop sound_loop fadeout 2
         stop ambience fadeout 2
     elif (alt_day2_rendezvous == 5) and alt_day2_club_join_musc:
-        play music but_why_7dl fadein 3
+        play music music_7dl["but_why"] fadein 3
         show cg d5_mi_conv_7dl
         show prologue_dream
         with fade
@@ -4660,7 +4660,7 @@ label alt_day2_siesta:
         window hide
         scene anim prolog_1
         stop music fadeout 3
-        play ambience ambience_safe_7dl
+        play ambience ambience_7dl["safe"]
         "Снилась какая-то муть."
         "Будто я проснулся внутри сна, и понял, что у меня нет ног."
         "Вернее, есть — но эти два ватных бревна, которые с трудом приходится переносить с места на место."
@@ -5758,7 +5758,7 @@ label alt_day2_sup2:
 label alt_day2_slot_us_try:
     scene bg ext_dining_hall_near_sunset with fade
     play ambience ambience_camp_center_evening fadein 1
-    play music sneakupon_7dl fadein 3
+    play music music_7dl["sneakupon"] fadein 3
     "У выхода из столовой я ощутил странное чувство дежа вю…"
     scene bg ext_dining_hall_away_sunset with dissolve
     if alt_day_binder != 1:
@@ -6083,7 +6083,7 @@ label alt_day2_eventEv_me_mt_house1:
             "Осторожно ответил я."
             $ alt_day2_olga_help = True
     me "Как?"
-    play music lazy_olga_7dl fadein 3
+    play music music_7dl["lazy_olga"] fadein 3
     mt "Смотри."
     "Из ниоткуда взялась толстенькая пачка белых картонок со стилизованным совёнком на обрезе."
     mt "Путёвки на третью смену, детей много приедет, нужно заполнить по списку. Справишься?"
@@ -6230,7 +6230,7 @@ label alt_day2_eventEv_me_mt_house1:
     stop music fadeout 3
     me "И вечер хороший."
     mt "Как и всегда в этом лагере."
-    play music wheres_wonderland_7dl fadein 3
+    play music music_7dl["wheres_wonderland"] fadein 3
     window hide
     scene stars with dissolve2:
         zoom 1.1 xalign 0.5 yalign 0.5 subpixel True
@@ -6366,7 +6366,7 @@ label alt_day2_eventEv_estrade1:
     scene cg d3_dv_guitar with fade
     stop music fadeout 1
     "На самом краешке сцены сидела Алиса с гитарой наперевес."
-    play music splin_7dl fadein 5
+    play music music_7dl["splin"] fadein 5
     "Она что-то мурлыкала себе под нос и меланхолично перебирала струны."
     "Перебор был почему-то очень знакомым…"
     if alt_day2_loki_minijack:
@@ -7275,7 +7275,7 @@ label alt_day2_un_loki_date:
     if alt_day_binder != 1:
         play music music_list["lets_be_friends"] fadein 5
     else:
-        play music take_my_hand_7dl fadein 4
+        play music music_7dl["take_my_hand"] fadein 4
     if alt_day2_rendezvous == 1:
         "Сейчас в ней вдруг всплыла та самая девушка, которой она была утром — отбросившая все сомнения и беззаветно доверившаяся…"
         "А кому?"
@@ -7918,7 +7918,7 @@ label alt_day2_slot_un:
     if alt_day_binder != 1:
         play music music_list["lets_be_friends"] fadein 5
     else:
-        play music take_my_hand_7dl fadein 4
+        play music music_7dl["take_my_hand"] fadein 4
     "Я поднял глаза и встретился взглядом с девочкой."
     me "Лена? Ох. Ты всё слышала?"
     "Глупый вопрос."
@@ -8100,7 +8100,7 @@ label alt_day2_slot_un:
     if alt_day_binder != 1:
         play music music_list["lets_be_friends"] fadein 5
     else:
-        play music take_my_hand_7dl fadein 4
+        play music music_7dl["take_my_hand"] fadein 4
     "Вспомнился вдруг один фильм, который приходилось видеть давным-давно. Точнее, не сам фильм, а фразу оттуда."
     "Человек, здоровый человек, эгоистичен и неспособен нанести сам себе боль — срабатывают ограничители. Просто ради интереса попробуй укусить себя до крови."
     "И финальная сцена, где герой стоит с прокушенной рукой, а по пальцам струится вниз кровь."
@@ -8156,7 +8156,7 @@ label alt_day2_slot_un:
     scene bg ext_playground_night
     show un surprise sport
     with dissolve
-    play music take_my_hand_7dl fadein 3
+    play music music_7dl["take_my_hand"] fadein 3
     "Мне приходило в голову, что если однажды у меня будет жена и дети, а их, как во всех боевиках, захватят в заложники, я просто пожму плечами и не испытаю ровным счётом ничего."
     "Я — довольно неплохой эникейщик, неплохо разбираюсь в дизайне чтобы не потерять штаны, вылетев с очередной работы, плыву по течению ТАМ, в настоящей жизни."
     "Просто потому что ничегошеньки там не зависело от некоего С. Персунова, куча лет, незаконченное высшее."
@@ -8403,7 +8403,7 @@ label alt_day2_slot_dv:
     play ambience ambience_lake_shore_night fadein 2
     "Она опять засмеялась и встала, потянувшись."
     "Ну а я что — железный что ли…"
-    play music alice_theme_7dl fadein 3
+    play music music_7dl["alice_theme"] fadein 3
     window hide
     scene cg d2_2ch_beach:
         pos (0,-1920)
@@ -8614,7 +8614,7 @@ label alt_day2_slot_sl:
     stop music fadeout 3
     me "Да нет, ежей-то я видел."
     "Медленно сказал я."
-    play music out_of_your_tier_7dl fadein 3
+    play music music_7dl["out_of_your_tier"] fadein 3
     me "Знаю что это такое."
     th "Всё, как и предполагал."
     th "Сейчас она тепло поблагодарит меня за оказанную помощь, проводит до калитки или ещё лучше — скажет, куда идти — и распрощается."
