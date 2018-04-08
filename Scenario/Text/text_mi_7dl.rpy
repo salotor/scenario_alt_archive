@@ -10680,7 +10680,7 @@ label alt_day7_mi_7dl_liar:
     $ prolog_time()
     play music afraid_of_destiny_7dl fadein 3
     scene anim prolog_1 with fade2
-    play ambience ambience_night_city fadein 2
+    play ambience ambience_night_city_7dl fadein 2
     "Следует понимать, что «экс» звучит как «экз» — от слова «экземпляр». Твоя «экс» — это экземпляр человека, который недостаточно хорош для тебя."
     "Те «экзы», которые освещали мою жизнь мимолётными светлячками, добавили только шрамов поверх уже существующих — и теперь испещрённая корочками поверхность сердца почти ничем не прошибаема."
     "Во всяком случае, так мне раньше казалось."
@@ -10816,7 +10816,7 @@ label alt_day7_mi_7dl_liar:
     stop ambience fadeout 5
     window hide
     scene bg ext_city_night_7dl with dissolve
-    play ambience ambience_night_city fadein 3
+    play ambience ambience_night_city_7dl fadein 3
     stop sound_loop
     "Я подумал о том, что надо бы спешить за ним — или хотя бы на этот чёртов фестиваль ряженых кретинов, чтобы, как сказал пижон, отбить часть затрат."
     "Но я стоял и смотрел в глубину салона, где над колесом, прислонив голову к холодному стеклу, смежил веки тот, кем я так и не сумел стать."
@@ -10855,7 +10855,7 @@ label alt_day7_mi_7dl_liar:
 label alt_day7_mi_7dl_dark_dreams:
     play music dance_with_me_piano_7dl fadein 3
     scene bg ext_night_sky_7dl with dissolve
-    play ambience ambience_night_city fadein 3
+    play ambience ambience_night_city_7dl fadein 3
     "В литературе есть понятие «последняя сцена» или «обязательная сцена»."
     "Как правило, этим понятием выражают ту самую точку, куда неизбежно подталкивают героя бесконечным наращиванием конфликта."
     "И самая важная сцена, как правило, неотъемлемо связана с этой точкой — неким пустым местом, где встречаются протагонист и антагонист."
@@ -11020,7 +11020,7 @@ label alt_day7_mi_7dl_club27:
     scene cg d7_mi_club27_7dl
     show anim_grain
     with dissolve
-    play ambience ambience_night_city fadein 3
+    play ambience ambience_night_city_7dl fadein 3
     play music frostwithoutyou_7dl fadein 3
     $ set_mode_nvl()
     "На сонный город опускается влажная, жаркая ночь - нетерпеливая, как губы влюблённого, ненасытная, но скоротечная, как память его на обещания."
@@ -11315,7 +11315,7 @@ label alt_day7_mi_7dl_postscriptum:
     "Кто-то махнул матери из толпы, и она отошла, выговорив мне на прощание: «Я отойду газету купить, подожди здесь, хорошо?»"
     "Конечно, хорошо, мам. Конечно."
     window hide
-    play ambience ambience_night_city
+    play ambience ambience_night_city_7dl
     with fade
     "Дети подобны влюблённым женщинам. Или наоборот?"
     "И те, и другие беззаветно простят вам всё, примут на веру любую чушь."
@@ -11410,7 +11410,7 @@ label alt_day7_mi_7dl_postscriptum:
     window hide
     scene stars
     with dissolve
-    play ambience ambience_night_city fadein 3
+    play ambience ambience_night_city_7dl fadein 3
     "Потом в стране началось что-то странное. "
     "Мама и папа опять пропали, в этот раз меня никуда никто не выпускал, никто за мной не приезжал."
     "Школа-интернат для детей-сирот и детей, оставшихся без попечения родителей."
@@ -11615,7 +11615,7 @@ label alt_day7_mi_7dl_postscriptum:
     "Зато Мику оставалась жива."
     "Пусть и не было никогда лагеря, нашей встречи и трогательной дружбы."
     with fade2
-    play ambience ambience_night_city fadein 3
+    play ambience ambience_night_city_7dl fadein 3
     "Зато…"
     "В какой-то момент я почувствовал, как кто-то незримый, очень большой и неравнодушный тихо улыбнулся, провожая меня взглядом."
     window hide
@@ -11654,7 +11654,7 @@ label alt_day7_mi_7dl_postscriptum:
     window hide
     if herc:
         scene bg int_store_7dl with dissolve
-        play ambience ambience_night_city fadein 3
+        play ambience ambience_night_city_7dl fadein 3
         "Был дядя Андрей Сычёв, ставший единственной надеждой на спасение — он дал мне свою фамилию, но никогда не претендовал на отцовство, потому-то я и Семёнович, а не Андреич…"
         "Я не знаю, зачем ему нужна была моя мама, но однажды они тихо расписались, и я стал Семёном Сычёвым."
         "И, хотя остаток детства воспитывался в почти армейской строгости, детство у меня всё-таки было."
@@ -12031,7 +12031,7 @@ label alt_day7_mi_7dl_sinthetic:
     "А ещё вконец испортившийся характер и периодическая потребность разогнать всех и остаться в одиночестве."
     window hide
     scene black with dsps
-    play ambience ambience_night_city fadein 4
+    play ambience ambience_night_city_7dl fadein 4
     "Иногда она выгоняла и меня."
     "Тогда я выбирался на улицы Синдзюку, где разбивал влажные, неоновые вечера унылыми фортепьянными переборами и обращался к небу — здесь оно было очень высоким, держалось на бетонных плечах небоскрёбов:"
     me "Милая моя Мику… Здесь нет горестей, нет печалей — но нет и жизни."
@@ -12195,7 +12195,7 @@ label alt_day7_mi_7dl_come_back:
     play music youareours_7dl fadein 3
     "Или находишь записку, которая заставляет поверить в то, что ты здесь не просто так."
     "То, что иной досужий разум величает Высшей Целью Жизни."
-    play ambience ambience_night_city fadein 2
+    play ambience ambience_night_city_7dl fadein 2
     scene anim intro_8 with dissolve
     "И так, строго говоря, получается, что Высшей Целью этого невзрачного человека было — просто появиться в жизни нескольких людей."
     "Появиться и наставить их на путь истинный."

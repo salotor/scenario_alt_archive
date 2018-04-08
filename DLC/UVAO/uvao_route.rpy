@@ -1701,7 +1701,7 @@ label alt_day5_uvao_getting_up:
         "После этого она освободила наконец помещение. Вздохнув, я встал и принялся одеваться."
         "В пакете оказались несколько сдобных булок со вчерашнего ужина. Недолго думая, я сунул пакет в рюкзак."
     else:
-        play sound_loop phone_vibro fadein 2
+        play sound_loop phone_vibro_7dl fadein 2
         "Проснулся я от какого-то неприятного жужжания."
         th "Вибровызов…"
         "Не открывая глаз, привычно потянулся было вправо, чтобы добраться до стола и заткнуть этот чёртов телефон…{w} И уткнулся носом в стену!"
@@ -2889,8 +2889,8 @@ label alt_day5_uvao_mines_begin:
     window hide
     play sound match_lights_7dl
     scene bg int_mine_crossroad
-    show match_lights
-    show uv normal at center behind match_lights
+    show match_lights_7dl
+    show uv normal at center behind match_lights_7dl
     with dissolve
 
     th "Похоже, какой-то перекрёсток?"
@@ -2916,16 +2916,16 @@ label alt_day5_uvao_mines_begin:
     window hide
     play sound match_lights_7dl
     scene bg int_mine_crossroad
-    show match_lights
-    show uv normal at center behind match_lights
+    show match_lights_7dl
+    show uv normal at center behind match_lights_7dl
     with dissolve
 
     th "Ещё один перекрёсток? Как она вообще тут ориентируется? Ещё и в кромешной темноте."
     "К сожалению, эта спичка сгорела так же быстро, как и предыдущая."
     scene bg black with fade2
     "Затушив её, я нащупал в темноте тёплую руку своей проводницы, и мы пошли дальше."
-    scene bg int_mine_crossroad_matches
-    $ renpy.music.play( (match_lights, silence), 'sound', True)
+    scene bg int_mine_crossroad_matches_7dl
+    $ renpy.music.play( (match_lights_7dl, silence), 'sound', True)
     "Так мы и ходили. То направо, то налево. Несколько раз я зажигал спички, но все перекрёстки были похожи, словно близнецы."
     "Скоро я целиком и полностью положился на свою странную провожатую - она каждый раз зачем-то озвучивала, в какую сторону мы поворачиваем."
     "Может быть, она хотела поговорить о чём-то, пока я молча плёлся за ней?"
@@ -2941,8 +2941,8 @@ label alt_day5_uvao_mines_begin:
         play sound match_lights_7dl
         window hide
         scene bg int_mine_crossroad
-        show match_lights
-        show uv normal at center behind match_lights
+        show match_lights_7dl
+        show uv normal at center behind match_lights_7dl
         with dissolve
     
         th "Кажется, я догадываюсь, кто это может быть."
@@ -3086,8 +3086,8 @@ label alt_day5_uvao_mines_sh:
     window hide
     play sound match_lights_7dl
     scene bg int_mine_halt
-    show match_lights   
-    show uv dontlike at center behind match_lights
+    show match_lights_7dl   
+    show uv dontlike at center behind match_lights_7dl
     with dissolve
 
     "Брошенные инструменты, какие-то разбитые ящики. Рельсы заворачивали вправо, и на повороте у стены лежала опрокинутая вагонетка."

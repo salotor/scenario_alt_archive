@@ -9546,7 +9546,7 @@ label alt_day6_un_7dl_dance:
 label alt_day6_un_7dl_sleeptime:
     play ambience ambience_camp_center_night fadein 1
     play music music_list["a_promise_from_distant_days_v2"] fadein 2
-    scene bg ext_house_of_el_nightwith dissolve
+    scene bg ext_house_of_el_night with dissolve
     play sound sfx_open_dooor_campus_1
     pause(1)
     scene bg int_extra_house_7dl

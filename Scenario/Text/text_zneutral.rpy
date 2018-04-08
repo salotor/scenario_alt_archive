@@ -5027,7 +5027,7 @@ label alt_day5_morningdream:
     
 label alt_day5_neu_start:
     play music too_quiet_7dl fadein 3
-    play sound_loop ambience_rain_7dl_7dl fadein 5
+    play sound_loop ambience_rain_7dl fadein 5
     if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
         scene bg int_aidpost_day with dissolve
         play ambience ambience_medstation_inside_day fadein 5

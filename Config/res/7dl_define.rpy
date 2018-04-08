@@ -955,7 +955,7 @@
     $ misery_7dl = get_music_7dl("misery_7dl.ogg")
     $ moment_7dl = get_music_7dl("moment_7dl.ogg")
     $ more_than_alive_7dl = get_music_7dl("more_than_alive_7dl.ogg")
-    $ my_only_hope= get_music_7dl("7dl_my_only_hope.ogg")
+    $ my_only_hope_7dl = get_music_7dl("my_only_hope_7dl.ogg")
     
     $ nookie_7dl = get_music_7dl("nookie_7dl.ogg")
     $ no_hope_left_7dl = get_music_7dl("no_hope_left_7dl.ogg")

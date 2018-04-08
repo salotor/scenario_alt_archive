@@ -12663,7 +12663,7 @@ label alt_day7_us_px_mourning:
     ba "А сейчас марш на обед — и по домам. По области объявлено штормовое предупреждение."
     stop music fadeout 5
     window hide
-    play sound_loop ambience_rain_7dl_7dl fadein 5
+    play sound_loop ambience_rain_7dl fadein 5
     scene bg ext_houses_rainy_day_7dl with dissolve
     with dissolve
     play music what_cost_7dl fadein 3

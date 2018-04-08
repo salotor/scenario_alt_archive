@@ -906,7 +906,7 @@ label alt_day0_start_l:
     stop ambience
     stop sound_loop
     "Ксана назначила встречу в ЦПКиО."
-    play ambience ambience_night_city fadein 3
+    play ambience ambience_night_city_7dl fadein 3
     "Где-то рядом с катком, сказала, что будет ждать меня у самой коробки."
     "Мой подарок на Новый Год. Подарок победителю в игре, где победитель теряет всё."
     "Чего-то такого и я ждал — Локи ведь тоже не очень хорошо кончил."
