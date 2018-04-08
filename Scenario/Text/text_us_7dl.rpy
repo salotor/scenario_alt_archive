@@ -483,7 +483,7 @@ label alt_day6_us_7dl_exercises:
     mt "А вечером после ужина — прощальная дискотека!"
     mt "Так как она праздничная, то будет продлена на целый час для старших отрядов!"
     "Ликующий вопль заглушил и слова вожатой, и не к спеху заоравший горн."
-    play music music_7dl["eat_horn"] fadein 3 
+    play music sfx_7dl["eat_horn"] fadein 3 
     play ambience ambience_camp_center_evening
     "Ольга Дмитриевна что-то ещё говорила, но никто её не слушал."
     show mt normal pioneer with dspr
@@ -1543,7 +1543,7 @@ label alt_day_us_7dl_preps:
     mi "Да не стой ты там с коробками! Давай их сюда."
     mi "Нам до обеда хорошо бы всё успеть…"
     me "Думаешь, успеем?"
-    play music music_7dl["eat_horn"] fadein 3
+    play music sfx_7dl["eat_horn"] fadein 3
     mi "Нет."
     "С обескураживающей честностью ответила японка."
     play sound sfx_open_door_clubs_2
@@ -1835,7 +1835,7 @@ label alt_day6_us_7dl_warehouse:
     with swradar
     "Эту и следующую партию мы продули."
     "Последнюю шли нос в нос, банка за банкой…"
-    play music music_7dl["eat_horn"] fadein 3
+    play music sfx_7dl["eat_horn"] fadein 3
     "И только горн на обед не дал нам выяснить до конца, кто же из нас щегол."
     "А жаль."
     "Мне так хотелось реванша!"
@@ -4240,7 +4240,7 @@ label alt_day6_us_7dl_rendezvous:
     "Ибо зачем?"
     "Я улыбнулся."
     me "Мне тоже понравился. Жаль только, последний."
-    play music music_7dl["eat_horn"] fadein 3
+    play music sfx_7dl["eat_horn"] fadein 3
     "Девочка хотела добавить ещё что-то, но её перебил горн."
     me "Вот. А теперь, если нерадивая жена не хочет меня кормить, я пойду добывать пропитание сам."
     "Над моей головой в дверь врезалась подушка, и я, смеясь, выскочил на улицу."
@@ -10758,7 +10758,7 @@ label alt_day7_us_7dl_reunite:
 label alt_day7_us_7dl_ever_after:
     play music music_7dl["ask_you_out"] fadein 3
     play ambience ambience_cold_wind_loop fadein 6
-    play sound_loop sfx_7dl["ambience_night_city"] fadein 6
+    play sound_loop ambience_7dl["night_city"] fadein 6
     scene anim intro_2
     with dissolve
     "Город красится перед выходом в люди."
@@ -12663,7 +12663,7 @@ label alt_day7_us_px_mourning:
     ba "А сейчас марш на обед — и по домам. По области объявлено штормовое предупреждение."
     stop music fadeout 5
     window hide
-    play sound_loop sfx_7dl["ambience_rain"] fadein 5
+    play sound_loop ambience_7dl["rain"] fadein 5
     scene bg ext_houses_rainy_day_7dl with dissolve
     with dissolve
     play music music_7dl["what_cost"] fadein 3
@@ -12914,7 +12914,7 @@ label alt_day7_us_px_dejavu:
     stop music fadeout 4
     window hide
     $ set_mode_adv()
-    play music music_7dl["ringtone"]
+    play music sfx_7dl["ringtone"]
     "Телефон зазвонил. {w}Ульяна?"
     "Я как раз колдовал на кухне над очередным шедевром из котлет и макарон, потому трубку услышал не сразу."
     "А вот когда услышал — стремглав бросился в комнату."

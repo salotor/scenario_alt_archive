@@ -120,7 +120,7 @@
     $ set_mode_nvl()
     scene bg semen_room_window 
     play sound_loop sfx_street_traffic_outside fadein 2
-    play music music_7dl["ringtone"]
+    play music sfx_7dl["ringtone"]
     $ renpy.pause(3)
     "Мобильный на столе зажужжал, привлекая моё внимание."
     "Спасаясь от почти ощутимого треска реальности по швам, я вцепился в трубку."

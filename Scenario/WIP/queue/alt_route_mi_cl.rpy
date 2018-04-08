@@ -3593,7 +3593,7 @@ label alt_day5_mi_start:
     $ alt_chapter(5, u"Мику. Утро.")
     window hide
     play music music_list["raindrops"] fadein 3
-    play sound_loop sfx_7dl["ambience_rain"] fadein 5
+    play sound_loop ambience_7dl["rain"] fadein 5
     scene bg ext_houses_rainy_day_7dl with dissolve
     $ renpy.pause(4, hard=True)
     show wet1

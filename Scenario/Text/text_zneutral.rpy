@@ -352,7 +352,7 @@
         with dissolve
         "Она грохнула дверью."
         "А я пошёл."
-    play music music_7dl["eat_horn"] fadein 3
+    play music sfx_7dl["eat_horn"] fadein 3
     "Над лагерем своевременно разнёсся сигнал горна."
     "Раз не обломилось с занятиями музыкой, придётся искать себе другие развлечения."
     "Но этим лучше заниматься на полный желудок."
@@ -963,7 +963,7 @@ label alt_day4_neu_us:
     us "А снимешь потом?"
     $ alt_day4_neu_us_snake = True
     me "Нет, себе заберу и слопаю."
-    play music music_7dl["eat_horn"] fadein 3
+    play music sfx_7dl["eat_horn"] fadein 3
     show us dontlike sport with dspr
     "Она надулась и топнула ногой:"
     us "Ах так! Да я…"
@@ -1407,7 +1407,7 @@ label alt_day4_neu_un:
                 un "Увидимся."
                 hide un with dissolve
                 "Будто услышав мысленный посыл, она положила ракетку на стенде и, кивнув мне, направилась к выходу с корта."
-                play music music_7dl["eat_horn"]
+                play music sfx_7dl["eat_horn"]
                 "А от столовой между тем донеслось приснопамятное «бери ложку»."
                 "И я ощутил вдруг, как сильно проголодался."
                 stop music fadeout 3
@@ -1611,7 +1611,7 @@ label alt_day4_neu_mi:
     show dv scared pioneer with dspr
     me "Меньше надо греть свои тупые уши!"
     hide dv with dissolve
-    play music music_7dl["eat_horn"] fadein 3
+    play music sfx_7dl["eat_horn"] fadein 3
     "Оттолкнув её c пути, я направился к столовой."
     "Не знаю, почему я психанул."
     "Хотя вру. Знаю. Тоненькие ножки-ручки — одним пальцем сломать можно — а туда же, смеяться надо мной."
@@ -2622,7 +2622,7 @@ label alt_day4_neu_lunch:
             "И я почувствовал, как против воли уголки губ начинают разъезжаться."
             "Ульяна оказывала на меня самое позитивное воздействие."
             "И почему она не постарше лет на пять!"
-            play music music_7dl["eat_horn"] fadein 5
+            play music sfx_7dl["eat_horn"] fadein 5
             show us normal sport with dspr
             us "Нет."
             "Ответила рыжая."
@@ -5027,7 +5027,7 @@ label alt_day5_morningdream:
     
 label alt_day5_neu_start:
     play music music_7dl["too_quiet"] fadein 3
-    play sound_loop sfx_7dl["ambience_rain"] fadein 5
+    play sound_loop ambience_7dl["rain"] fadein 5
     if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
         scene bg int_aidpost_day with dissolve
         play ambience ambience_medstation_inside_day fadein 5

@@ -11203,7 +11203,7 @@ label alt_day7_mi_7dl_sparkle:
     stop music fadeout 3
     scene bg semen_room_window 
     play sound_loop sfx_street_traffic_outside fadein 2
-    play music music_7dl["ringtone"]
+    play music sfx_7dl["ringtone"]
     $ renpy.pause(3)
     "Карман дёрнулся, оттуда полились переливы рингтона, и я осторожно, как дохлую крысу, вытащил аппарат из кармана."
     me "Какого чёрта?!"
