@@ -404,7 +404,7 @@ label start_7dl:
  
 label start_menu_7dl: # need dopil on girls walls
     if persistent.waifu_7dl == 1 and 'un' not in list_waifu_7dl:
-        play music take_my_hand fadein 3
+        play music take_my_hand_7dl fadein 3
         #$ time_7dl = check_time_7dl(time_7dl)
         #if time_7dl == "day":
             #$ list_waifu_7dl.append('un')
@@ -417,27 +417,27 @@ label start_menu_7dl: # need dopil on girls walls
     #if persistent.waifu_7dl == 2 and 'sl' not in list_waifu_7dl:
         #$ list_waifu_7dl.append('sl')
         #scene bg black 
-        #play music slavyas_fantazm fadein 3
+        #play music slavyas_fantazm_7dl fadein 3
         #call screen menu_7dl
     #if persistent.waifu_7dl == 3 and 'dv' not in list_waifu_7dl:
         #$ list_waifu_7dl.append('dv')
         #scene bg black 
-        #play music uncertainity fadein 3
+        #play music uncertainity_7dl fadein 3
         #call screen menu_7dl
     if persistent.waifu_7dl == 4 and 'mi' not in list_waifu_7dl:
         $ list_waifu_7dl.append('mi')
         scene bg mi_bg_7dl with fade
-        play music tellyourworld fadein 3
+        play music tellyourworld_7dl fadein 3
         call screen menu_7dl
     if persistent.waifu_7dl == 5 and 'us' not in list_waifu_7dl:
         $ list_waifu_7dl.append('us')
         scene bg us_bg_7dl with fade
-        play music thousand_of_pixies fadein 3
+        play music thousand_of_pixies_7dl fadein 3
         call screen menu_7dl
     #if persistent.waifu_7dl == 6 and 'mt' not in list_waifu_7dl:
         #$ list_waifu_7dl.append('mt')
         #scene bg black 
-        #play music wheres_wonderland fadein 3
+        #play music wheres_wonderland_7dl fadein 3
         #call screen menu_7dl
     else:
         jump choose_waifu_7dl

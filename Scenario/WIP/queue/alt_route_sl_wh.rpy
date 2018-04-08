@@ -6,8 +6,8 @@
     $ sunset_time()
     $ alt_chapter(5, u"Ведьма. Утро.")
     scene cg d5_rainy_idle_7dl with dissolve
-    play music ambience_safe fadein 3
-    play sound_loop ambience_rain
+    play music ambience_safe_7dl fadein 3
+    play sound_loop ambience_rain_7dl
     "Я проснулся от холода и сырости, залезающей, казалось, за шиворот."
     th "Где я?"
     "Я рывком сел и огляделся."

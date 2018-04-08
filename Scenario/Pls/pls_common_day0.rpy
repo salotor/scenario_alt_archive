@@ -75,7 +75,7 @@ label alt_day0_start:
         "Так всё и начиналось.":
             $ plthr = u"Дрищ"
             $ alt_chapter0()
-            play sound role_drisch
+            play sound role_drisch_7dl
             $ renpy.pause(4, hard=True)
             with fade2
             $ routetag = 'prologue'
@@ -87,14 +87,14 @@ label alt_day0_start:
     jump alt_day0_start1
 
 label alt_day0_start_herc:
-    play sound mpbt fadein 0
+    play sound mpbt_7dl fadein 0
     scene intro_herc with dissolve
     pause(1)
     menu:
         "Так всё и начиналось.":
             $ plthr = u"Герк"
             $ alt_chapter0()
-            play sound role_herc
+            play sound role_herc_7dl
             $ renpy.pause(4, hard=True)
             with fade2
             $ routetag = 'prologue'
@@ -114,7 +114,7 @@ label alt_day0_start_loki:
         "Так всё и начиналось.":
             $ plthr = u"Локи"
             $ alt_chapter0()
-            play sound role_loki
+            play sound role_loki_7dl
             $ renpy.pause(4, hard=True)
             with dissolve2
             $ routetag = 'prologue'
@@ -146,9 +146,9 @@ label alt_day0_start1:
 label alt_day0_opening:
     $ renpy.pause(2, hard=True)
     if alt_day_binder != 1:
-        play music intro2 fadein 5
+        play music intro2_7dl fadein 5
     else:
-        play music seven_summer_days fadein 5
+        play music seven_summer_days_7dl fadein 5
     scene black 
     $ renpy.pause(3, hard=True)
     scene op_back 

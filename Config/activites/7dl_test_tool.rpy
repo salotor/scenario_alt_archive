@@ -63,7 +63,7 @@ label scenario__sdl_selector:
     call alt_day7_us_px_vars
     $ make_names_unknown_7dl()
     $ plthr = u"Дрищ"
-    play ambience ambience_safe fadein 5
+    play ambience ambience_safe_7dl fadein 5
     
 label sdl_menu:
     scene scenery with dissolve
