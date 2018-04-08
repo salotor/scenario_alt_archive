@@ -2705,7 +2705,7 @@ label alt_day4_neu_lunch:
             "Пум!" with vpunch
             "Последняя шишка прилетела мне в лоб!"
             us "И победила — я!"
-            play ambience ambience_volley_7dl fadeout 2
+            play ambience ambience_7dl["volley"] fadeout 2
             play music music_list["went_fishing_caught_a_girl"] fadein 2
             mt "Давай играть, победитель!"
             "Ольга резко хлопнула по мячу."
@@ -5571,7 +5571,7 @@ label alt_day5_neu_breakfast:
     return
 
 label alt_day5_neu_arrest:
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     play music music_7dl["to_the_sunrise"] fadein 3
     scene bg ext_clubs_sunset_rain_7dl
     show mt normal pioneer at zenterleft
@@ -6258,7 +6258,7 @@ label alt_day5_neu_gaming:
     return
     
 label alt_day5_neu_along:
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     $ persistent.sprite_time = "day"
     $ day_time()
     play music music_7dl["beth"] fadein 3
@@ -6672,7 +6672,7 @@ label alt_day5_neu_cndl:
     if alt_day5_neu_candle == 2:
         stop music fadeout 3
         window hide
-        play ambience ambience_rain_7dl fadein 3
+        play ambience ambience_7dl["rain"] fadein 3
         scene bg ext_clubs_sunset_rain_7dl
         show mt normal pioneer at zenterright
         with dissolve

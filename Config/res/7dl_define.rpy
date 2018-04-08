@@ -858,17 +858,17 @@
     
 #Звучок
 #ambience
-    $ ambience_concert_7dl = get_ambience_7dl("tellyourworld_concert_7dl.ogg")
-    $ ambience_elevator_7dl = get_ambience_7dl("ambience_elevator_7dl.ogg")
-    $ ambience_explosive_post_7dl = get_ambience_7dl("ambience_explosive_post_7dl.ogg")
-    $ ambience_night_city_7dl = get_ambience_7dl("ambience_night_city_7dl.ogg")
-    $ ambience_railroad_7dl = get_ambience_7dl("railroad_ambience_7dl.ogg")
-    $ ambience_rain_7dl = get_ambience_7dl("ambience_rain_loop_7dl.ogg")
-    $ ambience_safe_7dl = get_ambience_7dl("ambience_safe_7dl.ogg")
-    $ ambience_salute_7dl = get_ambience_7dl("ambience_salute_7dl.ogg")
-    $ ambience_town_day_7dl = get_ambience_7dl("ambience_town_day_7dl.ogg")
-    $ ambience_underwater_7dl = get_ambience_7dl("ambience_underwater_7dl.ogg")
-    $ ambience_volley_7dl = get_ambience_7dl("ambience_volley_7dl.ogg")
+    $ ambience_7dl["concert"] = get_ambience_7dl("tellyourworld_concert_7dl.ogg")
+    $ ambience_7dl["elevator"] = get_ambience_7dl("ambience_elevator_7dl.ogg")
+    $ ambience_7dl["explosive_post"] = get_ambience_7dl("ambience_explosive_post_7dl.ogg")
+    $ ambience_7dl["night_city"] = get_ambience_7dl("ambience_night_city_7dl.ogg")
+    $ ambience_7dl["railroad"] = get_ambience_7dl("railroad_ambience_7dl.ogg")
+    $ ambience_7dl["rain"] = get_ambience_7dl("ambience_rain_loop_7dl.ogg")
+    $ ambience_7dl["safe"] = get_ambience_7dl("ambience_safe_7dl.ogg")
+    $ ambience_7dl["salute"] = get_ambience_7dl("ambience_salute_7dl.ogg")
+    $ ambience_7dl["town_day"] = get_ambience_7dl("ambience_town_day_7dl.ogg")
+    $ ambience_7dl["underwater"] = get_ambience_7dl("ambience_underwater_7dl.ogg")
+    $ ambience_7dl["volley"] = get_ambience_7dl("ambience_volley_7dl.ogg")
     
 #music
     $ music_7dl = {}

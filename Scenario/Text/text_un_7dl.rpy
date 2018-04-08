@@ -10884,7 +10884,7 @@ label alt_day7_un_7dl_epilogue_bad:
     scene bg int_home_lift_7dl
     with fade2
     "Ну, здравствуй, нелюбимый и немилый дом."
-    play ambience ambience_elevator_7dl fadein 3
+    play ambience ambience_7dl["elevator"] fadein 3
     "Подскочившую консьержку я отодвинул в сторону не глядя, и лишь спустя пару мгновений в лифте, безучастно отметив лязг сомкнувшихся створок, понял, что сознание абсолютно не отметило этаж, кнопку которого выбрали пальцы."
     "Оно, может, и к лучшему."
     "Я забился в дальний тёмный угол и сел на пол, прижав колени к груди."
@@ -12154,7 +12154,7 @@ label alt_day7_un_7dl_true:
     scene black with fade
     #TODO: возможное метро
     "И хорошо: с глаз долой — из сердца вон."
-    play ambience ambience_railroad_7dl fadein 3
+    play ambience ambience_7dl["railroad"] fadein 3
     show un tr1 at left
     show mt tr1 at right
     with dissolve

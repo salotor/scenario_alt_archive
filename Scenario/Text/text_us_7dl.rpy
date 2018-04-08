@@ -3576,7 +3576,7 @@ label alt_day6_us_7dl_button:
                 play sound sfx_shoulder_dive_water
                 pause(1)
                 scene anim_underwater
-                play ambience ambience_underwater_7dl fadein 3
+                play ambience ambience_7dl["underwater"] fadein 3
                 "Вот только в воду в результате ухнул я, а не она."
                 "Старый-старый приём ещё из «Ивана Васильевича»."
                 "А я, дурак, купился."
@@ -3757,7 +3757,7 @@ label alt_day6_us_7dl_button:
 
 label alt_day6_us_7dl_rendezvous:
     play music music_7dl["dance_with_me"] fadein 3
-    play ambience ambience_underwater_7dl fadein 0
+    play ambience ambience_7dl["underwater"] fadein 0
     "Не так я себе представлял последний день в лагере."
     "Совсем не так."
     "Мне грезились игры, смех, влюблённые глаза и впитавшееся в стволы сосен счастье, которое манит и манит год за годом возвращаться сюда вновь."
@@ -4463,7 +4463,7 @@ label alt_day6_us_px_carrier:
     me "Обратно. Я не уверен, что нам стоит здесь оста…"
     with flash
     play sound sfx_fall_wood_floor
-    play ambience ambience_explosive_post_7dl
+    play ambience ambience_7dl["explosive_post"]
     "Как падение вглубь собственного подсознания перед сном, отчего сами дёргаются ноги, мимо меня, обдав морозным воздухом, пронеслась «Волга». Воображаемая."
     play ambience ambience_ext_road_day fadein 3
     me "Нет, валим отсюда."
@@ -10220,7 +10220,7 @@ label alt_day7_us_7dl_mikuforever:
     window hide
     scene bg int_home_lift_7dl
     with fade2
-    play ambience ambience_elevator_7dl fadein 3
+    play ambience ambience_7dl["elevator"] fadein 3
     "Я добрался домой уже заполночь, прошмыгнул мимо недовольного взгляда консьержки, вызвал лифт."
     "Всё напевал и напевал эту мелодию, стараясь запомнить как следует."
     "У меня было несколько программ для распознавания музыки, и я не собирался просто так отступаться."
@@ -10577,7 +10577,7 @@ label alt_day7_us_7dl_reunite:
     with fade
     play sound sfx_intro_bus_door_open
     pause(2)
-    play ambience ambience_railroad_7dl fadein 3
+    play ambience ambience_7dl["railroad"] fadein 3
     scene bg ext_mv2_7dl
     with fade
     stop sound_loop fadeout 4

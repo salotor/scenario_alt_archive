@@ -212,7 +212,7 @@ label alt_day4_mi_7dl_ch2:
     window hide
     scene bg ext_hospital2_away_day_7dl
     with dissolve
-    play ambience ambience_town_day_7dl fadein 3
+    play ambience ambience_7dl["town_day"] fadein 3
     play music music_list["my_daily_life"] fadein 5
     "За спиной кто-то недовольно что-то заворчал, заворочался."
     "Но «Волга» была машиной какой угодно, только не удобной для сна."
@@ -684,7 +684,7 @@ label alt_day4_mi_7dl_ch4:
     pause(1)
     scene bg ext_townscape_ph_day_7dl
     with flash
-    play ambience ambience_town_day_7dl fadein 3
+    play ambience ambience_7dl["town_day"] fadein 3
     return
     
 label alt_day4_mi_7dl_ch5a:
@@ -845,7 +845,7 @@ label alt_day4_mi_7dl_ch5a:
     scene bg ext_townscape_ph_day_7dl
     show cs normal
     with dissolve
-    play ambience ambience_town_day_7dl fadein 3
+    play ambience ambience_7dl["town_day"] fadein 3
     "А ещё час спустя я кивнул Виоле, передавая ей ключ."
     cs "С лёгким паром?"
     "Спросила она."
@@ -929,7 +929,7 @@ label alt_day4_mi_7dl_ch5b:
     "Она потянула мне за собой вниз по улице."
     window hide
     scene expression Dawn("bg ext_townscape_ph_day_7dl") with dissolve
-    play ambience ambience_town_day_7dl fadein 3
+    play ambience ambience_7dl["town_day"] fadein 3
     "Я сильно сомневался в том, что она сможет утолить свою покупательскую жажду."
     "Но не подрезать же ей крылья на взлёте?"
     me "Видишь где-нибудь торговые ряды?"
@@ -976,7 +976,7 @@ label alt_day4_mi_7dl_ch5b:
     window hide
     scene bg ext_townscape_ph_day_7dl
     with fade
-    play ambience ambience_town_day_7dl fadein 3
+    play ambience ambience_7dl["town_day"] fadein 3
     "Дать бы в зубы ей «Никон» — и не отличишь от тех живчиков, что ежегодно рассыпаются из огромных тонированных автобусов на Дворцовой и ваташивакают по окрестностям."
     "И не боятся же заблукать!"
     "Парочками, одиночками, стайками — их можно обнаружить, например, в пышечной на Большой Конюшенной — и «пысики, четыре я и три она, аригато?»"
@@ -1211,7 +1211,7 @@ label alt_day4_mi_7dl_ch5b:
     scene bg ext_townscape_ph_day_7dl
     show mi normal pioneer
     with dissolve
-    play ambience ambience_town_day_7dl fadein 3
+    play ambience ambience_7dl["town_day"] fadein 3
     "Мику ожидала меня в тени раскидистого вяза, стоящего неподалёку от кафе."
     "Наверное, сюда время от времени вытаскивают столы и пируют на свежем воздухе."
     "Но мы искали прохлады и тишины — и получили их."
@@ -2733,7 +2733,7 @@ label alt_day4_mi_7dl_ch83:
     return
     
 label alt_day5_mi_7dl_rain_2gether:
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     play music music_7dl["to_the_sunrise"] fadein 3
     "Мои слова — как срывающиеся с губ признания в самом непростительном."
     "Я виновен перед тобой."
@@ -3005,7 +3005,7 @@ label alt_day5_mi_7dl_rain_2gether:
 label alt_day5_mi_7dl_morning:
     play music music_7dl["sign_of_blood"] fadein 3
     scene anim prolog_2
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     play music music_7dl["dance_with_me_piano"] fadein 3
     "И снова дождь льёт, снова голос твой нежный меня зовёт…"
     "В памяти застревают отдельные слова, кадры, не складывающиеся в единую стройную картину, как ты ни старайся."
@@ -9195,7 +9195,7 @@ label alt_day6_mi_7dl_discoteque:
     with dissolve
     "Над которой уже началось действо…"
     play music music_7dl["sam_lullaby"] fadein 3
-    play ambience ambience_salute_7dl fadein 1
+    play ambience ambience_7dl["salute"] fadein 1
     show salute
     pause(1)
     show black behind salute
@@ -10680,7 +10680,7 @@ label alt_day7_mi_7dl_liar:
     $ prolog_time()
     play music music_7dl["afraid_of_destiny"] fadein 3
     scene anim prolog_1 with fade2
-    play ambience ambience_night_city_7dl fadein 2
+    play ambience ambience_7dl["night_city"] fadein 2
     "Следует понимать, что «экс» звучит как «экз» — от слова «экземпляр». Твоя «экс» — это экземпляр человека, который недостаточно хорош для тебя."
     "Те «экзы», которые освещали мою жизнь мимолётными светлячками, добавили только шрамов поверх уже существующих — и теперь испещрённая корочками поверхность сердца почти ничем не прошибаема."
     "Во всяком случае, так мне раньше казалось."
@@ -10816,7 +10816,7 @@ label alt_day7_mi_7dl_liar:
     stop ambience fadeout 5
     window hide
     scene bg ext_city_night_7dl with dissolve
-    play ambience ambience_night_city_7dl fadein 3
+    play ambience ambience_7dl["night_city"] fadein 3
     stop sound_loop
     "Я подумал о том, что надо бы спешить за ним — или хотя бы на этот чёртов фестиваль ряженых кретинов, чтобы, как сказал пижон, отбить часть затрат."
     "Но я стоял и смотрел в глубину салона, где над колесом, прислонив голову к холодному стеклу, смежил веки тот, кем я так и не сумел стать."
@@ -10855,7 +10855,7 @@ label alt_day7_mi_7dl_liar:
 label alt_day7_mi_7dl_dark_dreams:
     play music music_7dl["dance_with_me_piano"] fadein 3
     scene bg ext_night_sky_7dl with dissolve
-    play ambience ambience_night_city_7dl fadein 3
+    play ambience ambience_7dl["night_city"] fadein 3
     "В литературе есть понятие «последняя сцена» или «обязательная сцена»."
     "Как правило, этим понятием выражают ту самую точку, куда неизбежно подталкивают героя бесконечным наращиванием конфликта."
     "И самая важная сцена, как правило, неотъемлемо связана с этой точкой — неким пустым местом, где встречаются протагонист и антагонист."
@@ -11020,7 +11020,7 @@ label alt_day7_mi_7dl_club27:
     scene cg d7_mi_club27_7dl
     show anim_grain
     with dissolve
-    play ambience ambience_night_city_7dl fadein 3
+    play ambience ambience_7dl["night_city"] fadein 3
     play music music_7dl["frostwithoutyou"] fadein 3
     $ set_mode_nvl()
     "На сонный город опускается влажная, жаркая ночь - нетерпеливая, как губы влюблённого, ненасытная, но скоротечная, как память его на обещания."
@@ -11193,7 +11193,7 @@ label alt_day7_mi_7dl_sparkle:
     window hide
     scene bg int_home_lift_7dl
     with dissolve
-    play ambience ambience_elevator_7dl fadein 3
+    play ambience ambience_7dl["elevator"] fadein 3
     "Сейчас, поднимаясь вверх на лифте, я понимал подспудные причины собственного идиотского поведения — не следовало позволять проникнуть слишком глубоко в душу, в сердце."
     "Иначе сейчас было бы слишком больно, не спас бы никакой аутотренинг."
     "Спасительная глупость, как надувной матрас под окнами седьмого этажа, распахивающий объятья самоубийце-прыгуну — моё подсознание оказалось в тысячу раз мудрее меня самого."
@@ -11315,7 +11315,7 @@ label alt_day7_mi_7dl_postscriptum:
     "Кто-то махнул матери из толпы, и она отошла, выговорив мне на прощание: «Я отойду газету купить, подожди здесь, хорошо?»"
     "Конечно, хорошо, мам. Конечно."
     window hide
-    play ambience ambience_night_city_7dl
+    play ambience ambience_7dl["night_city"]
     with fade
     "Дети подобны влюблённым женщинам. Или наоборот?"
     "И те, и другие беззаветно простят вам всё, примут на веру любую чушь."
@@ -11410,7 +11410,7 @@ label alt_day7_mi_7dl_postscriptum:
     window hide
     scene stars
     with dissolve
-    play ambience ambience_night_city_7dl fadein 3
+    play ambience ambience_7dl["night_city"] fadein 3
     "Потом в стране началось что-то странное. "
     "Мама и папа опять пропали, в этот раз меня никуда никто не выпускал, никто за мной не приезжал."
     "Школа-интернат для детей-сирот и детей, оставшихся без попечения родителей."
@@ -11455,7 +11455,7 @@ label alt_day7_mi_7dl_postscriptum:
     "Неправда…"
     window hide
     scene bg ext_city_night_7dl with fade
-    play ambience ambience_railroad_7dl fadein 3
+    play ambience ambience_7dl["railroad"] fadein 3
     "Один короткий звонок, одно короткое слово, один короткий ответ."
     mi "Я скоро приеду."
     "Поэтому я сейчас и стою на приёмном терминала в Пулково, поэтому и жду рейс из Сухуми — именно им с пересадками Она добралась до меня, как и обещала."
@@ -11615,7 +11615,7 @@ label alt_day7_mi_7dl_postscriptum:
     "Зато Мику оставалась жива."
     "Пусть и не было никогда лагеря, нашей встречи и трогательной дружбы."
     with fade2
-    play ambience ambience_night_city_7dl fadein 3
+    play ambience ambience_7dl["night_city"] fadein 3
     "Зато…"
     "В какой-то момент я почувствовал, как кто-то незримый, очень большой и неравнодушный тихо улыбнулся, провожая меня взглядом."
     window hide
@@ -11654,7 +11654,7 @@ label alt_day7_mi_7dl_postscriptum:
     window hide
     if herc:
         scene bg int_store_7dl with dissolve
-        play ambience ambience_night_city_7dl fadein 3
+        play ambience ambience_7dl["night_city"] fadein 3
         "Был дядя Андрей Сычёв, ставший единственной надеждой на спасение — он дал мне свою фамилию, но никогда не претендовал на отцовство, потому-то я и Семёнович, а не Андреич…"
         "Я не знаю, зачем ему нужна была моя мама, но однажды они тихо расписались, и я стал Семёном Сычёвым."
         "И, хотя остаток детства воспитывался в почти армейской строгости, детство у меня всё-таки было."
@@ -11666,7 +11666,7 @@ label alt_day7_mi_7dl_postscriptum:
         "Была Ксюша. Ксения. Ксана. Прелестная тварь — господи, как я любил её…"
     else:
         scene bg int_home_lift_7dl with fade2
-        play ambience ambience_elevator_7dl fadein 5
+        play ambience ambience_7dl["elevator"] fadein 5
         "Была мечта, которая позволила справиться со всем остальным."
         "Держащая плечи расправленными, а искривлённый позвоночник прямым и вытянутым, как пружина."
         "Хоть и ничем особенным не блистала наша школа, кроме кружка музыки."
@@ -11995,7 +11995,7 @@ label alt_day7_mi_7dl_sinthetic:
     scene expression Desat("cg d7_mi_kaito_7dl")
     show anim_grain
     with dissolve
-    play ambience ambience_town_day_7dl fadein 3
+    play ambience ambience_7dl["town_day"] fadein 3
     "Нужно быть сессиаином, чтобы тебе дали кредит."
     "Как у нас на родине — запись в трудовой, не больше, не меньше."
     "Иначе никакого кредита, только постоянным сотрудникам какой-то компании."
@@ -12031,7 +12031,7 @@ label alt_day7_mi_7dl_sinthetic:
     "А ещё вконец испортившийся характер и периодическая потребность разогнать всех и остаться в одиночестве."
     window hide
     scene black with dsps
-    play ambience ambience_night_city_7dl fadein 4
+    play ambience ambience_7dl["night_city"] fadein 4
     "Иногда она выгоняла и меня."
     "Тогда я выбирался на улицы Синдзюку, где разбивал влажные, неоновые вечера унылыми фортепьянными переборами и обращался к небу — здесь оно было очень высоким, держалось на бетонных плечах небоскрёбов:"
     me "Милая моя Мику… Здесь нет горестей, нет печалей — но нет и жизни."
@@ -12195,7 +12195,7 @@ label alt_day7_mi_7dl_come_back:
     play music music_7dl["youareours"] fadein 3
     "Или находишь записку, которая заставляет поверить в то, что ты здесь не просто так."
     "То, что иной досужий разум величает Высшей Целью Жизни."
-    play ambience ambience_night_city_7dl fadein 2
+    play ambience ambience_7dl["night_city"] fadein 2
     scene anim intro_8 with dissolve
     "И так, строго говоря, получается, что Высшей Целью этого невзрачного человека было — просто появиться в жизни нескольких людей."
     "Появиться и наставить их на путь истинный."

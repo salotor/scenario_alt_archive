@@ -3302,7 +3302,7 @@ label alt_day5_begin_mi_dj:
     mt "Прислушайся."
     me "Зачем?"
     mt "Прислушайся, говорю!"
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     "Я последовал требованию вожатой и сквозь стенки домика расслышал мерный перестук капель по крыше."
     me "Дождь?"
     mt "Да. Так что все линейки и зарядки отменены, завтрак позже — таков регламент."
@@ -3633,7 +3633,7 @@ label alt_day5_begin_mi_dj:
         mi "Какое радио в дождь? Фильмы смотреть пошли, а то я без тебя включать не умею."
         me "Как прагматично."
     window hide
-    play ambience ambience_rain_7dl fadein 2
+    play ambience ambience_7dl["rain"] fadein 2
     scene cg d5_rainy_idle_7dl with dissolve
     play music music_7dl["lastlight_piano"]
     "Мы рассмеялись в тон и, взявшись за руки как две первоклашки, отправились навстречу новому, дождливому, сырому, пасмурному — но тёплому — дню."
@@ -11808,7 +11808,7 @@ label alt_day7_mi_dj_epilogue_frost:
     "Она усадила меня в кэб, вручила водителю бумажку и несколько ассигнаций."
     window hide
     scene bg ext_graveyard_rain_7dl with flash
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     nvl clear
     "Плоская гранитная плита с вертикальной строчкой — одна из десятков тысяч в этом насквозь цивилизованном месте."
     "Иероглифы, которых мне едва хватает навыка прочесть."

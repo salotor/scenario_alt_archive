@@ -3641,7 +3641,7 @@ label alt_day5_dv_7dl_alco_morning:
     return
 
 label alt_day5_dv_7dl_begin: 
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     play music music_list["reflection_on_water"] fadein 3
     scene expression Desat("bg int_house_of_mt_sunset") with fade2
     "Глаза открываться отказывались решительно, тяжёлая, гудящая голова совершенно определённо давала мне понять, что оторвать от подушки её можно будет разве что подъёмным краном."
@@ -3658,7 +3658,7 @@ label alt_day5_dv_7dl_begin:
     "Она с намёком кивнула на дверь, и я, скосив взгляд, разглядел, как по стеклу колотит ленивым перестуком дождя."
     th "Вот почему мне так сладко спалось."
     "Догадался я."
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     "И вот почему так тяжело было выныривать из забытья."
     me "Дождь?"
     mt "Дождь. Так как вещей у тебя нет, возьмёшь плащ в шкафу, я на глаз размер примеряла, должен подойти."
@@ -3829,7 +3829,7 @@ label alt_day5_dv_7dl_begin:
     "Тем более, что и погода располагает."
     "Убрав останки недобитого завтрака на поднос, я цапнул с вешалки первый попавшийся дождевик подходящего размера и кинулся вслед Алисе."
     stop ambience fadeout 6
-    play ambience ambience_rain_7dl fadein 4
+    play ambience ambience_7dl["rain"] fadein 4
     window hide
     scene cg d5_rainy_idle_7dl
     window hide
@@ -3855,7 +3855,7 @@ label alt_day5_dv_7dl_begin:
 label alt_day5_dv_7dl_roadtrip:
     scene black
     play music music_list["raindrops"] fadein 6
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     "Спалось удивительно сладко – будто удалось на долю секунды устроиться-таки удобно на жёстком сиденье Волги, так, чтобы не затекала шея."
     "Ритмичное гудение скоро ушло, потеряло значение, оставляя меня наедине с моим вечным собеседником-сном."
     window hide
@@ -3944,10 +3944,10 @@ label alt_day5_dv_7dl_roadtrip:
     "Нет, ещё раньше."
     "Dura lex, но дуракам не писан."
     window hide
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     scene cg d5_rainy_idle_7dl with dissolve
     play music music_7dl["pathways"] fadein 5
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     $sunset_time()
     stop ambience fadeout 1
     play sound sfx_knock_glass
@@ -4429,7 +4429,7 @@ label alt_day5_dv_7dl_candle:
     show dv normal pioneer2 behind mt with dspr
     dv "А у меня… Нет никого. Я неродная в семье."
     stop ambience
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     "Гудение голосов тут же как отрезало — а у меня перед глазами почему-то встал ледяной декабрьский Питер в колодцах дворов, чьи края неумолимо удаляются с ускорением свободного падения."
     "Неловкое признание, ледяное — нараспашку — отчаянное."
     "Ожидание того, что и я сейчас буду как все, оттолкну, сам отскочу."
@@ -4488,7 +4488,7 @@ label alt_day5_dv_7dl_candle:
     show el normal pioneer far at cleft behind mt
     show mi normal pioneer far at cright behind mt
     with dissolve
-    play ambience ambience_rain_7dl fadein 4
+    play ambience ambience_7dl["rain"] fadein 4
 
     "Я не знаю, в каком пространстве-времени звучал этот диалог, но когда я всплыл к поверхности и как рыба схватил воздух губами, то обнаружил, что взгляды присутствующих сошлись на мне."
     "Не говоря ни одного слова, Мику капнула воска на стол и поставила свечу передо мной."
@@ -13113,7 +13113,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     with fade
     play sound sfx_intro_bus_door_open
     $ renpy.pause(3, hard=True)
-    play ambience ambience_railroad_7dl fadein 3
+    play ambience ambience_7dl["railroad"] fadein 3
     hide blind3_2
     with fade
     $ renpy.pause(1, hard=True)
@@ -13876,7 +13876,7 @@ label alt_day7_dv_7dl_bad_end:
     window hide
     scene bg ext_mv2_7dl with dissolve
     stop music fadeout 3
-    play ambience ambience_railroad_7dl fadein 3
+    play ambience ambience_7dl["railroad"] fadein 3
     play music music_7dl["misery"] fadein 3
 
     "Вокруг бурлила жизнь мегаполиса, царила та атмосфера, что возможна лишь на вокзалах — как провожают пароходы? Ах, действительно, совсем не так, как поезда."

@@ -3525,7 +3525,7 @@ label alt_day4_fz_old_camp:
     scene bg int_catacombs_living
     with dissolve
     stop music fadeout 5
-    play ambience ambience_safe_7dl
+    play ambience ambience_7dl["safe"]
     "Мы оказались в святая святых этого места."
     $ persistent.sprite_time = "sunset"
     "Двухъярусная кровать с толстым слоем пыли - демонстрирующая, что на ней никогда не спали, уголок радиста и индивидуальные шкафчики, один из которых был распахнут."

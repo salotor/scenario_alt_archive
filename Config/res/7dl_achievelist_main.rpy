@@ -33,7 +33,7 @@ label scenario__sdl_achvlist_Author:
     $ day_time()
     $ persistent.sprite_time = "day"
     $ plthr = u"Достижения"
-    play ambience ambience_safe_7dl fadein 5
+    play ambience ambience_7dl["safe"] fadein 5
         
 # ------------------------------------------------
 # Показываем первоначальный фон

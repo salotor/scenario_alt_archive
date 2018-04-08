@@ -795,7 +795,7 @@ label alt_day4_sl_cl_shurik:
         ease 0.5 yalign 1 zoom 1.3
     with flash
     play sound sfx_fall_wood_floor
-    play ambience ambience_explosive_post_7dl
+    play ambience ambience_7dl["explosive_post"]
 
     "И полностью отрубиться позволил себе лишь тогда, когда вытолкнул очкарика вон из клуба, и он загремел вниз по ступеням."
     play sound sfx_bodyfall_1
@@ -2051,7 +2051,7 @@ label alt_day4_sl_old_camp2:
     scene bg int_catacombs_living
     show cotocomb_lighter
     with flash
-    play ambience ambience_safe_7dl
+    play ambience ambience_7dl["safe"]
     extend ", нашему взгляду предстал миниатюрный рай для отшельника."
     "Полностью укомплектованная, отлаженная и пугающе самодостаточная система."
     if alt_day4_sl_tut_iz:
@@ -3211,7 +3211,7 @@ label alt_day5_sl_begin:
     $ sunset_time()
     scene expression Desat("bg int_house_of_sl_day")
     show unblink
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     "Я вздрогнул и открыл глаза."
     play music music_7dl["shehasgone"] fadein 3
     "Приснится же такое. {w}Потом в реальность не веришь."
@@ -4034,7 +4034,7 @@ label alt_day5_sl_begin:
     $ persistent.sprite_time = "sunset" 
     $ sunset_time()
     scene bg ext_admins_rain_7dl with dissolve
-    play ambience ambience_rain_7dl fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     "Мы вышли в промозглое июльское утро."
     "Иногда мне кажется, что я ношу за собой дождь как мантию. {w}Серую мантию — лакмус свинцового колера моей души."
     "И здесь, среди лета, я ничуть не удивился тому, что непогода всё-таки догнала меня."
@@ -4166,7 +4166,7 @@ label alt_day5_sl_begin:
     $ sunset_time()
     scene expression Desat("bg ext_stand3_7dl")
     show rain_overlay
-    play ambience ambience_rain_7dl
+    play ambience ambience_7dl["rain"]
     with dissolve
     "На стенде уже висела какая-то бумажка явно медицинского толка."
     "И было на этой бумажке…"
@@ -4925,7 +4925,7 @@ label alt_day5_sl_begin:
     show unblink
     scene expression Desat("bg int_mine_room2_7dl")
     with dissolve
-    play ambience ambience_safe_7dl
+    play ambience ambience_7dl["safe"]
     "Я находился в каком-то полутёмном помещении, лежа на чём-то мягком."
     show sl angry pioneer with dspr 
     sl "Ты не успел отношениями обзавестись, а уже стремишься стать бобылём?"
@@ -9978,7 +9978,7 @@ label alt_day6_sl_amp_club:
         me "Знаешь, давай-ка ты лучше спускайся, и мы тут просто замок по…"
         window hide
         stop music
-        play ambience ambience_explosive_post_7dl
+        play ambience ambience_7dl["explosive_post"]
         scene expression Noir("bg int_clubs_male_day") with flash
         $ renpy.pause(2)
         scene expression Dawn("bg int_clubs_male_day") with diam
@@ -14000,7 +14000,7 @@ label alt_day7_sl_square1:
             stop music fadeout 3
             window hide
             scene black with fade
-            play ambience ambience_safe_7dl
+            play ambience ambience_7dl["safe"]
             "Странное чувство — будто я хожу по самому краю — то самое, что было у меня только тогда, когда я оттаскивал Славю за шиворот от того злополучного тумана."
             "Но в этот раз оно не в пример сильнее."
             "Туннель немного петлял, однако я был начеку и вовремя выставлял ладони перед собой."
