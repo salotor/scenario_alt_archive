@@ -33,7 +33,7 @@ label scenario__sdl_achvlist_Author:
     $ day_time()
     $ persistent.sprite_time = "day"
     $ plthr = u"Достижения"
-    play ambience ambience_safe fadein 5
+    play ambience ambience_safe_7dl fadein 5
         
 # ------------------------------------------------
 # Показываем первоначальный фон
@@ -3140,7 +3140,7 @@ label sdl_achvlist_menoi_clear_Author:
 label alt_achvA_mi7dl_true:
     scene anim intro_16 with dsps
     play ambience ambience_camp_entrance_day fadein 3
-    play music iwantmagic fadein 3
+    play music iwantmagic_7dl fadein 3
     $ alt_day7_mi_7dl_trait = 3
     "Размышлять не стоило."
     "Незачем оно было."
@@ -3171,7 +3171,7 @@ label alt_achvA_mi7dl_true:
     stop sound_loop fadeout 0
     show blink
     scene black
-    play music sh_ai_rejuv fadein 3
+    play music sh_ai_rejuv_7dl fadein 3
     $ persistent.sprite_time = "prolog"
     $ prolog_time()
     "Я не знаю, что дальше будет со мной."
@@ -3181,11 +3181,11 @@ label alt_achvA_mi7dl_true:
     window hide
     scene expression SS_com("cg d6_mi_vyluthere_7dl")
     show anim_grain
-    play sound white_noise
+    play sound white_noise_7dl
     pause(1)
     scene expression SS_com("cg d6_mi_vyluthere_7dl")
     show anim_grain
-    play sound white_noise
+    play sound white_noise_7dl
     scene white with flash
     "Что такое - думать."
     window hide
@@ -3215,7 +3215,7 @@ label alt_achvA_mi7dl_true:
     "Ты обещал, что…"
     scene expression SS_com("bg ext_adductius_7dl")
     show anim_grain
-    play sound white_noise
+    play sound white_noise_7dl
     scene white with flash
     "Сегодня двадцать седьмое октября."
     "Я никогда не умру и ничего не забуду."
@@ -3247,7 +3247,7 @@ label alt_achvA_mi7dl_true:
     "Ты. Всё ещё. Не приходишь."
     scene expression Desat("cg d5_mi_conv_7dl")
     show anim_grain
-    play sound white_noise
+    play sound white_noise_7dl
     pause(.2)
     play sound sfx_head_heartbeat
     mi "Сеня-сан, зачем тебе вся эта аппаратура?"
@@ -3352,9 +3352,9 @@ label alt_achvA_mi7dl_true:
     scene black 
     show alt_letter timeskip10 at truecenter with zoomin
     window hide
-    play music emptiness fadein 3
+    play music emptiness_7dl fadein 3
     $ persistent.mi_7dl_true = True
-    play sound aunl
+    play sound aunl_7dl
     show acm_logo_mi_thank_you with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
