@@ -1,12 +1,8 @@
-# Все экраны в которых есть bgs/art - не трогать, там чисто пикчи. 
-init:
-    $ mods["alt_gallery"] = u"7dl gallery"
-    
 init 1:
     
     $ page_7dl = 1
     $ show_image_7dl = ""
-    $ gallery_mode_7dl = "arts"
+    $ gallery_mode_7dl = ""
     $ filter_7dl = ""
     
     $ style.page_7dl_text = Style(style.default)
@@ -14,6 +10,7 @@ init 1:
     $ style.page_7dl_text.color = "#ffffff"
     $ style.page_7dl_text.size = 60
     
+    image bg gallery_7dl = get_image_7dl("gui/gallery/gallery_bg.png")
     $ locked_img_7dl = ["gallery_stub_1.png", "gallery_stub_2.png", "gallery_stub_3.png", "gallery_stub_4.png", "gallery_stub_5.png", 
                         "gallery_stub_6.png", "gallery_stub_7.png", "gallery_stub_8.png", "gallery_stub_9.png"]
         
@@ -46,23 +43,31 @@ screen gallery_main_7dl:
         imagebutton:
             auto get_image_7dl("gui/gallery/gallery_navig_arts_%s.png") xalign 0.733 yalign 0.032 
             action [Hide("art_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "none")]
-    if gallery_mode_7dl == "bgs":
+    if gallery_mode_7dl == "":
+        timer 0.01 action [Show("art_7dl_%s" % str(page_7dl), transition=Dissolve(1.0)), Show("gallery_bw_7dl", transition=Dissolve(1.0)), Show("gallery_fw_7dl", transition=Dissolve(1.0)), SetVariable("gallery_mode_7dl", "arts")]
+    elif gallery_mode_7dl == "bgs":
         timer 0.01 action [Show("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2))]
-    if gallery_mode_7dl == "arts":
+    elif gallery_mode_7dl == "arts":
         timer 0.01 action [Show("art_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2))]
-    if filter_7dl == "un":
+    elif filter_7dl == "un":
         timer 0.01 action [Show("art_7dl_un_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2))]
-    if filter_7dl == "sl":
+    elif filter_7dl == "sl":
         timer 0.01 action [Show("art_7dl_sl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2))]
-    if filter_7dl == "dv":
+    elif filter_7dl == "dv":
         timer 0.01 action [Show("art_7dl_dv_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2))]
-    if filter_7dl == "mi":
+    elif filter_7dl == "mi":
         timer 0.01 action [Show("art_7dl_mi_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2))]
     elif filter_7dl == "us":
         timer 0.01 action [Show("art_7dl_us_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2))]
     elif filter_7dl == "mt":
         timer 0.01 action [Show("art_7dl_mt_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2))]
 
+screen gallery_exit_7dl:
+    if gallery_mode_7dl == "bgs":
+        imagebutton: 
+            auto get_image_7dl("gui/gallery/gallery_navig_bgs_%s.png") xalign 0.31 yalign 0.029 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "none")]
+        
 screen gallery_bw_7dl:
     if gallery_mode_7dl == "bgs":
         if renpy.get_screen("bgs_7dl_1"):
@@ -255,6 +260,102 @@ screen gallery_fw_7dl:
     elif filter_7dl == "mt":
         pass
                     
+screen gallery_fw_7dl:
+    if gallery_mode_7dl == "bgs":
+        if renpy.get_screen("bgs_7dl_24"):
+            pass
+        else:
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
+                if renpy.get_screen("bgs_7dl_1"):
+                    action [SetVariable("page_7dl", 2), Hide("bgs_7dl_1", transition=Dissolve(0.2)), Show("bgs_7dl_2", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_2"):
+                    action [SetVariable("page_7dl", 3), Hide("bgs_7dl_2", transition=Dissolve(0.2)), Show("bgs_7dl_3", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_3"):
+                    action [SetVariable("page_7dl", 4), Hide("bgs_7dl_3", transition=Dissolve(0.2)), Show("bgs_7dl_4", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_4"):
+                    action [SetVariable("page_7dl", 5), Hide("bgs_7dl_4", transition=Dissolve(0.2)), Show("bgs_7dl_5", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_5"):
+                    action [SetVariable("page_7dl", 6), Hide("bgs_7dl_5", transition=Dissolve(0.2)), Show("bgs_7dl_6", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_6"):
+                    action [SetVariable("page_7dl", 7), Hide("bgs_7dl_6", transition=Dissolve(0.2)), Show("bgs_7dl_7", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_7"):
+                    action [SetVariable("page_7dl", 8), Hide("bgs_7dl_7", transition=Dissolve(0.2)), Show("bgs_7dl_8", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_8"):
+                    action [SetVariable("page_7dl", 9), Hide("bgs_7dl_8", transition=Dissolve(0.2)), Show("bgs_7dl_9", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_9"):
+                    action [SetVariable("page_7dl", 10), Hide("bgs_7dl_9", transition=Dissolve(0.2)), Show("bgs_7dl_10", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_10"):
+                    action [SetVariable("page_7dl", 11), Hide("bgs_7dl_10", transition=Dissolve(0.2)), Show("bgs_7dl_11", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_11"):
+                    action [SetVariable("page_7dl", 12), Hide("bgs_7dl_11", transition=Dissolve(0.2)), Show("bgs_7dl_12", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_12"):
+                    action [SetVariable("page_7dl", 13), Hide("bgs_7dl_12", transition=Dissolve(0.2)), Show("bgs_7dl_13", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_13"):
+                    action [SetVariable("page_7dl", 14), Hide("bgs_7dl_13", transition=Dissolve(0.2)), Show("bgs_7dl_14", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_14"):
+                    action [SetVariable("page_7dl", 15), Hide("bgs_7dl_14", transition=Dissolve(0.2)), Show("bgs_7dl_15", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_15"):
+                    action [SetVariable("page_7dl", 16), Hide("bgs_7dl_15", transition=Dissolve(0.2)), Show("bgs_7dl_16", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_16"):
+                    action [SetVariable("page_7dl", 17), Hide("bgs_7dl_16", transition=Dissolve(0.2)), Show("bgs_7dl_17", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_17"):
+                    action [SetVariable("page_7dl", 18), Hide("bgs_7dl_17", transition=Dissolve(0.2)), Show("bgs_7dl_18", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_18"):
+                    action [SetVariable("page_7dl", 19), Hide("bgs_7dl_18", transition=Dissolve(0.2)), Show("bgs_7dl_19", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_19"):
+                    action [SetVariable("page_7dl", 20), Hide("bgs_7dl_19", transition=Dissolve(0.2)), Show("bgs_7dl_20", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_20"):
+                    action [SetVariable("page_7dl", 21), Hide("bgs_7dl_20", transition=Dissolve(0.2)), Show("bgs_7dl_21", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_21"):
+                    action [SetVariable("page_7dl", 22), Hide("bgs_7dl_21", transition=Dissolve(0.2)), Show("bgs_7dl_22", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_22"):
+                    action [SetVariable("page_7dl", 23), Hide("bgs_7dl_22", transition=Dissolve(0.2)), Show("bgs_7dl_23", transition=Dissolve(0.2))]
+                elif renpy.get_screen("bgs_7dl_23"):
+                    action [SetVariable("page_7dl", 24), Hide("bgs_7dl_23", transition=Dissolve(0.2)), Show("bgs_7dl_24", transition=Dissolve(0.2))]
+    elif gallery_mode_7dl == "arts":
+            if renpy.get_screen("art_7dl_8"):
+                pass
+            else:
+                imagebutton:
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
+                    if renpy.get_screen("art_7dl_1"):
+                        action [SetVariable("page_7dl", 2), Hide("art_7dl_1", transition=Dissolve(0.2)), Show("art_7dl_2", transition=Dissolve(0.2))]
+                    elif renpy.get_screen("art_7dl_2"):
+                        action [SetVariable("page_7dl", 3), Hide("art_7dl_2", transition=Dissolve(0.2)), Show("art_7dl_3", transition=Dissolve(0.2))]
+                    elif renpy.get_screen("art_7dl_3"):
+                        action [SetVariable("page_7dl", 4), Hide("art_7dl_3", transition=Dissolve(0.2)), Show("art_7dl_4", transition=Dissolve(0.2))]
+                    elif renpy.get_screen("art_7dl_4"):
+                        action [SetVariable("page_7dl", 5), Hide("art_7dl_4", transition=Dissolve(0.2)), Show("art_7dl_5", transition=Dissolve(0.2))]
+                    elif renpy.get_screen("art_7dl_5"):
+                        action [SetVariable("page_7dl", 6), Hide("art_7dl_5", transition=Dissolve(0.2)), Show("art_7dl_6", transition=Dissolve(0.2))]
+                    elif renpy.get_screen("art_7dl_6"):
+                        action [SetVariable("page_7dl", 7), Hide("art_7dl_6", transition=Dissolve(0.2)), Show("art_7dl_7", transition=Dissolve(0.2))]
+                    elif renpy.get_screen("art_7dl_7"):
+                        action [SetVariable("page_7dl", 8), Hide("art_7dl_7", transition=Dissolve(0.2)), Show("art_7dl_8", transition=Dissolve(0.2))]
+    elif filter_7dl == "un":
+        if renpy.get_screen("art_7dl_un_2"):
+            pass
+        elif renpy.get_screen("art_7dl_un_1"):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
+                action [SetVariable("page_7dl", 2), Hide("art_7dl_un_1", transition=Dissolve(0.2)), Show("art_7dl_un_2", transition=Dissolve(0.2))]
+    elif filter_7dl == "sl":
+        pass
+    elif filter_7dl == "dv":
+        pass
+    elif filter_7dl == "mi":
+        if renpy.get_screen("art_7dl_mi_2"):
+            pass
+        else:
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5
+                action [SetVariable("page_7dl", 2), Hide("art_7dl_mi_1", transition=Dissolve(0.2)), Show("art_7dl_mi_2", transition=Dissolve(0.2))]
+    elif filter_7dl == "us":
+        pass
+    elif filter_7dl == "mt":
+        pass
+
 screen bgs_7dl_1:
     tag menu
     $ next_page_7dl = str(page_7dl) + "/24"
@@ -1949,6 +2050,11 @@ screen filter_settings_7dl:
     imagebutton:
         auto get_image_7dl("gui/gallery/arts/d2_mt_me_resort_afar_7dl_%s.png") xalign 0.8 yalign 0.93 
         action [Hide("filter_settings_7dl", transition=Dissolve(0.2)), SetVariable("filter_7dl", "mt"), SetVariable("page_7dl", 1), Show("art_7dl_mt_1", transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2))] 
+    
+label alt_gallery_start:
+    scene bg gallery_7dl with fade
+    play music tellyourworld fadein 3
+    call screen gallery_main_7dl       
     
 label alt_gallery:
     call screen gallery_main_7dl       
