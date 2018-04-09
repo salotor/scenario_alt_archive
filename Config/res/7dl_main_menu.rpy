@@ -134,6 +134,7 @@ screen settings_reboot_7dl():
     add get_image_7dl("gui/menu_elem/settings/settings_reboot.png")
    
 screen menu_7dl(): # need changes on settings pics
+    modal True
     imagemap at left_menu_7dl(0.1, 0.7):
         if persistent.waifu_7dl == 1:
             #if time_7dl == 'day':
