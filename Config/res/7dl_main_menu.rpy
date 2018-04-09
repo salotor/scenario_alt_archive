@@ -16,6 +16,7 @@ init 1: # done
     $ persistent.waifu_7dl = 0
     $ time_7dl = ""
     image bg mi_bg_7dl = get_image_7dl("gui/menu_main/mi_bg.png")
+    image bg sl_bg_7dl = get_image_7dl("gui/menu_main/sl_bg.png")
     image bg un_bg_day_7dl = get_image_7dl("gui/menu_main/un_bg_day.png")
     image bg un_bg_night_7dl = get_image_7dl("gui/menu_main/un_bg_night.png")
     image bg us_bg_7dl = get_image_7dl("gui/menu_main/us_bg.png")
@@ -143,21 +144,21 @@ screen menu_7dl(): # need changes on settings pics
                 action [Show("media_7dl", transition=Dissolve(0.2))]
             hotspot (164, 772, 146, 38):
                 action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]   
-    #elif persistent.waifu_7dl == 2:
-        #imagemap at left_menu_7dl(0.1, 0.7):
-            #auto "mods/test1/img/menu_main/mi_menu_%s.png"
-            #hotspot (170, 511, 300, 38):
-                #action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Jump("start_7dl")]
-            #hotspot (170, 563, 300, 36):
-                #action [Show("settings_7dl", transition=Dissolve(0.2))]
-            #hotspot (162, 615, 307, 40):
-                #action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Jump("scenario__sdl_achvlist_Author")]
-            #hotspot (165, 665, 233, 43):
-                #action [Show("contacts_7dl", transition=Dissolve(0.2))]
-            #hotspot (164, 718, 153, 41):
-                #action [Show("media_7dl", transition=Dissolve(0.2))]
-            #hotspot (164, 772, 146, 38):
-                #action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
+    elif persistent.waifu_7dl == 2:
+        imagemap at left_menu_7dl(0.1, 0.7):
+            auto get_image_7dl("gui/menu_main/sl_menu_%s.png")
+            hotspot (170, 511, 300, 38):
+                action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Jump("start_7dl")]
+            hotspot (170, 563, 300, 36):
+                action [Show("settings_7dl", transition=Dissolve(0.2))]
+            hotspot (162, 615, 307, 40):
+                action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Jump("scenario__sdl_achvlist_Author")]
+            hotspot (165, 665, 233, 43):
+                action [Show("contacts_7dl", transition=Dissolve(0.2))]
+            hotspot (164, 718, 153, 41):
+                action [Show("media_7dl", transition=Dissolve(0.2))]
+            hotspot (164, 772, 146, 38):
+                action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
     #elif persistent.waifu_7dl == 3:
         #imagemap at left_menu_7dl(0.1, 0.7):
             #auto "mods/test1/img/menu_main/mi_menu_%s.png"
@@ -345,24 +346,24 @@ label choose_waifu_7dl: # done
         $ list_waifu_7dl = []
     if persistent.waifu_7dl == 0:
         #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 3, 4, 5, 6])
-        $ persistent.waifu_7dl = renpy.random.choice([1, 4, 5])
+        $ persistent.waifu_7dl = renpy.random.choice([1, 2, 4, 5])
         jump start_menu_7dl
     if persistent.waifu_7dl == 1:
         #$ persistent.waifu_7dl = renpy.random.choice([2, 3, 4, 5, 6])
-        $ persistent.waifu_7dl = renpy.random.choice([4, 5])
+        $ persistent.waifu_7dl = renpy.random.choice([2, 4, 5])
         jump start_menu_7dl
-    #if persistent.waifu_7dl == 2:
-        #$ persistent.waifu_7dl = renpy.random.choice([1, 3, 4, 5, 6])
-        #jump start_menu_7dl
+    if persistent.waifu_7dl == 2:
+        $ persistent.waifu_7dl = renpy.random.choice([1, 4, 5])
+        jump start_menu_7dl
     #if persistent.waifu_7dl == 3:
         #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 4, 5, 6])
         #jump start_menu_7dl
     if persistent.waifu_7dl == 4:
         #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 3, 5, 6])
-        $ persistent.waifu_7dl = renpy.random.choice([1, 5])
+        $ persistent.waifu_7dl = renpy.random.choice([1, 2, 5])
         jump start_menu_7dl
     if persistent.waifu_7dl == 5:
-        $ persistent.waifu_7dl = renpy.random.choice([1, 4])
+        $ persistent.waifu_7dl = renpy.random.choice([1, 2, 4])
         jump start_menu_7dl
     #if persistent.waifu_7dl == 6:
         #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 3, 4, 5])
@@ -414,11 +415,11 @@ label start_menu_7dl: # need dopil on girls walls
         $ list_waifu_7dl.append('un')
         scene bg un_bg_night_7dl with fade
         call screen menu_7dl
-    #if persistent.waifu_7dl == 2 and 'sl' not in list_waifu_7dl:
-        #$ list_waifu_7dl.append('sl')
-        #scene bg black 
-        #play music music_7dl["slavyas_fantazm"] fadein 3
-        #call screen menu_7dl
+    if persistent.waifu_7dl == 2 and 'sl' not in list_waifu_7dl:
+        $ list_waifu_7dl.append('sl')
+        scene bg sl_bg_7dl with fade2
+        play music music_7dl["slavyas_fantazm"] fadein 3
+        call screen menu_7dl
     #if persistent.waifu_7dl == 3 and 'dv' not in list_waifu_7dl:
         #$ list_waifu_7dl.append('dv')
         #scene bg black 

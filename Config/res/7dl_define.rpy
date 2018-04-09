@@ -205,15 +205,15 @@
         repeat
     
     image uv_bus:
-        get_sprite_7dl("screens/uv_alt1.png")
+        get_sprite_7dl("custom/uv_alt1_7dl.png")
         pause 0.5
-        get_sprite_7dl("screens/uv_alt2.png") 
+        get_sprite_7dl("custom/uv_alt2_7dl.png") 
         pause 0.5
-        get_sprite_7dl("screens/uv_alt3.png")
+        get_sprite_7dl("custom/uv_alt3_7dl.png")
         pause 0.5
-        get_sprite_7dl("screens/uv_alt2.png")
+        get_sprite_7dl("custom/uv_alt2_7dl.png")
         pause 0.5
-        get_sprite_7dl("screens/uv_alt1.png")
+        get_sprite_7dl("custom/uv_alt1_7dl.png")
         pause 0.5
     
     image anim_underwater:
@@ -250,11 +250,11 @@
 
     
     image timer_anim: 
-        get_image_7dl("sprites/custom/win_7dl.png") 
+        get_sprite_7dl("custom/win_7dl.png") 
         0.1 #Задержка
-        get_image_7dl("sprites/custom/win2_7dl.png")
+        get_sprite_7dl("custom/win2_7dl.png")
         0.1
-        get_image_7dl("sprites/custom/win3_7dl.png")
+        get_sprite_7dl("custom/win3_7dl.png")
         0.1
         repeat # Не убирать
         
@@ -268,17 +268,17 @@
         repeat # Не убирать
         
     image un serious dress anim: 
-        get_sprite_7dl("screens/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
         8.0 #Задержка
-        get_sprite_7dl("screens/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2.png")
         0.1
-        get_sprite_7dl("screens/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
         4.0 #Задержка
-        get_sprite_7dl("screens/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2.png")
         0.15
-        get_sprite_7dl("screens/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
         7.0 #Задержка
-        get_sprite_7dl("screens/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2.png")
         0.1
         repeat # Не убирать
 #Заставки
@@ -534,6 +534,7 @@
     image cg d5_rainy_idle_7dl = get_image_7dl("cg/d5_rainy_idle_7dl.jpg")
     image cg d5_sl_bed_7dl = get_image_7dl("cg/d5_sl_bed_7dl.jpg")
     image cg d5_sl_bench_7dl = get_image_7dl("cg/d5_sl_bench_7dl.jpg")
+    image cg d5_sl_hugs_7dl = get_image_7dl("cg/d5_sl_hugs_7dl.jpg")
     image cg d5_sl_kissing_7dl = get_image_7dl("cg/d5_sl_kissing_7dl.png")
     image cg d5_sl_moon_7dl = get_image_7dl("cg/d5_sl_moon_7dl.jpg")
     image cg d5_sl_swimming_7dl = get_image_7dl("cg/d5_sl_swimming_7dl.jpg")
@@ -550,6 +551,7 @@
     image cg d6_dance_alt_7dl = get_image_7dl("cg/d6_dance_alt_7dl.jpg")
     image cg d6_dv_dance_7dl = get_image_7dl("cg/d6_dv_dance_7dl.jpg")
     image cg d6_dv_hentai_7dl = get_image_7dl("cg/d6_dv_hentai_7dl.jpg")
+    image cg d6_dv_hentai2_7dl = get_image_7dl("cg/d6_dv_hentai2_7dl.jpg")
     
     image cg d6_mi_boat_7dl = get_image_7dl("cg/d6_mi_boat_7dl.jpg")
     image cg d6_mi_cya_7dl = get_image_7dl("cg/d6_mi_cya_7dl.jpg")
@@ -817,12 +819,10 @@
     
     image achieve_beagod = get_image_7dl("gui/acm/achieve_beagod_7dl.png")
     image acm_logo = get_image_7dl("gui/acm/acm_logo1_7dl.png") #Логотип сюжета
-    
-    image myst_mh = get_image_7dl("sprites/custom/myst_mh_7dl.png")
-    
+
     image dreamgirl_overlay = get_image_7dl("screens/dreamgirl_overlay.png")
     image wet1 = get_image_7dl("screens/wet1.png")
-    image volley_fight = get_image_7dl("sprites/custom/volley_fight_7dl.png")
+    image volley_fight = get_sprite_7dl("custom/volley_fight_7dl.png")
     
 #Картинки с использованием прозрачности и прочая спрайтовость
     image dv normal flipped = Transform("dv normal pioneer", xzoom=-1.0)
@@ -832,28 +832,29 @@
     #image d3_miku_dance_blush flipped = Transform("d3_miku_dance_blush", xzoom=-1.0)
     image uv shade3 sized = Transform("uv shade3", zoom=.4)
     image uv shade4 sized = Transform("uv shade4", zoom=.4)
-    image digi_pad = get_sprite_7dl("screens/digi_pad.png")
-    image hands_together = get_sprite_7dl("screens/hands_together.png")
-    image hands_together_tight = get_sprite_7dl("screens/hands_together_tight.png")
-    image sl_trench = get_sprite_7dl("screens/sl_trench.png")
-    image sl_trench2 = get_sprite_7dl("screens/sl_trench2.png")
-    image cotocomb_lighter = get_sprite_7dl("screens/cotocomb_lighter.png")
-    image d4_cat_door_frame = get_sprite_7dl("screens/d4_cat_door_frame.png")
-    image d6_miku_cries = get_sprite_7dl("screens/d6_miku_cries.png")
-    image mouth_dull = get_sprite_7dl("screens/mouth_dull.png")
-    image mi_ru = get_sprite_7dl("screens/mi_ru.png")
-    image mt_bus = get_sprite_7dl("screens/mt_bus.png")
-    image uvao_d1 = get_sprite_7dl("screens/uvao_d1.png")
-    image dv_mt = get_sprite_7dl("screens/dv_mt.png")
-    image backpack = get_sprite_7dl("screens/backpack.png")
-    image backpack_tiny = get_sprite_7dl("screens/backpack_tiny.png")
-    image dv_us_volley = get_sprite_7dl("screens/dv_us_volley.png")
+    image digi_pad = get_sprite_7dl("custom/digi_pad_7dl.png")
+    image hands_together = get_sprite_7dl("custom/hands_together_7dl.png")
+    image hands_together_tight = get_sprite_7dl("custom/hands_together_tight_7dl.png")
+    image sl_trench = get_sprite_7dl("custom/sl_trench_7dl.png")
+    image sl_trench2 = get_sprite_7dl("custom/sl_trench2_7dl.png")
+    image cotocomb_lighter = get_sprite_7dl("custom/cotocomb_lighter_7dl.png")
+    image d4_cat_door_frame = get_sprite_7dl("custom/d4_cat_door_frame_7dl.png")
+    image d6_miku_cries = get_sprite_7dl("custom/d6_miku_cries_7dl.png")
+    image mouth_dull = get_sprite_7dl("custom/mouth_dull_7dl.png")
+    image mi_ru = get_sprite_7dl("custom/mi_ru_7dl.png")
+    image mt_bus = get_sprite_7dl("custom/mt_bus_7dl.png")
+    image myst_mh = get_sprite_7dl("custom/myst_mh_7dl.png")
+    image uvao_d1 = get_sprite_7dl("custom/uvao_d1_7dl.png")
+    image dv_mt = get_sprite_7dl("custom/dv_mt_7dl.png")
+    image backpack = get_sprite_7dl("custom/backpack_7dl.png")
+    image backpack_tiny = get_sprite_7dl("custom/backpack_tiny_7dl.png")
+    image dv_us_volley = get_sprite_7dl("custom/dv_us_volley_7dl.png")
     
 #Dnd
     image alt_cat_map_wireframe = get_image_7dl("gui/dnd/alt_cat_map_wireframe.png")
     image alt_cat_map = get_image_7dl("gui/dnd/alt_cat_map.png")
     image alt_cat_map_pathfinding = get_image_7dl("gui/dnd/alt_cat_map_pathfinding.png")
-    image PolariodFrame = get_image_7dl("gui/PolariodFrame.png")
+    image PolariodFrame = get_sprite_7dl("custom/PolariodFrame.png")
     
     
 #Звучок
