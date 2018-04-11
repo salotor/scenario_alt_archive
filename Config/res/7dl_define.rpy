@@ -714,6 +714,7 @@
 #    image widget map = store.map_pics["widget map"]
 
 #Скачки по карте
+    image bg map_explain = get_image_7dl("gui/maps/map_explain.png")
     image dvsem_el = get_image_7dl("gui/maps/dvsem_el.png")
     image eye_s = get_image_7dl("sprites/custom/eye_s_7dl.png")
 #Сотик
@@ -861,14 +862,16 @@
 #ambience
     $ ambience_7dl = {}
 
-    $ ambience_7dl["concert"] = get_ambience_7dl("tellyourworld_concert_7dl.ogg")
+    $ ambience_7dl["disco"] = get_ambience_7dl("ambience_disco_7dl.ogg")
+    $ ambience_7dl["concert"] = get_ambience_7dl("ambience_tellyourworld_concert_7dl.ogg")
     $ ambience_7dl["elevator"] = get_ambience_7dl("ambience_elevator_7dl.ogg")
     $ ambience_7dl["explosive_post"] = get_ambience_7dl("ambience_explosive_post_7dl.ogg")
     $ ambience_7dl["night_city"] = get_ambience_7dl("ambience_night_city_7dl.ogg")
-    $ ambience_7dl["railroad"] = get_ambience_7dl("railroad_ambience_7dl.ogg")
+    $ ambience_7dl["railroad"] = get_ambience_7dl("ambience_railroad_7dl.ogg")
     $ ambience_7dl["rain"] = get_ambience_7dl("ambience_rain_loop_7dl.ogg")
     $ ambience_7dl["safe"] = get_ambience_7dl("ambience_safe_7dl.ogg")
     $ ambience_7dl["salute"] = get_ambience_7dl("ambience_salute_7dl.ogg")
+    $ ambience_7dl["showers"] = get_ambience_7dl("ambience_showers_7dl.ogg")
     $ ambience_7dl["town_day"] = get_ambience_7dl("ambience_town_day_7dl.ogg")
     $ ambience_7dl["underwater"] = get_ambience_7dl("ambience_underwater_7dl.ogg")
     $ ambience_7dl["volley"] = get_ambience_7dl("ambience_volley_7dl.ogg")

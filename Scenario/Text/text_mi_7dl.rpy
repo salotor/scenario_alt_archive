@@ -6185,7 +6185,7 @@ label alt_day6_mi_7dl_soul:
     el "Почему-то я так и подумал."
     "Спокойно кивнул парень."
     window hide
-    scene bg ext_path_day with joff
+    scene bg ext_admins_day_7dl with joff
     play ambience ambience_forest_day fadein 1
     show el normal pioneer with dspr
     el "Сегодня с самого утра поднялся по одному делу — пошёл было, а тут вижу: Лена куда-то крадётся."
@@ -6212,6 +6212,8 @@ label alt_day6_mi_7dl_soul:
     el "Нас должны ждать."
     me "Второй отряд?"
     "Вместо ответа Электроник свернул на едва заметной тропинке и несколькими минутами спустя вывел меня к выходу из лагеря."
+    window hide
+    scene bg ext_backdoor_day_7dl with dissolve
     "Здесь уже толпились ребятишки из второго отряда."
     el "Все собрались?"
     "Они вразнобой уверили — что да, все желающие на месте."
