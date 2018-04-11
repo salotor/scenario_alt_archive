@@ -3249,12 +3249,8 @@ label alt_day6_mt_7dl_nighttime:
 
 label alt_day7_mt_7dl_begin:
     $ meet('mt','Олька')
-<<<<<<< HEAD
     $ alt_meet['mt'] = u"Олька"
-    play music ltyh fadein 3
-=======
     play music music_7dl["ltyh"] fadein 3
->>>>>>> master
     "Я спал."
     "И во сне был счастлив."
     window hide
