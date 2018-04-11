@@ -2987,7 +2987,7 @@ label alt_day2_event_medic_house1:
     me "Меня с маршрутным листом послали."
     show cs smile close at center with dspr
     cs "Но ведь можно же и полечиться, да?"
-    show cs grin close
+    show cs grin #close для close нет запчастей
     $ renpy.pause(.25)
     show cs smile close with dissolve
     "Подмигнув мне, она придвинулась ещё ближе, так, что наши колени почти соприкасались, и… {w}Выхватив бегунок у меня из пальцев, поднесла к глазам."
