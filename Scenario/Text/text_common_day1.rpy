@@ -1,5 +1,5 @@
 ﻿label alt_day1_begin:
-    play music areyouabully fadein 2
+    play music music_7dl["areyouabully"] fadein 2
     play sound sfx_shoulder_dive_water
     scene anim_underwater
     show blackout_exh
@@ -13,8 +13,6 @@
         "И принял неизбежное."
     else:
         "Я рванулся к поверхности."
-    stop music fadeout 4
-    stop ambience fadeout 6
     window hide
     with fade
     return
@@ -191,10 +189,15 @@ label alt_day1_bus_start:
     show prologue_dream
     with flash
 
-    "Её губы почти касаются моего уха, и от тепла дыхания и щекотно, и приятно."
-    dreamgirl "«…вспомни…»"
-    dreamgirl "«…жалуйста… един…»"
-    dreamgirl "«…шанс…»"
+    "Её губы почти касались моего уха, и от тепла дыхания было и щекотно, и приятно."
+    if alt_day_binder != 0:
+        dreamgirl "«…вспомни…»"
+        dreamgirl "«…жалуйста… един…»"
+        dreamgirl "«…шанс…»"
+    else:
+        dreamgirl "Ты решил остаться?"
+        dreamgirl "Глупый Сёмчик, глупый."
+        dreamgirl "Но я рада."
     window hide
     scene bg ext_road_day with dissolve
 
@@ -222,7 +225,7 @@ label alt_day1_bus_start:
         if not herc:
             "Ладно, это всё ерунда, надо набрать мать."
         "Последний номер."
-        "Ничего удивительного, кроме него там было считанное количество других номеров. Из числа тех, кого я поленился удалить."
+        "Ничего удивительного, кроме него там было считанное количество других. Из числа тех, кого я поленился удалить."
         play sound sfx_cellular_phone_error fadein 0
         "Глухо."
         $ renpy.pause(3)
@@ -236,7 +239,7 @@ label alt_day1_bus_start:
     "Смежные частоты. {w} Глухо."
     th "Ладно, дальше."
     $ volume (0.2,'sound_loop')
-    play sound white_noise fadeout 2
+    play sound sfx_7dl["white_noise"] fadeout 2
     "Я с грехом пополам пристроил наушники в ушах и переключил плеер в режим радиосканера."
     "FM-диапазон. {w} Глухо. {w} АМ-диапазон. {w} Глухо."
     stop sound
@@ -279,6 +282,7 @@ label alt_day1_firts_met:
     play sound sfx_punch_medium
     scene expression Noon("bg ext_bus1_7dl") with blind_l
     with vpunch
+    play ambience ambience_camp_entrance_day fadein 9
     "И, пребольно стукнувшись головой о дверку, открыл глаза."
     show sl_shade with flash
     play music music_list["take_me_beautifully"] fadein 1
@@ -343,7 +347,9 @@ label alt_day1_firts_met:
             "Колокольчик нигде не отзывался, с тем же успехом это мог быть какой-нибудь Дай Кхунь Пей — понял бы я столько же."
             sl "Вожатая."
             "Пояснила девушка."
-            "Я вспомнил первого человека, которого увидел, открыв глаза — ту японскую разухабистую красотку в форме пионерки."
+            "Я вспомнил первого человека, которого увидел, открыв глаза — ту японскую разухабисту красотку в форме пионерки."
+            "Да и нынешняя моя собеседница была наряжена ровно таким же образом."
+            "Белая рубашечка, алый галстук да юбочка до середины бедра. Не хватает только татуировки «Не забуду Ильича» для полной аутентичности."
             th "Ясно. {w}Так и запишем — играли в пионеров, даже вожатых завезли."
         "Игнорировать её.":
             $ lp_sl -= 1
@@ -387,12 +393,13 @@ label alt_day1_firts_met:
     with flash
     sl "Смотри, мы здесь."
     "Она показала на прямоугольник, чьим-то красивым почерком подписанный как «стоянка» — там был жирный красный крест."
+    scene bg map_explain with fade
     sl "А тебе надо вот сюда — к дому Ольги Дмитриевны."
-    show sl smile pioneer with dissolve
+    show sl smile2 pioneer with dissolve
     sl "Ты же умеешь по карте ориентироваться, правда?"
     window hide
-    scene bg ext_bus1_7dl at zenterleft
-    show sl smile2 pioneer at cleft
+    scene bg ext_bus1_7dl
+    show sl smile2 pioneer cleft
     with dissolve
     "Девушка улыбнулась так, будто для неё отрицательный ответ был невозможен."
     me "Я попробую."
@@ -482,7 +489,7 @@ label alt_day1_firts_met:
     if alt_day1_sl_conv:
         show sl normal pioneer with dissolve
     "Потому что взгляду моему открылась картина, что преследовала меня всю мою сознательную жизнь!"
-    play music dead_silence fadein 3
+    play music music_7dl["dead_silence"] fadein 3
     scene expression Dawn("bg ext_entrance_night_clear_7dl")
     show anim_grain
     with touch
@@ -639,7 +646,7 @@ label alt_day1_arrival:
     "Молчание становилось пугающим, и я уже решил было прочистить горло, чтобы хоть как-нибудь прервать тишину, как нам помешали."
     "Соседние кусты затрещали, и на дорогу выскочил кто-то!"
     "Кто-то невысокий, в алой футболке с надписью «СССР» и с мордочкой вечно жизнерадостной, счастливой и пакостливой младшей сестры."
-    show un normal pioneer at center with dspr
+    show us grin sport far at center with move
     "Рыжие до красноты волосы, стянутые двумя хвостами-ракетами, смазливая внешность, которую уверенно портила бездна лукавства, плещущая на дне голубых глазищ!"
     "Издалека она казалась совсем маленькой и по возрасту определённо была младше всех, кого я тут видел раньше." 
     if not alt_day1_sl_conv:
@@ -648,18 +655,18 @@ label alt_day1_arrival:
         "Я хотел что-то сказать или спросить, но не успел — «красная» подскочила к девушке и о чём-то начала рассказывать, возбуждённо размахивая руками."
     "Та же в свою очередь смутилась, потупила взгляд и ничего не сказала."
     if alt_day1_sl_conv:
-        show sl normal pioneer at fleft with dissolve
+        show sl normal pioneer at fright with dissolve
         sl "Уль-я-на!"
-        show us laugh sport with dspr
+        show us laugh sport far with dspr
         us "Да, гражнинначаник!"
         "Искренне улыбнулась мелкая."
         sl "Уль-я-на!"
         "Снова по слогам произнесла моя провожатая."
-        show us smile sport with dspr
+        show us smile sport far with dspr
         us "Ну чегоооо…"
         show sl laugh pioneer with dspr
         sl "Да не притворяйся, всё ты поняла."
-        show us sad sport with dspr
+        show us sad sport far with dspr
         us "Бу-бу-бу, киллджой косатый!"
         "Надулась мелкая, разжимая ладонь."
         "Оттуда в зенит мгновенно улетело что-то продолговатое, зелёное, трещащее на лету."
@@ -668,9 +675,13 @@ label alt_day1_arrival:
         hide us with easeoutright
         "Зеленоглазка немного постояла, приходя в себя — видимо, поняла, от чего её только что спасли."
         play sound sfx_open_door_1
-        hide us with diam
+        hide un with diam
         "После чего, выдавив нечто невразумительное, вернулась обратно в «Клубы»."
     else:
+        "Заинтересованный, я сделал шаг поближе, пытаясь услышать, о чём они разговаривают."
+        show un normal pioneer with center
+        show us laugh sport at right
+        with dissolve
         "Я бы, наверное, и дальше наблюдал за их занимательным диалогом, но «СССР» вдруг достала из кармана что-то и начала трясти этим перед лицом «Грустяши»."
         "«Чем-то» оказался кузнечик. {w}Нет. Саранча. Огромная!"
         "Сказать по правде, я бы и сам напугался, если бы мне в лицо ткнули чем-то подобным." 
@@ -899,7 +910,7 @@ label alt_day1_arrival:
         "Я махнул рукой и усмехнулся."
         th "Сам виноват, сам."
         "Рядом была крайне перспективная скамеечка, куда я и устроился, предварительно выжав на себе свитер."
-        play music so_cold fadein 3
+        play music music_7dl["so_cold"] fadein 3
         "Сохнуть!"
         "К счастью, для таких вот моментов неминуемого унижения, у меня, как у супергероя «Человека-Неудачника», существовал антикризисный набор."
         "Чуть-чуть самобичевания, чуть-чуть чёрного юмора и море самоиронии."
@@ -1225,17 +1236,18 @@ label alt_day1_mod_tan:
         $ renpy.pause(2)
         mt "Открыто!"
         window hide
-        stop ambience
+        stop ambience fadeout 5
         play sound sfx_open_dooor_campus_1
+        pause(1)
         play ambience ambience_int_cabin_day fadein 1
         scene bg int_house_of_mt_noitem_day
-        show mt normal pioneer
         with dissolve
         "Не слушая моих возражений, блондинка потащила меня за собой."
     "Внутри домик выглядел именно так, как и ожидалось: две кровати, столик, стулья, пара шкафчиков и постер с несравненным Жаном Маре в роли Фантомаса."
     "Ничего сверхъестественного, хотя по части бардака этот домик влёгкую мог потягаться с моей квартирой."
     "Возле окна стояла девушка примерно моего возраста и что-то читала в ежедневнике. {w}И, разумеется, как и всех прочих представительниц прекрасного пола, встреченных мной тут, природа не обделила её ни лицом, ни фигурой."
     th "Хоть это радует — помирать буду в компании прекрасных дам. Если буду, конечно."
+    show mt normal pioneer with dissolve
     mt "А вот и ты."
     if not (herc or loki) and not alt_day1_sl_conv:
         "Она скептически оглядела мою одежду и покачала головой."
@@ -1417,9 +1429,10 @@ label alt_day1_mod_tan:
     mt "Справишься?"
     me "Ну… да."
     mt "Вот и хорошо. Увидимся за ужином, Семён."
-    mt "Не забудь переодеться!"
     hide mt with dissolve
     "Она выпорхнула за дверь вслед за Славей."
+    me "А куда мне нести бельё?"
+    "Спросил у пустоты я. С ожидаемым результатом."
     if not (herc or loki) and not alt_day1_sl_conv:
         "Мои сырые вещи заняли шкаф и пару вешалок, так что я остался в только вожатской футболке — не самый лучший прикид, но куда лучше, чем ходить в мокром."
     else:
@@ -1511,6 +1524,8 @@ label alt_day1_elektron:
     "Через неё можно было разглядеть полутёмное помещение с трёхэтажными деревянными полками, на каждой из них лежали свёрнутые рулетом матрасы; в качестве начинки выступала подушка, обёрнутая в тонкое шерстяное одеяло."
     sl "Ой, ребята, подождите. Сейчас я выйду."
     play music music_list["take_me_beautifully"] fadein 1
+    window hide
+    scene bg int_warehouse_day_7dl
     show sl shy sport at center 
     show el normal pioneer at left
     with dissolve
@@ -1621,9 +1636,9 @@ label alt_day1_meeting:
     "Девочка-пожар, девочка-брызги…"
     me "Такая злая?"
     el "Да нет, просто она какая-то…{w} Фамилия Двачевская, но только попробуй назвать её"
-    extend " ДваЧе…"
-    stop music fadeout 0
+    stop music fadeout 6
     stop ambience fadeout 0
+    extend " ДваЧе…"
     pause(3)
     play music music_list["awakening_power"] fadein 2
     show dv angry pioneer2 far at left behind el with dspr
@@ -1791,7 +1806,7 @@ label alt_day1_soccer_d1:
     else:
         "Можно подумать, счастье — в количестве подтягиваний."
         "Поняв, что на «слабо» я не ведусь, девочка хотела было вернуться к игре, но её прервал сигнал горна."
-    play music eat_horn fadein 3 
+    play music sfx_7dl["eat_horn"] fadein 3 
     us "Бегом до столовой! Кто последний, тот тухлый помидор!"
     hide us with dissolve
     "Дети загалдели и, толкаясь, бросились по направлению к столовой."
@@ -2067,7 +2082,7 @@ label alt_day1_chase:
             scene bg ext_path_sunset with dissolve
             $ renpy.pause (1)
             play ambience ambience_forest_day fadein 1
-            play sound breath fadein 3
+            play sound sfx_7dl["breath"] fadein 3
         
             "Пробежав весь лагерь насквозь, я начал понимать, что где-то разминулся с жертвой."
             "Я остановился, со злостью ударив кулаком по дереву, и, согнувшись, попробовал восстановить дыхание."
@@ -2563,7 +2578,7 @@ label alt_day1_slavya_saviour:
     stop music fadeout 4
     stop ambience fadeout 6
     window hide
-    with fade
+    scene black with fade
     return
 
 label alt_day1_lena:
@@ -2586,7 +2601,7 @@ label alt_day1_lena:
     if alt_day_binder != 1:
         play music music_list["lets_be_friends"] fadein 5
     else:
-        play music take_my_hand fadein 4
+        play music music_7dl["take_my_hand"] fadein 4
 
     th "Лена."
     "Она не столько читала, сколько сидела, прикрыв глаза, и что-то беззвучно говорила."
@@ -2947,7 +2962,7 @@ label alt_day1_un_stay:
 label alt_day1_sleep:
     window hide
     scene bg ext_square_night with dissolve
-    play music melancholy_sun fadein 3
+    play music music_7dl["melancholy_sun"] fadein 3
     "Вечер — тёплый, добрый, мой."
     "Возможно, сегодня произошло всё не так, как я планировал, не так, как я хотел."
     "Но это и не важно!"

@@ -14,10 +14,17 @@
     if alt_day1_un_dated == 1:
         call alt_day2_guide
         pause(1)
+    elif alt_day2_sl_bf:
+        call alt_day2_sl_guide
+        pause(1)
+        if (alt_day1_sl_keys_took == 1) and (alt_day2_sl_guilty == 0):
+            call alt_day2_sl_hyst
+        pause(1)
+        call alt_day2_map_prepare
     else:
         call alt_day2_convoy
         pause(1)
-    call alt_day2_map_prepare
+        call alt_day2_map_prepare
     pause(1)
     call alt_day2_event_estrade
     pause(1)
@@ -34,7 +41,6 @@
             call alt_day2_dubstep2
     pause(1)
     call alt_day2_dinner
-    $ alt_chapter(2, u"День")
     pause(1)
     $ persistent.sprite_time = "day"
     $ day_time()
@@ -42,7 +48,7 @@
         $ alt_chapter(2, u"Великий побег.")
         call alt_day2_grand_escape
     else:
-        $ alt_chapter(2, u"Тихий час.")
+        $ alt_chapter(2, u"День.")
         call alt_day2_siesta
     pause(1)
     $ alt_chapter(2, u"Турнир")

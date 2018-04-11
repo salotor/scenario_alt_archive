@@ -14,7 +14,7 @@
     image bg int_sleep_hentai_office_7dl = get_image_uvao_7dl("bg/int_sleep_hentai_office_7dl.jpg")
     image bg int_sleep_hentai_office2_7dl = get_image_uvao_7dl("bg/int_sleep_hentai_office2_7dl.jpg")
     #Анимка спичек
-    image match_lights: 
+    image match_lights_7dl: 
         contains: 
             get_image_uvao_7dl('matches_tone.png') # оранжевенькая тонировка путь 1
             additive 1.0
@@ -24,7 +24,7 @@
             function random_zoom # дрожание огонька
             repeat
     # Анимка бесконечных спичек
-    image bg int_mine_crossroad_matches: 
+    image bg int_mine_crossroad_matches_7dl: 
         "bg black" with fade2
         0.5
         block:
@@ -54,8 +54,8 @@
 
     
 # sounds
-    $ phone_vibro = get_sfx_uvao_7dl("vibration-smartphone.ogg")
-    $ match_lights = get_sfx_uvao_7dl("lighting-a-match.ogg")
-    $ silence = get_sfx_uvao_7dl("silence_4sec.ogg")
-    $ my_chrysalis_highwayman = get_music_uvao_7dl("my_chrysalis_highwayman.ogg")
+    $ sfx_7dl["phone_vibro"] = get_sfx_uvao_7dl("vibration-smartphone_7dl.ogg")
+    $ sfx_7dl["match_lights"] = get_sfx_uvao_7dl("lighting-a-match_7dl.ogg")
+    $ sfx_7dl["silence"] = get_sfx_uvao_7dl("silence_4sec_7dl.ogg")
+    $ music_7dl["my_chrysalis_highwayman"] = get_music_uvao_7dl("my_chrysalis_highwayman_7dl.ogg")
     

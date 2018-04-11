@@ -53,7 +53,7 @@
     "Вряд ли после вчерашнего мне удастся пронять её враждебными взглядами, но попытаться-то стоило!"
     show dv laugh pioneer2 far with dissolve
     "Она расхохоталась ещё раз и, пройдя к стулу, взяла оттуда форму и бросила мне."
-    play sound blanket fadein 0
+    play sound sfx_7dl["blanket"] fadein 0
     dv "Ты проспал всё, что мог. {w}Поднимайся."
     "Она прислонилась к двери и, кажется, собралась ждать."
     "Я как сидел, вытянул в сторону двери руку, указывая направления…"
@@ -680,7 +680,7 @@ label alt_day4_dv_7dl_forest:
     show un grin pioneer with dissolve
     un "Давай над Алиской приколемся?"
     me "Как?"
-    play sound kissing_sound fadein 3
+    play sound sfx_7dl["kissing_sound"] fadein 3
     "Вместо ответа она согнула руку в локте и, поднеся сгиб ко рту, издала очаровательный оглушительный «чмок»."
     me "Ага, значит нарываемся на место под соснами?" 
     "Улыбнулся я."
@@ -1243,7 +1243,7 @@ label alt_day4_dv_7dl_silent_hour:
     th "Чёрт. Ещё дольше ждать теперь."
     "Девочки так и сидели на солнышке, сбросив обувь, и лениво обменивались фразами. Присутствию вожатой они не удивились, даже позы не сменили. Однако, ей, похоже, потребовалось что-то сказать — и этого «чего-то» было довольно много."
     th "Я уже второй раз делаю одно и то же. Вместо того, чтобы наслаждаться мирной жизнью образцового пионера — Славю, там, окучивать, с помощью метёлки и помощи по хозяйству — опять двигаюсь перебежками от укрытия к укрытию как очередной придурочный герой очередной придурочной видеоигры."
-    play music me2ost fadein 5
+    play music music_7dl["me2ost"] fadein 5
     "Бравый коммандер Шепурд выглянул из укрытия и взял на прицел дверной проём!"
     th "Меня никто не успел засечь, поэтому термозарядов полно, а желания их потратить — ещё больше!"
     th "Но — чу! На горизонте видны подавляюще большие силы противника! Придётся отсиживаться в укрытии!"
@@ -1483,7 +1483,7 @@ label alt_day4_dv_7dl_silent_hour:
     "Вниз по склону — на бетонном пятачке, где внезапно окажется, что мой голос достаточно перспективен, чтобы быть голосом лагеря, а на пять метров левее мне раскровенят нос за то, что на десять метров правее мне поставили засос — там будет дизель-электростанция, делящая общее здание со спутниковым телевидением, телефоном и интернетом."
     "А Алиса взрослая, лет порядка сорока-сорока двух, устало руководит всем этим балаганом, и следа даже не осталось от её роскошных хвостов-молний, и не пахнет даже в воздухе былым праздником, который шебутная девочка создавала одним своим присутствием."
     show dv normal pioneer2 with dissolve
-    play music lost_without_you fadein 3
+    play music music_7dl["lost_without_you"] fadein 3
     "Она вздрогнуть не успела, как оказалась обратно у меня в руках."
     me "Пообещай мне, что никогда не повзрослеешь, слышишь?"
     me "Я не хочу видеть тебя скучной взрослой тёткой. {w}Я боюсь увидеть её в тебе однажды."
@@ -1522,7 +1522,7 @@ label alt_day4_dv_7dl_silent_hour:
     window hide
     scene bg ext_house_of_un_day with dissolve
     with dissolve
-    play music old_kiss fadein 5
+    play music music_7dl["old_kiss"] fadein 5
     show un smile pioneer at cleft with dspr
     show dv smile pioneer2 at cright with dspr
     with dissolve
@@ -1708,7 +1708,7 @@ label alt_day4_dv_7dl_silent_hour:
     "Наконец, у меня начало что-то получаться, но к этому моменту пальцы уже были сбиты в ноль."
     "Правая ладонь горела огнём, однако, я был доволен собой — всё-таки, оно стоило того!"
     $ volume(0.5, "music")
-    play music eat_horn fadein 4 
+    play music sfx_7dl["eat_horn"] fadein 4 
     "Тем более, что над соснами вовсю разносилось развесёлое «бери ложку, бери хлеб», а это значит, что больше не надо корчить из себя образцовый лагерь, прятаться по углам от восхищающихся родителей, и так далее, и тому подобное."
     show dv smile pioneer2 with dissolve
     dv "Ну что, выучился чему-нибудь?"
@@ -2858,7 +2858,7 @@ label alt_day4_dv_7dl_aidpost:
                 "О том, что верхняя часть косточки на бедре — просто место, где щекотно, а нижняя… О, к этому я вернулся сразу после того, как узнал, что эрогенные зоны девочки расположились в том числе и на обратной стороне колена."
                 "О том, что рыжая дорожка волос ведёт туда, где…"
                 show blinking
-                play sound breath
+                play sound sfx_7dl["breath"]
                 "Она оказалась терпкой."
                 "Терпкой и нетерпеливой."
                 "И постоянно грозила сломать мне шею ногами, если я не прекращу делать то, что делаю."
@@ -2889,7 +2889,7 @@ label alt_day4_dv_7dl_aidpost:
             window hide
             scene anim prolog_2
             with dissolve2
-            play music vale fadein 3
+            play music music_7dl["vale"] fadein 3
             "Я спал, и мне снился сон о том, как чьи-то шаловливые ладошки гуляли по моей коже."
             "Вот они прогулялись по спине, по бокам, разгоняя тёплые волны застоявшейся крови, добрались до живота и, немного постояв, попытались протиснуться под ремень."
             me "Не стоит."
@@ -3641,7 +3641,7 @@ label alt_day5_dv_7dl_alco_morning:
     return
 
 label alt_day5_dv_7dl_begin: 
-    play ambience ambience_rain fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     play music music_list["reflection_on_water"] fadein 3
     scene expression Desat("bg int_house_of_mt_sunset") with fade2
     "Глаза открываться отказывались решительно, тяжёлая, гудящая голова совершенно определённо давала мне понять, что оторвать от подушки её можно будет разве что подъёмным краном."
@@ -3658,7 +3658,7 @@ label alt_day5_dv_7dl_begin:
     "Она с намёком кивнула на дверь, и я, скосив взгляд, разглядел, как по стеклу колотит ленивым перестуком дождя."
     th "Вот почему мне так сладко спалось."
     "Догадался я."
-    play ambience ambience_rain fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     "И вот почему так тяжело было выныривать из забытья."
     me "Дождь?"
     mt "Дождь. Так как вещей у тебя нет, возьмёшь плащ в шкафу, я на глаз размер примеряла, должен подойти."
@@ -3829,7 +3829,7 @@ label alt_day5_dv_7dl_begin:
     "Тем более, что и погода располагает."
     "Убрав останки недобитого завтрака на поднос, я цапнул с вешалки первый попавшийся дождевик подходящего размера и кинулся вслед Алисе."
     stop ambience fadeout 6
-    play ambience ambience_rain fadein 4
+    play ambience ambience_7dl["rain"] fadein 4
     window hide
     scene cg d5_rainy_idle_7dl
     window hide
@@ -3855,7 +3855,7 @@ label alt_day5_dv_7dl_begin:
 label alt_day5_dv_7dl_roadtrip:
     scene black
     play music music_list["raindrops"] fadein 6
-    play ambience ambience_rain fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     "Спалось удивительно сладко – будто удалось на долю секунды устроиться-таки удобно на жёстком сиденье Волги, так, чтобы не затекала шея."
     "Ритмичное гудение скоро ушло, потеряло значение, оставляя меня наедине с моим вечным собеседником-сном."
     window hide
@@ -3944,10 +3944,10 @@ label alt_day5_dv_7dl_roadtrip:
     "Нет, ещё раньше."
     "Dura lex, но дуракам не писан."
     window hide
-    play ambience ambience_rain fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     scene cg d5_rainy_idle_7dl with dissolve
-    play music pathways fadein 5
-    play ambience ambience_rain fadein 3
+    play music music_7dl["pathways"] fadein 5
+    play ambience ambience_7dl["rain"] fadein 3
     $sunset_time()
     stop ambience fadeout 1
     play sound sfx_knock_glass
@@ -4000,7 +4000,7 @@ label alt_day5_dv_7dl_roadtrip:
     "Ладно, чёрт с ним, как это выглядит, но она же в мокрой одежде, зальёт весь салон, да ещё и подумает обо мне невесть что."
     "Хотя по мне, так моей репутации уже вряд ли что-то повредит. Ниже уже некуда."
     me "Давай свой плащ, я сейчас."
-    play sound blanket fadein 0
+    play sound sfx_7dl["blanket"] fadein 0
     "Стараясь действовать как можно оперативнее — и от того лишь ещё больше путаясь — я несколько минут безрезультатно воевал с плащом."
     sl "Говорю же, вылезай."
     "Подала голос Славя, всё это время с улыбкой наблюдающая за мной."
@@ -4298,7 +4298,7 @@ label alt_day5_dv_7dl_candle:
     "Как-то отстранённо подумал я."
     "Рыжие, наконец, двинулись к выходу. Но Ольга остановила их:"
     mt "Стоять."
-    play music sky_feather fadein 5
+    play music music_7dl["sky_feather"] fadein 5
     dv "Что ещё?"
     mt "Я не слышу ваших объяснений."
     "Ох уже это взрослое «почему ты так сделал». Почему-почему… Потому что трюфеля."
@@ -4429,7 +4429,7 @@ label alt_day5_dv_7dl_candle:
     show dv normal pioneer2 behind mt with dspr
     dv "А у меня… Нет никого. Я неродная в семье."
     stop ambience
-    play ambience ambience_rain fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     "Гудение голосов тут же как отрезало — а у меня перед глазами почему-то встал ледяной декабрьский Питер в колодцах дворов, чьи края неумолимо удаляются с ускорением свободного падения."
     "Неловкое признание, ледяное — нараспашку — отчаянное."
     "Ожидание того, что и я сейчас буду как все, оттолкну, сам отскочу."
@@ -4488,7 +4488,7 @@ label alt_day5_dv_7dl_candle:
     show el normal pioneer far at cleft behind mt
     show mi normal pioneer far at cright behind mt
     with dissolve
-    play ambience ambience_rain fadein 4
+    play ambience ambience_7dl["rain"] fadein 4
 
     "Я не знаю, в каком пространстве-времени звучал этот диалог, но когда я всплыл к поверхности и как рыба схватил воздух губами, то обнаружил, что взгляды присутствующих сошлись на мне."
     "Не говоря ни одного слова, Мику капнула воска на стол и поставила свечу передо мной."
@@ -4563,7 +4563,7 @@ label alt_day5_dv_7dl_candle:
     stop ambience
     th "Сейчас я закончу речь — и Виола поедет в город ещё раз, в этот раз со мной в качестве пассажира. {w}В психоневрологический диспансер, к Наполеонам и пришельцам с планеты Ка-Пэкс."
     me "В общем, я… {w}Ну, я приехал… Из…"
-    play sound eat_horn fadein 6
+    play sound sfx_7dl["eat_horn"] fadein 6
     "От расправы на месте меня спас только сигнал горна, зовущий пионеров на обед."
     "А может, дело в том, что дождь закончился, и выглянувшее солнце на пару пунктов подняло настроение."
     play sound sfx_open_door_strong
@@ -4866,7 +4866,7 @@ label alt_day5_dv_7dl_dinner:
     window hide
     with flash
 
-    play music walkingaway fadein 3
+    play music music_7dl["walkingaway"] fadein 3
     window hide
     scene bg ext_square_day with pixellate:
         pos (0,0) 
@@ -4918,7 +4918,7 @@ label alt_day5_dv_7dl_dinner:
     with vpunch
 
     "Нога подвернулась, и я кубарем укатился под сосну, неудачно стукнувшись ребром о торчащие узловатые жилы воздушных корней, несколько мгновений вспоминал как дышать."
-    play sound breath fadein 3
+    play sound sfx_7dl["breath"] fadein 3
     "От удара с дерева слетело несколько чешуек и приземлились мне на голову."
     "Не к месту вдруг вспомнилось, как я в детстве нарезал перочинным ножиком кору сосен, потому что она здорово подходила для мальчишеских поделок, не занозилась, не красилась."
     "И какие гигантские флотилии потом сплавлялись по течению петлянок, на берегу которых мне приходилось залетовать…"
@@ -5061,7 +5061,7 @@ label alt_day5_dv_7dl_dinner:
         "Всхлипнула, оцарапала щёку, вывернулась и убежала."
         hide dv with moveoutright
         "Я как сомнамбула двинулся за ней, но меня разбудил сигнал горна."
-        play sound eat_horn
+        play sound sfx_7dl["eat_horn"]
         "Я вздрогнул, проводив мелькающую за кустами белую рубашку, развернулся по часовой, в сторону столовой."
         "Ненавидел ли я себя в этот момент? Наверное, нет."
         "И так слишком много глупостей сегодня сделал, одной больше, одной меньше…"
@@ -5100,7 +5100,7 @@ label alt_day5_dv_7dl_dinner:
         "Меня нет."
         "Я растворился в окружающем."
         "Хотя, конечно, глупо. Она легко меня найдёт, если захочет."
-        play sound eat_horn fadein 3
+        play sound sfx_7dl["eat_horn"] fadein 3
         "Меня спас сигнал горна."
         "Развернувшись на месте, Алиса ушла, оставив меня в одиночестве."
     stop music fadeout 3
@@ -5327,7 +5327,7 @@ label alt_day5_dv_7dl_lunch:
     "На любом пионерском заседании нас бы ругали за популяризацию чуждой музыки — но эта песня была слишком красива, слишком интересна."
     "Мелодия — язык интернациональный."
     "Хотя нарывающей недостачей ощущалось отсутствие Алисы в коллективе, слаженное исполнение песни позволило ненадолго приглушить неприятные ощущения."
-    play sound eat_horn fadein 2
+    play sound sfx_7dl["eat_horn"] fadein 2
     "А там и горн подоспел.  Прикрывшая глаза за роялем Мику нехотя открыла глаза, отпуская магию музыки, Лена вытянула последнюю ноту, поблескивая глазами, переживая каждое мгновение, с совершенно особенным выражением выводя «You and Me»…"
     "Я же, прижимая струны, снова боролся с ощущением, что попал в кадр какого-то музыкального фильма или мюзикла — и, видимо, многочисленные повторения дали о себе знать — та самая гитарная вставка, покорившая меня в детстве, вышла без сучка, без задоринки."
     stop sound
@@ -5722,7 +5722,7 @@ label alt_day5_dv_7dl_supper:
     "«Пуща» — всплыло вдруг в голове полузабытое слово."
     stop music fadeout 5
     "Я придержал шаг, пропуская Ульяну вперёд."
-    play music ourfirstmet fadein 5
+    play music music_7dl["ourfirstmet"] fadein 5
     "На лес опускался вечер, между верхушками деревьев на западе контрастно выделялось наливающееся алым небо."
     "Тот самый красный закат, который практически невозможно встретить в городе."
     window hide
@@ -5833,7 +5833,7 @@ label alt_day5_dv_7dl_evening:
     th "Она что, она со мной…"
     dreamgirl "Заигрывала, да. Или ты можешь называть это модным словом «флирт»."
     dreamgirl "Кажется, наш Сёмчик кому-то симпатичен!"
-    play music lastlight_guitar fadein 5
+    play music music_7dl["lastlight_guitar"] fadein 5
     th "Да иди ты! Просто она…"
     dreamgirl "…натыкала пальцем тебе в бочину и смеется от того, как тебе щекотно."
     th "Наверное…"
@@ -7021,7 +7021,7 @@ label alt_day6_dv_7dl_begin:
     me "В общении с нашим добрейшим доктором? О, сколько угодно."
     window hide
     scene bg ext_square_sunset with dissolve
-    play sound eat_horn fadein 2
+    play sound sfx_7dl["eat_horn"] fadein 2
 
     "Над головой послышались фанфары, оповещающие о начале линейки. Следовало поспешить, если мы хотим успеть на завтрак."
     if alt_day4_dv_7dl_portwine:
@@ -7239,7 +7239,7 @@ label alt_day6_dv_7dl_breakfast:
     show dv normal pioneer2 with dspr
     dv "Успокойся. Чего ты взялся вдруг?"
     "Рыжая успокаивающе положила ладонь поверх моей."
-    play music rewind fadein 3
+    play music music_7dl["rewind"] fadein 3
     "Мы оба вздрогнули от прикосновения. Мгновение вдруг превратилось в огромный сияющий шар, подобный солнцу, и мы остались вдвоём, отгороженные от остального мира ослепляющей улыбкой."
     th "Я тормоз, да? Мне три дня понадобились для того, чтобы понять, что Двачевская – девушка."
     th "Четыре дня для того, чтобы понять, что она хоть и вредина, но очень красивая. Так глядишь, через пару лет и созрею до того, что к ней вполне возможно испытывать какие-то чувства."
@@ -7586,7 +7586,7 @@ label alt_day6_dv_7dl_breakfast:
     dv "Что там за песня, Мику?"
     mi "Называется «Близость»."
     "Японка включила перемотку на магнитофоне, и бобины с лёгким шорохом завертелись справа налево."
-    play music closetoyou fadein 3
+    play music music_7dl["closetoyou"] fadein 3
     mi "Хочу её спеть сегодня."
     me "Не маловато ли времени для…"
     show mi shy pioneer with dspr
@@ -7853,7 +7853,7 @@ label alt_day6_dv_7dl_breakfast:
     dv "Нет."
     "Ничего не объясняя, отрезала она."
     dv "Иди и пей! То есть, пой. Короче, ты понял."
-    play sound eat_horn
+    play sound sfx_7dl["eat_horn"]
     "К счастью, от ещё пяти минут позора меня спас горн. Эти ангельские фанфары, их придумал очень-очень хороший человек, и ему, а не Генде, должен стоять памятник на площади!"
     window hide
     play sound sfx_open_door_kick
@@ -8408,7 +8408,7 @@ label alt_day6_dv_7dl_sl_help2:
     "Она улыбнулась эдак… {w}Не знаю даже, как назвать. По-голливудски? Возможно."
     window hide
     $ renpy.pause(4.4, hard=True)
-    play sound snap fadein 0
+    play sound sfx_7dl["snap"] fadein 0
     scene white with flash
     $ renpy.pause(9.4, hard=True)
 
@@ -8641,7 +8641,7 @@ label alt_day6_dv_7dl_sl_help2:
         hide sl with dissolve
         if (lp_sl > 4) and (lp_dv < 15):
             window hide
-            play music misery fadein 3
+            play music music_7dl["misery"] fadein 3
             "Из-за спины Алисы показалась Ульяна."
             us "Ой, а что это вы тут делаете, а?"
             me "Не твоё дело."
@@ -8711,7 +8711,7 @@ label alt_day6_dv_7dl_sl_help2:
             th "Сама виновата, сама пусть и извиняется. А чтобы думалось легче — устроим-ка ей тотальный бойкот."
             stop music fadeout 4
             "Хорохорясь так, я сидел ещё несколько минут в потёмках."
-            play music unforgotten fadein 3
+            play music music_7dl["unforgotten"] fadein 3
             "А с улицы уже были слышны вступительные аккорды какой-то песни, и, судя по шуму, потихоньку начали подтягиваться благодарные зрители."
             "Хлопнув дверью, я вышел наружу."
             window hide
@@ -8744,7 +8744,7 @@ label alt_day6_dv_7dl_sl_help2:
 label alt_day6_dv_7dl_un:
     scene bg ext_house_of_mt_day
     with dissolve
-    play music breath_me fadein 3
+    play music music_7dl["breath_me"] fadein 3
     "Уже почти добежав до самого домика, я вдруг понял, что позабыл об одной малозначимой вещи."
     th "У меня же плавки какой-то гад свистнул!"
     "В голове почему-то вертелся образ фетишиста, сделавшего из моих несчастных труселей флаг."
@@ -9362,7 +9362,7 @@ label alt_day6_dv_7dl_concert:
     "Или несколько песен."
     "Или восемь лет Питера."
     "Я пришёл в себя, когда Мику снова забралась на сцену – и приветственно помахала рукой уже узнающей её публике, радостно хлопающей, предвкушающей очередное интересное выступление."
-    play music closetoyou fadein 3
+    play music music_7dl["closetoyou"] fadein 3
     "Две табуретки, две гитары, две красивых девушки, одна красивая песня. Беспроигрышное сочетание."
     "Спасибо им за то, что дали в один день ощутить себя в роли и зрителя, и артиста."
     "Хотя последний опыт я предпочёл бы не повторять ближайшие лет пятьсот, если не слишком сложно, спасибо."
@@ -9414,7 +9414,7 @@ label alt_day6_dv_7dl_concert:
 
     "Мику, коротко улыбнувшись, спрыгнула со сцены и побежала к своей аппаратуре – впереди ещё ожидались люди, желающие своих пятнадцати минут славы."
     " Алиса же никуда не торопилась – она стояла на сцене, раскланиваясь и улыбаясь." 
-    play music wheres_wonderland fadein 3
+    play music music_7dl["wheres_wonderland"] fadein 3
     if alt_day6_dv_7dl_transit:
         "Столкнувшись со мной взглядом, она вздрогнула, погасила улыбку и быстро убралась со сцены."
         "Рассеянно посмотрела на сцену, где в буквальном смысле выкаблучивался квартет мальчишек, заозиралась по сторонам."
@@ -9876,7 +9876,7 @@ label alt_day6_dv_7dl_dance:
     "Мику пляшет за вертушками, Ольга Дмитриевна изображает некое подобие твиста, даже кибернетики прыгают молодыми козликами у скамеек."
     if alt_day6_dv_7dl_transit:
         stop music
-        play music unforgotten fadein 6
+        play music music_7dl["unforgotten"] fadein 6
         "Я опять ощутил себя вуайеристом на чужом празднике жизни."
         "И, уличив момент, развернулся."
         "И сбежал."
@@ -10092,7 +10092,7 @@ label alt_day6_dv_7dl_escape_convince:
         play sound sfx_water_emerge
         "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
         window hide
-        play sound aunl
+        play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
@@ -10108,7 +10108,7 @@ label alt_day6_dv_7dl_escape_convince:
         "Ради безрадостного и безысходного бытия?"
         "Ради своей пули в голове."
         window hide
-        play sound makarych fadein 0
+        play sound sfx_7dl["makarych"] fadein 0
         
         scene black with fade
         "Место встречи изменить нельзя — Зинка, пьянь с травматом, и я — с дырой в пустой голове."
@@ -10116,14 +10116,14 @@ label alt_day6_dv_7dl_escape_convince:
         window hide
         play sound sfx_bodyfall_1
         stop sound_loop fadeout 0
-        play sound aunl
+        play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
         return
     elif loki:
-        play music herc_death fadein 5
+        play music music_7dl["herc_death"] fadein 5
         show blink  with dissolve
         scene bg ext_winterpark_7dl 
         $ renpy.pause(1.5)
@@ -10156,7 +10156,7 @@ label alt_day6_dv_7dl_escape_convince:
         "Мой труп должен прилично выглядеть. А значит, остатки тающих сил надо инвестировать в улыбку."
         "Пусть знают, я ушёл светло и ни о чём не жалел."
         window hide
-        play sound aunl
+        play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
@@ -10192,7 +10192,7 @@ label alt_day6_dv_7dl_escape_convince:
                 window hide
                 scene cg d3_disco with dissolve
                 $ volume(0.3, "music")
-                play music tender_song
+                play music music_7dl["tender_song"]
                 "Помахав ей, я вернулся к колонке — как и тогда, в день моего обхода лагеря, вдруг захотелось послушать что-нибудь ностальгическое."
                 "Динамики загудели, послышались колокольцы, и…"
                 "Танцующие замерли в полной растерянности."
@@ -10231,7 +10231,7 @@ label alt_day6_dv_7dl_escape_convince:
             "Ей на смену пришла композиция понежнее, а вожатая вдруг уведомила в микрофона на весь лагерь:"
         mt "По лагерю объявляется белый танец: дамы приглашают кавалеров."
         "По лагерю объявляется белый танец."
-        play music ourfirstmet fadein 4
+        play music music_7dl["ourfirstmet"] fadein 4
         "Почему-то у меня всегда это словосочетание — «белый танец» — будило какие-то потаённые фобии."
         "Даже не знаю, как это можно описать — как будто пользуясь тем, что по правилам этикета нельзя отказывать даме, меня затащит на медляк страшная жируха и будет крутить вокруг себя в духе спортивного рок'н'ролла."
         "Хотя в лагере, вроде бы, не предусмотрено ни жирух, ни страшных."
@@ -10248,7 +10248,7 @@ label alt_day6_dv_7dl_escape_convince:
 
 label alt_day6_dv_7dl_sl_dancing:
     "Своевременно."
-    play music stilllovingyou fadein 4
+    play music music_7dl["stilllovingyou"] fadein 4
     "Я даже понять ничего не успел — а меня уже тащили, между делом расталкивая поперечных танцующих."
     me "Славя, я сам идти могу!"
     show sl normal dress with dissolve
@@ -10393,7 +10393,7 @@ label alt_day6_dv_7dl_sl_dancing:
     show sl laugh dress with dissolve
     sl "Что-то вроде того!"
     me "Скажи… А тебе, вот, не жалко своего платья? Оно у тебя нарядное такое, а ты в нём подметаешь…"
-    play music lonesome_shepherd fadein 3
+    play music music_7dl["lonesome_shepherd"] fadein 3
     sl "Вот…"
     "Прислушавшись, сказала Славя."
     sl "Последний отбой. Традиция."
@@ -10454,7 +10454,7 @@ label alt_day6_dv_7dl_sl_dancing:
     return
 
 label alt_day6_dv_7dl_un_dancing:
-    play music danceagain fadein 4
+    play music music_7dl["danceagain"] fadein 4
     "Лена стояла, подпирая плечом Генду — всё ещё зеленоватая после перенесённого стресса."
     "Всё ещё чуточку расфокусированная после слоновой дозы успокоительного."
     "Впрочем, эти же успокоительные послужили как в иных случаях работает водка:"
@@ -10606,7 +10606,7 @@ label alt_day6_dv_7dl_mt_dancing:
     return
 
 label alt_day6_dv_7dl_dv_dancing:
-    play music deadman fadein 4
+    play music music_7dl["deadman"] fadein 4
     "Только я не танцую."
     "И Алиса не танцует."
     "Мы смотрим друг на друга сквозь размывающийся по Гауссу флёр концентрированного счастья, и будто выпадаем из течения времени."
@@ -10894,7 +10894,8 @@ label alt_day6_dv_7dl_love_scene:
     dv "Ну… {w}Насмотрелся?"
     me "Нет."
     "Честно ответил я."
-
+    scene cg d6_dv_hentai_7dl
+    with fade
     "Что она там делала? Губы? Шея? Ключицы… {w}Я чувствовал себя отомщённым всякий раз, когда с девичьих губ срывался вскрик."
     "Потом в никуда улетело платье, оставляя Алису в одних белоснежных трусиках."
     dv "Ты так смотришь…"
@@ -10910,6 +10911,9 @@ label alt_day6_dv_7dl_love_scene:
     "Не знаю, на сколько его задерживал я…"
     "…но с танцпола доносилось эхо чего-то такого космического, и тишина вокруг стояла космическая…"
     "…и сопротивление Алисы было чисто символическим, будто и не было его, а потом взаправду не было…"
+    window hide
+    scene expression Desat("cg d6_dv_hentai2_7dl")
+    with fade
     "…и пахла она опьяняюще – раскалённым песком, дёгтем и самую чуточку страхом…"
     "…впрочем, последний растворился задолго до того, как мне пригрозили отвернуть голову, если я не вернусь в правильную позу…"
     "…и получилось всё как-то само собой, она негромко вскрикнула, отвернула голову набок и проложившей по щеке дорожки слёз не было заметно из-за испарины, и я всё боялся упасть со скользких матов…"
@@ -10962,7 +10966,7 @@ label alt_day6_dv_7dl_love_scene:
         dv "Что ж, пора и честь знать. Пошли."
         me "Куда?"
         dv "Слышишь? Дискотека закончилась."
-        play music lonesome_shepherd fadein 3
+        play music music_7dl["lonesome_shepherd"] fadein 3
         "И будто отвечая её словам, из жестяного рупора в ночь полились звуки «Одинокого Пастуха»."  
         dv "Что ж. Спокойной ночи!"
         hide dv with dissolve
@@ -10984,7 +10988,7 @@ label alt_day6_dv_7dl_love_scene:
         dv "Что ж, пора и честь знать. Пошли."
         me "Куда?"
         dv "Слышишь? Дискотека закончилась."
-        play music lonesome_shepherd fadein 3
+        play music music_7dl["lonesome_shepherd"] fadein 3
         "И будто отвечая её словам, из жестяного рупора в ночь полились звуки «Одинокого Пастуха»."  
         "Наскоро одевшись, мы выбрались из зала и, поминутно обнимаясь и целуясь, неспешно фланировали к домикам."
         window hide
@@ -11353,7 +11357,7 @@ label alt_day7_dv_7dl_begin:
     "Обламывая ногти, я подцепил непослушное зеркало — силы понемногу возвращались, даже дышать уже было не больно — и, выключив воду, убрал стекло подмышку."
     "Два шага на кухню, открыть раму — и затяжной полёт неудачно подхваченного ветром стекла."
     "Хорошо, что никого внизу не было — это больше всего походило на взрыв гранаты, когда блестящее полотно столкнулось с бетонным блоком и разлетелось осколками."
-    play sound window_glass_break
+    play sound sfx_7dl["window_glass_break"]
     with vpunch
     window hide
     show unblink
@@ -11378,7 +11382,7 @@ label alt_day7_dv_7dl_router:
         $ routetag = "dv7dlbad"
     scene bg int_house_of_mt_sunset with dissolve
     play ambience ambience_int_cabin_evening fadein 2
-    play music will_you fadein 6
+    play music music_7dl["will_you"] fadein 6
 
     if alt_day6_dv_7dl_transit:
         if alt_day6_dv_7dl_sl_route:
@@ -11539,7 +11543,7 @@ label alt_day7_dv_7dl_un:
     scene bg ext_road_day with dissolve
     play ambience ambience_camp_entrance_day fadein 3
 
-    play music beasteye fadein 3
+    play music music_7dl["beasteye"] fadein 3
     "Но вместо того, чтобы бегать по лагерю, ловить старательно скрывающуюся от меня Алису и что-то ей доказываться, я побрёл куда глаза глядят."
     "Это же самое простое — отпустить удила и позволить автопилоту уволочь тебя куда-то, где будет лучше, чем там, где ты сейчас."
     "Меня ноги вывели ко входу в лагерь, даже чуть дальше — к лугам по обе стороны от шоссе, на одном из которых я обнаружил крайне уместно вкопанную скамеечку."
@@ -12379,7 +12383,7 @@ label alt_day7_dv_7dl_tulpa_end:
     show prologue_dream 
     with flash
     show spill_red
-    play music herc_death
+    play music music_7dl["herc_death"]
     "Реальность исказилась, покорная моей воле — и швырнула меня, а вслед за мной и сжимающую мою руку девочку в морозный декабрьский вечер."
     $ persistent.sprite_time = "night"
     show dv tr21 behind prologue_dream
@@ -12430,7 +12434,7 @@ label alt_day7_dv_7dl_tulpa_end:
 
     "Я закрыл глаза."
     "А открыл их уже на серых больничных простынях."
-    play music but_why fadein 3
+    play music music_7dl["but_why"] fadein 3
     scene bg ext_winterpark_sunset_7dl
     "Я начинаю бояться людей в белых халатах."
     "Они никогда, никогда не приносят мне хороших новостей."
@@ -12498,7 +12502,7 @@ label alt_day7_dv_7dl_tulpa_end:
     show prologue_dream 
     $ renpy.pause(3)
 
-    play music uncertainity fadein 10
+    play music music_7dl["uncertainity"] fadein 10
     "Память расслоилась кадрами-картинками, каждый в толстой золотой раме, каждый, заслуживающий самого пристального внимания."
     "Абсолютно каждый — детальный, не превращающийся в набор квадратиков при ближайшем рассмотрении."
     "Настоящий. Живой."
@@ -12585,7 +12589,7 @@ label alt_day7_dv_7dl_tulpa_end:
     show alt_credits timeskip_come with dissolve2:
         pos (747,105)
     stop sound_loop fadeout 0
-    play sound aunl
+    play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_tulpa = True
     show acm_logo_dv_tulpa with moveinright:
         pos (1600, 1020)
@@ -12597,7 +12601,7 @@ label alt_day7_dv_7dl_tulpa_end:
     
 label alt_day7_dv_7dl_bus:
     window hide
-    play music tilltheend fadein 3
+    play music music_7dl["tilltheend"] fadein 3
     "Ровно в два часа от ворот лагеря раздался сигнал — карету подали."
     "К тому моменту большинство пионеров было уже там."
     window hide
@@ -12974,7 +12978,7 @@ label alt_day7_dv_7dl_ussr_epilogue:
     "Стоит ли удивляться, что ради своей молодой жены я не поленился исполнить и невысказанное желание — так что Анна Семёновна увидела белый свет в том же роддоме, где некогда появился на свет и я…"
     nvl clear
     play sound_loop sfx_street_traffic_outside fadein 2
-    play music lyrica_sg fadein 10
+    play music music_7dl["lyrica_sg"] fadein 10
     "Эти белые ночи, когда все питерцы немножко сходят с ума, эти четыре часа утра, а я стоял в помятой белой рубашке, без галстука, с розой — не в зубах, понятно, но мне не до глупостей сейчас."
     "А по ту сторону живой ограды шумел утренний Ленинград, так и не ставший вновь Питером, а из окна второго этажа бледная, измученная, но ничуть не менее прекрасная Алиса поднимала на руках, показывая мне, крохотное счастье."
     "Свидетельство того, что чудеса всё-таки случаются — даже если ты их не заслуживаешь."
@@ -13003,10 +13007,10 @@ label alt_day7_dv_7dl_ussr_epilogue:
     with dissolve
     "Значит, здравствуй, светлое настоящее?"
     stop music fadeout 3
-    play music rightroad fadein 3
+    play music music_7dl["rightroad"] fadein 3
     window hide
     stop sound_loop fadeout 0
-    play sound aunl
+    play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_good_ussr = True
     show acm_logo_dv_ussr_good with moveinright:
         pos (1600, 1020)
@@ -13032,7 +13036,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     play sound_loop sfx_street_traffic_outside fadein 2
     "Мне город шепчет «лети», подставляя под распахнутые руки упругий ветер, и горб Володарского моста пробегаешь просто потому что бежится, а не потому, что куда-то спешишь."
     "Мне город предлагает «дыши», бросая в лицо щедрую пригоршню сырого тумана, во все века плевавшего на гравитацию или тёплую одежду — пронизывающего до костей."
-    play music misery fadein 3
+    play music music_7dl["misery"] fadein 3
     "А я улыбаюсь ему окровавленным ртом, пугающе красным на фоне бледного до синевы лица, сдуваю с глаз чёлку и шагаю в грядущее."
     "То самое грядущее, которому однажды не поленился вложить несколько камней в основание."
     "Но сегодня особенный день."
@@ -13105,7 +13109,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     with fade2
 
     "Автобус, что увезёт меня в страну счастья."
-    "В продолжение истории, что началась двадцать пять лет назад…"
+    "В продолжение истории, что началась много-много лет назад…"
     window hide
     $ renpy.pause(2)
     hide blind3_1
@@ -13113,7 +13117,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     with fade
     play sound sfx_intro_bus_door_open
     $ renpy.pause(3, hard=True)
-    play ambience ambience_railroad fadein 3
+    play ambience ambience_7dl["railroad"] fadein 3
     hide blind3_2
     with fade
     $ renpy.pause(1, hard=True)
@@ -13164,7 +13168,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     "Алиса нашла себе временную подработку в фотосалоне, благо, осваивала всё необходимое на лету, и легко управлялась как с техникой, так и с «фотошопом»."
     hide blind4_4 with flash
     "Но однажды она услышала по радио одну песенку…"
-    play music sheiscool
+    play music music_7dl["sheiscool"]
     window hide
     scene expression Noir("cg d7_dv_alice_dj_7dl", brightness = 0.1, tint_r = 0.2, tint_g = 0.9, tint_b = 0.7, saturation = 0.7)
     show prologue_dream
@@ -13200,7 +13204,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     "В Питере и была вся моя жизнь."
     "Но Алиса… {w}Алиса значила куда больше."
     stop ambience fadeout 3
-    play sound aunl
+    play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_good_ussr_rf = True
     show acm_logo_dv_morethanlife with moveinright:
         pos (1600, 1020)
@@ -13210,7 +13214,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     $ renpy.pause(2)
     if alt_day_binder == 1:
         $ prolog_time()
-        play music herc_death fadein 3
+        play music music_7dl["herc_death"] fadein 3
         scene expression Noir("bg int_sam_house_clean_7dl", brightness = 0.1, tint_r = 0.2, tint_g = 0.9, tint_b = 0.7, saturation = 0.7)
         with joff
     
@@ -13260,7 +13264,7 @@ label alt_day7_dv_7dl_rej_ussr_end:
     stop music fadeout 3
     $ renpy.pause(3)
     $ set_mode_nvl()
-    play music deadman fadein 3
+    play music music_7dl["deadman"] fadein 3
     nvl clear
     "Наверное, не стоило делать глупостей."
     if alt_day7_dv_7dl_check == 22:
@@ -13410,7 +13414,7 @@ label alt_day7_dv_7dl_rej_ussr_end:
     show blackout
     with fade
 
-    play music walkingaway fadein 3
+    play music music_7dl["walkingaway"] fadein 3
     voice "Двачевская, на выход."
     "Донёс голос из жестяного динамика."
     voice "Свидание окончено."
@@ -13439,13 +13443,13 @@ label alt_day7_dv_7dl_rej_ussr_end:
     dv "До самого конца."
     window hide
     stop sound_loop fadeout 0
-    play sound aunl
+    play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_reject_ussr = True
     show acm_logo_dv_tillend with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    play music walkingaway fadein 3
+    play music music_7dl["walkingaway"] fadein 3
     call alt_7dl_titles
     $ renpy.pause(2)
     return
@@ -13481,7 +13485,7 @@ label alt_day7_dv_7dl_rej_rf_end:
     "А с привычного уже пятачка доносятся гитарные переборы."
     "Обычно там квартируют студенты, стреляющие мелочь и хулиганящие исполнением какого-нибудь залётного эмси с закашливанием матерщины."
     "Но сегодня гитара звучит взросло, умно и с очень хорошей подачей. "
-    play music dv_guitar fadein 7
+    play music music_7dl["dv_guitar"] fadein 7
     "Нечто в духе Игоря Преснякова со скидкой на то, что в подземке все нюансы игры щипковым стилем всё равно не расслышишь."
     scene cg d7_dv_rf_reject_7dl:
         pos (0,-1261)
@@ -13499,7 +13503,7 @@ label alt_day7_dv_7dl_rej_rf_end:
     nvl clear
     stop music fadeout 3
     "И она, то ли растрогавшись от тёплой реакции, то ли расстроившись каким-то собственным мыслям, пытается сморгнуть, резким движением стряхнуть выступившие слёзы, и вязаная шапочка съезжает. И на лоб мгновенно выскакивает непокорный рыжий чуб. "
-    play music Everlasting_Summer_Alice fadein 3
+    play music music_7dl["Everlasting_Summer_Alice"] fadein 3
     me "Так это…"
     "Шепчу я, невольно замедляя шаг."
     me "Алиса?!"
@@ -13578,13 +13582,13 @@ label alt_day7_dv_7dl_rej_rf_end:
     window hide
     $ set_mode_adv()
     scene cg d7_dv_ep_red_7dl with dissolve
-    play sound aunl
+    play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_reject_rf = True
     show acm_logo_dv_gohome with moveinright:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
     with vpunch
-    play music walkingaway fadein 3
+    play music music_7dl["walkingaway"] fadein 3
     call alt_7dl_titles
     $ renpy.pause(2)
     return
@@ -13627,7 +13631,7 @@ label alt_day7_dv_7dl_un_end:
         "А мне уже очень давно хотелось застыть точкой в океане времени и просто — помечтать. "
     window hide
     scene cg d4_fz_un_reject_7dl with fade2
-    play music are_you_there fadein 3
+    play music music_7dl["are_you_there"] fadein 3
     "Мне хотелось грезить о том, как мы стали вместе."
     "Зимой темнеет рано, но я почти не вижу дня — я весь будто застрял в сердце бесконечной полярной ночи, не особо надеясь на просвет."
     "Я хочу тебя видеть, я хочу тебя слышать."
@@ -13648,7 +13652,7 @@ label alt_day7_dv_7dl_un_end:
     "Я облажался с простейшей проверкой на прочность, уступив боли в зелёных глазах — но это значит только то, что я облажался."
     "Я закрыл глаза."
     window hide
-    play music sky_feather fadein 3
+    play music music_7dl["sky_feather"] fadein 3
     stop sound_loop
     $ renpy.pause(3)
     scene anim prolog_2 
@@ -13706,13 +13710,13 @@ label alt_day7_dv_7dl_un_end:
     "Где-то далеко-далеко, вышедшая на крылечко в летний полдень очень красивая девочка взгрустнула на полсекунды, сама не понимая, почему — а из-за ворот лагеря, где она отдыхала, взревел мотором «Икарус», доставивший вожатую и почту от родителей."
     "И укатил прочь."
     window hide
-    play sound aunl
+    play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_un = True
     show acm_logo_dv_meetmethere with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    play music danceagain fadein 3
+    play music music_7dl["danceagain"] fadein 3
     call alt_7dl_titles
     $ renpy.pause(2)
     return
@@ -13724,7 +13728,7 @@ label alt_day7_dv_7dl_bad_end:
     stop sound_loop
     stop music fadeout 3
     $ renpy.pause(3)
-    play music prologue_1 fadein 3
+    play music music_7dl["prologue_1"] fadein 3
     show laptop
     show laptop_dv_bad
     if herc:
@@ -13747,49 +13751,49 @@ label alt_day7_dv_7dl_bad_end:
     else:
         icq "Знаешь, Сём…"
     icq "Только то, что мы знакомы тысячу лет, удерживает меня от некоторых опрометчивых поступков."
-    play sound KBtyping
+    play sound sfx_7dl["KBtyping"]
     me "Значит, ты мне веришь?"
     icq "Нет! Но и просто так отбросить твои слова не могу."
     icq "Может, ты хотя бы что-то оттуда вспомнишь, такое, чтобы хотя бы было что искать?"
-    play sound KBtyping
+    play sound sfx_7dl["KBtyping"]
     if alt_day_binder != 1:
         me "Нет. Я вышел из автобуса, передо мной ворота — их я-то точно никогда не забуду. Подошёл к ним — и всё."
-        play sound KBtyping
+        play sound sfx_7dl["KBtyping"]
         me "Когда я открыл глаза в следующий раз — я снова сидел на сиденье 410-го."
     else:
         me "Всё началось с удара по голове. Так что всё это вполне могло счесть следствием травмы."
         me "Хотя и очень не хочется."
     icq "А все твои снимки, записи — нет?"
-    play sound KBtyping
+    play sound sfx_7dl["KBtyping"]
     me "Нет."
     "Мой собеседник мог, а главное — хотел мне помочь. Но всё, что я мог ему предложить… Эх."
-    play sound KBtyping
+    play sound sfx_7dl["KBtyping"]
     me "Понимаешь, какая штука — это как на детекторе лжи, есть вещи, на которые реакция есть, а есть те, на которые тебе плевать."
     if alt_day6_dv_7dl_sl_route:
         me "Например, фотография блондинки вызывает у меня нежность — но какую-то… Как у младшего брата, например."
     if alt_day4_dv_7dl_portwine:
         me "Фотография сексапильной брюнетки почему-то, напротив, как-то опасение какое-то внушает…"
-    play sound KBtyping
+    play sound sfx_7dl["KBtyping"]
     me "В рюкзаке обнаружились невесть как туда попавшие записи, какие-то конфеты чуть ли не советских времён, ножик… Всё. Эти вообще никаких эмоций не вызвали."
     "Я со злостью сломал сигарету в пепельнице."
-    play sound KBtyping
+    play sound sfx_7dl["KBtyping"]
     me "Я не могу вспомнить лиц, веришь?"
     if alt_day6_dv_7dl_sl_route:
         me "Даже эту блондинку я забываю быстрее, чем закрывается окно просмотрщика."
     me "Мелькают какие-то другие впечатления."
     icq "Например?"
-    play sound KBtyping
+    play sound sfx_7dl["KBtyping"]
     me "Ну… Я загорел — это очевидный факт. Я помню вкус еды. Тактильные ощущения. Причём не просто пальцами-плечами. Я с кем-то целовался там."
     icq "С такими уликами каши не сваришь."
     icq "Может быть, хотя бы что-то конкретное?"
     icq "Хотя бы что-то? Имена? Названия населённых пунктов? Хотя бы речку эту идиотскую назвать сумеешь?"
-    play sound KBtyping
+    play sound sfx_7dl["KBtyping"]
     me "Нет. Я же говорю — смутно, будто во сне. Причём чаще всего вспоминаю два рыжих хвоста и невероятно яркую радужку глаз — красную, янтарную. Такой же не бывает в природе, да?"
     icq "Бывает, но редко. Вообще, кстати, зацепка. Если, конечно, то не контактные линзы были."
-    play sound KBtyping
+    play sound sfx_7dl["KBtyping"]
     me "Это едва ли. Всё-таки Cоветский Cоюз."
     icq "Что-то вспоминаешь?"
-    play sound KBtyping
+    play sound sfx_7dl["KBtyping"]
     me "Да нет. Логика. Три галоши и два валенка — вот и весь ассортимент местного сельпо. Какие уж тут цветные контактные линзы."
     icq "Ясно."
     "{i}Собеседник оффлайн.{/i}"
@@ -13876,8 +13880,8 @@ label alt_day7_dv_7dl_bad_end:
     window hide
     scene bg ext_mv2_7dl with dissolve
     stop music fadeout 3
-    play ambience ambience_railroad fadein 3
-    play music misery fadein 3
+    play ambience ambience_7dl["railroad"] fadein 3
+    play music music_7dl["misery"] fadein 3
 
     "Вокруг бурлила жизнь мегаполиса, царила та атмосфера, что возможна лишь на вокзалах — как провожают пароходы? Ах, действительно, совсем не так, как поезда."
     "Мне нравилось сесть в самой круговерти, просто чуточку абстрагировавшись, например, на сиденье на остановке или вот так, здесь, в кафе вокзала — и наблюдать за перипетиями чьих-то судеб, на долю секунды пересёкшихся здесь."
@@ -13945,7 +13949,7 @@ label alt_day7_dv_7dl_bad_end:
         me "Да куда пошли-то?"
         mt "Пап, ты чё, издеваешься?! {w}Или мне маме сказать, что ты опять включил непослушного пионера?"
         mt "Так она тебе устроит… {w}Прощальную дискотеку с мешком сахара."
-        play music breath_me fadein 3
+        play music music_7dl["breath_me"] fadein 3
         "Против такой перспективы устоять было решительно невозможно."
         "И я перестал сопротивляться."
         "Она выдернула меня за руку на улицу."
@@ -13957,7 +13961,7 @@ label alt_day7_dv_7dl_bad_end:
         voice "…Ииии! Три-четыре!"
         voices "Здрав… жалам… товарищ директор!"
         window hide
-        play sound aunl
+        play sound sfx_7dl["aunl"]
         $ persistent.dv_7dl_bad_mt = True
         show acm_logo_dv_drunk with moveinright:
             pos (1600, 1020)
@@ -13967,13 +13971,13 @@ label alt_day7_dv_7dl_bad_end:
         $ renpy.pause(2)
         return
     else:
-        play sound aunl
+        play sound sfx_7dl["aunl"]
         $ persistent.dv_7dl_bad = True
         show acm_logo_dv_theresnoway with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
         with vpunch
-        play music tilltheend fadein 3
+        play music music_7dl["tilltheend"] fadein 3
         call alt_7dl_titles
         $ renpy.pause(2)
         return
