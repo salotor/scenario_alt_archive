@@ -1124,8 +1124,8 @@ screen arts_7dl_mt_1:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.19 yalign 0.15
         
 label alt_gallery_start:
+    play music music_7dl["more_than_alive"] fadein 3
     scene bg gallery_7dl with fade
-    play music tellyourworld fadein 3
     $ gallery_mode_7dl = "start"
     call screen gallery_main_7dl       
     
