@@ -134,6 +134,7 @@ screen settings_reboot_7dl():
     add get_image_7dl("gui/menu_elem/settings/settings_reboot.png")
    
 screen menu_7dl(): # need changes on settings pics
+    modal True
     imagemap at left_menu_7dl(0.1, 0.7):
         if persistent.waifu_7dl == 1:
             #if time_7dl == 'day':
@@ -153,80 +154,80 @@ screen menu_7dl(): # need changes on settings pics
         hotspot (170, 511, 300, 38):
             if renpy.get_screen("settings_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("settings_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Function(renpy.scene), Function(renpy.show, "bg black"), Jump("start_7dl")]
             elif renpy.get_screen("contacts_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Function(renpy.scene), Function(renpy.show, "bg black"), Jump("start_7dl")]
             elif renpy.get_screen("media_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("media_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Function(renpy.scene), Function(renpy.show, "bg black"), Jump("start_7dl")]
             else:
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Function(renpy.scene), Function(renpy.show, "bg black"), Jump("start_7dl")]
         hotspot (170, 563, 300, 36):
             if not renpy.get_screen("settings_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Show("settings_7dl", transition=Dissolve(0.2))]
             else:
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("settings_7dl", transition=Dissolve(0.2))]
         hotspot (162, 615, 307, 40):
             if renpy.get_screen("settings_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("settings_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Function(renpy.scene), Function(renpy.show, "bg black"), Jump("scenario__sdl_achvlist_Author")]
             elif renpy.get_screen("contacts_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Function(renpy.scene), Function(renpy.show, "bg black"), Jump("scenario__sdl_achvlist_Author")]
             elif renpy.get_screen("media_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("media_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Function(renpy.scene), Function(renpy.show, "bg black"), Jump("scenario__sdl_achvlist_Author")]
             else:
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Function(renpy.scene), Function(renpy.show, "bg black"), Jump("scenario__sdl_achvlist_Author")]
         hotspot (165, 665, 233, 43):
             if renpy.get_screen("contacts_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked Hide("contacts_7dl", transition=Dissolve(0.2))
             else:
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked Show("contacts_7dl", transition=Dissolve(0.2))
         hotspot (164, 718, 153, 41):
             if renpy.get_screen("media_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked Hide("media_7dl", transition=Dissolve(0.2))
             else:
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked Show("media_7dl", transition=Dissolve(0.2))
         hotspot (164, 772, 146, 38):
             if renpy.get_screen("settings_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("settings_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
             elif renpy.get_screen("contacts_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
             elif renpy.get_screen("media_7dl"):
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("media_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
             else:
                 focus_mask None
-                hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+                hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
                 clicked [Hide("menu_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
             
 screen settings_7dl(): # done
@@ -235,54 +236,54 @@ screen settings_7dl(): # done
     if not persistent.lp_widget_7dl:
         imagebutton xalign 0.82 yalign 0.315:
             auto get_image_7dl("gui/menu_elem/settings/settings_wdgmlp_off_%s.png")
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             hovered Show("settings_widget_lp_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_lp_off_7dl", transition=Dissolve(0.2)), Hide("settings_widget_lp_on_7dl", transition=Dissolve(0.2))]
             action [SetField(persistent,'lp_widget_7dl', True), Function(add_lp_widget_7dl)]
     else:
         imagebutton xalign 0.82 yalign 0.315:
             auto get_image_7dl("gui/menu_elem/settings/settings_wdgmlp_on_%s.png")
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             hovered Show("settings_widget_lp_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_lp_on_7dl", transition=Dissolve(0.2)), Hide("settings_widget_lp_off_7dl", transition=Dissolve(0.2))]
             action [SetField(persistent,'lp_widget_7dl', False), Function(del_lp_widget_7dl)]
     if not persistent.music_widget_7dl:
         imagebutton xalign 0.82 yalign 0.365:
             auto get_image_7dl("gui/menu_elem/settings/settings_wdgmus_off_%s.png")
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             hovered Show("settings_widget_music_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_music_off_7dl", transition=Dissolve(0.2)), Hide("settings_widget_music_on_7dl", transition=Dissolve(0.2))]
             action [SetField(persistent,'music_widget_7dl', True), Function(add_music_widget_7dl)]
     else:
         imagebutton xalign 0.82 yalign 0.365:
             auto get_image_7dl("gui/menu_elem/settings/settings_wdgmus_on_%s.png")
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             hovered Show("settings_widget_music_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_music_on_7dl", transition=Dissolve(0.2)), Hide("settings_widget_music_off_7dl", transition=Dissolve(0.2))]
             action [SetField(persistent,'music_widget_7dl', False), Function(del_music_widget_7dl)]
     imagebutton xalign 0.82 yalign 0.41:
         if not persistent.uv_dlc_on_7dl:
             auto get_image_7dl("gui/menu_elem/settings/settings_dlc_off_%s.png")
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             hovered Show("settings_dlc_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_dlc_off_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_on_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'uv_dlc_on_7dl',True)
         else:
             auto get_image_7dl("gui/menu_elem/settings/settings_dlc_on_%s.png")
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             hovered Show("settings_dlc_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_dlc_on_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_off_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'uv_dlc_on_7dl',False)
     imagebutton xalign 0.82 yalign 0.46:
         if not persistent.hentai_un_old_7dl:
             auto get_image_7dl("gui/menu_elem/settings/settings_hent_off_%s.png")
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             hovered Show("settings_hentai_un_old_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'hentai_un_old_7dl',True)
         else:
             auto get_image_7dl("gui/menu_elem/settings/settings_hent_on_%s.png")
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             hovered Show("settings_hentai_un_new_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'hentai_un_old_7dl',False)
@@ -297,7 +298,7 @@ screen settings_7dl(): # done
     else:
         imagebutton xalign 0.81 yalign 0.8:
             auto get_image_7dl("gui/menu_elem/settings/settings_reboot_%s.png")
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             hovered Show("settings_reboot_7dl", transition=Dissolve(0.2))
             unhovered Hide("settings_reboot_7dl", transition=Dissolve(0.2))
             if persistent.lp_widget_7dl or persistent.music_widget_7dl and not persistent.lock_apply_button_7dl:
@@ -316,16 +317,16 @@ screen contacts_7dl(): # done
     imagemap xalign 0.9 yalign 0.7:
         auto get_image_7dl("gui/menu_elem/contacts/contacts_%s.png")
         hotspot(1265, 330, 329, 59):
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             action Function(link1_7dl)
         hotspot(1265, 389, 329, 59):
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             action Function(link2_7dl)
         hotspot(1265, 449, 329, 59):
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             action Function(link3_7dl)
         hotspot(1265, 508, 329, 59):
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             action Function(link4_7dl)
             
 screen media_7dl(): # done, TODO gallery and music room
@@ -333,11 +334,11 @@ screen media_7dl(): # done, TODO gallery and music room
     imagemap:   
         auto get_image_7dl("gui/menu_elem/media/media_%s.png")
         hotspot(1333, 224, 540, 160):
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
             clicked [Show("alt_wip1", transition=Dissolve(0.2))]
         hotspot(1218, 394, 700, 700):
-            hover_sound "scenario_alt/Sound/sfx/ach_list/sdl_achv_click.ogg"
-            clicked [Show("alt_wip2", transition=Dissolve(0.2))]
+            hover_sound get_sfx_7dl("/ach_list/7dl_achv_click.ogg")
+            clicked [Hide("media_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Function(renpy.scene), Function(renpy.show, "bg black"), Jump("alt_gallery_start")]
         
 label choose_waifu_7dl: # done
     stop music

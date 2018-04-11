@@ -634,21 +634,21 @@
 # Стим
 #####################################################
     image sl serious body = ConditionSwitch(
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), "images/1080/sprites/normal/sl/sl_1_body.png",(0,0), "images/1080/sprites/normal/sl/sl_1_serious.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), "images/1080/sprites/normal/sl/sl_1_body.png",(0,0), "images/1080/sprites/normal/sl/sl_1_serious.png"), im.matrix.tint(0.63, 0.78, 0.82) ),
-    True,im.Composite((900,1080), (0,0), "images/1080/sprites/normal/sl/sl_1_body.png",(0,0), "images/1080/sprites/normal/sl/sl_1_serious.png") )
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_1_body.png'), (0,0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_1_body.png'), (0,0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
+    True,im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_1_body.png'), (0,0), get_sprite_ori('normal/sl/sl_1_serious.png')) )
     
     image sl laugh body = ConditionSwitch(
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), "images/1080/sprites/normal/sl/sl_2_body.png",(0,0), "images/1080/sprites/normal/sl/sl_2_laugh.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), "images/1080/sprites/normal/sl/sl_2_body.png",(0,0), "images/1080/sprites/normal/sl/sl_2_laugh.png"), im.matrix.tint(0.63, 0.78, 0.82) ),
-    True,im.Composite((900,1080), (0,0), "images/1080/sprites/normal/sl/sl_2_body.png",(0,0), "images/1080/sprites/normal/sl/sl_2_laugh.png") )
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_2_body.png'), (0,0), get_sprite_ori('normal/sl/sl_2_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_2_body.png'), (0,0), get_sprite_ori('normal/sl/sl_2_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
+    True,im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_2_body.png'), (0,0), get_sprite_ori('normal/sl/sl_2_laugh.png')) )
     
     image sl normal body close = ConditionSwitch(
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((1050,1080), (0,0), "images/1080/sprites/close/sl/sl_1_body.png",(0,0), "images/1080/sprites/close/sl/sl_1_normal.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((1050,1080), (0,0), "images/1080/sprites/close/sl/sl_1_body.png",(0,0), "images/1080/sprites/close/sl/sl_1_normal.png"), im.matrix.tint(0.63, 0.78, 0.82) ),
-    True,im.Composite((1050,1080), (0,0), "images/1080/sprites/close/sl/sl_1_body.png",(0,0), "images/1080/sprites/close/sl/sl_1_normal.png") )
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((1050,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'), (0,0), get_sprite_ori('close/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((1050,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'), (0,0), get_sprite_ori('close/sl/sl_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
+    True,im.Composite((1050,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'), (0,0), get_sprite_ori('close/sl/sl_1_normal.png')) )
     
     image mt shocked pioneer close = ConditionSwitch(
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((1050,1080), (0,0), "images/1080/sprites/close/mt/mt_2_body.png",(0,0), "images/1080/sprites/close/mt/mt_2_pioneer.png",(0,0), "images/1080/sprites/close/mt/mt_2_shocked.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((1050,1080), (0,0), "images/1080/sprites/close/mt/mt_2_body.png",(0,0), "images/1080/sprites/close/mt/mt_2_pioneer.png",(0,0), "images/1080/sprites/close/mt/mt_2_shocked.png"), im.matrix.tint(0.63, 0.78, 0.82) ),
-    True,im.Composite((1050,1080), (0,0), "images/1080/sprites/close/mt/mt_2_body.png",(0,0), "images/1080/sprites/close/mt/mt_2_pioneer.png",(0,0), "images/1080/sprites/close/mt/mt_2_shocked.png") )
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((1050,1080), (0,0), get_sprite_ori('close/mt/mt_2_body.png'), (0,0), get_sprite_ori('close/mt/mt_2_pioneer.png'), (0,0), get_sprite_ori('close/mt/mt_2_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((1050,1080), (0,0), get_sprite_ori('close/mt/mt_2_body.png'), (0,0), get_sprite_ori('close/mt/mt_2_pioneer.png'), (0,0), get_sprite_ori('close/mt/mt_2_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
+    True,im.Composite((1050,1080), (0,0), get_sprite_ori('close/mt/mt_2_body.png'), (0,0), get_sprite_ori('close/mt/mt_2_pioneer.png'), (0,0), get_sprite_ori('close/mt/mt_2_shocked.png')) )
