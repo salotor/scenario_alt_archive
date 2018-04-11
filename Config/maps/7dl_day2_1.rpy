@@ -11,7 +11,8 @@
     $ set_zone_alt1('me_mt_house_alt1', 'alt_day2_event_me_mt_house')
     $ set_zone_alt1('library_alt1', 'alt_day2_event_library')
     $ set_zone_alt1('medic_house_alt1', 'alt_day2_event_medic_house')
-    $ set_zone_alt1('square_alt1', 'alt_day2_event_square')
+    if alt_day2_sl_guilty == 0:
+        $ set_zone_alt1('square_alt1', 'alt_day2_event_square')
     $ set_zone_alt1('boat_station_alt1', 'alt_day2_event_boat_station')
 
     $ alt_day2_necessary_done = 0
@@ -129,7 +130,11 @@ label alt_day2_event_square:
                 $ disable_current_zone_alt1()
     $ persistent.sprite_time = "day"
     $ day_time()
-    call alt_day2_event_square1
+    call alt_day2_event_square_1
+    if (alt_day2_rendezvous == 2) and (alt_day1_sl_keys_took == 1) and (alt_day2_sl_guilty != 0):
+        call alt_day2_sl_hyst
+    else:
+        call alt_day2_event_square_dunno
     jump alt_day2_map
 
 label alt_day2_event_boat_station:

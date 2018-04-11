@@ -39,7 +39,7 @@ label alt_day3_router_mi:
         jump alt_day3_router_sl
 
 label alt_day3_router_sl:
-    if alt_day3_sl_day_event2 and lp_sl >= 13:
+    if (alt_day3_sl_day_event2 != 0) and lp_sl >= 13:
         "Мне снилась Славя…"
         window hide
         if alt_day3_technoquest_st3 == 2:

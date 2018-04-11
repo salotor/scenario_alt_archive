@@ -1825,7 +1825,7 @@ label alt_day2_final_fail:
     scene bg int_dining_hall_sunset
     "Похоже, у меня не было ни шанса."
     if alt_day2_f1 == 1:
-        play music take_my_hand fadein 3
+        play music music_7dl["take_my_hand"] fadein 3
         $ lp_un += 1
         show un surprise pioneer with dspr
         "Кажется, Лена ещё не до конца поняла, что именно сейчас произошло."
@@ -1999,7 +1999,7 @@ label alt_day2_final_fail:
         window hide
         return
     elif alt_day2_f1 == 4:
-        play music ourfirstmet fadein 3
+        play music music_7dl["ourfirstmet"] fadein 3
         show mi happy pioneer with dspr
         $ lp_mi += 1
         $ karma += 10
@@ -2015,7 +2015,7 @@ label alt_day2_final_fail:
         th "Дефицит внимания, ласки, тепла и заботы… А я ещё себя хикикомори считал."
         me "А кричать-то зачем?"
         "Оказаться в финале для меня уже было изрядным достижением, поэтому я не особо расстраивался насчёт проигрыша."
-        play music tender_song fadein 3
+        play music music_7dl["tender_song"] fadein 3
         "А Мику вдруг воздела к небу пальчик."
         show mi happy pioneer with dspr
         mi "Ой, а я знаю, кажется! Да! Мне только что идея в голову пришла! Я…"
@@ -2062,7 +2062,7 @@ label alt_day2_final_fail:
         
     elif alt_day2_f1 == 5:
         $ lp_us += 1
-        play music genki fadein 3
+        play music music_7dl["genki"] fadein 3
         "Как известно, в карты везёт новичкам и дурачкам."
         "Так как мы все здесь новички, мы были в равных условиях."
         "Но кое-кому перепало на один шанс больше!"
@@ -2113,19 +2113,19 @@ label alt_day2_final_fail:
         "Жужелица встала."
         "Окинула всех диковатым взглядом."
         mz "Всё, что ли? Больше жертв не будет?"
-        play sound highfive
+        play sound sfx_7dl["highfive"]
         $ renpy.pause (3)
-        play sound highfive
+        play sound sfx_7dl["highfive"]
         $ renpy.pause (3)
         "В полной тишине спросила она."
-        play sound highfive
+        play sound sfx_7dl["highfive"]
         $ renpy.pause (3)
-        play sound highfive
+        play sound sfx_7dl["highfive"]
         show el smile pioneer at left with dissolve
         "Только Электроник продолжал хлопать."
         mz "Ну ладно. Я пойду тогда."
         el "Ура, да здравствует победитель!"
-        play sound highfive
+        play sound sfx_7dl["highfive"]
         "Закричал Сыроежкин ей вслед."
         "По-моему, это всё-таки любовь."
         sh "Эл, всё, она ушла. Упокойся."
@@ -2179,7 +2179,7 @@ label alt_day2_final_win:
     window show
     scene bg int_dining_hall_sunset
     if alt_day2_f1 == 1:
-        play music take_my_hand fadein 3
+        play music music_7dl["take_my_hand"] fadein 3
         show un shy pioneer with dissolve
         un "К-кажется, в-всё."
         me "Что?"
@@ -2216,7 +2216,7 @@ label alt_day2_final_win:
         hide dv with dissolve
     elif alt_day2_f1 == 2:
         $ lp_sl += 1
-        play music Please_Reprise fadein 3
+        play music music_7dl["Please_Reprise"] fadein 3
         show sl smile pioneer with dspr
         "Я победил?"
         "Победил?!"
@@ -2261,7 +2261,7 @@ label alt_day2_final_win:
         window hide
     elif alt_day2_f1 == 3:
         $ lp_dv += 1
-        play music sheiscool fadein 3
+        play music music_7dl["sheiscool"] fadein 3
         th "Я выиграл!"
         th "Выиграл?"
         th "Выиграл!!!"
@@ -2297,7 +2297,7 @@ label alt_day2_final_win:
     elif alt_day2_f1 == 4:
         $ lp_mi += 2
         $ alt_day2_mi_snap = True
-        play music tellyourworld fadein 3
+        play music music_7dl["tellyourworld"] fadein 3
         show mi smile pioneer with dspr
         mi "Ты и правда победил! Ты молодец!"
         "Воскликнула она."
@@ -2357,7 +2357,7 @@ label alt_day2_final_win:
         with dissolve
         "Но… поздно!"
         window hide
-        play sound snap
+        play sound sfx_7dl["snap"]
         scene expression Sepia("cg d2_mi_me_polaroid_7dl")
         show PolariodFrame
         with flash
@@ -2376,7 +2376,7 @@ label alt_day2_final_win:
         th "Выиграл!!!"
         "Бац!" with vpunch
         with flash_red
-        play music genki fadein 3
+        play music music_7dl["genki"] fadein 3
         show us calml pioneer with dspr
         us "И ничего ты не выиграл!"
         "Она хмуро смотрела на меня снизу вверх."
@@ -2400,7 +2400,7 @@ label alt_day2_final_win:
         window hide
         hide dv with dissolve
     elif alt_day2_f1 == 6:
-        play music dead_silence fadein 3
+        play music music_7dl["dead_silence"] fadein 3
         show sh rage pioneer with dspr
         sh "Значит, победил?"
         "Медленно произнёс он."
