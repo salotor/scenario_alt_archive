@@ -330,7 +330,7 @@ init:
     # ------------------------------------------------
     ##\\\\\\\\\\\\\\\\\\\\\\\\\ЗВУК\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     #SFX
-    $ sdl_achv_clear = get_sfx_7dl("ach_list/7dl_achv_clear.ogg")
-    $ sdl_achv_click = get_sfx_7dl("ach_list/7dl_achv_click.ogg")
-    $ sdl_achv_info = get_sfx_7dl("ach_list/7dl_achv_info.ogg")
-    $ sdl_achv_pagina = get_sfx_7dl("ach_list/7dl_achv_pagina.ogg")
+    $ sdl_achv_clear = get_sfx_7dl("ach_list/achv_clear_7dl.ogg")
+    $ sdl_achv_click = get_sfx_7dl("ach_list/achv_click_7dl.ogg")
+    $ sdl_achv_info = get_sfx_7dl("ach_list/achv_info_7dl.ogg")
+    $ sdl_achv_pagina = get_sfx_7dl("ach_list/achv_pagina_7dl.ogg")
