@@ -13,8 +13,7 @@ init 1:
     $ style.page_7dl_text.size = 60
     
     image bg gallery_7dl = get_image_7dl("gui/gallery/gallery_bg.png")
-    $ locked_img_7dl = ["gallery_stub_1.png", "gallery_stub_2.png", "gallery_stub_3.png", "gallery_stub_4.png", "gallery_stub_5.png", 
-                        "gallery_stub_6.png", "gallery_stub_7.png", "gallery_stub_8.png", "gallery_stub_9.png"]
+    $ locked_img_7dl = ["gallery_stub_1.png", "gallery_stub_2.png", "gallery_stub_3.png"]
         
 screen gallery_main_7dl:
     add get_image_7dl("gui/gallery/gallery_bg.png")
