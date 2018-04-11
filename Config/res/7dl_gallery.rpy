@@ -643,7 +643,7 @@ screen arts_7dl_2:
     if renpy.seen_image("cg d4_mi_dj_lib_7dl"):
         imagebutton:
             auto get_image_7dl("gui/gallery/arts/d4_mi_dj_lib_7dl_%s.png") xalign 0.2 yalign 0.93 
-            action [Hide("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d4_mi_dj_lib_7dl"), SetVariable("show_image_7dl", "cg d4_mi_dj_lib0_7dl"), Jump("show_image_7dl")] 
+            action [Hide("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d4_mi_dj_lib_7dl"), SetVariable("show_image2_7dl", "cg d4_mi_dj_lib0_7dl"), Jump("show_image_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.2 yalign 0.93 
     if renpy.seen_image("cg d4_mi_hedgehod_7dl"):
