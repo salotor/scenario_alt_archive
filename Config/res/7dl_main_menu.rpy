@@ -335,7 +335,7 @@ screen media_7dl(): # done, TODO gallery and music room
         hotspot(1333, 224, 540, 160):
             clicked [Show("alt_wip1", transition=Dissolve(0.2))]
         hotspot(1218, 394, 700, 700):
-            clicked [Show("alt_wip2", transition=Dissolve(0.2))]
+            clicked [Hide("media_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Jump("alt_gallery_start")]
         
 label choose_waifu_7dl: # done
     stop music
