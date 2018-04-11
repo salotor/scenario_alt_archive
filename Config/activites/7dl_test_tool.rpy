@@ -1,25 +1,25 @@
-﻿init :
+﻿init:
     $ mods["scenario__sdl_selector"] = u"Селектор 7дл"
     $ mod_tags["scenario__sdl_selector"] = ["length:days","gameplay:vn","protagonist:male"]
     
     image scenery:
-        "images/1080/anim/prolog_2.jpg" with Dissolve(.5) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.5) 
         pause 2.6
-        "images/1080/anim/prolog_1.jpg" with Dissolve(.5) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.5) 
         pause 0.6
         repeat
         
     image scenery2:
-        "images/1080/anim/prolog_2.jpg" with Dissolve(.4) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.4) 
         pause 2.0
-        "images/1080/anim/prolog_1.jpg" with Dissolve(.4) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.4) 
         pause 0.4
         repeat    
         
     image scenery3:
-        "images/1080/anim/prolog_2.jpg" with Dissolve(.25) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.25) 
         pause 1.4
-        "images/1080/anim/prolog_1.jpg" with Dissolve(.25) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.25) 
         pause 0.25
         repeat
         
@@ -63,7 +63,7 @@ label scenario__sdl_selector:
     call alt_day7_us_px_vars
     $ make_names_unknown_7dl()
     $ plthr = u"Дрищ"
-    play ambience ambience_safe fadein 5
+    play ambience ambience_7dl["safe"] fadein 5
     
 label sdl_menu:
     scene scenery with dissolve
@@ -399,16 +399,17 @@ label sdl_menu:
                     
                 "Славя":
                     $ alt_day3_event2 = 22
-                    $ alt_day3_sl_day_event2 = True
                     $ lp_sl += 14
                     menu:
                         "7дл":
+                            $ alt_day3_sl_day_event2 = 2
                             $ routetag = "sl7dl"
                             "Рут находится в разработке."
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu
                         "Классик":
+                            $ alt_day3_sl_day_event2 = 1
                             $ alt_day3_technoquest_st3 = 2
                             $ routetag = "sl"
                             stop ambience fadeout 2

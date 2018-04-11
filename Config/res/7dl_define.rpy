@@ -117,83 +117,83 @@
     $ flash2_red = Fade(0.5, 0, 0.5, color="#f11")
     $ flash_pink = Fade(1, 0, 1, color="#e25")
     
-    $ diam = ImageDissolve(im.Tile(get_image_7dl("gui/pattern.jpg")), 1.1, 1)
-    $ fdiam = ImageDissolve(im.Tile(get_image_7dl("gui/pattern.jpg")), 0.4, 1)
-    $ fulldiam = MultipleTransition([False,fdiam,get_image_7dl("gui/digi1.jpg"),fdiam,True])
+    $ diam = ImageDissolve(im.Tile(get_image_7dl("gui/transit/pattern.jpg")), 1.1, 1)
+    $ fdiam = ImageDissolve(im.Tile(get_image_7dl("gui/transit/pattern.jpg")), 0.4, 1)
+    $ fulldiam = MultipleTransition([False,fdiam,get_image_7dl("screens/digi1.jpg"),fdiam,True])
     
     $ gopr = ImageDissolve(im.Tile(get_image_7dl("gui/blackout_go.png")), 0.95, 1)
-    $ swradar = ImageDissolve(im.Tile(get_image_7dl("gui/blackout3.jpg")), 0.95, 1)
+    $ swradar = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout3.jpg")), 0.95, 1)
     $ joff = MultipleTransition([False,swradar,Solid("#000"),swradar,True])
-    $ swradarr = ImageDissolve(im.Tile(get_image_7dl("gui/blackout32.jpg")), 0.95, 1)
+    $ swradarr = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout32.jpg")), 0.95, 1)
     $ joffr = MultipleTransition([False,swradarr,Solid("#000"),swradarr,True])
     
-    $ blind_d = ImageDissolve(im.Tile(get_image_7dl("gui/roof_ks.jpg")), 1.3)
-    $ blinds_l = ImageDissolve(im.Tile(get_image_7dl("gui/roof_ks2.jpg")), 0.6)
-    $ blinds_r = ImageDissolve(im.Tile(get_image_7dl("gui/roof_ks3.jpg")), 0.7)
+    $ blind_d = ImageDissolve(im.Tile(get_image_7dl("gui/transit/roof_ks.jpg")), 1.3)
+    $ blinds_l = ImageDissolve(im.Tile(get_image_7dl("gui/transit/roof_ks2.jpg")), 0.6)
+    $ blinds_r = ImageDissolve(im.Tile(get_image_7dl("gui/transit/roof_ks3.jpg")), 0.7)
     
     $ blind_l = MultipleTransition([False,blinds_l,Solid("#011"),blinds_r,True])
     $ blind_r = MultipleTransition([False,blinds_r,Solid("#011"),blinds_l,True])
-    $ touch = ImageDissolve(im.Tile(get_image_7dl("gui/pattern2.jpg")), 0.9, 1)
+    $ touch = ImageDissolve(im.Tile(get_image_7dl("gui/transit/pattern2.jpg")), 0.9, 1)
     $ dspq = Dissolve(0.04, alpha=True)
     $ dsps = Dissolve(3.0, alpha=True)
-    $ guess_on = ImageDissolve(get_image_7dl("blackpalm.png"), 0.25, ramplen=256, reverse=True)
-    $ guess_off = ImageDissolve(get_image_7dl("blackpalm.png"), 0.3, ramplen=256)
+    $ guess_on = ImageDissolve(get_image_7dl("screens/blackpalm.png"), 0.25, ramplen=256, reverse=True)
+    $ guess_off = ImageDissolve(get_image_7dl("screens/blackpalm.png"), 0.3, ramplen=256)
 #Анимы
     image anim_digi:
-        get_image_7dl("gui/digi1.jpg")  with Dissolve(1.5) 
+        get_image_7dl("screens/digi1.jpg")  with Dissolve(1.5) 
         pause 1.5
-        get_image_7dl("gui/digi2.jpg")  with Dissolve(1.5) 
+        get_image_7dl("screens/digi2.jpg")  with Dissolve(1.5) 
         pause 1.5
         repeat
     
     image anim_grain: #Смэртельный номер: тянем картинку, делаем прозрачной и запускаем в секвенцию - и всё в коде!
-        filmetile(get_image_7dl("gui/alt_noise1.png"))
+        filmetile(get_image_7dl("screens/alt_noise1.png"))
         pause 0.1
-        filmetile(get_image_7dl("gui/alt_noise2.png"))
+        filmetile(get_image_7dl("screens/alt_noise2.png"))
         pause 0.1
-        filmetile(get_image_7dl("gui/alt_noise3.png"))
+        filmetile(get_image_7dl("screens/alt_noise3.png"))
         pause 0.1
         repeat
         
     image anim_intro_recall:
-        "images/1080/bg/semen_room.jpg"
+        get_image("bg/semen_room.jpg")
         pause 0.1
-        "images/1080/bg/semen_room_window.jpg"
+        get_image("bg/semen_room_window.jpg")
         pause 0.1
-        "images/1080/anim/intro_1.jpg"
+        get_image("anim/intro_1.jpg")
         pause 0.1
-        "images/1080/anim/intro_2.jpg"
+        get_image("anim/intro_2.jpg")
         pause 0.1
-        "images/1080/anim/intro_3.jpg"
+        get_image("anim/intro_3.jpg")
         pause 0.1
-        "images/1080/anim/intro_4.jpg"
+        get_image("anim/intro_4.jpg")
         pause 0.1
-        "images/1080/anim/intro_5.jpg"
+        get_image("anim/intro_5.jpg")
         pause 0.1
-        "images/1080/anim/intro_6.jpg"
+        get_image("anim/intro_6.jpg")
         pause 0.1
-        "images/1080/anim/intro_8.jpg"
+        get_image("anim/intro_8.jpg")
         pause 0.1
-        "images/1080/anim/prolog_2.jpg"
+        get_image("anim/prolog_2.jpg")
         pause 0.1
-        "images/1080/anim/prolog_1.jpg"
+        get_image("anim/prolog_1.jpg")
         pause 0.1
-        "images/1080/anim/intro_9.jpg"
+        get_image("anim/intro_9.jpg")
         pause 0.1
-        "images/1080/anim/intro_10.jpg"
+        get_image("anim/intro_10.jpg")
         pause 0.1
-        "images/1080/anim/intro_11.jpg"
+        get_image("anim/intro_11.jpg")
         pause 0.1
-        "images/1080/anim/intro_13.jpg"
+        get_image("anim/intro_13.jpg")
         pause 0.1
-        "images/1080/bg/intro_xx.jpg"
+        get_image("bg/intro_xx.jpg")
         pause 0.1
         repeat
         
     image anim_square_party:
-        "images/1080/bg/ext_square_night_party.jpg" with Dissolve(.5) 
+        get_image("bg/ext_square_night_party.jpg") with Dissolve(.5) 
         pause 0.6
-        "images/1080/bg/ext_square_night_party2.jpg" with Dissolve(.5) 
+        get_image("bg/ext_square_night_party2.jpg") with Dissolve(.5) 
         pause 0.6
         repeat
         
@@ -205,15 +205,15 @@
         repeat
     
     image uv_bus:
-        get_sprite_7dl("misc/uv_alt1.png")
+        get_sprite_7dl("custom/uv_alt1_7dl.png")
         pause 0.5
-        get_sprite_7dl("misc/uv_alt2.png") 
+        get_sprite_7dl("custom/uv_alt2_7dl.png") 
         pause 0.5
-        get_sprite_7dl("misc/uv_alt3.png")
+        get_sprite_7dl("custom/uv_alt3_7dl.png")
         pause 0.5
-        get_sprite_7dl("misc/uv_alt2.png")
+        get_sprite_7dl("custom/uv_alt2_7dl.png")
         pause 0.5
-        get_sprite_7dl("misc/uv_alt1.png")
+        get_sprite_7dl("custom/uv_alt1_7dl.png")
         pause 0.5
     
     image anim_underwater:
@@ -230,55 +230,55 @@
         repeat
     
     image salute = LiveComposite((1920,1080),
-                                  (0,0), salute_main(get_image_7dl("spoloh1.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh11.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh2.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh21.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh3.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh1.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh11.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh2.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh21.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh3.png")),
 
-                                  (0,0), salute_main(get_image_7dl("spoloh4.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh41.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh5.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh51.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh6.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh61.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh7.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh71.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh4.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh41.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh5.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh51.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh6.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh61.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh7.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh71.png")),
 
-                                  (0,0), salute_main(get_image_7dl("spoloh91.png")),
-                                  (0,0), salute_main(get_image_7dl("spoloh9.png")))
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh91.png")),
+                                  (0,0), salute_main(get_image_7dl("screens/salute/spoloh9.png")))
 
     
     image timer_anim: 
-        get_image_7dl("gui/win.png") 
+        get_sprite_7dl("custom/win_7dl.png") 
         0.1 #Задержка
-        get_image_7dl("gui/win2.png")
+        get_sprite_7dl("custom/win2_7dl.png")
         0.1
-        get_image_7dl("gui/win3.png")
+        get_sprite_7dl("custom/win3_7dl.png")
         0.1
         repeat # Не убирать
         
     image ftl_anim: 
-        get_image_7dl("gui/ftl1.png") 
+        get_image_7dl("screens/ftl1.png") 
         0.1 #Задержка
-        get_image_7dl("gui/ftl2.png")
+        get_image_7dl("screens/ftl2.png")
         0.1
-        get_image_7dl("gui/ftl3.png")
+        get_image_7dl("screens/ftl3.png")
         0.1
         repeat # Не убирать
         
     image un serious dress anim: 
-        get_sprite_7dl("misc/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
         8.0 #Задержка
-        get_sprite_7dl("misc/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2.png")
         0.1
-        get_sprite_7dl("misc/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
         4.0 #Задержка
-        get_sprite_7dl("misc/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2.png")
         0.15
-        get_sprite_7dl("misc/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
         7.0 #Задержка
-        get_sprite_7dl("misc/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2.png")
         0.1
         repeat # Не убирать
 #Заставки
@@ -534,6 +534,7 @@
     image cg d5_rainy_idle_7dl = get_image_7dl("cg/d5_rainy_idle_7dl.jpg")
     image cg d5_sl_bed_7dl = get_image_7dl("cg/d5_sl_bed_7dl.jpg")
     image cg d5_sl_bench_7dl = get_image_7dl("cg/d5_sl_bench_7dl.jpg")
+    image cg d5_sl_hugs_7dl = get_image_7dl("cg/d5_sl_hugs_7dl.jpg")
     image cg d5_sl_kissing_7dl = get_image_7dl("cg/d5_sl_kissing_7dl.png")
     image cg d5_sl_moon_7dl = get_image_7dl("cg/d5_sl_moon_7dl.jpg")
     image cg d5_sl_swimming_7dl = get_image_7dl("cg/d5_sl_swimming_7dl.jpg")
@@ -550,6 +551,7 @@
     image cg d6_dance_alt_7dl = get_image_7dl("cg/d6_dance_alt_7dl.jpg")
     image cg d6_dv_dance_7dl = get_image_7dl("cg/d6_dv_dance_7dl.jpg")
     image cg d6_dv_hentai_7dl = get_image_7dl("cg/d6_dv_hentai_7dl.jpg")
+    image cg d6_dv_hentai2_7dl = get_image_7dl("cg/d6_dv_hentai2_7dl.jpg")
     
     image cg d6_mi_boat_7dl = get_image_7dl("cg/d6_mi_boat_7dl.jpg")
     image cg d6_mi_cya_7dl = get_image_7dl("cg/d6_mi_cya_7dl.jpg")
@@ -633,8 +635,8 @@
     image alt_tournament_bg = get_image_7dl("gui/tournament/alt_tournament_bg.png")
     image sal_black = Solid("#00000000")
     image sal_splash = Solid("#FFFFFF66")
-    image alt_KS_censor = get_image_7dl("alt_KS_censor.png")
-    image alt_KS_censor2 = get_image_7dl("alt_KS_censor2.png")
+    image alt_KS_censor = get_image_7dl("screens/alt_KS_censor.png")
+    image alt_KS_censor2 = get_image_7dl("screens/alt_KS_censor2.png")
     
     
     image dv_playon = get_image_7dl("gui/tournament/dv_playon.png")
@@ -661,7 +663,7 @@
     image blind4_2 = get_image_7dl("gui/intro/blind4_2.png")
     image blind4_3 = get_image_7dl("gui/intro/blind4_3.png")
     image blind4_4 = get_image_7dl("gui/intro/blind4_4.png")
-    image ldb_blind = get_image_7dl("gui/ldb_blind.png")
+    image ldb_blind = get_image_7dl("sprites/custom/ldb_blind_7dl.png")
 #Интро
     image believe_in_pain = get_image_7dl("gui/intro/believe_in_pain.jpg")
     image gameover = get_image_7dl("gui/intro/gameover.jpg")
@@ -682,17 +684,17 @@
     image name_mt = get_image_7dl("gui/intro/name_mt.png")
     image name_sl = get_image_7dl("gui/intro/name_sl.png")
     image name_us = get_image_7dl("gui/intro/name_us.png")
-    image rain_overlay = get_image_7dl("gui/rain_overlay.png")
+    image rain_overlay = get_image_7dl("screens/rain_overlay.png")
     image intro_transparent = get_image_7dl("gui/intro/intro_transparent.png")
 
 #Элементы интерфейса
-    image blackout = get_image_7dl("gui/blackout.png")
-    image blackout2 = get_image_7dl("gui/blackout2.png")
-    image blackout_exh = get_image_7dl("gui/blackout_exh.png")
-    image blackout_exh2 = get_image_7dl("gui/blackout_exh2.png")
-    image blackout_exh3 = get_image_7dl("gui/blackout_exh3.png")
-    image genda_portrait = get_image_7dl("gui/genda_portrait.png")
-    image gfx bokeh = get_image_7dl("gui/splatter.png")
+    image blackout = get_image_7dl("gui/transit/blackout.png")
+    image blackout2 = get_image_7dl("gui/transit/blackout2.png")
+    image blackout_exh = get_image_7dl("gui/transit/blackout_exh.png")
+    image blackout_exh2 = get_image_7dl("gui/transit/blackout_exh2.png")
+    image blackout_exh3 = get_image_7dl("gui/transit/blackout_exh3.png")
+    image genda_portrait = get_image_7dl("sprites/custom/genda_portrait_7dl.png")
+    image gfx bokeh = get_image_7dl("screens/splatter.png")
     
     image anim_exhausted: 
         get_image_7dl("gui/blackout_exh2.png")
@@ -712,8 +714,9 @@
 #    image widget map = store.map_pics["widget map"]
 
 #Скачки по карте
+    image bg map_explain = get_image_7dl("gui/maps/map_explain.png")
     image dvsem_el = get_image_7dl("gui/maps/dvsem_el.png")
-    image eye_s = get_image_7dl("gui/eye_s.png")
+    image eye_s = get_image_7dl("sprites/custom/eye_s_7dl.png")
 #Сотик
     image frame = get_image_7dl("gui/phone/frame.png")
     image cam_ui = get_image_7dl("gui/phone/cam_ui.png")
@@ -754,75 +757,73 @@
     image sam_scissor = get_image_7dl("gui/rps/sam_scissor.png")
     
 #Ачивы+лого 
-    image acm_logo_dv_drunk = get_image_7dl("gui/acm_logo_dv_drunk.png")
-    image acm_logo_dv_gohome = get_image_7dl("gui/acm_logo_dv_gohome.png")
-    image acm_logo_dv_meetmethere = get_image_7dl("gui/acm_logo_dv_meetmethere.png")
-    image acm_logo_dv_morethanlife = get_image_7dl("gui/acm_logo_dv_morethanlife.png")
-    image acm_logo_dv_theresnoway = get_image_7dl("gui/acm_logo_dv_theresnoway.png")
-    image acm_logo_dv_tillend = get_image_7dl("gui/acm_logo_dv_tillend.png")
-    image acm_logo_dv_tulpa = get_image_7dl("gui/acm_logo_dv_tulpa.png")
-    image acm_logo_me_lamp = get_image_7dl("gui/acm_logo_me_lamp.png") 
-    image acm_logo_dv_ussr_good = get_image_7dl("gui/acm_logo_dv_ussr_good.png")
+    image acm_logo_dv_drunk = get_image_7dl("gui/acm/acm_logo_dv_drunk_7dl.png")
+    image acm_logo_dv_gohome = get_image_7dl("gui/acm/acm_logo_dv_gohome_7dl.png")
+    image acm_logo_dv_meetmethere = get_image_7dl("gui/acm/acm_logo_dv_meetmethere_7dl.png")
+    image acm_logo_dv_morethanlife = get_image_7dl("gui/acm/acm_logo_dv_morethanlife_7dl.png")
+    image acm_logo_dv_theresnoway = get_image_7dl("gui/acm/acm_logo_dv_theresnoway_7dl.png")
+    image acm_logo_dv_tillend = get_image_7dl("gui/acm/acm_logo_dv_tillend_7dl.png")
+    image acm_logo_dv_tulpa = get_image_7dl("gui/acm/acm_logo_dv_tulpa_7dl.png")
+    image acm_logo_me_lamp = get_image_7dl("gui/acm/acm_logo_me_lamp_7dl.png") 
+    image acm_logo_dv_ussr_good = get_image_7dl("gui/acm/acm_logo_dv_ussr_good_7dl.png")
     
-    image acm_logo_me_deep = get_image_7dl("gui/acm_logo_me_deep.png")
-    image acm_logo_me_lamp = get_image_7dl("gui/acm_logo_me_lamp.png")
-    image acm_logo_me_qte = get_image_7dl("gui/acm_logo_me_qte.png")
+    image acm_logo_me_deep = get_image_7dl("gui/acm/acm_logo_me_deep_7dl.png")
+    image acm_logo_me_lamp = get_image_7dl("gui/acm/acm_logo_me_lamp_7dl.png")
+    image acm_logo_me_qte = get_image_7dl("gui/acm/acm_logo_me_qte_7dl.png")
     
-    image acm_logo_mi_allyours = get_image_7dl("gui/acm_logo_mi_allyours.png")
-    image acm_logo_mi_namiki = get_image_7dl("gui/acm_logo_mi_namiki.png")
-    image acm_logo_mi_new_happy = get_image_7dl("gui/acm_logo_mi_new_happy.png")
-    image acm_logo_mi_ricochet = get_image_7dl("gui/acm_logo_mi_ricochet.png")
-    image acm_logo_mi_ungood = get_image_7dl("gui/acm_logo_mi_ungood.png")
+    image acm_logo_mi_allyours = get_image_7dl("gui/acm/acm_logo_mi_allyours_7dl.png")
+    image acm_logo_mi_namiki = get_image_7dl("gui/acm/acm_logo_mi_namiki_7dl.png")
+    image acm_logo_mi_new_happy = get_image_7dl("gui/acm/acm_logo_mi_new_happy_7dl.png")
+    image acm_logo_mi_ricochet = get_image_7dl("gui/acm/acm_logo_mi_ricochet_7dl.png")
+    image acm_logo_mi_ungood = get_image_7dl("gui/acm/acm_logo_mi_ungood_7dl.png")
     
-    image acm_logo_mi_happy_again = get_image_7dl("gui/acm_logo_mi_happy_again.png")
-    image acm_logo_mi_liar = get_image_7dl("gui/acm_logo_mi_liar.png")
-    image acm_logo_mi_dark_dreams = get_image_7dl("gui/acm_logo_mi_dark_dreams.png")
-    image acm_logo_mi_club27 = get_image_7dl("gui/acm_logo_mi_club27.png")
-    image acm_logo_mi_sparkle = get_image_7dl("gui/acm_logo_mi_sparkle.png")
-    image acm_logo_mi_bitter_truth = get_image_7dl("gui/acm_logo_mi_bitter_truth.png")
-    image acm_logo_mi_dam_cpu = get_image_7dl("gui/acm_logo_mi_dam_cpu.png")
-    image acm_logo_mi_unlike = get_image_7dl("gui/acm_logo_mi_unlike.png")
-    image acm_logo_mi_come = get_image_7dl("gui/acm_logo_mi_come.png")
-    image acm_logo_mi_watashi = get_image_7dl("gui/acm_logo_mi_watashi.png")
-    image acm_logo_mi_thank_you = get_image_7dl("gui/acm_logo_mi_thank_you.png")
+    image acm_logo_mi_happy_again = get_image_7dl("gui/acm/acm_logo_mi_happy_again_7dl.png")
+    image acm_logo_mi_liar = get_image_7dl("gui/acm/acm_logo_mi_liar_7dl.png")
+    image acm_logo_mi_dark_dreams = get_image_7dl("gui/acm/acm_logo_mi_dark_dreams_7dl.png")
+    image acm_logo_mi_club27 = get_image_7dl("gui/acm/acm_logo_mi_club27_7dl.png")
+    image acm_logo_mi_sparkle = get_image_7dl("gui/acm/acm_logo_mi_sparkle_7dl.png")
+    image acm_logo_mi_bitter_truth = get_image_7dl("gui/acm/acm_logo_mi_bitter_truth_7dl.png")
+    image acm_logo_mi_dam_cpu = get_image_7dl("gui/acm/acm_logo_mi_dam_cpu_7dl.png")
+    image acm_logo_mi_unlike = get_image_7dl("gui/acm/acm_logo_mi_unlike_7dl.png")
+    image acm_logo_mi_come = get_image_7dl("gui/acm/acm_logo_mi_come_7dl.png")
+    image acm_logo_mi_watashi = get_image_7dl("gui/acm/acm_logo_mi_watashi_7dl.png")
+    image acm_logo_mi_thank_you = get_image_7dl("gui/acm/acm_logo_mi_thank_you_7dl.png")
     
-    image acm_logo_mt_cause = get_image_7dl("gui/acm_logo_mt_cause.png")
-    image acm_logo_mt_ending = get_image_7dl("gui/acm_logo_mt_ending.png")
-    image acm_logo_mt_ever_after = get_image_7dl("gui/acm_logo_mt_ever_after.png")
-    image acm_logo_mt_named_olga = get_image_7dl("gui/acm_logo_mt_named_olga.png")
+    image acm_logo_mt_cause = get_image_7dl("gui/acm/acm_logo_mt_cause_7dl.png")
+    image acm_logo_mt_ending = get_image_7dl("gui/acm/acm_logo_mt_ending_7dl.png")
+    image acm_logo_mt_ever_after = get_image_7dl("gui/acm/acm_logo_mt_ever_after_7dl.png")
+    image acm_logo_mt_named_olga = get_image_7dl("gui/acm/acm_logo_mt_named_olga_7dl.png")
     
-    image acm_logo_sl_bad = get_image_7dl("gui/acm_logo_sl_bad.png")
-    image acm_logo_sl_be_ok = get_image_7dl("gui/acm_logo_sl_be_ok.png")
-    image acm_logo_sl_fantazm = get_image_7dl("gui/acm_logo_sl_fantazm.png")
-    image acm_logo_sl_good = get_image_7dl("gui/acm_logo_sl_good.png")
-    image acm_logo_sl_lone = get_image_7dl("gui/acm_logo_sl_lone.png")
-    image acm_logo_sl_ok = get_image_7dl("gui/acm_logo_sl_ok.png")
-    image acm_logo_sl_same_place = get_image_7dl("gui/acm_logo_sl_same_place.png")
-    image acm_logo_sl_too_late = get_image_7dl("gui/acm_logo_sl_too_late.png")
-    image acm_logo_sl_worth = get_image_7dl("gui/acm_logo_sl_worth.png")
+    image acm_logo_sl_bad = get_image_7dl("gui/acm/acm_logo_sl_bad_7dl.png")
+    image acm_logo_sl_be_ok = get_image_7dl("gui/acm/acm_logo_sl_be_ok_7dl.png")
+    image acm_logo_sl_fantazm = get_image_7dl("gui/acm/acm_logo_sl_fantazm_7dl.png")
+    image acm_logo_sl_good = get_image_7dl("gui/acm/acm_logo_sl_good_7dl.png")
+    image acm_logo_sl_lone = get_image_7dl("gui/acm/acm_logo_sl_lone_7dl.png")
+    image acm_logo_sl_ok = get_image_7dl("gui/acm/acm_logo_sl_ok_7dl.png")
+    image acm_logo_sl_same_place = get_image_7dl("gui/acm/acm_logo_sl_same_place_7dl.png")
+    image acm_logo_sl_too_late = get_image_7dl("gui/acm/acm_logo_sl_too_late_7dl.png")
+    image acm_logo_sl_worth = get_image_7dl("gui/acm/acm_logo_sl_worth_7dl.png")
     
-    image acm_logo_un_good = get_image_7dl("gui/acm_logo_un_good.png")
-    image acm_logo_un_good2 = get_image_7dl("gui/acm_logo_un_good2.png")
-    image acm_logo_un_shelter = get_image_7dl("gui/acm_logo_un_shelter.png")
-    image acm_logo_un_sui = get_image_7dl("gui/acm_logo_un_sui.png")
-    image acm_logo_un_transit = get_image_7dl("gui/acm_logo_un_transit.png")
+    image acm_logo_un_good = get_image_7dl("gui/acm/acm_logo_un_good_7dl.png")
+    image acm_logo_un_good2 = get_image_7dl("gui/acm/acm_logo_un_good2_7dl.png")
+    image acm_logo_un_shelter = get_image_7dl("gui/acm/acm_logo_un_shelter_7dl.png")
+    image acm_logo_un_sui = get_image_7dl("gui/acm/acm_logo_un_sui_7dl.png")
+    image acm_logo_un_transit = get_image_7dl("gui/acm/acm_logo_un_transit_7dl.png")
     
-    image acm_logo_us_bad = get_image_7dl("gui/acm_logo_us_bad.png")
-    image acm_logo_us_fairytale = get_image_7dl("gui/acm_logo_us_fairytale.png")
-    image acm_logo_us_hi = get_image_7dl("gui/acm_logo_us_hi.png")
-    image acm_logo_us_openup = get_image_7dl("gui/acm_logo_us_openup.png")
-    image acm_logo_us_px = get_image_7dl("gui/acm_logo_us_px.png")
-    image acm_logo_us_semische = get_image_7dl("gui/acm_logo_us_semische.png")
-    image acm_logo_us_true = get_image_7dl("gui/acm_logo_us_true.png")
+    image acm_logo_us_bad = get_image_7dl("gui/acm/acm_logo_us_bad_7dl.png")
+    image acm_logo_us_fairytale = get_image_7dl("gui/acm/acm_logo_us_fairytale_7dl.png")
+    image acm_logo_us_hi = get_image_7dl("gui/acm/acm_logo_us_hi_7dl.png")
+    image acm_logo_us_openup = get_image_7dl("gui/acm/acm_logo_us_openup_7dl.png")
+    image acm_logo_us_px = get_image_7dl("gui/acm/acm_logo_us_px_7dl.png")
+    image acm_logo_us_semische = get_image_7dl("gui/acm/acm_logo_us_semische_7dl.png")
+    image acm_logo_us_true = get_image_7dl("gui/acm/acm_logo_us_true_7dl.png")
     
-    image achieve_beagod = get_image_7dl("gui/achieve_beagod.png")
-    image acm_logo = get_image_7dl("gui/acm_logo1.png") #Логотип сюжета
-    
-    image myst_mh = get_image_7dl("gui/myst_mh.png")
-    
-    image dreamgirl_overlay = get_image_7dl("gui/dreamgirl_overlay.png")
-    image wet1 = get_image_7dl("gui/wet1.png")
-    image volley_fight = get_image_7dl("gui/volley_fight.png")
+    image achieve_beagod = get_image_7dl("gui/acm/achieve_beagod_7dl.png")
+    image acm_logo = get_image_7dl("gui/acm/acm_logo1_7dl.png") #Логотип сюжета
+
+    image dreamgirl_overlay = get_image_7dl("screens/dreamgirl_overlay.png")
+    image wet1 = get_image_7dl("screens/wet1.png")
+    image volley_fight = get_sprite_7dl("custom/volley_fight_7dl.png")
     
 #Картинки с использованием прозрачности и прочая спрайтовость
     image dv normal flipped = Transform("dv normal pioneer", xzoom=-1.0)
@@ -832,264 +833,272 @@
     #image d3_miku_dance_blush flipped = Transform("d3_miku_dance_blush", xzoom=-1.0)
     image uv shade3 sized = Transform("uv shade3", zoom=.4)
     image uv shade4 sized = Transform("uv shade4", zoom=.4)
-    image digi_pad = get_sprite_7dl("misc/digi_pad.png")
-    image hands_together = get_sprite_7dl("misc/hands_together.png")
-    image hands_together_tight = get_sprite_7dl("misc/hands_together_tight.png")
-    image sl_trench = get_sprite_7dl("misc/sl_trench.png")
-    image sl_trench2 = get_sprite_7dl("misc/sl_trench2.png")
-    image cotocomb_lighter = get_sprite_7dl("misc/cotocomb_lighter.png")
-    image d4_cat_door_frame = get_sprite_7dl("misc/d4_cat_door_frame.png")
-    image d6_miku_cries = get_sprite_7dl("misc/d6_miku_cries.png")
-    image mouth_dull = get_sprite_7dl("misc/mouth_dull.png")
-    image mi_ru = get_sprite_7dl("misc/mi_ru.png")
-    image mt_bus = get_sprite_7dl("misc/mt_bus.png")
-    image uvao_d1 = get_sprite_7dl("misc/uvao_d1.png")
-    image dv_mt = get_sprite_7dl("misc/dv_mt.png")
-    image backpack = get_sprite_7dl("misc/backpack.png")
-    image backpack_tiny = get_sprite_7dl("misc/backpack_tiny.png")
-    image dv_us_volley = get_sprite_7dl("misc/dv_us_volley.png")
+    image digi_pad = get_sprite_7dl("custom/digi_pad_7dl.png")
+    image hands_together = get_sprite_7dl("custom/hands_together_7dl.png")
+    image hands_together_tight = get_sprite_7dl("custom/hands_together_tight_7dl.png")
+    image sl_trench = get_sprite_7dl("custom/sl_trench_7dl.png")
+    image sl_trench2 = get_sprite_7dl("custom/sl_trench2_7dl.png")
+    image cotocomb_lighter = get_sprite_7dl("custom/cotocomb_lighter_7dl.png")
+    image d4_cat_door_frame = get_sprite_7dl("custom/d4_cat_door_frame_7dl.png")
+    image d6_miku_cries = get_sprite_7dl("custom/d6_miku_cries_7dl.png")
+    image mouth_dull = get_sprite_7dl("custom/mouth_dull_7dl.png")
+    image mi_ru = get_sprite_7dl("custom/mi_ru_7dl.png")
+    image mt_bus = get_sprite_7dl("custom/mt_bus_7dl.png")
+    image myst_mh = get_sprite_7dl("custom/myst_mh_7dl.png")
+    image uvao_d1 = get_sprite_7dl("custom/uvao_d1_7dl.png")
+    image dv_mt = get_sprite_7dl("custom/dv_mt_7dl.png")
+    image backpack = get_sprite_7dl("custom/backpack_7dl.png")
+    image backpack_tiny = get_sprite_7dl("custom/backpack_tiny_7dl.png")
+    image dv_us_volley = get_sprite_7dl("custom/dv_us_volley_7dl.png")
     
 #Dnd
     image alt_cat_map_wireframe = get_image_7dl("gui/dnd/alt_cat_map_wireframe.png")
     image alt_cat_map = get_image_7dl("gui/dnd/alt_cat_map.png")
     image alt_cat_map_pathfinding = get_image_7dl("gui/dnd/alt_cat_map_pathfinding.png")
-    image PolariodFrame = get_image_7dl("gui/PolariodFrame.png")
+    image PolariodFrame = get_sprite_7dl("custom/PolariodFrame.png")
     
     
 #Звучок
 #ambience
-    $ ambience_concert = get_ambience_7dl("7dl_tellyourworld_concert.ogg")
-    $ ambience_elevator = get_ambience_7dl("7dl_ambience_elevator.ogg")
-    $ ambience_explosive_post = get_ambience_7dl("7dl_ambience_explosive_post.ogg")
-    $ ambience_night_city = get_ambience_7dl("7dl_ambience_night_city.ogg")
-    $ ambience_railroad = get_ambience_7dl("7dl_railroad_ambience.ogg")
-    $ ambience_rain = get_ambience_7dl("7dl_ambience_rain_loop.ogg")
-    $ ambience_safe = get_ambience_7dl("7dl_ambience_safe.ogg")
-    $ ambience_salute = get_ambience_7dl("7dl_ambience_salute.ogg")
-    $ ambience_town_day = get_ambience_7dl("7dl_ambience_town_day.ogg")
-    $ ambience_underwater = get_ambience_7dl("7dl_ambience_underwater.ogg")
-    $ ambience_volley = get_ambience_7dl("7dl_ambience_volley.ogg")
-    
+    $ ambience_7dl = {}
+
+    $ ambience_7dl["disco"] = get_ambience_7dl("ambience_disco_7dl.ogg")
+    $ ambience_7dl["concert"] = get_ambience_7dl("ambience_tellyourworld_concert_7dl.ogg")
+    $ ambience_7dl["elevator"] = get_ambience_7dl("ambience_elevator_7dl.ogg")
+    $ ambience_7dl["explosive_post"] = get_ambience_7dl("ambience_explosive_post_7dl.ogg")
+    $ ambience_7dl["night_city"] = get_ambience_7dl("ambience_night_city_7dl.ogg")
+    $ ambience_7dl["railroad"] = get_ambience_7dl("ambience_railroad_7dl.ogg")
+    $ ambience_7dl["rain"] = get_ambience_7dl("ambience_rain_loop_7dl.ogg")
+    $ ambience_7dl["safe"] = get_ambience_7dl("ambience_safe_7dl.ogg")
+    $ ambience_7dl["salute"] = get_ambience_7dl("ambience_salute_7dl.ogg")
+    $ ambience_7dl["showers"] = get_ambience_7dl("ambience_showers_7dl.ogg")
+    $ ambience_7dl["town_day"] = get_ambience_7dl("ambience_town_day_7dl.ogg")
+    $ ambience_7dl["underwater"] = get_ambience_7dl("ambience_underwater_7dl.ogg")
+    $ ambience_7dl["volley"] = get_ambience_7dl("ambience_volley_7dl.ogg")
     
 #music
-    $ alice_theme = get_music_7dl("7dl_alice_theme.ogg")
-    $ afraid_of_destiny = get_music_7dl("7dl_afraid_of_destiny.ogg")
-    $ anglegrinder = get_music_7dl("7dl_anglegrinder.ogg")
-    $ areyouabully = get_music_7dl("7dl_areyouabully.ogg")
-    $ are_you_there = get_music_7dl("7dl_are_you_there.ogg")
-    $ ask_you_out = get_music_7dl("7dl_ask_you_out.ogg")
-    
-    $ bad_apple = get_music_7dl("7dl_bad_apple.ogg")
-    $ beat_symphonic = get_music_7dl("7dl_beat_symphonic.ogg")
-    $ beth = get_music_7dl("7dl_beth.ogg")
-    $ but_why = get_music_7dl("7dl_but_why.ogg")
-    $ breath_again = get_music_7dl("7dl_breath_again.ogg")
-    $ breath_me = get_music_7dl("7dl_breath_me.ogg")
-    $ beasteye = get_music_7dl("7dl_beasteye.ogg")
-    
-    $ catch_the_hedge = get_music_7dl("7dl_catch_the_hedge.ogg")
-    $ christmas_met = get_music_7dl("7dl_christmas_met.ogg")
-    $ closetoyou = get_music_7dl("7dl_closetoyou.ogg")
-    $ clueless_hope = get_music_7dl("7dl_clueless_hope.ogg")
-    
-    $ danceagain = get_music_7dl("7dl_danceagain.ogg")
-    $ dance_with_me = get_music_7dl("7dl_dance_with_me.ogg")
-    $ dance_with_me_piano = get_music_7dl("7dl_dance_with_me_piano.ogg")
-    $ deadman = get_music_7dl("7dl_deadman.ogg")
-    $ dead_silence = get_music_7dl("7dl_dead_silence.ogg")
-    $ deep_inside = get_music_7dl("7dl_deep_inside.ogg")
-    $ dropit = get_music_7dl("7dl_dropit.ogg")
-    $ dv_guitar = get_music_7dl("7dl_dv_guitar.ogg")
+    $ music_7dl = {}
 
-    $ escape_2 = get_music_7dl("7dl_escape_2.ogg")
-    $ exodus = get_music_7dl("7dl_Exodus.ogg")
-    $ emptiness = get_music_7dl("7dl_emptiness.ogg")
-    $ es_downmix = get_music_7dl("7dl_es_downmix.ogg")
-    $ Everlasting_Summer_Alice = get_music_7dl("7dl_Everlasting_Summer_Alice.ogg")
+    $ music_7dl["alice_theme"] = get_music_7dl("alice_theme_7dl.ogg")
+    $ music_7dl["afraid_of_destiny"] = get_music_7dl("afraid_of_destiny_7dl.ogg")
+    $ music_7dl["anglegrinder"] = get_music_7dl("anglegrinder_7dl.ogg")
+    $ music_7dl["areyouabully"] = get_music_7dl("areyouabully_7dl.ogg")
+    $ music_7dl["are_you_there"] = get_music_7dl("are_you_there_7dl.ogg")
+    $ music_7dl["ask_you_out"] = get_music_7dl("ask_you_out_7dl.ogg")
     
-    $ feel_you_inside = get_music_7dl("7dl_feel_you_inside.ogg")
-    $ finale_farewell = get_music_7dl("7dl_finale_farewell.ogg")
-    $ forgive_or_what = get_music_7dl("7dl_forgive_or_what.ogg")
-    $ frostwithoutyou = get_music_7dl("7dl_frostwithoutyou.ogg")
-    $ fsl_tn = get_music_7dl("7dl_fsl_tn.ogg")
+    $ music_7dl["bad_apple"] = get_music_7dl("bad_apple_7dl.ogg")
+    $ music_7dl["beat_symphonic"] = get_music_7dl("beat_symphonic_7dl.ogg")
+    $ music_7dl["beth"] = get_music_7dl("beth_7dl.ogg")
+    $ music_7dl["but_why"] = get_music_7dl("but_why_7dl.ogg")
+    $ music_7dl["breath_again"] = get_music_7dl("breath_again_7dl.ogg")
+    $ music_7dl["breath_me"] = get_music_7dl("breath_me_7dl.ogg")
+    $ music_7dl["beasteye"] = get_music_7dl("beasteye_7dl.ogg")
     
-    $ genki = get_music_7dl("7dl_genki.ogg")
-    $ guitar_under_the_window = get_music_7dl("7dl_guitar_under_the_window.ogg")
-    $ groovie = get_music_7dl("7dl_groovie.ogg")
-    $ gonna_be_ok = get_music_7dl("7dl_gonna_be_ok.ogg")
+    $ music_7dl["catch_the_hedge"] = get_music_7dl("catch_the_hedge_7dl.ogg")
+    $ music_7dl["christmas_met"] = get_music_7dl("christmas_met_7dl.ogg")
+    $ music_7dl["closetoyou"] = get_music_7dl("closetoyou_7dl.ogg")
+    $ music_7dl["clueless_hope"] = get_music_7dl("clueless_hope_7dl.ogg")
     
-    $ happy_ending = get_music_7dl("7dl_happy_ending.ogg")
-    $ herc_death = get_music_7dl("7dl_herc_death.ogg")
+    $ music_7dl["danceagain"] = get_music_7dl("danceagain_7dl.ogg")
+    $ music_7dl["dance_with_me"] = get_music_7dl("dance_with_me_7dl.ogg")
+    $ music_7dl["dance_with_me_piano"] = get_music_7dl("dance_with_me_piano_7dl.ogg")
+    $ music_7dl["deadman"] = get_music_7dl("deadman_7dl.ogg")
+    $ music_7dl["dead_silence"] = get_music_7dl("dead_silence_7dl.ogg")
+    $ music_7dl["deep_inside"] = get_music_7dl("deep_inside_7dl.ogg")
+    $ music_7dl["dropit"] = get_music_7dl("dropit_7dl.ogg")
+    $ music_7dl["dv_guitar"] = get_music_7dl("dv_guitar_7dl.ogg")
+
+    $ music_7dl["escape_2"] = get_music_7dl("escape_2_7dl.ogg")
+    $ music_7dl["exodus"] = get_music_7dl("Exodus_7dl.ogg")
+    $ music_7dl["emptiness"] = get_music_7dl("emptiness_7dl.ogg")
+    $ music_7dl["es_downmix"] = get_music_7dl("es_downmix_7dl.ogg")
+    $ music_7dl["Everlasting_Summer_Alice"] = get_music_7dl("Everlasting_Summer_Alice_7dl.ogg")
+    
+    $ music_7dl["feel_you_inside"] = get_music_7dl("feel_you_inside_7dl.ogg")
+    $ music_7dl["finale_farewell"] = get_music_7dl("finale_farewell_7dl.ogg")
+    $ music_7dl["forgive_or_what"] = get_music_7dl("forgive_or_what_7dl.ogg")
+    $ music_7dl["frostwithoutyou"] = get_music_7dl("frostwithoutyou_7dl.ogg")
+    $ music_7dl["fsl_tn"] = get_music_7dl("fsl_tn_7dl.ogg")
+    
+    $ music_7dl["genki"] = get_music_7dl("genki_7dl.ogg")
+    $ music_7dl["guitar_under_the_window"] = get_music_7dl("guitar_under_the_window_7dl.ogg")
+    $ music_7dl["groovie"] = get_music_7dl("groovie_7dl.ogg")
+    $ music_7dl["gonna_be_ok"] = get_music_7dl("gonna_be_ok_7dl.ogg")
+    
+    $ music_7dl["happy_ending"] = get_music_7dl("happy_ending_7dl.ogg")
+    $ music_7dl["herc_death"] = get_music_7dl("herc_death_7dl.ogg")
         
-    $ iamagod2 = get_music_7dl("7dl_iamagod2.ogg")
-    $ iamsadiamsorry3 = get_music_7dl("7dl_iamsadiamsorry3.ogg")
-    $ iamsadiamsorry2 = get_music_7dl("7dl_iamsadiamsorry2.ogg")
-    $ iamsadiamsorry = get_music_7dl("7dl_iamsadiamsorry.ogg")
-    $ intro1 = get_music_7dl("7dl_intro1.ogg")
-    $ intro2 = get_music_7dl("7dl_intro2.ogg")
-    $ iwantmagic = get_music_7dl("7dl_iwantmagic.ogg")
+    $ music_7dl["iamagod2"] = get_music_7dl("iamagod2_7dl.ogg")
+    $ music_7dl["iamsadiamsorry3"] = get_music_7dl("iamsadiamsorry3_7dl.ogg")
+    $ music_7dl["iamsadiamsorry2"] = get_music_7dl("iamsadiamsorry2_7dl.ogg")
+    $ music_7dl["iamsadiamsorry"] = get_music_7dl("iamsadiamsorry_7dl.ogg")
+    $ music_7dl["intro1"] = get_music_7dl("intro1_7dl.ogg")
+    $ music_7dl["intro2"] = get_music_7dl("intro2_7dl.ogg")
+    $ music_7dl["iwantmagic"] = get_music_7dl("iwantmagic_7dl.ogg")
     
-    $ knock = get_music_7dl("7dl_knock.ogg")
-    $ kiss_you = get_music_7dl("7dl_kiss_you.ogg")
+    $ music_7dl["knock"] = get_music_7dl("knock_7dl.ogg")
+    $ music_7dl["kiss_you"] = get_music_7dl("kiss_you_7dl.ogg")
     
-    $ lastlight_guitar = get_music_7dl("7dl_lastlight_guitar.ogg")
-    $ lastlight_piano = get_music_7dl("7dl_lastlight_piano.ogg")
-    $ laugh_throught_the_universe = get_music_7dl("7dl_laugh_throught_the_universe.ogg")
-    $ lazy_olga = get_music_7dl("7dl_lazy_olga.ogg")
-    $ last_pixie = get_music_7dl("7dl_last_pixie.ogg")
-    $ lonesome_shepherd = get_music_7dl("7dl_lonesome_shepherd.ogg")
-    $ liliac_ball = get_music_7dl("7dl_liliac_ball.ogg")
-    $ loki_on_3 = get_music_7dl("7dl_loki_on_3.ogg")
-    $ lullaby2 = get_music_7dl("7dl_lullaby2.ogg")
-    $ lost_without_you = get_music_7dl("7dl_lost_without_you.ogg")
-    $ longing = get_music_7dl("7dl_longing.ogg")
-    $ ltyh = get_music_7dl("7dl_ltyh.ogg")
-    $ lunar_anguish = get_music_7dl("7dl_lunar_anguish.ogg")
-    $ lyrica_sg = get_music_7dl("7dl_lyrica_sg.ogg")
-    $ lynn = get_music_7dl("7dl_lynn.ogg")
+    $ music_7dl["lastlight_guitar"] = get_music_7dl("lastlight_guitar_7dl.ogg")
+    $ music_7dl["lastlight_piano"] = get_music_7dl("lastlight_piano_7dl.ogg")
+    $ music_7dl["laugh_throught_the_universe"] = get_music_7dl("laugh_throught_the_universe_7dl.ogg")
+    $ music_7dl["lazy_olga"] = get_music_7dl("lazy_olga_7dl.ogg")
+    $ music_7dl["last_pixie"] = get_music_7dl("last_pixie_7dl.ogg")
+    $ music_7dl["lonesome_shepherd"] = get_music_7dl("lonesome_shepherd_7dl.ogg")
+    $ music_7dl["liliac_ball"] = get_music_7dl("liliac_ball_7dl.ogg")
+    $ music_7dl["loki_on_3"] = get_music_7dl("loki_on_3_7dl.ogg")
+    $ music_7dl["lullaby2"] = get_music_7dl("lullaby2_7dl.ogg")
+    $ music_7dl["lost_without_you"] = get_music_7dl("lost_without_you_7dl.ogg")
+    $ music_7dl["longing"] = get_music_7dl("longing_7dl.ogg")
+    $ music_7dl["ltyh"] = get_music_7dl("ltyh_7dl.ogg")
+    $ music_7dl["lunar_anguish"] = get_music_7dl("lunar_anguish_7dl.ogg")
+    $ music_7dl["lyrica_sg"] = get_music_7dl("lyrica_sg_7dl.ogg")
+    $ music_7dl["lynn"] = get_music_7dl("lynn_7dl.ogg")
 
-    $ mammal = get_music_7dl("7dl_mammal.ogg")
-    $ meetmethere_tts = get_music_7dl("7dl_meetmethere_tts.ogg")
-    $ me2ost = get_music_7dl("7dl_me2ost.ogg")
-    $ melancholy_sun = get_music_7dl("7dl_melancholy_sun.ogg")
-    $ misery = get_music_7dl("7dl_misery.ogg")
-    $ moment = get_music_7dl("7dl_moment.ogg")
-    $ more_than_alive = get_music_7dl("7dl_more_than_alive.ogg")
-    $ my_only_hope= get_music_7dl("7dl_my_only_hope.ogg")
+    $ music_7dl["mammal"] = get_music_7dl("mammal_7dl.ogg")
+    $ music_7dl["meetmethere_tts"] = get_music_7dl("meetmethere_tts_7dl.ogg")
+    $ music_7dl["me2ost"] = get_music_7dl("me2ost_7dl.ogg")
+    $ music_7dl["melancholy_sun"] = get_music_7dl("melancholy_sun_7dl.ogg")
+    $ music_7dl["misery"] = get_music_7dl("misery_7dl.ogg")
+    $ music_7dl["moment"] = get_music_7dl("moment_7dl.ogg")
+    $ music_7dl["more_than_alive"] = get_music_7dl("more_than_alive_7dl.ogg")
+    $ music_7dl["my_only_hope"] = get_music_7dl("my_only_hope_7dl.ogg")
     
-    $ nookie = get_music_7dl("7dl_nookie.ogg")
-    $ no_hope_left = get_music_7dl("7dl_no_hope_left.ogg")
-    $ nowyouseeme = get_music_7dl("7dl_nowyouseeme.ogg")
+    $ music_7dl["nookie"] = get_music_7dl("nookie_7dl.ogg")
+    $ music_7dl["no_hope_left"] = get_music_7dl("no_hope_left_7dl.ogg")
+    $ music_7dl["nowyouseeme"] = get_music_7dl("nowyouseeme_7dl.ogg")
     
-    $ old_kiss = get_music_7dl("7dl_old_kiss.ogg")
-    $ ourfirstmet = get_music_7dl("7dl_ourfirstmet.ogg") 
-    $ outer = get_music_7dl("7dl_Outer_Science.ogg") 
-    $ out_of_your_tier = get_music_7dl("7dl_out_of_your_tier.ogg") 
-    $ out_of_painkillers = get_music_7dl("7dl_out_of_painkillers.ogg") 
+    $ music_7dl["old_kiss"] = get_music_7dl("old_kiss_7dl.ogg")
+    $ music_7dl["ourfirstmet"] = get_music_7dl("ourfirstmet_7dl.ogg") 
+    $ music_7dl["outer"] = get_music_7dl("Outer_Science_7dl.ogg") 
+    $ music_7dl["out_of_your_tier"] = get_music_7dl("out_of_your_tier_7dl.ogg") 
+    $ music_7dl["out_of_painkillers"] = get_music_7dl("out_of_painkillers_7dl.ogg") 
     
-    $ pathways = get_music_7dl("7dl_pathways.ogg")
-    $ Please_Reprise = get_music_7dl("7dl_Please_Reprise.ogg")
-    $ pixies_playing = get_music_7dl("7dl_pixies_playing.ogg")
-    $ polyhymnia_intro = get_music_7dl("7dl_polyhymnia_intro.ogg")
-    $ polyhymnia_main = get_music_7dl("7dl_polyhymnia_main.ogg")
-    $ ppk = get_music_7dl("7dl_ppk.ogg")
-    $ prologue_1 = get_music_7dl("7dl_prologue_1.ogg")
-    $ promise_to_meet_you = get_music_7dl("7dl_promise_to_meet_you.ogg")
+    $ music_7dl["pathways"] = get_music_7dl("pathways_7dl.ogg")
+    $ music_7dl["Please_Reprise"] = get_music_7dl("Please_Reprise_7dl.ogg")
+    $ music_7dl["pixies_playing"] = get_music_7dl("pixies_playing_7dl.ogg")
+    $ music_7dl["polyhymnia_intro"] = get_music_7dl("polyhymnia_intro_7dl.ogg")
+    $ music_7dl["polyhymnia_main"] = get_music_7dl("polyhymnia_main_7dl.ogg")
+    $ music_7dl["ppk"] = get_music_7dl("ppk_7dl.ogg")
+    $ music_7dl["prologue_1"] = get_music_7dl("prologue_1_7dl.ogg")
+    $ music_7dl["promise_to_meet_you"] = get_music_7dl("promise_to_meet_you_7dl.ogg")
 
-    $ Redemption = get_music_7dl("7dl_Redemption.ogg")
-    $ red_lights = get_music_7dl("7dl_red_lights.ogg")
-    $ refuse_to_believe = get_music_7dl("7dl_refuse_to_believe.ogg")
-    $ refuse_to_replay = get_music_7dl("7dl_refuse_to_replay.ogg")
-    $ rewind = get_music_7dl("7dl_rewind.ogg")
-    $ rightroad = get_music_7dl("7dl_rightroad.ogg")
-    $ ritual2 = get_music_7dl("7dl_ritual2.ogg")
-    $ runaway = get_music_7dl("7dl_runaway.ogg")
+    $ music_7dl["Redemption"] = get_music_7dl("Redemption_7dl.ogg")
+    $ music_7dl["red_lights"] = get_music_7dl("red_lights_7dl.ogg")
+    $ music_7dl["refuse_to_believe"] = get_music_7dl("refuse_to_believe_7dl.ogg")
+    $ music_7dl["refuse_to_replay"] = get_music_7dl("refuse_to_replay_7dl.ogg")
+    $ music_7dl["rewind"] = get_music_7dl("rewind_7dl.ogg")
+    $ music_7dl["rightroad"] = get_music_7dl("rightroad_7dl.ogg")
+    $ music_7dl["ritual2"] = get_music_7dl("ritual2_7dl.ogg")
+    $ music_7dl["runaway"] = get_music_7dl("runaway_7dl.ogg")
     
-    $ Sad_Piano = get_music_7dl("7dl_Sad_Piano.ogg")
-    $ sam_lullaby = get_music_7dl("7dl_sam_lullaby.ogg")
-    $ scorpions = get_music_7dl("7dl_scorpions.ogg")
-    $ Semische = get_music_7dl("7dl_Semische.ogg")
-    $ seven_summer_days = get_music_7dl("7dl_seven_summer_days.ogg")
-    $ sign_of_blood = get_music_7dl("7dl_sign_of_blood.ogg")
-    $ silent_angel = get_music_7dl("7dl_silent_angel.ogg")
-    $ sh_ai_rejuv = get_music_7dl("7dl_sh_ai_rejuv.ogg")
-    $ shape_of_my_heart = get_music_7dl("7dl_shape_of_my_heart.ogg")
-    $ sheiscool = get_music_7dl("7dl_sheiscool.ogg")
-    $ shehasgone = get_music_7dl("7dl_shehasgone.ogg")
-    $ shib_mono = get_music_7dl("7dl_shib_mono.ogg")
-    $ shib_stereo = get_music_7dl("7dl_shib_stereo.ogg")
-    $ slavyas_fantazm = get_music_7dl("7dl_slavyas_fantazm.ogg")
-    $ sky_feather = get_music_7dl("7dl_sky_feather.ogg")
-    $ sneakupon = get_music_7dl("7dl_sneakupon.ogg")
-    $ so_cold = get_music_7dl("7dl_so_cold.ogg")
-    $ so_lonely = get_music_7dl("7dl_so_lonely.ogg")
-    $ someone_like_you_guitar = get_music_7dl("7dl_someone_like_you_guitar.ogg")
-    $ splin = get_music_7dl("7dl_splin1.ogg")
-    $ stilllovingyou = get_music_7dl("7dl_stilllovingyou.ogg")
-    $ summer_ends_soon2 = get_music_7dl("7dl_summer_ends_soon2.ogg")
+    $ music_7dl["Sad_Piano"] = get_music_7dl("Sad_Piano_7dl.ogg")
+    $ music_7dl["sam_lullaby"] = get_music_7dl("sam_lullaby_7dl.ogg")
+    $ music_7dl["scorpions"] = get_music_7dl("scorpions_7dl.ogg")
+    $ music_7dl["Semische"] = get_music_7dl("Semische_7dl.ogg")
+    $ music_7dl["seven_summer_days"] = get_music_7dl("seven_summer_days_7dl.ogg")
+    $ music_7dl["sign_of_blood"] = get_music_7dl("sign_of_blood_7dl.ogg")
+    $ music_7dl["silent_angel"] = get_music_7dl("silent_angel_7dl.ogg")
+    $ music_7dl["sh_ai_rejuv"] = get_music_7dl("sh_ai_rejuv_7dl.ogg")
+    $ music_7dl["shape_of_my_heart"] = get_music_7dl("shape_of_my_heart_7dl.ogg")
+    $ music_7dl["sheiscool"] = get_music_7dl("sheiscool_7dl.ogg")
+    $ music_7dl["shehasgone"] = get_music_7dl("shehasgone_7dl.ogg")
+    $ music_7dl["shib_mono"] = get_music_7dl("shib_mono_7dl.ogg")
+    $ music_7dl["shib_stereo"] = get_music_7dl("shib_stereo_7dl.ogg")
+    $ music_7dl["slavyas_fantazm"] = get_music_7dl("slavyas_fantazm_7dl.ogg")
+    $ music_7dl["sky_feather"] = get_music_7dl("sky_feather_7dl.ogg")
+    $ music_7dl["sneakupon"] = get_music_7dl("sneakupon_7dl.ogg")
+    $ music_7dl["so_cold"] = get_music_7dl("so_cold_7dl.ogg")
+    $ music_7dl["so_lonely"] = get_music_7dl("so_lonely_7dl.ogg")
+    $ music_7dl["someone_like_you_guitar"] = get_music_7dl("someone_like_you_guitar_7dl.ogg")
+    $ music_7dl["splin"] = get_music_7dl("splin1_7dl.ogg")
+    $ music_7dl["stilllovingyou"] = get_music_7dl("stilllovingyou_7dl.ogg")
+    $ music_7dl["summer_ends_soon2"] = get_music_7dl("summer_ends_soon2_7dl.ogg")
 
-    $ take_my_hand = get_music_7dl("7dl_take_my_hand.ogg")
-    $ tears_of = get_music_7dl("7dl_tears_of.ogg")
-    $ tellyourworld = get_music_7dl("7dl_tellyourworld.ogg")
-    $ temptation = get_music_7dl("7dl_temptation.ogg")
-    $ tender_song = get_music_7dl("7dl_tender_song.ogg")
-    $ there_you_are = get_music_7dl("7dl_loop_there_you_are!.ogg")
-    $ the_way = get_music_7dl("7dl_the_way.ogg")
-    $ thousand_little_things = get_music_7dl("7dl_thousand_little_things.ogg")
-    $ thousand_of_pixies = get_music_7dl("7dl_thousand_of_pixies.ogg")
-    $ tilltheend = get_music_7dl("7dl_tilltheend.ogg")
-    $ timetowakeup = get_music_7dl("7dl_timetowakeup.ogg")
-    $ to_the_sunrise = get_music_7dl("7dl_to_the_sunrise.ogg")
-    $ too_quiet = get_music_7dl("7dl_too_quiet.ogg")
+    $ music_7dl["take_my_hand"] = get_music_7dl("take_my_hand_7dl.ogg")
+    $ music_7dl["tears_of"] = get_music_7dl("tears_of_7dl.ogg")
+    $ music_7dl["tellyourworld"] = get_music_7dl("tellyourworld_7dl.ogg")
+    $ music_7dl["temptation"] = get_music_7dl("temptation_7dl.ogg")
+    $ music_7dl["tender_song"] = get_music_7dl("tender_song_7dl.ogg")
+    $ music_7dl["there_you_are"] = get_music_7dl("loop_there_you_are!_7dl.ogg")
+    $ music_7dl["the_way"] = get_music_7dl("the_way_7dl.ogg")
+    $ music_7dl["thousand_little_things"] = get_music_7dl("thousand_little_things_7dl.ogg")
+    $ music_7dl["thousand_of_pixies"] = get_music_7dl("thousand_of_pixies_7dl.ogg")
+    $ music_7dl["tilltheend"] = get_music_7dl("tilltheend_7dl.ogg")
+    $ music_7dl["timetowakeup"] = get_music_7dl("timetowakeup_7dl.ogg")
+    $ music_7dl["to_the_sunrise"] = get_music_7dl("to_the_sunrise_7dl.ogg")
+    $ music_7dl["too_quiet"] = get_music_7dl("too_quiet_7dl.ogg")
     
-    $ uncertainity = get_music_7dl("7dl_uncertainity.ogg")
-    $ unfulfilled = get_music_7dl("7dl_unfulfilled.ogg")
-    $ uneven_me = get_music_7dl("7dl_uneven_me.ogg")
-    $ unfinished_life = get_music_7dl("7dl_unfinished_life.ogg")
-    $ unforgotten = get_music_7dl("7dl_Unforgotten.ogg")
-    $ unholy_you = get_music_7dl("7dl_unholy_you.ogg")
+    $ music_7dl["uncertainity"] = get_music_7dl("uncertainity_7dl.ogg")
+    $ music_7dl["unfulfilled"] = get_music_7dl("unfulfilled_7dl.ogg")
+    $ music_7dl["uneven_me"] = get_music_7dl("uneven_me_7dl.ogg")
+    $ music_7dl["unfinished_life"] = get_music_7dl("unfinished_life_7dl.ogg")
+    $ music_7dl["unforgotten"] = get_music_7dl("Unforgotten_7dl.ogg")
+    $ music_7dl["unholy_you"] = get_music_7dl("unholy_you_7dl.ogg")
     
-    $ vale = get_music_7dl("7dl_vale.ogg")
-    $ vampire = get_music_7dl("7dl_vampire.ogg")
+    $ music_7dl["vale"] = get_music_7dl("vale_7dl.ogg")
+    $ music_7dl["vampire"] = get_music_7dl("vampire_7dl.ogg")
     
-    $ walkingaway = get_music_7dl("7dl_walkingaway.ogg")
-    $ what_am_i_doing_here = get_music_7dl("7dl_what_am_i_doing_here.ogg")
-    $ what_cost = get_music_7dl("7dl_what_cost.ogg")
-    $ whatnow = get_music_7dl("7dl_whatnow.ogg")
-    $ wheres_wonderland = get_music_7dl("7dl_wheres_wonderland.ogg")
-    $ will_you = get_music_7dl("7dl_will_you.ogg")
-    $ wonderful_faraway = get_music_7dl("7dl_wonderful_faraway.ogg")
+    $ music_7dl["walkingaway"] = get_music_7dl("walkingaway_7dl.ogg")
+    $ music_7dl["what_am_i_doing_here"] = get_music_7dl("what_am_i_doing_here_7dl.ogg")
+    $ music_7dl["what_cost"] = get_music_7dl("what_cost_7dl.ogg")
+    $ music_7dl["whatnow"] = get_music_7dl("whatnow_7dl.ogg")
+    $ music_7dl["wheres_wonderland"] = get_music_7dl("wheres_wonderland_7dl.ogg")
+    $ music_7dl["will_you"] = get_music_7dl("will_you_7dl.ogg")
+    $ music_7dl["wonderful_faraway"] = get_music_7dl("wonderful_faraway_7dl.ogg")
     
-    $ you_were_late = get_music_7dl("7dl_you_were_late.ogg")
-    $ you_are_human = get_music_7dl("7dl_you_are_human.ogg")
-    $ you_are_soul = get_music_7dl("7dl_you_are_soul.ogg")
-    $ you_are_star = get_music_7dl("7dl_you_are_star.ogg")
-    $ youareours = get_music_7dl("7dl_youareours.ogg")
-    $ youre_not_real = get_music_7dl("7dl_youre_not_real.ogg")
-    $ your_life = get_music_7dl("7dl_your_life.ogg")
+    $ music_7dl["you_were_late"] = get_music_7dl("you_were_late_7dl.ogg")
+    $ music_7dl["you_are_human"] = get_music_7dl("you_are_human_7dl.ogg")
+    $ music_7dl["you_are_soul"] = get_music_7dl("you_are_soul_7dl.ogg")
+    $ music_7dl["you_are_star"] = get_music_7dl("you_are_star_7dl.ogg")
+    $ music_7dl["youareours"] = get_music_7dl("youareours_7dl.ogg")
+    $ music_7dl["youre_not_real"] = get_music_7dl("youre_not_real_7dl.ogg")
+    $ music_7dl["your_life"] = get_music_7dl("your_life_7dl.ogg")
     
 # sfx
-    $ apple_bite = get_sfx_7dl("7dl_apple_bite.ogg")
-    $ aunl = get_sfx_7dl("7dl_aunl.ogg")
-    $ bed_squeak = get_sfx_7dl("7dl_bed_squeak.ogg")
-    $ brake = get_sfx_7dl("7dl_brake.ogg")
-    $ breath = get_sfx_7dl("7dl_breath.ogg")
-    $ blanket = get_sfx_7dl("7dl_blanket.ogg")
-    $ car_passing = get_sfx_7dl("7dl_car_passing.ogg")
-    $ deagle_shot = get_sfx_7dl("7dl_deagle_shot.ogg")
-    $ eat_horn = get_sfx_7dl("7dl_eat_horn.ogg")
-    $ footsteps_grass = get_sfx_7dl("7dl_footsteps_grass.ogg")
-    $ ghmm = get_sfx_7dl("7dl_ghm.ogg")
-    $ hedgehog = get_sfx_7dl("7dl_hedgehog.ogg")
-    $ highfive = get_sfx_7dl("7dl_highfive.ogg")
-    $ intro_dr = get_sfx_7dl("7dl_intro_dr.ogg")
-    $ KBtyping = get_sfx_7dl("7dl_KBtyping.ogg")
-    $ kissing_sound = get_sfx_7dl("7dl_kissing_sound.ogg")
-    $ makarych = get_sfx_7dl("7dl_makarych.ogg")
-    $ miku_stomping = get_sfx_7dl("7dl_miku_stomping.ogg")
-    $ metal_hit_on_metal = get_sfx_7dl("7dl_metal_hit_on_metal.ogg")
-    $ mpbt = get_sfx_7dl("7dl_mpbt.ogg")
-    $ phone_feedback = get_sfx_7dl("7dl_phone_feedback.ogg")
-    $ pouring = get_sfx_7dl("7dl_pouring.ogg")
-    $ pup_bark = get_sfx_7dl("7dl_pup_bark.ogg")
-    $ push_the_button = get_sfx_7dl("7dl_push_the_button.ogg")
-    $ raindrops_radio = get_sfx_7dl("7dl_raindrops_radio.ogg")
-    $ reverse_bell = get_sfx_7dl("7dl_reverse_bell.ogg")
-    $ ringtone = get_sfx_7dl("7dl_ringtone.ogg")
+    $ sfx_7dl = {}
+
+    $ sfx_7dl["apple_bite"] = get_sfx_7dl("apple_bite_7dl.ogg")
+    $ sfx_7dl["aunl"] = get_sfx_7dl("aunl_7dl.ogg")
+    $ sfx_7dl["bed_squeak"] = get_sfx_7dl("bed_squeak_7dl.ogg")
+    $ sfx_7dl["brake"] = get_sfx_7dl("brake_7dl.ogg")
+    $ sfx_7dl["breath"] = get_sfx_7dl("breath_7dl.ogg")
+    $ sfx_7dl["blanket"] = get_sfx_7dl("blanket_7dl.ogg")
+    $ sfx_7dl["car_passing"] = get_sfx_7dl("car_passing_7dl.ogg")
+    $ sfx_7dl["deagle_shot"] = get_sfx_7dl("deagle_shot_7dl.ogg")
+    $ sfx_7dl["eat_horn"] = get_sfx_7dl("eat_horn_7dl.ogg")
+    $ sfx_7dl["footsteps_grass"] = get_sfx_7dl("footsteps_grass_7dl.ogg")
+    $ sfx_7dl["ghmm"] = get_sfx_7dl("ghm_7dl.ogg")
+    $ sfx_7dl["hedgehog"] = get_sfx_7dl("hedgehog_7dl.ogg")
+    $ sfx_7dl["highfive"] = get_sfx_7dl("highfive_7dl.ogg")
+    $ sfx_7dl["intro_dr"] = get_sfx_7dl("intro_dr_7dl.ogg")
+    $ sfx_7dl["KBtyping"] = get_sfx_7dl("KBtyping_7dl.ogg")
+    $ sfx_7dl["kissing_sound"] = get_sfx_7dl("kissing_sound_7dl.ogg")
+    $ sfx_7dl["makarych"] = get_sfx_7dl("makarych_7dl.ogg")
+    $ sfx_7dl["miku_stomping"] = get_sfx_7dl("miku_stomping_7dl.ogg")
+    $ sfx_7dl["metal_hit_on_metal"] = get_sfx_7dl("metal_hit_on_metal_7dl.ogg")
+    $ sfx_7dl["mpbt"] = get_sfx_7dl("mpbt_7dl.ogg")
+    $ sfx_7dl["phone_feedback"] = get_sfx_7dl("phone_feedback_7dl.ogg")
+    $ sfx_7dl["pouring"] = get_sfx_7dl("pouring_7dl.ogg")
+    $ sfx_7dl["pup_bark"] = get_sfx_7dl("pup_bark_7dl.ogg")
+    $ sfx_7dl["push_the_button"] = get_sfx_7dl("push_the_button_7dl.ogg")
+    $ sfx_7dl["raindrops_radio"] = get_sfx_7dl("raindrops_radio_7dl.ogg")
+    $ sfx_7dl["reverse_bell"] = get_sfx_7dl("reverse_bell_7dl.ogg")
+    $ sfx_7dl["ringtone"] = get_sfx_7dl("ringtone_7dl.ogg")
     #Озвучка заголовка роли by Noir Сычёв
-    $ role_drisch = get_sfx_7dl("7dl_role_drisch.ogg")
-    $ role_herc = get_sfx_7dl("7dl_role_herc.ogg")
-    $ role_loki = get_sfx_7dl("7dl_role_loki.ogg")
-    $ sigh_out = get_sfx_7dl("7dl_sigh_out.ogg")
-    $ snap = get_sfx_7dl("7dl_snap.ogg")
-    $ stahp = get_sfx_7dl("7dl_stahp.ogg")
-    $ tearing = get_sfx_7dl("7dl_tearing.ogg")
-    $ tousche = get_sfx_7dl("7dl_tousche.ogg")
-    $ train_depart = get_sfx_7dl("7dl_train_depart.ogg")
-    $ train_income = get_sfx_7dl("7dl_train_income.ogg")
-    $ nesmogla = get_sfx_7dl("7dl_nesmogla.ogg")
-    $ volley_hit = get_sfx_7dl("7dl_volley_hit.ogg")
-    $ wakeup_horn = get_sfx_7dl("7dl_wakeup_horn.ogg")
-    $ wakeup = get_sfx_7dl("7dl_wakeup.ogg")
-    $ white_noise = get_sfx_7dl("7dl_white_noise.ogg")
-    $ window_glass_break = get_sfx_7dl("7dl_window_glass_break.ogg")
+    $ sfx_7dl["role_drisch"] = get_sfx_7dl("role_drisch_7dl.ogg")
+    $ sfx_7dl["role_herc"] = get_sfx_7dl("role_herc_7dl.ogg")
+    $ sfx_7dl["role_loki"] = get_sfx_7dl("role_loki_7dl.ogg")
+    $ sfx_7dl["sigh_out"] = get_sfx_7dl("sigh_out_7dl.ogg")
+    $ sfx_7dl["snap"] = get_sfx_7dl("snap_7dl.ogg")
+    $ sfx_7dl["stahp"] = get_sfx_7dl("stahp_7dl.ogg")
+    $ sfx_7dl["tearing"] = get_sfx_7dl("tearing_7dl.ogg")
+    $ sfx_7dl["tousche"] = get_sfx_7dl("tousche_7dl.ogg")
+    $ sfx_7dl["train_depart"] = get_sfx_7dl("train_depart_7dl.ogg")
+    $ sfx_7dl["train_income"] = get_sfx_7dl("train_income_7dl.ogg")
+    $ sfx_7dl["nesmogla"] = get_sfx_7dl("nesmogla_7dl.ogg")
+    $ sfx_7dl["volley_hit"] = get_sfx_7dl("volley_hit_7dl.ogg")
+    $ sfx_7dl["wakeup_horn"] = get_sfx_7dl("wakeup_horn_7dl.ogg")
+    $ sfx_7dl["wakeup"] = get_sfx_7dl("wakeup_7dl.ogg")
+    $ sfx_7dl["white_noise"] = get_sfx_7dl("white_noise_7dl.ogg")
+    $ sfx_7dl["window_glass_break"] = get_sfx_7dl("window_glass_break_7dl.ogg")

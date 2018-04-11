@@ -1029,15 +1029,15 @@ label alt_day4_mi_visit_sick:
             window hide
             menu:
                 "Дабстепчику бы!":
-                    play music polyhymnia_main
+                    play music music_7dl["polyhymnia_main"]
                 
                     extend " в раскалённом воздухе поплыли сверхтяжёлые басы."
                 "Что-нибудь потяжелее!":
-                    play music nookie
+                    play music music_7dl["nookie"]
                 
                     extend " сонное царство всколыхнуло агрессивными рифами."
                 "Что-нибудь для души!":
-                    play music knock
+                    play music music_7dl["knock"]
                 
                     extend " в эфир отправилась медленная, грустная композиция с моей родины."
                 "Оставить играть.":
@@ -2218,7 +2218,7 @@ label alt_day4_mi_xroad:
     play music music_list["pile"] fadein 1
 
     "Он замахнулся арматурой."
-    play sound mpbt
+    play sound sfx_7dl["mpbt"]
     with flash
 
     "Как и вчера…Время встало."
@@ -3084,7 +3084,7 @@ label alt_day4_mi2sl_mi:
     me "Один… Три!"
     window hide
     $ renpy.pause(4.4, hard=True)
-    play sound snap fadein 0
+    play sound sfx_7dl["snap"] fadein 0
     scene white with flash
     $ renpy.pause(9.4, hard=True)
 
@@ -3437,7 +3437,7 @@ label alt_day4_mi_date:
         show mi happy pioneer at center
         window hide
         $ renpy.pause(4.4, hard=True)
-        play sound snap fadein 0
+        play sound sfx_7dl["snap"] fadein 0
         scene white with flash
         $ renpy.pause(2.4, hard=True)
     
@@ -3593,7 +3593,7 @@ label alt_day5_mi_start:
     $ alt_chapter(5, u"Мику. Утро.")
     window hide
     play music music_list["raindrops"] fadein 3
-    play sound_loop ambience_rain fadein 5
+    play sound_loop ambience_7dl["rain"] fadein 5
     scene bg ext_houses_rainy_day_7dl with dissolve
     $ renpy.pause(4, hard=True)
     show wet1
