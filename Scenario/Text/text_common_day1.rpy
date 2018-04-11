@@ -399,7 +399,7 @@ label alt_day1_firts_met:
     sl "Ты же умеешь по карте ориентироваться, правда?"
     window hide
     scene bg ext_bus1_7dl
-    show sl smile2 pioneer cleft
+    show sl smile2 pioneer at cleft
     with dissolve
     "Девушка улыбнулась так, будто для неё отрицательный ответ был невозможен."
     me "Я попробую."
