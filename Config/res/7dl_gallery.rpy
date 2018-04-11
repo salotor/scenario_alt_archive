@@ -244,95 +244,95 @@ screen gallery_fw_7dl:
         if not renpy.get_screen("bgs_7dl_6"):
             if renpy.get_screen("bgs_7dl_1"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 2), Hide("bgs_7dl_1", transition=Dissolve(0.2)), Show("bgs_7dl_2", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_2"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                     action [SetVariable("page_7dl", 3), Hide("bgs_7dl_2", transition=Dissolve(0.2)), Show("bgs_7dl_3", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_3"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                     action [SetVariable("page_7dl", 4), Hide("bgs_7dl_3", transition=Dissolve(0.2)), Show("bgs_7dl_4", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_4"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                     action [SetVariable("page_7dl", 5), Hide("bgs_7dl_4", transition=Dissolve(0.2)), Show("bgs_7dl_5", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_5"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                     action [SetVariable("page_7dl", 6), Hide("bgs_7dl_5", transition=Dissolve(0.2)), Show("bgs_7dl_6", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_6"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 7), Hide("bgs_7dl_6", transition=Dissolve(0.2)), Show("bgs_7dl_7", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_7"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 8), Hide("bgs_7dl_7", transition=Dissolve(0.2)), Show("bgs_7dl_8", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_8"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 9), Hide("bgs_7dl_8", transition=Dissolve(0.2)), Show("bgs_7dl_9", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_9"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 10), Hide("bgs_7dl_9", transition=Dissolve(0.2)), Show("bgs_7dl_10", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_10"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 11), Hide("bgs_7dl_10", transition=Dissolve(0.2)), Show("bgs_7dl_11", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_11"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 12), Hide("bgs_7dl_11", transition=Dissolve(0.2)), Show("bgs_7dl_12", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_12"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 13), Hide("bgs_7dl_12", transition=Dissolve(0.2)), Show("bgs_7dl_13", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_13"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 14), Hide("bgs_7dl_13", transition=Dissolve(0.2)), Show("bgs_7dl_14", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_14"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 15), Hide("bgs_7dl_14", transition=Dissolve(0.2)), Show("bgs_7dl_15", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_15"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 16), Hide("bgs_7dl_15", transition=Dissolve(0.2)), Show("bgs_7dl_16", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_16"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 17), Hide("bgs_7dl_16", transition=Dissolve(0.2)), Show("bgs_7dl_17", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_17"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 18), Hide("bgs_7dl_17", transition=Dissolve(0.2)), Show("bgs_7dl_18", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_18"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 19), Hide("bgs_7dl_18", transition=Dissolve(0.2)), Show("bgs_7dl_19", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_19"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 20), Hide("bgs_7dl_19", transition=Dissolve(0.2)), Show("bgs_7dl_20", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_20"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 21), Hide("bgs_7dl_20", transition=Dissolve(0.2)), Show("bgs_7dl_21", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_21"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 22), Hide("bgs_7dl_21", transition=Dissolve(0.2)), Show("bgs_7dl_22", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_22"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                     action [SetVariable("page_7dl", 23), Hide("bgs_7dl_22", transition=Dissolve(0.2)), Show("bgs_7dl_23", transition=Dissolve(0.2))]
             elif renpy.get_screen("bgs_7dl_23"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 24), Hide("bgs_7dl_23", transition=Dissolve(0.2)), Show("bgs_7dl_24", transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "arts":
         if not renpy.get_screen("arts_7dl_7"):
@@ -340,31 +340,31 @@ screen gallery_fw_7dl:
                 auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
             if renpy.get_screen("arts_7dl_1"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                     action [SetVariable("page_7dl", 2), Hide("arts_7dl_1", transition=Dissolve(0.2)), Show("arts_7dl_2", transition=Dissolve(0.2))]
             elif renpy.get_screen("arts_7dl_2"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                     action [SetVariable("page_7dl", 3), Hide("arts_7dl_2", transition=Dissolve(0.2)), Show("arts_7dl_3", transition=Dissolve(0.2))]
             elif renpy.get_screen("arts_7dl_3"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                     action [SetVariable("page_7dl", 4), Hide("arts_7dl_3", transition=Dissolve(0.2)), Show("arts_7dl_4", transition=Dissolve(0.2))]
             elif renpy.get_screen("arts_7dl_4"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                     action [SetVariable("page_7dl", 5), Hide("arts_7dl_4", transition=Dissolve(0.2)), Show("arts_7dl_5", transition=Dissolve(0.2))]
             elif renpy.get_screen("arts_7dl_5"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                     action [SetVariable("page_7dl", 6), Hide("arts_7dl_5", transition=Dissolve(0.2)), Show("arts_7dl_6", transition=Dissolve(0.2))]
             elif renpy.get_screen("arts_7dl_6"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                     action [SetVariable("page_7dl", 7), Hide("arts_7dl_6", transition=Dissolve(0.2)), Show("arts_7dl_7", transition=Dissolve(0.2))]
             elif renpy.get_screen("arts_7dl_7"):
                 imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                     action [SetVariable("page_7dl", 8), Hide("arts_7dl_7", transition=Dissolve(0.2)), Show("arts_7dl_8", transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "un":
         if renpy.get_screen("arts_7dl_un_1"):
