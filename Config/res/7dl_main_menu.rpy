@@ -143,7 +143,7 @@ screen menu_7dl(): # need changes on settings pics
             #else:
             auto get_image_7dl("gui/menu_main/un_night_menu_%s.png")
         elif persistent.waifu_7dl == 2:
-            auto "gui/menu_main/sl_menu_%s.png"
+            auto get_image_7dl("gui/menu_main/sl_menu_%s.png")
         #elif persistent.waifu_7dl == 3:
             #auto "mods/test1/img/menu_main/mi_menu_%s.png"
         elif persistent.waifu_7dl == 4:
