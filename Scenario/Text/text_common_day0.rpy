@@ -448,9 +448,9 @@ label alt_day0_start_h:
     with fade
     $ renpy.pause(3, hard=True)
     "Я ходил по утрамбованному снежку возле остановки, безуспешно пытаясь согреться."
+    stop music fadeout 3
     "Как обычно, в моменты вынужденного безделья, мало-помалу начал углубляться в воспоминания."
     window hide
-    stop music fadeout 10
     $ volume(1.0, 'music')
     play music music_7dl["tilltheend"] fadein 3
     $ renpy.pause(3)
