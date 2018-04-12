@@ -91,7 +91,12 @@ label after_load:
 
     # читаем 'save_name' и ищем в строке "7ДЛ" - думаю, этого дл идентификации мода достаточно
     if save_name.find(u'7ДЛ') != -1: #Если нашли вхождение '7ДЛ' в имени сохранения игры
-        $ meet('ba',alt_meet['ba']) # повторный meet() с именами из собственного списка каналов спикеров после загрузки сохранения
+
+        # пишем версию 7дл в трейсбеках
+        $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)
+
+        # повторный meet() с именами из собственного списка каналов спикеров после загрузки сохранения
+        $ meet('ba',alt_meet['ba'])
         $ meet('ase',alt_meet['ase'])
         $ meet('we',alt_meet['we'])
         $ meet('ml',alt_meet['ml'])
@@ -120,6 +125,7 @@ label after_load:
         $ meet('dreamgirl',alt_meet['dreamgirl'])
         $ meet('voice',alt_meet['voice'])
         $ meet('voices',alt_meet['voices'])
+        
         # Проверяем, совпадают ли версии сохранения и мода и есть ли версия сохранения в списке совместимых
         if (alt_release_no != alt_save_release_no) and (alt_save_release_no not in alt_compatible_release_no): # и если сохранение несовместимо
 
