@@ -125,9 +125,9 @@ label alt_day0_vars: #Переменные нулевого дня
     $ make_names_unknown_7dl()
     $ th_prefix = "«"
     $ th_suffix = "»"
-    $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)
     if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
+    $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)
 
     python:
         alt_meet = { # свой список каналов спикеров для повторного вызова meet() при загрузке сохранения
