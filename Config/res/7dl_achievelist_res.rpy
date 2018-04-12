@@ -196,7 +196,7 @@ init:
     image de_achiv_lock13 = get_image_7dl("gui/ach_list/de_achiv_lock.png")
     image de_achiv_lock14 = get_image_7dl("gui/ach_list/de_achiv_lock.png")
     #Заглушки под дубли достижений (не понимает иначе модуль screen RenPy)
-    image acm_logo_sl_good1 = get_image_7dl("gui/acm_logo_sl_good.png")
+    image acm_logo_sl_good1 = get_image_7dl("gui/acm/acm_logo_sl_good_7dl.png")
     # ------------------------------------------------
     #Иконки рутов
     #7ДЛ-руты
