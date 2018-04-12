@@ -92,6 +92,9 @@ label after_load:
     # читаем 'save_name' и ищем в строке "7ДЛ" - думаю, этого дл идентификации мода достаточно
     if save_name.find(u'7ДЛ') != -1: #Если нашли вхождение '7ДЛ' в имени сохранения игры
 
+        # пишем версию 7дл в трейсбеках
+        $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
+
         # Проверяем, совпадают ли версии сохранения и мода и есть ли версия сохранения в списке совместимых
         if (alt_release_no != alt_save_release_no) and (alt_save_release_no not in alt_compatible_release_no): # и если сохранение несовместимо
 
