@@ -1359,7 +1359,7 @@ label alt_day2_inmusic:
     window hide
     dreamgirl "А я зато — могу!"
     dreamgirl "Ты гляди, они ж в полосочку!"
-    "Я обогнул рояль, и, нагнувшись, поднял гармошку, вручив её хозяйке."
+    "Я обогнул рояль и, нагнувшись, поднял гармошку, вручив её хозяйке."
     window hide
     scene cg d2_miku_piano with dissolve
     play sound sfx_piano_head_bump
