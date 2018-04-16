@@ -18,7 +18,7 @@
     "Не прошло и пяти минут, а мы уже разбились по парам."
     "Мне в оппоненты рандом послал"
     call alt_shuffler
-    
+
     scene bg int_dining_hall_sunset
     call alt_shuffler_pl1
     call alt_shuffler_pl2
@@ -61,7 +61,7 @@
         us "И не надо! Но играть будем по моим правилам!"
         me "Это по каким это?"
         us "Увидишь!"
-        
+
     elif alt_pe == 6:#
         show sh normal pioneer at cright with dspr
         extend " Шурика."
@@ -74,8 +74,8 @@
         mz "Я твой противник."
         "Скрипнула она, присаживаясь напротив."
         "Я молча кивнул в ответ."
-        
-    
+
+
     if persistent.altCardsWon1 or persistent.altCardsFail:
         menu:
             "Играть самостоятельно.":
@@ -184,7 +184,7 @@ label alt_day2_participate:
         "Из-за стёкол очков на меня зыркала нелюдимая библиотекарша"
 
     extend ", а вот за другими столами дела сложились куда интереснее."
-    
+
     "Первый стол заняли"
     if alt_player1 == 1:
         show un_playon:
@@ -221,7 +221,7 @@ label alt_day2_participate:
             pos (459,157)
         with dissolve
         extend " Женя"
-    
+
     if alt_player2 == 1:
         show un_playon:
             pos (459,312)
@@ -265,8 +265,8 @@ label alt_day2_participate:
         extend " и Жужелица."
         "Она, как обычно, проигнорировала меня."
     "С первым столом разобрались, кто-то из них сегодня не дойдёт до финала."
-    
-    "Следующий стол принадлежал "
+
+    "Следующий стол принадлежал"
     if alt_player3 == 1:
         show un_playon:
             pos (459,620)
@@ -346,7 +346,7 @@ label alt_day2_participate:
         extend " и Жене."
         "Видно было, что она рада бы всё бросить и пойти в библиотеку."
     "И, наконец, последний стол."
-    
+
     "За ним сидели"
     if alt_player5 == 1:
         show un_playon:
@@ -598,12 +598,12 @@ label alt_day2_participate_fail:
             us "Зануда! {w}И что, даже отыграться не хочешь?"
             "Отыграться? О чём это она?"
             us "Неужели не обидно проиграть девчонке?"
-            me "Да мне фиолетово, на самом-то деле. "
+            me "Да мне фиолетово, на самом-то деле."
             th "Кто там что думает и решает, остаётся его достоянием."
         "Мудрый совет на все случаи жизни: болтать поменьше."
         us "Зануда! {w}Зануда."
         "Кричала она."
-        "А потом резко вскочила и пошла к столику, отведённому под следующую игру. "
+        "А потом резко вскочила и пошла к столику, отведённому под следующую игру."
         us "Просто ты проигравший и тебе неприятно!"
         show us normal pioneer with dissolve
         me "Да, возьми меня ещё раз на «слабо», детка."
@@ -704,7 +704,7 @@ label alt_day2_participate_win:
     $ persistent.altCardsWon1 = True
     scene bg int_dining_hall_sunset
     $ alt_day2_round1 = 2
-    window show    
+    window show
     call alt_day2_qf_analizer
     $ renpy.pause(1)
     scene bg int_dining_hall_sunset
@@ -715,7 +715,7 @@ label alt_day2_participate_win:
         "Она сидела, будто сама не способная поверить в то, что только что произошло."
         if lp_un >= 6 and not alt_day2_revanche:
             menu:
-                "Матч-реванш":
+                "Матч-реванш.":
                     $ karma += 5
                     $ alt_day2_revanche = True
                     if loki:
@@ -745,7 +745,7 @@ label alt_day2_participate_win:
                         hide el
                         window hide
                         jump alt_day2_tournament_start
-                "Ничего не делать":
+                "Ничего не делать.":
                     pass
         else:
             pass
@@ -806,7 +806,7 @@ label alt_day2_participate_win:
                     "Девочка потрепала меня по плечу и направилась в стан болельщиков."
                     hide sl with dissolve
                     jump alt_day2_semifinal
-                "Ничего не делать":
+                "Ничего не делать.":
                     pass
         else:
             pass
@@ -882,7 +882,7 @@ label alt_day2_participate_win:
                         dv "Удачи тебе."
                         hide dv with dissolve
                         window hide
-                        
+
                     else:
                         "Начал было я, и, чувствуя, как запал иссякает, продолжил уже куда спокойнее:"
                         me "Кажется, я победил."
@@ -898,7 +898,7 @@ label alt_day2_participate_win:
                         dv "Ладно, бывай."
                         hide dv with dissolve
                         window hide
-                        
+
                 "Партия.":
                     "Алиса кивнула и молча поднялась из-за стола."
                     pass
@@ -954,7 +954,7 @@ label alt_day2_participate_win:
         "Хотя, конечно, моя карма и везение — это слова-антонимы."
         "Я — ходячее олицетворение закона Мэрфи."
         dreamgirl "Ну да, ну да. {w}А то, что ты вытянул билет даже не на миллион, а на новую жизнь, это мы в расчёт как бы не берём, да?"
-        th "Ты о попадании в лагерь? "
+        th "Ты о попадании в лагерь?"
         th "Я не могу назвать это везением в прямом смысле этого слова."
         dreamgirl "А как это ещё назвать?"
         th "Ну… Просто оказался в ненужном месте в ненужное время."
@@ -988,9 +988,9 @@ label alt_day2_participate_win:
     elif alt_pe == 5:
         if alt_day2_revanche:
             show us angry pioneer with dissolve
-            us "Эй! "
+            us "Эй!"
             show us dontlike pioneer with dspr
-            extend "Так нечестно! "
+            extend " Так нечестно!"
             us "Ты должен был поддаться и проиграть, ты обещал!"
             "Она надулась и топнула ногой, явно расстроенная."
             th "Дуется, как мышь на крупу."
@@ -1010,7 +1010,7 @@ label alt_day2_participate_win:
             el "Один матч, три раунда, проигравший выбывает."
             "Ульяна и бровью не повела."
             show us angry pioneer with dspr
-            us "Ты должен проиграть! Должен! Понял! "
+            us "Ты должен проиграть! Должен! Понял!"
             "Ещё немного, и начну хохотать в голос, настолько потешно это выглядело."
             if alt_day2_us_escape:
                 us " Ах так! Да я тогда… Я тогда завтра снова сбегу, понял!"
@@ -1142,11 +1142,11 @@ label alt_day2_participate_win:
             pos (1315,620)
         $ renpy.pause(1)
         hide mz_playon with diam
-        
+
     "А мой соперник отправляется в ад!"
     "То есть, остаётся в первом коне."
 
-    
+
 label alt_day2_semifinal:
     "За стол полуфиналиста посадили моего оппонента."
     scene bg int_dining_hall_sunset
@@ -1198,7 +1198,7 @@ label alt_day2_semifinal:
         show us grin pioneer with dspr
         window show
         play music music_list["i_want_to_play"] fadein 1
-        us "Будешь поддаваться, будешь? "
+        us "Будешь поддаваться, будешь?"
         "С улыбкой до ушей она уставилась на меня."
         us "Я хочу всех победить!"
         me "Не буду."
@@ -1206,14 +1206,14 @@ label alt_day2_semifinal:
         if alt_day2_dv_bet_approve:
             me "У нас же спор, помнишь?"
             if loki or herc:
-                extend "Ты разбивала!"
+                extend " Ты разбивала!"
             show us sad pioneer with dspr
             us "Спор — это да."
             us "Но играть будем по моим правилам!"
             me "Что бы это значило?!"
             show us laugh pioneer with dspr
         us "Просто я ничего не поняла и не запомнила."
-        
+
     if alt_day2_hf2 == 6:
         "Александр Трофимов. {w}Больше известный как Шурик за схожесть с одним киногероем."
         show sh normal pioneer with dspr
@@ -2029,7 +2029,7 @@ label alt_day2_final_fail:
         "Неизвестно откуда взявшиеся Ольга и Алиса, взревев в унисон, ринулись было стаскивать её на пол."
         "Но где там!"
         show mi laugh pioneer far at fleft with diam
-        "Стол для игры финалистов был большой, не чета узеньким, за которым мы квалифицировались. "
+        "Стол для игры финалистов был большой, не чета узеньким, за которым мы квалифицировались."
         "Поэтому маленькая, юркая японочка успешно прыгала между руками загребущими и голосила во всю силу своих развитых лёгких."
         "Пела она о чём-то своём, на лунном наречии, которое я даже под градусом считал зубодробительным, а потому и не пытался вслушиваться."
         "Куда интереснее было слушать голос."
@@ -2059,7 +2059,7 @@ label alt_day2_final_fail:
         mt "Ну, Хатсуне!"
         "Мику на миг прижалась ко мне всем телом, а затем убежала от криков разъярённой вожатой."
         hide mi with flash
-        
+
     elif alt_day2_f1 == 5:
         $ lp_us += 1
         play music music_7dl["genki"] fadein 3
@@ -2101,7 +2101,7 @@ label alt_day2_final_fail:
         sl "Лена, а ты бы сама немного думала, что говоришь в присутствии ребёнка."
         us "Эй, мне уже четырнадцать."
         un "Э…"
-        sl "Да-да, ты тут о достоинствах Шурика разглагольствовала. "
+        sl "Да-да, ты тут о достоинствах Шурика разглагольствовала."
         dv "Девочки, а что это вы тут обсуждаете, и без меня."
         un "Ой, потеряйся, Двачевская, кошмарище лесное, додумалась новичка сиськами запугивать."
         me "Эй, я всё ещё здесь!"
@@ -2132,8 +2132,8 @@ label alt_day2_final_fail:
     window hide
     stop music fadeout 3
     with fade
-    return    
-    
+    return
+
 label alt_day2_final_draw:
     $ show_cards()
     window show
@@ -2431,7 +2431,7 @@ label alt_day2_final_win:
         with diam
         "Наваждение момента исчезло, Шурик из зловещей фигуры превратился обратно в обычного, чуть рассеянного, парня."
         "Серые, давящие стены уступили место красноватому свету катящегося на закат светила."
-        "И самое главное — "
+        "И самое главное —"
         "Ведь я же победитель!"
         "Электроник внёс моё имя в список победителей."
         el "А после ужина…"
@@ -2457,14 +2457,14 @@ label alt_day2_qf_analizer:
     with dissolve
     "Что же касается других столов…"
     "Там всё тоже достаточно любопытно."
-    
+
     "За первым столом победа ушла"
     $ alt_dd1 = renpy.random.choice([10, 1])
     if alt_dd1 == 10:
         $ alt_day2_hf1 = alt_player1
     else:
         $ alt_day2_hf1 = alt_player2
-        
+
     if alt_day2_hf1 == 1:
         extend " Лене."
         if alt_day2_hf1 == alt_player1:
@@ -2558,7 +2558,7 @@ label alt_day2_qf_analizer:
             pos (648,235)
         with diam
         "Она с неудовольствием скривилась, кажется, поняла, что победа значит ещё и дальнейшее участие в этой дурацкой игре."
-    
+
     "Проигравшая сторона постаралась отреагировать с достоинством."
     if ((alt_player1 == 1) or (alt_player2 == 1)) and (alt_day2_hf1 != 1):
         if alt_player1 == 1:
@@ -2634,15 +2634,15 @@ label alt_day2_qf_analizer:
         with dissolve
         "С видом величайшего облегчения Женя бросила карты на стол и, встав, направилась на улицу."
         hide mz_playon with diam
-        
-    
+
+
     "Второй стол принёс удачу"
     $ alt_dd2 = renpy.random.choice([10, 1])
     if alt_dd2 == 10:
         $ alt_day2_hf2 = alt_player3
     else:
         $ alt_day2_hf2 = alt_player4
-        
+
     if alt_day2_hf2 == 1:
         extend " Лене."
         if alt_day2_hf2 == alt_player3:
@@ -2736,7 +2736,7 @@ label alt_day2_qf_analizer:
             pos (648,698)
         with diam
         "Она с неудовольствием скривилась, кажется, поняла, что победа значит ещё и дальнейшее участие в этой дурацкой игре."
-    
+
     "Случайность, наверное."
     if ((alt_player3 == 1) or (alt_player4 == 1)) and (alt_day2_hf2 != 1):
         if alt_player3 == 1:
@@ -2812,14 +2812,14 @@ label alt_day2_qf_analizer:
         with dissolve
         "С видом величайшего облегчения Женя бросила карты на стол и, встав, направилась на улицу."
         hide mz_playon with diam
-        
+
     "За третьим же столом, кажется, всё подыгрывало"
     $ alt_dd3 = renpy.random.choice([10, 1])
     if alt_dd3 == 10:
         $ alt_day2_hf3 = alt_player5
     else:
         $ alt_day2_hf3 = alt_player6
-        
+
     if alt_day2_hf3 == 1:
         extend " Лене."
         if alt_day2_hf3 == alt_player5:
@@ -2913,7 +2913,7 @@ label alt_day2_qf_analizer:
             pos (1135,235)
         with diam
         "Она с неудовольствием скривилась, кажется, поняла, что победа значит ещё и дальнейшее участие в этой дурацкой игре."
-    
+
     "Побеждённому оставалось лишь признать своё поражение."
     if ((alt_player5 == 1) or (alt_player6 == 1)) and (alt_day2_hf3 != 1):
         if alt_player5 == 1:
@@ -2990,7 +2990,7 @@ label alt_day2_qf_analizer:
         "С видом величайшего облегчения Женя бросила карты на стол и, встав, направилась на улицу."
         hide mz_playon with diam
     return
-    
+
 label alt_day2_hf_analizer:
     $ alt_dd11 = renpy.random.choice([10, 1])
     "На соседнем же столе борьба разыгралась нешуточная."
@@ -3007,7 +3007,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 1:
             show un_playon:
                 pos (648,235)
-        else:        
+        else:
             show un_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 2:
@@ -3015,7 +3015,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 2:
             show sl_playon:
                 pos (648,235)
-        else:        
+        else:
             show sl_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 3:
@@ -3023,7 +3023,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 3:
             show dv_playon:
                 pos (648,235)
-        else:        
+        else:
             show dv_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 4:
@@ -3031,7 +3031,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 1:
             show mi_playon:
                 pos (648,235)
-        else:        
+        else:
             show mi_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 5:
@@ -3039,7 +3039,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 5:
             show us_playon:
                 pos (648,235)
-        else:        
+        else:
             show us_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 6:
@@ -3047,7 +3047,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 6:
             show sh_playon:
                 pos (648,235)
-        else:        
+        else:
             show sh_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 7:
@@ -3055,10 +3055,10 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 7:
             show mz_playon:
                 pos (648,235)
-        else:        
+        else:
             show mz_playon:
                 pos (1135,235)
-                
+
     $ renpy.pause(.3)
     if alt_day2_hf1 == 1:
         show un_playon:
@@ -3097,7 +3097,7 @@ label alt_day2_hf_analizer:
         with diam
         "Меня откровенно забавляло то, что она-то как раз меньше всего хотела играть."
         "А ушла так далеко."
-        
+
     "Второму полуфиналисту повезло куда меньше."
     if ((alt_day2_hf1 == 1) or (alt_day2_hf3 == 1)) and (alt_day2_f1 != 1):
         if alt_day2_hf1 == 1:
@@ -3182,8 +3182,8 @@ label alt_day2_hf_analizer:
         "Женя разулыбалась, вздохнула, расправила плечи."
         mz "Ну наконец-то!"
         "Рявкнула она и вышла вон из столовой."
-    
-    
+
+
     "Что же касается нашего стола…"
     if alt_day2_round2 == 1:
         $ alt_day2_f2 = alt_day2_hf2

@@ -17,10 +17,10 @@ label alt_day5_sl_7dl_start:
     $ alt_chapter(5, u"Славя. 7ДЛ. Костёр")
     $ alt_chapter(5, u"Славя. 7ДЛ. Ночь")
     jump alt_day6_sl_7dl_start
- 
+
 label alt_day6_sl_7dl_start:
     jump alt_day7_sl_7dl_start
-    
+
 label alt_day7_sl_7dl_start:
     #Cон
     $ sunset_time()

@@ -1,4 +1,4 @@
-#init -1 python: # done  
+#init -1 python: # done
     #def check_time_7dl(time_7dl):
         #from time import localtime, strftime
         #t = strftime("%H:%M:%S", localtime())
@@ -10,7 +10,7 @@
         #elif hour in (19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5):
             #time_7dl = "night"
             #return time_7dl
-            
+
 init 1: # done
     $ list_waifu_7dl = []
     $ persistent.waifu_7dl = 0
@@ -30,20 +30,20 @@ init 1: # done
         style.log_button_text.hover_color = "#115bc0"
         style.log_button_text.selected_color = "#b6ff00"
         style.log_button_text.hover_color = "#b6ff00"
-    
+
 init 9001 python: # done
     def add_lp_widget_7dl():
         for i in persistent.filters:
             if i['id'] == "widget__7dl_widget": i['is_active'] = True
-            
-    def del_lp_widget_7dl():  
+
+    def del_lp_widget_7dl():
         for i in persistent.filters:
             if i['id'] == "widget__7dl_widget": i['is_active'] = False
-     
+
     def add_music_widget_7dl():
         for i in persistent.filters:
             if i['id'] == "music_widget_7dl": i['is_active'] = True
-        
+
     def del_music_widget_7dl():
         for i in persistent.filters:
             if i['id'] == "music_widget_7dl": i['is_active'] = False
@@ -84,19 +84,19 @@ screen alt_wip2:
         yalign 0.65
         xalign 0.5
         action Hide("alt_wip2")
-    
+
 screen settings_widget_lp_on_7dl(): # done
     add get_image_7dl("gui/menu_elem/settings/settings_wdglp_on.png")
-    
+
 screen settings_widget_lp_off_7dl(): # done
     add get_image_7dl("gui/menu_elem/settings/settings_wdglp_off.png")
-    
+
 screen settings_widget_music_on_7dl(): # done
     add get_image_7dl("gui/menu_elem/settings/settings_wdgmus_on.png")
-    
+
 screen settings_widget_music_off_7dl(): # done
     add get_image_7dl("gui/menu_elem/settings/settings_wdgmus_off.png")
-    
+
 screen settings_dlc_on_7dl(): # done
     add get_image_7dl("gui/menu_elem/settings/settings_dlc_on.png")
 
@@ -105,13 +105,13 @@ screen settings_dlc_off_7dl(): # done
 
 screen settings_hentai_un_new_7dl(): # done
     add get_image_7dl("gui/menu_elem/settings/settings_hent_new.png")
- 
+
 screen settings_hentai_un_old_7dl(): # done
     add get_image_7dl("gui/menu_elem/settings/settings_hent_old.png")
- 
+
 screen settings_reboot_7dl():
     add get_image_7dl("gui/menu_elem/settings/settings_reboot.png")
- 
+
 screen menu_7dl(): # need changes on settings pics
     if persistent.waifu_7dl == 1:
         #if time_7dl == "day":
@@ -128,7 +128,7 @@ screen menu_7dl(): # need changes on settings pics
                 #hotspot (164, 718, 153, 41):
                     #action [Show("media_7dl", transition=Dissolve(0.2))]
                 #hotspot (164, 772, 146, 38):
-                    #action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]   
+                    #action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
         #elif time_7dl == "night":
         imagemap at left_menu_7dl(0.1, 0.7):
             auto get_image_7dl("gui/menu_main/un_night_menu_%s.png")
@@ -143,7 +143,7 @@ screen menu_7dl(): # need changes on settings pics
             hotspot (164, 718, 153, 41):
                 action [Show("media_7dl", transition=Dissolve(0.2))]
             hotspot (164, 772, 146, 38):
-                action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]   
+                action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
     elif persistent.waifu_7dl == 2:
         imagemap at left_menu_7dl(0.1, 0.7):
             auto get_image_7dl("gui/menu_main/sl_menu_%s.png")
@@ -188,7 +188,7 @@ screen menu_7dl(): # need changes on settings pics
             hotspot (164, 718, 153, 41):
                 action [Show("media_7dl", transition=Dissolve(0.2))]
             hotspot (164, 772, 146, 38):
-                action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]     
+                action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
     elif persistent.waifu_7dl == 5:
         imagemap at left_menu_7dl(0.1, 0.7):
             auto get_image_7dl("gui/menu_main/us_menu_%s.png")
@@ -219,7 +219,7 @@ screen menu_7dl(): # need changes on settings pics
                 #action [Show("media_7dl", transition=Dissolve(0.2))]
             #hotspot (164, 772, 146, 38):
                 #action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
-            
+
 screen settings_7dl(): # done
     tag menu
     add get_image_7dl("gui/menu_elem/settings/settings_bg.png") xalign 0.9 yalign 0.7
@@ -314,29 +314,29 @@ screen settings_7dl(): # done
                 hovered Show("settings_reboot_7dl", transition=Dissolve(0.2))
                 unhovered Hide("settings_reboot_7dl", transition=Dissolve(0.2))
                 action Jump("widgets_on_off_7dl")
-                
+
 screen contacts_7dl(): # done
     tag menu
     imagemap xalign 0.9 yalign 0.7:
         auto get_image_7dl("gui/menu_elem/contacts/contacts_%s.png")
         hotspot(1265, 330, 329, 59):
-            action OpenURL("www.7dneyleta.ru") 
+            action OpenURL("www.7dneyleta.ru")
         hotspot(1265, 389, 329, 59):
-            action OpenURL("https://vk.com/bl_7dl") 
+            action OpenURL("https://vk.com/bl_7dl")
         hotspot(1265, 449, 329, 59):
-            action OpenURL("https://steamcommunity.com/sharedfiles/filedetails/?id=441054187") 
+            action OpenURL("https://steamcommunity.com/sharedfiles/filedetails/?id=441054187")
         hotspot(1265, 508, 329, 59):
-            action OpenURL("https://vk.com/page-128046483_52530462") 
-            
+            action OpenURL("https://vk.com/page-128046483_52530462")
+
 screen media_7dl(): # done, TODO gallery and music room
     tag menu
-    imagemap:   
+    imagemap:
         auto get_image_7dl("gui/menu_elem/media/media_%s.png")
         hotspot(1333, 224, 540, 160):
             clicked [Show("alt_wip1", transition=Dissolve(0.2))]
         hotspot(1218, 394, 700, 700):
             clicked [Hide("media_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Jump("alt_gallery_start")]
-        
+
 label choose_waifu_7dl: # done
     stop music
     stop sound
@@ -365,7 +365,7 @@ label choose_waifu_7dl: # done
     #elif persistent.waifu_7dl == 6:
         #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 3, 4, 5])
         #jump start_menu_7dl
-        
+
 label widgets_on_off_7dl:
     if persistent.lp_widget_7dl or persistent.music_widget_7dl:
         python:
@@ -399,7 +399,7 @@ label start_7dl:
     call alt_day0_vars
     call alt_day0_prologue
     jump choose_waifu_7dl
- 
+
 label start_menu_7dl: # need dopil on girls walls
     if persistent.waifu_7dl == 1 and 'un' not in list_waifu_7dl:
         play music music_7dl["take_my_hand"] fadein 3
@@ -419,7 +419,7 @@ label start_menu_7dl: # need dopil on girls walls
         call screen menu_7dl
     #if persistent.waifu_7dl == 3 and 'dv' not in list_waifu_7dl:
         #$ list_waifu_7dl.append('dv')
-        #scene bg black 
+        #scene bg black
         #play music music_7dl["uncertainity"] fadein 3
         #call screen menu_7dl
     if persistent.waifu_7dl == 4 and 'mi' not in list_waifu_7dl:
@@ -434,7 +434,7 @@ label start_menu_7dl: # need dopil on girls walls
         call screen menu_7dl
     #if persistent.waifu_7dl == 6 and 'mt' not in list_waifu_7dl:
         #$ list_waifu_7dl.append('mt')
-        #scene bg black 
+        #scene bg black
         #play music music_7dl["wheres_wonderland"] fadein 3
         #call screen menu_7dl
     else:

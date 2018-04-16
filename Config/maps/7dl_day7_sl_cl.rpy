@@ -41,37 +41,37 @@ label alt_day7_sl_square:
     $ disable_current_zone_alt2()
     call alt_day7_sl_beach
     return
-    
+
 label alt_day7_sl_clubs:
     call alt_day7_sl_clubs1
     $  alt_day7_sl_map_progress += 1
     $ disable_current_zone_alt2()
     jump alt_day7_sl_map
-    
+
 label alt_day7_sl_dining_hall:
     call alt_day7_sl_dining_hall1
     $  alt_day7_sl_map_progress += 1
     $ disable_current_zone_alt2()
     jump alt_day7_sl_map
-    
+
 label alt_day7_sl_sport_area:
     call alt_day7_sl_sport_area1
     $  alt_day7_sl_map_progress += 1
     $ disable_current_zone_alt2()
     jump alt_day7_sl_map
-    
+
 label alt_day7_sl_volleyball_alt:
     call alt_day7_sl_volleyball_alt1
     $  alt_day7_sl_map_progress += 1
     $ disable_current_zone_alt2()
     jump alt_day7_sl_map
-    
+
 label alt_day7_sl_estrade:
     call alt_day7_sl_estrade1
     $  alt_day7_sl_map_progress += 1
     $ disable_current_zone_alt2()
     jump alt_day7_sl_map
-    
+
 label alt_day7_sl_boat_station:
     call alt_day7_sl_boat_station1
     call alt_day7_sl_beach

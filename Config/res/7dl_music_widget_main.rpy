@@ -3,7 +3,7 @@ init:
 
 python early:
     def music_widget_7dl():
-        def check_muzlo(value):   
+        def check_muzlo(value):
             for k, v in music_list.items():
                 if v == value:
                     return k
@@ -27,8 +27,8 @@ python early:
                 elif m == None:
                     get_mus_7dl('ambience')
                     if m == default_7dl_path+"Sound/ambience/ambience_safe.ogg":
-                        ui.text("%s" % "Mikko Tarmia - Back Hall (Amnesia OST)", style="button_text", size=13)
-                    else: 
+                        ui.text("%s" % "Mikko Tarmia — Back Hall (Amnesia OST)", style="button_text", size=13)
+                    else:
                         ui.text("%s" % "Нет музыки", style="button_text", size=13)
                 else:
                     ui.text("%s" % "Неизвестный трек", style="button_text", size=13)

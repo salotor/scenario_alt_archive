@@ -22,7 +22,7 @@
     "Ещё один гребок к поверхности."
     "Ещё один."
     window hide
-    play sound sfx_bus_window_hit 
+    play sound sfx_bus_window_hit
     with vpunch
     scene black with flash_red
     stop music fadeout 2
@@ -293,7 +293,7 @@
     window hide
     with fade
     return
-    
+
 label alt_day1_alt_A:
     scene black
     dv "Ну и долго ещё собираешься изображать припадочного?"
@@ -343,7 +343,7 @@ label alt_day1_alt_A:
         "За последний час меня ударили по голове, облапали и наорали."
         "И оттого в голове царил сущий хаос — про вещи типа гордости или силы воли даже не вспоминалось…"
         "Злость девушки была довольно забавной, но кто его знает, на что она способна?"
-        "И, как всегда, оказавшись в непонятной ситуации, я прибёг к старому доброму способу решения проблем." 
+        "И, как всегда, оказавшись в непонятной ситуации, я прибёг к старому доброму способу решения проблем."
         "Я пустил всё на самотёк."
     window hide
     scene bg ext_square_day at zentercenter2 with flash
@@ -487,13 +487,13 @@ label alt_day1_alt_A:
     th "А с другой стороны, интересно проверить, насколько я выносливый."
     "Так что если она немного задержится, так, может, и будет лучше."
     "Я бы попробовал выстоять минут пятнадцать."
-    "Чтобы не попрекали, мол, ничего тяжелее компьютерной мышки "
+    "Чтобы не попрекали, мол, ничего тяжелее компьютерной мышки"
     if herc:
-        extend "да демократизатора"
+        extend " да демократизатора"
     elif loki:
-        extend "да партитур"
+        extend " да партитур"
     else:
-        extend "да планшета"
+        extend " да планшета"
     extend " и в руках-то не держал."
     "Так что распределяем нагрузку — выпрямляем спину, расправляем плечи, ноги ставим на ширине плеч."
     play music music_list["you_lost_me"] fadein 3
@@ -632,7 +632,7 @@ label alt_day1_alt_A:
         with Shake((0, 0, 0, 0), 2.0, dist=50)
         $ renpy.pause(2, hard=True)
         scene bg ext_boathouse_alt_day_7dl with flash
-    
+
         me "И не подходи ко мне больше."
         show dv surprise pioneer2 far with dspr
         "Меня можно понять."
@@ -667,7 +667,7 @@ label alt_day1_alt_A:
         th "Хотя для девушки оказаться в мокрой рубашке это, всё-таки, немного другое."
     me "У меня и переодеться не во что."
     if herc:
-        scene bg ext_sky_7dl with flash 
+        scene bg ext_sky_7dl with flash
         "Глядя в небо и не делая попыток подняться, уведомил я."
     else:
         show dv grin pioneer2 with dspr
@@ -687,7 +687,7 @@ label alt_day1_alt_A:
         "И, стараясь сохранить остатки собственного достоинства, я поднялся."
         window hide
         scene bg ext_boathouse_alt_day_7dl with dissolve
-    
+
     else:
         "Девушка стояла и улыбалась мне, будто ожидая, что я её сейчас похвалю за невероятно смешную шутку."
     if herc:
@@ -805,7 +805,7 @@ label alt_day1_alt_A:
     window hide
     with fade
     return
-    
+
 label alt_day1_alt_S:
     play music music_list["take_me_beautifully"] fadein 1
     scene bg ext_boathouse_day at zenterleft
@@ -1071,7 +1071,7 @@ label alt_day1_alt_S:
     sl "Как-никак, я помощница вожатой и отвечаю за пионеров."
     menu:
         "Ясно. А я Семён.":
-        
+
             "Вежливо кивнул я, а девочка снова улыбнулась."
             sl "Прости, где мои манеры."
             show sl smile2 pioneer with dspr
@@ -1082,7 +1082,7 @@ label alt_day1_alt_S:
             $ alt_day1_sl_met = True
             $ lp_sl += 1
         "Да, спасибо.":
-        
+
             "С третьего щелчка вышибло ум у старика."
             "Пионерки, бронзовые деятели и советский флаг — всё вместе или по отдельности ещё можно было как-то объяснить."
             "Но резкое омоложение…"
@@ -1130,7 +1130,7 @@ label alt_day1_alt_S:
             scene bg ext_house_of_sl_day at zenterright
             show sl normal pioneer at cright
             with dissolve
-        
+
             "Однако далеко мы не ушли."
             "Не успели мы сделать и пяти шагов, как нас окрикнули."
             show bg ext_house_of_sl_day at enterleft
@@ -1259,7 +1259,7 @@ label alt_day1_alt_L:
     "На этом, кажется, силы покинули её."
     menu:
         "Да, я Семён. А ты…":
-            
+
             "Её пальцы судорожно вцепились в край юбки, она смутилась ещё сильнее."
             un "Я… Ну… Это…"
             show un surprise pioneer with dspr
@@ -1308,7 +1308,7 @@ label alt_day1_alt_L:
     "Спросил я."
     "Пока мы шли вот так, бок о бок, было немного полегче общаться, чем глаза в глаза."
     un "В прошлом году… Была."
-    "Ответила она, всё так же старательно глядя себе под ноги. "
+    "Ответила она, всё так же старательно глядя себе под ноги."
     scene bg ext_houses_day at zenterleft
     show un normal pioneer at cleft
     with dissolve
@@ -1349,14 +1349,14 @@ label alt_day1_alt_L:
             "У меня будет полное право долго и остервенело пинать воришку."
             window hide
             scene bg ext_houses_day with flash:
-                pos (0,0) 
-                linear 0.1 pos (-5,-5) 
-                linear 0.1 pos (5,5) 
-                pos (0,0) 
-                linear 0.1 pos (0,-5) 
-                linear 0.1 pos (0,5) 
+                pos (0,0)
+                linear 0.1 pos (-5,-5)
+                linear 0.1 pos (5,5)
+                pos (0,0)
+                linear 0.1 pos (0,-5)
+                linear 0.1 pos (0,5)
                 repeat
-        
+
             "А тот, видимо, почуяв мои самые неблагие намерения, с душой так поднажал."
             me "Врёшь, тварь!"
             "Сквозь стиснутые зубы прорычал я, ускоряясь."
@@ -1368,20 +1368,20 @@ label alt_day1_alt_L:
             "Распрыжкой."
             window hide
             show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=10)
-        
+
             "Я поймаю его и утрамбую в бетон, чтобы наружу торчали одни только уши."
             "Надо просто быть ещё чуточку быстрее…"
             window hide
             show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=15)
-        
+
             "Ещё…"
             window hide
             show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=20)
-        
+
             "Чуточку…"
             window hide
             show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=15)
-        
+
             "Быстрее…"
             "Икроножные мышцы заныли, когда я, оставляя за собой инверсионный след, вышел на первую космическую."
             "За спиной осталась удивлённо вскрикнувшая Лена, которую я обогнал как стоячую."
@@ -1395,7 +1395,7 @@ label alt_day1_alt_L:
             show blackout_exh
             show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=15)
             with flash
-        
+
             voice "Эй, лови!"
             "В воздух взлетело что-то."
             "Что-то блеснувшее на солнце."
@@ -1408,7 +1408,7 @@ label alt_day1_alt_L:
             "И…"
             th "Поймал!"
             "В прыжке, сделавшем честь иному голкиперу, я поймал ценный груз в воздухе."
-            
+
             play sound sfx_7dl["breath"] fadein 3
             stop music fadeout 3
             if not (herc or loki):
@@ -1430,7 +1430,7 @@ label alt_day1_alt_L:
             show blackout_exh3
             window hide
             with fade
-            
+
             "Ещё несколько минут, заполненных одним только дыханием и желанием сплюнуть."
             hide blackout_exh3 with dspr
             "Наконец, темнота перед глазами немного отступила."
@@ -1496,7 +1496,7 @@ label alt_day1_alt_L:
             "Что за день такой сегодня… Глупый."
             window hide
             scene expression Desat1("bg ext_houses_day")with fade
-        
+
             "Хуже уже не будет, сильнее, чем собралась, ругать меня вожатая не станет."
             th "Не убьёт же она меня?"
             "Постояв немного на месте и повздыхав, я направился куда глаза глядят."
@@ -1518,7 +1518,7 @@ label alt_day1_alt_L:
             window hide
             scene bg ext_path_day with dissolve
             play ambience ambience_forest_day fadein 3
-        
+
             "Я оказался в роще."
             "Здесь было тихо и полутемно."
             th "Вот поселюсь здесь и буду жить."
@@ -1535,7 +1535,7 @@ label alt_day1_alt_L:
             window hide
             scene bg ext_musclub_day with fade
             play ambience ambience_camp_center_day
-        
+
             "И, кажется, я и правда ошибся с направлением."
             "Пробравшись между деревьями, я вышел на открытое пространство, над которым доминировало одно большое здание."
             "Больше всего оно походило на самый обыкновенный дом, у которого зачем-то сняли одну стену, обрезали пополам по высоте остальные, а те, что остались, застеклили как только могли."
@@ -1654,7 +1654,7 @@ label alt_day1_alt_L:
                 "О всеблагой рандом, пусть уже кто-нибудь отпилит её и спрячет в сейф — мне надоело, что по ней сегодня все бьют!"
                 "Перед глазами всё потемнело, а рыжая бандитка, прокричав что-то ободряющее, скрылась с места преступления в неизвестном направлении, забрав с собой орудие преступления."
                 hide us
-                show mi scared pioneer behind blackout_exh2 with dspr 
+                show mi scared pioneer behind blackout_exh2 with dspr
                 mi "Ой, с вами всё в порядке?"
                 me "С тобой."
                 "Бросил я."
@@ -1685,7 +1685,7 @@ label alt_day1_alt_L:
     window hide
     with fade
     return
-    
+
 label alt_day1_alt_O:
     play sound sfx_open_door_clubs_2
     scene bg int_house_of_mt_day with dissolve
@@ -1714,7 +1714,7 @@ label alt_day1_alt_O:
     mt "Ну, здравствуй."
     "Чуточку ворчливо начала она."
     mt "Я тебя уж заждалась, думала сама за тобой идти."
-    
+
     me "Простите?"
     mt "Не прощу."
     show mt smile pioneer with dspr
@@ -1749,7 +1749,7 @@ label alt_day1_alt_O:
 
     me "Извините."
     me "Но я посторонний человек здесь, я ехал…"
-    
+
     "Куда я ехал и зачем, почему-то из памяти выпало, поэтому я заткнулся."
     play music music_7dl["wheres_wonderland"] fadein 3
     mt "Охохо, и за что мне несчастье такое."
@@ -1787,7 +1787,7 @@ label alt_day1_alt_O:
     "Она достала с полки ежедневник, а оттуда — сложенный пополам лист."
     mt "Держи. Читай."
     "Я растерянно принял листок и развернул его."
-    
+
     $ set_mode_nvl()
     "Привет! Прииииивет!"
     "Любопытно, как тебя зовут в этот раз?"
@@ -1816,7 +1816,7 @@ label alt_day1_alt_O:
     "Пожалуйста."
     "Засим адью с неприличными жестами."
     "Сэм."
-    
+
     $ set_mode_adv()
     "Я вернул письмо вожатой."
     $ meet('mt','Ольга')
@@ -1825,7 +1825,7 @@ label alt_day1_alt_O:
     "Она несколько секунд вглядывалась мне в глаза, видимо, пытаясь там что-то найти."
     "Не нашла."
     "Вздохнула."
-    mt "… Дмитриевна."
+    mt "…Дмитриевна."
     $ meet('mt','Ольга Дмитриевна')
     me "Ясно, значит, вы вожатая, а я пионэр."
     show mt smile pioneer with dspr
@@ -1840,7 +1840,7 @@ label alt_day1_alt_O:
     "Почти как бесплатная путёвка в Дубаи, только с омоложением всего организма в качестве бонусного сервиса."
     me "Ясно, Ольга…"
     menu:
-        "… Дмитриевна.":
+        "…Дмитриевна.":
             $ karma += 10
             "Я с усилием выговорил её отчество."
             "Как будто мы всю жизнь звали друг друга по именам."
@@ -1868,7 +1868,7 @@ label alt_day1_alt_O:
     window hide
     with fade
     return
-    
+
 
 label alt_day1_alt_supper:
     window hide
@@ -1898,11 +1898,11 @@ label alt_day1_alt_supper:
     hide us with dissolve
     "Я, с огромным удовольствием наблюдавший всю сцену, даже вздрогнул, когда вожатая окликнула меня."
     mt "Семён!"
-    me "Да?" 
+    me "Да?"
     mt "Видел, кого поймала?"
     me "Ну."
     show mt laugh pioneer with dspr
-    mt "Что «ну», беги за ней, узнаешь, где рукомойник! "
+    mt "Что «ну», беги за ней, узнаешь, где рукомойник!"
     me "Понял."
     "Не теряя больше ни секунды, а поспешил за пионеркой в футболке."
     window hide
@@ -1964,7 +1964,7 @@ label alt_day1_alt_supper:
     "Спустя пять минут я, отряхивая ладони от холодной — ледяной! — воды, поднялся на крылечко и вместе с вожатой зашёл внутрь."
     window hide
     $ persistent.sprite_time = 'sunset'
-    scene bg int_dining_hall_people_day 
+    scene bg int_dining_hall_people_day
     with dissolve
     play ambience ambience_dining_hall_full fadein 3
     scene bg int_dining_hall_people_day  with fade
@@ -2003,8 +2003,8 @@ label alt_day1_alt_supper:
     extend " Двачевская, стоять!"
     show dv surprise pioneer2 with dspr
     dv "Чего ещё?"
-    mt "Ты во что одета? "
-    dv "В форму? "
+    mt "Ты во что одета?"
+    dv "В форму?"
     "Разумеется, в форму. Вопрос лишь в том, как именно была надета эта форма."
     "Если рубашка на голое тело, повязанная ковбойским узлом и галстук в качестве напульсника — то это, конечно, тоже форма."
     "Правда, не пионера, а кое-кого другого."
@@ -2044,7 +2044,7 @@ label alt_day1_alt_supper:
     "Впрочем, их место говорило само за себя: в отряде царит жёсткий матриархат."
     us "Эй, псст!"
     scene bg int_dining_hall_people_day at zentercenter
-    show us smile sport 
+    show us smile sport
     with dissolve
     me "Что?"
     "Не было печали…"
@@ -2096,7 +2096,7 @@ label alt_day1_alt_supper:
             "Ну разве не волнительная картина?"
             window hide
             with fade
-        
+
             th "И почему я не ренегат из одной известной игры? Я бы ещё и смехом как у доктора Зло заливался, творя бесчинства и непотребства."
             th "Антикризисная программа для неудачника."
             th "Мечты-мечты."
@@ -2112,7 +2112,7 @@ label alt_day1_alt_supper:
     window hide
     with fade
     return
-    
+
 label alt_day1_alt_U:
     scene bg ext_dining_hall_near_sunset with dissolve
     play ambience ambience_camp_center_evening
@@ -2131,7 +2131,7 @@ label alt_day1_alt_U:
     "Стоило бы ожидать. {w}Одно только попадание сюда чего стоит."
     "Сзади раздался смешок, и я обернулся."
     scene bg ext_dining_hall_near_sunset at zenterleft
-    show us smile sport at cleft 
+    show us smile sport at cleft
     with dissolve
     play music music_list["i_want_to_play"] fadein 5
     us "Хы!"
@@ -2290,7 +2290,7 @@ label alt_day1_alt_U:
             window hide
             scene bg ext_dining_hall_near_sunset with dissolve
             play sound sfx_7dl["metal_hit_on_metal"]
-        
+
             "Подбежав к дверям столовой, я что было сил заколотил по ним подобранным орудием."
             "Грохот стоял страшный!"
             "Но тем не менее, спаренный стук башмаков по полу я уловил."
@@ -2301,14 +2301,14 @@ label alt_day1_alt_U:
             voices "Стой, кому говорят!"
             window hide
             scene bg ext_dining_hall_near_sunset with flash:
-                pos (0,0) 
-                linear 0.1 pos (-5,-5) 
-                linear 0.1 pos (5,5) 
-                pos (0,0) 
-                linear 0.1 pos (0,-5) 
-                linear 0.1 pos (0,5) 
+                pos (0,0)
+                linear 0.1 pos (-5,-5)
+                linear 0.1 pos (5,5)
+                pos (0,0)
+                linear 0.1 pos (0,-5)
+                linear 0.1 pos (0,5)
                 repeat
-        
+
             "За спиной послышался топот, и я припустил изо всех сил."
             "Кажется, дежурные клюнули на приманку."
             "Что-то мешало мне бежать, и я с недоумением посмотрел на палку, которую до сих пор сжимал в руке."
@@ -2327,11 +2327,11 @@ label alt_day1_alt_U:
             $ persistent.sprite_time = "sunset"
             $ sunset_time()
             scene bg ext_square_sunset with dissolve
-        
+
             "Отсюда уже рукой подать было до площади, и я занял одну из скамеек, приходя в себя."
             "Со стороны столовой доносились какие-то переговоры на повышенных тонах."
             "Я спрятал довольную улыбку."
-            
+
             "Для полноты эффекта не хватало только, чтобы моя подельница нашла меня и отсыпала мне мою долю."
             "Вряд ли мы разминёмся – все пути в этом лагере ведут к Генде."
             stop music fadeout 3
@@ -2435,7 +2435,7 @@ label alt_day1_alt_U_reject:
     "Раздался голос за спиной."
     "Вздрогнув, я обернулся."
     scene bg ext_square_sunset at zenterleft
-    show sl normal pioneer at cleft 
+    show sl normal pioneer at cleft
     with dissolve
     me "Славя! Ты меня напугала."
     sl "Ещё бы чуть-чуть, и попались бы начальнику лагеря."
@@ -2544,7 +2544,7 @@ label alt_day1_alt_ev_A_S:
         dv "И она идёт сюда?"
         "Алиса тут же спрятала отмычки в карман и отскочила к лестнице."
     menu:
-        "Помочь":
+        "Помочь.":
             $ lp_dv += 1
             $ karma += 10
             $ alt_day1_dv_feed = True
@@ -2572,8 +2572,8 @@ label alt_day1_alt_ev_A_S:
             hide dv with dissolve
             "Алиса скрылась в темноте, а я пожал плечами."
             "Колхоз — дело добровольное."
-        "Не помогать":
-        
+        "Не помогать.":
+
             "А со стороны задних помещений уже был слышен звук шагов спешащей Слави."
             me "Поступь бронзового командора."
             "Усмехнулся я."
@@ -2603,7 +2603,7 @@ label alt_day1_alt_ev_A_S:
     "Она, кажется, не обратила внимания на мои актёрские потуги. {w}Или вежливо притворилась, что всё хорошо."
     window hide
     $ persistent.sprite_time = "night"
-    scene bg int_dining_hall_night 
+    scene bg int_dining_hall_night
     with dissolve
     play music music_list["a_promise_from_distant_days"] fadein 5
     play ambience ambience_dining_hall_empty fadein 3
@@ -2615,7 +2615,7 @@ label alt_day1_alt_ev_A_S:
     "Я откинулся на спинку и стал ждать свою спасительницу."
     hide sl with dissolve
     window hide
-    show cg d1_sl_dinner 
+    show cg d1_sl_dinner
     with dissolve
 
     "Через пару минут она появилась с большим блюдом булочек и поставила его на стол."
@@ -2742,7 +2742,7 @@ label alt_day1_alt_ev_A_S:
     window hide
     stop music fadeout 5
     $ persistent.sprite_time = "night"
-    scene bg int_dining_hall_night 
+    scene bg int_dining_hall_night
     show sl smile pioneer with dissolve
     "Она встала из-за стола."
     sl "Уже поздно. Сам дорогу до Ольги Дмитриевны найдёшь?"
@@ -2766,13 +2766,13 @@ label alt_day1_alt_ev_A_S:
     "А стучаться во все домики подряд среди ночи показалось не самой разумной затеей."
     window hide
     menu:
-        "Взять ключи":
+        "Взять ключи.":
             $ karma -= 10
             $ alt_day1_sl_keys_took = 1
             th "Ладно."
             "Я старательно закрыл дверь в столовую и спустил связку в карман."
             th "При возможности отдам, а пока пусть будут у меня для большего спокойствия."
-        "Не трогать":
+        "Не трогать.":
             $ alt_day1_sl_keys_took = 0
             th "Хотя, с другой стороны, зачем они мне…"
     window hide
@@ -2789,7 +2789,7 @@ label alt_day1_alt_ev_A_S:
         play music music_list["orchid"]
         play sound sfx_hiding_in_bush
         "Я проверил дверь в столовую ещё раз, и тут в кустах за спиной что-то зашуршало, под чьим-то весом ощутимо хрустнула ветка."
-        "Мне стало {b}очень{/b} не по себе."    
+        "Мне стало {b}очень{/b} не по себе."
         "Булочки поместились в кармане, а вот кефир пришлось отложить на стоящую тут же скамеечку."
         "Распределив добычу, я стал оглядываться в поисках подходящего оружия."
         with vpunch

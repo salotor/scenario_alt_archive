@@ -1,7 +1,7 @@
 ﻿label alt_day3_slots:
    scene scenery
    with dissolve
-    
+
 label alt_day3_router_dv:
     if alt_day3_dv_evening:
         "Поворочавшись, я улыбнулся посетившей мои сны Алисе."
@@ -13,7 +13,7 @@ label alt_day3_router_dv:
                 jump alt_day4_dv_7dl_start
             else:
                 jump alt_day3_router_un
-            
+
 label alt_day3_router_un:
     if lp_un >= 12 or (lp_un >= 11 and alt_day1_sl_conv):
         "Мне снилась Лена…"
@@ -50,7 +50,7 @@ label alt_day3_router_sl:
             jump alt_day4_sl_7dl_start
     else:
         jump alt_day3_router_neutral
-    
+
 label alt_day3_router_neutral:
     if alt_dlc_active and alt_day3_uvao_spotted:
         $ routetag = "uv"

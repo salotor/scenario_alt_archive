@@ -9,7 +9,7 @@ python early:
             else:
                 ui.button(clicked=None, xpos=0.16, xanchor=0.0, ypos=2, xpadding=6, xminimum=200)
                 ui.text("%s" % (save_name), style="button_text", size=13)
-                
+
                 ui.button(clicked=None, xpos=0.07, xanchor=0.0, ypos=2, xpadding=6, xminimum=120)
                 if alt_sp > 0:
                     if karma >= 75:
@@ -28,10 +28,10 @@ python early:
                         ui.text("%s: %d" % ("Карма", karma), style="button_text", size=14, color="#7bacff")
                     else:
                         ui.text("%s: %d" % ("Карма", karma), style="button_text", size=13)
-                        
+
                 ui.button(clicked=None, xpos=0.0, xanchor=0.0, ypos=2, xpadding=6, xminimum=120)
                 ui.text("%s: %s" % ("Роль", plthr), style="button_text", size=13)
-                
+
             if (us_pt > 0) or (mt_pt > 0) or (d3_pt > 0):
                 ui.button(clicked=None, xpos=1.0, xanchor=1.0, ypos=2, xpadding=6, xminimum=120)
                 if us_pt < 8:
@@ -51,7 +51,7 @@ python early:
             else:
                 ui.button(clicked=None, xpos=1.0, xanchor=1.0, ypos=2, xpadding=6, xminimum=120)
                 ui.text("%s: %d" % ("Ульяна", lp_us), style="button_text", size=13)
-                
+
                 ui.button(clicked=None, xpos=0.93, xanchor=1.0, ypos=2, xpadding=6, xminimum=120)
                 if lp_mi >= 13:
                     if lp_mi < 20:
@@ -60,7 +60,7 @@ python early:
                         ui.text("%s: %d" % ("Мику", lp_mi), style="button_text", size=15, color="#00ffff")
                 else:
                     ui.text("%s: %d" % ("Мику", lp_mi), style="button_text", size=13)
-                    
+
                 ui.button(clicked=None, xpos=0.86, xanchor=1.0, ypos=2, xpadding=6, xminimum=120)
                 if lp_dv >=11:
                     if lp_dv < 18:
@@ -69,7 +69,7 @@ python early:
                         ui.text("%s: %d" % ("Алиса", lp_dv), style="button_text", size=15, color="#ffaa00")
                 else:
                     ui.text("%s: %d" % ("Алиса", lp_dv), style="button_text", size=13)
-                
+
                 ui.button(clicked=None, xpos=0.79, xanchor=1.0, ypos=2, xpadding=6, xminimum=120)
                 if lp_sl >= 14:
                     if lp_sl < 20:
@@ -78,7 +78,7 @@ python early:
                         ui.text("%s: %d" % ("Славя", lp_sl), style="button_text", size=15, color="#ffaa00")
                 else:
                     ui.text("%s: %d" % ("Славя", lp_sl), style="button_text", size=13)
-                
+
                 ui.button(clicked=None, xpos=0.72, xanchor=1.0, ypos=2, xpadding=6, xminimum=120)
                 if lp_un >= 12:
                     if lp_un < 20:
@@ -87,6 +87,6 @@ python early:
                         ui.text("%s: %d" % ("Лена", lp_un), style="button_text", size=15, color="#d599ff")
                 else:
                     ui.text("%s: %d" % ("Лена", lp_un), style="button_text", size=13)
-                
+
         config.overlay_functions.append(editoverlay)
 

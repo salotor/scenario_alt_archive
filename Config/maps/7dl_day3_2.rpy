@@ -36,7 +36,7 @@ label alt_day3_mapAf:
     scene black with fade
     play music music_list["smooth_machine"] fadein 3
     $ show_map_alt1()
-    
+
 label alt_day3_eventAf_clubs:
     scene bg ext_clubs_day with fade
     play ambience ambience_camp_center_day
@@ -57,7 +57,7 @@ label alt_day3_eventAf_music_club:
     else:
         $ disable_current_zone_alt1()
         window hide
-        jump alt_day3_mapAf   
+        jump alt_day3_mapAf
 
 label alt_day3_eventAf_un_mi_house:
     call alt_day3_eventAf_un_mi_house1
@@ -85,7 +85,7 @@ label alt_day3_eventAf_admins:
     call alt_day3_sl_postlunch
     window hide
     return
-        
+
 label alt_day3_eventAf_me_mt_house:
     call alt_day3_eventAf_me_mt_house1
     window hide

@@ -2,7 +2,7 @@
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
     $ alt_release_no = "0.34.a"
-    $ alt_compatible_release_no = ["0.00.x", "0.34.a"] 
+    $ alt_compatible_release_no = ["0.00.x", "0.34.a"]
     $ plthr = u"none"
 
 init 2:
@@ -21,46 +21,46 @@ init 2:
     $ timeskip10 = "Спасибо…"
     $ timeskip11 = "Прощай."
     $ timeskip12 = "Ты потерялся, малыш?"
-    $ alt_credits_text = "Команда 7 дней лета (7дл-кун сотоварищи) благодарит вас за время, уделённое игре!\n\nБлагодарности:\n\nЛюдям, ловившим ошибки, баги и нелогичности, альфа-, бета- и гамма-тестерам.\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nОСОБЫЕ БЛАГОДАРНОСТИ:\n\nMannych - за колоритного физрука!\n\nEldhenn - за адаптацию игры в Steam.\n\nPeregarrett, Chess - за кошко-рут.\n\nЛенофаг Простой, Ravsii - за идеи и помощь их реализации.\n\nNuttyprof, openplace - за новую карту лагеря.\n\nМакс Смолев(sorasora) - за новые cg-сценки и стиль БЛ.\n\nАлексей - за фоны и модели.\n\nGoodbyeNona - за супер-фоны!\n\n☆ FairyApple ☆ - за вдохновение и неконтролируемые приступы позитива!\n\nВсем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ.\n"
-    
+    $ alt_credits_text = "Команда 7 дней лета (7дл-кун сотоварищи) благодарит вас за время, уделённое игре!\n\nБлагодарности:\n\nЛюдям, ловившим ошибки, баги и нелогичности, альфа-, бета- и гамма-тестерам.\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nОСОБЫЕ БЛАГОДАРНОСТИ:\n\nMannych - за колоритного физрука!\n\nEldhenn - за адаптацию игры в Steam.\n\nPeregarrett, Chess - за кошко-рут.\n\nЛенофаг Простой, Ravsii - за идеи и помощь их реализации.\n\nNuttyprof, openplace - за новую карту лагеря.\n\nМакс Смолев(sorasora) - за новые cg-сценки и стиль БЛ.\n\nАлексей - за фоны и модели.\n\nGoodbyeNona - за супер-фоны!\n\n☆ FairyApple ☆ - за вдохновение и неконтролируемые приступы позитива!\n\nВсем, кого не упомянул, но не забыл — за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ.\n"
+
     $ colors['ba'] = {'night': (88, 18, 67, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
     $ store.names_list.append('ba')
-    
+
     $ colors['sak'] = {'night': (44, 12, 67, 255), 'sunset': (66, 18, 100, 255), 'day': (176, 10, 192, 255), 'prolog': (75, 34, 100, 255)}
     $ store.names_list.append('sak')
-    
+
     $ colors['ai'] = {'night': (44, 12, 67, 255), 'sunset': (66, 18, 100, 255), 'day': (176, 10, 192, 255), 'prolog': (34, 150, 100, 255)}
     $ store.names_list.append('ai')
-    
+
     #Камео мисс Селезнёвой
     $ colors['ase'] = {'night': (97, 10, 10, 255), 'sunset': (137, 14, 14, 255), 'day': (236, 66, 66, 255), 'prolog': (137, 14, 14, 255)}
     $ store.names_list.append('ase')
-    
+
     #Толпа - не используется
     $ colors['we'] = {'night': (67, 23, 111, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
     $ store.names_list.append('we')
-    
+
     $ colors['ml'] = {'night': (20, 69, 68, 255), 'sunset': (32, 106, 104, 255), 'day': (74, 200, 147, 255), 'prolog': (50, 20, 80, 255)}
     $ store.names_list.append('ml')
-    
+
     $ colors['ml2'] = {'night': (20, 46, 68, 255), 'sunset': (32, 73, 104, 255), 'day': (74, 170, 147, 255), 'prolog': (32, 75, 106, 255)}
     $ store.names_list.append('ml2')
-    
+
     $ colors['ml3'] = {'night': (30, 46, 68, 255), 'sunset': (48, 73, 104, 255), 'day': (107, 170, 147, 255), 'prolog': (48, 75, 106, 255)}
     $ store.names_list.append('ml3')
-    
+
     $ colors['voice1'] = {'night': (159, 8, 73, 255), 'sunset': (196, 7, 92, 255), 'day': (255, 136, 192, 255), 'prolog': (196, 7, 124, 255)}
     $ store.names_list.append('voice1')
-    
+
     $ colors['bb'] = {'night': (159, 8, 73, 255), 'sunset': (196, 7, 92, 255), 'day': (255, 136, 192, 255), 'prolog': (196, 7, 124, 255)}
     $ store.names_list.append('bb')
-    
+
     $ colors['icq'] = {'night': (6, 62, 14, 255), 'sunset': (10, 91, 20, 255), 'day': (10, 204, 10, 255), 'prolog': (10, 91, 30, 255)}
     $ store.names_list.append('icq')
     #Резерв
     #$ colors['ann'] = {'night': (15, 159, 14, 255), 'sunset': (10, 217, 16, 255), 'day': (170, 254, 160, 255), 'prolog': (10, 215, 30, 255)}
     #$ store.names_list.append('ann')
-    
+
 label scenario__alt_sevendl:
 # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
 # ------------------------------------------------
@@ -103,7 +103,7 @@ label alt_day0_vars: #Переменные нулевого дня
         $ alt_day_binder = 1
     $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
     return
-    
+
 label alt_day1_vars: #Переменные первого дня
     $ alt_route_flag = 1
     $ alt_day1_alt_chase = False
@@ -127,7 +127,7 @@ label alt_day1_vars: #Переменные первого дня
     $ alt_day1_cofront_sl_dv = 0
     $ alt_day1_headshot = False
     return
-    
+
 label alt_day2_vars: #Переменные второго дня
     $ alt_route_flag = 2
     $ alt_day2_bf_dv_us = False
@@ -194,7 +194,7 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day3_duty = False
     $ alt_day2_sl_chased = False
     return
-    
+
 label alt_day3_vars: #Переменные третьего дня
     $ alt_route_flag = 3
     $ alt_day3_dancing = 0
@@ -203,7 +203,7 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_event3 = 0
     $ alt_day3_event4 = 0
     $ alt_day3_dv_date = False
-    $ alt_day3_dv_dj = False 
+    $ alt_day3_dv_dj = False
     $ alt_day3_dv_evening = False
     $ alt_day3_dv_event = False
     $ alt_day3_dv2_event = False
@@ -211,7 +211,7 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_dv_invite = False
     $ alt_day3_dv_rejected = False
     $ alt_day3_mi_date = False
-    $ alt_day3_mi_dj = False 
+    $ alt_day3_mi_dj = False
     $ alt_day3_mi_event = False
     $ alt_day3_mi_rejected = False
     $ alt_day3_mi_invite = False
@@ -230,7 +230,7 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_timer_jump = 0
     $ alt_day3_lp_route = 0
     $ alt_day3_un_cheated = False
-    $ alt_day3_un_date = False 
+    $ alt_day3_un_date = False
     $ alt_day3_un_event = False
     $ alt_day3_un_med_help = False
     $ alt_day3_un_strip_pool_sp = 5

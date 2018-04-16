@@ -1,28 +1,28 @@
 ﻿init:
     $ mods["scenario__sdl_selector"] = u"Селектор 7дл"
     $ mod_tags["scenario__sdl_selector"] = ["length:days","gameplay:vn","protagonist:male"]
-    
+
     image scenery:
-        get_image("anim/prolog_2.jpg") with Dissolve(.5) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.5)
         pause 2.6
-        get_image("anim/prolog_1.jpg") with Dissolve(.5) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.5)
         pause 0.6
         repeat
-        
+
     image scenery2:
-        get_image("anim/prolog_2.jpg") with Dissolve(.4) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.4)
         pause 2.0
-        get_image("anim/prolog_1.jpg") with Dissolve(.4) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.4)
         pause 0.4
-        repeat    
-        
+        repeat
+
     image scenery3:
-        get_image("anim/prolog_2.jpg") with Dissolve(.25) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.25)
         pause 1.4
-        get_image("anim/prolog_1.jpg") with Dissolve(.25) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.25)
         pause 0.25
         repeat
-        
+
 label scenario__sdl_selector:
 
     $ init_map_zones_alt1()
@@ -64,11 +64,11 @@ label scenario__sdl_selector:
     $ make_names_unknown_7dl()
     $ plthr = u"Дрищ"
     play ambience ambience_7dl["safe"] fadein 5
-    
+
 label sdl_menu:
     scene scenery with dissolve
     menu:
-        "Выбранный лейбл":
+        "Выбранный лейбл.":
             $ meet('mi','Мику')
             $ meet('us','Ульяна')
             $ meet('sl','Славя')
@@ -84,132 +84,132 @@ label sdl_menu:
             $ persistent.altCardsWon3 = True
             stop ambience fadeout 2
             jump alt_test
-        "Руты":
+        "Руты.":
             menu:
                 "С самого начала?":
                     menu:
-                        "День Первый":
+                        "День Первый.":
                             menu:
-                                "Герк":
+                                "Герк.":
                                     $ herc = True
                                     $ plthr = u"Герк"
-                                "Локи":
+                                "Локи.":
                                     $ loki = True
                                     $ plthr = u"Локи"
-                                "Дрищ":
+                                "Дрищ.":
                                     $ plthr = u"Дрищ"
                             stop ambience fadeout 2
                             jump alt_day1_start
-                        "День Первый Альтернативный":
+                        "День Первый Альтернативный.":
                             menu:
-                                "Герк":
+                                "Герк.":
                                     $ herc = True
                                     $ plthr = u"Герк"
-                                "Локи":
+                                "Локи.":
                                     $ loki = True
                                     $ plthr = u"Локи"
-                                "Дрищ":
+                                "Дрищ.":
                                     $ plthr = u"Дрищ"
                             stop ambience fadeout 2
                             $ alt_day_binder = 1
                             jump alt_day1_start
-                "Ульяна":
+                "Ульяна.":
                     menu:
-                        "Локи":
+                        "Локи.":
                             $ loki = True
                             $ plthr = u"Локи"
                             $ us_pt += 5
-                        "Дрищ":
+                        "Дрищ.":
                             $ plthr = u"Дрищ"
                             $ us_pt += 5
                             pause(1)
                     menu:
                         "День 6":
                             menu:
-                                "Начало дня":
+                                "Начало дня.":
                                     menu:
-                                        "7дл":
+                                        "7дл.":
                                             $ routetag = "us7dl_bad"
-                                        "7дл после пряток":
+                                        "7дл после пряток.":
                                             $ routetag = "us7dl_bad"
                                             $ alt_day4_neu_us_pixies == 2
-                                        "Огоньки":
+                                        "Огоньки.":
                                             $ routetag = "us7dl_good"
                                             $ alt_day4_neu_us_pixies == 3
                                     stop ambience fadeout 2
                                     jump alt_day6_us_7dl_start
-                                "Отдельные сцены":
+                                "Отдельные сцены.":
                                     menu:
-                                        "Утро":
+                                        "Утро.":
                                             menu:
-                                                "Зарядка":
+                                                "Зарядка.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_exercises
-                                                "Завтрак":
+                                                "Завтрак.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_breakfast
-                                                "7дл - помощь по лагерю":
+                                                "7дл — помощь по лагерю.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_helping
-                                                "7дл - помощь Мику":
+                                                "7дл — помощь Мику.":
                                                     stop ambience fadeout 2
                                                     call alt_day_us_7dl_preps
-                                                "7дл - помощь Славе":
+                                                "7дл — помощь Славе.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_warehouse
-                                                "7дл - поиски Лены":
+                                                "7дл — поиски Лены.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_un_met
-                                        "День":
+                                        "День.":
                                             menu:
-                                                "Обед":
+                                                "Обед.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_dinner
-                                                "7дл - саундчек":
+                                                "7дл — саундчек.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_soundcheck
-                                                "7дл - Ульяна - пуговица":
+                                                "7дл - Ульяна — пуговица.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_button
-                                                "7дл - Ульяна - рандеву":
+                                                "7дл - Ульяна — рандеву.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_rendezvous
-                                                "Огоньки - карьер":
+                                                "Огоньки — карьер.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_carrier
-                                                "Огоньки - обед":
+                                                "Огоньки — обед.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_dinner
-                                                "Огоньки - Лена":
+                                                "Огоньки — Лена.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_Lena
-                                                "Огьньки - Славя":
+                                                "Огьньки — Славя.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_party_sl
-                                                "Огоньки - дальние ворота":
+                                                "Огоньки — дальние ворота.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_far_gate
-                                        "Вечер":
+                                        "Вечер.":
                                             menu:
-                                                "7дл - концерт":
+                                                "7дл — концерт.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_concert
-                                                "7дл - ужин":
+                                                "7дл — ужин.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_supper
-                                                "7дл - танцы":
+                                                "7дл — танцы.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_disco
-                                                "Огоньки - чаепитие":
+                                                "Огоньки — чаепитие.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_tea
-                                                "Огоньки - вечер у пристани.":
+                                                "Огоньки — вечер у пристани.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_afterwords
-                                                "Отбой":
+                                                "Отбой.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_sleeptime
-                        "День 7, ЭПИЛОГ":
+                        "День 7, ЭПИЛОГ.":
                             stop ambience fadeout 2
                             call alt_day6_us_px_vars
                             stop ambience fadeout 2
@@ -217,25 +217,25 @@ label sdl_menu:
                             stop ambience fadeout 2
                             call alt_day7_us_px_vars
                             menu:
-                                "С самого начала, Огоньки":
+                                "С самого начала, Огоньки.":
                                     menu:
-                                        "Со Славей":
+                                        "Со Славей.":
                                             $ alt_day6_us_px_sl_join = True
-                                        "Без Слави":
+                                        "Без Слави.":
                                             $ alt_day6_us_px_sl_join = False
                                     $ alt_day4_neu_us_pixies = 3
                                     stop ambience fadeout 2
                                     jump alt_day7_us_7dl_start
-                                "С самого начала, 7дл":
+                                "С самого начала, 7дл.":
                                     menu:
-                                        "Подветка Мику":
+                                        "Подветка Мику.":
                                             $ alt_day6_us_7dl_mi_friends = 3
-                                        "Подветка Лены":
+                                        "Подветка Лены.":
                                             $ alt_day6_us_7dl_un_friends = 3
-                                        "Главная подветка":
+                                        "Главная подветка.":
                                             $ alt_day6_us_7dl_tr = True
                                     jump alt_day7_us_7dl_start
-                                "Выбор сцен":
+                                "Выбор сцен.":
                                     $ alt_day6_us_7dl_tr = True
                                     menu:
                                         "Утро(гл. ветка)":
@@ -250,91 +250,91 @@ label sdl_menu:
                                                     $ alt_day6_us_px_sl_join = True
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_px_escape
-                                                "Без Слави":
+                                                "Без Слави.":
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_px_escape
-                                                "Автобус":
+                                                "Автобус.":
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_px_bus
-                                                "Пустоши":
+                                                "Пустоши.":
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_px_bus
                                                 "История сказки (эпилог)":
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_px_fairytale
-                                                "Возвращение в лагерь со Славей":
+                                                "Возвращение в лагерь со Славей.":
                                                     $ alt_day6_us_px_sl_join = True
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_px_mourning
-                                                "Возвращение в лагерь без Слави":
+                                                "Возвращение в лагерь без Слави.":
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_px_mourning
-                                        "Утреннее рандеву":
+                                        "Утреннее рандеву.":
                                             menu:
-                                                "С Ульянкой":
+                                                "С Ульянкой.":
                                                     $ alt_day6_us_7dl_tr
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_rendezvous2
-                                                "С Мику":
+                                                "С Мику.":
                                                     $ alt_day6_us_7dl_mi_friends = 3
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_rendezvous2
-                                                "С Леной":
+                                                "С Леной.":
                                                     $ alt_day6_us_7dl_un_friends = 3
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_rendezvous2
-                                                "С вещами":
+                                                "С вещами.":
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_packing
-                                        "Огоньки, отъезд":
+                                        "Огоньки, отъезд.":
                                             stop ambience fadeout 2
                                             call alt_day7_us_px_dejavu
-                                        "7дл, отъезд":
+                                        "7дл, отъезд.":
                                             menu:
-                                                "С Ульяной":
+                                                "С Ульяной.":
                                                     $ alt_day6_us_7dl_tr
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_leaving
-                                                "С Мику":
+                                                "С Мику.":
                                                     $ alt_day6_us_7dl_mi_friends = 3
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_leaving
-                                                "С Леной":
+                                                "С Леной.":
                                                     $ alt_day6_us_7dl_un_friends = 3
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_leaving
-                                        "7дл, эпилоги":
+                                        "7дл, эпилоги.":
                                             menu:
-                                                "Пробуждение":
+                                                "Пробуждение.":
                                                     $ alt_day6_us_7dl_tr
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_wakeup
-                                                "Ульяна, хорошая концовка":
+                                                "Ульяна, хорошая концовка.":
                                                     $ alt_day6_us_7dl_tr
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_reunite
-                                                "Концовка Мику":
+                                                "Концовка Мику.":
                                                     $ alt_day6_us_7dl_mi_friends = 3
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_mikuforever
-                                                "Концовка Лены":
+                                                "Концовка Лены.":
                                                     $ alt_day6_us_7dl_un_friends = 3
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_lenaforever
-                                                "Плохая концовка":
+                                                "Плохая концовка.":
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_bad
-                                            
-                "Мику":
+
+                "Мику.":
                     $ lp_mi += 14
                     $ routetag = "mi7dl"
                     menu:
                         "DJ":
                             $ alt_day3_mi_dj = True
-                            
+
                             stop ambience fadeout 2
                             jump alt_day4_mi_dj_start
-                        "7дл":
+                        "7дл.":
                             menu:
                                 "День 4. Едем в город вместе?":
                                     $ alt_day3_mi_donor = True
@@ -350,35 +350,35 @@ label sdl_menu:
                                     jump alt_day5_mi_7dl_start
                                 "День 6.":
                                     menu:
-                                        "Ветка Принцессы":
+                                        "Ветка Принцессы.":
                                             $ alt_spt += 10
-                                        "Ветка Человека":
+                                        "Ветка Человека.":
                                             $ alt_hpt += 10
-                                        "Бонусная ветка":
+                                        "Бонусная ветка.":
                                             $ alt_day5_mi_7dl_voyeur = True
                                     stop ambience fadeout 2
                                     jump alt_day6_mi_7dl_start
-                                "Прощание общее":
+                                "Прощание общее.":
                                     menu:
-                                        "Звезда":
+                                        "Звезда.":
                                             pass
-                                        "Душа":
+                                        "Душа.":
                                             $ alt_day5_mi_7dl_voyeur = True
                                     stop ambience fadeout 2
                                     jump alt_day6_mi_7dl_miku_sakishita
-                                "Прощание: Принцесса":
+                                "Прощание: Принцесса.":
                                     stop ambience fadeout 2
                                     jump alt_day6_mi_7dl_miku_farewell_star
-                                "Прощание: Душа":
+                                "Прощание: Душа.":
                                     stop ambience fadeout 2
                                     jump alt_day6_mi_7dl_miku_farewell_soul
-                            
-                        "Классик":
+
+                        "Классик.":
                             "Рут находится в разработке."
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu
-                "Алиса":
+                "Алиса.":
                     $ routetag = "dv7dl"
                     $ lp_dv = 14
                     menu:
@@ -387,43 +387,43 @@ label sdl_menu:
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu
-                        "7дл":
+                        "7дл.":
                             $ alt_day3_event3 = 33
                             stop ambience fadeout 2
                             jump alt_day4_dv_7dl_start
-                        "Классик":
+                        "Классик.":
                             "Рут находится в разработке."
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu
-                    
-                "Славя":
+
+                "Славя.":
                     $ alt_day3_event2 = 22
                     $ lp_sl += 14
                     menu:
-                        "7дл":
+                        "7дл.":
                             $ alt_day3_sl_day_event2 = 2
                             $ routetag = "sl7dl"
                             "Рут находится в разработке."
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu
-                        "Классик":
+                        "Классик.":
                             $ alt_day3_sl_day_event2 = 1
                             $ alt_day3_technoquest_st3 = 2
                             $ routetag = "sl"
                             stop ambience fadeout 2
                             jump alt_day4_sl_start
-                "Лена":
+                "Лена.":
                     $ lp_un += 14
                     $ routetag = "un7dl"
                     menu:
-                        "Френдзона":
+                        "Френдзона.":
                             $ alt_day2_date = 132
                             $ alt_day3_dancing = 132
                             stop ambience fadeout 2
                             jump alt_day4_un_fz_start
-                        "7дл":
+                        "7дл.":
                             menu:
                                 "Карма"
                                 "10":
@@ -433,48 +433,48 @@ label sdl_menu:
                                 "100":
                                     $ karma = 100
                             menu:
-                                "Герк":
+                                "Герк.":
                                     $ herc = True
-                                "Дрищ":
+                                "Дрищ.":
                                     pass
-                                "Локи":
+                                "Локи.":
                                     $ loki = True
                             menu:
                                 "Ключи"
-                                "Есть":
+                                "Есть.":
                                     $ alt_day1_sl_keys_took = 1
-                                "Нет":
+                                "Нет.":
                                     pass
                             menu:
                                 "Газета"
-                                "Записан":
+                                "Записан.":
                                     $ alt_day2_club_join_nwsppr = True
-                                "Нет":
-                                    pass 
+                                "Нет.":
+                                    pass
                             menu:
                                 "Транзит?"
-                                "Да":
+                                "Да.":
                                     $ alt_day4_neu_transit = 1
-                                "Нет":
+                                "Нет.":
                                     $ alt_day4_neu_transit = 0
                                     $ alt_day3_un_med_help = 1
                             stop ambience fadeout 2
                             jump alt_day4_un_7dl_start
 
-                        "Классик":
+                        "Классик.":
                             "Рут находится в разработке."
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu
-                    
-                "Ольга":
+
+                "Ольга.":
                     $ mt_pt += 8
                     stop ambience fadeout 2
                     jump alt_day6_mt_7dl_start
-                "Одиночка":
+                "Одиночка.":
                     stop ambience fadeout 2
                     jump alt_day4_neu_begin
-        "Концовки":
+        "Концовки.":
             label alt_endings:
                 with fade
                 menu:
@@ -491,37 +491,37 @@ label sdl_menu:
                                 jump alt_day7_mi_dj_jp_good_end
                             "{color=#ed6b6b}И не мечтай! (хорошая-рф){/color}":
                                 menu:
-                                    "С послесловием":
+                                    "С послесловием.":
                                         $ alt_day_binder = 1
-                                    "Без послесловия":
+                                    "Без послесловия.":
                                         with fade
                                 stop ambience fadeout 2
                                 jump alt_day7_mi_dj_rf_good_end
-                    "Мику-7дл":
+                    "Мику-7дл.":
                         menu:
                             "Эпилог.":
                                 menu:
-                                    "Мику уехала":
+                                    "Мику уехала.":
                                         $ alt_day6_mi_7dl_left = True
                                         menu:
-                                            "Звезда":
+                                            "Звезда.":
                                                 $ alt_spt += 10
                                                 $ lp_mi += 20
-                                            "Сомневающийся":
+                                            "Сомневающийся.":
                                                 $ alt_spt += 7
-                                            "Безвольный":
+                                            "Безвольный.":
                                                 $ alt_spt += 1
                                         stop ambience fadeout 2
                                         jump alt_day7_mi_7dl_start
-                                        
-                                    "Мику осталась":
+
+                                    "Мику осталась.":
                                         menu:
-                                            "Человек":
+                                            "Человек.":
                                                 $ alt_hpt += 10
                                                 $ lp_mi += 20
-                                            "Сомневающийся":
+                                            "Сомневающийся.":
                                                 $ alt_hpt += 7
-                                            "Безвольный":
+                                            "Безвольный.":
                                                 $ alt_hpt += 1
                                         stop ambience fadeout 2
                                         jump alt_day7_mi_7dl_start
@@ -549,7 +549,7 @@ label sdl_menu:
                             "{color=#ac7bff}Странные сны{/color}":
                                 stop ambience fadeout 2
                                 jump alt_day7_mi_7dl_dark_dreams
-                            "{color=#9b6aee}Развесели снова":
+                            "{color=#9b6aee}Развесели снова.":
                                 stop ambience fadeout 2
                                 jump alt_day7_mi_7dl_happy_again
                             "{color=#dd598a}Спасибо тебе…{/color}":
@@ -558,10 +558,10 @@ label sdl_menu:
                                 $ alt_day5_mi_7dl_voyeur = True
                                 $ persistent.mi_7dl_dr_exc = True
                                 jump alt_day6_mi_7dl_miku_farewell_finale
-                            "{color=#8a59dd}Так честнее":
+                            "{color=#8a59dd}Так честнее.":
                                 stop ambience fadeout 2
                                 jump alt_day7_mi_7dl_liar
-                    "Алиса":
+                    "Алиса.":
                         menu:
                             "{color=#ff0000}Тульпа (эксклюзив){/color}":
                                 stop ambience fadeout 2
@@ -584,9 +584,9 @@ label sdl_menu:
                                 jump alt_day7_dv_7dl_bad_end
                             "{color=#fca635}Больше, чем жизнь (хорошая-рф){/color}":
                                 menu:
-                                    "С послесловием":
+                                    "С послесловием.":
                                         $ alt_day_binder = 1
-                                    "Без послесловия":
+                                    "Без послесловия.":
                                         with fade
                                 stop ambience fadeout 2
                                 jump alt_day7_dv_7dl_rf_epilogue
@@ -599,7 +599,7 @@ label sdl_menu:
                             "{color=#e37944}Я отвезу тебя домой. (нейтральная-рф){/color}":
                                 stop ambience fadeout 2
                                 jump alt_day7_dv_7dl_rej_rf_end
-                    "Славя":
+                    "Славя.":
                         menu:
                             "{color=#f7f723}Всё же хорошо? (истинная){/color}":
                                 stop ambience fadeout 2
@@ -634,9 +634,9 @@ label sdl_menu:
                             "{color=#aaaaaa}Postscriptum {/color}":
                                 stop ambience fadeout 2
                                 jump alt_day8_sl_postscriptum
-                    "Лена":
+                    "Лена.":
                         menu:
-                            "Хорошие":
+                            "Хорошие.":
                                 menu:
                                     "Эпилог.":
                                         stop ambience fadeout 2
@@ -646,9 +646,9 @@ label sdl_menu:
                                         jump alt_day7_un_7dl_ussr
                                     "{color=#a6a1ff}Вся жизнь впереди-2 (хорошая-рф){/color}":
                                         menu:
-                                            "С послесловием":
+                                            "С послесловием.":
                                                 $ alt_day_binder = 1
-                                            "Без послесловия":
+                                            "Без послесловия.":
                                                 with fade
                                         stop ambience fadeout 2
                                         jump alt_day7_un_7dl_rf
@@ -658,43 +658,43 @@ label sdl_menu:
                             "Дождь.":
                                 stop ambience fadeout 2
                                 jump alt_day7_un_7dl_true
-                    "Ольга":
+                    "Ольга.":
                         menu:
-                            "Сброс флагов концовок":
+                            "Сброс флагов концовок.":
                                 $ persistent.mt_7dl_good = False
                                 $ persistent.mt_7dl_bad = False
                                 $ persistent.mt_7dl_ever_after = False
                                 $ persistent.mt_7dl_true = False
-                            "Эпилоги":
+                            "Эпилоги.":
                                 menu:
                                     "{color=#3350fb}Выбор: прошлое{/color}":
                                         menu:
-                                            "Истинная концовка":
+                                            "Истинная концовка.":
                                                 $ mt_pt = 15
                                                 $ alt_day2_date = 6
-                                                $ alt_day5_neu_mt_diary = True 
+                                                $ alt_day5_neu_mt_diary = True
                                                 $ alt_day4_neu_mt_diary = True
-                                            "Нейтральная концовка":
+                                            "Нейтральная концовка.":
                                                 pass
                                         stop ambience fadeout 2
                                         jump alt_day7_mt_7dl_loopthru
                                     "{color=#33fb50}Выбор: будущее{/color}":
                                         menu:
-                                            "Хорошая концовка":
+                                            "Хорошая концовка.":
                                                 $ mt_pt = 13
                                                 $ alt_day2_date = 6
                                                 $ alt_day3_dancing = 5
                                                 $ alt_day4_neu_mt_fire = True
                                                 $ alt_day_binder = 1
-                                            "Плохая концовка":
+                                            "Плохая концовка.":
                                                 pass
                                         stop ambience fadeout 2
                                         jump alt_day7_mt_7dl_loopback
                             "{color=#3ff02b}Чудо по имени Ольга (хорошая){/color}":
                                 menu:
-                                    "С послесловием":
+                                    "С послесловием.":
                                         $ alt_day_binder = 1
-                                    "Без послесловия":
+                                    "Без послесловия.":
                                         with fade
                                 stop ambience fadeout 2
                                 jump alt_day7_mt_7dl_good
@@ -707,7 +707,7 @@ label sdl_menu:
                             "{color=#bf2bf0}По праву памяти (истинная){/color}":
                                     stop ambience fadeout 2
                                     jump alt_day7_mt_7dl_true
-                    "Ульяна":
+                    "Ульяна.":
                         menu:
                             "{color=#ff0000}Ульяна, хорошая концовка.{/color}":
                                 $ alt_day6_us_7dl_tr
@@ -736,7 +736,7 @@ label sdl_menu:
                         $ renpy.pause(1)
                         stop ambience fadeout 2
                         jump alt_endings
-                    "Одиночка":
+                    "Одиночка.":
                         "Рут находится в разработке."
                         $ renpy.pause(1)
                         stop ambience fadeout 2

@@ -85,7 +85,7 @@ label alt_day5_dv_7dl_start:
     call alt_day5_dv_7dl_night
     pause(1)
     jump alt_day6_dv_7dl_start
- 
+
 label alt_day6_dv_7dl_start:
     call alt_day6_dv_7dl_vars
     pause(1)
@@ -102,7 +102,7 @@ label alt_day6_dv_7dl_start:
     call alt_day6_dv_7dl_dinner
     pause(1)
     if alt_day6_dv_7dl_sl_route:
-        call alt_day6_dv_7dl_sl 
+        call alt_day6_dv_7dl_sl
         pause(1)
         if alt_day6_dv_7dl_sl_help_agree or not alt_day1_cofront_sl_dv == 3:#новая переменная согласился помочь
             call alt_day6_dv_7dl_sl_help
@@ -139,10 +139,10 @@ label alt_day6_dv_7dl_start:
     else:
         call alt_day6_dv_7dl_dv_dancing
         pause(1)
-    if alt_day6_dv_7dl_transit:       
+    if alt_day6_dv_7dl_transit:
         call alt_day6_dv_7dl_sleeptime
         pause(1)
-    else: 
+    else:
         if alt_day1_sl_keys_took == 1 or alt_day1_sl_keys_took == 3 or alt_day4_dv_7dl_extra_key:
             if alt_day6_dv_7dl_sl_route:
                 if alt_day4_dv_7dl_extra_key:
@@ -172,7 +172,7 @@ label alt_day6_dv_7dl_start:
         call alt_day6_dv_7dl_sleeptime
         pause(1)
     jump alt_day7_dv_7dl_start
-    
+
 label alt_day7_dv_7dl_start:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -190,7 +190,7 @@ label alt_day7_dv_7dl_start:
             pause(1)
         if alt_day6_dv_7dl_dance == 22 or alt_day6_dv_7dl_dance == 21: # проверить 21 и 22
             call alt_day7_dv_7dl_sl
-            pause(1)            
+            pause(1)
     else:
         if alt_day7_dv_7dl_check == 5:
             call alt_day7_dv_7dl_mt
@@ -237,5 +237,4 @@ label alt_day7_dv_7dl_start:
         call alt_day7_dv_7dl_bad_end
         pause(1)
     return
-    
-    
+

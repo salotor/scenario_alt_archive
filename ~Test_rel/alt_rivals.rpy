@@ -10,7 +10,7 @@ init -50 python:
     4, 3, 2, 1 - соответственно 20, 40, 60, 80 % вероятность ошибки.
     """
     import random
-    
+
     class CardGameRivalWise_alt:                                                # УМНЫЙ (ну, почти) СОПЕРНИК
 
         def __init__(self, avatar, name, behavior = 'defense', skill = 5):      # свойства нашего соперника (аватар и имя передаются при вызове, поведение и "навык" МОЖНО передать при вызове)
@@ -56,7 +56,7 @@ init -50 python:
             self.player_unnecessary_card = 7                                    # эта карта у нас Семёну, вероятно, не нужна (отдал сразу или подсунул на 7-ми картах)
             self.player_accept_card = 7                                         # эта карта у нас Семёну, вероятно, нужна (защищал её)
             self.last_selected_card = 7                                         # последняя выбранная карта (используется в режиме слива)
-            
+
     # МЕТОДЫ НОВЫЕ ========================================================================================
         def what_we_have(self):                                                 # что же мы таки имеем на руках
             self.combo_in_hand = what_category_alt(cards_rival)                 # вызываем определение своей комбинации
@@ -112,7 +112,7 @@ init -50 python:
             values_max_com_12 = []                                              # очищаем таблицу первой последовательности на 2-х
             values_max_com_23 = []                                              # очищаем таблицу второй последовательности на 2-х
             triplex_seq = 0                                                     # сколько последовательностей по три
-        #------------------------------------------- 
+        #-------------------------------------------
             len_seq_max = 0                                                     # количество карт в максимальной последовательности
             seq_value_max = 0                                                   # старшая карта в последовательности
             len_seq_1 = 0                                                       # количество карт в первой последовательности
@@ -185,7 +185,7 @@ init -50 python:
                     if (above_2 in self.table_card_points) or (below_2 in self.table_card_points): # если есть одна из карт по схеме 3+1
                         values_max_2 = [seq_value_2,seq_value_2-1,seq_value_2-2] # вставляем в таблицу три карты последовательности - старшая первая
                         if above_2 in self.table_card_points:                   # если есть старшая карта
-                            values_max_2.insert(0,above_2)                      # вставляем её в начало списка 
+                            values_max_2.insert(0,above_2)                      # вставляем её в начало списка
                         if below_2 in self.table_card_points:                   # если есть и младшая карта
                             values_max_2.append(below_2)                        # добавляем её к набору
                 if len_seq_3 == 3:                                              # если третья
@@ -195,7 +195,7 @@ init -50 python:
                     if (above_3 in self.table_card_points) or (below_3 in self.table_card_points): # если есть одна из карт по схеме 3+1
                         values_max_3 = [seq_value_3,seq_value_3-1,seq_value_3-2] # вставляем в таблицу три карты последовательности - старшая первая
                         if above_3 in self.table_card_points:                   # если есть старшая карта
-                            values_max_3.insert(0,above_3)                      # вставляем её в начало списка 
+                            values_max_3.insert(0,above_3)                      # вставляем её в начало списка
                         if below_3 in self.table_card_points:                   # если есть и младшая карта
                             values_max_3.append(below_3)                        # добавляем её к набору
                 if len(values_max_3) !=0:                                       # начинаем с третьей - потенциально старшей
@@ -212,7 +212,7 @@ init -50 python:
                         if len(values_max_1) !=0:                               # проверяем первую последовательность - если не пустая (может и лишнее, но чтоб не вылетело)
                             values_max = values_max_1[:]                        # добавляем всё оттуда в максимальную последовательность
         #------------------------------------------
-            if (len_seq_max == 2) or (triplex_seq == 1):                        # если максимальная последовательность = 2 или одна тройная последовательность, проверяем двойные 
+            if (len_seq_max == 2) or (triplex_seq == 1):                        # если максимальная последовательность = 2 или одна тройная последовательность, проверяем двойные
                 if len_seq_1 in [2,3]:                                          # если первая последовательность = 2 или 3
                     if len_seq_2 == 2:                                          # если вторая последовательность = 2
                         if seq_value_2 == (seq_value_1+3):                      # если старшая второй последовательности = старшая первой +3
@@ -250,7 +250,7 @@ init -50 python:
         #-------------------------------------------
         # проверка на потенциальный стрит от пятёрки (младший)
             values_min = []                                                     # готовим таблицу очков карт
-            for mix in [[2,3,4,14],[2,3,5,14],[2,4,5,14],[3,4,5,14]]:           # проверяем 4-ре возможных сочетания с тузом 
+            for mix in [[2,3,4,14],[2,3,5,14],[2,4,5,14],[3,4,5,14]]:           # проверяем 4-ре возможных сочетания с тузом
                                                                                 # если все очки карт из сочетания входят в списое очков наших карт
                 if (mix[0] in self.table_card_points) and (mix[1] in self.table_card_points) and (mix[2] in self.table_card_points) and (mix[3] in self.table_card_points):
                     values_min = mix[:]                                         # принимаем это сочетание, как таблицу очков минимума
@@ -275,19 +275,19 @@ init -50 python:
                 self.check_for_four_suit()                                      # проверяем на 4 в масти
             else:
                 self.table_card_suit = []                                       # убираем недофлеш
-                self.table_card_sequence_max = []                               # и недостриты 
+                self.table_card_sequence_max = []                               # и недостриты
                 self.table_card_sequence_min = []
             if self.combo_in_hand[0] < 4:                                       # если меньше стрита
                 self.check_for_four_sequence()                                  # проверяем на 4 последовательные
             else:
-                self.table_card_sequence_max = []                               # убираем недостриты 
+                self.table_card_sequence_max = []                               # убираем недостриты
                 self.table_card_sequence_min = []
 # .................................
         def remember_combo(self):                                               # запоминаем комбинацию
             self.combo_was_before = []                                          # создаём пустой список
             if self.combo_in_hand != None:                                      # если получили комбо "на руках"
                 self.combo_was_before = self.combo_in_hand[:]                   # запоминаем его
-# ................................. 
+# .................................
         def compare_combo(self):                                                # сравниваем комбинации до и после
             if self.combo_in_hand != None and self.combo_was_before != None:    # если определили новую и запомнили старую комбо
                 if self.combo_in_hand[0] > self.combo_was_before[0]:            # если новая комбинация старше
@@ -315,11 +315,11 @@ init -50 python:
                 if len(self.table_card_suit) != 0:                                      # если недофлеш
                     self.table_card_possible_combo = self.table_card_suit[:]            # принимаем его, как возможную комбинацию
                 if len(self.table_card_sequence_max) != 0:                              # если что-то есть в большом стрите
-                    for i in range(0,len(self.table_card_sequence_max)):                # перебираем его 
+                    for i in range(0,len(self.table_card_sequence_max)):                # перебираем его
                         if self.table_card_sequence_max[i] not in self.table_card_possible_combo: # если такой карты там ещё нет
                             self.table_card_possible_combo.append(self.table_card_sequence_max[i]) # добавляем её туда
                 if len(self.table_card_sequence_min) != 0:                              # если что-то есть в малом стрите
-                    for i in range(0,len(self.table_card_sequence_min)):                # перебираем его 
+                    for i in range(0,len(self.table_card_sequence_min)):                # перебираем его
                         if self.table_card_sequence_min[i] not in self.table_card_possible_combo: # если такой карты там ещё нет
                             self.table_card_possible_combo.append(self.table_card_sequence_min[i]) # добавляем её туда
                 if len(self.table_card_possible_combo) !=0:                             # если список возможных комбинаций не пустой
@@ -330,7 +330,7 @@ init -50 python:
             for i in range(0,n_cards):                                                      # перебираем свои карты
                 if cards_rival[i].in_combo:                                                 # если карта в комбинации карт
                     self.yourself_need_cards.append(i)                                      # добавляем индекс этой карты в сет
-# ................................. 
+# .................................
         def choice_waste_cards(self):                                                       # отбираем мусор (не в комбинации)
             self.waste_cards = []                                                           # очищаем список
             for i in range(0,n_cards):                                                      # перебираем свои карты
@@ -432,7 +432,7 @@ init -50 python:
                             self.selection_cards_for_gamble_proposed()                                      # сортируем карты под риск - предлагать
                 else:                                                                               # если на руках от стрита и выше
                     self.selection_cards_for_defense()                                              # сортируем карты под защиту
-        # ----------------------------------------------------------- 
+        # -----------------------------------------------------------
             elif self.playstyle == 'succumb':                                                       # если сливаемся
                 if self.combo_in_hand[0] in [7,6,3,2]:                                              # если две пары, тройка, фулл-хаус, покер
                     for i in range(0,n_cards):                                                      # перебираем свои карты
@@ -469,7 +469,7 @@ init -50 python:
         # -----------------------------------------------------------
             if self.player_unnecessary_card < 7:                                                    # если определена карта, отданная Семёном у нас - НЕНУЖНАЯ ему
                 if self.playstyle in ['defense', 'gamble']:                                         # если защищаемся или рискуем
-                    if (self.player_unnecessary_card in self.would_not_want_give) or (self.player_unnecessary_card in self.can_give_in_a_pinch):    # если эта карта попала в нужные 
+                    if (self.player_unnecessary_card in self.would_not_want_give) or (self.player_unnecessary_card in self.can_give_in_a_pinch):    # если эта карта попала в нужные
                         pass
                     elif self.player_unnecessary_card in self.these_proposed_to_take:                   # если она попала в предлагаемые к отдаче
                         if self.player_unnecessary_card not in self.its_urgent_shove:                   # эта карта ещё не попала в первую очередь на отдачу
@@ -479,7 +479,7 @@ init -50 python:
                         self.its_urgent_shove.remove(self.player_unnecessary_card)                      # удаляем её оттуда
                     if self.player_unnecessary_card in self.these_proposed_to_take:                     # если эта карта в списке предлагаемых
                         self.these_proposed_to_take.remove(self.player_unnecessary_card)                # удаляем её оттуда
-                    if self.player_unnecessary_card in self.can_give_in_a_pinch:                        # если эта карта в списке на крайний случай 
+                    if self.player_unnecessary_card in self.can_give_in_a_pinch:                        # если эта карта в списке на крайний случай
                         self.can_give_in_a_pinch.remove(self.player_unnecessary_card)                   # удаляем её оттуда
                     if self.player_unnecessary_card not in self.would_not_want_give:                    # если не попала в список " не отдавать"
                         self.would_not_want_give.append(self.player_unnecessary_card)                   # добавляем её в список "не отдавать"
@@ -492,7 +492,7 @@ init -50 python:
                         self.its_urgent_shove.remove(self.player_accept_card)                                   # удаляем её оттуда
                     if (self.player_accept_card in self.these_proposed_to_take) and (len(self.these_proposed_to_take)>1):# если эта карта в списке предлагаемых и она там не одна
                         self.these_proposed_to_take.remove(self.player_accept_card)                                   # удаляем её оттуда
-                    if self.player_accept_card in self.can_give_in_a_pinch:                             # если эта карта в списке на крайний случай 
+                    if self.player_accept_card in self.can_give_in_a_pinch:                             # если эта карта в списке на крайний случай
                         self.can_give_in_a_pinch.remove(self.player_accept_card)                        # удаляем её оттуда
                     if self.player_accept_card not in self.would_not_want_give:                         # если не попала в список " не отдавать"
                         if (self.player_accept_card not in self.its_urgent_shove) and (self.player_accept_card not in self.these_proposed_to_take): # и её нет в списках на отдачу
@@ -500,7 +500,7 @@ init -50 python:
                 elif self.playstyle == 'succumb':                                                       # если сливаемся
                     pass
                 elif self.playstyle == 'foolplay':                                                      # если включили дурака
-                    pass 
+                    pass
 # .................................
         def find_low_cards(self,table):                                             # функция поиска младших карт в наборе
             min_in_combo = 15                                                       # минимальная карта в предлагаемых - принимаем 15
@@ -569,7 +569,7 @@ init -50 python:
                     if (len(self.its_urgent_shove) == 1) or (self.playstyle == 'succumb'): # и такая карта всего одна ИЛИ игра в поддавки
                         renpy.pause(1.0)                                        # немного подумали и.....
                         changes_left = 0                                        # сбрасываем обмены (Сеня заберёт карту)
-                    elif len(self.its_urgent_shove) > 1:                        # и совсем ненужных несколько 
+                    elif len(self.its_urgent_shove) > 1:                        # и совсем ненужных несколько
                         k = random.choice([1,2,3])                              # решаем - отдавать карту сразу (1,2) или нет (3) - вероятность 0,66
                         if k in [1,2]:                                          # и если да
                             renpy.pause(1.0)                                    # немного подумали и.....
@@ -640,7 +640,7 @@ init -50 python:
         #-------------------------------------------
             return (i,j)                                                        # выдаём позиции для обмена
 # .................................
-        def what_at_us_took(self,z):                                                # а что у нас Семён забрал - нужную или ненужную    
+        def what_at_us_took(self,z):                                                # а что у нас Семён забрал - нужную или ненужную
             if self.degree_usefulness_card == 3:                                    # если забрал нужную
                 self.pick_this_cards_urgently.insert(0,self.inserted_player_card)   # добавляем вынутую у нас карту в список "забрать срочно"
             elif self.degree_usefulness_card == 2:                                  # если забрал из тех, что на крайний случай
@@ -651,7 +651,7 @@ init -50 python:
                 self.player_unnecessary_card = 7                                    # присваиваем индекс 7
             if z == self.player_accept_card:                                        # Семён забрал у нас нужную ему карту
                 self.player_accept_card = 7                                         # присваиваем индекс 7
-                
+
             if z in self.this_give_definitely_succumb:                              # если забрал ту, которая в списке слива
                 if self.inserted_player_card not in self.never_touch_cards:         # если такой карты ещё нет в списке
                     self.never_touch_cards.insert(0,self.inserted_player_card)          # добавляем её в список "не трогать"
@@ -744,12 +744,12 @@ init -50 python:
         #-------------------------------------------
             elif (self.playstyle =='gamble') and (not self.make_mistakes):          # если рискуем и не ошибаемся
                 self.what_cards_have()                                              # проверяем, что там у нас на руках
-                
+
                 if self.combo_was_before == None:                                   # если комбинации еще не сравнивали
                     self.combo_was_before = []                                      # создаём пустой список
                 if len(self.combo_was_before) == 0:                                 # если список пустой
                     self.combo_was_before = [0,0,0,0]                               # создаём заполнитель для проверки
-                
+
                 if (self.combo_was_before[0] >= 4) and (self.as_changed_combo == 'worse'):  # если был стрит и выше и положение ухудшилось
                     res = self.usual_card_choose()                                          # "обычный выбор" у Семёна, нефиг рисковать
                 else:                                                                       # во всех других случаях
@@ -779,13 +779,13 @@ init -50 python:
             elif (self.playstyle == 'foolplay') or (self.make_mistakes):        # если включили дурака или ошибаемся
                 res = self.random_card_choose()                                 # "случайный выбор" у Семёна
         #-------------------------------------------
-            return res 
+            return res
 # .................................
         def pick_my_card_last_think(self):                                      # последняя выделенная карта игрока - используется в режиме (соперник забирает)
             self.how_skill()                                                    # проверяем навык
             if (self.playstyle in ['defense','gamble']) and (not self.make_mistakes): # если защита или риск и не ошибаемся
                 x = self.pick_my_card_last_usual()                              # обычный выбор последней карты
-                
+
             elif (self.playstyle == 'succumb') and (not self.make_mistakes):    # если слив и не ошибаемся
                 if self.last_selected_card !=7 :                                # если определена последняя выбранная карта
                     if self.last_selected_card not in self.never_touch_cards:   # если последняя выбранная НЕ в списке тех, которые "не трогать"
@@ -799,10 +799,10 @@ init -50 python:
                             x = self.pick_my_card_last_usual()                  # обычный выбор последней карты
                 else:                                                           # последний выбор не определен
                     x = self.pick_my_card_last_random()                         # рандомный выбор
-                
+
             elif (self.playstyle == 'foolplay') or (self.make_mistakes):        # если включили дурака или ошибаемся
                 x = self.pick_my_card_last_random()                             # рандомный выбор
-                
+
             self.last_selected_card = 7                                         # сбрасываем последнюю выбранную карту
             self.what_is_pulled_out(x)                                          # проверяем, что вынули у Семёна
             return x
@@ -886,7 +886,7 @@ init -50 python:
 
 
 
-##########################  ИГРОКИ  ##################################### 
+##########################  ИГРОКИ  #####################################
 
 
 
@@ -897,11 +897,11 @@ init -50 python:
                 cards_rival[i].allow = True                                 # для каждой карты = доступна для выбора
 # .................................
         def allow_to_defend(self):                                          # режим защиты обычного игрока
-            return True                                 
+            return True
 # .................................
         def want_to_defend(self):                                           # разрешение ИГРОКУ на защиту (отличается у Ульяны в классике)
             return True
- 
+
 # =======================================================================
     class CardGameRivalWiseLikeUS(CardGameRivalWise_alt):                   # стиль игры - как у Ульяны
         def what_card_choose(self):                                         # переопределённый метод - за Ульяну выбирает Семён
@@ -932,7 +932,7 @@ init -50 python:
 # .................................
         def allow_to_defend(self):                                              # разрешение Ульяне на защиту (нет)
             return False
-        
-    
-    
+
+
+
 

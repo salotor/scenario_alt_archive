@@ -14,8 +14,8 @@ init -1001 python:
 
 init -997 python:
     store.map_pics_alt1 = {
-        "bgpic_alt1": get_image_7dl("gui/maps/map_bg.jpg"), 
-        "avaliable_alt1": get_image_7dl("gui/maps/map_avaliable.jpg"), 
+        "bgpic_alt1": get_image_7dl("gui/maps/map_bg.jpg"),
+        "avaliable_alt1": get_image_7dl("gui/maps/map_avaliable.jpg"),
         "selected_alt1": get_image_7dl("gui/maps/map_selected.jpg")
     }
 
@@ -64,7 +64,7 @@ init -51 python:
             data["avaliable"] = True
             data["been_here"] = 0
 
-    class Map_alt1(renpy.Displayable): 
+    class Map_alt1(renpy.Displayable):
         def __init__(self,pics,chibi,default):
             renpy.Displayable.__init__(self)
             self.pics=pics
@@ -156,7 +156,7 @@ init -51 python:
                 ui.close()
 
 # … и создаем новый объект класса
-    store.map_alt1 = Map_alt1(store.map_pics_alt1, store.map_chibi, default) 
+    store.map_alt1 = Map_alt1(store.map_pics_alt1, store.map_chibi, default)
 
 # Ниже кусок из pyclasses.rpy; возможно, есть и лишние строки - но без этого карта работать отказывалась
     import pygame
@@ -177,7 +177,7 @@ init -51 python:
 # инициализируем функции по методам вновь созданного класса
 
 init 5 python:
-    import renpy.store as store 
+    import renpy.store as store
     if  not config_session:
 
         def disable_all_zones_alt1():
@@ -244,9 +244,9 @@ init -1001 python:
 
 init -997 python:
     store.map_pics_alt2 = {
-        "bgpic_alt2": get_image_7dl("gui/maps/7dl/7dl_bg.png"), 
-        "avaliable_alt2": get_image_7dl("gui/maps/7dl/7dl_avaliable.png"), 
-        "selected_alt2": get_image_7dl("gui/maps/7dl/7dl_selected.png") 
+        "bgpic_alt2": get_image_7dl("gui/maps/7dl/7dl_bg.png"),
+        "avaliable_alt2": get_image_7dl("gui/maps/7dl/7dl_avaliable.png"),
+        "selected_alt2": get_image_7dl("gui/maps/7dl/7dl_selected.png")
     }
 
 # Определяем ключи и координаты локаций данной карты:
@@ -308,7 +308,7 @@ init -51 python:
             data["avaliable"] = True
             data["been_here"] = 0
 
-    class Map_alt2(renpy.Displayable): 
+    class Map_alt2(renpy.Displayable):
         def __init__(self,pics,chibi,default):
             renpy.Displayable.__init__(self)
             self.pics=pics
@@ -401,7 +401,7 @@ init -51 python:
                 ui.close()
 
 # … и создаем новый объект класса
-    store.map_alt2 = Map_alt2(store.map_pics_alt2, store.map_chibi, default) 
+    store.map_alt2 = Map_alt2(store.map_pics_alt2, store.map_chibi, default)
 
 # Ниже кусок из pyclasses.rpy; возможно, есть и лишние строки - но без этого карта работать отказывалась
     import pygame
@@ -422,7 +422,7 @@ init -51 python:
 # инициализируем функции по методам вновь созданного класса
 
 init 5 python:
-    import renpy.store as store 
+    import renpy.store as store
     if not config_session:
 
         def disable_all_zones_alt2():
@@ -457,7 +457,7 @@ init 5:
         image widget map_alt2 = get_image_7dl("gui/maps/7dl/7dl_bg.png")
         image bg map_alt2 = get_image_7dl("gui/maps/7dl/7dl_bg.png")
 
-# еще раз отключаем чибиков 
+# еще раз отключаем чибиков
 
 init 52 python:
     def disable_all_chibi_alt2():

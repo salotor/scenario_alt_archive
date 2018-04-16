@@ -35,7 +35,7 @@
             call alt_day4_neu_us
             pause(1)
     else:
-        call alt_day4_neu_home #Домик ведёт к Ульянке, Ольге, Лене и Мику. 
+        call alt_day4_neu_home #Домик ведёт к Ульянке, Ольге, Лене и Мику.
         pause(1)
         if alt_day3_us_bugs == 1:
             $ day4_neu_transit = 5
@@ -73,7 +73,7 @@
     if herc:
         return
         #jump alt_day4_noir_start
-    call alt_day4_neu_lunch 
+    call alt_day4_neu_lunch
     pause(1)
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -100,7 +100,7 @@
     call alt_day4_neu_sleeptime
     pause(1)
     jump alt_day5_neu_begin
-    
+
 label alt_day5_neu_begin:
     call alt_day5_neu_us_vars
     call alt_day5_mt_7dl_vars
@@ -190,7 +190,7 @@ label alt_day5_neu_begin:
             pause(1)
             return
     jump alt_day6_neu_begin
-    
+
 label alt_day6_neu_begin:
     call alt_day6_neu_start
     pause(1)

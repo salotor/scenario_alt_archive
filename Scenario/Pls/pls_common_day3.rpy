@@ -2,13 +2,13 @@
     call alt_day3_vars
     pause(1)
     $ persistent.sprite_time = "sunset"
-    $ prolog_time() 
+    $ prolog_time()
     $ alt_chapter(3, u"Утро")
     call alt_day3_begin
     pause(1)
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
-    $ alt_chapter(3, u"Завтрак")   
+    $ alt_chapter(3, u"Завтрак")
     call alt_day3_bf
     pause(1)
     if alt_day3_un_event and not alt_day3_duty:
@@ -136,7 +136,7 @@ label alt_day3_dv_stayhere:
     call alt_day3_sleeptime
     pause(1)
     jump alt_day3_slots
-    
+
 label alt_day3_leave:
     call alt_day3_leave1
     pause(1)

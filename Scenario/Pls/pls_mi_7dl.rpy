@@ -90,7 +90,7 @@ label alt_day5_mi_7dl_start:
     call alt_day5_mi_7dl_goodnight
     pause(2)
     jump alt_day6_mi_7dl_start
-    
+
 label alt_day6_mi_7dl_start:
     call alt_day6_mi_7dl_vars
     $ persistent.sprite_time = "sunset"
@@ -143,7 +143,7 @@ label alt_day6_mi_7dl_start:
         pause(1)
         return
     jump alt_day7_mi_7dl_start
-    
+
 label alt_day7_mi_7dl_start:
     #Роутер концовок
     if alt_day6_mi_7dl_left:

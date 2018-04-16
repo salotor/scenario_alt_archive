@@ -81,7 +81,7 @@
     call alt_day6_us_7dl_sleeptime
     pause(1)
     jump alt_day7_us_7dl_start
-    
+
 label alt_day7_us_7dl_start:
     call alt_day7_us_px_vars
     $ persistent.sprite_time = "sunset"
