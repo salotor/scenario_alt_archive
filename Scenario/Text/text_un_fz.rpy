@@ -1756,7 +1756,7 @@ label alt_day4_fz_dv_dinner:
 label alt_day4_fz_lost_coun:
     if lp_sl > 4:
         scene bg int_aidpost_day with dissolve
-        sl "… нормально, доктор? Я же не знала!"
+        sl "…нормально, доктор? Я же не знала!"
         "Ворвался в сознание встревоженный голос."
         "Славя?"
         cs "Расслабься, пионерка."
