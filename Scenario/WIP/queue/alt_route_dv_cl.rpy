@@ -167,7 +167,7 @@
     with dissolve2
     window hide
     return
-    
+
 label alt_day5_dv_start:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()

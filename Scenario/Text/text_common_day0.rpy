@@ -118,7 +118,7 @@
     "Я подавил желание вскочить и, подвывая от ужаса, побежать куда-то — слишком уж точно били бессвязные реплики моей новообретённой шизофрении."
     "Между тем за окном уже окончательно стемнело."
     $ set_mode_nvl()
-    scene bg semen_room_window 
+    scene bg semen_room_window
     play sound_loop sfx_street_traffic_outside fadein 2
     play music sfx_7dl["ringtone"]
     $ renpy.pause(3)
@@ -143,28 +143,28 @@
     dreamgirl "Новые впечатления, как-никак. Подождут твои анонимусы, никуда не денутся."
     "Затычки с Мэнсоном в уши, пальто на рыбьем меху на плечи — и навстречу декабрьскому вечеру."
     window hide
-    scene anim intro_1 
+    scene anim intro_1
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_2 
+    scene anim intro_2
     with fade
     play sound sfx_intro_bus_stop_steps
     $ renpy.pause(3, hard=True)
-    scene anim intro_3 
+    scene anim intro_3
     with fade
     $ volume(0.3, 'music')
-    play music music_7dl["prologue_1"] 
+    play music music_7dl["prologue_1"]
     $ renpy.pause(3, hard=True)
-    scene anim intro_4 
+    scene anim intro_4
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_5 
+    scene anim intro_5
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_6 
+    scene anim intro_6
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_8 
+    scene anim intro_8
     play sound sfx_intro_bus_stop_sigh
     with fade
     $ renpy.pause(3, hard=True)
@@ -184,7 +184,7 @@
     dreamgirl "У тебя тут интереснее, чем у родителей на балконе!"
     window hide
     $ renpy.pause(3)
-    scene anim prolog_2 
+    scene anim prolog_2
     with fade
     $ renpy.pause(1)
     $ set_mode_nvl()
@@ -230,24 +230,24 @@
     $ renpy.pause(3)
     play sound_loop sfx_intro_bus_engine_loop fadein 3
     $ set_mode_adv()
-    scene anim intro_9 
+    scene anim intro_9
     with fade2
     "Не сойти с ума. Не сойти с ума."
     "В голове это крутилось как надоедливая песенка всё то время, что я устраивался в салоне подошедшего автобуса марки «ЛиАЗ» — старинного, таких на маршруте, пожалуй что и не встретишь. "
     window hide
     $ renpy.pause(2)
-    scene anim intro_10 
+    scene anim intro_10
     with fade
     play sound sfx_intro_bus_door_open
     $ renpy.pause(3, hard=True)
-    scene anim intro_11 
+    scene anim intro_11
     with fade
     $ renpy.pause(1, hard=True)
     stop sound_loop fadeout 4
-    scene anim intro_13 
+    scene anim intro_13
     with fade2
     $ renpy.pause(3, hard=True)
-    scene bg intro_xx 
+    scene bg intro_xx
     with fade
     stop ambience fadeout 2
     play sound_loop sfx_bus_interior_moving fadein 4
@@ -277,11 +277,11 @@
     "И в тот самый момент, когда чёрные языки воды   впервые лизнули подошвы моих ботинок — я, наконец, уступил просьбам — и  засомневался в реальности происходящего."
     window hide
     play ambience ambience_camp_center_night fadein 2
-    scene bg ext_entrance_night_clear_7dl 
+    scene bg ext_entrance_night_clear_7dl
     show owl :
         pos (931, 88)
     show uvao_d1 at left
-    show prologue_dream 
+    show prologue_dream
     with fade3
     "Из ничего соткалась картинка с какими-то воротами, ведущими, судя по надписи,  в пионерский лагерь — на переднем плане грустная шатеночка, о чём-то меня спрашивающая."
     "И лицо её было знакомое-знакомое…"
@@ -367,41 +367,41 @@ label alt_day0_start_h:
     with fade3
     $ renpy.pause(5, hard=True)
     "День не задался с самого утра."
-    play music music_7dl["prologue_1"] 
+    play music music_7dl["prologue_1"]
     window hide
     scene bg semen_room
     "В холодильнике было шаром покати, а из двух последних яиц, что предназначались мне на завтрак, одно оказалось тухлым."
     "Я узнал об этом, когда вылил его к первому в сковородку."
     "Так что вместо завтрака я убирал за кошкой, наевшейся ватных палочек."
     window hide
-    scene anim intro_1 
+    scene anim intro_1
     with fade
     $ renpy.pause(3, hard=True)
     "Вечер, четверг, 28 декабря 2018 года."
     "Дата и без того скверная."
     "А тут ещё и работа."
     window hide
-    scene anim intro_2 
+    scene anim intro_2
     with fade
     play sound sfx_intro_bus_stop_steps
     $ renpy.pause(3, hard=True)
-    scene anim intro_3 
+    scene anim intro_3
     with fade
     "Как говорил мой отец — если мужчина ничего не умеет, он идёт работать охранником."
     "А если женщина ничего не умеет — она идёт на панель."
     "Суть одна — спать за деньги."
     window hide
     $ renpy.pause(3, hard=True)
-    scene anim intro_4 
+    scene anim intro_4
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_5 
+    scene anim intro_5
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_6 
+    scene anim intro_6
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_8 
+    scene anim intro_8
     play sound sfx_intro_bus_stop_sigh
     with fade
     $ renpy.pause(3, hard=True)
@@ -409,10 +409,10 @@ label alt_day0_start_h:
     "Нева то и дело норовит вскрыться и окутать стылой промозглой сыростью всё в диаметре километра."
     "Не спасает ни горнолыжная одежда — каюсь, увлекался по молодости лет — ни дорогие перчатки."
     window hide
-    scene anim intro_7 
+    scene anim intro_7
     with fade
     $ renpy.pause(3, hard=True)
-    scene bg bus_stop 
+    scene bg bus_stop
     with fade
     "Меня подводит пальто на рыбьем меху."
     "Такая ерунда.{w} Штаны и перчатки я себе купил, а на хорошую куртку уже не хватило."
@@ -434,7 +434,7 @@ label alt_day0_start_h:
     "Меня портит моя вспыльчивость."
     "Ну, когда-то она называлась так…"
     show blinking  with dissolve
-    "Ещё тогда, когда меня заботили определения и оценки." 
+    "Ещё тогда, когда меня заботили определения и оценки."
     "Небо сегодня какое свежее. Какое равнодушное."
     "Хотя глаз привычно уже отмечает окружение, выбирает возможные линии огня."
     "И открытая площадь оценивается лишь как «а это место неплохо простреливается!»"
@@ -444,7 +444,7 @@ label alt_day0_start_h:
     "Проблема в том лишь, что в этом мире больше не осталось действительно нормальных людей."
     window hide
     $ renpy.pause(3, hard=True)
-    scene bg bus_stop 
+    scene bg bus_stop
     with fade
     $ renpy.pause(3, hard=True)
     "Я ходил по утрамбованному снежку возле остановки, безуспешно пытаясь согреться."
@@ -454,7 +454,7 @@ label alt_day0_start_h:
     $ volume(1.0, 'music')
     play music music_7dl["tilltheend"] fadein 3
     $ renpy.pause(3)
-    scene anim prolog_2 
+    scene anim prolog_2
     with fade
     $ renpy.pause(1)
     $ set_mode_nvl()
@@ -512,7 +512,7 @@ label alt_day0_start_h:
     $ renpy.pause(3)
     play sound_loop sfx_intro_bus_engine_loop fadein 3
     $ set_mode_adv()
-    scene anim intro_9 
+    scene anim intro_9
     with fade2
     "Подъехавший «ЛиАЗ» меня, мягко говоря, удивил."
     "Старый-старый, ископаемое, свидетель времени, когда не считались нелепыми атавизмами честь и совесть."
@@ -522,18 +522,18 @@ label alt_day0_start_h:
     stop music fadeout 5
     window hide
     $ renpy.pause(2)
-    scene anim intro_10 
+    scene anim intro_10
     with fade
     play sound sfx_intro_bus_door_open
     $ renpy.pause(3, hard=True)
-    scene anim intro_11 
+    scene anim intro_11
     with fade
     $ renpy.pause(1, hard=True)
     stop sound_loop fadeout 4
-    scene anim intro_13 
+    scene anim intro_13
     with fade2
     $ renpy.pause(3, hard=True)
-    scene bg intro_xx 
+    scene bg intro_xx
     with fade
     stop ambience fadeout 2
     play sound_loop sfx_bus_interior_moving fadein 4
@@ -577,23 +577,23 @@ label alt_day0_start_h:
     "В общем, день определённо не задался."
     window hide
     scene bg ext_entrance_night_clear_7dl
-    show prologue_dream 
+    show prologue_dream
     with fade3
     $ night_time()
     play ambience ambience_camp_center_night fadein 2
     "Две пули, два кусочка питерского неба — в голову."
-    "У других на краю небытия перед глазами проносится вся жизнь." 
+    "У других на краю небытия перед глазами проносится вся жизнь."
     "Во всяком случае, я так слышал — у меня-то была совершенно другая картинка."
     "Какое-то странное место, летняя ночь, тишина."
     "И лишь знакомый голос родом из страны детских снов:"
     window hide
-    scene black 
+    scene black
     with fade3
     scene bg ext_entrance_night_clear_7dl
     show owl :
         pos (931, 88)
     show uvao_d1 at left
-    show prologue_dream 
+    show prologue_dream
     with fade3
     show alt_credits timeskip_come with dissolve2:
         pos (747,105)
@@ -656,7 +656,7 @@ label alt_day0_start_l:
     "Я не гордился этим, но к своей мечте, связать жизнь с музыкой, шёл бульдозером."
     "Просто потому, что с первой мечтой в моей жизни, стать космонавтом, меня развернули — что-то в моём светлом детстве пошло не так, что-то со внутренними органами."
     window hide
-    scene anim intro_1 
+    scene anim intro_1
     with fade
     $ renpy.pause(3, hard=True)
     "Как результат, моя реальность состояла из нотных тетрадей, бесконечных репетиций, сольфеджио и попыток считать мелодию «с листа»."
@@ -674,14 +674,14 @@ label alt_day0_start_l:
     play sound sfx_door_bell
     "По ту сторону двери стояла она."
     window hide
-    scene anim intro_2 
+    scene anim intro_2
     with fade
     play sound sfx_intro_bus_stop_steps
     $ renpy.pause(3, hard=True)
-    scene anim intro_3 
+    scene anim intro_3
     show blind1_1
     with fade
-    play music music_7dl["prologue_1"] 
+    play music music_7dl["prologue_1"]
     hide blind1_1
     show blind1_2
     with dissolve
@@ -690,16 +690,16 @@ label alt_day0_start_l:
     "Но факты штука упрямая — по ту сторону двери стояла она."
     window hide
     $ renpy.pause(3, hard=True)
-    scene anim intro_4 
+    scene anim intro_4
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_5 
+    scene anim intro_5
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_6 
+    scene anim intro_6
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_8 
+    scene anim intro_8
     play sound sfx_intro_bus_stop_sigh
     with fade
     $ renpy.pause(3, hard=True)
@@ -715,10 +715,10 @@ label alt_day0_start_l:
     "А не глухота, тошнота и мгла…"
     "Семнадцать лет, чего вы хотели… {w}Перспективный мальчик."
     window hide
-    scene anim intro_7 
+    scene anim intro_7
     with fade
     $ renpy.pause(3, hard=True)
-    scene bg bus_stop 
+    scene bg bus_stop
     with fade
     "А ведь мы даже не поцеловались."
     "Держались за руки, ходили вместе, медленно двигаясь к тому, когда кому-нибудь из нас хватит решимости перевести её и меня в «нас»."
@@ -730,7 +730,7 @@ label alt_day0_start_l:
     "Он очень долго молчал и до этого, но я тогда был занят — я был влюблён."
     window hide
     $ renpy.pause(3)
-    scene anim prolog_2 
+    scene anim prolog_2
     with fade
     $ renpy.pause(1)
     "Почему-то даже в голову не пришло мстить или бороться…"
@@ -781,10 +781,10 @@ label alt_day0_start_l:
     "Я не знаю, сколько мы били друг друга, сколько орали, но…"
     window hide
     $ renpy.pause(3)
-    scene anim prolog_5 
+    scene anim prolog_5
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim prolog_5 
+    scene anim prolog_5
     with fade
     $ renpy.pause(3, hard=True)
     "Я не пошёл учиться.{w} Ни в этот день, ни в следующий."
@@ -804,7 +804,7 @@ label alt_day0_start_l:
     $ volume(1.0, 'music')
     play music music_list["a_promise_from_distant_days_v2"] fadein 3
     $ renpy.pause(3)
-    scene anim prolog_2 
+    scene anim prolog_2
     with fade
     $ renpy.pause(1)
     with flash
@@ -869,7 +869,7 @@ label alt_day0_start_l:
     $ renpy.pause(3)
     play sound_loop sfx_intro_bus_engine_loop fadein 3
     $ set_mode_adv()
-    scene anim intro_9 
+    scene anim intro_9
     with fade2
     "И потому я тютелька в тютельку стою на остановке автобуса."
     "«Четыреста десятый, наш автобус отправляется в ад»."
@@ -877,18 +877,18 @@ label alt_day0_start_l:
     "Именно поэтому я машу ладонью водителю ЛиАЗа — старенького, красного, сейчас таких и не встретишь почти — всё заменили евроноводелы."
     window hide
     $ renpy.pause(2)
-    scene anim intro_10 
+    scene anim intro_10
     with fade
     play sound sfx_intro_bus_door_open
     $ renpy.pause(3, hard=True)
-    scene anim intro_11 
+    scene anim intro_11
     with fade
     $ renpy.pause(1, hard=True)
     stop sound_loop fadeout 4
-    scene anim intro_13 
+    scene anim intro_13
     with fade2
     $ renpy.pause(3, hard=True)
-    scene bg intro_xx 
+    scene bg intro_xx
     with fade
     stop ambience fadeout 2
     play sound_loop sfx_bus_interior_moving fadein 4
@@ -906,7 +906,7 @@ label alt_day0_start_l:
     "Я всё ещё{w} {b}не могу без неё{/b}."
     window hide
     "Я закрыл глаза."
-    show blink 
+    show blink
     $ renpy.pause(1.5)
     scene bg ext_winterpark_7dl with dissolve
     $ renpy.pause(1.5)
@@ -945,7 +945,7 @@ label alt_day0_start_l:
     "Была ночь, стояла полная тишина, нарушаемая лишь пением цикад."
     "И лишь знакомый с детства голос, зовущий в страну, откуда нет возврата:"
     window hide
-    scene bg ext_entrance_night_clear_7dl 
+    scene bg ext_entrance_night_clear_7dl
     show owl :
         pos (931, 88)
     show expression D3_intro("uvao_d1") at left
@@ -975,7 +975,7 @@ label alt_day0_start_l:
     $ renpy.pause(1)
     $ renpy.pause(2, hard=True)
     return
-    
+
 label alt_day0_d3_prologue:
     $ plthr = u"Септим"
     play sound sfx_7dl["wakeup"] fadein 3
@@ -1026,7 +1026,7 @@ label alt_day0_d3_prologue:
     "Я не гордился этим, но к своей мечте, связать жизнь с музыкой, шёл бульдозером."
     "Просто потому, что с первой мечтой в моей жизни, стать космонавтом, меня развернули — что-то в моём светлом детстве пошло не так, что-то со внутренними органами."
     window hide
-    scene anim intro_1 
+    scene anim intro_1
     with fade
     $ renpy.pause(3, hard=True)
     "Как результат, моя реальность состояла из нотных тетрадей, бесконечных репетиций, сольфеджио и попыток считать мелодию «с листа»."
@@ -1044,14 +1044,14 @@ label alt_day0_d3_prologue:
     play sound sfx_door_bell
     "По ту сторону двери стояла она."
     window hide
-    scene anim intro_2 
+    scene anim intro_2
     with fade
     play sound sfx_intro_bus_stop_steps
     $ renpy.pause(3, hard=True)
-    scene anim intro_3 
+    scene anim intro_3
     show blind1_1
     with fade
-    play music music_7dl["prologue_1"] 
+    play music music_7dl["prologue_1"]
     hide blind1_1
     show blind1_2
     with dissolve
@@ -1060,16 +1060,16 @@ label alt_day0_d3_prologue:
     "Но факты штука упрямая — по ту сторону двери стояла она."
     window hide
     $ renpy.pause(3, hard=True)
-    scene anim intro_4 
+    scene anim intro_4
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_5 
+    scene anim intro_5
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_6 
+    scene anim intro_6
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_8 
+    scene anim intro_8
     play sound sfx_intro_bus_stop_sigh
     with fade
     $ renpy.pause(3, hard=True)
@@ -1085,10 +1085,10 @@ label alt_day0_d3_prologue:
     "А не глухота, тошнота и мгла…"
     "Семнадцать лет, чего вы хотели… {w}Перспективный мальчик."
     window hide
-    scene anim intro_7 
+    scene anim intro_7
     with fade
     $ renpy.pause(3, hard=True)
-    scene bg bus_stop 
+    scene bg bus_stop
     with fade
     "А ведь мы даже не поцеловались."
     "Держались за руки, ходили вместе, медленно двигаясь к тому, когда кому-нибудь из нас хватит решимости перевести её и меня в «нас»."
@@ -1100,7 +1100,7 @@ label alt_day0_d3_prologue:
     "Он очень долго молчал и до этого, но я тогда был занят — я был влюблён."
     window hide
     $ renpy.pause(3)
-    scene anim prolog_2 
+    scene anim prolog_2
     with fade
     $ renpy.pause(1)
     "Почему-то даже в голову не пришло мстить или бороться…"
@@ -1150,10 +1150,10 @@ label alt_day0_d3_prologue:
     "Я не знаю, сколько мы били друг друга, сколько орали, но…"
     window hide
     $ renpy.pause(3)
-    scene anim prolog_5 
+    scene anim prolog_5
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim prolog_5 
+    scene anim prolog_5
     with fade
     $ renpy.pause(3, hard=True)
     "Я не пошёл учиться.{w} Ни в этот день, ни в следующий."
@@ -1173,7 +1173,7 @@ label alt_day0_d3_prologue:
     $ volume(1.0, 'music')
     play music music_list["a_promise_from_distant_days_v2"] fadein 3
     $ renpy.pause(3)
-    scene anim prolog_2 
+    scene anim prolog_2
     with fade
     $ renpy.pause(1)
     with flash
@@ -1238,7 +1238,7 @@ label alt_day0_d3_prologue:
     $ renpy.pause(3)
     play sound_loop sfx_intro_bus_engine_loop fadein 3
     $ set_mode_adv()
-    scene anim intro_9 
+    scene anim intro_9
     with fade2
     "И потому я тютелька в тютельку стою на остановке автобуса."
     "«Четыреста десятый, наш автобус отправляется в ад»."
@@ -1246,18 +1246,18 @@ label alt_day0_d3_prologue:
     "Именно поэтому я машу ладонью водителю ЛиАЗа — старенького, красного, сейчас таких и не встретишь почти — всё заменили евроноводелы."
     window hide
     $ renpy.pause(2)
-    scene anim intro_10 
+    scene anim intro_10
     with fade
     play sound sfx_intro_bus_door_open
     $ renpy.pause(3, hard=True)
-    scene anim intro_11 
+    scene anim intro_11
     with fade
     $ renpy.pause(1, hard=True)
     stop sound_loop fadeout 4
-    scene anim intro_13 
+    scene anim intro_13
     with fade2
     $ renpy.pause(3, hard=True)
-    scene bg intro_xx 
+    scene bg intro_xx
     with fade
     stop ambience fadeout 2
     play sound_loop sfx_bus_interior_moving fadein 4
@@ -1275,7 +1275,7 @@ label alt_day0_d3_prologue:
     "Я всё ещё{w} {b}не могу без неё{/b}."
     window hide
     "Я закрыл глаза."
-    show blink 
+    show blink
     $ renpy.pause(1.5)
     scene bg ext_winterpark_7dl with dissolve
     $ renpy.pause(1.5)

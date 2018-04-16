@@ -394,7 +394,7 @@
     window hide
     with fade
     return
-    
+
 label alt_day6_mt_7dl_morning:
     play music music_list["everyday_theme"] fadein 5
     scene bg ext_dining_hall_near_sunset
@@ -480,7 +480,7 @@ label alt_day6_mt_7dl_morning:
     window hide
     with fade
     return
-    
+
 label alt_day6_mt_7dl_dv_morning:
     "И заметил куда-то крадущуюся Алису."
     "К груди она прижимала какой-то бумажный пакет — в Америке в таких обычно прячут спиртное."
@@ -964,7 +964,7 @@ label alt_day6_mt_7dl_un_morning:
     window hide
     with fade
     return
-    
+
 label alt_day6_mt_7dl_retail:
     window hide
     stop ambience
@@ -1153,7 +1153,7 @@ label alt_day6_mt_7dl_retail_vg:
     window hide
     with fade
     return
-    
+
 label alt_day6_mt_7dl_declaration0:
     menu:
         "Ольга Дмитриевна, я не тот, за кого вы меня принимаете.":
@@ -1240,7 +1240,7 @@ label alt_day6_mt_7dl_declaration0:
     window hide
     with fade
     return
-    
+
 label alt_day6_mt_7dl_forgive:
     "Ольга хотела было выйти, но я остановил её вопросом:"
     me "Ольга Дмитриевна, что я могу сделать, чтобы заслужить ваше прощение?"
@@ -1393,7 +1393,7 @@ label alt_day6_mt_7dl_memento:
     "Даже сейчас я понимаю, что она говорит это, не вкладывая никакого дополнительного смысла в слова."
     "Просто для того, чтобы разрушить молчание между нами."
     mt "Я могу уйти."
-    show mt smile sport behind prologue_dream with dissolve 
+    show mt smile sport behind prologue_dream with dissolve
     "В этот раз на ней была спортивная форма цвета, который я затруднился бы описать."
     "Бело-малиновая? Не знаю."
     "Я ещё подумал, почему она штаны носит, эту мужскую одежду."
@@ -1569,7 +1569,7 @@ label alt_day6_mt_7dl_memento:
     window hide
     with fade
     return
-    
+
 label alt_day6_mt_7dl_diary3:
     play sound sfx_open_dooor_campus_1
     pause(1)
@@ -1666,7 +1666,7 @@ label alt_day6_mt_7dl_diary3:
     window hide
     with fade
     return
-    
+
 label alt_day6_mt_7dl_dinner:
     scene bg int_dining_hall_people_day with dissolve
     play ambience ambience_dining_hall_full fadein 3
@@ -1957,7 +1957,7 @@ label alt_day6_mt_7dl_dinner:
         "Со своей собственной Швейцарией в лице пионера Сычёва."
     else:
         "Со своей собственной Швейцарией в лице пионера Персунова."
-    
+
     "Со столицей в районе Цитадели, выросшей на отрядном месте, с собственным населением, фольклором…"
     "К несчастью, нашу волшебную свободную республику постигла ровно та же участь, что и прототип — Алексей Максимович захотел сделать целую третью смену по образу и подобию нашего маленького мирка, а мы с этим не согласились."
     "Сожгли шевроны, разобрали Цитадель и поклялись друг другу никогда больше не произносить это слово."
@@ -2167,7 +2167,7 @@ label alt_day6_mt_7dl_concert:
         "Я довольно успешно профилонил подготовку к предыдущим танцам, но в этот раз сбежать, похоже, не получится."
     "Тем более, что остались только наши."
     stop music fadeout 5
-    window hide 
+    window hide
     scene bg ext_stage_normal_day
     show mt normal pioneer
     with dissolve
@@ -2371,7 +2371,7 @@ label alt_day6_mt_7dl_supper:
     window hide
     with fade
     return
-        
+
 label alt_day6_mt_7dl_choice:
     "Фактически, настолько понятнее, что я всерьёз подумывал о том, чтобы пуститься в бега."
     "Ситуация сложилась очень нехорошая, очень некрасивая."
@@ -2497,7 +2497,7 @@ label alt_day6_mt_7dl_choice:
     sl "Семён. {w}Позволь я скажу это так:{w} если у вас что-то есть и для тебя это хоть что-то значит — я ухожу и больше никогда тебя не потревожу."
     me "Выглядит как сделка с совестью."
     sl "Это она и есть. {w}Я и так забралась дальше, чем позволяют приличия."
-    show sl angry dress with dspr 
+    show sl angry dress with dspr
     "Вот с этим я полностью согласился."
     th "У самой, что ли, проблемы на личном фронте — чужих мальчиков окучивать?"
     show dreamgirl_overlay
@@ -2830,7 +2830,7 @@ label alt_day6_mt_7dl_declare:
     show mi normal dress at right
     with dissolve
     pause(.2)
-    show us smile dress at left 
+    show us smile dress at left
     with dissolve
     pause(.2)
     "Там уже стояли все наши."
@@ -2854,7 +2854,7 @@ label alt_day6_mt_7dl_declare:
     with dissolve
     "Теперь всё будет иначе."
     pause(.2)
-    show us grin dress at left 
+    show us grin dress at left
     with dissolve
     pause(.2)
     "Теперь всё будет хорошо."
@@ -2971,7 +2971,7 @@ label alt_day6_mt_7dl_declare:
     window hide
     with fade
     return
-    
+
 label alt_day6_mt_7dl_nighttime:
     scene bg ext_house_of_mt_night_without_light with dissolve
     $ renpy.pause (1)
@@ -3322,7 +3322,7 @@ label alt_day7_mt_7dl_begin:
     window hide
     with fade
     return
-    
+
 label alt_day7_mt_7dl_morning:
     scene bg ext_house_of_mt_sunset with dissolve
     play ambience ambience_camp_center_day fadein 3
@@ -3620,7 +3620,7 @@ label alt_day7_mt_7dl_morning:
     if alt_day4_neu_mt_volonteer:
         th "Дежавю, нет? Где-то я уже слышал такое. Вот поклясться готов!"
     mt "На следующую смену я заступила помощницей вожатого, а Димка ведущим кружков выжигания, макраме и литературы."
-    me "Это как?" 
+    me "Это как?"
     "Я попытался совместить в голове эти понятия, но что-то не получалось."
     mt "А вот так!"
     "Рассмеялась Ольга, увидев мои квадратные глаза."
@@ -4032,7 +4032,7 @@ label alt_day7_mt_7dl_byes:
     window hide
     with fade
     return
-    
+
 label alt_day7_mt_7dl_dv_bye:
     show dv smile sport with dissolve
     play music music_7dl["sheiscool"] fadein 3
@@ -4078,7 +4078,7 @@ label alt_day7_mt_7dl_dv_bye:
     "С другой стороны я ловил себя на мысли, что сейчас все мои эмоции, все переживания ярки как никогда."
     if (alt_day_binder != 1):
         "Всё началось с удивившей меня насыщенности цветов у входа."
-    else:    
+    else:
         "Всё началось со столкновения с одной фантастически красивой японкой. Лоб в лоб."
     "Потом была Ольга."
     "И вот сейчас я сижу и откровенно сержусь на хохочущую девушку."
@@ -4294,7 +4294,7 @@ label alt_day7_mt_7dl_un_bye:
     window hide
     with fade
     return
-    
+
 label alt_day7_mt_7dl_un_fz_bye:
     "Прислушавшись к совету внутреннего голоса, я открыл глаза."
     scene bg ext_house_of_mt_day
@@ -4380,7 +4380,7 @@ label alt_day7_mt_7dl_un_fz_bye:
     window hide
     with fade
     return
-    
+
 label alt_day7_mt_7dl_departure:
     "Я всё ещё пребывал в раздумьях относительно сегодняшних гостей, когда меня без особой ласки подёргали за плечо."
     show mt normal pioneer with dissolve
@@ -4440,7 +4440,7 @@ label alt_day7_mt_7dl_departure:
     "На мой подозрительный взгляд они синхронно показали мне языки и синхронно же рассмеялись."
     me "Оболдуйки."
     "Проворчал я, ловя себя на том, что и сам улыбаюсь."
-    scene bg ext_no_bus 
+    scene bg ext_no_bus
     show un smile dress at left
     with dissolve
     "Лена, отчаянно улыбающаяся, будто пытаясь впитать в себя как можно больше солнца и лета, перехватила мой взгляд."
@@ -4767,7 +4767,7 @@ label alt_day7_mt_7dl_loopback:
     window hide
     with fade
     return
-        
+
 label alt_day7_mt_7dl_good:
     $ persistent.sprite_time = "day"
     $ prolog_time()
@@ -4818,7 +4818,7 @@ label alt_day7_mt_7dl_good:
     $ renpy.pause(3, hard=True)
     scene anim intro_4
     show blind2_1
-    with fade 
+    with fade
     "Так глупо. Оказалось, я не умею быть никому не нужным, мне жизненно важно делать что-то — и чтобы оно отзывалось в душах тех, кто для меня что-то значит."
     hide blind2_1
     show blind2_2
@@ -5073,7 +5073,7 @@ label alt_day7_mt_7dl_bad:
     "Была бы рядом Ольга, она бы сумела меня понять, у неё было какое-то сверхъестественное понимание моих мыслей, всегда было."
     window hide
     play ambience ambience_cold_wind_loop fadein 3
-    scene anim intro_4 
+    scene anim intro_4
     with fade
     "Больше всего мне хотелось встряхнуться, сбросить намертво приставший к плечам серый плащ воспоминаний — моих, чужих, общих…"
     "Но почему-то не хватало сил."

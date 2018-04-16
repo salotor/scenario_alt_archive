@@ -19,7 +19,7 @@
     $ persistent.sprite_time = "day"
     $ day_time()
     $ alt_chapter(2, u"Знакомство с лагерем")
-    
+
 label alt_day2_map:
     $ persistent.sprite_time = "day"
     $ day_time
@@ -108,7 +108,7 @@ label alt_day2_event_medic_house:
         jump alt_day2_map
     $ alt_day2_necessary_done += 1
     jump alt_day2_map
-    
+
 label alt_day2_event_square:
     $ persistent.sprite_time = "day"
     $ day_time()

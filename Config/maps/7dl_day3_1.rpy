@@ -4,7 +4,7 @@
     $ alt_chapter(3, u"День")
     $ disable_all_zones_alt1()
     $ disable_all_chibi_alt1()
-    
+
     play music music_list["everyday_theme"]
 
     $ set_zone_alt1("music_club_alt1",   "alt_day3_event_music_club")
@@ -61,7 +61,7 @@ label alt_day3_event_dining_hall:
     call alt_day3_event_dining_hall1
     $ disable_current_zone_alt1()
     jump alt_day3_map
-    
+
 label alt_day3_event_sport_area:
     call alt_day3_event_sport_area1
     $ disable_current_zone_alt1()

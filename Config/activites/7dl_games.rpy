@@ -37,7 +37,7 @@
         $ rhyme_tone8 = 0
         $ rhyme_tone9 = 0
 
-        
+
     label rhyme_start:
         show mi smile pioneer with dspr
         mi "Итак, какое настроение у первой строки? От одного до десяти."
@@ -171,7 +171,7 @@
             $ alt_rhyme_tone = "Открою"
         if rhyme_tone == 10:
             $ alt_rhyme_tone = "Ты чуешь?"
-        
+
         if rhyme_tone1 == 1:
             $ alt_rhyme_tone1 = "чудное"
         if rhyme_tone1 == 2:
@@ -192,7 +192,7 @@
             $ alt_rhyme_tone1 = "нужное"
         if rhyme_tone1 == 10:
             $ alt_rhyme_tone1 = "конское"
-        
+
         if rhyme_tone2 == 1:
             $ alt_rhyme_tone2 = "мгновенье"
         if rhyme_tone2 == 2:
@@ -234,7 +234,7 @@
             $ alt_rhyme_tone3 = "В ночном горшке"
         if rhyme_tone3 == 10:
             $ alt_rhyme_tone3 = "Из головы"
-        
+
         if rhyme_tone4 == 1:
             $ alt_rhyme_tone4 = "явилась ты"
         if rhyme_tone4 == 2:
@@ -255,7 +255,7 @@
             $ alt_rhyme_tone4 = "помылась ты"
         if rhyme_tone4 == 10:
             $ alt_rhyme_tone4 = "удар поддых"
-        
+
         if rhyme_tone5 == 1:
             $ alt_rhyme_tone5 = "мимолётное"
         if rhyme_tone5 == 2:
@@ -276,7 +276,7 @@
             $ alt_rhyme_tone5 = "межушанское"
         if rhyme_tone5 == 10:
             $ alt_rhyme_tone5 = "зело злобное"
-        
+
         if rhyme_tone6 == 1:
             $ alt_rhyme_tone6 = "виденье"
         if rhyme_tone6 == 2:
@@ -297,7 +297,7 @@
             $ alt_rhyme_tone6 = "сплетенье"
         if rhyme_tone6 == 10:
             $ alt_rhyme_tone6 = "бухтенье"
-        
+
         if rhyme_tone7 == 1:
             $ alt_rhyme_tone7 = "гений"
         if rhyme_tone7 == 2:
@@ -318,7 +318,7 @@
             $ alt_rhyme_tone7 = "злоба"
         if rhyme_tone7 == 10:
             $ alt_rhyme_tone7 = "зависть"
-        
+
         if rhyme_tone8 == 1:
             $ alt_rhyme_tone8 = "чистой"
         if rhyme_tone8 == 2:
@@ -339,7 +339,7 @@
             $ alt_rhyme_tone8 = "жаждет"
         if rhyme_tone8 == 10:
             $ alt_rhyme_tone8 = "женской"
-        
+
         if rhyme_tone9 == 1:
             $ alt_rhyme_tone9 = "красоты"
         if rhyme_tone9 == 2:
@@ -395,52 +395,52 @@
         th "Буду пытаться дальше."
         $ lp_un += 1
     return
-    
+
 label RPS_game(alt_opp): # параметры вызова. Обязательный параметр - alt_opp
-    
+
     #  кто что выбросил:
     $ sam_move = renpy.random.choice(["Камень", "Ножницы", "Бумага"])
     $ alt_opp_move = renpy.random.choice(["Камень", "Ножницы", "Бумага"])
     $ RPS_winner = 0 # 1 - player, -1 - alt_opp, 0 - draw
-    
+
     $ alt_taunt = renpy.random.randint(1, 9) # Определяем порядок насмешек плюс очередность хода
-    if alt_taunt == 1: 
+    if alt_taunt == 1:
         $ alt_rps_taunt_won = "Ура!"
         $ alt_rps_taunt_lose = "Ура…."
         $ alt_rps_taunt_draw = "Ещё раз."
-    elif alt_taunt == 2: 
+    elif alt_taunt == 2:
         $ alt_rps_taunt_won = "Победа!"
         $ alt_rps_taunt_lose = "Тебе повезло."
         $ alt_rps_taunt_draw = "Боевая ничья."
-    elif alt_taunt == 3: 
+    elif alt_taunt == 3:
         $ alt_rps_taunt_won = "И победителем становится… Я!"
         $ alt_rps_taunt_lose = "Жульничаешь, поди?"
         $ alt_rps_taunt_draw = "Повторим!"
-    elif alt_taunt == 4: 
+    elif alt_taunt == 4:
         $ alt_rps_taunt_won = "Вот так!"
         $ alt_rps_taunt_lose = "Вот блин!"
         $ alt_rps_taunt_draw = "Следующий кон!"
-    elif alt_taunt == 5: 
+    elif alt_taunt == 5:
         $ alt_rps_taunt_won = "Знай наших!"
         $ alt_rps_taunt_lose = "Не везёт, и всё тут!"
         $ alt_rps_taunt_draw = "Сначала."
-    elif alt_taunt == 6: 
+    elif alt_taunt == 6:
         $ alt_rps_taunt_won = "У тебя не было ни шанса!"
         $ alt_rps_taunt_lose = "Опять жульничаешь…"
         $ alt_rps_taunt_draw = "И ещё разок…"
-    elif alt_taunt == 7: 
+    elif alt_taunt == 7:
         $ alt_rps_taunt_won = "Повезло, конечно."
         $ alt_rps_taunt_lose = "Да что ты будешь делать!"
         $ alt_rps_taunt_draw = "Ничья."
-    elif alt_taunt == 8: 
+    elif alt_taunt == 8:
         $ alt_rps_taunt_won = "Ожидаемая победа."
         $ alt_rps_taunt_lose = "Ну да, твоя победа!"
         $ alt_rps_taunt_draw = "Никому не повезло."
-    elif alt_taunt == 9: 
+    elif alt_taunt == 9:
          $ alt_rps_taunt_won = "Да!"
          $ alt_rps_taunt_lose = "Нееееет!"
          $ alt_rps_taunt_draw = "Ну-ка, заново!"
-    
+
     if alt_taunt > 5:
         if sam_move == "Камень":
             show sam_rock at left with zoomin
@@ -552,7 +552,7 @@ label RPS_game(alt_opp): # параметры вызова. Обязательн
                 me "%(alt_rps_taunt_lose)s"
                 $ RPS_winner = -1
     return
-    
+
 #Антигаремник-кастратор!
 label alt_day3_lp_checker(alt_dater):
     if alt_dater == un:
@@ -574,7 +574,7 @@ label alt_day3_lp_checker(alt_dater):
         elif alt_day3_event2 == 43: #Потанцульки-обнимашки с Годзиллой
             $ lp_mi -= 1
         return
-        
+
     elif alt_dater == sl:
         $ lp_un -= 1
         $ lp_sl += 1
@@ -586,7 +586,7 @@ label alt_day3_lp_checker(alt_dater):
             $ lp_dv -= 1
         elif alt_day2_date == 4:
             $ lp_mi -= 1
-            
+
         if alt_day3_event2 == 11 == 2:
             $ lp_un = lp_un
         elif alt_day3_event1 == 33:
@@ -594,7 +594,7 @@ label alt_day3_lp_checker(alt_dater):
         elif alt_day3_event2 == 43:
             $ lp_mi -= 1
         return
-        
+
     elif alt_dater == dv:
         $ lp_un -= 1
         $ lp_sl -= 1
@@ -606,7 +606,7 @@ label alt_day3_lp_checker(alt_dater):
             $ lp_sl -= 1
         elif alt_day2_date == 4:
             $ lp_mi -= 1
-        
+
         if alt_day3_event2 == 11 == 2:
             $ lp_un -= 1
         elif alt_day3_event1 == 22:
@@ -614,7 +614,7 @@ label alt_day3_lp_checker(alt_dater):
         elif alt_day3_event2 == 43:
             $ lp_mi -= 1
         return
-        
+
     elif alt_dater == mi:
         $ lp_un -= 1
         $ lp_sl -= 1
@@ -634,7 +634,7 @@ label alt_day3_lp_checker(alt_dater):
         elif alt_day3_event1 == 33:
             $ lp_dv -= 1
         return
-        
+
 label alt_shuffler:
     $ alt_pe = renpy.random.randint(1, 7) #Приоритет: оппонент Сэму
     return alt_pe
@@ -669,29 +669,29 @@ label alt_shuffler_pl6:
     while (alt_player1==alt_player6) or (alt_player2==alt_player6) or (alt_player3==alt_player6) or (alt_player4==alt_player6) or (alt_player5==alt_player6) or (alt_pe==alt_player6):
         $ alt_player6 = renpy.random.randint(1, 7)
     return alt_player6
-    
+
 label alt_7dl_titles:
     scene bg black
     with dissolve2
     pause(1)
     show alt_credits alt_credits_text:
-        xalign 0.5 
-        ypos 1.3 
-        linear 67.0 ypos -1.3 
+        xalign 0.5
+        ypos 1.3
+        linear 67.0 ypos -1.3
     $ renpy.pause(67, hard=True)
     scene black
     with dissolve2
     stop music fadeout 3
     $ renpy.pause(4, hard=True)
     return
-    
+
 label alt_cotocombs:
     menu:
         "Открыть карту?":
             jump alt_cotocombs_map
         "Воспользоваться автопилотом.":
             "Я решил прислушаться к интуиции и, прикинув направление, зашагал в нужную сторону."
-            return 
+            return
 label alt_cotocombs_map:
     #Пилим DND-карту. Отдельным файлом, интеграция в шароёбства по котокомбам
     #Активный тайл-сет: 8х8, номерация тайлов с левого нижнего угла, старт с тайла 8, если идём со стороны старого лагеря, либо с тайла 64, если идём от Генды.
@@ -701,14 +701,14 @@ label alt_cotocombs_map:
     #Доступные тайлы:
     #2 -  вверх в 22 (мокрый)
     #6 - вверх в 26, вправо в 7  - доступна только с 7 (мокрый)
-    #7 - влево к 6, вверх в 27, вправо в 8, 
+    #7 - влево к 6, вверх в 27, вправо в 8,
     #8 - влево к 7, вправо к выходу (если  есть верёвка)
     #22 - вверх в 32(можно пробежаться до 72), вниз в 2
     #25 - вверх в 35 (шахта)
     #26 - вверх в 36, вправо в 27
     #27 - вниз в 7, и влево к 26
     #32 - вверх в 42, вниз в 22, вправо в 33(можно пробежаться до 36)
-    #33 - влево в 32, вправо в 34  
+    #33 - влево в 32, вправо в 34
     #34 - влево в 33, вправо в 35,  вверх в 41
     #35 - влево в 34, вправо в 36, вниз в 25
     #36 - влево в 35, вверх в 46

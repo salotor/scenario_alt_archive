@@ -10,92 +10,92 @@ init -10 python:
     style.sdl_achvlistB_de_kurz = Style(style.default)
     style.sdl_achvlistB_de_kurz.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistB_de_kurz.size = 32
-    style.sdl_achvlistB_de_kurz.color = "#989898" 
+    style.sdl_achvlistB_de_kurz.color = "#989898"
     #Удалятор-цвет-пассив-стандартный
     style.sdl_achvlistB_de_st = Style(style.default)
     style.sdl_achvlistB_de_st.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistB_de_st.size = 54
-    style.sdl_achvlistB_de_st.color = "#989898" 
-    
+    style.sdl_achvlistB_de_st.color = "#989898"
+
     #Мику-цвет-большой
     style.sdl_achvlistA_mi_gross = Style(style.default)
     style.sdl_achvlistA_mi_gross.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_mi_gross.size = 98
-    style.sdl_achvlistA_mi_gross.color = "#00deff" 
+    style.sdl_achvlistA_mi_gross.color = "#00deff"
     #Мику-цвет-стандартный
     style.sdl_achvlistA_mi_st = Style(style.default)
     style.sdl_achvlistA_mi_st.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_mi_st.size = 54
-    style.sdl_achvlistA_mi_st.color = "#00deff" 
-    
+    style.sdl_achvlistA_mi_st.color = "#00deff"
+
     #Алисхен-цвет-большой
     style.sdl_achvlistA_dv_gross = Style(style.default)
     style.sdl_achvlistA_dv_gross.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_dv_gross.size = 98
-    style.sdl_achvlistA_dv_gross.color = "#ff7e00" 
+    style.sdl_achvlistA_dv_gross.color = "#ff7e00"
     #Алисхен-цвет-стандартный
     style.sdl_achvlistA_dv_st = Style(style.default)
     style.sdl_achvlistA_dv_st.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_dv_st.size = 54
-    style.sdl_achvlistA_dv_st.color = "#ff7e00" 
-    
+    style.sdl_achvlistA_dv_st.color = "#ff7e00"
+
     #Славя-цвет-большой
     style.sdl_achvlistA_sl_gross = Style(style.default)
     style.sdl_achvlistA_sl_gross.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_sl_gross.size = 98
-    style.sdl_achvlistA_sl_gross.color = "#ffd200" 
+    style.sdl_achvlistA_sl_gross.color = "#ffd200"
     #Славя-цвет-стандартный
     style.sdl_achvlistA_sl_st = Style(style.default)
     style.sdl_achvlistA_sl_st.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_sl_st.size = 54
-    style.sdl_achvlistA_sl_st.color = "#ffd200" 
-    
+    style.sdl_achvlistA_sl_st.color = "#ffd200"
+
     #Лена-цвет-большой
     style.sdl_achvlistA_un_gross = Style(style.default)
     style.sdl_achvlistA_un_gross.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_un_gross.size = 98
-    style.sdl_achvlistA_un_gross.color = "#b956ff" 
+    style.sdl_achvlistA_un_gross.color = "#b956ff"
     #Лена-цвет-стандартный
     style.sdl_achvlistA_un_st = Style(style.default)
     style.sdl_achvlistA_un_st.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_un_st.size = 54
     style.sdl_achvlistA_un_st.color = "#b956ff"
-    
+
     #Ольга-цвет-большой
     style.sdl_achvlistA_mt_gross = Style(style.default)
     style.sdl_achvlistA_mt_gross.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_mt_gross.size = 98
-    style.sdl_achvlistA_mt_gross.color = "#00ea32" 
+    style.sdl_achvlistA_mt_gross.color = "#00ea32"
     #Ольга-цвет-стандартный
     style.sdl_achvlistA_mt_st = Style(style.default)
     style.sdl_achvlistA_mt_st.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_mt_st.size = 54
-    style.sdl_achvlistA_mt_st.color = "#00ea32" 
-    
+    style.sdl_achvlistA_mt_st.color = "#00ea32"
+
     #Ульяна-цвет-большой
     style.sdl_achvlistA_us_gross = Style(style.default)
     style.sdl_achvlistA_us_gross.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_us_gross.size = 98
-    style.sdl_achvlistA_us_gross.color = "#ff0000" 
+    style.sdl_achvlistA_us_gross.color = "#ff0000"
     #Ульяна-цвет-стандартный
     style.sdl_achvlistA_us_st = Style(style.default)
     style.sdl_achvlistA_us_st.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_us_st.size = 54
-    style.sdl_achvlistA_us_st.color = "#ff0000" 
-    
+    style.sdl_achvlistA_us_st.color = "#ff0000"
+
     #Одиночка-цвет-большой
     style.sdl_achvlistA_me_gross = Style(style.default)
     style.sdl_achvlistA_me_gross.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_me_gross.size = 98
-    style.sdl_achvlistA_me_gross.color = "#ffffff" 
+    style.sdl_achvlistA_me_gross.color = "#ffffff"
     #Одиночка-цвет-стандартный
     style.sdl_achvlistA_me_st = Style(style.default)
     style.sdl_achvlistA_me_st.font = get_image_7dl("gui/ach_list/stylo_Bold.ttf")
     style.sdl_achvlistA_me_st.size = 54
-    style.sdl_achvlistA_me_st.color = "#ffffff" 
+    style.sdl_achvlistA_me_st.color = "#ffffff"
 
 
-    
+
 init:
     image bg sdl_ach_inactive = get_image_7dl("gui/ach_list/7dl_ach_inactive1.png")
     image bg sdl_ach_inactive_mi = get_image_7dl("gui/ach_list/ach_mi_7dlB.png")
@@ -259,7 +259,7 @@ init:
     image sdl_achv_delB_7dl = Text(" Обнулить\nпрохождения", style="sdl_achvlistB_de_kurz")
     image sdl_achv_extA_7dl = Text(" Выход\n в меню", style="sdl_achvlistA_de_kurz")
     image sdl_achv_extB_7dl = Text(" Выход\n в меню", style="sdl_achvlistB_de_kurz")
-    
+
     image sdl_achv_need_routeA = Text("Рут не дописан", style="sdl_achvlistB_de_st")
     image sdl_achv_jumpchkA = Text(" Перейти\nна концовку", style="sdl_achvlistB_de_st")
     image sdl_achv_infochkD = Text(" Требует\nпрохождения\n концовки", style="sdl_achvlistB_de_st")
@@ -317,7 +317,7 @@ init:
     image sdl_achv_pst_me = Text("Постскриптум", style="sdl_achvlistA_me_st")
     image sdl_achv_qte_me = Text(" Тест на реакцию\nи сообразительность", style="sdl_achvlistA_me_st")
     image sdl_achv_kat_me = Text("Катапультная\n концовка", style="sdl_achvlistA_me_st")
-    
+
     #Концовки-описание (Ульянка расцветка)
     image sdl_achv_good_us_px = Text("Хорошая\nконцовка Огоньков", style="sdl_achvlistA_us_st")
     image sdl_achv_true_us_px = Text("Истинная\nконцовка Огоньков", style="sdl_achvlistA_us_st")
@@ -326,7 +326,7 @@ init:
     image sdl_achv_true_us_7dl = Text("Истинная\n7дл концовка", style="sdl_achvlistA_us_st")
     image sdl_achv_us_un = Text("Концовка\n Лены", style="sdl_achvlistA_us_st")
     image sdl_achv_us_mi = Text("Концовка\n Мику", style="sdl_achvlistA_us_st")
-    
+
     # ------------------------------------------------
     ##\\\\\\\\\\\\\\\\\\\\\\\\\ЗВУК\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     #SFX

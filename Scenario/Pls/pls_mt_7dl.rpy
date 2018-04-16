@@ -64,7 +64,7 @@
     call alt_day6_mt_7dl_nighttime
     pause(1)
     jump alt_day7_mt_7dl_start
-    
+
 label alt_day7_mt_7dl_start:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -110,7 +110,7 @@ label alt_day7_mt_7dl_start:
             call alt_day7_mt_7dl_good
             pause(1)
             if alt_day_binder == 1:
-                call alt_day7_mt_7dl_postscriptum  
+                call alt_day7_mt_7dl_postscriptum
         else:
             call alt_day7_mt_7dl_bad
     pause(1)

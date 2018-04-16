@@ -48,7 +48,7 @@
     call alt_day4_mi_dj_sleeptime
     pause(1)
     jump alt_day5_start_mi_dj
-    
+
 label alt_day5_start_mi_dj:
     call alt_day5_mi_dj_vars
     $ persistent.sprite_time = "sunset"
@@ -105,7 +105,7 @@ label alt_day5_start_mi_dj:
         call alt_day5_mi_dj_sleeptime
         pause(1)
     jump alt_day6_start_mi_dj
-    
+
 label alt_day6_start_mi_dj:
     pause(1)
     call alt_day6_mi_dj_vars
@@ -115,7 +115,7 @@ label alt_day6_start_mi_dj:
     if alt_day5_mi_dj_hentai:
         call alt_day6_mi_dj_good
         pause(1)
-    else: 
+    else:
         call alt_day6_mi_dj_neutral
         pause(1)
     $ persistent.sprite_time = "day"
@@ -182,7 +182,7 @@ label alt_day6_start_mi_dj:
     pause(1)
     call alt_day6_mi_dj_first_dance
     pause(1)
-    call alt_day6_mi_dj_second_dance 
+    call alt_day6_mi_dj_second_dance
     pause(1)
     if lp_mi >= 19 and not alt_day6_mi_dj_me_evil:
         call alt_day6_mi_dj_dance2_success
@@ -193,7 +193,7 @@ label alt_day6_start_mi_dj:
         if alt_day6_mi_dj_rejected and alt_day6_mi_dj_letmeout:
             return
     jump alt_day7_mi_dj_start
-    
+
 label alt_day7_mi_dj_start:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -232,5 +232,5 @@ label alt_day7_mi_dj_start:
         elif alt_day6_mi_dj_no_hentai:
             call alt_day7_mi_dj_rf_good_end
             pause(1)
-               
+
     return

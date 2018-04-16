@@ -266,7 +266,7 @@
     "Предложил я."
     "Помедлив, Виола кивнула."
     cs "Ладно."
-    
+
 label alt_day4_mi_cs_med_play:
     window hide
     menu:
@@ -285,14 +285,14 @@ label alt_day4_mi_cs_med_play:
             jump alt_day4_mi_cs_med_fail
         "Пропустить":
             jump alt_day4_mi_cs_med_win
-           
+
 label alt_day4_mi_cs_med_draw:
     scene bg int_aidpost_day with fade
-    show cs normal at center 
+    show cs normal at center
     cs "Не свезло. Давай-ка ещё разок."
     "Я кивнул и сдал карты по-новой."
     jump alt_day4_mi_cs_med_play
-    
+
 label alt_day4_mi_cs_med_fail:
     scene bg int_aidpost_day with fade
     show cs smile at center
@@ -304,7 +304,7 @@ label alt_day4_mi_cs_med_fail:
     "Она лучезарно улыбнулась и выпорхнула из здания."
     "Ну а я что? А я остался сидеть - карточный долг дело святое."
     jump alt_day4_mi_duty
-    
+
 label alt_day4_mi_cs_med_win:
     $ alt_day4_mi_rival_won = True
     scene bg int_aidpost_day with fade
@@ -325,7 +325,7 @@ label alt_day4_mi_cs_med_win:
         jump alt_day4_mi_visit_sick
     else:
         jump alt_day4_mi_club_sick
-        
+
 label alt_day4_mi_duty:
     $ persistent.sprite_time = "day"
     $ day_time()
@@ -334,7 +334,7 @@ label alt_day4_mi_duty:
     cs "Чуть не забыла.{w} Вот ключи!"
     play sound sfx_keys_rattle
     pause(1)
-    
+
     hide cs
     with dissolve
     "Медсестра кинула мне ключи и убежала."
@@ -427,8 +427,8 @@ label alt_day4_mi_duty:
     play music music_list["my_daily_life"] fadein 5
     th "Ох, будем надеяться, это не что-нибудь серьёзное."
     play sound sfx_open_door_clubs
-    
-    show sl normal pioneer at center 
+
+    show sl normal pioneer at center
     with dissolve
     "На пороге стояла Славя, держащая в руках судки - три кастрюльки, составленные одна на другую."
     show sl smile pioneer at center with dspr
@@ -534,8 +534,8 @@ label alt_day4_mi_duty:
     "Внутренний голос, конечно, имел право скабрезничать и издеваться, но, по-моему, сейчас он хватанул лишку."
     th "Грязь какая. Больше, чтобы такого не звучало.  Может, это параллельный мир, где пионерами до восемнадцати лет дети ходят."
     dreamgirl "Ага. Точно. У самого скоро дети будут, а всё галстук кумачовый таскает."
-    
-    show sl normal pioneer at center 
+
+    show sl normal pioneer at center
     with dissolve
     "Наконец, Славя закочнила свои таинственные дела и вышла на крыльцо."
     "В руках она сжимала продолговатый бумажный пакетик."
@@ -543,7 +543,7 @@ label alt_day4_mi_duty:
     menu:
         "Спросить, что это":
             $ alt_day4_mi_vodka = True
-        
+
             me "А что это такое?"
             show sl shy pioneer at center with dspr
             sl "Ничего!"
@@ -559,16 +559,16 @@ label alt_day4_mi_duty:
         "Не спрашивать":
             $ day4_sl_compl = 1
             $ lp_sl += 1
-            show sl normal pioneer far at center  
+            show sl normal pioneer far at center
             with dissolve
-        
+
             me "Надеюсь, я теперь могу пойти поесть?"
             "Уточнил я."
             show sl happy pioneer far at center with dspr
             sl "Да, конечно. Спасибо!"
             stop music fadeout 3
             "Одарив меня улыбкой, она убежала."
-            
+
             hide sl
             with dissolve
     window hide
@@ -584,13 +584,13 @@ label alt_day4_mi_duty:
     play music music_list["my_daily_life"]
     play sound sfx_open_door_clubs
     scene bg int_aidpost_day
-    
+
     play ambience ambience_medstation_inside_day
 
     th "Наконец, я смогу нормально поесть!"
     show blinking
     "Я как раз прикончил второе, когда дверь открылась."
-    show un normal pioneer at center 
+    show un normal pioneer at center
     with dissolve
     "На пороге стояла Лена."
     un "Привет.{w} А медсестры нет?"
@@ -640,14 +640,14 @@ label alt_day4_mi_duty:
         "Тебе бы подошло":
             $ alt_day4_mi_clothes = True
             $ lp_un += 1
-        
+
             me "Да просто представил, кто бы мог надеть это - чтобы подошло."
             me "На тебе смотрелось бы идеально."
             un "Спасибо…"
             me "Да не за что."
             "Я пожал плечами."
         "Да просто так":
-        
+
             "Я смутился и отвернулся."
             un "…"
     "Некоторое время мы молчали."
@@ -657,7 +657,7 @@ label alt_day4_mi_duty:
     "Она благодарно мне кивнула и направилась к двери."
     un "Удачно додежурить."
     me "Спасибо!"
-    
+
     hide un
     with dissolve
     stop music fadeout 3
@@ -672,8 +672,8 @@ label alt_day4_mi_duty:
     me "Войдите!"
     play sound sfx_open_door_clubs
     play music music_list["eat_some_trouble"] fadein 3
-    
-    show us normal pioneer at center 
+
+    show us normal pioneer at center
     with dissolve
     "Славя. Лена. Ну да, следующей по списку должен быть кто-то из рыжего тандема."
     "Ульяна Батьковна во плоти."
@@ -732,7 +732,7 @@ label alt_day4_mi_duty:
         "Отравилась?":
             $ alt_day4_mi_bake = True
             $ lp_us += 1
-        
+
             me "Тяжёлую пищу сегодня ела?"
             show us surp1 pioneer at center with dspr
             us "Тяжёлую?"
@@ -752,10 +752,10 @@ label alt_day4_mi_duty:
             window hide
             pause(1)
             play sound sfx_slam_door_campus
-            
+
             hide us
             with dissolve
-        
+
             us "Бу сделано, доктор!"
     stop music fadeout 3
     "…"
@@ -779,7 +779,7 @@ label alt_day4_mi_duty:
     "Но по здравому размышлению от этой идеи отказался - вполне возможно, что к ней всё же нагрянули предки."
     play sound sfx_open_door_kick
     play music music_list["that_s_our_madhouse"] fadein 3
-    show dv normal pioneer at center 
+    show dv normal pioneer at center
     with dissolve
     "Поэтому ворвавшаяся на пост Алиса стала, пусть и неожиданным, но приятным разнообразием."
     "Она оторопела, углядев меня рядом со столом."
@@ -820,13 +820,13 @@ label alt_day4_mi_duty:
         "Дать Алисе уголь":
             $ alt_day4_mi_coal = True
             $ lp_dv += 1
-        
+
             th "Надеюсь, меня не сочтут пособником подросткового алкоголизма."
             me "Чёрт его знает, где Алиса взяла столько спиртного, чтобы аж углем запасаться, но…"
             window hide
             play sound sfx_open_table
             $ renpy.pause(1)
-        
+
             "Я полез в ящик и вытащил оттуда пачку конвалют с активированным углем, туго перетянутую зелёной медицинской резинкой."
             "Достав одну, я протянул её Двачевской."
             show dv normal pioneer at center with dspr
@@ -838,7 +838,7 @@ label alt_day4_mi_duty:
             stop music fadeout 3
             "Она забрала упаковку и убежала."
         "Не давать ей уголь":
-        
+
             me "Планируешь? А потом пальцем на меня укажешь, мол, это я?"
             dv "Ничего я ни на кого не укажу."
             me "Фигушки."
@@ -905,7 +905,7 @@ label alt_day4_mi_duty:
     "Я терпеть не мог чувствовать себя беспомощным."
     play sound sfx_open_journal
     "Но всё, что я мог в данном случае - это ждать, когда долгоиграющий Гершвин на радиоволнах сменится дорогим мне голосом. "
-    if alt_day4_mi_mi2midj_transit: 
+    if alt_day4_mi_mi2midj_transit:
         th "Кстати, привет она мне так и не передала."
     "Время плавно перевалило за восемь часов - последних посетителей разогнали, а пионеров отправили принимать здоровое и сбалансированное питание."
     "Остались только самые отчаянные - те, кто забирал ребёнка и вёз его куда-нибудь далеко, чтобы, значит, в тесном семейном отметить временное воссоединение."
@@ -951,7 +951,7 @@ label alt_day4_mi_duty:
     window hide
     stop music fadeout 3
     jump alt_day4_mi_supper_sick
-   
+
 label alt_day4_mi_visit_sick:
     if alt_day4_mi_mi2midj_transit:
         $ persistent.sprite_time = "day"
@@ -970,7 +970,7 @@ label alt_day4_mi_visit_sick:
         $ persistent.sprite_time = "day"
         scene bg ext_clubs_day
         with dissolve
-    
+
         "Хлеб радиоведущего несладок."
         "Когда горит надпись «air», ты остаёшься один против всего мира."
         "А в обычной жизни к тебе не подходят потому, что твоё имя на слуху, а это значит, что ты, в некотором роде, знаменитость."
@@ -984,7 +984,7 @@ label alt_day4_mi_visit_sick:
         scene bg int_clubs_dj_7dl with dissolve
         show mi smile pioneer at center with dissolve
         play ambience ambience_clubs_inside_day fadein 3
-    
+
         mi "Привет, Сеня! А что ты здесь делаешь?"
         "Я улыбнулся ей в ответ."
         me "Я выиграл в карты право провести пару часов с тобой."
@@ -1003,7 +1003,7 @@ label alt_day4_mi_visit_sick:
         mi "Как?"
         me "Известно, как! В камень-ножницы-бумагу!"
         "Правила игры довольно простые -  господи, да все в жизни хоть раз в эту игру да играли!"
-            
+
         label alt_day4_mi_rps3:
             scene bg int_clubs_dj_7dl
             show mi smile pioneer at center
@@ -1017,9 +1017,9 @@ label alt_day4_mi_visit_sick:
                 jump alt_day4_mi_rps3
             elif RPS_winner == -1:
                 jump alt_day4_rps_fail
-                    
 
-            
+
+
 
         label alt_day4_rps_win:
             me "Я победитель, а это значит, что следующая песня будет звучать по моему выбору!"
@@ -1030,19 +1030,19 @@ label alt_day4_mi_visit_sick:
             menu:
                 "Дабстепчику бы!":
                     play music music_7dl["polyhymnia_main"]
-                
+
                     extend " в раскалённом воздухе поплыли сверхтяжёлые басы."
                 "Что-нибудь потяжелее!":
                     play music music_7dl["nookie"]
-                
+
                     extend " сонное царство всколыхнуло агрессивными рифами."
                 "Что-нибудь для души!":
                     play music music_7dl["knock"]
-                
+
                     extend " в эфир отправилась медленная, грустная композиция с моей родины."
                 "Оставить играть.":
-                
-                    extend " оставил песню. Неплохая же, на самом деле!"    
+
+                    extend " оставил песню. Неплохая же, на самом деле!"
             mi "Ещё?"
             menu:
                 "Да!":
@@ -1067,7 +1067,7 @@ label alt_day4_mi_visit_sick:
                 play music music_list["tried_to_bring_it_back"] fadein 3
             elif alt_day4_miku_chart == 4:
                 mi "Да пусть играет то, что есть! Мне и это нравится."
-            
+
             mi "Ещё?"
             menu:
                 "Да!":
@@ -1075,7 +1075,7 @@ label alt_day4_mi_visit_sick:
                 "Нет.":
                     me "Нет, думаю, на этом хватит."
                     jump alt_day4_mi_movealong
-                    
+
         label alt_day4_mi_movealong:
             "Разулыбавшись, она поднялась, и потянулась, разминая спину."
             "А я что, я засмотрелся. Нельзя?"
@@ -1116,13 +1116,13 @@ label alt_day4_mi_visit_sick:
             scene bg ext_dining_hall_away_day
             with dissolve
             stop sound fadeout 2
-        
+
             "На крыльце стояла Ольга Дмитриевна."
-            show mt normal pioneer far at center  
-            with dissolve   
+            show mt normal pioneer far at center
+            with dissolve
             "Чем-то мне её взгляд не понравился, однако, она смягчилась, разглядев бинты у меня на голове."
             mt "Семён, почему не в медпункте?"
-            show mt normal pioneer at center 
+            show mt normal pioneer at center
             with dissolve
             me "Да я Мику в радиорубке подменял, вот и…"
             th "Сейчас, небось, скажет, что если болеешь - надо болеть, а не по разным рубкам сидеть."
@@ -1134,7 +1134,7 @@ label alt_day4_mi_visit_sick:
             scene bg int_dining_hall_people_day
             with dissolve
             play ambience ambience_dining_hall_full fadein 5
-        
+
             "Ну и, спрашивается, кто я такой, чтобы спорить с ней по таким вопросам?"
             "Тем более, что раздавали самые настоящие тульские пряники!"
             "Которые, правда, по чьей-то гениальной задумке предполагалось запивать киселём."
@@ -1144,7 +1144,7 @@ label alt_day4_mi_visit_sick:
             "Немного подумав, я решил повременить с возвращением на пост, и отправился гости к Виоле."
             "Доктор сказал, с доктором спорить себе дороже."
             jump alt_day4_mi_med_EV
-            
+
         label alt_day4_mi_back2radio:
             window hide
             play sound sfx_open_door_clubs
@@ -1218,7 +1218,7 @@ label alt_day4_mi_visit_sick:
             $ persistent.sprite_time = "sunset"
             scene bg int_clubs_dj_7dl
             with dissolve
-        
+
             $ sunset_time()
             "Последний час я добивал, уткнувшись в книжку. Не хотелось уже совсем ничего."
             "Просто впасть в анабиоз, пока не вернётся та, ради кого я вообще здесь нахожусь."
@@ -1228,7 +1228,7 @@ label alt_day4_mi_visit_sick:
             pause(3)
             show unblink
             scene bg int_clubs_dj_7dl
-        
+
             play music music_list["a_promise_from_distant_days_v2"] fadein 3
             "Поэтому когда чьи-то ладошки закрыли мне глаза, я не глядя схватил и поцеловал их."
             if loki:
@@ -1359,13 +1359,13 @@ label alt_day4_mi_visit_sick:
                     with dissolve
                     scene bg ext_aidpost_sunset_7dl
                     with dissolve
-                
+
                     "С Виолой проблем не возникло - она легко отпустила меня обратно под крылышко Ольги, потребовав лишь обещание, что если вдруг станет хуже - я не раздумывая вернусь."
                     "А буквально полчаса спустя на лагерь опустились сумерки."
                     window hide
                     scene bg ext_clubs_sunset with dissolve
                     $ sunset_time()
-                
+
                     "Я встал у крылечка и терпеливо ждал, когда зеленовласая царевна, наконец, устанет сидеть и выйдет ко мне."
                     "Наконец, скрипнула дверь…"
                     show mi normal pioneer at center with dissolve
@@ -1379,7 +1379,7 @@ label alt_day4_mi_visit_sick:
                     mi "Веди!"
                     window hide
                     jump alt_day4_mi_date
-                    
+
                 "Да выбрось ты это из головы!":
                     me "Надо было просто нас познакомить."
                     "Серьёзно предложил я."
@@ -1394,7 +1394,7 @@ label alt_day4_mi_visit_sick:
                     me "Если вдруг окажется так, что вам решительно не по пути, вы сможете разбежаться."
                     mi "Да не хочу я разбегаться. Но этот его внезапный порыв - агрессивный, как будто его Ма накрутила… {w}Он же всегда исповедовал свободу мысли!"
                     "Любой мужчина крайне тепло относится к сексу до свадьбы. Пока не обзаведётся дочерью."
-                    me "Может, и накрутила. {w}Они ведь оба понимают, что сейчас тебя от того, чтобы хлопнуть дверью, удерживает одна лишь твоя добрая воля, Мику." 
+                    me "Может, и накрутила. {w}Они ведь оба понимают, что сейчас тебя от того, чтобы хлопнуть дверью, удерживает одна лишь твоя добрая воля, Мику."
                     show mi upset pioneer at center with dissolve
                     me "Раз уж ты такая самодостаточная - им кажется, что ты больше в них не нуждаешься. А отпускать детей всегда трудно."
                     "Попробуй оправдать родителей, простить их, съехать на дом к воздыхателю никогда не поздно."
@@ -1410,7 +1410,7 @@ label alt_day4_mi_visit_sick:
                     "Она легко поднялась и подала мне руку."
                     stop music fadeout 3
                     window hide
-                    
+
 label alt_day4_mi_date_sick:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -1420,7 +1420,7 @@ label alt_day4_mi_date_sick:
     scene bg ext_clubs_sunset
     with dissolve
     show mi normal pioneer at center with dissolve
- 
+
     mi "Ты вообще как себя чувствуешь?"
     mi "А то тебе болеть положено, а ты на ногах целый день, я слышала, при сотрясении надо лежать постоянно!"
     "В левую щёку кольнуло запоздалым откатом, и я потёр её ладонью."
@@ -1475,7 +1475,7 @@ label alt_day4_mi_date_sick:
         "А про четвёртую с момента, когда она запечатлела нас с Мику на бумаге, не было слышно ни слуху ни духу."
     th "Наверняка, Ольга Дмитриевна сейчас курирует разбор последствий после концерта."
     th "А Виола неотрывно присутствует в медпункте - сегодня уголёк и весёлые домики будут пользоваться повышенным спросом."
-    show mi normal pioneer at center 
+    show mi normal pioneer at center
     with dissolve
     mi "Озираешься? Тоже боишься, как бы не заметили?"
     me "Ага. Хотя, казалось бы, чего бояться…"
@@ -1484,7 +1484,7 @@ label alt_day4_mi_date_sick:
     mi "И я прекрасно помню, а примеры местных пионеров только подтверждают это - что до тех пор, пока ваши с девушкой отношения не переваливают некоторую стадию, вы стараетесь скрывать связь и даже стыдитесь её."
     me "Мы. Ага."
     mi "Так вот это и был мой вопрос!"
-    show mi angry pioneer at center 
+    show mi angry pioneer at center
     me "Я всё ещё не расслышал его."
     mi "Откуда ты такой появился, что плюёшь на собственную культуру?"
     mi "Ты не стесняешься гулять с девочкой под ручку, пускай вы встречаетесь второй день, ты ешь иначе, ходишь иначе, даже смотришь на мир иначе."
@@ -1498,7 +1498,7 @@ label alt_day4_mi_date_sick:
     with dissolve
 
     $renpy.pause(3)
-    show mi normal pioneer at center 
+    show mi normal pioneer at center
     with dissolve
     "Между делом мы неторопливо дефилировали к выходу из лагеря."
     mi "Только не рассказывай о том, что ты приехал из дальней деревни - у тебя повадки городского жителя. "
@@ -1507,7 +1507,7 @@ label alt_day4_mi_date_sick:
     show mi surprise pioneer at center with dspr
     "Она некоторое время смотрела на меня, прикидывая, не издеваюсь ли я  часом."
     me "Давай! Я не буду рассказывать тебе о том, как на дальнем перегоне Ленинград-Череповец познакомились юноша с девушкой, результатом чего стал я."
-    
+
     show mi normal pioneer at center with dspr
     mi "А что тогда?"
     me "Вопросы задавай, солнце ясное!"
@@ -1533,7 +1533,7 @@ label alt_day4_mi_date_sick:
     "Коротко ответила она, снедаемая всё той же дилеммой."
     mi "Тебе понравится."
     me "Я тебе, конечно, верю…"
-    
+
     show mi sad pioneer at center with dspr
     mi "Вот и верь."
     "Она оборвала меня."
@@ -1597,8 +1597,8 @@ label alt_day4_mi_date_sick:
     me "В случае с лисичками - то там просто пожарить с картошкой, летят как семечки."
     "Я почувствовал, что ещё пара минут разглагольствований в таком духе - и я рискую захлебнуться слюной."
     "И без того на ужин опоздали, что теперь душу-то травить?"
-    
-    show mi surprise pioneer at center 
+
+    show mi surprise pioneer at center
     with dissolve
     mi "Какие интересные вещи ты знаешь, Сёмочка! С тобой интересно так, ой, а что это там впереди, мы уже пришли, да?"
     stop ambience fadeout 2
@@ -1617,8 +1617,8 @@ label alt_day4_mi_date_sick:
     "И будто этого было недостаточно - скрипящая от редких порывов, насквозь распахнутая дверь."
     me "Калдище какое."
     "Потрясённо прошептал я."
-    
-    show mi shocked pioneer at center 
+
+    show mi shocked pioneer at center
     with dissolve
     "Мику неосознанно спряталась у меня на груди, где я утешающе обнял её и гладил по голове."
     "Ребёнку было страшно, ребёнок хотел спрятаться."
@@ -1665,11 +1665,11 @@ label alt_day4_mi_date_sick:
         "Она улыбнулась."
         mi "Но так же не бывает."
         me "Зато к этому можно стремиться!"
-        
+
     "Мы помолчали ещё немного."
     me "Ладно. Я созрел."
-    
-    show mi normal pioneer at center 
+
+    show mi normal pioneer at center
     with dissolve
     mi "Сёмочка, если тебе страшно, в этом ничего плохого нет, всем бывает страшно."
     "Как бы ей объяснить, что мне не только страшно, у меня ещё и организм меня чехвостит на все лады за то, что завёлся без повода."
@@ -1679,7 +1679,7 @@ label alt_day4_mi_date_sick:
     "Она тихонько улыбнулась и схватила мою ладонь."
     "Ребёнок хотел идти вместе. За ручку. Что ж, на миру и смерть красна."
     "Мы направились к зданию."
-    
+
     hide un
     with dissolve
     window hide
@@ -1691,8 +1691,8 @@ label alt_day4_mi_date_sick:
     pause(1)
 
     "И та с мерзким, вынимающим душу скрежетом попыталась провернуться на давным-давно заржавевшом подшипнике."
-    
-    show mi shocked pioneer at center 
+
+    show mi shocked pioneer at center
     with dissolve
     mi "Ай!"
     "Ребёнок мгновенно растерял весь запас храбрости и снова спрятался за меня. "
@@ -1730,8 +1730,8 @@ label alt_day4_mi_date_sick:
     "Мне вдруг стрельнуло сыграть с Мику во что-нибудь безголовое, требующее только кидать кубик да двигать фишку."
     show mi upset pioneer at center with dspr
     mi "Сёмочка, не уходи в себя, ты меня пугаешь!"
-    
-    show mi surprise pioneer at center 
+
+    show mi surprise pioneer at center
     with dissolve
     "Она ощутимо встряхнула меня за плечо, и за это была удостоена благодарного взгляда."
     mi "Шурик!"
@@ -1746,7 +1746,7 @@ label alt_day4_mi_date_sick:
     me "Так ты не расскажешь, зачем вела меня сюда?"
     "Она закатила глаза и фыркнула."
     mi "Это не важно уже! Пошли искать."
-    
+
     hide un
     with dissolve
     window hide
@@ -1756,13 +1756,13 @@ label alt_day4_mi_date_sick:
     "В комнате, где, предположительно находился  кабинет начальника лагеря, даже удалось найти несколько альбомов разных годов с росписями и тёплыми словами от детишек."
     "Позитива была бы уйма - если бы бумага от старости не разъезжалась под пальцами."
     "Мы вернулись в прихожую."
-    
-    show mi normal pioneer at center 
+
+    show mi normal pioneer at center
     with dissolve
     mi "Шурика здесь совершенно точно нет."
     me "Ну. Зря только время потеряли."
     mi "Время, потраченное на поиск и спасение жизни, нельзя называть потерянным!"
-    show mi sad pioneer at center 
+    show mi sad pioneer at center
     with dissolve
     mi "Это же самая высокая ценность в мире - человеческая жизнь!"
     "Сразу видно человека, который никогда не жил в девяностых."
@@ -1832,8 +1832,8 @@ label alt_day4_mi_date_sick:
     "Она, кстати, ничего, похоже, не заметила."
     me "Вот тут аккуратнее, последняя ступенька."
     "Я подсветил указанное препятствие и, подхватив девушку за талию, плавно опустил её на пол."
-    
-    show mi normal pioneer at center 
+
+    show mi normal pioneer at center
     with dissolve
     "На подвал эта структура явно не походит. А вот на сервисный туннель…"
     "Вдоль стен протянулись толстые кабели в прорезиненной оплётке, каждые полметра перехваченные несущими из нержавейки, больной бьющей отражением от фонаря."
@@ -1844,14 +1844,14 @@ label alt_day4_mi_date_sick:
     "О да. Они приведут нас прямиком к Монолиту."
     "Я усмехнулся про себя и уточнил."
     me "Мику, солнышко, скажи, ты ведь в курсе упёртости советских строителей? У тебя папка, наверное, очень упорный человек."
-    show mi smile pioneer at center 
+    show mi smile pioneer at center
     with dissolve
     mi "Да, а что?"
     me "Да понимаешь, если это действительно сервисный туннель какой-нибудь секретной инфраструктуры, то допускается протяжённость сообщения в несколько километров. И не хотелось бы, чтобы пройдя эти километры, мы просто вышли на поверхность."
     mi "Нет, на этот счёт можешь не волноваться."
     "Она указала на отчётливо отпечатавшийся след кроссовки, принадлежащей Шурику."
     mi "Нам туда."
-    
+
     with dissolve
     "…"
     window hide
@@ -1879,8 +1879,8 @@ label alt_day4_mi_date_sick:
     "И, будто убеждая нас в серьёзности всего происходящего, строго по центру поблескивало металлическими боками из-под облупившейся красной краски круглое колесо кремальерного запора."
     "Рядом висел плакат с регламентом проведения первой медицинской на случай механического поражения при работе с дверью - хотя кто их когда читал…"
     "И, разумеется, чёрная коробка зуммера, с помощью которого можно было открыть дверь - если та не была предварительно задраена."
-    
-    show mi normal pioneer at left 
+
+    show mi normal pioneer at left
     with dissolve
     mi "Изрядная штука."
     "С уважением проговорила Мику."
@@ -1908,12 +1908,12 @@ label alt_day4_mi_date_sick:
     "Двухъярусная кровать с толстым слоем пыли - демонстрирующая, что на ней никогда не спали, уголок радиста и индивидуальные шкафчики, один из которых был распахнут."
     "Что удивительно - сюда до сих пор подавалось электричество! Даже системы вытяжки - топорные, советского производства - ощутимо гудели из-под потолка."
     "Шурика не было и здесь."
-    
-    show mi smile pioneer at center 
+
+    show mi smile pioneer at center
     with dissolve
     mi "Ой, гляди, ещё один фонарик!"
     "Мику подняла с пола дубликат фонаря, что был у меня в руках, попыталась включить - тот даже тусклого света не дал."
-    show mi sad pioneer at center 
+    show mi sad pioneer at center
     with dissolve
     mi "Ну вот, только-только первую полезную находку нашла…"
     me "Дай сюда."
@@ -1922,7 +1922,7 @@ label alt_day4_mi_date_sick:
     "Неудивительно, для жизни в бомбоубежище запасные детали жизненно необходимы."
     "Три минуты скручиваний-раскручиваний - и, проверив свечение, а попутно чуть не ослепнув на левый глаз, я вручил фонарик Мику."
     me "Владей и помни мою доброту."
-    show mi happy pioneer at center 
+    show mi happy pioneer at center
     with dissolve
     mi "Спасибо, Сёмочка! Ты самый лучший."
     "Она захлопала в ладоши, потом, привлечённая игрой света на потолке, начала вырисовывать там фигуры световым кругом."
@@ -1982,8 +1982,8 @@ label alt_day4_mi_date_sick:
 
     "Я подошёл к краю ямы и посветил вниз."
     "Неглубоко, метра два. Плюс внизу куча, сокращающая дистанцию."
-    
-    show mi normal pioneer at center 
+
+    show mi normal pioneer at center
     with dissolve
     mi "Рельсы?"
     me "Похоже на какие-то заброшенные шахты…"
@@ -2013,15 +2013,15 @@ label alt_day4_mi_date_sick:
     "Ну, насколько это можно было так назвать - так как юбка её каким-то немыслимым образом зацепилась за что-то у меня на рубашке и, поднявшись, вывернулась наизнанку…"
     "Выпавший из руки фонарь подсвечивал моих старых знакомых - в бирюзово-белую полосочку, из-за чего упругие полушария походили на арбуз."
     mi "Сёмочка, ты ещё долго любоваться собираешься?"
-    
-    show mi shy pioneer at center 
+
+    show mi shy pioneer at center
     with dissolve
     "Немного напряжённым голосом уточнила она."
     mi "А то здесь довольно прохладно."
     me "Ох, прости, пожалуйста…"
     "Я покраснел и поспешил поставить её на ноги."
-    
-    show mi shy pioneer at center 
+
+    show mi shy pioneer at center
     with dissolve
     mi "Таким изысканным образом мне ещё комплиментов не делали."
     "Рассмеялась она, приводя одежду в порядок."
@@ -2036,9 +2036,9 @@ label alt_day4_mi_date_sick:
     $ alt_day4_mi_senio = 1
 label alt_day4_mi_xroad:
     "Мы миновали несколько развилок, двигаясь напропалую вперёд, пока не уткнулись в т-образный перекрёсток."
-    
-    
-    show mi normal pioneer at center 
+
+
+    show mi normal pioneer at center
     with dissolve
 
     if alt_day4_mi_senio == 1:
@@ -2064,7 +2064,7 @@ label alt_day4_mi_xroad:
         me "Плевал я на Шурика! Пусть хоть поселится в этих катакомбах! Мы идём к поверхности."
     mi "Направо!"
     me "Налево!"
-    
+
     label alt_day4_miku_rps2:
         scene bg int_mine_crossroad
         show mi smile pioneer at center
@@ -2087,14 +2087,14 @@ label alt_day4_mi_xroad:
             me "Налево шагом арш!"
             window hide
             jump alt_day4_mi_gogo
-            
+
         label alt_day4_rps2_fail:
             scene bg int_mine_crossroad
             show mi laugh pioneer at center
             me "Ладно, Мику, ты победила. Cворачиваем направо."
             mi "Ура! Наше дело правое, мы идём направо!"
             jump alt_day4_mi_gogo
-            
+
         label alt_day4_mi_gogo:
             $ alt_day4_mi_gogo = renpy.random.choice([1, 2])
             if alt_day4_mi_gogo == 1:
@@ -2132,8 +2132,8 @@ label alt_day4_mi_xroad:
         dreamgirl "Хуже всего, что под ним Мику сидеть будет, а на женский организм сверхнизкий звук куда злее влияет. Короче, неизвестно кто и зачем так эту дрянь разместил, а выключить её надо."
 
     "Свет фонаря отразился от чего-то металлического в глубине тоннеля."
-    
-    show mi normal pioneer at center 
+
+    show mi normal pioneer at center
     with dissolve
     me "Разнообразие…"
     mi "Что?"
@@ -2145,7 +2145,7 @@ label alt_day4_mi_xroad:
 
     mi "А что там?"
     me "Подойдём да побачим."
-    
+
     hide un
     with dissolve
     play sound sfx_open_door_mines
@@ -2161,7 +2161,7 @@ label alt_day4_mi_xroad:
     th "И судя по количеству бутылок из-под спиртного, здесь частенько гостят люди."
     th "Сомневаюсь, что они устраивают для этого марш-бросок, подобный нашему - чего только стоят полу-рабочие петли дверей в бомбоубежище."
     "Шурика не было и здесь."
-    show mi normal pioneer at center with dissolve  
+    show mi normal pioneer at center with dissolve
     me "Очкарик… раздражает. Не сиделось ему в клубе!"
     "Я распинал несколько бутылок и уселся на освободившееся место."
     "Мику села рядом и тихонько взяла меня за руку."
@@ -2207,7 +2207,7 @@ label alt_day4_mi_xroad:
     "Очкарик явно был не в себе: растрёпанные волосы неопрятными сосульками лезли на грязный пыльный лоб, глаза блестели наркоманским блеском, а в руках наш «потеряшка» сжимал какую-то кривулину с острыми краями."
     me "Да хотелось больно. Не надо было за тобой, кретином приходить. Так бы и сидел здесь в темноте."
     sh "Не думайте, что сможете меня обмануть!"
-    show sh rage pioneer at center with dissolve  
+    show sh rage pioneer at center with dissolve
     "Он побежал в нашу сторону, размахивая своей кривулиной."
     "Я оттёр Мику ещё дальше за спину."
     stop music fadeout 3
@@ -2443,7 +2443,7 @@ label alt_day4_mi_xroad:
 label alt_day4_mi_herbs:
     play music music_list["a_promise_from_distant_days_v2"] fadein 3
 
-    show cs normal at center 
+    show cs normal at center
     $ night_time()
     $ persistent.sprite_time = "night"
     scene bg ext_aidpost_night
@@ -2454,7 +2454,7 @@ label alt_day4_mi_herbs:
     scene bg int_aidpost_day
     with dissolve
     play ambience ambience_medstation_inside_day fadein 3
-    
+
     show cs normal at center with dissolve
     "Виола уже ждала меня - на столе стоял термос, откуда ароматно веяло какими-то травами."
     cs "Давай, пей отраву, тварь."
@@ -2528,7 +2528,7 @@ label alt_day4_mi_herbs:
         $ persistent.sprite_time = "day"
         scene bg ext_musclub_day
         with dissolve
-    
+
         "Не уверен, что способен сейчас сумею выдать фламенко, особенно с мозгом, напоминающим пористую губку, плавающую в соляном растворе, и пребольно бьющимся о стенки черепа."
         "Но хотя бы навещу Мику!"
         "Я заспешил по направлению к музыкальному клубу."
@@ -2551,7 +2551,7 @@ label alt_day4_mi_herbs:
         show mi smile pioneer at center with dissolve
         with dissolve
         play ambience ambience_music_club_day fadein 3
-    
+
         play music music_list["always_ready"] fadein 5
         "К счастью, к ней ещё никто не приехал."
         th "К огромному!"
@@ -2593,7 +2593,7 @@ label alt_day4_mi_herbs:
         $ day_time()
         play music music_list["confession_oboe"] fadein 5
         scene cg d4_mi_sup_7dl with dissolve
-    
+
         "Легко говорить комплименты и восхищаться красотой вслух."
         "Но что происходит, когда до холода в сердце тебя пронзает осознанием - а ведь это есть самая объективная правда!"
         "То самое, что только и может заполнить паузу смыслом."
@@ -2613,7 +2613,7 @@ label alt_day4_mi_herbs:
         window hide
         scene bg int_musclub_day with fade
         show mi grin pioneer at center with dissolve
-    
+
         "Просто проснуться - и не холодея от ужаса, что это лишь привиделось - а рядом."
         "Чувствуя продолжение себя в нескольких сантиметрах рядом."
         mi "Ты слишком настоящий."
@@ -2661,7 +2661,7 @@ label alt_day4_mi_herbs:
         th "Она мгновенно забыла обо мне. Не то чтобы я ревновал, но…"
         "Я вышел из клуба и, закрыв за собой дверь, поплёлся в медпункт."
         window hide
-        
+
 label alt_day4_mi_med_EV:
     play music music_list["everyday_theme"] fadein 5
     stop ambience fadeout 2
@@ -2696,7 +2696,7 @@ label alt_day4_mi_med_EV:
     cs "Не хватало ещё перед прощальной дискотекой потерять столь…"
     "Она со вкусом облизала губы."
     cs "…перспективного кадра."
-    show cs smile close at center 
+    show cs smile close at center
     dreamgirl "Перестань краснеть, чувак. Это у неё просто манера речи такая."
     dreamgirl "Не льсти себе, будто она только и думает о том, как бы забраться тебе под зиппер."
     th "Да-а?"
@@ -2782,7 +2782,7 @@ label alt_day4_mi_med_EV:
     "Я приложил руку к пустой голове и выметнулся вон из помещения."
     window hide
 
-    
+
 label alt_day4_mi2sl_mi:
     $ persistent.sprite_time = "day"
     scene bg ext_dining_hall_near_day
@@ -2818,7 +2818,7 @@ label alt_day4_mi2sl_mi:
             me "Шалишь. Политику двойных стандартов давай-ка оставим за дверями - хотя бы на время, пока я доедаю бульон."
             me "И немного подумаем вот о чём - нужна ли тебе помощь, или ты вся такая самостоятельная и везде кругом справишься без чужого вмешательства?"
             me "И сама обо всём догадаешься."
-            "Безотказное сочетание из подкормленного любопытства и надежды, что окружающие, всё-таки, не совсем безнадёжны." 
+            "Безотказное сочетание из подкормленного любопытства и надежды, что окружающие, всё-таки, не совсем безнадёжны."
             "Ложка звякнула о дно тарелки, и я откинулся назад."
             me "Вот так. Либо ты становишься эгоисткой и социопатом, зато предельно самодостаточной - хоть сейчас запаивай тебя в капсулу и отправляй на Марс…"
             me "Либо ты принимаешь мою руку и позволяешь помочь тебе."
@@ -3207,7 +3207,7 @@ label alt_day4_mi2sl_mi:
             scene bg ext_aidpost_sunset_7dl
             with dissolve
             play ambience ambience_camp_center_day fadein 3
-        
+
             th "Это были несколько часов единения."
             "Вместившие в себя больше, чем иные сутки."
             "Не было большей откровенности, не было большего доверия - и смех от рассказов о том, как мы сидели со Славей, и сочувствие от требований матери привезти из лагеря жениха."
@@ -3228,7 +3228,7 @@ label alt_day4_mi2sl_mi:
             scene bg int_aidpost_day
             with dissolve
             play ambience ambience_medstation_inside_day fadein 3
-        
+
             "Дверь грохнула."
             "Мику усадила меня на кушетку."
             mi "Голова закружилась, много танцевали."
@@ -3335,7 +3335,7 @@ label alt_day4_mi_date:
         $ persistent.sprite_time = "sunset"
         $ sunset_time()
         show mt smile pioneer at left with dissolve
-    
+
         mt "А ты неплохо поёшь, Семён."
         "Кивнула вожатая."
         mt "Теперь я знаю, кто в завтрашнем походе будет запевающим."
@@ -3394,7 +3394,7 @@ label alt_day4_mi_date:
         scene bg ext_musclub_night_7dl with dissolve
         show mi smile pioneer at center
         play music music_list["everlasting_summer"] fadein 3
-    
+
         "Нам так и не удалось побыть вдвоём."
         "Не беда. Самое важное - мы были вместе. А сколько там кого…"
         "С какого-то момента начиная, мне стало просто плевать на это."
@@ -3417,7 +3417,7 @@ label alt_day4_mi_date:
         show frame at truecenter
         show cam_ui at truecenter
         me "Хватило бы батарей. Ксеноновая вспышка очень дофига жрёт."
-        
+
         "Впрочем…"
         show frame at truecenter:
             xalign 0.5 yalign 0.5 zoom 1.0
@@ -3440,10 +3440,10 @@ label alt_day4_mi_date:
         play sound sfx_7dl["snap"] fadein 0
         scene white with flash
         $ renpy.pause(2.4, hard=True)
-    
+
         scene bg ext_musclub_night_7dl with fade
         show mi smile pioneer at center
-    
+
         mi "С тебя фотка!"
         me "Замётано!"
         window hide
@@ -3451,7 +3451,7 @@ label alt_day4_mi_date:
         scene bg int_musclub_day with dissolve
         pause(4)
         scene bg ext_musclub_night_7dl with fade2
-    
+
         show mi normal pioneer at center with dissolve
         "Сгрузив гитару в помещении клуба, мы вернулись на улицу."
         "Луна уже порядком забралась на небосклон, отсчитывая если и не новые минуты дня наступившего - то последние минуты дня уходящего точно."
@@ -3474,7 +3474,7 @@ label alt_day4_mi_date:
         scene bg ext_house_of_mt_night_without_light with fade
         play ambience ambience_camp_center_night fadein 1
         play music music_list["a_promise_from_distant_days_v2"] fadein 2
-    
+
         show mi happy pioneer at center with dissolve
         "Мы добрались до развилочки, откуда наши пути неизбежно разбегутся."
         "Мне направо - так как дело моё правое. А Мику налево - ну, кому что досталось!"
@@ -3552,7 +3552,7 @@ label alt_day4_mi_date:
         with fade
         $ renpy.pause (1)
         play ambience ambience_int_cabin_night fadein 1
-    
+
         "Спать."
         "Вожатые сто процентов через мамок-папок уже раздобыли себе вкусняшек разной степени крепости."
         th "И я даже догадываюсь, где они давят эти самые вкусняшки."
@@ -3577,16 +3577,16 @@ label alt_day4_mi_date:
         "И то ли ещё будет!"
         "Мику опять переборщила с эфирными маслами, и от рубашки, висящей на спинке кровати отчётливо слышался летучий запах - отныне и впредь навсегда связанный с ней."
         scene cg wtf_end_of_day  with dissolve
-    
+
         "Ми…"
         window hide
         scene black with fade2
-    
+
         "Я уснул раньше, чем стих звук её имени."
         window hide
         jump alt_day5_start_mi_dj
-        
-        
+
+
 label alt_day5_mi_start:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()

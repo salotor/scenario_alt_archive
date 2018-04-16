@@ -78,7 +78,7 @@
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day6_us_7dl_begin:
     play music music_7dl["so_lonely"] fadein 5
     play ambience ambience_int_cabin_day fadein 2
@@ -187,7 +187,7 @@ label alt_day6_us_7dl_exercises:
     "Между домиками уже шныряли вожатые, где деликатно стучась в двери, а где — бесцеремонно вламываясь в комнаты."
     "И вот же какая штука — чем старше отряд был, тем реже было последнее."
     th "Опасаются, что пионеры спросонок могут и запульнуть чем-нибудь?"
-    dreamgirl "Скорее, уважают право подростков немного постесняться своих молодых, красивых вожатых." 
+    dreamgirl "Скорее, уважают право подростков немного постесняться своих молодых, красивых вожатых."
     dreamgirl "Хотя некоторые вовсе не понимают значение этого слова. Вон, например."
     "На крылечке домика сонно потягивалась Мику, явно не спешащая ни умываться, ни вообще просыпаться."
     "Я помахал ей рукой, и она улыбнулась было мне, но тут же, ойкнув, прикрыла ладошкой зевок."
@@ -465,7 +465,7 @@ label alt_day6_us_7dl_exercises:
     show mt angry pioneer with dspr
     mt "Вы {b}обязаны{/b} быть на репетиции!"
     mt "Если я узнаю, что вы сачковали, а на эстраду не явились… В общем, я вас предупредила!"
-    th "Ой, боюсь-боюсь." 
+    th "Ой, боюсь-боюсь."
     if alt_day4_neu_us_pixies == 3:
         "В свете всего вчерашнего, что мы успели учудить с мелкой и её сегодняшним исчезновением…"
         "Говоря короче, не пугали меня угрозы и не трогали."
@@ -483,7 +483,7 @@ label alt_day6_us_7dl_exercises:
     mt "А вечером после ужина — прощальная дискотека!"
     mt "Так как она праздничная, то будет продлена на целый час для старших отрядов!"
     "Ликующий вопль заглушил и слова вожатой, и не к спеху заоравший горн."
-    play music sfx_7dl["eat_horn"] fadein 3 
+    play music sfx_7dl["eat_horn"] fadein 3
     play ambience ambience_camp_center_evening
     "Ольга Дмитриевна что-то ещё говорила, но никто её не слушал."
     show mt normal pioneer with dspr
@@ -496,7 +496,7 @@ label alt_day6_us_7dl_exercises:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day6_us_7dl_breakfast:
     scene bg int_dining_hall_people_sunset
     with dissolve
@@ -639,7 +639,7 @@ label alt_day6_us_7dl_breakfast:
                 "Славя улыбнулась, когда я поинтересовался:"
                 me "Можно?"
                 "И кивнула на место рядом с собой."
-                me "Приятного аппетита!" 
+                me "Приятного аппетита!"
                 sl "И тебе!"
                 "Бутерброды и каша — пища наша."
                 "Сегодня ради разнообразия нас не травили какао со сгущёнкой, кофе со сгущёнкой же и прочей отравой."
@@ -671,7 +671,7 @@ label alt_day6_us_7dl_breakfast:
                 sl "Но у меня есть перечень обязанностей, и я их по мере возможностей выполняю."
                 me "Добровольных, наверное, обязанностей."
                 window hide
-                show sl smile pioneer 
+                show sl smile pioneer
                 with fade2
                 "Славя кивнула."
                 sl "Сегодня у меня как раз появилось время разобраться немного на складе с формой и бельём."
@@ -783,7 +783,7 @@ label alt_day6_us_7dl_breakfast:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day6_us_7dl_helping:
     scene bg ext_dining_hall_near_day
     with dissolve
@@ -1105,7 +1105,7 @@ label alt_day6_us_7dl_helping:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day_us_7dl_preps:
     scene bg ext_musclub_day with dissolve
     play ambience ambience_camp_center_day fadein 6
@@ -1566,7 +1566,7 @@ label alt_day_us_7dl_preps:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day6_us_7dl_warehouse:
     play ambience ambience_camp_center_night
     play music music_7dl["old_kiss"] fadein 3
@@ -1670,7 +1670,7 @@ label alt_day6_us_7dl_warehouse:
     "Она оглядела меня и согласно кивнула."
     sl "Не такой. Но у нас здесь комплекты всё же под детишек поменьше."
     if alt_day4_neu_us_pixies != 0:
-        sl "И… Мне может показаться, но ты как будто стал поменьше." 
+        sl "И… Мне может показаться, но ты как будто стал поменьше."
         me "Истоптался."
         show sl smile pioneer with dspr
         sl "Всё смеёшься. А между прочим в нашу первую встречу ты смотрел с гораздо большей высоты."
@@ -1850,7 +1850,7 @@ label alt_day6_us_7dl_warehouse:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day6_us_7dl_un_met:
     scene bg ext_square_day with dissolve
     play ambience ambience_camp_center_day fadein 3
@@ -2232,7 +2232,7 @@ label alt_day6_us_7dl_un_met:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day6_us_7dl_dinner:
     play music music_7dl["afraid_of_destiny"] fadein 2
     scene bg int_dining_hall_people_day with dissolve
@@ -2336,7 +2336,7 @@ label alt_day6_us_7dl_dinner:
         th "Счастливая, румяная, довольная…"
         dreamgirl "Счастливая."
         th "Да."
-        show sl happy pioneer at zenterright 
+        show sl happy pioneer at zenterright
         dreamgirl "И Славя тоже счастливая."
         "Продолжало свой иезуитский шёпот подсознание."
         dreamgirl "Смотри, как глаза блестят!"
@@ -2507,7 +2507,7 @@ label alt_day6_us_7dl_dinner:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day6_us_7dl_soundcheck:
     scene bg ext_square_day with dissolve
     play ambience ambience_camp_center_day fadein 3
@@ -2768,7 +2768,7 @@ label alt_day6_us_7dl_soundcheck:
     "Я почувствовал, как вспыхнули кончики ушей."
     me "Я не присматривал."
     me "И я — не надзор!"
-     
+
     mt "Конечно, не надзор! Ты — друг!"
     dreamgirl "А не сосиска!"
     show mi smile pioneer at left with dissolve
@@ -2819,7 +2819,7 @@ label alt_day6_us_7dl_soundcheck:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day6_us_7dl_button:
     play music music_list["i_want_to_play"] fadein 3
     scene bg ext_dining_hall_near_day
@@ -3059,12 +3059,12 @@ label alt_day6_us_7dl_button:
     "Хотя хотелось, что уж там."
     window hide
     scene bg ext_house_of_dv_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0,0)
+        linear 0.1 pos (-5,-5)
+        linear 0.1 pos (5,5)
+        pos (0,0)
+        linear 0.1 pos (0,-5)
+        linear 0.1 pos (0,5)
         repeat
     with dissolve
     "Но так или иначе, мы понеслись по лагерю, искусно лавируя между там и сям вышагивающими вожатыми, пионерами…"
@@ -3073,12 +3073,12 @@ label alt_day6_us_7dl_button:
     stop music fadeout 3
     window hide
     scene bg ext_square_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0,0)
+        linear 0.1 pos (-5,-5)
+        linear 0.1 pos (5,5)
+        pos (0,0)
+        linear 0.1 pos (0,-5)
+        linear 0.1 pos (0,5)
         repeat
     with dissolve
     play music music_list["went_fishing_caught_a_girl"] fadein 3
@@ -3513,24 +3513,24 @@ label alt_day6_us_7dl_button:
                 "Хохочущее знакомым смехом!"
                 "Сгруппировавшись и перекатившись, оно, завывая и улюлюкая, бросилось бежать."
                 scene bg ext_clubs_day with flash:
-                    pos (0,0) 
-                    linear 0.1 pos (-5,-5) 
-                    linear 0.1 pos (5,5) 
-                    pos (0,0) 
-                    linear 0.1 pos (0,-5) 
-                    linear 0.1 pos (0,5) 
+                    pos (0,0)
+                    linear 0.1 pos (-5,-5)
+                    linear 0.1 pos (5,5)
+                    pos (0,0)
+                    linear 0.1 pos (0,-5)
+                    linear 0.1 pos (0,5)
                     repeat
                 with dissolve
                 "Ну, а я, соответственно, за ним."
                 th "Догоню — высеку."
                 "Пообещал себе я."
                 scene bg ext_square_day with flash:
-                    pos (0,0) 
-                    linear 0.1 pos (-5,-5) 
-                    linear 0.1 pos (5,5) 
-                    pos (0,0) 
-                    linear 0.1 pos (0,-5) 
-                    linear 0.1 pos (0,5) 
+                    pos (0,0)
+                    linear 0.1 pos (-5,-5)
+                    linear 0.1 pos (5,5)
+                    pos (0,0)
+                    linear 0.1 pos (0,-5)
+                    linear 0.1 pos (0,5)
                     repeat
                 with dissolve
                 "Внутренний голос пытался добавлять какие-то похабности, но мной сейчас двигала жажда воспитательной мести!"
@@ -4535,7 +4535,7 @@ label alt_day6_us_px_carrier:
     stop music fadeout 3
     stop ambience fadeout 1
     return
-    
+
 label alt_day6_us_px_dinner:
     scene bg int_dining_hall_people_day
     with dissolve
@@ -4629,7 +4629,7 @@ label alt_day6_us_px_dinner:
     "Немного погодя из дверей столовой вышла Ольга Дмитриевна."
     "Но с ней я общаться уже не хотел."
     window hide
-    scene bg ext_houses_day 
+    scene bg ext_houses_day
     with dissolve
     "Догнала меня Ульяна лишь на перекрёстке — после обеда был законный тихий час, и тратить его непонятно на что мне не хотелось совершенно."
     show us sad sport with dissolve
@@ -4674,7 +4674,7 @@ label alt_day6_us_px_dinner:
     stop music fadeout 3
     stop ambience fadeout 1
     return
-    
+
 label alt_day6_us_px_Lena:
     scene bg ext_un_hideout_day_7dl
     with dissolve
@@ -4781,7 +4781,7 @@ label alt_day6_us_px_party_sl:
     stop music fadeout 3
     stop ambience fadeout 1
     return
-            
+
 label alt_day6_us_px_far_gate:
     scene bg ext_backdoor_day_7dl
     with dissolve
@@ -4825,7 +4825,7 @@ label alt_day6_us_px_far_gate:
     stop music fadeout 3
     stop ambience fadeout 1
     return
-    
+
 label alt_day6_us_7dl_concert:
     scene bg ext_stage_big_day
     with dissolve
@@ -5047,7 +5047,7 @@ label alt_day6_us_7dl_concert:
             "Продолжила вожатая, когда в тишину вонзился перестук перкуссии."
             me "Есть такое."
             "Не стал отпираться я."
-            me "И что? Имя как имя. Услышали, поди, от Кати вашей, а та — от Даньки или его оболтусов." 
+            me "И что? Имя как имя. Услышали, поди, от Кати вашей, а та — от Даньки или его оболтусов."
             "Включил дурачка я."
             show mt grin pioneer with dspr
             mt "Нет, всё намного веселее."
@@ -5159,7 +5159,7 @@ label alt_day6_us_7dl_concert:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day6_us_7dl_supper:
     scene expression Dawn("bg ext_dining_hall_away_day")
     with dissolve
@@ -5469,7 +5469,7 @@ label alt_day6_us_7dl_supper:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day6_us_7dl_disco:
     scene anim_square_preparty
     with dissolve
@@ -5754,7 +5754,7 @@ label alt_day6_us_7dl_disco:
             "Я уже видел это платье, и с тех пор оно не стало ниичуточки хуже."
             "Всё тоже простенькое с виду, но так выгодно подчёркивающее всё, что необходимо подчеркнуть."
         else:
-            "Платье, в которое она переоделась, выглядело ещё лучше, чем то, в котором она выступала." 
+            "Платье, в которое она переоделась, выглядело ещё лучше, чем то, в котором она выступала."
         "Перехватив мой взгляд, она рассмеялась и качнула головой, подзывая."
     elif alt_day4_neu_us_pixies != 0:
         show ml grin pioneer with dissolve
@@ -6282,7 +6282,7 @@ label alt_day6_us_7dl_disco:
             me "Пусть я потом и повёл себя как свинтус."
         else:
             un "Никого сюда не водила. Никогда."
-            me "Значит, я здесь пионер? Первооткрыватель?" 
+            me "Значит, я здесь пионер? Первооткрыватель?"
         show un shy dress with dspr
         un "Только не подумай, что я говорю это всем."
         un "Мне вообще очень, очень тяжело разговаривать с тобой вот так, глаза в глаза."
@@ -6616,7 +6616,7 @@ label alt_day6_us_7dl_disco:
                     mi "И от меня сбежал, а я ждала, ждала…"
                     me "Боюсь надоесть, извини уж."
                 else:
-                    me "Жалею лишь о том, что тогда, во второй свой день, не пришёл к тебе в клуб познакомиться поближе."  
+                    me "Жалею лишь о том, что тогда, во второй свой день, не пришёл к тебе в клуб познакомиться поближе."
                     mi "И мы успели бы гораздо больше."
                     th "Куда уж больше."
                 "Я поцеловал её макушку."
@@ -6772,7 +6772,7 @@ label alt_day6_us_7dl_disco:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day6_us_7dl_tea:
     scene bg ext_house_of_mt_night
     with fade
@@ -7042,7 +7042,7 @@ label alt_day6_us_px_afterwords:
     "Но когда их было много…"
     "Вот он и искал ещё Огоньков — чтобы, объединившись с ними, снова помочь глупому хозяину."
     "Прошло, должно быть, около часа, так как музыка с танцплощадки стихла окончательно."
-    "Запрокинутое над головой небо стало бездонным, а я окончательно разуверился в чудесах." 
+    "Запрокинутое над головой небо стало бездонным, а я окончательно разуверился в чудесах."
     "Но всё равно продолжал сидеть и сидеть, одинокий, всеми брошенный и чуть не рыдающий от жалости к самому себе."
     window hide
     scene bg ext_boathouse_night with dissolve
@@ -7159,7 +7159,7 @@ label alt_day6_us_7dl_sleeptime:
     stop ambience fadeout 3
     with fade
     return
-    
+
 label alt_day7_us_7dl_begin:
     scene bg int_house_of_mt_sunset
     with dissolve
@@ -7780,7 +7780,7 @@ label alt_day7_us_7dl_breakfast:
     stop music fadeout 3
     stop ambience fadeout 1
     return
-    
+
 label alt_day7_us_7dl_rendezvous2:
     if alt_day6_us_7dl_tr:
         scene bg ext_dining_hall_near_day
@@ -7900,7 +7900,7 @@ label alt_day7_us_7dl_rendezvous2:
         show us normal pioneer with dspr
         "Ульяна вздохнула:"
         us "Я думала, ты знаешь! Дядя Боря не только физру преподаёт, он ещё и фотограф."
-        if alt_day3_sl_day_event:   
+        if alt_day3_sl_day_event:
             me "И что, он вот так просто их отдаст?"
             us "Почему нет?"
         if alt_day2_mi_snap:
@@ -8330,7 +8330,7 @@ label alt_day7_us_7dl_rendezvous2:
         stop music fadeout 8
         play sound sfx_open_dooor_campus_1
         pause(1)
-        show us normal pioneer at left 
+        show us normal pioneer at left
         show dv grin sport at zenterright
         with move
         play music music_7dl["shehasgone"] fadein 3
@@ -8785,7 +8785,7 @@ label alt_day7_us_7dl_rendezvous2:
     stop music fadeout 3
     stop ambience fadeout 1
     return
-    
+
 label alt_day7_us_7dl_packing:
     scene bg ext_house_of_mt_day
     with dissolve
@@ -8991,7 +8991,7 @@ label alt_day7_us_7dl_packing:
     stop music fadeout 3
     stop ambience fadeout 1
     return
-    
+
 label alt_day7_us_7dl_leaving:#Ещё немного — и домой. Вот только бы найти дорогу.
     scene bg ext_camp_entrance_day
     with dissolve
@@ -9174,7 +9174,7 @@ label alt_day7_us_7dl_leaving:#Ещё немного — и домой. Вот �
         $ renpy.pause(4.4, hard=True)
         window hide
         scene bg ext_camp_entrance_day
-        show un normal dress 
+        show un normal dress
         with dissolve
         "Телефон жалобно зажужжал и отключился."
         "Я даже не успел посмотреть, сохранилось ли фото."
@@ -9533,7 +9533,7 @@ label alt_day7_us_7dl_leaving:#Ещё немного — и домой. Вот �
         "Ещё одна."
         dreamgirl "Лето завершено."
         us "Время… время просыпаться, Сёмыч!"
-        if (persistent.us_7dl_un or persistent.us_7dl_mi) and persistent.us_px_rf_good and alt_day4_neu_us_pixies != 0: 
+        if (persistent.us_7dl_un or persistent.us_7dl_mi) and persistent.us_px_rf_good and alt_day4_neu_us_pixies != 0:
             window hide
             scene bg int_bus_night
             show us sad sport
@@ -9782,7 +9782,7 @@ label alt_day7_us_7dl_leaving:#Ещё немного — и домой. Вот �
     stop music fadeout 3
     stop ambience fadeout 1
     return
-    
+
 label alt_day7_us_7dl_wakeup:
     scene bg intro_xx
     with fade
@@ -9901,7 +9901,7 @@ label alt_day7_us_7dl_wakeup:
     $ renpy.pause(3, hard=True)
     scene anim intro_4
     show blind2_1
-    with fade 
+    with fade
     "Иногда я вижу кого-то на улице, и замирает внутри что-то."
     "Я с криком кидаюсь вдогонку, настигаю… Извиняюсь."
     "В последнее время так много людей стали красить волосы в экзотические цвета, делать себе экзотические причёски."
@@ -9995,7 +9995,7 @@ label alt_day7_us_7dl_wakeup:
         "Да она куда более настоящая, чем всё меня окружающее!"
         "Я же…"
         window hide
-        scene bg semen_room_window 
+        scene bg semen_room_window
         play sound_loop sfx_street_traffic_outside fadein 2
         "Я напоминал себе старую артхаусную фотографию, исполненную в технике сепии."
         "Девушка, гуляющая с псом."
@@ -10531,7 +10531,7 @@ label alt_day7_us_7dl_lenaforever:
     call alt_7dl_titles
     $ renpy.pause(2)
     return
-    
+
 label alt_day7_us_7dl_reunite:
     play music music_7dl["iamagod2"] fadein 3
     scene bg ext_winterpark_7dl with dissolve
@@ -10774,11 +10774,11 @@ label alt_day7_us_7dl_ever_after:
     scene anim intro_1
     with fade2
     "Красный, серый, белый."
-    "В голове всплывают строчки из полузабытой книги." 
-    "Должно быть, автор написал их тогда, когда ему окончательно надоела предопределённость." 
-    "{i}…Нет, не все в этом мире бушующем призрачно, братие.{/i}" 
-    "{i}От субъектов, живущих в домах, до фасадов домов.{/i}" 
-    "{i}От разнузданных авторов до охреневших читателей.{/i}" 
+    "В голове всплывают строчки из полузабытой книги."
+    "Должно быть, автор написал их тогда, когда ему окончательно надоела предопределённость."
+    "{i}…Нет, не все в этом мире бушующем призрачно, братие.{/i}"
+    "{i}От субъектов, живущих в домах, до фасадов домов.{/i}"
+    "{i}От разнузданных авторов до охреневших читателей.{/i}"
     "{i}От бессмысленных слов до немых, бессловесных томов…{/i}"
     play sound sfx_7dl["brake"] fadein 4
     "А я, двигаясь как скверно сделанная марионетка, повернулся в сторону растущего капота жемчужного «Гетц», зажмурил глаза, готовясь к столкновению…"
@@ -10815,7 +10815,7 @@ label alt_day7_us_7dl_ever_after:
     "Немного согревшись, она с жадным любопытством оглядела окрестности."
     us "Мы у тебя дома?"
     me "Практически."
-    play sound sfx_7dl["car_passing"] 
+    play sound sfx_7dl["car_passing"]
     "Пешком отсюда до моей берлоги было всего ничего — пять минут."
     "Возможно, располагайся остановка чуть дальше, я бы так никогда в жизни и не выбрался на улицу."
     "И не произошло бы этой глупой, случайной истории."
@@ -10896,7 +10896,7 @@ label alt_day7_us_7dl_ever_after:
     "Где-то в запасниках должна быть пенка и запасной плед."
     "А если повезёт, то и раскладушка."
     stop music fadeout 6
-    window hide 
+    window hide
     scene anim prolog_15
     with diam
     "А поутру они проснулись."
@@ -11489,7 +11489,7 @@ label alt_day7_us_7dl_ever_after:
     call alt_7dl_titles
     $ renpy.pause(2)
     return
-    
+
 label alt_day7_us_7dl_bad:
     play music music_7dl["misery"] fadein 3
     "Звонок трелью разносился по улице, пока я, глупо улыбаясь, ждал, что вот-вот щёлкнет что-то и детский голос спросит: «Кто там?»"
@@ -11661,7 +11661,7 @@ label alt_day7_us_7dl_bad:
     call alt_7dl_titles
     $ renpy.pause(2)
     return
-    
+
 label alt_day7_us_px_escape:
     scene bg ext_dining_hall_away_day
     with dissolve
@@ -11749,7 +11749,7 @@ label alt_day7_us_px_escape:
     us "Мы ещё по короткому пути идём."
     stop music fadeout 3
     us "Но это нормально. Если идти скучным путём, то мы до вечера не управимся."
-    window hide 
+    window hide
     scene bg ext_sandpit_day_7dl
     with dissolve
     play ambience ambience_forest_day fadein 5
@@ -11787,7 +11787,7 @@ label alt_day7_us_px_escape:
         "Оглядела нас с Ульянкой и Леной по очереди."
         "Потом посмотрела ещё раз на перильца, изрезанными досужими пионерами."
         sl "А хотя… Это же лес памяти! Здесь некоторые несознательные свои автографы оставляют."
-        show sl serious pioneer 
+        show sl serious pioneer
         show us shy sport
         show un shy pioneer
         with dissolve
@@ -11983,7 +11983,7 @@ label alt_day7_us_px_escape:
         window hide
         scene bg ext_busstop_sun_7dl
         with dissolve
-        "И его правильность подтвердило жизнерадостное, басовитое гудение из-за горизонта." 
+        "И его правильность подтвердило жизнерадостное, басовитое гудение из-за горизонта."
     else:
         play music music_7dl["exodus"] fadein 3
         "А ещё часом спустя мы оказались на месте."
@@ -12021,7 +12021,7 @@ label alt_day7_us_px_escape:
         "Лена вздохнула и уставилась себе под ноги, чертя мыском обуви что-то в песке."
         "Кажется, её мой ответ не удовлетворил совершенно."
         me "А ты?"
-        show un surprise pioneer 
+        show un surprise pioneer
         with dissolve
         un "Я?"
         me "Зачем в поиск с нами пошла?"
@@ -12068,7 +12068,7 @@ label alt_day7_us_px_escape:
     stop music fadeout 3
     stop ambience fadeout 1
     return
-    
+
 label alt_day7_us_px_bus:
     scene cg d7_bus_night_7dl
     with dissolve
@@ -12097,7 +12097,7 @@ label alt_day7_us_px_bus:
     window hide
     play sound sfx_intro_bus_door_open
     $ renpy.pause(3, hard=True)
-    scene anim intro_11 
+    scene anim intro_11
     with fade
     "Вызывая странное чувство дежавю, автобус остановился прямо напротив нас, я оказался напротив дверей — и створки с шипением разъехались в разные стороны."
     me "Неужели, просто так и поедем? А как же…"
@@ -12116,7 +12116,7 @@ label alt_day7_us_px_bus:
         "Пошли!":
             $ alt_day7_us_px_escaped = True
             window hide
-            scene op_back 
+            scene op_back
             with fade
             us "Ура!"
             "Ульяна подскочила, втолкнула меня в салон и протащила к сиденью над колесом."
@@ -12159,7 +12159,7 @@ label alt_day7_us_px_bus:
     stop music fadeout 3
     stop ambience fadeout 1
     return
-    
+
 label alt_day7_us_px_wastelands:
     play ambience sfx_bus_interior_moving fadein 2
     "Лишь мальчик и девочка, сидящие на одном сиденье. {w}И девочка, сидящая через проход."
@@ -12433,7 +12433,7 @@ label alt_day7_us_px_fairytale:
     call alt_7dl_titles
     $ renpy.pause(2)
     return
-    
+
 label alt_day7_us_px_mourning:
     play music music_list["door_to_nightmare"] fadein 4
     scene bg ext_backdoor_day_7dl
@@ -12463,24 +12463,24 @@ label alt_day7_us_px_mourning:
         play ambience ambience_camp_center_day fadein 7
         window hide
         scene bg ext_dining_hall_away_day with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
+            pos (0,0)
+            linear 0.1 pos (-5,-5)
+            linear 0.1 pos (5,5)
+            pos (0,0)
+            linear 0.1 pos (0,-5)
+            linear 0.1 pos (0,5)
             repeat
         with dissolve
         "Она с места стартанула в сторону площади, а я припустил вслед за ней."
         $ volume(0.8, "sound")
         window hide
         scene bg ext_square_day with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
+            pos (0,0)
+            linear 0.1 pos (-5,-5)
+            linear 0.1 pos (5,5)
+            pos (0,0)
+            linear 0.1 pos (0,-5)
+            linear 0.1 pos (0,5)
             repeat
         with dissolve
     else:
@@ -12541,12 +12541,12 @@ label alt_day7_us_px_mourning:
         sl "Неужели опоздали?"
     window hide
     scene bg ext_clubs_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0,0)
+        linear 0.1 pos (-5,-5)
+        linear 0.1 pos (5,5)
+        pos (0,0)
+        linear 0.1 pos (0,-5)
+        linear 0.1 pos (0,5)
         repeat
     with dissolve
     "Ещё рывок к воротам."
@@ -12710,7 +12710,7 @@ label alt_day7_us_px_mourning:
     stop music fadeout 3
     stop ambience fadeout 1
     return
-    
+
 label alt_day7_us_px_dejavu:
     play music music_7dl["pathways"] fadein 3
     scene anim intro_14

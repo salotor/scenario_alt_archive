@@ -41,7 +41,7 @@
         scene expression Noir("bg int_attic2_day_7dl")
         show prologue_dream
         with fade
-    
+
         "Звуковая завеса."
     window hide
     scene expression Noir("bg ext_old_building_night")

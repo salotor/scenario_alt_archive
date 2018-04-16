@@ -59,7 +59,7 @@
     $ night_time()
     stop ambience
     scene bg ext_house_of_mt_night_without_light
-    show mi smile pioneer 
+    show mi smile pioneer
     with dissolve
 
     mi "Ой, привет, Сенечка!"
@@ -290,12 +290,12 @@ label alt_day4_mi_dj_hedg_hunt:
     window hide
     play music music_7dl["catch_the_hedge"] fadein 2
     scene cg d4_mi_hedgehod_7dl:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0,0)
+        linear 0.1 pos (-5,-5)
+        linear 0.1 pos (5,5)
+        pos (0,0)
+        linear 0.1 pos (0,-5)
+        linear 0.1 pos (0,5)
         repeat
     with dissolve
     "Из тёмного прогала под обиталищем Лены и Мику в лунный свет вырвалась та самая округлая хищная тень, по чью душу я здесь и стоял."
@@ -325,12 +325,12 @@ label alt_day4_mi_dj_hedg_hunt:
     play sound sfx_slavya_run
     $ night_time()
     scene bg ext_musclub_night_7dl:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0,0)
+        linear 0.1 pos (-5,-5)
+        linear 0.1 pos (5,5)
+        pos (0,0)
+        linear 0.1 pos (0,-5)
+        linear 0.1 pos (0,5)
         repeat
     with dissolve
 
@@ -378,7 +378,7 @@ label alt_day4_mi_dj_hedg_hunt:
     "Я пожал плечами."
     "Как-то впервые приходится ловить ежа, и я понятия не знаю, что с ним делать дальше."
     me "Да отпущу, наверное. Вряд ли кому-то в лагере нужен громко сопящий и топающий по ночам питомец."
-    show mi laugh pioneer close with dspr 
+    show mi laugh pioneer close with dspr
     mi "Что верно, то верно. Давай отнесём его за территорию."
     "Отсюда рукой подать было до забора, поэтому направление даже выбирать не пришлось."
     "Ёжик так и лежал у меня на ладонях, свернувшись клубком, как делают все ежи в минуты опасности, и небольно колол пальцы сквозь рубашку."
@@ -454,7 +454,7 @@ label alt_day4_mi_dj_morning:
         scene bg int_house_of_mt_day
         show mt normal pioneer
         with dspr
-    
+
         "Впрочем, нашу вожатую, похоже, такими вещами, как злобный взгляд, уже не проймёшь — так как она удовлетворённо улыбнулась и кивнула."
         mt "Поднимайся, через полчаса сюда комиссия придёт, так что у тебя времени впритык собраться и позавтракать."
         me "Комиссия?"
@@ -471,7 +471,7 @@ label alt_day4_mi_dj_morning:
         show unblink
         scene bg int_house_of_mt_day
         with dissolve
-    
+
         "Выспался я отлично, хотя и проспал всё на свете — брошенный на часы взгляд уведомил меня, что сейчас начало одиннадцатого, и Ольга Дмитриевна так и не сумела меня добудиться."
         play sound sfx_open_dooor_campus_1
         show mt normal pioneer with moveinleft
@@ -539,7 +539,7 @@ label alt_day4_mi_dj_day:
     dreamgirl "Нагнал мрачняку."
     window hide
     scene bg ext_clubs_day with dissolve
-    pause(3) 
+    pause(3)
     stop ambience fadeout 2
     stop music fadeout 6
     play sound sfx_open_door_clubs
@@ -566,10 +566,10 @@ label alt_day4_mi_dj_day:
     window hide
     with fade
     return
-    
+
 label alt_day4_mi_dj_radio:
     scene bg int_clubs_dj_7dl
-    show mi normal pioneer at center 
+    show mi normal pioneer at center
     with dissolve
     "Мику была какая-то расхристанная, лицо помятое, волосы чуть встрёпаны — видимо, недостаток сна ночью давал о себе знать."
     "Хотя глаза горели лихорадочным блеском, а на щеках играл румянец — кажется, девочка нашла себе занятие по нраву."
@@ -668,7 +668,7 @@ label alt_day4_mi_dj_radio:
         play sound sfx_open_door_clubs_nextroom
         scene bg int_clubs_male2_night
         show mi normal pioneer with dspr
-    
+
         "Мику повернулась на шум открывающейся двери и вопросительно посмотрела на меня."
         me "Вот."
         "Я протянул ей плеер со штекером."
@@ -704,7 +704,7 @@ label alt_day4_mi_dj_radio:
     "Когда по волосам стекает хмарь, так и не превратившаяся в дождь, а внутри творится точно такое же свинцово-непроглядное непотребство…"
     "…когда самым простым и очевидным выходом кажется наглотаться таблеток, выйти в окно, спрыгнуть с моста, попасть под порвавшийся высоковольтный провод, угодить под трамвай и на виадуке быть испепелённым взрывом выстроенной в обход  всех правил АЗС…"
     "…когда всё, что есть — это ты, дождь, Питер и узкие бойницы глаз, сквозь которые на мир вызверилось забитое твоё отчаяние…"
-    
+
     "Ты толкаешься ногой от асфальта и распахиваешь крылья, пронзая собой серую хмарь на плечах, ты бежишь со скорость спортивного автомобиля, тебе нипочём ледяной вакуум космоса и неспешное капанье секунд."
     "Ты встречаешь из бесконечной осени человека, которого не видел миллионы лет и от объятий некуда вдохнуть, ты в одиночку противостоишь десяткам противников, неизменно побеждая, ты выходишь из собственного тела взглядом в небо и отразившись от облаков попадаешь внутрь той, что всю свою жизнь ждала одного тебя."
     "Ты подобен богу в этот момент, ты подобен целому миру."
@@ -1017,7 +1017,7 @@ label alt_day4_mi_dj_cleaning:
     $ persistent.sprite_time = "night"
     $ night_time()
     scene bg int_clubs_male2_night
-    show mi normal pioneer at center 
+    show mi normal pioneer at center
     with dissolve
     play ambience ambience_clubs_inside_day fadein 3
     "Электроник что-то пробормотал мне в спину, но я уже не слушал к тому моменту."
@@ -1072,7 +1072,7 @@ label alt_day4_mi_dj_cleaning:
     "Дальше уже было совсем просто — медленно, конечно, зато наверняка."
     "На улицу тихой сапой отправились поломанные табуретки, пустые коробки, рваные карты, тубусы с какой-то графитовой трухой внутри, велосипедное колесо, доски и светомаскировочный фанерный щит."
     "Красному знамени самое место было в основном помещении — как ни крути, это практически религиозный символ для местной молодёжи."
-    window hide 
+    window hide
     $ persistent.sprite_time = "day"
     $ day_time()
     stop ambience
@@ -1173,7 +1173,7 @@ label alt_day4_mi_dj_cleaning:
         scene bg ext_clubs_day with dissolve
         play music music_list["my_daily_life"] fadein 1
         play ambience ambience_camp_center_day fadein 1
-    
+
         "Времени до обеда оставалось всё меньше, значит, едва ли Мику заставят устраивать вещание прямо сейчас."
         th "Что ж. Тем выше шанс пересечься на обеде."
         dreamgirl "Скажешь, зачем ты к этой девчонке прицепился?"
@@ -1213,12 +1213,12 @@ label alt_day4_mi_dj_cleaning:
             dreamgirl "Главное, не говори ей, что слышал это — отомстит."
         scene bg ext_boathouse_day with fade
         play ambience ambience_boat_station_day fadein 2
-    
+
         "Склад находился в самом сердце лагеря, у столовой, и если бы я так и дефилировал в своей перепачканной рубашке, то, полагаю, уже создал известное реноме о том, как ходят здесь пионеры."
         "Не к месту проснувшаяся ответственность завернула меня в обход — через лодочную станцию."
         window hide
         scene bg ext_un_hideout_day_7dl with dissolve
-    
+
         "По ничейной территории, отмеченной галечным пляжем и видной косой, вдающейся далеко в залив."
         window hide
         scene bg ext_beach_day with fade
@@ -1252,7 +1252,7 @@ label alt_day4_mi_dj_cleaning:
         scene bg int_warehouse_day_7dl
         show sl normal pioneer
         with dissolve
-    
+
         "Славя сидела за рабочим столом и что-то писала на жёлтой разлинованной бумаге в огромной учётной книге."
         "Увидев меня, она мгновенно поднялась и, в своей обычной манере, неотразимо улыбнулась."
         sl "Привет. Ты с чем ко мне?"
@@ -1328,12 +1328,12 @@ label alt_day4_mi_dj_cleaning:
         me "А если ты перестанешь надо мной смеяться, то мы и в столовую поспеем!"
         show sl laugh pioneer with dspr
         sl "Прости, ничего не могу поделать. Ты такой забавный, когда смущаешься."
-        window hide 
+        window hide
         play sound sfx_close_door_clubs_nextroom
         scene bg ext_warehouse_day_7dl
         show sl normal pioneer
         with dissolve
-    
+
         "Захлопнув дверь и щёлкнув новомодным пружинным замком, Славя скомандовала:"
         sl "Вперёд! На штурм столовой!"
         menu:
@@ -1412,14 +1412,14 @@ label alt_day4_mi_dj_dinner:
     dreamgirl "Не гонит — так какого рожна тебе ещё, морда протокольная? Радуйся,  целая японская певица изволит тебя терпеть."
     th "Наверное, ей есть какие-то положительные стороны в моём обществе — ну, не знаю, поднять что-нибудь, отнести."
     th "В клубе, опять же, помог с уборкой."
-    show mi normal pioneer at center 
+    show mi normal pioneer at center
     with dspr
     mi "Приятного аппетита."
     "Пожелала она, потирая руки и взяв ложку наизготовку."
     me "Спасибо."
     "Картина была до того забавной, что я ничуть не удивился самовольной улыбке, занявшей уголки губ."
     me "И тебе того же и по тому же месту."
-    show mi smile pioneer at center 
+    show mi smile pioneer at center
     with dspr
     mi "Ты сейчас это так забавно произнёс."
     "Мику заулыбалась и подвинула ко мне стул, заскрипев на всю столовую ножками о кафель."
@@ -1605,7 +1605,7 @@ label alt_day4_mi_dj_dinner:
     window hide
     with fade
     return
-            
+
 label alt_day4_mi_dj_dinner2:
     scene bg ext_dining_hall_away_day
     with dissolve
@@ -1984,7 +1984,7 @@ label alt_day4_mi_dj_repetition:
     $ day_time()
     scene bg ext_houses_day
     with dissolve
-    show un smile sport at center 
+    show un smile sport at center
     show us smile sport at right
     with dspr
 
@@ -2058,12 +2058,12 @@ label alt_day4_mi_dj_repetition:
     me "У неё же живот болел?"
     mt "Прошёл. А попрыгать немного у сетки даже полезно!"
     show dv normal sport far at fleft
-    show mt normal pioneer far at left 
+    show mt normal pioneer far at left
     with moveinleft
     show us smile sport far at right
     show un smile sport far at fright
     with moveinright
-    
+
     "Трое на двое. Учитывая, что у них вожатая — как раз очень даже честно."
     me "Мяч в игру. Подача за стороной вожатой."
     "Привычно констатировал я."
@@ -2104,7 +2104,7 @@ label alt_day4_mi_dj_repetition:
     hide un
     hide us
     pause(2)
-    window hide 
+    window hide
     scene bg ext_volley_court_7dl
     with blind_l
     "И, когда Ульяна укатила мячик в дом, и вслед за ней разошлись остальные пионеры, поняв, что шоу на сегодня завершилось, на скамеечках остались только мы с Леной."
@@ -2468,7 +2468,7 @@ label alt_day4_mi_dj_evening:
         scene bg int_clubs_dj_night_7dl
         show mi normal pioneer
         with dissolve
-    
+
         play music music_7dl["will_you"] fadein 6
         "Я даже удивиться не успел — настолько быстро меня схватили за руку и утащили в помещение."
         "И удивительное дело — если в прошлый раз мне действительно приходилось заставлять себя заходить в клуб, я будто в стоячую воду нырял, то сейчас некое сопротивление исчезло."
@@ -2504,7 +2504,7 @@ label alt_day4_mi_dj_evening:
         scene bg int_clubs_dj_night_7dl
         show mi normal pioneer
         with dissolve
-    
+
         play music music_7dl["will_you"] fadein 6
     play ambience ambience_medstation_inside_night fadein 2
     "Оказавшись внутри, Мику довольно улыбнулась и тут же завертелась среди аппаратуры, сняв «долгоиграющую» плёнку и поставив вместо неё что-то лёгкое на пластинке."
@@ -2771,7 +2771,7 @@ label alt_day4_mi_dj_night:
         dreamgirl "Что? А, пардон, заговариваюсь."
         window hide
         with flash
-    
+
         "На несколько секунд мгновение застыло, в ушах, будто ватой набитых в обратную сторону прокрутилось какое-то слово."
         dreamgirl "Я говорю, ты нравишься ей, она нравится тебе."
         th "Ну. Симпатия. Дальше что?"
@@ -3121,7 +3121,7 @@ label alt_day4_mi_dj_night:
     window hide
     with fade
     return
-    
+
 label alt_day4_mi_dj_sleeptime:
     $ night_time ()
     $ persistent.sprite_time = "night"
@@ -3427,7 +3427,7 @@ label alt_day5_begin_mi_dj:
     window hide
     play music music_list["awakening_power"] fadein 2
     hide mi
-    show dv_mt 
+    show dv_mt
     with dissolve
 
     "Мы резко обернулись к источнику шума."
@@ -3455,7 +3455,7 @@ label alt_day5_begin_mi_dj:
         window hide
         scene bg int_dining_hall_people_rain_7dl
         show dv guilty pioneer with dspr
-    
+
         "Алиса подошла ко мне и начала:"
         dv "Это… Новичок…"
         mt "Семён!"
@@ -3724,7 +3724,7 @@ label alt_day5_begin_mi_dj:
     window hide
     with fade
     return
-    
+
 label alt_day5_mi_dj_cinema:
     scene bg int_clubs_dj_7dl
     show mi smile pioneer
@@ -3807,7 +3807,7 @@ label alt_day5_mi_dj_cinema:
     me "Миров…"
     window hide
     with fade2
- 
+
     mi "Слушай, а я же, по сути, ничегошеньки об одном симпатичном юноше не знаю, непорядок, срочно исправлять!"
     me "Ты хочешь, чтобы я о себе рассказал?"
     show mi grin pioneer with dspr
@@ -4047,7 +4047,7 @@ label alt_day5_mi_dj_cinema:
     window hide
     with fade
     return
-    
+
 label alt_day5_mi_dj_dinner:
     scene bg int_dining_hall_people_day
     show mi smile pioneer
@@ -4160,7 +4160,7 @@ label alt_day5_mi_dj_dinner:
     me "Так, давай на улицу, и… Не знаю."
     "Оставлять её там стоять было как-то не очень красиво."
     me "Найди мне Электроника, пожалуйста, кажется, здесь фон от какой-то техники, надо будет поискать."
-    show mi sad pioneer with dspr 
+    show mi sad pioneer with dspr
     me "Хорошо?"
     mi "Договорились!"
     hide mi with easeoutright
@@ -4388,11 +4388,11 @@ label alt_day5_mi_dj_dinner:
     pause(1)
     $ persistent.sprite_time = "day"
     scene bg int_musclub_day
-    show mi normal pioneer at center 
+    show mi normal pioneer at center
     with blind_r
     play music music_list["so_good_to_be_careless"] fadein 5
     play ambience ambience_music_club_day fadein 3
-    
+
 
     "В этот раз мы решили не оставаться на улице — полуденный зной был ещё довольно ощутим, а мне, как хворому, решительно противопоказано было долго находиться на солнцепёке."
     "Это Мику так сказала, если что. Не я!"
@@ -4549,16 +4549,16 @@ label alt_day5_mi_dj_dinner:
     mi "Сеня…"
     dreamgirl "Ты истеричка!" with hpunch
     th "Врёшь. {w}Тут не истерика, тут впору искать консоль и отформатировать весь ваш мир вдребезги пополам!"
-    window hide 
+    window hide
     play sound sfx_open_door_kick
     pause(1)
     scene bg ext_musclub_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0,0)
+        linear 0.1 pos (-5,-5)
+        linear 0.1 pos (5,5)
+        pos (0,0)
+        linear 0.1 pos (0,-5)
+        linear 0.1 pos (0,5)
         repeat
     with dissolve
     "Не помня себя от ужаса, я насилу выбрался из помещения клуба и со всех ног кинулся в душную жару."
@@ -4575,27 +4575,27 @@ label alt_day5_mi_dj_dinner:
     th "Но я не хочу находиться внутри какой-то там реальности. Это что, я в компьютерной игре, да?"
     dreamgirl "Возможно."
     dreamgirl "А возможно, что это и есть настоящая реальность, а ты до этого видел скучный сон."
-    window hide 
+    window hide
     scene bg ext_square_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0,0)
+        linear 0.1 pos (-5,-5)
+        linear 0.1 pos (5,5)
+        pos (0,0)
+        linear 0.1 pos (0,-5)
+        linear 0.1 pos (0,5)
         repeat
     with dissolve
     if not loki:
         th "Логика в этом есть. Я никогда не ломал конечностей, несмотря на то, что все мои знакомые хоть раз да… Даже травм особых не получал."
     "Мысли прыгали с пятого на десятое, спорить с самим собой получалось с трудом, но страх гнал меня вперёд."
-    window hide 
+    window hide
     scene bg ext_boathouse_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0,0)
+        linear 0.1 pos (-5,-5)
+        linear 0.1 pos (5,5)
+        pos (0,0)
+        linear 0.1 pos (0,-5)
+        linear 0.1 pos (0,5)
         repeat
     with dissolve
     stop music fadeout 6
@@ -4754,7 +4754,7 @@ label alt_day5_mi_dj_dinner:
     window hide
     with fade
     return
-    
+
 label alt_day5_mi_dj_music_club1:
     play ambience ambience_camp_center_day fadein 3
     $ persistent.sprite_time = "day"
@@ -4847,7 +4847,7 @@ label alt_day5_mi_dj_clubs1:
     window hide
     with fade
     return
-    
+
 label alt_day5_mi_dj_camp_entrance1:
     $ persistent.sprite_time = "day"
     scene bg ext_camp_entrance_day
@@ -4940,7 +4940,7 @@ label alt_day5_mi_dj_camp_entrance1:
     window hide
     with fade
     return
-    
+
 label alt_day5_mi_dj_un_mi_house1:
     $ persistent.sprite_time = "day"
     scene bg ext_house_of_un_day with dissolve
@@ -4975,7 +4975,7 @@ label alt_day5_mi_dj_un_mi_house1:
     window hide
     with fade
     return
-    
+
 label alt_day5_mi_dj_estrade1:
     $ persistent.sprite_time = "day"
     scene bg ext_stage_normal_day
@@ -5242,7 +5242,7 @@ label alt_day5_mi_dj_supper:
     "Она недовольно поморщилась, но руку не убрала."
     "А скоро и вожатая появилась."
     hide mi with dissolve
-    show mt normal pioneer far at center  
+    show mt normal pioneer far at center
     with dissolve
     "Всучив мне гитару, она выпрямилась во фрунт и глубоко вздохнула."
     stop music
@@ -5297,7 +5297,7 @@ label alt_day5_mi_dj_supper:
     "Я обернулся — она уже сошла со своей привычной трибуны и подошла к нам, всем видом показывая, что формальности на сегодня завершены."
     window hide
     scene bg ext_square_sunset
-    show mt normal pioneer at center 
+    show mt normal pioneer at center
     with dissolve
 
     me "Да?"
@@ -5315,12 +5315,12 @@ label alt_day5_mi_dj_supper:
     "Проблем со взревновавшим Электроником мне ещё не хватало."
     hide mt
     with dissolve
-    show mz normal glasses pioneer at center 
+    show mz normal glasses pioneer at center
     with dissolve
     "Жук-носорог замер посередине тропинки, настороженно поблескивая стекляшками глаз."
     th "Что там Мику говорила…"
     me "Женя, можно у тебя спросить кое-что?"
-    show mz bukal glasses pioneer at center 
+    show mz bukal glasses pioneer at center
     with dspr
     "Всеобъемлющий взгляд на мгновение сфокусировался на мне. До меня снизошли."
     "Не знаю, сколько мне ещё надо тренироваться, чтобы {b}так{/b} смотреть сквозь человека."
@@ -5502,7 +5502,7 @@ label alt_day5_mi_dj_supper:
     "Ольга с таким видом осматривала поляну, будто была здесь впервые."
     "Хотя я чётко видел следы от граблей и метёлки,  брёвна, уложенные треугольником относительно центра поляны."
     "И, разумеется, выложенное булыжником костровище."
-    show mt normal pioneer at center 
+    show mt normal pioneer at center
     with dissolve
     mt "Отряды, разойтись! Костровому — приступить к розжигу!"
     "Стройные ряды тут же сломались и перемешались в более привычную неорганизованную толкучку."
@@ -5557,7 +5557,7 @@ label alt_day5_mi_dj_supper:
     window hide
     with fade2
 
-    show sl normal pioneer at center 
+    show sl normal pioneer at center
     with dissolve
     mi "Как здорово, что все мы здесь сегодня собрались."
     me "Угу…"
@@ -6012,7 +6012,7 @@ label alt_day5_mi_dj_voyeur_3:
     "Закусив губу, она посмотрела на меня незнакомыми, испытующим глазами."
     sl "Ты знаешь…"
     sl "А впрочем, подожди."
-    hide sl 
+    hide sl
     "Она скрылась в клубах пара."
     "Изнутри донеслось журчание воды."
     sl "Вот!"
@@ -6143,7 +6143,7 @@ label alt_day5_mi_dj_voyeur_4:
     return
 
 label alt_day5_mi_dj_late_evening:
-    if alt_day5_mi_dj_voyeur == 4:  
+    if alt_day5_mi_dj_voyeur == 4:
         scene bg ext_musclub_night_7dl with dissolve
         "Мику всю дорогу не смотрела на меня, очевидно, полностью уйдя в свои какие-то размышления."
         "Мы сделали небольшой крюк, занесли постиранную одежду и полотенце в домик, после чего Мику забрала ключ от музыкального клуба и отвела нас сюда."
@@ -6181,7 +6181,7 @@ label alt_day5_mi_dj_late_evening:
     scene bg int_musclub_day
     with dissolve
     play ambience ambience_music_club_day fadein 3
-    show mi normal pioneer at center 
+    show mi normal pioneer at center
     with dissolve
 
     mi "Заходи."
@@ -6311,7 +6311,7 @@ label alt_day5_mi_dj_evening_club1:
         "Уже почти предчувствуя печальный ответ, всё же уточнил я."
         window hide
         with fade2
-    
+
         show mi smile pioneer with dspr
         mi "Семён…"
         me "Что?"
@@ -6439,11 +6439,11 @@ label alt_day5_mi_dj_evening_club2:
         scene bg int_clubs_dj_night_nolight_7dl
         show mi normal pioneer with dspr
         with dissolve
-    
+
         "С улицы нас всё равно можно было заметить, если очень постараться, поэтому мы на цыпочках пересекли помещение основного клуба кибернетики, открыли внутреннюю дверь и, лишь заперев её изнутри, позволили себе расслабиться."
         window hide
         with fade2
-    
+
         "Дверка была хлипковатая, звуки не отсекала совершенно, и хороший пинок бы распахнул её как пить дать."
         "Проще говоря, держалась эта дверь только на репутации администрации лагеря да нежелании пионеров получать дополнительные сложности."
         "Зато она была непрозрачной! И здесь можно было спрятаться от целого лагеря!"
@@ -6491,7 +6491,7 @@ label alt_day5_mi_dj_evening_club2:
         "На некий миг я будто обратился сторуким существом, способным чувствовать, как подаётся под требовательной лаской нежная девичья кожа. Я был везде, и вбирал её в себя, впитывал до последней капли."
         window hide
         scene black with fade
-    
+
         "Пробившийся с улицы блик отразился в её глазах — полуприкрытых, затянутых масленой плёнкой… розовые щёки, сбитое дыхание — она моя. А я — весь её."
         mi "Меня может не существовать."
         mi "Но я хочу чувствовать тебя. Иди ко мне."
@@ -6522,7 +6522,7 @@ label alt_day5_mi_dj_evening_club2:
         "Выдохи всё резче, все чаще, движение навстречу уже обоюдное, в едином ритме, в танце, что возрастом старше человечества и ровесник самой жизни."
         "Ноги уже начали уставать от неудобной позы, плюс приходилось придерживать девушку руками, чтобы не брякнулась — но всё это такие мелочи…"
         "Она забыла обо всём — как и я — наверное, нас слышно сейчас во всём лагере — и закричала изо всех сил, вся сотрясаясь, закусив нижнюю губу."
-        "Мику что-то лепетала, но я и этого уже не слышал — в этот момент не существовало «меня»…" 
+        "Мику что-то лепетала, но я и этого уже не слышал — в этот момент не существовало «меня»…"
         "Я полностью впустил Мику в себя. Полностью растворился в ней."
         "Кажется, я потерял сознание."
         show blinking
@@ -6530,7 +6530,7 @@ label alt_day5_mi_dj_evening_club2:
         window hide
         scene bg int_clubs_dj_night_nolight_7dl
         show mi normal pioneer with dspr
-    
+
         mi "Я читала в книгах, что любовь — это что-то крышесносящее."
         mi "Но до такой степени… Наверное, это потому что ты был моим первым мальчиком, Сенечка."
         "Романтика, влюблённость."
@@ -6643,7 +6643,7 @@ label alt_day5_mi_dj_sleeptime:
     dreamgirl "Ну и? Долго стоять собираешься? Или ты хочешь в шезлонге заночевать?"
     th "В шезлонге? Не думаю."
     dreamgirl "Ну, тогда нацепи побыстрее свой покер-фейс и шагом марш под своды дома. Простыть ещё не хватало!"
-    "Приготовившись врать напропалую, я толкнул дверь."  
+    "Приготовившись врать напропалую, я толкнул дверь."
     window hide
     scene bg int_house_of_mt_night2 with fade
     play ambience ambience_int_cabin_night fadein 1
@@ -6729,13 +6729,13 @@ label alt_day6_mi_dj_neutral:
     play sound_loop sfx_water_sink_stream
 
     "Автопилот сделал даже больше — он исправно дотащил меня до кафельного многоногого чудовища и, открыв воду, бросил горсть ледяной воды мне в лицо!"
-    play sound sfx_draw_water 
+    play sound sfx_draw_water
     with vpunch
     me "Ух!"
     "На долю секунды я забыл как дышать, сердце пропустило целый удар, а с сознания будто пыль стряхнули."
     "И мир, к яркости и контрастности которого я уже начал было привыкать, снова заиграл недоступными моей обычной жизни красками!"
     "Но пока я там восторгался красивым утром, я совершенно забыл отключить подсознание."
-    play sound sfx_draw_water 
+    play sound sfx_draw_water
     with vpunch
     me "Ух!"
     th "Так, вредитель, прекращаем!"
@@ -6771,7 +6771,7 @@ label alt_day6_mi_dj_neutral:
         "Я был здесь не один!"
         window hide
         scene bg ext_washstand_day with dissolve
-    
+
         if alt_day5_mi_dj_voyeur == 3:
             show sl smile sport with dspr
             sl "Физкульт-привет!"
@@ -6966,7 +6966,7 @@ label alt_day6_mi_dj_neutral:
         "Похолодел я."
         window hide
         with dissolve
-    
+
         "К счастью, я, кажется, ошибся — Мику заговорила совсем о другом:"
     "Ей понадобилось в десятки раз больше времени, чем обычно, чтобы произнести несколько последних фраз."
     "Но эту она вымучивала секунд десять."
@@ -7173,7 +7173,7 @@ label alt_day6_mi_dj_good:
     mi "Свою рубашку так и быть, можешь забрать, я пока свою накину. Но поспеши, а то как бы чего не вышло."
     "Накинув рубашку и насилу найдя галстук, непонятно что делающий на телевизоре, я по возможности привёл себя в порядок, коснулся губами виска Мику — и выметнулся на улицу."
     "Электроника ещё не было, поэтому моя «маскировка» работала на все сто."
-    window hide 
+    window hide
     scene bg ext_clubs_sunset
     with dissolve
 
@@ -7233,7 +7233,7 @@ label alt_day6_mi_dj_good:
     $ persistent.sprite_time = "day"
     scene bg int_house_of_un_day
     with dissolve
-    show un normal pioneer at center 
+    show un normal pioneer at center
     with dissolve
 
     "Лена сидела у стола и быстрыми быстрыми линиями карандашом рисовала что-то на большом листе ватмана."
@@ -8098,7 +8098,7 @@ label alt_day6_mi_dj_rendezvous:
     window hide
     with fade
     return
-    
+
 label alt_day6_mi_dj_forgiveness:
     mi "Нет, не поменялись!"
     me "Тогда я предлагаю коррективу!"
@@ -8578,7 +8578,7 @@ label alt_day6_mi_dj_tale:
     window hide
     with fade
     return
-            
+
 label alt_day6_mi_dj_plain:
     mi "Все мои планы сейчас — это концерт и ты!"
     me "Неплохие планы! Мне нравятся!"
@@ -8855,7 +8855,7 @@ label alt_day6_mi_dj_concert:
     "И тут, как всегда это и бывает, прозрачная, хрустальная тишина сломалась, заполнилась гудением голосов, шарканьем подошв. {w}Были бы в театре — тут бы ещё и сиденья скрипели."
     "Не прошло и десяти минут, а у эстрады остались только наши."
     stop music fadeout 5
-    window hide 
+    window hide
     scene bg ext_stage_normal_day with dissolve
     show mt normal pioneer at left with dissolve
 
@@ -9084,7 +9084,7 @@ label alt_day6_mi_dj_newswall:
     "Цапнув со стола настольную лампу и планшетку с какими-то записями, Мику обернулась ко мне:"
     mi "Я готова!"
     window hide
-    stop music 
+    stop music
     play sound sfx_open_door_clubs_2
     scene bg ext_square_sunset
 
@@ -9107,7 +9107,7 @@ label alt_day6_mi_dj_newswall:
     show un shy pioneer at left with dissolve
     un "А, ребята… Вы пришли.{w} В-вот…"
     "Она рассеянно махнула рукой в сторону газеты, наконец, отходя в сторонку и давая нам полюбоваться получившимся шедевром."
-    show mi smile pioneer at right with moveinright 
+    show mi smile pioneer at right with moveinright
     mi "Ну, давай посмотрим, что тут у тебя."
     "Мику встала напротив газеты с самым глубокомысленным видом, даже подбородок подперла для пущего эффекта."
     "Не хватало только очков с нулём диоптрий для завершения образа."
@@ -9182,17 +9182,17 @@ label alt_day6_mi_dj_supper:
     window hide
     with fade
     return
-    
+
 label alt_day6_mi_dj_late_supper:
     scene bg int_dining_hall_sunset with fade
     $ sunset_time ()
     $ persistent.sprite_time = "sunset"
     play ambience ambience_dining_hall_empty fadein 4
     if alt_day6_mi_dj_sl_alt_day1_dv_feed:
-        scene bg int_dining_hall_sunset 
+        scene bg int_dining_hall_sunset
         with dissolve
         play music music_list["a_promise_from_distant_days"] fadein 5
-    
+
         "Место встречи изменить нельзя. Мы снова оказались там, откуда начали, а завтра отодвинемся ещё дальше к истокам."
         "Автобус, из которого мы выгрузились, примет нас обратно в своё нутро и утащит откуда привёз."
         sl "Садитесь пока, я посмотрю, что там на кухне осталось."
@@ -9489,7 +9489,7 @@ label alt_day6_mi_dj_late_supper:
         play music music_list["lightness"] fadein 2
         scene bg ext_house_of_un_day with dissolve
         play ambience ambience_camp_center_evening fadein 2
-    
+
         "Лена провела нас кружными тропинками — так, что никому мы на глаза не попались, и никто нас не заставил работать вместо нашего честно заработанного ужина."
         window hide
         stop ambience fadeout 1
@@ -9498,7 +9498,7 @@ label alt_day6_mi_dj_late_supper:
         scene bg int_house_of_un_night
         with fade2
         play ambience ambience_int_cabin_night fadein 3
-    
+
         show un normal pioneer with dspr
         un "Садитесь пока, я поищу."
         show mi normal pioneer at right with dissolve
@@ -9550,7 +9550,7 @@ label alt_day6_mi_dj_late_supper:
     window hide
     with fade
     return
-    
+
 label alt_day6_mi_dj_discotheque:
     scene anim_square_preparty with fade2
     play music music_list["lightness"] fadein 5
@@ -9638,7 +9638,7 @@ label alt_day6_mi_dj_discotheque:
     window hide
     with fade
     return
-    
+
 label alt_day6_mi_dj_first_dance:
     "Но в данном случае, когда не надо было изгибаться как незнамо кто непонятно чего ради — а предоставили вполне себе легальный способ пообниматься с симпатичной девушкой на танцполе, я и секунды колебаться не собираюсь."
     "Мику я уже не боялся. Больше не боялся."
@@ -9720,7 +9720,7 @@ label alt_day6_mi_dj_first_dance:
     window hide
     with fade
     return
-    
+
 label alt_day6_mi_dj_second_dance:
     window hide
     $ persistent.sprite_time = "night"
@@ -9865,7 +9865,7 @@ label alt_day6_mi_dj_second_dance:
         "Я забился в самый дальний угол и сел на скамейку."
         stop music
         window hide
-    elif lp_mi >= 19: 
+    elif lp_mi >= 19:
         play music music_7dl["stilllovingyou"] fadein 5
         "Волшебная музыка."
         "Со скорпов началось моё знакомство с действительно хорошими балладами, с ними же под ручку пронеслось моё детство — и самые лучшие медляки, самые запоминающие истории — горькие, романтические, запоминающиеся…"
@@ -10160,7 +10160,7 @@ label alt_day6_mi_dj_dance2_fail:
             "Мику всхлипнула, не поднимая головы."
             mi "Страшно стало так, что я побежала сразу за тобой…"
             me "Но ведь мы же условились — держаться вместе… Я не мог тебя обмануть."
-            if alt_day6_mi_dj_sl_evil or alt_day6_mi_dj_me_evil or alt_day6_mi_dj_rejected: 
+            if alt_day6_mi_dj_sl_evil or alt_day6_mi_dj_me_evil or alt_day6_mi_dj_rejected:
                 mi "Но ведь после того, как я с тобой танцевать отказалась…"
                 "Я обнял это глупое существо, считающее, что просто отказ танцевать может сделать обещание ничего незначащим сотрясением воздуха."
                 "Подумывал даже немного обидеться на такую оценку, но сейчас было решительно не к спеху."
@@ -10180,7 +10180,7 @@ label alt_day6_mi_dj_dance2_fail:
             scene bg ext_house_of_un_night_7dl
             with dissolve
             play music music_list["a_promise_from_distant_days"] fadein 5
-        
+
             show mi normal dress with dissolve
             me "Мы пришли."
             mi "Да…"
@@ -10235,7 +10235,7 @@ label alt_day6_mi_dj_dance2_fail:
             show blink
             scene black
             with fade
-        
+
             "Чувствуя себя идиотом — привычно уже — я подчинился."
             me "Дальше?"
             sl "Дальше — представляй себе. Что последнее помнишь перед тем, как попал сюда."
@@ -10246,7 +10246,7 @@ label alt_day6_mi_dj_dance2_fail:
             scene expression Dawn("bg int_intro_liaz_7dl")
             show anim_grain
             with fade
-        
+
             voice "Возьми нас за руки на случай, если получится."
             "Хуже уже быть не могло, поэтому я послушно протянул руки."
             voice "Теперь добавь в картинку деталей."
@@ -10270,12 +10270,12 @@ label alt_day6_mi_dj_dance2_fail:
                     stop ambience fadeout 2
                     play sound_loop sfx_bus_interior_moving fadein 4
                     show prologue_dream
-                
+
                     "Реальность сместилась."
                     "И я выдохнул…"
                     window hide
                     show prologue_dream
-                
+
                     "Морозный пар!"
                     "Я оказался дома. Дома?"
                     scene bg intro_xx with flash
@@ -10286,7 +10286,7 @@ label alt_day6_mi_dj_dance2_fail:
                     "Я не успел додумать."
                     window hide
                     scene black with fade
-                
+
                     play sound sfx_water_emerge
                     "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
                     window hide
@@ -10307,7 +10307,7 @@ label alt_day6_mi_dj_dance2_fail:
                     "Ради своей пули в голове."
                     window hide
                     play sound sfx_7dl["makarych"] fadein 0
-                    
+
                     scene black with fade
                     "Место встречи изменить нельзя — Зинка, пьянь с травматом, и я — с дырой в пустой голове."
                     "И даже то, что я вернулся не один, не поменяло ровным счётом ни-че-го."
@@ -10323,7 +10323,7 @@ label alt_day6_mi_dj_dance2_fail:
                 elif loki:
                     play music music_7dl["herc_death"] fadein 5
                     show blink  with dissolve
-                    scene bg ext_winterpark_7dl 
+                    scene bg ext_winterpark_7dl
                     $ renpy.pause(1.5)
                     "Нас вышвырнуло к началу этой истории."
                     "Туда, откуда сказочная девочка забрала меня в страну грёз."
@@ -10331,7 +10331,7 @@ label alt_day6_mi_dj_dance2_fail:
                     "А я её предал."
                     window hide
                     show prologue_dream
-                
+
                     "Мы определённо стоим друг друга."
                     scene bg ext_winterpark_7dl with flash
                     "Я выдохнул морозный пар и тут же закашлялся."
@@ -10342,7 +10342,7 @@ label alt_day6_mi_dj_dance2_fail:
                     scene cg d7_sl_gonna_be_ok_7dl
                     show ldb_blind
                     with fade2
-                
+
                     "Ледяной холод забрал меня в свои объятья."
                     "И я прекратил сопротивляться."
                     "Прекратил жить."
@@ -10360,7 +10360,7 @@ label alt_day6_mi_dj_dance2_fail:
             scene bg ext_warehouse_night_7dl
             with fade
             play ambience ambience_camp_center_night
-        
+
             show dv grin pioneer at right with flash
             stop sound_loop
             show sl sad dress at left with flash
@@ -10492,7 +10492,7 @@ label alt_day6_mi_dj_dance2_success:
     mi "А Славя на что?"
     me "Тогда хочу. Куда ты хочешь сбежать?"
     stop music fadeout 6
-    play ambience ambience_camp_center_night 
+    play ambience ambience_camp_center_night
     "Музыка смолкла, и танцующие неохотно разбили пары, кое-кто хлопал со скамеек, салютуя хорошему вкусу ведущего, а Мику потянула меня за руку."
     mi "Пошли!"
     me "Да куда?"
@@ -10524,7 +10524,7 @@ label alt_day6_mi_dj_dance2_success:
             scene bg ext_house_of_mt_night_without_light
             with dissolve
             play music music_7dl["ltyh"] fadein 5
-        
+
             "Всё, как и ожидал вчера — кружащее голову ликование от подрагивающей в руке тёплой ладошки, мягкий голос, запах волос, доводящий до восторга."
             "Мы прибежали к домику за две минуты и замерли, прислушиваясь — а оказалось, обнимаемся. И прижимаемся друг к другу всё ближе."
             th "Ещё чуть-чуть в таком духе, и я полностью потеряю контроль над собой."
@@ -10540,7 +10540,7 @@ label alt_day6_mi_dj_dance2_success:
             play sound sfx_open_dooor_campus_2
             scene bg int_house_of_mt_night2
             with dissolve
-        
+
             "Оказавшись внутри, я огляделся — благо, света от фонарей, проникающих сквозь окно, было достаточно для того, чтобы ориентироваться."
             "За спиной скрипнуло, и я вздрогнул."
             show mi normal dress with dspr
@@ -10562,7 +10562,7 @@ label alt_day6_mi_dj_dance2_success:
                     play music music_list["awakening_power"] fadein 2
                     scene bg int_house_of_mt_noitem_night with dissolve
                     show mt rage dress with dspr
-                
+
                     "Дверь распахнулась, зажёгся свет…"
                     "На пороге стояла взбешённая вожатая!"
                     mt "Семёёёёён!"
@@ -10586,7 +10586,7 @@ label alt_day6_mi_dj_dance2_success:
                     stop music fadeout 6
                     window hide
                     scene bg int_house_of_mt_night2 with dissolve
-                
+
                     "Погасив свет, я разделся, нырнул под одеяло и вытянулся."
                     "Колотивший последние пять минут нервяк отступил, и я понял, насколько устал."
                     "Закрыв глаза, я провалился в сон."
@@ -10605,7 +10605,7 @@ label alt_day6_mi_dj_dance2_success:
                     scene bg ext_house_of_mt_night with dissolve
                     play sound sfx_close_door_clubs_nextroom
                     play ambience ambience_camp_center_night
-                
+
                     "Мы выскочили из домика и, чудом разминувшись с бегущей вожатой, бросились бежать к указанному домику."
                     window hide
                     $ night_time ()
@@ -10618,7 +10618,7 @@ label alt_day6_mi_dj_dance2_success:
                     scene bg int_extra_house_7dl
                     show mi serious dress
                     with dissolve
-                
+
                     "Мы сделали всё как надо."
                     "Как только возможно правильно."
                     "Как только возможно…"
@@ -10704,7 +10704,7 @@ label alt_day6_mi_dj_dance2_success:
                     $ renpy.pause(3)
                     $ alt_day6_mi_dj_key = True
                     $ alt_day6_mi_dj_hentai2 = True
-            
+
         "Может, время выждем?":
             $ alt_day6_mi_dj_no_hentai = True
             mi "Не думаю, что… А, впрочем, ладно."
@@ -10712,23 +10712,23 @@ label alt_day6_mi_dj_dance2_success:
             "Вложив руку мне в ладонь, Мику полностью отдала инициативу мне."
             window hide
             with fade2
-        
+
             "И, как оказалось, напрасно…"
-            window hide 
+            window hide
             scene bg ext_musclub_night_7dl
             with dissolve
             play ambience ambience_camp_center_night
-        
+
             "У музыкальных клубов ходила Славя."
             window hide
             scene bg ext_clubs_night
             with dissolve
-        
+
             "В клубах горел свет — там явно было занято. Я даже думать не хотел, чем или кем."
             "Куда важнее было то, что там было попросту несвободно."
             window hide
             scene bg ext_house_of_un_night_7dl
-        
+
             "А когда мы двигались к домику Лены, то еле успели увернуться от шикарной водной дуги — под которую зато попала Лена!"
             "Она завизжала, в темноте раздался подозрительно знакомый смех…"
             "Так или иначе, домик Мику теперь тоже был занят."
@@ -10757,7 +10757,7 @@ label alt_day6_mi_dj_dance2_success:
             $ night_time()
             scene bg ext_house_of_mt_night
             with dissolve
-        
+
             "Пришлось топать домой — несмотря даже на то, что планов на вечер было громадьё. И все планы были связаны с невероятно красивой девушкой с волной аквамариновых волос."
             "Никогда не считал её суеверной."
             "Впрочем, за неделю решительно невозможно изучить человека досконально."
@@ -10773,7 +10773,7 @@ label alt_day6_mi_dj_dance2_success:
             scene bg int_house_of_mt_noitem_night
             $ renpy.pause (1)
             play ambience ambience_int_cabin_night fadein 1
-        
+
             "Внутри ожидаемо никого не оказалось — кто бы ни был избранником нашей вожатой в эту тёплую ночь, она явно не собиралась терять ни секунды времени впустую."
             "Ну а мне остаётся только смежить веки и уснуть до утра."
             "Закатить глаза, чтобы облегчить процесс засыпания, расслабить мышцы на затылке, чтобы ослабить церебральную активность."
@@ -10855,7 +10855,7 @@ label alt_day7_mi_dj_alone:
         th "Надо пойти поздороваться с ней."
         th "Я не видел её почти пятьсот минут!"
         "Быстро облачившись, я выскочил из домика."
-    elif alt_day6_mi_dj_no_hentai: 
+    elif alt_day6_mi_dj_no_hentai:
         "Вот ведь какая штука…"
         "Если бы мне хватило решимости вчера, ну, или не знаю, удачи — у нас всё могло бы зайти дальше некуда."
         "Вопрос лишь в том, насколько мне это самое «дальше» нужно."
@@ -11116,7 +11116,7 @@ label alt_day7_mi_dj_badfeel:
         window hide
         scene bg ext_house_of_un_day with dissolve
         play ambience ambience_camp_center_evening
-    
+
         "Наша вилла расположилась крайне удачно — через угол от импровизированной улочки, одним своим краем завершающейся на домике вожатой, а другим — как раз на домике Лены и Мику."
         "Дальше шла тропинка к умывальнику, но нас она не интересовала."
         "Мику, коротко кивнув мне, исчезла за дверью"
@@ -11334,7 +11334,7 @@ label alt_day7_mi_dj_preparations:
     "Она прикусила губку и посмотрела на меня снизу вверх, исподлобья, быстро-быстро моргая, будто готовясь разреветься."
     "Но не выдержала — рассмеялась."
     dreamgirl "Если я не ошибаюсь…"
-    show mi smile pioneer at center 
+    show mi smile pioneer at center
     with dspr
     mi "Ну как же…"
     "Она посмотрела на меня и улыбнулась."
@@ -11346,7 +11346,7 @@ label alt_day7_mi_dj_preparations:
     "Пообещал я."
     me "И как так получилось, что я никогда раньше у тебя не спрашивал об этом?"
     th "И, если на то пошло, то вообще не спрашивал о таких вещах — о датах… Даже в голову не приходило."
-    show mi serious pioneer at center 
+    show mi serious pioneer at center
     with dspr
     mi "Не знаю. Но…"
     "Она бросила взгляд на календарь."
@@ -11358,11 +11358,11 @@ label alt_day7_mi_dj_preparations:
     me "Не знаешь, кому в таких случаях требуется молиться?"
     mi "Не знаю…"
     mi "Ма так и не сумела воспитать во мне набожности. {w} Трудно вообще разговаривать с духами или богами, когда под боком напичканная электроникой студия."
-    show mi serious pioneer at center 
+    show mi serious pioneer at center
     with dspr
     me "Так вот почему ты…"
     mi "Да. У нас там целая школа по уходу за голосом — это кроме навыков сценического мастерства, кабуки и целой кучи других умений, присущих артисту."
-    show mi smile pioneer at center 
+    show mi smile pioneer at center
     with dspr
     mi "Только не думай, что я жалуюсь! Мне всё это очень нравится, и всё своё время я с удовольствием трачу либо в студии, либо на сцене, либо в хореографическом зале."
     "Она осеклась."
@@ -11375,7 +11375,7 @@ label alt_day7_mi_dj_preparations:
     mi "Я сейчас как представлю, что танцую на сцене, а за кулисами ты ждёшь — сразу внутри тепло становится."
     "Она провела ладонью по животу."
     mi "Где-то здесь. Звучит, наверное, глупо. Нет-нет, не говори ничего."
-    show mi normal pioneer at center 
+    show mi normal pioneer at center
     with dspr
     mi "Просто до тебя я… Я не знаю."
     me "Судя по твоему напору…"
@@ -11389,11 +11389,11 @@ label alt_day7_mi_dj_preparations:
     "Зерно истины в её словах было, но только зерно."
     "Я хотел было продолжить беседу, исподволь подводя к вопросу о том, что же она такого может знать, чтобы быть так в себе уверенной, но нас прервали."
     scene bg int_house_of_un_day at zenterleft
-    show mi normal pioneer at center 
+    show mi normal pioneer at center
     show un normal pioneer at left
     with dissolve
     un "Привет, ребята. Не помешала?"
-    show mi normal pioneer at center 
+    show mi normal pioneer at center
     with dspr
     mi "Привет, Лена. Ты к отъезду уже упаковалась?"
     show un smile pioneer with dspr
@@ -11418,7 +11418,7 @@ label alt_day7_mi_dj_preparations:
     un "Ой. Да ну вас!"
     "Она покраснела и сбежала под наш сдвоенный смех."
     hide un with moveoutright
-    show mi smile pioneer at center 
+    show mi smile pioneer at center
     with dspr
     mi "Вообще, стоит прислушаться."
     me "Ты о чём?"
@@ -11739,7 +11739,7 @@ label alt_day7_mi_dj_preparations:
     window hide
     with fade
     return
-    
+
 label alt_day7_mi_dj_epilogue_frost:
     $ meet('mi','Девушка')
     play music music_7dl["frostwithoutyou"] fadein 3
@@ -11862,7 +11862,7 @@ label alt_day7_mi_dj_epilogue_frost:
     with dissolve
     "Я мокну под дождём, пробегая пальцами по выбитым в камне иероглифам."
     show cg d7_mi_hugs_7dl behind prologue_dream:
-        pos (0,-1920) 
+        pos (0,-1920)
         linear 15.0 pos (0,-500)
     "{i}Мне шесть, и мы снова видимся.{/i}"
     "{i}Я сказал, что женюсь на ней, когда вырасту.{/i}"
@@ -12078,7 +12078,7 @@ label alt_day7_mi_dj_bad_end:
     "Память. Вот и всё, что у меня осталось."
     "На часах без трёх минут полночь, где-то там по телевизору распинается президент, и страна безмолвно ему внемлет."
     "А я прячу руку в карманы и достаю оттуда…"
-    
+
     "С Волги доносится разрыв первого салюта — там гуляющие уже отслушали дядю Вову с портативных телевизоров и спешат вступить в новый 2019-й. Один лишь я увяз в никогда не существующем 1989-м."
     me "С новым Годом, милая."
     "Обращаюсь я в никуда."
@@ -12089,7 +12089,7 @@ label alt_day7_mi_dj_bad_end:
     window hide
     $ renpy.pause(3)
     scene expression SS_com("cg d7_mi_epilogue_7dl")
-    show prologue_dream 
+    show prologue_dream
     with flash_red
 
     "Она была всегда."
@@ -12222,7 +12222,7 @@ label alt_day7_mi_dj_true_end:
     "Полтора метра беспечности, гипнотически плывущих волос. {w}И жизнерадостности, присущей лишь одному существу во всех обозримых Вселенных."
     window hide
     scene cg d4_mi_hedgehod_7dl
-    show prologue_dream 
+    show prologue_dream
     with fade2
     $ renpy.pause(3)
 
@@ -12240,7 +12240,7 @@ label alt_day7_mi_dj_true_end:
     "Вплетён туда и цвет дамы моего сердца. Мику вознаградила меня за помощь в беде."
     window hide
     scene expression Desat("cg d6_mi_farewell_7dl")
-    show prologue_dream 
+    show prologue_dream
     with fade2
     $ renpy.pause(3)
 
@@ -12263,7 +12263,7 @@ label alt_day7_mi_dj_true_end:
     "А настоящая версия в том, что мне такая она только и нужна — со всей своей неправильностью."
     window hide
     scene expression Desat("bg ext_musclub_day")
-    show prologue_dream 
+    show prologue_dream
     with fade2
     $ renpy.pause(3)
 
@@ -12299,7 +12299,7 @@ label alt_day7_mi_dj_true_end:
     me "Ты знаешь."
     "Медленно произношу я, а искусанные, чтобы не разреветься, губы горят как от острой аллергии…"
     me "Если не хочешь, чтобы от тебя люди сбегали, попробуй говорить как поёшь. Одна фраза — одна мысль."
-    
+
     "Хотя кто когда поверит в эту глупость?"
     window hide
     scene expression Noon("cg d7_mi_reenter_7dl") with flash
@@ -12392,7 +12392,7 @@ label alt_day7_mi_dj_good:
     nvl clear
     $ renpy.pause(3)
     play sound_loop sfx_bus_interior_moving fadein 4
-    scene bg intro_xx 
+    scene bg intro_xx
     with fade
     stop ambience fadeout 2
     "Именно."
@@ -12706,7 +12706,7 @@ label alt_day7_mi_dj_rf_good_end:
     $ set_mode_adv()
     play music music_list["lightness_radio_bus"] fadein 7
     play sound_loop sfx_bus_interior_moving fadein 4
-    scene bg intro_xx 
+    scene bg intro_xx
     with fade
     stop ambience fadeout 2
     "Вдох тёплым воздухом, чуточку спёртым от большого количества одновременно стоящих рядом со мной людей."
@@ -12814,23 +12814,23 @@ label alt_day7_mi_dj_rf_good_end:
     play sound sfx_intro_bus_stop_steps
     "Мой новый год был лучшим за последние пять лет — он был полон предвкушениями."
     window hide
-    scene anim intro_2 
+    scene anim intro_2
     with fade
     play sound sfx_intro_bus_stop_steps
     $ renpy.pause(3, hard=True)
-    scene anim intro_3 
+    scene anim intro_3
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_4 
+    scene anim intro_4
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_5 
+    scene anim intro_5
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_6 
+    scene anim intro_6
     with fade
     $ renpy.pause(3, hard=True)
-    scene anim intro_8 
+    scene anim intro_8
     play sound sfx_intro_bus_stop_sigh
     with fade
     $ renpy.pause(3, hard=True)
@@ -13034,7 +13034,7 @@ label alt_day7_mi_dj_rf_good_end:
         play music music_7dl["unfinished_life"] fadein 3
         scene expression Noir("bg int_sam_house_clean_7dl", brightness = 0.1, tint_r = 0.2, tint_g = 0.9, tint_b = 0.7, saturation = 0.7)
         with touch
-    
+
         "Так всё оно и будет однажды."
         "Я верю в это."
         "До такой степени верю, что вижу сны, подробные, цветные и с объёмным звуком."

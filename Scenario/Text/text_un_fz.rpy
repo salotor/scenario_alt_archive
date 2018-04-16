@@ -1,5 +1,5 @@
 ﻿label alt_day4_un_fz_begin:
-    stop ambience 
+    stop ambience
     scene stars
     show rain_overlay
     with dissolve
@@ -356,7 +356,7 @@ label alt_day4_un_fz_sl:
     window hide
     with fade
     return
-    
+
 label alt_day4_fz_play:
     if not persistent.altCardsWon4:
         "Славя сдала карты, и партия началась."
@@ -386,7 +386,7 @@ label alt_day4_fz_play:
 
 label alt_fz_draw:
     scene bg ext_aidpost_day with fade
-    show sl smile pioneer with dspr 
+    show sl smile pioneer with dspr
     sl "Боевая ничья. Давай ещё раз."
     "Я кивнул и сдал карты по-новой."
     $ persistent.altCardsWon4 = True
@@ -903,7 +903,7 @@ label alt_day4_un_fz_dv:
     me "Значит, началось всё в первый мой день здесь, когда у нас не сложился разговор с Леной."
     cs "Удивительно, что она вообще тебя подпустила и согласилась разговаривать."
     "Покачала головой Виолетта."
-    cs "Девочка не слишком жалует посторонних, а ты, похоже, слишком понравился." 
+    cs "Девочка не слишком жалует посторонних, а ты, похоже, слишком понравился."
     "Я покраснел."
     cs "Ты не цвети здесь маковым цветом, ты дальше излагай."
     me "Так вот, в первый день, похоже, я сделал что-то не так, неправильно."
@@ -933,7 +933,7 @@ label alt_day4_un_fz_dv:
         me "Она была приветлива вечером на турнире."
     me "Где мы вполне ожидаемо попали в пару."
     if alt_day2_fail == 1:
-        cs "Надеюсь, ты хотя бы поддался ей?" 
+        cs "Надеюсь, ты хотя бы поддался ей?"
         me "Конечно! За кого вы меня принимаете. Поддался, подбодрил — хотя она далеко и не прошла, но мне показалось, для неё это кое-что значило."
     cs "Дальше."
     me "А дальше я…"
@@ -994,7 +994,7 @@ label alt_day4_un_fz_dv:
     cs "Серьёзно? Заставила встать в шесть утра, чтобы постирать тебе грязную одежду и посидеть рядом?"
     me "Ну, или может, ответственность у неё."
     cs "Ты её ни с какой другой пионеркой не путаешь?"
-    me "Тогда я не знаю." 
+    me "Тогда я не знаю."
     cs "Значит, и глупости говорить ни к чему. {w}Я переговорю с девочкой и узнаю её мнение относительно твоего поведения."
     cs "А там подумаем. Может, вам обоим действительно лучше соблюдать дистанцию."
     th "А если я не хочу соблюдать дистанцию?"
@@ -1228,11 +1228,11 @@ label alt_day4_fz_dv_dinner:
     th "Первый больной - в студию!.."
     play sound sfx_open_door_clubs
     with None
-    show sl normal pioneer at center 
+    show sl normal pioneer at center
     with dissolve
     "Славя неслышно прикрыла дверь за собой и улыбнулась."
     with None
-    show sl smile pioneer at center 
+    show sl smile pioneer at center
     with dspr
     sl "Здравствуй!"
     "Улыбнулась она."
@@ -1240,7 +1240,7 @@ label alt_day4_fz_dv_dinner:
     "Мы немного помолчали, будто забыв стереть улыбки с лиц, пока я не спохватился:"
     me "Так ты с чем? Болит что-нибудь?"
     with None
-    show sl shy pioneer at center 
+    show sl shy pioneer at center
     with dspr
     sl "Спасибо. У меня вообще всё хорошо, я тебя проведать зашла. {w}Хотя…"
     "Она замялась."
@@ -1256,13 +1256,13 @@ label alt_day4_fz_dv_dinner:
     "Сказал я, прежде чем понял - что несу вообще!"
     th "А если она чего-нибудь непристойного потребует!"
     with None
-    show sl happy pioneer at center 
+    show sl happy pioneer at center
     with dspr
     sl "Да, кое-что…"
     th "Например, попросит голышом сплясать на столе? Или сделать два круга по полю, нарядившись в её сафаранчик?"
     "Мысль об интиме меня до последнего не навещала, пока Славя не покраснела пуще прежнего."
     with None
-    show sl normal pioneer at center 
+    show sl normal pioneer at center
     with dspr
     me "И что же это?"
     sl "Ох."
@@ -1296,7 +1296,7 @@ label alt_day4_fz_dv_dinner:
     th "Это нормально, если не циклиться на этом постоянно."
     dreamgirl "Так ты и не циклись. А мне-то, мне, твоей тёмной половине, это не только позволительно - это единственно верный модус операнди."
     with None
-    show sl normal pioneer at center 
+    show sl normal pioneer at center
     with dissolve
     "Наконец, Славя закончила свои таинственные дела и вышла на крыльцо."
     "В руках она сжимала продолговатый бумажный пакетик."
@@ -1306,7 +1306,7 @@ label alt_day4_fz_dv_dinner:
             $ alt_day4_fz_vodka = True
             me "А что это такое?"
             with None
-            show sl shy pioneer at center 
+            show sl shy pioneer at center
             with dspr
             sl "Ничего!"
             "Она покраснела."
@@ -1324,12 +1324,12 @@ label alt_day4_fz_dv_dinner:
             $ day4_sl_compl = 1
             $ lp_sl += 1
             with None
-            show sl normal pioneer far at center  
+            show sl normal pioneer far at center
             with dissolve
             me "Сделала что хотела?"
             "Уточнил я."
             with None
-            show sl happy pioneer far at center 
+            show sl happy pioneer far at center
             with dspr
             sl "Да, конечно. Спасибо!"
             stop music fadeout 3
@@ -1360,7 +1360,7 @@ label alt_day4_fz_dv_dinner:
     dreamgirl "Запомните и горячо прижмите близкого человека к себе, потому что это единственное сокровище, которое можете отдать от сердца, и оно не стоит ни копейки."
     show blinking
     play music music_list["my_daily_life"]
-    show un normal pioneer at center 
+    show un normal pioneer at center
     with dissolve
     "Дверь скрипнула - почему-то без стука."
     "И на пороге оказалась Лена."
@@ -1391,7 +1391,7 @@ label alt_day4_fz_dv_dinner:
     me "Посидишь немного? Оно через пару минут подействует."
     "Лена засомневалась, но я, пожав плечами, уже уткнулся обратно в журнал - так и развёрнутый на странице с лоскутной кофтой с высоким воротником."
     with None
-    show un surprise pioneer at center 
+    show un surprise pioneer at center
     with dspr
     dreamgirl "Запомните и держитесь за руки и цените моменты, когда вы вместе, потому что однажды этого человека не будет рядом с вами."
     th "Уймёшься уже?"
@@ -1401,13 +1401,13 @@ label alt_day4_fz_dv_dinner:
     me "Скажи, а тебе такого типа вещи вообще нравятся?"
     "Лена посмотрела на рисунок."
     with None
-    show un normal pioneer at center 
+    show un normal pioneer at center
     with dspr
     un "Да… Нравятся."
     me "Это не слишком старо сейчас?"
     "С намёком спросил я."
     with None
-    show un shy pioneer at center 
+    show un shy pioneer at center
     with dspr
     un "Журнал же…"
     "Она указала на обложку и покраснела."
@@ -1430,7 +1430,7 @@ label alt_day4_fz_dv_dinner:
     "Наконец, она поднялась и, чуть задержавшись, направилась к выходу."
     me "Прошла голова?"
     with None
-    show un smile pioneer at center 
+    show un smile pioneer at center
     with dspr
     un "Да, спасибо."
     th "Что ж, это хотя бы не было презрением с отвращением."
@@ -1459,20 +1459,20 @@ label alt_day4_fz_dv_dinner:
     play sound sfx_open_door_clubs
     play music music_list["eat_some_trouble"] fadein 3
     with None
-    show us normal pioneer at center 
+    show us normal pioneer at center
     with dissolve
     "Мику, Ульяна или Алиса? А то, может, и сама вожатая?"
     "А то последняя сегодня не очень балует меня вниманием."
     me "Привет."
     with None
-    show us sad pioneer at center 
+    show us sad pioneer at center
     with dspr
     us "Привет. А где врачиха?"
     "Ульянка."
     "Егоза отличалась нежно-салатовым цветом лица и периодически издавала китовые песни животом."
     me "Живот, ага?"
     with None
-    show us dontlike pioneer at center 
+    show us dontlike pioneer at center
     with dspr
     us "Тебе-то какая разница. Так где врачиха?"
     me "Сначала хамишь, потом вопросы задаёшь. Невежливо."
@@ -1485,36 +1485,36 @@ label alt_day4_fz_dv_dinner:
     dreamgirl "Скажи ещё, что не смешно!"
     "Я поморщился."
     "Чем-то шутящее подсознание напоминало мне Ульянку - оба стихийных бедствия можно было только переждать."
-    show us surp1 pioneer at center 
+    show us surp1 pioneer at center
     with dspr
     us "Да? Ну я, тогда, пожалуй, пойду сдохну под кустом."
     "Она ехидно улыбнулась."
     me "Счастливой смерти."
     "Вежливо пожелал я."
     with None
-    show us normal pioneer at center 
+    show us normal pioneer at center
     with dspr
     "Она замерла на полушаге."
     us "От живота таблетку найдёшь?"
     me "Где болит? Верх живота, низ?"
     us "Верх."
     with None
-    show us dontlike pioneer at center 
+    show us dontlike pioneer at center
     with dspr
     us "Верхняя часть."
     me "Там, где голова расположена?"
     with None
-    show us surp3 pioneer at center 
+    show us surp3 pioneer at center
     with dspr
     us "Что?"
     me "Ничего, айн момент."
     with None
-    show us normal pioneer at center 
+    show us normal pioneer at center
     with dspr
     th "Похоже на перегруз живота. Сейчас дровишек подкинем."
     "Панкреатин был такой же, каким я всю жизнь его и помнил - ещё по родительской аптечке, розовые таблетки."
     with None
-    show us laugh2 pioneer at center 
+    show us laugh2 pioneer at center
     with dspr
     us "Спасибо, доктор!"
     "Она выпила таблетку и, посидев минут десять, в своём обычном стиле превратилась в красно-рыжий смерч."
@@ -1524,7 +1524,7 @@ label alt_day4_fz_dv_dinner:
         "Объелась, что ли?":
             me "Что ела-то? Сыр чистоганом или копчености?"
             with None
-            show us dontlike pioneer at center 
+            show us dontlike pioneer at center
             with dspr
             us "Откуда знаешь?"
             "Мелкая с подозрением вызверилась на меня."
@@ -1543,13 +1543,13 @@ label alt_day4_fz_dv_dinner:
             $ lp_us += 1
             me "Тяжёлую пищу сегодня ела?"
             with None
-            show us surp1 pioneer at center 
+            show us surp1 pioneer at center
             with dspr
             us "Тяжёлую?"
             me "Копчёности-печёности."
             "Она пожала плечами."
             with None
-            show us grin pioneer at center 
+            show us grin pioneer at center
             with dspr
             us "Может, и ела. Ты думаешь, я запоминаю?"
             me "Родители копчёную курицу или колбасу привозили?"
@@ -1587,7 +1587,7 @@ label alt_day4_fz_dv_dinner:
     play sound sfx_open_door_kick
     play music music_list["that_s_our_madhouse"] fadein 3
     with None
-    show dv normal pioneer at center 
+    show dv normal pioneer at center
     with dissolve
     "Поэтому ворвавшаяся на пост Алиса стала, пусть и неожиданным, но приятным разнообразием."
     "Она оторопела, углядев меня рядом со столом."
@@ -1595,7 +1595,7 @@ label alt_day4_fz_dv_dinner:
     me "Сижу…"
     "Констатировать очевидное проще всего."
     with None
-    show dv smile pioneer at center 
+    show dv smile pioneer at center
     with dspr
     dv "Сидишь. Ага.{w} Тем лучше."
     "Она подошла ко мне и без лишних вопросов попробовала откатить меня в сторону."
@@ -1603,7 +1603,7 @@ label alt_day4_fz_dv_dinner:
     "Осведомился я."
     th "Могу прописать профилактическую в челюсть. "
     with None
-    show dv normal pioneer at center 
+    show dv normal pioneer at center
     with dspr
     dv "Ну чё расселся, двигайся давай."
     me "С фига ли?"
@@ -1611,21 +1611,21 @@ label alt_day4_fz_dv_dinner:
     me "Какая таблетка?"
     "Она медленно выдохнула, всеми силами стараясь не взорваться."
     with None
-    show dv angry pioneer at center 
+    show dv angry pioneer at center
     with dspr
     dv "Как думаешь, это твоё дело?"
     me "Я здесь врио, и подозрительных личностей вроде тебя к таблеткам и близко не подпущу."
     "Я хихикнул, представив себе, как Двачевская, наворовав пенталакса и пургена, вываливает всё в огромный алюминиевый котёл с вечерним компотом."
     dreamgirl "Отож! Лагерные весёлые домики резко прибавят в популярности."
     with None
-    show dv normal pioneer at center 
+    show dv normal pioneer at center
     with dspr
     "Такой подход к делу несколько обескуражил Алису, и она всерьёз задумалась."
     dv "Мне нужен уголь. От отравлений, знаешь?"
     me "Ты не выглядишь отравленной."
     dv "О да."
     with None
-    show dv grin pioneer at center 
+    show dv grin pioneer at center
     with dspr
     "Усмехнулась она."
     dv "Я пока только планирую."
@@ -1642,7 +1642,7 @@ label alt_day4_fz_dv_dinner:
             "Я полез в ящик и вытащил оттуда пачку конвалют с активированным углем, туго перетянутую зелёной медицинской резинкой."
             "Достав одну, я протянул её Двачевской."
             with None
-            show dv normal pioneer at center 
+            show dv normal pioneer at center
             with dspr
             me "Удачно погудеть."
             "От души пожелал я."
@@ -1658,13 +1658,13 @@ label alt_day4_fz_dv_dinner:
             me "Фигушки."
             "Я поднялся со стула и, привалившись пятой точкой к столу поверх бюро, скрестил руки на груди."
             with None
-            show dv angry pioneer at center 
+            show dv angry pioneer at center
             with dspr
             dv "Тебе что, угля жалко?!"
             me "Нисколько. Но я не хочу оказаться замешанным. А ты мне этого пообещать не можешь."
             "Она замялась."
             with None
-            show dv normal pioneer at center 
+            show dv normal pioneer at center
             with dspr
             me "Извини, что?"
             dv "Я обещаю, что не стану на тебя указывать."
@@ -1672,7 +1672,7 @@ label alt_day4_fz_dv_dinner:
             "Она попыталась пролезть силой, но где ей тягаться со мной."
             "Возможно, я малахольный дрищ, но всё равно весовые категории у нас несравнимые."
             with None
-            show dv angry pioneer at center 
+            show dv angry pioneer at center
             with dspr
             dv "Да и подавись своим углем!"
             with None
@@ -1752,7 +1752,7 @@ label alt_day4_fz_dv_dinner:
     stop music fadeout 6
     scene black
     return
-    
+
 label alt_day4_fz_lost_coun:
     if lp_sl > 4:
         scene bg int_aidpost_day with dissolve
@@ -2362,7 +2362,7 @@ label alt_day5_fz_supper:
     window hide
     with fade
     return
-    
+
 label alt_day4_fz_sh_choose:
     scene bg ext_clubs_sunset with dissolve
     "Чем дольше я сидел, тем отчётливее понимал, что кроме меня, в этом лагере тупо некому найти беглеца."
@@ -2377,8 +2377,8 @@ label alt_day4_fz_sh_choose:
     th "Провожатого? Хм…"
     window hide
     return
-    
-    
+
+
 label alt_day4_fz_sh_menu:
     scene bg ext_clubs_sunset with dissolve
     "Скорее всего, я пойду…"
@@ -2542,7 +2542,7 @@ label alt_day4_fz_old_camp:
         me "Спасибо ещё раз."
     elif alt_day4_fz_sh == 4:
         "Я, кряхтя как старый дед, поднялся и кивнул Электронику."
-    me "Так в какую сторону у вас тут старый корпус?"        
+    me "Так в какую сторону у вас тут старый корпус?"
     window hide
     $ persistent.sprite_time = "night"
     scene bg ext_path2_night
@@ -2818,12 +2818,12 @@ label alt_day4_fz_old_camp:
         pause(1)
         th "И на следующий день вышел Чапай на поле боя в новеньких коричневых галифе."
         "Если записать звук, который издала карусель, получился бы отменный будильник - ненадолго, до первого инфаркта."
-        show un shocked pioneer at center 
+        show un shocked pioneer at center
         with dissolve
         un "Ай!"
         "Лена мгновенно догнала и ухватилась за меня? как утопающий за соломинку. "
         me "Это просто карусель."
-        show un shy pioneer at center 
+        show un shy pioneer at center
         with dspr
         "Ровным голосом уведомил я."
         "Что-то, истошно вопящее внутри о том, что она близко, она рядом, она - та самая, вопило всё тише."
@@ -2902,7 +2902,7 @@ label alt_day4_fz_old_camp:
         me "Когда целым коллективом травят одного человека, дети свято уверены, что ничего не происходит. {w}Когда красивая девочка подходит и улыбается только тогда, когда ей что-то надо - она уверена, что это нормально."
         me "Впрочем, это лирика. Давай двигаться дальше."
         "Славя была не прочь продолжить разговор, но покорно кивнула и встала во главе колонны, засветив фонарик."
-        show sl normal pioneer at center 
+        show sl normal pioneer at center
         with dissolve
         "А я покорно уступил инициативу ей."
         th "Наверное, она-то уж знает что делает!"
@@ -2949,7 +2949,7 @@ label alt_day4_fz_old_camp:
         "Злясь больше на самого себя, я задал такую скорость, что не прошло и минуты, как дверь в старый корпус, громко скрипнув, распахнулась."
         stop ambience fadeout 2
     elif alt_day4_fz_sh == 4:
-        show el normal pioneer at center 
+        show el normal pioneer at center
         with dspr
         el "Если хочешь, можем передохнуть пока."
         me "Да нет, раньше начнём, раньше закончим."
@@ -3093,26 +3093,26 @@ label alt_day4_fz_old_camp:
         un "Лишним не будет."
         "Непреклонным тоном отрезала она."
         un "Может, пропустил где-нибудь что-то?"
-        show un normal pioneer at center 
+        show un normal pioneer at center
         with dspr
     elif alt_day4_fz_sh == 2:
         sl "Ну а вдруг! Вообще, ты уверен, что хорошо смотрел?"
         "Судя по её решительному виду, поиски только что вышли на новый виток."
         sl "Может, пропустил где-нибудь что-то?"
-        show sl normal pioneer at center 
+        show sl normal pioneer at center
         with dspr
     elif alt_day4_fz_sh == 3:
         dv "Никак не могу запомнить, что именно ты - МОЗГ команды."
         "Фыркнула Алиса."
         dv "Или, может, мозжечок? "
         dv "Предлагай свой вариант, мозжечок."
-        show dv grin pioneer at center 
+        show dv grin pioneer at center
         with dspr
     elif alt_day4_fz_sh == 4:
         el "Ну не возвращаться же несолоно хлебавши."
         "Электроник явно собрался во что бы то ни стало найти своего друга почему-то именно здесь."
         el "Давай подумаем, где ещё не смотрели. И сходим!"
-        show el normal pioneer at center 
+        show el normal pioneer at center
         with dspr
     me "Можешь сходить да посмотреть. Я за тебя потом отомщу если что."
     me "В случае, если вдруг на тебя там враги нападут или ещё что."
@@ -3161,7 +3161,7 @@ label alt_day4_fz_old_camp:
         with dissolve
         el "Больше Шурику быть негде."
     me "Думаешь?"
-    "Впрочем, вопрос тут же перестал быть актуальным, как только я разглядел отпечаток чьей-то ноги в пыли." 
+    "Впрочем, вопрос тут же перестал быть актуальным, как только я разглядел отпечаток чьей-то ноги в пыли."
     me "Чёрт, а я даже завещания не оставил."
     "Вздохнул я."
     if alt_day4_fz_sh == 1:
@@ -3228,7 +3228,7 @@ label alt_day4_fz_old_camp:
         el "Нормально, похоже, не сломаются."
         "Электроник осмелел и двигался гораздо быстрее."
     me "Что ж, тогда встретимся в морге."
-    "Пробормотал я, следуя примеру авангарда." 
+    "Пробормотал я, следуя примеру авангарда."
     scene black with dissolve
     "Внизу оказалось темно как в гробу."
     "Не сказать, чтобы меня привлекала вся эта кладбищенская атрибутика, но здесь такая атмосфера…"
@@ -3275,7 +3275,7 @@ label alt_day4_fz_old_camp:
     scene bg int_catacombs_entrance:
         xalign .5 yalign .4 zoom 1.0
         linear 6.0 xalign 0.65 yalign .6 zoom 2.0
-    "Сердце царапнуло застарелым приступом клаустрофобии - старой подруги, которую, казалось, я давно и успешно изжил в себе, обитая в тёмной конуре наедине с монитором и клубами никотинового дыма." 
+    "Сердце царапнуло застарелым приступом клаустрофобии - старой подруги, которую, казалось, я давно и успешно изжил в себе, обитая в тёмной конуре наедине с монитором и клубами никотинового дыма."
     th "Кстати, странно, что за четыре дня меня так ни разу и не дёрнуло затянуться."
     th "Если я правильно помню, там завязка не столько физиологическая (хвала рандому, обновлённое тело лишено зависимости), сколько психологическая. Но ведь и не вспомнил ни разу."
     "Я фыркнул. Да уж, ассоциации работают что надо, осталось только вспомнить про интернет, анонимное общение и серость за окном, и готова ностальгия. {w}Вы слышали? {w}Ностальгия! {w}Кошмар!"
@@ -3353,7 +3353,7 @@ label alt_day4_fz_old_camp:
         dv "Ррррр…"
         play sound sfx_bus_window_hit
         "Алиса от злости саданула кулаком по стене."
-        show dv normal pioneer with dspr 
+        show dv normal pioneer with dspr
         dv "Ты ещё хуже Феоктистовой!"
         me "Приму как комплимент."
         "Алиса больше не говорила не слова - молча зажгла фонарь и отправилась по направлению следа."
@@ -3372,7 +3372,7 @@ label alt_day4_fz_old_camp:
     scene bg int_catacombs_entrance with dissolve
     window hide
     "Дорога была не очень. Очень не очень."
-    "В отличие от стен, полу досталось сильнее, и он был повсеместно покрыт какими-то выбоинами, лужами, тут и там валялись вывалившиеся из стен несущие, и зачастую приходилось двигаться по очень узкой и очень непрямой дорожке." 
+    "В отличие от стен, полу досталось сильнее, и он был повсеместно покрыт какими-то выбоинами, лужами, тут и там валялись вывалившиеся из стен несущие, и зачастую приходилось двигаться по очень узкой и очень непрямой дорожке."
     "Кое-где приходилось огибать лужи - угодить головой на один из крюков не улыбалось совершенно, а это было неизбежно, особенно, если  слева и справа от обломков ступить некуда, а единственный путь приходится на лужу - с почему-то очень скользким дном!"
     if alt_day4_fz_sh == 1:
         "Не помогало даже то, что Лена шла впереди, прекрасно ориентируясь и, кажется, нисколько не сомневаясь даже тогда, когда наш импровизированный слалом по сложности достиг запредельного уровня."
@@ -3410,7 +3410,7 @@ label alt_day4_fz_old_camp:
     "А вот та коробочка, если я правильно помню уроки ОБЖ, относится к запирающим механизмам."
     "Разумеется, в том случае, если дверь не задраена изнутри."
     if alt_day4_fz_sh == 1:
-        show un normal pioneer at left 
+        show un normal pioneer at left
         with dissolve
         un "Серьёзная вещь."
         "Кивнула Лена."
@@ -3427,7 +3427,7 @@ label alt_day4_fz_old_camp:
         "Лена жала изо всех сил, давая мне время крутить колесо, и я был ей благодарен за то, что не включила белоручку."
         "Наконец, где-то внутри штифт поймал нужную пружинку, и…"
     elif alt_day4_fz_sh == 2:
-        show sl normal pioneer at left 
+        show sl normal pioneer at left
         with dissolve
         sl "Серьёзная вещь."
         "Кивнула Славя."
@@ -3450,7 +3450,7 @@ label alt_day4_fz_old_camp:
         sl "Может, она была открыта - он зашёл и просто захлопнул дверь за собой."
         "Это звучало ещё глупее, чем одновременное нажатие кнопки и вращение колеса пяткой, поэтому я промолчал."
     elif alt_day4_fz_sh == 3:
-        show dv normal pioneer at left 
+        show dv normal pioneer at left
         with dissolve
         dv "Ты ведь знаешь как её открыть, правда?"
         "С надеждой спросила Алиса."
@@ -3487,7 +3487,7 @@ label alt_day4_fz_old_camp:
         me "Да отпускай уже."
         "Рыжая прыснула и отпустила кнопку."
     elif alt_day4_fz_sh == 4:
-        show el normal pioneer at left 
+        show el normal pioneer at left
         with dissolve
         el "Шурик здесь точно был."
         "Электроник подсветил грязный отпечаток у самой двери."
@@ -3538,7 +3538,7 @@ label alt_day4_fz_old_camp:
         "Ни делать, ни думать ничего не хотелось, и молчание ещё это, становящееся всё более натянутым с каждой минутой."
         "Уже не хотелось ни найти Шурика, ни выбраться отсюда."
         "Быстрая и безболезненная смерть тоже устроила бы."
-        show un sad pioneer at center 
+        show un sad pioneer at center
         with dissolve
         un "И как долго ты собираешься здесь сидеть?"
         "Спросила Лена, когда молчание затянулось."
@@ -3555,7 +3555,7 @@ label alt_day4_fz_old_camp:
         me "Я плохо себя чувствую."
         "Ровным голосом ответил я."
         me "Если не хочешь, чтобы меня вывернуло тебе на форму, оставь меня на пару минут в покое, пожалуйста."
-        show un shy pioneer at center 
+        show un shy pioneer at center
         with dissolve
         un "О, господи."
         "Злости как ни бывало - рядом со мной на кровать опустилась донельзя смущённая девочка."
@@ -3596,7 +3596,7 @@ label alt_day4_fz_old_camp:
         "Понятия не имею, что она нашла такого в этом бомбоубежище, из вызывающего интерес здесь можно разве что тареном разжиться."
         dreamgirl "Наркоман."
         th "Ой, хорошо. Ещё сухпаями и радиоэлектроникой. Но лучше здесь не трогать ничего."
-        show sl sad pioneer at center 
+        show sl sad pioneer at center
         with dissolve
         sl "Почему?"
         "Надо больше внимания уделять самоконтролю. Слишком часто в последнее время я непроизвольно озвучиваю собственные мысли."
@@ -3615,7 +3615,7 @@ label alt_day4_fz_old_camp:
         "Я закрыл глаза. Кажется, находился сегодня."
         "Некоторое время спустя кровать заскрипела под дополнительным весом, и рядом уселась Славяна."
         "Ещё через секунду мою руку забрали ладошки и больше машинально, чем с каким-то подтекстом, погладили."
-        show sl shy pioneer at center 
+        show sl shy pioneer at center
         with dissolve
         sl "Слушай, если совсем плохо — можем пойти назад."
         "Предложила она."
@@ -3633,7 +3633,7 @@ label alt_day4_fz_old_camp:
         scene cg d4_sl_sleep_7dl with dissolve
         "Уставшяя и перенервничавшая девушка безо всякого зазрения совести воспользовалась мной как подушкой!"
         "Улыбнувшись, я опёрся спиной о стену так, чтобы ей было удобнее, и сам смежил веки."
-        window hide 
+        window hide
         with fade2
         "Спать не хотелось, належался за день, но я вчера ещё постиг дао, а значит, время не имело значения."
         "Хромая голова была пустой, лишь кое-где с ощутимым треском проскакивал сигнал между синапсов."
@@ -3683,7 +3683,7 @@ label alt_day4_fz_old_camp:
         "Энтузиазма в ней это не прибавило. {w}Скорее наоборот, судя по виду, ей ощутимо подурнело."
         "Начать стоит, пожалуй, с прекрасного зеленоватового оттенка её лица, который вкупе с прозрачной кожей, присущей всем рыжим, делал её похожей на живой труп."
         "Про выражение на лице «я не знаю, зачем оно приползло, но я его сожрала» и упоминать не хочется."
-        show dv guilty pioneer at center 
+        show dv guilty pioneer at center
         with dissolve
         dv "Кажется…"
         "Она не договорила — и если бы не подспудная готовность, задействованная сразу после того, как я узрил её лицо — там бы и рухнула."
@@ -3930,7 +3930,7 @@ label alt_day4_fz_old_camp:
     th "Стоп. Я сказал каверны?"
     "В луче фонаря что-то блеснуло."
     if alt_day4_fz_sh == 1:
-        show un normal pioneer at center 
+        show un normal pioneer at center
         with dissolve
         un "Рельсы?"
         me "Шахта, кажется."
@@ -3985,14 +3985,14 @@ label alt_day4_fz_old_camp:
         "Идеально белые! Миниатюрные!"
         "Фонарик выпал из руки и лежал на полу, подсвечивая идиллическую картинку с полушариями идеальной формы, лежащими у меня в ладонях."
         "Лена взвизгнула и отскочила."
-        show un shy pioneer far at center 
+        show un shy pioneer far at center
         with dissolve
         "Её щёки полыхали."
         "А я, несмотря на то, что сам был смущён не меньше, никак не мог одолеть завладевшего мной бесовского веселья."
         me "Неудобно вышло, да?"
         "Она промолчала."
         me "Ну, с этим спуском, с трусами."
-        show un angry2 pioneer far at center 
+        show un angry2 pioneer far at center
         with dissolve
         un "М-может, мы уже забудем об этом инциденте?"
         "Как и любой другой сгорающий со стыда человек, она нашла выход в агрессии."
@@ -4009,7 +4009,7 @@ label alt_day4_fz_old_camp:
         $ persistent.sprite_time = "night"
         $ alt_day4_fz_senio = 1
     elif alt_day4_fz_sh == 2:
-        show sl normal pioneer at center 
+        show sl normal pioneer at center
         with dissolve
         sl "Подземная железная дорога."
         me "Секретное правительственное метро."
@@ -4071,13 +4071,13 @@ label alt_day4_fz_old_camp:
         window hide
         scene bg int_mine
         with flash
-        show sl shy pioneer at center 
+        show sl shy pioneer at center
         with dissolve
         "И в его свете разглядел и кучу обломков, на которой мы всё ещё стояли, и покрасневшую Славю, и — в последнюю очередь — бревенчатые крепи заброшенной угольной шахты."
         sl "Кажется, это действительно шахта."
         me "И Шурик, конечно же, попёрся сюда. Не сиделось ему на месте!"
         "Перспективы бродить здесь до посинения становились всё более и более явными."
-        show sl normal pioneer at center 
+        show sl normal pioneer at center
         with dissolve
         sl "Думаю, он где-то неподалёку."
         "Рассмеялась она, приводя одежду в порядок."
@@ -4087,7 +4087,7 @@ label alt_day4_fz_old_camp:
         $ persistent.sprite_time = "night"
         $ alt_day4_fz_senio = 2
     elif alt_day4_fz_sh == 3:
-        show dv normal pioneer at center 
+        show dv normal pioneer at center
         with dissolve
         dv "Похоже на шахту."
         me "Это она и есть. Кажется, кто-то что-то накосячил во время планировки, вот и обвалилось."
@@ -4134,7 +4134,7 @@ label alt_day4_fz_old_camp:
         dreamgirl "Остались сущие мелочи - убедить её отказаться от игр в футбол и ношения свинчатки в кармане юбки."
         me "Так это. Ты симпатичная."
         "Кажется, я сбил её с толку."
-        show dv shy pioneer at center 
+        show dv shy pioneer at center
         with dissolve
         dv "…"
         "Она покраснела пуще прежнего и, нагнувшись, подняла фонарь с пола."
@@ -4149,7 +4149,7 @@ label alt_day4_fz_old_camp:
         $ persistent.sprite_time = "night"
         $ alt_day4_fz_senio = 2
     elif alt_day4_fz_sh == 4:
-        show el normal pioneer at center 
+        show el normal pioneer at center
         with dissolve
         el "Не знал, что под лагерем шахты находятся."
         me "Под лагерем? С чего ты решил?"
@@ -4186,7 +4186,7 @@ label alt_day4_fz_old_camp:
         el "Держу!"
         "Он удерживал меня, сам заметно кренясь - всё-таки моё новое тело было чуть больше и ощутимо тяжеле того, что было у кибернетика."
         "Наконец, удалось найти какой-то упор."
-        show el sad pioneer at center 
+        show el sad pioneer at center
         with dissolve
         el "Ещё бы чуть-чуть, и!"
         me "Спасибо, дружище!"
@@ -4207,7 +4207,7 @@ label alt_day4_fz_old_camp:
     window hide
     with fade
     return
-    
+
 label alt_day4_fz_xroad:
     scene bg int_mine_crossroad with dissolve
     "Мы миновали несколько развилок, двигаясь напропалую вперёд, пока не уткнулись в т-образный перекрёсток."
@@ -4357,7 +4357,7 @@ label alt_day4_fz_xroad:
         label alt_day4_fz_gogo03:
             $ alt_day4_fz_gogo = renpy.random.choice([1, 2])
             if alt_day4_fz_gogo == 1:
-            
+
                 "Оставалось только надеяться, что наш метод оправдает себя."
                 window hide
                 $ alt_day4_fz_senio = alt_day4_fz_senio + 1
@@ -4395,7 +4395,7 @@ label alt_day4_fz_xroad:
         label alt_day4_fz_gogo04:
             $ alt_day4_fz_gogo = renpy.random.choice([1, 2])
             if alt_day4_fz_gogo == 1:
-            
+
                 "Оставалось только надеяться, что наш метод оправдает себя."
                 window hide
                 $ alt_day4_fz_senio = alt_day4_fz_senio + 1
@@ -4406,12 +4406,12 @@ label alt_day4_fz_xroad:
     window hide
     with fade
     return
-            
+
 label alt_day4_fz_exit:
     if alt_day4_fz_sh == 1:
         "Некоторое время мы шли молча."
         "Наконец, Лене надоело молчание."
-        show un normal pioneer at center 
+        show un normal pioneer at center
         with dspr
         un "Как ты?"
         me "Спасибо, я в порядке."
@@ -4448,7 +4448,7 @@ label alt_day4_fz_exit:
         "Я нашёл, что в это трудно поверить, хотя до сих пор внутренний голос никогда не врал."
         dreamgirl "Препирательства закончили? Тогда приготовься. {w}Я сниму боль, но рекомендую удвоить бдительность: похоже, мы на месте."
         "Боль немного отступила, и тут же, подтверждая слова внутреннего голоса, свет фонаря отразился от чего-то металлического в глубине тоннеля."
-        show un normal pioneer at center 
+        show un normal pioneer at center
         with dissolve
         me "Разнообразие…"
         un "Что?"
@@ -4475,7 +4475,7 @@ label alt_day4_fz_exit:
         "Значит, есть и другой вход."
         "Шурика не было и здесь."
     elif alt_day4_fz_sh == 2:
-        show sl normal pioneer at center 
+        show sl normal pioneer at center
         with dspr
         sl "Держишься?"
         "Сочувствующе спросила Славяна."
@@ -4514,7 +4514,7 @@ label alt_day4_fz_exit:
         sl "Да! Ты тянешься к людям, видишь в каждом из них собственное маленькое чудо, целый мир… И с огромным удовольствием даёшь им шанс. "
         sl "Я очень рада, что мы подружились, Семён.  Я очень рада, что ты дал и мне мой маленький шансик."
         "В темноте что-то тёплое коснулось моих пальцем и легонько сжало их."
-        show sl normal pioneer at center 
+        show sl normal pioneer at center
         with dissolve
         "Меня как парализовало от таких откровений."
         me "Разнообразие…"
@@ -4542,7 +4542,7 @@ label alt_day4_fz_exit:
         "Значит, есть и другой вход."
         "Шурика не было и здесь."
     elif alt_day4_fz_sh == 3:
-        show dv normal pioneer at center 
+        show dv normal pioneer at center
         with dspr
         dv "Не выдохся ещё?"
         me "Да мы тут с тобой оба инвалиды."
@@ -4590,7 +4590,7 @@ label alt_day4_fz_exit:
         dreamgirl "С чем удалось разобраться — это с психосоматикой: координаты, куда ты так спешишь, защищены, и чем ближе ты к ним в состоянии сознания, тем сильнее у тебя болит голова."
         dreamgirl "Я постараюсь снять неприятные ощущения, но это максимум, что я могу. {w}А там уж дальше, благо, не долго осталось."
         "Боль немного отступила, и тут же, подтверждая слова внутреннего голоса, свет фонаря отразился от чего-то металлического в глубине тоннеля."
-        show dv normal pioneer at center 
+        show dv normal pioneer at center
         with dissolve
         me "Точно, в туалет. Надеюсь, он за той дверью."
         dv "Что?"
@@ -4624,7 +4624,7 @@ label alt_day4_fz_exit:
         me "Его нет и здесь. Но эти бутылки…"
         dv "Да. Вряд ли кто-нибудь пойдёт пить так далеко, как забрались мы."
     elif alt_day4_fz_sh == 4:
-        show el normal pioneer at center 
+        show el normal pioneer at center
         with dspr
         el "Перекур?"
         "Предложил Электроник."
@@ -4671,7 +4671,7 @@ label alt_day4_fz_exit:
         "На лоб будто положили холодный компресс, и я застонал от облегчения."
         th "Никогда бы не подумал, какое это счастье - когда нигде не болит!"
         dreamgirl "Не благодари. Удачи тебе. А я пойду разбираться с остатками алгоритма."
-        show el normal pioneer at center 
+        show el normal pioneer at center
         with dissolve
         el "Ты почему замолчал?"
         me "Дверь."
@@ -4705,7 +4705,7 @@ label alt_day4_fz_exit:
         "Ну и, понятно, Шурика до кучи — его вполне ожидаемо не было здесь."
     play music music_list["torture"] fadein 1
     if alt_day4_fz_sh == 1:
-        show un normal pioneer at center 
+        show un normal pioneer at center
         with dissolve
         me "Очкарик… раздражает. Не сиделось ему в клубе!"
         "Я распинал несколько бутылок и уселся на освободившееся место."
@@ -4734,7 +4734,7 @@ label alt_day4_fz_exit:
         "А потому непонятный мерный шум, доносящийся из-за двери, мгновенно разбудил меня."
         window hide
         scene bg int_mine_room
-        show un shocked pioneer at right 
+        show un shocked pioneer at right
         with dissolve
         th "Что ж… Первый живой человек на все часы поисков."
         "Безучастно подумал я."
@@ -4753,7 +4753,7 @@ label alt_day4_fz_exit:
         play sound sfx_shurik_opens_door
         pause(1)
     elif alt_day4_fz_sh == 2:
-        show sl normal pioneer at center 
+        show sl normal pioneer at center
         with dissolve
         me "Александр… Как его там по фамилии?"
         sl "Трофимов."
@@ -4773,19 +4773,19 @@ label alt_day4_fz_exit:
         me "Можем. А будешь сопротивляться — утащу на тех самых умытых руках. "
         me "Правда, недолго и недалеко. {w}Но я очень постараюсь."
         sl "А меня ещё никогда на руках не носили."
-        show sl normal pioneer close at center  
+        show sl normal pioneer close at center
         with dissolve
         "Мечтательно произнесла она, упокаивая голову у меня на плече."
         sl "Только мама, когда я была маленькой. {w}Но я уже ничего не помню."
         "Она закрыла глаза."
-        show sl shy pioneer close at center 
+        show sl shy pioneer close at center
         with dspr
         sl "Только не подумай, что я навязываюсь…"
         "Сонно произнесла она."
         me "Да ни в одном глазу."
         play sound_loop sfx_shurik_mines_far
         "Я хотел ещё добавить какую-нибудь чушь в духе «для меня это удовольствие», но от очередного позора меня спас какой-то невнятный шум, доносящийся из-за двери, откуда мы пришли."
-        show sl serious pioneer at right 
+        show sl serious pioneer at right
         with dissolve
         th "Ну, если это не Шурик…"
         "Безучастно подумал я."
@@ -4809,7 +4809,7 @@ label alt_day4_fz_exit:
         play sound sfx_shurik_opens_door
         pause(1)
     elif alt_day4_fz_sh == 3:
-        show dv normal pioneer at center 
+        show dv normal pioneer at center
         with dissolve
         dv "Ладно!"
         "Объявила рыжая."
@@ -4830,17 +4830,17 @@ label alt_day4_fz_exit:
         th "Или вообще в сам лагерь?"
         me "То есть, Шурик вполне может быть у себя в домике?"
         dv "Не исключено."
-        show dv normal pioneer close at center  
+        show dv normal pioneer close at center
         with dissolve
         dv "Ещё не исключено, что он до сих пор шляется по туннелям."
         "Да, и такой вариант стоило рассмотреть."
-        show dv grin pioneer close at center 
+        show dv grin pioneer close at center
         with dspr
         dv "Ну, а вообще…"
         play sound_loop sfx_shurik_mines_far
         "Что «вообще», Алиса пояснить не успела."
         "Через дверь за нашей спиной, донёсся какой-то мерный, непонятный шум."
-        show dv shocked pioneer at right 
+        show dv shocked pioneer at right
         with dissolve
         dv "Что это?!"
         me "Понятия не знаю, что это."
@@ -4867,7 +4867,7 @@ label alt_day4_fz_exit:
         play sound sfx_shurik_opens_door
         pause(1)
     elif alt_day4_fz_sh == 4:
-        show el normal pioneer at center 
+        show el normal pioneer at center
         with dissolve
         me "Очередная пустая комната. Твой друг начинает меня доставать."
         "Электроник только руками развёл. {w}Не то чтобы я был в претензии лично к нему, но…"
@@ -4943,7 +4943,7 @@ label alt_day4_fz_exit:
         "Плюс ко всему, на левой щеке у него зияла свежая царапина как от кошачьих когтей, а в руке покоилась тяжёлая даже с виду арматурина с острым краем, эдакий импровизированный черепокол."
         me "Спрятаться? Да мы за тобой, придурком, пришли. "
         sh "Я вам не верю! Вам меня не запутать!"
-        show sh laugh pioneer at center with dissolve  
+        show sh laugh pioneer at center with dissolve
         sh "Голос мне всё рассказал про вас! {w}И про тебя, пришельца, и про неё, обманщицу!"
         "Он говорил, указывая на нас и размахивал арматурой так, что мне пришлось отступить на шаг, чтобы не попасть под удар."
         stop music fadeout 3
@@ -5036,7 +5036,7 @@ label alt_day4_fz_exit:
         "Парой минут позже, мы уже сидели на земле, привалясь спиной к пьедесталу."
         un "Та ещё прогулочка приключилась, да?"
         "Я не мог не согласиться и молча кивнул."
-        show un normal pioneer at center 
+        show un normal pioneer at center
         with dissolve
         "Лена несмело коснулась моей руки."
         un "Надо подниматься."
@@ -5114,7 +5114,7 @@ label alt_day4_fz_exit:
         me "А это украшение у тебя откуда?"
         sh "Украшение? О чём ты?"
         me "Царапины, как будто тебя кошка оцарпала."
-        show sh laugh pioneer at center with dissolve  
+        show sh laugh pioneer at center with dissolve
         sh "Какая кошка в шахтах? Это антинаучно."
         "Он говорил ещё что-то, рассказывал, сбиваясь и перепрыгивая с пятого на десятое, но не подходил вплотную к самой важной теме."
         stop music fadeout 3
@@ -5228,7 +5228,7 @@ label alt_day4_fz_exit:
         $ persistent.sprite_time = "sunset"
         scene bg ext_square_night
         with dissolve
-        show sl smile pioneer close at center  
+        show sl smile pioneer close at center
         with dissolve
         sl "С добрым утром."
         "Поприветствовала меня Славя."
@@ -5344,7 +5344,7 @@ label alt_day4_fz_exit:
         "Я кивнул, указывая на его лицо, где алели три продольных «украшения»."
         sh "Царапины?"
         me "Как будто кошка тебя оцарапала."
-        show sh laugh pioneer at left with dissolve  
+        show sh laugh pioneer at left with dissolve
         sh "Кошка? В шахтах? Это невозможно, это антинаучно!"
         me "Плевал я на возможность. Царапины откуда?"
         show sh normal pioneer with dspr
@@ -5456,7 +5456,7 @@ label alt_day4_fz_exit:
         $ persistent.sprite_time = "sunset"
         scene bg ext_square_sunset
         with dissolve
-        show dv smile pioneer close at center  
+        show dv smile pioneer close at center
         with dissolve
         dv "Мало нам было по катакомбам пошляться, мы ещё и спать на площади завалились."
         "Хрипловатым спросонок голосом заявила рыжая."
@@ -5529,7 +5529,7 @@ label alt_day4_fz_exit:
         sh "Где?"
         "Он машинально коснулся щеки и отдёрнул руку, нащупав кровь."
         me "Это не от человеческих ногтей царапины. Больше на кошачьи когти походят."
-        show sh laugh pioneer at center with dissolve  
+        show sh laugh pioneer at center with dissolve
         sh "Кошачьи? Не думаешь же ты, что здесь где-то водятся кошки!"
         me "Я вообще ничего не думаю. Но у тебя царапины на щеке, а то, что ты не помнишь ничего…"
         stop music fadeout 3
@@ -5563,7 +5563,7 @@ label alt_day4_fz_exit:
         $ persistent.sprite_time = "night"
         scene bg int_mine_exit_night_light
         with dissolve
-    
+
         "По ту сторону двери оказалась небольшая комнатка, дальнюю стену которой полностью занимала ниша с вмурованными в бетон стальными скобами ступеней."
         "После всех перипетий подняться наверх по лестнице и, упираясь спиной в противоположную стенку желоба, выбить решётку несколькими сильными ударами ноги было детским лепетом."
         stop ambience fadeout 3
@@ -5599,10 +5599,10 @@ label alt_day4_fz_exit:
     window hide
     with fade
     return
-    
+
 label alt_day4_fz_herbs:
     play music music_list["a_promise_from_distant_days_v2"] fadein 3
-    show cs normal at center 
+    show cs normal at center
     $ sunset_time()
     $ persistent.sprite_time = "sunset"
     scene bg ext_aidpost_night

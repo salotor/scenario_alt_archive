@@ -16,7 +16,7 @@
     window hide
     with fade
     return
-    
+
 label alt_day1_bus_start:
     scene anim_underwater
     show blackout_exh
@@ -261,7 +261,7 @@ label alt_day1_bus_start:
     "Предстояло найти ответы на два извечных русских вопроса: «кто виноват» и «что делать»."
     "И это не считая того, что природа вокруг бушевала яркими, насыщенными тонами, заставляя задуматься о гуляющей в крови отраве."
     "Я слышал, что некоторые наркотики дают такой вот побочный эффект — ты глядишь на мир и видишь его перенасыщено ярким."
-    "Будто кто-то выкрутил ползунок насыщенности цвета на максимум." 
+    "Будто кто-то выкрутил ползунок насыщенности цвета на максимум."
     "В результате, картинка природы средней полосы России напоминала не то джунгли Амазонки, не то полотно импрессиониста."
     "Меня всегда учили, что прежде чем что-то делать, нужно понять, а нужно ли это делать вообще."
     "В идеале, конечно, лучше вообще составить план действий, но пока рановато, мало данных, а подсказываемый воющим подсознанием план схватиться за голову и побежать в разные стороны я отметал как несостоятельный."
@@ -273,7 +273,7 @@ label alt_day1_bus_start:
     window hide
     with fade
     return
-    
+
 label alt_day1_firts_met:
     scene black
     sl "…ищут, а он здесь спит!"
@@ -287,7 +287,7 @@ label alt_day1_firts_met:
     show sl_shade with flash
     play music music_list["take_me_beautifully"] fadein 1
     "Из-за яркого солнца, бьющего прямо в лицо, никак не удавалось разглядеть, кто со мной говорит."
-    "Но хотя бы контуры фигуры — явно женской — различить удалось." 
+    "Но хотя бы контуры фигуры — явно женской — различить удалось."
     th "Ну что, снова подтверждаем реноме человека-неудачника?"
     th "Не успел ещё даже пошевелиться или куда-то пойти — а уже где-то накосячил."
     "Великолепно, правда?"
@@ -482,7 +482,7 @@ label alt_day1_firts_met:
         xalign 0.5 yalign 0.5 zoom 1.15
         linear 0.2 zoom 1.2 xalign 0.5 yalign 0.5
         ease 0.05 zoom 1.0 xalign 0.5 yalign 0.5
-    stop music 
+    stop music
     stop ambience
     window hide
     play ambience ambience_camp_entrance_day fadein 3
@@ -596,7 +596,7 @@ label alt_day1_firts_met:
     scene black
     with fade
     return
-    
+
 label alt_day1_arrival:
     play music music_list["my_daily_life"] fadein 1
     play ambience ambience_camp_center_day fadein 0
@@ -614,7 +614,7 @@ label alt_day1_arrival:
     pause(1)
     "Что гораздо важнее, там была какая-то девушка."
     "Ещё одна красавица в этом тревожном месте."
-    show un normal pioneer far at left with dissolve 
+    show un normal pioneer far at left with dissolve
     if alt_day1_sl_conv:
         "Она улыбнулась моей провожатой, но немного споткнулась, когда перехватила мой взгляд."
     else:
@@ -648,7 +648,7 @@ label alt_day1_arrival:
     "Кто-то невысокий, в алой футболке с надписью «СССР» и с мордочкой вечно жизнерадостной, счастливой и пакостливой младшей сестры."
     show us grin sport far at center with move
     "Рыжие до красноты волосы, стянутые двумя хвостами-ракетами, смазливая внешность, которую уверенно портила бездна лукавства, плещущая на дне голубых глазищ!"
-    "Издалека она казалась совсем маленькой и по возрасту определённо была младше всех, кого я тут видел раньше." 
+    "Издалека она казалась совсем маленькой и по возрасту определённо была младше всех, кого я тут видел раньше."
     if not alt_day1_sl_conv:
         "Я уже совсем было собрался наплевать на возможные «меканья» и подойти уточнить дорогу по карте,  когда новая девочка подскочила к так и стоящей зеленоглазке и начала что-то говорить, размахивая руками в лучших итальянских традициях."
     else:
@@ -684,7 +684,7 @@ label alt_day1_arrival:
         with dissolve
         "Я бы, наверное, и дальше наблюдал за их занимательным диалогом, но «СССР» вдруг достала из кармана что-то и начала трясти этим перед лицом «Грустяши»."
         "«Чем-то» оказался кузнечик. {w}Нет. Саранча. Огромная!"
-        "Сказать по правде, я бы и сам напугался, если бы мне в лицо ткнули чем-то подобным." 
+        "Сказать по правде, я бы и сам напугался, если бы мне в лицо ткнули чем-то подобным."
         window hide
         stop ambience fadeout 2
         scene cg d1_grasshopper with dissolve
@@ -752,7 +752,7 @@ label alt_day1_arrival:
     "Да не так уж важно, победил я страх или не понял, что надо бояться — надо вести себя достойно и соответствовать высокому званию представителя моего родного города."
     "Я шёл по мощёной дорожке, жмурился от солнца и с интересом рассматривал «бочки» — полукруглые корпуса с одной дверью и одним окном, накрытые листом гофрированного железа."
     "Для пионеров слишком шикарно. {w}Лично мне приходилось ютиться в бараке на сорок человек, разбитом на четыре спальни — девочки в левом крыле, мальчики в правом."
-    "Поэтому мнение о быте пионеров у меня сложилось несколько отличное от того, что я вижу здесь. {w}Во всяком случае, спален-общежитий здесь нет, и это уже неплохо." 
+    "Поэтому мнение о быте пионеров у меня сложилось несколько отличное от того, что я вижу здесь. {w}Во всяком случае, спален-общежитий здесь нет, и это уже неплохо."
     "Что же касается распорядка…"
     play sound sfx_punch_medium
     with vpunch
@@ -813,7 +813,7 @@ label alt_day1_arrival:
         "Я только усмехнулся и прибавил ходу."
         dv "Ты что, не слышишь, что ли?!"
         window hide
-        scene bg ext_path_day 
+        scene bg ext_path_day
         show dv surprise pioneer2 at left
         with flash
         pause(1)
@@ -849,7 +849,7 @@ label alt_day1_arrival:
         "Она засомневалась, но увидеть, как человек сам себя обливает из пожарного ведра, ей, похоже, очень хотелось."
         play sound sfx_punch_medium
         with vpunch
-        me "Так… {w}Поймаешь… {w}Если… {w}Вру." 
+        me "Так… {w}Поймаешь… {w}Если… {w}Вру."
         dv "Ладно."
         "Она ослабила захват и кивнула уже знакомой «СССР», волочащей красное коническое ведро, до краёв налитое мутной водой из пожарной бочки."
         dv "Наш новичок хочет выписать сам себе штрафную! Дадим ему этот шанс!"
@@ -862,8 +862,8 @@ label alt_day1_arrival:
         dv "Нет."
         "Рыжая-старшая облизала губы."
         dv "Но ведь мы его поймаем, если что, верно?"
-        show us smile sport at right with dissolve 
-        us "Точно!" 
+        show us smile sport at right with dissolve
+        us "Точно!"
         us "Сейчас я…"
         "Я взял ведро в руку…"
         me "Вторая степень унижения!"
@@ -966,24 +966,24 @@ label alt_day1_chase1:
     "Истово, от души, хохоча, я пересёк площадь в другую сторону."
     window hide
     scene bg ext_square_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0,0)
+        linear 0.1 pos (-5,-5)
+        linear 0.1 pos (5,5)
+        pos (0,0)
+        linear 0.1 pos (0,-5)
+        linear 0.1 pos (0,5)
         repeat
     with dissolve
 
     "Помахал бронзовому балбесу…"
     window hide
     scene bg ext_aidpost_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0,0)
+        linear 0.1 pos (-5,-5)
+        linear 0.1 pos (5,5)
+        pos (0,0)
+        linear 0.1 pos (0,-5)
+        linear 0.1 pos (0,5)
         repeat
     with dissolve
 
@@ -991,12 +991,12 @@ label alt_day1_chase1:
     th "Красный крест? Медпункт?{w} Будет актуально, если я сейчас не оторвусь."
     window hide
     scene bg ext_dining_hall_away_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0,0)
+        linear 0.1 pos (-5,-5)
+        linear 0.1 pos (5,5)
+        pos (0,0)
+        linear 0.1 pos (0,-5)
+        linear 0.1 pos (0,5)
         repeat
     with dissolve
 
@@ -1016,7 +1016,7 @@ label alt_day1_dock:
     th "Здесь так мирно."
     "Кажется, здесь можно укрыться от погони. Во всяком случае, пока."
     "Прогрохотав тяжёлыми зимними ботинками по доскам настила, я ушёл к самому краю."
-    "Присмотрев местечко поуютнее, сбросил с себя мокрый свитер и повесил его на поручень." 
+    "Присмотрев местечко поуютнее, сбросил с себя мокрый свитер и повесил его на поручень."
     "Поискал по карманам сигареты, не нашёл. Ну и ладно."
     th "Ощущение, что я что-то забыл…"
     th "Пальто! В нём же и паспорт, и пара сотен на проезд! Как я мог забыть его в автобусе!"
@@ -1179,7 +1179,7 @@ label alt_day1_mod_tan:
                 extend ", прихватив по дороге крайне удачно лежащую шишку."
             else:
                 extend ", спрятавшись от солнцепёка."
-                
+
             if alt_day1_sl_met:
                 "Славя села в соседний и спокойно улыбнулась в ответ на вопрошающий взгляд."
             th "Похоже, у вожатой дел невпроворот. Впрочем, судя по вздорному детскому голоску, который я слышу… Ничего удивительного."
@@ -1305,48 +1305,48 @@ label alt_day1_mod_tan:
     play music music_list["revenga"] fadein 3
     if not (herc or loki) and not alt_day1_sl_conv:
         scene cg d2_mirror:
-            pause 0.5 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (5,0) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,0) 
+            pause 0.5
+            linear 0.05 pos (-5,-5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (5,5)
+            linear 0.05 pos (5,0)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (-5,-5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (5,5)
+            linear 0.05 pos (0,5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (-5,-5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (5,5)
+            linear 0.05 pos (0,5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (-5,-5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (5,5)
+            linear 0.05 pos (0,0)
     else:
         scene cg d1_me_dahell_7dl:
-            pause 0.5 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (5,0) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,0) 
+            pause 0.5
+            linear 0.05 pos (-5,-5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (5,5)
+            linear 0.05 pos (5,0)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (-5,-5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (5,5)
+            linear 0.05 pos (0,5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (-5,-5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (5,5)
+            linear 0.05 pos (0,5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (-5,-5)
+            linear 0.05 pos (0,0)
+            linear 0.05 pos (5,5)
+            linear 0.05 pos (0,0)
     with dissolve
     "Я отказывался верить тому, что увидел в зеркале."
     "Из-под чёлки взирал товарищ лет восемнадцати, будто немного уменьшенный относительно меня настоящего."
@@ -1439,7 +1439,7 @@ label alt_day1_mod_tan:
         "Пальто я благополучно посеял в автобусе, так что дело было за свитером — я тут же избавился от него, повесив на спинку кровати, и снял ботинки, поклявшись себе либо раздобыть нормальную обувь по погоде, либо ходить босиком."
         "Я остался в одной футболке «Indigo Denim» и призадумался, не слишком ли это будет вызывающе — носить такие вещи в советском лагере."
         "После секундных раздумий решил, что футболка летом будет уместнее свитера. Даже с буржуйской надписью на груди."
-        th "В конце концов, мелкая, вон, в эсэсэрке бегает, и ничего. Чем я хуже? Буду причащать массы к плетёному хлопку." 
+        th "В конце концов, мелкая, вон, в эсэсэрке бегает, и ничего. Чем я хуже? Буду причащать массы к плетёному хлопку."
     stop music fadeout 4
     stop ambience fadeout 6
     window hide
@@ -1526,7 +1526,7 @@ label alt_day1_elektron:
     play music music_list["take_me_beautifully"] fadein 1
     window hide
     scene bg int_warehouse_day_7dl
-    show sl shy sport at center 
+    show sl shy sport at center
     show el normal pioneer at left
     with dissolve
     "Несколько минут спустя из-за полок появилась встрёпанная и покрасневшая Славя, одёргивающая одежду."
@@ -1581,7 +1581,7 @@ label alt_day1_meeting:
     show el laugh pioneer at cleft with dspr
     el "Смотри, Семён. Лена!"
     show un normal pioneer far at cright behind el with dspr
-    th "Не спорю, Лена — девушка видная. Но называть её достопримечательностью…" 
+    th "Не спорю, Лена — девушка видная. Но называть её достопримечательностью…"
     "Я подавил смешок."
     me "А она в курсе, как ты её только что окрестил?"
     el "Конечно."
@@ -1703,7 +1703,7 @@ label alt_day1_meeting:
             hide dv with dissolve
             window hide
             with fade2
-        
+
             th "Судя по всему, дальше меня никто не будет доставать, и время до ужина можно посвятить блаженной праздности."
             "Я наобум выбрал направление и отправился в сторону, откуда раздавались упругие удары по мячу — там явно играли в футбол."
     stop music fadeout 4
@@ -1713,7 +1713,7 @@ label alt_day1_meeting:
     return
 
 label alt_day1_soccer_d1:
-    scene bg ext_playground2_7dl 
+    scene bg ext_playground2_7dl
     with dissolve
     play ambience ambience_soccer_play_background fadeout 2
     play music music_list["went_fishing_caught_a_girl"] fadein 2
@@ -1770,7 +1770,7 @@ label alt_day1_soccer_d1:
         scene bg ext_playground2_7dl at zentercenter
         show us smile sport
         with dissolve
-    
+
         us "Эй, и это что, всё?"
         me "Ну, так а больше и не надо!"
         me "Впрочем, ты всегда можешь забраться на турник и переубедить меня!"
@@ -1791,7 +1791,7 @@ label alt_day1_soccer_d1:
         "Разочарованно загудели незаметно подтянувшиеся болельщики."
         window hide
         scene bg ext_playground2_7dl with flash
-    
+
         th "Так и до инфаркта довести недолго."
         "Недовольно подумал я, поднимаясь."
         show us smile sport with dspr
@@ -1802,11 +1802,11 @@ label alt_day1_soccer_d1:
     if loki and not alt_day1_sl_conv:
         us "Лентяй ты, вот ты кто."
         me "Будешь обзываться — оболью ещё раз!"
-        "Девочка хотела было ответить что-то обидное, но её прервали сигналы бессмертного «бери ложку, бери хлеб»." 
+        "Девочка хотела было ответить что-то обидное, но её прервали сигналы бессмертного «бери ложку, бери хлеб»."
     else:
         "Можно подумать, счастье — в количестве подтягиваний."
         "Поняв, что на «слабо» я не ведусь, девочка хотела было вернуться к игре, но её прервал сигнал горна."
-    play music sfx_7dl["eat_horn"] fadein 3 
+    play music sfx_7dl["eat_horn"] fadein 3
     us "Бегом до столовой! Кто последний, тот тухлый помидор!"
     hide us with dissolve
     "Дети загалдели и, толкаясь, бросились по направлению к столовой."
@@ -1830,7 +1830,7 @@ label alt_day1_soccer_d1:
     return
 
 label alt_day1_supper:
-    scene bg ext_dining_hall_away_sunset 
+    scene bg ext_dining_hall_away_sunset
     with dissolve
     "Заскочив по дорожке к умывальникам и сполоснув руки холодной до ломоты в пальцах водой, мы зашли в помещение столовой."
     stop music fadeout 4
@@ -1838,7 +1838,7 @@ label alt_day1_supper:
     window hide
     with fade
     return
-    
+
 label alt_day1_dining_room:
     play ambience ambience_dining_hall_full fadein 3
     scene bg int_dining_hall_people_day  with fade
@@ -2072,7 +2072,7 @@ label alt_day1_chase:
     menu:
         "Бежать на площадь!":
             scene bg ext_square_sunset with dissolve
-        
+
             th "Сколь-ко мож-но у-же бе-гать!"
             "Волка ноги кормят, но я сегодня что-то всё больше бегаю, чем кормлюсь."
             "За весь день я даже воды не попил, откуда ж силам взяться. А ещё эта мерзавка."
@@ -2083,7 +2083,7 @@ label alt_day1_chase:
             $ renpy.pause (1)
             play ambience ambience_forest_day fadein 1
             play sound sfx_7dl["breath"] fadein 3
-        
+
             "Пробежав весь лагерь насквозь, я начал понимать, что где-то разминулся с жертвой."
             "Я остановился, со злостью ударив кулаком по дереву, и, согнувшись, попробовал восстановить дыхание."
             if alt_dlc_active:
@@ -2098,7 +2098,7 @@ label alt_day1_chase:
             "Красная футболка с надписью «СССР» мелькала среди зелени заметным пятном."
             "И я прибавил ходу, не обращая внимания на возмущённо ноющие ноги."
             window hide
-            scene bg ext_playground_day 
+            scene bg ext_playground_day
             with dissolve
             "Впрочем, долго их игнорировать не удалось бы, и я почувствовал, что ещё немного — и начну сдавать."
             "Скорости было недостаточно, дыхалки было недостаточно."
@@ -2138,7 +2138,7 @@ label alt_day1_chase:
     window hide
     with fade
     return
-                    
+
 label alt_day1_headshot:
     scene bg ext_path_day with fade
     play music music_list["take_me_beautifully"] fadein 1
@@ -2171,7 +2171,7 @@ label alt_day1_headshot:
     window hide
     with fade
     return
-    
+
 label alt_day1_nocatch:
     scene bg ext_path_sunset with fade2
     "Время было уже позднее, и делать что-то в потёмках не хотелось совершенно."
@@ -2298,14 +2298,14 @@ label alt_day1_slavya_saviour:
     window hide
     stop music fadeout 3
     $ persistent.sprite_time = "night"
-    scene bg ext_dining_hall_away_night 
+    scene bg ext_dining_hall_away_night
     with dissolve
 
     play sound sfx_alisa_picklock
     "Но на крыльце уже кто-то был и, судя по сосредоточенному пыхтению, пытался забраться внутрь."
     window hide
     $ persistent.sprite_time = "night"
-    scene bg ext_dining_hall_near_night 
+    scene bg ext_dining_hall_near_night
     with dissolve
 
     if not herc:
@@ -2543,7 +2543,7 @@ label alt_day1_slavya_saviour:
     window hide
     $ persistent.sprite_time = "night"
     scene bg int_extra_house_7dl
-    show sl smile pioneer 
+    show sl smile pioneer
     with dissolve
     "Она встала из-за стола."
     sl "1989-й год от рождества Христова.  {w}Это какая-то проверка была?"
@@ -2741,7 +2741,7 @@ label alt_day1_lena:
                     "Она поднялась со скамейки, поколебалась с секунду, а потом развернулась и растаяла в ночи."
                     hide un with dissolve
                     th "Всё как обычно, вот что значит старая школа."
-                    "Такие девушки как она, не интересуются такими парнями как я. Всё логично. Нас либо френдзонят, либо игнорят." 
+                    "Такие девушки как она, не интересуются такими парнями как я. Всё логично. Нас либо френдзонят, либо игнорят."
                     "Спасибо, хоть поговорила со мной."
                     stop music fadeout 4
                     $ renpy.pause(3)
@@ -2760,7 +2760,7 @@ label alt_day1_lena:
                     "Она немного помолчала."
                     un "А ты?"
                     me "Я?"
-                    "И правда, а что я?" 
+                    "И правда, а что я?"
                     "Рассказать ей о том, что последние пару лет читаю со смарта золотую коллекцию юмористического фэнтези нулевых в триста книжек?"
                     "Или вспомнить Бушкова, Головачёва, Булычёва — они, вроде, уже творили в это время? "
                     "А, была не была!"
@@ -2771,7 +2771,7 @@ label alt_day1_lena:
                     "Она замолчала."
                     show un sad pioneer with dspr
                     un "Не люблю фантастику."
-                    me "Не просто фантастика, а социально-философская фантастика!" 
+                    me "Не просто фантастика, а социально-философская фантастика!"
                     me "Тех же «Гадких лебедей» возьми — вот о чём там?"
                     me "О какой-то там школе и детях-индиго? О сверхспособностях? "
                     me "Нет, там — о людях! О том, как ведут себя люди, оказавшиеся в необычных ситуациях."
@@ -2921,7 +2921,7 @@ label alt_day1_lena:
     window hide
     with fade
     return
-    
+
 label alt_day1_un_stay:
     un "Ладно…"
     show un serious pioneer with dspr
@@ -2958,7 +2958,7 @@ label alt_day1_un_stay:
     window hide
     with fade
     return
-    
+
 label alt_day1_sleep:
     window hide
     scene bg ext_square_night with dissolve

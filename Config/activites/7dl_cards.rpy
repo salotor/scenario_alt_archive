@@ -18,7 +18,7 @@
     "Не прошло и пяти минут, а мы уже разбились по парам."
     "Мне в оппоненты рандом послал"
     call alt_shuffler
-    
+
     scene bg int_dining_hall_sunset
     call alt_shuffler_pl1
     call alt_shuffler_pl2
@@ -61,7 +61,7 @@
         us "И не надо! Но играть будем по моим правилам!"
         me "Это по каким это?"
         us "Увидишь!"
-        
+
     elif alt_pe == 6:#
         show sh normal pioneer at cright with dspr
         extend " Шурика."
@@ -74,8 +74,8 @@
         mz "Я твой противник."
         "Скрипнула она, присаживаясь напротив."
         "Я молча кивнул в ответ."
-        
-    
+
+
     if persistent.altCardsWon1 or persistent.altCardsFail:
         menu:
             "Играть самостоятельно.":
@@ -184,7 +184,7 @@ label alt_day2_participate:
         "Из-за стёкол очков на меня зыркала нелюдимая библиотекарша"
 
     extend ", а вот за другими столами дела сложились куда интереснее."
-    
+
     "Первый стол заняли"
     if alt_player1 == 1:
         show un_playon:
@@ -221,7 +221,7 @@ label alt_day2_participate:
             pos (459,157)
         with dissolve
         extend " Женя"
-    
+
     if alt_player2 == 1:
         show un_playon:
             pos (459,312)
@@ -265,7 +265,7 @@ label alt_day2_participate:
         extend " и Жужелица."
         "Она, как обычно, проигнорировала меня."
     "С первым столом разобрались, кто-то из них сегодня не дойдёт до финала."
-    
+
     "Следующий стол принадлежал "
     if alt_player3 == 1:
         show un_playon:
@@ -346,7 +346,7 @@ label alt_day2_participate:
         extend " и Жене."
         "Видно было, что она рада бы всё бросить и пойти в библиотеку."
     "И, наконец, последний стол."
-    
+
     "За ним сидели"
     if alt_player5 == 1:
         show un_playon:
@@ -704,7 +704,7 @@ label alt_day2_participate_win:
     $ persistent.altCardsWon1 = True
     scene bg int_dining_hall_sunset
     $ alt_day2_round1 = 2
-    window show    
+    window show
     call alt_day2_qf_analizer
     $ renpy.pause(1)
     scene bg int_dining_hall_sunset
@@ -882,7 +882,7 @@ label alt_day2_participate_win:
                         dv "Удачи тебе."
                         hide dv with dissolve
                         window hide
-                        
+
                     else:
                         "Начал было я, и, чувствуя, как запал иссякает, продолжил уже куда спокойнее:"
                         me "Кажется, я победил."
@@ -898,7 +898,7 @@ label alt_day2_participate_win:
                         dv "Ладно, бывай."
                         hide dv with dissolve
                         window hide
-                        
+
                 "Партия.":
                     "Алиса кивнула и молча поднялась из-за стола."
                     pass
@@ -1142,11 +1142,11 @@ label alt_day2_participate_win:
             pos (1315,620)
         $ renpy.pause(1)
         hide mz_playon with diam
-        
+
     "А мой соперник отправляется в ад!"
     "То есть, остаётся в первом коне."
 
-    
+
 label alt_day2_semifinal:
     "За стол полуфиналиста посадили моего оппонента."
     scene bg int_dining_hall_sunset
@@ -1213,7 +1213,7 @@ label alt_day2_semifinal:
             me "Что бы это значило?!"
             show us laugh pioneer with dspr
         us "Просто я ничего не поняла и не запомнила."
-        
+
     if alt_day2_hf2 == 6:
         "Александр Трофимов. {w}Больше известный как Шурик за схожесть с одним киногероем."
         show sh normal pioneer with dspr
@@ -2059,7 +2059,7 @@ label alt_day2_final_fail:
         mt "Ну, Хатсуне!"
         "Мику на миг прижалась ко мне всем телом, а затем убежала от криков разъярённой вожатой."
         hide mi with flash
-        
+
     elif alt_day2_f1 == 5:
         $ lp_us += 1
         play music music_7dl["genki"] fadein 3
@@ -2132,8 +2132,8 @@ label alt_day2_final_fail:
     window hide
     stop music fadeout 3
     with fade
-    return    
-    
+    return
+
 label alt_day2_final_draw:
     $ show_cards()
     window show
@@ -2457,14 +2457,14 @@ label alt_day2_qf_analizer:
     with dissolve
     "Что же касается других столов…"
     "Там всё тоже достаточно любопытно."
-    
+
     "За первым столом победа ушла"
     $ alt_dd1 = renpy.random.choice([10, 1])
     if alt_dd1 == 10:
         $ alt_day2_hf1 = alt_player1
     else:
         $ alt_day2_hf1 = alt_player2
-        
+
     if alt_day2_hf1 == 1:
         extend " Лене."
         if alt_day2_hf1 == alt_player1:
@@ -2558,7 +2558,7 @@ label alt_day2_qf_analizer:
             pos (648,235)
         with diam
         "Она с неудовольствием скривилась, кажется, поняла, что победа значит ещё и дальнейшее участие в этой дурацкой игре."
-    
+
     "Проигравшая сторона постаралась отреагировать с достоинством."
     if ((alt_player1 == 1) or (alt_player2 == 1)) and (alt_day2_hf1 != 1):
         if alt_player1 == 1:
@@ -2634,15 +2634,15 @@ label alt_day2_qf_analizer:
         with dissolve
         "С видом величайшего облегчения Женя бросила карты на стол и, встав, направилась на улицу."
         hide mz_playon with diam
-        
-    
+
+
     "Второй стол принёс удачу"
     $ alt_dd2 = renpy.random.choice([10, 1])
     if alt_dd2 == 10:
         $ alt_day2_hf2 = alt_player3
     else:
         $ alt_day2_hf2 = alt_player4
-        
+
     if alt_day2_hf2 == 1:
         extend " Лене."
         if alt_day2_hf2 == alt_player3:
@@ -2736,7 +2736,7 @@ label alt_day2_qf_analizer:
             pos (648,698)
         with diam
         "Она с неудовольствием скривилась, кажется, поняла, что победа значит ещё и дальнейшее участие в этой дурацкой игре."
-    
+
     "Случайность, наверное."
     if ((alt_player3 == 1) or (alt_player4 == 1)) and (alt_day2_hf2 != 1):
         if alt_player3 == 1:
@@ -2812,14 +2812,14 @@ label alt_day2_qf_analizer:
         with dissolve
         "С видом величайшего облегчения Женя бросила карты на стол и, встав, направилась на улицу."
         hide mz_playon with diam
-        
+
     "За третьим же столом, кажется, всё подыгрывало"
     $ alt_dd3 = renpy.random.choice([10, 1])
     if alt_dd3 == 10:
         $ alt_day2_hf3 = alt_player5
     else:
         $ alt_day2_hf3 = alt_player6
-        
+
     if alt_day2_hf3 == 1:
         extend " Лене."
         if alt_day2_hf3 == alt_player5:
@@ -2913,7 +2913,7 @@ label alt_day2_qf_analizer:
             pos (1135,235)
         with diam
         "Она с неудовольствием скривилась, кажется, поняла, что победа значит ещё и дальнейшее участие в этой дурацкой игре."
-    
+
     "Побеждённому оставалось лишь признать своё поражение."
     if ((alt_player5 == 1) or (alt_player6 == 1)) and (alt_day2_hf3 != 1):
         if alt_player5 == 1:
@@ -2990,7 +2990,7 @@ label alt_day2_qf_analizer:
         "С видом величайшего облегчения Женя бросила карты на стол и, встав, направилась на улицу."
         hide mz_playon with diam
     return
-    
+
 label alt_day2_hf_analizer:
     $ alt_dd11 = renpy.random.choice([10, 1])
     "На соседнем же столе борьба разыгралась нешуточная."
@@ -3007,7 +3007,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 1:
             show un_playon:
                 pos (648,235)
-        else:        
+        else:
             show un_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 2:
@@ -3015,7 +3015,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 2:
             show sl_playon:
                 pos (648,235)
-        else:        
+        else:
             show sl_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 3:
@@ -3023,7 +3023,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 3:
             show dv_playon:
                 pos (648,235)
-        else:        
+        else:
             show dv_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 4:
@@ -3031,7 +3031,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 1:
             show mi_playon:
                 pos (648,235)
-        else:        
+        else:
             show mi_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 5:
@@ -3039,7 +3039,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 5:
             show us_playon:
                 pos (648,235)
-        else:        
+        else:
             show us_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 6:
@@ -3047,7 +3047,7 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 6:
             show sh_playon:
                 pos (648,235)
-        else:        
+        else:
             show sh_playon:
                 pos (1135,235)
     elif alt_day2_f1 == 7:
@@ -3055,10 +3055,10 @@ label alt_day2_hf_analizer:
         if alt_day2_hf1 == 7:
             show mz_playon:
                 pos (648,235)
-        else:        
+        else:
             show mz_playon:
                 pos (1135,235)
-                
+
     $ renpy.pause(.3)
     if alt_day2_hf1 == 1:
         show un_playon:
@@ -3097,7 +3097,7 @@ label alt_day2_hf_analizer:
         with diam
         "Меня откровенно забавляло то, что она-то как раз меньше всего хотела играть."
         "А ушла так далеко."
-        
+
     "Второму полуфиналисту повезло куда меньше."
     if ((alt_day2_hf1 == 1) or (alt_day2_hf3 == 1)) and (alt_day2_f1 != 1):
         if alt_day2_hf1 == 1:
@@ -3182,8 +3182,8 @@ label alt_day2_hf_analizer:
         "Женя разулыбалась, вздохнула, расправила плечи."
         mz "Ну наконец-то!"
         "Рявкнула она и вышла вон из столовой."
-    
-    
+
+
     "Что же касается нашего стола…"
     if alt_day2_round2 == 1:
         $ alt_day2_f2 = alt_day2_hf2

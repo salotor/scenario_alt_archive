@@ -33,34 +33,34 @@ label alt_day5_mi_dj_map:
         return
     else:
         $ show_map_alt1()
-    
+
 label alt_day5_mi_dj_music_club:
     call alt_day5_mi_dj_music_club1
     $ disable_current_zone_alt1()
     $ alt_day5_mi_dj_necessary_done += 1
     $ alt_day5_mi_dj_musclub_visited = True
     jump alt_day5_mi_dj_map
-    
+
 label alt_day5_mi_dj_clubs:
     call alt_day5_mi_dj_clubs1
     $ disable_current_zone_alt1()
     $ alt_day5_mi_dj_necessary_done += 1
     jump alt_day5_mi_dj_map
-    
+
 label alt_day5_mi_dj_camp_entrance:
     call alt_day5_mi_dj_camp_entrance1
     $ disable_current_zone_alt1()
     $ alt_day5_mi_dj_entrance_visited = True
     $ alt_day5_mi_dj_necessary_done += 1
     jump alt_day5_mi_dj_map
-    
+
 label alt_day5_mi_dj_un_mi_house:
     call alt_day5_mi_dj_un_mi_house1
     $ disable_current_zone_alt1()
     $ alt_day5_mi_dj_home_visited = True
     $ alt_day5_mi_dj_necessary_done += 1
     jump alt_day5_mi_dj_map
-    
+
 label alt_day5_mi_dj_estrade:
     call alt_day5_mi_dj_estrade1
     $ disable_current_zone_alt1()

@@ -1,28 +1,28 @@
 ﻿init:
     $ mods["scenario__sdl_selector"] = u"Селектор 7дл"
     $ mod_tags["scenario__sdl_selector"] = ["length:days","gameplay:vn","protagonist:male"]
-    
+
     image scenery:
-        get_image("anim/prolog_2.jpg") with Dissolve(.5) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.5)
         pause 2.6
-        get_image("anim/prolog_1.jpg") with Dissolve(.5) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.5)
         pause 0.6
         repeat
-        
+
     image scenery2:
-        get_image("anim/prolog_2.jpg") with Dissolve(.4) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.4)
         pause 2.0
-        get_image("anim/prolog_1.jpg") with Dissolve(.4) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.4)
         pause 0.4
-        repeat    
-        
+        repeat
+
     image scenery3:
-        get_image("anim/prolog_2.jpg") with Dissolve(.25) 
+        get_image("anim/prolog_2.jpg") with Dissolve(.25)
         pause 1.4
-        get_image("anim/prolog_1.jpg") with Dissolve(.25) 
+        get_image("anim/prolog_1.jpg") with Dissolve(.25)
         pause 0.25
         repeat
-        
+
 label scenario__sdl_selector:
 
     $ init_map_zones_alt1()
@@ -64,7 +64,7 @@ label scenario__sdl_selector:
     $ make_names_unknown_7dl()
     $ plthr = u"Дрищ"
     play ambience ambience_7dl["safe"] fadein 5
-    
+
 label sdl_menu:
     scene scenery with dissolve
     menu:
@@ -324,14 +324,14 @@ label sdl_menu:
                                                 "Плохая концовка":
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_bad
-                                            
+
                 "Мику":
                     $ lp_mi += 14
                     $ routetag = "mi7dl"
                     menu:
                         "DJ":
                             $ alt_day3_mi_dj = True
-                            
+
                             stop ambience fadeout 2
                             jump alt_day4_mi_dj_start
                         "7дл":
@@ -372,7 +372,7 @@ label sdl_menu:
                                 "Прощание: Душа":
                                     stop ambience fadeout 2
                                     jump alt_day6_mi_7dl_miku_farewell_soul
-                            
+
                         "Классик":
                             "Рут находится в разработке."
                             $ renpy.pause(1)
@@ -396,7 +396,7 @@ label sdl_menu:
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu
-                    
+
                 "Славя":
                     $ alt_day3_event2 = 22
                     $ lp_sl += 14
@@ -450,7 +450,7 @@ label sdl_menu:
                                 "Записан":
                                     $ alt_day2_club_join_nwsppr = True
                                 "Нет":
-                                    pass 
+                                    pass
                             menu:
                                 "Транзит?"
                                 "Да":
@@ -466,7 +466,7 @@ label sdl_menu:
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu
-                    
+
                 "Ольга":
                     $ mt_pt += 8
                     stop ambience fadeout 2
@@ -513,7 +513,7 @@ label sdl_menu:
                                                 $ alt_spt += 1
                                         stop ambience fadeout 2
                                         jump alt_day7_mi_7dl_start
-                                        
+
                                     "Мику осталась":
                                         menu:
                                             "Человек":
@@ -672,7 +672,7 @@ label sdl_menu:
                                             "Истинная концовка":
                                                 $ mt_pt = 15
                                                 $ alt_day2_date = 6
-                                                $ alt_day5_neu_mt_diary = True 
+                                                $ alt_day5_neu_mt_diary = True
                                                 $ alt_day4_neu_mt_diary = True
                                             "Нейтральная концовка":
                                                 pass

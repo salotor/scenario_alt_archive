@@ -2,8 +2,8 @@
     # Номер релиза сохранения, пустой по инициализации, в начале игры - присваивается номер релиза мода,
     # при загрузке:
     #  - если было сохранение с присвоением номера, при загрузке переменная будет взята из сохранения;
-    #  - если загружается "старое" сохранение (до ввода процедуры контроля загрузок) - останется None 
-    $ alt_save_release_no = None 
+    #  - если загружается "старое" сохранение (до ввода процедуры контроля загрузок) - останется None
+    $ alt_save_release_no = None
 
     $ alt_aicr_string = " "
 
@@ -15,7 +15,7 @@ screen alt_incompatible_release:
 
         aicr_colors_hover = {'day': '#9dcd55', 'night': '#3ccfa2', 'sunset': '#dcd168', 'prologue': '#98d8da'}
         aicr_colors = {'day': '#466123', 'night': '#145644', 'sunset': '#69652f', 'prologue': '#496463'}
-         
+
     window:
         text alt_aicr_string align (0.5, 0.05) color "#FF2500" font 'fonts/corbel.ttf' size 60 bold True text_align 0.5 line_spacing 20
         text u"РАБОТОСПОСОБНОСТЬ НЕ ГАРАНТИРУЕТСЯ. ВЫЛЕТ ИГРЫ ВОЗМОЖЕН В ЛЮБОЙ МОМЕНТ" align(0.5, 0.25) color "#FF2500" font 'fonts/corbel.ttf' size 60 bold True text_align 0.5 line_spacing 20
@@ -67,9 +67,9 @@ screen alt_incompatible_release:
                 font 'fonts/corbel.ttf'
                 size 50
 
-# Для особо упёртых\упорных\…. Пробуем продолжить, авось получится. 
+# Для особо упёртых\упорных\…. Пробуем продолжить, авось получится.
 # Продолжение игры номер сохранения не перепишет; так что окно проверки будет вываливаться каждый раз
-        button:  
+        button:
             xalign 0.5
             yalign 0.95
             action Jump("alt_continue_game")
@@ -83,7 +83,7 @@ screen alt_incompatible_release:
                 size 40
 
 
-# После загрузки файла переходим именно в это место. Определено механикой Ренпая - 
+# После загрузки файла переходим именно в это место. Определено механикой Ренпая -
 # если есть метка 'after_load' - переходить на нее. В классике и других модах такая метка не обнаружена
 # Не путать со служебной меткой '_after_load'
 
@@ -103,7 +103,7 @@ label after_load:
             call screen alt_incompatible_release # и показываем экран предупреждения с выбором вариантов
         else:
             pass # версии совпали, играем дальше
-    else: 
+    else:
         pass # это не 7ДЛ, играем дальше
 
 label alt_continue_game:

@@ -36,19 +36,19 @@
             pos (200,540)
     with dissolve2
     window hide
-    
+
 label Ravsii__role_menu:
     call screen role_menu_7dl
-    
+
 screen intro_loki_screen:
     add "intro_loki" xalign 0.0 yalign 0.0
-    
+
 screen intro_herc_screen:
     add "intro_herc" xalign 0.0 yalign 0.0
-    
+
 screen intro_dr_screen:
     add "intro_dr" xalign 0.0 yalign 0.0
-    
+
 screen role_menu_7dl:
     tag menu
     modal False
@@ -149,24 +149,24 @@ label alt_day0_opening:
         play music music_7dl["intro2"] fadein 5
     else:
         play music music_7dl["seven_summer_days"] fadein 5
-    scene black 
+    scene black
     $ renpy.pause(3, hard=True)
-    scene op_back 
+    scene op_back
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show op_mi 
+    show op_mi
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show op_dv 
+    show op_dv
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show op_sl 
+    show op_sl
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show op_un 
+    show op_un
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show mt_bus 
+    show mt_bus
     with dissolve2
     $ renpy.pause(2, hard=True)
     show op_us
@@ -178,9 +178,9 @@ label alt_day0_opening:
     with dissolve2
     show acm_logo with zoomin:
         pos (1200,350)
-    with vpunch 
+    with vpunch
     $ renpy.pause(2, hard=True)
-    scene black 
+    scene black
     with dissolve2
     stop music fadeout 5
     $ renpy.pause(5, hard=True)
