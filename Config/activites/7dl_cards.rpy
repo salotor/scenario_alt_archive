@@ -715,7 +715,7 @@ label alt_day2_participate_win:
         "Она сидела, будто сама не способная поверить в то, что только что произошло."
         if lp_un >= 6 and not alt_day2_revanche:
             menu:
-                "Матч-реванш":
+                "Матч-реванш.":
                     $ karma += 5
                     $ alt_day2_revanche = True
                     if loki:
@@ -745,7 +745,7 @@ label alt_day2_participate_win:
                         hide el
                         window hide
                         jump alt_day2_tournament_start
-                "Ничего не делать":
+                "Ничего не делать.":
                     pass
         else:
             pass
@@ -806,7 +806,7 @@ label alt_day2_participate_win:
                     "Девочка потрепала меня по плечу и направилась в стан болельщиков."
                     hide sl with dissolve
                     jump alt_day2_semifinal
-                "Ничего не делать":
+                "Ничего не делать.":
                     pass
         else:
             pass

@@ -289,12 +289,12 @@ label alt_day2_cards_tournament:
 # ----------------------------------------------------------------------------------- ADD Показываем правила игры
     if persistent.altRulesRead_new:                            # если правила игры уже прочитаны
         menu:
-            "Показать комбинации":
+            "Показать комбинации.":
                 jump alt_day2_poker_rules_reading
-            "Комбинации вроде бы помню, но нужна подсказка при игре":
+            "Комбинации вроде бы помню, но нужна подсказка при игре.":
                 $ alt_hint_poker_contractual = True
                 jump alt_day2_poker_rules_known
-            "Я комбинации знаю, и подсказки не нужны":
+            "Я комбинации знаю, и подсказки не нужны.":
                 $ alt_hint_poker_contractual = False
                 jump alt_day2_poker_rules_known
     else:                                                       # если ещё правил не читали — читаем.
@@ -473,9 +473,9 @@ label alt_day2_poker_rules_known:
 
     if persistent.altCardsDemo_new:
         menu:
-            "Пройти обучение":
+            "Пройти обучение.":
                 jump alt_day2_demo_play_new
-            "Пропустить обучение":
+            "Пропустить обучение.":
                 jump alt_day2_cards_continue_new
 
 label alt_day2_demo_play_new:
@@ -1117,7 +1117,7 @@ label alt_day2_participate_win_end_new:
         "Она сидела, будто сама не способная поверить в то, что только что произошло."
         if lp_un >= 6 and not alt_day2_detour_semifinal:
             menu:
-                "Матч-реванш":
+                "Матч-реванш.":
                     $ karma += 5
                     $ alt_day2_revanche = True
                     $ lp_un += 1
@@ -1140,7 +1140,7 @@ label alt_day2_participate_win_end_new:
                     window hide
                     $ alt_day2_my_win = alt_day2_rival_win = alt_day2_game_played_out = 0           # обнуляем результат турнира — если реванш
                     jump alt_day2_tournament_start_new
-                "Ничего не делать":
+                "Ничего не делать.":
                     pass
         else:
             pass
@@ -1208,7 +1208,7 @@ label alt_day2_participate_win_end_new:
                     "Девочка потрепала меня по плечу и направилась в стан болельщиков."
                     hide sl with dissolve
                     jump alt_day2_semifinal_new
-                "Ничего не делать":
+                "Ничего не делать.":
                     pass
         else:
             pass
@@ -3181,9 +3181,9 @@ label alt_day2_checking_scores:
             "Электроник выудил из кармана монету."
             el "Орёл? Решка?"
             menu:
-                "Орёл":
+                "Орёл.":
                     $ alt_whose_first_move_choice = 1
-                "Решка":
+                "Решка.":
                     $ alt_whose_first_move_choice = 0
             $ alt_whose_first_move_random = renpy.random.choice([0, 1])
             if alt_whose_first_move_random == 0:
