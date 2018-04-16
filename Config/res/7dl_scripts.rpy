@@ -409,7 +409,7 @@ init -5 python:
 # в имя сохраняемого файла добавим номер релиза игры
         sdn = (u"7ДЛ v.%s: День %d") % (alt_release_no, alt_day_number)
 # -----------------------------------------------------------------------
-        save_name = ((sdn) + (u" - ")) + (alt_chapter_name)
+        save_name = ((sdn) + (u" — ")) + (alt_chapter_name)
         if persistent.sprite_time == "prolog":
             renpy.show('day_num', what=Text(dn, style=style.alt_days,xcenter=0.5215,ycenter=0.25))
             renpy.show('day_text', what=Text(alt_chapter_name, style=style.alt_chapters,xcenter=0.5215,ycenter=0.35))

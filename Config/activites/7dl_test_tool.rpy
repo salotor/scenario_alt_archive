@@ -148,16 +148,16 @@ label sdl_menu:
                                                 "Завтрак.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_breakfast
-                                                "7дл - помощь по лагерю.":
+                                                "7дл — помощь по лагерю.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_helping
-                                                "7дл - помощь Мику.":
+                                                "7дл — помощь Мику.":
                                                     stop ambience fadeout 2
                                                     call alt_day_us_7dl_preps
-                                                "7дл - помощь Славе.":
+                                                "7дл — помощь Славе.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_warehouse
-                                                "7дл - поиски Лены.":
+                                                "7дл — поиски Лены.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_un_met
                                         "День.":
@@ -165,45 +165,45 @@ label sdl_menu:
                                                 "Обед.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_dinner
-                                                "7дл - саундчек.":
+                                                "7дл — саундчек.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_soundcheck
-                                                "7дл - Ульяна - пуговица.":
+                                                "7дл - Ульяна — пуговица.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_button
-                                                "7дл - Ульяна - рандеву.":
+                                                "7дл - Ульяна — рандеву.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_rendezvous
-                                                "Огоньки - карьер.":
+                                                "Огоньки — карьер.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_carrier
-                                                "Огоньки - обед.":
+                                                "Огоньки — обед.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_dinner
-                                                "Огоньки - Лена.":
+                                                "Огоньки — Лена.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_Lena
-                                                "Огьньки - Славя.":
+                                                "Огьньки — Славя.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_party_sl
-                                                "Огоньки - дальние ворота.":
+                                                "Огоньки — дальние ворота.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_far_gate
                                         "Вечер.":
                                             menu:
-                                                "7дл - концерт.":
+                                                "7дл — концерт.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_concert
-                                                "7дл - ужин.":
+                                                "7дл — ужин.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_supper
-                                                "7дл - танцы.":
+                                                "7дл — танцы.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_disco
-                                                "Огоньки - чаепитие.":
+                                                "Огоньки — чаепитие.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_tea
-                                                "Огоньки - вечер у пристани.":
+                                                "Огоньки — вечер у пристани.":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_afterwords
                                                 "Отбой.":

@@ -153,7 +153,7 @@ init 1 python:                                              # начинаем �
                 ypos = screen_height - card_top_dy - bottom_dy,
                 style=style.cards_button,
             )
-            ui.text("%s - %s" % ("У меня", alt_name_my_poker_hand),style="button_text",size=23)
+            ui.text("%s — %s" % ("У меня", alt_name_my_poker_hand),style="button_text",size=23)
 
         if (INVISIBLE or cards_rival[0].visible == 'VISIBLE') and alt_hint_poker:
             ui.button(clicked=None, xanchor=0.5, xpadding=10, xminimum=400,
@@ -161,7 +161,7 @@ init 1 python:                                              # начинаем �
                 ypos = card_top_dy - 28,
                 style=style.cards_button,
             )
-            ui.text("%s %s - %s" % ("У", alt_name_my_rival_r, alt_name_rival_poker_hand),style="button_text",size=23)
+            ui.text("%s %s — %s" % ("У", alt_name_my_rival_r, alt_name_rival_poker_hand),style="button_text",size=23)
 
         if  result_status != 'in_progress':
             renpy.block_rollback()
