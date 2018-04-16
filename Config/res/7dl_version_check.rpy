@@ -5,7 +5,7 @@
     #  - если загружается "старое" сохранение (до ввода процедуры контроля загрузок) - останется None
     $ alt_save_release_no = None
 
-    $ alt_aicr_string = " "
+    $ alt_aicr_string = ""
 
     # определяем показываемый экран
 screen alt_incompatible_release:

@@ -927,7 +927,7 @@ init 3 python:
             table_title = alt_table_name_cases[alt_table_affiliation[tab_var][1]][0]                    # склоняем слово "стол"
             table_suffix =  alt_table_affiliation[tab_var][0]                                       # склоняем принадлежность стола
             gamblers_case = alt_table_affiliation[tab_var][2]                                       # получаем падеж для игроков
-        table = " ".join([table_name,table_title,table_suffix])                  #собираем представление стола в массив .. и комбинируем через " "
+        table = " ".join([table_name,table_title,table_suffix])                  #собираем представление стола в массив .. и комбинируем через ""
         gambler_upper = gamblers_tmp[2*table_no-2].name[gamblers_case]              # получаем имя верхнего игрока в нужном падеже
         gambler_lover = gamblers_tmp[2*table_no-1].name[gamblers_case]              # получаем имя нижнего игрока в нужном падеже
         if combine_nicks in alt_table_mutual_taunt and alt_table_mutual_taunt[combine_nicks] != " ":    # если определен парный таунт
@@ -981,7 +981,7 @@ init 3 python:
         table_title = alt_table_name_cases[alt_table_winner[tab_var][1]][0]                    # склоняем слово "стол"
         table_suffix =  alt_table_winner[tab_var][0]                                       # склоняем принадлежность стола
         winner_case = alt_table_winner[tab_var][2]                                       # получаем падеж для победителя
-        table = " ".join([table_name,table_title,table_suffix])                         # собираем представление стола в массив .. и комбинируем через " "
+        table = " ".join([table_name,table_title,table_suffix])                         # собираем представление стола в массив .. и комбинируем через ""
         if table_no <= 4:                                                       # если № стола 1..4
             m = table_no                                                        # указатель — по номеру стола
         else:
