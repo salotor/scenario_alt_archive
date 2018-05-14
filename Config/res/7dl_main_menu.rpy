@@ -20,7 +20,8 @@ init 1: # done
     image bg un_bg_day_7dl = get_image_7dl("gui/menu_main/un_bg_day.png")
     image bg un_bg_night_7dl = get_image_7dl("gui/menu_main/un_bg_night.png")
     image bg us_bg_7dl = get_image_7dl("gui/menu_main/us_bg.png")
-    python:
+
+    python: # стиль надписей для заглушки
         style.log_button = Style(style.button)
         style.log_button.child = None
         style.log_button.focus_mask = None
@@ -53,7 +54,7 @@ transform left_menu_7dl(xal, yal): # done
     alpha 0.0
     easein 1 xalign xal alpha 1.0
 
-screen alt_wip1:
+screen alt_wip:
     modal True
     add get_image("gui/o_rly/base.png")
     text "РАЗДЕЛ «МУЗЫКА» НАХОДИТСЯ В РАЗРАБОТКЕ":
@@ -67,24 +68,8 @@ screen alt_wip1:
         style "log_button"
         yalign 0.65
         xalign 0.5
-        action Hide("alt_wip1")
+        action Hide("alt_wip")
 
-screen alt_wip2:
-    modal True
-    add get_image("gui/o_rly/base.png")
-    text "РАЗДЕЛ «ГАЛЕРЕЯ» НАХОДИТСЯ В РАЗРАБОТКЕ":
-        text_align 0.5
-        yalign 0.46
-        xalign 0.5
-        color "#64483c"
-        size 30
-    textbutton _("OK"):
-        text_size 60
-        style "log_button"
-        yalign 0.65
-        xalign 0.5
-        action Hide("alt_wip2")
-    
 screen settings_widget_lp_on_7dl(): # done
     add get_image_7dl("gui/menu_elem/settings/settings_wdglp_on.png")
     
@@ -271,49 +256,12 @@ screen settings_7dl(): # done
             hovered Show("settings_hentai_un_new_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'hentai_un_old_7dl',False)
-    if renpy.get_screen("settings_widget_lp_on_7dl") or renpy.get_screen("settings_widget_lp_off_7dl"):
-        python:
-            pass
-    elif renpy.get_screen("settings_widget_music_on_7dl") or renpy.get_screen("settings_widget_music_off_7dl"):
-        python:
-            pass
-    elif renpy.get_screen("settings_dlc_on_7dl") or renpy.get_screen("settings_dlc_off_7dl"):
-        python:
-            pass
-    elif renpy.get_screen("settings_hentai_un_old_7dl") or renpy.get_screen("settings_hentai_un_new_7dl"):
-        python:
-            pass
-    else:
-        if persistent.lp_widget_7dl or persistent.music_widget_7dl:
-            imagebutton xalign 0.81 yalign 0.8:
-                auto get_image_7dl("gui/menu_elem/settings/settings_reboot_%s.png")
-                hovered Show("settings_reboot_7dl", transition=Dissolve(0.2))
-                unhovered Hide("settings_reboot_7dl", transition=Dissolve(0.2))
-                action Jump("widgets_on_off_7dl")
-        elif persistent.lp_widget_7dl and persistent.music_widget_7dl and not persistent.lock_apply_button_7dl:
-            imagebutton xalign 0.81 yalign 0.8:
-                auto get_image_7dl("gui/menu_elem/settings/settings_reboot_%s.png")
-                hovered Show("settings_reboot_7dl", transition=Dissolve(0.2))
-                unhovered Hide("settings_reboot_7dl", transition=Dissolve(0.2))
-                action Jump("widgets_on_off_7dl")
-        elif persistent.lp_widget_7dl and persistent.music_widget_7dl and persistent.lock_apply_button_7dl:
-            imagebutton xalign 0.81 yalign 0.8:
-                auto get_image_7dl("gui/menu_elem/settings/settings_reboot_%s.png")
-                hovered Show("settings_reboot_7dl", transition=Dissolve(0.2))
-                unhovered Hide("settings_reboot_7dl", transition=Dissolve(0.2))
-                action NullAction()
-        elif not persistent.lp_widget_7dl or not persistent.music_widget_7dl:
-            imagebutton xalign 0.81 yalign 0.8:
-                auto get_image_7dl("gui/menu_elem/settings/settings_reboot_%s.png")
-                hovered Show("settings_reboot_7dl", transition=Dissolve(0.2))
-                unhovered Hide("settings_reboot_7dl", transition=Dissolve(0.2))
-                action Jump("widgets_on_off_7dl")
-        elif not persistent.lp_widget_7dl and not persistent.music_widget_7dl:
-            imagebutton xalign 0.81 yalign 0.8:
-                auto get_image_7dl("gui/menu_elem/settings/settings_reboot_%s.png")
-                hovered Show("settings_reboot_7dl", transition=Dissolve(0.2))
-                unhovered Hide("settings_reboot_7dl", transition=Dissolve(0.2))
-                action Jump("widgets_on_off_7dl")
+    if (check_music_widget_7dl != persistent.music_widget_7dl) or (check_lp_widget_7dl != persistent.lp_widget_7dl):
+        imagebutton xalign 0.81 yalign 0.8:
+            auto get_image_7dl("gui/menu_elem/settings/settings_reboot_%s.png")
+            hovered Show("settings_reboot_7dl", transition=Dissolve(0.2))
+            unhovered Hide("settings_reboot_7dl", transition=Dissolve(0.2))
+            action Jump("widgets_on_off_7dl")
                 
 screen contacts_7dl(): # done
     tag menu
@@ -333,7 +281,7 @@ screen media_7dl(): # done, TODO gallery and music room
     imagemap:   
         auto get_image_7dl("gui/menu_elem/media/media_%s.png")
         hotspot(1333, 224, 540, 160):
-            clicked [Show("alt_wip1", transition=Dissolve(0.2))]
+            clicked [Show("alt_wip", transition=Dissolve(0.2))]
         hotspot(1218, 394, 700, 700):
             clicked [Hide("media_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Jump("alt_gallery_start")]
         
@@ -378,7 +326,6 @@ label widgets_on_off_7dl:
         python:
             add_lp_widget_7dl()
             add_music_widget_7dl()
-            persistent.lock_apply_button_7dl = True
             renpy.utter_restart()
     elif not persistent.lp_widget_7dl or not persistent.music_widget_7dl:
         python:
@@ -386,13 +333,11 @@ label widgets_on_off_7dl:
                 del_lp_widget_7dl()
             if not persistent.music_widget_7dl:
                 del_music_widget_7dl()
-            persistent.lock_apply_button_7dl = False
             renpy.utter_restart()
     elif not persistent.lp_widget_7dl and not persistent.music_widget_7dl:
         python:
             del_lp_widget_7dl()
             del_music_widget_7dl()
-            persistent.lock_apply_button_7dl = False
             renpy.utter_restart()
 
 label start_7dl:
@@ -401,6 +346,8 @@ label start_7dl:
     jump choose_waifu_7dl
  
 label start_menu_7dl: # need dopil on girls walls
+    $ check_music_widget_7dl = persistent.music_widget_7dl
+    $ check_lp_widget_7dl = persistent.lp_widget_7dl
     if persistent.waifu_7dl == 1 and 'un' not in list_waifu_7dl:
         play music music_7dl["take_my_hand"] fadein 3
         #$ time_7dl = check_time_7dl(time_7dl)
