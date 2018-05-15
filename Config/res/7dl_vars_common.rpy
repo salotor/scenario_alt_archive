@@ -72,7 +72,7 @@ label scenario__alt_sevendl:
     $ alt_save_release_no = alt_release_no
 # ------------------------------------------------
 
-jump choose_waifu_7dl
+jump main_menu_7dl
 
 label alt_day0_vars: #Переменные нулевого дня
     $ lp_mi = 0
