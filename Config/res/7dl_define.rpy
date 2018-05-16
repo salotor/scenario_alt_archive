@@ -456,6 +456,22 @@
     image bg int_wardrobe_7dl = get_image_7dl("bg/int_wardrobe_7dl.jpg")
     image bg int_wardrobe2_7dl = get_image_7dl("bg/int_wardrobe2_7dl.jpg")
     
+    if not config.version == "1.0":
+        image bg ext_house_of_el_day = get_image_extra7dl("bg/ext_house_of_el_day.jpg")
+        image bg ext_house_of_el_night = get_image_extra7dl("bg/ext_house_of_el_night.jpg")
+        image bg ext_stand = get_image_extra7dl("bg/ext_stand.jpg")
+        image bg ext_stand_2 = get_image_extra7dl("bg/ext_stand_2.jpg")
+        image bg ext_stage_big_day = get_image_extra7dl("bg/ext_stage_big_day.jpg")
+        image bg int_house_of_mt_noitem_day = get_image_extra7dl("bg/int_house_of_mt_noitem_day.jpg")
+        image bg ext_aidpost_sunset = get_image_extra7dl("bg/ext_aidpost_sunset.jpg")
+        image bg ext_boathouse_sunset = get_image_extra7dl("bg/ext_boathouse_sunset.jpg")
+        image bg ext_camp_entrance_sunset = get_image_extra7dl("bg/ext_camp_entrance_sunset.jpg")
+        image bg ext_clubs_sunset = get_image_extra7dl("bg/ext_clubs_sunset.jpg")
+        image bg ext_playground_sunset = get_image_extra7dl("bg/ext_playground_sunset.jpg")
+        image bg int_dining_hall_people_sunset = get_image_extra7dl("bg/int_dining_hall_people_sunset.jpg")
+        image bg ext_shed_sunset = get_image_extra7dl("bg/ext_shed_sunset.jpg")
+
+    
 #Сценки ака CG
 
     
@@ -628,8 +644,16 @@
     image cg d7_us_pixie_7dl = get_image_7dl("cg/d7_us_pixie_7dl.png")
     image cg d7_us_tai_tai_7dl = get_image_7dl("cg/d7_us_tai_tai_7dl.jpg")
 
-    
     image cg d7_bus_night_7dl = get_image_7dl("cg/d7_bus_night_7dl.jpg")
+    
+    if not config.version == "1.0":
+        image cg d1_uv_2_alt = get_image_extra7dl("cg/d1_uv_2.jpg")
+        image cg d2_water_dan_night = get_image_extra7dl("cg/d2_water_dan_night.jpg")
+        image cg d3_fag_room = get_image_extra7dl("cg/d3_fag_room.jpg")
+        image cg d3_potato_1 = get_image_extra7dl("cg/d3_potato_1.jpg")
+        image cg d3_potato_2 = get_image_extra7dl("cg/d3_potato_2.jpg")
+        image cg epilogue_dv_good = get_image_extra7dl("cg/epilogue_dv_good.png")
+        image cg wtf_end_of_day = get_image_extra7dl("cg/wtf_end_of_day.jpg")
     
 #Турнир
     image alt_tournament_bg = get_image_7dl("gui/tournament/alt_tournament_bg.png")

@@ -162,9 +162,16 @@ init -2 python:
     def meet(who, name):
         set_name(who, name)
 
-    def set_name(who, name):
+    if config.version == "1.0":
+        def set_name(who, name):
             gl = globals()
             gl[who + "_name"] = name
+    else:
+        def set_name(who, name):
+            global store
+            store.names[who] = name
+            gl = globals()
+            gl[who + "_name"] = store.names[who]
 
 init -265 python: 
     #Пресеты с возможностью настройки
@@ -458,8 +465,6 @@ init -5 python:
     # тонировка:
     tint_night = im.matrix.tint(0.63, 0.78, 0.82)
     tint_sunset = im.matrix.tint(0.94, 0.82, 1.0)    
-    # Дефолтный путь к спрайтам
-    _default_sprites_path = 'scenario_alt/Pics/sprites'
 
     # Простая функция, строит спрайт из переданных путей
     def ComposeSprite(*argv):
@@ -474,7 +479,7 @@ init -5 python:
         
     # Функция, собирающая спрайты из запчастей
     # types - набор калибров спрайтов. Любой набор из ('far', 'close', 'normal', 'veryfar'). По пути, где лежат спрайты, должны быть соотвествующие директории, иначе не найдет
-    # argv - файлы-запчасти. передаются в формате ('path', 'file') - например ('images/1080/sprites/','dv/dv_1_coat.png'), или просто 'file' - тогда используется _default_sprites_path
+    # argv - файлы-запчасти. передаются в формате ('path', 'file') - например ('images/1080/sprites/','dv/dv_1_coat.png'), или просто 'file'
     # на выходе - dict спрайтов, по одному для каждого из types
     def ComposeSpriteSet(distance, *argv):
         if isinstance(distance, str): #если types содержит только один параметр.
@@ -487,7 +492,7 @@ init -5 python:
             subargs = list()
             for arg in argv:
                 if isinstance(arg, str): #просто file
-                    subarg = (_default_sprites_path, arg)
+                    subarg = (default_7dl_path + 'Pics/sprites/', arg)
                 else: # (path, file)
                     subarg = arg;
                 subargs.append( subarg[0] + '/' + dst +'/' + subarg[1] ) # 'images/1080/sprites/normal/dv/dv_1_coat.png'
@@ -502,15 +507,24 @@ init 52 python:
             data["chibi"] = None
         
 init -1001 python:
-    default_7dl_path = 'scenario_alt/'
     def disable_all_chibi():
         global global_zones
         for name,data in global_zones.iteritems():
             data["map_chibi"] = None
             
+init -1000 python:
+    if config.version == "1.0":
+        default_7dl_path = 'scenario_alt/'
+    else:
+        default_7dl_path = 'mods/scenario_alt/'
+    config_session = False
+
 init -999 python:
     def get_image_7dl(file):
         return default_7dl_path+"Pics/%s" % (file)
+    if not config.version == "1.0":
+        def get_image_extra7dl(file):
+            return default_7dl_path+"pics_extra/%s" % (file)
         
 init -998 python:
     def get_sfx_7dl(file):
@@ -525,7 +539,9 @@ init -997 python:
         return default_7dl_path+"Pics/sprites/%s" % (file)
     def get_sprite_ori(file):
         return get_image("sprites/%s") % (file)
-        
+    if not config.version == "1.0":
+        def get_sprite_extra7dl(file):
+            return get_image_extra7dl("sprites/%s" % (file))
     
     store.map_chibi = {
             "?" : get_image_7dl("gui/maps/map_icon_n00.png"),
@@ -543,9 +559,7 @@ init -997 python:
             "cs": get_image_7dl("gui/maps/map_icon_n12.png"),
         }
         
-init:
-
-    python:
+init python:
     
         import math
 
@@ -599,6 +613,3 @@ init:
                           **properties)
 
         Shake = renpy.curry(_Shake)
-    #
-
-#

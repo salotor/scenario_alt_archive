@@ -61,6 +61,31 @@ init 2:
     #$ colors['ann'] = {'night': (15, 159, 14, 255), 'sunset': (10, 217, 16, 255), 'day': (170, 254, 160, 255), 'prolog': (10, 215, 30, 255)}
     #$ store.names_list.append('ann')
     
+    if not config.version == "1.0":
+        $ names['ba'] = u'Физрук'
+        $ names['sak'] = u'Японец'
+        $ names['ai'] = u'Мужчина'    
+        $ names['ase'] = u'Алиса'
+        $ names['we'] = u'Все вместе'
+        $ names['ml'] = u'Мальчик'
+        $ names['ml2'] = u'Мальчик2'
+        $ names['ml3'] = u'Мальчик3'
+        $ names['voice1'] = u'Продавщица'
+        $ names['bb'] = u'Начальник'
+        $ names['icq'] = u'Собеседник'
+
+        $ colors['voices'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (192, 192, 192, 255), 'prolog': (192, 192, 192, 255)}
+        $ names['voices'] = u'Голоса'
+        $ store.names_list.append('voices')
+        
+        $ colors['kids'] = {'night': (235, 120, 131, 255), 'sunset': (235, 120, 131, 255), 'day': (235, 120, 131, 255), 'prolog': (235, 120, 131, 255)}
+        $ names['kids'] = u'Малышня'
+        $ store.names_list.append('kids')
+        
+        $ colors['dy'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (56, 90, 107, 255), 'prolog': (192, 192, 192, 255)}
+        $ names['dy'] = u'Голос из динамика'
+        $ store.names_list.append('dy')
+    
 label scenario__alt_sevendl:
 # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
 # ------------------------------------------------
@@ -101,7 +126,42 @@ label alt_day0_vars: #Переменные нулевого дня
     $ th_suffix = "»"
     if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
-    $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
+    if config.version == "1.0":
+        $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
+    else:
+        $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)
+        python:
+            alt_meet = { # свой список каналов спикеров для повторного вызова meet() при загрузке сохранения
+            'ba':          u"Физрук",
+            'ase':         u"Алиса",
+            'we':          u"Толпа", # не используется
+            'ml':          u"Мальчик",
+            'ml2':         u"Мальчик",
+            'ml3':         u"Мальчик",
+            'voice1':      u"Продавщица",
+            'kids':        u"Дети",
+            'dy':          u"Динамики",
+            'icq':         u"Собеседник",
+            'el':          u"Кудрявый",
+            'un':          u"Грустяша",
+            'dv':          u"Рыжая",
+            'sl':          u"Блондинка",
+            'us':          u"Мелкая",
+            'mt':          u"Вожатая",
+            'cs':          u"Медсестра",
+            'mz':          u"Очкарик",
+            'mi':          u"Японка",
+            'uv':          u"Котэ",
+            'bb':          u"Начальник",
+            'sh':          u"Очкарик",
+            'ai':          u"Мужчина",
+            'sak':         u"Старик",
+            'me':          u"Семён",
+            'pi':          u"Пионер",
+            'dreamgirl':   u"…",
+            'voice':       u"Голос",
+            'voices':      u"Голоса"
+            }
     return
     
 label alt_day1_vars: #Переменные первого дня

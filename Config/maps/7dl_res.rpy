@@ -125,10 +125,11 @@ init -51 python:
             global_zones_alt1[name]["been_here"] += 1
             global_map_result_alt1 = name
             renpy.scene()
-            if not not_in_rollback_or_fast_forward():
-                renpy.log("renpy.roll_forward_info()")
-                renpy.config.skipping = False
-                renpy.game.after_rollback = False
+            if config.version == "1.0":
+                if not not_in_rollback_or_fast_forward():
+                    renpy.log("renpy.roll_forward_info()")
+                    renpy.config.skipping = False
+                    renpy.game.after_rollback = False
             ui.jumps(global_zones_alt1[name]["label"])()
         def overlay(self):
             if  store.map_enabled_alt1:
@@ -369,10 +370,11 @@ init -51 python:
             global_zones_alt2[name]["been_here"] += 1
             global_map_result_alt2 = name
             renpy.scene()
-            if not not_in_rollback_or_fast_forward():
-                renpy.log("renpy.roll_forward_info()")
-                renpy.config.skipping = False
-                renpy.game.after_rollback = False
+            if config.version == "1.0":
+                if not not_in_rollback_or_fast_forward():
+                    renpy.log("renpy.roll_forward_info()")
+                    renpy.config.skipping = False
+                    renpy.game.after_rollback = False
             ui.jumps(global_zones_alt2[name]["label"])()
         def overlay(self):
             if  store.map_enabled_alt2:
