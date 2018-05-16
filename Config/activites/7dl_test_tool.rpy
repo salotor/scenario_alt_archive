@@ -555,6 +555,8 @@ label sdl_menu:
                             "{color=#dd598a}Спасибо тебе…{/color}":
                                 $ alt_day5_mi_7dl_voyeur = True
                                 stop ambience fadeout 2
+                                $ alt_day5_mi_7dl_voyeur = True
+                                $ persistent.mi_7dl_dr_exc = True
                                 jump alt_day6_mi_7dl_miku_farewell_finale
                             "{color=#8a59dd}Так честнее":
                                 stop ambience fadeout 2

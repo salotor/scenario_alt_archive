@@ -1,4 +1,4 @@
-﻿init 3:
+﻿init 999999:
 #Саныч от Mannych
     image ba em1 uniform = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1050, 1080), (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_em1.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1050, 1080),  (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_em1.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1050, 1080),  (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_em1.png')))
     
