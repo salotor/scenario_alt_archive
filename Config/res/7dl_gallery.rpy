@@ -1082,6 +1082,5 @@ label show_img_7dl:
         $ renpy.with_statement(fade)
         $ renpy.pause()
         $ show_image4_7dl = ""
-    if config.version == "1.0":
-        $ renpy.show("bg black")
+    $ renpy.show("bg black")
     jump alt_gallery
