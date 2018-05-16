@@ -398,11 +398,11 @@ label widgets_on_off_7dl:
     python:
         if persistent.lp_widget_7dl:
             add_lp_widget_7dl()
+        else:
+            del_lp_widget_7dl()
         if persistent.music_widget_7dl:
             add_music_widget_7dl()
-        if not persistent.lp_widget_7dl:
-            del_lp_widget_7dl()
-        if not persistent.music_widget_7dl:
+        else:
             del_music_widget_7dl()
         renpy.utter_restart()
 
