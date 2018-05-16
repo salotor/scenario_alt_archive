@@ -253,6 +253,7 @@ label alt_day4_uvao_vars:
     return
     
 label alt_day4_sl_7dl_vars:
+    $ alt_day4_sl_7dl_help1 = False
     $ alt_day4_sl_7dl_phone = False
     $ alt_day4_sl_7dl_rendezvous = False
     return

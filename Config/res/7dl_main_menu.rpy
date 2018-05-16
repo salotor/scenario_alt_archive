@@ -335,37 +335,34 @@ screen media_7dl(): # done, TODO gallery and music room
         hotspot(1333, 224, 540, 160):
             clicked [Show("alt_wip1", transition=Dissolve(0.2))]
         hotspot(1218, 394, 700, 700):
-            clicked [Show("alt_wip2", transition=Dissolve(0.2))]
+            clicked [Hide("media_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=3), Jump("alt_gallery_start")]
         
 label choose_waifu_7dl: # done
     stop music
     stop sound
     stop sound_loop
     #if len(list_waifu_7dl) == 6:
-    if len(list_waifu_7dl) == 3:
+    if len(list_waifu_7dl) == 4:
         $ list_waifu_7dl = []
     if persistent.waifu_7dl == 0:
-        #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 3, 4, 5, 6])
         $ persistent.waifu_7dl = renpy.random.choice([1, 2, 4, 5])
         jump start_menu_7dl
-    if persistent.waifu_7dl == 1:
-        #$ persistent.waifu_7dl = renpy.random.choice([2, 3, 4, 5, 6])
+    elif persistent.waifu_7dl == 1:
         $ persistent.waifu_7dl = renpy.random.choice([2, 4, 5])
         jump start_menu_7dl
-    if persistent.waifu_7dl == 2:
+    elif persistent.waifu_7dl == 2:
         $ persistent.waifu_7dl = renpy.random.choice([1, 4, 5])
         jump start_menu_7dl
-    #if persistent.waifu_7dl == 3:
+    #elif persistent.waifu_7dl == 3:
         #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 4, 5, 6])
         #jump start_menu_7dl
-    if persistent.waifu_7dl == 4:
-        #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 3, 5, 6])
+    elif persistent.waifu_7dl == 4:
         $ persistent.waifu_7dl = renpy.random.choice([1, 2, 5])
         jump start_menu_7dl
-    if persistent.waifu_7dl == 5:
+    elif persistent.waifu_7dl == 5:
         $ persistent.waifu_7dl = renpy.random.choice([1, 2, 4])
         jump start_menu_7dl
-    #if persistent.waifu_7dl == 6:
+    #elif persistent.waifu_7dl == 6:
         #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 3, 4, 5])
         #jump start_menu_7dl
         
@@ -417,7 +414,7 @@ label start_menu_7dl: # need dopil on girls walls
         call screen menu_7dl
     if persistent.waifu_7dl == 2 and 'sl' not in list_waifu_7dl:
         $ list_waifu_7dl.append('sl')
-        scene bg sl_bg_7dl with fade2
+        scene bg sl_bg_7dl with fade
         play music music_7dl["slavyas_fantazm"] fadein 3
         call screen menu_7dl
     #if persistent.waifu_7dl == 3 and 'dv' not in list_waifu_7dl:
@@ -442,4 +439,3 @@ label start_menu_7dl: # need dopil on girls walls
         #call screen menu_7dl
     else:
         jump choose_waifu_7dl
-    # здесь была Ульяна (-_o)
