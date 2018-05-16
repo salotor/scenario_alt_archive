@@ -1046,9 +1046,11 @@ label alt_gallery_start:
     play music music_7dl["more_than_alive"] fadein 3
     scene bg gallery_7dl with fade
     $ gallery_mode_7dl = "start"
+    $ renpy.block_rollback()
     call screen gallery_main_7dl       
     
 label alt_gallery:
+    $ renpy.block_rollback()
     call screen gallery_main_7dl       
 
 label show_img_7dl:
