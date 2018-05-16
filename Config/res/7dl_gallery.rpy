@@ -63,39 +63,39 @@ screen gallery_exit_7dl:
     if gallery_mode_7dl == "bgs":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_back_%s.png") xalign 0.029 yalign 0.971 
-            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("choose_waifu_7dl")]
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("main_menu_7dl")]
     elif gallery_mode_7dl == "arts" or gallery_mode_7dl == "start":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_back_%s.png") xalign 0.029 yalign 0.971 
-            action [Hide("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("choose_waifu_7dl")]
+            action [Hide("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("main_menu_7dl")]
     elif gallery_mode_7dl == "filter":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_back_%s.png") xalign 0.029 yalign 0.971 
-            action [Hide("filter_settings_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("choose_waifu_7dl")]
+            action [Hide("filter_settings_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("main_menu_7dl")]
     elif gallery_mode_7dl == "un":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_back_%s.png") xalign 0.029 yalign 0.971 
-            action [Hide("arts_7dl_un_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("choose_waifu_7dl")]
+            action [Hide("arts_7dl_un_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("main_menu_7dl")]
     elif gallery_mode_7dl == "sl":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_back_%s.png") xalign 0.029 yalign 0.971 
-            action [Hide("arts_7dl_sl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("choose_waifu_7dl")]
+            action [Hide("arts_7dl_sl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("main_menu_7dl")]
     elif gallery_mode_7dl == "dv":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_back_%s.png") xalign 0.029 yalign 0.971 
-            action [Hide("arts_7dl_dv_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("choose_waifu_7dl")]
+            action [Hide("arts_7dl_dv_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("main_menu_7dl")]
     elif gallery_mode_7dl == "mi":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_back_%s.png") xalign 0.029 yalign 0.971 
-            action [Hide("arts_7dl_mi_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("choose_waifu_7dl")]
+            action [Hide("arts_7dl_mi_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("main_menu_7dl")]
     elif gallery_mode_7dl == "us":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_back_%s.png") xalign 0.029 yalign 0.971 
-            action [Hide("arts_7dl_us_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("choose_waifu_7dl")]
+            action [Hide("arts_7dl_us_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("main_menu_7dl")]
     elif gallery_mode_7dl == "mt":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_back_%s.png") xalign 0.029 yalign 0.971 
-            action [Hide("arts_7dl_mt_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("choose_waifu_7dl")]
+            action [Hide("arts_7dl_mt_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Jump("main_menu_7dl")]
         
 screen gallery_bw_7dl:
     if gallery_mode_7dl == "bgs":
