@@ -1,5 +1,5 @@
 ﻿label alt_day0_prologue:
-    $ renpy.pause(3)
+    $ renpy.pause(2)
     scene black
     play music music_list["drown"] fadein 3
     $ plthr = u"Выбор"

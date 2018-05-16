@@ -2710,8 +2710,7 @@ label alt_day4_neu_lunch:
             mt "Давай играть, победитель!"
             "Ольга резко хлопнула по мячу."
             "Да, накачала она его на совесть."
-            show un normal sport at left
-            with dissolve
+            show un normal sport at left with dissolve
             un "Эм… Ольга Дмитриевна?"
             mt "Хорошо, что ты здесь, Лена. {w}Будешь со мной в команде."
             "Пляжный волейбол…"
@@ -2736,12 +2735,12 @@ label alt_day4_neu_lunch:
             mt "Ничего, раз ты бегаешь, то и сыграть сможешь. Становись на ту сторону сетки."
             "Недовольная Алиса, скрипя зубами, подчинилась."
             mt "Давай-давай, не куксись! {w}Физкультура полезна!"
-            show un smile sport far at fleft
+            show un smile sport at fleft
             show mt normal sport at left
             show ba normal uniform at cleft behind mt
             with moveinleft
-            show us smile sport far at fright
-            show dv normal sport far at fright
+            show us smile sport at fright
+            show dv normal sport at fright
             with moveinright
             "Кроме того, вожатая успешно поймала куда-то бредущего с видом зомби физрука и поставила к сетке."
             "Трое на трое."
@@ -2769,12 +2768,12 @@ label alt_day4_neu_lunch:
             scene bg ext_volley_court_7dl with flash
             "Рявкнул Саныч, свистнув в свисток."
             "И — вот она! Началась жесть!"
-            show un smile sport far at fleft
+            show un smile sport at fleft
             show mt normal sport at left
             show ba normal uniform at cleft behind mt
             with moveinleft
-            show us smile sport far at fright
-            show dv normal sport far at fright
+            show us smile sport at fright
+            show dv normal sport at fright
             with moveinright
             "Сегодня мы, наконец, узнаем, кто сильнейший в этом лагере!"
             "Ольга ушла на пятачок и хлёстким ударом отправила мяч на нашу сторону."
@@ -2847,7 +2846,7 @@ label alt_day4_neu_lunch:
             us "Вот! Только ты меня понимаешь."
             us "Давай их проучим? {w}Чтобы в следующий раз честно играли!"
             me "Давай! А как?"
-            show us grin sport at center with dspr
+            show us grin sport with dspr
             us "Мы что-нибудь придумаем!"
             me "Тогда встречаемся у медпункта после ужина!"
             "Она удалялась слишком быстро, поэтому до меня долетел растянутый допплеровым эффектом бас."

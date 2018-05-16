@@ -196,7 +196,7 @@ init:
     image de_achiv_lock13 = get_image_7dl("gui/ach_list/de_achiv_lock.png")
     image de_achiv_lock14 = get_image_7dl("gui/ach_list/de_achiv_lock.png")
     #Заглушки под дубли достижений (не понимает иначе модуль screen RenPy)
-    image acm_logo_sl_good1 = get_image_7dl("gui/acm_logo_sl_good.png")
+    image acm_logo_sl_good1 = get_image_7dl("gui/acm/acm_logo_sl_good_7dl.png")
     # ------------------------------------------------
     #Иконки рутов
     #7ДЛ-руты
@@ -330,7 +330,7 @@ init:
     # ------------------------------------------------
     ##\\\\\\\\\\\\\\\\\\\\\\\\\ЗВУК\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     #SFX
-    $ sdl_achv_clear = get_sfx_7dl("ach_list/7dl_achv_clear.ogg")
-    $ sdl_achv_click = get_sfx_7dl("ach_list/7dl_achv_click.ogg")
-    $ sdl_achv_info = get_sfx_7dl("ach_list/7dl_achv_info.ogg")
-    $ sdl_achv_pagina = get_sfx_7dl("ach_list/7dl_achv_pagina.ogg")
+    $ sdl_achv_clear = get_sfx_7dl("ach_list/achv_clear_7dl.ogg")
+    $ sdl_achv_click = get_sfx_7dl("ach_list/achv_click_7dl.ogg")
+    $ sdl_achv_info = get_sfx_7dl("ach_list/achv_info_7dl.ogg")
+    $ sdl_achv_pagina = get_sfx_7dl("ach_list/achv_pagina_7dl.ogg")

@@ -75,7 +75,7 @@ label scenario__alt_sevendl:
     $ alt_save_release_no = alt_release_no
 # ------------------------------------------------
 
-jump choose_waifu_7dl
+jump main_menu_7dl
 
 label alt_day0_vars: #Переменные нулевого дня
     $ lp_mi = 0
@@ -104,6 +104,7 @@ label alt_day0_vars: #Переменные нулевого дня
     $ th_suffix = "»"
     if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
+    $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
     return
     
 label alt_day1_vars: #Переменные первого дня
