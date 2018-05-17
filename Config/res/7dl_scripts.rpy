@@ -524,8 +524,7 @@ init -1000 python:
 init -999 python:
     def get_image_7dl(file):
         return default_7dl_path+"Pics/%s" % (file)
-    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        def get_image_extra7dl(file):
+    def get_image_extra7dl(file):
             return default_7dl_path+"Pics/extra/%s" % (file)
         
 init -998 python:
