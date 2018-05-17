@@ -162,7 +162,7 @@ init -2 python:
     def meet(who, name):
         set_name(who, name)
 
-    if config.version == "1.0":
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         def set_name(who, name):
             gl = globals()
             gl[who + "_name"] = name
@@ -513,7 +513,7 @@ init -1001 python:
             data["map_chibi"] = None
             
 init -1000 python:
-    if config.version == "1.0":
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         default_7dl_path = 'scenario_alt/'
     else:
         default_7dl_path = 'mods/scenario_alt/'
@@ -522,7 +522,7 @@ init -1000 python:
 init -999 python:
     def get_image_7dl(file):
         return default_7dl_path+"Pics/%s" % (file)
-    if not config.version == "1.0":
+    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         def get_image_extra7dl(file):
             return default_7dl_path+"pics_extra/%s" % (file)
         
@@ -539,7 +539,7 @@ init -997 python:
         return default_7dl_path+"Pics/sprites/%s" % (file)
     def get_sprite_ori(file):
         return get_image("sprites/%s") % (file)
-    if not config.version == "1.0":
+    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         def get_sprite_extra7dl(file):
             return get_image_extra7dl("sprites/%s" % (file))
     

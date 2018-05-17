@@ -61,7 +61,7 @@ init 2:
     #$ colors['ann'] = {'night': (15, 159, 14, 255), 'sunset': (10, 217, 16, 255), 'day': (170, 254, 160, 255), 'prolog': (10, 215, 30, 255)}
     #$ store.names_list.append('ann')
     
-    if not config.version == "1.0":
+    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         $ names['ba'] = u'Физрук'
         $ names['sak'] = u'Японец'
         $ names['ai'] = u'Мужчина'    
@@ -126,7 +126,7 @@ label alt_day0_vars: #Переменные нулевого дня
     $ th_suffix = "»"
     if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
-    if config.version == "1.0":
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
     else:
         $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)

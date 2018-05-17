@@ -93,7 +93,7 @@ label after_load:
     if save_name.find(u'7ДЛ') != -1: #Если нашли вхождение '7ДЛ' в имени сохранения игры
 
         # пишем версию 7дл в трейсбеках
-        if config.version == "1.0":
+        if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
             $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
         else:
             $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)

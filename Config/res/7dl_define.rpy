@@ -456,7 +456,7 @@
     image bg int_wardrobe_7dl = get_image_7dl("bg/int_wardrobe_7dl.jpg")
     image bg int_wardrobe2_7dl = get_image_7dl("bg/int_wardrobe2_7dl.jpg")
     
-    if not config.version == "1.0":
+    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         image bg ext_house_of_el_day = get_image_extra7dl("bg/ext_house_of_el_day.jpg")
         image bg ext_house_of_el_night = get_image_extra7dl("bg/ext_house_of_el_night.jpg")
         image bg ext_stand = get_image_extra7dl("bg/ext_stand.jpg")
@@ -646,7 +646,7 @@
 
     image cg d7_bus_night_7dl = get_image_7dl("cg/d7_bus_night_7dl.jpg")
     
-    if not config.version == "1.0":
+    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         image cg d1_uv_2_alt = get_image_extra7dl("cg/d1_uv_2.jpg")
         image cg d2_water_dan_night = get_image_extra7dl("cg/d2_water_dan_night.jpg")
         image cg d3_fag_room = get_image_extra7dl("cg/d3_fag_room.jpg")

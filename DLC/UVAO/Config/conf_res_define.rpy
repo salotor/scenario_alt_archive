@@ -48,7 +48,7 @@
     image cg d4_uv_pioner_lib_hiding_7dl = get_image_uvao_7dl("cg/d4_uv_pioner_lib_hiding_7dl.jpg")
     image cg d5_uv_photo_city_7dl = get_image_uvao_7dl("cg/d5_uv_photo_city_7dl.jpg")
     image cg d5_uv_photo_galaxy_7dl = get_image_uvao_7dl("cg/d5_uv_photo_galaxy_7dl.jpg")
-    if config.version == "1.0":
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         # Кошочка авторства Орики
         image uv_new_hentai1 = get_image("cg/epilogue_uv_hentai_1.jpg")
         image uv_new_hentai2 = get_image("cg/epilogue_uv_hentai_2.jpg")

@@ -1,5 +1,5 @@
 init 1 python:
-    if config.version == "1.0":
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         header_font = "fonts/corbel.ttf"
         style.settings_link = Style(style.base_font)
         style.settings_link.font  = header_font

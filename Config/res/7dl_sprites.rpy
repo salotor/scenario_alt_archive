@@ -631,7 +631,7 @@
     image cs badgirl2          = _cs_badgirl2['normal']
     image cs badgirl2 glasses    = ComposeSpriteSet('normal', 'cs/cs_1_body.png', 'cs/cs_1_glasses.png', 'cs/cs_2_badgirl.png')['normal']
 
-    if not config.version == "1.0":
+    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         image sl serious body = ConditionSwitch(
         "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_1_body.png'), (0,0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
         "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_1_body.png'), (0,0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
