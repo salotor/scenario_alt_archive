@@ -1223,11 +1223,13 @@ label alt_day4_mi_7dl_ch5b:
     play sound_loop sfx_intro_bus_engine_loop fadein 3
     play music music_7dl["unholy_you"] fadein 3
     $ meet ('sak','Японец')
+    $ alt_meet['sak'] = u"Японец"
     sak "Здравствуйте, Мику-кун."
     "Я резко обернулся — за рулём кажущегося здесь неуместным «Мицубиси» сидел…"
     show mi normal pioneer with dspr
     mi "Здравствуйте, Сакишита-сан."
     $ meet ('sak','Сакишита')
+    $ alt_meet['sak'] = u"Сакишита"
     "Улыбнулась Мику."
     mi "Вы по поручению отца?"
     me "Мику, что это за хрен?"
@@ -1425,6 +1427,7 @@ label alt_day4_mi_7dl_ch6:
         "Я не стал к ним подходить — во избежание."
         "Мне повезло уже обнаружить Мику — та плелась по тропинке от умывальников и вид имела самый унылый."
         $ meet('sak','Сакишита')
+        $ alt_meet['sak'] = u"Сакишита"
         window hide
         scene bg ext_house_of_un_day
         show mi sad pioneer
@@ -10568,6 +10571,7 @@ label alt_day7_mi_7dl_happy_again:
     window hide
     with fade
     $ meet('sak','Сакишита')
+    $ alt_meet['sak'] = u"Сакишита"
     me "Никакой надежды, да?"
     show sak scared suit with dissolve
     sak "Я не знаю, Семён-сан."
@@ -10618,6 +10622,7 @@ label alt_day7_mi_7dl_happy_again:
     extend "и человек, от которого зависело столько, столько…"
     window hide
     $ meet('ai','Говоров')
+    $ alt_meet['ai'] = u"Говоров"
     "Отец Мику, мой возможный тесть — Говоров Архип Андреевич."
     "Говоров-сама, Фудзита-сан."
     "До сих пор мы ни разу не виделись, со всеми делами мне помогал Сакишита."
@@ -10701,7 +10706,9 @@ label alt_day7_mi_7dl_liar:
     window hide
     scene expression Notch("bg ext_khruschevka_day_7dl") with dissolve
     $ meet('ml','Пижон')
+    $ alt_meet['ml'] = u"Пижон"
     $ meet('ml2','Мелкий')
+    $ alt_meet['ml2'] = u"Мелкий"
     ml "И что, ты тоже веришь в эту чушь?"
     "Издевательски протянул парень в ветровке — один в один той же, что была на Мику с автобуса."
     "Тоже в тренде, скотина… Пижон."
