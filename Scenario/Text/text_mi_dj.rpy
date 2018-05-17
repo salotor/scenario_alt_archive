@@ -2405,10 +2405,12 @@ label alt_day4_mi_dj_supper:
         scene black with guess_on
         "И тут мне глаза закрыли руками."
         $ meet ('mi', 'Голос')
+        $ alt_meet['mi'] = u"Голос"
         mi "Угадай, кто?"
         me "Мику, конечно!"
         "Улыбнулся я, целуя её ладошки."
         $ meet ('mi', 'Мику')
+        $ alt_meet['mi'] = u"Мику"
         scene bg int_dining_hall_people_day
         show mi happy pioneer at center with dissolve
         mi "Вся твоя!"

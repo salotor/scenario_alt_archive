@@ -1661,6 +1661,7 @@ label alt_day5_uvao_getting_up:
 
     if alt_uvao_true:
         $ meet('mt', 'Голос')
+        $ alt_meet['mt'] = u"Голос"
         mt "Семён! Семён!" with hpunch
         th "М-м-м…"
         mt "Семён!" with hpunch
@@ -3276,6 +3277,7 @@ label alt_day5_uvao_mines_sh:
     stop ambience
 label alt_day5_uvao_mines_sh_capture_debug: #Хомутаем Шурика и отлаживаем спрайты
     $ meet('mt', 'Голос')
+    $ alt_meet['mt'] = u"Голос"
     $ day_time()
     $ persistent.sprite_time = "day"
     scene bg int_old_building_day_7dl with flash

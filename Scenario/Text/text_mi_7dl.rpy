@@ -1223,11 +1223,13 @@ label alt_day4_mi_7dl_ch5b:
     play sound_loop sfx_intro_bus_engine_loop fadein 3
     play music music_7dl["unholy_you"] fadein 3
     $ meet ('sak','Японец')
+    $ alt_meet['sak'] = u"Японец"
     sak "Здравствуйте, Мику-кун."
     "Я резко обернулся — за рулём кажущегося здесь неуместным «Мицубиси» сидел…"
     show mi normal pioneer with dspr
     mi "Здравствуйте, Сакишита-сан."
     $ meet ('sak','Сакишита')
+    $ alt_meet['sak'] = u"Сакишита"
     "Улыбнулась Мику."
     mi "Вы по поручению отца?"
     me "Мику, что это за хрен?"
