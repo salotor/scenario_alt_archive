@@ -1033,6 +1033,8 @@
     $ music_7dl["shib_stereo"] = get_music_7dl("shib_stereo_7dl.ogg")
     $ music_7dl["slavyas_fantazm"] = get_music_7dl("slavyas_fantazm_7dl.ogg")
     $ music_7dl["sky_feather"] = get_music_7dl("sky_feather_7dl.ogg")
+    $ music_7dl["sammy"] = get_music_7dl("sammy_7dl.ogg")
+    $ music_7dl["snatch"] = get_music_7dl("snatch_7dl.ogg")
     $ music_7dl["sneakupon"] = get_music_7dl("sneakupon_7dl.ogg")
     $ music_7dl["so_be_it"] = get_music_7dl("so_be_it_7dl.ogg")
     $ music_7dl["so_cold"] = get_music_7dl("so_cold_7dl.ogg")

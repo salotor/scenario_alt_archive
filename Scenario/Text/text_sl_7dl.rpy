@@ -1,4 +1,9 @@
-﻿label alt_day4_sl_7dl_begin:
+﻿#Новый музон
+#play music music_7dl["snatch"]
+#play music music_7dl["sammy"]
+
+
+label alt_day4_sl_7dl_begin:
     play music music_7dl["ask_you_out"] fadein 3
     scene bg int_house_of_mt_sunset
     with dissolve
