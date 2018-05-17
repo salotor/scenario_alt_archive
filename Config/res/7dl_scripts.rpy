@@ -524,7 +524,7 @@ init -999 python:
         return default_7dl_path+"Pics/%s" % (file)
     if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         def get_image_extra7dl(file):
-            return default_7dl_path+"pics_extra/%s" % (file)
+            return default_7dl_path+"Pics/extra/%s" % (file)
         
 init -998 python:
     def get_sfx_7dl(file):
@@ -539,9 +539,6 @@ init -997 python:
         return default_7dl_path+"Pics/sprites/%s" % (file)
     def get_sprite_ori(file):
         return get_image("sprites/%s") % (file)
-    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        def get_sprite_extra7dl(file):
-            return get_image_extra7dl("sprites/%s" % (file))
     
     store.map_chibi = {
             "?" : get_image_7dl("gui/maps/map_icon_n00.png"),
