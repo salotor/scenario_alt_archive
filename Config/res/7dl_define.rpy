@@ -83,6 +83,11 @@
         xalign 0.3 yalign 0.5 zoom 1.05
         linear 0.8 zoom 1.0 xalign 0.5 yalign 0.5
         
+    transform bottotop:
+        pos (0,-1261)
+        linear 10.0 pos (0,0)
+        linear 2.0 pos (0, -200)
+        
     transform salute_main_black(salute):
         "sal_black"
         choice 15:

@@ -40,6 +40,7 @@ label scenario__sdl_achvlist_Author:
     scene bg sdl_ach_inactive
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
+    $ renpy.block_rollback()
     call screen sdl_achvlist_Author
     
 screen mi_button_active:
