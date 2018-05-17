@@ -515,8 +515,10 @@ init -1001 python:
 init -1000 python:
     if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         default_7dl_path = 'scenario_alt/'
-    else:
+    elif stadnalone_7dl = True or renpy.version(tuple=False) == "Ren'Py 6.18.3.761":
         default_7dl_path = 'mods/scenario_alt/'
+    else:
+        default_7dl_path = '../441054187/scenario_alt/'
     config_session = False
 
 init -999 python:
