@@ -83,6 +83,11 @@
         xalign 0.3 yalign 0.5 zoom 1.05
         linear 0.8 zoom 1.0 xalign 0.5 yalign 0.5
         
+    transform bottotop:
+        pos (0,-1261)
+        linear 10.0 pos (0,0)
+        linear 2.0 pos (0, -200)
+        
     transform salute_main_black(salute):
         "sal_black"
         choice 15:
@@ -456,6 +461,19 @@
     image bg int_wardrobe_7dl = get_image_7dl("bg/int_wardrobe_7dl.jpg")
     image bg int_wardrobe2_7dl = get_image_7dl("bg/int_wardrobe2_7dl.jpg")
     
+    #extra
+    image bg ext_house_of_el_day = get_image_extra7dl("bg/ext_house_of_el_day.jpg")
+    image bg ext_house_of_el_night = get_image_extra7dl("bg/ext_house_of_el_night.jpg")
+    image bg ext_stage_big_day = get_image_extra7dl("bg/ext_stage_big_day.jpg")
+    image bg int_house_of_mt_noitem_day = get_image_extra7dl("bg/int_house_of_mt_noitem_day.jpg")
+    image bg ext_boathouse_sunset = get_image_extra7dl("bg/ext_boathouse_sunset.jpg")
+    image bg ext_camp_entrance_sunset = get_image_extra7dl("bg/ext_camp_entrance_sunset.jpg")
+    image bg ext_clubs_sunset = get_image_extra7dl("bg/ext_clubs_sunset.jpg")
+    image bg ext_playground_sunset = get_image_extra7dl("bg/ext_playground_sunset.jpg")
+    image bg int_dining_hall_people_sunset = get_image_extra7dl("bg/int_dining_hall_people_sunset.jpg")
+    image bg ext_shed_sunset = get_image_extra7dl("bg/ext_shed_sunset.jpg")
+
+    
 #Сценки ака CG
 
     
@@ -628,8 +646,14 @@
     image cg d7_us_pixie_7dl = get_image_7dl("cg/d7_us_pixie_7dl.png")
     image cg d7_us_tai_tai_7dl = get_image_7dl("cg/d7_us_tai_tai_7dl.jpg")
 
-    
     image cg d7_bus_night_7dl = get_image_7dl("cg/d7_bus_night_7dl.jpg")
+    
+    #extra
+    image cg d2_water_dan_night = get_image_extra7dl("cg/d2_water_dan_night.jpg")
+    image cg d3_fag_room = get_image_extra7dl("cg/d3_fag_room.jpg")
+    image cg d3_potato_1 = get_image_extra7dl("cg/d3_potato_1.jpg")
+    image cg d3_potato_2 = get_image_extra7dl("cg/d3_potato_2.jpg")
+    image cg wtf_end_of_day = get_image_extra7dl("cg/wtf_end_of_day.jpg")
     
 #Турнир
     image alt_tournament_bg = get_image_7dl("gui/tournament/alt_tournament_bg.png")
@@ -714,7 +738,7 @@
 #    image widget map = store.map_pics["widget map"]
 
 #Скачки по карте
-    image bg map_explain = get_image_7dl("gui/maps/map_explain.png")
+    image bg map_explain = get_image_7dl("gui/maps/map_explain.jpg")
     image dvsem_el = get_image_7dl("gui/maps/dvsem_el.png")
     image eye_s = get_image_7dl("sprites/custom/eye_s_7dl.png")
 #Сотик
