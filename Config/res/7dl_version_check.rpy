@@ -91,11 +91,44 @@ label after_load:
 
     # читаем 'save_name' и ищем в строке "7ДЛ" - думаю, этого дл идентификации мода достаточно
     if save_name.find(u'7ДЛ') != -1: #Если нашли вхождение '7ДЛ' в имени сохранения игры
-    
-        #Версия билда
-        $ config.name = "Everlasting Summer 1.1 + 7dl "
-        $ config.version = alt_release_no
-        
+
+        # пишем версию 7дл в трейсбеках
+        if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+            $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
+        else:
+            $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)
+
+            # повторный meet() с именами из собственного списка каналов спикеров после загрузки сохранения
+            $ meet('ba',alt_meet['ba'])
+            $ meet('ase',alt_meet['ase'])
+            $ meet('we',alt_meet['we'])
+            $ meet('ml',alt_meet['ml'])
+            $ meet('ml2',alt_meet['ml2'])
+            $ meet('ml3',alt_meet['ml3'])
+            $ meet('voice1',alt_meet['voice1'])
+            $ meet('kids',alt_meet['kids'])
+            $ meet('dy',alt_meet['dy'])
+            $ meet('icq',alt_meet['icq'])
+            $ meet('el',alt_meet['el'])
+            $ meet('un',alt_meet['un'])
+            $ meet('dv',alt_meet['dv'])
+            $ meet('sl',alt_meet['sl'])
+            $ meet('us',alt_meet['us'])
+            $ meet('mt',alt_meet['mt'])
+            $ meet('cs',alt_meet['cs'])
+            $ meet('mz',alt_meet['mz'])
+            $ meet('mi',alt_meet['mi'])
+            $ meet('uv',alt_meet['uv'])
+            $ meet('bb',alt_meet['bb'])
+            $ meet('sh',alt_meet['sh'])
+            $ meet('ai',alt_meet['ai'])
+            $ meet('sak',alt_meet['sak'])
+            $ meet('me',alt_meet['me'])
+            $ meet('pi',alt_meet['pi'])
+            $ meet('dreamgirl',alt_meet['dreamgirl'])
+            $ meet('voice',alt_meet['voice'])
+            $ meet('voices',alt_meet['voices'])
+
         # Проверяем, совпадают ли версии сохранения и мода и есть ли версия сохранения в списке совместимых
         if (alt_release_no != alt_save_release_no) and (alt_save_release_no not in alt_compatible_release_no): # и если сохранение несовместимо
 
