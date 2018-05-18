@@ -212,7 +212,11 @@ init -6 python:
         global save_name
         save_name = (u"7ДЛ v.%s: пролог. %s") % (alt_release_no, plthr)
 
-        
+init python:
+    if persistent.autostart_7dl:
+        rgsn = renpy.game.script.namemap
+        rgsn["main_menu_7dl"],rgsn["splashscreen"] = rgsn["splashscreen"],rgsn["main_menu_7dl"]
+
 init -5 python:
     def alt_chapter(alt_day_number, alt_chapter_name):
         global save_name
