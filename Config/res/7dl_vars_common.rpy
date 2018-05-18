@@ -124,7 +124,7 @@ label alt_day0_vars: #Переменные нулевого дня
     $ make_names_unknown_7dl()
     $ th_prefix = "«"
     $ th_suffix = "»"
-    if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
+    if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
     if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
