@@ -738,7 +738,7 @@
 #    image widget map = store.map_pics["widget map"]
 
 #Скачки по карте
-    image bg map_explain = get_image_7dl("gui/maps/map_explain.png")
+    image bg map_explain = get_image_7dl("gui/maps/map_explain.jpg")
     image dvsem_el = get_image_7dl("gui/maps/dvsem_el.png")
     image eye_s = get_image_7dl("sprites/custom/eye_s_7dl.png")
 #Сотик
