@@ -129,50 +129,75 @@ init -10 python:
 init -2 python:
     def make_names_unknown_7dl():
         global store
-        set_name('ba',u"Физрук")
-        set_name('ase',u"Алиса")
-        set_name('we',u"Толпа") # не используется
-        set_name('ml',u"Мальчик")
-        set_name('ml2',u"Мальчик")
-        set_name('ml3',u"Мальчик")
-        set_name('voice1',u"Продавщица")
-        set_name('kids',u"Дети")
-        set_name('dy',u"Динамики")
-        set_name('icq',u"Собеседник")
-        set_name('el',u"Кудрявый")
-        set_name('un',u"Грустяша")
-        set_name('dv',u"Рыжая")
-        set_name('sl',u"Блондинка")
-        set_name('us',u"Мелкая")
-        set_name('mt',u"Вожатая")
-        set_name('cs',u"Медсестра")
-        set_name('mz',u"Очкарик")
-        set_name('mi',u"Японка")
-        set_name('uv',u"Котэ")
-        set_name('bb',u"Начальник")
-        set_name('sh',u"Очкарик")
-        set_name('ai',u"Мужчина")
-        set_name('sak',u"Старик")
-        set_name('me',u"Семён")
-        set_name('pi',u"Пионер")
-        set_name('dreamgirl',u"…")
-        set_name('voice',u"Голос")
-        set_name('voices',u"Голоса")
+        meet('ba',u"Физрук")
+        meet('ase',u"Алиса")
+        meet('we',u"Толпа") # не используется
+        meet('ml',u"Мальчик")
+        meet('ml2',u"Мальчик")
+        meet('ml3',u"Мальчик")
+        meet('voice1',u"Продавщица")
+        meet('kids',u"Дети")
+        meet('dy',u"Динамики")
+        meet('icq',u"Собеседник")
+        meet('el',u"Кудрявый")
+        meet('un',u"Грустяша")
+        meet('dv',u"Рыжая")
+        meet('sl',u"Блондинка")
+        meet('us',u"Мелкая")
+        meet('mt',u"Вожатая")
+        meet('cs',u"Медсестра")
+        meet('mz',u"Очкарик")
+        meet('mi',u"Японка")
+        meet('uv',u"Котэ")
+        meet('bb',u"Начальник")
+        meet('sh',u"Очкарик")
+        meet('ai',u"Мужчина")
+        meet('sak',u"Старик")
+        meet('me',u"Семён")
+        meet('pi',u"Пионер")
+        meet('dreamgirl',u"…")
+        meet('voice',u"Голос")
+        meet('voices',u"Голоса")
 
     def meet(who, name):
-        set_name(who, name)
+        gl = globals()
+        gl[who + "_name"] = name
 
-    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        def set_name(who, name):
+init 2 python:
+    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        def char_define(x,is_nvl=False):
+            global DynamicCharacter
+            global _show_two_window
+            global nvl
+            global time_of_day
             gl = globals()
-            gl[who + "_name"] = name
-    else:
-        def set_name(who, name):
+            v = "_voice"
+            if  x == 'narrator':
+                if  is_nvl:
+                    gl['narrator'] = Character(None, kind=nvl, what_style="narrator_%s"%time_of_day, ctc="ctc_animation_nvl", ctc_position="fixed")
+                else:
+                    gl['narrator'] = Character(None, what_style="narrator_%s"%time_of_day, ctc="ctc_animation", ctc_position="fixed")
+                return
+            if  x == 'th':
+                if  is_nvl:
+                    gl['th'] = Character(None, kind=nvl, what_style="thoughts_%s"%time_of_day,what_prefix = th_prefix,what_suffix=th_suffix, ctc="ctc_animation_nvl", ctc_position="fixed")
+                else:
+                    gl['th'] = Character(None, what_style="thoughts_%s"%time_of_day,what_prefix = th_prefix,what_suffix=th_suffix, ctc="ctc_animation", ctc_position="fixed")
+                return
+            if  is_nvl:
+                gl[x] = DynamicCharacter("%s_name"%x, color=store.colors[x][time_of_day], kind=nvl, what_style="normal_%s"%time_of_day,who_suffix=":", ctc="ctc_animation_nvl", ctc_position="fixed")
+            else:
+                gl[x] = DynamicCharacter("%s_name"%x, color=store.colors[x][time_of_day], show_two_window=_show_two_window,  what_style="normal_%s"%time_of_day, ctc="ctc_animation", ctc_position="fixed")
+
+        def make_names_unknown():
+            gl = globals()
             global store
-            store.names[who] = name
-            gl = globals()
-            gl[who + "_name"] = store.names[who]
-
+            for x in store.names_list:
+                if not (x == 'narrator' or x == 'th'):
+                    gl["%s_name"%x] = store.names[x]
+                
+        make_names_unknown()
+            
 init -265 python: 
     #Пресеты с возможностью настройки
     def Noir(id, brightness = -0.4, tint_r = 0.2126, tint_g = 0.7152, tint_b = 0.0722, saturation = 0.5):

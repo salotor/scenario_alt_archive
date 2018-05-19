@@ -70,25 +70,15 @@ label sdl_menu:
     menu:
         "Выбранный лейбл":
             $ meet('mi','Мику')
-            $ alt_meet['mi'] = u"Мику"
             $ meet('us','Ульяна')
-            $ alt_meet['us'] = u"Ульяна"
             $ meet('sl','Славя')
-            $ alt_meet['sl'] = u"Славя"
             $ meet('dv','Алиса')
-            $ alt_meet['dv'] = u"Алиса"
             $ meet('mt','Ольга Дмитриевна')
-            $ alt_meet['mt'] = u"Ольга Дмитриевна"
             $ meet('un','Лена')
-            $ alt_meet['un'] = u"Лена"
             $ meet('cs','Виола')
-            $ alt_meet['cs'] = u"Виола"
             $ meet('el','Электроник')
-            $ alt_meet['el'] = u"Электроник"
             $ meet('sh','Шурик')
-            $ alt_meet['sh'] = u"Шурик"
             $ meet('ba','Саныч')
-            $ alt_meet['ba'] = u"Саныч"
             $ persistent.altCardsWon1 = True
             $ persistent.altCardsWon2 = True
             $ persistent.altCardsWon3 = True

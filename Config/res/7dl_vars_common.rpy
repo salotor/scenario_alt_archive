@@ -5,7 +5,7 @@ init -1:
     $ alt_compatible_release_no = ["0.00.x", "0.34.a"] 
     $ plthr = u"none"
 
-init 2:
+init:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
     $ timeskip_come = "Ты пойдёшь со мной?"
@@ -63,13 +63,13 @@ init 2:
     
     if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         $ names['ba'] = u'Физрук'
-        $ names['sak'] = u'Японец'
+        $ names['sak'] = u'Старик'
         $ names['ai'] = u'Мужчина'    
         $ names['ase'] = u'Алиса'
-        $ names['we'] = u'Все вместе'
+        $ names['we'] = u'Толпа'
         $ names['ml'] = u'Мальчик'
-        $ names['ml2'] = u'Мальчик2'
-        $ names['ml3'] = u'Мальчик3'
+        $ names['ml2'] = u'Мальчик'
+        $ names['ml3'] = u'Мальчик'
         $ names['voice1'] = u'Продавщица'
         $ names['bb'] = u'Начальник'
         $ names['icq'] = u'Собеседник'
@@ -79,11 +79,11 @@ init 2:
         $ store.names_list.append('voices')
         
         $ colors['kids'] = {'night': (235, 120, 131, 255), 'sunset': (235, 120, 131, 255), 'day': (235, 120, 131, 255), 'prolog': (235, 120, 131, 255)}
-        $ names['kids'] = u'Малышня'
+        $ names['kids'] = u'Дети'
         $ store.names_list.append('kids')
         
         $ colors['dy'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (56, 90, 107, 255), 'prolog': (192, 192, 192, 255)}
-        $ names['dy'] = u'Голос из динамика'
+        $ names['dy'] = u'Динамики'
         $ store.names_list.append('dy')
     
 label scenario__alt_sevendl:
@@ -97,7 +97,7 @@ label scenario__alt_sevendl:
     $ alt_save_release_no = alt_release_no
 # ------------------------------------------------
 
-jump main_menu_7dl
+    jump main_menu_7dl
 
 label alt_day0_vars: #Переменные нулевого дня
     $ lp_mi = 0
@@ -130,38 +130,6 @@ label alt_day0_vars: #Переменные нулевого дня
         $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
     else:
         $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)
-        python:
-            alt_meet = { # свой список каналов спикеров для повторного вызова meet() при загрузке сохранения
-            'ba':          u"Физрук",
-            'ase':         u"Алиса",
-            'we':          u"Толпа", # не используется
-            'ml':          u"Мальчик",
-            'ml2':         u"Мальчик",
-            'ml3':         u"Мальчик",
-            'voice1':      u"Продавщица",
-            'kids':        u"Дети",
-            'dy':          u"Динамики",
-            'icq':         u"Собеседник",
-            'el':          u"Кудрявый",
-            'un':          u"Грустяша",
-            'dv':          u"Рыжая",
-            'sl':          u"Блондинка",
-            'us':          u"Мелкая",
-            'mt':          u"Вожатая",
-            'cs':          u"Медсестра",
-            'mz':          u"Очкарик",
-            'mi':          u"Японка",
-            'uv':          u"Котэ",
-            'bb':          u"Начальник",
-            'sh':          u"Очкарик",
-            'ai':          u"Мужчина",
-            'sak':         u"Старик",
-            'me':          u"Семён",
-            'pi':          u"Пионер",
-            'dreamgirl':   u"…",
-            'voice':       u"Голос",
-            'voices':      u"Голоса"
-            }
     return
     
 label alt_day1_vars: #Переменные первого дня
