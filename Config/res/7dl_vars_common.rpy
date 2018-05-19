@@ -62,6 +62,15 @@ init 2:
     #$ store.names_list.append('ann')
     
     if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        $ colors['voices'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (192, 192, 192, 255), 'prolog': (192, 192, 192, 255)}
+        $ store.names_list.append('voices')
+        
+        $ colors['kids'] = {'night': (235, 120, 131, 255), 'sunset': (235, 120, 131, 255), 'day': (235, 120, 131, 255), 'prolog': (235, 120, 131, 255)}
+        $ store.names_list.append('kids')
+        
+        $ colors['dy'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (56, 90, 107, 255), 'prolog': (192, 192, 192, 255)}
+        $ store.names_list.append('dy')
+    
         $ names['ba'] = u'Физрук'
         $ names['sak'] = u'Старик'
         $ names['ai'] = u'Мужчина'    
@@ -73,19 +82,10 @@ init 2:
         $ names['voice1'] = u'Продавщица'
         $ names['bb'] = u'Начальник'
         $ names['icq'] = u'Собеседник'
-
-        $ colors['voices'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (192, 192, 192, 255), 'prolog': (192, 192, 192, 255)}
         $ names['voices'] = u'Голоса'
-        $ store.names_list.append('voices')
-        
-        $ colors['kids'] = {'night': (235, 120, 131, 255), 'sunset': (235, 120, 131, 255), 'day': (235, 120, 131, 255), 'prolog': (235, 120, 131, 255)}
         $ names['kids'] = u'Дети'
-        $ store.names_list.append('kids')
-        
-        $ colors['dy'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (56, 90, 107, 255), 'prolog': (192, 192, 192, 255)}
         $ names['dy'] = u'Динамики'
-        $ store.names_list.append('dy')
-    
+
 label scenario__alt_sevendl:
 # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
 # ------------------------------------------------
