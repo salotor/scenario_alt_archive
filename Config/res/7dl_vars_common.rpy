@@ -5,7 +5,7 @@ init -1:
     $ alt_compatible_release_no = ["0.00.x", "0.34.a"] 
     $ plthr = u"none"
 
-init:
+init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
     $ timeskip_come = "Ты пойдёшь со мной?"

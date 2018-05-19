@@ -165,38 +165,45 @@ init -2 python:
 
 init 2 python:
     if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        def char_define(x,is_nvl=False):
-            global DynamicCharacter
-            global _show_two_window
-            global nvl
-            global time_of_day
-            gl = globals()
-            v = "_voice"
-            if  x == 'narrator':
-                if  is_nvl:
-                    gl['narrator'] = Character(None, kind=nvl, what_style="narrator_%s"%time_of_day, ctc="ctc_animation_nvl", ctc_position="fixed")
-                else:
-                    gl['narrator'] = Character(None, what_style="narrator_%s"%time_of_day, ctc="ctc_animation", ctc_position="fixed")
-                return
-            if  x == 'th':
-                if  is_nvl:
-                    gl['th'] = Character(None, kind=nvl, what_style="thoughts_%s"%time_of_day,what_prefix = th_prefix,what_suffix=th_suffix, ctc="ctc_animation_nvl", ctc_position="fixed")
-                else:
-                    gl['th'] = Character(None, what_style="thoughts_%s"%time_of_day,what_prefix = th_prefix,what_suffix=th_suffix, ctc="ctc_animation", ctc_position="fixed")
-                return
-            if  is_nvl:
-                gl[x] = DynamicCharacter("%s_name"%x, color=store.colors[x][time_of_day], kind=nvl, what_style="normal_%s"%time_of_day,who_suffix=":", ctc="ctc_animation_nvl", ctc_position="fixed")
-            else:
-                gl[x] = DynamicCharacter("%s_name"%x, color=store.colors[x][time_of_day], show_two_window=_show_two_window,  what_style="normal_%s"%time_of_day, ctc="ctc_animation", ctc_position="fixed")
+        # def char_define(x,is_nvl=False):
+            # global DynamicCharacter
+            # global _show_two_window
+            # global nvl
+            # global time_of_day
+            # gl = globals()
+            # v = "_voice"
+            # if  x == 'narrator':
+                # if  is_nvl:
+                    # gl['narrator'] = Character(None, kind=nvl, what_style="narrator_%s"%time_of_day, ctc="ctc_animation_nvl", ctc_position="fixed")
+                # else:
+                    # gl['narrator'] = Character(None, what_style="narrator_%s"%time_of_day, ctc="ctc_animation", ctc_position="fixed")
+                # return
+            # if  x == 'th':
+                # if  is_nvl:
+                    # gl['th'] = Character(None, kind=nvl, what_style="thoughts_%s"%time_of_day,what_prefix = th_prefix,what_suffix=th_suffix, ctc="ctc_animation_nvl", ctc_position="fixed")
+                # else:
+                    # gl['th'] = Character(None, what_style="thoughts_%s"%time_of_day,what_prefix = th_prefix,what_suffix=th_suffix, ctc="ctc_animation", ctc_position="fixed")
+                # return
+            # if  is_nvl:
+                # gl[x] = DynamicCharacter("%s_name"%x, color=store.colors[x][time_of_day], kind=nvl, what_style="normal_%s"%time_of_day,who_suffix=":", ctc="ctc_animation_nvl", ctc_position="fixed")
+            # else:
+                # gl[x] = DynamicCharacter("%s_name"%x, color=store.colors[x][time_of_day], show_two_window=_show_two_window,  what_style="normal_%s"%time_of_day, ctc="ctc_animation", ctc_position="fixed")
 
-        def make_names_unknown():
+        # def make_names_unknown():
+            # gl = globals()
+            # global store
+            # for x in store.names_list:
+                # if not (x == 'narrator' or x == 'th'):
+                    # gl["%s_name"%x] = store.names[x]
+                
+        # make_names_unknown()
+        
+        def save_names_known():
             gl = globals()
             global store
             for x in store.names_list:
                 if not (x == 'narrator' or x == 'th'):
-                    gl["%s_name"%x] = store.names[x]
-                
-        make_names_unknown()
+                    store.names[x] = gl["%s_name"%x]
             
 init -265 python: 
     #Пресеты с возможностью настройки

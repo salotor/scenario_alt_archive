@@ -97,6 +97,7 @@ label after_load:
             $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
         else:
             $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)
+            $ save_names_known()
 
         # Проверяем, совпадают ли версии сохранения и мода и есть ли версия сохранения в списке совместимых
         if (alt_release_no != alt_save_release_no) and (alt_save_release_no not in alt_compatible_release_no): # и если сохранение несовместимо
