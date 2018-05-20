@@ -159,11 +159,17 @@ init -2 python:
         meet('voice',u"Голос")
         meet('voices',u"Голоса")
 
-    def meet(who, name):
-        gl = globals()
-        gl[who + "_name"] = name
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        def meet(who, name):
+            gl = globals()
+            gl[who + "_name"] = name
+    else:
+        def meet(who, name):
+            global store
+            gl = globals()
+            gl[who + "_name"] = name
+            store.names[who] = name
 
-    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         def save_names_known():
             gl = globals()
             global store
