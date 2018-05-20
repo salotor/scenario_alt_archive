@@ -216,11 +216,6 @@ init -6 python:
         global save_name
         save_name = (u"7ДЛ v.%s: пролог. %s") % (alt_release_no, plthr)
 
-init python:
-    if persistent.autostart_7dl:
-        rgsn = renpy.game.script.namemap
-        rgsn["main_menu_7dl"],rgsn["splashscreen"] = rgsn["splashscreen"],rgsn["main_menu_7dl"]
-
 init -5 python:
     def alt_chapter(alt_day_number, alt_chapter_name):
         global save_name
@@ -567,55 +562,104 @@ init -997 python:
         
 init python:
     
-        import math
+    import math
 
-        class Shaker(object):
+    class Shaker(object):
+    
+        anchors = {
+            'top' : 0.0,
+            'center' : 0.5,
+            'bottom' : 1.0,
+            'left' : 0.0,
+            'right' : 1.0,
+            }
+    
+        def __init__(self, start, child, dist):
+            if start is None:
+                start = child.get_placement()
+            #
+            self.start = [ self.anchors.get(i, i) for i in start ]  # central position
+            self.dist = dist    # maximum distance, in pixels, from the starting point
+            self.child = child
+            
+        def __call__(self, t, sizes):
+            # Float to integer… turns floating point numbers to
+            # integers.                
+            def fti(x, r):
+                if x is None:
+                    x = 0
+                if isinstance(x, float):
+                    return int(x * r)
+                else:
+                    return x
+
+            xpos, ypos, xanchor, yanchor = [ fti(a, b) for a, b in zip(self.start, sizes) ]
+
+            xpos = xpos - xanchor
+            ypos = ypos - yanchor
+            
+            nx = xpos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
+            ny = ypos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
+
+            return (int(nx), int(ny), 0, 0)
+    
+    def _Shake(start, time, child=None, dist=100.0, **properties):
+
+        move = Shaker(start, child, dist=dist)
+    
+        return renpy.display.layout.Motion(move,
+                      time,
+                      child,
+                      add_sizes=True,
+                      **properties)
+
+    Shake = renpy.curry(_Shake)
         
-            anchors = {
-                'top' : 0.0,
-                'center' : 0.5,
-                'bottom' : 1.0,
-                'left' : 0.0,
-                'right' : 1.0,
-                }
+init 2 python:
+    if persistent.autostart_7dl:
+        rgsn = renpy.game.script.namemap
+        rgsn["splashscreen_7dl"],rgsn["splashscreen"] = rgsn["splashscreen"],rgsn["splashscreen_7dl"]
         
-            def __init__(self, start, child, dist):
-                if start is None:
-                    start = child.get_placement()
-                #
-                self.start = [ self.anchors.get(i, i) for i in start ]  # central position
-                self.dist = dist    # maximum distance, in pixels, from the starting point
-                self.child = child
-                
-            def __call__(self, t, sizes):
-                # Float to integer… turns floating point numbers to
-                # integers.                
-                def fti(x, r):
-                    if x is None:
-                        x = 0
-                    if isinstance(x, float):
-                        return int(x * r)
-                    else:
-                        return x
+        rgsn = renpy.game.script.namemap
+        rgsn["alt_start_7dl"],rgsn["start"] = rgsn["start"],rgsn["alt_start_7dl"]
 
-                xpos, ypos, xanchor, yanchor = [ fti(a, b) for a, b in zip(self.start, sizes) ]
+label splashscreen_7dl:
 
-                xpos = xpos - xanchor
-                ypos = ypos - yanchor
-                
-                nx = xpos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
-                ny = ypos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
-
-                return (int(nx), int(ny), 0, 0)
+    python:
         
-        def _Shake(start, time, child=None, dist=100.0, **properties):
+        if not persistent.set_volumes:
+            
+            persistent.lan_chosen = True
+            persistent.licensed = True
+            
+            persistent.timeofday='prologue'
+            
+            persistent.choices = []
+            
+            persistent.show_achievements = False
+            
+            persistent.show_hentai_ach = False
+            
+            _preferences.language = None
+            
+            persistent.set_volumes = True
+            persistent.achievement = True
+            persistent.collector = True
+            
+            persistent.font_size = "small"
+            persistent.hentai = False
+            
+            _preferences.volumes['music'] = .65
+            _preferences.volumes['sfx'] = 1.0
+            _preferences.volumes['voice'] = .75
 
-            move = Shaker(start, child, dist=dist)
-        
-            return renpy.display.layout.Motion(move,
-                          time,
-                          child,
-                          add_sizes=True,
-                          **properties)
+    $ prolog_time()
+    return
 
-        Shake = renpy.curry(_Shake)
+label alt_start_7dl:
+    $ renpy.music.stop()
+    $ skip_text_blocks = True
+    $ renpy.block_rollback()
+    $ init_map_zones()
+
+    jump scenario__alt_sevendl
