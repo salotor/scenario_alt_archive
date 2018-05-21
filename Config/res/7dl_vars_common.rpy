@@ -61,6 +61,31 @@ init 2:
     #$ colors['ann'] = {'night': (15, 159, 14, 255), 'sunset': (10, 217, 16, 255), 'day': (170, 254, 160, 255), 'prolog': (10, 215, 30, 255)}
     #$ store.names_list.append('ann')
     
+    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        $ colors['voices'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (192, 192, 192, 255), 'prolog': (192, 192, 192, 255)}
+        $ store.names_list.append('voices')
+        
+        $ colors['kids'] = {'night': (235, 120, 131, 255), 'sunset': (235, 120, 131, 255), 'day': (235, 120, 131, 255), 'prolog': (235, 120, 131, 255)}
+        $ store.names_list.append('kids')
+        
+        $ colors['dy'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (56, 90, 107, 255), 'prolog': (192, 192, 192, 255)}
+        $ store.names_list.append('dy')
+    
+        $ names['ba'] = u'Физрук'
+        $ names['sak'] = u'Старик'
+        $ names['ai'] = u'Мужчина'    
+        $ names['ase'] = u'Алиса'
+        $ names['we'] = u'Толпа'
+        $ names['ml'] = u'Мальчик'
+        $ names['ml2'] = u'Мальчик'
+        $ names['ml3'] = u'Мальчик'
+        $ names['voice1'] = u'Продавщица'
+        $ names['bb'] = u'Начальник'
+        $ names['icq'] = u'Собеседник'
+        $ names['voices'] = u'Голоса'
+        $ names['kids'] = u'Дети'
+        $ names['dy'] = u'Динамики'
+
 label scenario__alt_sevendl:
 # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
 # ------------------------------------------------
@@ -72,7 +97,7 @@ label scenario__alt_sevendl:
     $ alt_save_release_no = alt_release_no
 # ------------------------------------------------
 
-jump choose_waifu_7dl
+    jump main_menu_7dl
 
 label alt_day0_vars: #Переменные нулевого дня
     $ lp_mi = 0
@@ -99,8 +124,12 @@ label alt_day0_vars: #Переменные нулевого дня
     $ make_names_unknown_7dl()
     $ th_prefix = "«"
     $ th_suffix = "»"
-    if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
+    if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
+    else:
+        $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)
     return
     
 label alt_day1_vars: #Переменные первого дня

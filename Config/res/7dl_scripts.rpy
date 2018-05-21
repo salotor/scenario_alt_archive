@@ -129,43 +129,54 @@ init -10 python:
 init -2 python:
     def make_names_unknown_7dl():
         global store
-        set_name('ba',u"Физрук")
-        set_name('ase',u"Алиса")
-        set_name('we',u"Толпа") # не используется
-        set_name('ml',u"Мальчик")
-        set_name('ml2',u"Мальчик")
-        set_name('ml3',u"Мальчик")
-        set_name('voice1',u"Продавщица")
-        set_name('kids',u"Дети")
-        set_name('dy',u"Динамики")
-        set_name('icq',u"Собеседник")
-        set_name('el',u"Кудрявый")
-        set_name('un',u"Грустяша")
-        set_name('dv',u"Рыжая")
-        set_name('sl',u"Блондинка")
-        set_name('us',u"Мелкая")
-        set_name('mt',u"Вожатая")
-        set_name('cs',u"Медсестра")
-        set_name('mz',u"Очкарик")
-        set_name('mi',u"Японка")
-        set_name('uv',u"Котэ")
-        set_name('bb',u"Начальник")
-        set_name('sh',u"Очкарик")
-        set_name('ai',u"Мужчина")
-        set_name('sak',u"Старик")
-        set_name('me',u"Семён")
-        set_name('pi',u"Пионер")
-        set_name('dreamgirl',u"…")
-        set_name('voice',u"Голос")
-        set_name('voices',u"Голоса")
+        meet('ba',u"Физрук")
+        meet('ase',u"Алиса")
+        meet('we',u"Толпа") # не используется
+        meet('ml',u"Мальчик")
+        meet('ml2',u"Мальчик")
+        meet('ml3',u"Мальчик")
+        meet('voice1',u"Продавщица")
+        meet('kids',u"Дети")
+        meet('dy',u"Динамики")
+        meet('icq',u"Собеседник")
+        meet('el',u"Кудрявый")
+        meet('un',u"Грустяша")
+        meet('dv',u"Рыжая")
+        meet('sl',u"Блондинка")
+        meet('us',u"Мелкая")
+        meet('mt',u"Вожатая")
+        meet('cs',u"Медсестра")
+        meet('mz',u"Очкарик")
+        meet('mi',u"Японка")
+        meet('uv',u"Котэ")
+        meet('bb',u"Начальник")
+        meet('sh',u"Очкарик")
+        meet('ai',u"Мужчина")
+        meet('sak',u"Старик")
+        meet('me',u"Семён")
+        meet('pi',u"Пионер")
+        meet('dreamgirl',u"…")
+        meet('voice',u"Голос")
+        meet('voices',u"Голоса")
 
-    def meet(who, name):
-        set_name(who, name)
-
-    def set_name(who, name):
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        def meet(who, name):
             gl = globals()
             gl[who + "_name"] = name
+    else:
+        def meet(who, name):
+            global store
+            gl = globals()
+            gl[who + "_name"] = name
+            store.names[who] = name
 
+        def save_names_known():
+            gl = globals()
+            global store
+            for x in store.names_list:
+                if not (x == 'narrator' or x == 'th'):
+                    store.names[x] = gl["%s_name"%x]
+            
 init -265 python: 
     #Пресеты с возможностью настройки
     def Noir(id, brightness = -0.4, tint_r = 0.2126, tint_g = 0.7152, tint_b = 0.0722, saturation = 0.5):
@@ -205,7 +216,6 @@ init -6 python:
         global save_name
         save_name = (u"7ДЛ v.%s: пролог. %s") % (alt_release_no, plthr)
 
-        
 init -5 python:
     def alt_chapter(alt_day_number, alt_chapter_name):
         global save_name
@@ -458,8 +468,6 @@ init -5 python:
     # тонировка:
     tint_night = im.matrix.tint(0.63, 0.78, 0.82)
     tint_sunset = im.matrix.tint(0.94, 0.82, 1.0)    
-    # Дефолтный путь к спрайтам
-    _default_sprites_path = 'scenario_alt/Pics/sprites'
 
     # Простая функция, строит спрайт из переданных путей
     def ComposeSprite(*argv):
@@ -474,7 +482,7 @@ init -5 python:
         
     # Функция, собирающая спрайты из запчастей
     # types - набор калибров спрайтов. Любой набор из ('far', 'close', 'normal', 'veryfar'). По пути, где лежат спрайты, должны быть соотвествующие директории, иначе не найдет
-    # argv - файлы-запчасти. передаются в формате ('path', 'file') - например ('images/1080/sprites/','dv/dv_1_coat.png'), или просто 'file' - тогда используется _default_sprites_path
+    # argv - файлы-запчасти. передаются в формате ('path', 'file') - например ('images/1080/sprites/','dv/dv_1_coat.png'), или просто 'file'
     # на выходе - dict спрайтов, по одному для каждого из types
     def ComposeSpriteSet(distance, *argv):
         if isinstance(distance, str): #если types содержит только один параметр.
@@ -487,7 +495,7 @@ init -5 python:
             subargs = list()
             for arg in argv:
                 if isinstance(arg, str): #просто file
-                    subarg = (_default_sprites_path, arg)
+                    subarg = (default_7dl_path + 'Pics/sprites/', arg)
                 else: # (path, file)
                     subarg = arg;
                 subargs.append( subarg[0] + '/' + dst +'/' + subarg[1] ) # 'images/1080/sprites/normal/dv/dv_1_coat.png'
@@ -502,15 +510,25 @@ init 52 python:
             data["chibi"] = None
         
 init -1001 python:
-    default_7dl_path = 'scenario_alt/'
     def disable_all_chibi():
         global global_zones
         for name,data in global_zones.iteritems():
             data["map_chibi"] = None
             
+init -1000 python:
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        default_7dl_path = 'scenario_alt/'
+    elif persistent.nonsteam_7dl == True or renpy.version(tuple=False) == "Ren'Py 6.18.3.761":
+        default_7dl_path = 'mods/scenario_alt/'
+    else:
+        default_7dl_path = '../441054187/scenario_alt/'
+    config_session = False
+
 init -999 python:
     def get_image_7dl(file):
         return default_7dl_path+"Pics/%s" % (file)
+    def get_image_extra7dl(file):
+            return default_7dl_path+"Pics/extra/%s" % (file)
         
 init -998 python:
     def get_sfx_7dl(file):
@@ -525,7 +543,6 @@ init -997 python:
         return default_7dl_path+"Pics/sprites/%s" % (file)
     def get_sprite_ori(file):
         return get_image("sprites/%s") % (file)
-        
     
     store.map_chibi = {
             "?" : get_image_7dl("gui/maps/map_icon_n00.png"),
@@ -543,62 +560,106 @@ init -997 python:
             "cs": get_image_7dl("gui/maps/map_icon_n12.png"),
         }
         
-init:
+init python:
+    
+    import math
+
+    class Shaker(object):
+    
+        anchors = {
+            'top' : 0.0,
+            'center' : 0.5,
+            'bottom' : 1.0,
+            'left' : 0.0,
+            'right' : 1.0,
+            }
+    
+        def __init__(self, start, child, dist):
+            if start is None:
+                start = child.get_placement()
+            #
+            self.start = [ self.anchors.get(i, i) for i in start ]  # central position
+            self.dist = dist    # maximum distance, in pixels, from the starting point
+            self.child = child
+            
+        def __call__(self, t, sizes):
+            # Float to integer… turns floating point numbers to
+            # integers.                
+            def fti(x, r):
+                if x is None:
+                    x = 0
+                if isinstance(x, float):
+                    return int(x * r)
+                else:
+                    return x
+
+            xpos, ypos, xanchor, yanchor = [ fti(a, b) for a, b in zip(self.start, sizes) ]
+
+            xpos = xpos - xanchor
+            ypos = ypos - yanchor
+            
+            nx = xpos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
+            ny = ypos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
+
+            return (int(nx), int(ny), 0, 0)
+    
+    def _Shake(start, time, child=None, dist=100.0, **properties):
+
+        move = Shaker(start, child, dist=dist)
+    
+        return renpy.display.layout.Motion(move,
+                      time,
+                      child,
+                      add_sizes=True,
+                      **properties)
+
+    Shake = renpy.curry(_Shake)
+        
+init 2 python:
+    if persistent.autostart_7dl:
+        rgsn = renpy.game.script.namemap
+        rgsn["splashscreen_7dl"],rgsn["splashscreen"] = rgsn["splashscreen"],rgsn["splashscreen_7dl"]
+        
+        rgsn = renpy.game.script.namemap
+        rgsn["alt_start_7dl"],rgsn["start"] = rgsn["start"],rgsn["alt_start_7dl"]
+
+label splashscreen_7dl:
 
     python:
-    
-        import math
-
-        class Shaker(object):
         
-            anchors = {
-                'top' : 0.0,
-                'center' : 0.5,
-                'bottom' : 1.0,
-                'left' : 0.0,
-                'right' : 1.0,
-                }
-        
-            def __init__(self, start, child, dist):
-                if start is None:
-                    start = child.get_placement()
-                #
-                self.start = [ self.anchors.get(i, i) for i in start ]  # central position
-                self.dist = dist    # maximum distance, in pixels, from the starting point
-                self.child = child
-                
-            def __call__(self, t, sizes):
-                # Float to integer… turns floating point numbers to
-                # integers.                
-                def fti(x, r):
-                    if x is None:
-                        x = 0
-                    if isinstance(x, float):
-                        return int(x * r)
-                    else:
-                        return x
+        if not persistent.set_volumes:
+            
+            persistent.lan_chosen = True
+            persistent.licensed = True
+            
+            persistent.timeofday='prologue'
+            
+            persistent.choices = []
+            
+            persistent.show_achievements = False
+            
+            persistent.show_hentai_ach = False
+            
+            _preferences.language = None
+            
+            persistent.set_volumes = True
+            persistent.achievement = True
+            persistent.collector = True
+            
+            persistent.font_size = "small"
+            persistent.hentai = False
+            
+            _preferences.volumes['music'] = .65
+            _preferences.volumes['sfx'] = 1.0
+            _preferences.volumes['voice'] = .75
 
-                xpos, ypos, xanchor, yanchor = [ fti(a, b) for a, b in zip(self.start, sizes) ]
+    $ prolog_time()
+    return
 
-                xpos = xpos - xanchor
-                ypos = ypos - yanchor
-                
-                nx = xpos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
-                ny = ypos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
+label alt_start_7dl:
+    $ renpy.music.stop()
+    $ skip_text_blocks = True
+    $ renpy.block_rollback()
+    $ init_map_zones()
 
-                return (int(nx), int(ny), 0, 0)
-        
-        def _Shake(start, time, child=None, dist=100.0, **properties):
-
-            move = Shaker(start, child, dist=dist)
-        
-            return renpy.display.layout.Motion(move,
-                          time,
-                          child,
-                          add_sizes=True,
-                          **properties)
-
-        Shake = renpy.curry(_Shake)
-    #
-
-#
+    jump scenario__alt_sevendl
