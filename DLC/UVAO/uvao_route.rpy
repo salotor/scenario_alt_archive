@@ -1075,7 +1075,6 @@ label alt_day4_uvao_meet_Yulia_after_lunch:
     scene bg ext_house_of_mt_day with dissolve:
         zoom 2.5 xalign 0.7 yalign 0.55
     $ meet('uv','Существо')
-    $ alt_meet['uv'] = u"Существо"
     show uv dontlike close at center
 
     play music music_list["mystery_girl_v2"] fadein 5
@@ -1133,7 +1132,6 @@ label alt_day4_uvao_meet_Yulia_after_lunch:
     "Она немного подумала."
     uv "Хотя раньше меня Юлей называли. Наверное, и тебе можно. Если хочешь."
     $ meet('uv','Юля')
-    $ alt_meet['uv'] = u"Юля"
     "Мне показалось, что беседа начала ей надоедать и я поспешил сменить тему, ляпнув первое, что пришло в голову:"
     me "А ты здесь что-нибудь искала, да?"
     uv "Интересно было, что там в домике. В других я уже бывала, а тут всё время заперто."
@@ -1661,14 +1659,12 @@ label alt_day5_uvao_getting_up:
 
     if alt_uvao_true:
         $ meet('mt', 'Голос')
-        $ alt_meet['mt'] = u"Голос"
         mt "Семён! Семён!" with hpunch
         th "М-м-м…"
         mt "Семён!" with hpunch
         "Голос продолжал неумолимо ввинчиваться в голову, а плечо неумолимо продолжали трясти, и мне пришлось-таки открыть глаза."
         show mt angry pioneer close at center with dissolve
         $ meet('mt','Ольга Дмитриевна')
-        $ alt_meet['mt'] = u"Ольга Дмитриевна"
         "Надо мной нависало недовольное лицо Ольги."
         me "Ох… Ольга Дмитриевна… Что случилось?"
         mt "Семён, вставай давай!"
@@ -3277,7 +3273,6 @@ label alt_day5_uvao_mines_sh:
     stop ambience
 label alt_day5_uvao_mines_sh_capture_debug: #Хомутаем Шурика и отлаживаем спрайты
     $ meet('mt', 'Голос')
-    $ alt_meet['mt'] = u"Голос"
     $ day_time()
     $ persistent.sprite_time = "day"
     scene bg int_old_building_day_7dl with flash
@@ -3293,7 +3288,6 @@ label alt_day5_uvao_mines_sh_capture_debug: #Хомутаем Шурика и о
     "Мы с Юлей подобрались к окну и одновременно выглянули в щель между досками."
     window hide
     $ meet('mt','Ольга Дмитриевна')
-    $ alt_meet['mt'] = u"Ольга Дмитриевна"
     scene bg ext_old_building_day_7dl
     show mt pioneer normal veryfar:
         xalign 0.3 yalign 0.999 zoom 0.7
