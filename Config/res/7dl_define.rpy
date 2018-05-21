@@ -126,7 +126,7 @@
     $ fdiam = ImageDissolve(im.Tile(get_image_7dl("gui/transit/pattern.jpg")), 0.4, 1)
     $ fulldiam = MultipleTransition([False,fdiam,get_image_7dl("screens/digi1.jpg"),fdiam,True])
     
-    $ gopr = ImageDissolve(im.Tile(get_image_7dl("gui/blackout_go.png")), 0.95, 1)
+    $ gopr = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout_go.png")), 0.95, 1)
     $ swradar = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout3.jpg")), 0.95, 1)
     $ joff = MultipleTransition([False,swradar,Solid("#000"),swradar,True])
     $ swradarr = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout32.jpg")), 0.95, 1)
