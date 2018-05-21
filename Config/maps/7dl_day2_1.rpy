@@ -114,27 +114,20 @@ label alt_day2_event_square:
     $ day_time()
     if alt_day2_rendezvous == 2: # второе посещение со Славей
         $ disable_current_zone_alt1()
+        if alt_day1_sl_keys_took == 1:
+            call alt_day2_sl_hyst
+        else:
+            call alt_day2_event_square_dunno
     else:
         if alt_day2_necessary_done > 1: # пришёл после уборки
             $ disable_current_zone_alt1()
         else:
             if alt_day2_rendezvous == 22: # первое посещение со Славей
-                $ alt_day2_necessary_done += 1
                 $ set_chibi_alt1('square_alt1', 'sl')
                 window hide
             else:
-                if loki and alt_day2_rendezvous != 22: # отказ Локи
-                    pass
-                else: # припахали
-                    $ alt_day2_necessary_done += 1
                 $ disable_current_zone_alt1()
-    $ persistent.sprite_time = "day"
-    $ day_time()
-    call alt_day2_event_square_1
-    if (alt_day2_rendezvous == 2) and (alt_day1_sl_keys_took == 1) and (alt_day2_sl_guilty != 0):
-        call alt_day2_sl_hyst
-    else:
-        call alt_day2_event_square_dunno
+        call alt_day2_event_square_1
     jump alt_day2_map
 
 label alt_day2_event_boat_station:

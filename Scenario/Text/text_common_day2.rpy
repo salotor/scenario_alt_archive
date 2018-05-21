@@ -3415,6 +3415,8 @@ label alt_day2_phone:
 
 label alt_day2_sl_hyst:
     play ambience ambience_camp_center_day fadein 3
+    scene bg ext_square_day
+    with fade
     if alt_day2_phys_done:
         show us normal sport with dspr
         us "Медленно же вы!"
@@ -3600,6 +3602,9 @@ label alt_day2_event_square_dunno:
     return
     
 label alt_day2_event_square_1:
+    play ambience ambience_camp_center_day fadein 3
+    scene bg ext_square_day
+    with fade
     "День вчера был суматошный, на зарядке я наблюдал за девчонками, а на линейке у меня случился полный отвал башни из-за публичного представления. Так что Генду, даром что он был центровой фигурой лагеря, рассмотреть я так и не успел."
     "Пора навёрстывать упущенное."
     "Я подошёл к самому постаменту и задумчиво уставился на бронзового деятеля снизу вверх."
@@ -3643,6 +3648,7 @@ label alt_day2_event_square_1:
         "Она забрала у меня маршрутный лист и расписалась в свободной графе."
         "Я улыбнулся и прикинул, куда идти дальше…"
         $ alt_day2_rendezvous = 2
+        $ alt_day2_necessary_done += 1
     else:
         sl "Привет!"
         show sl smile pioneer at center
@@ -3686,6 +3692,7 @@ label alt_day2_event_square_1:
             un "Время ещё есть…"
             "Безразлично произнесла она."
             un "Главное, чтобы флаг завтра поднимать не заставили."
+            $ alt_day2_necessary_done += 1
         elif alt_day2_rendezvous == 3:
             show dv angry pioneer2 at left
             dv "Что? Убираться?! Вот ещё."
@@ -3698,6 +3705,7 @@ label alt_day2_event_square_1:
             "Подумал."
             "Потом ещё раз посмотрел на Алису."
             "Вздохнул и вцепился в метлу."
+            $ alt_day2_necessary_done += 1
         "Славя не обманула, мы действительно справились быстро, не прошло и получаса, как мы сгрузили последний пакет с мусором в тележку и осмотрели поле боя."
         sl "Вот и всё. Спасибо тебе огромное."
         th "Не за что, эксплуататор."
