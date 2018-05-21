@@ -158,6 +158,38 @@ init -2 python:
         meet('dreamgirl',u"…")
         meet('voice',u"Голос")
         meet('voices',u"Голоса")
+        
+    def make_names_known_7dl():
+        global store
+        meet('ba',u"Саныч")
+        meet('ase',u"Алиса")
+        meet('we',u"Толпа") # не используется
+        meet('ml',u"Даня")
+        meet('ml2'u"Тоник")
+        meet('ml3',u"Алька")
+        meet('voice1',u"Продавщица")
+        meet('kids',u"Дети")
+        meet('dy',u"Динамики")
+        meet('icq',u"Собеседник")
+        meet('el',u"Электроник")
+        meet('un',u"Лена")
+        meet('dv',u"Алиса")
+        meet('sl',u"Славя")
+        meet('us',u"Ульяна")
+        meet('mt',u"Ольга Дмитриевна")
+        meet('cs',u"Виола")
+        meet('mz',u"Женя")
+        meet('mi',u"Мику")
+        meet('uv',u"Девушка")
+        meet('bb',u"Начальник")
+        meet('sh',u"Шурик")
+        meet('ai',u"Мужчина")
+        meet('sak',u"Сакишита")
+        meet('me',u"Семён")
+        meet('pi',u"Пионер")
+        meet('dreamgirl',u"…")
+        meet('voice',u"Голос")
+        meet('voices',u"Голоса")
 
     if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         def meet(who, name):
