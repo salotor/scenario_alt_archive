@@ -6,12 +6,11 @@ label replays_7dl:
 
     $ init_map_zones_alt1()
     $ init_map_zones_alt2()
-    $ alt_save_release_no = alt_release_no
     $ day_time()
     $ persistent.sprite_time = "day"
     call screen replay_buttons_7dl
 
-init:
+init 2:
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars
@@ -42,12 +41,20 @@ init:
     call alt_day6_us_px_vars
     call alt_day6_us_7dl_vars
     call alt_day7_us_px_vars
-    $ plthr = u"Дрищ"
+    $ make_names_known_7dl()
     
 screen replay_buttons_7dl:
-    textbutton "Ольга, утро":
-        style "log_button"
-        text_style "settings_link"
-        yalign 0.65
-        xalign 0.5
-        action Replay("alt_day6_mt_7dl_morning", scope={"alt_day5_mt_7dl_hentai":True}, locked=None)
+    if renpy.seen_label("alt_day7_mt_7dl_loopback"):
+        textbutton "Ольга, утро":
+            style "log_button"
+            text_style "settings_link"
+            yalign 0.65
+            xalign 0.5
+            action Replay("alt_day7_mt_7dl_loopback", scope={"alt_day5_mt_7dl_hentai":True}, locked=None)
+    else:
+        text "Фок ю":
+            color "#64483c"
+            font header_font
+            size 30
+            yalign 0.65
+            xalign 0.5
