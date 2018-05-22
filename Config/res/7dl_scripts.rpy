@@ -165,7 +165,7 @@ init -2 python:
         meet('ase',u"Алиса")
         meet('we',u"Толпа") # не используется
         meet('ml',u"Даня")
-        meet('ml2'u"Тоник")
+        meet('ml2',u"Тоник")
         meet('ml3',u"Алька")
         meet('voice1',u"Продавщица")
         meet('kids',u"Дети")
