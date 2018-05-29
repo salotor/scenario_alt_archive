@@ -9401,14 +9401,16 @@ label alt_day3_dance_dance2_menu:
     menu:
         "Помочь им":
             $ alt_day3_technoquest_st3_help = True
-            if alt_day3_dancing == 2:
-                if alt_day3_sl_day_event:
-                    $ lp_sl += 1
-                sl "Правильное решение."
-                show sl smile dress at right with moveinright
-                "Улыбнулась незаметно подошедшая Славя."
-                sl "Ты заставляешь уважать себя!"
-                th "Я об этом пожалею…"
+            if not (alt_day3_dv_dj or alt_day3_mi_dj):
+                if alt_day3_dancing == 2:
+                    if alt_day3_sl_day_event:
+                        $ lp_sl += 1
+                    sl "Правильное решение."
+                    show sl smile dress at right with moveinright
+                    "Улыбнулась незаметно подошедшая Славя."
+                    sl "Ты заставляешь уважать себя!"
+                    th "Я об этом пожалею…"
+                me "Хватит. Пошли."
             elif alt_day3_dv_dj:
                 me "Ребят, я вам и так помог. Но я Алису подводить не хочу, понимаете?"
                 el "Понимаю."
@@ -9417,7 +9419,6 @@ label alt_day3_dance_dance2_menu:
                 me "Извините, но я хочу убедиться, что у Мику всё в порядке, понимаешь?"
                 el "Понимаю."
                 "Электроник пожал плечами, но, похоже, не был слишком удивлён."
-            me "Хватит. Пошли."
         "Остаться танцевать":
             if alt_day2_date == 132:
                 hide el with dissolve
