@@ -139,6 +139,7 @@ screen replays_common_choice_7dl:
         action [Hide("replays_route_choice_7dl", transition=Dissolve(0.2)), Hide("replays_common_choice_7dl", transition=Dissolve(0.2)), Show("replays_common_d3_1_7dl", transition=Dissolve(0.2))]
 
 screen replays_common_d0_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -183,6 +184,7 @@ screen replays_common_d0_7dl:
             ypos 0.2
 
 screen replays_common_d1_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -419,6 +421,7 @@ screen replays_common_d1_7dl:
             ypos 0.35
 
 screen replays_common_d1alt_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -583,19 +586,13 @@ screen replays_common_d1alt_7dl:
             ypos 0.05
 
 screen replays_common_d2_1_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
         xpos 0.2
         ypos 0.05
         action [Hide("replays_common_d2_1_7dl", transition=Dissolve(0.2)), Show("replays_route_choice_7dl", transition=Dissolve(0.2))]
-    text "Часть 1":
-        style "replays_text"
-        xpos 0.6
-        ypos 0.85
-    imagebutton:
-        auto get_image_7dl("gui/menu_elem/media/right_arrow_%s.png") xpos 0.6 ypos 0.9
-        action [Hide("replays_common_d2_1_7dl", transition=Dissolve(0.2)), Show("replays_common_d2_2_7dl", transition=Dissolve(0.2))]
     if renpy.seen_label("alt_day2_begin"):
         textbutton "Название":
             style "log_button"
@@ -862,6 +859,18 @@ screen replays_common_d2_1_7dl:
             ypos 0.5
 
 screen replays_common_d2_2_7dl:
+    tag menu
+    text "Часть 2":
+        style "replays_text"
+        xpos 0.2
+        ypos 0.85
+    text "Часть 3":
+        style "replays_text"
+        xpos 0.6
+        ypos 0.85
+    imagebutton:
+        auto get_image_7dl("gui/gallery/gallery_left_arrow_%s.png") xalign 0.045 yalign 0.5 
+        action [SetVariable("page_7dl", 1), Hide("bgs_7dl_2", transition=Dissolve(0.2)), Show("bgs_7dl_1", transition=Dissolve(0.2))]
     if renpy.seen_label("alt_day2_event_estrade"):
         textbutton "Название":
             style "log_button"
@@ -1104,6 +1113,7 @@ screen replays_common_d2_2_7dl:
             ypos 0.35
 
 screen replays_common_d2_3_7dl:
+    tag menu
     if renpy.seen_label("alt_day2_eventEv_music_club1"):
         textbutton "Название":
             style "log_button"
@@ -1322,6 +1332,7 @@ screen replays_common_d2_3_7dl:
             ypos 0.25
 
 screen replays_common_d3_1_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -1558,6 +1569,7 @@ screen replays_common_d3_1_7dl:
             ypos 0.35
 
 screen replays_common_d3_2_7dl:
+    tag menu
     if renpy.seen_label("alt_day3_eventAf_music_club1"):
         textbutton "Название":
             style "log_button"
@@ -1752,6 +1764,7 @@ screen replays_common_d3_2_7dl:
             ypos 0.15
 
 screen replays_common_d3_3_7dl:
+    tag menu
     if renpy.seen_label("alt_day3_dance_dance"):
         textbutton "Название":
             style "log_button"
@@ -2030,6 +2043,7 @@ screen replays_common_d3_3_7dl:
             ypos 0.5
 
 screen replays_neutral_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -2069,6 +2083,7 @@ screen replays_un_choice_7dl:
         action [Hide("replays_route_choice_7dl", transition=Dissolve(0.2)), Hide("replays_un_choice_7dl", transition=Dissolve(0.2)), Show("replays_un_fz_7dl", transition=Dissolve(0.2))]
 
 screen replays_un_7dl_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -2089,6 +2104,7 @@ screen replays_un_7dl_7dl:
             ypos 0.1
 
 screen replays_un_fz_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -2128,6 +2144,7 @@ screen replays_sl_choice_7dl:
         ypos 0.1
 
 screen replays_sl_7dl_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -2148,6 +2165,7 @@ screen replays_sl_7dl_7dl:
             ypos 0.1
 
 screen replays_sl_cl_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -2186,6 +2204,7 @@ screen replays_dv_choice_7dl:
         ypos 0.15
 
 screen replays_dv_7dl_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -2225,6 +2244,7 @@ screen replays_mi_choice_7dl:
         action [Hide("replays_route_choice_7dl", transition=Dissolve(0.2)), Hide("replays_mi_choice_7dl", transition=Dissolve(0.2)), Show("replays_mi_dj_7dl", transition=Dissolve(0.2))]
 
 screen replays_mi_7dl_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -2245,6 +2265,7 @@ screen replays_mi_7dl_7dl:
             ypos 0.1
 
 screen replays_mi_dj_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -2265,6 +2286,7 @@ screen replays_mi_dj_7dl:
             ypos 0.1
 
 screen replays_us_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -2285,6 +2307,7 @@ screen replays_us_7dl:
             ypos 0.1
 
 screen replays_mt_7dl:
+    tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"

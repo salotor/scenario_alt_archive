@@ -12,6 +12,7 @@ init 1:
     $ style.page_7dl_text.size = 60
     
     image bg gallery_7dl = get_image_7dl("gui/gallery/gallery_bg.png")
+    image bg gallery_moments_7dl = get_image_7dl("gui/gallery/gallery_moments_bg.png")
     $ locked_img_7dl = ["gallery_stub_1.png", "gallery_stub_2.png", "gallery_stub_3.png"]
         
 screen gallery_main_7dl:
@@ -21,32 +22,36 @@ screen gallery_main_7dl:
             auto get_image_7dl("gui/gallery/gallery_navig_bgs_%s.png") xcenter 0.167 ycenter 0.046 
             action [Show("bgs_7dl_1", transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "bgs"), SetVariable("page_7dl", 1)]
         imagebutton: 
-            auto get_image_7dl("gui/gallery/gallery_navig_moments_%s.png") xcenter 0.833 ycenter 0.046
-            action [Show("replays_route_choice_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "moments")]
-        imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_filter_%s.png") xcenter 0.917 ycenter 0.148
             action [Show("filter_settings_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "filter"), SetVariable("page_7dl", 1)]
     else:
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_bgs_%s.png") xcenter 0.167 ycenter 0.046 
             action NullAction()
-    if not gallery_mode_7dl == "arts" or gallery_mode_7dl == "start":
+    if not (gallery_mode_7dl == "arts" or gallery_mode_7dl == "start"):
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_arts_%s.png") xcenter 0.5 ycenter 0.046
             action [Show("arts_7dl_1", transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "arts"), SetVariable("page_7dl", 1)]
+    else:
+        imagebutton: 
+            auto get_image_7dl("gui/gallery/gallery_navig_arts_%s.png") xcenter 0.5 ycenter 0.046
+            action NullAction()
+    if not gallery_mode_7dl == "moments":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_moments_%s.png") xcenter 0.833 ycenter 0.046
             action [Show("replays_route_choice_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "moments")]
     else:
         imagebutton: 
-            auto get_image_7dl("gui/gallery/gallery_navig_arts_%s.png") xcenter 0.5 ycenter 0.046
+            auto get_image_7dl("gui/gallery/gallery_navig_moments_%s.png") xcenter 0.833 ycenter 0.046
             action NullAction()
     if gallery_mode_7dl == "start":
         timer 0.01 action [Show("arts_7dl_1", transition=Dissolve(1.0)), Show("gallery_bw_7dl", transition=Dissolve(1.0)), Show("gallery_fw_7dl", transition=Dissolve(1.0)), Show("gallery_exit_7dl", transition=Dissolve(1.0))]
-    elif gallery_mode_7dl == "bgs":
-        timer 0.01 action [Show("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2)), Show("gallery_exit_7dl", transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "arts":
         timer 0.01 action [Show("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2)), Show("gallery_exit_7dl", transition=Dissolve(0.2))]
+    elif gallery_mode_7dl == "bgs":
+        timer 0.01 action [Show("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2)), Show("gallery_exit_7dl", transition=Dissolve(0.2))]
+    elif gallery_mode_7dl == "moments":
+        add "bg gallery_moments_7dl"
     elif gallery_mode_7dl == "filter":
         timer 0.01 action [Show("filter_settings_7dl", transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2)), Show("gallery_exit_7dl", transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "un":
@@ -74,7 +79,7 @@ screen gallery_exit_7dl:
     elif gallery_mode_7dl == "moments":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_exit_%s.png") xalign 0.029 yalign 0.971 
-            action [Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Show("arts_7dl_1"), Hide("arts_7dl_1"), Jump("main_menu_7dl")]
+            action [Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", ""), SetVariable("page_7dl", 1), Hide("replays_common_choice_7dl", transition=Dissolve(0.2)), Hide("replays_un_choice_7dl", transition=Dissolve(0.2)), Hide("replays_sl_choice_7dl", transition=Dissolve(0.2)), Hide("replays_dv_choice_7dl", transition=Dissolve(0.2)), Hide("replays_mi_choice_7dl", transition=Dissolve(0.2)), Show("arts_7dl_1"), Hide("arts_7dl_1"), Jump("main_menu_7dl")]
     elif gallery_mode_7dl == "filter":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_exit_%s.png") xalign 0.029 yalign 0.971 
