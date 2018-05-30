@@ -51,7 +51,7 @@ screen gallery_main_7dl:
     elif gallery_mode_7dl == "bgs":
         timer 0.01 action [Show("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2)), Show("gallery_exit_7dl", transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "moments":
-        add "bg gallery_moments_7dl"
+        add "bg gallery_moments_7dl" xcenter 0.503 ycenter 0.532
     elif gallery_mode_7dl == "filter":
         timer 0.01 action [Show("filter_settings_7dl", transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2)), Show("gallery_exit_7dl", transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "un":
