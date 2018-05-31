@@ -1134,6 +1134,17 @@ screen replays_common_d2_2_7dl:
 
 screen replays_common_d2_3_7dl:
     tag menu
+    text "Часть 5":
+        style "replays_text"
+        xcenter 0.432
+        ycenter 0.885
+    text "Часть 6":
+        style "replays_text"
+        xcenter 0.741
+        ycenter 0.883
+    imagebutton:
+        auto get_image_7dl("gui/gallery/gallery_left_arrow_%s.png") xcenter 0.256 ycenter 0.923 
+        action Show("replays_common_d2_2_7dl", transition=Dissolve(0.2))
     if renpy.seen_label("alt_day2_eventEv_music_club1"):
         textbutton "Название":
             style "log_button"
