@@ -21,9 +21,6 @@ screen gallery_main_7dl:
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_bgs_%s.png") xcenter 0.167 ycenter 0.046 
             action [Show("bgs_7dl_1", transition=Dissolve(0.2)), Show("gallery_bw_7dl", transition=Dissolve(0.2)), Show("gallery_fw_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "bgs"), SetVariable("page_7dl", 1)]
-        imagebutton: 
-            auto get_image_7dl("gui/gallery/gallery_navig_filter_%s.png") xcenter 0.917 ycenter 0.148
-            action [Show("filter_settings_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "filter"), SetVariable("page_7dl", 1)]
     else:
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_bgs_%s.png") xcenter 0.167 ycenter 0.046 
@@ -36,6 +33,10 @@ screen gallery_main_7dl:
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_arts_%s.png") xcenter 0.5 ycenter 0.046
             action NullAction()
+    if not (gallery_mode_7dl == "bgs" or gallery_mode_7dl == "moments"):
+        imagebutton: 
+            auto get_image_7dl("gui/gallery/gallery_navig_filter_%s.png") xcenter 0.917 ycenter 0.148
+            action [Show("filter_settings_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "filter"), SetVariable("page_7dl", 1)]
     if not gallery_mode_7dl == "moments":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_moments_%s.png") xcenter 0.833 ycenter 0.046

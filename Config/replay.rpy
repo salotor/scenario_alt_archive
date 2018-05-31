@@ -8,7 +8,7 @@ init 9999 python:
     style.replays_textbutton = Style(style.base_font)
     style.replays_textbutton.font  = cursive_font
     style.replays_textbutton.size = 42
-    style.replays_textbutton.kerning = 3
+    #style.replays_textbutton.kerning = 3
     style.replays_textbutton.color = "#7847f3"
     style.replays_textbutton.hover_color = "#2f059a"
     style.replays_textbutton.selected_color = "#7847f3"
@@ -16,12 +16,18 @@ init 9999 python:
     style.replays_textbutton.selected_hover_color = "#2f059a"
     style.replays_textbutton.insensitive_color = "#7847f3"
 
+    style.replays_text_locked = Style(style.base_font)
+    style.replays_text_locked.font  = cursive_font
+    style.replays_text_locked.size = 42
+    #style.replays_text_locked.kerning = 3
+    style.replays_text_locked.color = "#808080"
+
     style.replays_text = Style(style.base_font)
     style.replays_text.font  = cursive_font
     style.replays_text.size = 42
-    style.replays_text.kerning = 3
-    style.replays_text.color = "#808080"
-
+    #style.replays_text.kerning = 3
+    style.replays_text.color = "#7847f3"
+    
 init 2:
     call alt_day0_vars
     call alt_day1_vars
@@ -155,7 +161,7 @@ screen replays_common_d0_7dl:
             action Replay("alt_day0_start_l", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
     if renpy.seen_label("alt_day0_start_h"):
@@ -167,7 +173,7 @@ screen replays_common_d0_7dl:
             action Replay("alt_day0_start_h", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.285
     if renpy.seen_label("alt_day0_start_d"):
@@ -179,7 +185,7 @@ screen replays_common_d0_7dl:
             action Replay("alt_day0_start_d", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.333
 
@@ -200,7 +206,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
     if renpy.seen_label("alt_day1_bus_start"):
@@ -212,7 +218,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_bus_start", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.285
     if renpy.seen_label("alt_day1_firts_met"):
@@ -224,7 +230,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_firts_met", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.333
     if renpy.seen_label("alt_day1_arrival"):
@@ -236,7 +242,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_arrival", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.382
     if renpy.seen_label("alt_day1_chase1"):
@@ -248,7 +254,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_chase1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.431
     if renpy.seen_label("alt_day1_dock"):
@@ -260,7 +266,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_dock", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.479
     if renpy.seen_label("alt_day1_mod_tan"):
@@ -272,7 +278,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_mod_tan", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.528
     if renpy.seen_label("alt_day1_elektron"):
@@ -284,7 +290,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_elektron", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.577
     if renpy.seen_label("alt_day1_meeting"):
@@ -296,7 +302,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_meeting", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.625
     if renpy.seen_label("alt_day1_soccer_d1"):
@@ -308,7 +314,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_soccer_d1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.674
     if renpy.seen_label("alt_day1_supper"):
@@ -320,7 +326,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_supper", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.723
     if renpy.seen_label("alt_day1_dining_room"):
@@ -332,7 +338,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_dining_room", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.771
     if renpy.seen_label("alt_day1_chase"):
@@ -344,7 +350,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_chase", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.187
     if renpy.seen_label("alt_day1_headshot"):
@@ -356,7 +362,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_headshot", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.236
     if renpy.seen_label("alt_day1_nocatch"):
@@ -368,7 +374,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_nocatch", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.285
     if renpy.seen_label("alt_day1_slavya_saviour"):
@@ -380,7 +386,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_slavya_saviour", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.333
     if renpy.seen_label("alt_day1_lena"):
@@ -392,7 +398,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_lena", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.382
     if renpy.seen_label("alt_day1_un_stay"):
@@ -404,7 +410,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_un_stay", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.431
     if renpy.seen_label("alt_day1_sleep"):
@@ -416,7 +422,7 @@ screen replays_common_d1_7dl:
             action Replay("alt_day1_sleep", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.479
 
@@ -437,7 +443,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
     if renpy.seen_label("alt_day1_alt_M"):
@@ -449,7 +455,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_alt_M", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.285
     if renpy.seen_label("alt_day1_alt_A"):
@@ -461,7 +467,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_alt_A", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.333
     if renpy.seen_label("alt_day1_alt_S"):
@@ -473,7 +479,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_alt_S", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.382
     if renpy.seen_label("alt_day1_alt_L"):
@@ -485,7 +491,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_alt_L", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.431
     if renpy.seen_label("alt_day1_alt_O"):
@@ -497,7 +503,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_alt_O", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.479
     if renpy.seen_label("alt_day1_alt_supper"):
@@ -509,7 +515,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_alt_supper", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.528
     if renpy.seen_label("alt_day1_alt_U"):
@@ -521,7 +527,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_alt_U", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.577
     if renpy.seen_label("alt_day1_alt_U_reject"):
@@ -533,7 +539,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_alt_U_reject", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.625
     if renpy.seen_label("alt_day1_alt_ev_A_S"):
@@ -545,7 +551,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_alt_ev_A_S", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.674
     if renpy.seen_label("alt_day1_lena"):
@@ -557,7 +563,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_lena", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.723
     if renpy.seen_label("alt_day1_un_stay"):
@@ -569,7 +575,7 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_un_stay", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.771
     if renpy.seen_label("alt_day1_sleep"):
@@ -581,12 +587,23 @@ screen replays_common_d1alt_7dl:
             action Replay("alt_day1_sleep", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.187
 
 screen replays_common_d2_1_7dl:
     tag menu
+    text "Часть 1":
+        style "replays_text"
+        xcenter 0.432
+        ycenter 0.885
+    text "Часть 2":
+        style "replays_text"
+        xcenter 0.741
+        ycenter 0.883
+    imagebutton:
+        auto get_image_7dl("gui/gallery/gallery_right_arrow_%s.png") xcenter 0.749 ycenter 0.923 
+        action Show("replays_common_d2_2_7dl", transition=Dissolve(0.2))
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
@@ -602,7 +619,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
     if renpy.seen_label("alt_day2_lineup"):
@@ -614,7 +631,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_lineup", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.285
     if renpy.seen_label("alt_day2_bf"):
@@ -626,7 +643,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_bf", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.333
     if renpy.seen_label("alt_day2_guide"):
@@ -638,7 +655,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_guide", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.382
     if renpy.seen_label("alt_day2_sl_guide"):
@@ -650,7 +667,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_sl_guide", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.431
     if renpy.seen_label("alt_day2_sl_hyst"):
@@ -662,7 +679,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_sl_hyst", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.479
     if renpy.seen_label("alt_day2_event_music_club1"):
@@ -674,7 +691,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_music_club1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.528
     if renpy.seen_label("alt_day2_inmusic"):
@@ -686,7 +703,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_inmusic", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.577
     if renpy.seen_label("alt_day2_event_clubs1"):
@@ -698,7 +715,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_clubs1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.625
     if renpy.seen_label("alt_day2_event_camp_entrance1"):
@@ -710,7 +727,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_camp_entrance1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.674
     if renpy.seen_label("alt_day2_event_dv_us_house1"):
@@ -722,7 +739,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_dv_us_house1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.723
     if renpy.seen_label("alt_day2_event_dining_hall1"):
@@ -734,7 +751,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_dining_hall1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.771
     if renpy.seen_label("alt_day2_event_sport_area1"):
@@ -746,7 +763,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_sport_area1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.187
     if renpy.seen_label("alt_day2_event_beach1"):
@@ -758,7 +775,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_beach1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.236
     if renpy.seen_label("alt_day2_event_me_mt_house1"):
@@ -770,7 +787,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_me_mt_house1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.285
     if renpy.seen_label("alt_day2_event_library1"):
@@ -782,7 +799,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_library1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.333
     if renpy.seen_label("alt_day2_mz"):
@@ -794,7 +811,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_mz", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.382
     if renpy.seen_label("alt_day2_event_medic_house1"):
@@ -806,7 +823,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_medic_house1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.431
     if renpy.seen_label("alt_day2_event_square_dunno"):
@@ -818,7 +835,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_square_dunno", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.479
     if renpy.seen_label("alt_day2_event_square_1"):
@@ -830,7 +847,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_square_1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.528
     if renpy.seen_label("alt_day2_event_boat_station1"):
@@ -842,7 +859,7 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_event_boat_station1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.577
     if renpy.seen_label("alt_day2_convoy"):
@@ -854,23 +871,26 @@ screen replays_common_d2_1_7dl:
             action Replay("alt_day2_convoy", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.625
 
 screen replays_common_d2_2_7dl:
     tag menu
-    text "Часть 2":
-        style "replays_text"
-        xpos 0.235
-        ypos 0.85
     text "Часть 3":
         style "replays_text"
-        xpos 0.544
-        ypos 0.85
+        xcenter 0.432
+        ycenter 0.885
+    text "Часть 4":
+        style "replays_text"
+        xcenter 0.741
+        ycenter 0.883
     imagebutton:
-        auto get_image_7dl("gui/gallery/gallery_left_arrow_%s.png") xalign 0.045 yalign 0.5 
-        action [SetVariable("page_7dl", 1), Hide("bgs_7dl_2", transition=Dissolve(0.2)), Show("bgs_7dl_1", transition=Dissolve(0.2))]
+        auto get_image_7dl("gui/gallery/gallery_left_arrow_%s.png") xcenter 0.256 ycenter 0.923 
+        action Show("replays_common_d2_1_7dl", transition=Dissolve(0.2))
+    imagebutton:
+        auto get_image_7dl("gui/gallery/gallery_right_arrow_%s.png") xcenter 0.749 ycenter 0.923 
+        action Show("replays_common_d2_3_7dl", transition=Dissolve(0.2))
     if renpy.seen_label("alt_day2_event_estrade"):
         textbutton "Название":
             style "log_button"
@@ -880,7 +900,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_event_estrade", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.187
     if renpy.seen_label("alt_day2_phone"):
@@ -892,7 +912,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_phone", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
     if renpy.seen_label("alt_day2_dubstep"):
@@ -904,7 +924,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_dubstep", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.285
     if renpy.seen_label("alt_day2_dubstep2"):
@@ -916,7 +936,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_dubstep2", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.333
     if renpy.seen_label("alt_day2_dinner"):
@@ -928,7 +948,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_dinner", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.382
     if renpy.seen_label("alt_day2_grand_escape"):
@@ -940,7 +960,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_grand_escape", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.431
     if renpy.seen_label("alt_day2_siesta"):
@@ -952,7 +972,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_siesta", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.479
     if renpy.seen_label("alt_day2_tournament"):
@@ -964,7 +984,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_tournament", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.528
     if renpy.seen_label("alt_day2_walk_sl"):
@@ -976,7 +996,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_walk_sl", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.577
     if renpy.seen_label("alt_day2_walk_alone"):
@@ -988,7 +1008,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_walk_alone", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.625
     if renpy.seen_label("alt_day2_ultim"):
@@ -1000,7 +1020,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_ultim", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.674
     if renpy.seen_label("alt_day2_cards"):
@@ -1012,7 +1032,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_cards", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.723
     if renpy.seen_label("alt_day2_tournament_prep"):
@@ -1024,7 +1044,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_tournament_prep", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.771
     if renpy.seen_label("alt_day2_supper"):
@@ -1036,7 +1056,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_supper", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.187
     if renpy.seen_label("alt_day2_slot_us_try"):
@@ -1048,7 +1068,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_slot_us_try", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.236
     if renpy.seen_label("alt_day2_slot_us"):
@@ -1060,7 +1080,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_slot_us", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.285
     if renpy.seen_label("alt_day2_sup2"):
@@ -1072,7 +1092,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_sup2", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.333
     if renpy.seen_label("alt_day2_slot_sl"):
@@ -1084,7 +1104,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_slot_sl", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.382
     if renpy.seen_label("alt_day2_eventEv_beach1"):
@@ -1096,7 +1116,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_eventEv_beach1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.431
     if renpy.seen_label("alt_day2_slot_dv"):
@@ -1108,7 +1128,7 @@ screen replays_common_d2_2_7dl:
             action Replay("alt_day2_slot_dv", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.479
 
@@ -1123,7 +1143,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_music_club1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.187
     if renpy.seen_label("alt_day2_slot_mi"):
@@ -1135,7 +1155,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_slot_mi", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
     if renpy.seen_label("alt_day2_eventEv_clubs1"):
@@ -1147,7 +1167,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_clubs1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.285
     if renpy.seen_label("alt_day2_eventEv_camp_entrance1"):
@@ -1159,7 +1179,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_camp_entrance1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.333
     if renpy.seen_label("alt_day2_eventEv_un_mi_house1"):
@@ -1171,7 +1191,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_un_mi_house1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.382
     if renpy.seen_label("alt_day2_un_loki_date"):
@@ -1183,7 +1203,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_un_loki_date", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.431
     if renpy.seen_label("alt_day2_un_herc_date"):
@@ -1195,7 +1215,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_un_herc_date", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.479
     if renpy.seen_label("alt_day2_eventEv_dv_us_house1"):
@@ -1207,7 +1227,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_dv_us_house1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.528
     if renpy.seen_label("alt_day2_eventEv_dining_hall1"):
@@ -1219,7 +1239,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_dining_hall1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.577
     if renpy.seen_label("alt_day2_eventEv_sport_area1"):
@@ -1231,7 +1251,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_sport_area1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.625
     if renpy.seen_label("alt_day2_slot_un"):
@@ -1243,7 +1263,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_slot_un", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.674
     if renpy.seen_label("alt_day2_eventEv_me_mt_house1"):
@@ -1255,7 +1275,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_me_mt_house1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.723
     if renpy.seen_label("alt_day2_eventEv_library1"):
@@ -1267,7 +1287,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_library1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.771
     if renpy.seen_label("alt_day2_eventEv_medic_house1"):
@@ -1279,7 +1299,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_medic_house1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.187
     if renpy.seen_label("alt_day2_eventEv_estrade1"):
@@ -1291,7 +1311,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_estrade1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.236
     if renpy.seen_label("alt_day2_eventEv_square1"):
@@ -1303,7 +1323,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_square1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.285
     if renpy.seen_label("alt_day2_eventEv_boat_station1"):
@@ -1315,7 +1335,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_eventEv_boat_station1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.333
     if renpy.seen_label("alt_day2_dream"):
@@ -1327,7 +1347,7 @@ screen replays_common_d2_3_7dl:
             action Replay("alt_day2_dream", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.382
 
@@ -1348,7 +1368,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
     if renpy.seen_label("alt_day3_bf"):
@@ -1360,7 +1380,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_bf", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.285
     if renpy.seen_label("alt_day3_event_library1"):
@@ -1372,7 +1392,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_library1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.333
     if renpy.seen_label("alt_day3_event_estrade"):
@@ -1384,7 +1404,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_estrade", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.382
     if renpy.seen_label("alt_day3_event_music_club"):
@@ -1396,7 +1416,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_music_club", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.431
     if renpy.seen_label("alt_day3_bf_duty"):
@@ -1408,7 +1428,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_bf_duty", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.479
     if renpy.seen_label("alt_day3_event_camp_entrance"):
@@ -1420,7 +1440,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_camp_entrance", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.528
     if renpy.seen_label("alt_day3_event_music_club1"):
@@ -1432,7 +1452,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_music_club1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.577
     if renpy.seen_label("alt_day3_event_clubs1"):
@@ -1444,7 +1464,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_clubs1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.625
     if renpy.seen_label("alt_day3_event_camp_entrance1"):
@@ -1456,7 +1476,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_camp_entrance1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.674
     if renpy.seen_label("alt_day3_event_dining_hall1"):
@@ -1468,7 +1488,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_dining_hall1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.723
     if renpy.seen_label("alt_day3_event_sport_area1"):
@@ -1480,7 +1500,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_sport_area1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.771
     if renpy.seen_label("alt_day3_event_beach1"):
@@ -1492,7 +1512,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_beach1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.187
     if renpy.seen_label("alt_day3_event_medic_house1"):
@@ -1504,7 +1524,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_medic_house1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.236
     if renpy.seen_label("alt_day3_event_estrade1"):
@@ -1516,7 +1536,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_estrade1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.285
     if renpy.seen_label("alt_day3_event_square1"):
@@ -1528,7 +1548,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_square1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.333
     if renpy.seen_label("alt_day3_event_boat_station1"):
@@ -1540,7 +1560,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_event_boat_station1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.382
     if renpy.seen_label("alt_day3_dinner"):
@@ -1552,7 +1572,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_dinner", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.431
     if renpy.seen_label("alt_day3_dinner_menu"):
@@ -1564,7 +1584,7 @@ screen replays_common_d3_1_7dl:
             action Replay("alt_day3_dinner_menu", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.479
 
@@ -1579,7 +1599,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_eventAf_music_club1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.187
     if renpy.seen_label("alt_day3_eventAf_library1"):
@@ -1591,7 +1611,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_eventAf_library1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
     if renpy.seen_label("alt_day3_eventAf_clubs_ladder"):
@@ -1603,7 +1623,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_eventAf_clubs_ladder", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.285
     if renpy.seen_label("alt_day3_eventAf_clubs_technoquest"):
@@ -1615,7 +1635,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_eventAf_clubs_technoquest", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.333
     if renpy.seen_label("alt_day3_eventAf_un_mi_house1"):
@@ -1627,7 +1647,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_eventAf_un_mi_house1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.382
     if renpy.seen_label("alt_day3_eventAf_dining_hall1"):
@@ -1639,7 +1659,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_eventAf_dining_hall1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.431
     if renpy.seen_label("alt_day3_eventAf_admins1"):
@@ -1651,7 +1671,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_eventAf_admins1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.479
     if renpy.seen_label("alt_day3_sl_postlunch"):
@@ -1663,7 +1683,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_sl_postlunch", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.528
     if renpy.seen_label("alt_day3_eventAf_me_mt_house1"):
@@ -1675,7 +1695,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_eventAf_me_mt_house1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.577
     if renpy.seen_label("alt_day3_eventAf_estrade1"):
@@ -1687,7 +1707,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_eventAf_estrade1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.625
     if renpy.seen_label("alt_day3_music"):
@@ -1699,7 +1719,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_music", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.674
     if renpy.seen_label("alt_day3_aftermath"):
@@ -1711,7 +1731,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_aftermath", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.723
     if renpy.seen_label("alt_day3_nightmare"):
@@ -1723,7 +1743,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_nightmare", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.771
     if renpy.seen_label("alt_day3_supper1"):
@@ -1735,7 +1755,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_supper1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.187
     if renpy.seen_label("alt_day3_supper"):
@@ -1747,7 +1767,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_supper", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.236
     if renpy.seen_label("alt_day3_supper2"):
@@ -1759,7 +1779,7 @@ screen replays_common_d3_2_7dl:
             action Replay("alt_day3_supper2", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.285
 
@@ -1774,7 +1794,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_dance_dance", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.187
     if renpy.seen_label("alt_day3_makeup"):
@@ -1786,7 +1806,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_makeup", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
     if renpy.seen_label("alt_day3_dv_lf"):
@@ -1798,7 +1818,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_dv_lf", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.285
     if renpy.seen_label("alt_day3_rockstar"):
@@ -1810,7 +1830,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_rockstar", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.333
     if renpy.seen_label("alt_day3_dv_reunion"):
@@ -1822,7 +1842,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_dv_reunion", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.382
     if renpy.seen_label("alt_day3_dv_stayhere1"):
@@ -1834,7 +1854,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_dv_stayhere1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.431
     if renpy.seen_label("alt_day3_bath_voyeur"):
@@ -1846,7 +1866,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_bath_voyeur", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.479
     if renpy.seen_label("alt_day3_leave1"):
@@ -1858,7 +1878,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_leave1", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.528
     if renpy.seen_label("alt_day3_choose"):
@@ -1870,7 +1890,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_choose", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.577
     if renpy.seen_label("alt_day3_dance_dance2"):
@@ -1882,7 +1902,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_dance_dance2", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.625
     if renpy.seen_label("alt_day3_med_un"):
@@ -1894,7 +1914,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_med_un", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.674
     if renpy.seen_label("alt_day3_un_cards"):
@@ -1906,7 +1926,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_un_cards", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.723
     if renpy.seen_label("alt_day3_un_strip_play"):
@@ -1918,7 +1938,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_un_strip_play", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.771
     if renpy.seen_label("alt_day3_card_lose"):
@@ -1930,7 +1950,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_card_lose", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.187
     if renpy.seen_label("alt_day3_card_won"):
@@ -1942,7 +1962,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_card_won", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.236
     if renpy.seen_label("alt_day3_post_strip"):
@@ -1954,7 +1974,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_post_strip", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.285
     if renpy.seen_label("alt_day3_mt_scare"):
@@ -1966,7 +1986,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_mt_scare", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.333
     if renpy.seen_label("alt_day3_dance_dance2_menu"):
@@ -1978,7 +1998,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_dance_dance2_menu", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.382
     if renpy.seen_label("alt_day3_technoquest3"):
@@ -1990,7 +2010,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_technoquest3", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.431
     if renpy.seen_label("alt_day3_choose3"):
@@ -2002,7 +2022,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_choose3", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.479
     if renpy.seen_label("alt_day3_mi_7dl_init"):
@@ -2014,7 +2034,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_mi_7dl_init", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.528
     if renpy.seen_label("alt_day3_disco_past_d2"):
@@ -2026,7 +2046,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_disco_past_d2", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.577
     if renpy.seen_label("alt_day3_sleeptime"):
@@ -2038,7 +2058,7 @@ screen replays_common_d3_3_7dl:
             action Replay("alt_day3_sleeptime", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.544
             ypos 0.625
 
@@ -2059,7 +2079,7 @@ screen replays_neutral_7dl:
             action Replay("alt_day4_neu_home", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
 
@@ -2072,7 +2092,7 @@ screen replays_un_choice_7dl:
         action [Hide("replays_route_choice_7dl", transition=Dissolve(0.2)), Hide("replays_un_choice_7dl", transition=Dissolve(0.2)), Show("replays_un_7dl_7dl", transition=Dissolve(0.2))]
 
     text "Классик":
-        style "replays_text"
+        style "replays_text_locked"
         xpos 0.544
         ypos 0.236
     textbutton "Френдзона":
@@ -2099,7 +2119,7 @@ screen replays_un_7dl_7dl:
             action Replay("alt_day4_un_7dl_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
 
@@ -2120,7 +2140,7 @@ screen replays_un_fz_7dl:
             action Replay("alt_day4_un_fz_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
 
@@ -2139,7 +2159,7 @@ screen replays_sl_choice_7dl:
         action [Hide("replays_route_choice_7dl", transition=Dissolve(0.2)), Hide("replays_sl_choice_7dl", transition=Dissolve(0.2)), Show("replays_sl_cl_7dl", transition=Dissolve(0.2))]
 
     text "Ведьма":
-        style "replays_text"
+        style "replays_text_locked"
         xpos 0.544
         ypos 0.236
 
@@ -2160,7 +2180,7 @@ screen replays_sl_7dl_7dl:
             action Replay("alt_day4_sl_7dl_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
 
@@ -2181,7 +2201,7 @@ screen replays_sl_cl_7dl:
             action Replay("alt_day4_sl_cl_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
 
@@ -2194,12 +2214,12 @@ screen replays_dv_choice_7dl:
         action [Hide("replays_route_choice_7dl", transition=Dissolve(0.2)), Hide("replays_dv_choice_7dl", transition=Dissolve(0.2)), Show("replays_dv_7dl_7dl", transition=Dissolve(0.2))]
 
     text "Классик":
-        style "replays_text"
+        style "replays_text_locked"
         xpos 0.544
         ypos 0.236
 
     text "Диджей":
-        style "replays_text"
+        style "replays_text_locked"
         xpos 0.544
         ypos 0.285
 
@@ -2220,7 +2240,7 @@ screen replays_dv_7dl_7dl:
             action Replay("alt_day4_dv_7dl_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
 
@@ -2233,7 +2253,7 @@ screen replays_mi_choice_7dl:
         action [Hide("replays_route_choice_7dl", transition=Dissolve(0.2)), Hide("replays_mi_choice_7dl", transition=Dissolve(0.2)), Show("replays_mi_7dl_7dl", transition=Dissolve(0.2))]
 
     text "Классик":
-        style "replays_text"
+        style "replays_text_locked"
         xpos 0.544
         ypos 0.236
     textbutton "Диджей":
@@ -2260,7 +2280,7 @@ screen replays_mi_7dl_7dl:
             action Replay("alt_day4_mi_7dl_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
 
@@ -2281,7 +2301,7 @@ screen replays_mi_dj_7dl:
             action Replay("alt_day4_mi_dj_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
 
@@ -2302,7 +2322,7 @@ screen replays_us_7dl:
             action Replay("alt_day6_us_px_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
 
@@ -2323,6 +2343,6 @@ screen replays_mt_7dl:
             action Replay("alt_day6_mt_7dl_begin", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text"
+            style "replays_text_locked"
             xpos 0.235
             ypos 0.236
