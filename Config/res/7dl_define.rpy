@@ -879,7 +879,7 @@
     image alt_cat_map_wireframe = get_image_7dl("gui/dnd/alt_cat_map_wireframe.png")
     image alt_cat_map = get_image_7dl("gui/dnd/alt_cat_map.png")
     image alt_cat_map_pathfinding = get_image_7dl("gui/dnd/alt_cat_map_pathfinding.png")
-    image PolariodFrame = get_sprite_7dl("custom/PolariodFrame.png")
+    image PolaroidFrame_7dl = get_sprite_7dl("custom/PolaroidFrame_7dl.png")
     
     
 #Звучок

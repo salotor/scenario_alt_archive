@@ -8473,7 +8473,7 @@ label alt_day6_mi_7dl_miku_farewell_star:
         mt "Держи!"
         window hide
         scene expression Sepia("cg d2_mi_me_polaroid_7dl")
-        show PolariodFrame
+        show PolaroidFrame_7dl
         with dsps
         "Это был тот самый снимок! Вот красота японская, улыбается во все тридцать два — а вот смущённый и ссутуленный я, положил руку ей на плечо."
         mt "На память!"
@@ -11103,7 +11103,7 @@ label alt_day7_mi_7dl_club27:
     nvl clear
     window hide
     scene expression Sepia("cg d2_mi_me_polaroid_7dl")
-    show PolariodFrame
+    show PolaroidFrame_7dl
     show prologue_dream
     with dsps
     "Девушка зажала кулак зубами, чтобы не заорать."
