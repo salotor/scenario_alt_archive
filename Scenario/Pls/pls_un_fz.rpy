@@ -7,6 +7,7 @@
     $ persistent.sprite_time = "prolog"
     $ prolog_time()
     $ alt_chapter(4, u"Лена. ФЗ. Утро")
+    call screen wip_alert_un_fz
     call alt_day4_un_fz_begin
     if alt_day2_rendezvous == 2:
         call alt_day4_un_fz_sl
@@ -45,9 +46,12 @@
     elif alt_day4_fz_sh == 2:
         $ routetag = "sl"
         jump alt_day5_sl_start
-    elif alt_day4_fz_sh == 3:
-        $ routetag = "dv"
-        jump alt_day5_dv_start
+    # elif alt_day4_fz_sh == 3:
+        # $ routetag = "dv"
+        # jump alt_day5_dv_start
+    else:
+        $ routetag = "prologue"
+        jump alt_day5_neu_begin
 
 label alt_day5_fz_start:
     $ persistent.sprite_time = "sunset"
@@ -55,7 +59,7 @@ label alt_day5_fz_start:
     $ alt_chapter(5, u"Лена. ФЗ. Утро.")
     call alt_day5_fz_begin
     pause(1)
-    if routetag == "mt7dl":
+    if routetag == "prologue":
         jump alt_day5_neu_begin
     else:
         return
