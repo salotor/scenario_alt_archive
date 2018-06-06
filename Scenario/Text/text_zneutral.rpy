@@ -5027,7 +5027,7 @@ label alt_day5_morningdream:
 label alt_day5_neu_start:
     play music music_7dl["too_quiet"] fadein 3
     play sound_loop ambience_7dl["rain"] fadein 5
-    if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4 or alt_day4_fz_sh == 3:
+    if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
         scene bg int_aidpost_day with dissolve
         play ambience ambience_medstation_inside_day fadein 5
         "Моё внимание привлёк какой-то мерный, монотонный шум из-за окна."
@@ -5143,7 +5143,7 @@ label alt_day5_neu_breakfast:
         "Следующая клеточка была заполнена красной пастой, жирно, по диагонали: «ОТЪЕЗД»."
         th "Вот и решился самый главный вопрос: выпустят ли нас отсюда живьём."
         "Я усмехнулся и, поставив на поднос тарелку с кашей и стакан какао, стал прикидывать, куда бы приземлиться."
-    if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4 or alt_day4_fz_sh == 3:
+    if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
         "В последний момент мимо меня к раздаче сомнамбулой прошествовала Лена."
         "Она взяла себе пару булочек и устроилась у самого окна."
     $ volume (0.5,'music')
@@ -5163,7 +5163,7 @@ label alt_day5_neu_breakfast:
             $ volume (1.0,'ambience')
             show us normal pioneer with dissolve
             me "Привет."
-            if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4 or alt_day4_fz_sh == 3:
+            if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
                 $ us_pt += 3
             else:
                 $ us_pt += 1
@@ -5343,7 +5343,7 @@ label alt_day5_neu_breakfast:
             "Солнышко выглянуло из-за туч — на долю секунды даже дождь притих. {w}Мику улыбнулась."
             if alt_day4_neu_date == 4:
                 mi "Почему-то никак не получается на тебя дуться, хотя я умом понимаю, что ты говоришь довольно обидные вещи."
-            if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4 or alt_day4_fz_sh == 3:
+            if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
                 $ d3_pt += 3
             else:
                 $ d3_pt += 1
@@ -5480,7 +5480,7 @@ label alt_day5_neu_breakfast:
                 stop ambience fadeout 5
                 $ alt_day5_neu_candle = 2
             else:
-                if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4 or alt_day4_fz_sh == 3:
+                if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
                     $ mt_pt += 3
                 "Как говорится, ничто не предвещало…"
                 "И горе тому, что будет предвещать!"
@@ -5938,7 +5938,7 @@ label alt_day5_neu_gaming:
     me "Мне нужна помощь с расстановкой столов, один я не справлюсь."
     el "Но я… А, впрочем…"
     "Парень покорно отправился за мной и схватился за первый же указанный стол."
-    if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4 or alt_day4_fz_sh == 3:
+    if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
         el "Не видел Шурика с утра, он так и спит в изоляторе?"
         me "Угу."
     else:
@@ -10604,7 +10604,7 @@ label alt_day5_neu_sleepnight:
     play ambience ambience_int_cabin_night fadein 1
     "Здесь всё было по-прежнему."
     "Чайники, термосы, бельё Ольги, висящее на спинке."
-    if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4 or alt_day4_fz_sh == 3:
+    if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
         "Ещё одно воспоминание в копилку с надписью «я хотел бы, чтобы их никогда не существовало»."
         "Но я сам выбрал такой вариант, ничего с этим не сделаешь."
     "Я разделся, с неудовольствием ощущая, что весь пропах запахом дыма."
