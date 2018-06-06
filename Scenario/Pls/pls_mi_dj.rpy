@@ -203,6 +203,14 @@ label alt_day7_mi_dj_start:
         call alt_day7_mi_dj_together
         pause(1)
     else:
+        $ persistent.sprite_time = "sunset"
+        $ sunset_time()
+        if alt_day6_mi_dj_letmeout:
+            $ routetag = "mi7dlbad"
+        elif alt_day6_mi_dj_letmestay:
+            $ routetag = "mi7true"
+        elif alt_day6_mi_dj_no_hentai:
+            $ routetag = "mi7dl"
         call alt_day7_mi_dj_alone
         pause(1)
     if alt_day6_mi_dj_hentai1:
