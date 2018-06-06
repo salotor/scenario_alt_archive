@@ -40,33 +40,6 @@
 label Ravsii__role_menu:
     call screen role_menu_7dl
     
-screen intro_loki_screen:
-    add "intro_loki" xalign 0.0 yalign 0.0
-    
-screen intro_herc_screen:
-    add "intro_herc" xalign 0.0 yalign 0.0
-    
-screen intro_dr_screen:
-    add "intro_dr" xalign 0.0 yalign 0.0
-    
-screen role_menu_7dl:
-    tag menu
-    modal False
-    imagemap:
-        ground "intro_transparent"
-        hotspot ((0, 0, 635, 1080)):
-            hovered [Show("intro_loki_screen", transition=Dissolve(0.5))]
-            unhovered [Hide("intro_loki_screen", transition=Dissolve(1.0))]
-            action [Hide("intro_loki_screen", transition=Dissolve(0.5)), Jump("alt_day0_start_loki")]
-        hotspot ((635, 0, 652, 1080)):
-            hovered [Show("intro_herc_screen", transition=Dissolve(0.5))]
-            unhovered [Hide("intro_herc_screen", transition=Dissolve(1.0))]
-            action [Hide("intro_herc_screen", transition=Dissolve(0.5)), Jump("alt_day0_start_herc")]
-        hotspot ((1287, 0, 634, 1080)):
-            hovered [Show("intro_dr_screen", transition=Dissolve(0.5))]
-            unhovered [Hide("intro_dr_screen", transition=Dissolve(1.0))]
-            action [Hide("intro_dr_screen", transition=Dissolve(0.5)), Jump("alt_day0_start")]
-
 label alt_day0_start:
     play sound sfx_wind_gust
     scene intro_dr with dissolve
