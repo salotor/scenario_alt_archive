@@ -54,7 +54,7 @@ label alt_day5_start_mi_dj:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(5, u"Мику. DJ. Утро")
-    call alt_day5_begin_mi_dj
+    call alt_day5_mi_dj_begin
     pause(1)
     $ persistent.sprite_time = "night"
     $ day_time()

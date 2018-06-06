@@ -2847,7 +2847,7 @@ label alt_day4_sl_wh_night:
         "В конце концов, что я теряю!"
         play sound sfx_hiding_in_bush
         menu:
-            "Проследить за тенью.":
+            "Проследить за тенью (рут находится в разработке).":
                 "Я раздвинул кусты, и увидел…"
                 play music music_7dl["dropit"]
                 window hide

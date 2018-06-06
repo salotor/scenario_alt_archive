@@ -3245,7 +3245,7 @@ label alt_day4_mi_dj_sleeptime:
     with fade
     return
 
-label alt_day5_begin_mi_dj:
+label alt_day5_mi_dj_begin:
     play music music_7dl["lastlight_piano"]
     scene anim prolog_1
     "Мне снился сон."

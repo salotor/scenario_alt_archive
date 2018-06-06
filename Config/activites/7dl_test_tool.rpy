@@ -144,7 +144,7 @@ label sdl_menu:
                                                     call alt_day6_us_7dl_helping
                                                 "7дл - помощь Мику":
                                                     stop ambience fadeout 2
-                                                    call alt_day_us_7dl_preps
+                                                    call alt_day6_us_7dl_preps
                                                 "7дл - помощь Славе":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_warehouse

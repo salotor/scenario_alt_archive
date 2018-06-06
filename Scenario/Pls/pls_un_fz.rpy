@@ -23,7 +23,7 @@
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(4, u"Лена. ФЗ. Вечер.")
-    call alt_day5_fz_supper
+    call alt_day4_fz_supper
     pause(1)
     $ persistent.sprite_time = "sunset"
     $ sunset_time()

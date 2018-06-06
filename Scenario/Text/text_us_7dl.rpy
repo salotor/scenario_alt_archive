@@ -1106,7 +1106,7 @@ label alt_day6_us_7dl_helping:
     with fade
     return
     
-label alt_day_us_7dl_preps:
+label alt_day6_us_7dl_preps:
     scene bg ext_musclub_day with dissolve
     play ambience ambience_camp_center_day fadein 6
     play music music_7dl["to_the_sunrise"] fadein 3
