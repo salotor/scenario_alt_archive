@@ -3224,9 +3224,9 @@ label alt_day4_mi_dj_sleeptime:
     "А в памяти совершенно самостоятельно разворачивались воспоминания."
     if alt_day4_mi_dj_hedg:
         "…Охота на хыщника…"
-    if alt_day3_technoquest_st1:
+    if not (alt_day3_technoquest_st1 or alt_day3_technoquest_st2):
         "…Превращение захламленного помещения в удобную радиорубку…"
-    if not alt_day4_mi_dj_hedg:
+    else:
         "…Стычка с Двачевской…"
     "…Фильмы и воспоминания об отце…"
     "…Концерт Мику, мой ступор у клубов.…"
