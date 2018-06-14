@@ -196,6 +196,8 @@ label alt_day7_sl_start:
                 $ persistent.sprite_time = "prolog"
                 $ prolog_time()
                 call alt_day8_sl_postscriptum
+        elif alt_day6_sl_good == 3:
+            call alt_day7_sl_cl_bad
         else:
             if alt_day6_sl_arc == 1 and lp_sl > 20:
                 if alt_day6_sl_good == 2:

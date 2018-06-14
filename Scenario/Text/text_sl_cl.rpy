@@ -15393,6 +15393,7 @@ label alt_day7_sl_dinner:
                         "В глубине сердца затухал окончательно задушенный инстинкт самосохранения."
                         me "Хочу быть вместе с ней."
             "К этому всё и шло.":
+                $ alt_day6_sl_good = 3
                 stop ambience fadeout 3
                 pass
     stop music fadeout 3
