@@ -7,7 +7,6 @@
     $ persistent.sprite_time = "prolog"
     $ prolog_time()
     $ alt_chapter(4, u"Лена. ФЗ. Утро")
-    call screen wip_alert_un_fz
     call alt_day4_un_fz_begin
     if alt_day2_rendezvous == 2:
         call alt_day4_un_fz_sl

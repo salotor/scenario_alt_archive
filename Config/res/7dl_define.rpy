@@ -31,18 +31,18 @@ screen alt_timer:
     text "ВЕРНУТЬСЯ В ЛАГЕРЬ! (--->7<---)" align (0.5, 0.8) color "#FF0000"
     timer 2.0 action Jump("alt_day3_leave")
 
-screen wip_alert_un_fz:
+screen alert_text: #пишем предупреждение игроку
     modal True
     add get_image_7dl("screens/wet1.png")
     add get_image("gui/o_rly/base.png")
-    text "Рут Лена-френдзона дописан только до 5-го дня.":
+    text "Строка 1.":
         text_align 0.5
         yalign 0.44
         xalign 0.5
         color "#64483c"
         font header_font
         size 30
-    text "С него можно перейти на рут Одиночки и рут Славя-классик.":
+    text "Строка 2.":
         text_align 0.5
         yalign 0.49
         xalign 0.5
@@ -55,33 +55,7 @@ screen wip_alert_un_fz:
         text_style "settings_link"
         yalign 0.65
         xalign 0.5
-        action [Hide("wip_alert_un_fz"), Return(value=None)]
-        
-screen wip_alert_sl_wh:
-    modal True
-    add get_image_7dl("screens/wet1.png")
-    add get_image("gui/o_rly/base.png")
-    text "Рут Славя-ведьма не написан. Далее можно увидеть выход на него.":
-        text_align 0.5
-        yalign 0.44
-        xalign 0.5
-        color "#64483c"
-        font header_font
-        size 30
-    text "Рекомендуем вернуться назад и изменить выбор.":
-        text_align 0.5
-        yalign 0.49
-        xalign 0.5
-        color "#64483c"
-        font header_font
-        size 30
-    textbutton _("OK"):
-        text_size 60
-        style "log_button"
-        text_style "settings_link"
-        yalign 0.65
-        xalign 0.5
-        action [Hide("wip_alert_sl_wh"), Return(value=None)]
+        action [Hide("alert_text"), Return(value=None)]
         
 init:
     transform fleft:
