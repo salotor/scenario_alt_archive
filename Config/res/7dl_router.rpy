@@ -1,6 +1,8 @@
 ﻿label alt_day3_slots:
    scene scenery
    with dissolve
+   $ alt_spt = 0
+   $ alt_hpt = 0
     
 label alt_day3_router_dv:
     if alt_day3_dv_evening:

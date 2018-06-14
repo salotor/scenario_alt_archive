@@ -6717,8 +6717,7 @@ label alt_day6_dv_7dl_begin:
         "Наконец, с площади послышались отрывистые выкрики, считающие ритм — зарядка началась. И я дал отмашку."
         window hide
         scene black
-        $ timeskip3 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
-        show alt_credits timeskip3 at truecenter
+        show alt_credits timeskip33 at truecenter
         with vpunch
         play music music_list["you_won_t_let_me_down"] fadein 7
         stop sound_loop
