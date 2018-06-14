@@ -463,6 +463,13 @@ label sdl_menu:
                     stop ambience fadeout 2
                     jump alt_day6_mt_7dl_start
                 "Одиночка":
+                    menu:
+                        "Утро с Алисой":
+                            $ alt_day3_dv_evening = True
+                        "Утро в медпункте":
+                            $ alt_day3_technoquest_st3 = 2
+                        "Утро в домике":
+                            pass
                     stop ambience fadeout 2
                     jump alt_day4_neu_begin
         "Концовки":

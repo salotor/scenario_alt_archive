@@ -1,5 +1,6 @@
 ﻿label alt_day4_mi_7dl_start:
     call alt_day4_mi_7dl_vars
+    $ routetag = "mi7dl"
     $ persistent.sprite_time = "night"
     $ night_time()
     $ alt_chapter(4, u"Мику. 7ДЛ. Поездка.")
