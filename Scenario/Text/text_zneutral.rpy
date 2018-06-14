@@ -540,27 +540,31 @@ label alt_day4_neu_aid_un:
     "Её голос упал до шёпота."
     un "Мог бы быть цел и здоров."
     un "Не помог бы, но и… Я такие глупости несу. Пойду я."
-    menu:
-        "Останься?.. (рут находится в разработке)":
-            un "Н-но ты же сам…"
-            me "Лен, слушай. Мне и так досталось вчера, поэтому я могу просто жесточайшие глупости делать и вести себя странно."
-            me "Просто пойми это и сделай скидку, хорошо?"
-            show un normal pioneer with dspr
-            un "Просто не хотела мешать."
-            me "А ты и не… Короче, я был бы только рад, если бы мы посидели и поболтали!"
-            show un shy pioneer with dspr
-            un "П-правда?"
-            me "Самая настоящая."
-            "Серьёзно ответил я."
-            me "Оставайся. Скучно точно не будет."
-            show un smile pioneer with dspr
-            un "Да."
-            "Сказала Лена, будто не веря до конца в мои слова."
-            un "Да!"
-            $ alt_day4_neu_transit = 11
-        "Да. До скорого.":
-            hide un with dissolve
-            "Она ушла."
+    if False:
+        menu:
+            "Останься?.. (рут находится в разработке)":
+                un "Н-но ты же сам…"
+                me "Лен, слушай. Мне и так досталось вчера, поэтому я могу просто жесточайшие глупости делать и вести себя странно."
+                me "Просто пойми это и сделай скидку, хорошо?"
+                show un normal pioneer with dspr
+                un "Просто не хотела мешать."
+                me "А ты и не… Короче, я был бы только рад, если бы мы посидели и поболтали!"
+                show un shy pioneer with dspr
+                un "П-правда?"
+                me "Самая настоящая."
+                "Серьёзно ответил я."
+                me "Оставайся. Скучно точно не будет."
+                show un smile pioneer with dspr
+                un "Да."
+                "Сказала Лена, будто не веря до конца в мои слова."
+                un "Да!"
+                $ alt_day4_neu_transit = 11
+            "Да. До скорого.":
+                hide un with dissolve
+                "Она ушла."
+    me "Да. До скорого."
+    hide un with dissolve
+    "Она ушла."
     return
         
 label alt_day4_neu_aid_sl:
@@ -1782,9 +1786,16 @@ label alt_day4_neu_curl:
         with flash_red
         window hide
         show blinking
-        scene black
-        "Нуар-рут находится в разработке."
-        return
+        window hide
+        show spill_red with dspr
+        $ renpy.pause(2, hard=True)
+        show spill_gray with dspr
+        $ renpy.pause(2, hard=True)
+        show alt_credits timeskip_dev at truecenter with dissolve2
+        $ renpy.pause(4, hard=True)
+        with dissolve2
+        window hide
+        return        
     else:
         play music music_list["into_the_unknown"] fadein 3
         window hide

@@ -55,7 +55,7 @@ label alt_day5_fz_start:
     $ alt_chapter(5, u"Лена. ФЗ. Утро.")
     call alt_day5_fz_begin
     pause(1)
-    if routetag == "mt7dl":
+    if routetag == "prologue":
         jump alt_day5_neu_begin
     else:
         return
