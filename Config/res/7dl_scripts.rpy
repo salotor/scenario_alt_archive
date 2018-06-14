@@ -129,50 +129,86 @@ init -10 python:
 init -2 python:
     def make_names_unknown_7dl():
         global store
-        set_name('ba',u"Физрук")
-        set_name('ase',u"Алиса")
-        set_name('we',u"Толпа") # не используется
-        set_name('ml',u"Мальчик")
-        set_name('ml2',u"Мальчик")
-        set_name('ml3',u"Мальчик")
-        set_name('voice1',u"Продавщица")
-        set_name('kids',u"Дети")
-        set_name('dy',u"Динамики")
-        set_name('icq',u"Собеседник")
-        set_name('el',u"Кудрявый")
-        set_name('un',u"Грустяша")
-        set_name('dv',u"Рыжая")
-        set_name('sl',u"Блондинка")
-        set_name('us',u"Мелкая")
-        set_name('mt',u"Вожатая")
-        set_name('cs',u"Медсестра")
-        set_name('mz',u"Очкарик")
-        set_name('mi',u"Японка")
-        set_name('uv',u"Котэ")
-        set_name('bb',u"Начальник")
-        set_name('sh',u"Очкарик")
-        set_name('ai',u"Мужчина")
-        set_name('sak',u"Старик")
-        set_name('me',u"Семён")
-        set_name('pi',u"Пионер")
-        set_name('dreamgirl',u"…")
-        set_name('voice',u"Голос")
-        set_name('voices',u"Голоса")
-
-    def meet(who, name):
-        set_name(who, name)
+        meet('ba',u"Физрук")
+        meet('ase',u"Алиса")
+        meet('we',u"Толпа") # не используется
+        meet('ml',u"Мальчик")
+        meet('ml2',u"Мальчик")
+        meet('ml3',u"Мальчик")
+        meet('voice1',u"Продавщица")
+        meet('kids',u"Дети")
+        meet('dy',u"Динамики")
+        meet('icq',u"Собеседник")
+        meet('el',u"Кудрявый")
+        meet('un',u"Грустяша")
+        meet('dv',u"Рыжая")
+        meet('sl',u"Блондинка")
+        meet('us',u"Мелкая")
+        meet('mt',u"Вожатая")
+        meet('cs',u"Медсестра")
+        meet('mz',u"Очкарик")
+        meet('mi',u"Японка")
+        meet('uv',u"Котэ")
+        meet('bb',u"Начальник")
+        meet('sh',u"Очкарик")
+        meet('ai',u"Мужчина")
+        meet('sak',u"Старик")
+        meet('me',u"Семён")
+        meet('pi',u"Пионер")
+        meet('dreamgirl',u"…")
+        meet('voice',u"Голос")
+        meet('voices',u"Голоса")
+        
+    def make_names_known_7dl():
+        global store
+        meet('ba',u"Саныч")
+        meet('ase',u"Алиса")
+        meet('we',u"Толпа") # не используется
+        meet('ml',u"Даня")
+        meet('ml2',u"Тоник")
+        meet('ml3',u"Алька")
+        meet('voice1',u"Продавщица")
+        meet('kids',u"Дети")
+        meet('dy',u"Динамики")
+        meet('icq',u"Собеседник")
+        meet('el',u"Электроник")
+        meet('un',u"Лена")
+        meet('dv',u"Алиса")
+        meet('sl',u"Славя")
+        meet('us',u"Ульяна")
+        meet('mt',u"Ольга Дмитриевна")
+        meet('cs',u"Виола")
+        meet('mz',u"Женя")
+        meet('mi',u"Мику")
+        meet('uv',u"Девушка")
+        meet('bb',u"Начальник")
+        meet('sh',u"Шурик")
+        meet('ai',u"Мужчина")
+        meet('sak',u"Сакишита")
+        meet('me',u"Семён")
+        meet('pi',u"Пионер")
+        meet('dreamgirl',u"…")
+        meet('voice',u"Голос")
+        meet('voices',u"Голоса")
 
     if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        def set_name(who, name):
+        def meet(who, name):
             gl = globals()
             gl[who + "_name"] = name
     else:
-        def set_name(who, name):
+        def meet(who, name):
             global store
-            store.names[who] = name
             gl = globals()
-            gl[who + "_name"] = store.names[who]
+            gl[who + "_name"] = name
+            store.names[who] = name
 
+        def save_names_known():
+            gl = globals()
+            global store
+            for x in store.names_list:
+                if not (x == 'narrator' or x == 'th'):
+                    store.names[x] = gl["%s_name"%x]
+            
 init -265 python: 
     #Пресеты с возможностью настройки
     def Noir(id, brightness = -0.4, tint_r = 0.2126, tint_g = 0.7152, tint_b = 0.0722, saturation = 0.5):
@@ -212,231 +248,224 @@ init -6 python:
         global save_name
         save_name = (u"7ДЛ v.%s: пролог. %s") % (alt_release_no, plthr)
 
-init python:
-    if persistent.autostart_7dl:
-        rgsn = renpy.game.script.namemap
-        rgsn["main_menu_7dl"],rgsn["splashscreen"] = rgsn["splashscreen"],rgsn["main_menu_7dl"]
-
 init -5 python:
     def alt_chapter(alt_day_number, alt_chapter_name):
         global save_name
         renpy.block_rollback()
-        renpy.scene()
-        if persistent.sprite_time == "day":
-            renpy.show('bg ext_stand3_7dl')
-        elif persistent.sprite_time == "sunset":
-            renpy.show('bg ext_stand3_sunset_7dl')
-        elif persistent.sprite_time == "night":
-            renpy.show('bg ext_stand3_night_7dl')
-        elif persistent.sprite_time == "prolog":
-            renpy.show('bg ext_stand3_prolog_7dl')
-        renpy.pause(1.0)
-        renpy.transition(dissolve)
-        
-        if routetag == "dv": #Классическая и диджей ветка гуд
-            renpy.show("dv normal pioneer2", at_list=[left])
-            renpy.transition(moveinleft)
-        elif routetag == "dvbad": #Классическая ветка, бэд, диджей ветка дисмисс
-            renpy.show("dv sad pioneer2", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)    
-           
-        elif routetag == "dv7dl": #7дл-ветка, гуд
-            renpy.show("dv normal pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "dv7dlbad": #7дл-ветка, реджект/дисмисс
-            renpy.show("dv guilty pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "dv7dlgood": #7дл-ветка, гуд
-            renpy.show("dv smile pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-
-        elif routetag == "mi7dl": #7дл-ветка, диджей гуд
-            renpy.show("mi normal pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mi7": #Мику-коммон
-            renpy.show("mi sad pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mi7dlbad": #7дл-ветка, реджект, диджей нейтрал
-            renpy.show("mi cry pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mi7dlgood": #7дл-ветка, реджект, диджей нейтрал
-            renpy.show("mi happy pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mi7dldress":
-            renpy.show("mi normal dress", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mi7rej": #7дл-ветка, реджект, диджей бэд
-            renpy.show("mi serious pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mi7true": #7дл-ветка, реджект, диджей бэд
-            renpy.show("mi shy pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mi7dlvoca":
-            renpy.show("mi shy voca", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mi7dlcas":
-            renpy.show("mi happy casual", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mi7dlcas1":
-            renpy.show("mi sad casual", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mi7dlcas1":
-            renpy.show("mi cry casual", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mi7dlvoca1":
-            renpy.show("mi sad voca", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        elif routetag == "sl": #Классическая ветка гуд
-            renpy.show("sl normal pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        elif routetag == "sltrue": #Классическая ветка гуд
-            renpy.show("sl shy sport", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        elif routetag == "slcas": #Классическая ветка гуд
-            renpy.show("sl smile2 dress", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        elif routetag == "slbad": #Классическая ветка, бэд
-            renpy.show("sl sad pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)    
-            
-        elif routetag == "sl7dl": #7дл-ветка, гуд
-            renpy.show("sl smile pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        elif routetag == "sl7dlbad": #7дл-ветка, дисмисс
-            renpy.show("sl cry pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        
-        elif routetag == "un": #Классическая
-            renpy.show("un normal pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-        elif routetag == "unbad": #Классическая ветка, бэд
-            renpy.show("un sad pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)    
-            
-        elif routetag == "un7dl": #7дл-ветка, гуд
-            renpy.show("un normal pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        #Флаг для плохого эпилога Лены
-        elif routetag == "un7dlbad": #7дл-ветка, реджект/бэд
-            renpy.show("un sorrow modern", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "un7dlgood": #7дл-ветка, реджект/бэд
-            renpy.show("un smile modern", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)    
-            
-        elif routetag == "mt7dl": #Ольга - общая
-            renpy.show("mt grin pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "mt7dl_bad": #Ольга - плохая концовка
-            renpy.show("mt sad pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        elif routetag == "us7dl_good":
-            renpy.show("us smile sport", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        elif routetag == "us7dl_good_surp":
-            renpy.show("us surp1 sport", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        elif routetag == "us7dl_bad":
-            renpy.show("us normal pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        elif routetag == "us7dl_bad_laugh":
-            renpy.show("us laugh pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        elif routetag == "us7dl_bad_sad":
-            renpy.show("us sad pioneer", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        elif routetag == "uv_unknown": #Кошочку еще не знаем
-            renpy.show("uv black silhouette", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "uv": #Кошонка-распашонка
-            renpy.show("uv normal", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "uv_true": #Кошочка поражена до самой глыбины своих глыбин
-            renpy.show("uv surprise", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "uv_false": #Кошонка на позитиве
-            renpy.show("uv grin", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-        elif routetag == "uv_bad": #Виноватая кошонка
-            renpy.show("uv guilty", at_list=[left])
-            renpy.transition(moveinleft)
-            renpy.pause(2.0)
-            
-        else:
-            renpy.show("owl")
-            renpy.pause(0.3)
-        
-        dn = (u"7ДЛ:День %d") % (alt_day_number)
 # ----------------------------------------------------------------------
 # в имя сохраняемого файла добавим номер релиза игры
         sdn = (u"7ДЛ v.%s: День %d") % (alt_release_no, alt_day_number)
-# -----------------------------------------------------------------------
         save_name = ((sdn) + (u" - ")) + (alt_chapter_name)
-        if persistent.sprite_time == "prolog":
-            renpy.show('day_num', what=Text(dn, style=style.alt_days,xcenter=0.5215,ycenter=0.25))
-            renpy.show('day_text', what=Text(alt_chapter_name, style=style.alt_chapters,xcenter=0.5215,ycenter=0.35))
-        else:
-            renpy.show('day_num', what=Text(dn, style=style.alt_days,xcenter=0.5215,ycenter=0.35))
-            renpy.show('day_text', what=Text(alt_chapter_name, style=style.alt_chapters,xcenter=0.5215,ycenter=0.45))
-        
-        renpy.pause(3)
-        renpy.scene()
-        renpy.show('bg black')
-        renpy.transition(blind_r)
-        set_mode_adv()
+# -----------------------------------------------------------------------
+        if not persistent.chapter_off_7dl:
+            renpy.scene()
+            if persistent.sprite_time == "day":
+                renpy.show('bg ext_stand3_7dl')
+            elif persistent.sprite_time == "sunset":
+                renpy.show('bg ext_stand3_sunset_7dl')
+            elif persistent.sprite_time == "night":
+                renpy.show('bg ext_stand3_night_7dl')
+            elif persistent.sprite_time == "prolog":
+                renpy.show('bg ext_stand3_prolog_7dl')
+            renpy.pause(1.0)
+            renpy.transition(dissolve)
+            
+            if routetag == "dv": #Классическая и диджей ветка гуд
+                renpy.show("dv normal pioneer2", at_list=[left])
+                renpy.transition(moveinleft)
+            elif routetag == "dvbad": #Классическая ветка, бэд, диджей ветка дисмисс
+                renpy.show("dv sad pioneer2", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)    
+               
+            elif routetag == "dv7dl": #7дл-ветка, гуд
+                renpy.show("dv normal pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "dv7dlbad": #7дл-ветка, реджект/дисмисс
+                renpy.show("dv guilty pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "dv7dlgood": #7дл-ветка, гуд
+                renpy.show("dv smile pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
 
+            elif routetag == "mi7dl": #7дл-ветка, диджей гуд
+                renpy.show("mi normal pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mi7": #Мику-коммон
+                renpy.show("mi sad pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mi7dlbad": #7дл-ветка, реджект, диджей нейтрал
+                renpy.show("mi cry pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mi7dlgood": #7дл-ветка, реджект, диджей нейтрал
+                renpy.show("mi happy pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mi7dldress":
+                renpy.show("mi normal dress", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mi7rej": #7дл-ветка, реджект, диджей бэд
+                renpy.show("mi serious pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mi7true": #7дл-ветка, реджект, диджей бэд
+                renpy.show("mi shy pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mi7dlvoca":
+                renpy.show("mi shy voca", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mi7dlcas":
+                renpy.show("mi happy casual", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mi7dlcas1":
+                renpy.show("mi sad casual", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mi7dlcas1":
+                renpy.show("mi cry casual", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mi7dlvoca1":
+                renpy.show("mi sad voca", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            elif routetag == "sl": #Классическая ветка гуд
+                renpy.show("sl normal pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            elif routetag == "sltrue": #Классическая ветка гуд
+                renpy.show("sl shy sport", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            elif routetag == "slcas": #Классическая ветка гуд
+                renpy.show("sl smile2 dress", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            elif routetag == "slbad": #Классическая ветка, бэд
+                renpy.show("sl sad pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)    
+                
+            elif routetag == "sl7dl": #7дл-ветка, гуд
+                renpy.show("sl smile pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            elif routetag == "sl7dlbad": #7дл-ветка, дисмисс
+                renpy.show("sl cry pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            
+            elif routetag == "un": #Классическая
+                renpy.show("un normal pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+            elif routetag == "unbad": #Классическая ветка, бэд
+                renpy.show("un sad pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)    
+                
+            elif routetag == "un7dl": #7дл-ветка, гуд
+                renpy.show("un normal pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            #Флаг для плохого эпилога Лены
+            elif routetag == "un7dlbad": #7дл-ветка, реджект/бэд
+                renpy.show("un sorrow modern", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "un7dlgood": #7дл-ветка, реджект/бэд
+                renpy.show("un smile modern", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)    
+                
+            elif routetag == "mt7dl": #Ольга - общая
+                renpy.show("mt grin pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "mt7dl_bad": #Ольга - плохая концовка
+                renpy.show("mt sad pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            elif routetag == "us7dl_good":
+                renpy.show("us smile sport", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            elif routetag == "us7dl_good_surp":
+                renpy.show("us surp1 sport", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            elif routetag == "us7dl_bad":
+                renpy.show("us normal pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            elif routetag == "us7dl_bad_laugh":
+                renpy.show("us laugh pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            elif routetag == "us7dl_bad_sad":
+                renpy.show("us sad pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            elif routetag == "uv_unknown": #Кошочку еще не знаем
+                renpy.show("uv black silhouette", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "uv": #Кошонка-распашонка
+                renpy.show("uv normal", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "uv_true": #Кошочка поражена до самой глыбины своих глыбин
+                renpy.show("uv surprise", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "uv_false": #Кошонка на позитиве
+                renpy.show("uv grin", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "uv_bad": #Виноватая кошонка
+                renpy.show("uv guilty", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+                
+            else:
+                renpy.show("owl")
+                renpy.pause(0.3)
+            
+            dn = (u"7ДЛ: День %d") % (alt_day_number)
+            if persistent.sprite_time == "prolog":
+                renpy.show('day_num', what=Text(dn, style=style.alt_days,xcenter=0.5215,ycenter=0.25))
+                renpy.show('day_text', what=Text(alt_chapter_name, style=style.alt_chapters,xcenter=0.5215,ycenter=0.35))
+            else:
+                renpy.show('day_num', what=Text(dn, style=style.alt_days,xcenter=0.5215,ycenter=0.35))
+                renpy.show('day_text', what=Text(alt_chapter_name, style=style.alt_chapters,xcenter=0.5215,ycenter=0.45))
         
-        
-        
+            renpy.pause(3)
+            renpy.scene()
+            renpy.show('bg black')
+            renpy.transition(blind_r)
+            set_mode_adv()
+
     if persistent.altCardsDemo == None:
         persistent.altCardsDemo = False
 
@@ -563,55 +592,104 @@ init -997 python:
         
 init python:
     
-        import math
+    import math
 
-        class Shaker(object):
+    class Shaker(object):
+    
+        anchors = {
+            'top' : 0.0,
+            'center' : 0.5,
+            'bottom' : 1.0,
+            'left' : 0.0,
+            'right' : 1.0,
+            }
+    
+        def __init__(self, start, child, dist):
+            if start is None:
+                start = child.get_placement()
+            #
+            self.start = [ self.anchors.get(i, i) for i in start ]  # central position
+            self.dist = dist    # maximum distance, in pixels, from the starting point
+            self.child = child
+            
+        def __call__(self, t, sizes):
+            # Float to integer… turns floating point numbers to
+            # integers.                
+            def fti(x, r):
+                if x is None:
+                    x = 0
+                if isinstance(x, float):
+                    return int(x * r)
+                else:
+                    return x
+
+            xpos, ypos, xanchor, yanchor = [ fti(a, b) for a, b in zip(self.start, sizes) ]
+
+            xpos = xpos - xanchor
+            ypos = ypos - yanchor
+            
+            nx = xpos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
+            ny = ypos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
+
+            return (int(nx), int(ny), 0, 0)
+    
+    def _Shake(start, time, child=None, dist=100.0, **properties):
+
+        move = Shaker(start, child, dist=dist)
+    
+        return renpy.display.layout.Motion(move,
+                      time,
+                      child,
+                      add_sizes=True,
+                      **properties)
+
+    Shake = renpy.curry(_Shake)
         
-            anchors = {
-                'top' : 0.0,
-                'center' : 0.5,
-                'bottom' : 1.0,
-                'left' : 0.0,
-                'right' : 1.0,
-                }
+init 2 python:
+    if persistent.autostart_7dl:
+        rgsn = renpy.game.script.namemap
+        rgsn["splashscreen_7dl"],rgsn["splashscreen"] = rgsn["splashscreen"],rgsn["splashscreen_7dl"]
         
-            def __init__(self, start, child, dist):
-                if start is None:
-                    start = child.get_placement()
-                #
-                self.start = [ self.anchors.get(i, i) for i in start ]  # central position
-                self.dist = dist    # maximum distance, in pixels, from the starting point
-                self.child = child
-                
-            def __call__(self, t, sizes):
-                # Float to integer… turns floating point numbers to
-                # integers.                
-                def fti(x, r):
-                    if x is None:
-                        x = 0
-                    if isinstance(x, float):
-                        return int(x * r)
-                    else:
-                        return x
+        rgsn = renpy.game.script.namemap
+        rgsn["alt_start_7dl"],rgsn["start"] = rgsn["start"],rgsn["alt_start_7dl"]
 
-                xpos, ypos, xanchor, yanchor = [ fti(a, b) for a, b in zip(self.start, sizes) ]
+label splashscreen_7dl:
 
-                xpos = xpos - xanchor
-                ypos = ypos - yanchor
-                
-                nx = xpos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
-                ny = ypos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
-
-                return (int(nx), int(ny), 0, 0)
+    python:
         
-        def _Shake(start, time, child=None, dist=100.0, **properties):
+        if not persistent.set_volumes:
+            
+            persistent.lan_chosen = True
+            persistent.licensed = True
+            
+            persistent.timeofday='prologue'
+            
+            persistent.choices = []
+            
+            persistent.show_achievements = False
+            
+            persistent.show_hentai_ach = False
+            
+            _preferences.language = None
+            
+            persistent.set_volumes = True
+            persistent.achievement = True
+            persistent.collector = True
+            
+            persistent.font_size = "small"
+            persistent.hentai = False
+            
+            _preferences.volumes['music'] = .65
+            _preferences.volumes['sfx'] = 1.0
+            _preferences.volumes['voice'] = .75
 
-            move = Shaker(start, child, dist=dist)
-        
-            return renpy.display.layout.Motion(move,
-                          time,
-                          child,
-                          add_sizes=True,
-                          **properties)
+    $ prolog_time()
+    return
 
-        Shake = renpy.curry(_Shake)
+label alt_start_7dl:
+    $ renpy.music.stop()
+    $ skip_text_blocks = True
+    $ renpy.block_rollback()
+    $ init_map_zones()
+
+    jump scenario__alt_sevendl

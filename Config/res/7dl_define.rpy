@@ -1,4 +1,63 @@
-﻿init:
+﻿screen intro_loki_screen:
+    add "intro_loki" xalign 0.0 yalign 0.0
+    
+screen intro_herc_screen:
+    add "intro_herc" xalign 0.0 yalign 0.0
+    
+screen intro_dr_screen:
+    add "intro_dr" xalign 0.0 yalign 0.0
+    
+screen role_menu_7dl:
+    tag menu
+    modal False
+    imagemap:
+        ground "intro_transparent"
+        hotspot ((0, 0, 635, 1080)):
+            hovered [Show("intro_loki_screen", transition=Dissolve(0.5))]
+            unhovered [Hide("intro_loki_screen", transition=Dissolve(1.0))]
+            action [Hide("intro_loki_screen", transition=Dissolve(0.5)), Jump("alt_day0_start_loki")]
+        hotspot ((635, 0, 652, 1080)):
+            hovered [Show("intro_herc_screen", transition=Dissolve(0.5))]
+            unhovered [Hide("intro_herc_screen", transition=Dissolve(1.0))]
+            action [Hide("intro_herc_screen", transition=Dissolve(0.5)), Jump("alt_day0_start_herc")]
+        hotspot ((1287, 0, 634, 1080)):
+            hovered [Show("intro_dr_screen", transition=Dissolve(0.5))]
+            unhovered [Hide("intro_dr_screen", transition=Dissolve(1.0))]
+            action [Hide("intro_dr_screen", transition=Dissolve(0.5)), Jump("alt_day0_start")]
+
+screen alt_timer:
+    add "timer_anim" xalign 0.5 yalign 0.5
+    key "7" action [Hide("alt_timer"), Jump("alt_day3_dv_stayhere")]
+    text "ВЕРНУТЬСЯ В ЛАГЕРЬ! (--->7<---)" align (0.5, 0.8) color "#FF0000"
+    timer 2.0 action Jump("alt_day3_leave")
+
+screen alert_text: #пишем предупреждение игроку
+    modal True
+    add get_image_7dl("screens/wet1.png")
+    add get_image("gui/o_rly/base.png")
+    text "Строка 1.":
+        text_align 0.5
+        yalign 0.44
+        xalign 0.5
+        color "#64483c"
+        font header_font
+        size 30
+    text "Строка 2.":
+        text_align 0.5
+        yalign 0.49
+        xalign 0.5
+        color "#64483c"
+        font header_font
+        size 30
+    textbutton _("OK"):
+        text_size 60
+        style "log_button"
+        text_style "settings_link"
+        yalign 0.65
+        xalign 0.5
+        action [Hide("alert_text"), Return(value=None)]
+        
+init:
     transform fleft:
         xalign 0.16
         xanchor 0.5
@@ -126,7 +185,7 @@
     $ fdiam = ImageDissolve(im.Tile(get_image_7dl("gui/transit/pattern.jpg")), 0.4, 1)
     $ fulldiam = MultipleTransition([False,fdiam,get_image_7dl("screens/digi1.jpg"),fdiam,True])
     
-    $ gopr = ImageDissolve(im.Tile(get_image_7dl("gui/blackout_go.png")), 0.95, 1)
+    $ gopr = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout_go.png")), 0.95, 1)
     $ swradar = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout3.jpg")), 0.95, 1)
     $ joff = MultipleTransition([False,swradar,Solid("#000"),swradar,True])
     $ swradarr = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout32.jpg")), 0.95, 1)
@@ -899,7 +958,7 @@
     image alt_cat_map_wireframe = get_image_7dl("gui/dnd/alt_cat_map_wireframe.png")
     image alt_cat_map = get_image_7dl("gui/dnd/alt_cat_map.png")
     image alt_cat_map_pathfinding = get_image_7dl("gui/dnd/alt_cat_map_pathfinding.png")
-    image PolariodFrame = get_sprite_7dl("custom/PolariodFrame.png")
+    image PolaroidFrame_7dl = get_sprite_7dl("custom/PolaroidFrame_7dl.png")
     
     
 #Звучок

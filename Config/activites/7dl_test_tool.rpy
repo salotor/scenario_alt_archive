@@ -61,7 +61,8 @@ label scenario__sdl_selector:
     call alt_day6_us_px_vars
     call alt_day6_us_7dl_vars
     call alt_day7_us_px_vars
-    $ make_names_unknown_7dl()
+    
+    $ make_names_known_7dl()
     $ plthr = u"Дрищ"
     play ambience ambience_7dl["safe"] fadein 5
     
@@ -69,26 +70,6 @@ label sdl_menu:
     scene scenery with dissolve
     menu:
         "Выбранный лейбл":
-            $ meet('mi','Мику')
-            $ alt_meet['mi'] = u"Мику"
-            $ meet('us','Ульяна')
-            $ alt_meet['us'] = u"Ульяна"
-            $ meet('sl','Славя')
-            $ alt_meet['sl'] = u"Славя"
-            $ meet('dv','Алиса')
-            $ alt_meet['dv'] = u"Алиса"
-            $ meet('mt','Ольга Дмитриевна')
-            $ alt_meet['mt'] = u"Ольга Дмитриевна"
-            $ meet('un','Лена')
-            $ alt_meet['un'] = u"Лена"
-            $ meet('cs','Виола')
-            $ alt_meet['cs'] = u"Виола"
-            $ meet('el','Электроник')
-            $ alt_meet['el'] = u"Электроник"
-            $ meet('sh','Шурик')
-            $ alt_meet['sh'] = u"Шурик"
-            $ meet('ba','Саныч')
-            $ alt_meet['ba'] = u"Саныч"
             $ persistent.altCardsWon1 = True
             $ persistent.altCardsWon2 = True
             $ persistent.altCardsWon3 = True
@@ -163,7 +144,7 @@ label sdl_menu:
                                                     call alt_day6_us_7dl_helping
                                                 "7дл - помощь Мику":
                                                     stop ambience fadeout 2
-                                                    call alt_day_us_7dl_preps
+                                                    call alt_day6_us_7dl_preps
                                                 "7дл - помощь Славе":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_warehouse

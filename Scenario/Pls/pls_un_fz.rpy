@@ -23,7 +23,7 @@
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(4, u"Лена. ФЗ. Вечер.")
-    call alt_day5_fz_supper
+    call alt_day4_fz_supper
     pause(1)
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -55,7 +55,7 @@ label alt_day5_fz_start:
     $ alt_chapter(5, u"Лена. ФЗ. Утро.")
     call alt_day5_fz_begin
     pause(1)
-    if routetag == "mt7dl":
+    if routetag == "prologue":
         jump alt_day5_neu_begin
     else:
         return

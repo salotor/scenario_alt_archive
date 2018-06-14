@@ -38,7 +38,7 @@
         call alt_day6_us_7dl_helping
         pause(1)
         if alt_day6_us_7dl_mi_friends == 2:
-            call alt_day_us_7dl_preps
+            call alt_day6_us_7dl_preps
         elif alt_day6_us_7dl_sl_friends == 2:
             call alt_day6_us_7dl_warehouse
         else:

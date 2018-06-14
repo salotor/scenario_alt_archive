@@ -116,11 +116,6 @@
                 call alt_day3_dv_reunion
                 pause(1)
                 scene black
-                screen alt_timer:
-                    add "timer_anim" xalign 0.5 yalign 0.5
-                    key "7" action [Hide("alt_timer"), Jump("alt_day3_dv_stayhere")]
-                    text "ВЕРНУТЬСЯ В ЛАГЕРЬ! (--->7<---)" align (0.5, 0.8) color "#FF0000"
-                    timer 2.0 action Jump("alt_day3_leave")
                 call screen alt_timer
         else:
             jump alt_day3_disco

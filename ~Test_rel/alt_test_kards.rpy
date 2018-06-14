@@ -2962,7 +2962,7 @@ label alt_day2_final_win_end_new:
         window hide
         play sound sfx_7dl["snap"]
         scene expression Sepia("cg d2_mi_me_polaroid_7dl")
-        show PolariodFrame
+        show PolaroidFrame_7dl
         with flash
         $ renpy.pause(3)
         me "Сыыыр."
