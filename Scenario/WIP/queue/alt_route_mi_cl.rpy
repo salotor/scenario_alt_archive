@@ -3433,7 +3433,7 @@ label alt_day4_mi_date:
         show mi normal pioneer at center with dissolve
         $ alt_day4_mi_photo = True
         mi "Хорошо, хорошо."
-        "Она изо всех сил постаралсь - а я показал ей язык из-за камеры. {w}Тоже, значит, приложил руку к искусству."
+        "Она изо всех сил постаралась - а я показал ей язык из-за камеры. {w}Тоже, значит, приложил руку к искусству."
         show mi happy pioneer at center
         window hide
         $ renpy.pause(4.4, hard=True)

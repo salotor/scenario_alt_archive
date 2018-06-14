@@ -925,7 +925,16 @@
     
 #music
     $ music_7dl = {}
-
+#Новьё
+    $ music_7dl["surf"] = get_music_7dl("surf_7dl.ogg")
+    $ music_7dl["shestheone"] = get_music_7dl("shestheone_7dl.ogg")
+    $ music_7dl["everyday"] = get_music_7dl("everyday_7dl.ogg")
+    $ music_7dl["imfine"] = get_music_7dl("imfine_7dl.ogg")
+    $ music_7dl["too_serious"] = get_music_7dl("too_serious_7dl.ogg")
+    $ music_7dl["hug_me_already"] = get_music_7dl("hug_me_already_7dl.ogg")
+    $ music_7dl["one_little_lone_cloud"] = get_music_7dl("one_little_lone_cloud_7dl.ogg")
+    
+    
     $ music_7dl["alice_theme"] = get_music_7dl("alice_theme_7dl.ogg")
     $ music_7dl["afraid_of_destiny"] = get_music_7dl("afraid_of_destiny_7dl.ogg")
     $ music_7dl["anglegrinder"] = get_music_7dl("anglegrinder_7dl.ogg")
