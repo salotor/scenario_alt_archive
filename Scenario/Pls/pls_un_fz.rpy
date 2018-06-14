@@ -7,6 +7,7 @@
     $ persistent.sprite_time = "prolog"
     $ prolog_time()
     $ alt_chapter(4, u"Лена. ФЗ. Утро")
+    call screen wip_alert_un_fz
     call alt_day4_un_fz_begin
     if alt_day2_rendezvous == 2:
         call alt_day4_un_fz_sl
@@ -55,7 +56,7 @@ label alt_day5_fz_start:
     $ alt_chapter(5, u"Лена. ФЗ. Утро.")
     call alt_day5_fz_begin
     pause(1)
-    if routetag == "mt7dl":
+    if routetag == "prologue":
         jump alt_day5_neu_begin
     else:
         return
