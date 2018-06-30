@@ -7,7 +7,6 @@
 
     $ alt_aicr_string = " "
 
-    # определяем показываемый экран
 screen alt_incompatible_release:
     tag menu
     modal True
@@ -66,7 +65,6 @@ screen alt_incompatible_release:
                 hover_color aicr_colors_hover[persistent.timeofday]
                 font 'fonts/corbel.ttf'
                 size 50
-
 # Для особо упёртых\упорных\…. Пробуем продолжить, авось получится. 
 # Продолжение игры номер сохранения не перепишет; так что окно проверки будет вываливаться каждый раз
         button:  
@@ -81,7 +79,6 @@ screen alt_incompatible_release:
                 hover_color aicr_colors_hover[persistent.timeofday]
                 font 'fonts/corbel.ttf'
                 size 40
-
 
 # После загрузки файла переходим именно в это место. Определено механикой Ренпая - 
 # если есть метка 'after_load' - переходить на нее. В классике и других модах такая метка не обнаружена

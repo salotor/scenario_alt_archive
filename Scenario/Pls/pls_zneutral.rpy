@@ -38,7 +38,7 @@
         call alt_day4_neu_home #Домик ведёт к Ульянке, Ольге, Лене и Мику. 
         pause(1)
         if alt_day3_us_bugs == 1:
-            $ day4_neu_transit = 5
+            $ alt_day4_neu_transit = 5
             call alt_day4_neu_us
             pause(1)
         elif alt_day3_un_med_help != 0:

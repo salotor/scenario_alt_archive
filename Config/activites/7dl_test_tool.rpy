@@ -61,7 +61,8 @@ label scenario__sdl_selector:
     call alt_day6_us_px_vars
     call alt_day6_us_7dl_vars
     call alt_day7_us_px_vars
-    $ make_names_unknown_7dl()
+    
+    $ make_names_known_7dl()
     $ plthr = u"Дрищ"
     play ambience ambience_7dl["safe"] fadein 5
     
@@ -69,16 +70,6 @@ label sdl_menu:
     scene scenery with dissolve
     menu:
         "Выбранный лейбл":
-            $ meet('mi','Мику')
-            $ meet('us','Ульяна')
-            $ meet('sl','Славя')
-            $ meet('dv','Алиса')
-            $ meet('mt','Ольга Дмитриевна')
-            $ meet('un','Лена')
-            $ meet('cs','Виола')
-            $ meet('el','Электроник')
-            $ meet('sh','Шурик')
-            $ meet('ba','Саныч')
             $ persistent.altCardsWon1 = True
             $ persistent.altCardsWon2 = True
             $ persistent.altCardsWon3 = True
@@ -153,7 +144,7 @@ label sdl_menu:
                                                     call alt_day6_us_7dl_helping
                                                 "7дл - помощь Мику":
                                                     stop ambience fadeout 2
-                                                    call alt_day_us_7dl_preps
+                                                    call alt_day6_us_7dl_preps
                                                 "7дл - помощь Славе":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_warehouse
@@ -472,6 +463,13 @@ label sdl_menu:
                     stop ambience fadeout 2
                     jump alt_day6_mt_7dl_start
                 "Одиночка":
+                    menu:
+                        "Утро с Алисой":
+                            $ alt_day3_dv_evening = True
+                        "Утро в медпункте":
+                            $ alt_day3_technoquest_st3 = 2
+                        "Утро в домике":
+                            pass
                     stop ambience fadeout 2
                     jump alt_day4_neu_begin
         "Концовки":

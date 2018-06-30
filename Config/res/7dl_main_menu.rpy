@@ -92,31 +92,37 @@ screen alt_wip:
         action Hide("alt_wip")
 
 screen settings_widget_lp_on_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_wdglp_on.png")
+    add get_image_7dl("gui/menu_elem/settings/settings_wdglp_descr_on.png")
     
 screen settings_widget_lp_off_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_wdglp_off.png")
+    add get_image_7dl("gui/menu_elem/settings/settings_wdglp_descr_off.png")
     
 screen settings_widget_music_on_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_wdgmus_on.png")
+    add get_image_7dl("gui/menu_elem/settings/settings_wdgmus_descr_on.png")
     
 screen settings_widget_music_off_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_wdgmus_off.png")
+    add get_image_7dl("gui/menu_elem/settings/settings_wdgmus_descr_off.png")
     
 screen settings_dlc_on_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_dlc_on.png")
+    add get_image_7dl("gui/menu_elem/settings/settings_dlc_descr_on.png")
 
 screen settings_dlc_off_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_dlc_off.png")
+    add get_image_7dl("gui/menu_elem/settings/settings_dlc_descr_off.png")
 
 screen settings_hentai_un_new_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_hent_new.png")
+    add get_image_7dl("gui/menu_elem/settings/settings_hent_descr_new.png")
  
 screen settings_hentai_un_old_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_hent_old.png")
+    add get_image_7dl("gui/menu_elem/settings/settings_hent_descr_old.png")
 
 screen settings_reboot_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_reboot.png")
+    add get_image_7dl("gui/menu_elem/settings/settings_reboot_descr.png")
+
+screen settings_chapter_on_7dl():
+    add get_image_7dl("gui/menu_elem/settings/settings_chapter_descr_on.png")
+
+screen settings_chapter_off_7dl():
+    add get_image_7dl("gui/menu_elem/settings/settings_chapter_descr_off.png")
 
 screen menu_7dl():
     if persistent.waifu_7dl == 1:
@@ -305,6 +311,20 @@ screen settings_7dl():
             hovered Show("settings_hentai_un_new_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'hentai_un_old_7dl',False)
+    if not persistent.chapter_off_7dl:
+        imagebutton xpos 0.662 ypos 0.49:
+            auto get_image_7dl("gui/menu_elem/settings/settings_chapter_on_%s.png")
+            hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
+            hovered Show("settings_chapter_off_7dl", transition=Dissolve(0.2))
+            unhovered [Hide("settings_chapter_off_7dl", transition=Dissolve(0.2)), Hide("settings_chapter_on_7dl", transition=Dissolve(0.2))]
+            action SetField(persistent,'chapter_off_7dl',True)
+    else:
+        imagebutton xpos 0.662 ypos 0.49:
+            auto get_image_7dl("gui/menu_elem/settings/settings_chapter_off_%s.png")
+            hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
+            hovered Show("settings_chapter_on_7dl", transition=Dissolve(0.2))
+            unhovered [Hide("settings_chapter_on_7dl", transition=Dissolve(0.2)), Hide("settings_chapter_off_7dl", transition=Dissolve(0.2))]
+            action SetField(persistent,'chapter_off_7dl',False)
     if (compare_music_widget_7dl != persistent.music_widget_7dl) or (compare_lp_widget_7dl != persistent.lp_widget_7dl):
         imagebutton xalign 0.81 yalign 0.8:
             auto get_image_7dl("gui/menu_elem/settings/settings_reboot_%s.png")

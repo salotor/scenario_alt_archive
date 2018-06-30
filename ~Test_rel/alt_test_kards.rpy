@@ -2640,7 +2640,7 @@ label alt_day2_final_fail_end_new:
         hide mt
         hide dv
         with dissolve
-        "Так что ещё минут пять — и обе ловчих свалились рядом со столами, а она всё продолжала и продолжала петь, делая в воздухе странные, стригущие движение пальцами."
+        "Так что ещё минут пять — и обе ловчих свалились рядом со столами, а она всё продолжала и продолжала петь, делая в воздухе странные, стригущие движения пальцами."
         "Отчего-то от таких движений, да ещё в исполнении ультрамаринового маникюра неприятно-холодно ёкало в животе."
         show mi normal pioneer far at center with easeinleft
         window hide
@@ -2962,7 +2962,7 @@ label alt_day2_final_win_end_new:
         window hide
         play sound sfx_7dl["snap"]
         scene expression Sepia("cg d2_mi_me_polaroid_7dl")
-        show PolariodFrame
+        show PolaroidFrame_7dl
         with flash
         $ renpy.pause(3)
         me "Сыыыр."

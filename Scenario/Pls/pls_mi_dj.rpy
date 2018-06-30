@@ -54,7 +54,7 @@ label alt_day5_start_mi_dj:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(5, u"Мику. DJ. Утро")
-    call alt_day5_begin_mi_dj
+    call alt_day5_mi_dj_begin
     pause(1)
     $ persistent.sprite_time = "night"
     $ day_time()
@@ -203,6 +203,14 @@ label alt_day7_mi_dj_start:
         call alt_day7_mi_dj_together
         pause(1)
     else:
+        $ persistent.sprite_time = "sunset"
+        $ sunset_time()
+        if alt_day6_mi_dj_letmeout:
+            $ routetag = "mi7dlbad"
+        elif alt_day6_mi_dj_letmestay:
+            $ routetag = "mi7true"
+        elif alt_day6_mi_dj_no_hentai:
+            $ routetag = "mi7dl"
         call alt_day7_mi_dj_alone
         pause(1)
     if alt_day6_mi_dj_hentai1:
