@@ -74,7 +74,7 @@ screen replays_route_choice_7dl:
         text_style "replays_textbutton"
         xpos 0.235 #xpos 0.235
         ypos 0.236 #ypos 0.236
-        action [Hide("replays_common_choice_7dl", transition=Dissolve(0.2)), Hide("replays_un_choice_7dl", transition=Dissolve(0.2)), Hide("replays_sl_choice_7dl", transition=Dissolve(0.2)), Hide("replays_dv_choice_7dl", transition=Dissolve(0.2)), Hide("replays_mi_choice_7dl", transition=Dissolve(0.2)), Hide("replays_route_choice_7dl", transition=Dissolve(0.2)), Show("replays_neutral_7dl", transition=Dissolve(0.2))]
+        action [Hide("replays_common_choice_7dl", transition=Dissolve(0.2)), Hide("replays_un_choice_7dl", transition=Dissolve(0.2)), Hide("replays_sl_choice_7dl", transition=Dissolve(0.2)), Hide("replays_dv_choice_7dl", transition=Dissolve(0.2)), Hide("replays_mi_choice_7dl", transition=Dissolve(0.2)), Hide("replays_route_choice_7dl", transition=Dissolve(0.2)), Show("replays_neutral_1_7dl", transition=Dissolve(0.2))]
     textbutton "Лена":
         style "log_button"
         text_style "replays_textbutton"
@@ -2073,26 +2073,532 @@ screen replays_common_d3_3_7dl:
             xpos 0.544
             ypos 0.625
 
-screen replays_neutral_7dl:
+screen replays_neutral_1_7dl:
     tag menu
     textbutton "...":
         style "log_button"
         text_style "replays_textbutton"
         xpos 0.235
         ypos 0.187
-        action [Hide("replays_neutral_7dl", transition=Dissolve(0.2)), Show("replays_route_choice_7dl", transition=Dissolve(0.2))]
-    if renpy.seen_label("alt_day4_neu_home"):
-        textbutton "Начало":
+        action [Hide("replays_neutral_1_7dl", transition=Dissolve(0.2)), Show("replays_route_choice_7dl", transition=Dissolve(0.2))]
+    if renpy.seen_label("alt_day4_neu_dv"):
+        textbutton "alt_day4_neu_dv":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
+            action Replay("alt_day4_neu_dv", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.236
+    if renpy.seen_label("alt_day4_neu_aid"):
+        textbutton "alt_day4_neu_aid":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.285
+            action Replay("alt_day4_neu_aid", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.285
+    if renpy.seen_label("alt_day4_neu_aid_un"):
+        textbutton "alt_day4_neu_aid_un":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.333
+            action Replay("alt_day4_neu_aid_un", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.333
+    if renpy.seen_label("alt_day4_neu_aid_sl"):
+        textbutton "alt_day4_neu_aid_sl":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.382
+            action Replay("alt_day4_neu_aid_sl", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.382
+    if renpy.seen_label("alt_day4_neu_aid_generic"):
+        textbutton "alt_day4_neu_aid_generic":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.431
+            action Replay("alt_day4_neu_aid_generic", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.431
+    if renpy.seen_label("alt_day4_neu_mt"):
+        textbutton "alt_day4_neu_mt":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.479
+            action Replay("alt_day4_neu_mt", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.479
+    if renpy.seen_label("alt_day4_neu_us"):
+        textbutton "alt_day4_neu_us":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.528
+            action Replay("alt_day4_neu_us", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.528
+    if renpy.seen_label("alt_day4_neu_home"):
+        textbutton "alt_day4_neu_home":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.577
             action Replay("alt_day4_neu_home", scope={}, locked=None)
     else:
         text "?????":
-            style "replays_text_locked"
+            style "replays_text"
+            xpos 0.235
+            ypos 0.577
+    if renpy.seen_label("alt_day4_neu_un"):
+        textbutton "alt_day4_neu_un":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.625
+            action Replay("alt_day4_neu_un", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.625
+    if renpy.seen_label("alt_day4_neu_mi"):
+        textbutton "alt_day4_neu_mi":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.674
+            action Replay("alt_day4_neu_mi", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.674
+    if renpy.seen_label("alt_day4_neu_sl"):
+        textbutton "alt_day4_neu_sl":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.723
+            action Replay("alt_day4_neu_sl", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.723
+    if renpy.seen_label("alt_day4_neu_dinner"):
+        textbutton "alt_day4_neu_dinner":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.771
+            action Replay("alt_day4_neu_dinner", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.771
+    if renpy.seen_label("alt_day4_neu_curl"):
+        textbutton "alt_day4_neu_curl":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.187
+            action Replay("alt_day4_neu_curl", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.187
+    if renpy.seen_label("alt_day4_neu_lunch"):
+        textbutton "alt_day4_neu_lunch":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.236
+            action Replay("alt_day4_neu_lunch", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.236
+    if renpy.seen_label("alt_day4_neu_supper"):
+        textbutton "alt_day4_neu_supper":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.285
+            action Replay("alt_day4_neu_supper", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.285
+    if renpy.seen_label("alt_day4_neu_map_me_mt_house"):
+        textbutton "alt_day4_neu_map_me_mt_house":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.333
+            action Replay("alt_day4_neu_map_me_mt_house", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.333
+    if renpy.seen_label("alt_day4_neu_mt_diary_vol1"):
+        textbutton "alt_day4_neu_mt_diary_vol1":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.382
+            action Replay("alt_day4_neu_mt_diary_vol1", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.382
+    if renpy.seen_label("alt_day4_neu_us_guards"):
+        textbutton "alt_day4_neu_us_guards":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.431
+            action Replay("alt_day4_neu_us_guards", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.431
+    if renpy.seen_label("alt_day4_neu_us_launch"):
+        textbutton "alt_day4_neu_us_launch":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.479
+            action Replay("alt_day4_neu_us_launch", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.479
+    if renpy.seen_label("alt_day4_neu_map_dining_hall"):
+        textbutton "alt_day4_neu_map_dining_hall":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.528
+            action Replay("alt_day4_neu_map_dining_hall", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.528
+    if renpy.seen_label("alt_day4_neu_sleeptime"):
+        textbutton "alt_day4_neu_sleeptime":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.577
+            action Replay("alt_day4_neu_sleeptime", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.577
+            
+screen replays_neutral_2_7dl:
+    tag menu
+    if renpy.seen_label("alt_day5_morningdream"):
+        textbutton "alt_day5_morningdream":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.187
+            action Replay("alt_day5_morningdream", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.187
+    if renpy.seen_label("alt_day5_neu_start"):
+        textbutton "alt_day5_neu_start":
+            style "log_button"
+            text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
+            action Replay("alt_day5_neu_start", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.236
+    if renpy.seen_label("alt_day5_neu_breakfast"):
+        textbutton "alt_day5_neu_breakfast":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.285
+            action Replay("alt_day5_neu_breakfast", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.285
+    if renpy.seen_label("alt_day5_neu_along"):
+        textbutton "alt_day5_neu_along":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.333
+            action Replay("alt_day5_neu_along", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.333
+    if renpy.seen_label("alt_day5_neu_cndl"):
+        textbutton "alt_day5_neu_cndl":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.382
+            action Replay("alt_day5_neu_cndl", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.382
+    if renpy.seen_label("alt_day5_neu_gaming"):
+        textbutton "alt_day5_neu_gaming":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.431
+            action Replay("alt_day5_neu_gaming", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.431
+    if renpy.seen_label("alt_day5_neu_arrest"):
+        textbutton "alt_day5_neu_arrest":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.479
+            action Replay("alt_day5_neu_arrest", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.479
+    if renpy.seen_label("alt_day5_neu_dinner"):
+        textbutton "alt_day5_neu_dinner":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.528
+            action Replay("alt_day5_neu_dinner", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.528
+    if renpy.seen_label("alt_day5_neu_us_career"):
+        textbutton "alt_day5_neu_us_career":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.577
+            action Replay("alt_day5_neu_us_career", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.577
+    if renpy.seen_label("alt_day5_neu_us_punishment"):
+        textbutton "alt_day5_neu_us_punishment":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.625
+            action Replay("alt_day5_neu_us_punishment", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.625
+    if renpy.seen_label("alt_day5_neu_us_warm_evening"):
+        textbutton "alt_day5_neu_us_warm_evening":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.674
+            action Replay("alt_day5_neu_us_warm_evening", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.674
+    if renpy.seen_label("alt_day5_neu_us_hungry"):
+        textbutton "alt_day5_neu_us_hungry":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.723
+            action Replay("alt_day5_neu_us_hungry", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.723
+    if renpy.seen_label("alt_day5_neu_us_sleetptime"):
+        textbutton "alt_day5_neu_us_sleetptime":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.235
+            ypos 0.771
+            action Replay("alt_day5_neu_us_sleetptime", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.235
+            ypos 0.771
+    if renpy.seen_label("alt_day5_neu_mi_estrade"):
+        textbutton "alt_day5_neu_mi_estrade":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.187
+            action Replay("alt_day5_neu_mi_estrade", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.187
+    if renpy.seen_label("alt_day5_neu_lunch"):
+        textbutton "alt_day5_neu_lunch":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.236
+            action Replay("alt_day5_neu_lunch", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.236
+    if renpy.seen_label("alt_day5_neu_supper"):
+        textbutton "alt_day5_neu_supper":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.285
+            action Replay("alt_day5_neu_supper", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.285
+    if renpy.seen_label("alt_day5_neu_evening"):
+        textbutton "alt_day5_neu_evening":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.333
+            action Replay("alt_day5_neu_evening", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.333
+    if renpy.seen_label("alt_day5_neu_campfire_doom"):
+        textbutton "alt_day5_neu_campfire_doom":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.382
+            action Replay("alt_day5_neu_campfire_doom", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.382
+    if renpy.seen_label("alt_day5_neu_sleepnight"):
+        textbutton "alt_day5_neu_sleepnight":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.431
+            action Replay("alt_day5_neu_sleepnight", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.431
+    if renpy.seen_label("alt_day5_neu_mt_selector"):
+        textbutton "alt_day5_neu_mt_selector":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.479
+            action Replay("alt_day5_neu_mt_selector", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.479
+    if renpy.seen_label("alt_day5_neu_mt_retrib"):
+        textbutton "alt_day5_neu_mt_retrib":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.528
+            action Replay("alt_day5_neu_mt_retrib", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
+            ypos 0.528
+    if renpy.seen_label("alt_day5_neu_mt_tea_party"):
+        textbutton "alt_day5_neu_mt_tea_party":
+            style "log_button"
+            text_style "replays_textbutton"
+            xpos 0.544
+            ypos 0.577
+            action Replay("alt_day5_neu_mt_tea_party", scope={}, locked=None)
+    else:
+        text "?????":
+            style "replays_text"
+            xpos 0.544
 
 screen replays_un_choice_7dl:
     textbutton "7дл":
