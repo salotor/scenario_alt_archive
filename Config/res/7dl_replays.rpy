@@ -28,7 +28,7 @@ init 9999 python:
     #style.replays_text.kerning = 3
     style.replays_text.color = "#7847f3"
     
-init 2:
+init 4:
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars

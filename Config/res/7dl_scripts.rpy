@@ -126,7 +126,22 @@ init -10 python:
                  0     :p+"emo6.png",
             }
         
-init -2 python:
+init 3 python:
+
+    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        def meet(who, name):
+            global store
+            gl = globals()
+            gl[who + "_name"] = name
+            store.names[who] = name
+
+        def save_names_known():
+            gl = globals()
+            global store
+            for x in store.names_list:
+                if not (x == 'narrator' or x == 'th'):
+                    store.names[x] = gl["%s_name"%x]
+
     def make_names_unknown_7dl():
         global store
         meet('ba',u"Физрук")
@@ -190,25 +205,11 @@ init -2 python:
         meet('dreamgirl',u"…")
         meet('voice',u"Голос")
         meet('voices',u"Голоса")
+        
+    make_names_unknown_7dl()
+    set_mode_adv()
+    reload_names()
 
-    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        def meet(who, name):
-            gl = globals()
-            gl[who + "_name"] = name
-    else:
-        def meet(who, name):
-            global store
-            gl = globals()
-            gl[who + "_name"] = name
-            store.names[who] = name
-
-        def save_names_known():
-            gl = globals()
-            global store
-            for x in store.names_list:
-                if not (x == 'narrator' or x == 'th'):
-                    store.names[x] = gl["%s_name"%x]
-            
 init -265 python: 
     #Пресеты с возможностью настройки
     def Noir(id, brightness = -0.4, tint_r = 0.2126, tint_g = 0.7152, tint_b = 0.0722, saturation = 0.5):
