@@ -1133,7 +1133,7 @@ label alt_day2_participate_win_end_new:
                         me "Может, ещё разок?"
                         show el normal pioneer far at left
                     el "Я же сказал — никаких переигровок!"
-                    me "А это не переигровка, это… Это… Фальстарт!"
+                    me "А это не переигровка, это… Это… Фальстарт!" # Лучше такая капитализация: «А это не переигровка, это… это… фальстарт!», но не обязательно.
                     "Он неприязненно посмотрел на меня."
                     el "Ладно, давайте ещё раз!"
                     hide el with dissolve
@@ -1291,7 +1291,7 @@ label alt_day2_participate_win_end_new:
                             "Я подавил желание облегчённо вытереть лоб."
                             show dv grin pioneer2 with dspr
                             dv "А то если хочешь, можем ещё на что-нибудь поспорить?"
-                            "Я отшатнулся"
+                            "Я отшатнулся."
                             "Но постарался ответить солидно:"
                             me "Нет. {w}Свою натюрель ты уже поставила на кон."
                             dreamgirl "Дальше только честь девичья! {w}Ну-ка, скажешь это вслух?"
@@ -2112,7 +2112,7 @@ label alt_day2_semifinal_win_end_new:
     elif alt_my_rival_semifinal.take == 'sh':
         show sh normal pioneer with dspr
         "Шурик кивнул мне и поднялся."
-        "Не знаю, впечатлил его мой навык игры, в которую я играю второй раз в жизни (первый раз — в четвертьфинале) или нет."
+        "Не знаю, впечатлил его мой навык игры, в которую я играю второй раз в жизни (первый раз — в четвертьфинале), или нет."
         "Так или иначе, он достаточно равнодушно отнёсся к поражению."
         show sh smile pioneer with dspr
         sh "Насчёт клуба кибернетиков, если вдруг что…"
@@ -2422,7 +2422,7 @@ label alt_day2_final_fail_end_new:
     
 # ............................................ ДИАЛОГИ
     if alt_my_rival_final.take == 'un':
-        play music take_my_hand fadein 3
+        play music music_7dl["take_my_hand"] fadein 3
         $ lp_un += 1
         show un surprise pioneer with dspr
         "Кажется, Лена ещё не до конца поняла, что именно сейчас произошло."
@@ -2467,7 +2467,7 @@ label alt_day2_final_fail_end_new:
         $ karma += 10
         "Славя застонала и уронила голову на сложенные руки."
         play music music_list["forest_maiden"] fadein 5
-        sl "Вы хотя бы пытались?"
+        sl "Вы хотя бы пытались?" # Это она ко всему отряду, похоже, обращается. Надо бы как-то прояснить этот момент, а то я сначала на понял.
         me "Я — старался!"
         show sl normal pioneer with dspr
         sl "Семен, пожалуйста."
@@ -2596,7 +2596,7 @@ label alt_day2_final_fail_end_new:
             "Такого позора я ещё никогда не испытывал…"
 
     elif alt_my_rival_final.take == 'mi':
-        play music ourfirstmet fadein 3
+        play music music_7dl["ourfirstmet"] fadein 3
         show mi happy pioneer with dspr
         $ lp_mi += 1
         $ karma += 10
@@ -2612,7 +2612,7 @@ label alt_day2_final_fail_end_new:
         th "Дефицит внимания, ласки, тепла и заботы… А я ещё себя хикикомори считал."
         me "А кричать-то зачем?"
         "Оказаться в финале для меня уже было изрядным достижением, поэтому я не особо расстраивался насчёт проигрыша."
-        play music tender_song fadein 3
+        play music music_7dl["tender_song"] fadein 3
         "А Мику вдруг воздела к небу пальчик."
         show mi happy pioneer with dspr
         mi "Ой, а я знаю, кажется! Да! Мне только что идея в голову пришла! Я…"
@@ -2640,7 +2640,7 @@ label alt_day2_final_fail_end_new:
         hide mt
         hide dv
         with dissolve
-        "Так что ещё минут пять — и обе ловчих свалились рядом со столами, а она всё продолжала и продолжала петь, делая в воздухе странные, стригущие движение пальцами."
+        "Так что ещё минут пять — и обе ловчих свалились рядом со столами, а она всё продолжала и продолжала петь, делая в воздухе странные, стригущие движения пальцами."
         "Отчего-то от таких движений, да ещё в исполнении ультрамаринового маникюра неприятно-холодно ёкало в животе."
         show mi normal pioneer far at center with easeinleft
         window hide
@@ -2659,7 +2659,7 @@ label alt_day2_final_fail_end_new:
 
     elif alt_my_rival_final.take == 'us':
         $ lp_us += 1
-        play music genki fadein 3
+        play music music_7dl["genki"] fadein 3
         "Как известно, в карты везёт новичкам и дурачкам."
         "Так как мы все здесь новички, мы были в равных условиях."
         "Но кое-кому перепало на один шанс больше!"
@@ -2718,20 +2718,20 @@ label alt_day2_final_fail_end_new:
         "Жужелица встала."
         "Окинула всех диковатым взглядом."
         mz "Всё, что ли? Больше жертв не будет?"
-        play sound highfive
+        play sound sfx_7dl["highfive"]
         $ renpy.pause (3)
-        play sound highfive
+        play sound sfx_7dl["highfive"]
         $ renpy.pause (3)
         "В полной тишине спросила она."
-        play sound highfive
+        play sound sfx_7dl["highfive"]
         $ renpy.pause (3)
-        play sound highfive
+        play sound sfx_7dl["highfive"]
         show el smile pioneer at left with dissolve
         "Только Электроник продолжал хлопать."
         mz "Ну ладно. Я пойду тогда."
         el "Ура, да здравствует победитель!"
         hide mz           
-        play sound highfive
+        play sound sfx_7dl["highfive"]
         "Закричал Сыроежкин ей вслед."
         "По-моему, это всё-таки любовь."
         sh "Эл, всё, она ушла. Упокойся."
@@ -2767,7 +2767,7 @@ label alt_day2_final_win_end_new:
 
 # ............................................ ДИАЛОГИ
     if alt_my_rival_final.take == 'un':
-        play music take_my_hand fadein 3
+        play music music_7dl["take_my_hand"] fadein 3
         show un shy pioneer with dissolve
         un "К-кажется, в-всё."
         me "Что?"
@@ -2812,7 +2812,7 @@ label alt_day2_final_win_end_new:
 
     elif alt_my_rival_final.take == 'sl':
         $ lp_sl += 1
-        play music Please_Reprise fadein 3
+        play music music_7dl["Please_Reprise"] fadein 3
         show sl smile pioneer with dspr
         "Я победил?"
         "Победил?!"
@@ -2858,7 +2858,7 @@ label alt_day2_final_win_end_new:
 
     elif alt_my_rival_final.take == 'dv':
         $ lp_dv += 1
-        play music sheiscool fadein 3
+        play music music_7dl["sheiscool"] fadein 3
         th "Я выиграл!"
         th "Выиграл?"
         th "Выиграл!!!"
@@ -2899,7 +2899,7 @@ label alt_day2_final_win_end_new:
     elif alt_my_rival_final.take == 'mi':
         $ lp_mi += 2
         $ alt_day2_mi_snap = True
-        play music tellyourworld fadein 3
+        play music music_7dl["tellyourworld"] fadein 3
         show mi smile pioneer with dspr
         mi "Ты и правда победил! Ты молодец!"
         "Воскликнула она."
@@ -2928,11 +2928,11 @@ label alt_day2_final_win_end_new:
         show ba smile uniform with dspr
         ba "Для тебя, малая, сколько влезет."
         "Из ниоткуда в его руках появился жёсткий коричневый чехол для фотоаппарата, а оттуда…"
-        "Старый добрый «компакт-автомат», пленочный."
+        "Старый добрый «компакт-автомат», плёночный."
         "Я чуть было не сказал «раритет», но видно было, что машинка рабочая."
         ba "Только без вспышки сегодня, так что становитесь как-нибудь, где посветлее."
         "Мику улыбнулась и развернула кипучую деятельность, тормоша всех и переставляя."
-        "В результате, полотнище таблицы было снято и перенесено поближе к окошку, где Шурик и Электроник держали его на растяг."
+        "В результате полотнище таблицы было снято и перенесено поближе к окошку, где Шурик и Электроник держали его на растяг."
         scene bg int_dining_hall_sunset
         with dissolve
         scene
@@ -2942,7 +2942,7 @@ label alt_day2_final_win_end_new:
         "Ещё ближе."
         "Ещё чуточку."
         mi "Сень!"
-        "Наконец, не выдержала она."
+        "Наконец не выдержала она."
         mi "Я же с тобой фотографируюсь!!! А ну, быстро обними девушку."
         me "Но я…"
         "Я вздохнул."
@@ -2960,9 +2960,9 @@ label alt_day2_final_win_end_new:
         with dissolve
         "Но… поздно!"
         window hide
-        play sound snap
+        play sound sfx_7dl["snap"]
         scene expression Sepia("cg d2_mi_me_polaroid_7dl")
-        show PolariodFrame
+        show PolaroidFrame_7dl
         with flash
         $ renpy.pause(3)
         me "Сыыыр."
@@ -2980,7 +2980,7 @@ label alt_day2_final_win_end_new:
         th "Выиграл!!!"
         "Бац!" with vpunch
         with flash_red
-        play music genki fadein 3
+        play music music_7dl["genki"] fadein 3
         show us calml pioneer with dspr
         us "И ничего ты не выиграл!"
         "Она хмуро смотрела на меня снизу вверх."
@@ -3005,7 +3005,7 @@ label alt_day2_final_win_end_new:
         hide dv with dissolve
 
     elif alt_my_rival_final.take == 'sh':
-        play music dead_silence fadein 3
+        play music music_7dl["dead_silence"] fadein 3
         show sh rage pioneer with dspr
         sh "Значит, победил?"
         "Медленно произнёс он."
