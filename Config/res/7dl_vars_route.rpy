@@ -239,19 +239,6 @@ label alt_day7_us_px_vars:
     $ alt_day7_us_px_escaped = False
     return
     
-label alt_day4_uvao_vars:
-    $ alt_uvao_true = False
-    $ alt_uvao_D4_viola_morning = False
-    $ alt_uvao_D4_concert = False
-    $ alt_uvao_D4_lunch_un = False
-    $ alt_uvao_D4_lunch_sl = False
-    $ alt_uvao_D4_supper_cs = False
-    $ alt_uvao_D5_hentai = False
-    $ alt_uvao_D5_sh_mines = False
-    $ alt_uvao_D5_evening_sl = False
-    $ alt_uvao_D5_evening_dv_un = False
-    return
-    
 label alt_day4_sl_7dl_vars:
     $ alt_day4_sl_7dl_phone = False
     $ alt_day4_sl_7dl_rendezvous = False

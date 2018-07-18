@@ -1110,7 +1110,7 @@ label alt_day1_mod_tan:
     scene bg ext_house_of_mt_day with fade
     show sl normal pioneer
     with dissolve
-    play music music_list["everyday_theme"] fadein 2
+    play music music_7dl["everyday"] fadein 2
     "Домик был забавным — такие обычно рисуют дети: треугольный, с одной дверкой."
     "Это, да ещё и отвоёвывающие себе пространство кусты сирени, сложились в удивительной красоты натюрморт, достойный кисти любого художника."
     th "Или пейзаж?"
