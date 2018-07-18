@@ -2,10 +2,11 @@
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
     $ alt_release_no = "0.34.a"
+    $ hf = "hf0"
     $ alt_compatible_release_no = ["0.00.x", "0.34.a"] 
     $ plthr = u"none"
     $ config.name = "Everlasting Summer 1.1 + 7dl "
-    $ config.version = alt_release_no + hf0
+    $ config.version = alt_release_no + hf
     
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
