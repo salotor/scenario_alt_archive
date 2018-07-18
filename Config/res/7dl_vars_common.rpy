@@ -31,7 +31,7 @@ init 2:
     $ store.names_list.append('ba') #Саныч
     
     $ colors['am'] = {'night': (88, 18, 67, 255), 'sunset': (255, 255, 255, 255), 'day': (252, 255, 252, 255), 'prolog': (155, 155, 155, 255)}
-    $ store.names_list.append('ba') #Альтернативный протагонист
+    $ store.names_list.append('am') #Альтернативный протагонист
     
     $ colors['sak'] = {'night': (44, 12, 67, 255), 'sunset': (66, 18, 100, 255), 'day': (176, 10, 192, 255), 'prolog': (75, 34, 100, 255)}
     $ store.names_list.append('sak')#Сакишита
