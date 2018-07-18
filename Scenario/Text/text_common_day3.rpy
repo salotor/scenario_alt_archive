@@ -9429,7 +9429,7 @@ label alt_day3_dance_dance2:
         hide un with dissolve
         window hide
         return
-    elif alt_day3_us_bugs == 1 and alt_day3_dancing != 132:
+    elif (alt_day3_us_bugs == 1) and (alt_day3_dancing != 132):
         show us smile dress at center with dissolve
         play music music_7dl["genki"] fadein 3
         "Я был ещё весь во власти томного вечера, когда моё настроение крайне невежливо испортили — наступив на ногу."
@@ -11564,7 +11564,6 @@ label alt_day3_sleeptime:
         th "Лучше бы я с утра не просыпался. Как ни крути"
         th "Да вот как ни крути — а кошмарнее дня мне уже очень давно проживать не доводилось."
         th "Увлекательная стори. И всё о том, как я облажался."
-        "Завершившаяся феерическим унижением руками Двачевской." # а она тут при чём?
         return
     else:
         "С этой беготнёй по лагерю, со всеми этими делами, я уставал так, что…"
