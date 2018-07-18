@@ -26,7 +26,7 @@ label alt_day2_map:
     stop sound_loop
     stop ambience
     stop music fadeout 6
-    play music music_list["everyday_theme"] fadein 3
+    play music music_7dl["everyday"] fadein 3
     if alt_day2_necessary_done != 4:
         play sound sfx_paper_bag
         $ show_map_alt1()
