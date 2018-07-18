@@ -3,6 +3,7 @@
         $ routetag = "sl7dl_sport" #Спортивная форма для бегающих со Славей Герка и Локи
     else:
         $ routetag = "sl7dl" #Базис
+
     call alt_day4_sl_7dl_vars
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -226,3 +227,42 @@ label alt_day7_sl_7dl_start:
         call alt_day7_sl_7dl_bad
     pause(1)
     return
+=======
+    if herc:
+        call alt_day4_sl_7dl_herc_karma
+    elif loki:
+        call alt_day4_sl_7dl_loki_lp
+    else:
+        call alt_day4_sl_7dl_sam_sp
+    pause(1)
+    call alt_day4_sl_7dl_dinner
+    pause(1)
+    if herc:
+        call alt_day4_sl_7dl_herc_lp
+    elif loki:
+        call alt_day4_sl_7dl_loki_sp
+    else:
+        call alt_day4_sl_7dl_sam_karma
+    pause(1)
+    call alt_day4_sl_7dl_lunch
+    pause(1)
+    if herc:
+        call alt_day4_sl_7dl_herc_karma
+    elif loki:
+       call alt_day4_sl_7dl_loki_lp
+    else:
+        call alt_day4_sl_7dl_sam_sp
+    pause(1)
+    call alt_day4_sl_7dl_supper
+    pause(1)
+    if herc:
+        call alt_day4_sl_7dl_herc_lp
+    elif loki:
+       call alt_day4_sl_7dl_loki_sp
+    else:
+        call alt_day4_sl_7dl_sam_karma
+    pause(1)
+    call alt_day4_sl_7dl_sleeptime
+    jump alt_day5_sl_7dl_start
+    
+>>>>>>> master

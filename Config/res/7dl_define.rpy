@@ -450,6 +450,7 @@ init:
     image bg ext_warehouse_blurry_7dl = get_image_7dl("bg/ext_warehouse_blurry_7dl.jpg")
     image bg ext_warehouse_night_7dl = get_image_7dl("bg/ext_warehouse_night_7dl.jpg")
     image bg ext_washstand_night_7dl = get_image_7dl("bg/ext_washstand_night_7dl.jpg")
+
     image bg ext_winter_night_rotate_7dl = get_image_7dl("bg/outro/ext_winter_night_rotate_7dl.png")
     image bg ext_winter_night_7dl = get_image_7dl("bg/outro/ext_winter_night_7dl.png")
     image bg ext_winterpark_7dl = get_image_7dl("bg/outro/ext_winterpark_7dl.png")
@@ -617,6 +618,7 @@ init:
     
     image cg d4_sl_phone_ring_7dl = get_image_7dl("cg/d4_sl_phone_ring_7dl.png")
     image cg d4_sl_phone_up_7dl = get_image_7dl("cg/d4_sl_phone_ring_7dl.png")
+
     image cg d4_sl_lookup_7dl = get_image_7dl("cg/d4_sl_lookup_7dl.png")
     image cg d4_sl_sleeping_7dl = get_image_7dl("cg/d4_sl_sleeping_7dl.jpg")
     image cg d4_sl_sleep_7dl = get_image_7dl("cg/d4_sl_sleep_7dl.jpg")
