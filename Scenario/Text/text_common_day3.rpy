@@ -9386,7 +9386,7 @@ label alt_day3_choose:
             "Музыка здесь, конечно, ничего. Но танцевать я всё равно не стану."
             "Что я, больной, что ли?"
             th "Одиночество — вот наше всё."
-    if alt_day3_dancing == 132:
+    if alt_day2_date == 132:
         scene cg d3_disco_no_un_7dl with dissolve
     else:
         scene cg d3_disco with dissolve
@@ -9394,7 +9394,7 @@ label alt_day3_choose:
     "С некоторым удивлением я разглядел на танцполе и кибернетиков."
     "То, что они изображали, назвать танцем можно было лишь с ооочень большой натяжкой."
     th "Заболели, что ли?"
-    if alt_day3_dancing == 132:
+    if alt_day2_date == 132:
         "А вот Лены там больше не было."
     if alt_day3_dv_dj:
         "Алиса открыла в себе талант церемониймейстера, и отрывалась на полную катушку, буквально светясь от переполняющей её энергетики!"
@@ -9436,7 +9436,7 @@ label alt_day3_dance_dance2:
         hide un with dissolve
         window hide
         return
-    elif alt_day3_us_bugs == 1 and alt_day3_dancing != 132:
+    elif alt_day3_us_bugs == 1  and alt_day2_date != 132:
         show us smile dress at center with dissolve
         play music music_7dl["genki"] fadein 3
         "Я был ещё весь во власти томного вечера, когда моё настроение крайне невежливо испортили — наступив на ногу."
@@ -9475,7 +9475,7 @@ label alt_day3_dance_dance2_menu:
     menu:
         "Помочь им":
             $ alt_day3_technoquest_st3_help = True
-            if (alt_day3_dancing == 132) or not (alt_day3_dv_dj or alt_day3_mi_dj):
+            if not (alt_day3_dv_dj or alt_day3_mi_dj):
                 if alt_day3_dancing == 2:
                     if alt_day3_sl_day_event:
                         $ lp_sl += 1
@@ -9494,7 +9494,7 @@ label alt_day3_dance_dance2_menu:
                 el "Понимаю."
                 "Электроник пожал плечами, но, похоже, не был слишком удивлён."
         "Остаться танцевать":
-            if alt_day3_dancing == 132:
+            if alt_day2_date == 132:
                 hide el with dissolve
                 "Электроник ушёл расстроенный, а я уселся на скамейку."
                 "Быстрые танцы мне никогда не давались."
@@ -11571,7 +11571,7 @@ label alt_day3_sleeptime:
         th "Лучше бы я с утра не просыпался. Как ни крути"
         th "Да вот как ни крути — а кошмарнее дня мне уже очень давно проживать не доводилось."
         th "Увлекательная стори. И всё о том, как я облажался."
-        "Завершившаяся феерическим унижением руками Двачевской." # а она тут при чём?
+        "Завершившаяся феерическим унижением руками Двачевской."
         return
     else:
         "С этой беготнёй по лагерю, со всеми этими делами, я уставал так, что…"

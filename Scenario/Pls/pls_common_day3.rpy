@@ -176,7 +176,7 @@ label alt_day3_disco:
             call alt_day3_sleeptime
             pause(1)
             jump alt_day3_slots
-        elif alt_day3_us_bugs == 1 and alt_day3_dancing != 132:
+        elif alt_day3_us_bugs == 1 and alt_day2_date != 132:
             call alt_day3_mt_scare
             pause(1)
             call alt_day3_bath_voyeur
@@ -191,14 +191,14 @@ label alt_day3_disco:
                 call alt_day3_dance_dance2_menu
                 pause(1)
                 if alt_day3_technoquest_st3_help:
-                    if (alt_day3_dv_dj or alt_day3_mi_dj) and not (alt_day3_dancing == 132):
+                    if alt_day3_dv_dj or alt_day3_mi_dj:
                         jump alt_day3_disco2
                     else:
                         call alt_day3_technoquest3
                         pause(1)
                         jump alt_day3_slots
                 else:
-                    if alt_day3_dancing == 132:
+                    if alt_day2_date == 132:
                         call alt_day3_technoquest3
                         pause(1)
                         jump alt_day3_slots
