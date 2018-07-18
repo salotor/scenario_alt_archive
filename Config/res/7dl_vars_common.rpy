@@ -4,12 +4,15 @@ init -1:
     $ alt_release_no = "0.34.a"
     $ alt_compatible_release_no = ["0.00.x", "0.34.a"] 
     $ plthr = u"none"
-
+    $ config.name = "Everlasting Summer 1.1 + 7dl "
+    $ config.version = alt_release_no + hf0
+    
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
+    $ list_clubs_7dl = []
     $ timeskip_come = "Ты пойдёшь со мной?"
-    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 4."
+    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 5."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
     $ timeskip3 = "Я скучаю…"
     $ timeskip4 = "Я хочу к тебе…"
@@ -21,39 +24,51 @@ init 2:
     $ timeskip10 = "Спасибо…"
     $ timeskip11 = "Прощай."
     $ timeskip12 = "Ты потерялся, малыш?"
-    $ alt_credits_text = "Команда 7 дней лета (7дл-кун сотоварищи) благодарит вас за время, уделённое игре!\n\nБлагодарности:\n\nЛюдям, ловившим ошибки, баги и нелогичности, альфа-, бета- и гамма-тестерам.\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nОСОБЫЕ БЛАГОДАРНОСТИ:\n\nMannych - за колоритного физрука!\n\nEldhenn - за адаптацию игры в Steam.\n\nPeregarrett, Chess - за кошко-рут.\n\nЛенофаг Простой, Ravsii - за идеи и помощь их реализации.\n\nNuttyprof, openplace - за новую карту лагеря.\n\nМакс Смолев(sorasora) - за новые cg-сценки и стиль БЛ.\n\nАлексей - за фоны и модели.\n\nGoodbyeNona - за супер-фоны!\n\n☆ FairyApple ☆ - за вдохновение и неконтролируемые приступы позитива!\n\nВсем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ.\n"
+    $ alt_credits_text = "{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nYungPunk\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
     
+    #\n\nPeregarrett, Chess - за кошко-рут.#Вот допишете, тогда и поговорим.
     $ colors['ba'] = {'night': (88, 18, 67, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
-    $ store.names_list.append('ba')
+    $ store.names_list.append('ba') #Саныч
+    
+    $ colors['am'] = {'night': (88, 18, 67, 255), 'sunset': (255, 255, 255, 255), 'day': (252, 255, 252, 255), 'prolog': (155, 155, 155, 255)}
+    $ store.names_list.append('ba') #Альтернативный протагонист
     
     $ colors['sak'] = {'night': (44, 12, 67, 255), 'sunset': (66, 18, 100, 255), 'day': (176, 10, 192, 255), 'prolog': (75, 34, 100, 255)}
-    $ store.names_list.append('sak')
+    $ store.names_list.append('sak')#Сакишита
     
     $ colors['ai'] = {'night': (44, 12, 67, 255), 'sunset': (66, 18, 100, 255), 'day': (176, 10, 192, 255), 'prolog': (34, 150, 100, 255)}
-    $ store.names_list.append('ai')
+    $ store.names_list.append('ai')#Собеседник, ИИ
     
     #Камео мисс Селезнёвой
     $ colors['ase'] = {'night': (97, 10, 10, 255), 'sunset': (137, 14, 14, 255), 'day': (236, 66, 66, 255), 'prolog': (137, 14, 14, 255)}
     $ store.names_list.append('ase')
     
-    #Толпа - не используется
     $ colors['we'] = {'night': (67, 23, 111, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
-    $ store.names_list.append('we')
+    $ store.names_list.append('we')#Толпа
     
-    $ colors['ml'] = {'night': (20, 69, 68, 255), 'sunset': (32, 106, 104, 255), 'day': (74, 200, 147, 255), 'prolog': (50, 20, 80, 255)}
-    $ store.names_list.append('ml')
+    $ colors['ml'] = {'night': (20, 69, 68, 255), 'sunset': (32, 106, 104, 255), 'day': (74, 200, 147, 255), 'prolog': (150, 120, 180, 255)}
+    $ store.names_list.append('ml')#Малец1
     
-    $ colors['ml2'] = {'night': (20, 46, 68, 255), 'sunset': (32, 73, 104, 255), 'day': (74, 170, 147, 255), 'prolog': (32, 75, 106, 255)}
-    $ store.names_list.append('ml2')
+    $ colors['ml2'] = {'night': (20, 46, 68, 255), 'sunset': (32, 73, 104, 255), 'day': (74, 170, 147, 255), 'prolog': (132, 175, 106, 255)}
+    $ store.names_list.append('ml2')#Малец2
     
     $ colors['ml3'] = {'night': (30, 46, 68, 255), 'sunset': (48, 73, 104, 255), 'day': (107, 170, 147, 255), 'prolog': (48, 75, 106, 255)}
-    $ store.names_list.append('ml3')
+    $ store.names_list.append('ml3')#Малец3
+    
+    $ colors['dn'] = {'night': (30, 46, 68, 255), 'sunset': (48, 73, 104, 255), 'day': (107, 170, 147, 255), 'prolog': (48, 75, 106, 255)}
+    $ store.names_list.append('dn')#Данечка
+    
+    $ colors['al'] = {'night': (30, 46, 68, 255), 'sunset': (48, 73, 104, 255), 'day': (107, 170, 147, 255), 'prolog': (48, 75, 106, 255)}
+    $ store.names_list.append('al')#Алька
+    
+    $ colors['tn'] = {'night': (30, 46, 68, 255), 'sunset': (48, 73, 104, 255), 'day': (107, 170, 147, 255), 'prolog': (48, 75, 106, 255)}
+    $ store.names_list.append('tn')#Тоник
     
     $ colors['voice1'] = {'night': (159, 8, 73, 255), 'sunset': (196, 7, 92, 255), 'day': (255, 136, 192, 255), 'prolog': (196, 7, 124, 255)}
     $ store.names_list.append('voice1')
     
     $ colors['bb'] = {'night': (159, 8, 73, 255), 'sunset': (196, 7, 92, 255), 'day': (255, 136, 192, 255), 'prolog': (196, 7, 124, 255)}
-    $ store.names_list.append('bb')
+    $ store.names_list.append('bb')#Биг босс (начальник)
     
     $ colors['icq'] = {'night': (6, 62, 14, 255), 'sunset': (10, 91, 20, 255), 'day': (10, 204, 10, 255), 'prolog': (10, 91, 30, 255)}
     $ store.names_list.append('icq')
@@ -71,6 +86,7 @@ init 2:
         $ colors['dy'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (56, 90, 107, 255), 'prolog': (192, 192, 192, 255)}
         $ store.names_list.append('dy')
     
+        $ names['am'] = u'Я'
         $ names['ba'] = u'Физрук'
         $ names['sak'] = u'Старик'
         $ names['ai'] = u'Мужчина'    
@@ -85,6 +101,9 @@ init 2:
         $ names['voices'] = u'Голоса'
         $ names['kids'] = u'Дети'
         $ names['dy'] = u'Динамики'
+        $ names['dn'] = u'Мальчик'
+        $ names['al'] = u'Мальчик'
+        $ names['tn'] = u'Мальчик'
 
 label scenario__alt_sevendl:
 # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения

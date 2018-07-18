@@ -136,7 +136,7 @@
     "Я что-то утвердительно угукнул."
     cs "Тогда поднимайся, завтракать будем."
     me "Подниматься?"
-    play music music_list["everyday_theme"] fadein 5
+    play music music_7dl["everyday"] fadein 5
     play sound sfx_7dl["blanket"]
     cs "Сейчас."
     "Она перебросила рубашку и шорты через ширму."

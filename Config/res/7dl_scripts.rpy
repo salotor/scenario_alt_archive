@@ -132,6 +132,9 @@ init -2 python:
         meet('ba',u"Физрук")
         meet('ase',u"Алиса")
         meet('we',u"Толпа") # не используется
+        meet('dn',u"Мальчик")
+        meet('al',u"Мальчик")
+        meet('tn',u"Мальчик")
         meet('ml',u"Мальчик")
         meet('ml2',u"Мальчик")
         meet('ml3',u"Мальчик")
@@ -164,9 +167,9 @@ init -2 python:
         meet('ba',u"Саныч")
         meet('ase',u"Алиса")
         meet('we',u"Толпа") # не используется
-        meet('ml',u"Даня")
-        meet('ml2',u"Тоник")
-        meet('ml3',u"Алька")
+        meet('dn',u"Даня")
+        meet('tn',u"Тоник")
+        meet('al',u"Алька")
         meet('voice1',u"Продавщица")
         meet('kids',u"Дети")
         meet('dy',u"Динамики")
@@ -341,33 +344,59 @@ init -5 python:
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
                 
-            elif routetag == "sl": #Классическая ветка гуд
-                renpy.show("sl normal pioneer", at_list=[left])
+            elif routetag == "sl": #Классическая ветка, нормал
+                renpy.show("sl normal pioneer2", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
-                
-            elif routetag == "sltrue": #Классическая ветка гуд
+            elif routetag == "sltrue": #Классик, тру
                 renpy.show("sl shy sport", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
-                
             elif routetag == "slcas": #Классическая ветка гуд
-                renpy.show("sl smile2 dress", at_list=[left])
+                renpy.show("sl smile casual", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
-                
             elif routetag == "slbad": #Классическая ветка, бэд
-                renpy.show("sl sad pioneer", at_list=[left])
+                renpy.show("sl sad pioneer2", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)    
-                
-            elif routetag == "sl7dl": #7дл-ветка, гуд
+            
+            elif routetag == "sl7dl": #Ветка 7дл, базис
+                renpy.show("sl normal pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dl_herc": #Ветка 7дл, Герк
+                renpy.show("sl smile pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dl_loki": #Ветка 7дл, Локи
                 renpy.show("sl smile pioneer", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
                 
-            elif routetag == "sl7dlbad": #7дл-ветка, дисмисс
-                renpy.show("sl cry pioneer", at_list=[left])
+            elif routetag == "sl7dl_sport": #Ветка 7дл, спортивная
+                renpy.show("sl smile sport", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dl_dress": #Ветка 7дл, платье
+                renpy.show("sl smile dress", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            
+            elif routetag == "sl7dltrue": #Ветка 7дл, тру
+                renpy.show("sl_gr normal casual", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dlneu": #Ветка 7дл, тру
+                renpy.show("sl smile casual", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dlgood": #Ветка 7дл, тру
+                renpy.show("sl sad casual", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dlbad": #Ветка 7дл, тру
+                renpy.show("sl cry pioneer2", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
             
