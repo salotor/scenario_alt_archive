@@ -58,4 +58,3 @@
     $ sfx_7dl["match_lights"] = get_sfx_uvao_7dl("lighting-a-match_7dl.ogg")
     $ sfx_7dl["silence"] = get_sfx_uvao_7dl("silence_4sec_7dl.ogg")
     $ music_7dl["my_chrysalis_highwayman"] = get_music_uvao_7dl("my_chrysalis_highwayman_7dl.ogg")
-    
