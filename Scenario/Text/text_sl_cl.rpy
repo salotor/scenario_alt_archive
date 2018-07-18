@@ -4228,7 +4228,7 @@ label alt_day5_sl_begin:
     "Но Ульяна меня удивила:"
     scene expression Desat("bg ext_stand3_7dl") at enterright
     show sl normal pioneer at left
-    show us caldn sport at right
+    show us calml sport at right
     show rain_overlay
     with dissolve
     us "Эй! Я не маленькая!"
@@ -4740,7 +4740,7 @@ label alt_day5_sl_begin:
     "И посветил через плечо."
     stop sound_loop
     window hide
-    scene cg d5_sl_snark_7dl.png with flash
+    scene cg d5_sl_snark_7dl with flash
     "Смазаный свет фонарика отразился в чьих-то огромных, чёрных, практически без белка, глазах, двинулся дальше."
     "Меня парализовало от страха."
     "Я повёл фонарём назад."
@@ -11420,7 +11420,7 @@ label alt_day6_sl_ambulance:
     us "Чёнадоязанята!"
     "Выпалила она одним словом."
     me "Дело есть!"
-    show us caldn sport with dspr
+    show us calml sport with dspr
     us "Да какое дело, уйди, несчастный!"
     "Она оттолкнула меня и попыталась было убежать, но сейчас я был в режиме Слави и на глупости просто не обращал внимания!"
     "Тем более, что мимо нас куда-то бежала очень чем-то огорчённая Ольга Дмитриевна."

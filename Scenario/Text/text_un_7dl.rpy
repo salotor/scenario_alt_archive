@@ -12152,7 +12152,7 @@ label alt_day7_un_7dl_true:
     "На улице дождь."
     "Теперь она — полноправная владелица места, что так и не смогло стать мне домом."
     window hide
-    scene int_excalator_7dl with fade
+    scene bg int_excalator_7dl with fade
     "И хорошо: с глаз долой — из сердца вон."
     play ambience ambience_7dl["railroad"] fadein 3
     show un tr1 at left
@@ -12161,7 +12161,7 @@ label alt_day7_un_7dl_true:
     "Разве что весь путь до метро терзали меня образы двух красивых зеленоглазок."
     pause(1)
     window hide
-    scene int_excalator_7dl
+    scene bg int_excalator_7dl
     with dissolve
     "И никак не удавалось выбрать одну из них, так как внезапно проснулась память, которая рассказала мне всё."
     "И вот со всем этим {i}всем{/i}, я еду на эскалаторе вниз, бездумно всматриваясь в лица проезжающих мимо."
