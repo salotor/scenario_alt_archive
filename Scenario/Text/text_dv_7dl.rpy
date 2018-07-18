@@ -3363,7 +3363,7 @@ label alt_day4_dv_7dl_roadtrip:
     $ persistent.sprite_time = "night"
     $ night_time()
     window hide
-    scene cg d4_cs_car_dark
+    scene cg d4_cs_car_dark_7dl
     with dissolve
     "Дальше события завертелись чуть шустрее из-за общей интенсивности"
     "…вот мы подруливаем к областной больнице…"
@@ -3527,7 +3527,7 @@ label alt_day4_dv_7dl_alco:
     return
 
 label alt_day4_dv_7dl_back_to_camp:
-    scene cg d4_cs_car_open
+    scene cg d4_cs_car_open_7dl
     with dissolve
     "Спускать вниз напичканного болеутоляющим Шурика было проще, чем поднимать."
     "В конце концов, его как следует перепеленали, прижали, зашили и поставили несколько скобок — минимизировали все риски для бесценной жизни очкарика."
@@ -3568,7 +3568,7 @@ label alt_day4_dv_7dl_back_to_camp:
     "Кивнула она, заводя «Волгу»."
     cs "Тронулись, что ли?"
     window hide
-    scene cg d4_cs_car_rim
+    scene cg d4_cs_car_rim_7dl
     with fade
     "И мы тронулись. Часов до четырёх мы ехали, перебрасываясь односложными  фразами, а после меня выключило."
     show blinking
@@ -13489,7 +13489,7 @@ label alt_day7_dv_7dl_rej_rf_end:
     "Спасшихся будет… Минимум. "
     nvl clear
     play sound_loop sfx_street_traffic_outside fadein 2
-    scene int_excalator_7dl
+    scene bg int_excalator_7dl
     with fade
     "Что там дальше? Автозаправочная станция, которую обнимает поворотом трамвайный путь — если она рванёт, от меня не останется даже мокрого места, я даже почувствовать ничего не успею."
     "Но это чуть позже, перед этим всегда есть шанс, что собственно трамвай сковырнётся с виадука, куда то и дело заезжают «хозяева жизни» на «туарегах» и «кайенах»."
