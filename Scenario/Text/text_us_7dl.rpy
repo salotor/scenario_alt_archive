@@ -12360,8 +12360,8 @@ label alt_day7_us_px_fairytale:
     scene bg ext_adductius_7dl
     with dissolve
     play ambience ambience_7dl["town_day"] fadein 5
-    $ alt_meet['me'] = u"Я"
-    $ alt_meet['dv'] = u"Она"
+    $ meet('me','Я') # может лучше просто am использовать, раз ввели?
+    $ meet('dv','Она')
     "Она нашла меня одного, брошенного на качелях, спросила, почему я один."
     "А что я могу ей сказать?"
     "Я один потому, что никому не нужен?"
