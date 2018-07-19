@@ -3835,7 +3835,7 @@ label alt_day2_dinner:
                 $ alt_day2_club_join_volley = False 
                 $ alt_day2_club_join_badmin = False
                 $ alt_day2_club_join_musc = False
-            "Давайте, футбол, что ли." if alt_day2_club_join_footbal:
+            "Давайте футбол, что ли." if alt_day2_club_join_footbal:
                 me "Больше-то заняться всё равно нечем."
                 mt "Футбол так футбол."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
@@ -3843,7 +3843,7 @@ label alt_day2_dinner:
                 $ alt_day2_club_join_volley = False 
                 $ alt_day2_club_join_badmin = False
                 $ alt_day2_club_join_musc = False
-            "Давайте, волейбол?" if alt_day2_club_join_volley:
+            "Давайте волейбол?" if alt_day2_club_join_volley:
                 me "Останусь в волейбольной секции, пожалуй."
                 mt "Поближе к Славе? {w}Молодец какой."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
@@ -3851,7 +3851,7 @@ label alt_day2_dinner:
                 $ alt_day2_club_join_footbal = False
                 $ alt_day2_club_join_badmin = False
                 $ alt_day2_club_join_musc = False
-            "Давайте, бадминтон?"if alt_day2_club_join_badmin:
+            "Давайте бадминтон?" if alt_day2_club_join_badmin:
                 me "В бадминтон. Воланчики гонять."
                 mt "Немного не мальчишеский спорт, не считаешь?"
                 "Я пожал плечами."
@@ -3885,7 +3885,7 @@ label alt_day2_dinner:
         me "А вы меня записываться отправили или на обход?"
         show mt laugh pioneer with dspr
         mt "А ты непрост! {w}На самом деле я надеялась, что ты найдёшь себе занятие по душе."
-        mt "Но раз ты нигде заниматься не хочешь, придётся твоё свободное время потратить на общественную активность. Ты рад."
+        mt "Но раз ты нигде заниматься не хочешь, придётся твоё свободное время потратить на общественную активность. Ты рад?"
         me "Очень."
         "Пробормотал я."
         "К несчастью, Ольга Дмитриевна была полностью иммунна к сарказму, так как и бровью не повела."
