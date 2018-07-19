@@ -91,9 +91,9 @@ label after_load:
 
         # пишем версию 7дл в трейсбеках
         if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-            $ config.version = "1.1 + 7DL v.%s %d" % (alt_release_no, alt_hotfix_no)
+            $ config.version = "1.1 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
         else:
-            $ config.version = "1.2 + 7DL v.%s %d" % (alt_release_no, alt_hotfix_no)
+            $ config.version = "1.2 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
             $ save_names_known()
 
         # Проверяем, совпадают ли версии сохранения и мода и есть ли версия сохранения в списке совместимых

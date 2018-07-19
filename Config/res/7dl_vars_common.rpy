@@ -128,9 +128,9 @@ label alt_day0_vars: #Переменные нулевого дня
     if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
     if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        $ config.version = "1.1 + 7DL v.%s %d" % (alt_release_no, alt_hotfix_no)
+        $ config.version = "1.1 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
     else:
-        $ config.version = "1.2 + 7DL v.%s %d" % (alt_release_no, alt_hotfix_no)
+        $ config.version = "1.2 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
     return
     
 label alt_day1_vars: #Переменные первого дня
