@@ -2916,7 +2916,7 @@ label sdl_achvlist_mesmt_Author:
     if persistent.alt_mi_7dl_ps == True:
         show acm_logo_mi_bitter_truth  with dissolve:
             xcenter 800 ycenter 258 
-        show de_check_inactive4 with dissolve:
+        show de_check_active4 with dissolve:
             pos (590, 232)
     else:
         show de_achiv_lock4 with dissolve:
@@ -2944,7 +2944,7 @@ screen sdl_achvlist_mesmt_Author:
             hovered [Show("sdl_achv_kat_me", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_kat_me", transition=Dissolve(0.5))]
             action [Show("sdl_achv_kat_me", transition=Dissolve(0.5))]
-        if persistent.sl_cl_cata:
+        if persistent.alt_lamp:
             hotspot ((590, 40, 50, 52)): #Zerbrechen-Ende-Jump
                 hover_sound sdl_achv_click
                 hovered [Show ("de_check_active1", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
@@ -2954,7 +2954,7 @@ screen sdl_achvlist_mesmt_Author:
             hovered [Show("sdl_achv_kat_me", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_kat_me", transition=Dissolve(0.5))]
             action [Show("sdl_achv_kat_me", transition=Dissolve(0.5))] 
-        if persistent.dv_7dl_tulpa:
+        if persistent.alt_deep:
             hotspot ((590, 104, 50, 52)): #Tiefe-Ende-Jump
                 hover_sound sdl_achv_click
                 hovered [Show ("de_check_active2", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
@@ -2968,11 +2968,11 @@ screen sdl_achvlist_mesmt_Author:
             hovered [Show("sdl_achv_pst_me", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_pst_me", transition=Dissolve(0.5))]
             action [Show("sdl_achv_pst_me", transition=Dissolve(0.5))] 
-        if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_true and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
+        if persistent.alt_mi_7dl_ps:
             hotspot ((590, 232, 50, 52)): #Postscriptum-Miku-Bitter-Jump
                 hover_sound sdl_achv_click
-                hovered [Show ("de_check_active2", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
-                unhovered [Hide ("de_check_active2", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))] 
+                hovered [Show ("de_check_active4", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))] 
                 action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_me_smtA", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_me_sm_active", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)),  Hide("de_check_active3", transition=Dissolve(0.5)),Jump("alt_day7_mi_7dl_postscriptum")]
         else:
             hotspot ((590, 232, 50, 50)): #Ende-Info
