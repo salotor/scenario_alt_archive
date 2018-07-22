@@ -3,7 +3,7 @@
     # $ mods["alt_gallery_start"] = u"Галерея 7дл"
     # $ mod_tags["alt_gallery_start"] = ["length:days","gameplay:vn","protagonist:male"]
 
-init 9999 python:
+init 999 python:
     cursive_font = default_7dl_path + "Pics/fonts/olgactt.ttf"
 
     style.replays_textbutton = Style(style.base_font)
@@ -29,8 +29,10 @@ init 9999 python:
     #style.replays_text.kerning = 3
     style.replays_text.color = "#7847f3"
     
-init 5:
+init 99:
     $ make_names_known_7dl()
+    $ global_map_result_alt1 = "clubs_alt1" # в повторах текущая локация на карте всегда одна - клубы
+    $ global_map_result_alt2 = "clubs_alt2"
 
 screen replays_route_choice_7dl:
     tag menu
