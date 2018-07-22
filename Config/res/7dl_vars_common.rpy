@@ -8,6 +8,7 @@ init -1:
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
+    
     $ timeskip_come = "Ты пойдёшь со мной?"
     $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 4."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
@@ -21,9 +22,10 @@ init 2:
     $ timeskip10 = "Спасибо…"
     $ timeskip11 = "Прощай."
     $ timeskip12 = "Ты потерялся, малыш?"
-    $ alt_credits_text = "{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nYungPunk\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
     
+    $ alt_credits_text = "{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nYungPunk\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
     #\n\nPeregarrett, Chess - за кошко-рут.#Вот допишете, тогда и поговорим.
+    
     $ colors['ba'] = {'night': (88, 18, 67, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
     $ store.names_list.append('ba')
     
@@ -92,14 +94,44 @@ label scenario__alt_sevendl:
 # ------------------------------------------------
     $ init_map_zones_alt1()
     $ init_map_zones_alt2()
-
 # ------------------------------------------------
 # только если игру начали заново - принимаем номер релиза сохранения по номеру релиза мода
     $ alt_save_release_no = alt_release_no
 # ------------------------------------------------
-
     jump main_menu_7dl
 
+init 4: # вызываем все переменные в init (необходимо для работы повторов)
+    call alt_day0_vars
+    call alt_day1_vars
+    call alt_day2_vars
+    call alt_day3_vars
+    call alt_day5_sl_wh_vars
+    call alt_day5_us_7dl_vars
+    call alt_day4_mi_7dl_vars
+    call alt_day5_mi_7dl_vars
+    call alt_day6_mi_7dl_vars
+    call alt_day5_mt_7dl_vars
+    call alt_day6_mt_7dl_vars
+    call alt_day4_neu_us_vars
+    call alt_day5_neu_us_vars
+    call alt_day4_sl_cl_vars
+    call alt_day5_sl_cl_vars
+    call alt_day6_sl_cl_vars
+    call alt_day7_sl_cl_vars
+    call alt_day4_mi_dj_vars
+    call alt_day5_mi_dj_vars
+    call alt_day6_mi_dj_vars
+    call alt_day4_un_7dl_vars
+    call alt_day5_un_7dl_vars
+    call alt_day6_un_7dl_vars
+    call alt_day4_un_fz_vars
+    call alt_day4_mi_cl_vars
+    call alt_day4_dv_7dl_vars
+    call alt_day6_dv_7dl_vars
+    call alt_day6_us_px_vars
+    call alt_day6_us_7dl_vars
+    call alt_day7_us_px_vars
+    
 label alt_day0_vars: #Переменные нулевого дня
     $ lp_mi = 0
     $ lp_sl = 0

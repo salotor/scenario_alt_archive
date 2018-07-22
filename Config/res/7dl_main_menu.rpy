@@ -76,18 +76,18 @@ transform left_menu_7dl(xal, yal):
 screen alt_wip:
     modal True
     add get_image("gui/o_rly/base.png")
-    text "РАЗДЕЛ «МУЗЫКА» НАХОДИТСЯ В РАЗРАБОТКЕ":
+    text "РАЗДЕЛ НАХОДИТСЯ В РАЗРАБОТКЕ":
         text_align 0.5
         yalign 0.46
         xalign 0.5
         color "#64483c"
         font header_font
-        size 30
+        size 40
     textbutton _("OK"):
         text_size 60
         style "log_button"
         text_style "settings_link"
-        yalign 0.65
+        yalign 0.6
         xalign 0.5
         action Hide("alt_wip")
 

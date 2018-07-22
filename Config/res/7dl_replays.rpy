@@ -1,6 +1,7 @@
-init:
-    $ mods["alt_gallery_start"] = u"Галерея 7дл"
-    $ mod_tags["alt_gallery_start"] = ["length:days","gameplay:vn","protagonist:male"]
+# для тестов
+# init:
+    # $ mods["alt_gallery_start"] = u"Галерея 7дл"
+    # $ mod_tags["alt_gallery_start"] = ["length:days","gameplay:vn","protagonist:male"]
 
 init 9999 python:
     cursive_font = default_7dl_path + "Pics/fonts/olgactt.ttf"
@@ -28,37 +29,7 @@ init 9999 python:
     #style.replays_text.kerning = 3
     style.replays_text.color = "#7847f3"
     
-init 4:
-    call alt_day0_vars
-    call alt_day1_vars
-    call alt_day2_vars
-    call alt_day3_vars
-    call alt_day5_sl_wh_vars
-    call alt_day5_us_7dl_vars
-    call alt_day4_mi_7dl_vars
-    call alt_day5_mi_7dl_vars
-    call alt_day6_mi_7dl_vars
-    call alt_day5_mt_7dl_vars
-    call alt_day6_mt_7dl_vars
-    call alt_day4_neu_us_vars
-    call alt_day5_neu_us_vars
-    call alt_day4_sl_cl_vars
-    call alt_day5_sl_cl_vars
-    call alt_day6_sl_cl_vars
-    call alt_day7_sl_cl_vars
-    call alt_day4_mi_dj_vars
-    call alt_day5_mi_dj_vars
-    call alt_day6_mi_dj_vars
-    call alt_day4_un_7dl_vars
-    call alt_day5_un_7dl_vars
-    call alt_day6_un_7dl_vars
-    call alt_day4_un_fz_vars
-    call alt_day4_mi_cl_vars
-    call alt_day4_dv_7dl_vars
-    call alt_day6_dv_7dl_vars
-    call alt_day6_us_px_vars
-    call alt_day6_us_7dl_vars
-    call alt_day7_us_px_vars
+init 5:
     $ make_names_known_7dl()
 
 screen replays_route_choice_7dl:
@@ -66,14 +37,14 @@ screen replays_route_choice_7dl:
     textbutton "Основной рут":
         style "log_button"
         text_style "replays_textbutton"
-        xpos 0.235 #xpos 0.235
-        ypos 0.187 #ypos 0.187
+        xpos 0.235
+        ypos 0.187
         action [Hide("replays_common_choice_7dl", transition=Dissolve(0.2)), Hide("replays_un_choice_7dl", transition=Dissolve(0.2)), Hide("replays_sl_choice_7dl", transition=Dissolve(0.2)), Hide("replays_dv_choice_7dl", transition=Dissolve(0.2)), Hide("replays_mi_choice_7dl", transition=Dissolve(0.2)), Show("replays_common_choice_7dl", transition=Dissolve(0.2))]
     textbutton "Одиночка":
         style "log_button"
         text_style "replays_textbutton"
-        xpos 0.235 #xpos 0.235
-        ypos 0.236 #ypos 0.236
+        xpos 0.235
+        ypos 0.236
         action [Hide("replays_common_choice_7dl", transition=Dissolve(0.2)), Hide("replays_un_choice_7dl", transition=Dissolve(0.2)), Hide("replays_sl_choice_7dl", transition=Dissolve(0.2)), Hide("replays_dv_choice_7dl", transition=Dissolve(0.2)), Hide("replays_mi_choice_7dl", transition=Dissolve(0.2)), Hide("replays_route_choice_7dl", transition=Dissolve(0.2)), Show("replays_neutral_1_7dl", transition=Dissolve(0.2))]
     textbutton "Лена":
         style "log_button"
