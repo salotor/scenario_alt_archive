@@ -40,8 +40,7 @@ screen gallery_main_7dl:
     if not gallery_mode_7dl == "moments":
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_moments_%s.png") xcenter 0.833 ycenter 0.046
-            action Show("alt_wip", transition=Dissolve(0.2))
-            # action [Show("replays_route_choice_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "moments")]
+            action [Show("replays_route_choice_7dl", transition=Dissolve(0.2)), SetVariable("gallery_mode_7dl", "moments")]
     else:
         imagebutton: 
             auto get_image_7dl("gui/gallery/gallery_navig_moments_%s.png") xcenter 0.833 ycenter 0.046
