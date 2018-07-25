@@ -375,7 +375,7 @@ screen replays_common_d1_7dl:
             xpos 0.544
             ypos 0.382
     if renpy.seen_label("alt_day1_un_stay"):
-        textbutton "Подожди!":
+        textbutton "Прощание с Леной":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -540,7 +540,7 @@ screen replays_common_d1alt_7dl:
             xpos 0.235
             ypos 0.723
     if renpy.seen_label("alt_day1_un_stay"):
-        textbutton "Подожди!":
+        textbutton "Прощание с Леной":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1275,7 +1275,7 @@ screen replays_common_d2_3_7dl:
             xpos 0.235
             ypos 0.771
     if renpy.seen_label("alt_day2_eventEv_medic_house1"):
-        textbutton "alt_day2_eventEv_medic_house1":
+        textbutton "Медпункт":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -1287,7 +1287,7 @@ screen replays_common_d2_3_7dl:
             xpos 0.544
             ypos 0.187
     if renpy.seen_label("alt_day2_eventEv_estrade1"):
-        textbutton "alt_day2_eventEv_estrade1":
+        textbutton "Эстрада":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -1299,7 +1299,7 @@ screen replays_common_d2_3_7dl:
             xpos 0.544
             ypos 0.236
     if renpy.seen_label("alt_day2_eventEv_square1"):
-        textbutton "alt_day2_eventEv_square1":
+        textbutton "Площадь":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -1311,7 +1311,7 @@ screen replays_common_d2_3_7dl:
             xpos 0.544
             ypos 0.285
     if renpy.seen_label("alt_day2_eventEv_boat_station1"):
-        textbutton "alt_day2_eventEv_boat_station1":
+        textbutton "Лодочный причал":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -1323,7 +1323,7 @@ screen replays_common_d2_3_7dl:
             xpos 0.544
             ypos 0.333
     if renpy.seen_label("alt_day2_dream"):
-        textbutton "alt_day2_dream":
+        textbutton "Отбой":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -1355,7 +1355,7 @@ screen replays_common_d3_1_7dl:
         ypos 0.187
         action [Hide("replays_common_d3_1_7dl", transition=Dissolve(0.2)), Show("replays_route_choice_7dl", transition=Dissolve(0.2))]
     if renpy.seen_label("alt_day3_begin"):
-        textbutton "alt_day3_begin":
+        textbutton "Пробуждение":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1367,7 +1367,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.236
     if renpy.seen_label("alt_day3_bf"):
-        textbutton "alt_day3_bf":
+        textbutton "Завтрак":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1379,7 +1379,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.285
     if renpy.seen_label("alt_day3_event_library1"):
-        textbutton "alt_day3_event_library1":
+        textbutton "Библиотека":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1391,7 +1391,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.333
     if renpy.seen_label("alt_day3_event_estrade"):
-        textbutton "alt_day3_event_estrade":
+        textbutton "Эстрада":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1403,7 +1403,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.382
     if renpy.seen_label("alt_day3_event_music_club"):
-        textbutton "alt_day3_event_music_club":
+        textbutton "Музклуб":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1415,7 +1415,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.431
     if renpy.seen_label("alt_day3_bf_duty"):
-        textbutton "alt_day3_bf_duty":
+        textbutton "Дежурство на обеде":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1427,7 +1427,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.479
     if renpy.seen_label("alt_day3_event_camp_entrance"):
-        textbutton "alt_day3_event_camp_entrance":
+        textbutton "Ворота в лагерь":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1439,7 +1439,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.528
     if renpy.seen_label("alt_day3_event_music_club1"):
-        textbutton "alt_day3_event_music_club1":
+        textbutton "Тихий час: музклуб":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1451,7 +1451,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.577
     if renpy.seen_label("alt_day3_event_clubs1"):
-        textbutton "alt_day3_event_clubs1":
+        textbutton "Тихий час: клубы":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1463,7 +1463,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.625
     if renpy.seen_label("alt_day3_event_camp_entrance1"):
-        textbutton "alt_day3_event_camp_entrance1":
+        textbutton "Тихий час: ворота в лагерь":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1475,7 +1475,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.674
     if renpy.seen_label("alt_day3_event_dining_hall1"):
-        textbutton "alt_day3_event_dining_hall1":
+        textbutton "Тихий час: столовая":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1487,7 +1487,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.723
     if renpy.seen_label("alt_day3_event_sport_area1"):
-        textbutton "alt_day3_event_sport_area1":
+        textbutton "Тихий час: спорткомплекс":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.235
@@ -1499,7 +1499,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.235
             ypos 0.771
     if renpy.seen_label("alt_day3_event_beach1"):
-        textbutton "alt_day3_event_beach1":
+        textbutton "Тихий час: пляж":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -1511,7 +1511,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.544
             ypos 0.187
     if renpy.seen_label("alt_day3_event_medic_house1"):
-        textbutton "alt_day3_event_medic_house1":
+        textbutton "Тихий час: медпункт":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -1523,7 +1523,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.544
             ypos 0.236
     if renpy.seen_label("alt_day3_event_estrade1"):
-        textbutton "alt_day3_event_estrade1":
+        textbutton "Тихий час: эстрада":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -1535,7 +1535,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.544
             ypos 0.285
     if renpy.seen_label("alt_day3_event_square1"):
-        textbutton "alt_day3_event_square1":
+        textbutton "Тихий час: площадь":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -1547,7 +1547,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.544
             ypos 0.333
     if renpy.seen_label("alt_day3_event_boat_station1"):
-        textbutton "alt_day3_event_boat_station1":
+        textbutton "Тихий час: лодочный причал":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -1559,7 +1559,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.544
             ypos 0.382
     if renpy.seen_label("alt_day3_dinner"):
-        textbutton "alt_day3_dinner":
+        textbutton "Столовая":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
@@ -1571,7 +1571,7 @@ screen replays_common_d3_1_7dl:
             xpos 0.544
             ypos 0.431
     if renpy.seen_label("alt_day3_dinner_menu"):
-        textbutton "alt_day3_dinner_menu":
+        textbutton "Обед":
             style "log_button"
             text_style "replays_textbutton"
             xpos 0.544
