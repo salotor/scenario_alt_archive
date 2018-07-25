@@ -142,6 +142,7 @@ label alt_day6_sl_start:
                     if alt_day6_sl_int == 3:
                         call alt_day7_sl_loop
                         pause(1)
+                        call alt_day7_sl_loop2
                         if alt_day6_sl_int == 4:
                             call alt_day7_sl_will
                             pause(1)

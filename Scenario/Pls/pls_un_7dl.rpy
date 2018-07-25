@@ -67,7 +67,7 @@ label alt_day5_un_7dl_start:
         $ alt_chapter(5, u"Лена. 7ДЛ. Обед")
         call alt_day5_un_7dl_dinner
         pause(1)
-        if not (herc or loki) and alt_day2_club_join_nwsppr:
+        if not (herc or loki) and 'nwsppr' in list_clubs_7dl:
             call alt_day5_un_7dl_dinner_d
             pause(1)
             call alt_day5_un_7dl_unl
@@ -83,7 +83,7 @@ label alt_day5_un_7dl_start:
             pause(1)
         call alt_day5_un_7dl_launch
         pause(1)
-        if not (herc or loki) and alt_day2_club_join_nwsppr:
+        if not (herc or loki) and 'nwsppr' in list_clubs_7dl:
             call alt_day5_un_7dl_library
             pause(1)
         else:
@@ -94,7 +94,7 @@ label alt_day5_un_7dl_start:
     $ alt_chapter(5, u"Лена. 7ДЛ. Вечер")
     call alt_day5_un_7dl_supper
     pause(1)
-    if alt_day2_club_join_nwsppr and not alt_day5_un_7dl_club_day and not (herc or loki):
+    if 'nwsppr' in list_clubs_7dl and not alt_day5_un_7dl_club_day and not (herc or loki):
         call alt_day5_un_7dl_runaway
         pause(1)
     elif alt_day5_un_7dl_club_day:

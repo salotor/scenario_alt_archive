@@ -12,19 +12,13 @@
     call alt_day2_bf
     pause(1)
     if alt_day1_un_dated == 1:
-        call alt_day2_guide
-        pause(1)
-    elif alt_day2_sl_bf:
+        call alt_day2_un_guide
+    elif alt_day2_sl_conv:
         call alt_day2_sl_guide
-        pause(1)
-        if (alt_day1_sl_keys_took == 1) and (alt_day2_sl_guilty == 0):
-            call alt_day2_sl_hyst
-        pause(1)
-        call alt_day2_map_prepare
     else:
         call alt_day2_convoy
-        pause(1)
-        call alt_day2_map_prepare
+    pause(1)
+    call alt_day2_map_prepare
     pause(1)
     call alt_day2_event_estrade
     pause(1)
@@ -95,7 +89,7 @@
     else:
         call alt_day2_sup2
         pause(1)
-        if alt_day2_sl_chased:
+        if alt_day2_sl_chased or alt_day2_sl_conv:
             call alt_day2_slot_sl
         elif alt_day2_dv_chased:
             call alt_day2_eventEv_beach1
