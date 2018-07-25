@@ -8,7 +8,6 @@ init -1:
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
-    $ list_slavya_7dl = []
     $ timeskip_come = "Ты пойдёшь со мной?"
     $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 5."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
@@ -185,6 +184,7 @@ label alt_day0_vars: #Переменные нулевого дня
     
 label alt_day1_vars: #Переменные первого дня
     $ alt_route_flag = 1
+    $ list_slavya_7dl = []
     $ alt_day1_loop = False
     $ alt_day1_alt_chase = False
     $ alt_day1_alt_us_robbed = False

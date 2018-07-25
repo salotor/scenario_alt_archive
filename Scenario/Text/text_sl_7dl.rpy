@@ -4369,7 +4369,7 @@ label alt_day4_sl_7dl_sundown:
         th "Спрашиваешь!"
         window hide
         scene bg ext_dining_hall_away_sunset:
-            linear 1.0 zoom 1.2 #xalign что тут планировалось?
+            linear 1.0 zoom 1.2
         "Я подошёл к зданию столовой и аккуратно выглянул из-за угла."
         window hide
         with fade
