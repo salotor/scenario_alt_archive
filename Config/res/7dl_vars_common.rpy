@@ -189,6 +189,7 @@ label alt_day1_vars: #Переменные первого дня
     return
     
 label alt_day2_vars: #Переменные второго дня
+    $ list_clubs_7dl = []
     $ alt_route_flag = 2
     $ alt_day2_bf_dv_us = False
     $ alt_day2_bf_un = False
