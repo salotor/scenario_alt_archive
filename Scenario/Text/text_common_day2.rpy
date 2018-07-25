@@ -1191,7 +1191,7 @@ label alt_day2_event_music_club1:
         "Хотя после пмс-нутой библиотекарши я уже ничему не удивлюсь."
     else:
         pass
-    if (alt_day2_sl_guilty == 2) and (alt_day2_necessary_done < 1):
+    if (alt_day2_sl_guilty == 2) and (len(list_voyage_7dl) < 1):
         "Решив прислушаться к совету Слави, я отправился к наиболее близкой цели обхода."
         "Епархии некой Мику."
         "Как я понимал, это была та самая японская красотка, с которой я за сутки умудрился не пересечься ни разу."
@@ -1200,7 +1200,7 @@ label alt_day2_event_music_club1:
     "Я подумал, что вот здесь было бы очень неплохо задержаться ненадолго."
     "Хотя бы посидеть на терраске."
     if alt_day2_rendezvous == 4: 
-        if alt_day2_necessary_done == 0:
+        if len(list_voyage_7dl) == 0:
             show dv smile pioneer2 at center with dissolve
             "Алиса уже была здесь."
             dv "Ты быстро. Ладно, за дело."
@@ -1223,7 +1223,7 @@ label alt_day2_event_music_club1:
                 with fade2
                 "Вернувшись с тележкой, я сгрузил туда чёртов усилок и поднялся, приняв вес на руки."
                 me "Веди!"
-        if alt_day2_necessary_done == 1:
+        if len(list_voyage_7dl) == 1:
             "Алиса сидела на веранде, вся как-то съёжившись, безнадёжно глядя в пол."
             show dv cry pioneer2 at center with dissolve
             "И сердце кольнуло какой-то острой нежностью и подзабытым уже чувством раскаяния."
@@ -1280,7 +1280,7 @@ label alt_day2_event_music_club1:
                 dv "Надо отнести вот это."
                 "Она постучала ногой по стальному коробу с прозрачной верхней панелью, стоящему рядом с ней."
                 dv "К летней эстраде. Справишься?"
-        elif alt_day2_necessary_done >= 2:
+        elif len(list_voyage_7dl) >= 2:
             "В назначенной Алисой точке никого не было."
             "Я поднялся на террасу в поисках девочки, и моё внимание привлёк клочок бумажки, придавленный скамейкой."
             "Я наклонился и поднял бумажку."
@@ -1582,7 +1582,7 @@ label alt_day2_inmusic:
             me "Может быть, в другой раз."
     show mi normal pioneer with dspr
     th "Тебе бы рэп читать, девочка-оркестр. Вся широкоштанная эстрада с тобой и рядом не стояла."
-    if alt_day2_necessary_done < 3:
+    if len(list_voyage_7dl) < 3:
         "Я был склонен списать её странные выходки на смущение первой встречи."
         "Но она выглядела несколько расстроенной — насколько я мог судить, зная её без году неделю."
         me "Это не будет нескромным, если я спрошу — что-то случилось?"
@@ -3637,7 +3637,7 @@ label alt_day2_event_square_1:
     "Значит, какой-то вдохновитель? Ещё один болтун на броневике? Практика показывает, что именно таким болтунам и ставят постаменты."
     th "И всё равно, что за птица? Я абсолютно не припоминаю никого с такой фамилией, ни в новой, ни в новейшей истории."
     th "Может, я и правда угодил в параллельную вселенную?"
-    if alt_day2_necessary_done > 1:
+    if len(list_voyage_7dl) > 1:
         "Здесь было пусто. Никого."
         if alt_day2_rendezvous == 22:
             "Похоже, Славя закончила свою уборку и ушла."
@@ -3844,36 +3844,26 @@ label alt_day2_dinner:
                 show un normal pioneer at left with dissolve
                 un "Должен справиться."
                 mt "В таком случае, только музыка и газета."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('soccer')
-                $ list_clubs_7dl.remove('volley')
-                $ list_clubs_7dl.remove('badmin')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('music')
+                $ list_clubs_7dl.append('nwsppr')
             "Давайте стенгазету" if 'nwsppr' in list_clubs_7dl:
                 me "Буду статьи писать."
                 "Ольга кивнула, проставляя галочку напротив подписи в библиотеке."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('soccer')
-                $ list_clubs_7dl.remove('volley')
-                $ list_clubs_7dl.remove('badmin')
-                $ list_clubs_7dl.remove('music')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('nwsppr')
             "Давайте футбол, что ли." if 'soccer' in list_clubs_7dl:
                 me "Больше-то заняться всё равно нечем."
                 mt "Футбол так футбол."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('volley')
-                $ list_clubs_7dl.remove('badmin')
-                $ list_clubs_7dl.remove('music')
-                $ list_clubs_7dl.remove('nwsppr')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('soccer')
             "Давайте волейбол?" if 'volley' in list_clubs_7dl:
                 me "Останусь в волейбольной секции, пожалуй."
                 mt "Поближе к Славе? {w}Молодец какой."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('soccer')
-                $ list_clubs_7dl.remove('badmin')
-                $ list_clubs_7dl.remove('music')
-                $ list_clubs_7dl.remove('nwsppr')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('volley')
             "Давайте бадминтон?" if 'badmin' in list_clubs_7dl:
                 me "В бадминтон. Воланчики гонять."
                 mt "Немного не мальчишеский спорт, не считаешь?"
@@ -3881,21 +3871,14 @@ label alt_day2_dinner:
                 me "Мне нравится."
                 mt "Как скажешь."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('soccer')
-                $ list_clubs_7dl.remove('volley')
-                $ list_clubs_7dl.remove('music')
-                $ list_clubs_7dl.remove('nwsppr')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('badmin')
             "Останусь в музкружке!" if 'music' in list_clubs_7dl:
                 me "Мне там больше всего нравится."
                 mt "Или тебе Мику нравится?.. Всё-всё, молчу."
                 "Ольга поставила галочку напротив подписи Мику."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('soccer')
-                $ list_clubs_7dl.remove('volley')
-                $ list_clubs_7dl.remove('badmin')
-                $ list_clubs_7dl.remove('nwsppr')
-
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('music')
         mt "Но всё остальное — вычёркиваю!"
         "Ольга размашисто перечеркнула что-то на листочке и спрятала его в карман."
         "В этот раз окончательно."

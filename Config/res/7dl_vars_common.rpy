@@ -4,11 +4,10 @@ init -1:
     $ alt_release_no = "0.34.a"
     $ alt_hotfix_no = "hf0"
     $ plthr = u"none"
-    
+
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
-    $ list_slavya_7dl = []
     $ timeskip_come = "Ты пойдёшь со мной?"
     $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 5."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
@@ -184,6 +183,7 @@ label alt_day0_vars: #Переменные нулевого дня
     return
     
 label alt_day1_vars: #Переменные первого дня
+    $ list_slavya_7dl = []
     $ alt_route_flag = 1
     $ alt_day1_loop = False
     $ alt_day1_alt_chase = False
@@ -211,9 +211,8 @@ label alt_day1_vars: #Переменные первого дня
     
 label alt_day2_vars: #Переменные второго дня
     $ list_clubs_7dl = []
-    $ alt_route_flag = 2
-    $ list_clubs_7dl = []
     $ list_voyage_7dl = []
+    $ alt_route_flag = 2
     $ alt_day2_bf_dv_us = False
     $ alt_day2_bf_un = False
     $ alt_day2_dv_bet_approve = False
