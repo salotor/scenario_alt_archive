@@ -449,7 +449,7 @@ label sdl_menu:
                             menu:
                                 "Газета"
                                 "Записан":
-                                    $ 'nwsppr' in list_clubs_7dl = True
+                                    $ list_clubs_7dl.append('nwsppr')
                                 "Нет":
                                     pass 
                             menu:

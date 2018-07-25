@@ -11119,7 +11119,7 @@ label alt_day6_sl_intellectual:
     me "Главное, чтобы привычкой не стало."
     voice "А почему вы так спокойно к этому относитесь?"
     "Я пожал плечами и открыл глаза."
-        window hide
+    window hide
     play music music_7dl["lunar_anguish"] fadein 1
     scene expression Dawn("bg ext_townscape_ph_day_7dl")
     show prologue_dream
