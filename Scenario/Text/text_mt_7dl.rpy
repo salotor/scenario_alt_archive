@@ -396,7 +396,7 @@
     return
     
 label alt_day6_mt_7dl_morning:
-    play music music_list["everyday_theme"] fadein 5
+    play music music_7dl["everyday"] fadein 5
     scene bg ext_dining_hall_near_sunset
     show sl normal pioneer
     with dissolve
@@ -3326,7 +3326,7 @@ label alt_day7_mt_7dl_begin:
 label alt_day7_mt_7dl_morning:
     scene bg ext_house_of_mt_sunset with dissolve
     play ambience ambience_camp_center_day fadein 3
-    play music music_list["everyday_theme"] fadein 5
+    play music music_7dl["everyday"] fadein 5
     "С добым утром, лагерь!"
     "Теперь, когда я знаю, сколько мы знакомы — я, наверное, могу быть немного фамильярным?"
     "Могу позволить себе не сутулиться, думая о том, что предстоит — а отпустить мысли и вдохнуть ещё немного этого утра, подобного которому никогда-никогда не будет."
@@ -5443,7 +5443,7 @@ label alt_day7_mt_7dl_true:
 label alt_day7_mt_7dl_postscriptum:
     $ persistent.sprite_time = "day"
     $ day_time()
-    scene bg ext_winter_night_7dl with touch
+    scene bg ext_winter_night_rotate_7dl with touch
     play music music_7dl["promise_to_meet_you"] fadein 3
     "Ты обещала меня встретить, помнишь?"
     "Обещала поймать меня из воздуха и не позволить мне исчезнуть."

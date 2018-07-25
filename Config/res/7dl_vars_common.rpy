@@ -8,8 +8,9 @@ init -1:
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
+    $ list_slavya_7dl = []
     $ timeskip_come = "Ты пойдёшь со мной?"
-    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 4."
+    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 5."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
     $ timeskip3 = "Я скучаю…"
     $ timeskip4 = "Я хочу к тебе…"
@@ -21,46 +22,61 @@ init 2:
     $ timeskip10 = "Спасибо…"
     $ timeskip11 = "Прощай."
     $ timeskip12 = "Ты потерялся, малыш?"
-    $ alt_credits_text = "{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nYungPunk\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
+    $ timeskip13 = "ПРИДИ В СЕБЯ!"
+    $ alt_credits_text = "{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nYungPunk\n\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
+
+    #Day - базис
+    #Sunset - 94%, 82%, 100%
+    #Night - 58%, 67%, 67%
+    #Prologue - 84%, 72%, 100% 
+
+    $ colors['ai'] = {'night': (41, 164, 1, 255), 'sunset': (67, 201, 2, 255), 'day': (72, 246, 2, 255), 'prolog': ((60, 177, 2, 255)}
+    $ store.names_list.append('ai')#Собеседник, ИИ
+
+    $ colors['al'] = {'night': (122, 121, 102, 255), 'sunset': (198, 148, 153, 255), 'day': (211, 181, 153, 255), 'prolog': (177, 130, 153, 255)}
+    $ store.names_list.append('al')#Алька
+
+    $ colors['am'] = {'night': (94, 143, 100, 255), 'sunset': (152, 175, 149, 255), 'day': (162, 214, 149, 255), 'prolog': (136, 154, 149, 255)}
+    $ store.names_list.append('am') #Альтернативный протагонист
+
+    $ colors['ase'] = {'night': (137, 44, 44, 255), 'sunset': (222, 54, 56, 255), 'day': (236, 66, 66, 255), 'prolog': (198, 48, 66, 255)}
+    $ store.names_list.append('ase')#Камео мисс Селезнёвой
+
+    $ colors['ba'] = {'night': (137, 153, 135, 255), 'sunset': (223, 188, 201, 255), 'day': (237, 229, 201, 255), 'prolog': (199, 165, 201, 255)}
+    $ store.names_list.append('ba') #Саныч
+
+    $ colors['bb'] = {'night': (133, 116, 90, 255), 'sunset': (215, 142, 135, 255), 'day': (229, 173, 135, 255), 'prolog': (192, 125, 135, 255)}
+    $ store.names_list.append('bb')#Биг босс (начальник)
+
+    $ colors['dn'] = {'night': (119, 68, 45, 255), 'sunset': (193, 84, 67, 255), 'day': (205, 102, 67, 255), 'prolog': (172, 73, 67, 255)}
+    $ store.names_list.append('dn')#Данечка
+
+    $ colors['ka'] = {'night': (137, 82, 85, 255), 'sunset': (222, 101, 127, 255), 'day': (236, 123, 127, 255), 'prolog': (198, 89, 127, 255)}
+    $ store.names_list.append('am') #Катюшка
+
+    $ colors['ln'] = {'night': (137, 82, 85, 255), 'sunset': (222, 101, 127, 255), 'day': (236, 123, 127, 255), 'prolog': (198, 89, 127, 255)}
+    $ store.names_list.append('am') #Понятно кто
+
+    $ colors['ml'] = {'night': (43, 134, 98, 255), 'sunset': (70, 164, 147, 255), 'day': (74, 200, 147, 255), 'prolog': (62, 144, 147, 255)}
+    $ store.names_list.append('ml')#Малец1
     
-    #\n\nPeregarrett, Chess - за кошко-рут.#Вот допишете, тогда и поговорим.
-    $ colors['ba'] = {'night': (88, 18, 67, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
-    $ store.names_list.append('ba')
+    $ colors['ml2'] = {'night': (43, 53, 134, 255), 'sunset': (70, 65, 200, 255), 'day': (74, 79, 200, 255), 'prolog': (62, 57, 200, 255)}
+    $ store.names_list.append('ml2')#Малец2
     
-    $ colors['sak'] = {'night': (44, 12, 67, 255), 'sunset': (66, 18, 100, 255), 'day': (176, 10, 192, 255), 'prolog': (75, 34, 100, 255)}
-    $ store.names_list.append('sak')
+    $ colors['ml3'] = {'night': (62, 114, 98, 255), 'sunset': (101, 139, 147, 255), 'day': (107, 170, 147, 255), 'prolog': (90, 122, 147, 255)}
+    $ store.names_list.append('ml3')#Малец3
     
-    $ colors['ai'] = {'night': (44, 12, 67, 255), 'sunset': (66, 18, 100, 255), 'day': (176, 10, 192, 255), 'prolog': (34, 150, 100, 255)}
-    $ store.names_list.append('ai')
-    
-    #Камео мисс Селезнёвой
-    $ colors['ase'] = {'night': (97, 10, 10, 255), 'sunset': (137, 14, 14, 255), 'day': (236, 66, 66, 255), 'prolog': (137, 14, 14, 255)}
-    $ store.names_list.append('ase')
-    
-    #Толпа - не используется
-    $ colors['we'] = {'night': (67, 23, 111, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
-    $ store.names_list.append('we')
-    
-    $ colors['ml'] = {'night': (20, 69, 68, 255), 'sunset': (32, 106, 104, 255), 'day': (74, 200, 147, 255), 'prolog': (50, 20, 80, 255)}
-    $ store.names_list.append('ml')
-    
-    $ colors['ml2'] = {'night': (20, 46, 68, 255), 'sunset': (32, 73, 104, 255), 'day': (74, 170, 147, 255), 'prolog': (32, 75, 106, 255)}
-    $ store.names_list.append('ml2')
-    
-    $ colors['ml3'] = {'night': (30, 46, 68, 255), 'sunset': (48, 73, 104, 255), 'day': (107, 170, 147, 255), 'prolog': (48, 75, 106, 255)}
-    $ store.names_list.append('ml3')
+    $ colors['sak'] = {'night': (89, 115, 146, 255), 'sunset': (144, 140, 218, 255), 'day': (153, 171, 218, 255), 'prolog': (129, 123, 218, 255)}
+    $ store.names_list.append('sak')#Сакишита
+
+    $ colors['tn'] = {'night': (125, 111, 62, 255), 'sunset': (203, 136, 93, 255), 'day': (216, 166, 93, 255), 'prolog': (181, 120, 93, 255)}
+    $ store.names_list.append('tn')#Тоник
     
     $ colors['voice1'] = {'night': (159, 8, 73, 255), 'sunset': (196, 7, 92, 255), 'day': (255, 136, 192, 255), 'prolog': (196, 7, 124, 255)}
     $ store.names_list.append('voice1')
-    
-    $ colors['bb'] = {'night': (159, 8, 73, 255), 'sunset': (196, 7, 92, 255), 'day': (255, 136, 192, 255), 'prolog': (196, 7, 124, 255)}
-    $ store.names_list.append('bb')
-    
-    $ colors['icq'] = {'night': (6, 62, 14, 255), 'sunset': (10, 91, 20, 255), 'day': (10, 204, 10, 255), 'prolog': (10, 91, 30, 255)}
-    $ store.names_list.append('icq')
-    #Резерв
-    #$ colors['ann'] = {'night': (15, 159, 14, 255), 'sunset': (10, 217, 16, 255), 'day': (170, 254, 160, 255), 'prolog': (10, 215, 30, 255)}
-    #$ store.names_list.append('ann')
+
+    $ colors['we'] = {'night': (67, 23, 111, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
+    $ store.names_list.append('we')#Толпа
     
     if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         $ colors['voices'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (192, 192, 192, 255), 'prolog': (192, 192, 192, 255)}
@@ -71,34 +87,68 @@ init 2:
         
         $ colors['dy'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (56, 90, 107, 255), 'prolog': (192, 192, 192, 255)}
         $ store.names_list.append('dy')
-    
+        
+        $ names['ai'] = u'Собеседник'
+        $ names['al'] = u'Сердитый мальчик'
+        $ names['am'] = u'Я'
+        $ names['ase'] = u'Странная девочка'
         $ names['ba'] = u'Физрук'
-        $ names['sak'] = u'Старик'
-        $ names['ai'] = u'Мужчина'    
-        $ names['ase'] = u'Алиса'
-        $ names['we'] = u'Толпа'
+        $ names['bb'] = u'Начальник лагеря'
+        $ names['dn'] = u'Взъерошенный мальчик'
+        $ names['ka'] = u'Вожатая 2-го отряда'
+        $ names['ln'] = u'Странная девушка'
         $ names['ml'] = u'Мальчик'
         $ names['ml2'] = u'Мальчик'
         $ names['ml3'] = u'Мальчик'
+        $ names['sak'] = u'Пожилой японец'
+        $ names['tn'] = u'Странный мальчик'
         $ names['voice1'] = u'Продавщица'
-        $ names['bb'] = u'Начальник'
-        $ names['icq'] = u'Собеседник'
         $ names['voices'] = u'Голоса'
+        $ names['we'] = u'Хором'
         $ names['kids'] = u'Дети'
         $ names['dy'] = u'Динамики'
 
 label scenario__alt_sevendl:
-# инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
-# ------------------------------------------------
-    $ init_map_zones_alt1()
-    $ init_map_zones_alt2()
-
-# ------------------------------------------------
 # только если игру начали заново - принимаем номер релиза сохранения по номеру релиза мода
     $ alt_save_release_no = alt_release_no
 # ------------------------------------------------
-
     jump main_menu_7dl
+
+init 4: # вызываем все переменные в init (необходимо для работы повторов)
+    call alt_day0_vars
+    call alt_day1_vars
+    call alt_day2_vars
+    call alt_day3_vars
+    call alt_day5_sl_wh_vars
+    call alt_day5_us_7dl_vars
+    call alt_day4_mi_7dl_vars
+    call alt_day5_mi_7dl_vars
+    call alt_day6_mi_7dl_vars
+    call alt_day5_mt_7dl_vars
+    call alt_day6_mt_7dl_vars
+    call alt_day4_neu_us_vars
+    call alt_day5_neu_us_vars
+    call alt_day4_sl_cl_vars
+    call alt_day5_sl_cl_vars
+    call alt_day6_sl_cl_vars
+    call alt_day7_sl_cl_vars
+    call alt_day4_mi_dj_vars
+    call alt_day5_mi_dj_vars
+    call alt_day6_mi_dj_vars
+    call alt_day4_un_7dl_vars
+    call alt_day5_un_7dl_vars
+    call alt_day6_un_7dl_vars
+    call alt_day4_un_fz_vars
+    call alt_day4_mi_cl_vars
+    call alt_day4_dv_7dl_vars
+    call alt_day6_dv_7dl_vars
+    call alt_day6_us_px_vars
+    call alt_day6_us_7dl_vars
+    call alt_day7_us_px_vars
+
+init 99: # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения    
+    $ init_map_zones_alt1()
+    $ init_map_zones_alt2()
 
 label alt_day0_vars: #Переменные нулевого дня
     $ lp_mi = 0
@@ -135,6 +185,7 @@ label alt_day0_vars: #Переменные нулевого дня
     
 label alt_day1_vars: #Переменные первого дня
     $ alt_route_flag = 1
+    $ alt_day1_loop = False
     $ alt_day1_alt_chase = False
     $ alt_day1_alt_us_robbed = False
     $ alt_day1_alt_robbery = False
@@ -144,6 +195,7 @@ label alt_day1_vars: #Переменные первого дня
     $ alt_day1_sam_paniqued = False
     $ alt_day1_sl_met = False
     $ alt_day1_sl_conv = False
+    $ alt_day1_sl_conv2 = False
     $ alt_day1_sl_keys_took = 0
     $ alt_day1_un_dated = False
     $ alt_day1_un_ignored = False
@@ -160,14 +212,10 @@ label alt_day1_vars: #Переменные первого дня
 label alt_day2_vars: #Переменные второго дня
     $ list_clubs_7dl = []
     $ alt_route_flag = 2
+    $ list_clubs_7dl = []
+    $ list_voyage_7dl = []
     $ alt_day2_bf_dv_us = False
     $ alt_day2_bf_un = False
-    $ alt_day2_club_join_badmin = False
-    $ alt_day2_club_join_cyb = False
-    $ alt_day2_club_join_footbal = False
-    $ alt_day2_club_join_nwsppr = False
-    $ alt_day2_club_join_musc = False
-    $ alt_day2_club_join_volley = False
     $ alt_day2_dv_bet_approve = False
     $ alt_day2_dv_bet_won = 0
     $ alt_day2_dv_bumped = False
@@ -185,6 +233,7 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_mi_snap = False
     $ alt_day2_rendezvous = 0
     $ alt_day2_rendezvous_dinner = 0
+    $ alt_day2_sl_conv = False
     $ alt_day2_sl_bf = False
     $ alt_day2_sl_guilty = 0 #0 не был свидетелем, 1 был, 2 вступился
     $ alt_day2_date = 0 #un 1, sl 2, dv 3, mi 4, us 5, mt 6
@@ -197,7 +246,6 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_club_done = False
     $ alt_day2_phys_done = False
     $ alt_day2_beach_done = False
-    $ alt_day2_necessary_done = 0
     $ alt_day2_walk = 0
     $ alt_day2_fail = 0
     $ alt_day2_sup = 0

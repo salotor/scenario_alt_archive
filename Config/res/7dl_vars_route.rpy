@@ -241,11 +241,28 @@ label alt_day7_us_px_vars:
     return
     
 label alt_day4_sl_7dl_vars:
-    $ alt_day4_sl_7dl_help1 = False
-    $ alt_day4_sl_7dl_phone = False
-    $ alt_day4_sl_7dl_rendezvous = False
+    $ alt_day4_sl_7dl_workout = False #Пробежка!
+    $ alt_day4_sl_7dl_herc_appletree = False #Ульянкина яблонька
+    $ alt_day4_sl_7dl_help1 = False #Помощь с колонками
+    $ alt_day4_sl_7dl_phone = False #Поднял телефон?
+    $ alt_day4_sl_7dl_herc_rendezvous = False #Согласился на встречу?
+    return
+
+label alt_day5_sl_7dl_vars:
+    $ alt_day5_sl_7dl_defend = False #Спасение!
+    $ alt_day5_sl_7dl_workout = False #Пробежка!
+    $ alt_day5_sl_7dl_herc_sick = False #Последствия
+    $ alt_day5_random_val = 0
+    $ alt_day5_sl_7dl_hentai_done = False
     return
     
 label alt_day6_sl_7dl_vars:
+    $ alt_day6_sl_7dl_workout = False #Пробежка!
     $ alt_day6_sl_7dl_transit = False
+    $ alt_day6_sl_7dl_hentai_done = False
     return
+    
+label alt_day7_sl_7dl_vars:
+    $ alt_day7_sl_7dl_workout = False #Пробежка!
+    return
+    

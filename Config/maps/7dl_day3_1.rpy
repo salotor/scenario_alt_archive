@@ -5,7 +5,7 @@
     $ disable_all_zones_alt1()
     $ disable_all_chibi_alt1()
     
-    play music music_list["everyday_theme"]
+    play music music_7dl["everyday"]
 
     $ set_zone_alt1("music_club_alt1",   "alt_day3_event_music_club")
     if alt_day3_mi_event:

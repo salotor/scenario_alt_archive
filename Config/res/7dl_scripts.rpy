@@ -144,67 +144,66 @@ init 3 python:
 
     def make_names_unknown_7dl():
         global store
+        meet('am',u"Я")
+        meet('ai',u"Собеседник")
+        meet('al',u"Сердитый мальчик")
+        meet('ase',u"Девочка")
         meet('ba',u"Физрук")
-        meet('ase',u"Алиса")
-        meet('we',u"Толпа") # не используется
+        meet('bb',u"Начальник лагеря")
+        meet('cs',u"Медсестра")
+        meet('dn',u"Растрёпанный мальчик")
+        meet('dreamgirl',u"…")
+        meet('dv',u"Рыжая")
+        meet('dv',u"Динамики")
+        meet('el',u"Кудрявый")
+        meet('dy',u"Динамики")
+        meet('ka',u"Вожатая 2-го отряда")
+        meet('kids',u"Дети")
+        meet('ln',u"Странная девочка")
+        meet('me',u"Семён")
+        meet('mi',u"Японка")
         meet('ml',u"Мальчик")
         meet('ml2',u"Мальчик")
         meet('ml3',u"Мальчик")
-        meet('voice1',u"Продавщица")
-        meet('kids',u"Дети")
-        meet('dy',u"Динамики")
-        meet('icq',u"Собеседник")
-        meet('el',u"Кудрявый")
-        meet('un',u"Грустяша")
-        meet('dv',u"Рыжая")
-        meet('sl',u"Блондинка")
-        meet('us',u"Мелкая")
         meet('mt',u"Вожатая")
-        meet('cs',u"Медсестра")
-        meet('mz',u"Очкарик")
-        meet('mi',u"Японка")
-        meet('uv',u"Котэ")
-        meet('bb',u"Начальник")
-        meet('sh',u"Очкарик")
-        meet('ai',u"Мужчина")
-        meet('sak',u"Старик")
-        meet('me',u"Семён")
+        meet('mz',u"Девушка в очках")
         meet('pi',u"Пионер")
-        meet('dreamgirl',u"…")
+        meet('sak',u"Пожилой японец")
+        meet('sl',u"Блондинка")
+        meet('sh',u"Очкарик")
+        meet('tn',u"Странный мальчик")
+        meet('un',u"Грустная девочка")
+        meet('us',u"Мелкая")
+        meet('uv',u"Кошкодевочка")
         meet('voice',u"Голос")
+        meet('voice1',u"Продавщица")
         meet('voices',u"Голоса")
-        
+        meet('we',u"Хором")
+
     def make_names_known_7dl():
         global store
-        meet('ba',u"Саныч")
+        meet('al',u"Алька")
         meet('ase',u"Алиса")
-        meet('we',u"Толпа") # не используется
-        meet('ml',u"Даня")
-        meet('ml2',u"Тоник")
-        meet('ml3',u"Алька")
-        meet('voice1',u"Продавщица")
-        meet('kids',u"Дети")
-        meet('dy',u"Динамики")
-        meet('icq',u"Собеседник")
-        meet('el',u"Электроник")
-        meet('un',u"Лена")
-        meet('dv',u"Алиса")
-        meet('sl',u"Славя")
-        meet('us',u"Ульяна")
-        meet('mt',u"Ольга Дмитриевна")
+        meet('ba',u"Саныч")
+        meet('bb',u"Алексей Максимыч")
         meet('cs',u"Виола")
-        meet('mz',u"Женя")
+        meet('dn',u"Даня")
+        meet('dv',u"Алиса")
+        meet('dv',u"Динамики")
+        meet('el',u"Электроник")
+        meet('ka',u"Катюшка")
+        meet('ln',u"Алёна")
         meet('mi',u"Мику")
-        meet('uv',u"Девушка")
-        meet('bb',u"Начальник")
+        meet('mt',u"Ольга Дмитриевна")
+        meet('mz',u"Женя")
+        meet('sak',u"Сакишита Тихиро")
+        meet('sl',u"Славя")
         meet('sh',u"Шурик")
-        meet('ai',u"Мужчина")
-        meet('sak',u"Сакишита")
-        meet('me',u"Семён")
-        meet('pi',u"Пионер")
-        meet('dreamgirl',u"…")
-        meet('voice',u"Голос")
-        meet('voices',u"Голоса")
+        meet('tn',u"Тоник")
+        meet('un',u"Лена")
+        meet('us',u"Ульянка")
+        meet('uv',u"Юля")
+        
         
     make_names_unknown_7dl()
     set_mode_adv()
@@ -233,7 +232,7 @@ init -265 python:
         
     #Тинты для разного времени суток    
     def Notch(id):
-        return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.15) * im.matrix.saturation(0.5))
+        return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.2) * im.matrix.saturation(0.6))
     def Dawn(id):
         return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.1) * im.matrix.tint(0.94, 0.82, 1.0))
     def Noon(id):
@@ -342,33 +341,59 @@ init -5 python:
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
                 
-            elif routetag == "sl": #Классическая ветка гуд
-                renpy.show("sl normal pioneer", at_list=[left])
+            elif routetag == "sl": #Классическая ветка, нормал
+                renpy.show("sl normal pioneer2", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
-                
-            elif routetag == "sltrue": #Классическая ветка гуд
+            elif routetag == "sltrue": #Классик, тру
                 renpy.show("sl shy sport", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
-                
             elif routetag == "slcas": #Классическая ветка гуд
-                renpy.show("sl smile2 dress", at_list=[left])
+                renpy.show("sl smile casual", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
-                
             elif routetag == "slbad": #Классическая ветка, бэд
-                renpy.show("sl sad pioneer", at_list=[left])
+                renpy.show("sl sad pioneer2", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)    
-                
-            elif routetag == "sl7dl": #7дл-ветка, гуд
+            
+            elif routetag == "sl7dl": #Ветка 7дл, базис
+                renpy.show("sl normal pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dl_herc": #Ветка 7дл, Герк
+                renpy.show("sl smile pioneer", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dl_loki": #Ветка 7дл, Локи
                 renpy.show("sl smile pioneer", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
                 
-            elif routetag == "sl7dlbad": #7дл-ветка, дисмисс
-                renpy.show("sl cry pioneer", at_list=[left])
+            elif routetag == "sl7dl_sport": #Ветка 7дл, спортивная
+                renpy.show("sl smile sport", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dl_dress": #Ветка 7дл, платье
+                renpy.show("sl smile dress", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            
+            elif routetag == "sl7dltrue": #Ветка 7дл, тру
+                renpy.show("sl_gr normal casual", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dlneu": #Ветка 7дл, тру
+                renpy.show("sl smile casual", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dlgood": #Ветка 7дл, тру
+                renpy.show("sl sad casual", at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dlbad": #Ветка 7дл, тру
+                renpy.show("sl cry pioneer2", at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
             
@@ -606,6 +631,8 @@ init python:
 
     Shake = renpy.curry(_Shake)
         
+# ================================================================================================
+#                                            альтернативный старт БЛ - WIP
 init 2 python:
     if persistent.autostart_7dl:
         rgsn = renpy.game.script.namemap
@@ -654,3 +681,4 @@ label alt_start_7dl:
     $ init_map_zones()
 
     jump scenario__alt_sevendl
+# ================================================================================================

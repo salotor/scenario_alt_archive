@@ -15,7 +15,6 @@
         $ set_zone_alt1('square_alt1', 'alt_day2_event_square')
     $ set_zone_alt1('boat_station_alt1', 'alt_day2_event_boat_station')
 
-    $ alt_day2_necessary_done = 0
     $ persistent.sprite_time = "day"
     $ day_time()
     $ alt_chapter(2, u"Знакомство с лагерем")
@@ -23,11 +22,9 @@
 label alt_day2_map:
     $ persistent.sprite_time = "day"
     $ day_time
-    stop sound_loop
-    stop ambience
-    stop music fadeout 6
-    play music music_list["everyday_theme"] fadein 3
-    if alt_day2_necessary_done != 4:
+    play music music_7dl["everyday"] fadein 3
+    
+    if len(list_voyage_7dl) < 4: 
         play sound sfx_paper_bag
         $ show_map_alt1()
     else:
@@ -41,7 +38,7 @@ label alt_day2_event_music_club:
         call alt_day2_event_music_club1
         pause(1)
         call alt_day2_inmusic
-        $ alt_day2_necessary_done += 1
+        $ list_voyage_7dl.append('music_club')
         $ disable_current_zone_alt1()
     jump alt_day2_map
 
@@ -52,7 +49,7 @@ label alt_day2_event_clubs:
         $ disable_current_zone_alt1()
         jump alt_day2_map
     window hide
-    $ alt_day2_necessary_done += 1
+    $ list_voyage_7dl.append('men_clubs')
     jump alt_day2_map
 
 label alt_day2_event_camp_entrance:
@@ -76,7 +73,7 @@ label alt_day2_event_dining_hall:
 
 label alt_day2_event_sport_area:
     call alt_day2_event_sport_area1
-    $ alt_day2_necessary_done += 1
+    $ list_voyage_7dl.append('sport_area')
     $ disable_current_zone_alt1()
     jump alt_day2_map
 
@@ -97,7 +94,7 @@ label alt_day2_event_library:
     call alt_day2_event_library1
     pause(1)
     call alt_day2_mz
-    $ alt_day2_necessary_done += 1
+    $ list_voyage_7dl.append('library')
     $ disable_current_zone_alt1()
     jump alt_day2_map
 
@@ -106,7 +103,7 @@ label alt_day2_event_medic_house:
     if been_there_alt1()>1:
         $ disable_current_zone_alt1()
         jump alt_day2_map
-    $ alt_day2_necessary_done += 1
+    $ list_voyage_7dl.append('medic')
     jump alt_day2_map
     
 label alt_day2_event_square:
