@@ -2,16 +2,12 @@
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
     $ alt_release_no = "0.34.a"
-    $ hf = "hf0"
-    $ alt_compatible_release_no = ["0.00.x", "0.34.a"] 
+    $ alt_hotfix_no = "hf0"
     $ plthr = u"none"
-    $ config.name = "Everlasting Summer 1.1 + 7dl "
-    $ config.version = alt_release_no + hf
     
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
-    $ list_slavya_7dl = []
     $ timeskip_come = "Ты пойдёшь со мной?"
     $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 5."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
@@ -33,7 +29,7 @@ init 2:
     #Night - 58%, 67%, 67%
     #Prologue - 84%, 72%, 100% 
 
-    $ colors['ai'] = {'night': (41, 164, 1, 255), 'sunset': (67, 201, 2, 255), 'day': (72, 246, 2, 255), 'prolog': ((60, 177, 2, 255)}
+    $ colors['ai'] = {'night': (41, 164, 1, 255), 'sunset': (67, 201, 2, 255), 'day': (72, 246, 2, 255), 'prolog': (60, 177, 2, 255)}
     $ store.names_list.append('ai')#Собеседник, ИИ
 
     $ colors['al'] = {'night': (122, 121, 102, 255), 'sunset': (198, 148, 153, 255), 'day': (211, 181, 153, 255), 'prolog': (177, 130, 153, 255)}
@@ -112,17 +108,46 @@ init 2:
         $ names['dy'] = u'Динамики'
 
 label scenario__alt_sevendl:
-# инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
-# ------------------------------------------------
-    $ init_map_zones_alt1()
-    $ init_map_zones_alt2()
-
-# ------------------------------------------------
 # только если игру начали заново - принимаем номер релиза сохранения по номеру релиза мода
     $ alt_save_release_no = alt_release_no
 # ------------------------------------------------
-
     jump main_menu_7dl
+
+init 4: # вызываем все переменные в init (необходимо для работы повторов)
+    call alt_day0_vars
+    call alt_day1_vars
+    call alt_day2_vars
+    call alt_day3_vars
+    call alt_day5_sl_wh_vars
+    call alt_day5_us_7dl_vars
+    call alt_day4_mi_7dl_vars
+    call alt_day5_mi_7dl_vars
+    call alt_day6_mi_7dl_vars
+    call alt_day5_mt_7dl_vars
+    call alt_day6_mt_7dl_vars
+    call alt_day4_neu_us_vars
+    call alt_day5_neu_us_vars
+    call alt_day4_sl_cl_vars
+    call alt_day5_sl_cl_vars
+    call alt_day6_sl_cl_vars
+    call alt_day7_sl_cl_vars
+    call alt_day4_mi_dj_vars
+    call alt_day5_mi_dj_vars
+    call alt_day6_mi_dj_vars
+    call alt_day4_un_7dl_vars
+    call alt_day5_un_7dl_vars
+    call alt_day6_un_7dl_vars
+    call alt_day4_un_fz_vars
+    call alt_day4_mi_cl_vars
+    call alt_day4_dv_7dl_vars
+    call alt_day6_dv_7dl_vars
+    call alt_day6_us_px_vars
+    call alt_day6_us_7dl_vars
+    call alt_day7_us_px_vars
+
+init 99: # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения    
+    $ init_map_zones_alt1()
+    $ init_map_zones_alt2()
 
 label alt_day0_vars: #Переменные нулевого дня
     $ lp_mi = 0
@@ -152,13 +177,14 @@ label alt_day0_vars: #Переменные нулевого дня
     if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
     if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
+        $ config.version = "1.1 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
     else:
-        $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)
+        $ config.version = "1.2 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
     return
     
 label alt_day1_vars: #Переменные первого дня
     $ alt_route_flag = 1
+    $ list_slavya_7dl = []
     $ alt_day1_loop = False
     $ alt_day1_alt_chase = False
     $ alt_day1_alt_us_robbed = False
@@ -184,6 +210,7 @@ label alt_day1_vars: #Переменные первого дня
     return
     
 label alt_day2_vars: #Переменные второго дня
+    $ list_clubs_7dl = []
     $ alt_route_flag = 2
     $ list_clubs_7dl = []
     $ list_voyage_7dl = []

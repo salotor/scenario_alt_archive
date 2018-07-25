@@ -1972,7 +1972,7 @@ label alt_day2_event_clubs1:
                         extend " Да и к Мику тоже."
                 elif 'music' in list_clubs_7dl:
                     extend " у Мику в клубе."
-                elif 'soccerl' in list_clubs_7dl:
+                elif 'soccer' in list_clubs_7dl:
                     extend ", и физрук меня прибьёт, если узнает, что я предпочёл ваш кружок футболу."
                 elif 'volley' in list_clubs_7dl:
                     extend ", и физрук меня прибьёт, если узнает, что я предпочёл ваш кружок волейболу."
@@ -2616,7 +2616,7 @@ label alt_day2_event_library1:
     menu:
         "Записаться":
             me "А к вам записаться можно?"
-            $ list_clubs_7dl.append('newspaper')
+            $ list_clubs_7dl.append('nwsppr')
             $ lp_un += 1
             sh "Нет. Мест больше нет."
             me "Точно нет? Я вижу, вас тут всего трое плюс девочка. Кто материал-то собирает?"
@@ -3836,7 +3836,7 @@ label alt_day2_dinner:
     if len(list_clubs_7dl) > 1: 
         mt "Неплохо ты так пробежался.{w} Но ты точно уверен, что сможешь ходить везде, где записался?"
         me "А что не так?"
-        mi "Да времени у тебя на всё это не хватит, так что давай не жадничай, выбери что-то одно!"
+        mt "Да времени у тебя на всё это не хватит, так что давай не жадничай, выбери что-то одно!"
         menu:
             "А я и в газету, и на музыку успею!" if (alt_day2_rendezvous == 1) and 'music' in list_clubs_7dl and 'nwsppr' in list_clubs_7dl:
                 mt "Уверен?"
@@ -3844,51 +3844,58 @@ label alt_day2_dinner:
                 show un normal pioneer at left with dissolve
                 un "Должен справиться."
                 mt "В таком случае, только музыка и газета."
-                $ 'soccerl' in list_clubs_7dl = False
-                $ 'volley' in list_clubs_7dl = False 
-                $ 'badmin' in list_clubs_7dl = False
+                $ list_clubs_7dl.remove('cyber')
+                $ list_clubs_7dl.remove('soccer')
+                $ list_clubs_7dl.remove('volley')
+                $ list_clubs_7dl.remove('badmin')
             "Давайте стенгазету" if 'nwsppr' in list_clubs_7dl:
                 me "Буду статьи писать."
                 "Ольга кивнула, проставляя галочку напротив подписи в библиотеке."
-                $ 'soccerl' in list_clubs_7dl = False
-                $ 'volley' in list_clubs_7dl = False 
-                $ 'badmin' in list_clubs_7dl = False
-                $ 'music' in list_clubs_7dl = False
-            "Давайте, футбол, что ли." if 'soccerl' in list_clubs_7dl:
+                $ list_clubs_7dl.remove('cyber')
+                $ list_clubs_7dl.remove('soccer')
+                $ list_clubs_7dl.remove('volley')
+                $ list_clubs_7dl.remove('badmin')
+                $ list_clubs_7dl.remove('music')
+            "Давайте футбол, что ли." if 'soccer' in list_clubs_7dl:
                 me "Больше-то заняться всё равно нечем."
                 mt "Футбол так футбол."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ 'nwsppr' in list_clubs_7dl = False
-                $ 'volley' in list_clubs_7dl = False 
-                $ 'badmin' in list_clubs_7dl = False
-                $ 'music' in list_clubs_7dl = False
-            "Давайте, волейбол?" if 'volley' in list_clubs_7dl:
+                $ list_clubs_7dl.remove('cyber')
+                $ list_clubs_7dl.remove('volley')
+                $ list_clubs_7dl.remove('badmin')
+                $ list_clubs_7dl.remove('music')
+                $ list_clubs_7dl.remove('nwsppr')
+            "Давайте волейбол?" if 'volley' in list_clubs_7dl:
                 me "Останусь в волейбольной секции, пожалуй."
                 mt "Поближе к Славе? {w}Молодец какой."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ 'nwsppr' in list_clubs_7dl = False
-                $ 'soccerl' in list_clubs_7dl = False
-                $ 'badmin' in list_clubs_7dl = False
-                $ 'music' in list_clubs_7dl = False
-            "Давайте, бадминтон?"if 'badmin' in list_clubs_7dl:
+                $ list_clubs_7dl.remove('cyber')
+                $ list_clubs_7dl.remove('soccer')
+                $ list_clubs_7dl.remove('badmin')
+                $ list_clubs_7dl.remove('music')
+                $ list_clubs_7dl.remove('nwsppr')
+            "Давайте бадминтон?" if 'badmin' in list_clubs_7dl:
                 me "В бадминтон. Воланчики гонять."
                 mt "Немного не мальчишеский спорт, не считаешь?"
                 "Я пожал плечами."
                 me "Мне нравится."
                 mt "Как скажешь."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ 'nwsppr' in list_clubs_7dl = False
-                $ 'soccerl' in list_clubs_7dl = False
-                $ 'volley' in list_clubs_7dl = False 
-                $ 'music' in list_clubs_7dl = False
+                $ list_clubs_7dl.remove('cyber')
+                $ list_clubs_7dl.remove('soccer')
+                $ list_clubs_7dl.remove('volley')
+                $ list_clubs_7dl.remove('music')
+                $ list_clubs_7dl.remove('nwsppr')
             "Останусь в музкружке!" if 'music' in list_clubs_7dl:
                 me "Мне там больше всего нравится."
                 mt "Или тебе Мику нравится?.. Всё-всё, молчу."
                 "Ольга поставила галочку напротив подписи Мику."
-                $ 'nwsppr' in list_clubs_7dl = False
-                $ 'soccerl' in list_clubs_7dl = False
-                $ 'volley' in list_clubs_7dl = False 
-                $ 'badmin' in list_clubs_7dl = False
+                $ list_clubs_7dl.remove('cyber')
+                $ list_clubs_7dl.remove('soccer')
+                $ list_clubs_7dl.remove('volley')
+                $ list_clubs_7dl.remove('badmin')
+                $ list_clubs_7dl.remove('nwsppr')
+
         mt "Но всё остальное — вычёркиваю!"
         "Ольга размашисто перечеркнула что-то на листочке и спрятала его в карман."
         "В этот раз окончательно."
@@ -3904,7 +3911,7 @@ label alt_day2_dinner:
         me "А вы меня записываться отправили или на обход?"
         show mt laugh pioneer with dspr
         mt "А ты непрост! {w}На самом деле я надеялась, что ты найдёшь себе занятие по душе."
-        mt "Но раз ты нигде заниматься не хочешь, придётся твоё свободное время потратить на общественную активность. Ты рад."
+        mt "Но раз ты нигде заниматься не хочешь, придётся твоё свободное время потратить на общественную активность. Ты рад?"
         me "Очень."
         "Пробормотал я."
         "К несчастью, Ольга Дмитриевна была полностью иммунна к сарказму, так как и бровью не повела."

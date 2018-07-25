@@ -91,13 +91,13 @@ label after_load:
 
         # пишем версию 7дл в трейсбеках
         if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-            $ config.version = "1.1 + 7DL v.%s" % (alt_release_no)
+            $ config.version = "1.1 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
         else:
-            $ config.version = "1.2 + 7DL v.%s" % (alt_release_no)
+            $ config.version = "1.2 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
             $ save_names_known()
 
         # Проверяем, совпадают ли версии сохранения и мода и есть ли версия сохранения в списке совместимых
-        if (alt_release_no != alt_save_release_no) and (alt_save_release_no not in alt_compatible_release_no): # и если сохранение несовместимо
+        if alt_release_no != alt_save_release_no: # и если сохранение несовместимо
 
             python: # генерируем строку с номерами версий
                 alt_aicr_string = (u"ЗАГРУЖАЕМАЯ ВЕРСИЯ СОХРАНЕНИЯ (%s) НЕСОВМЕСТИМА С ЭТОЙ ВЕРСИЕЙ МОДА (%s)") % (alt_save_release_no, alt_release_no)

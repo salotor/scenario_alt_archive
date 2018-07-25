@@ -631,6 +631,8 @@ init python:
 
     Shake = renpy.curry(_Shake)
         
+# ================================================================================================
+#                                            альтернативный старт БЛ - WIP
 init 2 python:
     if persistent.autostart_7dl:
         rgsn = renpy.game.script.namemap
@@ -679,3 +681,4 @@ label alt_start_7dl:
     $ init_map_zones()
 
     jump scenario__alt_sevendl
+# ================================================================================================

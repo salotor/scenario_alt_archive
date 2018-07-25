@@ -780,8 +780,6 @@ screen sdl_achvlist_mi7dl_Author:
 label sdl_achvlist_miclt_Author:
     scene bg sdl_ach_inactive_mi
     with dissolve
-    show sdl_achv_delB_7dl: #Иконка удалятора
-        pos (380, 680)
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     call screen sdl_achvlist_miclt_Author
@@ -838,12 +836,6 @@ screen sdl_achvlist_miclt_Author:
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Stop ("ambience"), Hide("sdl_logo_inactive", transition=Dissolve(0.5)),Hide("sdl_mi_cl_active", transition=Dissolve(0.5)),Hide("sdl_mi_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_mi_cltA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
-        hotspot ((380, 680, 170, 50)): #Удалятор
-            hover_sound sdl_achv_click
-            activate_sound sdl_achv_clear
-            hovered [Show("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            action Jump("sdl_achvlist_miclt_clear_Author")
 # ------------------------------------------------
 ######################МИКУ-ДИДЖЕЙ######################################
 label sdl_achvlist_midjt_Author:
@@ -1275,19 +1267,11 @@ screen sdl_achvlist_dv7dl_Author:
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"), Hide("sdl_dv_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_dv_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_dv_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
-        hotspot ((380, 680, 170, 50)): #Удалятор
-            hover_sound sdl_achv_click
-            activate_sound sdl_achv_clear
-            hovered [Show("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            action Jump("sdl_achvlist_dv7dl_clear_Author")
 # ------------------------------------------------   
 ######################АЛИСА-КЛАССИК######################################
 label sdl_achvlist_dvclt_Author:
     scene bg sdl_ach_inactive_dv
     with dissolve
-    show sdl_achv_delB_7dl: #Иконка удалятора
-        pos (380, 680)
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     call screen sdl_achvlist_dvclt_Author
@@ -1344,19 +1328,11 @@ screen sdl_achvlist_dvclt_Author:
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Stop ("ambience"), Hide("sdl_logo_inactive", transition=Dissolve(0.5)),Hide("sdl_dv_cl_active", transition=Dissolve(0.5)),Hide("sdl_dv_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_dv_cltA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
-        hotspot ((380, 680, 170, 50)): #Удалятор
-            hover_sound sdl_achv_click
-            activate_sound sdl_achv_clear
-            hovered [Show("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            action Jump("sdl_achvlist_dvclt_clear_Author")              
 # ------------------------------------------------   
 ######################АЛИСА-ДИДЖЕЙ######################################
 label sdl_achvlist_dvdjt_Author:
     scene bg sdl_ach_inactive_dv
     with dissolve
-    show sdl_achv_delB_7dl: #Иконка удалятора
-        pos (380, 680)
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     call screen sdl_achvlist_dvdjt_Author
@@ -1413,12 +1389,6 @@ screen sdl_achvlist_dvdjt_Author:
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Stop ("ambience"), Hide("sdl_logo_inactive", transition=Dissolve(0.5)),Hide("sdl_dv_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_dv_dj_active", transition=Dissolve(0.5)), Hide("sdl_achv_dv_djtA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
-        hotspot ((380, 680, 170, 50)): #Удалятор
-            hover_sound sdl_achv_click
-            activate_sound sdl_achv_clear
-            hovered [Show("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            action Jump("sdl_achvlist_dvdjt_clear_Author")            
 # ------------------------------------------------                
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\БЛОК СЛАВИ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
 # Slavjas Erreichunge
@@ -1856,8 +1826,6 @@ screen sdl_achvlist_slclt_Author:
 label sdl_achvlist_slwht_Author:
     scene bg sdl_ach_inactive_sl
     with dissolve
-    show sdl_achv_delB_7dl: #Иконка удалятора
-        pos (380, 680)
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     call screen sdl_achvlist_slwht_Author
@@ -1914,12 +1882,6 @@ screen sdl_achvlist_slwht_Author:
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Stop ("ambience"), Hide("sdl_logo_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_active", transition=Dissolve(0.5)), Hide("sdl_achv_sl_whtA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
-        hotspot ((380, 680, 170, 50)): #Удалятор
-            hover_sound sdl_achv_click
-            activate_sound sdl_achv_clear
-            hovered [Show("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            action Jump("sdl_achvlist_slwht_clear_Author")
 # ------------------------------------------------            
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\БЛОК ЛЕНЫ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\       
 # Lenas Erreichunge
@@ -2170,8 +2132,6 @@ screen sdl_achvlist_un7dl_Author:
 label sdl_achvlist_unclt_Author:
     scene bg sdl_ach_inactive_un
     with dissolve
-    show sdl_achv_delB_7dl: #Иконка удалятора
-        pos (380, 680)
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     call screen sdl_achvlist_unclt_Author
@@ -2228,19 +2188,11 @@ screen sdl_achvlist_unclt_Author:
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Stop ("ambience"), Hide("sdl_logo_inactive", transition=Dissolve(0.5)),Hide("sdl_un_cl_active", transition=Dissolve(0.5)),Hide("sdl_un_fz_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_un_cltA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
-        hotspot ((380, 680, 170, 50)): #Удалятор
-            hover_sound sdl_achv_click
-            activate_sound sdl_achv_clear
-            hovered [Show("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            action Jump("sdl_achvlist_unclt_clear_Author")
 # ------------------------------------------------   
 ######################ЛЕНА-ФРЕНДЗОНА######################################
 label sdl_achvlist_unfzd_Author:
     scene bg sdl_ach_inactive_un
     with dissolve
-    show sdl_achv_delB_7dl: #Иконка удалятора
-        pos (380, 680)
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     call screen sdl_achvlist_unfzd_Author
@@ -2297,12 +2249,6 @@ screen sdl_achvlist_unfzd_Author:
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Stop ("ambience"), Hide("sdl_logo_inactive", transition=Dissolve(0.5)),Hide("sdl_un_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_un_fz_active", transition=Dissolve(0.5)), Hide("sdl_achv_un_fzdA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
-        hotspot ((380, 680, 170, 50)): #Удалятор
-            hover_sound sdl_achv_click
-            activate_sound sdl_achv_clear
-            hovered [Show("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            action Jump("sdl_achvlist_unfzd_clear_Author")  
 # ------------------------------------------------
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\БЛОК ОЛЬГИ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\        
 # Olgas Erreichunge
@@ -2535,8 +2481,6 @@ label sdl_achvlist_us_Author:
         show de_achiv_lock7 with dissolve:
             xcenter 800 ycenter 450 
             
-    # show sdl_achv_need_routeA: #Надпись "Рут в разработке"
-        # xcenter 650 ycenter 840 
     show sdl_achv_delB_7dl: #Иконка удалятора
         pos (380, 680)
     show sdl_achv_extB_7dl: #Иконка Ausgang  
@@ -2747,8 +2691,6 @@ label sdl_achvlist_me_Author:
 label sdl_achvlist_med3r_Author:
     scene bg sdl_ach_inactive_me
     with dissolve
-    show sdl_achv_delB_7dl: #Иконка удалятора
-        pos (380, 680)
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     call screen sdl_achvlist_med3r_Author
@@ -2805,19 +2747,11 @@ screen sdl_achvlist_med3r_Author:
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)),Stop ("ambience"),  Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_me_no_inactive", transition=Dissolve(0.5)),Hide("sdl_me_sm_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_me_d3rA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
-        hotspot ((380, 680, 170, 50)): #Удалятор
-            hover_sound sdl_achv_click
-            activate_sound sdl_achv_clear
-            hovered [Show("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            action Jump("sdl_achvlist_med3r_clear_Author")        
 # ------------------------------------------------   
 ######################НУАР-РУТ######################################
 label sdl_achvlist_menoi_Author:
     scene bg sdl_ach_inactive_me
     with dissolve
-    show sdl_achv_delB_7dl: #Иконка удалятора
-        pos (380, 680)
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     call screen sdl_achvlist_menoi_Author
@@ -2874,17 +2808,13 @@ screen sdl_achvlist_menoi_Author:
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Stop ("ambience"), Hide("sdl_logo_inactive", transition=Dissolve(0.5)),Hide("sdl_me_no_active", transition=Dissolve(0.5)),Hide("sdl_me_sm_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_me_noiA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
-        hotspot ((380, 680, 170, 50)): #Удалятор
-            hover_sound sdl_achv_click
-            activate_sound sdl_achv_clear
-            hovered [Show("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
-            action Jump("sdl_achvlist_menoi_clear_Author")
 # ------------------------------------------------
 ######################ПРОЧИЕ ДОСТИЖЕНИЯ######################################
 label sdl_achvlist_mesmt_Author:
     scene bg sdl_ach_inactive_me
     with dissolve
+    show sdl_achv_delB_7dl: #Иконка удалятора
+        pos (380, 680)
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     #Ламповость
@@ -2916,7 +2846,7 @@ label sdl_achvlist_mesmt_Author:
     if persistent.alt_mi_7dl_ps == True:
         show acm_logo_mi_bitter_truth  with dissolve:
             xcenter 800 ycenter 258 
-        show de_check_inactive4 with dissolve:
+        show de_check_active4 with dissolve:
             pos (590, 232)
     else:
         show de_achiv_lock4 with dissolve:
@@ -2944,7 +2874,7 @@ screen sdl_achvlist_mesmt_Author:
             hovered [Show("sdl_achv_kat_me", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_kat_me", transition=Dissolve(0.5))]
             action [Show("sdl_achv_kat_me", transition=Dissolve(0.5))]
-        if persistent.sl_cl_cata:
+        if persistent.alt_lamp:
             hotspot ((590, 40, 50, 52)): #Zerbrechen-Ende-Jump
                 hover_sound sdl_achv_click
                 hovered [Show ("de_check_active1", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
@@ -2954,7 +2884,7 @@ screen sdl_achvlist_mesmt_Author:
             hovered [Show("sdl_achv_kat_me", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_kat_me", transition=Dissolve(0.5))]
             action [Show("sdl_achv_kat_me", transition=Dissolve(0.5))] 
-        if persistent.dv_7dl_tulpa:
+        if persistent.alt_deep:
             hotspot ((590, 104, 50, 52)): #Tiefe-Ende-Jump
                 hover_sound sdl_achv_click
                 hovered [Show ("de_check_active2", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
@@ -2968,11 +2898,11 @@ screen sdl_achvlist_mesmt_Author:
             hovered [Show("sdl_achv_pst_me", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_pst_me", transition=Dissolve(0.5))]
             action [Show("sdl_achv_pst_me", transition=Dissolve(0.5))] 
-        if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_true and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
+        if persistent.alt_mi_7dl_ps:
             hotspot ((590, 232, 50, 52)): #Postscriptum-Miku-Bitter-Jump
                 hover_sound sdl_achv_click
-                hovered [Show ("de_check_active2", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
-                unhovered [Hide ("de_check_active2", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))] 
+                hovered [Show ("de_check_active4", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))] 
                 action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_me_smtA", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_me_sm_active", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)),  Hide("de_check_active3", transition=Dissolve(0.5)),Jump("alt_day7_mi_7dl_postscriptum")]
         else:
             hotspot ((590, 232, 50, 50)): #Ende-Info
@@ -3016,6 +2946,13 @@ screen sdl_achvlist_mesmt_Author:
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             action [Hide("sdl_logo_inactive", transition=Dissolve(0.5)),Stop ("ambience"), Hide("sdl_me_no_inactive", transition=Dissolve(0.5)),Hide("sdl_me_sm_active", transition=Dissolve(0.5)), Hide("sdl_achv_me_smtA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
+        hotspot ((380, 680, 170, 50)): #Удалятор
+            hover_sound sdl_achv_click
+            activate_sound sdl_achv_clear
+            hovered [Show("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
+            action Jump("sdl_achvlist_mesmt_clear_Author")
+            
 ##|||||||||||||||||||||||||||||||||||СБРОС ПЕРСИСТЕНТОВ ПРОХОЖДЕНИЯ||||||||||||||||||||||||||||||||||||||||||||||||         
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\БЛОК МИКУ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
 ######################МИКУ-7ДЛ######################################
@@ -3136,6 +3073,14 @@ label sdl_achvlist_med3r_clear_Author:
 label sdl_achvlist_menoi_clear_Author:
     #Нужны флаги
     call screen sdl_achvlist_menoi_Author
+# ------------------------------------------------ 
+######################ПРОЧИЕ ДОСТИЖЕНИЯ######################################
+label sdl_achvlist_mesmt_clear_Author:
+    $ persistent.alt_lamp = False
+    $ persistent.alt_deep = False
+    $ persistent.alt_qte = False
+    $ persistent.alt_mi_7dl_ps = False
+    call screen sdl_achvlist_mesmt_Author
     
 ##|||||||||||||||||||||||||||||||||||ДУБЛИ КОНЦОВОК||||||||||||||||||||||||||||||||||||||||||||||||      
 label alt_achvA_mi7dl_true:

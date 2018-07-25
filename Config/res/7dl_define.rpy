@@ -538,6 +538,7 @@ init:
     image cg d3_mi_dance_afar_bordo_7dl = get_image_7dl("cg/d3_mi_dance_afar_bordo_7dl.jpg")
     image cg d3_mi_dance_afar_7dl = get_image_7dl("cg/d3_mi_dance_afar_7dl.jpg")
     image cg d3_mi_dance_close_7dl = get_image_7dl("cg/d3_mi_dance_close_7dl.jpg")
+    image cg d3_mi_dance_close_bordo_7dl = get_image_7dl("cg/d3_mi_dance_close_bordo_7dl.jpg")
     image cg d3_me_mirror_white_7dl = get_image_7dl("cg/d3_me_mirror_white_7dl.jpg")
     image cg d3_me_mirror_bordo_7dl = get_image_7dl("cg/d3_me_mirror_bordo_7dl.jpg")
     image cg d3_sl_bath_unplaited_7dl = get_image_7dl("cg/d3_sl_bath_unplaited_7dl.jpg")

@@ -80,8 +80,6 @@ init 2:
     $ mod_tags["scenario__alt__test"] = ["length:test","gameplay:test","protagonist:male","special:TEST","character:7ДЛ — ТЕСТ"]
     
 label scenario__alt__test:
-    $ init_map_zones_alt1()
-    $ init_map_zones_alt2()
     $ alt_save_release_no = "00.x.0"
     $ bak_release_no = alt_release_no
     $ alt_release_no = "00.x.0"

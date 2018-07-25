@@ -25,8 +25,6 @@
         
 label scenario__sdl_selector:
 
-    $ init_map_zones_alt1()
-    $ init_map_zones_alt2()
     $ alt_save_release_no = alt_release_no
     $ day_time()
     $ persistent.sprite_time = "day"
@@ -451,7 +449,7 @@ label sdl_menu:
                             menu:
                                 "Газета"
                                 "Записан":
-                                    $ 'nwsppr' in list_clubs_7dl = True
+                                    $ list_clubs_7dl.append('nwsppr')
                                 "Нет":
                                     pass 
                             menu:
