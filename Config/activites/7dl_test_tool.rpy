@@ -404,6 +404,18 @@ label sdl_menu:
                             $ alt_day3_technoquest_st3 = 2
                             $ routetag = "sl"
                             stop ambience fadeout 2
+                            menu:
+                                "Проверка инт-эпилога":
+                                    call alt_day7_sl_loop2
+                                "Проверка концовок - воля":
+                                    $ alt_day6_sl_int = 4
+                                    call alt_day7_sl_will
+                                "Проверка концовок - долг":
+                                    call alt_day7_sl_duty
+                            $ alt_day3_sl_day_event2 = 1
+                            $ alt_day3_technoquest_st3 = 2
+                            $ routetag = "sl"
+                            stop ambience fadeout 2
                             jump alt_day4_sl_start
                 "Лена":
                     $ lp_un += 14
@@ -439,7 +451,7 @@ label sdl_menu:
                             menu:
                                 "Газета"
                                 "Записан":
-                                    $ alt_day2_club_join_nwsppr = True
+                                    $ 'nwsppr' in list_clubs_7dl = True
                                 "Нет":
                                     pass 
                             menu:

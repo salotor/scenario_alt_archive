@@ -242,10 +242,10 @@ label alt_day7_us_px_vars:
     
 label alt_day4_sl_7dl_vars:
     $ alt_day4_sl_7dl_workout = False #Пробежка!
-    $ alt_day4_sl_7dl_herc_appletree = False
-    $ alt_day4_sl_7dl_help1 = False
-    $ alt_day4_sl_7dl_phone = False
-    $ alt_day4_sl_7dl_herc_rendezvous = False
+    $ alt_day4_sl_7dl_herc_appletree = False #Ульянкина яблонька
+    $ alt_day4_sl_7dl_help1 = False #Помощь с колонками
+    $ alt_day4_sl_7dl_phone = False #Поднял телефон?
+    $ alt_day4_sl_7dl_herc_rendezvous = False #Согласился на встречу?
     return
 
 label alt_day5_sl_7dl_vars:

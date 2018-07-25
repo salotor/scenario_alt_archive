@@ -2,10 +2,6 @@
     call alt_day1_vars
     pause(1)
     $ persistent.sprite_time = "day"
-    $ night_time()
-    call alt_day1_begin
-    pause(1)
-    $ persistent.sprite_time = "day"
     $ day_time()
     $ alt_chapter(1, u"Пробуждение")
     call alt_day1_bus_start
@@ -39,19 +35,23 @@
     pause(1)
     call alt_day1_dining_room
     pause(1)
-    $ alt_chapter(1, u"Погоня")
-    call alt_day1_chase
-    pause(1)
-    if alt_day1_us_shotted:
-        call alt_day1_headshot
+    if alt_day1_sl_conv2:
+        $ alt_chapter(1, u"Экскурсия. Вечер")
+        call alt_day1_meeting2
     else:
-        call alt_day1_nocatch
-    pause(1)
-    $ persistent.sprite_time = "night"
-    $ night_time()
-    $ alt_chapter(1, u"Спасительница")
-    call alt_day1_slavya_saviour
-    pause(1)
+        $ alt_chapter(1, u"Погоня")
+        call alt_day1_chase
+        pause(1)
+        if alt_day1_us_shotted:
+            call alt_day1_headshot
+        else:
+            call alt_day1_nocatch
+        pause(1)
+        $ persistent.sprite_time = "night"
+        $ night_time()
+        $ alt_chapter(1, u"Спасительница")
+        call alt_day1_slavya_saviour
+        pause(1)
     $ alt_chapter(1, u"Вечер")
     call alt_day1_lena
     pause(1)
@@ -60,4 +60,7 @@
         pause(1)
     call alt_day1_sleep
     pause(1)
-    jump alt_day2_start
+    if alt_day_binder == 1:
+        jump alt_day2_d3
+    else:
+        jump alt_day2_start

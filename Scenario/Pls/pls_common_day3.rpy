@@ -143,7 +143,7 @@ label alt_day3_disco:
     call alt_day3_choose
     pause(1)
     if (alt_day3_sl_day_event2 != 0) and (alt_day3_dancing == 2):
-        if (lp_sl >= 15) and (alt_day3_sl_day_event2 == 2):
+        if (lp_sl >= 15) and (alt_day3_sl_day_event2 != 0):
             pause(1)
             call alt_day3_bath_voyeur
             pause(1)

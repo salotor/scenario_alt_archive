@@ -38,6 +38,18 @@
         $ alt_chapter(4, u"Славя. 7ДЛ. Вечер")
         call alt_day4_sl_7dl_herc_evening
     else:
+        #Заглушка
+        window hide
+        show spill_red with dspr
+        $ renpy.pause(2, hard=True)
+        show spill_gray with dspr
+        $ renpy.pause(2, hard=True)
+        show alt_credits timeskip_dev at truecenter with dissolve2
+        $ renpy.pause(4, hard=True)
+        with dissolve2
+        window hide
+        return
+        #/Заглушка
         call alt_day4_sl_7dl_morning
         pause(1)
         $ alt_chapter(4, u"Славя. 7ДЛ. День")
@@ -227,42 +239,3 @@ label alt_day7_sl_7dl_start:
         call alt_day7_sl_7dl_bad
     pause(1)
     return
-=======
-    if herc:
-        call alt_day4_sl_7dl_herc_karma
-    elif loki:
-        call alt_day4_sl_7dl_loki_lp
-    else:
-        call alt_day4_sl_7dl_sam_sp
-    pause(1)
-    call alt_day4_sl_7dl_dinner
-    pause(1)
-    if herc:
-        call alt_day4_sl_7dl_herc_lp
-    elif loki:
-        call alt_day4_sl_7dl_loki_sp
-    else:
-        call alt_day4_sl_7dl_sam_karma
-    pause(1)
-    call alt_day4_sl_7dl_lunch
-    pause(1)
-    if herc:
-        call alt_day4_sl_7dl_herc_karma
-    elif loki:
-       call alt_day4_sl_7dl_loki_lp
-    else:
-        call alt_day4_sl_7dl_sam_sp
-    pause(1)
-    call alt_day4_sl_7dl_supper
-    pause(1)
-    if herc:
-        call alt_day4_sl_7dl_herc_lp
-    elif loki:
-       call alt_day4_sl_7dl_loki_sp
-    else:
-        call alt_day4_sl_7dl_sam_karma
-    pause(1)
-    call alt_day4_sl_7dl_sleeptime
-    jump alt_day5_sl_7dl_start
-    
->>>>>>> master

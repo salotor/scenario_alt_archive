@@ -55,8 +55,9 @@ label alt_day0_start:
             $ prolog_time()
         "Но я не уверен точно.":
             jump alt_day0_prologue
-        "На самом деле всё было совсем иначе!" if alt_day_binder == 3:
+        "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
+            $ d3 = True
     jump alt_day0_start1
 
 label alt_day0_start_herc:
@@ -75,7 +76,7 @@ label alt_day0_start_herc:
             $ herc = True
         "Но я не уверен точно.":
             jump alt_day0_prologue
-        "На самом деле всё было совсем иначе!" if alt_day_binder == 3:
+        "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
     jump alt_day0_start1
 
@@ -95,12 +96,12 @@ label alt_day0_start_loki:
             show alt_credits timeskip6 with dissolve2:
                 pos (200,540)
             $ renpy.pause(4, hard=True)
-            scene bg ext_winterpark_sunset_7dl with dissolve
+            scene expression Dawn("bg ext_winterpark_7dl") with dissolve
             $ prolog_time()
             $ loki = True
         "Но я не уверен точно…":
             jump alt_day0_prologue
-        "На самом деле всё было совсем иначе!" if alt_day_binder == 3:
+        "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
     jump alt_day0_start1
 
@@ -109,6 +110,8 @@ label alt_day0_start1:
         call alt_day0_start_l
     elif herc:
         call alt_day0_start_h
+    elif d3:
+        call alt_day0_d3_prologue
     else:
         call alt_day0_start_d
     if alt_day_catapult == 1:
@@ -124,29 +127,29 @@ label alt_day0_opening:
         play music music_7dl["seven_summer_days"] fadein 5
     scene black 
     $ renpy.pause(3, hard=True)
-    scene op_back 
+    scene op_back
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show op_mi 
+    show expression Notch("op_mi")
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show op_dv 
+    show expression Notch("op_dv")
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show op_sl 
+    show expression Notch("op_sl")
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show op_un 
+    show expression Notch("op_un")
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show mt_bus 
+    show expression Notch("mt_bus")
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show op_us
+    show expression Notch("op_us")
     show uv_bus behind op_dv
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show logo_day :
+    show expression Desat1("logo_day") :
         pos (400,150)
     with dissolve2
     show acm_logo with zoomin:
@@ -157,7 +160,9 @@ label alt_day0_opening:
     with dissolve2
     stop music fadeout 5
     $ renpy.pause(5, hard=True)
-    if alt_day_binder == 1:
-        jump alt_day1_alt_start
-    else:
+    call alt_day1_begin
+    pause(1)
+    if alt_day1_loop or (alt_day_binder != 1):
         jump alt_day1_start
+    else:
+        jump alt_day1_alt_start

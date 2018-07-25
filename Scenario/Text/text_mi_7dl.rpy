@@ -11946,7 +11946,7 @@ label alt_day7_mi_7dl_unlike:
     "Сейчас бы молчать в небосклон цвета индиго, переплетать облачка с кольцами дыма и сочинять глупые стихи о том, чего не бывает. Но…"
     play music music_7dl["ask_you_out"] fadein 3
     window hide
-    scene bg ext_winterpark_sunset_7dl with dissolve
+    scene expression Dawn("bg ext_winterpark_7dl") with dissolve
     "Резкий звук, брильянтовая крошка…"
     "Конечно, первое место мне не светит, но я хотя бы попадаю в список призёров."
     "А значит, не придётся бесславно возвращаться обратно в Россию, как в эти последние три года."
