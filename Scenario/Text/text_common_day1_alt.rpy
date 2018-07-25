@@ -2336,7 +2336,7 @@ label alt_day1_alt_U:
             "Вряд ли мы разминёмся – все пути в этом лагере ведут к Генде."
             stop music fadeout 3
             "Я закрыл глаза."
-            play music music_list["everyday_theme"] fadein 3
+            play music music_7dl["everyday"] fadein 3
             play sound sfx_7dl["pouring"]
             "А открыл их, когда мне на колени посыпалось нечто твёрдое и не сказать чтобы сыпучее."
             show us laugh sport with dspr

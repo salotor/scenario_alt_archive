@@ -2663,7 +2663,7 @@ label alt_day4_mi_herbs:
         window hide
         
 label alt_day4_mi_med_EV:
-    play music music_list["everyday_theme"] fadein 5
+    play music music_7dl["everyday"] fadein 5
     stop ambience fadeout 2
     play sound sfx_open_door_2
     scene bg ext_musclub_day

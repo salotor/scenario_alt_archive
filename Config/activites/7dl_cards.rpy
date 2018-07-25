@@ -1206,7 +1206,7 @@ label alt_day2_semifinal:
         if alt_day2_dv_bet_approve:
             me "У нас же спор, помнишь?"
             if loki or herc:
-                extend "Ты разбивала!"
+                extend " Ты разбивала!"
             show us sad pioneer with dspr
             us "Спор — это да."
             us "Но играть будем по моим правилам!"
@@ -1619,6 +1619,7 @@ label alt_day2_semifinal_win:
             dv "Что?"
             me "С позорным поражением тебя!"
             $ lp_dv += 1
+            show dv rage pioneer2 with dspr
             "По-моему, она меня всё-таки обругала матом."
             "Не могу сказать — её перекосило так, что я расхохотался."
         else:

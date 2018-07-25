@@ -1,10 +1,6 @@
 ﻿label alt_day1_alt_start:
     call alt_day1_vars
     $ persistent.sprite_time = "day"
-    $ night_time()
-    call alt_day1_begin
-    pause(1)
-    $ persistent.sprite_time = "day"
     $ day_time()
     $ alt_chapter(1, u"Лагерь.")
     call alt_day1_alt_M
