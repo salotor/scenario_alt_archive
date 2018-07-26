@@ -10678,7 +10678,7 @@ label alt_day7_us_7dl_reunite:
     call alt_7dl_titles
     stop music fadeout 3
     $ renpy.pause(2)
-    if (alt_day_binder == 1) and loki:
+    if ((alt_day_binder == 1) or alt_day1_loop) and loki:
         play music music_7dl["beasteye"] fadein 3
         window hide
         play ambience ambience_cold_wind_loop fadein 3
@@ -12491,7 +12491,7 @@ label alt_day7_us_px_fairytale:
     "Я не знал, что это такое, но на всякий случай кивнул."
     "И сделал это совсем не напрасно, потому что пицца…"
     "Мне было бы вкуснее, если бы не закрывающиеся глаза и озноб, который не закончился даже после горячей воды."
-    show flash2_red
+    with flash2_red
     dv "Ты красный… Ты весь горишь."
     "Она потрогала мой лоб."
     dv "Так и знала. Досиделся под дождём."
