@@ -197,7 +197,7 @@ label alt_day7_mi_7dl_start:
         else:
             if alt_spt >= 8:
                 call alt_day7_mi_7dl_sparkle
-                if alt_day_binder == 1:
+                if (alt_day_binder == 1) or alt_day1_loop:
                      call alt_day7_mi_7dl_postscriptum
             elif alt_spt > 6 and alt_day5_mi_7dl_kiss:
                 call alt_day7_mi_7dl_club27

@@ -44,9 +44,9 @@ label alt_day3_router_sl:
     if lp_sl >= 13:
         "Мне снилась Славя…"
         window hide
-        if alt_day2_sl_conv:
+        if alt_day3_sl_conv2:
             jump alt_day4_sl_7dl_start
-        elif (alt_day3_technoquest_st3 == 2) and (alt_day3_sl_event2 != 0):
+        elif alt_day3_sl_event3:
             $ lp_us -= 3
             $ routetag = "sl"
             jump alt_day4_sl_start

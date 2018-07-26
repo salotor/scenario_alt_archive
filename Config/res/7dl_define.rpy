@@ -645,7 +645,7 @@ init:
     image cg d6_sl_clean_7dl = get_image_7dl("cg/d6_sl_clean_7dl.jpg")
     image cg d6_sl_zettai_7dl = get_image_7dl("cg/d6_sl_zettai_7dl.jpg")
     
-    image cg d6_un_dissolve_0_7dl = get_image_7dl("cg/d6_un_dissolve_7dl.jpg")
+    image cg d6_un_dissolve_7dl = get_image_7dl("cg/d6_un_dissolve_7dl.jpg")
     
     image cg d6_un_evening_0_7dl = get_image_7dl("cg/d6_un_evening_0_7dl.jpg")
     image cg d6_un_evening_3_7dl = get_image_7dl("cg/d6_un_evening_3_7dl.jpg")
