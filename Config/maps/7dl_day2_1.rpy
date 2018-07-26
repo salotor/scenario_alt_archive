@@ -32,7 +32,7 @@ label alt_day2_map:
 
 label alt_day2_event_music_club:
     scene bg ext_musclub_day with fade
-    if alt_day2_rendezvous == 4:
+    if ('dv_prep' in list_d2_convoy_7dl):
         call alt_day2_event_music_club1
     else:
         call alt_day2_event_music_club1
@@ -78,6 +78,7 @@ label alt_day2_event_sport_area:
     jump alt_day2_map
 
 label alt_day2_event_beach:
+    $ list_voyage_7dl.append('beach')
     call alt_day2_event_beach1
     $ disable_current_zone_alt1()
     jump alt_day2_map
@@ -109,17 +110,17 @@ label alt_day2_event_medic_house:
 label alt_day2_event_square:
     $ persistent.sprite_time = "day"
     $ day_time()
-    if alt_day2_rendezvous == 2: # второе посещение со Славей
+    if ('sl' in list_d2_convoy_7dl): # второе посещение со Славей
         $ disable_current_zone_alt1()
         if alt_day1_sl_keys_took == 1:
             call alt_day2_sl_hyst
         else:
             call alt_day2_event_square_dunno
     else:
-        if alt_day2_necessary_done > 1: # пришёл после уборки
+        if 'cleaning_sl' in list_voyage_7dl:# пришёл после уборки
             $ disable_current_zone_alt1()
         else:
-            if alt_day2_rendezvous == 22: # первое посещение со Славей
+            if ('sl_prep' in list_d2_convoy_7dl): # первое посещение со Славей
                 $ set_chibi_alt1('square_alt1', 'sl')
                 window hide
             else:

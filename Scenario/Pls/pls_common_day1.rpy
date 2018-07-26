@@ -60,7 +60,7 @@
         pause(1)
     call alt_day1_sleep
     pause(1)
-    if alt_day_binder == 1:
+    if d3:
         jump alt_day2_d3
     else:
         jump alt_day2_start

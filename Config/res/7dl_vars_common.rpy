@@ -210,15 +210,15 @@ label alt_day1_vars: #Переменные первого дня
     return
     
 label alt_day2_vars: #Переменные второго дня
-    $ list_clubs_7dl = []
     $ alt_route_flag = 2
     $ list_clubs_7dl = []
     $ list_voyage_7dl = []
+    $ list_d2_date_7dl = []
+    $ list_d2_convoy_7dl = []
     $ alt_day2_bf_dv_us = False
     $ alt_day2_bf_un = False
     $ alt_day2_dv_bet_approve = False
     $ alt_day2_dv_bet_won = 0
-    $ alt_day2_dv_bumped = False
     $ alt_day2_dv_chased = False
     $ alt_day2_dv_harass = False
     $ alt_day2_dv_tears = False
@@ -231,21 +231,12 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_mi_hyst = False
     $ alt_day2_mt_help = False
     $ alt_day2_mi_snap = False
-    $ alt_day2_rendezvous = 0
-    $ alt_day2_rendezvous_dinner = 0
     $ alt_day2_sl_conv = False
     $ alt_day2_sl_bf = False
     $ alt_day2_sl_guilty = 0 #0 не был свидетелем, 1 был, 2 вступился
-    $ alt_day2_date = 0 #un 1, sl 2, dv 3, mi 4, us 5, mt 6
     $ alt_day2_un_secret_spot = 0
     $ alt_day2_us_dubstep = False
     $ alt_day2_us_escape = False
-    $ alt_day2_muz_done = False #Если только ходил в музклуб, но не записывался
-    $ alt_day2_lib_done = False
-    $ alt_day2_med_done = False
-    $ alt_day2_club_done = False
-    $ alt_day2_phys_done = False
-    $ alt_day2_beach_done = False
     $ alt_day2_walk = 0
     $ alt_day2_fail = 0
     $ alt_day2_sup = 0

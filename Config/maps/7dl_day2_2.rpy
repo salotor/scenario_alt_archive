@@ -1,11 +1,10 @@
 ﻿label alt_day2_mapEv_prepare:
-    window hide
-    stop ambience
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(2, u"Вечерние события")
     $ disable_all_zones_alt2()
     $ disable_all_chibi_alt2()
+    
     $ set_zone_alt2('music_club_alt2', 'alt_day2_eventEv_music_club')
     if lp_mi >= 5:
         $ set_chibi_alt2('music_club_alt2', 'mi')
@@ -104,7 +103,7 @@ label alt_day2_eventEv_sport_area:
 label alt_day2_eventEv_beach:
     call alt_day2_eventEv_beach1
     if alt_day2_round3 == 2 and alt_day2_dv_bet_approve:
-        $ alt_day2_date = 3
+        $ list_d2_date_7dl.append('dv')
         $ disable_current_zone_alt2()
         call alt_day2_slot_dv
         return
@@ -137,17 +136,17 @@ label alt_day2_eventEv_square:
     $ sunset_time()
     call alt_day2_eventEv_square1
     pause(1)
-    if lp_sl >= 8 and alt_day2_sl_guilty == 2:
+    if (lp_sl >= 8) and (alt_day2_sl_guilty == 2):
         call alt_day2_slot_sl
         return
-    elif alt_day2_cake: # новая переменная
+    elif alt_day2_cake:
         return
     $ disable_current_zone_alt2()
     jump alt_day2_mapEv
 
 label alt_day2_eventEv_boat_station:
     call alt_day2_eventEv_boat_station1
-    if alt_day2_cake: # новая переменная
+    if alt_day2_cake:
         return
     $ disable_current_zone_alt2()
     jump alt_day2_mapEv

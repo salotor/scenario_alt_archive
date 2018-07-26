@@ -12,7 +12,7 @@
         $ set_chibi_alt1("music_club_alt1",   "mi")
     $ set_zone_alt1("clubs_alt1",        "alt_day3_event_clubs")
     $ set_zone_alt1("camp_entrance_alt1","alt_day3_event_camp_entrance")
-    if alt_day2_date == 132:
+    if ('un_fz' in list_d2_date_7dl):
         $ set_chibi_alt1("camp_entrance_alt1","me")
     $ set_zone_alt1("dining_hall_alt1",  "alt_day3_event_dining_hall")
     $ set_zone_alt1("sport_area_alt1",   "alt_day3_event_sport_area")
@@ -51,7 +51,7 @@ label alt_day3_event_clubs:
 
 label alt_day3_event_camp_entrance:
     call alt_day3_event_camp_entrance1
-    if alt_day2_date == 132:
+    if ('un_fz' in list_d2_date_7dl):
        return
     else:
         $ disable_current_zone_alt1()
