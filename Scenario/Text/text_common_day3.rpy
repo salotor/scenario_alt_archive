@@ -9716,7 +9716,7 @@ label alt_day3_choose3:
                 $ alt_day3_dancing = 32
                 "Алиска так и не пришла. Похоже, придётся мне либо искать другую кандидатуру, либо сычевать."
                 jump alt_day3_choose3
-        "Танцевать со Славей":
+        "Танцевать со Славей" if not alt_day3_sl_day_event2:
             call alt_day3_lp_checker(alt_dater = sl)
             if alt_day3_dancing == 2:
                 $ alt_day3_dancing = 21
