@@ -296,8 +296,11 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_mi_invite2 = False
     $ alt_day3_mi_donor = False
     $ alt_day3_sl_bath_voy = False
-    $ alt_day3_sl_day_event2 = False
+    $ alt_day3_sl_conv = False
+    $ alt_day3_sl_conv2 = False
     $ alt_day3_sl_day_event = False
+    $ alt_day3_sl_day_event2 = False
+    $ alt_day3_sl_day_event3 = False
     $ alt_day3_sl_event = False
     $ alt_day3_sl_invite = False
     $ alt_day3_technoquest_st1 = False

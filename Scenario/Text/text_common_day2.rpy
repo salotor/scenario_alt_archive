@@ -3844,36 +3844,26 @@ label alt_day2_dinner:
                 show un normal pioneer at left with dissolve
                 un "Должен справиться."
                 mt "В таком случае, только музыка и газета."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('soccer')
-                $ list_clubs_7dl.remove('volley')
-                $ list_clubs_7dl.remove('badmin')
+                $ list_slavya_7dl = []
+                $ list_slavya_7dl.append('nwsppr')
+                $ list_slavya_7dl.append('music')
             "Давайте стенгазету" if 'nwsppr' in list_clubs_7dl:
                 me "Буду статьи писать."
                 "Ольга кивнула, проставляя галочку напротив подписи в библиотеке."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('soccer')
-                $ list_clubs_7dl.remove('volley')
-                $ list_clubs_7dl.remove('badmin')
-                $ list_clubs_7dl.remove('music')
+                $ list_slavya_7dl = []
+                $ list_slavya_7dl.append('nwsppr')
             "Давайте футбол, что ли." if 'soccer' in list_clubs_7dl:
                 me "Больше-то заняться всё равно нечем."
                 mt "Футбол так футбол."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('volley')
-                $ list_clubs_7dl.remove('badmin')
-                $ list_clubs_7dl.remove('music')
-                $ list_clubs_7dl.remove('nwsppr')
+                $ list_slavya_7dl = []
+                $ list_slavya_7dl.append('soccer')
             "Давайте волейбол?" if 'volley' in list_clubs_7dl:
                 me "Останусь в волейбольной секции, пожалуй."
                 mt "Поближе к Славе? {w}Молодец какой."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('soccer')
-                $ list_clubs_7dl.remove('badmin')
-                $ list_clubs_7dl.remove('music')
-                $ list_clubs_7dl.remove('nwsppr')
+                $ list_slavya_7dl = []
+                $ list_slavya_7dl.append('volley')
             "Давайте бадминтон?" if 'badmin' in list_clubs_7dl:
                 me "В бадминтон. Воланчики гонять."
                 mt "Немного не мальчишеский спорт, не считаешь?"
@@ -3881,21 +3871,20 @@ label alt_day2_dinner:
                 me "Мне нравится."
                 mt "Как скажешь."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('soccer')
-                $ list_clubs_7dl.remove('volley')
-                $ list_clubs_7dl.remove('music')
-                $ list_clubs_7dl.remove('nwsppr')
+                $ list_slavya_7dl = []
+                $ list_slavya_7dl.append('badmin')
             "Останусь в музкружке!" if 'music' in list_clubs_7dl:
                 me "Мне там больше всего нравится."
                 mt "Или тебе Мику нравится?.. Всё-всё, молчу."
                 "Ольга поставила галочку напротив подписи Мику."
-                $ list_clubs_7dl.remove('cyber')
-                $ list_clubs_7dl.remove('soccer')
-                $ list_clubs_7dl.remove('volley')
-                $ list_clubs_7dl.remove('badmin')
-                $ list_clubs_7dl.remove('nwsppr')
-
+                $ list_slavya_7dl = []
+                $ list_slavya_7dl.append('music')
+            "Я за кибернетику!" if 'cyber' in list_clubs_7dl:
+                mt "Уверен?"
+                me "Да."
+                mt "Хорошо, оставляем кибернетику."
+                $ list_slavya_7dl = []
+                $ list_slavya_7dl.append('cyber')
         mt "Но всё остальное — вычёркиваю!"
         "Ольга размашисто перечеркнула что-то на листочке и спрятала его в карман."
         "В этот раз окончательно."
