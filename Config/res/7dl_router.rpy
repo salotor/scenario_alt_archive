@@ -46,7 +46,7 @@ label alt_day3_router_sl:
         window hide
         if alt_day3_sl_conv2:
             jump alt_day4_sl_7dl_start
-        elif alt_day3_sl_event3:
+        elif alt_day3_sl_day_event3:
             $ lp_us -= 3
             $ routetag = "sl"
             jump alt_day4_sl_start

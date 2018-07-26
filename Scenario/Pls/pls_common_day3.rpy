@@ -143,17 +143,19 @@ label alt_day3_disco:
     call alt_day3_choose
     pause(1)
     if alt_day3_sl_day_event2 and (alt_day3_dancing == 2):
-        if (lp_sl >= 14) and alt_day3_sl_day_event2:
+        if alt_day3_sl_conv2:
             pause(1)
             call alt_day3_bath_voyeur
             pause(1)
             call alt_day3_sleeptime
             pause(1)
             jump alt_day3_slots
-        else:
+        elif alt_day3_sl_day_event3:
             call alt_day3_technoquest3
             pause(1)
             jump alt_day3_slots
+        else:
+            jump alt_day3_disco2 
     else:
         call alt_day3_dance_dance2
         pause(1)

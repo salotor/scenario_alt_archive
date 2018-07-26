@@ -6630,6 +6630,7 @@ label alt_day3_sl_postlunch:
             "Последним идиотом надо было быть, чтобы отказаться."
             "Как иначе-то?"
             $ alt_day3_sl_conv = True
+            $ alt_day3_sl_day_event2 = True
             $ lp_sl += 2
             stop ambience
             play music music_list["i_want_to_play"] fadein 3
@@ -9002,8 +9003,8 @@ label alt_day3_choose:
                 dreamgirl "Может, обратно на танцы? Там хоть и шумно, зато на скамейке никто не дёргает."
                 "Я задумался."
                 menu:
-                    "Остаться на пляже" if alt day3_sl_event2 and not alt_day3_sl_conv:
-                        $ alt_day3_sl_event3 = True
+                    "Остаться на пляже" if alt_day3_sl_day_event2 and not alt_day3_sl_conv:
+                        $ alt_day3_sl_day_event3 = True
                         if loki:
                             th "Неужели, одного единственного раза никогда не бывает достаточно?"
                             "Я как мотылёк, обжёгся о свечу так, что сгорел почти полностью."
