@@ -90,12 +90,14 @@ init 2:
         $ names['ai'] = u'Собеседник'
         $ names['al'] = u'Сердитый мальчик'
         $ names['am'] = u'Я'
-        $ names['ase'] = u'Странная девочка'
+        $ names['ase'] = u'Девочка'
         $ names['ba'] = u'Физрук'
         $ names['bb'] = u'Начальник лагеря'
-        $ names['dn'] = u'Взъерошенный мальчик'
+        $ names['dn'] = u'Растрёпанный мальчик'
+        $ names['dy'] = u'Динамики'
         $ names['ka'] = u'Вожатая 2-го отряда'
-        $ names['ln'] = u'Странная девушка'
+        $ names['kids'] = u'Дети'
+        $ names['ln'] = u'Странная девочка'
         $ names['ml'] = u'Мальчик'
         $ names['ml2'] = u'Мальчик'
         $ names['ml3'] = u'Мальчик'
@@ -104,9 +106,7 @@ init 2:
         $ names['voice1'] = u'Продавщица'
         $ names['voices'] = u'Голоса'
         $ names['we'] = u'Хором'
-        $ names['kids'] = u'Дети'
-        $ names['dy'] = u'Динамики'
-
+        
 label scenario__alt_sevendl:
 # только если игру начали заново - принимаем номер релиза сохранения по номеру релиза мода
     $ alt_save_release_no = alt_release_no
