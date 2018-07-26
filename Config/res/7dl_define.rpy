@@ -538,6 +538,7 @@ init:
     image cg d3_mi_dance_afar_bordo_7dl = get_image_7dl("cg/d3_mi_dance_afar_bordo_7dl.jpg")
     image cg d3_mi_dance_afar_7dl = get_image_7dl("cg/d3_mi_dance_afar_7dl.jpg")
     image cg d3_mi_dance_close_7dl = get_image_7dl("cg/d3_mi_dance_close_7dl.jpg")
+    image cg d3_mi_dance_close_bordo_7dl = get_image_7dl("cg/d3_mi_dance_close_bordo_7dl.jpg")
     image cg d3_me_mirror_white_7dl = get_image_7dl("cg/d3_me_mirror_white_7dl.jpg")
     image cg d3_me_mirror_bordo_7dl = get_image_7dl("cg/d3_me_mirror_bordo_7dl.jpg")
     image cg d3_sl_bath_unplaited_7dl = get_image_7dl("cg/d3_sl_bath_unplaited_7dl.jpg")
@@ -644,7 +645,7 @@ init:
     image cg d6_sl_clean_7dl = get_image_7dl("cg/d6_sl_clean_7dl.jpg")
     image cg d6_sl_zettai_7dl = get_image_7dl("cg/d6_sl_zettai_7dl.jpg")
     
-    image cg d6_un_dissolve_0_7dl = get_image_7dl("cg/d6_un_dissolve_7dl.jpg")
+    image cg d6_un_dissolve_7dl = get_image_7dl("cg/d6_un_dissolve_7dl.jpg")
     
     image cg d6_un_evening_0_7dl = get_image_7dl("cg/d6_un_evening_0_7dl.jpg")
     image cg d6_un_evening_3_7dl = get_image_7dl("cg/d6_un_evening_3_7dl.jpg")
