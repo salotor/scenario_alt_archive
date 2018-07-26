@@ -110,6 +110,9 @@ init 2:
 label scenario__alt_sevendl:
 # только если игру начали заново - принимаем номер релиза сохранения по номеру релиза мода
     $ alt_save_release_no = alt_release_no
+    $ init_map_zones_alt1() # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения    
+    $ init_map_zones_alt2()
+
 # ------------------------------------------------
     jump main_menu_7dl
 
@@ -144,10 +147,6 @@ init 4: # вызываем все переменные в init (необходи
     call alt_day6_us_px_vars
     call alt_day6_us_7dl_vars
     call alt_day7_us_px_vars
-
-init 99: # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения    
-    $ init_map_zones_alt1()
-    $ init_map_zones_alt2()
 
 label alt_day0_vars: #Переменные нулевого дня
     $ lp_mi = 0
@@ -303,6 +302,7 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_sl_day_event3 = False
     $ alt_day3_sl_event = False
     $ alt_day3_sl_invite = False
+    $ alt_day3_sl_event3 = False
     $ alt_day3_technoquest_st1 = False
     $ alt_day3_technoquest_st2 = False
     $ alt_day3_technoquest_st3 = 0
