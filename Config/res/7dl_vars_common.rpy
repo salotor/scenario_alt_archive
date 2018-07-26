@@ -110,9 +110,14 @@ init 2:
 label scenario__alt_sevendl:
 # только если игру начали заново - принимаем номер релиза сохранения по номеру релиза мода
     $ alt_save_release_no = alt_release_no
-    $ init_map_zones_alt1() # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения    
+# инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
+    $ init_map_zones_alt1()
     $ init_map_zones_alt2()
-
+# пишем версию 7дл в трейсбеках
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        $ config.version = "1.1 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
+    else:
+        $ config.version = "1.2 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
 # ------------------------------------------------
     jump main_menu_7dl
 
@@ -149,6 +154,7 @@ init 4: # вызываем все переменные в init (необходи
     call alt_day7_us_px_vars
 
 label alt_day0_vars: #Переменные нулевого дня
+    $ make_names_unknown_7dl()
     $ lp_mi = 0
     $ lp_sl = 0
     $ lp_un = 0
@@ -162,29 +168,26 @@ label alt_day0_vars: #Переменные нулевого дня
     $ mt_pt = 0
     $ d3_pt = 0
     $ us_pt = 0
+    $ th_prefix = "«"
+    $ th_suffix = "»"
     $ alt_day_catapult = 0
-    $ alt_day_binder = 0
+    $ alt_replay_on = False
     $ alt_dlc_active = False
     $ herc = False
     $ loki = False
     $ d3 = False
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
-    $ make_names_unknown_7dl()
-    $ th_prefix = "«"
-    $ th_suffix = "»"
     if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
-    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        $ config.version = "1.1 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
     else:
-        $ config.version = "1.2 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
+        $ alt_day_binder = 0
     return
     
 label alt_day1_vars: #Переменные первого дня
     $ list_slavya_7dl = []
-    $ alt_route_flag = 1
     $ list_slavya_7dl = []
+    $ alt_route_flag = 1
     $ alt_day1_loop = False
     $ alt_day1_alt_chase = False
     $ alt_day1_alt_us_robbed = False
