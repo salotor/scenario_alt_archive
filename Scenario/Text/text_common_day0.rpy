@@ -1078,7 +1078,7 @@ label alt_day0_d3_prologue:
     am "И что ты предлагаешь? {w}Остаться здесь?"
     dreamgirl "Нет. Пошли лучше со мной?"
     am "Я не могу, там люди, которые мне дороги."
-    show un smile with dspr
+    show uv smile with dspr
     dreamgirl "Дороги?"
     am "Да, ближе их у меня никого…"
     window hide

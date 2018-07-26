@@ -116,7 +116,7 @@ label alt_day2_event_square:
         else:
             call alt_day2_event_square_dunno
     else:
-        if alt_day2_necessary_done > 1: # пришёл после уборки
+        if len(list_voyage_7dl) > 1: # пришёл после уборки
             $ disable_current_zone_alt1()
         else:
             if alt_day2_rendezvous == 22: # первое посещение со Славей
