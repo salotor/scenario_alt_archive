@@ -51,10 +51,10 @@ init 2:
     $ store.names_list.append('dn')#Данечка
 
     $ colors['ka'] = {'night': (137, 82, 85, 255), 'sunset': (222, 101, 127, 255), 'day': (236, 123, 127, 255), 'prolog': (198, 89, 127, 255)}
-    $ store.names_list.append('am') #Катюшка
+    $ store.names_list.append('ka') #Катюшка
 
     $ colors['ln'] = {'night': (137, 82, 85, 255), 'sunset': (222, 101, 127, 255), 'day': (236, 123, 127, 255), 'prolog': (198, 89, 127, 255)}
-    $ store.names_list.append('am') #Понятно кто
+    $ store.names_list.append('ln') #Понятно кто
 
     $ colors['ml'] = {'night': (43, 134, 98, 255), 'sunset': (70, 164, 147, 255), 'day': (74, 200, 147, 255), 'prolog': (62, 144, 147, 255)}
     $ store.names_list.append('ml')#Малец1
