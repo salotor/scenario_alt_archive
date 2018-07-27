@@ -3184,7 +3184,6 @@ label alt_day2_dubstep2:
     us "Не буду я эту гадость слушать…"
     "Она уже отвернулась, чтобы уйти, и тут в партию вступил БАС!"
     stop music
-    $ alt_day2_ph = True
     play music music_7dl["polyhymnia_main"]
     scene bg ext_stage_near_clear_7dl:
         linear 0.1 zoom 1.1 xalign 0.5 yalign 0.5
