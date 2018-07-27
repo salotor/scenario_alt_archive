@@ -5138,7 +5138,7 @@ label alt_day2_walk_sl:
     "Улыбнулась Славя."
     sl "Но не в середине же дня. Туда и так постоянно все рвутся, Ольге Дмитриевне приходится там постоянно дежурить."
     show sl normal pioneer with dspr
-    if alt_day2_beach_done:
+    if alt_day2_beach_done and (alt_day2_rendezvous != 2):
         th "Ага. {w}Да я видел."
     else:
         "Так вот откуда она постоянно возвращается такая цветущая! "
