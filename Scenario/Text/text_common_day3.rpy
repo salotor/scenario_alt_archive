@@ -2314,7 +2314,7 @@ label alt_day3_event_beach1:
         "Я бы даже ставок делать не стал, настолько это предсказуемо…"
         play music sfx_7dl["eat_horn"] fadein 1
         "Я глянул на часы — время было без двадцати. Значит, пора."
-        if alt_day3_bf_duty:
+        if alt_day3_duty:
             "Надеюсь, Ульянка придёт. Одному работать совершенно не хочется."
     else:
         scene bg ext_beach_day with dissolve
@@ -6436,7 +6436,7 @@ label alt_day3_eventAf_admins1:
     "Со стороны столовой долетел сигнал горна."
     stop music fadeout 10
     dreamgirl "Половина пятого вечера. "
-    if alt_day3_bf_duty:
+    if alt_day3_duty:
         dreamgirl "Что делать?"
         dreamgirl "Иди дежурить. Пора на полдник накрывать."
     stop ambience fadeout 6
@@ -6448,7 +6448,7 @@ label alt_day3_sl_postlunch:
     play music music_7dl["tilltheend"] fadein 3
     scene bg int_dining_hall_day with dissolve
     "Полдник прошёл как в тумане."
-    if alt_day3_bf_duty:
+    if alt_day3_duty:
         "Я отмалчивался, ни разу не присел за стол, постоянно на ногах, на бегу — чувствуя на себе вопрошающий, испытующий взгляд."
         "И постоянно спотыкаясь об него."
         "Так что когда полдник закончился, я вздохнул с облегчением."
