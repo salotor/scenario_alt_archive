@@ -3184,7 +3184,6 @@ label alt_day2_dubstep2:
     us "Не буду я эту гадость слушать…"
     "Она уже отвернулась, чтобы уйти, и тут в партию вступил БАС!"
     stop music
-    $ alt_day2_ph = True
     play music music_7dl["polyhymnia_main"]
     scene bg ext_stage_near_clear_7dl:
         linear 0.1 zoom 1.1 xalign 0.5 yalign 0.5
@@ -5138,7 +5137,7 @@ label alt_day2_walk_sl:
     "Улыбнулась Славя."
     sl "Но не в середине же дня. Туда и так постоянно все рвутся, Ольге Дмитриевне приходится там постоянно дежурить."
     show sl normal pioneer with dspr
-    if alt_day2_beach_done:
+    if alt_day2_beach_done and (alt_day2_rendezvous != 2):
         th "Ага. {w}Да я видел."
     else:
         "Так вот откуда она постоянно возвращается такая цветущая! "
