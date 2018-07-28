@@ -11,7 +11,7 @@
     pause(1)
     $ alt_chapter(1, u"Прибытие")
     call alt_day1_arrival
-    if not alt_day1_sl_conv:
+    if (counter_sl_7dl != 1):
         if herc or loki:
             call alt_day1_chase1
             $ alt_chapter(1, u"Пристань")
@@ -35,7 +35,7 @@
     pause(1)
     call alt_day1_dining_room
     pause(1)
-    if alt_day1_sl_conv2:
+    if (counter_sl_7dl == 2):
         $ alt_chapter(1, u"Экскурсия. Вечер")
         call alt_day1_meeting2
     else:
@@ -60,7 +60,7 @@
         pause(1)
     call alt_day1_sleep
     pause(1)
-    if alt_day_binder == 1:
+    if d3:
         jump alt_day2_d3
     else:
         jump alt_day2_start

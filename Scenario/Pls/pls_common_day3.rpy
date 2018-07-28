@@ -21,11 +21,11 @@
     elif alt_day3_duty:
         call alt_day3_bf_duty
         pause(1)
-        if alt_day2_date == 132:
+        if ('un_fz' in list_d2_date_7dl):
             call alt_day3_event_camp_entrance
         else:
             call alt_day3_map_prepare
-    elif alt_day2_date == 132:
+    elif ('un_fz' in list_d2_date_7dl):
         call alt_day3_event_camp_entrance
     else:
         call alt_day3_map_prepare
@@ -37,14 +37,14 @@
     call alt_day3_dinner
     pause(1)
     if alt_day3_duty:
-        if alt_day2_date == 3 and alt_day3_dv_event:
+        if ('dv' in list_d2_date_7dl) and alt_day3_dv_event:
             pass
         else:
             call alt_day3_dinner_menu
     else:
         call alt_day3_dinner_menu
     pause(1)
-    if alt_day2_date == 3 and alt_day3_dv_event and alt_day3_duty:
+    if ('dv' in list_d2_date_7dl) and alt_day3_dv_event and alt_day3_duty:
         call alt_day3_eventAf_music_club1
     elif alt_day3_un_fz_dinner:
         pass
@@ -92,7 +92,7 @@
     if not alt_day3_dv_dj:
         call alt_day3_makeup
         pause(1)
-        if alt_day2_date == 132:
+        if ('un_fz' in list_d2_date_7dl):
             if alt_day3_un_fz_evening:
                 jump alt_day3_disco
             else:
@@ -142,8 +142,8 @@ label alt_day3_disco:
     $ night_time()
     call alt_day3_choose
     pause(1)
-    if (alt_day3_sl_event >= 3) and (alt_day3_dancing == 2):
-        if alt_day3_sl_conv2:
+    if (counter_sl_cl == 3) and (alt_day3_dancing == 2):
+        if (lp_sl >= 14) and (counter_sl_cl == 3):
             pause(1)
             call alt_day3_bath_voyeur
             pause(1)
@@ -200,7 +200,7 @@ label alt_day3_disco:
                         pause(1)
                         jump alt_day3_slots
                 else:
-                    if alt_day2_date == 132:
+                    if ('un_fz' in list_d2_date_7dl):
                         call alt_day3_technoquest3
                         pause(1)
                         jump alt_day3_slots
@@ -224,7 +224,7 @@ label alt_day3_disco2:
     $ night_time()
     call alt_day3_choose3
     pause(1)
-    if alt_day3_mi_date and (alt_day2_date == 4) and ((alt_day3_dancing == 41) or (alt_day3_dancing == 40)):
+    if alt_day3_mi_date and (('mi' in list_d2_date_7dl)) and ((alt_day3_dancing == 41) or (alt_day3_dancing == 40)):
         call alt_day3_mi_7dl_init
         pause(1)
         jump alt_day4_mi_7dl_start

@@ -146,20 +146,14 @@ label alt_day6_mi_7dl_start:
     jump alt_day7_mi_7dl_start
     
 label alt_day7_mi_7dl_start:
-    #Роутер концовок
     if alt_day6_mi_7dl_left:
         if alt_day5_mi_7dl_voyeur:
-            if herc:
-                $ routetag = "mi7dlcas"
-            elif loki:
-                $ routetag = "mi7dlcas"
-            else:
-                $ routetag = "mi7dlcas"
+            $ routetag = "mi7dlcas"
         else:
-            if alt_spt >= 8:
-                $ routetag = "mi7dlvoca"
-            elif alt_spt > 6 and alt_day5_mi_7dl_kiss:
+            if alt_spt > 6 and alt_day5_mi_7dl_kiss:
                 $ routetag = "mi7dlcas1"
+            elif alt_spt >= 8:
+                $ routetag = "mi7dlvoca"
             else:
                 $ routetag = "mi7dlvoca1"
     else:
