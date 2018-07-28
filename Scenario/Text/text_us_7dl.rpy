@@ -7892,7 +7892,7 @@ label alt_day7_us_7dl_rendezvous2:
         show us normal pioneer with dspr
         "Ульяна вздохнула:"
         us "Я думала, ты знаешь! Дядя Боря не только физру преподаёт, он ещё и фотограф."
-        if alt_day3_sl_day_event:   
+        if alt_day3_sl_event >= 2:   
             me "И что, он вот так просто их отдаст?"
             us "Почему нет?"
         if alt_day2_mi_snap:
@@ -7910,7 +7910,7 @@ label alt_day7_us_7dl_rendezvous2:
         show us smile pioneer with dspr
         us "Догадался, наконец."
         show us surp1 pioneer with dspr
-        if alt_day3_sl_day_event:
+        if alt_day3_sl_event >= 2:
             me "Не знал, что здесь всё так серьёзно."
         else:
             us "Дядя Боря старается снимать все важные моменты в лагере, у него знаешь какой запас фотографий, уууу!"

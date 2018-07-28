@@ -142,7 +142,7 @@ label alt_day3_disco:
     $ night_time()
     call alt_day3_choose
     pause(1)
-    if alt_day3_sl_day_event2 and (alt_day3_dancing == 2):
+    if (alt_day3_sl_event >= 3) and (alt_day3_dancing == 2):
         if alt_day3_sl_conv2:
             pause(1)
             call alt_day3_bath_voyeur
@@ -150,7 +150,7 @@ label alt_day3_disco:
             call alt_day3_sleeptime
             pause(1)
             jump alt_day3_slots
-        elif alt_day3_sl_day_event3:
+        elif alt_day3_sl_event == 4:
             call alt_day3_technoquest3
             pause(1)
             jump alt_day3_slots

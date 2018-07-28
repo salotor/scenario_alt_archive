@@ -935,7 +935,7 @@ label alt_day3_bf:
         "Она молча кивнула, кажется, смутившись."
         menu:
             "Ох, ладно":
-                $ alt_day3_sl_event = True
+                $ alt_day3_sl_event = 1
                 me "Ловлю тебя на слове."
                 "Я невежливо ткнул в её сторону пальцем."
                 show sl normal pioneer
@@ -1175,7 +1175,7 @@ label alt_day3_bf:
             "Она молча кивнула, кажется, смутившись."
             menu:
                 "Ох, ладно":
-                    $ alt_day3_sl_event = True
+                    $ alt_day3_sl_event = 1
                     me "Ловлю тебя на слове."
                     "Я невежливо ткнул в её сторону пальцем."
                     show sl normal pioneer
@@ -1665,7 +1665,7 @@ label alt_day3_bf_duty:
         else:
             "Вот вожатая удивилась бы, узнав, что меня просила о чём-то."
         "Я улыбнулся и навострил лыжи в сторону библиотеки."
-    elif alt_day3_sl_event:
+    elif alt_day3_sl_event == 1:
         if 'music' in list_clubs_7dl:
             "Мику, конечно, девочка хоть куда. Но сейчас меня ждёт куда более крупная форма произведения."
         else:
@@ -2143,7 +2143,7 @@ label alt_day3_event_beach1:
     scene bg ext_square_day with fade
     play ambience ambience_camp_center_day fadein 1
     play music music_list["take_me_beautifully"] fadein 5
-    if alt_day3_sl_event:
+    if alt_day3_sl_event == 1:
         if alt_day1_sl_conv:
             "Как и в первый день, Славя схватила меня за руку и потащила за собой."
             "Сначала в домик, где мне выдали чёрные плотные плавки, больше напоминающие семейные боксёрки."
@@ -3498,7 +3498,7 @@ label alt_day3_dinner_menu:
         "Сесть со Славей":
             call alt_day3_lp_checker(alt_dater = sl)
             play music music_list["take_me_beautifully"] fadein 5
-            if alt_day3_sl_event and alt_day2_date == 2:
+            if (alt_day3_sl_event == 1) and (alt_day2_date == 2):
                 "Это могло показаться невероятным, но — Славя похорошела ещё больше по сравнению с тем, какой была на завтраке."
                 "Она будто впитала в себя солнце пляжа, свежесть воды и восхищённое внимание тех, кто смотрел на неё."
                 show sl normal pioneer at center
@@ -3527,7 +3527,7 @@ label alt_day3_dinner_menu:
                 me "Если ты настаиваешь. {w}Через полчасика лови меня у администрации, я как раз убираться закончу."
                 "Славя кивнула и, поднявшись, ушла."
                 hide sl with dissolve
-                $ alt_day3_sl_day_event = True
+                $ alt_day3_sl_event = 2
             else:
                 "Похоже, рядом со Славей образовалось свободное местечко."
                 "Которое я и поспешил занять."
@@ -6633,7 +6633,7 @@ label alt_day3_sl_postlunch:
             "Последним идиотом надо было быть, чтобы отказаться."
             "Как иначе-то?"
             $ alt_day3_sl_conv = True
-            $ alt_day3_sl_day_event2 = True
+            $ alt_day3_sl_event = 3
             $ lp_sl += 2
             stop ambience
             play music music_list["i_want_to_play"] fadein 3
@@ -6657,7 +6657,7 @@ label alt_day3_sl_postlunch:
             show sl happy pioneer with dspr
             sl "Неприятность эту мы переживём! {w}Пошли!"
             sl "Нас ждут великие дела!"
-            $ alt_day3_sl_day_event2 = True
+            $ alt_day3_sl_event = 3
             $ lp_sl += 1
             "О том, что за великие дела, я понял, лишь добравшись до эстрады."
             stop ambience
@@ -7386,7 +7386,7 @@ label alt_day3_supper:
         "Кроме нас с Леной."
     else:
         "Кроме меня…"
-    if alt_day3_sl_day_event2:
+    if alt_day3_sl_event == 3:
         "Я надеялся сесть со Славей, но ту утащили какие-то подружки из других отрядов."
         "Вздохнув, я занял свободный столик на четырёх человек — оттуда как раз поднялись кибернетики — и принялся за ужин."
     elif alt_day3_mi_date:
@@ -7462,7 +7462,7 @@ label alt_day3_supper2:
     show sl normal pioneer at left with dissolve
     "Славя."
     "Не улыбается — что довольно необычно.{w} А смотрит приветливо и даже с некоторым вызовом."
-    if alt_day3_sl_day_event2:
+    if alt_day3_sl_event == 3:
         sl "Семён, мне тебя подождать или ты и правда не убежишь?"
         "Нет, вот сейчас точно — был же подкол! Красная лампочка загорелась!"
         me "Я же обещал."
@@ -8897,7 +8897,7 @@ label alt_day3_choose:
             me "Это хорошо, что ты в нём не каждый день ходишь."
             me "Иначе ни работать, ни отдыхать было бы невозможно. Только расслабишься — а тут ты, красивая."
             show sl laugh dress with dissolve
-            if alt_day3_sl_day_event2:
+            if alt_day3_sl_event == 3:
                 sl "Я обещала показать его — смотри!"
                 "Улыбнулась девушка."
                 sl "Но только, надеюсь, в этот раз ты никуда не убежишь и не бросишь девушку одну на танцполе."
@@ -8976,7 +8976,7 @@ label alt_day3_choose:
                 "К воде."
                 play music music_7dl["your_life"] fadein 3
                 th "Почему всё происходит именно так?"
-                if alt_day3_sl_conv and alt_day3_sl_day_event2:
+                if alt_day3_sl_conv and (alt_day3_sl_event == 3):
                     "Мне думалось, что всё могло бы стать началом какого-то тёплого переживания, симпатии."
                     "А я?"
                     th "Неужели я схожу с ума?"
@@ -9006,8 +9006,8 @@ label alt_day3_choose:
                 dreamgirl "Может, обратно на танцы? Там хоть и шумно, зато на скамейке никто не дёргает."
                 "Я задумался."
                 menu:
-                    "Остаться на пляже" if alt_day3_sl_day_event2 and not alt_day3_sl_conv:
-                        $ alt_day3_sl_day_event3 = True
+                    "Остаться на пляже" if (alt_day3_sl_event == 3) and not alt_day3_sl_conv:
+                        $ alt_day3_sl_event = 4
                         if loki:
                             th "Неужели, одного единственного раза никогда не бывает достаточно?"
                             "Я как мотылёк, обжёгся о свечу так, что сгорел почти полностью."
@@ -9550,7 +9550,7 @@ label alt_day3_dance_dance2_menu:
             $ alt_day3_technoquest_st3_help = True
             if not (alt_day3_dv_dj or alt_day3_mi_dj):
                 if alt_day3_dancing == 2:
-                    if alt_day3_sl_day_event:
+                    if alt_day3_sl_event >= 2:
                         $ lp_sl += 1
                     sl "Правильное решение."
                     show sl smile dress at right with moveinright
@@ -9719,13 +9719,13 @@ label alt_day3_choose3:
                 $ alt_day3_dancing = 32
                 "Алиска так и не пришла. Похоже, придётся мне либо искать другую кандидатуру, либо сычевать."
                 jump alt_day3_choose3
-        "Танцевать со Славей" if not alt_day3_sl_day_event2:
+        "Танцевать со Славей" if alt_day3_sl_event < 3:
             call alt_day3_lp_checker(alt_dater = sl)
             if alt_day3_dancing == 2:
                 $ alt_day3_dancing = 21
             else:
                 $ alt_day3_dancing = 20
-            if alt_day3_sl_day_event:
+            if alt_day3_sl_event >= 2:
                 "Между нами натянули струну."
                 "Тайна, даже горькая, может сплотить людей — а может и разобщить."
                 "Но я лелею надежду, что не разонравился Славе окончательно."
@@ -10120,14 +10120,14 @@ label alt_day3_technoquest3:
         show el normal pioneer at cleft
         show sh normal pioneer at cright
         with dissolve
-        if alt_day3_sl_day_event2 and (alt_day3_dancing == 2):
+        if (alt_day3_sl_event == 4) and (alt_day3_dancing == 2):
             "Электроник вывел меня короткой тропинкой к зданию клубов, где на крылечке уже мялся его друг."
         else:
             "Оба кибернетика уже стояли у двери, ожидая персонального мессию. Меня."
             "Оба же синхронно вздрогнули, когда я выступил из темноты в освещённый сектор перед крыльцом."
         me "Ну, братцы-кролики. Это должно быть что-то очень важное."
         me "Раз уж вы человека от танцев отрываете, значит, причина должна быть веской."
-        if alt_day3_sl_day_event2 and (alt_day3_dancing == 2):
+        if (alt_day3_sl_event == 4) and (alt_day3_dancing == 2):
             "Про то, что они меня по сути спасли от ненужных мне переживаний, я им сообщать не стал: настоящий мастер лишён гордыни."
         else:
             "Я не стал им говорить, что на танцах больше маялся, ожидая, когда все эти странные пляски под странную музыку закончатся."
@@ -10216,7 +10216,7 @@ label alt_day3_technoquest3:
         dreamgirl "Удачи. Желаю тебе не свернуть голову во имя неизвестно чьего блага."
         th "Если бы ещё были здравые альтернативы."
         th "Разве что Славя. Славя-то без проблем полезет."
-        if alt_day3_sl_day_event2:
+        if alt_day3_sl_event >= 3:
             dreamgirl "Куда она полезет, дурака кусок? {w}Я тебе намекну, в кабинете начальника лагеря она на табуретку не полезла не потому, что боялась тебе нижнее бельё засветить."
             dreamgirl "Если бы ты чуть меньше распускал слюни, а наблюдал за обстановкой, понял бы, что у девочки явно выраженная фобия."
             dreamgirl "Боязнь высоты, паническая причём."
@@ -11653,11 +11653,11 @@ label alt_day3_sleeptime:
             "Таблетка от головной боли, оказавшаяся не тем, о чём я думал."
             "Наш танец."
             "… Лена…"
-    elif alt_day3_sl_event:
+    elif alt_day3_sl_event >= 2:
         "Поход на пляж, обернувшийся возможностью узнать, что обо мне думают девочки."
-        if alt_day3_sl_day_event2 == 1:
+        if alt_day3_sl_event >= 3:
             "Трогательная история той, что становится мне всё ближе и роднее."
-        if alt_day3_dancing == 2 and alt_day3_dancing == 20:
+        if alt_day3_dancing == 21:
             "Наши танцы. Её — белый, и мой… {w}Когда я наконец решился."
             "И, конечно, тот эпический поход по ночному лагерю с ней на руках."
             "Как забавно оказалось, что она слышала наш с Женей диалог, и то, как улыбнулась, когда я целовал её в лоб."
