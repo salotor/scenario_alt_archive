@@ -8,11 +8,11 @@
     $ prolog_time()
     $ alt_chapter(4, u"Лена. ФЗ. Утро")
     call alt_day4_un_fz_begin
-    if alt_day2_rendezvous == 2:
+    if ('sl' in list_d2_convoy_7dl):
         call alt_day4_un_fz_sl
         call alt_day4_fz_play
         call alt_day4_fz_postcard
-    if alt_day2_rendezvous == 3:
+    if ('dv' in list_d2_convoy_7dl):
         call alt_day4_un_fz_dv
         call alt_day4_fz_postcard
         $ persistent.sprite_time = "day"
