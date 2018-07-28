@@ -26,7 +26,7 @@
     if lp_dv < 5:
             $ set_chibi_alt2('estrade_alt2', 'dv')
     $ set_zone_alt2('square_alt2', 'alt_day2_eventEv_square')
-    if (lp_sl >= 8) and (alt_day2_sl_guilty == 2):
+    if (lp_sl >= 8) and (counter_sl_cl == 1):
         $ set_chibi_alt2('square_alt2', 'sl')
     $ set_zone_alt2('boat_station_alt2', 'alt_day2_eventEv_boat_station')
     if not alt_day2_dv_chased:
@@ -136,7 +136,7 @@ label alt_day2_eventEv_square:
     $ sunset_time()
     call alt_day2_eventEv_square1
     pause(1)
-    if (lp_sl >= 8) and (alt_day2_sl_guilty == 2):
+    if (lp_sl >= 8) and (counter_sl_cl == 1):
         call alt_day2_slot_sl
         return
     elif alt_day2_cake:

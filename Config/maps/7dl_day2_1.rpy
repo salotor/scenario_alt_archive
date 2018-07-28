@@ -11,7 +11,7 @@
     $ set_zone_alt1('me_mt_house_alt1', 'alt_day2_event_me_mt_house')
     $ set_zone_alt1('library_alt1', 'alt_day2_event_library')
     $ set_zone_alt1('medic_house_alt1', 'alt_day2_event_medic_house')
-    if alt_day2_sl_guilty == 0:
+    if counter_sl_cl == 0:
         $ set_zone_alt1('square_alt1', 'alt_day2_event_square')
     $ set_zone_alt1('boat_station_alt1', 'alt_day2_event_boat_station')
 

@@ -13,7 +13,7 @@
     pause(1)
     if alt_day1_un_dated == 1:
         call alt_day2_un_guide
-    elif alt_day2_sl_conv:
+    elif (counter_sl_7dl == 3):
         call alt_day2_sl_guide
     else:
         call alt_day2_convoy
@@ -89,7 +89,7 @@
     else:
         call alt_day2_sup2
         pause(1)
-        if alt_day2_sl_chased or alt_day2_sl_conv:
+        if alt_day2_sl_chased or (counter_sl_7dl == 3):
             call alt_day2_slot_sl
         elif alt_day2_dv_chased:
             call alt_day2_eventEv_beach1

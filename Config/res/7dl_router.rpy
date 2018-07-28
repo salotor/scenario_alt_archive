@@ -17,7 +17,7 @@ label alt_day3_router_dv:
                 jump alt_day3_router_un
             
 label alt_day3_router_un:
-    if lp_un >= 12 or (lp_un >= 11 and alt_day1_sl_conv):
+    if lp_un >= 12 or (lp_un >= 11 and (counter_sl_7dl == 1)):
         "Мне снилась Лена…"
         window hide
     if (alt_day3_un_med_help == 1) and (lp_un >= 13):
@@ -44,9 +44,9 @@ label alt_day3_router_sl:
     if lp_sl >= 13:
         "Мне снилась Славя…"
         window hide
-        if alt_day3_sl_conv2:
+        if (counter_sl_7dl == 5):
             jump alt_day4_sl_7dl_start
-        elif alt_day3_sl_event3:
+        elif counter_sl_cl == 5:
             $ lp_us -= 3
             $ routetag = "sl"
             jump alt_day4_sl_start
