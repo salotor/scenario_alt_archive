@@ -51,10 +51,10 @@ init 2:
     $ store.names_list.append('dn')#Данечка
 
     $ colors['ka'] = {'night': (137, 82, 85, 255), 'sunset': (222, 101, 127, 255), 'day': (236, 123, 127, 255), 'prolog': (198, 89, 127, 255)}
-    $ store.names_list.append('am') #Катюшка
+    $ store.names_list.append('ka') #Катюшка
 
     $ colors['ln'] = {'night': (137, 82, 85, 255), 'sunset': (222, 101, 127, 255), 'day': (236, 123, 127, 255), 'prolog': (198, 89, 127, 255)}
-    $ store.names_list.append('am') #Понятно кто
+    $ store.names_list.append('ln') #Понятно кто
 
     $ colors['ml'] = {'night': (43, 134, 98, 255), 'sunset': (70, 164, 147, 255), 'day': (74, 200, 147, 255), 'prolog': (62, 144, 147, 255)}
     $ store.names_list.append('ml')#Малец1
@@ -150,6 +150,9 @@ init 99: # инициализация карт. Должна выполнять�
     $ init_map_zones_alt2()
 
 label alt_day0_vars: #Переменные нулевого дня
+    $ counter_sl_cl = 0 #Счётчик рута (Славя-классик in progress)
+    $ counter_sl_7dl = 0 #Счётчик рута (Славя-7дл)
+    #TODO - same shit для прочих девочек
     $ lp_mi = 0
     $ lp_sl = 0
     $ lp_un = 0
@@ -189,13 +192,10 @@ label alt_day1_vars: #Переменные первого дня
     $ alt_day1_alt_chase = False
     $ alt_day1_alt_us_robbed = False
     $ alt_day1_alt_robbery = False
-    $ alt_day1_alt_sl_conv = False
     $ alt_day1_dv_feed = False
     $ alt_day1_el_followed = False
     $ alt_day1_sam_paniqued = False
     $ alt_day1_sl_met = False
-    $ alt_day1_sl_conv = False
-    $ alt_day1_sl_conv2 = False
     $ alt_day1_sl_keys_took = 0
     $ alt_day1_un_dated = False
     $ alt_day1_un_ignored = False
@@ -210,15 +210,15 @@ label alt_day1_vars: #Переменные первого дня
     return
     
 label alt_day2_vars: #Переменные второго дня
-    $ list_clubs_7dl = []
     $ alt_route_flag = 2
     $ list_clubs_7dl = []
     $ list_voyage_7dl = []
+    $ list_d2_date_7dl = []
+    $ list_d2_convoy_7dl = []
     $ alt_day2_bf_dv_us = False
     $ alt_day2_bf_un = False
     $ alt_day2_dv_bet_approve = False
     $ alt_day2_dv_bet_won = 0
-    $ alt_day2_dv_bumped = False
     $ alt_day2_dv_chased = False
     $ alt_day2_dv_harass = False
     $ alt_day2_dv_tears = False
@@ -231,21 +231,10 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_mi_hyst = False
     $ alt_day2_mt_help = False
     $ alt_day2_mi_snap = False
-    $ alt_day2_rendezvous = 0
-    $ alt_day2_rendezvous_dinner = 0
-    $ alt_day2_sl_conv = False
     $ alt_day2_sl_bf = False
-    $ alt_day2_sl_guilty = 0 #0 не был свидетелем, 1 был, 2 вступился
-    $ alt_day2_date = 0 #un 1, sl 2, dv 3, mi 4, us 5, mt 6
     $ alt_day2_un_secret_spot = 0
     $ alt_day2_us_dubstep = False
     $ alt_day2_us_escape = False
-    $ alt_day2_muz_done = False #Если только ходил в музклуб, но не записывался
-    $ alt_day2_lib_done = False
-    $ alt_day2_med_done = False
-    $ alt_day2_club_done = False
-    $ alt_day2_phys_done = False
-    $ alt_day2_beach_done = False
     $ alt_day2_walk = 0
     $ alt_day2_fail = 0
     $ alt_day2_sup = 0
@@ -296,12 +285,6 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_mi_invite2 = False
     $ alt_day3_mi_donor = False
     $ alt_day3_sl_bath_voy = False
-    $ alt_day3_sl_conv = False
-    $ alt_day3_sl_conv2 = False
-    $ alt_day3_sl_day_event = False
-    $ alt_day3_sl_day_event2 = False
-    $ alt_day3_sl_day_event3 = False
-    $ alt_day3_sl_event = False
     $ alt_day3_sl_invite = False
     $ alt_day3_technoquest_st1 = False
     $ alt_day3_technoquest_st2 = False

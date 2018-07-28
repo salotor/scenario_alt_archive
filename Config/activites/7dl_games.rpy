@@ -560,11 +560,11 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl -= 1
         $ lp_dv -= 1
         $ lp_mi -= 1
-        if alt_day2_date == 2:
+        if ('sl' in list_d2_date_7dl):
             $ lp_sl -= 1
-        elif alt_day2_date == 3:
+        elif ('dv' in list_d2_date_7dl):
             $ lp_dv -= 1
-        elif alt_day2_date == 4:
+        elif ('mi' in list_d2_date_7dl):
             $ lp_mi -= 1
         #Уникальная возможность огрести ещё минусов по флагам д3
         if alt_day3_event1 == 22: #Судим волейбол для Слави
@@ -580,11 +580,11 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl += 1
         $ lp_dv -= 1
         $ lp_mi -= 1
-        if alt_day2_date == 1 or alt_day2_date == 11 or alt_day2_date == 12 or alt_day2_date == 132 or alt_day2_date == 131:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl) or ('un' in list_d2_date_7dl)31:
             $ lp_un -= 1
-        elif alt_day2_date == 3:
+        elif ('dv' in list_d2_date_7dl):
             $ lp_dv -= 1
-        elif alt_day2_date == 4:
+        elif ('mi' in list_d2_date_7dl):
             $ lp_mi -= 1
             
         if alt_day3_event2 == 11 == 2:
@@ -600,11 +600,11 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl -= 1
         $ lp_dv += 1
         $ lp_mi -= 1
-        if alt_day2_date == 1 or alt_day2_date == 11 or alt_day2_date == 12 or alt_day2_date == 132 or alt_day2_date == 131:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl) or ('un' in list_d2_date_7dl)31:
             $ lp_un -= 1
-        elif alt_day2_date == 2:
+        elif ('sl' in list_d2_date_7dl):
             $ lp_sl -= 1
-        elif alt_day2_date == 4:
+        elif ('mi' in list_d2_date_7dl):
             $ lp_mi -= 1
         
         if alt_day3_event2 == 11 == 2:
@@ -620,11 +620,11 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl -= 1
         $ lp_dv -= 1
         $ lp_mi += 1
-        if alt_day2_date == 1 or alt_day2_date == 11 or alt_day2_date == 12 or alt_day2_date == 132 or alt_day2_date == 131:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl) or ('un' in list_d2_date_7dl)31:
             $ lp_un -= 1
-        elif alt_day2_date == 2:
+        elif ('sl' in list_d2_date_7dl):
             $ lp_sl -= 1
-        elif alt_day2_date == 3:
+        elif ('dv' in list_d2_date_7dl):
             $ lp_dv -= 1
 
         if alt_day3_event2 == 11 == 2:

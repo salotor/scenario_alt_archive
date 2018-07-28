@@ -355,7 +355,7 @@ init:
     image bg ext_admins_day_7dl = get_image_7dl("bg/ext_admins_day_7dl.jpg")
     image bg ext_admins_night_7dl = get_image_7dl("bg/ext_admins_night_7dl.jpg")
     image bg ext_admins_rain_7dl = get_image_7dl("bg/ext_admins_rain_7dl.jpg")
-    image bg ext_aidpost_sunset_7dl = get_image_7dl("bg/ext_med_sunset_7dl.jpg")
+    image bg ext_aidpost_sunset_7dl = get_image_7dl("bg/ext_aidpost_sunset_7dl.jpg")
     image bg ext_aidpost2_sunset_7dl = get_image_7dl("bg/ext_med2_sunset_7dl.jpg")
     image bg ext_backdoor_day_7dl = get_image_7dl("bg/ext_backdoor_day_7dl.png")
     image bg ext_backdoor_night_7dl = get_image_7dl("bg/ext_backdoor_night_7dl.png")
@@ -453,8 +453,9 @@ init:
     image bg int_mt_sam_room_away_7dl = get_image_7dl("bg/int_mt_sam_room_away_7dl.jpg")
     image bg int_old_building_day_7dl = get_image_7dl("bg/int_old_building_day_7dl.jpg")
     image bg int_potato_storage_7dl = get_image_7dl("bg/int_potato_storage_7dl.png")
-    image bg int_refinery_7dl = get_image_7dl("bg/int_refinery_7dl.png")
-    image bg int_sam_room_7dl = get_image_7dl("bg/int_sam_room_7dl.png")
+    image bg int_refinery_day_7dl = get_image_7dl("bg/int_refinery_day_7dl.png")
+    image bg int_refinery_night_7dl = get_image_7dl("bg/int_refinery_night_7dl.png")
+    image bg int_refinery_sunset_7dl = get_image_7dl("bg/int_refinery_sunset_7dl.png")
     image bg int_warehouse_day_7dl = get_image_7dl("bg/int_warehouse_day_7dl.png")
     image bg int_warehouse_night_7dl = get_image_7dl("bg/int_warehouse_night_7dl.png")
     image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.png")
@@ -495,6 +496,7 @@ init:
     image bg int_opened_door_7dl = get_image_7dl("bg/outro/int_opened_door_7dl.jpg")
     image bg int_plats_7dl = get_image_7dl("bg/outro/int_plats_7dl.jpg")
     image bg int_sam_house_clean_7dl = get_image_7dl("bg/outro/int_sam_house_clean_7dl.jpg")
+    image bg int_sam_room_7dl = get_image_7dl("outro/int_sam_room_7dl.png")
     image bg int_store_7dl = get_image_7dl("bg/outro/int_store_7dl.png")
     
 #extra
@@ -504,15 +506,12 @@ init:
     image bg ext_house_of_el_day = get_image_extra7dl("bg/ext_house_of_el_day.jpg")
     image bg ext_house_of_el_night = get_image_extra7dl("bg/ext_house_of_el_night.jpg")
     image bg ext_playground_sunset = get_image_extra7dl("bg/ext_playground_sunset.jpg")
-    image bg ext_shed_sunset = get_image_extra7dl("bg/ext_shed_sunset.jpg")
     image bg ext_stage_big_day = get_image_extra7dl("bg/ext_stage_big_day.jpg")
     
     image bg int_dining_hall_people_sunset = get_image_extra7dl("bg/int_dining_hall_people_sunset.jpg")
     image bg int_house_of_mt_noitem_day = get_image_extra7dl("bg/int_house_of_mt_noitem_day.jpg")
     
 #Сценки ака CG
-
-    
     image cg d1_me_dahell_7dl = get_image_7dl("cg/d1_me_dahell_7dl.jpg")
     image cg d1_mi_bus_7dl = get_image_7dl("cg/d1_mi_bus_7dl.jpg")
     image cg d1_mi_dv_bus_7dl = get_image_7dl("cg/d1_mi_dv_bus_7dl.jpg")
