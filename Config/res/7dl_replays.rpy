@@ -31,8 +31,6 @@ init 999 python:
     
 init 99:
     $ make_names_known_7dl()
-    $ global_map_result_alt1 = "clubs_alt1" # в повторах текущая локация на карте всегда одна - клубы
-    $ global_map_result_alt2 = "clubs_alt2"
 
 screen replays_route_choice_7dl:
     tag menu
@@ -131,7 +129,7 @@ screen replays_common_d0_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day0_start_l", scope={}, locked=None)
+            action Replay("alt_day0_start_l", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -143,7 +141,7 @@ screen replays_common_d0_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day0_start_h", scope={}, locked=None)
+            action Replay("alt_day0_start_h", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -155,7 +153,7 @@ screen replays_common_d0_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day0_start_d", scope={}, locked=None)
+            action Replay("alt_day0_start_d", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -176,7 +174,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day1_begin", scope={}, locked=None)
+            action Replay("alt_day1_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -188,7 +186,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day1_bus_start", scope={}, locked=None)
+            action Replay("alt_day1_bus_start", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -200,7 +198,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day1_firts_met", scope={}, locked=None)
+            action Replay("alt_day1_firts_met", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -212,7 +210,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day1_arrival", scope={}, locked=None)
+            action Replay("alt_day1_arrival", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -224,7 +222,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day1_chase1", scope={}, locked=None)
+            action Replay("alt_day1_chase1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -236,7 +234,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day1_dock", scope={}, locked=None)
+            action Replay("alt_day1_dock", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -248,7 +246,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day1_mod_tan", scope={}, locked=None)
+            action Replay("alt_day1_mod_tan", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -260,7 +258,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day1_elektron", scope={}, locked=None)
+            action Replay("alt_day1_elektron", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -272,7 +270,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day1_meeting", scope={}, locked=None)
+            action Replay("alt_day1_meeting", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -284,7 +282,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day1_soccer_d1", scope={}, locked=None)
+            action Replay("alt_day1_soccer_d1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -296,7 +294,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day1_supper", scope={}, locked=None)
+            action Replay("alt_day1_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -308,7 +306,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day1_dining_room", scope={}, locked=None)
+            action Replay("alt_day1_dining_room", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -320,7 +318,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day1_chase", scope={}, locked=None)
+            action Replay("alt_day1_chase", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -332,7 +330,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day1_headshot", scope={}, locked=None)
+            action Replay("alt_day1_headshot", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -344,7 +342,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day1_nocatch", scope={}, locked=None)
+            action Replay("alt_day1_nocatch", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -356,7 +354,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day1_slavya_saviour", scope={}, locked=None)
+            action Replay("alt_day1_slavya_saviour", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -368,7 +366,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day1_lena", scope={}, locked=None)
+            action Replay("alt_day1_lena", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -380,7 +378,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day1_un_stay", scope={}, locked=None)
+            action Replay("alt_day1_un_stay", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -392,7 +390,7 @@ screen replays_common_d1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.479
-            action Replay("alt_day1_sleep", scope={}, locked=None)
+            action Replay("alt_day1_sleep", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -413,7 +411,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day1_begin", scope={}, locked=None)
+            action Replay("alt_day1_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -425,7 +423,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day1_alt_M", scope={}, locked=None)
+            action Replay("alt_day1_alt_M", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -437,7 +435,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day1_alt_A", scope={}, locked=None)
+            action Replay("alt_day1_alt_A", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -449,7 +447,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day1_alt_S", scope={}, locked=None)
+            action Replay("alt_day1_alt_S", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -461,7 +459,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day1_alt_L", scope={}, locked=None)
+            action Replay("alt_day1_alt_L", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -473,7 +471,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day1_alt_O", scope={}, locked=None)
+            action Replay("alt_day1_alt_O", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -485,7 +483,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day1_alt_supper", scope={}, locked=None)
+            action Replay("alt_day1_alt_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -497,7 +495,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day1_alt_U", scope={}, locked=None)
+            action Replay("alt_day1_alt_U", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -509,7 +507,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day1_alt_U_reject", scope={}, locked=None)
+            action Replay("alt_day1_alt_U_reject", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -521,7 +519,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day1_alt_ev_A_S", scope={}, locked=None)
+            action Replay("alt_day1_alt_ev_A_S", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -533,7 +531,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day1_lena", scope={}, locked=None)
+            action Replay("alt_day1_lena", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -545,7 +543,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day1_un_stay", scope={}, locked=None)
+            action Replay("alt_day1_un_stay", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -557,7 +555,7 @@ screen replays_common_d1alt_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day1_sleep", scope={}, locked=None)
+            action Replay("alt_day1_sleep", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -589,7 +587,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day2_begin", scope={}, locked=None)
+            action Replay("alt_day2_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -601,7 +599,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day2_lineup", scope={}, locked=None)
+            action Replay("alt_day2_lineup", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -613,7 +611,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day2_bf", scope={}, locked=None)
+            action Replay("alt_day2_bf", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -625,7 +623,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day2_guide", scope={}, locked=None)
+            action Replay("alt_day2_guide", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -637,7 +635,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day2_sl_guide", scope={}, locked=None)
+            action Replay("alt_day2_sl_guide", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -649,7 +647,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day2_sl_hyst", scope={}, locked=None)
+            action Replay("alt_day2_sl_hyst", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -661,7 +659,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day2_event_music_club1", scope={}, locked=None)
+            action Replay("alt_day2_event_music_club1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -673,7 +671,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day2_inmusic", scope={}, locked=None)
+            action Replay("alt_day2_inmusic", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -685,7 +683,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day2_event_clubs1", scope={}, locked=None)
+            action Replay("alt_day2_event_clubs1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -697,7 +695,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day2_event_camp_entrance1", scope={}, locked=None)
+            action Replay("alt_day2_event_camp_entrance1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -709,7 +707,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day2_event_dv_us_house1", scope={}, locked=None)
+            action Replay("alt_day2_event_dv_us_house1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -721,7 +719,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day2_event_dining_hall1", scope={}, locked=None)
+            action Replay("alt_day2_event_dining_hall1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -733,7 +731,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day2_event_sport_area1", scope={}, locked=None)
+            action Replay("alt_day2_event_sport_area1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -745,7 +743,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day2_event_beach1", scope={}, locked=None)
+            action Replay("alt_day2_event_beach1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -757,7 +755,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day2_event_me_mt_house1", scope={}, locked=None)
+            action Replay("alt_day2_event_me_mt_house1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -769,7 +767,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day2_event_library1", scope={}, locked=None)
+            action Replay("alt_day2_event_library1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -781,7 +779,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day2_mz", scope={}, locked=None)
+            action Replay("alt_day2_mz", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -793,7 +791,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day2_event_medic_house1", scope={}, locked=None)
+            action Replay("alt_day2_event_medic_house1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -805,7 +803,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.479
-            action Replay("alt_day2_event_square_dunno", scope={}, locked=None)
+            action Replay("alt_day2_event_square_dunno", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -817,7 +815,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.528
-            action Replay("alt_day2_event_square_1", scope={}, locked=None)
+            action Replay("alt_day2_event_square_1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -829,7 +827,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.577
-            action Replay("alt_day2_event_boat_station1", scope={}, locked=None)
+            action Replay("alt_day2_event_boat_station1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -841,7 +839,7 @@ screen replays_common_d2_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.625
-            action Replay("alt_day2_convoy", scope={}, locked=None)
+            action Replay("alt_day2_convoy", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -870,7 +868,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day2_event_estrade", scope={}, locked=None)
+            action Replay("alt_day2_event_estrade", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -882,7 +880,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day2_phone", scope={}, locked=None)
+            action Replay("alt_day2_phone", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -894,7 +892,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day2_dubstep", scope={}, locked=None)
+            action Replay("alt_day2_dubstep", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -906,7 +904,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day2_dubstep2", scope={}, locked=None)
+            action Replay("alt_day2_dubstep2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -918,7 +916,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day2_dinner", scope={}, locked=None)
+            action Replay("alt_day2_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -930,7 +928,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day2_grand_escape", scope={}, locked=None)
+            action Replay("alt_day2_grand_escape", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -942,7 +940,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day2_siesta", scope={}, locked=None)
+            action Replay("alt_day2_siesta", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -954,7 +952,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day2_tournament", scope={}, locked=None)
+            action Replay("alt_day2_tournament", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -966,7 +964,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day2_walk_sl", scope={}, locked=None)
+            action Replay("alt_day2_walk_sl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -978,7 +976,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day2_walk_alone", scope={}, locked=None)
+            action Replay("alt_day2_walk_alone", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -990,7 +988,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day2_ultim", scope={}, locked=None)
+            action Replay("alt_day2_ultim", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1002,7 +1000,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day2_cards", scope={}, locked=None)
+            action Replay("alt_day2_cards", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1014,7 +1012,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day2_tournament_prep", scope={}, locked=None)
+            action Replay("alt_day2_tournament_prep", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1026,7 +1024,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day2_supper", scope={}, locked=None)
+            action Replay("alt_day2_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1038,7 +1036,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day2_slot_us_try", scope={}, locked=None)
+            action Replay("alt_day2_slot_us_try", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1050,7 +1048,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day2_slot_us", scope={}, locked=None)
+            action Replay("alt_day2_slot_us", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1062,7 +1060,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day2_sup2", scope={}, locked=None)
+            action Replay("alt_day2_sup2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1074,7 +1072,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day2_slot_sl", scope={}, locked=None)
+            action Replay("alt_day2_slot_sl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1086,7 +1084,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day2_eventEv_beach1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_beach1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1098,7 +1096,7 @@ screen replays_common_d2_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.479
-            action Replay("alt_day2_slot_dv", scope={}, locked=None)
+            action Replay("alt_day2_slot_dv", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1124,7 +1122,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day2_eventEv_music_club1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_music_club1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1136,7 +1134,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day2_slot_mi", scope={}, locked=None)
+            action Replay("alt_day2_slot_mi", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1148,7 +1146,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day2_eventEv_clubs1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_clubs1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1160,7 +1158,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day2_eventEv_camp_entrance1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_camp_entrance1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1172,7 +1170,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day2_eventEv_un_mi_house1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_un_mi_house1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1184,7 +1182,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day2_un_loki_date", scope={}, locked=None)
+            action Replay("alt_day2_un_loki_date", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1196,7 +1194,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day2_un_herc_date", scope={}, locked=None)
+            action Replay("alt_day2_un_herc_date", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1208,7 +1206,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day2_eventEv_dv_us_house1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_dv_us_house1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1220,7 +1218,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day2_eventEv_dining_hall1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_dining_hall1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1232,7 +1230,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day2_eventEv_sport_area1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_sport_area1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1244,7 +1242,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day2_slot_un", scope={}, locked=None)
+            action Replay("alt_day2_slot_un", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1256,7 +1254,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day2_eventEv_me_mt_house1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_me_mt_house1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1268,7 +1266,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day2_eventEv_library1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_library1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1280,7 +1278,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day2_eventEv_medic_house1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_medic_house1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1292,7 +1290,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day2_eventEv_estrade1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_estrade1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1304,7 +1302,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day2_eventEv_square1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_square1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1316,7 +1314,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day2_eventEv_boat_station1", scope={}, locked=None)
+            action Replay("alt_day2_eventEv_boat_station1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1328,7 +1326,7 @@ screen replays_common_d2_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day2_dream", scope={}, locked=None)
+            action Replay("alt_day2_dream", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1360,7 +1358,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day3_begin", scope={}, locked=None)
+            action Replay("alt_day3_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1372,7 +1370,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day3_bf", scope={}, locked=None)
+            action Replay("alt_day3_bf", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1384,7 +1382,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day3_event_library1", scope={}, locked=None)
+            action Replay("alt_day3_event_library1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1396,7 +1394,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day3_event_estrade", scope={}, locked=None)
+            action Replay("alt_day3_event_estrade", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1408,7 +1406,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day3_event_music_club", scope={}, locked=None)
+            action Replay("alt_day3_event_music_club", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1420,7 +1418,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day3_bf_duty", scope={}, locked=None)
+            action Replay("alt_day3_bf_duty", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1432,7 +1430,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day3_event_camp_entrance", scope={}, locked=None)
+            action Replay("alt_day3_event_camp_entrance", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1444,7 +1442,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day3_event_music_club1", scope={}, locked=None)
+            action Replay("alt_day3_event_music_club1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1456,7 +1454,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day3_event_clubs1", scope={}, locked=None)
+            action Replay("alt_day3_event_clubs1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1468,7 +1466,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day3_event_camp_entrance1", scope={}, locked=None)
+            action Replay("alt_day3_event_camp_entrance1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1480,7 +1478,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day3_event_dining_hall1", scope={}, locked=None)
+            action Replay("alt_day3_event_dining_hall1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1492,7 +1490,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day3_event_sport_area1", scope={}, locked=None)
+            action Replay("alt_day3_event_sport_area1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1504,7 +1502,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day3_event_beach1", scope={}, locked=None)
+            action Replay("alt_day3_event_beach1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1516,7 +1514,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day3_event_medic_house1", scope={}, locked=None)
+            action Replay("alt_day3_event_medic_house1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1528,7 +1526,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day3_event_estrade1", scope={}, locked=None)
+            action Replay("alt_day3_event_estrade1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1540,7 +1538,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day3_event_square1", scope={}, locked=None)
+            action Replay("alt_day3_event_square1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1552,7 +1550,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day3_event_boat_station1", scope={}, locked=None)
+            action Replay("alt_day3_event_boat_station1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1564,7 +1562,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day3_dinner", scope={}, locked=None)
+            action Replay("alt_day3_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1576,7 +1574,7 @@ screen replays_common_d3_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.479
-            action Replay("alt_day3_dinner_menu", scope={}, locked=None)
+            action Replay("alt_day3_dinner_menu", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1605,7 +1603,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day3_eventAf_music_club1", scope={}, locked=None)
+            action Replay("alt_day3_eventAf_music_club1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1617,7 +1615,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day3_eventAf_library1", scope={}, locked=None)
+            action Replay("alt_day3_eventAf_library1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1629,7 +1627,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day3_eventAf_clubs_ladder", scope={}, locked=None)
+            action Replay("alt_day3_eventAf_clubs_ladder", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1641,7 +1639,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day3_eventAf_clubs_technoquest", scope={}, locked=None)
+            action Replay("alt_day3_eventAf_clubs_technoquest", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1653,7 +1651,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day3_eventAf_un_mi_house1", scope={}, locked=None)
+            action Replay("alt_day3_eventAf_un_mi_house1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1665,7 +1663,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day3_eventAf_dining_hall1", scope={}, locked=None)
+            action Replay("alt_day3_eventAf_dining_hall1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1677,7 +1675,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day3_eventAf_admins1", scope={}, locked=None)
+            action Replay("alt_day3_eventAf_admins1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1689,7 +1687,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day3_sl_postlunch", scope={}, locked=None)
+            action Replay("alt_day3_sl_postlunch", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1701,7 +1699,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day3_eventAf_me_mt_house1", scope={}, locked=None)
+            action Replay("alt_day3_eventAf_me_mt_house1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1713,7 +1711,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day3_eventAf_estrade1", scope={}, locked=None)
+            action Replay("alt_day3_eventAf_estrade1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1725,7 +1723,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day3_music", scope={}, locked=None)
+            action Replay("alt_day3_music", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1737,7 +1735,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day3_aftermath", scope={}, locked=None)
+            action Replay("alt_day3_aftermath", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1749,7 +1747,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day3_nightmare", scope={}, locked=None)
+            action Replay("alt_day3_nightmare", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1761,7 +1759,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day3_supper1", scope={}, locked=None)
+            action Replay("alt_day3_supper1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1773,7 +1771,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day3_supper", scope={}, locked=None)
+            action Replay("alt_day3_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1785,7 +1783,7 @@ screen replays_common_d3_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day3_supper2", scope={}, locked=None)
+            action Replay("alt_day3_supper2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1811,7 +1809,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day3_dance_dance", scope={}, locked=None)
+            action Replay("alt_day3_dance_dance", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1823,7 +1821,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day3_makeup", scope={}, locked=None)
+            action Replay("alt_day3_makeup", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1835,7 +1833,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day3_dv_lf", scope={}, locked=None)
+            action Replay("alt_day3_dv_lf", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1847,7 +1845,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day3_rockstar", scope={}, locked=None)
+            action Replay("alt_day3_rockstar", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1859,7 +1857,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day3_dv_reunion", scope={}, locked=None)
+            action Replay("alt_day3_dv_reunion", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1871,7 +1869,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day3_dv_stayhere1", scope={}, locked=None)
+            action Replay("alt_day3_dv_stayhere1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1883,7 +1881,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day3_bath_voyeur", scope={}, locked=None)
+            action Replay("alt_day3_bath_voyeur", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1895,7 +1893,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day3_leave1", scope={}, locked=None)
+            action Replay("alt_day3_leave1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1907,7 +1905,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day3_choose", scope={}, locked=None)
+            action Replay("alt_day3_choose", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1919,7 +1917,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day3_dance_dance2", scope={}, locked=None)
+            action Replay("alt_day3_dance_dance2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1931,7 +1929,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day3_med_un", scope={}, locked=None)
+            action Replay("alt_day3_med_un", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1943,7 +1941,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day3_un_cards", scope={}, locked=None)
+            action Replay("alt_day3_un_cards", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1955,7 +1953,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day3_un_strip_play", scope={}, locked=None)
+            action Replay("alt_day3_un_strip_play", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1967,7 +1965,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day3_card_lose", scope={}, locked=None)
+            action Replay("alt_day3_card_lose", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1979,7 +1977,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day3_card_won", scope={}, locked=None)
+            action Replay("alt_day3_card_won", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -1991,7 +1989,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day3_post_strip", scope={}, locked=None)
+            action Replay("alt_day3_post_strip", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2003,7 +2001,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day3_mt_scare", scope={}, locked=None)
+            action Replay("alt_day3_mt_scare", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2015,7 +2013,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day3_dance_dance2_menu", scope={}, locked=None)
+            action Replay("alt_day3_dance_dance2_menu", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2027,7 +2025,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day3_technoquest3", scope={}, locked=None)
+            action Replay("alt_day3_technoquest3", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2039,7 +2037,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.479
-            action Replay("alt_day3_choose3", scope={}, locked=None)
+            action Replay("alt_day3_choose3", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2051,7 +2049,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.528
-            action Replay("alt_day3_mi_7dl_init", scope={}, locked=None)
+            action Replay("alt_day3_mi_7dl_init", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2063,7 +2061,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.577
-            action Replay("alt_day3_disco_past_d2", scope={}, locked=None)
+            action Replay("alt_day3_disco_past_d2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2075,7 +2073,7 @@ screen replays_common_d3_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.625
-            action Replay("alt_day3_sleeptime", scope={}, locked=None)
+            action Replay("alt_day3_sleeptime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2107,7 +2105,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day4_neu_dv", scope={}, locked=None)
+            action Replay("alt_day4_neu_dv", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2119,7 +2117,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day4_neu_aid", scope={}, locked=None)
+            action Replay("alt_day4_neu_aid", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2131,7 +2129,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day4_neu_aid_un", scope={}, locked=None)
+            action Replay("alt_day4_neu_aid_un", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2143,7 +2141,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day4_neu_aid_sl", scope={}, locked=None)
+            action Replay("alt_day4_neu_aid_sl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2155,7 +2153,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day4_neu_aid_generic", scope={}, locked=None)
+            action Replay("alt_day4_neu_aid_generic", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2167,7 +2165,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day4_neu_mt", scope={}, locked=None)
+            action Replay("alt_day4_neu_mt", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2179,7 +2177,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day4_neu_us", scope={}, locked=None)
+            action Replay("alt_day4_neu_us", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2191,7 +2189,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day4_neu_home", scope={}, locked=None)
+            action Replay("alt_day4_neu_home", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2203,7 +2201,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day4_neu_un", scope={}, locked=None)
+            action Replay("alt_day4_neu_un", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2215,7 +2213,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day4_neu_mi", scope={}, locked=None)
+            action Replay("alt_day4_neu_mi", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2227,7 +2225,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day4_neu_sl", scope={}, locked=None)
+            action Replay("alt_day4_neu_sl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2239,7 +2237,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day4_neu_dinner", scope={}, locked=None)
+            action Replay("alt_day4_neu_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2251,7 +2249,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day4_neu_curl", scope={}, locked=None)
+            action Replay("alt_day4_neu_curl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2263,7 +2261,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day4_neu_lunch", scope={}, locked=None)
+            action Replay("alt_day4_neu_lunch", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2275,7 +2273,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day4_neu_supper", scope={}, locked=None)
+            action Replay("alt_day4_neu_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2287,7 +2285,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day4_neu_map_me_mt_house", scope={}, locked=None)
+            action Replay("alt_day4_neu_map_me_mt_house", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2299,7 +2297,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day4_neu_mt_diary_vol1", scope={}, locked=None)
+            action Replay("alt_day4_neu_mt_diary_vol1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2311,7 +2309,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day4_neu_us_guards", scope={}, locked=None)
+            action Replay("alt_day4_neu_us_guards", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2323,7 +2321,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.479
-            action Replay("alt_day4_neu_us_launch", scope={}, locked=None)
+            action Replay("alt_day4_neu_us_launch", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2335,7 +2333,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.528
-            action Replay("alt_day4_neu_map_dining_hall", scope={}, locked=None)
+            action Replay("alt_day4_neu_map_dining_hall", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2347,7 +2345,7 @@ screen replays_neutral_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.577
-            action Replay("alt_day4_neu_sleeptime", scope={}, locked=None)
+            action Replay("alt_day4_neu_sleeptime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2373,7 +2371,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day5_morningdream", scope={}, locked=None)
+            action Replay("alt_day5_morningdream", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2385,7 +2383,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day5_neu_start", scope={}, locked=None)
+            action Replay("alt_day5_neu_start", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2397,7 +2395,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day5_neu_breakfast", scope={}, locked=None)
+            action Replay("alt_day5_neu_breakfast", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2409,7 +2407,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day5_neu_along", scope={}, locked=None)
+            action Replay("alt_day5_neu_along", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2421,7 +2419,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day5_neu_cndl", scope={}, locked=None)
+            action Replay("alt_day5_neu_cndl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2433,7 +2431,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day5_neu_gaming", scope={}, locked=None)
+            action Replay("alt_day5_neu_gaming", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2445,7 +2443,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day5_neu_arrest", scope={}, locked=None)
+            action Replay("alt_day5_neu_arrest", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2457,7 +2455,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day5_neu_dinner", scope={}, locked=None)
+            action Replay("alt_day5_neu_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2469,7 +2467,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day5_neu_us_career", scope={}, locked=None)
+            action Replay("alt_day5_neu_us_career", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2481,7 +2479,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day5_neu_us_punishment", scope={}, locked=None)
+            action Replay("alt_day5_neu_us_punishment", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2493,7 +2491,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day5_neu_us_warm_evening", scope={}, locked=None)
+            action Replay("alt_day5_neu_us_warm_evening", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2505,7 +2503,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day5_neu_us_hungry", scope={}, locked=None)
+            action Replay("alt_day5_neu_us_hungry", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2517,7 +2515,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day5_neu_us_sleetptime", scope={}, locked=None)
+            action Replay("alt_day5_neu_us_sleetptime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2529,7 +2527,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day5_neu_mi_estrade", scope={}, locked=None)
+            action Replay("alt_day5_neu_mi_estrade", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2541,7 +2539,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day5_neu_lunch", scope={}, locked=None)
+            action Replay("alt_day5_neu_lunch", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2553,7 +2551,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day5_neu_supper", scope={}, locked=None)
+            action Replay("alt_day5_neu_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2565,7 +2563,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day5_neu_evening", scope={}, locked=None)
+            action Replay("alt_day5_neu_evening", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2577,7 +2575,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day5_neu_campfire_doom", scope={}, locked=None)
+            action Replay("alt_day5_neu_campfire_doom", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2589,7 +2587,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day5_neu_sleepnight", scope={}, locked=None)
+            action Replay("alt_day5_neu_sleepnight", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2601,7 +2599,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.479
-            action Replay("alt_day5_neu_mt_selector", scope={}, locked=None)
+            action Replay("alt_day5_neu_mt_selector", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2613,7 +2611,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.528
-            action Replay("alt_day5_neu_mt_retrib", scope={}, locked=None)
+            action Replay("alt_day5_neu_mt_retrib", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2625,7 +2623,7 @@ screen replays_neutral_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.577
-            action Replay("alt_day5_neu_mt_tea_party", scope={}, locked=None)
+            action Replay("alt_day5_neu_mt_tea_party", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2675,7 +2673,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day4_un_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day4_un_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2687,7 +2685,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day4_un_7dl_lineup", scope={}, locked=None)
+            action Replay("alt_day4_un_7dl_lineup", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2699,7 +2697,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day4_un_7dl_breakfast", scope={}, locked=None)
+            action Replay("alt_day4_un_7dl_breakfast", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2711,7 +2709,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day4_un_7dl_declaration", scope={}, locked=None)
+            action Replay("alt_day4_un_7dl_declaration", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2723,7 +2721,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day4_un_7dl_dinner", scope={}, locked=None)
+            action Replay("alt_day4_un_7dl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2735,7 +2733,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day4_un_7dl_launch", scope={}, locked=None)
+            action Replay("alt_day4_un_7dl_launch", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2747,7 +2745,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day4_un_7dl_supper", scope={}, locked=None)
+            action Replay("alt_day4_un_7dl_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2759,7 +2757,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day4_un_7dl_sleeptime", scope={}, locked=None)
+            action Replay("alt_day4_un_7dl_sleeptime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2771,7 +2769,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day5_un_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2783,7 +2781,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day5_un_7dl_breakfast", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_breakfast", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2795,7 +2793,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day5_un_7dl_breakfast_l", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_breakfast_l", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2807,7 +2805,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day5_un_7dl_clubs", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_clubs", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2819,7 +2817,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day5_un_7dl_breakfast_h", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_breakfast_h", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2831,7 +2829,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day5_un_7dl_games", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_games", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2843,7 +2841,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.479
-            action Replay("alt_day5_un_7dl_cleaning", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_cleaning", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2855,7 +2853,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.528
-            action Replay("alt_day5_un_7dl_dinner", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2867,7 +2865,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.577
-            action Replay("alt_day5_un_7dl_dinner_d", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_dinner_d", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2879,7 +2877,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.625
-            action Replay("alt_day5_un_7dl_unl", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_unl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2891,7 +2889,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.674
-            action Replay("alt_day5_un_7dl_dinner_hl", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_dinner_hl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2903,7 +2901,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.723
-            action Replay("alt_day5_un_7dl_np", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_np", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2915,7 +2913,7 @@ screen replays_un_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.771
-            action Replay("alt_day5_un_7dl_launch", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_launch", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2944,7 +2942,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day5_un_7dl_library", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_library", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2956,7 +2954,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day5_un_7dl_washing", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_washing", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2968,7 +2966,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day5_un_7dl_supper", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2980,7 +2978,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day5_un_7dl_runaway", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_runaway", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -2992,7 +2990,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day5_un_7dl_video", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_video", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3004,7 +3002,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day5_un_7dl_evening_un", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_evening_un", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3016,7 +3014,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day5_un_7dl_evening_dv", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_evening_dv", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3028,7 +3026,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day5_un_7dl_island_hen", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_island_hen", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3040,7 +3038,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day5_un_7dl_sleeptime", scope={}, locked=None)
+            action Replay("alt_day5_un_7dl_sleeptime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3052,7 +3050,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day6_un_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day6_un_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3064,7 +3062,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day6_un_7dl_dinner", scope={}, locked=None)
+            action Replay("alt_day6_un_7dl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3076,7 +3074,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day6_un_7dl_supper", scope={}, locked=None)
+            action Replay("alt_day6_un_7dl_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3088,7 +3086,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day6_un_7dl_letmeout", scope={}, locked=None)
+            action Replay("alt_day6_un_7dl_letmeout", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3100,7 +3098,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day6_un_7dl_dance", scope={}, locked=None)
+            action Replay("alt_day6_un_7dl_dance", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3112,7 +3110,7 @@ screen replays_un_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day6_un_7dl_sleeptime", scope={}, locked=None)
+            action Replay("alt_day6_un_7dl_sleeptime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3134,7 +3132,7 @@ screen replays_un_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day7_un_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day7_un_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3146,7 +3144,7 @@ screen replays_un_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day7_un_7dl_epilogue_all", scope={}, locked=None)
+            action Replay("alt_day7_un_7dl_epilogue_all", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3158,7 +3156,7 @@ screen replays_un_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day7_un_7dl_epilogue", scope={}, locked=None)
+            action Replay("alt_day7_un_7dl_epilogue", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3170,7 +3168,7 @@ screen replays_un_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day7_un_7dl_epilogue_rt", scope={}, locked=None)
+            action Replay("alt_day7_un_7dl_epilogue_rt", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3199,7 +3197,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day4_un_fz_begin", scope={}, locked=None)
+            action Replay("alt_day4_un_fz_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3211,7 +3209,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day4_un_fz_sl", scope={}, locked=None)
+            action Replay("alt_day4_un_fz_sl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3223,7 +3221,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day4_fz_play", scope={}, locked=None)
+            action Replay("alt_day4_fz_play", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3235,7 +3233,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day4_fz_postcard", scope={}, locked=None)
+            action Replay("alt_day4_fz_postcard", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3247,7 +3245,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day4_un_fz_dv", scope={}, locked=None)
+            action Replay("alt_day4_un_fz_dv", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3259,7 +3257,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day4_fz_dv_dinner", scope={}, locked=None)
+            action Replay("alt_day4_fz_dv_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3271,7 +3269,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day4_fz_lost_coun", scope={}, locked=None)
+            action Replay("alt_day4_fz_lost_coun", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3283,7 +3281,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day4_fz_supper", scope={}, locked=None)
+            action Replay("alt_day4_fz_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3295,7 +3293,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day4_fz_sh_choose", scope={}, locked=None)
+            action Replay("alt_day4_fz_sh_choose", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3307,7 +3305,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day4_fz_sh_menu", scope={}, locked=None)
+            action Replay("alt_day4_fz_sh_menu", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3319,7 +3317,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day4_fz_old_camp", scope={}, locked=None)
+            action Replay("alt_day4_fz_old_camp", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3331,7 +3329,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day4_fz_xroad", scope={}, locked=None)
+            action Replay("alt_day4_fz_xroad", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3343,7 +3341,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day4_fz_exit", scope={}, locked=None)
+            action Replay("alt_day4_fz_exit", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3355,7 +3353,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day4_fz_herbs", scope={}, locked=None)
+            action Replay("alt_day4_fz_herbs", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3367,7 +3365,7 @@ screen replays_un_fz_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day5_fz_begin", scope={}, locked=None)
+            action Replay("alt_day5_fz_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3407,7 +3405,7 @@ screen replays_sl_7dl_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day4_sl_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day4_sl_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3439,7 +3437,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day4_sl_begin", scope={}, locked=None)
+            action Replay("alt_day4_sl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3451,7 +3449,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day4_sl_cl_shurik", scope={}, locked=None)
+            action Replay("alt_day4_sl_cl_shurik", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3463,7 +3461,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day4_sl_laundry", scope={}, locked=None)
+            action Replay("alt_day4_sl_laundry", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3475,7 +3473,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day4_sl_supper", scope={}, locked=None)
+            action Replay("alt_day4_sl_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3487,7 +3485,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day4_sl_party_up", scope={}, locked=None)
+            action Replay("alt_day4_sl_party_up", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3499,7 +3497,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day4_sl_lf_coop", scope={}, locked=None)
+            action Replay("alt_day4_sl_lf_coop", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3511,7 +3509,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day4_sl_old_camp", scope={}, locked=None)
+            action Replay("alt_day4_sl_old_camp", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3523,7 +3521,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day4_sl_wh_night", scope={}, locked=None)
+            action Replay("alt_day4_sl_wh_night", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3535,7 +3533,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day4_sl_old_camp2", scope={}, locked=None)
+            action Replay("alt_day4_sl_old_camp2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3547,7 +3545,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day4_sl_cs_night", scope={}, locked=None)
+            action Replay("alt_day4_sl_cs_night", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3559,7 +3557,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day5_sl_begin", scope={}, locked=None)
+            action Replay("alt_day5_sl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3571,7 +3569,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day5_sl_dinner", scope={}, locked=None)
+            action Replay("alt_day5_sl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3583,7 +3581,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day5_sl_supper", scope={}, locked=None)
+            action Replay("alt_day5_sl_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3595,7 +3593,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day5_sl_fire", scope={}, locked=None)
+            action Replay("alt_day5_sl_fire", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3607,7 +3605,7 @@ screen replays_sl_cl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day5_sl_night", scope={}, locked=None)
+            action Replay("alt_day5_sl_night", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3636,7 +3634,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day6_sl_begin", scope={}, locked=None)
+            action Replay("alt_day6_sl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3648,7 +3646,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day6_sl_morgen", scope={}, locked=None)
+            action Replay("alt_day6_sl_morgen", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3660,7 +3658,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day6_sl_ba_quest1", scope={}, locked=None)
+            action Replay("alt_day6_sl_ba_quest1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3672,7 +3670,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day6_sl_dinner", scope={}, locked=None)
+            action Replay("alt_day6_sl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3684,7 +3682,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day6_sl_amp_list", scope={}, locked=None)
+            action Replay("alt_day6_sl_amp_list", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3696,7 +3694,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day6_sl_amp_club", scope={}, locked=None)
+            action Replay("alt_day6_sl_amp_club", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3708,7 +3706,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day6_sl_ambulance", scope={}, locked=None)
+            action Replay("alt_day6_sl_ambulance", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3720,7 +3718,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day6_sl_concert", scope={}, locked=None)
+            action Replay("alt_day6_sl_concert", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3732,7 +3730,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day6_sl_sh_tug", scope={}, locked=None)
+            action Replay("alt_day6_sl_sh_tug", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3744,7 +3742,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day6_sl_regular_arc", scope={}, locked=None)
+            action Replay("alt_day6_sl_regular_arc", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3756,7 +3754,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day6_sl_hala", scope={}, locked=None)
+            action Replay("alt_day6_sl_hala", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3768,7 +3766,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day6_sl_dance", scope={}, locked=None)
+            action Replay("alt_day6_sl_dance", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3780,7 +3778,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day6_sl_dancing", scope={}, locked=None)
+            action Replay("alt_day6_sl_dancing", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3792,7 +3790,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day6_sl_debarkader", scope={}, locked=None)
+            action Replay("alt_day6_sl_debarkader", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3804,7 +3802,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day6_sl_true_route", scope={}, locked=None)
+            action Replay("alt_day6_sl_true_route", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3816,7 +3814,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day6_sl_cl_become_a_hero", scope={}, locked=None)
+            action Replay("alt_day6_sl_cl_become_a_hero", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3828,7 +3826,7 @@ screen replays_sl_cl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day6_sl_intellectual", scope={}, locked=None)
+            action Replay("alt_day6_sl_intellectual", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3850,7 +3848,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day7_sl_fear", scope={}, locked=None)
+            action Replay("alt_day7_sl_fear", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3862,7 +3860,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day7_sl_1996", scope={}, locked=None)
+            action Replay("alt_day7_sl_1996", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3874,7 +3872,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day7_sl_loop", scope={}, locked=None)
+            action Replay("alt_day7_sl_loop", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3886,7 +3884,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day7_sl_begin", scope={}, locked=None)
+            action Replay("alt_day7_sl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3898,7 +3896,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day7_sl_breakfast", scope={}, locked=None)
+            action Replay("alt_day7_sl_breakfast", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3910,7 +3908,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day7_sl_admins1", scope={}, locked=None)
+            action Replay("alt_day7_sl_admins1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3922,7 +3920,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day7_sl_square1", scope={}, locked=None)
+            action Replay("alt_day7_sl_square1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3934,7 +3932,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day7_sl_beach", scope={}, locked=None)
+            action Replay("alt_day7_sl_beach", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3946,7 +3944,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day7_sl_clubs1", scope={}, locked=None)
+            action Replay("alt_day7_sl_clubs1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3958,7 +3956,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day7_sl_dining_hall1", scope={}, locked=None)
+            action Replay("alt_day7_sl_dining_hall1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3970,7 +3968,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day7_sl_sport_area1", scope={}, locked=None)
+            action Replay("alt_day7_sl_sport_area1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3982,7 +3980,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day7_sl_volleyball_alt1", scope={}, locked=None)
+            action Replay("alt_day7_sl_volleyball_alt1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -3994,7 +3992,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day7_sl_estrade1", scope={}, locked=None)
+            action Replay("alt_day7_sl_estrade1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4006,7 +4004,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day7_sl_boat_station1", scope={}, locked=None)
+            action Replay("alt_day7_sl_boat_station1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4019,7 +4017,7 @@ screen replays_sl_cl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day7_sl_dinner", scope={}, locked=None)
+            action Replay("alt_day7_sl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4069,7 +4067,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day4_dv_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day4_dv_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4081,7 +4079,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day4_dv_7dl_forest", scope={}, locked=None)
+            action Replay("alt_day4_dv_7dl_forest", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4093,7 +4091,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day4_dv_7dl_silent_hour", scope={}, locked=None)
+            action Replay("alt_day4_dv_7dl_silent_hour", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4105,7 +4103,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day4_dv_7dl_roadtrip", scope={}, locked=None)
+            action Replay("alt_day4_dv_7dl_roadtrip", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4117,7 +4115,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day4_dv_7dl_alco", scope={}, locked=None)
+            action Replay("alt_day4_dv_7dl_alco", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4129,7 +4127,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day4_dv_7dl_back_to_camp", scope={}, locked=None)
+            action Replay("alt_day4_dv_7dl_back_to_camp", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4141,7 +4139,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day4_dv_7dl_append", scope={}, locked=None)
+            action Replay("alt_day4_dv_7dl_append", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4153,7 +4151,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day4_dv_7dl_aidpost", scope={}, locked=None)
+            action Replay("alt_day4_dv_7dl_aidpost", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4165,7 +4163,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day4_dv_7dl_mt_aid", scope={}, locked=None)
+            action Replay("alt_day4_dv_7dl_mt_aid", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4177,7 +4175,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day4_dv_7dl_supper", scope={}, locked=None)
+            action Replay("alt_day4_dv_7dl_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4189,7 +4187,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day4_dv_7dl_sleeptime", scope={}, locked=None)
+            action Replay("alt_day4_dv_7dl_sleeptime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4201,7 +4199,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day5_dv_7dl_alco_morning", scope={}, locked=None)
+            action Replay("alt_day5_dv_7dl_alco_morning", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4213,7 +4211,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day5_dv_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day5_dv_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4225,7 +4223,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day5_dv_7dl_roadtrip", scope={}, locked=None)
+            action Replay("alt_day5_dv_7dl_roadtrip", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4237,7 +4235,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day5_dv_7dl_candle", scope={}, locked=None)
+            action Replay("alt_day5_dv_7dl_candle", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4249,7 +4247,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day5_dv_7dl_dinner", scope={}, locked=None)
+            action Replay("alt_day5_dv_7dl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4261,7 +4259,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day5_dv_7dl_lunch", scope={}, locked=None)
+            action Replay("alt_day5_dv_7dl_lunch", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4273,7 +4271,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.479
-            action Replay("alt_day5_dv_7dl_supper", scope={}, locked=None)
+            action Replay("alt_day5_dv_7dl_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4285,7 +4283,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.528
-            action Replay("alt_day5_dv_7dl_evening", scope={}, locked=None)
+            action Replay("alt_day5_dv_7dl_evening", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4297,7 +4295,7 @@ screen replays_dv_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.577
-            action Replay("alt_day5_dv_7dl_night", scope={}, locked=None)
+            action Replay("alt_day5_dv_7dl_night", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4326,7 +4324,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day6_dv_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4338,7 +4336,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day6_dv_7dl_breakfast", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_breakfast", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4350,7 +4348,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day6_dv_7dl_dinner", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4362,7 +4360,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day6_dv_7dl_sl", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_sl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4374,7 +4372,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day6_dv_7dl_sl_help", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_sl_help", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4386,7 +4384,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day6_dv_7dl_sl_help2", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_sl_help2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4398,7 +4396,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day6_dv_7dl_un", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_un", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4410,7 +4408,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day6_dv_7dl_hl_failer2", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_hl_failer2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4422,7 +4420,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day6_dv_7dl_concert", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_concert", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4434,7 +4432,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day6_dv_7dl_dance", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_dance", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4446,7 +4444,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day6_dv_7dl_escape_convince", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_escape_convince", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4458,7 +4456,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day6_dv_7dl_sl_dancing", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_sl_dancing", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4470,7 +4468,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day6_dv_7dl_un_dancing", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_un_dancing", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4482,7 +4480,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day6_dv_7dl_mt_dancing", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_mt_dancing", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4494,7 +4492,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day6_dv_7dl_dv_dancing", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_dv_dancing", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4506,7 +4504,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day6_dv_7dl_love_scene", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_love_scene", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4518,7 +4516,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day6_dv_7dl_non_love", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_non_love", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4530,7 +4528,7 @@ screen replays_dv_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day6_dv_7dl_sleeptime", scope={}, locked=None)
+            action Replay("alt_day6_dv_7dl_sleeptime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4552,7 +4550,7 @@ screen replays_dv_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day7_dv_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day7_dv_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4564,7 +4562,7 @@ screen replays_dv_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day7_dv_7dl_router", scope={}, locked=None)
+            action Replay("alt_day7_dv_7dl_router", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4576,7 +4574,7 @@ screen replays_dv_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day7_dv_7dl_un", scope={}, locked=None)
+            action Replay("alt_day7_dv_7dl_un", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4588,7 +4586,7 @@ screen replays_dv_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day7_dv_7dl_sl", scope={}, locked=None)
+            action Replay("alt_day7_dv_7dl_sl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4600,7 +4598,7 @@ screen replays_dv_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day7_dv_7dl_mt", scope={}, locked=None)
+            action Replay("alt_day7_dv_7dl_mt", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4612,7 +4610,7 @@ screen replays_dv_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day7_dv_7dl_dv", scope={}, locked=None)
+            action Replay("alt_day7_dv_7dl_dv", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4624,7 +4622,7 @@ screen replays_dv_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day7_dv_7dl_loki", scope={}, locked=None)
+            action Replay("alt_day7_dv_7dl_loki", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4636,7 +4634,7 @@ screen replays_dv_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day7_dv_7dl_bus", scope={}, locked=None)
+            action Replay("alt_day7_dv_7dl_bus", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4648,7 +4646,7 @@ screen replays_dv_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day7_dv_7dl_ending_router", scope={}, locked=None)
+            action Replay("alt_day7_dv_7dl_ending_router", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4699,7 +4697,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day4_mi_7dl_ch1", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4711,7 +4709,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day4_mi_7dl_ch2", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4723,7 +4721,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day4_mi_7dl_ch3", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch3", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4735,7 +4733,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day4_mi_7dl_ch4", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch4", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4747,7 +4745,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day4_mi_7dl_ch5a", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch5a", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4759,7 +4757,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day4_mi_7dl_ch5b", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch5b", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4771,7 +4769,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day4_mi_7dl_ch52", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch52", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4783,7 +4781,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day4_mi_7dl_ch6", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch6", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4795,7 +4793,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day4_mi_7dl_ch7", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch7", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4807,7 +4805,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day4_mi_7dl_ch8a", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch8a", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4819,7 +4817,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day4_mi_7dl_ch81", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch81", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4831,7 +4829,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day4_mi_7dl_ch82", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch82", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4843,7 +4841,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day4_mi_7dl_ch83", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch83", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4855,7 +4853,7 @@ screen replays_mi_7dl_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day4_mi_7dl_ch8b", scope={}, locked=None)
+            action Replay("alt_day4_mi_7dl_ch8b", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4884,7 +4882,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day5_mi_7dl_rain_2gether", scope={}, locked=None)
+            action Replay("alt_day5_mi_7dl_rain_2gether", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4896,7 +4894,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day5_mi_7dl_morning", scope={}, locked=None)
+            action Replay("alt_day5_mi_7dl_morning", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4908,7 +4906,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day5_mi_7dl_dinner", scope={}, locked=None)
+            action Replay("alt_day5_mi_7dl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4920,7 +4918,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day5_mi_7dl_router", scope={}, locked=None)
+            action Replay("alt_day5_mi_7dl_router", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4932,7 +4930,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day5_mi_7dl_lost", scope={}, locked=None)
+            action Replay("alt_day5_mi_7dl_lost", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4944,7 +4942,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day5_mi_7dl_hn", scope={}, locked=None)
+            action Replay("alt_day5_mi_7dl_hn", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4956,7 +4954,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day5_mi_7dl_branch", scope={}, locked=None)
+            action Replay("alt_day5_mi_7dl_branch", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4968,7 +4966,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day5_mi_7dl_potato", scope={}, locked=None)
+            action Replay("alt_day5_mi_7dl_potato", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4980,7 +4978,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day5_mi_7dl_camp_cleance", scope={}, locked=None)
+            action Replay("alt_day5_mi_7dl_camp_cleance", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -4992,7 +4990,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day5_mi_7dl_firecamp", scope={}, locked=None)
+            action Replay("alt_day5_mi_7dl_firecamp", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5004,7 +5002,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day5_mi_7dl_goodnight", scope={}, locked=None)
+            action Replay("alt_day5_mi_7dl_goodnight", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5016,7 +5014,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day6_mi_7dl_wakeup", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_wakeup", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5028,7 +5026,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day6_mi_7dl_soul", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_soul", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5040,7 +5038,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day6_mi_7dl_dinner", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5052,7 +5050,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day6_mi_7dl_soul_day", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_soul_day", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5064,7 +5062,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day6_mi_7dl_miku_sakishita", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_miku_sakishita", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5076,7 +5074,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day6_mi_7dl_miku_farewell_finale", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_miku_farewell_finale", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5088,7 +5086,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.479
-            action Replay("alt_day6_mi_7dl_miku_farewell_soul", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_miku_farewell_soul", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5100,7 +5098,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.528
-            action Replay("alt_day6_mi_7dl_star", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_star", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5112,7 +5110,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.577
-            action Replay("alt_day6_mi_7dl_star_day", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_star_day", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5124,7 +5122,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.625
-            action Replay("alt_day6_mi_7dl_miku_farewell_star", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_miku_farewell_star", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5136,7 +5134,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.674
-            action Replay("alt_day6_mi_7dl_human", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_human", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5148,7 +5146,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.723
-            action Replay("alt_day6_mi_7dl_human_day", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_human_day", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5160,7 +5158,7 @@ screen replays_mi_7dl_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.771
-            action Replay("alt_day6_mi_7dl_discoteque", scope={}, locked=None)
+            action Replay("alt_day6_mi_7dl_discoteque", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5182,7 +5180,7 @@ screen replays_mi_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day7_mi_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day7_mi_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5194,7 +5192,7 @@ screen replays_mi_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day7_mi_7dl_wakeup", scope={}, locked=None)
+            action Replay("alt_day7_mi_7dl_wakeup", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5206,7 +5204,7 @@ screen replays_mi_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day7_mi_7dl_packing", scope={}, locked=None)
+            action Replay("alt_day7_mi_7dl_packing", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5218,7 +5216,7 @@ screen replays_mi_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day7_mi_7dl_departure_lone", scope={}, locked=None)
+            action Replay("alt_day7_mi_7dl_departure_lone", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5230,7 +5228,7 @@ screen replays_mi_7dl_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day7_mi_7dl_departure_a2th", scope={}, locked=None)
+            action Replay("alt_day7_mi_7dl_departure_a2th", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5262,7 +5260,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day4_mi_dj_begin", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5274,7 +5272,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day4_mi_dj_hedg_hunt", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_hedg_hunt", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5286,7 +5284,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day4_mi_dj_morning", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_morning", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5298,7 +5296,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day4_mi_dj_day", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_day", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5310,7 +5308,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day4_mi_dj_radio", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_radio", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5322,7 +5320,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day4_mi_dj_cleaning", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_cleaning", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5334,7 +5332,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day4_mi_dj_dinner", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5346,7 +5344,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day4_mi_dj_dinner2", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_dinner2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5358,7 +5356,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day4_mi_dj_repetition", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_repetition", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5370,7 +5368,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day4_mi_dj_supper", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5382,7 +5380,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day4_mi_dj_evening", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_evening", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5394,7 +5392,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day4_mi_dj_night", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_night", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5406,7 +5404,7 @@ screen replays_mi_dj_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day4_mi_dj_sleeptime", scope={}, locked=None)
+            action Replay("alt_day4_mi_dj_sleeptime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5435,7 +5433,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day5_mi_dj_begin", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5447,7 +5445,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day5_mi_dj_cinema", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_cinema", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5459,7 +5457,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day5_mi_dj_dinner", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5471,7 +5469,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day5_mi_dj_music_club1", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_music_club1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5483,7 +5481,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day5_mi_dj_clubs1", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_clubs1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5495,7 +5493,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day5_mi_dj_camp_entrance1", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_camp_entrance1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5507,7 +5505,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day5_mi_dj_un_mi_house1", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_un_mi_house1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5519,7 +5517,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day5_mi_dj_estrade1", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_estrade1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5531,7 +5529,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day5_mi_dj_supper", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5543,7 +5541,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day5_mi_dj_voyeur_2", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_voyeur_2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5555,7 +5553,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day5_mi_dj_voyeur_3", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_voyeur_3", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5567,7 +5565,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day5_mi_dj_voyeur_4", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_voyeur_4", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5579,7 +5577,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day5_mi_dj_late_evening", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_late_evening", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5591,7 +5589,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day5_mi_dj_evening_club1", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_evening_club1", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5603,7 +5601,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day5_mi_dj_evening_club2", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_evening_club2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5615,7 +5613,7 @@ screen replays_mi_dj_2_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day5_mi_dj_sleeptime", scope={}, locked=None)
+            action Replay("alt_day5_mi_dj_sleeptime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5644,7 +5642,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day6_mi_dj_good", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_good", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5656,7 +5654,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day6_mi_dj_neutral", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_neutral", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5668,7 +5666,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day6_mi_dj_radio", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_radio", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5680,7 +5678,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day6_mi_dj_dinner", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5692,7 +5690,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day6_mi_dj_rendezvous", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_rendezvous", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5704,7 +5702,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day6_mi_dj_forgiveness", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_forgiveness", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5716,7 +5714,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day6_mi_dj_tale", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_tale", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5728,7 +5726,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day6_mi_dj_plain", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_plain", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5740,7 +5738,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day6_mi_dj_concert", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_concert", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5752,7 +5750,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day6_mi_dj_reject", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_reject", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5764,7 +5762,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day6_mi_dj_newswall", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_newswall", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5776,7 +5774,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day6_mi_dj_late_supper", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_late_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5788,7 +5786,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day6_mi_dj_sonic", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_sonic", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5800,7 +5798,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day6_mi_dj_supper", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5812,7 +5810,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day6_mi_dj_discotheque", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_discotheque", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5824,7 +5822,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day6_mi_dj_first_dance", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_first_dance", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5836,7 +5834,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day6_mi_dj_second_dance", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_second_dance", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5848,7 +5846,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day6_mi_dj_dance2_success", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_dance2_success", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5860,7 +5858,7 @@ screen replays_mi_dj_3_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day6_mi_dj_dance2_fail", scope={}, locked=None)
+            action Replay("alt_day6_mi_dj_dance2_fail", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5882,7 +5880,7 @@ screen replays_mi_dj_4_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day7_mi_dj_together", scope={}, locked=None)
+            action Replay("alt_day7_mi_dj_together", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5894,7 +5892,7 @@ screen replays_mi_dj_4_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day7_mi_dj_alone", scope={}, locked=None)
+            action Replay("alt_day7_mi_dj_alone", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5906,7 +5904,7 @@ screen replays_mi_dj_4_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day7_mi_dj_badfeel", scope={}, locked=None)
+            action Replay("alt_day7_mi_dj_badfeel", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5918,7 +5916,7 @@ screen replays_mi_dj_4_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day7_mi_dj_preparations", scope={}, locked=None)
+            action Replay("alt_day7_mi_dj_preparations", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5930,7 +5928,7 @@ screen replays_mi_dj_4_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day7_mi_dj_epilogue_frost", scope={}, locked=None)
+            action Replay("alt_day7_mi_dj_epilogue_frost", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5942,7 +5940,7 @@ screen replays_mi_dj_4_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day7_mi_dj_good", scope={}, locked=None)
+            action Replay("alt_day7_mi_dj_good", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5974,7 +5972,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day6_us_px_begin", scope={}, locked=None)
+            action Replay("alt_day6_us_px_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5986,7 +5984,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day6_us_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -5998,7 +5996,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day6_us_7dl_exercises", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_exercises", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6010,7 +6008,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day6_us_7dl_breakfast", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_breakfast", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6022,7 +6020,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day6_us_px_carrier", scope={}, locked=None)
+            action Replay("alt_day6_us_px_carrier", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6034,7 +6032,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day6_us_px_dinner", scope={}, locked=None)
+            action Replay("alt_day6_us_px_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6046,7 +6044,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day6_us_px_Lena", scope={}, locked=None)
+            action Replay("alt_day6_us_px_Lena", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6058,7 +6056,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day6_us_px_party_sl", scope={}, locked=None)
+            action Replay("alt_day6_us_px_party_sl", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6070,7 +6068,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day6_us_px_far_gate", scope={}, locked=None)
+            action Replay("alt_day6_us_px_far_gate", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6082,7 +6080,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day6_us_7dl_concert", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_concert", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6094,7 +6092,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day6_us_7dl_helping", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_helping", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6106,7 +6104,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day6_us_7dl_preps", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_preps", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6118,7 +6116,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day6_us_7dl_warehouse", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_warehouse", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6130,7 +6128,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day6_us_7dl_un_met", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_un_met", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6142,7 +6140,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day6_us_7dl_dinner", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6154,7 +6152,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day6_us_7dl_soundcheck", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_soundcheck", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6166,7 +6164,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day6_us_7dl_button", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_button", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6178,7 +6176,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day6_us_7dl_rendezvous", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_rendezvous", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6190,7 +6188,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.479
-            action Replay("alt_day6_us_7dl_supper", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6202,7 +6200,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.528
-            action Replay("alt_day6_us_7dl_disco", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_disco", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6214,7 +6212,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.577
-            action Replay("alt_day6_us_7dl_tea", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_tea", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6226,7 +6224,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.625
-            action Replay("alt_day6_us_px_afterwords", scope={}, locked=None)
+            action Replay("alt_day6_us_px_afterwords", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6238,7 +6236,7 @@ screen replays_us_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.674
-            action Replay("alt_day6_us_7dl_sleeptime", scope={}, locked=None)
+            action Replay("alt_day6_us_7dl_sleeptime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6260,7 +6258,7 @@ screen replays_us_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day7_us_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day7_us_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6272,7 +6270,7 @@ screen replays_us_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day7_us_7dl_breakfast", scope={}, locked=None)
+            action Replay("alt_day7_us_7dl_breakfast", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6284,7 +6282,7 @@ screen replays_us_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day7_us_px_escape", scope={}, locked=None)
+            action Replay("alt_day7_us_px_escape", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6296,7 +6294,7 @@ screen replays_us_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day7_us_px_bus", scope={}, locked=None)
+            action Replay("alt_day7_us_px_bus", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6308,7 +6306,7 @@ screen replays_us_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day7_us_px_wastelands", scope={}, locked=None)
+            action Replay("alt_day7_us_px_wastelands", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6320,7 +6318,7 @@ screen replays_us_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day7_us_px_mourning", scope={}, locked=None)
+            action Replay("alt_day7_us_px_mourning", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6332,7 +6330,7 @@ screen replays_us_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day7_us_7dl_rendezvous2", scope={}, locked=None)
+            action Replay("alt_day7_us_7dl_rendezvous2", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6344,7 +6342,7 @@ screen replays_us_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day7_us_7dl_packing", scope={}, locked=None)
+            action Replay("alt_day7_us_7dl_packing", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6356,7 +6354,7 @@ screen replays_us_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day7_us_7dl_leaving", scope={}, locked=None)
+            action Replay("alt_day7_us_7dl_leaving", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6368,7 +6366,7 @@ screen replays_us_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day7_us_7dl_wakeup", scope={}, locked=None)
+            action Replay("alt_day7_us_7dl_wakeup", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6400,7 +6398,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day6_mt_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6412,7 +6410,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day6_mt_7dl_morning", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_morning", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6424,7 +6422,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day6_mt_7dl_dv_morning", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_dv_morning", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6436,7 +6434,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day6_mt_7dl_un_morning", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_un_morning", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6448,7 +6446,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day6_mt_7dl_retail", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_retail", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6460,7 +6458,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day6_mt_7dl_retail_px", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_retail_px", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6472,7 +6470,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day6_mt_7dl_declaration0", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_declaration0", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6484,7 +6482,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day6_mt_7dl_memento", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_memento", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6496,7 +6494,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day6_mt_7dl_retail_vg", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_retail_vg", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6508,7 +6506,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.674
-            action Replay("alt_day6_mt_7dl_forgive", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_forgive", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6520,7 +6518,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.723
-            action Replay("alt_day6_mt_7dl_diary3", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_diary3", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6532,7 +6530,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.771
-            action Replay("alt_day6_mt_7dl_dinner", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_dinner", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6544,7 +6542,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.187
-            action Replay("alt_day6_mt_7dl_concert", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_concert", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6556,7 +6554,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.236
-            action Replay("alt_day6_mt_7dl_supper", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_supper", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6568,7 +6566,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.285
-            action Replay("alt_day6_mt_7dl_choice", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_choice", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6580,7 +6578,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.333
-            action Replay("alt_day6_mt_7dl_catha", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_catha", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6592,7 +6590,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.382
-            action Replay("alt_day6_mt_7dl_declare", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_declare", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6604,7 +6602,7 @@ screen replays_mt_1_7dl:
             text_style "replays_textbutton"
             xpos 0.544
             ypos 0.431
-            action Replay("alt_day6_mt_7dl_nighttime", scope={}, locked=None)
+            action Replay("alt_day6_mt_7dl_nighttime", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6626,7 +6624,7 @@ screen replays_mt_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.187
-            action Replay("alt_day7_mt_7dl_begin", scope={}, locked=None)
+            action Replay("alt_day7_mt_7dl_begin", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6638,7 +6636,7 @@ screen replays_mt_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.236
-            action Replay("alt_day7_mt_7dl_morning", scope={}, locked=None)
+            action Replay("alt_day7_mt_7dl_morning", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6650,7 +6648,7 @@ screen replays_mt_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.285
-            action Replay("alt_day7_mt_7dl_conclude", scope={}, locked=None)
+            action Replay("alt_day7_mt_7dl_conclude", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6662,7 +6660,7 @@ screen replays_mt_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.333
-            action Replay("alt_day7_mt_7dl_byes", scope={}, locked=None)
+            action Replay("alt_day7_mt_7dl_byes", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6674,7 +6672,7 @@ screen replays_mt_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.382
-            action Replay("alt_day7_mt_7dl_dv_bye", scope={}, locked=None)
+            action Replay("alt_day7_mt_7dl_dv_bye", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6686,7 +6684,7 @@ screen replays_mt_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.431
-            action Replay("alt_day7_mt_7dl_un_fz_bye", scope={}, locked=None)
+            action Replay("alt_day7_mt_7dl_un_fz_bye", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6698,7 +6696,7 @@ screen replays_mt_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.479
-            action Replay("alt_day7_mt_7dl_un_bye", scope={}, locked=None)
+            action Replay("alt_day7_mt_7dl_un_bye", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6710,7 +6708,7 @@ screen replays_mt_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.528
-            action Replay("alt_day7_mt_7dl_departure", scope={}, locked=None)
+            action Replay("alt_day7_mt_7dl_departure", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6722,7 +6720,7 @@ screen replays_mt_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.577
-            action Replay("alt_day7_mt_7dl_loopthru", scope={}, locked=None)
+            action Replay("alt_day7_mt_7dl_loopthru", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"
@@ -6734,7 +6732,7 @@ screen replays_mt_2_7dl:
             text_style "replays_textbutton"
             xpos 0.235
             ypos 0.625
-            action Replay("alt_day7_mt_7dl_loopback", scope={}, locked=None)
+            action Replay("alt_day7_mt_7dl_loopback", scope={"alt_replay_on" : "True"}, locked=None)
     else:
         text "?????":
             style "replays_text_locked"

@@ -150,10 +150,12 @@ label alt_day3_disco:
             call alt_day3_sleeptime
             pause(1)
             jump alt_day3_slots
-        else:
+        elif alt_day3_sl_event == 4:
             call alt_day3_technoquest3
             pause(1)
             jump alt_day3_slots
+        else:
+            jump alt_day3_disco2 
     else:
         call alt_day3_dance_dance2
         pause(1)

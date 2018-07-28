@@ -1681,11 +1681,12 @@ label alt_day2_inmusic:
     return
 
 label alt_day2_event_clubs1:
-    if been_there_alt1()>1:
-        scene bg ext_clubs_day with fade
-        th "Нет уж, хватит! Больше никакой кибернетики на сегодня!"
-        window hide
-        return
+    if not alt_replay_on:
+        if been_there_alt1()>1:
+            scene bg ext_clubs_day with fade
+            th "Нет уж, хватит! Больше никакой кибернетики на сегодня!"
+            window hide
+            return
     scene bg ext_clubs_day with fade
     play music music_list["eat_some_trouble"] fadein 2
     "Приоритетным зданием по списку значились клубы."
@@ -2004,20 +2005,21 @@ label alt_day2_event_clubs1:
     return
 
 label alt_day2_event_camp_entrance1:
-    if been_there_alt1()==1:
-        scene bg ext_camp_entrance_day with fade
-        th "Пусто."
-        "Давно известно, что самые крепкие стены — это их отсутствие."
-        "Казалось бы, чего проще — просто взять и пойти по этому шоссе. Но стоит лишь всплыть одному малюсенькому факту, и предприятие из авантюры превращается в фарс."
-        "Факту того, что отсюда до ближайшей самой захудалой деревни несколько сотен километров по трассам вторичных направлений. Сбежать отсюда? Я так не думаю."
-        "Откуда я это знаю?"
-        "А знаю и всё."
-        th "Похоже, выхода у меня и правда нет. Придётся ждать автобуса."
-        "Или не буду, и просто начну наконец наслаждаться нежданными летними каникулами!"
-    if been_there_alt1()==2:
-        scene bg ext_camp_entrance_day
-        th "Я снова здесь. Автобуса снова нет."
-        th "Скучно, пошли обратно."
+    if not alt_replay_on:
+        if been_there_alt1()>1:
+            scene bg ext_camp_entrance_day
+            th "Я снова здесь. Автобуса снова нет."
+            th "Скучно, пошли обратно."
+            return
+    scene bg ext_camp_entrance_day with fade
+    th "Пусто."
+    "Давно известно, что самые крепкие стены — это их отсутствие."
+    "Казалось бы, чего проще — просто взять и пойти по этому шоссе. Но стоит лишь всплыть одному малюсенькому факту, и предприятие из авантюры превращается в фарс."
+    "Факту того, что отсюда до ближайшей самой захудалой деревни несколько сотен километров по трассам вторичных направлений. Сбежать отсюда? Я так не думаю."
+    "Откуда я это знаю?"
+    "А знаю и всё."
+    th "Похоже, выхода у меня и правда нет. Придётся ждать автобуса."
+    "Или не буду, и просто начну наконец наслаждаться нежданными летними каникулами!"
     stop music fadeout 3
     stop ambience fadeout 6
     window hide
@@ -2025,13 +2027,14 @@ label alt_day2_event_camp_entrance1:
     return
 
 label alt_day2_event_dv_us_house1:
-    if been_there_alt1()>1:
-        scene bg map_alt1 with dspr
-        "Этот домик отличался от других — он был будто вырублен, ни одной плавной линии, все строгие, прямые, рубленные."
-        "И на стекле входной двери кто-то развесил весёлого Роджера. Даже не задумываясь, могу сказать — кто."
-        "Обязательно загляну сюда, когда хозяева будут дома."
-        window hide
-        return
+    if not alt_replay_on:
+        if been_there_alt1()>1:
+            scene bg map_alt1 with dspr
+            "Этот домик отличался от других — он был будто вырублен, ни одной плавной линии, все строгие, прямые, рубленные."
+            "И на стекле входной двери кто-то развесил весёлого Роджера. Даже не задумываясь, могу сказать — кто."
+            "Обязательно загляну сюда, когда хозяева будут дома."
+            window hide
+            return
     scene bg ext_houses_day with fade
     "Раскиданные как попало домики-бочки вызывали ощущение хаотичности, хотя при ближайшем просмотре становилось ясно, что здесь работал ландшафтный дизайнер."
     "Только человек с опытом и практикой может так удачно встроить здания в заведомо неровную поверхность, почти не потревожив вековые сосны."
@@ -2405,14 +2408,15 @@ label alt_day2_event_beach1:
     return
 
 label alt_day2_event_me_mt_house1:
-    if been_there_alt1()>1:
-        scene bg ext_houses_day with fade
-        th "И что я здесь забыл?"
-        stop music fadeout 3
-        stop ambience fadeout 6
-        window hide
-        with fade
-        return
+    if not alt_replay_on:
+        if been_there_alt1()>1:
+            scene bg ext_houses_day with fade
+            th "И что я здесь забыл?"
+            stop music fadeout 3
+            stop ambience fadeout 6
+            window hide
+            with fade
+            return
     scene bg ext_house_of_mt_day with fade
     "Я вышел к домику, которому предстояло стать моим на эти несколько дней, и остановился…"
     "Спать совершенно не хотелось."
@@ -2791,11 +2795,12 @@ label alt_day2_mz:
     return
 
 label alt_day2_event_medic_house1:
-    if been_there_alt1()>1:
-        scene bg ext_aidpost_day with fade
-        th "Нет, после сеанса обтираний мне здесь ловить явно нечего."
-        window hide
-        return
+    if not alt_replay_on:
+        if been_there_alt1()>1:
+            scene bg ext_aidpost_day with fade
+            th "Нет, после сеанса обтираний мне здесь ловить явно нечего."
+            window hide
+            return
     scene bg ext_aidpost_day with fade
     if ('sl' in list_d2_convoy_7dl):
         show sl serious pioneer
@@ -3150,7 +3155,6 @@ label alt_day2_dubstep2:
     us "Не буду я эту гадость слушать…"
     "Она уже отвернулась, чтобы уйти, и тут в партию вступил БАС!"
     stop music
-    $ alt_day2_ph = True
     play music music_7dl["polyhymnia_main"]
     scene bg ext_stage_near_clear_7dl:
         linear 0.1 zoom 1.1 xalign 0.5 yalign 0.5
@@ -3709,13 +3713,14 @@ label alt_day2_event_square_1:
 
 label alt_day2_event_boat_station1:
     play ambience ambience_boat_station_day fadein 2
-    if been_there_alt1()>1 :
-        scene bg ext_boathouse_day with fade
-        th "Я не видел смысла в повторном посещении лодочной станции. Подписи отсюда мне не нужны, а времени всё меньше."
-        window hide
-        stop ambience fadeout 1
-        play ambience ambience_camp_center_day fadein 1
-        return
+    if not alt_replay_on:
+        if been_there_alt1()>1 :
+            scene bg ext_boathouse_day with fade
+            th "Я не видел смысла в повторном посещении лодочной станции. Подписи отсюда мне не нужны, а времени всё меньше."
+            window hide
+            stop ambience fadeout 1
+            play ambience ambience_camp_center_day fadein 1
+            return
     scene bg ext_boathouse_day with fade
     if (herc or loki) and (counter_sl_7dl != 1):
         th "На пристани всё так же тихо и спокойно. Даже если ты не прячешься здесь от погони."
@@ -3811,26 +3816,26 @@ label alt_day2_dinner:
                 show un normal pioneer at left with dissolve
                 un "Должен справиться."
                 mt "В таком случае, только музыка и газета."
-                $ list_slavya_7dl = []
-                $ list_slavya_7dl.append('nwsppr')
-                $ list_slavya_7dl.append('music')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('music')
+                $ list_clubs_7dl.append('nwsppr')
             "Давайте стенгазету" if 'nwsppr' in list_clubs_7dl:
                 me "Буду статьи писать."
                 "Ольга кивнула, проставляя галочку напротив подписи в библиотеке."
-                $ list_slavya_7dl = []
-                $ list_slavya_7dl.append('nwsppr')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('nwsppr')
             "Давайте футбол, что ли." if 'soccer' in list_clubs_7dl:
                 me "Больше-то заняться всё равно нечем."
                 mt "Футбол так футбол."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ list_slavya_7dl = []
-                $ list_slavya_7dl.append('soccer')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('soccer')
             "Давайте волейбол?" if 'volley' in list_clubs_7dl:
                 me "Останусь в волейбольной секции, пожалуй."
                 mt "Поближе к Славе? {w}Молодец какой."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ list_slavya_7dl = []
-                $ list_slavya_7dl.append('volley')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('volley')
             "Давайте бадминтон?" if 'badmin' in list_clubs_7dl:
                 me "В бадминтон. Воланчики гонять."
                 mt "Немного не мальчишеский спорт, не считаешь?"
@@ -3838,20 +3843,20 @@ label alt_day2_dinner:
                 me "Мне нравится."
                 mt "Как скажешь."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
-                $ list_slavya_7dl = []
-                $ list_slavya_7dl.append('badmin')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('badmin')
             "Останусь в музкружке!" if 'music' in list_clubs_7dl:
                 me "Мне там больше всего нравится."
                 mt "Или тебе Мику нравится?.. Всё-всё, молчу."
                 "Ольга поставила галочку напротив подписи Мику."
-                $ list_slavya_7dl = []
-                $ list_slavya_7dl.append('music')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('music')
             "Я за кибернетику!" if 'cyber' in list_clubs_7dl:
                 mt "Уверен?"
                 me "Да."
                 mt "Хорошо, оставляем кибернетику."
-                $ list_slavya_7dl = []
-                $ list_slavya_7dl.append('cyber')
+                $ list_clubs_7dl = []
+                $ list_clubs_7dl.append('cyber')
         mt "Но всё остальное — вычёркиваю!"
         "Ольга размашисто перечеркнула что-то на листочке и спрятала его в карман."
         "В этот раз окончательно."
@@ -5986,14 +5991,15 @@ label alt_day2_eventEv_music_club1:
     return
 
 label alt_day2_eventEv_clubs1:
-    if been_there_alt2()>1:
-        scene bg map_alt2
-        th "Клуб юного техника умеет ждать."
-        stop music fadeout 3
-        stop ambience fadeout 6
-        window hide
-        with fade
-        return
+    if not alt_replay_on:
+        if been_there_alt2()>1:
+            scene bg map_alt2
+            th "Клуб юного техника умеет ждать."
+            stop music fadeout 3
+            stop ambience fadeout 6
+            window hide
+            with fade
+            return
     play ambience ambience_camp_center_evening fadein 1
     scene bg ext_clubs_sunset with fade
     th "Хм. Закрыто. А утром казалось, что «юные техники» здесь даже ночуют."
@@ -6744,10 +6750,6 @@ label alt_day2_dream:
     window hide
     scene black with fade2
     "И через секунду уже спал."
-    $ alt_day2_cardgame_block_rollback = False
-    $ disable_all_chibi_alt2()
-    $ disable_all_chibi_alt1()
-    $ disable_all_chibi()
     stop music fadeout 3
     stop ambience fadeout 6
     window hide
