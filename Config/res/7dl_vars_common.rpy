@@ -4,7 +4,7 @@ init -1:
     $ alt_release_no = "0.34.a"
     $ alt_hotfix_no = "hf0"
     $ plthr = u"none"
-    
+
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
@@ -90,12 +90,14 @@ init 2:
         $ names['ai'] = u'Собеседник'
         $ names['al'] = u'Сердитый мальчик'
         $ names['am'] = u'Я'
-        $ names['ase'] = u'Странная девочка'
+        $ names['ase'] = u'Девочка'
         $ names['ba'] = u'Физрук'
         $ names['bb'] = u'Начальник лагеря'
-        $ names['dn'] = u'Взъерошенный мальчик'
+        $ names['dn'] = u'Растрёпанный мальчик'
+        $ names['dy'] = u'Динамики'
         $ names['ka'] = u'Вожатая 2-го отряда'
-        $ names['ln'] = u'Странная девушка'
+        $ names['kids'] = u'Дети'
+        $ names['ln'] = u'Странная девочка'
         $ names['ml'] = u'Мальчик'
         $ names['ml2'] = u'Мальчик'
         $ names['ml3'] = u'Мальчик'
@@ -104,12 +106,18 @@ init 2:
         $ names['voice1'] = u'Продавщица'
         $ names['voices'] = u'Голоса'
         $ names['we'] = u'Хором'
-        $ names['kids'] = u'Дети'
-        $ names['dy'] = u'Динамики'
-
+        
 label scenario__alt_sevendl:
 # только если игру начали заново - принимаем номер релиза сохранения по номеру релиза мода
     $ alt_save_release_no = alt_release_no
+# инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
+    $ init_map_zones_alt1()
+    $ init_map_zones_alt2()
+# пишем версию 7дл в трейсбеках
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        $ config.version = "1.1 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
+    else:
+        $ config.version = "1.2 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
 # ------------------------------------------------
     jump main_menu_7dl
 
@@ -145,14 +153,8 @@ init 4: # вызываем все переменные в init (необходи
     call alt_day6_us_7dl_vars
     call alt_day7_us_px_vars
 
-init 99: # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения    
-    $ init_map_zones_alt1()
-    $ init_map_zones_alt2()
-
 label alt_day0_vars: #Переменные нулевого дня
-    $ counter_sl_cl = 0 #Счётчик рута (Славя-классик in progress)
-    $ counter_sl_7dl = 0 #Счётчик рута (Славя-7дл)
-    #TODO - same shit для прочих девочек
+    $ make_names_unknown_7dl()
     $ lp_mi = 0
     $ lp_sl = 0
     $ lp_un = 0
@@ -166,28 +168,29 @@ label alt_day0_vars: #Переменные нулевого дня
     $ mt_pt = 0
     $ d3_pt = 0
     $ us_pt = 0
+    $ th_prefix = "«"
+    $ th_suffix = "»"
     $ alt_day_catapult = 0
-    $ alt_day_binder = 0
+    $ alt_replay_on = False
     $ alt_dlc_active = False
     $ herc = False
     $ loki = False
     $ d3 = False
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
-    $ make_names_unknown_7dl()
-    $ th_prefix = "«"
-    $ th_suffix = "»"
     if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
-    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        $ config.version = "1.1 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
     else:
-        $ config.version = "1.2 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
+        $ alt_day_binder = 0
     return
     
 label alt_day1_vars: #Переменные первого дня
-    $ alt_route_flag = 1
+    $ counter_sl_cl = 0 #Счётчик рута (Славя-классик in progress)
+    $ counter_sl_7dl = 0 #Счётчик рута (Славя-7дл)
+    #TODO - same shit для прочих девочек
     $ list_slavya_7dl = []
+    $ list_slavya_7dl = []
+    $ alt_route_flag = 1
     $ alt_day1_loop = False
     $ alt_day1_alt_chase = False
     $ alt_day1_alt_us_robbed = False
