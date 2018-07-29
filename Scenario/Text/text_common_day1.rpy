@@ -3398,6 +3398,8 @@ label alt_day1_lena:
                     un "Спокойной ночи."
                     "Она поднялась со скамейки, поколебалась с секунду, а потом отправилась прочь."
                     hide un with dissolve
+                    window hide
+                    return
                 "Задержать.":
                     $ alt_day1_un_stopped = True
                     $ lp_un += 1
