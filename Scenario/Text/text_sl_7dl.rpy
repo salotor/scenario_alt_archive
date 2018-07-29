@@ -373,7 +373,7 @@ label alt_day4_sl_7dl_breakfast:
     me "И ты хочешь заставить меня таскать их все?"
     show sl smile pioneer with dspr
     sl "Один ты, боюсь, не справишься, так что я тебе несколько мальчиков из второго отряда пришлю."
-    if herc of loki:
+    if herc or loki:
         menu:
             "Пусть Шварценеггер таскает!" if loki:
                 show sl serious pioneer with dspr
