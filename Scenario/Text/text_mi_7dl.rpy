@@ -5,26 +5,26 @@
     "Машина уже успела немного остыть после дневного пекла, поэтому в салоне было достаточно приятно."
     "То ли в силу привычки, то ли ещё по какой причине, я мгновенно занял место на переднем сиденье — дорога предстояла довольно долгая, и возможность вытянуть ноги упускать не хотелось."
     "За спиной уже разместился Шурик — со стороны места водителя."
+    scene cg d4_cs_car_dark_7dl
     if alt_day3_mi_donor:
         "За спиной же у меня…"
         "Мурашки стройными рядами замаршировали по шее куда-то к линии роста волос — я ощутил на коже тепло дыхания Мику."
         mi "Ня!"
         "Улыбнулась девочка, хватаясь руками за спинку моего кресла и как-то очень уютно устраивая на нём подбородок."
         "Поймав мой вопросительный взгляд, улыбнулась:"
-        show mi smile pioneer with dissolve
+        #show mi smile pioneer with dissolve
         window hide
-        scene cg d4_cs_car_day_7dl
         with fade
         mi "Что не так? Я всю жизнь на заднем сиденье катаюсь — привыкла."
         me "За Шуриком последишь если что?"
         "Мику не успела ответить мне — на подмостках появился наш водитель."
-    show cs normal at left with dissolve
+    #show cs normal at left with dissolve
     cs "Всё, с Олей я утрясла все трудности."
     "Выдохнула сестра, плюхнувшись на сиденье."
     cs "Но чтобы без пряток мне, ясно"
     if alt_day3_mi_donor:
         extend "… пионеры?"
-        show mi normal pioneer at right 
+        #show mi normal pioneer at right 
         "Мы, переглянувшись (я снова весь покрылся мурашками от малоприятной близости), в один голос ответили:"
         me "Так точно."
         mi "Будет сделано."
@@ -38,7 +38,7 @@
     "Ответила Виола на невысказанный вопрос."
     cs "Так что лучше бы пристегнуть ремни."
     me "А?"
-    show cs smile with dspr
+    #show cs smile with dspr
     "Она поняла мой вопрос."
     "И усмехнулась."
     cs "Не беспокойся за ценный груз — я его как следует принайтовала."
@@ -46,7 +46,7 @@
     if alt_day3_mi_donor:
         mi "И махнул рукой!"
         "С воодушевлением подхватила Мику."
-        show mi shy pioneer with dspr
+        #show mi shy pioneer with dspr
         mi "Ой!"
         "И тут же закрыла рот ладошками."
         "Покосилась на недовольно всхрапнувшего Шурика и перевела дыхание."
@@ -54,7 +54,7 @@
     cs "Надеюсь, не придётся останавливаться по неотложным делам."
     "Вполголоса пробормотала она, включая первую передачу."
     window hide
-    scene cg d4_cs_car_day_cs_7dl
+    scene cg d4_cs_car_night_cs_7dl
     with fade
     stop ambience
     play music music_list["into_the_unknown"] fadein 3
@@ -178,7 +178,7 @@
     
 label alt_day4_mi_7dl_ch2:
     window hide
-    scene bg ext_road_day
+    scene cg d4_cs_car_day_cs_7dl #ext_road_day
     with dissolve
     play music music_7dl["rewind"] fadein 3
     "Устал я. Устал."
@@ -1331,7 +1331,7 @@ label alt_day4_mi_7dl_ch52:
     
 label alt_day4_mi_7dl_ch6:
     window hide
-    scene bg ext_road_day
+    scene cg d4_cs_car_day_cs_7dl
     with dissolve
     play sound_loop sfx_bus_interior_moving fadein 4
     "Про обратную дорогу ничего не могу сказать толком."

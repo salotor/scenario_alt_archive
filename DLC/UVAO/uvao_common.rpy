@@ -34,7 +34,7 @@ label alt_day1_uvao_ch2:
     return
     
 label alt_day3_uvao_ch3:
-    if alt_day1_genda_investigation and (alt_day2_date == 0) and max(lp_us,lp_dv,lp_un,lp_mi,lp_sl) <= 5:
+    if alt_day1_genda_investigation and (len(list_d2_date_7dl) == 0) and max(lp_us,lp_dv,lp_un,lp_mi,lp_sl) <= 5:
         menu:
             "Сбежать!":
                 "Мысли тревожно заметались. {w} Танцевать не хотелось категорически, да и сосредоточиться на плане дальнейших действий танец бы только помешал, особенно вкупе со странным поведением вожатой." 
