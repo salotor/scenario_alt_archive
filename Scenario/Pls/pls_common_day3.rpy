@@ -178,7 +178,7 @@ label alt_day3_disco:
             call alt_day3_sleeptime
             pause(1)
             jump alt_day3_slots
-        elif alt_day3_us_bugs == 1 and alt_day2_date != 132:
+        elif alt_day3_us_bugs == 1 and not ('un_fz' in list_d2_date_7dl):
             call alt_day3_mt_scare
             pause(1)
             call alt_day3_bath_voyeur

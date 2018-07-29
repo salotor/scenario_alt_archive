@@ -19,7 +19,7 @@
     $ set_zone_alt1("beach_alt1",        "alt_day3_event_beach")
     if (counter_sl_cl == 2):
         $ set_chibi_alt1("beach_alt1",        "sl")
-    if alt_day2_date != 132:
+    if not ('un_fz' in list_d2_date_7dl):
         $ set_zone_alt1("library_alt1",      "alt_day3_event_library")
         if alt_day3_un_event:
             $ set_chibi_alt1("library_alt1",      "un")
