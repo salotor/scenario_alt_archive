@@ -6764,7 +6764,7 @@ label alt_day2_dream:
     return
     
 label alt_day2_slot_us:
-    $ alt_day2_date = 5
+    $ list_d2_date_7dl.append('us')
     $ sunset_time ()
     $ persistent.sprite_time = "sunset"
     scene bg ext_playground_sunset with dissolve
@@ -6902,7 +6902,7 @@ label alt_day2_slot_us:
     return
 
 label alt_day2_slot_mi:
-    $ alt_day2_date = 4
+    $ list_d2_date_7dl.append('mi')
     play ambience ambience_camp_center_day fadein 3
     play music music_list["into_the_unknown"] fadein 3
     $ persistent.sprite_time = "sunset"
