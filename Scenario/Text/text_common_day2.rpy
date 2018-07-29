@@ -3667,7 +3667,7 @@ label alt_day2_event_square_1:
             "Уклончиво ответил я."
             sl "Поможете мне прибраться? Тут немного, втроём мигом справимся."
             "Она махнула рукой в сторону места под построение. После того, как там постояло несколько десятков пионеров, откуда-то вдруг появились бумажки, фантики и какой-то другой непонятный мусор."
-        if loki and not ('sl' in list_d2_convoy_7dl)2:
+        if loki and not ('sl_prep' in list_d2_convoy_7dl):
             me "Ага."
             "Пробормотал я."
             if ('dv' in list_d2_convoy_7dl):
@@ -7953,7 +7953,7 @@ label alt_day2_un_herc_date:
         "Мысли заметались, не выдавая ни единой разумной идеи о том как вести себя правильно в данной ситуации."
         show un smile pioneer with dspr
         un "Ну… Погуляли бы."
-    elif not ('un' in list_d2_convoy_7dl) and not ('me' in list_d2_convoy_7dl) and not ('sl' in list_d2_convoy_7dl)2:
+    elif not ('un' in list_d2_convoy_7dl) and not ('me' in list_d2_convoy_7dl) and not ('sl_prep' in list_d2_convoy_7dl):
         if ('sl' in list_d2_convoy_7dl):
             un "Скажи, почему ты столько внимания мне уделяешь?"
             me "Ну… Потому что мне с тобой интересно…"
