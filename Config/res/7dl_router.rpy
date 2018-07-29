@@ -23,7 +23,7 @@ label alt_day3_router_un:
     if (alt_day3_un_med_help == 1) and (lp_un >= 13):
         $ routetag = "un7dl"
         jump alt_day4_un_7dl_start
-    elif (('un_fz' in list_d2_date_7dl)) and (alt_day3_dancing == 132):
+    elif ('un_fz' in list_d2_date_7dl) and (alt_day3_dancing == 132):
         $ routetag = "un7dl"
         jump alt_day4_un_fz_start
     else:

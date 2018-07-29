@@ -3375,7 +3375,7 @@ label alt_day4_mi_date:
         me "Не надо!"
         "Я выставил руки перед собой."
         me "Вы все мне знакомые и практически родные, и то, мне довольно неловко, если на меня все смотрят…"
-        if not alt_day3_duty and (('sl' in list_d2_convoy_7dl)):
+        if not alt_day3_duty and ('sl' in list_d2_convoy_7dl):
             me "Я ещё после вчерашнего не отошёл."
             mt "Ты про падение?"
             me "Нет."
