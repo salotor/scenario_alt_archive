@@ -676,8 +676,8 @@ label alt_7dl_titles:
     pause(1)
     show alt_credits alt_credits_text:
         xalign 0.5 
-        ypos 1.3 
-        linear 67.0 ypos -1.3 
+        ypos 1.0 
+        linear 67.0 ypos -2.2 
     $ renpy.pause(67, hard=True)
     scene black
     with dissolve2

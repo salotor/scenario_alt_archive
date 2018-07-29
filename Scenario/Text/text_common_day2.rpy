@@ -1191,7 +1191,7 @@ label alt_day2_event_music_club1:
         "Я вспомнил свои первые репетиции и поёжился, воочию представив человек двадцать, которые пришли, заняли места и разыгрываются."
         "Вряд ли меня ожидает какой-либо сюрприз со стороны местного художественного руководителя."
         "Хотя после пмс-нутой библиотекарши я уже ничему не удивлюсь."
-    if (counter_sl_cl == 1) and (len(list_voyage_7dl) < 1)):
+    if (counter_sl_cl == 1) and len(list_voyage_7dl) == 0:
         "Решив прислушаться к совету Слави, я отправился к наиболее близкой цели обхода."
         "Епархии некой Мику."
         "Как я понимал, это была та самая японская красотка, с которой я за сутки умудрился не пересечься ни разу."
@@ -1744,7 +1744,7 @@ label alt_day2_event_clubs1:
         me "Здесь так и принято оставлять дверь нараспашку и исчезать?"
         show sl smile2 pioneer with dspr
         sl "Да это Шурик. Опять стрельнула мысль, он и побежал записывать её в газету."
-        if alt_day2_sl_guilty != 0:
+        if counter_sl_cl != 0:
             me "Что там со светомузыкой?"
             sl "Э… Не беспокойся на этот счёт, я сама всё проверю."
             me "Нет уж, извольте!"
@@ -2129,12 +2129,12 @@ label alt_day2_event_sport_area1:
     "Нет, на футболе он явно быть не может — игра стихийная. {w=.3}В бадминтон тренировать королевишен? {w=.3}Сомневаюсь. {w=.3}Волейбол? Кстати, возможно, но я там не вижу никого… "
     play sound sfx_soccer_ball_kick
     extend "И я резко нагнулся, пропуская мяч мимо!"
-    if ((alt_day1_sl_keys_took == 1) or (alt_day2_sl_guilty != 0)) and ('sl' in list_d2_convoy_7dl):
+    if ((alt_day1_sl_keys_took == 1) or (counter_sl_cl != 0)) and ('sl' in list_d2_convoy_7dl):
         us "Эй!"
         me "Чего тебе?"
         show us sad sport with dspr
         us "Вы в курсе, что вас Ольга Дмитриевна искала?"
-        if alt_day2_sl_guilty != 0:
+        if counter_sl_cl != 0:
             me "Спасибо."
             "Ответил я."
             me "Мы в курсе."
@@ -2182,7 +2182,7 @@ label alt_day2_event_sport_area1:
     $ persistent.sprite_time = "sunset"
     $ sunset_time
     play music music_list["went_fishing_caught_a_girl"] fadein 5
-    if ((alt_day1_sl_keys_took == 1) or (alt_day2_sl_guilty != 0)) and (('sl' in list_d2_convoy_7dl)):
+    if ((alt_day1_sl_keys_took == 1) or (counter_sl_cl != 0)) and (('sl' in list_d2_convoy_7dl)):
         "Славя была права!"
     else:
         "Ульянка была права!"
@@ -3489,7 +3489,6 @@ label alt_day2_sl_hyst:
     show sl sad pioneer at fright with move
     sl "Нету ключей. Потеряла."
     mt "Так, Семён, выйди, потому что зрелище сейчас будет не для слабонервных."
-    $ alt_day2_sl_guilty = 1
     menu:
         "Ключи у меня!":
             "Крикнул я."
@@ -3668,7 +3667,7 @@ label alt_day2_event_square_1:
             "Уклончиво ответил я."
             sl "Поможете мне прибраться? Тут немного, втроём мигом справимся."
             "Она махнула рукой в сторону места под построение. После того, как там постояло несколько десятков пионеров, откуда-то вдруг появились бумажки, фантики и какой-то другой непонятный мусор."
-        if loki and not ('sl' in list_d2_convoy_7dl)2:
+        if loki and not ('sl_prep' in list_d2_convoy_7dl):
             me "Ага."
             "Пробормотал я."
             if ('dv' in list_d2_convoy_7dl):
@@ -4170,7 +4169,7 @@ label alt_day2_dinner:
     "Далее — внимание! — Накрываем стакан тарелкой, и резко переворачиваем получившуюся конструкцию!"
     "Я тронул локтем Ульяну, задумчиво наблюдающую за моими действиями."
     me "Уль, спорим а спорим!"
-    if 'dv_dinner' int list_d2_convoy_7dl:
+    if 'dv_dinner' in list_d2_convoy_7dl:
         show us sad pioneer at left
     else:
         show us sad pioneer at center
@@ -4293,7 +4292,7 @@ label alt_day2_dinner:
                 "Не возьмёшь."
                 me "Никуда я с тобой не пойду. Иди спать."
                 "Ульянка, кажется, расстроилась. Она вздохнула, и, ссутулившись, побрела прочь. И куда только делся её обычный задор."
-            "Согласиться" if alt_day2_sl_guilty != 2:
+            "Согласиться" if counter_sl_cl != 1:
                 $ lp_us += 1
                 $ alt_day2_us_escape = True
             "Пригрозить вожатой":
@@ -6765,7 +6764,7 @@ label alt_day2_dream:
     return
     
 label alt_day2_slot_us:
-    $ alt_day2_date = 5
+    $ list_d2_date_7dl.append('us')
     $ sunset_time ()
     $ persistent.sprite_time = "sunset"
     scene bg ext_playground_sunset with dissolve
@@ -6903,7 +6902,7 @@ label alt_day2_slot_us:
     return
 
 label alt_day2_slot_mi:
-    $ alt_day2_date = 4
+    $ list_d2_date_7dl.append('mi')
     play ambience ambience_camp_center_day fadein 3
     play music music_list["into_the_unknown"] fadein 3
     $ persistent.sprite_time = "sunset"
@@ -7954,7 +7953,7 @@ label alt_day2_un_herc_date:
         "Мысли заметались, не выдавая ни единой разумной идеи о том как вести себя правильно в данной ситуации."
         show un smile pioneer with dspr
         un "Ну… Погуляли бы."
-    elif not ('un' in list_d2_convoy_7dl) and not ('me' in list_d2_convoy_7dl) and not ('sl' in list_d2_convoy_7dl)2:
+    elif not ('un' in list_d2_convoy_7dl) and not ('me' in list_d2_convoy_7dl) and not ('sl_prep' in list_d2_convoy_7dl):
         if ('sl' in list_d2_convoy_7dl):
             un "Скажи, почему ты столько внимания мне уделяешь?"
             me "Ну… Потому что мне с тобой интересно…"

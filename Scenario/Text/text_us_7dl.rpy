@@ -8403,7 +8403,7 @@ label alt_day7_us_7dl_rendezvous2:
         scene bg int_house_of_un_day
         with dissolve
         play ambience ambience_int_cabin_day fadein 3
-        if alt_day2_date != 11:
+        if not ('un_loki' in list_d2_date_7dl):
             th "А я ведь здесь не был ни разу"
             "С вялым удивлением констатировал я."
         show mi normal casual with dissolve
@@ -8606,7 +8606,7 @@ label alt_day7_us_7dl_rendezvous2:
         "Мы вышли на косу, вдающуюся далеко в заводь, казалось, рукой подать было до острова и стянувшей берега стальной нитки рельсов."
         "А ещё казалось, если долго-долго смотреть на бурлящую на гранитных обломках воду, что мы неспешно отчаливаем и направляемся куда-то далеко-далеко."
         "Путешествие длиною в жизнь."
-        if alt_day2_date != 11:
+        if not ('un_loki' in list_d2_date_7dl):
             me "А откуда место для костра?"
             "Молчание становилось совсем тягостным."
             show un normal pioneer with dspr
