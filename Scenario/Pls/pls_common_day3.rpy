@@ -224,7 +224,7 @@ label alt_day3_disco2:
     $ night_time()
     call alt_day3_choose3
     pause(1)
-    if alt_day3_mi_date and (('mi' in list_d2_date_7dl)) and ((alt_day3_dancing == 41) or (alt_day3_dancing == 40)):
+    if alt_day3_mi_date and ('mi' in list_d2_date_7dl) and ((alt_day3_dancing == 41) or (alt_day3_dancing == 40)):
         call alt_day3_mi_7dl_init
         pause(1)
         jump alt_day4_mi_7dl_start
