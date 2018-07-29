@@ -4524,7 +4524,7 @@ label alt_day4_sl_7dl_day:
     me "Я в полном восторге. {w} Это всё?"
     ba "Почти. Сейчас до одного тупорогого дрища дойдёт что-то очевидное."
     "Я сложил два и два."
-    if 'volley' if list_clubs_7dl:
+    if 'volley' in list_clubs_7dl:
         me "Это вы намекаете на то, что я тоже играю?"
         show ba smile uniform with dspr
         ba "Молодец! Соображаешь."
