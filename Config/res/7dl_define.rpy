@@ -454,8 +454,6 @@ init:
     image bg int_old_building_day_7dl = get_image_7dl("bg/int_old_building_day_7dl.jpg")
     image bg int_potato_storage_7dl = get_image_7dl("bg/int_potato_storage_7dl.png")
     image bg int_refinery_day_7dl = get_image_7dl("bg/int_refinery_day_7dl.png")
-    image bg int_refinery_night_7dl = get_image_7dl("bg/int_refinery_night_7dl.png")
-    image bg int_refinery_sunset_7dl = get_image_7dl("bg/int_refinery_sunset_7dl.png")
     image bg int_warehouse_day_7dl = get_image_7dl("bg/int_warehouse_day_7dl.png")
     image bg int_warehouse_night_7dl = get_image_7dl("bg/int_warehouse_night_7dl.png")
     image bg int_sporthall_day_7dl = get_image_7dl("bg/int_sporthall_day_7dl.png")
@@ -496,7 +494,7 @@ init:
     image bg int_opened_door_7dl = get_image_7dl("bg/outro/int_opened_door_7dl.jpg")
     image bg int_plats_7dl = get_image_7dl("bg/outro/int_plats_7dl.jpg")
     image bg int_sam_house_clean_7dl = get_image_7dl("bg/outro/int_sam_house_clean_7dl.jpg")
-    image bg int_sam_room_7dl = get_image_7dl("outro/int_sam_room_7dl.png")
+    image bg int_sam_room_7dl = get_image_7dl("bg/outro/int_sam_room_7dl.png")
     image bg int_store_7dl = get_image_7dl("bg/outro/int_store_7dl.png")
     
 #extra

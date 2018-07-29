@@ -11826,7 +11826,7 @@ label alt_day6_sl_concert:
     "Она то ли о чём-то догадывалась, то ли знала прямо — но долго не хотела соглашаться."
     "На всё это я смотрел с отстранённым брезгливым любопытством — все умственные силы были брошены на решение задачи, как помочь Славе."
     window hide
-    scene bg int_refinery_sunset_7dl with flash
+    scene expression Dawn("bg int_refinery_day_7dl") with flash
     "Потому что никакое нервное истощение не подразумевает падения температуры тела до тридцати пяти градусов и липкого пота!"
     window hide
     scene expression Dawn("cg d5_sl_bed_7dl") with dissolve

@@ -114,14 +114,14 @@ init:
     # image suit_uvao_L = im.Scale(get_image_7dl("gui/tournament/suit/suit_uvao.png"),26,35)
     
 # --------------  # картинки в папке теста — В РЕЛИЗНОЙ ВЕРСИИ ИХ НАДО УБРАТЬ
-    image suit_2ch_S = im.Scale('scenario_alt/~Test_rel/suit/suit_2ch.png',21,28)
-    image suit_2ch_L = im.Scale('scenario_alt/~Test_rel/suit/suit_2ch.png',26,35)
-    image suit_ussr_S = im.Scale('scenario_alt/~Test_rel/suit/suit_ussr.png',21,28)
-    image suit_ussr_L = im.Scale('scenario_alt/~Test_rel/suit/suit_ussr.png',26,35)
-    image suit_utan_S = im.Scale('scenario_alt/~Test_rel/suit/suit_utan.png',21,28)
-    image suit_utan_L = im.Scale('scenario_alt/~Test_rel/suit/suit_utan.png',26,35)
-    image suit_uvao_S = im.Scale('scenario_alt/~Test_rel/suit/suit_uvao.png',21,28)
-    image suit_uvao_L = im.Scale('scenario_alt/~Test_rel/suit/suit_uvao.png',26,35)
+    image suit_2ch_S = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_2ch.png',21,28)
+    image suit_2ch_L = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_2ch.png',26,35)
+    image suit_ussr_S = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_ussr.png',21,28)
+    image suit_ussr_L = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_ussr.png',26,35)
+    image suit_utan_S = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_utan.png',21,28)
+    image suit_utan_L = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_utan.png',26,35)
+    image suit_uvao_S = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_uvao.png',21,28)
+    image suit_uvao_L = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_uvao.png',26,35)
 # ------------------------------------------------
 
 init 2 python:

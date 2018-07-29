@@ -5679,8 +5679,7 @@ label alt_day4_fz_herbs:
         window hide
         play sound sfx_open_door_1
         pause(1)
-        scene bg int_refinery_night_7dl
-        with fade
+        scene expression Notch("bg int_refinery_day_7dl") with fade
         "Я отправился на своё место в изоляторе — от пережитого ощутимо кружило голову, а расслабляющие травки лишь усугубляли этот эффект."
         cs "Спокойной ночи."
         "Пожелала от двери Виолетта."
