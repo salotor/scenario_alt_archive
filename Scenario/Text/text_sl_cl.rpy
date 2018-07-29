@@ -10907,7 +10907,7 @@ label alt_day6_sl_intellectual:
     ba "Верну лучше, чем была."
     "Он подмигнул нам и направился к столовой."
     window hide
-    scene cg d4_cs_car_night_ba_gl_7dl
+    scene cg d4_cs_car_day_ba_gl_7dl
     with fade
     play sound sfx_intro_bus_engine_start
     $ renpy.pause(3)
