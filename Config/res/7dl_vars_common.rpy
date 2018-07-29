@@ -51,10 +51,10 @@ init 2:
     $ store.names_list.append('dn')#Данечка
 
     $ colors['ka'] = {'night': (137, 82, 85, 255), 'sunset': (222, 101, 127, 255), 'day': (236, 123, 127, 255), 'prolog': (198, 89, 127, 255)}
-    $ store.names_list.append('am') #Катюшка
+    $ store.names_list.append('ka') #Катюшка
 
     $ colors['ln'] = {'night': (137, 82, 85, 255), 'sunset': (222, 101, 127, 255), 'day': (236, 123, 127, 255), 'prolog': (198, 89, 127, 255)}
-    $ store.names_list.append('am') #Понятно кто
+    $ store.names_list.append('ln') #Понятно кто
 
     $ colors['ml'] = {'night': (43, 134, 98, 255), 'sunset': (70, 164, 147, 255), 'day': (74, 200, 147, 255), 'prolog': (62, 144, 147, 255)}
     $ store.names_list.append('ml')#Малец1
@@ -90,12 +90,14 @@ init 2:
         $ names['ai'] = u'Собеседник'
         $ names['al'] = u'Сердитый мальчик'
         $ names['am'] = u'Я'
-        $ names['ase'] = u'Странная девочка'
+        $ names['ase'] = u'Девочка'
         $ names['ba'] = u'Физрук'
         $ names['bb'] = u'Начальник лагеря'
-        $ names['dn'] = u'Взъерошенный мальчик'
+        $ names['dn'] = u'Растрёпанный мальчик'
+        $ names['dy'] = u'Динамики'
         $ names['ka'] = u'Вожатая 2-го отряда'
-        $ names['ln'] = u'Странная девушка'
+        $ names['kids'] = u'Дети'
+        $ names['ln'] = u'Странная девочка'
         $ names['ml'] = u'Мальчик'
         $ names['ml2'] = u'Мальчик'
         $ names['ml3'] = u'Мальчик'
@@ -104,12 +106,18 @@ init 2:
         $ names['voice1'] = u'Продавщица'
         $ names['voices'] = u'Голоса'
         $ names['we'] = u'Хором'
-        $ names['kids'] = u'Дети'
-        $ names['dy'] = u'Динамики'
-
+        
 label scenario__alt_sevendl:
 # только если игру начали заново - принимаем номер релиза сохранения по номеру релиза мода
     $ alt_save_release_no = alt_release_no
+# инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения
+    $ init_map_zones_alt1()
+    $ init_map_zones_alt2()
+# пишем версию 7дл в трейсбеках
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        $ config.version = "1.1 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
+    else:
+        $ config.version = "1.2 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
 # ------------------------------------------------
     jump main_menu_7dl
 
@@ -145,11 +153,8 @@ init 4: # вызываем все переменные в init (необходи
     call alt_day6_us_7dl_vars
     call alt_day7_us_px_vars
 
-init 99: # инициализация карт. Должна выполняться ТОЛЬКО один раз - иначе не работают сохранения    
-    $ init_map_zones_alt1()
-    $ init_map_zones_alt2()
-
 label alt_day0_vars: #Переменные нулевого дня
+    $ make_names_unknown_7dl()
     $ lp_mi = 0
     $ lp_sl = 0
     $ lp_un = 0
@@ -163,40 +168,37 @@ label alt_day0_vars: #Переменные нулевого дня
     $ mt_pt = 0
     $ d3_pt = 0
     $ us_pt = 0
+    $ th_prefix = "«"
+    $ th_suffix = "»"
     $ alt_day_catapult = 0
-    $ alt_day_binder = 0
+    $ alt_replay_on = False
     $ alt_dlc_active = False
     $ herc = False
     $ loki = False
     $ d3 = False
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
-    $ make_names_unknown_7dl()
-    $ th_prefix = "«"
-    $ th_suffix = "»"
     if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
         $ alt_day_binder = 1
-    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        $ config.version = "1.1 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
     else:
-        $ config.version = "1.2 + 7DL v.%s %s" % (alt_release_no, alt_hotfix_no)
+        $ alt_day_binder = 0
     return
     
 label alt_day1_vars: #Переменные первого дня
+    $ counter_sl_cl = 0 #Счётчик рута (Славя-классик in progress)
+    $ counter_sl_7dl = 0 #Счётчик рута (Славя-7дл)
+    #TODO - same shit для прочих девочек
+    $ list_slavya_7dl = []
     $ list_slavya_7dl = []
     $ alt_route_flag = 1
-    $ list_slavya_7dl = []
     $ alt_day1_loop = False
     $ alt_day1_alt_chase = False
     $ alt_day1_alt_us_robbed = False
     $ alt_day1_alt_robbery = False
-    $ alt_day1_alt_sl_conv = False
     $ alt_day1_dv_feed = False
     $ alt_day1_el_followed = False
     $ alt_day1_sam_paniqued = False
     $ alt_day1_sl_met = False
-    $ alt_day1_sl_conv = False
-    $ alt_day1_sl_conv2 = False
     $ alt_day1_sl_keys_took = 0
     $ alt_day1_un_dated = False
     $ alt_day1_un_ignored = False
@@ -211,14 +213,15 @@ label alt_day1_vars: #Переменные первого дня
     return
     
 label alt_day2_vars: #Переменные второго дня
+    $ alt_route_flag = 2
     $ list_clubs_7dl = []
     $ list_voyage_7dl = []
-    $ alt_route_flag = 2
+    $ list_d2_date_7dl = []
+    $ list_d2_convoy_7dl = []
     $ alt_day2_bf_dv_us = False
     $ alt_day2_bf_un = False
     $ alt_day2_dv_bet_approve = False
     $ alt_day2_dv_bet_won = 0
-    $ alt_day2_dv_bumped = False
     $ alt_day2_dv_chased = False
     $ alt_day2_dv_harass = False
     $ alt_day2_dv_tears = False
@@ -231,21 +234,10 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_mi_hyst = False
     $ alt_day2_mt_help = False
     $ alt_day2_mi_snap = False
-    $ alt_day2_rendezvous = 0
-    $ alt_day2_rendezvous_dinner = 0
-    $ alt_day2_sl_conv = False
     $ alt_day2_sl_bf = False
-    $ alt_day2_sl_guilty = 0 #0 не был свидетелем, 1 был, 2 вступился
-    $ alt_day2_date = 0 #un 1, sl 2, dv 3, mi 4, us 5, mt 6
     $ alt_day2_un_secret_spot = 0
     $ alt_day2_us_dubstep = False
     $ alt_day2_us_escape = False
-    $ alt_day2_muz_done = False #Если только ходил в музклуб, но не записывался
-    $ alt_day2_lib_done = False
-    $ alt_day2_med_done = False
-    $ alt_day2_club_done = False
-    $ alt_day2_phys_done = False
-    $ alt_day2_beach_done = False
     $ alt_day2_walk = 0
     $ alt_day2_fail = 0
     $ alt_day2_sup = 0
@@ -296,12 +288,6 @@ label alt_day3_vars: #Переменные третьего дня
     $ alt_day3_mi_invite2 = False
     $ alt_day3_mi_donor = False
     $ alt_day3_sl_bath_voy = False
-    $ alt_day3_sl_conv = False
-    $ alt_day3_sl_conv2 = False
-    $ alt_day3_sl_day_event = False
-    $ alt_day3_sl_day_event2 = False
-    $ alt_day3_sl_day_event3 = False
-    $ alt_day3_sl_event = False
     $ alt_day3_sl_invite = False
     $ alt_day3_technoquest_st1 = False
     $ alt_day3_technoquest_st2 = False

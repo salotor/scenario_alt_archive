@@ -9,12 +9,12 @@
         $ set_chibi_alt1("music_club_alt1",   "dv")
     else:
         $ set_chibi_alt1("music_club_alt1", "mi")
-    if not (alt_day3_mi_invite or alt_day3_sl_day_event):
+    if not (alt_day3_mi_invite or (counter_sl_cl == 2)):
             $ set_zone_alt1("clubs_alt1",        "alt_day3_eventAf_clubs")
             $ set_chibi_alt1("clubs_alt1",        "el")
     $ set_zone_alt1("dining_hall_alt1",  "alt_day3_eventAf_dining_hall")
     $ set_chibi_alt1("dining_hall_alt1",  "us")
-    if alt_day3_sl_day_event:
+    if (counter_sl_cl == 3):
         $ set_zone_alt1("admin_house_alt1", "alt_day3_eventAf_admins")
         $ set_chibi_alt1("admin_house_alt1",        "sl")
     $ set_zone_alt1("me_mt_house_alt1",  "alt_day3_eventAf_me_mt_house")
@@ -22,7 +22,7 @@
     $ set_zone_alt1("library_alt1",      "alt_day3_eventAf_library")
     if alt_day3_un_invite == 1:
         $ set_chibi_alt1("library_alt1",      "un")
-    if not alt_day3_sl_day_event:
+    if (counter_sl_cl <= 2):
         $ set_zone_alt1("estrade_alt1",      "alt_day3_eventAf_estrade")
         if alt_day3_mi_invite:
             $ set_chibi_alt1("estrade_alt1",      "?")
@@ -82,6 +82,7 @@ label alt_day3_eventAf_dining_hall:
 
 label alt_day3_eventAf_admins:
     call alt_day3_eventAf_admins1
+    pause(1)
     call alt_day3_sl_postlunch
     window hide
     return

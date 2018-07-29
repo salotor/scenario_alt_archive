@@ -133,7 +133,7 @@ label alt_day0_opening:
     show expression Notch("op_mi")
     with dissolve2
     $ renpy.pause(2, hard=True)
-    show expression Notch("op_dv")
+    show expression Notch("op_dv") zorder 2
     with dissolve2
     $ renpy.pause(2, hard=True)
     show expression Notch("op_sl")
@@ -146,7 +146,7 @@ label alt_day0_opening:
     with dissolve2
     $ renpy.pause(2, hard=True)
     show expression Notch("op_us")
-    show uv_bus behind op_dv
+    show uv_bus zorder 1
     with dissolve2
     $ renpy.pause(2, hard=True)
     show expression Desat1("logo_day") :

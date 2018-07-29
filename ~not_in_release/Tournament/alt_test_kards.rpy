@@ -160,7 +160,7 @@ label alt_day2_cards_tournament:
     show sl normal pioneer at right
     show mz normal glasses pioneer at left
     with dissolve
-    if alt_day2_lib_done:
+    if ('library' in list_voyage_7dl):
         "Следующий стол оккупировала жужелица из библиотеки, ей противостояла Славя."
     else:
         "Следующий стол занимала та самая незнакомая девочка в очках, против неё играла Славя."
@@ -2915,7 +2915,7 @@ label alt_day2_final_win_end_new:
         me "И что?"
         "Мы остановились у доски, и девочка кому-то замахала."
         mi "Дядя Боря-сенсей! Мы здесь!"
-        if alt_day2_phys_done:
+        if ('sport_area' in list_voyage_7dl):
             th "Что ей может понадобиться от Саныча?"
             "С любопытством подумал я."
         show ba normal uniform at cleft behind mi
