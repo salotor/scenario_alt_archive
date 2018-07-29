@@ -580,7 +580,7 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl += 1
         $ lp_dv -= 1
         $ lp_mi -= 1
-        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl) or ('un' in list_d2_date_7dl)31:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl):
             $ lp_un -= 1
         elif ('dv' in list_d2_date_7dl):
             $ lp_dv -= 1
@@ -600,7 +600,7 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl -= 1
         $ lp_dv += 1
         $ lp_mi -= 1
-        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl) or ('un' in list_d2_date_7dl)31:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl):
             $ lp_un -= 1
         elif ('sl' in list_d2_date_7dl):
             $ lp_sl -= 1
@@ -620,7 +620,7 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl -= 1
         $ lp_dv -= 1
         $ lp_mi += 1
-        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl) or ('un' in list_d2_date_7dl)31:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl):
             $ lp_un -= 1
         elif ('sl' in list_d2_date_7dl):
             $ lp_sl -= 1

@@ -3344,7 +3344,7 @@ label alt_day3_dinner_menu:
                 mi "Шшшш!"
                 "Она приложила палец к губам и уткнулась обратно в свои бумажки."
                 "А я от нечего делать стал осматривать помещение."
-                if ('music_club' in list_voyage_7dl) and alt_day2_rendezvous != 4:
+                if ('music_club' in list_voyage_7dl) and not ('dv_prep' in list_d2_convoy_7dl):
                     "Хотя, помнится, я здесь и в прошлый раз неплохо всё рассмотрел."
                 play music music_list["trapped_in_dreams"] fadein 3
                 "На доске, расчерченной в пять полос, значилась какая-то мелодия — и я, стараясь не смотреть на плохо замазанное «Мику …ра», попробовал её напеть."

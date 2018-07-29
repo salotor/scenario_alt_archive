@@ -2901,7 +2901,7 @@ label alt_day4_neu_supper:
     show mi sad pioneer at left with dissolve
     "У Мику глаза на мокром месте."
     "Она, конечно, суперстар и артистка та ещё. {w}Но пока молоденькая очень и не очень хорошо умеет прятать эмоции. Диагноз тот же — проблемы в семье."
-    if (('mi' in list_d2_date_7dl)) and not alt_day2_mi_hyst:
+    if ('mi' in list_d2_date_7dl) and not alt_day2_mi_hyst:
         th "Опачки. {w}А откуда я знаю, что она суперстар?"
         th "Откуда-то вдруг всплыло в памяти?"
     hide mi with dissolve
@@ -2910,7 +2910,7 @@ label alt_day4_neu_supper:
     "Не могу сказать, чтобы она была расстроенной — скорее, обескураженной чем-то."
     "Как будто она всю жизнь мечтала о чём-то, а сбывшаяся мечта либо сбылась не так как надо, либо, что гораздо хуже, оказалась скучной."
     th "Что я о ней знаю? {w}Она… Ну, она любит…"
-    if (('un_loki' in list_d2_date_7dl)) or (('un' in list_d2_date_7dl)):   
+    if ('un_loki' in list_d2_date_7dl) or ('un' in list_d2_date_7dl):   
         th "Одиночество."
         th "Уединённые места."
         if loki:

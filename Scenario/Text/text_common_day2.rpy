@@ -913,6 +913,7 @@ label alt_day2_convoy:
                 me "Нет бы, хоть кто-нибудь сказал: «Да! Конечно! Побежали! Никаких подводных камней!»"
                 show sl laugh pioneer with dspr
                 sl "Ты чего возмущаешься? Если не хочешь, не помогай."
+                $ list_d2_convoy_7dl = []
                 $ list_d2_convoy_7dl.append('sl_prep')
                 window hide
             else:
@@ -1030,6 +1031,7 @@ label alt_day2_convoy:
                     dv "Ладно. Убедил. Что тебе нужно?"
                 else:
                     window hide
+                    $ list_d2_convoy_7dl = []
                     $ list_d2_convoy_7dl.append('me')
             me "Погулять по лагерю, говорю. Мне тут бегунок дали. Не хочешь вместе со мной прогуляться?"
             show dv laugh pioneer2 with dspr
@@ -1049,6 +1051,7 @@ label alt_day2_convoy:
                 hide dv with dissolve
                 "А в спину прилетело:"
                 dv "Через пятнадцать минут. У музыкального клуба. Не опаздывай."
+                $ list_d2_convoy_7dl = []
                 $ list_d2_convoy_7dl.append('dv_prep')
                 window hide
             elif ('un_rej' in list_d2_convoy_7dl):
@@ -1060,6 +1063,7 @@ label alt_day2_convoy:
                 "Я кивнул, пряча довольную улыбку."
                 dv "Тогда жду в верхней части лагеря, у музклуба."
                 hide dv with dissolve
+                $ list_d2_convoy_7dl = []
                 $ list_d2_convoy_7dl.append('dv_prep')
                 window hide
             else:
@@ -1070,6 +1074,7 @@ label alt_day2_convoy:
                     "Что я не так сделал-то?"
                 "Рыжая стерва."
                 window hide
+                $ list_d2_convoy_7dl = []
                 $ list_d2_convoy_7dl.append('me')
         "Лена" if not 'un_rej' in list_d2_convoy_7dl:
             "Ещё после вчерашней нашей беседы Лена никак не шла у меня из головы."
@@ -1113,7 +1118,7 @@ label alt_day2_convoy:
             th "Вот и поговорили."
             hide un with dissolve
             window hide
-            $ list_d2_convoy_7dl.append('me_rej')
+            $ list_d2_convoy_7dl.append('un_rej')
             jump alt_day2_convoy
         "Я сам.":
             scene expression Noir("bg ext_dining_hall_near_day", brightness = -0.4, saturation = -0.4) at zentercenter
@@ -1162,6 +1167,7 @@ label alt_day2_sl_guide:
     "Пляски под открытым небом мне не могли привидеться и в страшных кошмарах."
     sl "Начали, времени в обрез!"
     "Славя вручила мне в руки метёлку, а сама заспешила на противоположную сторону площади."
+    $ list_d2_convoy_7dl = []
     $ list_d2_convoy_7dl.append('sl')
     stop music fadeout 3
     stop ambience fadeout 6
@@ -1294,6 +1300,7 @@ label alt_day2_event_music_club1:
         show dv smile pioneer2
         dv "Вот и хорошо."
         dv "Пошли, что ли?"
+        $ list_d2_convoy_7dl = []
         $ list_d2_convoy_7dl.append('dv')
         window hide
     stop music fadeout 3
@@ -2122,7 +2129,7 @@ label alt_day2_event_sport_area1:
     "Нет, на футболе он явно быть не может — игра стихийная. {w=.3}В бадминтон тренировать королевишен? {w=.3}Сомневаюсь. {w=.3}Волейбол? Кстати, возможно, но я там не вижу никого… "
     play sound sfx_soccer_ball_kick
     extend "И я резко нагнулся, пропуская мяч мимо!"
-    if ((alt_day1_sl_keys_took == 1) or (alt_day2_sl_guilty != 0)) and (('sl' in list_d2_convoy_7dl)):
+    if ((alt_day1_sl_keys_took == 1) or (alt_day2_sl_guilty != 0)) and ('sl' in list_d2_convoy_7dl):
         us "Эй!"
         me "Чего тебе?"
         show us sad sport with dspr
@@ -3306,7 +3313,8 @@ label alt_day2_dubstep2:
         "А там и горн поспел…"
         if ('dv_prep' in list_d2_convoy_7dl):
             "А склероз надо лечить."
-            $ ('me' in list_d2_convoy_7dl)
+            $ list_d2_convoy_7dl = []
+            $ list_d2_convoy_7dl.append('me')
         stop music
         stop ambience
         window hide
@@ -4119,7 +4127,7 @@ label alt_day2_dinner:
             stop ambience fadeout 2
             window hide
             return
-        "С Алисой" if (not ('dv_rej' in list_d2_convoy_7dl)) and (('dv' in list_d2_convoy_7dl)):
+        "С Алисой" if (not ('dv_rej' in list_d2_convoy_7dl)) and ('dv' in list_d2_convoy_7dl):
             if alt_day2_us_dubstep:
                 $ lp_dv += 1
                 $ list_d2_convoy_7dl.append('dv_dinner')
@@ -4772,7 +4780,7 @@ label alt_day2_siesta:
         "Потому что не всё в этой жизни зависит от наших желаний."
         stop sound_loop fadeout 2
         stop ambience fadeout 2
-    elif (('me' in list_d2_convoy_7dl)) and 'music' in list_clubs_7dl:
+    elif ('me' in list_d2_convoy_7dl) and ('music' in list_clubs_7dl):
         play music music_7dl["but_why"] fadein 3
         show cg d5_mi_conv_7dl
         show prologue_dream
@@ -5353,7 +5361,7 @@ label alt_day2_ultim:
     show dv laugh pioneer2
     "Вот тут она от души расхохоталась."
     dv "…лапал!"
-    if (('sl' in list_d2_convoy_7dl)) and ('medic' in list_voyage_7dl) and alt_day1_us_shotted:
+    if ('sl' in list_d2_convoy_7dl) and ('medic' in list_voyage_7dl) and alt_day1_us_shotted:
         me "А что с твоей «стрелой»?"
         dv "Стрелой?"
         me "Ага. Ты мне всыпать хотела за то, что твою мелкую подружку подстрелил."
