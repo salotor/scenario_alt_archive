@@ -7893,7 +7893,7 @@ label alt_day7_us_7dl_rendezvous2:
         show us normal pioneer with dspr
         "Ульяна вздохнула:"
         us "Я думала, ты знаешь! Дядя Боря не только физру преподаёт, он ещё и фотограф."
-        if (counter_sl_cl == 2):   
+        if (counter_sl_cl >= 3):   
             me "И что, он вот так просто их отдаст?"
             us "Почему нет?"
         if alt_day2_mi_snap:
@@ -7911,7 +7911,7 @@ label alt_day7_us_7dl_rendezvous2:
         show us smile pioneer with dspr
         us "Догадался, наконец."
         show us surp1 pioneer with dspr
-        if (counter_sl_cl == 2):
+        if (counter_sl_cl >= 3):
             me "Не знал, что здесь всё так серьёзно."
         else:
             us "Дядя Боря старается снимать все важные моменты в лагере, у него знаешь какой запас фотографий, уууу!"
@@ -7937,7 +7937,7 @@ label alt_day7_us_7dl_rendezvous2:
         ba "Так, вот эту забирай, у меня их две."
         ba "И эту тоже…"
         ba "А это когда дрищ твой приехал, очень я вовремя снял. Её бери."
-        if alt_day_binder != 1 and (counter_sl_7dl != 1):
+        if alt_day_binder != 1 and (counter_sl_7dl == 0):
             if loki:
                 "Ульяна сцапала фотографию и, всмотревшись, покраснела."
                 show us shy pioneer far with dspr
@@ -8854,7 +8854,7 @@ label alt_day7_us_7dl_packing:
     "Свитер решил не надевать, повязал рукавами на талии."
     if alt_day_binder == 1:
         "Пальто тоже оставил — не таскаться же с ним по лагерю."
-    if not loki and (alt_day_binder != 1) and (counter_sl_7dl != 1):
+    if not loki and (alt_day_binder != 1) and (counter_sl_7dl == 0):
         "Я пощупал подкладку: уже успело высохнуть за это время."
     "Оставлять его в лагере я не собирался, потому что почему-то был твёрдо уверен, что не доеду я до продолжения лета в городе."
     "Не получится у меня, никак не получится."
