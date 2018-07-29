@@ -1744,7 +1744,7 @@ label alt_day2_event_clubs1:
         me "Здесь так и принято оставлять дверь нараспашку и исчезать?"
         show sl smile2 pioneer with dspr
         sl "Да это Шурик. Опять стрельнула мысль, он и побежал записывать её в газету."
-        if alt_day2_sl_guilty != 0:
+        if counter_sl_cl != 0:
             me "Что там со светомузыкой?"
             sl "Э… Не беспокойся на этот счёт, я сама всё проверю."
             me "Нет уж, извольте!"
@@ -2129,12 +2129,12 @@ label alt_day2_event_sport_area1:
     "Нет, на футболе он явно быть не может — игра стихийная. {w=.3}В бадминтон тренировать королевишен? {w=.3}Сомневаюсь. {w=.3}Волейбол? Кстати, возможно, но я там не вижу никого… "
     play sound sfx_soccer_ball_kick
     extend "И я резко нагнулся, пропуская мяч мимо!"
-    if ((alt_day1_sl_keys_took == 1) or (alt_day2_sl_guilty != 0)) and ('sl' in list_d2_convoy_7dl):
+    if ((alt_day1_sl_keys_took == 1) or (counter_sl_cl != 0)) and ('sl' in list_d2_convoy_7dl):
         us "Эй!"
         me "Чего тебе?"
         show us sad sport with dspr
         us "Вы в курсе, что вас Ольга Дмитриевна искала?"
-        if alt_day2_sl_guilty != 0:
+        if counter_sl_cl != 0:
             me "Спасибо."
             "Ответил я."
             me "Мы в курсе."
@@ -2182,7 +2182,7 @@ label alt_day2_event_sport_area1:
     $ persistent.sprite_time = "sunset"
     $ sunset_time
     play music music_list["went_fishing_caught_a_girl"] fadein 5
-    if ((alt_day1_sl_keys_took == 1) or (alt_day2_sl_guilty != 0)) and (('sl' in list_d2_convoy_7dl)):
+    if ((alt_day1_sl_keys_took == 1) or (counter_sl_cl != 0)) and (('sl' in list_d2_convoy_7dl)):
         "Славя была права!"
     else:
         "Ульянка была права!"
@@ -3489,7 +3489,6 @@ label alt_day2_sl_hyst:
     show sl sad pioneer at fright with move
     sl "Нету ключей. Потеряла."
     mt "Так, Семён, выйди, потому что зрелище сейчас будет не для слабонервных."
-    $ alt_day2_sl_guilty = 1
     menu:
         "Ключи у меня!":
             "Крикнул я."
@@ -4293,7 +4292,7 @@ label alt_day2_dinner:
                 "Не возьмёшь."
                 me "Никуда я с тобой не пойду. Иди спать."
                 "Ульянка, кажется, расстроилась. Она вздохнула, и, ссутулившись, побрела прочь. И куда только делся её обычный задор."
-            "Согласиться" if alt_day2_sl_guilty != 2:
+            "Согласиться" if counter_sl_cl != 1:
                 $ lp_us += 1
                 $ alt_day2_us_escape = True
             "Пригрозить вожатой":
