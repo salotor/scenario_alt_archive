@@ -2324,6 +2324,7 @@ label alt_day2_event_sport_area1:
         un "Я бы посмотрела на тебя накачанного!"
         "Я бы тоже. Но время не терпит, пора двигаться дальше."
     elif ('sl' in list_d2_convoy_7dl):
+        show sl smile pioneer with dissolve
         if (counter_sl_7dl == 3):
             me "Физрук, конечно…"
             sl "Не обращай внимания на его поведение."
@@ -2338,7 +2339,7 @@ label alt_day2_event_sport_area1:
         sl "Да, Борис Александрович очень эффектен. Но мне несколько другой типаж нравится."
         "Интересно, какой это?"
         me "Расскажешь?"
-        show sl laugh pioneer
+        show sl laugh pioneer with dspr
         sl "Нет. Это секрет."
         "Секрет так секрет. Я улыбнулся и прикинул, куда идти дальше."
         
