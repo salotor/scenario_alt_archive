@@ -6859,15 +6859,16 @@ label alt_day5_sl_supper:
     "Пропыхтел я."
     "Вес, конечно, чувствовался, но потаскать девушку на руках я вполне был в состоянии."
     me "Она просто увидела мышь."
-    show un scared pioneer with dissolve
     un "Где?!"
     "Лена спряталась за Мику."
-    hide un with dissolve
     me "Она… Убежала!"
     "Рыжие пошептались и тихо захихикали, кидая взгляды в нашу сторону."
     "А я спустил Славю на землю."
     "Она улыбалась и вся раскраснелась."
-    show sl shy pioneer2 with dspr 
+    window hide
+    scene bg ext_backroad_day_7dl
+    show sl shy pioneer2 at left
+    with dissolve
     sl "Это было очень неразумно!"
     "Выговорила мне она."
     sl "А если бы ты меня уронил?"
@@ -11120,7 +11121,7 @@ label alt_day6_sl_intellectual:
     voice "А почему вы так спокойно к этому относитесь?"
     "Я пожал плечами и открыл глаза."
     window hide
-    play music music_7dl["lunar_anguish"] fadein 1
+    play music music_7dl["out_of_your_tier"] fadein 1
     scene expression Dawn("bg ext_townscape_ph_day_7dl")
     show prologue_dream
     with fade
@@ -11155,6 +11156,7 @@ label alt_day6_sl_intellectual:
     "Ни ответа, ни привета."
     "В сердцах я толкаю дверь, и та оказывается незапертой."
     "И вовремя."
+    play music music_7dl["lunar_anguish"] fadein 1
     window hide
     scene bg int_mt_sam_room_7dl
     show un serious pioneer
@@ -11244,6 +11246,8 @@ label alt_day6_sl_intellectual:
     "Всё зря. Мы изобразили дурацкую сцену, встав в круг, но ничего не произошло — как будто он ещё не закончил здесь всего, что должен был."
     "Он не закончил."
     "А вот Пират…"
+    window hide
+    scene bg ext_city_night_7dl
     with fade
     "Я выскакиваю из автобуса, моя остановка — мне очень горько от того, что мне пришлось сделать."
     "Очень стыдно, что пришлось выламывать руку, но…"

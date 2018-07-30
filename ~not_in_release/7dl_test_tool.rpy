@@ -387,14 +387,30 @@ label sdl_menu:
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu
-                    
                 "Славя":
                     $ lp_sl += 13
                     menu:
                         "7дл":
                             $ counter_sl_cl = 5
                             $ routetag = "sl7dl"
-                            "Рут находится в разработке."
+                            menu:
+                                "Герк":
+                                    $ herc = True
+                                "Локи":
+                                    $ loki = True
+                                "Дрищ":
+                                    pass
+                            menu:
+                                "Записаться на волейбол":
+                                    $ list_clubs_7dl.append('volley')
+                                "Не записываться.":
+                                    pass
+                            menu:
+                                "Записаться в музыкальный клуб":
+                                    $ list_clubs_7dl.append('music_club')
+                                "Не записываться":
+                                    pass
+                                jump alt_day4_sl_7dl_start
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu

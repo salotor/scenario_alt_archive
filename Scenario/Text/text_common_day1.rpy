@@ -3371,6 +3371,7 @@ label alt_day1_lena:
         "Я улыбнулся."
         "Рррромантика, что же ещё."
     window hide
+    scene bg ext_square_night
     show un normal pioneer
     with fade
     menu:
