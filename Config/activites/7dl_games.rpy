@@ -1,7 +1,7 @@
 ﻿label alt_day3_miku_rhymes_in:
     label alt_day3_miku_rhymes_start:
         #Мини-игра с подбором рифмы.
-        me "Ну давай попробуем."
+        me "Что ж, попробуем."
         mi "Хорошо."
         "Она взяла гитару и наиграла первую строфу."
         "Ещё раз."
@@ -376,7 +376,7 @@
             jump alt_day3_miku_rhymes_start
         "Хватит пока!":
             return
-    me "Ну, я, пожалуй, пойду."
+    me "Я, пожалуй, пойду."
     mi "Да, конечно. Увидимся завтра."
     mi "Или можешь перед ужином зайти, подберём тебе наряд для танцев. Хочешь?"
     me "Какой смысл? Мне всё равно танцевать не с кем."
@@ -580,7 +580,7 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl += 1
         $ lp_dv -= 1
         $ lp_mi -= 1
-        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl) or ('un' in list_d2_date_7dl)31:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl):
             $ lp_un -= 1
         elif ('dv' in list_d2_date_7dl):
             $ lp_dv -= 1
@@ -600,7 +600,7 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl -= 1
         $ lp_dv += 1
         $ lp_mi -= 1
-        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl) or ('un' in list_d2_date_7dl)31:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl):
             $ lp_un -= 1
         elif ('sl' in list_d2_date_7dl):
             $ lp_sl -= 1
@@ -620,7 +620,7 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl -= 1
         $ lp_dv -= 1
         $ lp_mi += 1
-        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl) or ('un' in list_d2_date_7dl)31:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl):
             $ lp_un -= 1
         elif ('sl' in list_d2_date_7dl):
             $ lp_sl -= 1
@@ -676,8 +676,8 @@ label alt_7dl_titles:
     pause(1)
     show alt_credits alt_credits_text:
         xalign 0.5 
-        ypos 1.3 
-        linear 67.0 ypos -1.3 
+        ypos 1.0 
+        linear 67.0 ypos -2.2 
     $ renpy.pause(67, hard=True)
     scene black
     with dissolve2

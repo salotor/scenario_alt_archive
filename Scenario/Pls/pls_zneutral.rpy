@@ -17,13 +17,15 @@
             pause(1)
             if alt_day4_neu_transit == 11:
                 jump alt_day4_un_cl_dinner
-        elif (counter_sl_cl == 3) or (lp_sl >= 13):
+        elif (counter_sl_cl == 5) or (lp_sl >= 13):
             call alt_day4_neu_aid_sl
             pause(1)
             if alt_day4_neu_transit == 2:
                 $ mt_pt = 0
                 $ d3_pt = 0
                 $ us_pt = 0
+                $ lp_us -= 3
+                $ routetag = "sl"
                 jump alt_day4_sl_start
         else:
             call alt_day4_neu_aid_generic
