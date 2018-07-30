@@ -70,9 +70,6 @@ label sdl_menu:
     scene scenery with dissolve
     menu:
         "Выбранный лейбл":
-            $ persistent.altCardsWon1 = True
-            $ persistent.altCardsWon2 = True
-            $ persistent.altCardsWon3 = True
             stop ambience fadeout 2
             jump alt_test
         "Руты":
