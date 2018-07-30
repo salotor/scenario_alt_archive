@@ -2580,7 +2580,7 @@ label alt_day5_uvao_hentai_dress_up:
     dreamgirl "Фи, какие мы серьёзные."
     uv "Так мы туда пойдём? В туннель?"
     stop music fadeout 5
-    me "Ну, ладно. Пошли."
+    me "Ну ладно. Пошли."
     jump alt_day5_uvao_mines_begin
     
 #Д5 - Задумался, разговор с Шизой (Не хентай ветка).
