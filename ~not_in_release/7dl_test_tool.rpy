@@ -70,9 +70,6 @@ label sdl_menu:
     scene scenery with dissolve
     menu:
         "Выбранный лейбл":
-            $ persistent.altCardsWon1 = True
-            $ persistent.altCardsWon2 = True
-            $ persistent.altCardsWon3 = True
             stop ambience fadeout 2
             jump alt_test
         "Руты":
@@ -387,17 +384,31 @@ label sdl_menu:
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu
-                    
                 "Славя":
                     $ lp_sl += 13
                     menu:
                         "7дл":
                             $ counter_sl_cl = 5
                             $ routetag = "sl7dl"
-                            "Рут находится в разработке."
-                            $ renpy.pause(1)
+                            menu:
+                                "Герк":
+                                    $ herc = True
+                                "Локи":
+                                    $ loki = True
+                                "Дрищ":
+                                    pass
+                            menu:
+                                "Записаться на волейбол":
+                                    $ list_clubs_7dl.append('volley')
+                                "Не записываться.":
+                                    pass
+                            menu:
+                                "Записаться в музыкальный клуб":
+                                    $ list_clubs_7dl.append('music_club')
+                                "Не записываться":
+                                    pass
                             stop ambience fadeout 2
-                            jump sdl_menu
+                            jump alt_day4_sl_7dl_start
                         "Классик":
                             $ counter_sl_cl = 5
                             $ alt_day3_technoquest_st3 = 2
