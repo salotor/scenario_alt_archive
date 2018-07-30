@@ -200,7 +200,7 @@ label alt_day2_cards_tournament:
     show un shy pioneer with dissolve
     un "Да…"
     "От внимания зрителей она явно чувствовала себя не в своей тарелке."
-    me "Ну, значит, удачи нам обоим."
+    me "Значит, удачи нам обоим."
     "На секундочку вдруг захотелось сдать партию, чтобы немного приободрить эту грустную девочку. Надо же иногда делать и добрые дела, не так ли?"
     hide un with dissolve
 
@@ -1631,7 +1631,7 @@ label alt_day2_semifinal_new:
     if alt_my_rival_semifinal.take == 'un':
         "Им оказалась Лена."
         show un shy pioneer with dspr
-        me "Ну что, удачи нам обоим?"
+        me "Удачи нам обоим?"
         show un smile pioneer with dspr
         $ renpy.pause(.3)
         show un shy pioneer with dspr
