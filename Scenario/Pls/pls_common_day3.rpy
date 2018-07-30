@@ -142,15 +142,15 @@ label alt_day3_disco:
     $ night_time()
     call alt_day3_choose
     pause(1)
-    if (counter_sl_cl == 3) and (alt_day3_dancing == 2):
-        if (lp_sl >= 14) and (counter_sl_cl == 3):
+    if ((counter_sl_7dl >= 4) or (counter_sl_cl >= 4)) and (alt_day3_dancing == 2) and lp_sl >= 13:
+        if counter_sl_7dl == 5:
             pause(1)
             call alt_day3_bath_voyeur
             pause(1)
             call alt_day3_sleeptime
             pause(1)
             jump alt_day3_slots
-        elif alt_day3_sl_event == 4:
+        elif counter_sl_cl == 5:
             call alt_day3_technoquest3
             pause(1)
             jump alt_day3_slots
@@ -178,7 +178,7 @@ label alt_day3_disco:
             call alt_day3_sleeptime
             pause(1)
             jump alt_day3_slots
-        elif alt_day3_us_bugs == 1 and alt_day2_date != 132:
+        elif alt_day3_us_bugs == 1 and not ('un_fz' in list_d2_date_7dl):
             call alt_day3_mt_scare
             pause(1)
             call alt_day3_bath_voyeur
@@ -224,7 +224,7 @@ label alt_day3_disco2:
     $ night_time()
     call alt_day3_choose3
     pause(1)
-    if alt_day3_mi_date and (('mi' in list_d2_date_7dl)) and ((alt_day3_dancing == 41) or (alt_day3_dancing == 40)):
+    if alt_day3_mi_date and ('mi' in list_d2_date_7dl) and ((alt_day3_dancing == 41) or (alt_day3_dancing == 40)):
         call alt_day3_mi_7dl_init
         pause(1)
         jump alt_day4_mi_7dl_start

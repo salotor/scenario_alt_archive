@@ -1,5 +1,5 @@
 ﻿label alt_day4_sl_start:
-    if (counter_sl_cl == 3) and lp_sl >= 13: # прямой выход
+    if (counter_sl_cl == 5) and lp_sl >= 13: # прямой выход
         call alt_day4_sl_cl_vars
         call alt_day4_un_fz_vars
         call alt_day4_neu_us_vars

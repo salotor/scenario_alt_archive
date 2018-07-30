@@ -22,7 +22,7 @@
     $ set_zone_alt1("library_alt1",      "alt_day3_eventAf_library")
     if alt_day3_un_invite == 1:
         $ set_chibi_alt1("library_alt1",      "un")
-    if (counter_sl_cl != 2):
+    if (counter_sl_cl <= 2):
         $ set_zone_alt1("estrade_alt1",      "alt_day3_eventAf_estrade")
         if alt_day3_mi_invite:
             $ set_chibi_alt1("estrade_alt1",      "?")

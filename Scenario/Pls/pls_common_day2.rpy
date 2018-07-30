@@ -80,7 +80,7 @@
                 call alt_day2_eventEv_beach1
                 pause(1)
                 if lp_dv > 3 and alt_day2_dv_bet_approve:
-                    $ alt_day2_date = 3
+                    $ list_d2_date_7dl.append('dv')
                     call alt_day2_slot_dv
                 else:
                     call alt_day2_mapEv_prepare
@@ -95,7 +95,7 @@
             call alt_day2_eventEv_beach1
             pause(1)
             if lp_dv > 3 and alt_day2_dv_bet_approve:
-                $ alt_day2_date = 3
+                $ list_d2_date_7dl.append('dv')
                 call alt_day2_slot_dv
             else:
                 call alt_day2_mapEv_prepare

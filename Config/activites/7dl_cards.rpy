@@ -1153,7 +1153,7 @@ label alt_day2_semifinal:
     if alt_day2_hf2 == 1:
         "Им оказалась Лена."
         show un shy pioneer with dspr
-        me "Ну что, удачи нам обоим?"
+        me "Удачи нам обоим?"
         show un smile pioneer with dspr
         $ renpy.pause(.3)
         show un shy pioneer with dspr
