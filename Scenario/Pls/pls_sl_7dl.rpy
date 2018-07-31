@@ -53,6 +53,16 @@
     $ night_time()
     call alt_day4_sl_7dl_sleeptime
     pause(1)
+    window hide
+    show spill_red with dspr
+    $ renpy.pause(2, hard=True)
+    show spill_gray with dspr
+    $ renpy.pause(2, hard=True)
+    show alt_credits timeskip_dev at truecenter with dissolve2
+    $ renpy.pause(4, hard=True)
+    with dissolve2
+    window hide
+    return
     jump alt_day5_sl_7dl
 
 label alt_day5_sl_7dl_start:
