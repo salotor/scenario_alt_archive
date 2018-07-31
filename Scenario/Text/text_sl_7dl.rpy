@@ -4365,7 +4365,7 @@ label alt_day4_sl_7dl_morning:
             "Лена неопределённо пожала плечами."
     me "Можно?"
     "Я кивнул на костёр."
-    show uin serious pioneer with dspr
+    show un serious pioneer with dspr
     un "Места здесь общие…"
     "Приняв это за разрешение, я подошёл поближе, и, усевшись на одном из брёвен, протянул руки к костерку."
     window hide
@@ -6069,7 +6069,7 @@ label alt_day4_sl_7dl_sundown:
         cs "Небольшое сотрясение да вывих. Я всё сделала, но ему лучше пока отдохнуть пару дней."
         show cs grin with dspr
         pause(.3)
-        show sc smile with dspr
+        show cs smile with dspr
         cs "А ты к своей блондинке, да?"
         with flash2_red
         me "Всё-таки в её состоянии частично и я виноват."
@@ -6133,7 +6133,7 @@ label alt_day4_sl_7dl_sundown:
         cs "Только никому не слова, понял? Хотя…"
         show cs grin
         pause(.3)
-        show sc normal with dspr
+        show cs normal with dspr
         cs "Ты и так никогда никому ничего не рассказываешь."
         show cs smile with dspr
         cs "Даже завидки берут."
