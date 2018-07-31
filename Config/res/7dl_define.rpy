@@ -498,6 +498,7 @@ init:
     image bg int_store_7dl = get_image_7dl("bg/outro/int_store_7dl.png")
     
 #extra
+    image bg ext_aidpost_sunset = get_image_extra7dl("bg/ext_aidpost_sunset.jpg")
     image bg ext_boathouse_sunset = get_image_extra7dl("bg/ext_boathouse_sunset.jpg")
     image bg ext_camp_entrance_sunset = get_image_extra7dl("bg/ext_camp_entrance_sunset.jpg")
     image bg ext_clubs_sunset = get_image_extra7dl("bg/ext_clubs_sunset.jpg")
@@ -586,7 +587,8 @@ init:
     image cg d4_sh_met_7dl = get_image_7dl("cg/d4_sh_met_7dl.jpg")
     
     image cg d4_sl_phone_ring_7dl = get_image_7dl("cg/d4_sl_phone_ring_7dl.png")
-    image cg d4_sl_phone_up_7dl = get_image_7dl("cg/d4_sl_phone_ring_7dl.png")
+    
+    image cg d4_sl_phone_up_7dl = get_image_7dl("cg/d4_sl_phone_up_7dl.png")
 
     image cg d4_sl_lookup_7dl = get_image_7dl("cg/d4_sl_lookup_7dl.png")
     image cg d4_sl_sleeping_7dl = get_image_7dl("cg/d4_sl_sleeping_7dl.jpg")
@@ -595,7 +597,7 @@ init:
     
     image cg d4_un_7dl = get_image_7dl("cg/d4_un_7dl.jpg")
     
-    image cg d4_us_stardust_7dl = get_image_7dl("cg/d4_us_stardust_7dl.png") #Тысяча огоньков
+    image cg d4_us_stardust_7dl = get_image_7dl("cg/d4_us_stardust_7dl.png")
     
     image cg d4_volley_rage_7dl = get_image_7dl("cg/d4_volley_rage_7dl.jpg")
     
