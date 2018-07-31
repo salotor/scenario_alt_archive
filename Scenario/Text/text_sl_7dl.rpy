@@ -2056,7 +2056,7 @@ label alt_day4_sl_7dl_herc_evening:
     "А тот наоборот, налетел, заколотил приятеля по плечу, заговорил о чём-то…"
     "И чтоб немного подбавить лимончика в получающуюся сахарность, я уведомил:"
     me "Твоего друга только чуть в яму не бросили."
-    show dn upset pioneer with easeinbottom
+    show dn upset pioneer at right with easeinbottom
     dn "А ты ещё кто такой?"
     $ meet('al',"Алька")
     $ meet('dn',"Данька")
