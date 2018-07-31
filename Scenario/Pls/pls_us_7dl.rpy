@@ -109,7 +109,7 @@ label alt_day7_us_7dl_start:
     $ day_time()
     if alt_day4_neu_us_pixies == 3:
         call alt_day7_us_px_escape
-        if alt_day6_us_px_sl_join and alt_day6_us_px_dv_join:
+        if alt_day6_us_px_sl_join:
             pause(1)
             $ alt_chapter(7, u"Огоньки. Автобус")
             call alt_day7_us_px_bus
