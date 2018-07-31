@@ -151,7 +151,7 @@ init 3 python:
         meet('ba',u"Физрук")
         meet('bb',u"Начальник лагеря")
         meet('cs',u"Медсестра")
-        meet('dn',u"Растрёпанный мальчик")
+        meet('dn',u"Кудрявый")
         meet('dreamgirl',u"…")
         meet('dv',u"Рыжая")
         meet('dy',u"Динамики")

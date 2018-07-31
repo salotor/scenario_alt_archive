@@ -11249,6 +11249,7 @@ label alt_day6_sl_intellectual:
     "Всё зря. Мы изобразили дурацкую сцену, встав в круг, но ничего не произошло — как будто он ещё не закончил здесь всего, что должен был."
     "Он не закончил."
     "А вот Пират…"
+    window hide
     scene bg intro_xx
     show prologue_dream
     with fade
