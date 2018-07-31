@@ -144,19 +144,18 @@ init 3 python:
 
     def make_names_unknown_7dl():
         global store
-        meet('am',u"Я")
         meet('ai',u"Собеседник")
         meet('al',u"Сердитый мальчик")
+        meet('am',u"Я")
         meet('ase',u"Девочка")
         meet('ba',u"Физрук")
         meet('bb',u"Начальник лагеря")
         meet('cs',u"Медсестра")
-        meet('dn',u"Растрёпанный мальчик")
+        meet('dn',u"Кудрявый")
         meet('dreamgirl',u"…")
         meet('dv',u"Рыжая")
-        meet('dv',u"Динамики")
-        meet('el',u"Кудрявый")
         meet('dy',u"Динамики")
+        meet('el',u"Кудрявый")
         meet('ka',u"Вожатая 2-го отряда")
         meet('kids',u"Дети")
         meet('ln',u"Странная девочка")
@@ -169,8 +168,8 @@ init 3 python:
         meet('mz',u"Девушка в очках")
         meet('pi',u"Пионер")
         meet('sak',u"Пожилой японец")
-        meet('sl',u"Блондинка")
         meet('sh',u"Очкарик")
+        meet('sl',u"Блондинка")
         meet('tn',u"Странный мальчик")
         meet('un',u"Грустная девочка")
         meet('us',u"Мелкая")
@@ -179,7 +178,7 @@ init 3 python:
         meet('voice1',u"Продавщица")
         meet('voices',u"Голоса")
         meet('we',u"Хором")
-
+        
     def make_names_known_7dl():
         global store
         meet('al',u"Алька")
@@ -197,13 +196,12 @@ init 3 python:
         meet('mt',u"Ольга Дмитриевна")
         meet('mz',u"Женя")
         meet('sak',u"Сакишита Тихиро")
-        meet('sl',u"Славя")
         meet('sh',u"Шурик")
+        meet('sl',u"Славя")
         meet('tn',u"Тоник")
         meet('un',u"Лена")
         meet('us',u"Ульянка")
         meet('uv',u"Юля")
-        
         
     make_names_unknown_7dl()
     set_mode_adv()

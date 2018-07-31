@@ -1,7 +1,7 @@
 ﻿label alt_day3_miku_rhymes_in:
     label alt_day3_miku_rhymes_start:
         #Мини-игра с подбором рифмы.
-        me "Ну давай попробуем."
+        me "Что ж, попробуем."
         mi "Хорошо."
         "Она взяла гитару и наиграла первую строфу."
         "Ещё раз."
@@ -376,7 +376,7 @@
             jump alt_day3_miku_rhymes_start
         "Хватит пока!":
             return
-    me "Ну, я, пожалуй, пойду."
+    me "Я, пожалуй, пойду."
     mi "Да, конечно. Увидимся завтра."
     mi "Или можешь перед ужином зайти, подберём тебе наряд для танцев. Хочешь?"
     me "Какой смысл? Мне всё равно танцевать не с кем."
@@ -560,11 +560,11 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl -= 1
         $ lp_dv -= 1
         $ lp_mi -= 1
-        if alt_day2_date == 2:
+        if ('sl' in list_d2_date_7dl):
             $ lp_sl -= 1
-        elif alt_day2_date == 3:
+        elif ('dv' in list_d2_date_7dl):
             $ lp_dv -= 1
-        elif alt_day2_date == 4:
+        elif ('mi' in list_d2_date_7dl):
             $ lp_mi -= 1
         #Уникальная возможность огрести ещё минусов по флагам д3
         if alt_day3_event1 == 22: #Судим волейбол для Слави
@@ -580,11 +580,11 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl += 1
         $ lp_dv -= 1
         $ lp_mi -= 1
-        if alt_day2_date == 1 or alt_day2_date == 11 or alt_day2_date == 12 or alt_day2_date == 132 or alt_day2_date == 131:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl):
             $ lp_un -= 1
-        elif alt_day2_date == 3:
+        elif ('dv' in list_d2_date_7dl):
             $ lp_dv -= 1
-        elif alt_day2_date == 4:
+        elif ('mi' in list_d2_date_7dl):
             $ lp_mi -= 1
             
         if alt_day3_event2 == 11 == 2:
@@ -600,11 +600,11 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl -= 1
         $ lp_dv += 1
         $ lp_mi -= 1
-        if alt_day2_date == 1 or alt_day2_date == 11 or alt_day2_date == 12 or alt_day2_date == 132 or alt_day2_date == 131:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl):
             $ lp_un -= 1
-        elif alt_day2_date == 2:
+        elif ('sl' in list_d2_date_7dl):
             $ lp_sl -= 1
-        elif alt_day2_date == 4:
+        elif ('mi' in list_d2_date_7dl):
             $ lp_mi -= 1
         
         if alt_day3_event2 == 11 == 2:
@@ -620,11 +620,11 @@ label alt_day3_lp_checker(alt_dater):
         $ lp_sl -= 1
         $ lp_dv -= 1
         $ lp_mi += 1
-        if alt_day2_date == 1 or alt_day2_date == 11 or alt_day2_date == 12 or alt_day2_date == 132 or alt_day2_date == 131:
+        if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl) or ('un_fz' in list_d2_date_7dl):
             $ lp_un -= 1
-        elif alt_day2_date == 2:
+        elif ('sl' in list_d2_date_7dl):
             $ lp_sl -= 1
-        elif alt_day2_date == 3:
+        elif ('dv' in list_d2_date_7dl):
             $ lp_dv -= 1
 
         if alt_day3_event2 == 11 == 2:
@@ -676,8 +676,8 @@ label alt_7dl_titles:
     pause(1)
     show alt_credits alt_credits_text:
         xalign 0.5 
-        ypos 1.3 
-        linear 67.0 ypos -1.3 
+        ypos 1.0 
+        linear 67.0 ypos -2.2 
     $ renpy.pause(67, hard=True)
     scene black
     with dissolve2

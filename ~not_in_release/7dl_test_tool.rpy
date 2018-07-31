@@ -25,6 +25,8 @@
         
 label scenario__sdl_selector:
 
+    $ init_map_zones_alt1()
+    $ init_map_zones_alt2()
     $ alt_save_release_no = alt_release_no
     $ day_time()
     $ persistent.sprite_time = "day"
@@ -68,9 +70,6 @@ label sdl_menu:
     scene scenery with dissolve
     menu:
         "Выбранный лейбл":
-            $ persistent.altCardsWon1 = True
-            $ persistent.altCardsWon2 = True
-            $ persistent.altCardsWon3 = True
             stop ambience fadeout 2
             jump alt_test
         "Руты":
@@ -385,20 +384,33 @@ label sdl_menu:
                             $ renpy.pause(1)
                             stop ambience fadeout 2
                             jump sdl_menu
-                    
                 "Славя":
-                    $ alt_day3_event2 = 22
-                    $ lp_sl += 14
+                    $ lp_sl += 13
                     menu:
                         "7дл":
-                            $ alt_day3_sl_day_event2 = 2
+                            $ counter_sl_cl = 5
                             $ routetag = "sl7dl"
-                            "Рут находится в разработке."
-                            $ renpy.pause(1)
+                            menu:
+                                "Герк":
+                                    $ herc = True
+                                "Локи":
+                                    $ loki = True
+                                "Дрищ":
+                                    pass
+                            menu:
+                                "Записаться на волейбол":
+                                    $ list_clubs_7dl.append('volley')
+                                "Не записываться.":
+                                    pass
+                            menu:
+                                "Записаться в музыкальный клуб":
+                                    $ list_clubs_7dl.append('music_club')
+                                "Не записываться":
+                                    pass
                             stop ambience fadeout 2
-                            jump sdl_menu
+                            jump alt_day4_sl_7dl_start
                         "Классик":
-                            $ alt_day3_sl_day_event2 = 1
+                            $ counter_sl_cl = 5
                             $ alt_day3_technoquest_st3 = 2
                             $ routetag = "sl"
                             stop ambience fadeout 2
@@ -410,7 +422,6 @@ label sdl_menu:
                                     call alt_day7_sl_will
                                 "Проверка концовок - долг":
                                     call alt_day7_sl_duty
-                            $ alt_day3_sl_day_event2 = 1
                             $ alt_day3_technoquest_st3 = 2
                             $ routetag = "sl"
                             stop ambience fadeout 2
@@ -420,7 +431,7 @@ label sdl_menu:
                     $ routetag = "un7dl"
                     menu:
                         "Френдзона":
-                            $ alt_day2_date = 132
+                            $ list_d2_date_7dl('un_fz')
                             $ alt_day3_dancing = 132
                             stop ambience fadeout 2
                             jump alt_day4_un_fz_start
@@ -441,22 +452,19 @@ label sdl_menu:
                                 "Локи":
                                     $ loki = True
                             menu:
-                                "Ключи"
-                                "Есть":
+                                "Ключи есть":
                                     $ alt_day1_sl_keys_took = 1
-                                "Нет":
+                                "Ключей нет":
                                     pass
                             menu:
-                                "Газета"
-                                "Записан":
+                                "Записан в газету":
                                     $ list_clubs_7dl.append('nwsppr')
-                                "Нет":
+                                "Не записан":
                                     pass 
                             menu:
-                                "Транзит?"
-                                "Да":
+                                "Транзит":
                                     $ alt_day4_neu_transit = 1
-                                "Нет":
+                                "Регуляр":
                                     $ alt_day4_neu_transit = 0
                                     $ alt_day3_un_med_help = 1
                             stop ambience fadeout 2
@@ -679,7 +687,7 @@ label sdl_menu:
                                         menu:
                                             "Истинная концовка":
                                                 $ mt_pt = 15
-                                                $ alt_day2_date = 6
+                                                $ list_d2_date_7dl('mt')
                                                 $ alt_day5_neu_mt_diary = True 
                                                 $ alt_day4_neu_mt_diary = True
                                             "Нейтральная концовка":
@@ -690,7 +698,7 @@ label sdl_menu:
                                         menu:
                                             "Хорошая концовка":
                                                 $ mt_pt = 13
-                                                $ alt_day2_date = 6
+                                                $ list_d2_date_7dl('mt')
                                                 $ alt_day3_dancing = 5
                                                 $ alt_day4_neu_mt_fire = True
                                                 $ alt_day_binder = 1

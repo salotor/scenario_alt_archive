@@ -96,7 +96,7 @@ label alt_day7_mt_7dl_start:
         $ alt_chapter(7, u"Ольга. Выбор: прошлое")
         call alt_day7_mt_7dl_loopthru
         pause(1)
-        if mt_pt >= 15 and (alt_day2_date == 6) and alt_day5_neu_mt_diary and alt_day4_neu_mt_diary:
+        if mt_pt >= 15 and ('mt' in list_d2_date_7dl) and alt_day5_neu_mt_diary and alt_day4_neu_mt_diary:
             call alt_day7_mt_7dl_true
         else:
             call alt_day7_mt_7dl_ever_after
@@ -106,7 +106,7 @@ label alt_day7_mt_7dl_start:
         $ prolog_time()
         call alt_day7_mt_7dl_loopback
         pause(1)
-        if (mt_pt >= 13) and (alt_day2_date == 6) and (alt_day3_dancing == 5) and alt_day4_neu_mt_fire:
+        if (mt_pt >= 13) and ('mt' in list_d2_date_7dl) and (alt_day3_dancing == 5) and alt_day4_neu_mt_fire:
             call alt_day7_mt_7dl_good
             pause(1)
             if (alt_day_binder == 1) or alt_day1_loop:

@@ -160,7 +160,7 @@ label alt_day2_cards_tournament:
     show sl normal pioneer at right
     show mz normal glasses pioneer at left
     with dissolve
-    if alt_day2_lib_done:
+    if ('library' in list_voyage_7dl):
         "Следующий стол оккупировала жужелица из библиотеки, ей противостояла Славя."
     else:
         "Следующий стол занимала та самая незнакомая девочка в очках, против неё играла Славя."
@@ -200,7 +200,7 @@ label alt_day2_cards_tournament:
     show un shy pioneer with dissolve
     un "Да…"
     "От внимания зрителей она явно чувствовала себя не в своей тарелке."
-    me "Ну, значит, удачи нам обоим."
+    me "Значит, удачи нам обоим."
     "На секундочку вдруг захотелось сдать партию, чтобы немного приободрить эту грустную девочку. Надо же иногда делать и добрые дела, не так ли?"
     hide un with dissolve
 
@@ -1631,7 +1631,7 @@ label alt_day2_semifinal_new:
     if alt_my_rival_semifinal.take == 'un':
         "Им оказалась Лена."
         show un shy pioneer with dspr
-        me "Ну что, удачи нам обоим?"
+        me "Удачи нам обоим?"
         show un smile pioneer with dspr
         $ renpy.pause(.3)
         show un shy pioneer with dspr
@@ -2915,7 +2915,7 @@ label alt_day2_final_win_end_new:
         me "И что?"
         "Мы остановились у доски, и девочка кому-то замахала."
         mi "Дядя Боря-сенсей! Мы здесь!"
-        if alt_day2_phys_done:
+        if ('sport_area' in list_voyage_7dl):
             th "Что ей может понадобиться от Саныча?"
             "С любопытством подумал я."
         show ba normal uniform at cleft behind mi
