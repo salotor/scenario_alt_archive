@@ -188,7 +188,7 @@ init 3 python:
         meet('cs',u"Виола")
         meet('dn',u"Даня")
         meet('dv',u"Алиса")
-        meet('dv',u"Динамики")
+        meet('dy',u"Динамики")
         meet('el',u"Электроник")
         meet('ka',u"Катюшка")
         meet('ln',u"Алёна")
@@ -530,6 +530,8 @@ init -1001 python:
             data["map_chibi"] = None
             
 init -1000 python:
+    #default_7dl_path = 'scenario_alt/' - для ведроида
+    
     if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         default_7dl_path = 'scenario_alt/'
     elif persistent.nonsteam_7dl == True or renpy.version(tuple=False) == "Ren'Py 6.18.3.761":
