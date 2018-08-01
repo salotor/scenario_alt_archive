@@ -407,10 +407,8 @@ label sdl_menu:
                                     $ list_clubs_7dl.append('music_club')
                                 "Не записываться":
                                     pass
-                            jump alt_day4_sl_7dl_start
-                            $ renpy.pause(1)
                             stop ambience fadeout 2
-                            jump sdl_menu
+                            jump alt_day4_sl_7dl_start
                         "Классик":
                             $ counter_sl_cl = 5
                             $ alt_day3_technoquest_st3 = 2
