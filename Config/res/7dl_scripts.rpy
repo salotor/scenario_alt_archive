@@ -188,7 +188,7 @@ init 3 python:
         meet('cs',u"Виола")
         meet('dn',u"Даня")
         meet('dv',u"Алиса")
-        meet('dv',u"Динамики")
+        meet('dy',u"Динамики")
         meet('el',u"Электроник")
         meet('ka',u"Катюшка")
         meet('ln',u"Алёна")
