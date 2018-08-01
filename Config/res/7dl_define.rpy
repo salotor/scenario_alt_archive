@@ -485,7 +485,7 @@ init:
     image bg ext_winter_night_rotate_7dl = get_image_7dl("bg/outro/ext_winter_night_rotate_7dl.png")
     image bg ext_winterpark_7dl = get_image_7dl("bg/outro/ext_winterpark_7dl.png")
     
-    image bg int_access_day_7dl = get_image_7dl("bg/outro_int_access_day_7dl.jpg")
+    image bg int_access_day_7dl = get_image_7dl("bg/outro/int_access_day_7dl.jpg")
     image bg int_epilogue_bg_7dl = get_image_7dl("bg/outro/int_epilogue_bg_7dl.jpg")
     image bg int_excalator_7dl = get_image_7dl("bg/outro/int_excalator_7dl.png")
     image bg int_excalator2_7dl = get_image_7dl("bg/outro/int_excalator2_7dl.png")
