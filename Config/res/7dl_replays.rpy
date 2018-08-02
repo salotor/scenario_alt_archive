@@ -6,14 +6,6 @@
 init 999 python:
     cursive_font = default_7dl_path + "Pics/fonts/olgactt.ttf"
 
-    style.base_font = Style(style.default)
-    style.base_font.font  = "fonts/calibri.ttf"
-    style.base_font.size = 28
-    style.say_label.drop_shadow_color = "#000"
-        
-    style.chapter = Style(style.base_font)
-    style.chapter.font  = "fonts/corbel.ttf"
-    
     style.replays_textbutton = Style(style.base_font)
     style.replays_textbutton.font  = cursive_font
     style.replays_textbutton.size = 42
