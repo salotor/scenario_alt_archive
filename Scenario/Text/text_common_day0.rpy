@@ -459,7 +459,7 @@ label alt_day0_start_h:
     scene anim intro_1 
     with fade
     $ renpy.pause(3, hard=True)
-    "Вечер, четверг, 28 декабря 2018 года."
+    "Вечер, пятница, 28 декабря 2018 года."
     "Дата и без того скверная."
     "А тут ещё и работа."
     window hide
