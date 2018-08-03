@@ -3158,7 +3158,7 @@ label alt_day5_sl_begin:
         show prologue_dream
         with touch
     elif alt_day5_sl_tan == dv:
-        scene expression Sepia("anim prolog1")
+        scene expression Sepia("anim prolog_1")
         show dv guilty pioneer at left
         show prologue_dream
         with touch
@@ -16741,7 +16741,7 @@ label alt_day7_sl_rf_good:
     "Который и пяти лет не продержался на одном месте — такой вот парадокс."
     "На часах 22:55, а сквозь тучи проглядывает Полярная, и обледеневший асфальт стелется под колёса, и…"
     window hide
-    scene expression D3_intro("bg ext_road_winter_rotate_7dl")
+    scene expression D3_intro("bg ext_winter_night_rotate_7dl")
     dreamgirl "Тёплое место, но улицы ждут отпечатков наших ног…"
     pause(1)
     scene bg ext_winter_night_7dl

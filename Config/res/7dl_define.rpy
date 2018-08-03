@@ -485,7 +485,7 @@ init:
     image bg ext_winter_night_rotate_7dl = get_image_7dl("bg/outro/ext_winter_night_rotate_7dl.png")
     image bg ext_winterpark_7dl = get_image_7dl("bg/outro/ext_winterpark_7dl.png")
     
-    image bg int_access_day_7dl = get_image_7dl("bg/outro_int_access_day_7dl.jpg")
+    image bg int_access_day_7dl = get_image_7dl("bg/outro/int_access_day_7dl.jpg")
     image bg int_epilogue_bg_7dl = get_image_7dl("bg/outro/int_epilogue_bg_7dl.jpg")
     image bg int_excalator_7dl = get_image_7dl("bg/outro/int_excalator_7dl.png")
     image bg int_excalator2_7dl = get_image_7dl("bg/outro/int_excalator2_7dl.png")
@@ -1153,7 +1153,7 @@ init:
     
     $ music_7dl["vale"] = get_music_7dl("vale_7dl.ogg")
     $ music_7dl["vampire"] = get_music_7dl("vampire_7dl.ogg")
-    $ music_7dl["ibe"] = get_music_7dl("Vibe_7dl.ogg")
+    $ music_7dl["vibe"] = get_music_7dl("Vibe_7dl.ogg")
     
     $ music_7dl["walkingaway"] = get_music_7dl("walkingaway_7dl.ogg")
     $ music_7dl["walk_with_me"] = get_music_7dl("walk_with_me_7dl.ogg")

@@ -2184,7 +2184,7 @@ label alt_day2_event_sport_area1:
     $ persistent.sprite_time = "sunset"
     $ sunset_time
     play music music_list["went_fishing_caught_a_girl"] fadein 5
-    if ((alt_day1_sl_keys_took == 1) or (counter_sl_cl != 0)) and (('sl' in list_d2_convoy_7dl)):
+    if ((alt_day1_sl_keys_took == 1) or (counter_sl_cl != 0) or (counter_sl_7dl == 3)) and (('sl' in list_d2_convoy_7dl)):
         "Славя была права!"
     else:
         "Ульянка была права!"
