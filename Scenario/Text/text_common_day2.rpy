@@ -4891,7 +4891,7 @@ label alt_day2_tournament:
     show un normal pioneer at center
     with dissolve
     "Здесь были все, кого я знаю — старший отряд практически в полном составе: Лена…"
-    if not ('cyber' in list_voyage_7dl' or 'library' in list_voyage_7dl):
+    if not ('cyber' in list_voyage_7dl or 'library' in list_voyage_7dl):
         "Так, стоп, а это кто?"
         us "Шурик, по какому поводу сбор?"
         $ meet('sh','Шурик')
