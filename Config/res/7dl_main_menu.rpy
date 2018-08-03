@@ -361,6 +361,7 @@ label main_menu_7dl:
     stop music
     stop sound
     stop sound_loop
+    window hide
     $ renpy.block_rollback()
     if len(list_waifu_7dl) == 4: #max 6
         $ list_waifu_7dl = []

@@ -7,7 +7,7 @@ init 1:
     $ gallery_mode_7dl = ""
     
     $ style.page_7dl_text = Style(style.default)
-    $ style.page_7dl_text.font  = get_image_7dl("gui/gallery/ofont_ru_a_AvanteLtNr.ttf")
+    $ style.page_7dl_text.font  = get_image_7dl("fonts/a_AvanteLtNr.ttf")
     $ style.page_7dl_text.color = "#ffffff"
     $ style.page_7dl_text.size = 60
     
