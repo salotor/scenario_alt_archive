@@ -297,7 +297,7 @@
     "Алиса откровенно не выспалась — на каждый мах руками она отвечала одним стабильным зевком."
     if alt_day1_dv_feed:
         "Не иначе, всю ночь пила кефир!"
-    elif alt_day_binder != 1:
+    elif (alt_day_binder != 1) and (counter_sl_7dl < 2):
         "Наверное, не поверила на слово? Вернулась проверить, как там дела в столовой?"
     show dv normal sport with dspr
     "Перехватив мой взгляд, она приветственно мотнула подбородком и снова ушла в себя."
@@ -2184,7 +2184,7 @@ label alt_day2_event_sport_area1:
     $ persistent.sprite_time = "sunset"
     $ sunset_time
     play music music_list["went_fishing_caught_a_girl"] fadein 5
-    if ((alt_day1_sl_keys_took == 1) or (counter_sl_cl != 0)) and (('sl' in list_d2_convoy_7dl)):
+    if ((alt_day1_sl_keys_took == 1) or (counter_sl_cl != 0) or (counter_sl_7dl == 3)) and (('sl' in list_d2_convoy_7dl)):
         "Славя была права!"
     else:
         "Ульянка была права!"
@@ -4968,13 +4968,13 @@ label alt_day2_tournament:
     me "Турнир, значит."
     me "Спасибо, {w=.9}что поинтересовались моим мнением."
     hide dv with hpunch
-    show us smile pioneer at cright
+    show us smile sport at cright
     us "Не кисни." with vpunch
     "Сзади ткнула в спину Ульянка."
     us "Будет весело, и я всех победю! Или побежу?"
     me "Побегу."
     "Подсказал я."
-    show us normal pioneer at cright
+    show us normal sport at cright
     hide el
     with dissolve
     me "И упаду."

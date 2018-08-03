@@ -78,6 +78,7 @@ label alt_day0_start_herc:
             jump alt_day0_prologue
         "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
+            $ d3 = True
     jump alt_day0_start1
 
 label alt_day0_start_loki:
@@ -103,6 +104,7 @@ label alt_day0_start_loki:
             jump alt_day0_prologue
         "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
+            $ d3 = True
     jump alt_day0_start1
 
 label alt_day0_start1:
