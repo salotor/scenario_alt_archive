@@ -1007,6 +1007,7 @@ init:
     $ music_7dl["es_downmix"] = get_music_7dl("es_downmix_7dl.ogg")
     $ music_7dl["Everlasting_Summer_Alice"] = get_music_7dl("Everlasting_Summer_Alice_7dl.ogg")
     $ music_7dl["everyday"] = get_music_7dl("everyday_7dl.ogg")
+    $ music_7dl["explore"] = get_music_7dl("explore_7dl.ogg")
 
     $ music_7dl["feel_you_inside"] = get_music_7dl("feel_you_inside_7dl.ogg")
     $ music_7dl["finale_farewell"] = get_music_7dl("finale_farewell_7dl.ogg")
@@ -1062,6 +1063,7 @@ init:
     $ music_7dl["misery"] = get_music_7dl("misery_7dl.ogg")
     $ music_7dl["moment"] = get_music_7dl("moment_7dl.ogg")
     $ music_7dl["more_than_alive"] = get_music_7dl("more_than_alive_7dl.ogg")
+    $ music_7dl["morning_dew"] = get_music_7dl("Morning_Dew_7dl.ogg")
     $ music_7dl["my_only_hope"] = get_music_7dl("my_only_hope_7dl.ogg")
     
     $ music_7dl["nap_one"] = get_music_7dl("nap_one_7dl.ogg")
@@ -1070,6 +1072,7 @@ init:
     $ music_7dl["nowyouseeme"] = get_music_7dl("nowyouseeme_7dl.ogg")
     
     $ music_7dl["old_kiss"] = get_music_7dl("old_kiss_7dl.ogg")
+    $ music_7dl["on_high"] = get_music_7dl("on_high_7dl.ogg")
     $ music_7dl["one_little_lone_cloud"] = get_music_7dl("one_little_lone_cloud_7dl.ogg")
     $ music_7dl["ourfirstmet"] = get_music_7dl("ourfirstmet_7dl.ogg") 
     $ music_7dl["outer"] = get_music_7dl("Outer_Science_7dl.ogg") 
@@ -1078,6 +1081,7 @@ init:
     
     $ music_7dl["pathways"] = get_music_7dl("pathways_7dl.ogg")
     $ music_7dl["Please_Reprise"] = get_music_7dl("Please_Reprise_7dl.ogg")
+    $ music_7dl["PleaseStop"] = get_music_7dl("PleaseStopItMastered_7dl.ogg")
     $ music_7dl["pixies_playing"] = get_music_7dl("pixies_playing_7dl.ogg")
     $ music_7dl["polyhymnia_intro"] = get_music_7dl("polyhymnia_intro_7dl.ogg")
     $ music_7dl["polyhymnia_main"] = get_music_7dl("polyhymnia_main_7dl.ogg")
@@ -1085,6 +1089,7 @@ init:
     $ music_7dl["prologue_1"] = get_music_7dl("prologue_1_7dl.ogg")
     $ music_7dl["promise_to_meet_you"] = get_music_7dl("promise_to_meet_you_7dl.ogg")
 
+    $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg")
     $ music_7dl["Redemption"] = get_music_7dl("Redemption_7dl.ogg")
     $ music_7dl["red_lights"] = get_music_7dl("red_lights_7dl.ogg")
     $ music_7dl["refuse_to_believe"] = get_music_7dl("refuse_to_believe_7dl.ogg")
@@ -1130,6 +1135,7 @@ init:
     $ music_7dl["tender_song"] = get_music_7dl("tender_song_7dl.ogg")
     $ music_7dl["there_you_are"] = get_music_7dl("loop_there_you_are!_7dl.ogg")
     $ music_7dl["the_way"] = get_music_7dl("the_way_7dl.ogg")
+    $ music_7dl["thinking_abou_you"] = get_music_7dl("thinking_abou_you_7dl.ogg")
     $ music_7dl["thousand_little_things"] = get_music_7dl("thousand_little_things_7dl.ogg")
     $ music_7dl["thousand_of_pixies"] = get_music_7dl("thousand_of_pixies_7dl.ogg")
     $ music_7dl["tilltheend"] = get_music_7dl("tilltheend_7dl.ogg")
@@ -1147,8 +1153,10 @@ init:
     
     $ music_7dl["vale"] = get_music_7dl("vale_7dl.ogg")
     $ music_7dl["vampire"] = get_music_7dl("vampire_7dl.ogg")
+    $ music_7dl["ibe"] = get_music_7dl("Vibe_7dl.ogg")
     
     $ music_7dl["walkingaway"] = get_music_7dl("walkingaway_7dl.ogg")
+    $ music_7dl["walk_with_me"] = get_music_7dl("walk_with_me_7dl.ogg")
     $ music_7dl["what_am_i_doing_here"] = get_music_7dl("what_am_i_doing_here_7dl.ogg")
     $ music_7dl["what_cost"] = get_music_7dl("what_cost_7dl.ogg")
     $ music_7dl["whatnow"] = get_music_7dl("whatnow_7dl.ogg")
