@@ -2182,23 +2182,33 @@ label alt_day1_meeting2:
     th "Ножички?"
     "Заинтересовавшись, я остановился, приглядываясь."
     "Они мгновенно среагировали:"
-    ml "Чего-то хотел?"
+    show al dontlike pioneer with moveinbottom
+    show dn dontlike pioneer at left
+    show tn shy pioneer at right
+    with dissolve
+    al "Чего-то хотел?"
     me "Да нет, хожу-брожу просто."
-    ml "Понятно."
+    al "Понятно."
     "Он коротко кивнул приятелю, и тот тут же упрятал ножичек в карман."
     "Распрямившись, окинули меня крайне терпеливым, выжидающим взглядом."
     "Видимо, они никуда не торопились."
     "Не торопился и я."
     window hide
-    show sl normal pioneer
+    show sl normal pioneer at fright
     with fade
     "Мы бы ещё долго так стояли, если бы не крайне своевременно подоспевшая Славя."
     "Она выглядела посвежевшей — похоже, успела умыться после уборки."
     sl "А что вы тут делаете?"
-    ml "Мы - уходим. А твой приятель остаётся."
+    dn "Мы - уходим. А твой приятель остаётся."
     show sl smile pioneer with dspr
     sl "Приятель?"
     "Я пожал плечами."
+    hide al
+    hide tn
+    hide dn
+    with dissolve
+    "Видимо, сочтя свою миссию выполненной, трио хамов удалилось."
+    show sl normal pioneer at center with move
     me "По крайней мере, ты ко мне куда дружелюбнее относишься, чем эта мелкота."
     show sl serious pioneer with dspr
     sl "Да, люди редко доверяют друг другу. {w}Но у меня есть и хорошая новость!"
@@ -2260,11 +2270,11 @@ label alt_day1_meeting2:
     sl "Так куда пойдём?"
     "Отсмеявшись, спросила со всех сторон позитивная девочка."
     window hide
-    scene bg ext_square_sunset
-    with dissolve
-    play music music_7dl["shestheone"] fadein 3
-    play ambience ambience_camp_entrance_night fadein 6
     while len(list_slavya_7dl) < 2:
+        play music music_7dl["shestheone"] fadein 3
+        scene bg ext_square_sunset
+        with dissolve
+        play ambience ambience_camp_center_evening fadein 6
         menu:
             "На эстраду" if not 'estrade' in list_slavya_7dl:
                 $ renpy.block_rollback()
@@ -2411,7 +2421,8 @@ label alt_day1_meeting2:
                     "И кто там играет — не так уж и важно. Главное — как он играет."
                     stop music fadeout 3
                     "Мы стояли ещё десять минут, слушая, пока неизвестный гитарист не наигрался, и только после этого на цыпочках ушли."
-                play music music_7dl["shestheone"] fadein 3
+                stop music fadeout 6
+                pause(1)
             "В медпункт" if (alt_day_binder != 1) and not 'aidstation' in list_slavya_7dl:
                 $ renpy.block_rollback()
                 $list_slavya_7dl.append('aidstation')
@@ -2498,10 +2509,6 @@ label alt_day1_meeting2:
                 sl "Знаешь, пойдём отсюда, а?"
                 me "А как же твои речи о поведении и прочем?"
                 sl "Да, да! Пошли уже!"
-                hide sl with dissolve
-                "Развернувшись, она почти побежала в сторону площади."
-                "Кажется, нас не успели заметить."
-                show sl normal pioneer with dissolve
             "Клубы - это что?" if not 'clubs' in list_slavya_7dl:
                 $ renpy.block_rollback()
                 $list_slavya_7dl.append('clubs')
@@ -2569,7 +2576,6 @@ label alt_day1_meeting2:
                 window hide
                 with fade
                 sl "Осмотрелся?{w} Пошли обратно?"
-                "Я кивнул, и мы отправились на площадь."
             "Спортплощадка?"  if not 'sports' in list_slavya_7dl:
                 $ renpy.block_rollback()
                 $list_slavya_7dl.append('sports')
@@ -2711,47 +2717,56 @@ label alt_day1_meeting2:
                 show sl smile2 pioneer with dspr
                 sl "И правда, пошли."
                 "Мы помахали мелкой дразнючке на прощание и удалились."
-                window hide
-                scene bg ext_playground_sunset
-                with dissolve
             "Да что-то никуда не хочется.":
                 $ renpy.block_rollback()
                 if len(list_slavya_7dl) == 1:
                     sl "Уверен?"
                     "Девушка кинула взгляд на небо — ещё довольно светлое."
                     sl "Ещё немного времени есть, но если ты торопишься…"
+                    me "Тороплюсь."
                     show sl smile pioneer with dspr
-                    sl "Хорошо, тогда давай я отведу тебя к площади, а ты там дальше сам." # они и так на площади
-                    "Она махнула рукой, подзывая меня держаться поближе, и зашагала по одним лишь ей понятным ориентирам."
-                    $ list_slavya_7dl.append('deny1')
-                    $ list_slavya_7dl.append('deny2')
+                    sl "Что ж, в таком случае, мне пора бежать. {w}Пока!"
                 else:
                     $ lp_sl -= 1
-                    sl "Ну, раз не хочется… Давай, тогда я тебя к площади отведу, нам оттуда примерно одинаково идти."
-                    sl "Только в разные стороны."
-                    me "Веди."
-                    sl "Не отставай!"
-                    $ list_slavya_7dl.append('deny2')
+                    sl "Ну, раз не хочется… "
+                    sl "Тогда оставляю тебя здесь. Найдёшь отсюда дорогу к вожатой?"
+                    me "Найду."
+                    sl "Тогда до скорого!"
+                $ list_slavya_7dl.append('deny1')
+                $ list_slavya_7dl.append('deny2')
+                "Славя помахала мне рукой и убежала, оставляя меня в одиночестве."
+                window hide
+                hide sl with dissolve
+                stop music fadeout 6
+                stop ambience fadeout 6
+                return
         if len(list_slavya_7dl) <= 1: 
-            sl "Куда дальше?"
-        else:
-            "Пока мы гуляли, небо уже окончательно потемнело, а между сосен залегли глубокие тени." # нужен вариант для отказа от прогулки if ('deny1' in list_slavya_7dl) and ('deny2' in list_slavya_7dl):
-            sl "Пошли на площадь, нам оттуда в разные стороны." # либо убрать отсюда про площадь, либо в ивентах на локациях, а то получаются повторы
-    scene bg ext_square_night
-    show sl normal pioneer
-    with dissolve
-    sl "Похоже, всё." # нужен другой вариант для отказа от прогулки, т.к. нелогично: "На сегодня моё свободное время закончилось" и "Спасибо за прогулку." 
-    "Славя посмотрела на часы."
-    sl "На сегодня моё свободное время закончилось, пора бежать по делам."
-    sl "Ты отсюда дорогу найдёшь?"
-    me "Куда?"
-    sl "Да к вожатскому домику же!"
-    me "А… Да. Туда найду."
-    "Славя ещё раз улыбнулась мне."
-    me "Спасибо за прогулку."
-    sl "Тебе спасибо. До скорого!"
-    hide sl with easeoutleft
-    "Она убежала, оставляя меня на площади."
+            window hide
+            scene bg ext_square_sunset
+            show sl normal pioneer
+            with dissolve
+            if 'deny1' in list_slavya_7dl or 'deny2' in list_slavya_7dl:
+                pass
+            else:
+                sl "Куда дальше?"
+    else:
+        $ night_time()
+        scene bg ext_square_night
+        show sl normal pioneer
+        with dissolve
+        "Пока мы гуляли, небо уже окончательно потемнело, а между сосен залегли глубокие тени"
+        sl "Похоже, всё."
+        "Славя посмотрела на часы."
+        sl "На сегодня моё свободное время закончилось, пора бежать по делам."
+        sl "Ты отсюда дорогу найдёшь?"
+        me "Куда?"
+        sl "Да к вожатскому домику же!"
+        me "А… Да. Туда найду."
+        "Славя ещё раз улыбнулась мне."
+        me "Спасибо за прогулку."
+        sl "Тебе спасибо. До скорого!"
+        hide sl with easeoutleft
+        "Она убежала, оставляя меня на площади."
     stop music fadeout 4
     stop ambience fadeout 6
     window hide
@@ -3644,12 +3659,10 @@ label alt_day1_lena:
             "Бесцветно прошелестела она и растаяла в сумерках."
             hide un with dissolve
         "Не злись на меня":
-            me "Я не знаю, что случилось, но я тебе ничего плохого не делал, честно!"
             me "Я здесь вообще сегодня в первый раз."
             show un sorrow pioneer with dspr
             un "В первый раз?"
             "Лена смерила меня прозрачным взглядом."
-            un "Не делал?"
             un "Х-хорошо."
             "Девочка поднялась, посмотрела мне в глаза, видимо, собираясь что-то сказать."
             "Но смутилась, отвела взгляд."

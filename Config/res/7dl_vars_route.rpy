@@ -249,8 +249,8 @@ label alt_day4_sl_7dl_vars:
     return
 
 label alt_day5_sl_7dl_vars:
-    $ alt_day5_sl_7dl_defend = False #Спасение!
     $ alt_day5_sl_7dl_workout = False #Пробежка!
+    $ alt_day5_sl_7dl_defend = False #Спасение!
     $ alt_day5_sl_7dl_herc_sick = False #Последствия
     $ alt_day5_random_val = 0
     $ alt_day5_sl_7dl_hentai_done = False

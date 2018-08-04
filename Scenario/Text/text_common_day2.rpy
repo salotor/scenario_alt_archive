@@ -1483,7 +1483,6 @@ label alt_day2_inmusic:
         "Вот опять же кто-нибудь уронит! "
         mi "Привет! Меня Мику зовут!"
     $ meet('mi','Мику')
-    $ alt_day2_mi_met2 = True
     me "Мику?"
     show mi smile pioneer at center
     mi "Да."
@@ -3909,10 +3908,10 @@ label alt_day2_dinner:
     else:
         "Но лучше поголодать недельку, чем рискнуть сесть рядом."
     "Также свободно было рядом с Ульяной, но тут всё понятно было – если мелкая вознамерится накормить меня жуком…"
-    if alt_day_binder == 1 and not alt_day2_mi_met2:
+    if (alt_day_binder == 1) and not 'music_club' in list_voyage_7dl:
         "И ещё одно место было рядом с девушкой, с которой я уже второй день обещаю себе познакомиться."
         "У нас постоянно такие странные встречи были."
-    elif alt_day2_mi_met2:
+    elif 'music_club' in list_voyage_7dl:
         "Свободное место было ещё и рядом с Мику — кажется, девочка пользовалась определённой репутацией в узких кругах."
         "Она подняла на меня взгляд и заинтересованно распахнула глаза — враз став похожей на героиню столь популярных у неё на родине аниме."
         th "Ну вылитая аниме девочка!"
@@ -3922,14 +3921,13 @@ label alt_day2_dinner:
     "Вопрос лишь в том, с кем сесть — так, чтобы ущерб был минимальным…"
     menu:
         "С аниме-девочкой":
-            $ alt_day2_mi_met = True
             me "Не возражаешь, если я здесь присяду?"
             show mi normal pioneer at center 
             with dissolve
             play music music_list["so_good_to_be_careless"] fadein 5
             mi "Со мной мало кто хочет садиться, так странно. Но ты садись, конечно. Приятного аппетита!"
             me "Спасибо. И тебе."
-            if alt_day2_mi_met2:
+            if 'music_club' in list_voyage_7dl:
                 "Впрочем, я уже немного запоздал. По части истребления еды Мику не сильно отставала от Ульянки."
                 menu:
                     "Ничего не теряла?" if alt_day2_mi_kumuhimo == 1:
@@ -4065,17 +4063,14 @@ label alt_day2_dinner:
                 extend "Вчера голова закружилась — так она мне такой медосмотр устроила, что я вмиг обо всех головных болях забыл."
             "Мику обладала одной замечательной возможностью — я с первых секунд будто знал её всю жизнь. Какого-то там смущения или запретных тем для нас уже не существовало. Я просто расслабился и наслаждался разговором."
             menu:
-                "Ты можешь рассказать что-нибудь о Лене?" if alt_day2_mi_met2:
+                "Ты можешь рассказать что-нибудь о Лене?" if 'music_club' in list_voyage_7dl:
                     $ lp_un += 1
                     show mi smile pioneer with dspr
                     mi "Лене?"
                     "Мику разулыбалась, с нескрываемой симпатией покосившись в сторону скромной девочки — ту с двух сторон обложили рыжие."
                     mi "Мы с ней соседки по домику."
-                    if alt_day2_mi_met:
-                        me "Да я в курсе…"
-                    else:
-                        me "Серьёзно?!"
-                        th "И как они вдвоём уживаются?"
+                    me "Вот как?"
+                    th "И как они вдвоём уживаются?"
                     mi "Вожатая сказала, что мы творческие люди и должны общаться тесно, поэтому уживёмся."
                     "Ответила Мику на невысказанный вопрос."
                     show mi upset pioneer with dspr
@@ -4888,40 +4883,27 @@ label alt_day2_tournament:
     window hide 
     scene bg ext_dining_hall_near_day with dissolve
     play ambience ambience_camp_center_day fadein 3
-    show mi smile pioneer at left
-    show sh normal at right
-    show un normal pioneer at center
     with dissolve
-    "Здесь были все, кого я знаю — старший отряд практически в полном составе: Лена…"
-    if not ('cyber' in list_voyage_7dl or 'library' in list_voyage_7dl):
-        "Так, стоп, а это кто?"
-        us "Шурик, по какому поводу сбор?"
-        $ meet('sh','Шурик')
-        sh "Сечас всё расскажем."
-    else:
-        extend " Шурик…"
-    if ('music_club' in list_voyage_7dl):
-        "Мику…"
-    elif alt_day2_mi_met:
-        "Моя новая знакомая, Мику…"
-    else:
-        "Давешняя аниме-девочка из столовой."
-        "Я ткнул Ульянку, стоящую тут же, локтем."
-        me "Ульяна, а что это за девочка?"
-        "Указывая одними глазами."
-        us "Нравится? Это наша худрук, её Мику зовут. По-настоящему."
-        $ meet('mi','Мику')
-        "Услышав, что её обсуждают, японка кивнула."
-    hide mi
-    hide sh
+    "Здесь были все, кого я знаю — старший отряд практически в полном составе."
+    show sl normal pioneer at left
+    with dissolve
+    "Славя."
+    hide sl_prep
+    show un at right
+    with dissolve
+    "Лена."
     hide un
+    show dv smile pioneer2 at left
+    show us laugh2 at right
     with dissolve
-    show mz normal glasses pioneer at right with dissolve
-    if ('library' in list_voyage_7dl):
-        "Даже эта жужелица из библиотеки приползла. Не иначе, портить мне настроение."
-        hide mz with dissolve
-    else:
-        "Здесь же находилась какая-то незнакомая девочка с угрожающе-жёлтыми глазами."
+    "Про рыжих бандиток и говорить не приходится."
+    hide us
+    hide dv
+    with dissolve
+    "Было и несколько незнакомых лиц."
+    if not ('library' in list_voyage_7dl):
+        show mz normal glasses pioneer at right with dissolve
+        "Например, незнакомая девочка с угрожающе-жёлтыми глазами."
         "Неприятный эффект от её взгляда немного гасили очки с толстыми стёклами."
         "Но только немного."
         hide mz with dissolve
@@ -4937,8 +4919,20 @@ label alt_day2_tournament:
         us "И все делают вид, что они заняты в стенгазете."
         us "По-моему, там только Лена работает. Рисует."
         hide us with dissolve
-    show el normal pioneer at cleft
-    with dissolve
+    if not ('cyber' in list_voyage_7dl or 'library' in list_voyage_7dl):
+        show sh normal pioner with dissolve
+        "Так, стоп, а это кто?"
+        us "Шурик, по какому поводу сбор?"
+        $ meet('sh','Шурик')
+        sh "Сечас всё расскажем."
+    if not ('music_club' in list_voyage_7dl):
+        "Здесь была и давешняя аниме-девочка из столовой."
+        "Я ткнул Ульянку, стоящую тут же, локтем."
+        me "Ульяна, а что это за девочка?"
+        "Указывая одними глазами."
+        us "Нравится? Это наша худрук, её Мику зовут. По-настоящему."
+        $ meet('mi','Мику')
+        "Услышав, что её обсуждают, японка кивнула."
     if alt_day_binder != 1:
         "А в центре всей толкучки стоял Электроник."
         el "Нет-нет, никаких автоматчей или переигровок не будет! Нам надо восемь участников, чтобы разыграть минимальный плей-офф."
@@ -4949,10 +4943,12 @@ label alt_day2_tournament:
         us "Сыроега, а что если я проиграю? Я не должна проигрывать!"
         el "Во-первых, не «сыроега», а «Электроник», а во-вторых, никаких реваншей или переигровок."
         el "Нам нужны восемь человек, чтобы создать плей-офф таблицу."
+    show sh normal pioneer at fleft with dissolve
     sh "Может, из младших отрядов наберём?"
     show sl normal pioneer at cright with dissolve
     sl "Нет. Это отрядное мероприятие."
     hide sl
+    hide sh
     show mi smile pioneer at cright
     with dissolve
     mi "А где наш новенький? Семён. Сеня?"
