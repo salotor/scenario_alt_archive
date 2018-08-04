@@ -228,8 +228,6 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_dv_us_house_visited = False
     $ alt_day2_loki_minijack = False
     $ alt_day2_mi_kumuhimo = 0
-    $ alt_day2_mi_met = False
-    $ alt_day2_mi_met2 = False
     $ alt_day2_mi_rejected = False
     $ alt_day2_mi_hyst = False
     $ alt_day2_mt_help = False
