@@ -3204,7 +3204,7 @@ label alt_day4_sl_7dl_loki_day:
     "И Мику — прячущая что-то за спиной."
     "Нет, я серьёзно: неужели Славе совсем заняться нечем?"
     "Так я и спросил."
-    play sound sfx_7dl["high_five"] fadein 1
+    play sound sfx_7dl["highfive"] fadein 1
     "Мику хлопнула Славе по подставленной ладони и что-то пробурчала себе под нос."
     sl "Давай-давай, не жульничай."
     show mi upset pioneer with dissolve
@@ -3871,7 +3871,7 @@ label alt_day4_sl_7dl_loki_evening:
     ka "Ну, почему ты молчишь?"
     al "… Извините."
     ka "Да что мне твоё «извините»? Марш домой переодеваться!"
-    show al donlike shirt with dspr
+    show al dontlike shirt with dspr
     al "Я не могу."
     ka "И кто же тебе мешает?"
     al "У меня форма постиранная."
@@ -4898,7 +4898,7 @@ label alt_day4_sl_7dl_day:
     me "Э… Пардон?"
     mt "В смысле, моих детей не дам в обиду!"
     me "Я так и подумал."
-    play sound sfx_7dl["high_five"] fadein 1
+    play sound sfx_7dl["highfive"] fadein 1
     "Ольга рассмеялась, хлопнула меня по плечу и ушла вслед за физруком и Славей."
     hide mt with dissolve
     stop music fadeout 6
