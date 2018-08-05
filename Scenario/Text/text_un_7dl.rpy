@@ -3653,7 +3653,7 @@ label alt_day5_un_7dl_breakfast_l:
     "Всё, что я хотел, я услышал."
     stop ambience fadeout 4
     window hide
-    scene bg ext_clubs_sunset_rain_7dl with dissolve
+    scene bg ext_clubs_rain_7dl with dissolve
     play music music_list["so_good_to_be_careless"] fadein 5
     "Я не знаю, как назвать то, что творилось внутри меня — несколько слов, обронённых посторонним, казалось бы, человеком."
     "Старая как мир история — они оба неровно дышат друг к другу. И они оба узнают об этом последними."
