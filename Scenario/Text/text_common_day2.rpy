@@ -4889,7 +4889,7 @@ label alt_day2_tournament:
     with dissolve
     "Славя."
     hide sl_prep
-    show un at right
+    show un normal pioneer at right
     with dissolve
     "Лена."
     hide un
