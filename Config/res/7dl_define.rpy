@@ -670,18 +670,12 @@ init:
     image cg d7_leaving_no_sl_7dl = get_image_7dl("cg/d7_leaving_no_sl_7dl.jpg")
     image cg d7_leaving_no_sl_sam_7dl = get_image_7dl("cg/d7_leaving_no_sl_sam_7dl.jpg")
     
-    image cg d6_mi_cry_sleeping_7dl = get_image_7dl("cg/d6_mi_cry_sleeping_7dl.png")
-
     image cg d7_mi_club27_7dl = get_image_7dl("cg/d7_mi_club27_7dl.jpg")
     image cg d7_mi_epilogue_7dl = get_image_7dl("cg/d7_mi_epilogue_7dl.jpg")
     image cg d7_mi_farewell_7dl = get_image_7dl("cg/d7_mi_farewell_7dl.jpg")
     image cg d7_mi_ghost_7dl = get_image_7dl("cg/d7_mi_ghost_7dl.png")
     
     image cg d7_mi_hugs_7dl = get_image_7dl("cg/d7_mi_hugs_7dl.jpg")
-    
-    image cg d7_mi_hands_tight_7dl = get_image_7dl("cg/d7_mi_hands_tight_7dl.jpg")
-    image cg d7_mi_hands_split_7dl = get_image_7dl("cg/d7_mi_hands_split_7dl.jpg")
-    image cg d7_mi_hands_2gether_7dl = get_image_7dl("cg/d7_mi_hands_2gether_7dl.jpg")
     
     image cg d7_mi_kaito_7dl = get_image_7dl("cg/d7_mi_kaito_7dl.jpg")
     image cg d7_mi_letter_7dl = get_image_7dl("cg/d7_mi_letter_7dl.jpg")
@@ -691,7 +685,6 @@ init:
     image cg d7_mi_meeting_7dl = get_image_7dl("cg/d7_mi_meeting_7dl.jpg")
     image cg d7_mi_ramen_7dl = get_image_7dl("cg/d7_mi_ramen_7dl.jpg")
     image cg d7_mi_reenter_7dl = get_image_7dl("cg/d7_mi_reenter_7dl.png")
-    image cg d7_mi_shesgone_7dl = get_image_7dl("cg/d7_mi_shesgone_7dl.jpg") #Свежачок от Макса
     image cg d7_mi_sparkle_7dl = get_image_7dl("cg/d7_mi_sparkle_7dl.jpg")
     image cg d7_mi_sunk_7dl = get_image_7dl("cg/d7_mi_sunk_7dl.jpg")
     
@@ -923,8 +916,6 @@ init:
     image uv shade3 sized = Transform("uv shade3", zoom=.4)
     image uv shade4 sized = Transform("uv shade4", zoom=.4)
     image digi_pad = get_sprite_7dl("custom/digi_pad_7dl.png")
-    image hands_together = get_sprite_7dl("custom/hands_together_7dl.png")
-    image hands_together_tight = get_sprite_7dl("custom/hands_together_tight_7dl.png")
     image sl_trench = get_sprite_7dl("custom/sl_trench_7dl.png")
     image sl_trench2 = get_sprite_7dl("custom/sl_trench2_7dl.png")
     image cotocomb_lighter = get_sprite_7dl("custom/cotocomb_lighter_7dl.png")

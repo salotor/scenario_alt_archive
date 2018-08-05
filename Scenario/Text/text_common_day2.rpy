@@ -4894,7 +4894,7 @@ label alt_day2_tournament:
     "Лена."
     hide un
     show dv smile pioneer2 at left
-    show us laugh2 at right
+    show us laugh2 pioneer at right
     with dissolve
     "Про рыжих бандиток и говорить не приходится."
     hide us
@@ -4920,7 +4920,7 @@ label alt_day2_tournament:
         us "По-моему, там только Лена работает. Рисует."
         hide us with dissolve
     if not ('cyber' in list_voyage_7dl or 'library' in list_voyage_7dl):
-        show sh normal pioner with dissolve
+        show sh normal pioneer with dissolve
         "Так, стоп, а это кто?"
         us "Шурик, по какому поводу сбор?"
         $ meet('sh','Шурик')
