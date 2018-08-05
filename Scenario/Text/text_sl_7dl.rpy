@@ -3871,7 +3871,7 @@ label alt_day4_sl_7dl_loki_evening:
     ka "Ну, почему ты молчишь?"
     al "… Извините."
     ka "Да что мне твоё «извините»? Марш домой переодеваться!"
-    show al donlike shirt with dspr
+    show al dontlike shirt with dspr
     al "Я не могу."
     ka "И кто же тебе мешает?"
     al "У меня форма постиранная."
