@@ -673,7 +673,7 @@ label alt_day4_neu_us:
     $ persistent.sprite_time = "day"
     $ day_time()
     window hide
-    if alt_day3_us_bugs == 1 or alt_day3_technoquest_st3 == 2:
+    if alt_day3_us_bugs == 1:
         us "Привет!"
         show us smile sport with dissolve
         "Из ниоткуда вдруг выпрыгнула Ульянка - признаюсь честно - заставив вздрогнуть от неожиданности!"
@@ -9475,7 +9475,7 @@ label alt_day5_neu_mi_estrade:
                 me "А в чём дело?"
                 mi "Возможно, ты знаешь какие-нибудь пионерские песенки? Или песни для костра под гитару? {w}А то мне поручили как музруку, а я почти ничего и не знаю кроме того, что мне Алиса показала."
                 me "Почему не знаешь?"
-                if alt_day2_mi_met2:
+                if('music_club' in list_voyage_7dl):
                     show mi serious pioneer with dspr
                     mi "Я же тебе говорила уже, неужели забыл? У меня папа русский, но мы жили в Японии."
                     mi "Хотя я и неплохо говорю по-русски, таким вот вещам меня никто не учил."

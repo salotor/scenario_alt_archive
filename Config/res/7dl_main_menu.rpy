@@ -1,5 +1,5 @@
 init 1 python:
-    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+    if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
         header_font = "fonts/corbel.ttf"
         style.settings_link = Style(style.base_font)
         style.settings_link.font  = header_font
@@ -361,6 +361,7 @@ label main_menu_7dl:
     stop music
     stop sound
     stop sound_loop
+    window hide
     $ renpy.block_rollback()
     if len(list_waifu_7dl) == 4: #max 6
         $ list_waifu_7dl = []
