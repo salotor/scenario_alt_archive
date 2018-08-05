@@ -3,7 +3,6 @@
         $ routetag = "sl7dl_sport" #Спортивная форма для бегающих со Славей Герка и Локи
     else:
         $ routetag = "sl7dl" #Базис
-
     call alt_day4_sl_7dl_vars
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -66,8 +65,8 @@
     jump alt_day5_sl_7dl
 
 label alt_day5_sl_7dl_start:
-    if herc or loki:
-        $ routetag = "sl7dl_sport" #Спортивная форма для бегающих со Славей Герка и Локи
+    if herc and alt_day4_sl_7dl_workout :
+        $ routetag = "sl7dl_sport" #Спортивная форма для бегающего к Славе Герка-спортсмена
     call alt_day5_sl_7dl_vars
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -81,8 +80,11 @@ label alt_day5_sl_7dl_start:
     $ day_time()
     if loki:
         $ routetag = "sl7dl_loki"
-        call alt_day5_sl_7dl_loki_morning
-        pause(1)
+    elif herc:
+        $ routetag = "sl7dl_herc"
+    call alt_day5_sl_7dl_candle
+    pause(1)
+    if loki:
         $ alt_chapter(5, u"Славя. 7ДЛ. День")
         call alt_day5_sl_7dl_loki_day
         pause(1)
@@ -90,10 +92,7 @@ label alt_day5_sl_7dl_start:
         $ sunset_time()
         $ alt_chapter(5, u"Славя. 7ДЛ. Вечер")
         call alt_day5_sl_7dl_loki_evening
-    elif herc:
-        $ routetag = "sl7dl_herc"
-        call alt_day5_sl_7dl_herc_morning
-        pause(1)
+    elif herc:  #Начало индирект рута mz+el
         $ alt_chapter(5, u"Славя. 7ДЛ. День")
         call alt_day5_sl_7dl_herc_day
         pause(1)
@@ -103,8 +102,6 @@ label alt_day5_sl_7dl_start:
         call alt_day5_sl_7dl_herc_evening
         pause(1)
     else:
-        call alt_day5_sl_7dl_morning
-        pause(1)
         $ alt_chapter(5, u"Славя. 7ДЛ. День")
         call alt_day5_sl_7dl_day
         pause(1)
@@ -127,7 +124,7 @@ label alt_day5_sl_7dl_start:
 
 label alt_day6_sl_7dl_start:
     if (herc or loki) and (lp_sl > 15):
-        $ routetag = "sl7dl_sport" #Спортивная форма для бегающих со Славей Герка и Локи
+        $ routetag = "sl7dl_sport" #Спортивная форма для всех, йоба
     call alt_day6_sl_7dl_vars
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -157,15 +154,16 @@ label alt_day6_sl_7dl_start:
         $ alt_chapter(6, u"Славя. 7ДЛ. День")
         call alt_day6_sl_7dl_day
         pause(1)
+    call alt_day6_sl_7dl_evening #Концерт - общий
     $ routetag = "sl7dl_dress"
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(6, u"Славя. 7ДЛ. Дискотека")
-    call alt_day6_sl_7dl_evening
+    call alt_day6_sl_7dl_disco
     pause(1)
     $ persistent.sprite_time = "night"
     $ night_time()
-    if persistent.sl_7dl_good_loki and persistent.sl_7dl_good_herc and persistent.sl_7dl_good:
+    if persistent.sl_7dl_good_loki or persistent.sl_7dl_good_herc or persistent.sl_7dl_good:
         $ routetag = "sl7dltrue"
     elif (lp_sl > 20) and (karma > 120):
         $ routetag = "sl7dlgood"
