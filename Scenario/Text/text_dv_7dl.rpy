@@ -3987,7 +3987,7 @@ label alt_day5_dv_7dl_roadtrip:
     "Судя по отсутствию шума двигателя и тому, что в салоне я находился один, мы успешно прибыли."
     "Приспустив немного стекло — насилу разобрался со всеми этими рычагами — я разглядел по ту сторону знакомые голубые глаза."
     window hide
-    scene bg ext_aidpost2_sunset_7dl with dissolve
+    scene bg ext_aidpost_rain_7dl with dissolve
     show sl normal pioneer with dspr
 
     "Славя."
@@ -4066,7 +4066,7 @@ label alt_day5_dv_7dl_roadtrip:
     th "Ага. Женя бесплатно трудится библиотекарем, Славя следит за территорией лагеря целиком, Мику на общественных началах ведёт музыкальный кружок. Мало удивительного в небольших послаблениях со стороны администрации."
     "Впрочем, я, кажется, уже начал привыкать к такому темпу перемещения. Даже придумал завести светскую беседу:"
     window hide
-    scene bg ext_clubs_sunset_rain_7dl
+    scene bg ext_clubs_rain_7dl
     show sl smile pioneer
     with dissolve
     me "Что у вас тут новенького?"
