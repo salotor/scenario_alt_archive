@@ -362,7 +362,14 @@ label main_menu_7dl:
     stop sound
     stop sound_loop
     window hide
+    call alt_day0_vars
     $ renpy.block_rollback()
+    
+    $ chk_music_widget_7dl()
+    $ chk_lp_widget_7dl()
+    $ compare_music_widget_7dl = persistent.music_widget_7dl
+    $ compare_lp_widget_7dl = persistent.lp_widget_7dl
+    
     if len(list_waifu_7dl) == 4: #max 6
         $ list_waifu_7dl = []
     if persistent.waifu_7dl == 0:
@@ -379,10 +386,6 @@ label main_menu_7dl:
         $ persistent.waifu_7dl = renpy.random.choice([1, 2, 4])
     #elif persistent.waifu_7dl == 6:
         #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 3, 4, 5])
-    $ chk_music_widget_7dl()
-    $ chk_lp_widget_7dl()
-    $ compare_music_widget_7dl = persistent.music_widget_7dl
-    $ compare_lp_widget_7dl = persistent.lp_widget_7dl
     if persistent.waifu_7dl == 1 and 'un' not in list_waifu_7dl:
         play music music_7dl["take_my_hand"] fadein 3
         $ list_waifu_7dl.append('un')
