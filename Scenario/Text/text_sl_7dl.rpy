@@ -4786,7 +4786,7 @@ label alt_day4_sl_7dl_day:
     "Меня подбросило в воздухе и аккуратно уронило на сутулую спину и поджатую к груди голову."
     "В любое другое время меня подобный момент не сильно расстроил бы — игровой момент, всё бывает."
     window hide
-    scene bg int_aidpost_day:
+    scene bg ext_volley_court_7dl:
         xalign .5 yalign .45 zoom 1.0
         easeout 1.0 zoom 1.45 xalign 0.5 yalign 0.75
     $renpy.pause(0.81)
@@ -6060,11 +6060,23 @@ label alt_day4_sl_7dl_sundown:
         "А потом меня прогнал сторож."
     else:
         "Смысл был… в правильных поступках."
-        "И почему-то самым правильным мне сейчас казался"
-        window hide
-        scene bg ext_aidpost_sunset_7dl
-        with fade
-        extend " только один."
+        if 'medic' in list_voyage_7dl or (alt_day_binder == 1):
+            "И почему-то самым правильным мне сейчас казался"
+            window hide
+            scene bg ext_aidpost_sunset_7dl
+            with fade
+            extend " только один."
+        else:
+            "Но для их свершения нужно было найти для начала Славю."
+            "А я в медпункте не был никогда, так что поискать на самом деле пришлось."
+            "В итоге, с грехом пополам я всё же нашёл искомое здание."
+            window hide
+            scene bg ext_aidpost_sunset_7dl
+            show cs normal
+            with dissolve
+            "На крылечке стояла Виола и сверлила меня взглядом."
+            me "Добрый вечер?"
+            cs "За пионеркой пришёл? {w}А я её не выпишу."
         me "Как она?"
         show cs normal with dissolve
         cs "Переохлаждение, нервы…"
