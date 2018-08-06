@@ -3654,7 +3654,7 @@ label alt_day5_mi_dj_begin:
     me "Мику."
     "Мы бежали через весь лагерь, но у самого входа в клубы, я остановил её и развернул к себе."
     window hide
-    scene bg ext_clubs_sunset_rain_7dl
+    scene bg ext_clubs_rain_7dl
     show mi normal pioneer
     with dissolve
 
@@ -6074,9 +6074,6 @@ label alt_day5_mi_dj_voyeur_2:
         hide dv with dissolve
         "Фыркнув, я убрался подальше от рыжей с её скабрезностями."
         "К несчастью, её слова оказались пророческими — Мику уже вымылась и ушла."
-        stop music fadeout 5
-        window hide
-        stop sound_loop
     else:
         dv "Что?"
         dv "Тебе жалко для меня одного единственного Сенечки?"
@@ -6105,6 +6102,7 @@ label alt_day5_mi_dj_voyeur_2:
             dreamgirl "Иди сохни, невинно намоченный и поцелованный."
         dreamgirl "Кажется, ты профукал свои последние шансы."
         dreamgirl "Так что нам остаётся только сохнуть."
+    stop sound_loop
     stop music fadeout 3
     stop ambience fadeout 6
     window hide
@@ -6135,6 +6133,7 @@ label alt_day5_mi_dj_voyeur_4:
     me "А можно мы поговорим где-нибудь, где нас гарантированно не подслушают?"
     "Она пожала плечами."
     mi "Можно у меня в клубе."
+    stop sound_loop
     stop music fadeout 3
     stop ambience fadeout 6
     window hide

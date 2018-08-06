@@ -2767,7 +2767,7 @@ label alt_day2_mz:
     mz "Дверь сразу за тобой."
     "Не открывая глаз, указала она."
     mz "Не перепутай."
-    "Пожав плечами, я вышел на улицу. С такими врединами общаться себе дороже. Пусть себе спит дальше."
+    "Пожав плечами, я отправился на улицу. С такими врединами общаться себе дороже. Пусть себе спит дальше."
     mz "Можешь не пытаться хлопать дверью. Там доводчик."
     window hide
     stop ambience fadeout 1
@@ -4889,12 +4889,12 @@ label alt_day2_tournament:
     with dissolve
     "Славя."
     hide sl_prep
-    show un at right
+    show un normal pioneer at right
     with dissolve
     "Лена."
     hide un
     show dv smile pioneer2 at left
-    show us laugh2 at right
+    show us laugh2 pioneer at right
     with dissolve
     "Про рыжих бандиток и говорить не приходится."
     hide us
@@ -4920,7 +4920,7 @@ label alt_day2_tournament:
         us "По-моему, там только Лена работает. Рисует."
         hide us with dissolve
     if not ('cyber' in list_voyage_7dl or 'library' in list_voyage_7dl):
-        show sh normal pioner with dissolve
+        show sh normal pioneer with dissolve
         "Так, стоп, а это кто?"
         us "Шурик, по какому поводу сбор?"
         $ meet('sh','Шурик')
