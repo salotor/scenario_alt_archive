@@ -3654,7 +3654,7 @@ label alt_day5_mi_dj_begin:
     me "Мику."
     "Мы бежали через весь лагерь, но у самого входа в клубы, я остановил её и развернул к себе."
     window hide
-    scene bg ext_clubs_sunset_rain_7dl
+    scene bg ext_clubs_rain_7dl
     show mi normal pioneer
     with dissolve
 

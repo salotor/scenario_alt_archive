@@ -2442,7 +2442,7 @@ label alt_day1_meeting2:
                 me "Эх… А счастье было так близко."
                 "Негромкое хихиканье было мне ответом."
                 window hide
-                scene bg ext_aidpost_sunset
+                scene bg ext_aidpost_sunset_7dl
                 with fade
                 "Уже на подходе я завидел тех самых хамов, которые были возле столовой."
                 me "Псс, Славя?"
