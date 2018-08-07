@@ -2354,7 +2354,7 @@ label alt_day4_sl_7dl_herc_evening:
     dreamgirl "Молчу-молчу. Посольский сынок."
     show dv smile pioneer at right with dissolve
     dv "Новичок, ты на ужин не идёшь?"
-    "Я вздрогул и очнулся:"
+    "Я вздрогнул и очнулся:"
     dv "Что значит, не идёшь? Ещё как идёшь!"
     sl "Тогда шагом марш вместе со всеми!"
     window hide
