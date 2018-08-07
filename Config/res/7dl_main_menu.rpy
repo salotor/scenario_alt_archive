@@ -91,6 +91,45 @@ screen alt_wip:
         xalign 0.5
         action Hide("alt_wip")
 
+screen help_7dl:
+    modal True
+    add get_image("gui/o_rly/base.png")
+    text "Уважаемый читатель,":
+        text_align 0.5
+        yalign 0.44
+        xalign 0.5
+        color "#64483c"
+        font header_font
+        size 40
+    text "проекту требуется ваша помощь!":
+        text_align 0.5
+        yalign 0.49
+        xalign 0.5
+        color "#64483c"
+        font header_font
+        size 40
+    textbutton _("Подробнее"):
+        text_size 40
+        style "log_button"
+        text_style "settings_link"
+        yalign 0.6
+        xalign 0.23
+        action [Hide("help_7dl", transition=Dissolve(0.2)), OpenURL("https://vk.com/wall-128046483_29533"), Stop('music', fadeout=2), Jump("random_bg_7dl")]
+    textbutton _("Закрыть"):
+        text_size 40
+        style "log_button"
+        text_style "settings_link"
+        yalign 0.6
+        xalign 0.5
+        action [Hide("help_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("random_bg_7dl")]
+    textbutton _("Больше не показывать"):
+        text_size 40
+        style "log_button"
+        text_style "settings_link"
+        yalign 0.6
+        xalign 0.83
+        action [Hide("help_7dl", transition=Dissolve(0.2)), SetField(persistent,'dont_disturb', True), Stop('music', fadeout=2), Jump("random_bg_7dl")]
+        
 screen settings_widget_lp_on_7dl():
     add get_image_7dl("gui/menu_elem/settings/settings_wdglp_descr_on.png")
     
@@ -362,7 +401,22 @@ label main_menu_7dl:
     stop sound
     stop sound_loop
     window hide
+    call alt_day0_vars
     $ renpy.block_rollback()
+    
+    $ chk_music_widget_7dl()
+    $ chk_lp_widget_7dl()
+    $ compare_music_widget_7dl = persistent.music_widget_7dl
+    $ compare_lp_widget_7dl = persistent.lp_widget_7dl
+    
+    if not persistent.dont_disturb:
+        if persistent.mi_7dl_true or persistent.mi_7dl_good_human or persistent.mi_7dl_neutral_human or persistent.mi_7dl_bad_human or persistent.mi_7dl_good_star or persistent.mi_7dl_neutral_star or persistent.mi_7dl_bad_star or persistent.mi_7dl_herc_exc or persistent.mi_7dl_loki_exc or persistent.mi_7dl_dr_exc or persistent.mi_dj_true or persistent.mi_dj_good_jap or persistent.mi_dj_good_rf or persistent.mi_dj_bad or persistent.dv_7dl_good_ussr or persistent.dv_7dl_good_ussr_rf or persistent.dv_7dl_reject_rf or persistent.dv_7dl_reject_ussr or persistent.dv_7dl_bad_mt or persistent.dv_7dl_un or persistent.dv_7dl_tulpa or persistent.dv_7dl_bad or persistent.sl_cl_int_bad or persistent.sl_cl_int_ok or persistent.sl_cl_int_good or persistent.sl_cl_good_rf2 or persistent.sl_cl_good_rf or persistent.sl_cl_good_ussr or persistent.sl_cl_reject_same or persistent.sl_cl_reject_late or persistent.sl_cl_cata or persistent.sl_cl_bad or persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf or persistent.un_7dl_true or persistent.un_7dl_true_transit or persistent.un_7dl_bad or persistent.mt_7dl_true or persistent.mt_7dl_good or persistent.mt_7dl_neutral or persistent.mt_7dl_bad or persistent.us_px_rf_good or persistent.us_px_true or persistent.us_7dl_bad or persistent.us_7dl_good or persistent.us_7dl_true or persistent.us_7dl_un or persistent.us_7dl_mi:
+            scene bg ext_city_night_7dl with fade
+            play music music_7dl["seven_summer_days"] fadein 3
+            $ renpy.transition(dissolve)
+            call screen help_7dl
+    
+label random_bg_7dl:
     if len(list_waifu_7dl) == 4: #max 6
         $ list_waifu_7dl = []
     if persistent.waifu_7dl == 0:
@@ -379,10 +433,6 @@ label main_menu_7dl:
         $ persistent.waifu_7dl = renpy.random.choice([1, 2, 4])
     #elif persistent.waifu_7dl == 6:
         #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 3, 4, 5])
-    $ chk_music_widget_7dl()
-    $ chk_lp_widget_7dl()
-    $ compare_music_widget_7dl = persistent.music_widget_7dl
-    $ compare_lp_widget_7dl = persistent.lp_widget_7dl
     if persistent.waifu_7dl == 1 and 'un' not in list_waifu_7dl:
         play music music_7dl["take_my_hand"] fadein 3
         $ list_waifu_7dl.append('un')
