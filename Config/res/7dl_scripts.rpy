@@ -29,6 +29,9 @@
     $ style.alt_letter.italic = True
     $ style.alt_letter.bold = False
     
+    image alt_letter = ParameterizedText(style = "alt_letter", size = 70)
+    
+init 999:
     if renpy.mobile:
         $ style.base_font = Style(style.default)
         $ style.base_font.font  = get_image_7dl("fonts/calibri.ttf")
@@ -46,7 +49,6 @@
         $ style.daynum.size = 45
 
 
-    image alt_letter = ParameterizedText(style = "alt_letter", size = 70)
 
 init -66 python:
     import random
