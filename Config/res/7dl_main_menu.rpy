@@ -94,14 +94,14 @@ screen alt_wip:
 screen help_7dl:
     modal True
     add get_image("gui/o_rly/base.png")
-    text "Уважаемый читатель!":
+    text "Уважаемый читатель,":
         text_align 0.5
         yalign 0.44
         xalign 0.5
         color "#64483c"
         font header_font
         size 40
-    text "Мод будет заморожен без вашей поддержки!":
+    text "проекту требуется ваша помощь!":
         text_align 0.5
         yalign 0.49
         xalign 0.5
