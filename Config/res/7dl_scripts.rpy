@@ -29,7 +29,7 @@
     $ style.alt_letter.italic = True
     $ style.alt_letter.bold = False
     
-    if renpy.android:
+    if renpy.mobile:
         $ style.base_font = Style(style.default)
         $ style.base_font.font  = get_image_7dl("fonts/calibri.ttf")
         $ style.base_font.size = 28
@@ -548,7 +548,7 @@ init -1001 python:
             
 init -1000 python:
     #if config.android or config.ios
-    if renpy.android:
+    if renpy.mobile:
         default_7dl_path = 'scenario_alt/'
     elif renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         default_7dl_path = 'scenario_alt/'
