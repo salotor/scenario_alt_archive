@@ -547,6 +547,7 @@ init -1001 python:
             data["map_chibi"] = None
             
 init -1000 python:
+    #if config.android or config.ios
     if renpy.android:
         default_7dl_path = 'scenario_alt/'
     elif renpy.version(tuple=False) == "Ren'Py 6.16.3.502":

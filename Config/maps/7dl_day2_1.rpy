@@ -120,8 +120,10 @@ label alt_day2_event_square:
         if 'cleaning_sl' in list_voyage_7dl:# пришёл после уборки
             $ disable_current_zone_alt1()
         else:
-            if ('sl_prep' in list_d2_convoy_7dl): # первое посещение со Славей
+            if ('sl_prep' in list_d2_convoy_7dl) and len(list_d2_convoy_7dl < 2): # первое посещение со Славей
                 $ set_chibi_alt1('square_alt1', 'sl')
+                $ list_d2_convoy_7dl = []
+                $ list_d2_convoy_7dl.append('sl')
                 window hide
             else:
                 $ disable_current_zone_alt1()
