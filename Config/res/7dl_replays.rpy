@@ -2,21 +2,20 @@
 # init:
     # $ mods["alt_gallery_start"] = u"Галерея 7дл"
     # $ mod_tags["alt_gallery_start"] = ["length:days","gameplay:vn","protagonist:male"]
-init 1005 python:
-    if config.android or config.ios
-        style.replays_textbutton = Style(style.base_font)
-        style.replays_textbutton.font  = cursive_font
-        style.replays_textbutton.size = 42
-        #style.replays_textbutton.kerning = 3
-        style.replays_textbutton.color = "#7847f3"
-        style.replays_textbutton.hover_color = "#2f059a"
-        style.replays_textbutton.selected_color = "#7847f3"
-        style.replays_textbutton.selected_idle_color = "#7847f3"
-        style.replays_textbutton.selected_hover_color = "#2f059a"
-        style.replays_textbutton.insensitive_color = "#7847f3"
-    
+
 init 999 python:
     cursive_font = default_7dl_path + "Pics/fonts/olgactt.ttf"
+
+    style.replays_textbutton = Style(style.base_font)
+    style.replays_textbutton.font  = cursive_font
+    style.replays_textbutton.size = 42
+    #style.replays_textbutton.kerning = 3
+    style.replays_textbutton.color = "#7847f3"
+    style.replays_textbutton.hover_color = "#2f059a"
+    style.replays_textbutton.selected_color = "#7847f3"
+    style.replays_textbutton.selected_idle_color = "#7847f3"
+    style.replays_textbutton.selected_hover_color = "#2f059a"
+    style.replays_textbutton.insensitive_color = "#7847f3"
 
     style.replays_text_locked = Style(style.base_font)
     style.replays_text_locked.font  = cursive_font
