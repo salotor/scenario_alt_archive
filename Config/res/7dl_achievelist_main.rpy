@@ -3007,6 +3007,7 @@ label sdl_achvlist_dvdjt_clear_Author:
 ######################СЛАВЯ-7ДЛ######################################
 label sdl_achvlist_sl7dl_clear_Author:
     #Нужны флаги
+    $ persistent.sl_7dl_good_ussr = False
     call screen sdl_achvlist_sl7dl_Author
 # ------------------------------------------------ 
 ######################СЛАВЯ-КЛАССИК######################################
