@@ -30,7 +30,7 @@ init -996 python:
             "estrade_alt1":       {"position":[1062,54,1154,135],"default_bg":bg_tmp_image(u"Эстрада")},
             "music_club_alt1":    {"position":[627,255,692,337],"default_bg":bg_tmp_image(u"Музклуб")},
             "square_alt1":        {"position":[887,360,998,545],"default_bg":bg_tmp_image(u"Площадь")},
-            "dining_hall_alt1":   {"position":[1010,458,1137,581],"default_bg":bg_tmp_image(u"Столовая")},
+            "dining_hall_alt1":   {"position":[1010,458,1140,581],"default_bg":bg_tmp_image(u"Столовая")},
             "sport_area_alt1":    {"position":[1220,481,1574,658],"default_bg":bg_tmp_image(u"Спорткомплекс")},
             "beach_alt1":         {"position":[1198,674,1488,831],"default_bg":bg_tmp_image(u"Пляж")},
             "boat_station_alt1":  {"position":[832,801,957,855],"default_bg":bg_tmp_image(u"Лодочный причал")},
@@ -45,7 +45,7 @@ init -996 python:
             "el_sh_house_alt1":  {"position":[854,292,884,331],"default_bg":bg_tmp_image(u"Эл и Шурик")},
             "dv_us_house_alt1":  {"position":[717,624,758,670],"default_bg":bg_tmp_image(u"Алиса и Ульяна")},
             "shed_alt1":         {"position":[1144,488,1211,584],"default_bg":bg_tmp_image(u"Склад")},
-            "admin_house_alt1":  {"position":[790,350,860,447],"default_bg":bg_tmp_image(u"Администрация")},
+            "admin_house_alt1":  {"position":[775,350,875,447],"default_bg":bg_tmp_image(u"Администрация")},
             "old_house_alt1":    {"position":[238,1005,340,1071],"default_bg":bg_tmp_image(u"Старый корпус")}
 
     }

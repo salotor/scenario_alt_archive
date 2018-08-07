@@ -5583,7 +5583,7 @@ label alt_day5_neu_breakfast:
 label alt_day5_neu_arrest:
     play ambience ambience_7dl["rain"] fadein 3
     play music music_7dl["to_the_sunrise"] fadein 3
-    scene bg ext_clubs_sunset_rain_7dl
+    scene bg ext_clubs_rain_7dl
     show mt normal pioneer at zenterleft
     with dissolve
     mt "Катерина обнаружила их вчера перед отбоем, возвращающимися из-за территории лагеря."
@@ -5827,7 +5827,7 @@ label alt_day5_neu_arrest:
     dn "Смотри…"
     "И я посмотрел."
     window hide
-    scene expression Desat("bg ext_clubs_sunset_rain_7dl")
+    scene expression Desat("bg ext_clubs_rain_7dl")
     show anim_grain
     with dissolve
     "Будто в детстве, когда у тебя есть одиночество, темнота и диапроектор, от жара лампы которого ты опасливо отодвигаешься, но не можешь не продолжать крутить ручку перемещения плёнки."
@@ -6395,7 +6395,7 @@ label alt_day5_neu_cndl:
     $ persistent.sprite_time = "day"
     $ day_time()
     if alt_day5_neu_candle == 2:
-        scene expression Desat1("bg ext_clubs_sunset_rain_7dl")
+        scene expression Desat1("bg ext_clubs_rain_7dl")
         play sound sfx_open_door_clubs
         pause(1)
         $ persistent.sprite_time = "day"
@@ -6683,7 +6683,7 @@ label alt_day5_neu_cndl:
         stop music fadeout 3
         window hide
         play ambience ambience_7dl["rain"] fadein 3
-        scene bg ext_clubs_sunset_rain_7dl
+        scene bg ext_clubs_rain_7dl
         show mt normal pioneer at zenterright
         with dissolve
         mt "Ну что, как тебе вечер?"
@@ -9475,7 +9475,7 @@ label alt_day5_neu_mi_estrade:
                 me "А в чём дело?"
                 mi "Возможно, ты знаешь какие-нибудь пионерские песенки? Или песни для костра под гитару? {w}А то мне поручили как музруку, а я почти ничего и не знаю кроме того, что мне Алиса показала."
                 me "Почему не знаешь?"
-                if alt_day2_mi_met2:
+                if('music_club' in list_voyage_7dl):
                     show mi serious pioneer with dspr
                     mi "Я же тебе говорила уже, неужели забыл? У меня папа русский, но мы жили в Японии."
                     mi "Хотя я и неплохо говорю по-русски, таким вот вещам меня никто не учил."
