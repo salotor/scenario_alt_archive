@@ -29,24 +29,25 @@
     $ style.alt_letter.italic = True
     $ style.alt_letter.bold = False
     
-    if renpy.android:
-        $ style.base_font = Style(style.default)
-        $ style.base_font.font  = get_image_7dl("fonts/calibri.ttf")
-        $ style.base_font.size = 28
-        $ style.base_font.line_spacing = 2
-        
-        $ style.chapter = Style(style.base_font)
-        $ style.chapter.font  = get_image_7dl("fonts/corbel.ttf")
-        $ style.chapter.size = 120
-        $ style.chapter.color = "#fff"
-        $ style.chapter.outlines = [ (1, "#ffdd7d", 0, 0) ]
-        
-        $ style.daynum = Style(style.chapter)
-        $ style.daynum.font  = get_image_7dl("fonts/corbel.ttf")
-        $ style.daynum.size = 45
-
-
     image alt_letter = ParameterizedText(style = "alt_letter", size = 70)
+    
+init 999:
+    if not ((renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761")):
+        if renpy.mobile:
+            $ style.base_font = Style(style.default)
+            $ style.base_font.font  = get_image_7dl("fonts/calibri.ttf")
+            $ style.base_font.size = 28
+            $ style.base_font.line_spacing = 2
+            
+            $ style.chapter = Style(style.base_font)
+            $ style.chapter.font  = get_image_7dl("fonts/corbel.ttf")
+            $ style.chapter.size = 120
+            $ style.chapter.color = "#fff"
+            $ style.chapter.outlines = [ (1, "#ffdd7d", 0, 0) ]
+            
+            $ style.daynum = Style(style.chapter)
+            $ style.daynum.font  = get_image_7dl("fonts/corbel.ttf")
+            $ style.daynum.size = 45
 
 init -66 python:
     import random
@@ -547,14 +548,15 @@ init -1001 python:
             data["map_chibi"] = None
             
 init -1000 python:
-    if renpy.android:
-        default_7dl_path = 'scenario_alt/'
-    elif renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         default_7dl_path = 'scenario_alt/'
     elif (renpy.version(tuple=False) == "Ren'Py 6.18.3.761") or (persistent.nonsteam_7dl == True):
         default_7dl_path = 'mods/scenario_alt/'
     else:
-        default_7dl_path = '../441054187/scenario_alt/'
+        if renpy.mobile:
+            default_7dl_path = 'scenario_alt/'
+        else:
+            default_7dl_path = '../441054187/scenario_alt/'
     config_session = False
 
 init -999 python:
