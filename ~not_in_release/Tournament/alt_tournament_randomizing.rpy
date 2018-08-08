@@ -114,14 +114,14 @@ init:
     # image suit_uvao_L = im.Scale(get_image_7dl("gui/tournament/suit/suit_uvao.png"),26,35)
     
 # --------------  # картинки в папке теста — В РЕЛИЗНОЙ ВЕРСИИ ИХ НАДО УБРАТЬ
-    image suit_2ch_S = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_2ch.png',21,28)
-    image suit_2ch_L = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_2ch.png',26,35)
-    image suit_ussr_S = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_ussr.png',21,28)
-    image suit_ussr_L = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_ussr.png',26,35)
-    image suit_utan_S = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_utan.png',21,28)
-    image suit_utan_L = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_utan.png',26,35)
-    image suit_uvao_S = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_uvao.png',21,28)
-    image suit_uvao_L = im.Scale('scenario_alt/~not_in_release/Tournament/suit/suit_uvao.png',26,35)
+    image suit_2ch_S = im.Scale(default_7dl_path+'~not_in_release/Tournament/suit/suit_2ch.png',21,28)
+    image suit_2ch_L = im.Scale(default_7dl_path+'~not_in_release/Tournament/suit/suit_2ch.png',26,35)
+    image suit_ussr_S = im.Scale(default_7dl_path+'~not_in_release/Tournament/suit/suit_ussr.png',21,28)
+    image suit_ussr_L = im.Scale(default_7dl_path+'~not_in_release/Tournament/suit/suit_ussr.png',26,35)
+    image suit_utan_S = im.Scale(default_7dl_path+'~not_in_release/Tournament/suit/suit_utan.png',21,28)
+    image suit_utan_L = im.Scale(default_7dl_path+'~not_in_release/Tournament/suit/suit_utan.png',26,35)
+    image suit_uvao_S = im.Scale(default_7dl_path+'~not_in_release/Tournament/suit/suit_uvao.png',21,28)
+    image suit_uvao_L = im.Scale(default_7dl_path+'~not_in_release/Tournament/suit/suit_uvao.png',26,35)
 # ------------------------------------------------
 
 init 2 python:
@@ -1044,7 +1044,7 @@ init 3 python:
 # ----------------------------------------------------------------------------------------
 # тащим картинку картёжника
     def alt_get_img_playon(gamblers):
-        prefix  = "scenario_alt/Pics/gui/tournament/"
+        prefix  = default_7dl_path+"Pics/gui/tournament/"
         suffix = "_playon.png"
         return prefix+gamblers+suffix
             
