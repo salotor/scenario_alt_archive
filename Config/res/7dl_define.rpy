@@ -955,6 +955,7 @@ init:
     $ ambience_7dl["int_silence"] = get_ambience_7dl("ambience_int_silence_7dl.ogg")
     $ ambience_7dl["showers"] = get_ambience_7dl("ambience_showers_7dl.ogg")
     $ ambience_7dl["town_day"] = get_ambience_7dl("ambience_town_day_7dl.ogg")
+    $ ambience_7dl["train"] = get_ambience_7dl("ambience_train_7dl.ogg")
     $ ambience_7dl["tv"] = get_ambience_7dl("ambience_tv_7dl.ogg")
     $ ambience_7dl["underwater"] = get_ambience_7dl("ambience_underwater_7dl.ogg")
     $ ambience_7dl["volley"] = get_ambience_7dl("ambience_volley_7dl.ogg")
@@ -991,6 +992,7 @@ init:
     $ music_7dl["deadman"] = get_music_7dl("deadman_7dl.ogg")
     $ music_7dl["dead_silence"] = get_music_7dl("dead_silence_7dl.ogg")
     $ music_7dl["deep_inside"] = get_music_7dl("deep_inside_7dl.ogg")
+    $ music_7dl["despair"] = get_music_7dl("despair_7dl.ogg")
     $ music_7dl["dropit"] = get_music_7dl("dropit_7dl.ogg")
     $ music_7dl["dv_guitar"] = get_music_7dl("dv_guitar_7dl.ogg")
 
@@ -1034,6 +1036,7 @@ init:
     
     $ music_7dl["lastlight_guitar"] = get_music_7dl("lastlight_guitar_7dl.ogg")
     $ music_7dl["lastlight_piano"] = get_music_7dl("lastlight_piano_7dl.ogg")
+    $ music_7dl["last_summer"] = get_music_7dl("last_summer_7dl.ogg")
     $ music_7dl["laugh_throught_the_universe"] = get_music_7dl("laugh_throught_the_universe_7dl.ogg")
     $ music_7dl["lazy_olga"] = get_music_7dl("lazy_olga_7dl.ogg")
     $ music_7dl["last_pixie"] = get_music_7dl("last_pixie_7dl.ogg")
