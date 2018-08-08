@@ -32,7 +32,7 @@
     image alt_letter = ParameterizedText(style = "alt_letter", size = 70)
     
 init 999:
-    if not (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
+    if not ((renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761")):
         if renpy.mobile:
             $ style.base_font = Style(style.default)
             $ style.base_font.font  = get_image_7dl("fonts/calibri.ttf")
