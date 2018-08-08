@@ -548,15 +548,15 @@ init -1001 python:
             data["map_chibi"] = None
             
 init -1000 python:
-    if not (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
-        if renpy.mobile:
-            default_7dl_path = 'scenario_alt/'
-    elif renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
         default_7dl_path = 'scenario_alt/'
     elif (renpy.version(tuple=False) == "Ren'Py 6.18.3.761") or (persistent.nonsteam_7dl == True):
         default_7dl_path = 'mods/scenario_alt/'
     else:
-        default_7dl_path = '../441054187/scenario_alt/'
+        if renpy.mobile:
+            default_7dl_path = 'scenario_alt/'
+        else:
+            default_7dl_path = '../441054187/scenario_alt/'
     config_session = False
 
 init -999 python:
