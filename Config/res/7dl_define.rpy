@@ -1052,6 +1052,7 @@ init:
     $ music_7dl["lynn"] = get_music_7dl("lynn_7dl.ogg")
 
     $ music_7dl["mammal"] = get_music_7dl("mammal_7dl.ogg")
+    $ music_7dl["magic_is_gone"] = get_music_7dl("magic_is_gone_7dl.ogg")
     $ music_7dl["meetmethere_tts"] = get_music_7dl("meetmethere_tts_7dl.ogg")
     $ music_7dl["me2ost"] = get_music_7dl("me2ost_7dl.ogg")
     $ music_7dl["melancholy_sun"] = get_music_7dl("melancholy_sun_7dl.ogg")
