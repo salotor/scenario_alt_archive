@@ -398,6 +398,7 @@ screen media_7dl():
         
 label main_menu_7dl:
     stop music
+    stop ambience
     stop sound
     stop sound_loop
     window hide
