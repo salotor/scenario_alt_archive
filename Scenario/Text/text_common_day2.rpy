@@ -6621,7 +6621,7 @@ label alt_day2_eventEv_square1:
         window hide
         with fade
         return
-    elif counter_sl_cl =! 1:
+    elif counter_sl_cl != 1:
         me "Чем занимаешься?"
         show sl sad pioneer with dspr
         sl "Да ключи ищу, будь они неладны."
