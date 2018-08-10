@@ -332,17 +332,17 @@ init:
         repeat # Не убирать
         
     image un serious dress anim: 
-        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1_7dl.png") 
         8.0 #Задержка
-        get_sprite_7dl("custom/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2_7dl.png")
         0.1
-        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1_7dl.png") 
         4.0 #Задержка
-        get_sprite_7dl("custom/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2_7dl.png")
         0.15
-        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1_7dl.png") 
         7.0 #Задержка
-        get_sprite_7dl("custom/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2_7dl.png")
         0.1
         repeat # Не убирать
 #Заставки
