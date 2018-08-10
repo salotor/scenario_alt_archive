@@ -677,12 +677,17 @@ label alt_7dl_titles:
     show alt_credits alt_credits_text:
         xalign 0.5 
         ypos 1.0 
-        linear 67.0 ypos -2.2 
-    $ renpy.pause(67, hard=True)
+        linear 15.0 ypos -2.2 
+    $ renpy.pause(15, hard=True)
     scene black
     with dissolve2
     stop music fadeout 3
-    $ renpy.pause(4, hard=True)
+    $ renpy.pause(3, hard=True)
+    if not (persistent.dont_disturb or (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761") or (persistent.nonsteam_7dl == True)):
+        scene bg ext_city_night_7dl with fade
+        play music music_7dl["seven_summer_days"] fadein 3
+        $ renpy.transition(dissolve)
+        call screen help_7dl
     return
     
 label alt_cotocombs:

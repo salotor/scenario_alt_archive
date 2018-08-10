@@ -332,17 +332,17 @@ init:
         repeat # Не убирать
         
     image un serious dress anim: 
-        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1_7dl.png") 
         8.0 #Задержка
-        get_sprite_7dl("custom/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2_7dl.png")
         0.1
-        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1_7dl.png") 
         4.0 #Задержка
-        get_sprite_7dl("custom/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2_7dl.png")
         0.15
-        get_sprite_7dl("custom/un_3_dress_serious_1.png") 
+        get_sprite_7dl("custom/un_3_dress_serious_1_7dl.png") 
         7.0 #Задержка
-        get_sprite_7dl("custom/un_3_dress_serious_2.png")
+        get_sprite_7dl("custom/un_3_dress_serious_2_7dl.png")
         0.1
         repeat # Не убирать
 #Заставки
@@ -1052,6 +1052,7 @@ init:
     $ music_7dl["lynn"] = get_music_7dl("lynn_7dl.ogg")
 
     $ music_7dl["mammal"] = get_music_7dl("mammal_7dl.ogg")
+    $ music_7dl["magic_is_gone"] = get_music_7dl("magic_is_gone_7dl.ogg")
     $ music_7dl["meetmethere_tts"] = get_music_7dl("meetmethere_tts_7dl.ogg")
     $ music_7dl["me2ost"] = get_music_7dl("me2ost_7dl.ogg")
     $ music_7dl["melancholy_sun"] = get_music_7dl("melancholy_sun_7dl.ogg")
