@@ -370,6 +370,10 @@ init:
     image bg ext_busstop_sun_7dl = get_image_7dl("bg/ext_busstop_sun_7dl.png")
     image bg ext_clubs_rain_7dl = get_image_7dl("bg/ext_clubs_rain_7dl.jpg")
     image bg ext_dining_hall_away_rain_7dl = get_image_7dl("bg/ext_dining_hall_away_rain_7dl.jpg")
+    
+    image bg ext_dv_hideout_day_7dl = get_image_7dl("bg/ext_dv_hideout_day_7dl.jpg")
+    image bg ext_dining_hall_backroad_day_7dl. = get_image_7dl("bg/ext_dining_hall_backroad_day_7dl.jpg")
+    
     image bg ext_dining_hall_near_rain_7dl = get_image_7dl("bg/ext_dining_hall_near_rain_7dl.jpg")
     image bg ext_entrance_night_clear_7dl = get_image_7dl("bg/ext_entrance_night_clear_7dl.png")
     image bg ext_entrance_night_clear_closed_7dl = get_image_7dl("bg/ext_entrance_night_clear_closed_7dl.png")
@@ -412,11 +416,12 @@ init:
     image bg ext_un_hideout_sunset_7dl = get_image_7dl("bg/ext_un_hideout_sunset_7dl.png")
     image bg ext_un_house_with_un_7dl = get_image_7dl("bg/ext_un_house_with_un_7dl.jpg")
     image bg ext_volley_court_7dl = get_image_7dl("bg/ext_volley_court_7dl.png")
-    image bg ext_warehouse_day_7dl = get_image_7dl("bg/ext_warehouse_day_7dl.jpg")
+    image bg ext_warehouse_day_7dl = get_image_7dl("bg/ext_warehouse_day_7dl.png")
     image bg ext_warehouse2_day_7dl = get_image_7dl("bg/ext_warehouse2_day_7dl.jpg")
-    image bg ext_warehouse_blurry_7dl = get_image_7dl("bg/ext_warehouse_blurry_7dl.jpg")
-    image bg ext_warehouse_night_7dl = get_image_7dl("bg/ext_warehouse_night_7dl.jpg")
-    image bg ext_warehouse_sunset_7dl = get_image_7dl("bg/ext_warehouse_sunset_7dl.jpg")
+    image bg ext_warehouse_blurry_7dl = get_image_7dl("bg/ext_warehouse_blurry_7dl.png")
+    image bg ext_warehouse_night_7dl = get_image_7dl("bg/ext_warehouse_night_7dl.png")
+    image bg ext_warehouse_rain_day_7dl = get_image_7dl("bg/ext_warehouse_rain_day_7dl.png")
+    image bg ext_warehouse_sunset_7dl = get_image_7dl("bg/ext_warehouse_sunset_7dl.png")
     image bg ext_washstand_night_7dl = get_image_7dl("bg/ext_washstand_night_7dl.jpg")
     
     image bg int_access2_day_7dl = get_image_7dl("bg/int_access2_day_7dl.png")
