@@ -372,7 +372,7 @@ init:
     image bg ext_dining_hall_away_rain_7dl = get_image_7dl("bg/ext_dining_hall_away_rain_7dl.jpg")
     
     image bg ext_dv_hideout_day_7dl = get_image_7dl("bg/ext_dv_hideout_day_7dl.jpg")
-    image bg ext_dining_hall_backroad_day_7dl. = get_image_7dl("bg/ext_dining_hall_backroad_day_7dl.jpg")
+    image bg ext_dining_hall_backroad_day_7dl = get_image_7dl("bg/ext_dining_hall_backroad_day_7dl.jpg")
     
     image bg ext_dining_hall_near_rain_7dl = get_image_7dl("bg/ext_dining_hall_near_rain_7dl.jpg")
     image bg ext_entrance_night_clear_7dl = get_image_7dl("bg/ext_entrance_night_clear_7dl.png")
