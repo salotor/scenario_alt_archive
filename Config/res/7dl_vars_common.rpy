@@ -2,7 +2,7 @@
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
     $ alt_release_no = "0.34.a"
-    $ alt_hotfix_no = "hf2"
+    $ alt_hotfix_no = "hf5"
     $ plthr = u"none"
 
 init 2:

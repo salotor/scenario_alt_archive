@@ -355,7 +355,7 @@
     window hide
     play ambience ambience_camp_center_night fadein 2
     scene bg ext_entrance_night_clear_7dl 
-    show owl :
+    show owl behind prologue_dream:
         pos (931, 88)
     show uvao_d1 at left
     show prologue_dream 
@@ -678,7 +678,7 @@ label alt_day0_start_h:
     scene black 
     with fade3
     scene bg ext_entrance_night_clear_7dl
-    show owl :
+    show owl behind prologue_dream:
         pos (931, 88)
     show uvao_d1 at left
     show prologue_dream 
@@ -1044,7 +1044,7 @@ label alt_day0_start_l:
     stop music fadeout 3
     "А под захлопнувшимся веком обнаружилась странная картинка:"
     show expression D3_intro("bg ext_entrance_night_clear_7dl")
-    show owl :
+    show owl behind prologue_dream:
         pos (931, 88)
     show prologue_dream
     with blind_d
@@ -1053,7 +1053,7 @@ label alt_day0_start_l:
     "И лишь знакомый с детства голос, зовущий в страну, откуда нет возврата:"
     window hide
     scene bg ext_entrance_night_clear_7dl 
-    show owl :
+    show owl behind prologue_dream:
         pos (931, 88)
     show expression D3_intro("uvao_d1") at left
     show prologue_dream
@@ -1415,7 +1415,7 @@ label alt_day0_d3_prologue:
     play music music_7dl["too_quiet"] fadein 3
     "И совёнком у притолоки."
     show expression D3_intro("bg ext_entrance_night_clear_closed_7dl")
-    show owl :
+    show owl behind prologue_dream:
         pos (931, 88)
     show prologue_dream
     with fdiam
