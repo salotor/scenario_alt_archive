@@ -4739,7 +4739,9 @@ label alt_day5_sl_begin:
     "И посветил через плечо."
     stop sound_loop
     window hide
-    scene cg d5_sl_snark_7dl with flash
+    scene cg d5_sl_snark_7dl
+    show blackout
+    with flash
     "Смазаный свет фонарика отразился в чьих-то огромных, чёрных, практически без белка, глазах, двинулся дальше."
     "Меня парализовало от страха."
     "Я повёл фонарём назад."
