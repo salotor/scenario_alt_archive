@@ -14361,7 +14361,7 @@ label alt_day7_sl_beach:
     play ambience ambience_lake_shore_day fadein 3
     play music music_7dl["melancholy_sun"] fadein 3
     if alt_day6_sl_arc == 1:
-        if (counter_sl_cl >= 2):
+        if (counter_sl_cl >= 3):
             "Конкретно с этим пляжем у меня не было связано никаких ассоциаций — я здесь судил матч по просьбе Слави, я здесь подслушал их разговор с Леной."
             "Честно сказать, сейчас я сильно сомневаюсь — случайно ли я его подслушал."
         else:
