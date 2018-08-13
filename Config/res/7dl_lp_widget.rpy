@@ -79,10 +79,10 @@ python early:
                     
                 #Тестовый вариант Слави
                 ui.button(clicked=None, xpos=0.79, xanchor=1.0, ypos=2, xpadding=6, xminimum=120)
-                if (lp_sl < 13) and (counter_sl_cl < 5) and (counter_sl_7dl < 5):
+                if (lp_sl < 13) and (counter_sl_cl < 7) and (counter_sl_7dl < 5):
                     ui.text("%s: %d" % ("Славя", lp_sl), style="button_text", size=13)
                 else:
-                    if counter_sl_cl == 5:
+                    if counter_sl_cl == 7:
                         if ((lp_sl >= 20) or (alt_sp >= 6)) or ((lp_sl >=20) and (alt_day6_sl_arc == 1)):
                             ui.text("%s: %d" % ("Славя-КЛ", lp_sl), style="button_text", size=15, color="#ffaa00")
                         else:
