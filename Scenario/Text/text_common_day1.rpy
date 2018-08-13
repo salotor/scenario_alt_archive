@@ -3877,6 +3877,7 @@ label alt_day1_sleep:
                 window hide
                 $ d3 = False
                 $ plthr = u"Дрищ"
+                $ alt_day1_d3_transform = True
                 if alt_day_binder == 1:
                     scene expression Noon("bg ext_house_of_sl_day") at zenterleft
                     show un smile2 pioneer at cleft
@@ -3897,6 +3898,7 @@ label alt_day1_sleep:
                 $ d3 = False
                 $ plthr = u"Локи"
                 $ loki = True
+                $ alt_day1_d3_transform = True
                 "Я вспомнил вдруг, что высшей потребностью любой творческой натуры всегда является самовыражение."
                 window hide
                 if alt_day_binder == 1:
@@ -3914,6 +3916,7 @@ label alt_day1_sleep:
                 $ d3 = False
                 $ plthr = u"Герк"
                 $ herc = True
+                $ alt_day1_d3_transform = True
                 scene bg int_house_of_mt_noitem_day
                 show mt normal pioneer
                 show prologue_dream

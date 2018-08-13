@@ -1764,7 +1764,7 @@ label alt_day6_mt_7dl_dinner:
     with dissolve
     us "Первая остановка! Ничего не вспоминаешь?"
     if (counter_sl_7dl == 0) and (alt_day_binder != 1):
-        if not (herc or loki):
+        if alt_day1_d3_transform or not (herc or loki):
             me "Здесь вы меня облили, две бандитки!"
         else:
             "Я почувствовал, что глупо улыбаюсь:"
