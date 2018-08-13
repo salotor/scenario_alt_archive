@@ -14145,7 +14145,12 @@ label alt_day7_sl_square1:
                 "И мы больше не расстанемся."
                 "Я улыбнулся, а внутри двери что-то отчётливо щёлкнуло, и она распахнулась."
                 "Пропуская меня туда, где уже так давно ждали."
-                jump alt_day7_d3_rejuv
+                $ alt_day7_d3_transit = True
+                stop music fadeout 3
+                stop ambience fadeout 6
+                window hide
+                with fade
+                return
             else:
                 "Немного посверкав и посияв, символы погасли."
                 "Снова обратившись скучными картинками по железу."
@@ -14155,7 +14160,12 @@ label alt_day7_sl_square1:
                 "Почему-то было очевидно, что путь сюда я больше не найду."
                 "Даже если ещё раз введу код на той панели."
         else:
-           jump alt_day7_d3_rejuv
+            $ alt_day7_d3_transit = True
+            stop music fadeout 3
+            stop ambience fadeout 6
+            window hide
+            with fade
+            return
     else:
         "Жаль, что я его не знаю. Даже в голову ничего не приходит."
     window hide

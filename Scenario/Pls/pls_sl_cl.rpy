@@ -184,6 +184,8 @@ label alt_day7_sl_start:
     call alt_day7_sl_breakfast
     pause(1)
     call alt_day7_sl_bl_tt_map
+    if alt_day7_d3_transit:
+        jump alt_day7_d3_rejuv
     pause(1)
     call alt_day7_sl_dinner
     if (lp_sl >= 18) or (alt_sp >= 6):
