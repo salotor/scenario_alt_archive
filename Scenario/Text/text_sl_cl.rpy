@@ -13184,7 +13184,7 @@ label alt_day6_sl_dance:
     "Диджей сменил пластинку, включив медленную композицию, и я стал проталкиваться к девушке с целью потанцевать её."
     if (counter_sl_7dl == 0): 
         dreamgirl "Ну, сам смотри — в первый же день над тобой поизмывались, как над новичком."
-        if (herc or loki) and (alt_day_binder != 1):
+        if ((herc or loki) and (alt_day_binder != 1):
             dreamgirl "Ну, или хотя бы попытались поизмываться."
         dreamgirl "Вечером, опять же, на котлету обули."
     else:
@@ -14145,7 +14145,12 @@ label alt_day7_sl_square1:
                 "И мы больше не расстанемся."
                 "Я улыбнулся, а внутри двери что-то отчётливо щёлкнуло, и она распахнулась."
                 "Пропуская меня туда, где уже так давно ждали."
-                jump alt_day7_d3_rejuv
+                $ alt_day7_d3_transit = True
+                stop music fadeout 3
+                stop ambience fadeout 6
+                window hide
+                with fade
+                return
             else:
                 "Немного посверкав и посияв, символы погасли."
                 "Снова обратившись скучными картинками по железу."
@@ -14155,7 +14160,12 @@ label alt_day7_sl_square1:
                 "Почему-то было очевидно, что путь сюда я больше не найду."
                 "Даже если ещё раз введу код на той панели."
         else:
-           jump alt_day7_d3_rejuv
+            $ alt_day7_d3_transit = True
+            stop music fadeout 3
+            stop ambience fadeout 6
+            window hide
+            with fade
+            return
     else:
         "Жаль, что я его не знаю. Даже в голову ничего не приходит."
     window hide
@@ -14361,7 +14371,7 @@ label alt_day7_sl_beach:
     play ambience ambience_lake_shore_day fadein 3
     play music music_7dl["melancholy_sun"] fadein 3
     if alt_day6_sl_arc == 1:
-        if (counter_sl_cl >= 2):
+        if (counter_sl_cl >= 3):
             "Конкретно с этим пляжем у меня не было связано никаких ассоциаций — я здесь судил матч по просьбе Слави, я здесь подслушал их разговор с Леной."
             "Честно сказать, сейчас я сильно сомневаюсь — случайно ли я его подслушал."
         else:
