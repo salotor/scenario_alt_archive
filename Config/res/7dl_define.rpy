@@ -418,7 +418,6 @@ init:
     image bg ext_volley_court_7dl = get_image_7dl("bg/ext_volley_court_7dl.png")
     image bg ext_warehouse2_day_7dl = get_image_7dl("bg/ext_warehouse2_day_7dl.jpg")
     image bg ext_warehouse_blurry_7dl = get_image_7dl("bg/ext_warehouse_blurry_7dl.jpg")
-    image bg ext_warehouse_day_7dl = get_image_7dl("bg/ext_warehouse_day_7dl.png")
     image bg ext_warehouse_night_7dl = get_image_7dl("bg/ext_warehouse_night_7dl.png")
     image bg ext_warehouse_rain_day_7dl = get_image_7dl("bg/ext_warehouse_rain_day_7dl.jpg")
     image bg ext_warehouse_sunset_7dl = get_image_7dl("bg/ext_warehouse_sunset_7dl.jpg")
@@ -440,7 +439,7 @@ init:
     image bg int_clubs_dj_night_7dl = get_image_7dl("bg/int_clubs_dj_night_7dl.jpg")
     image bg int_clubs_dj_night_nolight_7dl = get_image_7dl("bg/int_clubs_dj_night_nolight_7dl.jpg")
     image bg int_concert_room_7dl = get_image_7dl("bg/int_concert_room_7dl.jpg")
-    image bg int_d3_hideout_7dl = get_image_7dl("bg/int_d3_hideout_7dl.jpg")
+    image bg int_d3_hideout_7dl = get_image_7dl("bg/int_d3_hideout_7dl.png")
     image bg int_dining_hall_people_rain_7dl = get_image_7dl("bg/int_dinning_hall_people_rain_7dl.jpg")
     image bg int_dining_hall_rain_7dl = get_image_7dl("bg/int_dinning_hall_rain_7dl.jpg")
     image bg int_editorial_day_7dl = get_image_7dl("bg/int_editorial_day_7dl.jpg")
@@ -474,7 +473,7 @@ init:
     
 #Outro
     image bg ext_city_night_7dl = get_image_7dl("bg/outro/ext_city_night_7dl.png")
-    image bg ext_countryside_day_7dl = get_image_7dl("bg/outro/ext_countryside_day_7dl.jpg")
+    image bg ext_countryside_day_7dl = get_image_7dl("bg/outro/ext_countryside_day_7dl.png")
     image bg ext_dining_hall_near_snowy_day_7dl = get_image_7dl("bg/outro/ext_dining_hall_near_snowy_day_7dl.jpg")
     image bg ext_earth_7dl = get_image_7dl("bg/outro/ext_earth_7dl.jpg")
     image bg ext_entrance_winter_7dl = get_image_7dl("bg/outro/ext_entrance_winter_7dl.jpg")
