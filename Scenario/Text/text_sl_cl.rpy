@@ -13184,7 +13184,7 @@ label alt_day6_sl_dance:
     "Диджей сменил пластинку, включив медленную композицию, и я стал проталкиваться к девушке с целью потанцевать её."
     if (counter_sl_7dl == 0): 
         dreamgirl "Ну, сам смотри — в первый же день над тобой поизмывались, как над новичком."
-        if ((herc or loki) and  alt_day1_d3_transform) and (alt_day_binder != 1):
+        if ((herc or loki) and not alt_day1_d3_transform) and (alt_day_binder != 1):
             dreamgirl "Ну, или хотя бы попытались поизмываться."
         dreamgirl "Вечером, опять же, на котлету обули."
     else:
