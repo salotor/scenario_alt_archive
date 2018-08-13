@@ -418,6 +418,7 @@ init:
     image bg ext_volley_court_7dl = get_image_7dl("bg/ext_volley_court_7dl.png")
     image bg ext_warehouse2_day_7dl = get_image_7dl("bg/ext_warehouse2_day_7dl.jpg")
     image bg ext_warehouse_blurry_7dl = get_image_7dl("bg/ext_warehouse_blurry_7dl.jpg")
+    image bg ext_warehouse_day_7dl = get_image_7dl("bg/ext_warehouse_day_7dl.png") 
     image bg ext_warehouse_night_7dl = get_image_7dl("bg/ext_warehouse_night_7dl.png")
     image bg ext_warehouse_rain_day_7dl = get_image_7dl("bg/ext_warehouse_rain_day_7dl.jpg")
     image bg ext_warehouse_sunset_7dl = get_image_7dl("bg/ext_warehouse_sunset_7dl.jpg")
