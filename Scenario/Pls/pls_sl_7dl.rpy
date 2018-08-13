@@ -70,7 +70,7 @@ label alt_day5_sl_7dl_start:
     call alt_day5_sl_7dl_vars
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
-    $ alt_chapter(4, u"Славя. 7ДЛ. Утро")
+    $ alt_chapter(5, u"Славя. 7ДЛ. Утро")
     pause(1)
     call alt_day5_sl_7dl_begin
     pause(1)

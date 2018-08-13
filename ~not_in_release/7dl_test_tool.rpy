@@ -48,6 +48,10 @@ label scenario__sdl_selector:
     call alt_day5_sl_cl_vars
     call alt_day6_sl_cl_vars
     call alt_day7_sl_cl_vars
+    call alt_day4_sl_7dl_vars
+    call alt_day5_sl_7dl_vars
+    call alt_day6_sl_7dl_vars
+    call alt_day7_sl_7dl_vars
     call alt_day4_mi_dj_vars
     call alt_day5_mi_dj_vars
     call alt_day6_mi_dj_vars
@@ -408,7 +412,28 @@ label sdl_menu:
                                 "Не записываться":
                                     pass
                             stop ambience fadeout 2
-                            jump alt_day4_sl_7dl_start
+                            menu:
+                                "День 4":
+                                    jump alt_day4_sl_7dl_start
+                                "День 5":
+                                    $ alt_day4_sl_7dl_workout = True
+                                    $ alt_day4_sl_7dl_herc_appletree = True
+                                    $ alt_day4_sl_7dl_help1 = True
+                                    $ alt_day4_sl_7dl_phone = True
+                                    $ alt_day4_sl_7dl_herc_rendezvous = True
+                                    jump alt_day5_sl_7dl_start
+                                "День 6":
+                                    $ alt_day5_sl_7dl_workout = True
+                                    $ alt_day5_sl_7dl_defend = True
+                                    $ alt_day5_sl_7dl_herc_sick = True
+                                    $ alt_day5_random_val = 1
+                                    $ alt_day5_sl_7dl_hentai_done = True
+                                    jump alt_day6_sl_7dl_start
+                                "День 7":
+                                    $ alt_day6_sl_7dl_workout = True
+                                    $ alt_day6_sl_7dl_transit = True
+                                    $ alt_day6_sl_7dl_hentai_done = True
+                                    jump alt_day7_dv_7dl_start
                         "Классик":
                             $ counter_sl_cl = 5
                             $ alt_day3_technoquest_st3 = 2

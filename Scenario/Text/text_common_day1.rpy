@@ -1318,50 +1318,27 @@ label alt_day1_mod_tan:
     window hide
     play sound sfx_open_cabinet_2
     play music music_list["revenga"] fadein 3
-    if not (herc or loki) and (counter_sl_7dl != 1):
-        scene cg d2_mirror:
-            pause 0.5 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (5,0) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,0) 
-    else:
-        scene cg d1_me_dahell_7dl:
-            pause 0.5 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (5,0) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (-5,-5) 
-            linear 0.05 pos (0,0) 
-            linear 0.05 pos (5,5) 
-            linear 0.05 pos (0,0) 
+    scene cg d2_mirror:
+        pause 0.5 
+        linear 0.05 pos (-5,-5) 
+        linear 0.05 pos (0,0) 
+        linear 0.05 pos (5,5) 
+        linear 0.05 pos (5,0) 
+        linear 0.05 pos (0,0) 
+        linear 0.05 pos (-5,-5) 
+        linear 0.05 pos (0,0) 
+        linear 0.05 pos (5,5) 
+        linear 0.05 pos (0,5) 
+        linear 0.05 pos (0,0) 
+        linear 0.05 pos (-5,-5) 
+        linear 0.05 pos (0,0) 
+        linear 0.05 pos (5,5) 
+        linear 0.05 pos (0,5) 
+        linear 0.05 pos (0,0) 
+        linear 0.05 pos (-5,-5) 
+        linear 0.05 pos (0,0) 
+        linear 0.05 pos (5,5) 
+        linear 0.05 pos (0,0) 
     with dissolve
     "Я отказывался верить тому, что увидел в зеркале."
     "Из-под чёлки взирал товарищ лет восемнадцати, будто немного уменьшенный относительно меня настоящего."
