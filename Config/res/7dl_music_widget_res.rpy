@@ -200,3 +200,11 @@ init 1:
     $ music_list_7dl["SURF - Take Care"] = default_7dl_path+"Sound/music/surf_7dl.ogg"
     $ music_list_7dl["mattdeguia - daylight"] = default_7dl_path+"Sound/music/too_serious_7dl.ogg"
 
+    $ music_list_7dl["DeadPunk - despair"] = default_7dl_path+"Sound/music/despair_7dl.ogg"
+    $ music_list_7dl["steezy prime - explore"] = default_7dl_path+"Sound/music/explore_7dl.ogg"
+    $ music_list_7dl["ППВК - Последнее лето"] = default_7dl_path+"Sound/music/last_summer_7dl.ogg"
+    $ music_list_7dl["ППВК - Волшебство уходит"] = default_7dl_path+"Sound/music/magic_is_gone_7dl.ogg"
+    $ music_list_7dl["Morning Dew - Matt Quentin"] = default_7dl_path+"Sound/music/Morning_Dew_7dl.ogg"
+    $ music_list_7dl["DeadPunk - PleaseStopIt"] = default_7dl_path+"Sound/music/PleaseStopItMastered_7dl.ogg"
+    $ music_list_7dl["Kazam - raindrops"] = default_7dl_path+"Sound/music/raindrops_7dl.ogg"
+    $ music_list_7dl["DeadPunk - Vibe"] = default_7dl_path+"Sound/music/Vibe_7dl.ogg"
