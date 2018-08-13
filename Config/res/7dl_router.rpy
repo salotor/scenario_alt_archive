@@ -46,7 +46,7 @@ label alt_day3_router_sl:
         window hide
         if counter_sl_7dl == 5:
             jump alt_day4_sl_7dl_start
-        elif counter_sl_cl == 5:
+        elif counter_sl_cl == 7:
             $ lp_us -= 3
             $ routetag = "sl"
             jump alt_day4_sl_start
