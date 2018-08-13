@@ -4638,9 +4638,9 @@ label alt_day5_un_7dl_breakfast_h:
     un "Просто мне нужны материалы для статей и рисунков."
     if alt_day_binder != 1:
         if (counter_sl_7dl == 0):
-            if herc and not alt_day1_d3_transform:
+            if herc:
                 un "Я твой подвиг по переноске Алисы тоже запечатлела."
-            elif loki and not alt_day1_d3_transform:
+            elif loki:
                 un "Я твою встречу Алисы и Ульяны тоже нарисовала."
             elif alt_day1_el_followed:
                 un "Я вашу беготню с Электроником тоже нарисовала."
