@@ -32,7 +32,7 @@ screen alt_incompatible_release:
         button: # начинаем заново
             xalign 0.5
             yalign 0.65
-            action MainMenu(confirm=False)
+            action Jump("start_7dl")
             background None
             text u"Начать игру заново":
                 hover_size 50
@@ -44,7 +44,7 @@ screen alt_incompatible_release:
         button: # сначала удаляем (без предварительного запроса), потом начинаем заново. РАБОТАЕТ НЕ НА ВСЕХ СОХРАНЕНИЯХ. Будем выяснять.
             xalign 0.5
             yalign 0.75
-            action [FileDelete(selected_slot, confirm=False), MainMenu(confirm=False)]
+            action [FileDelete(selected_slot, confirm=False), Jump("start_7dl")]
             background None
             text u"Удалить это сохранение и начать игру заново":
                 hover_size 50
