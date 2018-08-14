@@ -32,7 +32,7 @@ screen alt_incompatible_release:
         button: # начинаем заново
             xalign 0.5
             yalign 0.65
-            action MainMenu(confirm=False)
+            action Jump("start_7dl")
             background None
             text u"Начать игру заново":
                 hover_size 50
@@ -41,24 +41,12 @@ screen alt_incompatible_release:
                 hover_color aicr_colors_hover[persistent.timeofday]
                 font 'fonts/corbel.ttf'
                 size 50
-        button: # сначала удаляем (без предварительного запроса), потом начинаем заново. РАБОТАЕТ НЕ НА ВСЕХ СОХРАНЕНИЯХ. Будем выяснять.
-            xalign 0.5
-            yalign 0.75
-            action [FileDelete(selected_slot, confirm=False), MainMenu(confirm=False)]
-            background None
-            text u"Удалить это сохранение и начать игру заново":
-                hover_size 50
-                color aicr_colors[persistent.timeofday]
-                xcenter 0.5
-                hover_color aicr_colors_hover[persistent.timeofday]
-                font 'fonts/corbel.ttf'
-                size 50
         button: # выходим в меню загрузки, ищем что-то другое
             xalign 0.5
-            yalign 0.85
+            yalign 0.75
             action ShowMenu('load')
             background None
-            text u"Выйти в меню загрузки":
+            text u"Загрузить другое сохранение":
                 hover_size 50
                 color aicr_colors[persistent.timeofday]
                 xcenter 0.5
@@ -69,7 +57,7 @@ screen alt_incompatible_release:
 # Продолжение игры номер сохранения не перепишет; так что окно проверки будет вываливаться каждый раз
         button:  
             xalign 0.5
-            yalign 0.95
+            yalign 0.85
             action Jump("alt_continue_game")
             background None
             text u"Загрузить это сохранение. На свой страх и риск, о возможных последствиях предупрежден.":
@@ -97,8 +85,11 @@ label after_load:
             $ save_names_known()
 
         # Проверяем, совпадают ли версии сохранения и мода и есть ли версия сохранения в списке совместимых
-        if alt_release_no != alt_save_release_no: # и если сохранение несовместимо
-
+        if alt_save_release_no not in alt_compatible_release_no: # и если сохранение несовместимо
+            python: # генерируем строку с номерами версий
+                alt_aicr_string = (u"ЗАГРУЖАЕМАЯ ВЕРСИЯ СОХРАНЕНИЯ (%s) НЕСОВМЕСТИМА С ЭТОЙ ВЕРСИЕЙ МОДА (%s)") % (alt_save_release_no, alt_release_no)
+            call screen alt_incompatible_release # и показываем экран предупреждения с выбором вариантов
+        elif (alt_save_release_no == "0.34.a") and (counter_sl_cl > 1) and (routetag == "prologue"):
             python: # генерируем строку с номерами версий
                 alt_aicr_string = (u"ЗАГРУЖАЕМАЯ ВЕРСИЯ СОХРАНЕНИЯ (%s) НЕСОВМЕСТИМА С ЭТОЙ ВЕРСИЕЙ МОДА (%s)") % (alt_save_release_no, alt_release_no)
             call screen alt_incompatible_release # и показываем экран предупреждения с выбором вариантов
