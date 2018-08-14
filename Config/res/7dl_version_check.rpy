@@ -41,24 +41,12 @@ screen alt_incompatible_release:
                 hover_color aicr_colors_hover[persistent.timeofday]
                 font 'fonts/corbel.ttf'
                 size 50
-        button: # сначала удаляем (без предварительного запроса), потом начинаем заново. РАБОТАЕТ НЕ НА ВСЕХ СОХРАНЕНИЯХ. Будем выяснять.
-            xalign 0.5
-            yalign 0.75
-            action [FileDelete(selected_slot, confirm=False), Jump("start_7dl")]
-            background None
-            text u"Удалить это сохранение и начать игру заново":
-                hover_size 50
-                color aicr_colors[persistent.timeofday]
-                xcenter 0.5
-                hover_color aicr_colors_hover[persistent.timeofday]
-                font 'fonts/corbel.ttf'
-                size 50
         button: # выходим в меню загрузки, ищем что-то другое
             xalign 0.5
-            yalign 0.85
+            yalign 0.75
             action ShowMenu('load')
             background None
-            text u"Выйти в меню загрузки":
+            text u"Загрузить другое сохранение":
                 hover_size 50
                 color aicr_colors[persistent.timeofday]
                 xcenter 0.5
@@ -69,7 +57,7 @@ screen alt_incompatible_release:
 # Продолжение игры номер сохранения не перепишет; так что окно проверки будет вываливаться каждый раз
         button:  
             xalign 0.5
-            yalign 0.95
+            yalign 0.85
             action Jump("alt_continue_game")
             background None
             text u"Загрузить это сохранение. На свой страх и риск, о возможных последствиях предупрежден.":
