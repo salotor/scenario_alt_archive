@@ -10898,7 +10898,7 @@ label alt_day7_un_7dl_epilogue_bad:
     "Теперь там стояла она."
     $ persistent.sprite_time = "day"
     stop ambience fadeout 3
-    play music music_list["meet_me_there"] fadein 5
+    play music music_7dl["meetmethere_tts"] fadein 5
     scene anim prolog_2 
     show un serious dress
     show prologue_dream

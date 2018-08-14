@@ -1267,6 +1267,12 @@ screen sdl_achvlist_dv7dl_Author:
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             action [Hide("sdl_logo_active", transition=Dissolve(0.5)),Stop ("ambience"), Hide("sdl_dv_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_dv_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_dv_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
+        hotspot ((380, 680, 170, 50)): #Удалятор
+            hover_sound sdl_achv_click
+            activate_sound sdl_achv_clear
+            hovered [Show("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5))]
+            action Jump("sdl_achvlist_dv7dl_clear_Author")
 # ------------------------------------------------   
 ######################АЛИСА-КЛАССИК######################################
 label sdl_achvlist_dvclt_Author:
