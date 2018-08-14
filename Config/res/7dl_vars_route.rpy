@@ -91,6 +91,7 @@ label alt_day6_sl_cl_vars:
     return
     
 label alt_day7_sl_cl_vars:
+    $ alt_day7_d3_transit = False
     $ alt_day7_sl_map_progress = 0
     $ alt_day7_sl_code = False
     return
