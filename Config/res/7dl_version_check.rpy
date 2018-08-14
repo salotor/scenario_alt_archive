@@ -97,8 +97,11 @@ label after_load:
             $ save_names_known()
 
         # Проверяем, совпадают ли версии сохранения и мода и есть ли версия сохранения в списке совместимых
-        if alt_release_no != alt_save_release_no: # и если сохранение несовместимо
-
+        if alt_save_release_no not in alt_compatible_release_no: # и если сохранение несовместимо
+            python: # генерируем строку с номерами версий
+                alt_aicr_string = (u"ЗАГРУЖАЕМАЯ ВЕРСИЯ СОХРАНЕНИЯ (%s) НЕСОВМЕСТИМА С ЭТОЙ ВЕРСИЕЙ МОДА (%s)") % (alt_save_release_no, alt_release_no)
+            call screen alt_incompatible_release # и показываем экран предупреждения с выбором вариантов
+        elif (alt_save_release_no == "0.34.a") and (counter_sl_cl > 1) and (routetag == "prologue"):
             python: # генерируем строку с номерами версий
                 alt_aicr_string = (u"ЗАГРУЖАЕМАЯ ВЕРСИЯ СОХРАНЕНИЯ (%s) НЕСОВМЕСТИМА С ЭТОЙ ВЕРСИЕЙ МОДА (%s)") % (alt_save_release_no, alt_release_no)
             call screen alt_incompatible_release # и показываем экран предупреждения с выбором вариантов
