@@ -140,7 +140,7 @@ label alt_day2_cards_tournament:
     stop music fadeout 1
     play sound sfx_close_door_1
     scene bg int_dining_hall_day with fade
-    play music music_list["i_want_to_play"] fadein 1
+    play music music_7dl["bureaucracy"] fadein 1
     play ambience ambience_medium_crowd_indoors_1 fadein 1
     window show
     "А внутри уже всё было готово!"
@@ -656,7 +656,7 @@ label alt_day2_cards_continue_new:
     
 label alt_day2_tournament_prep_new:
     scene bg int_dining_hall_sunset
-    play music music_list["my_daily_life"] fadein 5
+    play music music_7dl["explore"] fadein 5
     show mt normal pioneer
     with dissolve
     mt "Давайте-ка мы немного разнообразим игру!"
@@ -929,7 +929,7 @@ label alt_day2_participate_fail_end_new:
 # ............................................ ДИАЛОГИ
     if alt_my_rival_1_tour.take == 'un':
         $ lp_un = lp_un + 1
-        play music music_list["you_lost_me"]
+        play music music_7dl["sneakupon"]
         if alt_day2_dv_bet_approve:
             show un cry_smile pioneer at center
             un "Ты поддался… Ты чёртов жулик, ты поддался…"
@@ -1679,7 +1679,7 @@ label alt_day2_semifinal_new:
         "Напротив меня уселась Ульянка."
         show us grin pioneer with dspr
         window show
-        play music music_list["i_want_to_play"] fadein 1
+        play music music_7dl["bureaucracy"] fadein 1
         us "Будешь поддаваться, будешь? "
         "С улыбкой до ушей она уставилась на меня."
         us "Я хочу всех победить!"
@@ -2488,7 +2488,7 @@ label alt_day2_final_fail_end_new:
         stop music fadeout 3
 
     elif alt_my_rival_final.take == 'dv':
-        play music music_list["you_lost_me"]
+        play music music_7dl["sneakupon"]
         $ lp_dv = lp_dv/2
         if loki:
             "Проиграть было забавно."

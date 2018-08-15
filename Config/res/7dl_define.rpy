@@ -1017,6 +1017,7 @@ init:
     $ music_7dl["fsl_tn"] = get_music_7dl("fsl_tn_7dl.ogg")
     $ music_7dl["fyrsta"] = get_music_7dl("fyrsta_7dl.ogg")
     
+    $ music_7dl["game_of_shadows"] = get_music_7dl("game_of_shadows.ogg")
     $ music_7dl["genki"] = get_music_7dl("genki_7dl.ogg")
     $ music_7dl["guitar_under_the_window"] = get_music_7dl("guitar_under_the_window_7dl.ogg")
     $ music_7dl["groovie"] = get_music_7dl("groovie_7dl.ogg")
@@ -1052,6 +1053,7 @@ init:
     $ music_7dl["lost_without_you"] = get_music_7dl("lost_without_you_7dl.ogg")
     $ music_7dl["longing"] = get_music_7dl("longing_7dl.ogg")
     $ music_7dl["ltyh"] = get_music_7dl("ltyh_7dl.ogg")
+    $ music_7dl["lth"] = get_music_7dl("lth_7dl.ogg")
     $ music_7dl["lunar_anguish"] = get_music_7dl("lunar_anguish_7dl.ogg")
     $ music_7dl["lyrica_sg"] = get_music_7dl("lyrica_sg_7dl.ogg")
     $ music_7dl["lynn"] = get_music_7dl("lynn_7dl.ogg")
@@ -1154,6 +1156,7 @@ init:
     $ music_7dl["vale"] = get_music_7dl("vale_7dl.ogg")
     $ music_7dl["vampire"] = get_music_7dl("vampire_7dl.ogg")
     $ music_7dl["vibe"] = get_music_7dl("Vibe_7dl.ogg")
+    $ music_7dl["viola"] = get_music_7dl("viola_7dl.ogg")
     
     $ music_7dl["walkingaway"] = get_music_7dl("walkingaway_7dl.ogg")
     $ music_7dl["what_am_i_doing_here"] = get_music_7dl("what_am_i_doing_here_7dl.ogg")
@@ -1170,6 +1173,7 @@ init:
     $ music_7dl["youareours"] = get_music_7dl("youareours_7dl.ogg")
     $ music_7dl["youre_not_real"] = get_music_7dl("youre_not_real_7dl.ogg")
     $ music_7dl["your_life"] = get_music_7dl("your_life_7dl.ogg")
+    $ music_7dl["yume_akari"] = get_music_7dl("yume_akari_7dl.ogg")
     
 # sfx
     $ sfx_7dl = {}

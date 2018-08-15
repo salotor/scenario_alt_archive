@@ -33,7 +33,7 @@
         $ set_zone_alt2('beach_alt2', 'alt_day2_eventEv_beach')
         if lp_dv >= 5:
             $ set_chibi_alt2('beach_alt2', 'dv')
-    play music music_list["smooth_machine"] fadein 2
+    play music music_7dl["surf"] fadein 2
     jump alt_day2_mapEv
 
 label alt_day2_mapEv:
