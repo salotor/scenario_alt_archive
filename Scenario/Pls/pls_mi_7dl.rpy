@@ -115,6 +115,7 @@ label alt_day6_mi_7dl_start:
         call alt_day6_mi_7dl_miku_farewell_finale
         pause(1)
         if alt_day7_mi_7dl_trait == 3:
+            call alt_day7_mi_7dl_thank_you
             return
         call alt_day6_mi_7dl_miku_farewell_soul
     elif alt_hpt < alt_spt:
