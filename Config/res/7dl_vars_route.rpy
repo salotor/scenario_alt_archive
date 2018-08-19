@@ -191,6 +191,8 @@ label alt_day4_mi_cl_vars:
     $ alt_day4_mi_photo_slavya = False
     $ alt_day4_mi_photo = False
     $ alt_day4_mi_rival_won = False
+    $ alt_day4_mi_dance = False
+    $ alt_day4_mi_comfort = False
     return
     
 label alt_day4_dv_7dl_vars:

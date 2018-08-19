@@ -316,7 +316,6 @@ label sdl_menu:
                                                 "Плохая концовка":
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_7dl_bad
-                                            
                 "Мику":
                     $ lp_mi += 14
                     $ routetag = "mi7dl"
@@ -366,28 +365,22 @@ label sdl_menu:
                                     jump alt_day6_mi_7dl_miku_farewell_soul
                             
                         "Классик":
-                            "Рут находится в разработке."
-                            $ renpy.pause(1)
                             stop ambience fadeout 2
-                            jump sdl_menu
+                            jump alt_day4_mi_cl_start
                 "Алиса":
                     $ routetag = "dv7dl"
                     $ lp_dv = 14
                     menu:
                         "DJ":
-                            "Рут находится в разработке."
-                            $ renpy.pause(1)
                             stop ambience fadeout 2
-                            jump sdl_menu
+                            jump alt_day4_dv_dj_start
                         "7дл":
                             $ alt_day3_event3 = 33
                             stop ambience fadeout 2
                             jump alt_day4_dv_7dl_start
                         "Классик":
-                            "Рут находится в разработке."
-                            $ renpy.pause(1)
                             stop ambience fadeout 2
-                            jump sdl_menu
+                            jump alt_day4_dv_cl_start
                 "Славя":
                     $ lp_sl += 13
                     menu:
@@ -451,6 +444,9 @@ label sdl_menu:
                             $ routetag = "sl"
                             stop ambience fadeout 2
                             jump alt_day4_sl_start
+                        "Ведьма":
+                            stop ambience fadeout 2
+                            jump alt_day5_sl_wh_start
                 "Лена":
                     $ lp_un += 14
                     $ routetag = "un7dl"
@@ -494,12 +490,9 @@ label sdl_menu:
                                     $ alt_day3_un_med_help = 1
                             stop ambience fadeout 2
                             jump alt_day4_un_7dl_start
-
                         "Классик":
-                            "Рут находится в разработке."
-                            $ renpy.pause(1)
                             stop ambience fadeout 2
-                            jump sdl_menu
+                            jump alt_day4_un_cl_start
                     
                 "Ольга":
                     $ mt_pt += 8
