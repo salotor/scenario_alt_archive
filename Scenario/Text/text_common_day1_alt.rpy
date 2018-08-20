@@ -33,7 +33,7 @@
     scene bg int_aidpost_day
     with dissolve
     play ambience ambience_medstation_inside_day fadein 3
-    play music music_list["so_good_to_be_careless"] fadein 5
+    play music music_7dl["what_am_i_doing_here"] fadein 5
     "Кажется, я слишком резко вскочил — от столкновения с чем-то из глаз посыпались искры."
     mi "Ай!"
     "Это было действительно больно."
@@ -146,7 +146,7 @@
     show cs normal at cleft with dspr
     "В комнате появилось новое действующее лицо."
 
-    play music music_list["eternal_longing"] fadein 5
+    play music music_7dl["viola"] fadein 5
     cs "Виолетта Церновна Коллайдер."
     show cs grin with dspr
     $ renpy.pause(0.25)
@@ -411,7 +411,7 @@ label alt_day1_alt_A:
     "Указала она на жестяной тазик с ручками."
     "А я подчинился. {w}Что мне ещё оставалось?"
     dv "Теперь… Теперь… {w}Набери в неё воды."
-    play music music_list["eat_some_trouble"] fadein 2
+    play music music_7dl["genki"] fadein 2
     me "Послушай!"
     "Не выдержал я."
     me "Ты что, сама не можешь? {w}Почему я тут как раб твои приказания выполняю?"
@@ -496,7 +496,7 @@ label alt_day1_alt_A:
         extend "да планшета"
     extend " и в руках-то не держал."
     "Так что распределяем нагрузку — выпрямляем спину, расправляем плечи, ноги ставим на ширине плеч."
-    play music music_list["you_lost_me"] fadein 3
+    play music music_7dl["sneakupon"] fadein 3
     "И стоим."
     "Стоим."
     "У меня не было возможности проверить время и шум волн действовал расслабляюще, поэтому время тянулось надоедливо медленно."
@@ -808,7 +808,7 @@ label alt_day1_alt_A:
     return
     
 label alt_day1_alt_S:
-    play music music_list["take_me_beautifully"] fadein 1
+    play music music_7dl["slavyas_fantazm"]fadein 1
     scene bg ext_boathouse_day at zenterleft
     show sl normal pioneer at cleft
     with dissolve
@@ -1042,7 +1042,7 @@ label alt_day1_alt_S:
     me "Ау? {w}Ты где?"
     "Кажется, я сам не заметил, как заснул, а она пропала."
     sl "Я здесь."
-    play music music_list["my_daily_life"] fadein 3
+    play music music_7dl["explore"] fadein 3
     show sl scared pioneer close with dissolve
     "Рядом с кроватью, на которой я лежал, появилась девушка, которая снабдила меня формой."
     "Выглядела она не на шутку напуганной."
@@ -1700,7 +1700,7 @@ label alt_day1_alt_O:
     play sound sfx_open_door_clubs_2
     scene bg int_house_of_mt_day with dissolve
     play ambience ambience_int_cabin_day fadein 3
-    play music music_list["smooth_machine"] fadein 5
+    play music music_7dl["surf"] fadein 5
     "Внутри «чердак» оказался достаточно уютным и милым."
     "Места, конечно, было не очень много, но с другой стороны, и не предполагалось, что отдыхающие будут проводить много времени под крышей."
     "Проснулся, оделся, умылся, собрался и поскакал."
@@ -1889,7 +1889,7 @@ label alt_day1_alt_O:
 
 label alt_day1_alt_supper:
     window hide
-    play music music_list["my_daily_life"] fadein 1
+    play music music_7dl["explore"] fadein 1
     scene bg ext_dining_hall_away_sunset with dissolve
     "Столовая оказалась… Ну, столовой!"
     "Видел одну — видел все: приземистое одноэтажное здание с крыльцом и двойной дверью, обеспечивающей достойную пропускную способность."
@@ -1949,7 +1949,7 @@ label alt_day1_alt_supper:
         linear 0.3 zoom 1.1 xalign 0.5 yalign 0.45
     th "Никого?"
     "Хм…"
-    play music music_list["i_want_to_play"] fadein 5
+    play music music_7dl["bureaucracy"] fadein 5
     show us laugh sport with moveinbottom
     if d3:
         us "Новичок-новичок, косоногий казачок."
@@ -2156,7 +2156,7 @@ label alt_day1_alt_U:
     scene bg ext_dining_hall_near_sunset at zenterleft
     show us smile sport at cleft 
     with dissolve
-    play music music_list["i_want_to_play"] fadein 5
+    play music music_7dl["bureaucracy"] fadein 5
     us "Хы!"
     me "Опять ты. Отстань от меня уже!"
     if alt_day1_us_shotted:
@@ -2450,7 +2450,7 @@ label alt_day1_alt_U_reject:
     "В любом случае, я не собираюсь позволять мелкой втягивать меня в разные сомнительные мероприятия."
     $ karma += 20
     $ lp_us -= 1
-    play music music_list["my_daily_life"]
+    play music music_7dl["explore"]
     window hide
     scene bg ext_square_sunset
 
@@ -2809,7 +2809,7 @@ label alt_day1_alt_ev_A_S:
     "Надо срочно последовать совету Слави и добраться до домика вожатой."
     th "Пока на меня не напали и не схарчили местные ночные обитатели."
     if alt_day1_dv_feed == True:
-        play music music_list["orchid"]
+        play music music_7dl["PleaseStopItMastered"]
         play sound sfx_hiding_in_bush
         "Я проверил дверь в столовую ещё раз, и тут в кустах за спиной что-то зашуршало, под чьим-то весом ощутимо хрустнула ветка."
         "Мне стало {b}очень{/b} не по себе."    
