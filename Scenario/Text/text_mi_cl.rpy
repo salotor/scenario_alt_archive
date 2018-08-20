@@ -2,7 +2,7 @@ label alt_day4_mi_start:
     scene expression Dawn("bg int_aidpost_day")
     with dissolve
     play ambience ambience_medstation_inside_day fadein 3
-    play music music_list["my_daily_life"] fadein 6
+    play music music_7dl["explore"] fadein 6
     "Я открыл глаза в каком-то незнакомом помещении. Над головой были не привычные уже струганные доски моего дорогого домика, а ровный белёный потолок."
     "И пахло вокруг…{w}специфически."
     "Как может пахнуть только в больнице."
@@ -226,7 +226,7 @@ label alt_day4_mi_start:
         "Я остался один."
     "Ненадолго - часы елё-еле перевалили за час, я еле-еле успел заставить себе переодеться."
     "И ко мне заглянула Виола."
-    play music music_list["eternal_longing"] fadein 5
+    play music music_7dl["viola"] fadein 5
     show cs normal at center with dissolve
     cs "Привет… Пионер."
     me "Здравствуйте, Виолетта Церновна."
@@ -413,7 +413,7 @@ label alt_day4_mi_duty:
     play sound sfx_open_door_clubs
 
     me "Войдите."
-    play music music_list["my_daily_life"] fadein 5
+    play music music_7dl["explore"] fadein 5
     th "Ох, будем надеяться, это не что-нибудь серьёзное."
     play sound sfx_open_door_clubs
     
@@ -570,7 +570,7 @@ label alt_day4_mi_duty:
     scene bg int_aidpost_day
     with dissolve
     play ambience ambience_medstation_inside_day fadein 3
-    play music music_list["my_daily_life"]
+    play music music_7dl["explore"]
     play sound sfx_open_door_clubs
     scene bg int_aidpost_day
     
@@ -660,7 +660,7 @@ label alt_day4_mi_duty:
     "Сейчас я отчётливо как никогда понял — {w}быть врачом — не моё {w} и сказал:"
     me "Войдите!"
     play sound sfx_open_door_clubs
-    play music music_list["eat_some_trouble"] fadein 3
+    play music music_7dl["genki"] fadein 3
     
     show us normal pioneer at center 
     with dissolve
@@ -767,7 +767,7 @@ label alt_day4_mi_duty:
     "И я почти всерьёз подумывал обидеться на неё за это."
     "Но по здравому размышлению от этой идеи отказался - вполне возможно, что к ней всё же нагрянули предки."
     play sound sfx_open_door_kick
-    play music music_list["that_s_our_madhouse"] fadein 3
+    play music music_7dl["sheiscool"] fadein 3
     show dv normal pioneer at center 
     with dissolve
     "Поэтому ворвавшаяся на пост Алиса стала, пусть и неожиданным, но приятным разнообразием."
@@ -943,7 +943,7 @@ label alt_day4_mi_duty:
    
 label alt_day4_mi_visit_sick:
     scene bg ext_square_day with flash
-    play music music_list["so_good_to_be_careless"] fadein 5
+    play music music_7dl["what_am_i_doing_here"] fadein 5
     "Согласие на то, чтобы сидеть рядом с будущим диджеем, далось легко."
     "Я просто представил, какую уйму времени мы сможем проводить вместе, не отвлекаясь на глупости вроде соблюдения норм морали или чего-то в этом роде."
     "Поэтому, когда над головой прокашлялись, и знакомый серебряный голосок поприветствовал лагерь, я понял, где и чем буду заниматься ближайшие до отъезда дни."
@@ -1539,7 +1539,7 @@ label alt_day4_mi_date_sick:
     with dissolve
     $ night_time()
     play ambience ambience_forest_night fadein 3
-    play music music_list["door_to_nightmare"] fadein 3
+    play music music_7dl["sammy"] fadein 3
 
     show mi sad pioneer at center with dspr
     mi "Ни зачем."
@@ -2684,7 +2684,7 @@ label alt_day4_mi_med_EV:
     th "Да-а?"
     "Потерянно подумал я, отступая на шаг."
     "Но далеко не ушёл."
-    play music music_list["eternal_longing"] fadein 5
+    play music music_7dl["viola"] fadein 5
     show cs shy close:
         xalign 0.5 yalign 0.5 zoom 1.0
         linear 2.0 zoom 1.15 xalign 0.5 yalign 0.65
@@ -2776,7 +2776,7 @@ label alt_day4_mi2sl_mi:
     with dissolve
     play ambience ambience_dining_hall_full fadein 3
 
-    play music music_list["i_want_to_play"] fadein 5
+    play music music_7dl["bureaucracy"] fadein 5
     "Славя подошла к раздаче и минуты три что-то там негромко выговаривала."
     "Как результат - меня снабдили большой тарелкой прозрачного золотого бульона с плавающей на поверхности морковкой, зеленью и кружочками жира и миской с гренками."
     th "Бульон с сухарями - пища на все времена!"
@@ -2968,7 +2968,7 @@ label alt_day4_mi2sl_mi:
     scene bg int_clubs_dj_night_nolight_7dl with dissolve
     play ambience ambience_clubs_inside_day fadein 3
 
-    play music music_list["so_good_to_be_careless"] fadein 5
+    play music music_7dl["what_am_i_doing_here"] fadein 5
     th "Не будет никакого «позже». Тебе просто страшно разговаривать об этом с мальчиком."
     "Думал я, сверля взглядом её шею, выглядевшую удивительно беззащитно на контрасте с мощными косами, ниспадающими по плечам."
     "Дверь оказалась незапертой. Как дверь во внутреннее помещение - если я правильно помнил, именно сюда планировали поселить радиста."
@@ -3178,7 +3178,7 @@ label alt_day4_mi2sl_mi:
     show mi laugh pioneer at center with dissolve
     mi "Глупый. Какая же ты пара."
     mi "Ты часть меня."
-    play music music_list["you_won_t_let_me_down"] fadein 3
+    play music music_7dl["lth"] fadein 3
     "Из динамиков полилась медленная романтическая мелодия, и Мику между делом пригласила:"
     mi "Потанцуем?"
     menu:
@@ -3238,7 +3238,7 @@ label alt_day4_mi_supper_sick:
     with dissolve
     play ambience ambience_dining_hall_full fadein 3
 
-    play music music_list["no_tresspassing"] fadein 3
+    play music music_7dl["areyouabully"] fadein 3
     "На ужине меня не ждали. И даже кормить не хотели."
     voice "К вожатой своей обращайся, тебя сегодня нулевым столом кормят!"
     "Невежливо обронила повариха и переключилась на стоящую за мной Лену, которая, похоже, вовсе не обратила внимания на инцидент."
@@ -3259,7 +3259,7 @@ label alt_day4_mi_supper_sick:
     return
 
 label alt_day4_mi_date:
-    play music music_list["trapped_in_dreams"] fadein 3
+    play music music_7dl["nap_one"] fadein 3
     scene bg ext_square_night with flash
     show mi normal pioneer at center with dissolve
     "Ты знаешь, я в клуб не хочу… Давай здесь посидим?"

@@ -55,7 +55,7 @@
     window hide
     scene bg ext_houses_sunset with blinds_r
     play ambience ambience_camp_center_evening fadein 3
-    play music music_list["my_daily_life"] fadein 5
+    play music music_7dl["explore"] fadein 5
     "Со стонами и старческим кряхтеньем я отскрёб себя от матраца и, пошатываясь, выбрался на крыльцо."
     me "Начинается новый день, пионеры туда-сюда…"
     "Лагерь понемногу просыпался после вчерашнего."
@@ -237,7 +237,7 @@
     window hide
     scene bg ext_house_of_mt_sunset
     with dissolve
-    play music music_list["my_daily_life"] fadein 5
+    play music music_7dl["explore"] fadein 5
     "Снова эти неестественно яркие, насыщенные цвета, снова эта невозможно чёткая и глубокая картинка."
     "Я будто постоянно немного пьяный, и лишь моя общая вреднючесть не даёт мне погрузиться в ощущение постоянной эйфории."
     "К счастью, оная же вреднючесть не позволила мне подняться на крыльцо домика, к которому меня почти автоматически вывели ноги."
@@ -342,7 +342,7 @@
     play ambience ambience_dining_hall_full fadein 3
     scene bg int_dining_hall_people_sunset
     with dissolve
-    play music music_list["trapped_in_dreams"] fadein 3
+    play music music_7dl["nap_one"] fadein 3
     "Странно было и непонятно — ещё вчера я сам старательно избегал общества нашей добрейшей вожатой."
     "Чтобы не появилось у меня внезапно какое-нибудь партийное поручение."
     "А сегодня она сама…"
@@ -1804,7 +1804,7 @@ label alt_day6_mt_7dl_dinner:
     "И я не удерживаюсь — подмигиваю."
     window hide
     scene bg ext_admins_day_7dl with dissolve
-    play music music_list["silhouette_in_sunset"] fadein 3
+    play music music_7dl["shestheone"] fadein 3
     "Следующая остановка."
     show us laugh2 sport with dspr
     us "Есть успехи?"
@@ -2146,7 +2146,7 @@ label alt_day6_mt_7dl_concert:
     mt "Можно. Но после концерта. {w}Ты помогать Мику сам вызвался? Молодец! Работай!"
     window hide
     scene bg ext_stage_big_clear_day_7dl with dissolve
-    play music music_list["my_daily_life"] fadein 5
+    play music music_7dl["explore"] fadein 5
     "Я и работал."
     "Номера шли за номерами, порой Мику выбиралась на сцену сама, тогда за пультом хозяйничали мы с Ульяной, порой приходилось вытаскивать какой-то тяжёлый реквизит."
     "Рутина, рутина, рутина…"
@@ -3686,7 +3686,7 @@ label alt_day7_mt_7dl_conclude:
     $ day_time()
     scene bg ext_square_day with fdiam
     play ambience ambience_camp_center_day fadein 3
-    play music music_list["smooth_machine"] fadein 5
+    play music music_7dl["surf"] fadein 5
     "Наверное, и не вспомнили бы мы вовсе ни о чём, если бы не позвавший питаться горн, с трудом доставший до сознания."
     "К счастью, ему в лад ответил и мой желудок, поэтому мы, рассмеявшись, всё-таки, решили что всему своё время."
     window hide
