@@ -92,7 +92,7 @@ label alt_day5_sl_7dl_start:
         $ sunset_time()
         $ alt_chapter(5, u"Славя. 7ДЛ. Вечер")
         call alt_day5_sl_7dl_loki_evening
-    elif herc:  #Начало индирект рута mz+el
+    elif herc:
         $ alt_chapter(5, u"Славя. 7ДЛ. День")
         call alt_day5_sl_7dl_herc_day
         pause(1)
@@ -112,7 +112,7 @@ label alt_day5_sl_7dl_start:
     pause(1)
     call alt_day5_sl_7dl_campfire
     pause(1)
-    if (herc or loki) and (lp_sl > 18) and (persistent.sl_7dl_good_loki or persistent.sl_7dl_good_herc or persistent.sl_7dl_good):
+    if herc and (lp_sl > 18) and (persistent.sl_7dl_good_loki or persistent.sl_7dl_good_herc or persistent.sl_7dl_good):
         call alt_day5_sl_7dl_hentai
         $ alt_day5_sl_7dl_hentai_done = True
     pause(1)

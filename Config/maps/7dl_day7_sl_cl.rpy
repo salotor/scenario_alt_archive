@@ -12,7 +12,7 @@
     jump alt_day7_sl_map
 
 label alt_day7_sl_map:
-    play music music_list["smooth_machine"] fadein 2
+    play music music_7dl["surf"] fadein 2
     if alt_day7_sl_map_progress > 4:
         $ set_zone_alt2('square_alt2', 'alt_day7_sl_square')
         if alt_day6_sl_arc != 1:

@@ -292,7 +292,7 @@ label alt_day1_firts_met:
     play ambience ambience_camp_entrance_day fadein 9
     "И, пребольно стукнувшись головой о дверку, открыл глаза."
     show sl_shade with flash
-    play music music_list["take_me_beautifully"] fadein 1
+    play music music_7dl["slavyas_fantazm"]fadein 1
     "Из-за яркого солнца, бьющего прямо в лицо, никак не удавалось разглядеть, кто со мной говорит."
     "Но хотя бы контуры фигуры — явно женской — различить удалось." 
     th "Ну что, снова подтверждаем реноме человека-неудачника?"
@@ -615,7 +615,7 @@ label alt_day1_firts_met:
     return
     
 label alt_day1_arrival:
-    play music music_list["my_daily_life"] fadein 1
+    play music music_7dl["explore"] fadein 1
     play ambience ambience_camp_center_day fadein 0
     scene bg ext_clubs_day with dissolve
     window hide
@@ -658,7 +658,7 @@ label alt_day1_arrival:
     show us grin sport far at right with dissolve
     play sound sfx_bush_leaves
     $ renpy.pause(2)
-    play music music_list["i_want_to_play"] fadein 5
+    play music music_7dl["bureaucracy"] fadein 5
     show us grin sport at right with dissolve
     "Молчание становилось пугающим, и я уже решил было прочистить горло, чтобы хоть как-нибудь прервать тишину, как нам помешали."
     "Соседние кусты затрещали, и на дорогу выскочил кто-то!"
@@ -731,7 +731,7 @@ label alt_day1_arrival:
         "Вздохнув, я отправился вслед за убежавшей девочкой."
     window hide
     scene bg ext_square_day with dissolve
-    play music music_list["my_daily_life"] fadein 3
+    play music music_7dl["explore"] fadein 3
     if (counter_sl_7dl == 1):
         "А в голову сами собой закрадывались странные, невнятные мысли."
         th "Девушка."
@@ -773,7 +773,7 @@ label alt_day1_arrival:
     play sound sfx_punch_medium
     with vpunch
     "ХЛОП!"
-    play music music_list["that_s_our_madhouse"]
+    play music music_7dl["sheiscool"]
     "Я не успел додумать — от сильного хлопка между лопаток я потерял равновесие и растерял остатки мыслей."
     me "Что за…"
     dv "Вот он! Нашла!"
@@ -1048,7 +1048,7 @@ label alt_day1_dock:
     sl "Так тебе не сюда!"
     "Раздался за спиной знакомый уже голос."
     show sl smile swim with dissolve
-    play music music_list["take_me_beautifully"] fadein 1
+    play music music_7dl["slavyas_fantazm"]fadein 1
     "Я обернулся. Передо мной стояла та первая девочка, которую я встретил у ворот."
     sl "Я же тебе сказала от площади на домики ориентироваться, а ты куда пошёл?"
     menu:
@@ -1382,7 +1382,7 @@ label alt_day1_mod_tan:
     show mt normal pioneer far at left
     show sl normal pioneer far at right
     with dissolve
-    play music music_list["eternal_longing"] fadein 5
+    play music music_7dl["viola"] fadein 5
     show cs normal with dspr
     cs "Виолетта Церновна Коллайдер."
     show cs grin
@@ -1447,7 +1447,7 @@ label alt_day1_mod_tan:
 
 label alt_day1_elektron:
     scene bg ext_houses_day with dissolve
-    play music music_list["my_daily_life"] fadein 3
+    play music music_7dl["explore"] fadein 3
     "Что ж, ответы на вопросы можно поискать и на сытый желудок."
     "Как в той самой пословице про то, что русский на голодный желудок ни думать, ни делать не хочет."
     "А на сытый, понятно, не может."
@@ -1524,7 +1524,7 @@ label alt_day1_elektron:
     "Мы обошли здание и приблизились к распахнутой настежь двери."
     "Через неё можно было разглядеть полутёмное помещение с трёхэтажными деревянными полками, на каждой из них лежали свёрнутые рулетом матрасы; в качестве начинки выступала подушка, обёрнутая в тонкое шерстяное одеяло."
     sl "Ой, ребята, подождите. Сейчас я выйду."
-    play music music_list["take_me_beautifully"] fadein 1
+    play music music_7dl["slavyas_fantazm"]fadein 1
     window hide
     scene bg int_warehouse_day_7dl
     show sl shy sport at center 
@@ -1571,7 +1571,7 @@ label alt_day1_meeting:
     scene bg ext_square_day
     show el normal pioneer at left
     with dissolve
-    play music music_list["my_daily_life"] fadein 3
+    play music music_7dl["explore"] fadein 3
     play ambience ambience_camp_center_day fadein 3
     el "Начнём экскурсию с площади. Там все наши достопримечательности, Генда и…"
     me "И…"
@@ -1644,7 +1644,7 @@ label alt_day1_meeting:
     stop ambience fadeout 0
     extend " ДваЧе…"
     pause(3)
-    play music music_list["awakening_power"] fadein 2
+    play music music_7dl["catch_the_hedge"] fadein 2
     show dv angry pioneer2 far at left behind el with dspr
     dv "Чё ты там вякнул?"
     show el scared pioneer with dspr
@@ -2022,7 +2022,7 @@ label alt_day1_dining_room:
     "Переведя взгляд на тарелку, я отпрыгнул назад, запуская стул в стенку."
     me "Мать честная, оно что, живое?!!"
     window hide
-    play music music_list["awakening_power"] fadein 2
+    play music music_7dl["catch_the_hedge"] fadein 2
     scene cg d1_food_skolop:
         zoom 1.0 xalign 0.5 yalign 0.5
         linear 1.0 xalign 0.6 yalign 0.8 zoom 2.0
@@ -2049,7 +2049,7 @@ label alt_day1_dining_room:
     stop music fadeout 2
     "И, судя по долетевшему от двери довольному хихиканью, достиг ушей адресата."
     show us laugh sport with dspr
-    play music music_list["eat_some_trouble"]
+    play music music_7dl["genki"]
     "Вот только увидев выражение моего лица, она расхохоталась уже в полный голос!"
     us "Ах-ха-ха-ха-ха-хаа!"
     hide us with easeoutright
@@ -2835,7 +2835,7 @@ label alt_day1_chase:
                     
 label alt_day1_headshot:
     scene bg ext_path_day with fade
-    play music music_list["take_me_beautifully"] fadein 1
+    play music music_7dl["slavyas_fantazm"]fadein 1
     "Пробормотав отходную молитву по безвременно почившему ужину, я направился куда глаза глядят, и уже очень скоро уткнулся в знакомые ворота с пятиконечной звездой."
     "Как это странно, когда подъездной пятачок у лагеря совмещён с автобусной остановкой."
     window hide
@@ -3302,7 +3302,7 @@ label alt_day1_lena:
     window hide
     scene cg d1_un_book_7dl with dissolve
     if alt_day_binder != 1:
-        play music music_list["lets_be_friends"] fadein 5
+        play music music_7dl["take_my_hand"]fadein 5
     else:
         play music music_7dl["take_my_hand"] fadein 4
     th "Лена."
