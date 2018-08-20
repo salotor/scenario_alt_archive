@@ -2750,7 +2750,7 @@ label alt_day4_neu_lunch:
             show ba normal uniform at cleft behind mt
             with moveinleft
             show us smile sport at fright
-            show dv normal sport at fright
+            show dv normal sport at right
             with moveinright
             "Кроме того, вожатая успешно поймала куда-то бредущего с видом зомби физрука и поставила к сетке."
             "Трое на трое."
