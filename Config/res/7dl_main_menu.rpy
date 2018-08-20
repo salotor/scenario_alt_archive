@@ -114,21 +114,21 @@ screen help_7dl:
         text_style "settings_link"
         yalign 0.6
         xalign 0.23
-        action [Hide("help_7dl", transition=Dissolve(0.2)), OpenURL("https://vk.com/wall-128046483_29533"), Stop('music', fadeout=2), Jump("start_menu_7dl")]
+        action [Hide("help_7dl", transition=Dissolve(0.2)), OpenURL("https://vk.com/wall-128046483_29533"), Stop('music', fadeout=2), Jump("main_menu_7dl")]
     textbutton _("Закрыть"):
         text_size 40
         style "log_button"
         text_style "settings_link"
         yalign 0.6
         xalign 0.5
-        action [Hide("help_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("start_menu_7dl")]
+        action [Hide("help_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("main_menu_7dl")]
     textbutton _("Больше не показывать"):
         text_size 40
         style "log_button"
         text_style "settings_link"
         yalign 0.6
         xalign 0.83
-        action [Hide("help_7dl", transition=Dissolve(0.2)), SetField(persistent,'dont_disturb', True), Stop('music', fadeout=2), Jump("start_menu_7dl")]
+        action [Hide("help_7dl", transition=Dissolve(0.2)), SetField(persistent,'dont_disturb', True), Stop('music', fadeout=2), Jump("main_menu_7dl")]
         
 screen settings_widget_lp_on_7dl():
     add get_image_7dl("gui/menu_elem/settings/settings_wdglp_descr_on.png")
@@ -396,6 +396,21 @@ screen media_7dl():
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             clicked [Hide("media_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("alt_gallery_start")]
         
+label start_menu_7dl:
+    stop music
+    stop ambience
+    stop sound
+    stop sound_loop
+    window hide
+    
+    if not persistent.dont_disturb:
+        if persistent.mi_7dl_true or persistent.mi_7dl_good_human or persistent.mi_7dl_neutral_human or persistent.mi_7dl_bad_human or persistent.mi_7dl_good_star or persistent.mi_7dl_neutral_star or persistent.mi_7dl_bad_star or persistent.mi_7dl_herc_exc or persistent.mi_7dl_loki_exc or persistent.mi_7dl_dr_exc or persistent.mi_dj_true or persistent.mi_dj_good_jap or persistent.mi_dj_good_rf or persistent.mi_dj_bad or persistent.dv_7dl_good_ussr or persistent.dv_7dl_good_ussr_rf or persistent.dv_7dl_reject_rf or persistent.dv_7dl_reject_ussr or persistent.dv_7dl_bad_mt or persistent.dv_7dl_un or persistent.dv_7dl_tulpa or persistent.dv_7dl_bad or persistent.sl_cl_int_bad or persistent.sl_cl_int_ok or persistent.sl_cl_int_good or persistent.sl_cl_good_rf2 or persistent.sl_cl_good_rf or persistent.sl_cl_good_ussr or persistent.sl_cl_reject_same or persistent.sl_cl_reject_late or persistent.sl_cl_cata or persistent.sl_cl_bad or persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf or persistent.un_7dl_true or persistent.un_7dl_true_transit or persistent.un_7dl_bad or persistent.mt_7dl_true or persistent.mt_7dl_good or persistent.mt_7dl_neutral or persistent.mt_7dl_bad or persistent.us_px_rf_good or persistent.us_px_true or persistent.us_7dl_bad or persistent.us_7dl_good or persistent.us_7dl_true or persistent.us_7dl_un or persistent.us_7dl_mi:
+            scene bg ext_city_night_7dl with fade
+            play music music_7dl["seven_summer_days"] fadein 3
+            $ renpy.transition(dissolve)
+            call screen help_7dl
+    jump main_menu_7dl
+    
 label main_menu_7dl:
     stop music
     stop ambience
@@ -403,15 +418,6 @@ label main_menu_7dl:
     stop sound_loop
     window hide
     
-    if not (persistent.dont_disturb or (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761") or (persistent.nonsteam_7dl == True)):
-        if persistent.mi_7dl_true or persistent.mi_7dl_good_human or persistent.mi_7dl_neutral_human or persistent.mi_7dl_bad_human or persistent.mi_7dl_good_star or persistent.mi_7dl_neutral_star or persistent.mi_7dl_bad_star or persistent.mi_7dl_herc_exc or persistent.mi_7dl_loki_exc or persistent.mi_7dl_dr_exc or persistent.mi_dj_true or persistent.mi_dj_good_jap or persistent.mi_dj_good_rf or persistent.mi_dj_bad or persistent.dv_7dl_good_ussr or persistent.dv_7dl_good_ussr_rf or persistent.dv_7dl_reject_rf or persistent.dv_7dl_reject_ussr or persistent.dv_7dl_bad_mt or persistent.dv_7dl_un or persistent.dv_7dl_tulpa or persistent.dv_7dl_bad or persistent.sl_cl_int_bad or persistent.sl_cl_int_ok or persistent.sl_cl_int_good or persistent.sl_cl_good_rf2 or persistent.sl_cl_good_rf or persistent.sl_cl_good_ussr or persistent.sl_cl_reject_same or persistent.sl_cl_reject_late or persistent.sl_cl_cata or persistent.sl_cl_bad or persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf or persistent.un_7dl_true or persistent.un_7dl_true_transit or persistent.un_7dl_bad or persistent.mt_7dl_true or persistent.mt_7dl_good or persistent.mt_7dl_neutral or persistent.mt_7dl_bad or persistent.us_px_rf_good or persistent.us_px_true or persistent.us_7dl_bad or persistent.us_7dl_good or persistent.us_7dl_true or persistent.us_7dl_un or persistent.us_7dl_mi:
-            scene bg ext_city_night_7dl with fade
-            play music music_7dl["seven_summer_days"] fadein 3
-            $ renpy.transition(dissolve)
-            call screen help_7dl
-    jump start_menu_7dl
-    
-label start_menu_7dl:
     call alt_day0_vars
     $ renpy.block_rollback()
     $ chk_music_widget_7dl()
@@ -485,4 +491,4 @@ label widgets_on_off_7dl:
 label start_7dl:
     call alt_day0_vars
     call alt_day0_prologue
-    jump start_menu_7dl
+    jump main_menu_7dl

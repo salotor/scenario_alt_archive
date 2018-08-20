@@ -120,7 +120,7 @@ label scenario__alt_sevendl:
     else:
         $ config.version = "1.2 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
 # ------------------------------------------------
-    jump main_menu_7dl
+    jump start_menu_7dl
 
 init 4: # вызываем все переменные в init (необходимо для работы повторов)
     call alt_day0_vars

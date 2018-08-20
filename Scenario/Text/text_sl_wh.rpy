@@ -1,10 +1,4 @@
-﻿label alt_day5_sl_wh_start:
-    pause(1)
-    call alt_day5_sl_wh_vars
-    pause(1)
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(5, u"Ведьма. Утро.")
+label alt_day5_sl_wh_begin:
     scene cg d5_rainy_idle_7dl with dissolve
     play music ambience_7dl["safe"] fadein 3
     play sound_loop ambience_7dl["rain"]
@@ -68,14 +62,8 @@
     "Я с кряхтеньем поднялся на ноги."
     "И, прикинув направление, зашагал в сторону лагеря."
     "У меня было несколько неприятных вопросов к одной ведьмочке."
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
-    scene cg d5_rainy_idle_7dl with dissolve
-    show spill_red with dspr
-    $ renpy.pause(2, hard=True)
-    show spill_gray with dspr
-    $ renpy.pause(2, hard=True)
-    show alt_credits timeskip_dev at truecenter with dissolve2
-    $ renpy.pause(4, hard=True)
-    with dissolve2
-    window hide
+    with fade
     return
