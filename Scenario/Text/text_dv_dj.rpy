@@ -1,26 +1,17 @@
-﻿label alt_day4_dv_dj_start:
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(4, u"Alice DJ. Утро")
+label alt_day4_dv_dj_begin:
     scene bg int_house_of_mt_sunset
     play music music_7dl["explore"]
     #Спецсценарий для романсящих Алиску - диджея либо собирающихся сделать её таковой.
     #Саб-руты: медпункт - вербовка Алису на четвёртый день, медпункт (Алиса-диджей), базис (Алиса-диджей), базис с вербовкой.
     "Заглушка для Алисы-диджея."
     "Поздравляю, вы выбрали Элис диджей-рут! Рут находится в разработке."
-    show spill_red with dspr
-    $ renpy.pause(2, hard=True)
-    show spill_gray with dspr
-    $ renpy.pause(2, hard=True)
-    show alt_credits timeskip_dev at truecenter with dissolve2
-    $ renpy.pause(4, hard=True)
-    with dissolve2
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
+    with fade
     return
+    
 label alt_day4_dv_7dl2dj_transit:
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(4, u"Alice DJ. День.")
     if alt_day4_dv_7dl_walkman_presented:
         dv "Ты серьёзно? Просто так отдашь?"
         me "А что не так-то?"
@@ -33,4 +24,8 @@ label alt_day4_dv_7dl2dj_transit:
         me "Я могу тебе ещё как-нибудь помочь?"
         dv "Нет, я сейчас в радиорубку, буду пробовать собственные силы на поприще ведущего."
         "Она улыбнулась и убежала."
+    stop music fadeout 3
+    stop ambience fadeout 6
+    window hide
+    with fade
     return

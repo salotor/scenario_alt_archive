@@ -1,7 +1,4 @@
-﻿label alt_day4_dv_start:
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(4, u"Алиска. Утро")
+label alt_day4_dv_begin:
     scene bg int_aidpost_day with dissolve
     play ambience ambience_medstation_inside_day fadein 5
     play music music_7dl["explore"]
@@ -156,22 +153,13 @@
     "Я кивнул."
     dv "Так вот, несмотря на всё моё желание… В общем, этот рут ещё не дописан. Такие вот дела."
     "С этими словами со спутника над Германией в нашу сторону ударил лазерный луч, стирающий память."
-    pause(3)
+    stop music fadeout 3
+    stop ambience fadeout 6
     window hide
-    show spill_red with dspr
-    $ renpy.pause(2, hard=True)
-    show spill_gray with dspr
-    $ renpy.pause(2, hard=True)
-    show alt_credits timeskip_dev at truecenter with dissolve2
-    $ renpy.pause(4, hard=True)
-    with dissolve2
-    window hide
+    with fade
     return
     
-label alt_day5_dv_start:
-    $ persistent.sprite_time = "sunset"
-    $ sunset_time()
-    $ alt_chapter(5, u"Алиска. Утро")
+label alt_day5_dv_begin:
     scene bg int_aidpost_day with dissolve
     play ambience ambience_medstation_inside_day fadein 5
     play music music_7dl["explore"]

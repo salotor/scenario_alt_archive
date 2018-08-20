@@ -2,6 +2,7 @@
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
     $ alt_release_no = "0.35.a"
+    $ alt_compatible_release_no = ["0.34.a", "0.34.b", "0.35.a"]
     $ alt_hotfix_no = "hf0"
     $ plthr = u"none"
 
@@ -119,7 +120,7 @@ label scenario__alt_sevendl:
     else:
         $ config.version = "1.2 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
 # ------------------------------------------------
-    jump main_menu_7dl
+    jump start_menu_7dl
 
 init 4: # вызываем все переменные в init (необходимо для работы повторов)
     call alt_day0_vars
