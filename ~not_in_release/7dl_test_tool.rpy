@@ -414,7 +414,12 @@ label sdl_menu:
                                     $ alt_day4_sl_7dl_help1 = True
                                     $ alt_day4_sl_7dl_phone = True
                                     $ alt_day4_sl_7dl_herc_rendezvous = True
-                                    jump alt_day5_sl_7dl_start
+                                    menu:
+                                        "Начало":
+                                            jump alt_day5_sl_7dl_start
+                                        "Тизер":
+                                            jump alt_day5_sl_7dl_evening
+                                        
                                 "День 6":
                                     $ alt_day5_sl_7dl_workout = True
                                     $ alt_day5_sl_7dl_defend = True

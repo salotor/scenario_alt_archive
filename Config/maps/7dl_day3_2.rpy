@@ -34,13 +34,13 @@ label alt_day3_mapAf:
     stop sound_loop
     stop music
     scene black with fade
-    play music music_list["smooth_machine"] fadein 3
+    play music music_7dl["surf"] fadein 3
     $ show_map_alt1()
     
 label alt_day3_eventAf_clubs:
     scene bg ext_clubs_day with fade
     play ambience ambience_camp_center_day
-    play music music_list["i_want_to_play"] fadein 3
+    play music music_7dl["bureaucracy"] fadein 3
     if been_there_alt1()>1:
         call alt_day3_eventAf_clubs_ladder
         $ disable_current_zone_alt1()

@@ -1,7 +1,7 @@
 label alt_day4_dv_begin:
     scene bg int_aidpost_day with dissolve
     play ambience ambience_medstation_inside_day fadein 5
-    play music music_list["my_daily_life"]
+    play music music_7dl["explore"]
     "Дверь без стука распахнулась, и на пороге появилась Алиса."
     "Я еле успел прикрыться одеялом."
     show dv grin pioneer2 with dissolve
@@ -162,7 +162,7 @@ label alt_day4_dv_begin:
 label alt_day5_dv_begin:
     scene bg int_aidpost_day with dissolve
     play ambience ambience_medstation_inside_day fadein 5
-    play music music_list["my_daily_life"]
+    play music music_7dl["explore"]
     if alt_day4_fz_sh == 3:
         "Я потянулся, улыбаясь солнечным лучам, бьющим мне в лицо."
         th "Вчера денёк был дикий. Просто дикий."
