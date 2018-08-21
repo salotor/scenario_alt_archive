@@ -4891,7 +4891,6 @@ label alt_day2_siesta:
     return
 
 label alt_day2_tournament:
-    label alt_test:
     window hide 
     scene bg ext_dining_hall_near_day with dissolve
     play ambience ambience_camp_center_day fadein 3
