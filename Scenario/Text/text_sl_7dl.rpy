@@ -6881,7 +6881,7 @@ label alt_day5_sl_7dl_breakfast:
     else:
         stop music fadeout 5
         pause(1)
-        play music music_7dl["Morning_Dew"] fadein 3
+        play music music_7dl["morning_dew"] fadein 3
         me "С добрым утром, Виолетта Церновна."
         show cs normal with dissolve
         cs "Виола… пионер. {w}Когда ты называешь меня по имени-отчеству, я чувствую себя старой бабкой."
@@ -8186,7 +8186,7 @@ label alt_day5_sl_7dl_candle:
         window hide
         play sound sfx_open_door_clubs_2
         pause(1)
-        scene expression Desat('bg int_clubs_male_day')
+        scene expression Notch('bg int_clubs_male_day')
         with dissolve
         "А вот внутри уже всё было готово к проведению!"
         "Стол был пуст и даже, кажется, чист, вокруг него расставили табуретки."
@@ -8200,7 +8200,7 @@ label alt_day5_sl_7dl_candle:
         mt "Тема сегодняшней свечи — разговор в темноте."
         "Сообщила вожатая, задёргивая шторы."
         window hide
-        scene expression Notch("bg int_clubs_male_day") with fade
+        scene expression Desat("bg int_clubs_male_day") with fade
         $ night_time()
         $ persistent.sprite_time = "night"
         show mt normal pioneer with dissolve
@@ -8230,6 +8230,7 @@ label alt_day5_sl_7dl_candle:
         show mi smile pioneer with dspr
         mi "Интерееееесно!"
         "Воскликнула Мику, потирая ладошки."
+        hide mi with dissolve
         show mt normal pioneer at right with dissolve
         mt "Мику, цыц! Так, теперь выбираем двух ведущих."
         show us laugh sport at left with dissolve
@@ -8243,8 +8244,9 @@ label alt_day5_sl_7dl_candle:
         us "Вот так всегда!"
         hide us with dissolve
         mt "Значит, ведущими будут… Мику."
-        show mi happy pioneer at right with dissolve
-        mt "Я!"
+        show mt grin pioneer at right with dspr
+        show mi happy pioneer with dissolve
+        mi "Я!"
         "Японка спрыгнула с подоконника и подбежала к вожатой."
         mt "И Алиса."
         hide dv normal pioneer at left with dissolve
@@ -8256,7 +8258,7 @@ label alt_day5_sl_7dl_candle:
         "Дело её."
         mt "А теперь…"
         window hide
-        scene expression Notch("bg int_clubs_male_day") with fade
+        scene expression Desat("bg int_clubs_male_day") with fade
         with dissolve
         $ night_time()
         play ambience ambience_clubs_inside_day fadein 3
@@ -8295,9 +8297,9 @@ label alt_day5_sl_7dl_candle:
         mt "Ну, хорошо. Тогда пусть у нас будет долгая, бесконечная ночь."
         mt "Переход хода!"
         window hide
-        scene bg int_clubs_male_day with fade
+        scene expression Desat('bg int_clubs_male_day') with fade
         with dissolve
-        $ day_time()
+        $ night_time()
         "Огоньки свечей снова поплыли в темноте."
         "Каждый, видимо, подбирал слова, которые мог бы сказать, но никак не находил момента."
         "Каждый находил минутку для того, чтобы пообщаться с тем, с кем давно хотел."
@@ -9000,6 +9002,7 @@ label alt_day5_sl_7dl_herc_day:
     show mt laugh pioneer with dspr
     mt "Разве что после уборки! И, начали…"
     hide mt with dissolve
+    hide us with dissolve
     "Вожатая засучила рукава."
     window hide
     with fade
@@ -9067,7 +9070,7 @@ label alt_day5_sl_7dl_herc_day:
     mt "Ничего, не помрёшь без полдника. Мы отправляемя на поиски!"
     ba "Мне кажется, это нездравая затея, Оляш."
     mt "Борис Александрович, но…"
-    show ba evil uniform at right with dspr
+    show ba evil uniform at left behind mt with dspr
     ba "Дрищ хоть дурак, но вещи правильные говорит: у тебя кроме мелкой ещё целый отряд, за которым надо следить."
     show mt angry pioneer with dspr
     mt "Я отвечаю за неё, а вы…"
@@ -9132,6 +9135,7 @@ label alt_day5_sl_7dl_herc_evening:
     sl "Алиса! {w}Неужели ты совсем не переживаешь?"
     show dv smile pioneer2 with dspr
     dv "За эту-то? Да нисколько. {w}Она нигде не пропадёт."
+    show dv smile pioneer2 at cleft with dspr
     show mt normal pioneer at fleft with dissolve
     mt "Алиса, где Лена?"
     dv "Сейчас подойдёт. Мы точно должны искать мелкую?"
@@ -9139,6 +9143,7 @@ label alt_day5_sl_7dl_herc_evening:
     mt "Твой товарищ пропал!"
     show dv grin pioneer2 with dspr
     dv "Да сидит где-нибудь, над нами в кулак хихикает."
+    show sl sad pioneer at cright with dspr
     show un normal pioneer at fright with dissolve
     un "Звали, Ольга Дмитриевна?"
     mt "Да. Мне нужны все свободные ребята."
@@ -9412,7 +9417,7 @@ label alt_day5_sl_7dl_herc_evening:
     "Славя покачала головой."
     show sh scared pioneer with dspr
     sh "А это… Это…"
-    show mt normal pioneer at right
+    show mt normal pioneer at left
     with dissolve
     mt "А что это вы здесь делаете? А ну, марш на поиски!"
     show sl sad pioneer with dspr
@@ -9480,7 +9485,7 @@ label alt_day5_sl_7dl_herc_evening:
     "Двачевская сжала кулаки и цедила слова через зуб, но и вожатая тоже была крепкий орешек."
     "Ещё чуть-чуть — и кто-то начнёт кого-то бить."
     dv "Да какого чёрта? Я не нанималась вам в ищейки!"
-    show sl surprise pioneer at left
+    show sl surprise pioneer
     sl "Нашли что-то?"
     mt "Двачевская, наказана!"
     dv "Да плевала я."
@@ -9528,10 +9533,10 @@ label alt_day5_sl_7dl_herc_evening:
     play music music_7dl["bureaucracy"] fadein 3
     "… где нас уже ждала Ульяна."
     us "Эй, а где это вы были? Я думала, странно, целый отряд на ужин не пришёл!"
-    show mt rage pioneer at cleft with easeinleft
+    show mt rage pioneer at cleft behind us with easeinleft
     mt "Да я тебе!"
     "Вожатая замахнулась…"
-    show dv rage pioneer2 at cright with easeintright
+    show dv rage pioneer2 at cright behind us with easeinright
     dv "Даже и не…"
     "Рука повисла в воздухе, перехваченная Алисой."
     th "Ой-йо. И всё перед глазами целого лагеря… Что-то сейчас будет."
@@ -9548,7 +9553,7 @@ label alt_day5_sl_7dl_herc_evening:
     show mt normal pioneer with dspr
     mt "Молчи уж, искатель. Что вы за красную тряпку нашли?"
     me "Я думал — галстук."
-    show sl normal pioneer at right with dissolve
+    show sl normal pioneer at fright with dissolve
     sl "А я думала — лоскуток от футболки."
     dv "Ты дальше, дальше рассказывай."
     show us dontlike sport with dspr
@@ -9615,7 +9620,7 @@ label alt_day5_sl_7dl_herc_evening:
     return
     
 label alt_day5_sl_7dl_loki_day:
-    scene bg ext_square_rain_day_7dl
+    scene bg ext_square_day
     with dissolve
     play ambience ambience_camp_center_day fadein 5
     play music music_7dl["magic_is_gone"] fadein 3
@@ -9785,13 +9790,15 @@ label alt_day5_sl_7dl_loki_day:
     dv "Смотрите, кто у нас тут."
     "Протянула Алиса."
     dv "Да это же наша гордость и краса, талант и активистка. {w}Что нас сегодня ждёт? Уборка? Или уборка?"
+    show dv grin pioneer2 at left with dspr
+    show mi surprise pioneer at center with dspr
     show sl upset pioneer at right with dissolve
     sl "Послушай, Алиса, я сам не рада здесь находиться."
     show dv smile pioneer2 with dspr
     dv "Зато я-то как счастлива!"
     "Алиса привстала на носочки и прогнулась в некой пародии на балетное па."
     dv "Что у нас сегодня? Бальные танцы? Русские народные?"
-    show mi surprise pioneer at left with dissolve
+    show mi surprise pioneer with dissolve
     mi "Славя занимается бальными танцами?"
     "Удивилась Мику."
     "Я же скромно сидел и помалкивал."
@@ -9986,7 +9993,7 @@ label alt_day5_sl_7dl_loki_day:
     with moveinleft
     dv "…бы ей самой не… "
     show dv surprise pioneer2
-    show mt grin pioneer
+    show mt grin pioneer at left
     with dspr
     mt "Зайти? Я зашла."
     show dv normal pioneer2 with dspr
@@ -9999,7 +10006,7 @@ label alt_day5_sl_7dl_loki_day:
     dv "Да даже простенькую! И потом, почему три? {w}Мику, я… Кто ещё?"
     show mt smile pioneer with dspr
     mt "Неправильно. Ты, Семён и Славя."
-    show dv soft_smile pioneer2 with dspr
+    show dv soft smile pioneer2 with dspr
     dv "А, точно шутите."
     dv "С Мику мы ещё могли бы…"
     show mt normal pioneer with dspr
@@ -10110,20 +10117,20 @@ label alt_day5_sl_7dl_loki_evening:
     show sl smile pioneer with dspr
     sl "Мне кажется, Семён тебя дразнит."
     show dv surprise pioneer2 with dspr
-    dv "Да? {w]Мне казалось, он был серьёзен."
-    show dv smile pionere2 with dspr
+    dv "Да? {w}Мне казалось, он был серьёзен."
+    show dv smile pioneer2 with dspr
     dv  "В любом случае, я добыла один песенник с неплохими песнями."
     dv "Но вам я их показывать не буду — не уверена в том, что мы таким составом вообще способны что-либо выдать."
     show sl normal pioneer with dspr
     sl "Ты именно за этим села?"
-    show dv grin pioner2 with dspr
+    show dv grin pioneer2 with dspr
     dv "Ага! {w}Предупредить вас: готовьтесь к демонстрации каких-либо талантов."
     dv "В клубе будет прослушивание!{w}Впрочем, Феоктистовой этой не касается."
     me "Почему?"
     dv "Я же сказала! Про-слу-ши-ва-ние! {w}А не фестиваль бездарей."
     show sl grin pioneer with dspr
     sl "Ни разу не слышала про такой. Поделишься опытом?"
-    show dv normal pioneer with dspr
+    show dv normal pioneer2 with dspr
     dv "После полдника жду. Будем смотрить, кто на что способен."
     dv "Про твою дудку, новичок, слышала, это не то."
     dv "Возможно, ты сможешь быть более убедительным с гитарой?{w} Надо посмотреть, в общем."
@@ -10620,6 +10627,7 @@ label alt_day5_sl_7dl_day:
     me "Не доверяете?"
     mt "Ни на грош. Тут либо ты сбежишь, либо вы поубиваете друг друга."
     mt "Вдвоём вас оставлять нельзя, и тем не менее — дела должны быть сделаны."
+    show mt grin pioneer at right with dspr
     show un shy pioneer with dspr
     un "Н-неправда, я…"
     show mt grin pioneer with dspr
@@ -11276,7 +11284,7 @@ label alt_day5_sl_7dl_evening:
     me "И тебе не хворать!"
     us "Чем занимаешься?.. А, ты к Славке пришёл?"
     me "Только её нет почему-то."
-    show us laugh pioneer with dspr
+    show us laugh sport with dspr
     us "А я знаю! {w}Её Виола в тихий час куда-то увела!"
     me "Куда?"
     show us surp1 sport with dspr
@@ -11397,10 +11405,10 @@ label alt_day5_sl_7dl_evening:
     show dv2 normal pioneer2 with dspr
     dv "И что там произошло?"
     me "Да то же самое! Она снова убежала. {w}А мне потом за неё ещё докрашивать пришлось."
-    show dv2 smile pioneer with dspr
+    show dv2 smile pioneer2 with dspr
     dv "То есть, ты не в курсе, почему она заперлась в домике и отказывается выходить, не знаешь почему у неё истерика, и вообще ни в чём не виноват?"
     me "Да я тебе об этом и талдычу битый час уже!"
-    show dv2 normal pioneer with dspr
+    show dv2 normal pioneer2 with dspr
     dv "А я поняла, что это из-за тебя!"
     me "Пошла ты, знаешь куда."
     "Я отодвинул опешившую Алису в сторону и пошёл домой."
@@ -11421,7 +11429,7 @@ label alt_day5_sl_7dl_evening:
     dv "Извиняться я не буду."
     "Сразу предупредила она."
     me "А стоило бы."
-    show dv2 angry pionere2 with dspr
+    show dv2 angry pioneer2 with dspr
     dv "Ты остановишься или нет?"
     me "Ну?"
     dv "Послушай, мы с Леной знаем друг друга с детства, и…"
@@ -11446,7 +11454,7 @@ label alt_day5_sl_7dl_evening:
     me "Тьфу."
     me "Хочешь узнать, кто мне нравится? Изволь."
     me "Только сначала обещай, что отстанешь от меня и подружку свою бесноватую больше не подпустишь."
-    show dv2 normal pioner2 with dspr
+    show dv2 normal pioneer2 with dspr
     dv "Бесноватую?"
     me "Согласна?"
     dv "Сначала имя."
@@ -11494,7 +11502,7 @@ label alt_day5_sl_7dl_evening:
     dv "Извиняться надо за то, чего ты делать не хочешь. {w}А я шла спасать мою подругу."
     me "Тогда вали отсюда. {w}Волосы она покрасила, на тропу войны вышла."
     me "Вот из-за таких, как ты и вырастают мальчики женоненавистниками."
-    show dv2 sad pioneer with dissolve
+    show dv2 sad pioneer2 with dissolve
     dv "Что ж…"
     "Алиса вымученно улыбнулась."
     dv "Совет да любовь. {w}И помни своё обещание."
@@ -11996,6 +12004,7 @@ label alt_day5_sl_7dl_campfire:
         mt "Мы выдадим тебе туристические, они горят лучше. {w}Целый коробок"
         show mt laugh pioneer with dspr
         mt "И дрова сложим как надо. {w}Ты, главное, справься."
+        hide mt with dissolve
         me "Ну, дрова не надо…"
         "Я прекрасно понимал, что окажись здесь Славя — вся нагрузка легла бы на неё."
         "Так что я не имел права ни облажаться, ни злоупотребить чужой помощью."
@@ -12072,7 +12081,7 @@ label alt_day5_sl_7dl_campfire:
     "В голосе девочки явно сквозило сомнение."
     "Но спорить она не решилась — и правильно сделала."
     if herc:
-        show mt normal far at right with dissolve
+        show mt normal pioneer far at right with dissolve
         mt "Славя? На минутку."
         show sl surprise pioneer with dspr
         sl "А как же…"
@@ -12384,7 +12393,8 @@ label alt_day5_sl_7dl_campfire:
         "Идти пришлось через всю поляну, под обстрелом многочисленных взглядов."
         "Но теперь было совсем не как три дня назад, теперь мне удавалось не нервничать и даже почти не обращать внимания."
         "Изменения налицо."
-        show dv2 normal pioneer2 with dissolve
+        show sl serious pioneer at right with dspr
+        show dv2 normal pioneer2 at left with dissolve
         sl "Привет!"
         dv "Привет."
         "Славя обернулась на меня, предлагая мне включиться в разговор."
