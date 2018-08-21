@@ -9612,7 +9612,7 @@ label alt_day5_sl_7dl_herc_evening:
     return
     
 label alt_day5_sl_7dl_loki_day:
-    scene bg ext_square_rain_day_7dl
+    scene bg ext_square_day
     with dissolve
     play ambience ambience_camp_center_day fadein 5
     play music music_7dl["magic_is_gone"] fadein 3
@@ -9782,13 +9782,15 @@ label alt_day5_sl_7dl_loki_day:
     dv "Смотрите, кто у нас тут."
     "Протянула Алиса."
     dv "Да это же наша гордость и краса, талант и активистка. {w}Что нас сегодня ждёт? Уборка? Или уборка?"
+    show dv grin pioneer2 at left with dspr
+    show mi surprise pioneer at center with dspr
     show sl upset pioneer at right with dissolve
     sl "Послушай, Алиса, я сам не рада здесь находиться."
     show dv smile pioneer2 with dspr
     dv "Зато я-то как счастлива!"
     "Алиса привстала на носочки и прогнулась в некой пародии на балетное па."
     dv "Что у нас сегодня? Бальные танцы? Русские народные?"
-    show mi surprise pioneer at left with dissolve
+    show mi surprise pioneer with dissolve
     mi "Славя занимается бальными танцами?"
     "Удивилась Мику."
     "Я же скромно сидел и помалкивал."
@@ -9983,7 +9985,7 @@ label alt_day5_sl_7dl_loki_day:
     with moveinleft
     dv "…бы ей самой не… "
     show dv surprise pioneer2
-    show mt grin pioneer
+    show mt grin pioneer at left
     with dspr
     mt "Зайти? Я зашла."
     show dv normal pioneer2 with dspr
@@ -9996,7 +9998,7 @@ label alt_day5_sl_7dl_loki_day:
     dv "Да даже простенькую! И потом, почему три? {w}Мику, я… Кто ещё?"
     show mt smile pioneer with dspr
     mt "Неправильно. Ты, Семён и Славя."
-    show dv soft_smile pioneer2 with dspr
+    show dv soft smile pioneer2 with dspr
     dv "А, точно шутите."
     dv "С Мику мы ещё могли бы…"
     show mt normal pioneer with dspr
@@ -10107,20 +10109,20 @@ label alt_day5_sl_7dl_loki_evening:
     show sl smile pioneer with dspr
     sl "Мне кажется, Семён тебя дразнит."
     show dv surprise pioneer2 with dspr
-    dv "Да? {w]Мне казалось, он был серьёзен."
-    show dv smile pionere2 with dspr
+    dv "Да? {w}Мне казалось, он был серьёзен."
+    show dv smile pioneer2 with dspr
     dv  "В любом случае, я добыла один песенник с неплохими песнями."
     dv "Но вам я их показывать не буду — не уверена в том, что мы таким составом вообще способны что-либо выдать."
     show sl normal pioneer with dspr
     sl "Ты именно за этим села?"
-    show dv grin pioner2 with dspr
+    show dv grin pioneer2 with dspr
     dv "Ага! {w}Предупредить вас: готовьтесь к демонстрации каких-либо талантов."
     dv "В клубе будет прослушивание!{w}Впрочем, Феоктистовой этой не касается."
     me "Почему?"
     dv "Я же сказала! Про-слу-ши-ва-ние! {w}А не фестиваль бездарей."
     show sl grin pioneer with dspr
     sl "Ни разу не слышала про такой. Поделишься опытом?"
-    show dv normal pioneer with dspr
+    show dv normal pioneer2 with dspr
     dv "После полдника жду. Будем смотрить, кто на что способен."
     dv "Про твою дудку, новичок, слышала, это не то."
     dv "Возможно, ты сможешь быть более убедительным с гитарой?{w} Надо посмотреть, в общем."
