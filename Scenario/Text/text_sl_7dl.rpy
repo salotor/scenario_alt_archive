@@ -8992,6 +8992,7 @@ label alt_day5_sl_7dl_herc_day:
     show mt laugh pioneer with dspr
     mt "Разве что после уборки! И, начали…"
     hide mt with dissolve
+    hide us with dissolve
     "Вожатая засучила рукава."
     window hide
     with fade
@@ -9059,7 +9060,7 @@ label alt_day5_sl_7dl_herc_day:
     mt "Ничего, не помрёшь без полдника. Мы отправляемя на поиски!"
     ba "Мне кажется, это нездравая затея, Оляш."
     mt "Борис Александрович, но…"
-    show ba evil uniform at right with dspr
+    show ba evil uniform at left behind mt with dspr
     ba "Дрищ хоть дурак, но вещи правильные говорит: у тебя кроме мелкой ещё целый отряд, за которым надо следить."
     show mt angry pioneer with dspr
     mt "Я отвечаю за неё, а вы…"
@@ -9124,6 +9125,7 @@ label alt_day5_sl_7dl_herc_evening:
     sl "Алиса! {w}Неужели ты совсем не переживаешь?"
     show dv smile pioneer2 with dspr
     dv "За эту-то? Да нисколько. {w}Она нигде не пропадёт."
+    show dv smile pioneer2 at cleft with dspr
     show mt normal pioneer at fleft with dissolve
     mt "Алиса, где Лена?"
     dv "Сейчас подойдёт. Мы точно должны искать мелкую?"
@@ -9131,6 +9133,7 @@ label alt_day5_sl_7dl_herc_evening:
     mt "Твой товарищ пропал!"
     show dv grin pioneer2 with dspr
     dv "Да сидит где-нибудь, над нами в кулак хихикает."
+    show sl sad pioneer at cright with dspr
     show un normal pioneer at fright with dissolve
     un "Звали, Ольга Дмитриевна?"
     mt "Да. Мне нужны все свободные ребята."
@@ -9404,7 +9407,7 @@ label alt_day5_sl_7dl_herc_evening:
     "Славя покачала головой."
     show sh scared pioneer with dspr
     sh "А это… Это…"
-    show mt normal pioneer at right
+    show mt normal pioneer at left
     with dissolve
     mt "А что это вы здесь делаете? А ну, марш на поиски!"
     show sl sad pioneer with dspr
@@ -9472,7 +9475,7 @@ label alt_day5_sl_7dl_herc_evening:
     "Двачевская сжала кулаки и цедила слова через зуб, но и вожатая тоже была крепкий орешек."
     "Ещё чуть-чуть — и кто-то начнёт кого-то бить."
     dv "Да какого чёрта? Я не нанималась вам в ищейки!"
-    show sl surprise pioneer at left
+    show sl surprise pioneer
     sl "Нашли что-то?"
     mt "Двачевская, наказана!"
     dv "Да плевала я."
@@ -9520,10 +9523,10 @@ label alt_day5_sl_7dl_herc_evening:
     play music music_7dl["bureaucracy"] fadein 3
     "… где нас уже ждала Ульяна."
     us "Эй, а где это вы были? Я думала, странно, целый отряд на ужин не пришёл!"
-    show mt rage pioneer at cleft with easeinleft
+    show mt rage pioneer at cleft behind us with easeinleft
     mt "Да я тебе!"
     "Вожатая замахнулась…"
-    show dv rage pioneer2 at cright with easeintright
+    show dv rage pioneer2 at cright behind us with easeinright
     dv "Даже и не…"
     "Рука повисла в воздухе, перехваченная Алисой."
     th "Ой-йо. И всё перед глазами целого лагеря… Что-то сейчас будет."
@@ -9540,7 +9543,7 @@ label alt_day5_sl_7dl_herc_evening:
     show mt normal pioneer with dspr
     mt "Молчи уж, искатель. Что вы за красную тряпку нашли?"
     me "Я думал — галстук."
-    show sl normal pioneer at right with dissolve
+    show sl normal pioneer at fright with dissolve
     sl "А я думала — лоскуток от футболки."
     dv "Ты дальше, дальше рассказывай."
     show us dontlike sport with dspr
@@ -12064,7 +12067,7 @@ label alt_day5_sl_7dl_campfire:
     "В голосе девочки явно сквозило сомнение."
     "Но спорить она не решилась — и правильно сделала."
     if herc:
-        show mt normal far at right with dissolve
+        show mt normal pioneer far at right with dissolve
         mt "Славя? На минутку."
         show sl surprise pioneer with dspr
         sl "А как же…"

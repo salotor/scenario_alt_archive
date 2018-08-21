@@ -66,7 +66,7 @@ label alt_day5_sl_7dl_start:
     pause(1)
     call alt_day5_sl_7dl_breakfast
     pause(1)
-    $ persistent.sprite_time = "day"
+    $ persistent.sprite_time = "day" # на дождливых фонах слишком ярко выглядят
     $ day_time()
     if loki:
         $ routetag = "sl7dl_loki"
