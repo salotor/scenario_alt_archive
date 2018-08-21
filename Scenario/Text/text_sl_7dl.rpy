@@ -6323,7 +6323,7 @@ label alt_day5_sl_7dl_begin:
                 "Волосы мгновенно промокли и облепили лицо сосульками, про рубашку и говорить не приходится."
                 me "Фигня война, главное — маневры!"
                 "Сказал себе и, перепрыгивая лужи, побежал."
-                "Что самое странное, сегодня Славя не решилась заглянут на огонёк и вытащить меня на утреннюю пробежку."
+                "Что самое странное, сегодня Славя не решилась заглянуть на огонёк и вытащить меня на утреннюю пробежку."
                 th "Неужели пожалела?"
                 "Но нет, в этом будет и некая крохотная доля мести."
                 "Особенно, когда я всё же прибежал к домику и забарабанил в дверь."
@@ -6387,6 +6387,7 @@ label alt_day5_sl_7dl_begin:
                 play sound sfx_open_door_strong
                 pause(1)
                 play music music_7dl["raindrops"] fadein 3
+                scene bg ext_houses_rainy_day_7dl
                 "Разумеется, никуда мы не побежали."
                 "Вместо этого отправились на прогулку под зонтом."
                 "Обратно к моему дому."
@@ -6422,6 +6423,10 @@ label alt_day5_sl_7dl_begin:
                 me "… Чтобы лето заканчивалось."
                 show sl smile pioneer with dspr
                 sl "Тогда и не гони его от себя. {w}Мы пришли."
+                window hide
+                play sound sfx_open_door_strong
+                pause(1)
+                scene expression Desat("bg int_house_of_mt_sunset")
                 show mt normal pioneer at right with dissolve
                 sl "Сдаю вам пионера с рук на руки."
                 show mt surprise pioneer with dspr
@@ -6444,6 +6449,9 @@ label alt_day5_sl_7dl_begin:
                 "Под сдвоенный смех девушек, я нырнул в дверь."
                 window hide
                 with swradar
+                play sound sfx_open_dooor_campus_1
+                pause(1)
+                scene bg ext_houses_rainy_day_7dl
                 "Когда я в полном снаряжении вышел на улицу, и вожатой, и её помощницы уже след простыл."
                 me "Ожидаемо, что тут скажешь."
                 "Пробормотал под нос я."
