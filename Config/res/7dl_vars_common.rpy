@@ -232,6 +232,7 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_mi_rejected = False
     $ alt_day2_mi_hyst = False
     $ alt_day2_mt_help = False
+    $ alt_day2_mi_met = False
     $ alt_day2_mi_snap = False
     $ alt_day2_sl_bf = False
     $ alt_day2_un_secret_spot = 0

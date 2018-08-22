@@ -4008,6 +4008,7 @@ label alt_day2_dinner:
                     me "Да… Я сегодня ходил с маршрутным листом же, подписи собирал…"
                     mi "Значит, ко мне в клуб не заглянул. Я Мику."
                 $ meet('mi','Мику')
+                $ alt_day2_mi_met = True
                 "Она протянула руку через стол, и я поспешил ответить на рукопожатие."
                 menu:
                     "Познакомиться поближе":
@@ -4937,7 +4938,7 @@ label alt_day2_tournament:
         $ meet('sh','Шурик')
         sh "Сечас всё расскажем."
         hide sh with dissolve
-    if not ('music_club' in list_voyage_7dl):
+    if not (('music_club' in list_voyage_7dl) or alt_day2_mi_met):
         show mi normal pioneer with dissolve
         "Здесь была и давешняя аниме-девочка из столовой."
         "Я ткнул Ульянку, стоящую тут же, локтем."
