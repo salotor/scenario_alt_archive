@@ -4008,6 +4008,7 @@ label alt_day2_dinner:
                     me "Да… Я сегодня ходил с маршрутным листом же, подписи собирал…"
                     mi "Значит, ко мне в клуб не заглянул. Я Мику."
                 $ meet('mi','Мику')
+                $ alt_day2_mi_met = True
                 "Она протянула руку через стол, и я поспешил ответить на рукопожатие."
                 menu:
                     "Познакомиться поближе":
@@ -4899,7 +4900,7 @@ label alt_day2_tournament:
     show sl normal pioneer at left
     with dissolve
     "Славя."
-    hide sl_prep
+    hide sl
     show un normal pioneer at right
     with dissolve
     "Лена."
@@ -4936,7 +4937,9 @@ label alt_day2_tournament:
         us "Шурик, по какому поводу сбор?"
         $ meet('sh','Шурик')
         sh "Сечас всё расскажем."
-    if not ('music_club' in list_voyage_7dl):
+        hide sh with dissolve
+    if not (('music_club' in list_voyage_7dl) or alt_day2_mi_met):
+        show mi normal pioneer with dissolve
         "Здесь была и давешняя аниме-девочка из столовой."
         "Я ткнул Ульянку, стоящую тут же, локтем."
         me "Ульяна, а что это за девочка?"
@@ -4944,16 +4947,21 @@ label alt_day2_tournament:
         us "Нравится? Это наша худрук, её Мику зовут. По-настоящему."
         $ meet('mi','Мику')
         "Услышав, что её обсуждают, японка кивнула."
+        hide mi with dissolve
     if alt_day_binder != 1:
+        show el normal pioneer with dissolve
         "А в центре всей толкучки стоял Электроник."
         el "Нет-нет, никаких автоматчей или переигровок не будет! Нам надо восемь участников, чтобы разыграть минимальный плей-офф."
+        hide el with dissolve
     elif (alt_day_binder == 1) and not ('library' in list_voyage_7dl):
+        show el normal pioneer with dissolve
         $ meet('el','Электроник')
         "А в центре всей толкучки стоял какой-то белобрысый парень."
         "Я видел его вчера на ужине."
         us "Сыроега, а что если я проиграю? Я не должна проигрывать!"
         el "Во-первых, не «сыроега», а «Электроник», а во-вторых, никаких реваншей или переигровок."
         el "Нам нужны восемь человек, чтобы создать плей-офф таблицу."
+        hide el with dissolve
     show sh normal pioneer at fleft with dissolve
     sh "Может, из младших отрядов наберём?"
     show sl normal pioneer at cright with dissolve
@@ -4964,7 +4972,7 @@ label alt_day2_tournament:
     with dissolve
     mi "А где наш новенький? Семён. Сеня?"
     "Мику углядела меня и тут же сбежала с крыльца и подбежала ко мне."
-    show el normal pioneer at left with move
+    show el normal pioneer at left with dissolve
     mi "Ну вот, я тебя так ищу, кричу, а ты не отзываешься."
     if ('music_club' in list_voyage_7dl):
         mi "И в кружок не пришёл."
@@ -5004,13 +5012,14 @@ label alt_day2_tournament:
     sl "Карточный турнир."
     "Обернулась Славя."
     sl "Нам не хватало участников, поэтому ты, Алиса и Ульяна очень вовремя!"
-    show mt normal  pioneer at right
+    show mt normal pioneer at right with dissolve
     mt "Карточный турнир?"
     "Театр событий освятила своим появлением вожатая."
     mt "А почему я не в курсе?"
     hide sl with dissolve
-    show mt normal  pioneer at right with dspr
+    show mt normal pioneer at right
     show el smile pioneer at left
+    with dissolve
     el "Потому что это отрядное мероприятие!"
     "Гордо ответил Электроник."
     el "Проведение и организацию я полностью беру на себя!"
@@ -5020,17 +5029,17 @@ label alt_day2_tournament:
     "Ольга расхохоталась."
     mt "Вот чертенята. И откуда только узнали… "
     mt "Но вы сами должны понимать, это азартные игры, а они запрещены на территории лагеря."
-    show el normal pioneer at left
+    show el normal pioneer at left with dspr
     el "А это не азартная игра."
     "С пылом объяснил Электроник."
     el "Это, можно сказать, стратегия! Почти как шахматы! Я её сегодня придумал."
-    show mt smile  pioneer at right
+    show mt smile  pioneer at right with dspr
     mt "Ладно. Раз уж согласилась…"
     "Она кивнула мне, подзывая, и протянула небольшой резной ключ."
     mt "Это от моего шкафчика. Там найдёшь карты…"
     show mt angry  pioneer at right with dissolve
     "Она на секунду сделала самое злобное лицо."
-    show mt normal  pioneer at right
+    show mt normal  pioneer at right with dspr
     mt "Под вашу ответственность!"
     "Я покрутил ключ в пальцах и спрятал его в карман шорт…"
     "А потом медленно-медленно поднял голову…"
