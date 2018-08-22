@@ -1700,7 +1700,7 @@ label alt_day2_event_clubs1:
             window hide
             return
     scene bg ext_clubs_day with fade
-    play music music_7dl["genki"] fadein 2
+    play music music_7dl["shappihn"] fadein 2
     "Приоритетным зданием по списку значились клубы."
     if (alt_day_binder != 1):
         if counter_sl_7dl >= 1: 
@@ -4545,7 +4545,7 @@ label alt_day2_grand_escape:
     play music music_7dl["PleaseStopItMastered"] fadein 7
     "Разбудил меня голос Ольги Дмитриевны:"
     window hide
-    scene cg d3_us_library_4 #TODO
+    scene cg d3_us_library_4
     with dissolve
     mt "Семён…"
     mt "Мне мало было за вас краснеть в столовой, вы теперь ещё и сбежать придумали?!"
@@ -4555,7 +4555,7 @@ label alt_day2_grand_escape:
     "А я вдруг понял, что сплю не один. Вернее сказать, сплю не совсем сам по себе. Облапив меня в стиле кошки, положив сверху руки, ноги и живот, мне в плечо сладко посапывала Ульянка, всё такая же липкая от конфет. Это заставило меня проснуться в самые сжатые сроки."
     me "Аааааа!"
     window hide
-    scene cg d4_us_morning #TODO
+    scene cg d4_us_morning
     with dissolve
     us "Ууууууу!"
     "Закричала спросонья Ульяна."
@@ -4564,7 +4564,7 @@ label alt_day2_grand_escape:
     us "Так это что… Это сон был?"
     me "Похоже."
     window hide
-    scene cg d3_us_library_3 with dissolve #TODO
+    scene cg d3_us_library_3 with dissolve
     "Неохотно согласился я."
     us "Но я же так бежала… Я так никогда не бежала, я в поезд забралась! И тебе руку дала."
     me "Тебе приснилось."
@@ -5474,7 +5474,7 @@ label alt_day2_ultim:
                 "Но плясать под её дудку я не собираюсь."
                 window hide
             "Чтобы было честно":
-                play music music_7dl["sheiscool"] fadein 3
+                play music music_7dl["snatch"] fadein 3
                 $ lp_dv -= 10
                 $ lp_un -= 5
                 $ alt_day2_dv_harass = True
@@ -8973,7 +8973,7 @@ label alt_day2_slot_sl:
     window hide
     show sl normal pioneer
     with dissolve
-    play music music_7dl["brim"] fadein 2
+    play music music_7dl["not_alone"] fadein 2
     "Я остановился и поднял голову."
     "Она догоняла меня быстрым шагом, почти не тревожа окружение."
     "Идеально вписываясь, будто являясь частью всего этого — ничего удивительного в том, что я не сумел заметить её до сих пор."
