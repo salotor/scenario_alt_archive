@@ -16718,7 +16718,7 @@ label alt_day7_sl_rf_good:
     play music music_7dl["are_you_there"] fadein 3
     $ persistent.sprite_time = "day"
     $ prolog_time()
-    scene bg int_plats_7dl with flash
+    scene bg int_coupe_day_7dl with flash
     play ambience sfx_7dl["train_depart"] fadein 3
     "Шаг. {w}Шаг."
     "Мне нравились фильмы про Данилу Багрова — было в них что-то такое странное, пропитанное насквозь неизбывностью и тоской."
@@ -16958,7 +16958,7 @@ label alt_day7_sl_reject_same:
     pause(2)
     play music music_7dl["silent_angel"] fadein 3
     window hide
-    scene expression Notch("bg int_plats_7dl")
+    scene bg int_coupe_night_7dl
     show anim_grain
     with dissolve
     "Некоторые вещи действительно лучше сделать, чем потом всю жизнь мучиться безвестностью."
@@ -17220,13 +17220,13 @@ label alt_day7_sl_rej_end:
     "Кто вообще занимается решением этого вопроса — имеет ли человек право на мечту?"
     stop sound_loop
     window hide
-    scene expression Desat("bg int_plats_7dl")
+    scene expression Desat("bg int_coupe_day_7dl")
     show anim_grain
     with dissolve
     "Люди жили, проходили мимо неё, глядя в будущее, несомненно светлое."
     "А она упустила и своё счастье, и свою жизнь — погнавшись вслепую за приснившимся."
     "Поезд вздрогнул, с лязганьем сомкнулись двери, инерцией толкнуло в сторону Московского вокзала, будто город напоследок обнимал её."
-    scene expression Sepia("bg int_plats_7dl")
+    scene expression Sepia("bg int_coupe_day_7dl")
     show anim_grain
     with fade
     play ambience sfx_7dl["train_depart"] fadein 3
