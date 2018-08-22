@@ -52,12 +52,12 @@
         sl "Пошли, тебе понравится!"
         menu:
             "Чёрт с тобой. Дай одеться.":
-                label alt_test:
+                # label alt_test:
                 play ambience ambience_forest_evening fadein 6
                 play music music_7dl["runaway"] fadein 3
                 play sound_loop sfx_run_forest
                 scene expression Dawn("bg ext_backdoor_day_7dl"):
-                    zoom 1.25
+                    # zoom 1.25
                     ease 0.2 pos (0, 0)
                     ease 0.2 pos(25,50)
                     ease 0.2 pos (0, 0)
