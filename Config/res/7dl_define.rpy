@@ -146,7 +146,7 @@ init:
         pos (0,-1261)
         linear 10.0 pos (0,0)
         linear 2.0 pos (0, -200)
-        
+    
     transform salute_main_black(salute):
         "sal_black"
         choice 15:
@@ -431,7 +431,9 @@ init:
     image bg int_attic2_day_7dl = get_image_7dl("bg/int_attic2_day_7dl.jpg")
     image bg int_attic2_night_7dl = get_image_7dl("bg/int_attic2_night_7dl.jpg")
     image bg int_attic_ladder_7dl = get_image_7dl("bg/int_attic_ladder_7dl.jpg")
+    
     image bg int_bus_warp_7dl = get_image_7dl("bg/int_bus_warp_7dl.jpg")
+    
     image bg int_caffee_day_7dl = get_image_7dl("bg/int_caffee_day_7dl.png")
     image bg int_catacomb_door_fullbright_7dl = get_image_7dl("bg/int_catacomb_door_fullbright_7dl.jpg")
     image bg int_catacombs_door_light2_7dl = get_image_7dl("bg/int_catacombs_door_light2_7dl.jpg")
@@ -440,7 +442,11 @@ init:
     image bg int_clubs_dj_7dl = get_image_7dl("bg/int_clubs_dj_7dl.jpg")
     image bg int_clubs_dj_night_7dl = get_image_7dl("bg/int_clubs_dj_night_7dl.jpg")
     image bg int_clubs_dj_night_nolight_7dl = get_image_7dl("bg/int_clubs_dj_night_nolight_7dl.jpg")
+    image bg int_clubs_male_rain_7dl = get_image_7dl("bg/int_clubs_male_rain_7dl.jpg")
     image bg int_concert_room_7dl = get_image_7dl("bg/int_concert_room_7dl.jpg")
+    image bg int_coupe_day_7dl = get_image_7dl("bg/int_coupe_day_7dl.png")
+    image bg int_coupe_night_7dl = get_image_7dl("bg/int_coupe_night_7dl.png")
+    
     image bg int_d3_hideout_7dl = get_image_7dl("bg/int_d3_hideout_7dl.png")
     image bg int_dining_hall_people_rain_7dl = get_image_7dl("bg/int_dinning_hall_people_rain_7dl.jpg")
     image bg int_dining_hall_rain_7dl = get_image_7dl("bg/int_dinning_hall_rain_7dl.jpg")
@@ -501,7 +507,6 @@ init:
     image bg int_home_lift_7dl = get_image_7dl("bg/outro/int_home_lift_7dl.png")
     image bg int_intro_liaz_7dl = get_image_7dl("bg/outro/int_intro_liaz_7dl.jpg")
     image bg int_opened_door_7dl = get_image_7dl("bg/outro/int_opened_door_7dl.jpg")
-    image bg int_plats_7dl = get_image_7dl("bg/outro/int_plats_7dl.jpg")
     image bg int_sam_house_clean_7dl = get_image_7dl("bg/outro/int_sam_house_clean_7dl.jpg")
     image bg int_sam_room_7dl = get_image_7dl("bg/outro/int_sam_room_7dl.png")
     image bg int_store_7dl = get_image_7dl("bg/outro/int_store_7dl.png")
