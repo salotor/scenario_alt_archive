@@ -7718,7 +7718,7 @@ label alt_day5_sl_7dl_candle:
         window hide
         scene bg int_clubs_male_rain_7dl
         show blackout_exh
-         with fade
+        with fade
         $ night_time()
         $ persistent.sprite_time = "night"
         "Разрешение говорить было дано, видимо, мы уже хорошо научились слушать."
@@ -8105,7 +8105,7 @@ label alt_day5_sl_7dl_candle:
         window hide
         play sound sfx_close_cabinet
         pause(1)
-        scene bg int_plats_7dl
+        scene bg int_coupe_day_7dl
         with flash
         "Я почувствовал, как соскальзываю в эту бездну и с силой захлопнул дверь."
         "Откинулся на подушки, тяжело дыша."
@@ -9934,7 +9934,7 @@ label alt_day5_sl_7dl_loki_day:
     "Алиса явно не была в настроении сидеть и болтать."
     "Мику смущённо улыбнулась из-за рояля — она и сама что-то писала в нотной тетради."
     "Видимо, запас вдохновения у японской гостьи был поистине неисчерпаем."
-    show sl normal close with dissolve
+    show sl normal pioneer close with dissolve
     sl "Может быть, на улицу?"
     "Горячее дыхание Слави опалило мне ухо, я весь мгновенно покрылся мурашками."
     th "Ого!"
@@ -11093,7 +11093,7 @@ label alt_day5_sl_7dl_day:
     me "Поэтому вот, сказал. Пока."
     un "Совесть мучает? А что твоя совесть скажет об этом?"
     "Лена поставила краску на асфальт, аккуратно положила сверху кисточку и, сняв с запястья часы, ткнула руку мне под нос."
-    show un agnry pioneer with dspr
+    show un angry pioneer with dspr
     un "Что совесть говорит тебе теперь?"
     "На её запастье белел страшный кривой шрам."
     un "Ничего не напоминает?"
@@ -12190,7 +12190,7 @@ label alt_day5_sl_7dl_campfire:
         me "Да мы же просто гуляли! Потом Ульяну искали…"
         show mi grin casual with dspr
         mi "А теперь она ходит в твоём свитере."
-        show sl grin casual at left with dspr
+        show sl smile casual at left with dspr
         sl "Если тебе так завидно, Мику, могу поделиться."
         show mi laugh casual with dspr
         mi "Нет, вдвоём мы под ним не поместимся."
