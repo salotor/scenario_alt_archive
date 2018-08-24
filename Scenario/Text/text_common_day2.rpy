@@ -6275,7 +6275,7 @@ label alt_day2_eventEv_me_mt_house1:
             play sound sfx_open_dooor_campus_1
             pause(1)
             scene bg ext_house_of_mt_night with dissolve
-            "Однако, пока я ходил, время уже вплотную подобралось к отбою."
+            "Однако пока я ходил, время уже вплотную подобралось к отбою."
             "Делать нечего, пришлось двигаться к умывальникам."
             stop music fadeout 3
             stop ambience fadeout 6
@@ -9090,7 +9090,8 @@ label alt_day2_slot_sl:
         sl "Есть плавки?"
         me "Э…"
         sl "Я так и думала. {w}Пойдём, выдадим тебе казённые."
-        with swradar
+        "..."
+        with fulldiam
     else:
         "Помахала мне рукой девушка и убежала."
         hide sl with easeoutleft
