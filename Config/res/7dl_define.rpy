@@ -397,7 +397,7 @@ init:
     image bg ext_shower_night_7dl = get_image_7dl("bg/ext_shower_night_7dl.jpg")
     image bg ext_sky2_7dl = get_image_7dl("bg/ext_sky2_7dl.jpg")
     image bg ext_sky_7dl = get_image_7dl("bg/ext_sky_7dl.jpg")
-    image bg ext_square_rain_genda_7dl = get_image_7dl("bg/ext_square_rain_genda_7dl.jpg")
+    image bg ext_square_rain_genda_7dl = get_image_7dl("bg/ext_square_rain_genda_7dl.png")
     image bg ext_square_rain_day_7dl = get_image_7dl("bg/ext_square_rain_day_7dl.jpg")
     image bg ext_square_sunset2_7dl = get_image_7dl("bg/ext_square_sunset2_7dl.jpg")
     image bg ext_square_sunset3_7dl = get_image_7dl("bg/ext_square_sunset3_7dl.jpg")

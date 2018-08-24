@@ -2301,7 +2301,7 @@ label alt_day4_sl_7dl_herc_evening:
     with vpunch
     me "Ой!"
     "От неожиданного хлопка между лопаток, я подскочил и обернулся."
-    show mt dontlike pioneer close with dspr
+    show mt angry pioneer close with dspr
     "Там стояла вожатая."
     "Очень близко стояла."
     "И выражение лица у неё было крайне недовольное!"
@@ -2398,7 +2398,7 @@ label alt_day4_sl_7dl_herc_evening:
     "И в любой другой ситуации я бы обратил внимание на этот крайне презанятный факт, но тут над головами откашлялись колонки и заорали:"
     play sound sfx_7dl["phone_feedback"] fadein 0
     dy "Уважаемые гости нашего лагеря!"
-    me "Тьфу ты ну ты. {w}А ещё погромче нельзя было?" https://phraseology.academic.ru/13460/
+    me "Тьфу ты ну ты. {w}А ещё погромче нельзя было?" # https://phraseology.academic.ru/13460/
     dy "Благодарим вас за то, что уделили сегодня нам своё время!"
     dy "Ждём вас в следующий раз, а для тех, кто ещё не уехал, после ужина к воротам будет подан автобус!"
     th "Дармоеды, говорю же. И поели нахаляву, и развозку получили."
@@ -4937,7 +4937,7 @@ label alt_day4_sl_7dl_day:
     mt "В смысле, моих детей не дам в обиду!"
     me "Я так и подумал."
     play sound sfx_7dl["highfive"] fadein 1
-    show mt laugh sport with moveoutright
+    hide mt with moveoutright
     "Ольга рассмеялась, хлопнула меня по плечу и ушла вслед за физруком и Славей."
     stop music fadeout 6
     pause(1)
