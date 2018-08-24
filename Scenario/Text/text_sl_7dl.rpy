@@ -27,7 +27,6 @@
     "Она наклонилась ко мне и поцеловала в лоб."
     stop music fadeout 10
     pause(1)
-    
     window hide
     "Поверили, что ли?"
     "Наивные."
@@ -125,7 +124,6 @@
                 stop sound_loop
                 stop music fadeout 6
                 pause(1)
-                
                 window hide
             "Да отстанешь ты?!":
                 stop music fadeout 6
@@ -231,7 +229,6 @@
     window hide
     stop music fadeout 5
     pause(1)
-    
     scene bg ext_square_sunset
     with dissolve
     play ambience ambience_camp_center_day fadein 3
@@ -607,7 +604,6 @@ label alt_day4_sl_7dl_herc_morning:
     "Здорово, всё-таки, что есть вещи, право на которые никто и никогда отнять не сможет: одиночество, солнце и… "
     stop music fadeout 6
     pause(1)
-    
     window hide
     scene bg ext_backroad_day_7dl
     with dissolve
@@ -668,7 +664,6 @@ label alt_day4_sl_7dl_herc_morning:
     "Избушка стояла к лесу передом, так что пришлось идти в обход."
     stop music fadeout 5
     pause(1)
-    
     "Так я и сделал."
     window hide
     scene bg ext_old_building_day_7dl
@@ -939,7 +934,6 @@ label alt_day4_sl_7dl_herc_morning:
     "Щекочущий спину холодок придавал азарту похлеще пресловутого волшебного пенделя, так что я буквально вылетел в коридор, рыбкой нырнул под полку и, пинком распахнув дверь"
     stop music fadeout 6
     pause(1)
-    
     window hide
     play sound sfx_open_door_kick
     pause(1)
@@ -1138,7 +1132,6 @@ label alt_day4_sl_7dl_herc_morning:
     me "Если не вдаваться во всякие сложные вещи — так получилось. Не по моей вине, но меня это устраивает."
     stop music fadeout 6
     pause(1)
-    
     show sl normal dress with dspr
     sl "Я тебя услышала. {w}Не могу сказать, что согласна со всем, но услышала."
     play music music_7dl["vale"] fadein 3
@@ -1331,7 +1324,6 @@ label alt_day4_sl_7dl_herc_day:
     "Нет, не стокгольмский синдром — только сейчас я начал понимать, что однажды низвёл всю свою жизнь до состояния одного бесконечного дня и тем самым утратил всю прелесть бытия."
     stop music fadeout 5
     pause(1)
-    
     window hide
     with fade
     us "Хей! Что делаешь?"
@@ -1433,7 +1425,6 @@ label alt_day4_sl_7dl_herc_day:
     "Расхихикалась Ульянка, бегом отправляясь к воротам."
     stop music fadeout 3
     pause(1)
-    
     window hide
     scene bg ext_square_day with dissolve
     play ambience ambience_camp_center_day fadein 5
@@ -1519,7 +1510,6 @@ label alt_day4_sl_7dl_herc_day:
     "Утешив себя такой мыслью, я заработал ложкой."
     stop music fadeout 5
     pause(1)
-    
     window hide
     play sound sfx_open_dooor_campus_1
     pause(1)
@@ -1593,7 +1583,6 @@ label alt_day4_sl_7dl_herc_day:
     th "Понятия не знаю. {w}Но явно не из нашего отряда."
     stop music fadeout 5
     pause(1)
-    
     window hide
     with fade2
     play music music_7dl["too_serious"] fadein 3
@@ -1701,7 +1690,6 @@ label alt_day4_sl_7dl_herc_day:
             "Я отпустил ручку."
             stop music fadeout 6
             pause(1)
-            
             window hide
             scene bg ext_houses_day
             with dissolve
@@ -1845,7 +1833,6 @@ label alt_day4_sl_7dl_herc_day:
             $ karma += 10
     stop music fadeout 5
     pause(1)
-    
     window hide
     scene bg ext_dining_hall_away_day
     with dissolve
@@ -2023,7 +2010,6 @@ label alt_day4_sl_7dl_herc_evening:
     "Я затолкал остатки пряника в рот и поднялся, помахав девочкам на прощание."
     stop music fadeout 5
     pause(1)
-    
     window hide
     play sound sfx_open_door_1 fadein 0
     pause(1)
@@ -2167,7 +2153,6 @@ label alt_day4_sl_7dl_herc_evening:
     "И вдруг будто тучи заслонили солнце, хотя оно по-прежнему продолжало греть мне спину."
     stop music fadeout 3
     pause(1)
-    
     "Я вдруг тем самым местом почуял, что что-то не так."
     th "Неприятности?"
     play music music_7dl["areyouabully"] fadein 10
@@ -2371,7 +2356,6 @@ label alt_day4_sl_7dl_herc_evening:
     sl "Даже не знаю — и зачем Ольга Дмитриевна каждый раз пытается притащить Ульяну на концерт?.."
     stop music fadeout 3
     pause(1)
-    
     hide sl
     window hide
     with fade
@@ -2828,7 +2812,6 @@ label alt_day4_sl_7dl_loki_morning:
     "Она не лезла без мыла мне в душу, и этим была особенно ценна."
     stop music fadeout 3
     pause(1)
-    
     window hide
     scene bg int_musclub_day with fade
     play music music_7dl["hdance_5"] fadein 3
@@ -3103,7 +3086,6 @@ label alt_day4_sl_7dl_loki_day:
     sl "Мне кое-что привезли, помереть с голоду нашему худруку я не позволю."
     stop music fadeout 5
     pause(1)
-    
     window hide
     scene bg ext_dining_hall_away_day
     with fade
@@ -3229,7 +3211,6 @@ label alt_day4_sl_7dl_loki_day:
     "Вот так я снова остался один."
     stop music fadeout 5
     pause(1)
-    
     window hide
     scene bg ext_musclub_day
     with fade
@@ -3385,7 +3366,6 @@ label alt_day4_sl_7dl_loki_day:
     with easeoutleft
     stop music fadeout 5
     pause(1)
-    
     "Так началась катавасия."
     window hide
     with fade
@@ -3600,7 +3580,6 @@ label alt_day4_sl_7dl_loki_day:
     mi "Всё будет хорошо!"
     stop sound fadeout 1
     pause(1)
-    
     window hide
     play sound sfx_open_door_1
     pause(1)
@@ -3890,7 +3869,6 @@ label alt_day4_sl_7dl_loki_evening:
     hide sl with dissolve
     stop music fadeout 6
     pause(1)
-    
     "И в самом деле — на эстраду выскочила Мику."
     "Что характерно, в том самом платье, которое примеряла Славя."
     th "Прислушалась к моим словам? Ай, молодец!"
@@ -4105,7 +4083,6 @@ label alt_day4_sl_7dl_loki_evening:
     "Все забурчали, забормотали, но послушно начали выбираться с мест и строиться в колонну по двое."
     stop music fadeout 5
     pause(1)
-    
     window hide
     scene bg ext_dining_hall_away_sunset
     with dissolve
@@ -4364,7 +4341,6 @@ label alt_day4_sl_7dl_morning:
     dreamgirl "Хорош киснуть! {w}Пошли, посмотрим, что там дальше на косе?"
     stop music fadeout 3
     pause(1)
-    
     th "Тоже вариант…"
     window hide
     with fade
@@ -4664,7 +4640,6 @@ label alt_day4_sl_7dl_day:
     "Чёрт бы её побрал."
     stop music fadeout 6
     pause(1)
-    
     window hide
     scene bg ext_dining_hall_away_day
     show ba normal uniform
@@ -4794,7 +4769,6 @@ label alt_day4_sl_7dl_day:
     "Наконец, до поля добралась и наша капитан."
     stop music fadeout 5
     pause(1)
-    
     "Удачно тыкнув на левую руку в жребии, выбрала нам мяч, но неудобную сторону."
     bb "Мяч в игру!"
     play music music_7dl["anglegrinder"] fadein 3
@@ -4922,7 +4896,6 @@ label alt_day4_sl_7dl_day:
     bb "Первая партия, 25:4 в пользу родителей! Перерыв пять минут."
     stop music fadeout 6
     pause(1)
-    
     show sl sad sport at right with dissolve
     sl "Похоже, этот матч мы проиграем."
     show mt smile sport behind sl with dissolve
@@ -4968,7 +4941,6 @@ label alt_day4_sl_7dl_day:
     "Ольга рассмеялась, хлопнула меня по плечу и ушла вслед за физруком и Славей."
     stop music fadeout 6
     pause(1)
-    
     window hide
     with fade
     play music music_7dl["imfine"] fadein 3
@@ -5235,7 +5207,6 @@ label alt_day4_sl_7dl_evening:
     "А я пополз на чердак."
     stop music fadeout 6
     pause(1)
-    
     window hide
     scene bg int_attic2_day_7dl
     with dissolve
@@ -5316,7 +5287,6 @@ label alt_day4_sl_7dl_evening:
     "Решив проверить пробки, я полез по лестнице вниз."
     stop music fadeout 6
     pause(1)
-    
     window hide
     scene bg int_clubs_male_sunset
     with flash
@@ -5538,7 +5508,6 @@ label alt_day4_sl_7dl_evening:
     "Вода была неплохой, и я, разбежавшись, бросил себя в самую глубину."
     stop music fadeout 4
     pause(1)
-    
     window hide
     play sound sfx_shoulder_dive_water
     stop ambience fadeout 1
@@ -5659,7 +5628,6 @@ label alt_day4_sl_7dl_evening:
     sl "Да уж, будешь тут."
     stop music fadeout 3
     pause(1)
-    
     "Мику выскочила на сцену и что-то прокричала, отсюда неразличимое."
     play sound sfx_7dl["eat_horn"] fadein 1
     "Зато оживший над нашими головами жестяной раструб на стволе сосны был вполне различим."
@@ -5853,7 +5821,6 @@ label alt_day4_sl_7dl_sundown:
         th "А пошли…"
         stop music fadeout 3
         pause(1)
-        
         window hide
         scene bg ext_warehouse_sunset_7dl
         with fade
@@ -5944,7 +5911,6 @@ label alt_day4_sl_7dl_sundown:
         "Когда я уходил с дворика, за моей спиной с новыми силами разворачивался спор."
     stop music fadeout 3
     pause(1)
-    
     window hide
     scene bg ext_square_sunset
     with diam
