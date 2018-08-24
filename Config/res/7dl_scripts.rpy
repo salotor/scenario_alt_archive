@@ -563,7 +563,7 @@ init -999 python:
     def get_image_7dl(file):
         return default_7dl_path+"Pics/%s" % (file)
     def get_image_extra7dl(file):
-            return default_7dl_path+"Pics/extra/%s" % (file)
+        return default_7dl_path+"Pics/extra/%s" % (file)
         
 init -998 python:
     def get_sfx_7dl(file):
