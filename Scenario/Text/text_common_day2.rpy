@@ -9090,7 +9090,8 @@ label alt_day2_slot_sl:
         sl "Есть плавки?"
         me "Э…"
         sl "Я так и думала. {w}Пойдём, выдадим тебе казённые."
-        with swradar
+        "..."
+        with fulldiam
     else:
         "Помахала мне рукой девушка и убежала."
         hide sl with easeoutleft

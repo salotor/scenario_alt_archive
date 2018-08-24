@@ -1832,7 +1832,11 @@ label alt_day4_sl_7dl_herc_day:
             sl "Нет, их забрала вожатая второго отряда на подготовку к концерту."
             me "Какому концерту?"
             sl "На который вы оба после полдника отправляетесь! Имейте совесть, и без того сончас прогуляли!"
+            stop music fadeout 1
+            pause(1)
+            play sound sfx_7dl["eat_horn"] fadein 1
             "И будто подтверждая её слова, над лагерем разнёсся горн, призывающий всех в столовую."
+            stop sound fadeout 1
             $ alt_day4_sl_7dl_herc_appletree = True
             $ karma += 10
     stop music fadeout 5
