@@ -1692,6 +1692,7 @@ label alt_day4_sl_7dl_herc_day:
             pause(0.7)
             scene black
             "Спать."
+            play sound sfx_7dl["eat_horn"] fadein 1
             "Разбудил меня только горн, зовущий всех к столовой."
         "Так где, говоришь, была яблонька?":
             "Я отпустил ручку."
@@ -7716,7 +7717,7 @@ label alt_day5_sl_7dl_candle:
         window hide
         scene bg int_clubs_male_rain_7dl
         show blackout_exh
-         with fade
+        with fade
         $ night_time()
         $ persistent.sprite_time = "night"
         "Разрешение говорить было дано, видимо, мы уже хорошо научились слушать."
