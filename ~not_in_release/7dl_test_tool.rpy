@@ -390,9 +390,12 @@ label sdl_menu:
                             menu:
                                 "Герк":
                                     $ herc = True
+                                    $ plthr = u"Герк"
                                 "Локи":
                                     $ loki = True
+                                    $ plthr = u"Локи"
                                 "Дрищ":
+                                    $ plthr = u"Дрищ"
                                     pass
                             menu:
                                 "Записаться на волейбол":
@@ -417,8 +420,24 @@ label sdl_menu:
                                     menu:
                                         "Начало":
                                             jump alt_day5_sl_7dl_start
-                                        "Тизер":
-                                            jump alt_day5_sl_7dl_evening
+                                        "День":
+                                            if herc:
+                                                call alt_day5_sl_7dl_herc_day
+                                            elif loki:
+                                                call alt_day5_sl_7dl_loki_day
+                                            else:
+                                                call alt_day5_sl_7dl_day
+                                        "Вечер":
+                                            if herc:
+                                                call alt_day5_sl_7dl_herc_evening
+                                            elif loki:
+                                                call alt_day5_sl_7dl_loki_evening
+                                            else:
+                                                call alt_day5_sl_7dl_evening
+                                        "Костёр":
+                                            call alt_day5_sl_7dl_campfire
+                                        "Хентай":
+                                            call alt_day5_sl_7dl_hentai
                                         
                                 "День 6":
                                     $ alt_day5_sl_7dl_workout = True

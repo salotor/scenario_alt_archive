@@ -456,10 +456,10 @@ screen bgs_7dl_5:
         style "page_7dl_text"
         xalign 0.95
         yalign 0.95
-    if renpy.seen_image("bg int_plats_7dl"):
+    if renpy.seen_image("bg int_coupe_day_7dl"): # todo
         imagebutton:
             auto get_image_7dl("gui/gallery/bgs/int_plats_7dl_%s.png") xalign 0.19 yalign 0.15 
-            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg int_plats_7dl"), Jump("show_img_7dl")] 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg int_coupe_day_7dl"), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.19 yalign 0.15
     if renpy.seen_image("bg int_potato_storage_7dl"):

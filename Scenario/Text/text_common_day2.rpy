@@ -1700,7 +1700,7 @@ label alt_day2_event_clubs1:
             window hide
             return
     scene bg ext_clubs_day with fade
-    play music music_7dl["genki"] fadein 2
+    play music music_7dl["shappihn"] fadein 2
     "Приоритетным зданием по списку значились клубы."
     if (alt_day_binder != 1):
         if counter_sl_7dl >= 1: 
@@ -4008,6 +4008,7 @@ label alt_day2_dinner:
                     me "Да… Я сегодня ходил с маршрутным листом же, подписи собирал…"
                     mi "Значит, ко мне в клуб не заглянул. Я Мику."
                 $ meet('mi','Мику')
+                $ alt_day2_mi_met = True
                 "Она протянула руку через стол, и я поспешил ответить на рукопожатие."
                 menu:
                     "Познакомиться поближе":
@@ -4544,7 +4545,7 @@ label alt_day2_grand_escape:
     play music music_7dl["PleaseStopItMastered"] fadein 7
     "Разбудил меня голос Ольги Дмитриевны:"
     window hide
-    scene cg d3_us_library_4 #TODO
+    scene cg d3_us_library_4
     with dissolve
     mt "Семён…"
     mt "Мне мало было за вас краснеть в столовой, вы теперь ещё и сбежать придумали?!"
@@ -4554,7 +4555,7 @@ label alt_day2_grand_escape:
     "А я вдруг понял, что сплю не один. Вернее сказать, сплю не совсем сам по себе. Облапив меня в стиле кошки, положив сверху руки, ноги и живот, мне в плечо сладко посапывала Ульянка, всё такая же липкая от конфет. Это заставило меня проснуться в самые сжатые сроки."
     me "Аааааа!"
     window hide
-    scene cg d4_us_morning #TODO
+    scene cg d4_us_morning
     with dissolve
     us "Ууууууу!"
     "Закричала спросонья Ульяна."
@@ -4563,7 +4564,7 @@ label alt_day2_grand_escape:
     us "Так это что… Это сон был?"
     me "Похоже."
     window hide
-    scene cg d3_us_library_3 with dissolve #TODO
+    scene cg d3_us_library_3 with dissolve
     "Неохотно согласился я."
     us "Но я же так бежала… Я так никогда не бежала, я в поезд забралась! И тебе руку дала."
     me "Тебе приснилось."
@@ -4891,7 +4892,6 @@ label alt_day2_siesta:
     return
 
 label alt_day2_tournament:
-    label alt_test:
     window hide 
     scene bg ext_dining_hall_near_day with dissolve
     play ambience ambience_camp_center_day fadein 3
@@ -4938,7 +4938,7 @@ label alt_day2_tournament:
         $ meet('sh','Шурик')
         sh "Сечас всё расскажем."
         hide sh with dissolve
-    if not ('music_club' in list_voyage_7dl):
+    if not (('music_club' in list_voyage_7dl) or alt_day2_mi_met):
         show mi normal pioneer with dissolve
         "Здесь была и давешняя аниме-девочка из столовой."
         "Я ткнул Ульянку, стоящую тут же, локтем."
@@ -5474,7 +5474,7 @@ label alt_day2_ultim:
                 "Но плясать под её дудку я не собираюсь."
                 window hide
             "Чтобы было честно":
-                play music music_7dl["sheiscool"] fadein 3
+                play music music_7dl["snatch"] fadein 3
                 $ lp_dv -= 10
                 $ lp_un -= 5
                 $ alt_day2_dv_harass = True
@@ -6275,7 +6275,7 @@ label alt_day2_eventEv_me_mt_house1:
             play sound sfx_open_dooor_campus_1
             pause(1)
             scene bg ext_house_of_mt_night with dissolve
-            "Однако, пока я ходил, время уже вплотную подобралось к отбою."
+            "Однако пока я ходил, время уже вплотную подобралось к отбою."
             "Делать нечего, пришлось двигаться к умывальникам."
             stop music fadeout 3
             stop ambience fadeout 6
@@ -8973,7 +8973,7 @@ label alt_day2_slot_sl:
     window hide
     show sl normal pioneer
     with dissolve
-    play music music_7dl["brim"] fadein 2
+    play music music_7dl["not_alone"] fadein 2
     "Я остановился и поднял голову."
     "Она догоняла меня быстрым шагом, почти не тревожа окружение."
     "Идеально вписываясь, будто являясь частью всего этого — ничего удивительного в том, что я не сумел заметить её до сих пор."
@@ -9090,7 +9090,8 @@ label alt_day2_slot_sl:
         sl "Есть плавки?"
         me "Э…"
         sl "Я так и думала. {w}Пойдём, выдадим тебе казённые."
-        with swradar
+        "..."
+        with fulldiam
     else:
         "Помахала мне рукой девушка и убежала."
         hide sl with easeoutleft
