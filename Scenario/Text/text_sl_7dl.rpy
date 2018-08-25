@@ -1535,7 +1535,7 @@ label alt_day4_sl_7dl_herc_day:
     else:
         "Слави тоже нигде видно не было."
     th "Я думаю, Славя просто занята."
-     window hide
+    window hide
     scene bg ext_square_day with dissolve
     dreamgirl "Например?.."
     th "Да подметает опять где-нибудь, наверное. {w}Или за детишками следит."
