@@ -63,7 +63,7 @@
     "Я слишком углубился внутрь себя и почти вспомнил."
     "А потому мой лучший друг, мой контролёр и предохранитель немедля дёрнул за стоп-кран, вышвыривая в объективную реальность - пусть и накоротке с хандрой несправедливо отвергнутого, зато в здравом уме."
     "Голова трещала так, будто я вчера много и продуктивно причащался этанолом."
-    "Однако, хоть убей, ничего сопряжённого ни с тостами, ни с шумным застольем, в памяти не задержалось. А пьянствовать водку в одиночестве… я ещё не совсем алкоголик."
+    "Однако хоть убей, ничего сопряжённого ни с тостами, ни с шумным застольем, в памяти не задержалось. А пьянствовать водку в одиночестве… я ещё не совсем алкоголик."
     th "И что же тогда случилось?"
     "По носу резануло специфическим запахом, присущим только медицинским учреждениям - здесь смешались и ментоловые нотки валидола, и вездесущая хлорка…"
     "А над всем этим царил удушливый аромат кварцевания."
@@ -508,7 +508,7 @@ label alt_fz_win:
 label alt_day4_fz_postcard:
     stop music fadeout 5
     stop ambience fadeout 5
-    play music music_list["smooth_machine"] fadein 5
+    play music music_7dl["surf"] fadein 5
     if ('sl' in list_d2_convoy_7dl):
         "Несколько минут спустя на крылечке показалась Виолетта."
         show cs normal with dissolve
@@ -646,7 +646,7 @@ label alt_day4_fz_postcard:
     scene bg ext_aidpost_day with dissolve
     show sl normal pioneer
     with fade2
-    play music music_list["take_me_beautifully"] fadein 5
+    play music music_7dl["slavyas_fantazm"]fadein 5
     "Славя ждала меня всё на той же скамеечке, и я поймал себя на мысли, что мне очень, очень хочется увидеть её хотя бы разок без этих её вездесущих косиц."
     show sl shy pioneer with dspr
     sl "Ч-что…"
@@ -1224,7 +1224,7 @@ label alt_day4_fz_dv_dinner:
     with fade
     play sound sfx_open_door_clubs
     me "Войдите."
-    play music music_list["my_daily_life"] fadein 5
+    play music music_7dl["explore"] fadein 5
     th "Первый больной - в студию!.."
     play sound sfx_open_door_clubs
     with None
@@ -1359,7 +1359,7 @@ label alt_day4_fz_dv_dinner:
     dreamgirl "Запомните, уделяйте больше времени тем, кого любите, потому что они с вами не навсегда."
     dreamgirl "Запомните и горячо прижмите близкого человека к себе, потому что это единственное сокровище, которое можете отдать от сердца, и оно не стоит ни копейки."
     show blinking
-    play music music_list["my_daily_life"]
+    play music music_7dl["explore"]
     show un normal pioneer at center 
     with dissolve
     "Дверь скрипнула - почему-то без стука."
@@ -1457,7 +1457,7 @@ label alt_day4_fz_dv_dinner:
     "Я решил, что на будущее было бы неплохо обзавестись умением такого же типа и пригласил:"
     me "Войдите!"
     play sound sfx_open_door_clubs
-    play music music_list["eat_some_trouble"] fadein 3
+    play music music_7dl["genki"] fadein 3
     with None
     show us normal pioneer at center 
     with dissolve
@@ -1585,7 +1585,7 @@ label alt_day4_fz_dv_dinner:
     th "Остались только Мику и Алиса. Интересно, обе придут?"
     th "Голова была, женская часть была, живот был. {w}Что дальше? "
     play sound sfx_open_door_kick
-    play music music_list["that_s_our_madhouse"] fadein 3
+    play music music_7dl["sheiscool"] fadein 3
     with None
     show dv normal pioneer at center 
     with dissolve
@@ -1994,7 +1994,7 @@ label alt_day4_fz_supper:
     cs "Догадливый малый."
     "Виола приветственно кивнула вожатой и освободила помещение."
     hide cs with dissolve
-    play music music_list["smooth_machine"] fadein 5
+    play music music_7dl["surf"] fadein 5
     show mt normal pioneer with dspr
     mt "Извини, Семён, целый день на ногах с этим родительским днём."
     me "А что с ним? Приезжают родители, забирают детей, кормят так, будто дети здесь голодом сидят."
@@ -2133,7 +2133,7 @@ label alt_day4_fz_supper:
     scene bg ext_square_sunset with dissolve
     play ambience ambience_camp_center_day fadein 2
     $ persistent.sprite_time = "sunset"
-    play music music_list["into_the_unknown"] fadein 3
+    play music music_7dl["sh_ai_rejuv"] fadein 3
     "Вполне ожидаемо, что, пройдя по тропинке, я оказался на площади."
     th "Вечер. Мирно. Генда. Чем не лейтмотив?"
     "Моё внимание привлекла чья-то фигурка на одной из скамеек."
@@ -2202,7 +2202,7 @@ label alt_day4_fz_supper:
         "Но победный взгляд свысока и прочие мне напрочь непонятные ужимки имели место быть."
         th "Как будто она меня уже приписала в свою собственность."
         th "Очень не хотелось бы выступать инструментом возвеличивания кого-либо."
-        "Однако, рыжая меру знала и ничего сверх дозволенного себе не позволила."
+        "Однако рыжая меру знала и ничего сверх дозволенного себе не позволила."
         "А Лена покраснела, вздрогнула и закрылась книгой."
         "Впрочем, я это увидел уже краем глаза - мы сворачивали на дорогу, ведущую к воротам."
     elif alt_day4_fz_sh == 4:
@@ -2549,7 +2549,7 @@ label alt_day4_fz_old_camp:
     with dissolve
     $ night_time()
     play ambience ambience_forest_night fadein 3
-    play music music_list["door_to_nightmare"] fadein 3
+    play music music_7dl["sammy"] fadein 3
     "Пришлось вернуться чуть назад и повернуть на дорожку, ведущую мимо домиков - оставляя по левую руку уже знакомый домик рыжих с весёлым Роджером на двери."
     "Вот ещё один поворот - и дорожка проходит мимо пяти домиков в ряд, отделяемых от густых зарослей кажущейся хлипкой преградой кирпичного забора."
     "И, пройдя сквозь неширокую калитку, я ступил на хорошо натоптанную тропинку."
@@ -2649,7 +2649,7 @@ label alt_day4_fz_old_camp:
     with dissolve
     $ night_time()
     play ambience ambience_forest_night fadein 3
-    play music music_list["door_to_nightmare"] fadein 3
+    play music music_7dl["sammy"] fadein 3
     "Надеюсь, идти не очень далеко придётся."
     "Потому что с каждым новым шагом мне всё с большим трудом удавалось задушить в себе желание развернуться и припустить обратно в сторону лагеря."
     if alt_day4_fz_sh == 4:
@@ -3832,7 +3832,7 @@ label alt_day4_fz_old_camp:
     th "В следующий раз надо будет сломать ему ногу в целях профилактики."
     "С непонятным ожесточением подумал я."
     if alt_day4_fz_sh == 1:
-        play music music_list["trapped_in_dreams"] fadein 3
+        play music music_7dl["nap_one"] fadein 3
         scene cg d4_fz_catac_un_7dl with dissolve
         un "Тут очень много обломков, аккуратнее."
         "Предупредила девочка."
@@ -3856,7 +3856,7 @@ label alt_day4_fz_old_camp:
         "Мы миновали очередной поворот, двигаясь крайне быстрым шагом."
         "…как вдруг световой круг выхватил из темноты провал в полу."
     elif alt_day4_fz_sh == 2:
-        play music music_list["trapped_in_dreams"] fadein 3
+        play music music_7dl["nap_one"] fadein 3
         scene cg d4_fz_catac_sl_7dl with dissolve
         sl "Сколько мы здесь уже бродим?"
         "Она задала риторический вопрос, но я понял это уже тогда, когда на автомате проверил время."
@@ -3880,7 +3880,7 @@ label alt_day4_fz_old_camp:
         "Девочка она симпатичная, даже кое-какой интерес ко мне проявляет…"
         "Закончить я не успел - прямо под ногами из ниоткуда образовался провал в полу, и если бы не Славя, схватившая меня за ремень - греметь бы мне вниз."
     elif alt_day4_fz_sh == 3:
-        play music music_list["trapped_in_dreams"] fadein 3
+        play music music_7dl["nap_one"] fadein 3
         scene cg d4_fz_catac_dv_7dl with dissolve
         "Правда, тут же замешкалась в дверях, привыкая к темноте. {w}Зажечь фонарь ей почему-то в голову не пришло."
         "Хотя почему «почему-то»? Если я хоть немного понимаю в том, что произошло…"
@@ -3899,7 +3899,7 @@ label alt_day4_fz_old_camp:
         "Я только улыбнулся и, развернувшись, посветил себе под ноги."
         "И вовремя - ещё бы чуть-чуть, и лететь мне вниз метров с… не знаю, со скольки, но отсюда дна было не видать."
     elif alt_day4_fz_sh == 4:
-        play music music_list["trapped_in_dreams"] fadein 3
+        play music music_7dl["nap_one"] fadein 3
         scene cg d4_fz_catac_el_7dl with dissolve
         el "Извини, но первым ты не пойдёшь."
         "Предупредил кибернетик."
@@ -4659,7 +4659,7 @@ label alt_day4_fz_exit:
         dreamgirl "Кошмарная заключается в том, что она действует. С какого-то момента эта программа активировалась, и только моему наличию ты обязан тем, что до сих пор остаёшься в сознании."
         th "А теперь с китайского на русский, пожалуйста."
         dreamgirl "Какой же ты бестолковый. Поверить не могу, что я часть тебя. {w}Короче, мотай на ус:"
-        dreamgirl "Существует некая точка, координаты которой помещены тебе в голову, однако, эти координаты защищены хитрым психосоматическим барьером, вызывающим сильную головную боль при попытке приблизиться."
+        dreamgirl "Существует некая точка, координаты которой помещены тебе в голову, однако эти координаты защищены хитрым психосоматическим барьером, вызывающим сильную головную боль при попытке приблизиться."
         dreamgirl "Таким образом координаты защищены от обнаружения реципиентом в здравом уме и трезвой памяти. Ты просто не пойдёшь туда, где у тебя болит голова."
         dreamgirl "Первую часть алгоритма мне удалось разобрать — она гасит твоё эго и приводит сюда."
         th "Автопилот!"

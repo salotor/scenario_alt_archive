@@ -4,7 +4,7 @@
     else:
         $ routetag = "sl7dl" #Базис
     call alt_day4_sl_7dl_vars
-    $ persistent.sprite_time = "sunset"
+    $ persistent.sprite_time = "prolog"
     $ sunset_time()
     $ alt_chapter(4, u"Славя. 7ДЛ. Утро")
     pause(1)
@@ -12,7 +12,7 @@
     pause(1)
     call alt_day4_sl_7dl_breakfast
     pause(1)
-    $ persistent.sprite_time = "day"
+    $ persistent.sprite_time = "prolog"
     $ day_time()
     if loki:
         $ routetag = "sl7dl_loki"
@@ -52,17 +52,7 @@
     $ night_time()
     call alt_day4_sl_7dl_sleeptime
     pause(1)
-    window hide
-    show spill_red with dspr
-    $ renpy.pause(2, hard=True)
-    show spill_gray with dspr
-    $ renpy.pause(2, hard=True)
-    show alt_credits timeskip_dev at truecenter with dissolve2
-    $ renpy.pause(4, hard=True)
-    with dissolve2
-    window hide
-    return
-    jump alt_day5_sl_7dl
+    jump alt_day5_sl_7dl_start
 
 label alt_day5_sl_7dl_start:
     if herc and alt_day4_sl_7dl_workout :
@@ -76,7 +66,7 @@ label alt_day5_sl_7dl_start:
     pause(1)
     call alt_day5_sl_7dl_breakfast
     pause(1)
-    $ persistent.sprite_time = "day"
+    $ persistent.sprite_time = "prolog"
     $ day_time()
     if loki:
         $ routetag = "sl7dl_loki"
@@ -92,7 +82,7 @@ label alt_day5_sl_7dl_start:
         $ sunset_time()
         $ alt_chapter(5, u"Славя. 7ДЛ. Вечер")
         call alt_day5_sl_7dl_loki_evening
-    elif herc:  #Начало индирект рута mz+el
+    elif herc:
         $ alt_chapter(5, u"Славя. 7ДЛ. День")
         call alt_day5_sl_7dl_herc_day
         pause(1)
@@ -110,9 +100,10 @@ label alt_day5_sl_7dl_start:
         $ alt_chapter(5, u"Славя. 7ДЛ. Вечер")
         call alt_day5_sl_7dl_evening
     pause(1)
+    $ alt_chapter(5, u"Славя. 7ДЛ. Костёр")
     call alt_day5_sl_7dl_campfire
     pause(1)
-    if (herc or loki) and (lp_sl > 18) and (persistent.sl_7dl_good_loki or persistent.sl_7dl_good_herc or persistent.sl_7dl_good):
+    if herc and (lp_sl > 16) and (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
         call alt_day5_sl_7dl_hentai
         $ alt_day5_sl_7dl_hentai_done = True
     pause(1)
@@ -120,6 +111,16 @@ label alt_day5_sl_7dl_start:
     $ night_time()
     call alt_day5_sl_7dl_sleeptime
     pause(1)
+    window hide
+    show spill_red with dspr
+    $ renpy.pause(2, hard=True)
+    show spill_gray with dspr
+    $ renpy.pause(2, hard=True)
+    show alt_credits timeskip_dev at truecenter with dissolve2
+    $ renpy.pause(4, hard=True)
+    with dissolve2
+    window hide
+    return
     jump alt_day6_sl_7dl
 
 label alt_day6_sl_7dl_start:
