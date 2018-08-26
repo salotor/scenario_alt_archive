@@ -3579,7 +3579,8 @@ label alt_day2_sl_hyst:
             me "Так вот, если тебе прямо хочется отплатить бобром за бобро - ты могла бы составить мне компанию, показать, где здесь что."
             me "Нет, не настаиваю."
             "Славя улыбнулась и отобрала у меня листок."
-            sl "Давай в первую очередь пойдём к Мику? Отсюда ближе всего."
+            if not ('music_club' in list_voyage_7dl):
+                sl "Давай в первую очередь пойдём к Мику? Отсюда ближе всего."
         "Промолчать и послушно выйти.":
             $ alt_day1_sl_keys_took = 3
             window hide
@@ -4931,7 +4932,7 @@ label alt_day2_tournament:
         us "И все делают вид, что они заняты в стенгазете."
         us "По-моему, там только Лена работает. Рисует."
         hide us with dissolve
-    if not ('cyber' in list_voyage_7dl or 'library' in list_voyage_7dl):
+    if not ('men_clubs' in list_voyage_7dl or 'library' in list_voyage_7dl):
         show sh normal pioneer with dissolve
         "Так, стоп, а это кто?"
         us "Шурик, по какому поводу сбор?"
