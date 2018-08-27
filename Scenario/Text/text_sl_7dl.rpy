@@ -9121,7 +9121,7 @@ label alt_day5_sl_7dl_herc_day:
     me "Почти. А вы Ульяну отпустили?"
     mt "Ульяну…"
     "В этот самый момент вожатая открыла глаза."
-    show mt scared pioneer with dspr
+    show mt shocked pioneer with dspr
     mt "Ульяна!!!"
     show sl surprise sport at right with dissolve
     play music music_7dl["dropit"] fadein 3
@@ -9129,7 +9129,7 @@ label alt_day5_sl_7dl_herc_day:
     mt "Ульяна пропала!"
     dreamgirl "Похоже, обиделась девочка, что на неё всю работу свалили."
     "Я оглядел нашу со Славей сторону и сравнил её с противоположной и согласился."
-    show mt feared pioneer with dissolve
+    show mt sad pioneer with dissolve
     mt "Семён, Славя, вы когда последний раз её видели?"
     me "Да когда вы пришли. Вы же вместе убирались, помните?"
     th "Так что это {i}вы{/i} должны были следить за ней."
@@ -9154,7 +9154,7 @@ label alt_day5_sl_7dl_herc_day:
     mt "Не надо «лучше», не надо! {w}Вы уже сделали как лучше, хватило всему лагерю."
     me "Ольга Дмитриевна, пока вы нас ругаете, Ульяна где-то в лесу."
     "Напомнил я."
-    show mt feared pioneer with dspr
+    show mt sad pioneer with dspr
     "И это напоминание мгновенно остудило нашу вожатую — та будто под ведро ледяной воды угодила: съёжилась как-то, прикусила губу."
     mt "Мы будем её искать, понятно?"
     mt "Никто никуда не пойдёт, пока мы её не разыщем."
