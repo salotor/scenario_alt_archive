@@ -525,7 +525,8 @@ label alt_day4_sl_7dl_breakfast:
         sl "Мы ещё сделаем из тебя человека."
         me "Нисколько в этом не сомневаюсь."
     else:
-        me "Ровным счётом ничего. {w}Сама-то чем заниматься планируешь, пока я буду надрываться и погибать?"
+        me "Ровным счётом ничего."
+        "Сама меня припахать норовишь, а чем в это время займёшься?" 
         show sl smile pioneer with dspr
         sl "Проведу экскурсию по лагерю, соберу все замечания и в целом буду помогать комитету сегодня."
         me "А почему это тебе самая лёгкая работа достаётся?"
@@ -2058,6 +2059,9 @@ label alt_day4_sl_7dl_herc_evening:
     show al shy pioneer with dissolve
     "Он оказался ощутимо ниже меня, вихрастый, состоящий, казалось, из одних углов и голяшек."
     "Даже лицо у него было резкое, подобное тому, что я видел высеченным на стенах «Маяковской»."
+    "В общем, крайне приметная физиономия."
+    if alt_day4_sl_7dl_help1:
+        "Крайне знакомая к тому же."
     al "Я бы сам справился."
     me "Конечно, справился. {w}Но только какой ценой?"
     "Он угрюмо насупился."
@@ -3886,8 +3890,8 @@ label alt_day4_sl_7dl_loki_evening:
     pause(1)
     "И в самом деле — на эстраду выскочила Мику."
     "Что характерно, в том самом платье, которое примеряла Славя."
-    th "Прислушалась к моим словам? Ай, молодец!"
-    dreamgirl "Или просто оно изначально было её."
+    th "В любом случае, оно больше шло Мику."
+    dreamgirl "Или просто оно изначально принадлежало нашей хафу."
     th "О чём это ты?"
     dreamgirl "Так… Мысли вслух."
     play music music_7dl["will_you"] fadein 3
@@ -6248,17 +6252,22 @@ label alt_day4_sl_7dl_sleeptime:
     play sound sfx_open_dooor_campus_1
     pause(1)
     scene bg int_house_of_mt_noitem_night
-    with dissolve 
-    "Возможно, по всем канонам я должен был предложить проводить Славю."
-    "Или даже поцеловать её там, у воды — место-то романтичное."
+    with dissolve
+    if herc or loki:
+        "Возможно, по всем канонам я должен был предложить проводить Славю."
+        "Или даже поцеловать её там, у воды — место-то романтичное."
+    else:
+        "Не то время было, чтобы расслабляться."
+        "Не то место."
     "И обстановка."
-    "Вот только была небольшая проблемка."
     if herc:
+        "Вот только была небольшая проблемка."
         "Я не был уверен в том, что моя симпатия к ней обоюдна и взаимна."
     elif loki:
+        "Вот только…"
         "Она не нравилась мне в той мере, чтобы губы свои распускать."
     else:
-        "Моя чёртова удача."
+        "Да, моя чёртова удача."
         "Кажется, нам удалось немного подружиться со Славей, даже провернуть парочку заданий."
         "Вот только я опять всё испортил."
         "Человек-косяк, чтоб меня."
@@ -6491,12 +6500,16 @@ label alt_day5_sl_7dl_begin:
                 show mt smile pioneer with dspr
                 mt "На завтрак, Семён. {w}Во время дожда зарядка и линейка отменяются."
                 me "Да что ж вы сразу не сказали!"
+                show mt laugh pioneer with dspr
                 "Под сдвоенный смех девушек, я нырнул в дверь."
                 window hide
                 play sound sfx_open_dooor_campus_1
                 pause(1)
+                scene bg int_house_of_mt_day
+                pause(1)
+                scene bg ext_houses_rainy_day_7dl
                 with fulldiam
-                "Когда я в полном снаряжении вышел на улицу, и вожатой, и её помощницы уже след простыл."
+                "Когда я в полном снаряжении выбрался на улицу, и вожатой, и её помощницы уже след простыл."
                 me "Ожидаемо, что тут скажешь."
                 "Пробормотал под нос я."
                 "И отправился на завтрак."
@@ -6741,6 +6754,7 @@ label alt_day5_sl_7dl_breakfast:
         al "Посторонись!"
         "Мимо нас в обратную сторону деловито пронеслась троица хамов, разбрызгивая лужи и возбуждённо переговариваясь о чём-то."
         hide al with easeoutright
+        show sl smile pioneer with dspr
         sl "Опять в кораблики играть пошли."
         "Славя проводила их задумчивым взглядом, и я понял намёк: сбежал вниз по ступеням, галантно подал даме ручку…"
         "И дальше шла уже неторопливо."
@@ -6765,7 +6779,7 @@ label alt_day5_sl_7dl_breakfast:
         show sl happy2 pioneer with dspr
         sl "До чего ж ты любопытный!"
         me "Просто стараюсь поддержать разговор…"
-        show sl happy pioneer with dspr
+        show sl smile2 pioneer with dspr
         "Славя улыбнулась, но не ответила."
         "Девушка шла, качая головой в такт своим мыслям, а я исподволь изучал её."
         "Кургузый дождевик и резиновые сапоги — это понятно. {w}Но было в ней и что-то ещё."
@@ -6796,6 +6810,7 @@ label alt_day5_sl_7dl_breakfast:
             "Спорить с женщиной всегда тактика заведомо проигрышная: если проиграешь, сочтут идиотом, если победишь — грубияном."
         window hide
         scene bg ext_warehouse_rain_day_7dl
+        show sl smile pioneer
         with dissolve
         "Когда мы подходили к складу, барабанный, идущий пузырями по лужам, ливень утих, сменившись занудным косым дождиком."
         me "А вот это печально."
@@ -6824,6 +6839,7 @@ label alt_day5_sl_7dl_breakfast:
         play sound sfx_open_door_2
         window hide
         scene expression Desat("bg int_warehouse_day_7dl")
+        show sl normal pioneer with dspr
         with fade
         $ volume(0.5, "music")
         $ volume(0.5, "ambience")
@@ -6831,7 +6847,6 @@ label alt_day5_sl_7dl_breakfast:
         "Мы зашли в полутёмное, прохладное помещение."
         "И дождь сразу как-то отдалился, стал невесомым, незначимым…"
         "Скрылся, оставив нас наедине."
-        show sl normal pioneer with dspr
         sl "Постой пока здесь, я подыщу тебе что-нибудь."
         me "И резиновые сапоги!"
         show sl laugh pioneer with dspr
@@ -6925,6 +6940,7 @@ label alt_day5_sl_7dl_breakfast:
         sl "А куда я денусь?"
         if alt_day4_sl_7dl_herc_rendezvous:
             me "Я предпочёл бы, чтобы ты делась куда-нибудь на бережок речки, где мы договорились встретиться."
+            show sl shy pioneer with dspr
             sl "Что поделать, если погода не позволяет."
             sl "Ничего, будут ещё погожие деньки, увидимся обязательно."
             "Вообще, было в этом что-то иррациональное — смотря в глаза, спорить с девушкой, что она не хочет с тобой видеться."
@@ -7738,6 +7754,7 @@ label alt_day5_sl_7dl_candle:
         scene expression Desat('bg int_clubs_male_rain_7dl')
         with dissolve
         $ volume(0.5, "ambience")
+        stop music fadeout 3
         "А вот внутри уже всё было готово к свечке!"
         "Основной хлам был убран со стола, вокруг были расставлены стулья."
         play music music_7dl["pathways"] fadein 3
@@ -7758,7 +7775,7 @@ label alt_day5_sl_7dl_candle:
         $ persistent.sprite_time = "night"
         "Разрешение говорить было дано, видимо, мы уже хорошо научились слушать."
         "Все сразу заговорили вполголоса, зашумели, о чём-то переговариваясь."
-        show mt normal pioneer with dissolve
+        show mt normal pioneer at right with dissolve
         mt "Для начала, нам надо выбрать попутчика, кто хочет?"
         voices "Я! Я! Я!"
         "Тут же наперебой загомонили девочки."
@@ -7766,10 +7783,11 @@ label alt_day5_sl_7dl_candle:
         "Ольга забормотала, поочерёдно тыкая в каждого из желающих:"
         mt "На золотом крыльце сидели…"
         mt "Ведущая — Женя!"
-        show mz normal pioneer at right with dissolve
+        show mz normal glasses pioneer at left with dissolve
         mz "Я же не вызывалась…"
-        mt "Тебе ничего говорить не надо, ты сама всё поймёшь?"
+        mt "Тебе ничего говорить не надо, ты сама всё поймёшь?" # это ирония, угу.
         mz "Ох, ну ладно."
+        show mz normal pioneer at center with move
         "Спрятав очки в карман, Женя поднялась со своего места и заняла стул по ту сторону стола."
         mt "Как новенький, сегодня рассказчиком будет Семён. Прошу к столу!"
         me "Может, не надо?"
@@ -7778,10 +7796,13 @@ label alt_day5_sl_7dl_candle:
         with dspr
         mt "Смелее, рассказчик! Поприветствуем нашего рассказчика!"
         "Под нестройный хор хлопков, я прошёл к месту за столом и уселся на единственный стул."
+        show mz smile pioneer
+        show mt smile pioneer
+        with dspr
         mt "Что ж, а я ведущая. Пожалуй, начнём."
+        hide mt with moveoutright
+        show mz normal pioneer with dspr
         "Ольга отошла к вешалке, на которой сушился её зонтик и подперла плечом шкаф."
-        hide mt with dissolve
-        show mz normal pioneer at center with move
         mt "Смена закончилась, вы отправляетесь домой."
         "Начала вожатая."
         mt "Но вы живёте очень, очень далеко, так далеко, что вам надо добираться до дома на автобусе, а потом и поездом."
@@ -7815,14 +7836,15 @@ label alt_day5_sl_7dl_candle:
         me "А я… кхм… Я Семён."
         "В какой-то момент я утратил связь с реальностью: весь этот ритмичный стук, звуки дождя из-за окна, горящая свеча…"
         "Я поплыл."
+        scene black with dissolve
         $ volume(1.0, "ambience")
-        stop music fadeout 5
-        stop ambience fadeout 6
+        stop music fadeout 3
+        stop ambience fadeout 3
         pause(1)
         window hide
         scene bg int_coupe_day_7dl
-        show mz smile pioneer
-        with dissolve
+        show mz smile pioneer at center
+        show unblink
         play ambience ambience_7dl["train"] fadein 3
         play music music_7dl["last_summer"] fadein 3
         "Когда я открыл глаза, вокруг уже было смутно знакомое купе поезда, сквозь занавески лился неяркий закатный свет, а напротив меня сидела смутно знакомая девочка."
@@ -7907,6 +7929,7 @@ label alt_day5_sl_7dl_candle:
         me "А как?"
         show mz laugh pioneer with dspr
         mz "Со злым умыслом!"
+        show mz smile pioneer with dissolve
         mz "Эти точки связаны между собой, даже если между ними нет прямой дороги."
         mz "Потому и влюблённые, из тех, что поумнее, расставаясь, селятся там, где названия звучат одинаково — так они лучше чувствуют друг друга."
         mz "Только следующий шаг — сесть и поехать — мало кто решается совершить."
@@ -7963,10 +7986,16 @@ label alt_day5_sl_7dl_candle:
         "Задержа составляла четверть секунды — лаг."
         mz "Эй, не засыпай, ляг нормально!"
         me "Что?"
+        stop music fadeout 3
+        stop ambience fadeout 3
+        pause(1)
         window hide
         scene bg ext_city_night_7dl
+        show blackout_exh
+        show prologue_dream
         with dissolve
         $ prolog_time()
+        play music music_7dl["uneven_me"] fadein 3
         "У метро повесили гадальные автоматы в виде страшных рож в эстетике инков."
         "Страшных оскаленных рож с оскаленной пастью, куда тебе надо положить ладонь, чтобы получить свой прогноз."
         "Хиромантия, хреномантия."
@@ -8013,7 +8042,7 @@ label alt_day5_sl_7dl_candle:
         with fade
         "Вернулись мы только под утро и сразу легли спать."
         "Я не знаю, что снилось ей, а вот мне…"
-        stop music fadeout 5
+        stop music fadeout 3
         window hide
         scene anim_underwater
         with dissolve
@@ -8082,6 +8111,8 @@ label alt_day5_sl_7dl_candle:
         "Зато я знал пин-код."
         "Руки мыть надо, когда телефона касаешься, чтобы по следам на стекле не спалили."
         "Так что я набрал пин, и…"
+        stop music fadeout 5
+        play ambience ambience_7dl["train"] fadein 3
         mz "Эй, просыпайся!"
         "В пространство моего сна вдруг вторгся чей-то крайне знакомый голос."
         me "А, что?"
@@ -8092,6 +8123,7 @@ label alt_day5_sl_7dl_candle:
         scene bg int_coupe_night_7dl
         show mz normal pioneer
         with fade
+        play music music_7dl["to_the_sunrise"] fadein 3
         mz "Вокзал."
         me "О, спасибо."
         "Я спрыгнул с полки и начал в спешке собирать вещи."
@@ -8140,8 +8172,10 @@ label alt_day5_sl_7dl_candle:
         window hide
         play sound sfx_close_cabinet
         pause(1)
-        scene bg int_coupe_day_7dl
+        scene bg int_coupe_night_7dl
         with flash
+        $ night_time()
+        $ persistent.sprite_time = "night"
         "Я почувствовал, как соскальзываю в эту бездну и с силой захлопнул дверь."
         "Откинулся на подушки, тяжело дыша."
         "И тут же откатилась дверь, там показалась моя попутчица."
@@ -8187,6 +8221,7 @@ label alt_day5_sl_7dl_candle:
         scene bg int_clubs_male_rain_7dl
         show mz smile pioneer
         with dissolve
+        $ volume(0.5, "ambience")
         play ambience ambience_7dl["rain"] fadein 3
         mz "Полынью!"
         "Окружающие рукоплескали."
@@ -8213,31 +8248,37 @@ label alt_day5_sl_7dl_candle:
         th "… попросить."
         "Произнесло вдруг что-то в голове крайне знакомым голосом."
         mt "Загадать желание!"
-        hide mt
         hide mz
         with dissolve
         mt "Итак, давайте, собираемся все вместе и на счёт три задуваем свечку и загадываем желание!"
         "Славя уже стояла рядом."
         "Все девочки стояли рядом."
         mt "На счёт три!"
-        voice "Раз…"
-        voice "Два…"
-        voice "Три!"
+        hide mt with dissolve
+        voices "Раз…"
+        voices "Два…"
+        voices "Три!"
         "Мы синхронно нагнулись к свече и дунули."
         "Огонёк погас."
         th "Я хочу узнать, что это было."
         "Вот и всё, что успел загадать я."
         "Показалось, или где-то далеко-далеко послушался едва уловимый детский смех?"
         "Или не показалось?"
+        show us laugh sport at right with dissolve
         us "… чтобы закончился дождь!"
+        stop ambience fadeout 6
+        show mt normal pioneer at left with dissolve
         mt "Ульяна! Желание нельзя вслух произносить!"
         "Строго попеняла вожатая."
-        dv "Но он и правда закончился?"
+        show dv smile pioneer2 at fright with disslve
+        dv "Но он и правда закончился."
         mt "Да?"
         "Ольга кинула взгляд на часы."
         mt "Ох, ты ж… Так, ребята, все собираемся и идём к столовой!"
         mt "Засиделись мы что-то, время без пяти два."
+        show us smile sport with dspr
         us "Ура! Моё желание сбылось!"
+        show dv grun pioneer2 with dspr
         dv "Оно бы и так сбылось, балда!"
         "Послышался звонкий звук щелбана."
         dv "Надо было заказывать нового медведя! Ну, или конфет."
@@ -8588,6 +8629,7 @@ label alt_day5_sl_7dl_candle:
         mt "Дождевики, так и быть, можете пока оставить, после обеда переодеться обязательно!"
         us "Ольдмитривна! Мы это слышали уже, не первый дождь!"
         mt "И послушаете ещё раз! {w}Всё, марш на улицу, марш!"
+    $ volume(1.0, "ambience")
     window hide
     stop sound fadeout 1
     stop music fadeout 3
@@ -8723,7 +8765,7 @@ label alt_day5_sl_7dl_herc_day:
     dreamgirl "Гладите на него, какие мы нежные!"
     mt "Это хорошо, ведь у меня есть для тебя ещё одно увлекательное занятие!"
     show mt smile pioneer at right with dissolve
-    mt "Да кто бы сомневался…"
+    me "Да кто бы сомневался…"
     "Ольга присела на краешек скамейки и лёгким движением таза подвинула меня в сторонку."
     th "И вот зачем? {w}Я же теперь буду думать не только о промокшей рубашке Слави, но и…"
     "Бррр."
@@ -8736,7 +8778,10 @@ label alt_day5_sl_7dl_herc_day:
     "Ольга начала загибать пальцы."
     show mt normal pioneer with dspr
     mt "Самовольный уход за территорию — раз. Драка после обеда — два. Хамство гостям лагеря — четыре."
-    mt "И это только за один день."
+    me "Не сбились со счёта?"
+    "Услужливо переспросил я."
+    show mt grin pioneer with dspr
+    mt "Нет! {w} И это только за один день."
     me "Но об этом же знает только…"
     mt "Ответственной за тебя назначаю Славяну."
     sl "Хорошо, Ольга Дмитриевна."
@@ -8750,6 +8795,7 @@ label alt_day5_sl_7dl_herc_day:
     show sl surprise pioneer with dspr
     sl "Что такое?"
     me "Это ты?"
+    show sl smile pioneer with dspr
     sl "Конечно, я! {w}Я же помощница вожатой, помнишь? Я должна всё докладывать."
     me "Но это же была наша тайна."
     show sl shy pioneer with dspr
@@ -8940,9 +8986,9 @@ label alt_day5_sl_7dl_herc_day:
     with dissolve
     play ambience ambience_camp_center_day fadein 3
     "Славя вытолкала меня из помещения и закрыла за мной дверь."
+    show sl smile sport with dissolve
     "Немного повозилась с замком, повернулась ко мне со своей привычной уже улыбочкой."
     me "А Ульяну зачем?"
-    show sl smile sport with dspr
     sl "Её Ольга Дмитриевна за вчерашние художества наказала!"
     me "Художества?"
     show sl laugh sport with dspr
@@ -9006,6 +9052,7 @@ label alt_day5_sl_7dl_herc_day:
     sl "Ох, беда бедовая."
     "Славя взяла Ульяну за руку и повела за собой, мимолётом кивнув и мне."
     "У нас было три фартука, три пары варежек и один огромный мешок для мусора…"
+    stop music fadeout 3
     window hide 
     scene bg ext_path_day
     with dissolve
@@ -9046,8 +9093,10 @@ label alt_day5_sl_7dl_herc_day:
     me "Охраняет арестантов. Извини, не хотел тебя обидеть."
     sl "Тебе бы и не удалось."
     th "О, на этот счёт я готов поспорить."
+    show sl normal sport with dspr
     sl "Так или иначе, у нас сейчас времени в обрез — если не хотим опоздать на полдник."
     sl "Так что догоняем Ульяну, пока она опять куда-нибудь не сбежала!"
+    hide sl with dissolve
     "Да, для кого-то бег — определённо способ релакса."
     "Но не для меня."
     "И тем не менее,"
@@ -9065,6 +9114,7 @@ label alt_day5_sl_7dl_herc_day:
     sl "Можешь полежать на бревне, когда мы закончим."
     us "Нет, я хочу покрикивать и размахивать хлыстом как махараджа!"
     sl "Варежки взять не забудь, махараджа!"
+    show us grin sport with dspr
     us "Скучные старшаки, мамонты вымерли, а вы от скуки загнётесь!"
     show sl smile2 sport with dspr
     sl "Что-что?"
@@ -9121,7 +9171,7 @@ label alt_day5_sl_7dl_herc_day:
     me "Почти. А вы Ульяну отпустили?"
     mt "Ульяну…"
     "В этот самый момент вожатая открыла глаза."
-    show mt scared pioneer with dspr
+    show mt shocked pioneer with dspr
     mt "Ульяна!!!"
     show sl surprise sport at right with dissolve
     play music music_7dl["dropit"] fadein 3
@@ -9129,7 +9179,7 @@ label alt_day5_sl_7dl_herc_day:
     mt "Ульяна пропала!"
     dreamgirl "Похоже, обиделась девочка, что на неё всю работу свалили."
     "Я оглядел нашу со Славей сторону и сравнил её с противоположной и согласился."
-    show mt feared pioneer with dissolve
+    show mt sad pioneer with dissolve
     mt "Семён, Славя, вы когда последний раз её видели?"
     me "Да когда вы пришли. Вы же вместе убирались, помните?"
     th "Так что это {i}вы{/i} должны были следить за ней."
@@ -9154,7 +9204,7 @@ label alt_day5_sl_7dl_herc_day:
     mt "Не надо «лучше», не надо! {w}Вы уже сделали как лучше, хватило всему лагерю."
     me "Ольга Дмитриевна, пока вы нас ругаете, Ульяна где-то в лесу."
     "Напомнил я."
-    show mt feared pioneer with dspr
+    show mt sad pioneer with dspr
     "И это напоминание мгновенно остудило нашу вожатую — та будто под ведро ледяной воды угодила: съёжилась как-то, прикусила губу."
     mt "Мы будем её искать, понятно?"
     mt "Никто никуда не пойдёт, пока мы её не разыщем."
@@ -9186,9 +9236,8 @@ label alt_day5_sl_7dl_herc_day:
     ba "Идите уж."
     "Послушно кивнув, мы убрались с поляны."
     window hide
-    scene bg ext_path_day
-    show sl sad sport
-    with dissolve
+    scene bg ext_path_day with dissolve
+    show sl sad sport with dissolve
     sl "Как думаешь, с Ульяной всё в порядке?"
     "Спросила Славя, когда мы вышли на уже знакомую тропинку."
     "Ольга Дмитриевна шла впереди нас чуть ли не бегом, что позволяло пусть и между делом перебрасываться репликами."
@@ -9250,9 +9299,8 @@ label alt_day5_sl_7dl_herc_evening:
     th "Почему?"
     dreamgirl "Вопросы задавать начнут, узнают, вожатую по головке не погладят."
     window hide
-    scene bg ext_square_day
-    show mt normal pioneer
-    with dissolve
+    scene bg ext_square_day with dissolve
+    show mt normal pioneer with dissolve
     mt "Все слушаем сюда!"
     mt "Сегодня, в ходе уборки костровой поляны перед костром потерялась Сидорова."
     mt "Я не знаю, заблудилась она в лесу или спряталсь где-то, но мы должны её найти!"
@@ -9353,7 +9401,7 @@ label alt_day5_sl_7dl_herc_evening:
     "По левую руку я расслышал негромкое журчание — похоже, с той стороны дороги текла какая-то небольшая речушка."
     "Выдавали её буйные заросли — не чета тем, через которые предстояло пробираться нам."
     "Раздвинув стебли сухостоя, Славя кивнула, приглашая двигаться за ней."
-    stop music fadeout 6
+    stop music fadeout 3
     window hide
     scene bg ext_backroad_day_7dl
     with dissolve
@@ -9398,7 +9446,7 @@ label alt_day5_sl_7dl_herc_evening:
     th "А потом болезненное расставание у автобуса, да?"
     dreamgirl "Именно."
     th "Но если ей это всё не нужно?"
-    "Если всё это для неё пока не имеет никакого смысла…"
+    th "Если всё это для неё пока не имеет никакого смысла…"
     dreamgirl "Не попробуешь — не узнаешь. {w}Оп, что это?"
     "Скосив глаза, я увидел какую-то серую тень, неторопливо ковыляющую от меня."
     th "Что это?"
@@ -9523,7 +9571,7 @@ label alt_day5_sl_7dl_herc_evening:
     sl "Ольга Дмитриевна! Вместо того, чтобы ругать нас, вы бы посмотрели, что мы нашли."
     mt "Что нашли?"
     "Шурик безмолвно подал вожатой тряпочку, и выражение испуга перекочевало и на её лицо."
-    show mt scared pioneer with dspr
+    show mt shocked pioneer with dspr
     mt "Это же её галстук!"
     sl "Там ткань другая."
     mt "Какая разница! Славя, где ты это нашла? Нам надо…"
@@ -9553,7 +9601,7 @@ label alt_day5_sl_7dl_herc_evening:
     "Что с тебя возьмёшь?"
     "Я сам бы сбегал кого-нибудь позвал — находиться на одном патячке с истерящей вожатой не улыбалось совершенно."
     hide sl with easeoutright
-    stop music fadeout 6
+    stop music fadeout 3
     window hide
     scene bg ext_backroad_day_7dl
     with dissolve
@@ -9584,7 +9632,7 @@ label alt_day5_sl_7dl_herc_evening:
     "Двачевская сжала кулаки и цедила слова через зуб, но и вожатая тоже была крепкий орешек."
     "Ещё чуть-чуть — и кто-то начнёт кого-то бить."
     dv "Да какого чёрта? Я не нанималась вам в ищейки!"
-    show sl surprise pioneer at left
+    show sl surprise pioneer at left with dissolve
     sl "Нашли что-то?"
     mt "Двачевская, наказана!"
     dv "Да плевала я."
@@ -9594,6 +9642,8 @@ label alt_day5_sl_7dl_herc_evening:
     hide dv with moveoutright
     "Алиса демонстративно отвернулась и отправилась в лагерь."
     "К тому моменту, привлечённый руганью, вокруг нас собрался целый отряд."
+    stop music fadeout 3
+    $ volume(0.5, "sound")
     play sound sfx_7dl["eat_horn"] fadein 1
     "А со стороны лагеря донёсся сигнал горна."
     "Но никто никуда не спешил."
@@ -9623,6 +9673,7 @@ label alt_day5_sl_7dl_herc_evening:
     "Странные люди."
     "Но мы не обращали на них внимания — все находились до гудящих конечностей  и мечтали лишь о лавке и чём-нибудь горячем в тарелке."
     "Так что мы гурьбой завалились в столовую…"
+    $ volume(1.0, "sound")
     stop music fadeout 6
     window hide
     play sound sfx_open_door_1
@@ -11810,8 +11861,7 @@ label alt_day5_sl_7dl_campfire:
     "Начала было что-то говорить обычным своим голосом — с тем же результатом."
     "Сокрушённо покачав головой, вожатая набрала в грудь побольше воздуха:"
     show mt smile pioneer with dissolve
-    mt "Дорогие пионеры!"
-    with vpunch
+    mt "Дорогие пионеры!" with vpunch
     "Рявкнула она, да так, что парочка близстоящих пионеров присела, а те, кому не повезло очутиться ещё ближе — поседели до времени и подумывали прилечь."
     mt "Напоминаю вам о том, что на сегодняшний вечер назначен общелагерный костёр!"
     mt "Счастлива сообщить вам о том, что планы не изменились, и мы все после ужина отправляемся на костровую поляну!"
@@ -11826,7 +11876,7 @@ label alt_day5_sl_7dl_campfire:
         dn "Вообще-то мы картошку и сами отнесём."
         tn "На весь лагерь?"
         mt "В общем, жду вас после ужина на площади, там и разберёмся."
-        "Данечка и Тоник кивнули сели обратно на свои места."
+        "Данечка и его приятель кивнули сели обратно на свои места."
         hide dn
         hide tn
         with dissolve
@@ -11846,9 +11896,8 @@ label alt_day5_sl_7dl_campfire:
         show mt laugh pioneer with dspr
         mt "Тебе, Феоктистова, сейчас не о палатках думать надо, а о том, как побыстрее поправиться."
     "Завершив выступление, Ольга кивнула и отправилась к раздаче за своей порцией ужина."
-    scene bg int_dining_hall_sunset
-    show sl sad pioneer
-    with dissolve
+    scene bg int_dining_hall_sunset with dissolve
+    show sl sad pioneer with dissolve
     if herc:
         sl "За Ульяной будем следить вместе, хорошо?"
         me "Не думаю, что она нуждается в каком-то пригляде. {w}По-моему, она уже всё осознала и раскаялась."
@@ -11999,6 +12048,7 @@ label alt_day5_sl_7dl_campfire:
         sl "Что вы имеете в виду?"
         "Захлопала ресницами девочка, а вожатая просто рукой махнула:"
         mt "Да вставай, раз тебе так хочется."
+        hide mt with dissolve
         if loki:
             "Моего мнения, понятно, спросить забыли."
             "Но ничего, я уже привык."
@@ -12100,6 +12150,8 @@ label alt_day5_sl_7dl_campfire:
         if alt_day5_sl_7dl_workout:
             "Правда, немного першило в горле."
             "Но я предпочитал не думать об этом."
+        scene bg ext_polyana_sunset
+        with dissolve
         "У меня была Славя, был вечер и друзья вокруг."
         "Я и сам изменился. Не очень сильно, но зато весь."
         "Неизменным осталось только имя."
@@ -12169,7 +12221,7 @@ label alt_day5_sl_7dl_campfire:
         "В тишину отходящего ко сну леса добавился негромкий треск горящих дров."
     "Я отошёл от костра и присел на бревно."
     "Вечер начался."
-    stop music fadeout 6
+    stop music fadeout 3
     pause(1)
     play sound_loop sfx_forest_fireplace fadein 3
     play music music_7dl["lastlight_guitar"] fadein 3
@@ -12228,21 +12280,21 @@ label alt_day5_sl_7dl_campfire:
         me "Да мы же просто гуляли! Потом Ульяну искали…"
         show mi grin casual with dspr
         mi "А теперь она ходит в твоём свитере."
-        show sl smile casual at left with dspr
+        show sl smile pioneer at left with dspr
         sl "Если тебе так завидно, Мику, могу поделиться."
         show mi laugh casual with dspr
         mi "Нет, вдвоём мы под ним не поместимся."
         dreamgirl "Но надо попробовать. Это же зрелище!"
         th "Ещё какое. {w}Только вряд ли они решатся."
         dreamgirl "Кругом цинизм, морализм и ханжество. O tempora! O mores!"
+        show mi smile casual at left
+        show sl normal pioneer at right
+        with move
         "Девочки расселись по разные стороны от меня, и я сразу ощутил себя чуть ли не… Как там Ульянка говорила? Махараджей?"
         "Потому что теплом веяло сразу с обеих сторон."
         "Спокойным, размеренным — любовью — с правой стороны, где сидела Славя."
         "И шебутным, враспрыжку, ломаным — жадным интересом — со стороны Мику."
         me "Хороший вечер."
-        show mi smile casual at left
-        show sl normal pioneer at right
-        with move
         mi "Хороший… Мой па говорил о том, что ценно любое время, которое ты живёшь."
         mi "Но бесценно… Бесценно только то, что ты проводишь с близкими тебе людьми."
         me "Похоже, твой отец очень умный мужик."
@@ -12267,7 +12319,7 @@ label alt_day5_sl_7dl_campfire:
         th "А в моём имени звучит желание одиночества. {w}Его я, собственно, и получил."
         th "Только вот вам об этом знать совершенно необязательно."
         sl "Просто мы привыкли к тому, что Мику — это Мику!"
-        show mi normal casual with dspr
+        show mi smile casual with dspr
         mi "И пусть так остаётся!"
         "Мы рассмеялись, негромко, но дружно."
         "В этом мы не были кем-то особенным — тут и там с разных концов поляны доносились возгласы, смех, разговоры…"
@@ -12472,7 +12524,7 @@ label alt_day5_sl_7dl_campfire:
         play sound sfx_7dl["snap"] fadein 0
         scene white with flash
         $ renpy.pause(1, hard=True)
-        $ persistent. sprite_time = "night"
+        $ persistent.sprite_time = "night"
         $ night_time()
         scene bg ext_polyana_night
         show sl smile pioneer
@@ -12616,13 +12668,16 @@ label alt_day5_sl_7dl_campfire:
         me "Счастье — от слова «часть».{w} Вот что я понял."
         me "Ты счастлив, когда все твои части на месте. Ты «с-част-лив»!"
         me "А если вдруг части тебя не на месте, ты становишься несчастливым, нецельным."
+        show sl normal pioneer with dspr
         sl "Да."
         "Серьёзно кивнула девочка."
         sl "И я тоже чувствую себя целой сейчас. С того момента, когда ты…"
+        show sl shy pioneer with dspr
         "Она снова жарко покраснела."
         me "Что теперь делать будем?"
         sl "Наслаждаться… моментом?"
         me "Да!"
+        show sl shy pioneer close with dspr
         "Я обнял её и прижал к себе, с-част-ливый, как никогда прежде."
         window hide
         with fade
@@ -12637,6 +12692,7 @@ label alt_day5_sl_7dl_campfire:
         me "Да."
         sl "Тогда пошли?"
         me "Погоди!"
+        show sl shy pioneer close with dspr
         "Я снова притянул её к себе, снова нашёл её губы."
         me "Пошли."
         window hide
@@ -13094,6 +13150,8 @@ label alt_day5_sl_7dl_sleeptime:
     un "Ты обещал, что мы будем вместе!"
     un "Твои слова хоть чего-нибудь стоят?"
     if herc:
+        stop ambience fadeout 3
+        scene black with dissolve
         play music music_7dl["seven_summer_days"] fadein 3
         "Воздух встал в груди, попытался что-то ответить, и…"
         "И проснулся!"
