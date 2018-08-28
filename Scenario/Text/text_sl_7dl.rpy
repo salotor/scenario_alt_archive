@@ -6893,7 +6893,7 @@ label alt_day5_sl_7dl_breakfast:
         with dissolve
         $ volume(1.0, "music")
         $ volume(1.0, "ambience")
-        $ persistent.sprite_time = "prolog"
+        $ sprite_time = "prolog"
         "Сцапав новый комплект носков и старые сандалии, я вышел на улицу."
         sl "Ты чем сейчас планируешь заниматься?"
         if alt_day4_sl_7dl_herc_rendezvous:
@@ -7426,7 +7426,7 @@ label alt_day5_sl_7dl_candle:
     hide mt with easeoutright
     "И сбежала по ступенькам, предоставляя нам следовать за ней."
     "Лена сидела ближе всего к краю, так что она и пошла первая."
-    "Вслед за ней — Алиса."
+    "Вслед за ней — Алиса." # ничего, что на арте они идут в другой последовательности?
     "Очень удивительно, но без всякой строевой муштры, без глупостей и криков, Ольга заставила нас организованной толпой, не толкаясь и не пихаясь локтями, отправиться туда, куда нужно ей."
     "Только Мику почему-то плелась далеко в кильватере."
     "О чём-то задумалась, наверное."
@@ -7720,6 +7720,7 @@ label alt_day5_sl_7dl_candle:
         mt "Я к трём часам подойду, вы все должны быть в сборе."
         mt "Вопросы? Вопросов нет. {w}На обед шагом… арш!"
     elif herc:
+        label alt_test:
         window hide
         scene bg ext_clubs_rain_7dl
         with dissolve
@@ -7742,6 +7743,7 @@ label alt_day5_sl_7dl_candle:
         scene expression Desat('bg int_clubs_male_rain_7dl')
         with dissolve
         $ volume(0.5, "ambience")
+        stop music fadeout 3
         "А вот внутри уже всё было готово к свечке!"
         "Основной хлам был убран со стола, вокруг были расставлены стулья."
         play music music_7dl["pathways"] fadein 3
@@ -7762,7 +7764,7 @@ label alt_day5_sl_7dl_candle:
         $ persistent.sprite_time = "night"
         "Разрешение говорить было дано, видимо, мы уже хорошо научились слушать."
         "Все сразу заговорили вполголоса, зашумели, о чём-то переговариваясь."
-        show mt normal pioneer with dissolve
+        show mt normal pioneer at right with dissolve
         mt "Для начала, нам надо выбрать попутчика, кто хочет?"
         voices "Я! Я! Я!"
         "Тут же наперебой загомонили девочки."
@@ -7770,10 +7772,11 @@ label alt_day5_sl_7dl_candle:
         "Ольга забормотала, поочерёдно тыкая в каждого из желающих:"
         mt "На золотом крыльце сидели…"
         mt "Ведущая — Женя!"
-        show mz normal pioneer at right with dissolve
+        show mz normal glasses pioneer at left with dissolve
         mz "Я же не вызывалась…"
-        mt "Тебе ничего говорить не надо, ты сама всё поймёшь?"
+        mt "Тебе ничего говорить не надо, ты сама всё поймёшь?" # если это вопрос, то ответ странный
         mz "Ох, ну ладно."
+        show mz normal pioneer at center with move
         "Спрятав очки в карман, Женя поднялась со своего места и заняла стул по ту сторону стола."
         mt "Как новенький, сегодня рассказчиком будет Семён. Прошу к столу!"
         me "Может, не надо?"
@@ -7782,10 +7785,13 @@ label alt_day5_sl_7dl_candle:
         with dspr
         mt "Смелее, рассказчик! Поприветствуем нашего рассказчика!"
         "Под нестройный хор хлопков, я прошёл к месту за столом и уселся на единственный стул."
+        show mz smile pioneer
+        show mt smile pioneer
+        with dspr
         mt "Что ж, а я ведущая. Пожалуй, начнём."
+        hide mt with moveoutright
+        show mz normal pioneer with dspr
         "Ольга отошла к вешалке, на которой сушился её зонтик и подперла плечом шкаф."
-        hide mt with dissolve
-        show mz normal pioneer at center with move
         mt "Смена закончилась, вы отправляетесь домой."
         "Начала вожатая."
         mt "Но вы живёте очень, очень далеко, так далеко, что вам надо добираться до дома на автобусе, а потом и поездом."
@@ -7819,14 +7825,15 @@ label alt_day5_sl_7dl_candle:
         me "А я… кхм… Я Семён."
         "В какой-то момент я утратил связь с реальностью: весь этот ритмичный стук, звуки дождя из-за окна, горящая свеча…"
         "Я поплыл."
+        scene black with dissolve # здесь не должно быть случаем $ persistent.sprite_time = "prolog"?
         $ volume(1.0, "ambience")
-        stop music fadeout 5
-        stop ambience fadeout 6
+        stop music fadeout 3
+        stop ambience fadeout 3
         pause(1)
         window hide
         scene bg int_coupe_day_7dl
-        show mz smile pioneer
-        with dissolve
+        show mz smile pioneer at center
+        show unblink
         play ambience ambience_7dl["train"] fadein 3
         play music music_7dl["last_summer"] fadein 3
         "Когда я открыл глаза, вокруг уже было смутно знакомое купе поезда, сквозь занавески лился неяркий закатный свет, а напротив меня сидела смутно знакомая девочка."
@@ -7911,6 +7918,7 @@ label alt_day5_sl_7dl_candle:
         me "А как?"
         show mz laugh pioneer with dspr
         mz "Со злым умыслом!"
+        show mz smile pioneer with dissolve
         mz "Эти точки связаны между собой, даже если между ними нет прямой дороги."
         mz "Потому и влюблённые, из тех, что поумнее, расставаясь, селятся там, где названия звучат одинаково — так они лучше чувствуют друг друга."
         mz "Только следующий шаг — сесть и поехать — мало кто решается совершить."
@@ -7967,10 +7975,12 @@ label alt_day5_sl_7dl_candle:
         "Задержа составляла четверть секунды — лаг."
         mz "Эй, не засыпай, ляг нормально!"
         me "Что?"
+        stop ambience fadeout 3
+        pause(1)
         window hide
         scene bg ext_city_night_7dl
-        with dissolve
-        $ prolog_time()
+        with Fade(0.5, 0.5, 0.5)
+        $ prolog_time() # предлагаю здесь повесить prologue dream и поменять музыку
         "У метро повесили гадальные автоматы в виде страшных рож в эстетике инков."
         "Страшных оскаленных рож с оскаленной пастью, куда тебе надо положить ладонь, чтобы получить свой прогноз."
         "Хиромантия, хреномантия."
@@ -8022,7 +8032,7 @@ label alt_day5_sl_7dl_candle:
         scene anim_underwater
         with dissolve
         pause(1)
-        play music music_7dl["youre_not_real"] fadein 3
+        play music music_7dl["youre_not_real"] fadein 3 # а здесь потом убрать, чтобы разделить фрагменты
         "Мне снилось что-то крайне странное."
         "Землёй горьких слёз это место назвали неспроста."
         "Когда-то здесь произошла жуткая экологическая катастрофа, в результате которой под воду ушёл целый район Токугавы."
@@ -8090,7 +8100,7 @@ label alt_day5_sl_7dl_candle:
         "В пространство моего сна вдруг вторгся чей-то крайне знакомый голос."
         me "А, что?"
         "Я открыл глаза."
-        $ persistent.sprite_time = "prolog"
+        $ persistent.sprite_time = "prolog" # и здесь смена музыки бы не помешала
         window hide
         show unblink
         scene bg int_coupe_night_7dl
