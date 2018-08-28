@@ -6827,7 +6827,7 @@ label alt_day5_sl_7dl_breakfast:
         with fade
         $ volume(0.5, "music")
         $ volume(0.5, "ambience")
-        $ sprite_time = "night"
+        $ persistent.sprite_time = "night"
         "Мы зашли в полутёмное, прохладное помещение."
         "И дождь сразу как-то отдалился, стал невесомым, незначимым…"
         "Скрылся, оставив нас наедине."
@@ -6890,7 +6890,7 @@ label alt_day5_sl_7dl_breakfast:
         with dissolve
         $ volume(1.0, "music")
         $ volume(1.0, "ambience")
-        $ sprite_time = "sunset"
+        $ persistent.sprite_time = "sunset"
         "Сцапав новый комплект носков и старые сандалии, я вышел на улицу."
         sl "Ты чем сейчас планируешь заниматься?"
         if alt_day4_sl_7dl_herc_rendezvous:
@@ -8086,7 +8086,7 @@ label alt_day5_sl_7dl_candle:
         "В пространство моего сна вдруг вторгся чей-то крайне знакомый голос."
         me "А, что?"
         "Я открыл глаза."
-        $ persistent.sprite_time = "prolog"
+        $ persistent.sprite_time = "sunset"
         window hide
         show unblink
         scene bg int_coupe_night_7dl
@@ -12590,8 +12590,8 @@ label alt_day5_sl_7dl_campfire:
         sl "Что?"
         window hide
         scene cg d5_sl_kissing_7dl:
-            zoom 2.0 xalign .7 yalign .2
-            linear 4.0 xalign .5 yalign .5
+            zoom 2.0 xalign .8 yalign .1
+            linear 4.0 zoom 1.0 xalign .5 yalign .5
         "Вместо ответа я поцеловал её."
         "Как говорили раньше: украл поцелуй."
         "У меня всегда было трудно с притворством, я не мог притвориться, если человек мне не нравился или, наоборот, вызывал симпатию."
