@@ -4,7 +4,7 @@
     else:
         $ routetag = "sl7dl" #Базис
     call alt_day4_sl_7dl_vars
-    $ persistent.sprite_time = "prolog"
+    $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(4, u"Славя. 7ДЛ. Утро")
     pause(1)
@@ -12,7 +12,7 @@
     pause(1)
     call alt_day4_sl_7dl_breakfast
     pause(1)
-    $ persistent.sprite_time = "prolog"
+    $ persistent.sprite_time = "sunset"
     $ day_time()
     if loki:
         $ routetag = "sl7dl_loki"
@@ -66,7 +66,7 @@ label alt_day5_sl_7dl_start:
     pause(1)
     call alt_day5_sl_7dl_breakfast
     pause(1)
-    $ persistent.sprite_time = "prolog"
+    $ persistent.sprite_time = "sunset"
     $ day_time()
     if loki:
         $ routetag = "sl7dl_loki"
@@ -196,7 +196,7 @@ label alt_day7_sl_7dl_start:
     call alt_day7_sl_7dl_leaving
     pause(1)
     if routetag == "sl7dltrue":
-        $ persistent.sprite_time = "prolog"
+        $ persistent.sprite_time = "sunset"
         $ prolog_time()
         $ alt_chapter(6, u"Славя. 7ДЛ. Тру")
         call alt_day7_sl_7dl_true
@@ -210,7 +210,7 @@ label alt_day7_sl_7dl_start:
     else:
         call alt_day7_sl_7dl_epilogue
     pause(1)
-    $ persistent.sprite_time = "prolog"
+    $ persistent.sprite_time = "sunset"
     $ prolog_time()
     if routetag == "sl7dlgood":
         if loki:

@@ -6893,7 +6893,7 @@ label alt_day5_sl_7dl_breakfast:
         with dissolve
         $ volume(1.0, "music")
         $ volume(1.0, "ambience")
-        $ sprite_time = "prolog"
+        $ sprite_time = "sunset"
         "Сцапав новый комплект носков и старые сандалии, я вышел на улицу."
         sl "Ты чем сейчас планируешь заниматься?"
         if alt_day4_sl_7dl_herc_rendezvous:
