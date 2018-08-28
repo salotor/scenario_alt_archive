@@ -12610,7 +12610,6 @@ label alt_day5_sl_7dl_campfire:
         sl "Вот видишь. {w}В мире ещё остались чудеса."
         me "Самое главное чудо в мире — это ты."
         sl "Что?"
-        label alt_test:
         window hide
         scene cg d5_sl_kissing_7dl:
             zoom 2.0 xalign .7 yalign .2
@@ -12639,13 +12638,16 @@ label alt_day5_sl_7dl_campfire:
         me "Счастье — от слова «часть».{w} Вот что я понял."
         me "Ты счастлив, когда все твои части на месте. Ты «с-част-лив»!"
         me "А если вдруг части тебя не на месте, ты становишься несчастливым, нецельным."
+        show sl normal pioneer with dspr
         sl "Да."
         "Серьёзно кивнула девочка."
         sl "И я тоже чувствую себя целой сейчас. С того момента, когда ты…"
+        show sl shy pioneer with dspr
         "Она снова жарко покраснела."
         me "Что теперь делать будем?"
         sl "Наслаждаться… моментом?"
         me "Да!"
+        show sl shy pioneer close with dspr
         "Я обнял её и прижал к себе, с-част-ливый, как никогда прежде."
         window hide
         with fade
@@ -12660,6 +12662,7 @@ label alt_day5_sl_7dl_campfire:
         me "Да."
         sl "Тогда пошли?"
         me "Погоди!"
+        show sl shy pioneer close with dspr
         "Я снова притянул её к себе, снова нашёл её губы."
         me "Пошли."
         window hide
@@ -13117,6 +13120,8 @@ label alt_day5_sl_7dl_sleeptime:
     un "Ты обещал, что мы будем вместе!"
     un "Твои слова хоть чего-нибудь стоят?"
     if herc:
+        stop ambience fadeout 3
+        scene black with dissolve
         play music music_7dl["seven_summer_days"] fadein 3
         "Воздух встал в груди, попытался что-то ответить, и…"
         "И проснулся!"
