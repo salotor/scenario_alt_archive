@@ -2392,7 +2392,7 @@ label alt_day6_mt_7dl_choice:
         scene bg ext_stairs_sunset_7dl with dissolve
         play ambience ambience_camp_entrance_day fadein 3
     else:
-        scene bg ext_un_hideout_sunset_7dl with dissolve
+        scene bg ext_un_hideout_day_7dl with dissolve
         play ambience ambience_lake_shore_day fadein 1
     $ persistent.sprite_time = "night"
     "Лучше бы они глядели в сторону, где я снова буду в своём четырёхстенном макрокосме, никому не мешающий и не нужный."

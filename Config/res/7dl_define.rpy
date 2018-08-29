@@ -379,6 +379,7 @@ init:
     image bg ext_entrance_night_clear_closed_7dl = get_image_7dl("bg/ext_entrance_night_clear_closed_7dl.png")
     image bg ext_hospital2_away_day_7dl = get_image_7dl("bg/ext_hospital2_away_day_7dl.jpg")
     image bg ext_hospital2_away_night_7dl = get_image_7dl("bg/ext_hospital2_away_night_7dl.jpg")
+    image bg ext_house_of_mt_rain_7dl = get_image_7dl("bg/ext_house_of_mt_rain_7dl.jpg")
     image bg ext_house_of_un_night_7dl = get_image_7dl("bg/ext_house_of_un_night_7dl.jpg")
     image bg ext_houses_night_7dl = get_image_7dl("bg/ext_houses_night_7dl.jpg")
     image bg ext_houses_rainy_day_7dl = get_image_7dl("bg/ext_houses_rainy_day_7dl.jpg")
