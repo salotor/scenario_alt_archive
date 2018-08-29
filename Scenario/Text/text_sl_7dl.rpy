@@ -526,7 +526,7 @@ label alt_day4_sl_7dl_breakfast:
         me "Нисколько в этом не сомневаюсь."
     else:
         me "Ровным счётом ничего."
-        "Сама меня припахать норовишь, а чем в это время займёшься?" 
+        me "Сама меня припахать норовишь, а чем в это время займёшься?" 
         show sl smile pioneer with dspr
         sl "Проведу экскурсию по лагерю, соберу все замечания и в целом буду помогать комитету сегодня."
         me "А почему это тебе самая лёгкая работа достаётся?"
@@ -8031,6 +8031,8 @@ label alt_day5_sl_7dl_candle:
         "В подъезде снова было темно, свет был только от лампочки на столе консьержки, так что дорогу до лифта пришлось искать наощупь."
         window hide
         scene bg int_home_lift_7dl
+        show blackout_exh
+        show prologue_dream
         with dissolve
         "В лифте комочек отогрелся и мирно засопел у меня на груди, неумело замурлыкал."
         me "Да."
@@ -8038,6 +8040,8 @@ label alt_day5_sl_7dl_candle:
         me "Теперь у тебя есть свой человек."
         window hide
         scene bg int_sam_house_clean_7dl
+        show blackout_exh
+        show prologue_dream
         with fade
         "К счастью, молока дома хватало — в «тетрапаках», шестипроцентного."
         "Оставалось просто намыть моего нового соседа, погреть молока, и…"
@@ -8053,6 +8057,8 @@ label alt_day5_sl_7dl_candle:
         stop music fadeout 3
         window hide
         scene anim_underwater
+        show blackout_exh
+        show prologue_dream
         with dissolve
         pause(1)
         play music music_7dl["youre_not_real"] fadein 3
@@ -8068,6 +8074,8 @@ label alt_day5_sl_7dl_candle:
         "Или это было ещё раньше?"
         window hide
         scene bg ext_adductius_7dl
+        show blackout_exh
+        show prologue_dream
         with fade
         "Сначала я упустил трубку, точно."
         "Китайская реплика какого-то жутко навороченного телефона из-за дождя скользила в руках, потому и улетела так легко."
@@ -8075,6 +8083,8 @@ label alt_day5_sl_7dl_candle:
         "А после катастрофы на Токугаве решётки в Японии очень широкие."
         window hide
         scene black
+        show blackout_exh
+        show prologue_dream
         with fade
         "Я в ужасе вскочил, вскинулся на шезлонге, заботливо укутанный пледом."
         "Трубка была здесь."
@@ -8125,7 +8135,8 @@ label alt_day5_sl_7dl_candle:
         "В пространство моего сна вдруг вторгся чей-то крайне знакомый голос."
         me "А, что?"
         "Я открыл глаза."
-        $ persistent.sprite_time = "sunset"
+        $ night_time()
+        $ persistent.sprite_time = "night"
         window hide
         show unblink
         scene bg int_coupe_night_7dl
@@ -8182,8 +8193,6 @@ label alt_day5_sl_7dl_candle:
         pause(1)
         scene bg int_coupe_night_7dl
         with flash
-        $ night_time()
-        $ persistent.sprite_time = "night"
         "Я почувствовал, как соскальзываю в эту бездну и с силой захлопнул дверь."
         "Откинулся на подушки, тяжело дыша."
         "И тут же откатилась дверь, там показалась моя попутчица."
@@ -8223,6 +8232,7 @@ label alt_day5_sl_7dl_candle:
         mz "Вот и кушай, кушай."
         mz "Дорога пахнет барбарисом, а вечность…"
         $ sunset_time()
+        $ persistent.sprite_time = "sunset"
         stop music fadeout 6
         pause(1)
         window hide
@@ -8272,21 +8282,23 @@ label alt_day5_sl_7dl_candle:
         "Вот и всё, что успел загадать я."
         "Показалось, или где-то далеко-далеко послушался едва уловимый детский смех?"
         "Или не показалось?"
-        show us laugh sport at right with dissolve
+        show us laugh sport at cright with dissolve
         us "… чтобы закончился дождь!"
         stop ambience fadeout 6
         show mt normal pioneer at left with dissolve
         mt "Ульяна! Желание нельзя вслух произносить!"
         "Строго попеняла вожатая."
-        show dv smile pioneer2 at fright with disslve
+        show dv smile pioneer2 at fright with dissolve
         dv "Но он и правда закончился."
         mt "Да?"
+        $ volume(1.0, "ambience")
+        play ambience ambience_clubs_inside_day fadein 4
         "Ольга кинула взгляд на часы."
         mt "Ох, ты ж… Так, ребята, все собираемся и идём к столовой!"
         mt "Засиделись мы что-то, время без пяти два."
         show us smile sport with dspr
         us "Ура! Моё желание сбылось!"
-        show dv grun pioneer2 with dspr
+        show dv grin pioneer2 with dspr
         dv "Оно бы и так сбылось, балда!"
         "Послышался звонкий звук щелбана."
         dv "Надо было заказывать нового медведя! Ну, или конфет."
@@ -8637,7 +8649,6 @@ label alt_day5_sl_7dl_candle:
         mt "Дождевики, так и быть, можете пока оставить, после обеда переодеться обязательно!"
         us "Ольдмитривна! Мы это слышали уже, не первый дождь!"
         mt "И послушаете ещё раз! {w}Всё, марш на улицу, марш!"
-    $ volume(1.0, "ambience")
     window hide
     stop sound fadeout 1
     stop music fadeout 3
@@ -8791,6 +8802,7 @@ label alt_day5_sl_7dl_herc_day:
     show mt grin pioneer with dspr
     mt "Нет! {w} И это только за один день."
     me "Но об этом же знает только…"
+    show mt normal pioneer with dspr
     mt "Ответственной за тебя назначаю Славяну."
     sl "Хорошо, Ольга Дмитриевна."
     "Кивнула девочка. Ей, похоже, всё было нипочём."
@@ -12158,8 +12170,6 @@ label alt_day5_sl_7dl_campfire:
         if alt_day5_sl_7dl_workout:
             "Правда, немного першило в горле."
             "Но я предпочитал не думать об этом."
-        scene bg ext_polyana_sunset
-        with dissolve
         "У меня была Славя, был вечер и друзья вокруг."
         "Я и сам изменился. Не очень сильно, но зато весь."
         "Неизменным осталось только имя."
@@ -12690,8 +12700,8 @@ label alt_day5_sl_7dl_campfire:
         window hide
         with fade
         "Мы пришли в себя, когда нас начали аукать."
-        "Вздрогнули, отпрянули было — и рассмеялись."
         show sl smile pioneer with dspr
+        "Вздрогнули, отпрянули было — и рассмеялись."
         sl "Пора возвращаться."
         me "Пора."
         sl "Это был…"

@@ -256,7 +256,7 @@ init -265 python:
     def HomeCity(id):
         return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.1) * im.matrix.tint(0.82, 0.84, 1.0))
     def Rained(id):
-        return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.4) * im.matrix.tint(0.68, 0.90, 0.8) * im.matrix.saturation(0.6)))
+        return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.4) * im.matrix.tint(0.68, 0.90, 0.8) * im.matrix.saturation(0.6))
 
     def filmetile(bitmap, opacity=0.1):
         return im.Tile(im.Alpha(bitmap,opacity))
