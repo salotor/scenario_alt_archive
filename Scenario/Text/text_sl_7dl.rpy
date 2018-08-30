@@ -10065,6 +10065,7 @@ label alt_day5_sl_7dl_loki_day:
     "Чуя неладное, я резко обернулся."
     show dv laugh pioneer2 far at right
     show mi laugh pioneer far
+    with dspr
     "Ну, разумеется."
     "Обе мерзавки корчили нам в спину рожи и показывали языки."
     "И если Алису я бы понял, то Мику…"
@@ -10125,18 +10126,19 @@ label alt_day5_sl_7dl_loki_day:
             "Ни формы скул, ни носа, ни даже разреза этих самых глаз."
             "Вообще ничего."
         "…одной не в меру навязчивой…":
-            show blink
             $ lp_sl += 1
             "Тем более, вот она сидит, довольная."
             "Что уж может быть проще: запомни как следует, закрой глаза…"
+            show blink
             "И представь."
             "Если не получается с первого раза — пробуй ещё, память в итоге всё равно уцепит черты лица!"
             "Разве нет?"
             window hide
             "Не получилось ни с третьей, ни с пятой попытки."
+    scene bg ext_musclub_day
+    show sl smile2 pioneer
     show unblink
     me "Да как ты это делаешь?!"
-    show sl smile2 pioneer with dspr
     sl "Это ты делаешь, Сёмушка."
     "«Сёмушку» я предпочёл пропустить мимо ушей."
     sl "Самые дорогие воспоминания — самые глубокие. {w}Ты почти никогда не можешь вызвать в памяти лица любимых людей."
@@ -10560,14 +10562,14 @@ label alt_day5_sl_7dl_loki_evening:
     "Прозвучало это донельзя двусмысленно, но я постарался не проводить параллелей."
     hide mi with dissolve
     show dv angry pioneer2 at right
-    show sl angry pioneer at left
+    show sl angry pioneer
     with dissolve
     me "Двести долларов на…"
     "Я ухмыльнулся."
     me "На Алису!"
-    "Обиженная вероломством, Славя поперхнулась аргументом."
     show dv laugh pioneer2 with dspr
     show sl upset pioneer with dspr
+    "Обиженная вероломством, Славя поперхнулась аргументом."
     dv "Что ты там сказала? «Да»?"
     sl "Что? Я не…"
     mi "Побеждает Алиса!"
@@ -12433,19 +12435,25 @@ label alt_day5_sl_7dl_campfire:
         window hide
     elif loki:
         stop music fadeout 5
-        show sl normal pioneer at center
-        show dv normal sport at right
-        show mi normal casual at left
-        with dissolve
+        show sl normal pioneer at center with dspr
+        show dv normal sport at right with moveinright
+        show mi normal casual at left with moveinleft
         dv "Сидите, голубки?"
         show sl dontlike pioneer with dspr
         sl "Тебе нравится издеваться, Алиса?"
         show dv smile sport with dspr
         dv "На самом деле я тебе даже немного завидую."
+        show sl normal pioneer with dspr
         sl "Вот как?"
         show dv grin sport with dspr
         dv "Да! Гляди, какой свитер модный у тебя!"
+        show dv laugh sport with dspr
+        show mi laugh casual with dspr
         "Девочки засмеялись, а Славя просто махнула рукой."
+        window hide
+        show dv normal sport
+        show mi normal casual
+        with fade
         "Мне же было необъяснимо хорошо."
         "И дело было не в каком-то определённом человека, нет."
         "Напротив."
@@ -12472,6 +12480,8 @@ label alt_day5_sl_7dl_campfire:
         "Музыка пропала."
         "Так что от того, какую мелодию я выберу, будет зависеть настроение."
         me "Ну, ладно."
+        show dv normal sport
+        with fade
         play music music_7dl["breath_again_slow"]
         "Я взял гитару поудобнее, потряс плечами, подёргал пальцами, разминая."
         "Конечно, я прекрасно понимал, что всё это ерунда, пока у меня не будет достаточно тренирована моторика пальцев."
@@ -12494,7 +12504,7 @@ label alt_day5_sl_7dl_campfire:
         "Хотя, казалось бы, с рыжей я толком общаться-то начал несколько часов назад."
         show dv normal sport with dspr
         dv "Смогаешь!"
-        "Кивнула Алиса, забирая инструмент."
+        "Кивнула Алиса, забирая инструмент." # может, сменить трек?
         dv "Значит, и завтра сможешь!"
         me "Попробую."
         dv "Там партия проще, чем то, что ты здесь играл. Точно сможешь."
