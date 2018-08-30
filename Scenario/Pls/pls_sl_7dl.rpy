@@ -112,15 +112,7 @@ label alt_day5_sl_7dl_start:
     call alt_day5_sl_7dl_sleeptime
     pause(1)
     window hide
-    show spill_red with dspr
-    $ renpy.pause(2, hard=True)
-    show spill_gray with dspr
-    $ renpy.pause(2, hard=True)
-    show alt_credits timeskip_dev at truecenter with dissolve2
-    $ renpy.pause(4, hard=True)
-    with dissolve2
-    window hide
-    return
+    with fade
     jump alt_day6_sl_7dl
 
 label alt_day6_sl_7dl_start:
@@ -178,6 +170,15 @@ label alt_day6_sl_7dl_start:
         $ routetag = "sl7dlbad"
     call alt_day6_sl_7dl_sleeptime
     pause(1)
+    window hide
+    show spill_red with dspr
+    $ renpy.pause(2, hard=True)
+    show spill_gray with dspr
+    $ renpy.pause(2, hard=True)
+    show alt_credits timeskip_dev at truecenter with dissolve2
+    $ renpy.pause(4, hard=True)
+    with dissolve2
+    return#Отсечка-заглушка
     jump alt_day7_sl_7dl
 
 label alt_day7_sl_7dl_start:
