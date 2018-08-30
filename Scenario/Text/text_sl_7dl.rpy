@@ -12835,7 +12835,7 @@ label alt_day5_sl_7dl_campfire:
         scene cg d5_sl_kissing_7dl with flash
         "Поцеловала."
         scene bg ext_path_night
-        show sl shy close pioneer 
+        show sl shy pioneer close
         with dissolve
         me "А это зачем?"
         sl "Чтобы понять, нужно ли нам продолжение?"
@@ -12846,7 +12846,7 @@ label alt_day5_sl_7dl_campfire:
         "Славя покачала головой и привлекла меня к себе снова."
         "Поцеловала снова."
         scene bg ext_path_night
-        show sl shy close pioneer 
+        show sl shy pioneer close
         with dissolve
         "Помолчала, восстанавливая дыхание."
         sl "Определённо, нужно."
