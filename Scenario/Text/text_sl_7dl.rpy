@@ -10423,7 +10423,7 @@ label alt_day5_sl_7dl_loki_evening:
     "Стиснуть зубы и терпеть."
     "Притворяться «полноценным членом общества»."
     "Ведь Слави общаются лишь с полноценными членами, никак иначе."
-    stop music fadeout 6
+    stop music fadeout 3
     window hide
     play sound sfx_open_door_2
     pause(1)
@@ -10537,7 +10537,7 @@ label alt_day5_sl_7dl_loki_evening:
     dreamgirl "Оу, ю тач май талала!"
     "Прыгнувший в голову образ проходил по категории «18+», потому я старательно зажмурился."
     me "Какой кошмаааар!"
-    stop music fadeout 5
+    stop music fadeout 2
     show mi normal pioneer with dspr
     pause(1)
     play music music_7dl["breath_me"] fadein 3
@@ -10556,13 +10556,17 @@ label alt_day5_sl_7dl_loki_evening:
     "Мику ударила в воображаемый гонг."
     mi "Двести долларов на бойца в красных трусах!"
     "Прозвучало это донельзя двусмысленно, но я постарался не проводить параллелей."
+    hide mi with dissolve
+    show dv angry pioneer2 at right
+    show sl angry pioneer at left
+    with dissolve
     me "Двести долларов на…"
     "Я ухмыльнулся."
     me "На Алису!"
     "Обиженная вероломством, Славя поперхнулась аргументом."
-    show dv laugh pioneer2 at right with dissolve
+    show dv laugh pioneer2 with dspr
+    show sl upset pioneer with dspr
     dv "Что ты там сказала? «Да»?"
-    show sl upset pioneer at left with dissolve
     sl "Что? Я не…"
     mi "Побеждает Алиса!"
     show dv grin pioneer2 with dspr
@@ -10571,7 +10575,9 @@ label alt_day5_sl_7dl_loki_evening:
     dv "Покажешь всем, как легко это — музыка!"
     dv "За язык никто не тянул, сама сказала, что барабаны — просто."
     dv "Даже ты сама сможешь. {w}Покажи класс."
-    hide sl with dissolve
+    hide sl
+    hide dv
+    with dissolve
     "Смущённая напором оппонентки и нашими взглядами, Славя позволила увлечь себя за установку."
     "Уселась на табуретку, взяла палочки."
     th "Вот было бы забавно, устрой она сейчас забойное соло."
@@ -10581,13 +10587,11 @@ label alt_day5_sl_7dl_loki_evening:
     "Я не сразу понял, что вместо ожидаемого ритмического рисунка в тишину клуба вплёлся нервным перестук, больше походящий на какую-то пионерскую дробь."
     "Хотя, наверное, это дробь и была."
     "Видимо, ничего другого на барабане исполнять Славя просто не умела."
-    show dv laugh pioneer2 with dspr
+    show dv laugh pioneer2 at right with dissolve
     dv "И это всё?"
     dv "Вот всё это — простое — оно всё?"
-    hide mi
-    show sl sad pioneer at left
-    show dv smile pioneer2 at right
-    with dissolve
+    show sl sad pioneer at left with dissolve
+    show dv smile pioneer2 with dspr
     sl "Я не говорила, что барабаны — это просто."
     dv "Говорила."
     sl "Я имела в виду…"
@@ -10600,8 +10604,8 @@ label alt_day5_sl_7dl_loki_evening:
     sl "Предлагаю сломать ветки о спину Алисы."
     show sl sad pioneer at fleft
     show dv smile pioneer2 at center
-    show mi normal pioneer at fright
     with move
+    show mi normal pioneer at fright with dissolve
     mi "Я не против! Не буду я ветками махать!"
     me "А я воздержусь."
     "Несмотря на то, что Алиса пока не зарекомендовала себя как добрая и ласковая девочка, её забота о деле подкупала."
@@ -10618,25 +10622,31 @@ label alt_day5_sl_7dl_loki_evening:
     dv "На трубе и гитаре — пианино сведёт тебя с ума."
     me "Нет, играть на пианино будет…"
     show sl upset pioneer with dspr
-    stop music fadeout 5
+    stop music fadeout 3
     extend "Славя."
+    show mi surprise pioneer
+    show dv surprise pioneer2
+    with dspr
     we "Славя?!"
     me "Покажи им."
     play music music_7dl["yume_akari"] fadein 3
     sl "Нет."
     me "Смелее!"
     sl "Я не буду."
-    show mi surprise pioneer with dissolve
     mi "Славя умеет играть на пианино? {w}Я не знала…"
     dv "Я слышала что-то подобное, но не верила."
     show sl angry pioneer with dspr
     sl "Да я…"
-    dv "Значит, скрывала."
     show dv normal pioneer2 with dspr
+    dv "Значит, скрывала."
     dv "Ну, Славка…"
     me "Покажи им."
+    show sl sad pioneer with dspr
     "Славя заколебалась, подыскивая какие-нибудь доводы, кроме невежливого «нет»."
     "Только вот не дал ей никто такого шанса."
+    show mi smile pioneer
+    show dv smile pioneer2
+    with dspr
     we "Сла-вя! Сла-вя!"
     "Хором начали скандировать девочки."
     sl "Я не хочуууу…"
@@ -10655,7 +10665,6 @@ label alt_day5_sl_7dl_loki_evening:
     "Потому и подталкивал, и подталкивал девочку."
     show sl shy pioneer with dspr
     sl "Я сто лет не играла."
-    show dv smile pioneer2 with dspr
     dv "Ничего, это как не велосипеде ездить — ни за что не разучишься."
     show mi happy pioneer with dspr
     mi "Мы верим в тебя, Славя!"
@@ -10679,7 +10688,7 @@ label alt_day5_sl_7dl_loki_evening:
     "Французская песня о том, что всегда есть надежда, что ни в коем случае нельзя расставаться и опускать руки."
     "Песня о любви."
     "И всё она наврала, глупая Славка — всё в порядке у неё с игрой."
-    show dv normal pioneer2 with dissolve
+    show dv normal pioneer2 at right with dissolve
     dv "Ты знаешь…"
     "Шепнула Алиса, приобняв меня за плечи."
     dv "Теперь у нас будет музыкальное сопровождение такое, что все обзавидуются."
@@ -10687,29 +10696,41 @@ label alt_day5_sl_7dl_loki_evening:
     "И то, что не злая она, притворяется только, что и ей доступны простые человеческие переживания."
     "Что Алиса — добрая девочка."
     "Вот только если я скажу ей это в лицо — она будет долго смеяться."
+    show mi smile pioneer at left with dissolve
     "Мику же просто смотрела на происходящее и улыбалась, качая головой в такт музыке."
     "Из всех нас она, пожалуй, была самой счастливой."
-    hide dv with dissolve
+    hide dv
+    hide mi
+    with dissolve
     "Славя взяла последний аккорд, и в помещении повисла тишина."
     sl "Вот…"
     "Славя упорно смотрела в крышку рояля перед собой, будто читая там что-то."
     "Мы же молчали."
     "Потому что после такой игры… Что ж, иногда лучше действительно просто промолчать."
     play sound sfx_simon_applause
-    pause(1)
     "Алиса зааплодировала, а Мику засуетилась, бормоча себе что-то под нос."
     "Сначала побежала в угол к магнитофону, потом несколько раз обогнула рояль…"
     "Наконец, нашла искомое там, где сидела раньше."
+    show mi smile pioneer at left
+    show sl shy pioneer
+    with dissolve
     mi "Вот! Попробуй."
     "На полочке появилась открытая книжка."
     mi "У тебя получится!"
     sl "Но я же…"
     mi "Просто попробуй!"
     sl "Ох, хорошо."
+    hide sl
+    hide mi
+    with dissolve
     "Глядя в ноты, Славя «попробовала»."
     "И у неё получилось!"
     "Пусть неуверенно, медленно…"
     "Но для игры «с листа», для человека, который чёрте сколько не садился за рояль…"
+    show mi smile pioneer at left
+    show dv smile pioneer2 at right
+    show sl smile2 pioneer
+    with dissolve
     "Мику улыбаясь, качала головой, а потом негромко затянула:"
     mi "Прощальный час настал… И обнял нас за плечи."
     dv "Запомни этот зал и этот тёплый вечер!"
