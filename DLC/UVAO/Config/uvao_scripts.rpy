@@ -41,7 +41,7 @@ init -5 python:
             subargs = list()
             for arg in argv:
                 if isinstance(arg, str): #просто file
-                    subarg = (default_7dl_path + 'Pics/sprites/', arg)
+                    subarg = (default_7dl_path + 'DLC/UVAO/Pics/sprites/', arg)
                 else: # (path, file)
                     subarg = arg;
                 subargs.append( subarg[0] + '/' + dst +'/' + subarg[1] ) # 'images/1080/sprites/normal/dv/dv_1_coat.png'

@@ -255,6 +255,8 @@ init -265 python:
         return im.MatrixColor(ImageReference(id), im.matrix.brightness(0.2) * im.matrix.tint(1.0, 0.94, 0.82))
     def HomeCity(id):
         return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.1) * im.matrix.tint(0.82, 0.84, 1.0))
+    def Rained(id):
+        return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.4) * im.matrix.tint(0.68, 0.90, 0.8) * im.matrix.saturation(0.6))
 
     def filmetile(bitmap, opacity=0.1):
         return im.Tile(im.Alpha(bitmap,opacity))
@@ -563,7 +565,7 @@ init -999 python:
     def get_image_7dl(file):
         return default_7dl_path+"Pics/%s" % (file)
     def get_image_extra7dl(file):
-            return default_7dl_path+"Pics/extra/%s" % (file)
+        return default_7dl_path+"Pics/extra/%s" % (file)
         
 init -998 python:
     def get_sfx_7dl(file):
