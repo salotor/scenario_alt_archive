@@ -6337,6 +6337,7 @@ label alt_day5_sl_7dl_begin:
     show unblink
     scene expression Desat("bg int_house_of_mt_sunset")
     with dissolve
+    $ volume(0.5, "ambience")
     play ambience ambience_7dl["rain"] fadein 6
     pause(1)
     play music music_7dl["ask_you_out"] fadein 3
@@ -6369,6 +6370,7 @@ label alt_day5_sl_7dl_begin:
                 window hide
                 play sound sfx_open_dooor_campus_1
                 pause(1)
+                $ volume(1.0, "ambience")
                 scene bg ext_houses_rainy_day_7dl
                 with flash
                 "Выскочил на улицу!"
@@ -6576,6 +6578,7 @@ label alt_day5_sl_7dl_begin:
     "Глубоко вдохнув:"
     me "Ну… С богом!"
     "Я выскочил на улицу."
+    $ volume(1.0, "ambience")
     window hide
     with fade
     stop music fadeout 3
@@ -6584,7 +6587,7 @@ label alt_day5_sl_7dl_begin:
 label alt_day5_sl_7dl_breakfast:
     $ persistent.sprite_time = "sunset" 
     $ sunset_time()
-    scene bg ext_house_of_mt_day
+    scene bg ext_house_of_mt_rain_7dl
     with dissolve
     play music music_7dl["everyday"] fadein 3
     "Есть теория о том, что человека определяют его предки."
@@ -7713,6 +7716,7 @@ label alt_day5_sl_7dl_candle:
         mt "Три!"
         "Мы дунули все вместе."
         "Свеча погасла."
+        stop ambience fadeout 6
         show mt normal pioneer with dissolve
         mt "Всем спасибо!"
         "Поглядев на часы, Ольга всполошилась:"
@@ -7794,7 +7798,7 @@ label alt_day5_sl_7dl_candle:
         mt "Ведущая — Женя!"
         show mz normal glasses pioneer at left with dissolve
         mz "Я же не вызывалась…"
-        mt "Тебе ничего говорить не надо, ты сама всё поймёшь?" # это ирония, угу.
+        mt "Тебе ничего говорить не надо, ты сама всё поймёшь?"
         mz "Ох, ну ладно."
         show mz normal pioneer at center with move
         "Спрятав очки в карман, Женя поднялась со своего места и заняла стул по ту сторону стола."
@@ -9878,7 +9882,9 @@ label alt_day5_sl_7dl_loki_day:
     me "Думать вредно. {w}А я и спал, пока ты не пришла."
     show dv laugh pioneer2 with dspr
     dv "Думать вредно только тебе. {w}Ты и так постоянно тормозишь. А я…"
+    hide dv with dissolve
     "Я неторопливо обогнул её и направился на север."
+    show dv normal pioneer2 with dissolve
     "Что-то бормоча и размахивая руками, Алиса догнала меня и пристроилась рядом."
     th "Странно. Странно всё вокруг."
     dreamgirl "Он ушёл от нас, а вчера вода с неба. Мокро. Холодно."
@@ -9940,13 +9946,13 @@ label alt_day5_sl_7dl_loki_day:
     "Каждая из них могла бы заставить бить сердце быстрее, улыбнувшись или глубоко вздохнув."
     "Чистая красота, которой не нужны стрелки на глазах и помада на губах."
     "Чистая, чужая красота."
-    stop music fadeout 6
+    stop music fadeout 3
     window hide
     play sound sfx_open_door_clubs
     pause(1)
     scene bg int_musclub_day
     show sl normal pioneer at right
-    show dv normal pioneer2
+    show dv normal pioneer2 at left
     with dissolve
     play music music_7dl["shestheone"] fadein 3
     play ambience ambience_music_club_day fadein 3
@@ -9960,13 +9966,12 @@ label alt_day5_sl_7dl_loki_day:
     "Сникла."
     "Видимо, до последнего не верила в такое вот доброе соседство, а получила в нагрузку бездарного Семёна и непокорную Алису — локальное такое торнадо, способное вдребезги разнести окружение."
     "Собственно, вся идея собраться здесь изначально была таким торнадо."
-    show dv grin pioneer2 with dissolve
+    show dv grin pioneer2 with dspr
     dv "Смотрите, кто у нас тут."
     "Протянула Алиса."
     dv "Да это же наша гордость и краса, талант и активистка. {w}Что нас сегодня ждёт? Уборка? Или уборка?"
-    show dv grin pioneer2 at left with dspr
-    show mi surprise pioneer at center with dspr
-    show sl upset pioneer at right with dissolve
+    show dv grin pioneer2 with dspr
+    show sl upset pioneer with dspr
     sl "Послушай, Алиса, я сама не рада здесь находиться."
     show dv smile pioneer2 with dspr
     dv "Зато я-то как счастлива!"
@@ -10011,15 +10016,14 @@ label alt_day5_sl_7dl_loki_day:
     mi "Я — за! Давайте, переставайте ругаться!"
     show dv normal pioneer2 with dspr
     dv "Да было бы с кем."
+    hide dv with dissolve
     "Алиса спрятала свою ядовитую усмешку и отвернулась к окну, с преувеличенным вниманием разглядывая творящееся там."
     "А разглядывать там нечего было особо — кусты да трава.."
     "Видимо, с её точки зрения, уж лучше кусты, чем наша весёлая компания."
+    hide mi with dissolve
     "Мику тоже отошла к роялю."
     "Остались только мы вдвоём со Славей."
-    hide dv
-    hide mi
-    show sl normal pioneer at center
-    with dissolve
+    show sl normal pioneer at center with move
     sl "Извини, я постоянно забываю, что половину слов Алисы надо просто пропускать мимо ушей."
     me "И зря. {w}Понимаешь, её негативное поведение не должно заставлять тебя стыдиться собственных чувств."
     show sl upset pioneer with dspr
@@ -10061,11 +10065,14 @@ label alt_day5_sl_7dl_loki_day:
     hide sl with dissolve
     "Когда я шёл за ней, в клубе вдруг повисла какая-то невозможная, неестественная тишина."
     "Чуя неладное, я резко обернулся."
+    show dv laugh pioneer2 far at right
+    show mi laugh pioneer far
+    with dspr
     "Ну, разумеется."
     "Обе мерзавки корчили нам в спину рожи и показывали языки."
     "И если Алису я бы понял, то Мику…"
     "Покачав головой, я вышел на улицу."
-    stop music fadeout 6
+    stop music fadeout 3
     window hide
     play sound sfx_open_door_clubs
     pause(1)
@@ -10076,6 +10083,7 @@ label alt_day5_sl_7dl_loki_day:
     "На улице было тихо, мирно, солнечно…"
     "Дикие удары по струнам из клуба мгновенно сменились меланхоличными переборами, стоило лишь закрыть дверь за собой."
     "Славя устроилась на скамейке, и, сбросив обувь, забросила ножки на соседнюю, подставляясь солнцу, бьющему сквозь кроны деревьев."
+    show sl smile pioneer with dissolve
     sl "Они напрасно стараются, для меня такая память всё равно будет дорога."
     me "Любая память дорога?"
     "Я было нацелился на скамейку, занятую ногами Слави, но глянул на неё, на её юбку, на любопытный ракурс с места возможного приземления…"
@@ -10096,12 +10104,14 @@ label alt_day5_sl_7dl_loki_day:
     sl "Нет."
     sl "Просто эта память сама по себе спрятана глубже всех прочих. До неё тяжело доставать."
     me "Что-то из детства?"
+    show sl laugh pioneer with dspr
     "Славя рассмеялась."
     sl "Ты ведёшь себя как юноша на первом свидании — чувствуешь себя неловко и ведёшь неловко."
     dreamgirl "И говоришь несуразности."
     "Завершил внутренний голос."
     dreamgirl "Если не глупости."
     th "Да вы все сговорились, что ли?!"
+    show sl smile pioneer with dspr
     sl "Я расскажу."
     "Сжалилась наконец девочка."
     me "Если не трудно. {w}Не нравится мне чувствовать себя дураком."
@@ -10112,6 +10122,7 @@ label alt_day5_sl_7dl_loki_day:
     "Я же предпочёл вспомнить лицо…"
     menu:
         "… одной знакомой ядовитой змеи":
+            show blink
             "Прикрыл глаза, расслабился, воскрешая в памяти яркие голубые глаза."
             "И понял вдруг, что не могу вспомнить больше ничего!"
             "Ни формы скул, ни носа, ни даже разреза этих самых глаз."
@@ -10120,14 +10131,16 @@ label alt_day5_sl_7dl_loki_day:
             $ lp_sl += 1
             "Тем более, вот она сидит, довольная."
             "Что уж может быть проще: запомни как следует, закрой глаза…"
+            show blink
             "И представь."
             "Если не получается с первого раза — пробуй ещё, память в итоге всё равно уцепит черты лица!"
             "Разве нет?"
             window hide
-            with fade
             "Не получилось ни с третьей, ни с пятой попытки."
+    scene bg ext_musclub_day
+    show sl smile2 pioneer
+    show unblink
     me "Да как ты это делаешь?!"
-    show sl smile2 pioneer with dspr
     sl "Это ты делаешь, Сёмушка."
     "«Сёмушку» я предпочёл пропустить мимо ушей."
     sl "Самые дорогие воспоминания — самые глубокие. {w}Ты почти никогда не можешь вызвать в памяти лица любимых людей."
@@ -10138,7 +10151,7 @@ label alt_day5_sl_7dl_loki_day:
     sl "Последнее время я столько бездельничаю."
     sl "Дни тянутся долго-долго, в каждый из них столько вмещается…"
     show sl upset pioneer with dspr
-    mt "И вместится ещё больше, будь уверена!"
+    mt "И вместится ещё больше, будь уверена!" with vpunch
     "Ольга Дмитриевна в этот раз ради разнообразия решила материализоваться у меня за спиной, заставляя подпрыгнуть на месте."
     "Славя же и бровью не повела."
     "Видимо, давно уже засекла вожатую."
@@ -10164,14 +10177,14 @@ label alt_day5_sl_7dl_loki_day:
     scene bg int_musclub_day
     show dv angry pioneer2 at right
     show sl normal pioneer
-    with moveinleft
+    with dissolve
     dv "…бы ей самой не… "
-    show dv surprise pioneer2
-    show mt grin pioneer at left
-    with dspr
+    show dv surprise pioneer2 with dspr
+    show mt grin pioneer at left with moveinleft
     mt "Зайти? Я зашла."
     show dv normal pioneer2 with dspr
     dv "И чем я могу помочь нашей вожатой?"
+    show mt normal pioneer with dspr
     mt "Двачевская, не паясничай."
     mt "Твоя задача на сегодня — это разучить какую-нибудь пионерскую песню на три партии."
     show dv smile pioneer2 with dspr
@@ -10195,6 +10208,7 @@ label alt_day5_sl_7dl_loki_day:
     menu:
         "Это нереально!":
             $ karma += 10
+            show mt smile pioneer with dspr
             "Алиса благодарно посмотрела на меня, но вожатая просто улыбнулась."
             mt "Партия сказала «надо», что ответил пионер?"
             me "Что в гробу я видал такие задания?"
@@ -10214,10 +10228,11 @@ label alt_day5_sl_7dl_loki_day:
             mt "Умницы!"
             mt "Про полдник не забудьте, через полчаса горн."
             mt "Жду от вас хорошей песни."
-    hide mt with dissolve
+    hide mt with moveoutleft
     "Ещё раз одарив нас ослепительной улыбкой, вожатая ушла."
     show dv normal pioneer2 at right
     show sl normal pioneer at left
+    with move
     dv "Разучить песню за сутки?"
     sl "Угу."
     dv "Ни больше ни меньше."
@@ -10242,6 +10257,7 @@ label alt_day5_sl_7dl_loki_day:
     dv "Эй, чем тебе похабщина не угодила?"
     sl "Мы будем выступать перед детьми, если ты забыла. {w}В дворце ветеранов люди хотя бы понимающие были."
     sl "А здесь ты кого увидеть в зале планируешь?"
+    show dv smile pioneer2 with dspr
     dv "Зануда ты, Славка."
     me "Э… Вы уже больше не ссоритесь?"
     sl "А мы и не ссорились."
@@ -10254,6 +10270,9 @@ label alt_day5_sl_7dl_loki_day:
     show sl grin pioneer with dspr
     sl "Да ни за что!"
     th "Определённо не научусь."
+    stop music fadeout 1
+    pause(1)
+    play sound sfx_7dl["eat_horn"] fadein 1
     "Над нашими головами разнеслись задорные переливы горна."
     window hide
     stop music fadeout 3
@@ -10410,7 +10429,7 @@ label alt_day5_sl_7dl_loki_evening:
     "Стиснуть зубы и терпеть."
     "Притворяться «полноценным членом общества»."
     "Ведь Слави общаются лишь с полноценными членами, никак иначе."
-    stop music fadeout 6
+    stop music fadeout 3
     window hide
     play sound sfx_open_door_2
     pause(1)
@@ -10524,7 +10543,7 @@ label alt_day5_sl_7dl_loki_evening:
     dreamgirl "Оу, ю тач май талала!"
     "Прыгнувший в голову образ проходил по категории «18+», потому я старательно зажмурился."
     me "Какой кошмаааар!"
-    stop music fadeout 5
+    stop music fadeout 2
     show mi normal pioneer with dspr
     pause(1)
     play music music_7dl["breath_me"] fadein 3
@@ -10543,13 +10562,17 @@ label alt_day5_sl_7dl_loki_evening:
     "Мику ударила в воображаемый гонг."
     mi "Двести долларов на бойца в красных трусах!"
     "Прозвучало это донельзя двусмысленно, но я постарался не проводить параллелей."
+    hide mi with dissolve
+    show dv angry pioneer2 at right
+    show sl angry pioneer
+    with dissolve
     me "Двести долларов на…"
     "Я ухмыльнулся."
     me "На Алису!"
+    show dv laugh pioneer2 with dspr
+    show sl upset pioneer with dspr
     "Обиженная вероломством, Славя поперхнулась аргументом."
-    show dv laugh pioneer2 at right with dissolve
     dv "Что ты там сказала? «Да»?"
-    show sl upset pioneer at left with dissolve
     sl "Что? Я не…"
     mi "Побеждает Алиса!"
     show dv grin pioneer2 with dspr
@@ -10558,7 +10581,9 @@ label alt_day5_sl_7dl_loki_evening:
     dv "Покажешь всем, как легко это — музыка!"
     dv "За язык никто не тянул, сама сказала, что барабаны — просто."
     dv "Даже ты сама сможешь. {w}Покажи класс."
-    hide sl with dissolve
+    hide sl
+    hide dv
+    with dissolve
     "Смущённая напором оппонентки и нашими взглядами, Славя позволила увлечь себя за установку."
     "Уселась на табуретку, взяла палочки."
     th "Вот было бы забавно, устрой она сейчас забойное соло."
@@ -10568,13 +10593,11 @@ label alt_day5_sl_7dl_loki_evening:
     "Я не сразу понял, что вместо ожидаемого ритмического рисунка в тишину клуба вплёлся нервным перестук, больше походящий на какую-то пионерскую дробь."
     "Хотя, наверное, это дробь и была."
     "Видимо, ничего другого на барабане исполнять Славя просто не умела."
-    show dv laugh pioneer2 with dspr
+    show dv laugh pioneer2 at right with dissolve
     dv "И это всё?"
     dv "Вот всё это — простое — оно всё?"
-    hide mi
-    show sl sad pioneer at left
-    show dv smile pioneer2 at right
-    with dissolve
+    show sl sad pioneer at left with dissolve
+    show dv smile pioneer2 with dspr
     sl "Я не говорила, что барабаны — это просто."
     dv "Говорила."
     sl "Я имела в виду…"
@@ -10587,8 +10610,8 @@ label alt_day5_sl_7dl_loki_evening:
     sl "Предлагаю сломать ветки о спину Алисы."
     show sl sad pioneer at fleft
     show dv smile pioneer2 at center
-    show mi normal pioneer at fright
     with move
+    show mi normal pioneer at fright with dissolve
     mi "Я не против! Не буду я ветками махать!"
     me "А я воздержусь."
     "Несмотря на то, что Алиса пока не зарекомендовала себя как добрая и ласковая девочка, её забота о деле подкупала."
@@ -10605,25 +10628,31 @@ label alt_day5_sl_7dl_loki_evening:
     dv "На трубе и гитаре — пианино сведёт тебя с ума."
     me "Нет, играть на пианино будет…"
     show sl upset pioneer with dspr
-    stop music fadeout 5
+    stop music fadeout 3
     extend "Славя."
+    show mi surprise pioneer
+    show dv surprise pioneer2
+    with dspr
     we "Славя?!"
     me "Покажи им."
     play music music_7dl["yume_akari"] fadein 3
     sl "Нет."
     me "Смелее!"
     sl "Я не буду."
-    show mi surprise pioneer with dissolve
     mi "Славя умеет играть на пианино? {w}Я не знала…"
     dv "Я слышала что-то подобное, но не верила."
     show sl angry pioneer with dspr
     sl "Да я…"
-    dv "Значит, скрывала."
     show dv normal pioneer2 with dspr
+    dv "Значит, скрывала."
     dv "Ну, Славка…"
     me "Покажи им."
+    show sl sad pioneer with dspr
     "Славя заколебалась, подыскивая какие-нибудь доводы, кроме невежливого «нет»."
     "Только вот не дал ей никто такого шанса."
+    show mi smile pioneer
+    show dv smile pioneer2
+    with dspr
     we "Сла-вя! Сла-вя!"
     "Хором начали скандировать девочки."
     sl "Я не хочуууу…"
@@ -10642,7 +10671,6 @@ label alt_day5_sl_7dl_loki_evening:
     "Потому и подталкивал, и подталкивал девочку."
     show sl shy pioneer with dspr
     sl "Я сто лет не играла."
-    show dv smile pioneer2 with dspr
     dv "Ничего, это как не велосипеде ездить — ни за что не разучишься."
     show mi happy pioneer with dspr
     mi "Мы верим в тебя, Славя!"
@@ -10666,7 +10694,7 @@ label alt_day5_sl_7dl_loki_evening:
     "Французская песня о том, что всегда есть надежда, что ни в коем случае нельзя расставаться и опускать руки."
     "Песня о любви."
     "И всё она наврала, глупая Славка — всё в порядке у неё с игрой."
-    show dv normal pioneer2 with dissolve
+    show dv normal pioneer2 at right with dissolve
     dv "Ты знаешь…"
     "Шепнула Алиса, приобняв меня за плечи."
     dv "Теперь у нас будет музыкальное сопровождение такое, что все обзавидуются."
@@ -10674,29 +10702,41 @@ label alt_day5_sl_7dl_loki_evening:
     "И то, что не злая она, притворяется только, что и ей доступны простые человеческие переживания."
     "Что Алиса — добрая девочка."
     "Вот только если я скажу ей это в лицо — она будет долго смеяться."
+    show mi smile pioneer at left with dissolve
     "Мику же просто смотрела на происходящее и улыбалась, качая головой в такт музыке."
     "Из всех нас она, пожалуй, была самой счастливой."
-    hide dv with dissolve
+    hide dv
+    hide mi
+    with dissolve
     "Славя взяла последний аккорд, и в помещении повисла тишина."
     sl "Вот…"
     "Славя упорно смотрела в крышку рояля перед собой, будто читая там что-то."
     "Мы же молчали."
     "Потому что после такой игры… Что ж, иногда лучше действительно просто промолчать."
     play sound sfx_simon_applause
-    pause(1)
     "Алиса зааплодировала, а Мику засуетилась, бормоча себе что-то под нос."
     "Сначала побежала в угол к магнитофону, потом несколько раз обогнула рояль…"
     "Наконец, нашла искомое там, где сидела раньше."
+    show mi smile pioneer at left
+    show sl shy pioneer
+    with dissolve
     mi "Вот! Попробуй."
     "На полочке появилась открытая книжка."
     mi "У тебя получится!"
     sl "Но я же…"
     mi "Просто попробуй!"
     sl "Ох, хорошо."
+    hide sl
+    hide mi
+    with dissolve
     "Глядя в ноты, Славя «попробовала»."
     "И у неё получилось!"
     "Пусть неуверенно, медленно…"
     "Но для игры «с листа», для человека, который чёрте сколько не садился за рояль…"
+    show mi smile pioneer at left
+    show dv smile pioneer2 at right
+    show sl smile2 pioneer
+    with dissolve
     "Мику улыбаясь, качала головой, а потом негромко затянула:"
     mi "Прощальный час настал… И обнял нас за плечи."
     dv "Запомни этот зал и этот тёплый вечер!"
@@ -12401,19 +12441,26 @@ label alt_day5_sl_7dl_campfire:
         window hide
     elif loki:
         stop music fadeout 5
-        show sl normal pioneer at center
-        show dv normal sport at right
-        show mi normal casual at left
-        with dissolve
+        show sl normal pioneer at center with dspr
+        show dv normal sport at right with moveinright
+        show mi normal casual at left with moveinleft
         dv "Сидите, голубки?"
         show sl dontlike pioneer with dspr
         sl "Тебе нравится издеваться, Алиса?"
         show dv smile sport with dspr
         dv "На самом деле я тебе даже немного завидую."
+        show sl normal pioneer with dspr
         sl "Вот как?"
         show dv grin sport with dspr
         dv "Да! Гляди, какой свитер модный у тебя!"
+        show dv laugh sport
+        show mi laugh casual
+        with dspr
         "Девочки засмеялись, а Славя просто махнула рукой."
+        window hide
+        show dv normal sport
+        show mi normal casual
+        with fade
         "Мне же было необъяснимо хорошо."
         "И дело было не в каком-то определённом человека, нет."
         "Напротив."
@@ -12440,6 +12487,8 @@ label alt_day5_sl_7dl_campfire:
         "Музыка пропала."
         "Так что от того, какую мелодию я выберу, будет зависеть настроение."
         me "Ну, ладно."
+        show dv normal sport
+        with fade
         play music music_7dl["breath_again_slow"]
         "Я взял гитару поудобнее, потряс плечами, подёргал пальцами, разминая."
         "Конечно, я прекрасно понимал, что всё это ерунда, пока у меня не будет достаточно тренирована моторика пальцев."
@@ -12487,6 +12536,7 @@ label alt_day5_sl_7dl_campfire:
         mi "А мне понравилось! Ты вполне можешь стать гитаристом."
         me "Спасибо, я продпочитаю стать духовиком."
         mi "Но у тебя же на трубе ещё хуже получается… Ой!"
+        show mi surprise casual with dspr
         "Мику прикрыла рот ладошкой."
         me "Спасибо. Я в курсе."
         me "Мне нужна практика, и ей я займусь незамедлительно после лагеря."
@@ -12497,6 +12547,10 @@ label alt_day5_sl_7dl_campfire:
         "О вторых, пятых, десятых шансах, об исполнении фантазий."
         "Только вот меня всю жизнь учили опасаться того, чем могут стать мечты."
         me "Пойду я прогуляюсь."
+        hide mi
+        hide sl
+        hide dv
+        with dissolve
         "Поднявшись, я вышел за круг света."
         "Хотелось одиночества, размышлений и жалости к самому себе."
         "Только с первыми двумя приходится пока распрощаться — в толпе, да в компании таких дам особо не поразмышляешь."
@@ -12614,7 +12668,7 @@ label alt_day5_sl_7dl_campfire:
         dreamgirl "Только не отбивайся! Не вздумай отбиваться!"
         th "Да я-то что…"
         "Я пошёл вслед за девочкой как покорный телок, полностью доверив ей инициативу."
-    stop music fadeout 5
+    stop music fadeout 3
     stop sound_loop
     window hide
     play sound sfx_bush_leaves
@@ -12778,16 +12832,22 @@ label alt_day5_sl_7dl_campfire:
             me "А вдруг просто показалось?"
             sl "Тогда через минуту я крепко об этом пожалею."
         window hide
-        scene cg d5_sl_kissing_7dl:
-            zoom 2.0 xalign .7 yalign .2
-            linear 4.0 xalign .5 yalign .5
+        scene cg d5_sl_kissing_7dl with flash
         "Поцеловала."
+        scene bg ext_path_night
+        show sl shy pioneer close
+        with dissolve
         me "А это зачем?"
         sl "Чтобы понять, нужно ли нам продолжение?"
         me "Иииии?.."
         sl "Хм… Дай подумать.{w} Не поняла."
+        window hide
+        scene cg d5_sl_kissing_7dl with flash
         "Славя покачала головой и привлекла меня к себе снова."
         "Поцеловала снова."
+        scene bg ext_path_night
+        show sl shy pioneer close
+        with dissolve
         "Помолчала, восстанавливая дыхание."
         sl "Определённо, нужно."
         mt "Славя?! Семён?! Вы где?"
@@ -12947,7 +13007,10 @@ label alt_day5_sl_7dl_campfire:
     "Когда мы вернулись, большая часть отряда уже ушла в лагерь, на поляне суетился только наш отряд во главе с Ольгой Дмитриевной."
     "Все собирали брезент, остатки картошки, неиспользованные дрова…"
     "Переглянувшись, мы отправились помогать."
-    "Похоже, нашего отсутствия так никто и не заметил."
+    if lp_sl > 15 and not herc:
+        "Похоже, кроме вожатой, никто нас так и не хватился."
+    else:
+        "Похоже, нашего отсутствия так никто и не заметил."
     "Разве что Алиса как-то так хитро смотрела, между делом прибираясь."
     "Но мы не обратили на неё внимания."
     "Нас связывала тайна, доступная лишь нам двоим."

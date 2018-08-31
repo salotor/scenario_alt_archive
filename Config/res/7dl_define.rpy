@@ -414,7 +414,6 @@ init:
     image bg ext_townscape_ph_day_7dl = get_image_7dl("bg/ext_townscape_ph_day_7dl.png")
     image bg ext_un_hideout_day_7dl = get_image_7dl("bg/ext_un_hideout_day_7dl.png")
     image bg ext_un_hideout_night_7dl = get_image_7dl("bg/ext_un_hideout_night_7dl.png")
-    image bg ext_un_hideout_sunset_7dl = get_image_7dl("bg/ext_un_hideout_sunset_7dl.png")
     image bg ext_un_house_with_un_7dl = get_image_7dl("bg/ext_un_house_with_un_7dl.jpg")
     image bg ext_underwater_7dl = get_image_7dl("bg/ext_underwater_7dl.jpg")
     image bg ext_volley_court_7dl = get_image_7dl("bg/ext_volley_court_7dl.png")
