@@ -1146,6 +1146,7 @@ init:
     $ music_7dl["surf"] = get_music_7dl("surf_7dl.ogg")
 
     $ music_7dl["take_my_hand"] = get_music_7dl("take_my_hand_7dl.ogg")
+    $ music_7dl["tearing_sobs"] = get_music_7dl("tearing_sobs_7dl")
     $ music_7dl["tears_of"] = get_music_7dl("tears_of_7dl.ogg")
     $ music_7dl["tellyourworld"] = get_music_7dl("tellyourworld_7dl.ogg")
     $ music_7dl["temptation"] = get_music_7dl("temptation_7dl.ogg")

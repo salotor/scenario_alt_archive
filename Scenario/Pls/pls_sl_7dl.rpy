@@ -113,6 +113,15 @@ label alt_day5_sl_7dl_start:
     pause(1)
     window hide
     with fade
+    window hide
+    show spill_red with dspr
+    $ renpy.pause(2, hard=True)
+    show spill_gray with dspr
+    $ renpy.pause(2, hard=True)
+    show alt_credits timeskip_dev at truecenter with dissolve2
+    $ renpy.pause(4, hard=True)
+    with dissolve2
+    return#Отсечка-заглушка
     jump alt_day6_sl_7dl
 
 label alt_day6_sl_7dl_start:
@@ -214,14 +223,12 @@ label alt_day7_sl_7dl_start:
     $ persistent.sprite_time = "sunset"
     $ prolog_time()
     if routetag == "sl7dlgood":
+        $ alt_chapter(7, u"Славя. 7ДЛ. Гуд")
         if loki:
-            $ alt_chapter(7, u"Славя. 7ДЛ. Гуд")
             call alt_day7_sl_7dl_loki_good
         elif herc:
-            $ alt_chapter(7, u"Славя. 7ДЛ. Гуд")
             call alt_day7_sl_7dl_herc_good
         else:
-            $ alt_chapter(7, u"Славя. 7ДЛ. Гуд")
             call alt_day7_sl_7dl_good
     elif routetag == "sl7dlneu":
         if loki:
