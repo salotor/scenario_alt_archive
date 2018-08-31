@@ -1215,6 +1215,7 @@ init:
     $ sfx_7dl["metal_hit_on_metal"] = get_sfx_7dl("metal_hit_on_metal_7dl.ogg")
     $ sfx_7dl["mpbt"] = get_sfx_7dl("mpbt_7dl.ogg")
     $ sfx_7dl["old_phone"] = get_sfx_7dl("old_phone_7dl.ogg")
+    $ sfx_7dl["plates_broken"] = get_sfx_7dl("plates_broken_7dl.ogg")
     $ sfx_7dl["phone_feedback"] = get_sfx_7dl("phone_feedback_7dl.ogg")
     $ sfx_7dl["pouring"] = get_sfx_7dl("pouring_7dl.ogg")
     $ sfx_7dl["pup_bark"] = get_sfx_7dl("pup_bark_7dl.ogg")
