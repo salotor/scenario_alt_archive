@@ -5654,7 +5654,6 @@ label alt_day4_sl_7dl_evening:
     "Зато оживший над нашими головами жестяной раструб на стволе сосны был вполне различим."
     me "Пошли, будем ловить сестру на ужине."
     "Славя послушно кивнула и пошла к столовой."
-    stop music fadeout 3
     window hide
     stop music fadeout 3
     stop ambience fadeout 6
@@ -13092,7 +13091,7 @@ label alt_day5_sl_7dl_campfire:
         sl "Не станет сжигать лес, если там упало одно дерево."
         sl "Хочешь ты того или нет, но ты теперь часть моего мира… Сёмушка."
         "Славя потянула меня за собой — впереди явственно замаячили огни лагеря."
-    elise:
+    else:
         "Царила в сердце сладковатая жуть, какая бывает у костра, когда вы собрались кружком и рассказываете страшные истории."
         "Но впервые за неизвестно сколько лет я чувствовал, что легко могу справиться со страхом."
         "Если только потребуется, я в любой момент сумею переступить через себя, через страх."
@@ -13550,7 +13549,7 @@ label alt_day6_sl_7dl_loki_morning: #Локиутро
     with fade
     return
 
-label alt_day6_sl_7dl_herc_day: #Локидень
+label alt_day6_sl_7dl_loki_day: #Локидень
     play ambience ambience_camp_center_day
     play music music_7dl["everyday"] fadein 3
     scene bg ext_square_day
@@ -13574,7 +13573,7 @@ label alt_day6_sl_7dl_morning: #Дрищеутро
     with fade
     return
 
-label alt_day6_sl_7dl_herc_day: #Дрищедень
+label alt_day6_sl_7dl_day: #Дрищедень
     play ambience ambience_camp_center_day
     play music music_7dl["everyday"] fadein 3
     scene bg ext_square_day
@@ -13588,7 +13587,7 @@ label alt_day6_sl_7dl_herc_day: #Дрищедень
 
 label alt_day6_sl_7dl_evening:#Общий концерт
     play ambience ambience_camp_center_evening fadein 5
-    play music music_7dl["close_to_you"] fadein 3
+    play music music_7dl["closetoyou"] fadein 3
     scene bg ext_stage_big_clear_day_7dl
     with dissolve
     
@@ -13719,7 +13718,7 @@ label alt_day7_sl_7dl_herc_epilogue:#Эпилог Герка
 
 label alt_day7_sl_7dl_epilogue:#Эпилог Дрища
     #Почти ничего из детства не помню. Будто прожил его кто-то вместо меня.
-    play music music_7dl["Exodus"] fadein 3
+    play music music_7dl["exodus"] fadein 3
     scene bg ext_seashore_7dl
     with fade
     
@@ -13742,7 +13741,7 @@ label alt_day7_sl_7dl_loki_good:#Гуд Локи
     with fade
     return
 
-label alt_day7_sl_7dl_loki_good:#Гуд Герка
+label alt_day7_sl_7dl_herc_good:#Гуд Герка
     #Бог распрятал трёх нужных нам в людей в семь миллиардов тел. Попробуй угадай, кто нужный? У тебя всего несколько десятков лет. Время пошло.
     play music music_7dl["despair"] fadein 3
     scene bg int_bus_night
@@ -13756,7 +13755,7 @@ label alt_day7_sl_7dl_loki_good:#Гуд Герка
 
 label alt_day7_sl_7dl_good:#Гуд Дрища
     #Как хотели жили. Нам хотелось хвастаться своей глупой памятью.
-    play music music_7dl["Unforgotten"] fadein 3
+    play music music_7dl["unforgotten"] fadein 3
     play ambience ambience_7dl["int_silence"] fadein 3
     scene bg int_access_day_7dl
     with dissolve
@@ -13797,7 +13796,7 @@ label alt_day7_sl_7dl_excl:#Эксклюзив Дрища
     #Ну, вы поняли.
     play music music_7dl["Sad_Piano"] fadein 3
     play ambience ambience_medstation_inside_day fadein 4
-    scene bg int_hospital_day_7dl
+    scene bg int_hospital_hall_day_7dl
     with dissolve
     
     window hide
