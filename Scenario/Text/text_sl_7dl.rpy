@@ -13029,7 +13029,7 @@ label alt_day5_sl_7dl_campfire:
         sl "Не станет сжигать лес, если там упало одно дерево."
         sl "Хочешь ты того или нет, но ты теперь часть моего мира… Сёмушка."
         "Славя потянула меня за собой — впереди явственно замаячили огни лагеря."
-    elise:
+    else:
         "Царила в сердце сладковатая жуть, какая бывает у костра, когда вы собрались кружком и рассказываете страшные истории."
         "Но впервые за неизвестно сколько лет я чувствовал, что легко могу справиться со страхом."
         "Если только потребуется, я в любой момент сумею переступить через себя, через страх."
@@ -13487,7 +13487,7 @@ label alt_day6_sl_7dl_loki_morning: #Локиутро
     with fade
     return
 
-label alt_day6_sl_7dl_herc_day: #Локидень
+label alt_day6_sl_7dl_loki_day: #Локидень
     play ambience ambience_camp_center_day
     play music music_7dl["everyday"] fadein 3
     scene bg ext_square_day
@@ -13511,7 +13511,7 @@ label alt_day6_sl_7dl_morning: #Дрищеутро
     with fade
     return
 
-label alt_day6_sl_7dl_herc_day: #Дрищедень
+label alt_day6_sl_7dl_day: #Дрищедень
     play ambience ambience_camp_center_day
     play music music_7dl["everyday"] fadein 3
     scene bg ext_square_day
@@ -13679,7 +13679,7 @@ label alt_day7_sl_7dl_loki_good:#Гуд Локи
     with fade
     return
 
-label alt_day7_sl_7dl_loki_good:#Гуд Герка
+label alt_day7_sl_7dl_herc_good:#Гуд Герка
     #Бог распрятал трёх нужных нам в людей в семь миллиардов тел. Попробуй угадай, кто нужный? У тебя всего несколько десятков лет. Время пошло.
     play music music_7dl["despair"] fadein 3
     scene bg int_bus_night
