@@ -12668,7 +12668,7 @@ label alt_day5_sl_7dl_campfire:
         dreamgirl "Только не отбивайся! Не вздумай отбиваться!"
         th "Да я-то что…"
         "Я пошёл вслед за девочкой как покорный телок, полностью доверив ей инициативу."
-    stop music fadeout 5
+    stop music fadeout 5 # подробнее писал в вк
     stop sound_loop
     window hide
     play sound sfx_bush_leaves
