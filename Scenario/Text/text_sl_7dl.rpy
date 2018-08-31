@@ -13796,7 +13796,7 @@ label alt_day7_sl_7dl_excl:#Эксклюзив Дрища
     #Ну, вы поняли.
     play music music_7dl["Sad_Piano"] fadein 3
     play ambience ambience_medstation_inside_day fadein 4
-    scene bg int_hospital_day_7dl
+    scene bg int_hospital_hall_day_7dl
     with dissolve
     
     window hide
