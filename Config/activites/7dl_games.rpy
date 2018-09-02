@@ -683,7 +683,7 @@ label alt_7dl_titles:
     with dissolve2
     stop music fadeout 3
     $ renpy.pause(3, hard=True)
-    if not (persistent.dont_disturb or (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761") or (persistent.nonsteam_7dl == True)):
+    if not persistent.dont_disturb:
         scene bg ext_city_night_7dl with fade
         play music music_7dl["seven_summer_days"] fadein 3
         $ renpy.transition(dissolve)
