@@ -2642,7 +2642,7 @@ label alt_day6_mt_7dl_catha:
         window hide
         play sound sfx_bodyfall_1
         scene gameover with flash
-        stop sound_loop fadeout 0
+        stop sound_loop
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:

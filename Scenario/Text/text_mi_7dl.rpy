@@ -207,6 +207,7 @@ label alt_day4_mi_7dl_ch2:
     "Две минуты — и мы остановились у нисходящих вниз ступенек."
     cs "Всё. С добрым утром!"
     "Поздоровалась она и заглушила мотор."
+    stop sound_loop fadeout 1
     window hide
     scene bg ext_hospital2_away_day_7dl
     with dissolve
@@ -715,7 +716,6 @@ label alt_day4_mi_7dl_ch5a:
     "Никаких бабок у подъезда не было, и ничто не помешало мне пройти к двери."
     "Виола не сообщила мне код на двери, но самые вытертые кнопки подсказали и так."
     play sound sfx_open_door_2
-    stop sound_loop fadeout 2
     window hide
     pause(1)
     scene bg int_access2_day_7dl with dissolve
@@ -3292,7 +3292,7 @@ label alt_day5_mi_7dl_dinner:
     pause(1)
     scene bg ext_dining_hall_near_day with dissolve
     play ambience ambience_camp_center_day fadein 2
-    play sound_loop sfx_run_forest fadein 1
+    play sound sfx_run_forest fadein 1
     "Хлопнула дверь."
     "И, судя по сдавленному смеху, Мику всё это время бежала за мной."
     me "И вот что ты сделала?"
