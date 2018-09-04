@@ -12414,7 +12414,7 @@ label alt_day5_sl_7dl_campfire:
         mi "Самое главное! Самое… важное. Сказать слова, какие не успела сказать, сделать то, что следовало сделать."
         "Внутри меня поселилось некое сосущее чувство, как предвкушение чего-то необыкновенного, что вот-вот должно произойти."
         "Я посмотрел на Славю, она на меня."
-        if (lp_sl > 16) and (persistent.sl_7dl_good_loki or persistent.sl_7dl_good_herc or persistent.sl_7dl_good):
+        if (lp_sl > 16) and (persistent.sl_7dl_good_loki or persistent.sl_7dl_good_herc or persistent.sl_7dl_good): # условия забыли поменять на if herc and (lp_sl > 16) and (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
             sl "Да."
             "Медленно проговорила Славя."
             sl "Столько нужно успеть."
