@@ -10654,7 +10654,7 @@ label alt_day3_un_strip_play:
             jump alt_day3_un_strip_play
             
 label alt_day3_un_strip_play_fail:
-    scene bg int_aidpost_night with dspr
+    scene bg int_aidpost_night 
     if alt_day3_un_strip_pool_sp == 5:
         $ alt_day3_un_strip_pool_sp = alt_day3_un_strip_pool_sp - 1
         "Я улыбнулся и без сожалений стащил с себя рубашку. Жалко, что ли?"
@@ -10686,7 +10686,7 @@ label alt_day3_un_strip_play_draw:
     jump alt_day3_un_strip_play
     
 label alt_day3_un_strip_play_win:
-    scene bg int_aidpost_night with dspr
+    scene bg int_aidpost_night 
     if alt_day3_un_strip_pool_un == 5:
         $ alt_day3_un_strip_pool_un = alt_day3_un_strip_pool_un - 1
         show un smile2 dress with dissolve
