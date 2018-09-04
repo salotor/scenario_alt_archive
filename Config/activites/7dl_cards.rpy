@@ -2404,7 +2404,7 @@ label alt_day2_final_win:
         show sh rage pioneer with dspr
         sh "Значит, победил?"
         "Медленно произнёс он."
-        "Он так странно стоял, что никак не мог разглядеть его глаз из-за бликов на очках."
+        "Он так странно стоял, что я никак не мог разглядеть его глаз из-за бликов на очках."
         show sh serious pioneer with dspr
         "Да и сама его поза…"
         "Почему-то вдруг вспомнился персонаж Элайджи Вуда из «Города Грехов»."
@@ -2425,6 +2425,7 @@ label alt_day2_final_win:
             ease 0.3 yalign .4 zoom 1.25
         "Он сделал резкий шаг в мою сторону и протянул руку."
         mt "Шурик!"
+        stop music fadeout 3
         play ambience ambience_dining_hall_full fadein 5
         show blinking
         scene bg int_dining_hall_sunset

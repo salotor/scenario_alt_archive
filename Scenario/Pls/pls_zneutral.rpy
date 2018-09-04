@@ -177,7 +177,7 @@ label alt_day5_neu_begin:
         call alt_day5_neu_sleepnight
         pause(1)
         if mt_pt >= 7 and alt_day5_neu_mt_voyeur != 0:
-            $ routetag = "mt7dl"
+            $ routetag = "mt7dl" # Так и задумывалось, что во всём руте Ольги все "главы" идут со спрайтом довольной Ольги или нет? У остальных девушек до эпилога идёт спокойный спрайт, а в конце - в зависимости от концовки. Ольга же улыбается даже в бед-энде.
             call alt_day5_neu_mt_selector
             pause(1)
             if alt_day5_neu_mt_diary:
