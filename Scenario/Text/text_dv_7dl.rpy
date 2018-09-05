@@ -13829,14 +13829,14 @@ label alt_day7_dv_7dl_bad_end:
     scene cg d2_lineup
     show prologue_dream
     with fade
-
     "Потому что там, по ту сторону волокнистого тумана, неумолимого Морфея и долгой зимы, остались глупые спичи Ольги Дмитриевны."
+    
     window hide
     scene cg d1_grasshopper
     show prologue_dream
     with fade
-    
     "И проказы мелкой егозы."
+    
     window hide
     if alt_day3_duty:
         scene cg d3_potato_2
@@ -13844,33 +13844,33 @@ label alt_day7_dv_7dl_bad_end:
         scene cg d5_us_ghost_2  
     show prologue_dream
     with fade
-
-    "И девочка, которой пронзительно не всё равно."
+    "И девочка, которой пронзительно не всё равно." # при упоминании Слави показывается cg Ульянки.
+    
     window hide
     scene cg d7_mi_epilogue_7dl
     show prologue_dream
     with fade
-
     "И гениальная японская девочка, плоть от плоти музыки."
+    
     window hide
     scene cg d7_un_epilogue_7dl
     show prologue_dream
     with fade
-
     "И грустная девочка."
+    
     window hide
     scene cg d5_dv_argue
     show prologue_dream
     with fade
-
     "И, конечно, Алиса."
     "Злая, вредная, сердитая, вспыльчивая, нетерпимая — Алиса."
+    
     window hide
     scene cg d2_water_dan
     show prologue_dream
     with fade
-
     "Смеющаяся до упада, радующаяся каждой прожитой секунде, заражающая окружающих своей неукротимой тягой не прозябать, а жить."
+    
     window hide
     scene cg d4_dv_mt
     show prologue_dream

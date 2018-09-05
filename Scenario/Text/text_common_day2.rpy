@@ -1854,7 +1854,7 @@ label alt_day2_event_clubs1:
             "Наконец я нашёл искомое — и вовремя."
     else:
         "Хозяев нигде видно не было."
-        if ('me' in list_d2_convoy_7dl) or ('dv_prep' in list_d2_convoy_7dl) or ('sl_prep' in list_d2_convoy_7dl):
+        if not (('me' in list_d2_convoy_7dl) or ('dv_prep' in list_d2_convoy_7dl) or ('sl_prep' in list_d2_convoy_7dl)):
             me "И как долго его может не быть?"
         if ('un' in list_d2_convoy_7dl):
             show un normal pioneer with dspr
