@@ -2118,7 +2118,7 @@ label alt_day2_event_dining_hall1:
     return
 
 label alt_day2_event_sport_area1:
-    scene bg ext_playground2_7dl with dissolve
+    scene bg ext_playground2_7dl with fade
     play ambience ambience_soccer_play_background fadeout 2
     play music music_list["went_fishing_caught_a_girl"] fadein 2
     if alt_day_binder != 1:
@@ -5077,9 +5077,6 @@ label alt_day2_tournament:
             hide mt
             with dissolve
             dreamgirl "Ну что, всё всем доказал, умник? Тебя снова припахали за здорово живёшь. Лох — это диагноз."
-            window hide
-            scene bg black with fade
-            return
         "Мы можем вместе сходить…":
             me "Мы вообще вместе с ней сходить можем, если вы мне так не доверяете."
             $ lp_sl += 1
@@ -5096,8 +5093,6 @@ label alt_day2_tournament:
             "Если бы у Слави были каблуки, ох и залихватски бы она ими щёлкнула сейчас!"
             hide mt
             hide sl
-            window hide
-            scene bg black with fade
             $ alt_day2_walk = 2
     stop music fadeout 3
     stop ambience fadeout 6
@@ -5107,6 +5102,7 @@ label alt_day2_tournament:
 
 label alt_day2_walk_alone:
     scene bg ext_square_day with dissolve
+    play music music_list["afterword"] fadein 1
     "Понял Антоха, что поступил плохо, и то, что развела его колдунья как лоха…"
     "Лейтмотив последних нескольких дней в этом лагере."
     "А потом мы не понимаем — а почему это в СССР была такая сильная педагогическая школа?"
