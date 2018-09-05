@@ -222,6 +222,9 @@ init:
     image sdl_un_cl_inactive = get_image_7dl("gui/ach_list/un_cl_inactive1.png")
     image sdl_un_fz_active = get_image_7dl("gui/ach_list/un_fz_active1.png")
     image sdl_un_fz_inactive = get_image_7dl("gui/ach_list/un_fz_inactive1.png")
+    #Ульяна
+    image sdl_us_px_active = get_image_7dl("gui/ach_list/us_px_active1.png")
+    image sdl_us_px_inactive = get_image_7dl("gui/ach_list/us_px_inactive1.png")
     #Одиночка
     image sdl_me_no_active = get_image_7dl("gui/ach_list/me_no_active1.png")
     image sdl_me_no_inactive = get_image_7dl("gui/ach_list/me_no_inactive1.png")
@@ -248,6 +251,7 @@ init:
     #Ольга-рут
     image sdl_achv_mt_7dlA = Text("Основная история", style="sdl_achvlistA_mt_gross")
     #Ульяна-рут
+    image sdl_achv_us_pxsA = Text("Огоньки", style="sdl_achvlistA_us_gross")
     image sdl_achv_us_7dlA = Text("Основная история", style="sdl_achvlistA_us_gross")
     #Одиночка-руты
     image sdl_achv_me_smtA = Text("Прочее", style="sdl_achvlistA_me_gross")
