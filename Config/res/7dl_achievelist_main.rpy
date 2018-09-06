@@ -288,19 +288,21 @@ screen sdl_achv_good_mi:
     
 #Надписи концовок Алисхен
 screen sdl_achv_bad_dv:
-    add "sdl_achv_bad_dv" xcenter 700 ycenter 840 
+    add "sdl_achv_bad_dv" xcenter 700 ycenter 840
 screen sdl_achv_excl_LO_dv:
-    add "sdl_achv_excl_LO_dv" xcenter 700 ycenter 840 
+    add "sdl_achv_excl_LO_dv" xcenter 700 ycenter 840
 screen sdl_achv_good_RF_dv:
-    add "sdl_achv_good_RF_dv" xcenter 700 ycenter 840 
+    add "sdl_achv_good_RF_dv" xcenter 700 ycenter 840
 screen sdl_achv_good_US_dv:
-    add "sdl_achv_good_US_dv" xcenter 700 ycenter 840 
+    add "sdl_achv_good_US_dv" xcenter 700 ycenter 840
 screen sdl_achv_rejc_RF_dv:
-    add "sdl_achv_rejc_RF_dv" xcenter 700 ycenter 840 
+    add "sdl_achv_rejc_RF_dv" xcenter 700 ycenter 840
 screen sdl_achv_rejc_US_dv:
-    add "sdl_achv_rejc_US_dv" xcenter 700 ycenter 840 
+    add "sdl_achv_rejc_US_dv" xcenter 700 ycenter 840
 screen sdl_achv_tran_dv:
-    add "sdl_achv_tran_dv" xcenter 700 ycenter 840 
+    add "sdl_achv_tran_dv" xcenter 700 ycenter 840
+screen sdl_achv_tran_HE_dv:
+    add "sdl_achv_tran_HE_dv" xcenter 700 ycenter 840
     
 #Надписи концовок Славя
 screen sdl_achv_true_IN_sl:
@@ -351,20 +353,16 @@ screen sdl_achv_kat_me:
     add "sdl_achv_kat_me" xcenter 700 ycenter 840 
 
 #Надписи концовок Уля
-screen sdl_achv_good_us_px:
-    add "sdl_achv_good_us_px" xcenter 700 ycenter 840
-screen sdl_achv_true_us_px:
-    add "sdl_achv_true_us_px" xcenter 700 ycenter 840 
-screen sdl_achv_bad_us_7dl:
-    add "sdl_achv_bad_us_7dl" xcenter 700 ycenter 840 
-screen sdl_achv_good_us_7dl:
-    add "sdl_achv_good_us_7dl" xcenter 700 ycenter 840 
-screen sdl_achv_true_us_7dl:
-    add "sdl_achv_true_us_7dl" xcenter 700 ycenter 840 
+screen sdl_achv_true_us:
+    add "sdl_achv_true_us" xcenter 700 ycenter 840
+screen sdl_achv_good_us:
+    add "sdl_achv_good_us" xcenter 700 ycenter 840
+screen sdl_achv_bad_us:
+    add "sdl_achv_bad_us" xcenter 700 ycenter 840
 screen sdl_achv_us_un:
-    add "sdl_achv_us_un" xcenter 700 ycenter 840 
+    add "sdl_achv_us_un" xcenter 700 ycenter 840
 screen sdl_achv_us_mi:
-    add "sdl_achv_us_mi" xcenter 700 ycenter 840 
+    add "sdl_achv_us_mi" xcenter 700 ycenter 840
     
     
 #Переход на концовки
@@ -1209,9 +1207,9 @@ screen sdl_achvlist_dv7dl_Author:
                 unhovered [Hide ("de_check_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 action [Hide("sdl_dv_cl_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_dv_7dlA", transition=Dissolve(1.0)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Hide("sdl_dv_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active4", transition=Dissolve(0.5)), Jump("alt_day7_dv_7dl_rej_ussr_end")]
         hotspot ((650,296, 300, 52)): #Транзит-Ольга
-            hovered [Show("sdl_achv_tran_dv", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_tran_dv", transition=Dissolve(0.5))]
-            action [Show("sdl_achv_tran_dv", transition=Dissolve(0.5))]
+            hovered [Show("sdl_achv_tran_HE_dv", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_tran_HE_dv", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_tran_HE_dv", transition=Dissolve(0.5))]
         if persistent.dv_7dl_bad_mt:
             hotspot ((590, 296, 50, 52)): #Transit-MT-Ende-Jump
                 hover_sound sdl_achv_click
@@ -2583,9 +2581,9 @@ screen sdl_achvlist_us7dl_Author:
             action [Hide("sdl_achv_us_7dlA", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(1.0)), Show("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_us_px_inactive", transition=Dissolve(0.5)), Show("sdl_us_px_active", transition=Dissolve(0.5)), Jump("sdl_achvlist_uspxs_Author")]
 
         hotspot ((650, 40, 300, 52)): #Тру-7дл
-            hovered [Show("sdl_achv_true_us_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_true_us_7dl", transition=Dissolve(0.5))]
-            action [Show("sdl_achv_true_us_7dl", transition=Dissolve(0.5))] 
+            hovered [Show("sdl_achv_true_us", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_true_us", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_true_us", transition=Dissolve(0.5))] 
         if persistent.us_7dl_true:
             hotspot ((590, 40, 50, 52)):
                 hover_sound sdl_achv_click
@@ -2605,9 +2603,9 @@ screen sdl_achvlist_us7dl_Author:
                 unhovered [Hide ("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_us_hi", transition=Dissolve(0.5))]
                 action [Hide("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_us_hi", transition=Dissolve(0.5))]
         hotspot ((650, 104, 300, 52)): #Гуд-7дл
-            hovered [Show("sdl_achv_good_us_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_good_us_7dl", transition=Dissolve(0.5))]
-            action [Show("sdl_achv_good_us_7dl", transition=Dissolve(0.5))]
+            hovered [Show("sdl_achv_good_us", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_good_us", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_good_us", transition=Dissolve(0.5))]
         if persistent.us_7dl_good:
             hotspot ((590, 104, 50, 52)):
                 hover_sound sdl_achv_click
@@ -2635,9 +2633,9 @@ screen sdl_achvlist_us7dl_Author:
                 unhovered [Hide ("de_check_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 action [Hide("sdl_us_px_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_us_7dlA", transition=Dissolve(1.0)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active4", transition=Dissolve(0.5)), Jump("alt_day7_us_7dl_mikuforever")]
         hotspot ((650, 296, 300, 52)): #Бэд-7дл
-            hovered [Show("sdl_achv_bad_us_7dl", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_bad_us_7dl", transition=Dissolve(0.5))]
-            action [Show("sdl_achv_bad_us_7dl", transition=Dissolve(0.5))]
+            hovered [Show("sdl_achv_bad_us", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_bad_us", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_bad_us", transition=Dissolve(0.5))]
         if persistent.us_7dl_bad:
             hotspot ((590, 296, 50, 52)):
                 hover_sound sdl_achv_click
@@ -2735,9 +2733,9 @@ screen sdl_achvlist_uspxs_Author:
             action [Hide("sdl_achv_us_pxsA", transition=Dissolve(0.5)), Show("sdl_us_px_inactive", transition=Dissolve(0.5)), Hide ("sdl_us_px_active", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Show("sdl_logo_active", transition=Dissolve(0.5)), Jump("sdl_achvlist_us7dl_Author")]
 
         hotspot ((650, 40, 300, 52)): #Тру-Огоньки
-            hovered [Show("sdl_achv_true_us_px", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_true_us_px", transition=Dissolve(0.5))]
-            action [Show("sdl_achv_true_us_px", transition=Dissolve(0.5))] 
+            hovered [Show("sdl_achv_true_us", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_true_us", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_true_us", transition=Dissolve(0.5))] 
         if persistent.us_px_true:
             hotspot ((590, 40, 50, 52)):
                 hover_sound sdl_achv_click
@@ -2751,9 +2749,9 @@ screen sdl_achvlist_uspxs_Author:
                 unhovered [Hide ("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_us_semische", transition=Dissolve(0.5))]
                 action [Hide("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_us_semische", transition=Dissolve(0.5))]
         hotspot ((650, 104, 300, 52)): #Гуд-Огоньки
-            hovered [Show("sdl_achv_good_us_px", transition=Dissolve(0.5))]
-            unhovered [Hide("sdl_achv_good_us_px", transition=Dissolve(0.5))]
-            action [Show("sdl_achv_good_us_px", transition=Dissolve(0.5))]
+            hovered [Show("sdl_achv_good_us", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_good_us", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_good_us", transition=Dissolve(0.5))]
         if persistent.us_px_rf_good:
             hotspot ((590, 104, 50, 52)):
                 hover_sound sdl_achv_click
