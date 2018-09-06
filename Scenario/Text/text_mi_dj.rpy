@@ -6222,7 +6222,7 @@ label alt_day5_mi_dj_late_evening:
             mi "Конечно, нет. Поэтому из трёх пластинок ты выбрал мою нелюбимую."
             mi "Короче, ты как хочешь. А я спать."
             "Она приглашающе распахнула дверь, и мне ничего не оставалось как принять предложение."
-    stop music fadeout 3
+    stop music fadeout 3 # не надо. следующий лейбл идёт с этой же музыкой
     stop ambience fadeout 6
     window hide
     with fade
@@ -9947,7 +9947,7 @@ label alt_day6_mi_dj_second_dance:
                 "Я махнул ладонью, отпуская её."
                 hide mi with dissolve
                 "И остался в одиночестве, наедине со своим позором."
-    stop music fadeout 3
+    stop music fadeout 3 # не надо. следующий лейбл идёт с этой же музыкой
     stop ambience fadeout 6
     window hide
     with fade
