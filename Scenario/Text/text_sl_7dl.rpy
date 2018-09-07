@@ -10557,7 +10557,7 @@ label alt_day5_sl_7dl_loki_evening:
     me "Извини, а какое…"
     show mi smile pioneer with dspr
     mi "Не обращай внимания, эти двое пока не наругаются досыта, ничем заниматься не будут.{w} Будь они мальчик и девочка, я бы решила, что это любовь."
-    dreamgirl "Оу, ю тач май талала!"
+    dreamgirl "Оу, ю тач май тралала!"
     "Прыгнувший в голову образ проходил по категории «18+», потому я старательно зажмурился."
     me "Какой кошмаааар!"
     stop music fadeout 2
@@ -12451,7 +12451,6 @@ label alt_day5_sl_7dl_campfire:
             stop ambience fadeout 6
             stop sound_loop
             with fade
-            return
         if alt_day4_sl_7dl_herc_rendezvous:
             me "Между прочим, мне кое-кто кое-что обещал."
             show sl shy pioneer with dspr
@@ -12474,9 +12473,16 @@ label alt_day5_sl_7dl_campfire:
             sl "Вредный."
             me "Нам голову отвернут, если мы его упустим."
             sl "Огромный риск, огромный."
+            "Славя говорила всё это, крохотным шажками отходя от костра."
+            "А я шёл за ней."
+            "Ответственность, ответственность…"
         hide mi with dissolve
         "Мику хихикнула и исчезла, оставляя нас вдвоём."
         "А вокруг будто бы исчезли, пропали люди, и мы были на поляне тет-а-тет."
+        "Хотя и остались у меня к Славе вопросы, да и к глупой её расстановке приоритетов."
+        "Я не со всем был согласен — и в её поведении, и в том, как она относится к чужим тайнам."
+        "Леночкину тайну мы охраняем, а нашу общую вдруг… Эх!"
+        "Я в очередной раз понял, что любовь в первую очередь подразумевает умение плюнуть на вопросы или спустить всё на взаимных компромиссах."
         stop music fadeout 5
         window hide
     elif loki:
@@ -12722,7 +12728,10 @@ label alt_day5_sl_7dl_campfire:
     "Вожатые там сгрудились кружком и болтали о своих вожатских делах, а Саныч втихомолку фотографировал происходящее — память-с!"
     "Память."
     "Всё осталось за спиной."
-    if loki:
+    if herc:
+        "Я сам выбрал только то, что впереди."
+        "Пригревшись рядом с моим солнышком, напитался, набрался сил и сделал свой очередной шаг в неизвестность."
+    elif loki:
         "И это, наверное, даже к лучшему. {w}Лучше всего иногда просто сбежать."
         "Так я и сделал."
         "Вернее, думал, что сбежал."
@@ -13214,6 +13223,10 @@ label alt_day5_sl_7dl_hentai:
     "Как будто между нами провесили зеркало, и я чувствовал всё, что чувствовала она."
     "Мы уже были на моей кровати с продавленным панцирем, и под нужным место у Слави уже была подушка, и я приложил все усилия для того, чтобы всё прошло, как надо, а…"
     "Чёрт-те что и сбоку бантик."
+    th "Я это или не я?"
+    th "Где старый я, наплевательский относящийся к чувствам другим?"
+    me "Что ты со мной сделала, ведьма чёртова?"
+    "Вытолкнуло пересхошее горло."
     "Я не мог заставить себя сделать ей больно."
     "Просто не мог."
     "Это было на почти физиологическом уровне."
@@ -13360,6 +13373,7 @@ label alt_day5_sl_7dl_sleeptime:
             "В горле першило, но я не обратил на это особого внимания."
         "Ольга Дмитриевна уже пришла, устроилась поудобнее и досматривала пятый сон."
         "Я не мог объяснить себе причины своего странного поведения, но мне становилось всё душнее и душнее, пока я, наконец, не проснулся окончательно."
+        "Свитер на всякий случай взял с собой — летние ночи, понятно, летние, но если вдруг станет холодно…"
         "От сна в памяти остались лишь обрывки, нечёткие, неясные, будто принадлежащие сразу нескольким людям — слишком уж разные были от них послевкусия."
         "Панцирь коротко скрипнул, прогибаясь, я сел на краю кровати, борясь с бьющим всё тело нервным возбуждением."
         "Осмотрелся…"
@@ -13523,335 +13537,6 @@ label alt_day5_sl_7dl_sleeptime:
         "Потому нет."
         "Аккуратно сложив форму Слави на лежащее здесь же полешко, я отправился в близлежащие кусты за дровами."
         "Скоро уже выпадет роса, и тогда мы действительно оба озябнем."
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-#День 6
-label alt_day6_sl_7dl_begin:#Общий подъём
-    play music music_7dl["ask_you_out"] fadein 3
-    scene bg int_house_of_mt_sunset
-    with dissolve
-    play ambience ambience_int_cabin_day fadein 2
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day6_sl_7dl_breakfast:#Общий завтрак
-    play music music_7dl["too_serious"] fadein 3
-    play ambience ambience_camp_center_evening
-    scene bg ext_square_sunset
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day6_sl_7dl_herc_morning: #Геркоутро
-    play ambience ambience_camp_center_evening
-    play music music_7dl["explore"] fadein 3
-    scene bg ext_dining_hall_away_sunset
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day6_sl_7dl_herc_day: #Геркодень
-    play ambience ambience_camp_center_day
-    play music music_7dl["everyday"] fadein 3
-    scene bg ext_square_day
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day6_sl_7dl_loki_morning: #Локиутро
-    play ambience ambience_camp_center_evening
-    play music music_7dl["explore"] fadein 3
-    scene bg ext_dining_hall_away_sunset
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day6_sl_7dl_loki_day: #Локидень
-    play ambience ambience_camp_center_day
-    play music music_7dl["everyday"] fadein 3
-    scene bg ext_square_day
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day6_sl_7dl_morning: #Дрищеутро
-    play ambience ambience_camp_center_evening
-    play music music_7dl["explore"] fadein 3
-    scene bg ext_dining_hall_away_sunset
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day6_sl_7dl_day: #Дрищедень
-    play ambience ambience_camp_center_day
-    play music music_7dl["everyday"] fadein 3
-    scene bg ext_square_day
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day6_sl_7dl_evening:#Общий концерт
-    play ambience ambience_camp_center_evening fadein 5
-    play music music_7dl["closetoyou"] fadein 3
-    scene bg ext_stage_big_clear_day_7dl
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day6_sl_7dl_disco: #Общая дискотека
-    play ambience ambience_camp_center_evening fadein 5
-    play music music_7dl["one_little_lone_cloud"] fadein 3
-    scene anim_square_preparty
-    with dissolve
-    if karma < 100:
-        scene bg ext_un_hideout_day_7dl
-        with dissolve
-        play ambience ambience_lake_shore_night fadein 6
-    play ambience ambience_7dl["disco"] fadein 3
-    scene anim_square_preparty
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day6_sl_7dl_hentai: #Хентай
-    scene cg d5_sl_moon_7dl
-    with dissolve
-    play music music_7dl["iamsadiamsorry"] fadein 3
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day6_sl_7dl_sleeptime: #Отбой
-    scene bg ext_house_of_mt_night_without_light
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-#День 7
-label alt_day7_sl_7dl_begin:#Общий подъём
-    play music music_7dl["ask_you_out"] fadein 3
-    scene bg int_house_of_mt_sunset
-    with dissolve
-    play ambience ambience_int_cabin_day fadein 2
-    #Подъём-умывание-завтрак
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_packing:#Сборы
-    play music music_7dl["unfulfilled"] fadein 3
-    play ambience ambience_camp_center_evening
-    scene bg ext_square_sunset
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_leaving:#Отъезд
-    play music music_7dl["tilltheend"] fadein 3
-    play ambience ambience_camp_center_evening
-    scene bg ext_square_sunset
-    with dissolve
-    play music music_7dl["tearing_sobs"] fadein 3
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_true:#ТруЪ-концовка
-    play music music_7dl["emptiness"] fadein 3
-    play ambience ambience_cold_wind_loop fadein 3
-    scene bg ext_entrance_winter_7dl
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_loki_epilogue:#Эпилог Локи
-    #Я написал историю, но никто не понял послания.
-    play music music_7dl["so_lonely"] fadein 3
-    play ambience ambience_cold_wind_loop fadein 3
-    scene bg ext_khruschevka_night_7dl
-    with dissolve
-    #Она живёт там. Её окна, почти как в песне, на пятом этаже.
-    #Только нет у меня дерева, чтобы забраться и постучать.
-    #А если бы и было…
-    #Проблема в том, что я так и не научился любить до конца. И ненавидеть разучился.
-    #Ещё Славя эта…
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_herc_epilogue:#Эпилог Герка
-    #И кто ты без этих глупых цифр?
-    play music music_7dl["despair"] fadein 3
-    scene bg ext_square_rain_genda_7dl
-    show prologue_dream
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_epilogue:#Эпилог Дрища
-    #Почти ничего из детства не помню. Будто прожил его кто-то вместо меня.
-    play music music_7dl["exodus"] fadein 3
-    scene bg ext_seashore_7dl
-    with fade
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_loki_good:#Гуд Локи
-    #Дурные мысли - души бездарной выхлоп.
-    play music music_7dl["wonderful_faraway"] fadein 3
-    play ambience ambience_cold_wind_loop fadein 3
-    scene bg ext_winterpark_7dl
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_herc_good:#Гуд Герка
-    #Бог распрятал трёх нужных нам в людей в семь миллиардов тел. Попробуй угадай, кто нужный? У тебя всего несколько десятков лет. Время пошло.
-    play music music_7dl["despair"] fadein 3
-    scene bg int_bus_night
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_good:#Гуд Дрища
-    #Как хотели жили. Нам хотелось хвастаться своей глупой памятью.
-    play music music_7dl["unforgotten"] fadein 3
-    play ambience ambience_7dl["int_silence"] fadein 3
-    scene bg int_access_day_7dl
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_loki_excl:#Эксклюзив Локи
-    #В этой бездне канули десятки лет. А ты хочешь заполнить их простым «хочу».
-    play music music_7dl["laugh_throught_the_universe"] fadein 3
-    play ambience ambience_7dl["railroad"] fadein 3
-    scene bg ext_mv2_7dl
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_herc_excl:#Эксклюзив Герка
-    #Конец света куда ближе, чем надо.
-    play music music_7dl["shape_of_my_heart"] fadein 3
-    play ambience sfx_street_traffic_outside fadein 2
-    scene bg int_store_7dl
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_excl:#Эксклюзив Дрища
-    #Ну, вы поняли.
-    play music music_7dl["Sad_Piano"] fadein 3
-    play ambience ambience_medstation_inside_day fadein 4
-    scene bg int_hospital_hall_day_7dl
-    with dissolve
-    
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_sl_7dl_bad:#Капитальный бэд
-    #Используй против них неотразимый свой приём. Люби.
-    play music music_7dl["PleaseStopItMastered"] fadein 3
-    play ambience ambience_7dl["night_city"] fadein 3
-    scene bg ext_city_night_7dl
-    with dissolve
-    
     window hide
     stop music fadeout 3
     stop ambience fadeout 6
