@@ -37,7 +37,7 @@
             call alt_day4_neu_us
             pause(1)
     else:
-        call alt_day4_neu_home #Домик ведёт к Ульянке, Ольге, Лене и Мику. 
+        call alt_day4_neu_home
         pause(1)
         if alt_day3_us_bugs == 1:
             $ alt_day4_neu_transit = 5
@@ -68,7 +68,7 @@
     $ persistent.sprite_time = "day"
     $ day_time()
     $ alt_chapter(4, u"Одиночка. День")
-    call alt_day4_neu_dinner #На обеде подводим итоги
+    call alt_day4_neu_dinner
     pause(1)
     call alt_day4_neu_curl
     pause(1)

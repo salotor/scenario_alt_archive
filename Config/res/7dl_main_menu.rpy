@@ -114,21 +114,21 @@ screen help_7dl:
         text_style "settings_link"
         yalign 0.6
         xalign 0.23
-        action [Hide("help_7dl", transition=Dissolve(0.2)), OpenURL("https://vk.com/wall-128046483_29533"), Stop('music', fadeout=2), Jump("main_menu_7dl")]
+        action [Hide("help_7dl", transition=Dissolve(0.2)), OpenURL("https://vk.com/wall-128046483_29533"), Stop('music', fadeout=2), Return()]
     textbutton _("Закрыть"):
         text_size 40
         style "log_button"
         text_style "settings_link"
         yalign 0.6
         xalign 0.5
-        action [Hide("help_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("main_menu_7dl")]
+        action [Hide("help_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Return()]
     textbutton _("Больше не показывать"):
         text_size 40
         style "log_button"
         text_style "settings_link"
         yalign 0.6
         xalign 0.83
-        action [Hide("help_7dl", transition=Dissolve(0.2)), SetField(persistent,'dont_disturb', True), Stop('music', fadeout=2), Jump("main_menu_7dl")]
+        action [Hide("help_7dl", transition=Dissolve(0.2)), SetField(persistent,'dont_disturb', True), Stop('music', fadeout=2), Return()]
         
 screen settings_widget_lp_on_7dl():
     add get_image_7dl("gui/menu_elem/settings/settings_wdglp_descr_on.png")

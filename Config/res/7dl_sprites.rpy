@@ -993,3 +993,8 @@
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/pi/pi_1_pioneer.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/pi/pi_1_pioneer.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
     True,im.Composite((900,1080), (0,0), get_sprite_ori('normal/pi/pi_1_pioneer.png')) )
+    
+    image sl normal sport far = ConditionSwitch(
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((630,1080), (0,0), get_sprite_ori('far/sl/sl_1_body.png'),(0,0), get_sprite_ori('far/sl/sl_1_sport.png'),(0,0), get_sprite_ori('far/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((630,1080), (0,0), get_sprite_ori('far/sl/sl_1_body.png'),(0,0), get_sprite_ori('far/sl/sl_1_sport.png'),(0,0), get_sprite_ori('far/sl/sl_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
+    True,im.Composite((630,1080), (0,0), get_sprite_ori('far/sl/sl_1_body.png'),(0,0), get_sprite_ori('far/sl/sl_1_sport.png'),(0,0), get_sprite_ori('far/sl/sl_1_normal.png')) )
