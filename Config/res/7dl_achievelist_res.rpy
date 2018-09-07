@@ -222,6 +222,9 @@ init:
     image sdl_un_cl_inactive = get_image_7dl("gui/ach_list/un_cl_inactive1.png")
     image sdl_un_fz_active = get_image_7dl("gui/ach_list/un_fz_active1.png")
     image sdl_un_fz_inactive = get_image_7dl("gui/ach_list/un_fz_inactive1.png")
+    #Ульяна
+    image sdl_us_px_active = get_image_7dl("gui/ach_list/us_px_active1.png")
+    image sdl_us_px_inactive = get_image_7dl("gui/ach_list/us_px_inactive1.png")
     #Одиночка
     image sdl_me_no_active = get_image_7dl("gui/ach_list/me_no_active1.png")
     image sdl_me_no_inactive = get_image_7dl("gui/ach_list/me_no_inactive1.png")
@@ -247,7 +250,8 @@ init:
     image sdl_achv_un_7dlA = Text("Основная история", style="sdl_achvlistA_un_gross")
     #Ольга-рут
     image sdl_achv_mt_7dlA = Text("Основная история", style="sdl_achvlistA_mt_gross")
-    #Ульяна-рут
+    #Ульяна-руты
+    image sdl_achv_us_pxsA = Text("Огоньки", style="sdl_achvlistA_us_gross")
     image sdl_achv_us_7dlA = Text("Основная история", style="sdl_achvlistA_us_gross")
     #Одиночка-руты
     image sdl_achv_me_smtA = Text("Прочее", style="sdl_achvlistA_me_gross")
@@ -289,6 +293,7 @@ init:
     image sdl_achv_rejc_RF_dv = Text(" Реджект\nРФ-концовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_rejc_US_dv = Text(" Реджект \nСССР-концовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_tran_dv = Text("Транзитная\n концовка", style="sdl_achvlistA_dv_st")
+    image sdl_achv_tran_HE_dv = Text("Транзитная \nконцовка Герка", style="sdl_achvlistA_dv_st")
     # ------------------------------------------------
     #Концовки-описание (Славя расцветка)
     image sdl_achv_true_IN_sl = Text(" Истинная\nинт-концовка", style="sdl_achvlistA_sl_st")
@@ -313,19 +318,17 @@ init:
     image sdl_achv_good_mt = Text("Хорошая\nконцовка", style="sdl_achvlistA_mt_st")
     image sdl_achv_neutral_mt = Text("Нейтральная\n  концовка", style="sdl_achvlistA_mt_st")
     # ------------------------------------------------
+    #Концовки-описание (Ульянка расцветка)
+    image sdl_achv_true_us = Text("Истинная\nконцовка", style="sdl_achvlistA_us_st")
+    image sdl_achv_good_us = Text("Хорошая\nконцовка", style="sdl_achvlistA_us_st")
+    image sdl_achv_bad_us = Text(" Плохая\nконцовка", style="sdl_achvlistA_us_st")
+    image sdl_achv_us_un = Text("Концовка\n Лены", style="sdl_achvlistA_us_st")
+    image sdl_achv_us_mi = Text("Концовка\n Мику", style="sdl_achvlistA_us_st")
+    # ------------------------------------------------
     #Концовки-описание (Одиночка расцветка)
     image sdl_achv_pst_me = Text("Постскриптум", style="sdl_achvlistA_me_st")
     image sdl_achv_qte_me = Text(" Тест на реакцию\nи сообразительность", style="sdl_achvlistA_me_st")
     image sdl_achv_kat_me = Text("Катапультная\n концовка", style="sdl_achvlistA_me_st")
-    
-    #Концовки-описание (Ульянка расцветка)
-    image sdl_achv_good_us_px = Text("Хорошая\nконцовка Огоньков", style="sdl_achvlistA_us_st")
-    image sdl_achv_true_us_px = Text("Истинная\nконцовка Огоньков", style="sdl_achvlistA_us_st")
-    image sdl_achv_bad_us_7dl = Text("Плохая\n7дл концовка", style="sdl_achvlistA_us_st")
-    image sdl_achv_good_us_7dl = Text("Хорошая\n7дл концовка", style="sdl_achvlistA_us_st")
-    image sdl_achv_true_us_7dl = Text("Истинная\n7дл концовка", style="sdl_achvlistA_us_st")
-    image sdl_achv_us_un = Text("Концовка\n Лены", style="sdl_achvlistA_us_st")
-    image sdl_achv_us_mi = Text("Концовка\n Мику", style="sdl_achvlistA_us_st")
     
     # ------------------------------------------------
     ##\\\\\\\\\\\\\\\\\\\\\\\\\ЗВУК\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

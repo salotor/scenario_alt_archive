@@ -381,7 +381,7 @@ screen bgs_7dl_3:
     if renpy.seen_image("bg ext_un_hideout_day_7dl"):
         imagebutton:
             auto get_image_7dl("gui/gallery/bgs/ext_un_hideout_day_7dl_%s.png") xalign 0.8 yalign 0.15 
-            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg ext_un_hideout_day_7dl"), SetVariable("show_image2_7dl", "bg ext_un_hideout_night_7dl"), SetVariable("show_image3_7dl", "bg ext_un_hideout_sunset_7dl"), Jump("show_img_7dl")] 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg ext_un_hideout_day_7dl"), SetVariable("show_image2_7dl", "bg ext_un_hideout_night_7dl"), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.8 yalign 0.15
     if renpy.seen_image("bg ext_volley_court_7dl"):
@@ -1179,7 +1179,7 @@ screen arts_7dl_us_1:
         style "page_7dl_text"
         xalign 0.95
         yalign 0.95
-    if renpy.seen_image("cg d2_us_soccer_sunset_7dl"):
+    if renpy.seen_image("cg d2_us_soccer_sunset_7dl"):    # Почему есть этот арт (когда это перерисовка cg из БЛ), но нет d5_us_rendezvous_7dl (точнее есть, но не по фильтру Ульяны) ?
         imagebutton:
             auto get_image_7dl("gui/gallery/arts/d2_us_soccer_sunset_7dl_%s.png") xalign 0.19 yalign 0.15 
             action [Hide("arts_7dl_us_1", transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d2_us_soccer_sunset_7dl"), Jump("show_img_7dl")] 
