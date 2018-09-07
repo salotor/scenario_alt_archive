@@ -1126,7 +1126,7 @@ label alt_day2_convoy:
             window hide
             $ list_d2_convoy_7dl.append('un_rej')
             jump alt_day2_convoy
-        "Я сам.":
+        "Я сам":
             scene expression Noir("bg ext_dining_hall_near_day", brightness = -0.4, saturation = -0.4) at zentercenter
             "Что я, маленький, что ли?"
             "Сам прекрасно справлюсь."
@@ -4130,7 +4130,7 @@ label alt_day2_dinner:
                     "Судя по всему, такую низменную вещь, как занесение мелодии на нотный стан, Мику презирала."
                     show mi upset pioneer with dspr
                     if 'music' in list_clubs_7dl:
-                        mi "Ой, извини, ты же уже записался. А ты на чём будешь играть?"
+                        mi "Ой, извини, ты же уже записался. А ты на чём будешь играть?"    # Всё же вопрос "на чём будешь играть?" Локи и Дрищу не очень подходит. Мику же обещала достать мундштук для тромбона (или она просто такая забывчивая?)
                         if herc:
                             extend " На гитаре?"
                         me "Как дело пойдёт."
