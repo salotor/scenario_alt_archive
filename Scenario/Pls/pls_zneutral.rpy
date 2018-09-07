@@ -37,7 +37,7 @@
             call alt_day4_neu_us
             pause(1)
     else:
-        call alt_day4_neu_home #Домик ведёт к Ульянке, Ольге, Лене и Мику. 
+        call alt_day4_neu_home
         pause(1)
         if alt_day3_us_bugs == 1:
             $ alt_day4_neu_transit = 5
@@ -68,7 +68,7 @@
     $ persistent.sprite_time = "day"
     $ day_time()
     $ alt_chapter(4, u"Одиночка. День")
-    call alt_day4_neu_dinner #На обеде подводим итоги
+    call alt_day4_neu_dinner
     pause(1)
     call alt_day4_neu_curl
     pause(1)
@@ -177,7 +177,7 @@ label alt_day5_neu_begin:
         call alt_day5_neu_sleepnight
         pause(1)
         if mt_pt >= 7 and alt_day5_neu_mt_voyeur != 0:
-            $ routetag = "mt7dl" # Так и задумывалось, что во всём руте Ольги все "главы" идут со спрайтом довольной Ольги или нет? У остальных девушек до эпилога идёт спокойный спрайт, а в конце - в зависимости от концовки. Ольга же улыбается даже в бед-энде.
+            $ routetag = "mt7dl"
             call alt_day5_neu_mt_selector
             pause(1)
             if alt_day5_neu_mt_diary:

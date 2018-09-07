@@ -32,7 +32,7 @@
         me "И снова добрый вечер."
         "Она смущённо улыбнулась, но ничего не сказала."
 
-    elif alt_pe == 2:#
+    elif alt_pe == 2:
         show sl smile2 pioneer at cright with dspr
         extend " Славю."
         sl "Знаешь, я не очень хорошо в картах."
@@ -46,13 +46,13 @@
         "Усмехнулась она, садясь на противоположное место."
         me "А как же. {w}Я принесу на твою могилку два гладиолуса."
 
-    elif alt_pe == 4:#
+    elif alt_pe == 4:
         show mi smile pioneer at cright with dspr
         extend " Мику."
         mi "Ой, привет, Сенечка, а что за игра такая, ты не знаешь? А то меня позвали играть, а правила не объяснили."
         "Не переставая болтать, она села за стол и сложила руки."
 
-    elif alt_pe == 5:#
+    elif alt_pe == 5:
         show us laugh pioneer at cright with dspr
         extend " Ульяну."
         us "Готов поддаваться?"
@@ -62,13 +62,13 @@
         me "Это по каким это?"
         us "Увидишь!"
         
-    elif alt_pe == 6:#
+    elif alt_pe == 6:
         show sh normal pioneer at cright with dspr
         extend " Шурика."
         sh "Ну что, пусть победит сильнейший?"
         "Я молча пожал ему руку."
 
-    elif alt_pe == 7:#
+    elif alt_pe == 7:
         show mz normal pioneer at cright with dspr
         extend " Женю."
         mz "Я твой противник."
@@ -2256,7 +2256,10 @@ label alt_day2_final_win:
         "Судя по сузившимся глазам Слави, не я один."
         "Но я обернулся."
         show dv smile pioneer2 at cleft with dissolve
-        dv "Ты победил в споре и турнире." # даже если Семён не спорил или лапал Алису она это говорит.
+        if alt_day2_dv_bet_approve:
+            dv "Ты победил в споре и турнире."
+        else:
+            dv "Молоток!"
         "Она ткнула меня кулаком в плечо и, развернувшись, растворилась в толпе."
         window hide
     elif alt_day2_f1 == 3:
