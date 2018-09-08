@@ -389,7 +389,7 @@
     window hide
     $ renpy.pause(2)
     menu:
-        "Пойду, милая.":
+        "Пойду, милая":
             "Конечно, пойду."
         "Нет, я останусь здесь":
             $ alt_day_catapult = 1
@@ -691,7 +691,7 @@ label alt_day0_start_h:
     show uvao_d1 at left
     show prologue_dream
     menu:
-        "Пойду, милая.":
+        "Пойду, милая":
             "Я молча схватил протянутую руку."
         "Нет, я останусь здесь":
             $ alt_day_catapult = 1
@@ -1070,7 +1070,7 @@ label alt_day0_start_l:
     window hide
     $ renpy.pause(2)
     menu:
-        "Пойду, милая.":
+        "Пойду, милая":
             me "Надеюсь, там не будет больше ни её, ни его, ни этой чёртовой четвёрки."
         "Нет, я останусь здесь":
             $ alt_day_catapult = 1
