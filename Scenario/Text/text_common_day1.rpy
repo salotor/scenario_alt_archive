@@ -2852,7 +2852,7 @@ label alt_day1_chase:
             stop ambience fadeout 3
             stop sound_loop
             menu:
-                "Пнуть мячик.":
+                "Пнуть мячик":
                     $ karma -= 10
                     $ alt_day1_us_shotted = True
                     me "Сбежать захотела?"

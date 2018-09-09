@@ -137,6 +137,14 @@ screen gallery_bw_7dl:
             imagebutton:
                 auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
                 action [SetVariable("page_7dl", 6), Hide("bgs_7dl_7", transition=Dissolve(0.2)), Show("bgs_7dl_6", transition=Dissolve(0.2))]
+        elif renpy.get_screen("bgs_7dl_8"):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                action [SetVariable("page_7dl", 7), Hide("bgs_7dl_8", transition=Dissolve(0.2)), Show("bgs_7dl_7", transition=Dissolve(0.2))]
+        elif renpy.get_screen("bgs_7dl_9"):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                action [SetVariable("page_7dl", 8), Hide("bgs_7dl_9", transition=Dissolve(0.2)), Show("bgs_7dl_8", transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "arts":
         if renpy.get_screen("arts_7dl_2"):
             imagebutton:
@@ -176,6 +184,11 @@ screen gallery_bw_7dl:
             imagebutton:
                 auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5
                 action [SetVariable("page_7dl", 1), Hide("arts_7dl_mi_2", transition=Dissolve(0.2)), Show("arts_7dl_mi_1", transition=Dissolve(0.2))]
+    elif gallery_mode_7dl == "us":
+        if not renpy.get_screen("arts_7dl_us_1"):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5
+                action [SetVariable("page_7dl", 1), Hide("arts_7dl_us_2", transition=Dissolve(0.2)), Show("arts_7dl_us_1", transition=Dissolve(0.2))]
      
 screen gallery_fw_7dl:
     if gallery_mode_7dl == "start":
@@ -207,6 +220,14 @@ screen gallery_fw_7dl:
             imagebutton:
                 auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
                 action [SetVariable("page_7dl", 7), Hide("bgs_7dl_6", transition=Dissolve(0.2)), Show("bgs_7dl_7", transition=Dissolve(0.2))]
+        elif renpy.get_screen("bgs_7dl_7"):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
+                action [SetVariable("page_7dl", 8), Hide("bgs_7dl_7", transition=Dissolve(0.2)), Show("bgs_7dl_8", transition=Dissolve(0.2))]
+        elif renpy.get_screen("bgs_7dl_8"):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
+                action [SetVariable("page_7dl", 9), Hide("bgs_7dl_8", transition=Dissolve(0.2)), Show("bgs_7dl_9", transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "arts":
             if renpy.get_screen("arts_7dl_1"):
                 imagebutton:
@@ -246,6 +267,11 @@ screen gallery_fw_7dl:
             imagebutton:
                 auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
                 action [SetVariable("page_7dl", 2), Hide("arts_7dl_mi_1", transition=Dissolve(0.2)), Show("arts_7dl_mi_2", transition=Dissolve(0.2))]
+    elif gallery_mode_7dl == "us":
+        if not renpy.get_screen("arts_7dl_us_2"):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
+                action [SetVariable("page_7dl", 2), Hide("arts_7dl_us_1", transition=Dissolve(0.2)), Show("arts_7dl_us_2", transition=Dissolve(0.2))]
 
 screen filter_settings_7dl:
     tag menu
@@ -270,7 +296,7 @@ screen filter_settings_7dl:
                     
 screen bgs_7dl_1:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/7"
+    $ next_page_7dl = str(page_7dl) + "/9"
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -315,7 +341,7 @@ screen bgs_7dl_1:
 
 screen bgs_7dl_2:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/7"
+    $ next_page_7dl = str(page_7dl) + "/9"
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -360,7 +386,7 @@ screen bgs_7dl_2:
        
 screen bgs_7dl_3:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/7"
+    $ next_page_7dl = str(page_7dl) + "/9"
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -405,7 +431,7 @@ screen bgs_7dl_3:
         
 screen bgs_7dl_4:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/7"
+    $ next_page_7dl = str(page_7dl) + "/9"
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -450,16 +476,16 @@ screen bgs_7dl_4:
        
 screen bgs_7dl_5:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/7"
+    $ next_page_7dl = str(page_7dl) + "/9"
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
         xalign 0.95
         yalign 0.95
-    if renpy.seen_image("bg int_coupe_day_7dl"): # todo
+    if renpy.seen_image("bg int_hospital_hall_day_7dl"):
         imagebutton:
-            auto get_image_7dl("gui/gallery/bgs/int_plats_7dl_%s.png") xalign 0.19 yalign 0.15 
-            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg int_coupe_day_7dl"), Jump("show_img_7dl")] 
+            auto get_image_7dl("gui/gallery/bgs/int_hospital_hall_day_7dl_%s.png") xalign 0.19 yalign 0.15 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg int_hospital_hall_day_7dl"), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.19 yalign 0.15
     if renpy.seen_image("bg int_potato_storage_7dl"):
@@ -495,7 +521,7 @@ screen bgs_7dl_5:
         
 screen bgs_7dl_6:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/7"
+    $ next_page_7dl = str(page_7dl) + "/9"
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -540,7 +566,7 @@ screen bgs_7dl_6:
         
 screen bgs_7dl_7:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/7"
+    $ next_page_7dl = str(page_7dl) + "/9"
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -576,7 +602,73 @@ screen bgs_7dl_7:
             action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg int_toilet_day_7dl"), SetVariable("show_image2_7dl", "bg int_toilet_night_7dl"), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.5 yalign 0.93
+    if renpy.seen_image("bg ext_countryside_day_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/bgs/ext_countryside_day_7dl_%s.png") xalign 0.8 yalign 0.93 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg ext_countryside_day_7dl"), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.8 yalign 0.93
         
+screen bgs_7dl_8:
+    tag menu
+    $ next_page_7dl = str(page_7dl) + "/9"
+    textbutton next_page_7dl:
+        text_style "page_7dl_text"
+        style "page_7dl_text"
+        xalign 0.95
+        yalign 0.95
+    if renpy.seen_image("bg ext_dining_hall_backroad_day_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/bgs/ext_dining_hall_backroad_day_7dl_%s.png") xalign 0.19 yalign 0.15 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg ext_dining_hall_backroad_day_7dl"), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.19 yalign 0.15
+    if renpy.seen_image("bg ext_dv_hideout_day_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/bgs/ext_dv_hideout_day_7dl_%s.png") xalign 0.5 yalign 0.15 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg ext_dv_hideout_day_7dl"), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.5 yalign 0.15
+    if renpy.seen_image("bg ext_square_rain_genda_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/bgs/ext_square_rain_genda_7dl_%s.png") xalign 0.8 yalign 0.15 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg ext_square_rain_genda_7dl"), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.8 yalign 0.15
+    if renpy.seen_image("bg ext_warehouse_day_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/bgs/ext_warehouse_day_7dl_%s.png") xalign 0.2 yalign 0.93 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg ext_warehouse_day_7dl"), SetVariable("show_image2_7dl", "bg ext_warehouse_night_7dl"), SetVariable("show_image3_7dl", "bg ext_warehouse_sunset_7dl"), SetVariable("show_image4_7dl", "bg ext_warehouse_rain_day_7dl"), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.2 yalign 0.93
+    if renpy.seen_image("bg ext_warehouse2_day_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/bgs/ext_warehouse2_day_7dl_%s.png") xalign 0.5 yalign 0.93 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg ext_warehouse2_day_7dl"), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.5 yalign 0.93
+    if renpy.seen_image("bg int_coupe_day_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/bgs/int_coupe_day_7dl_%s.png") xalign 0.8 yalign 0.93 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg int_coupe_day_7dl"), SetVariable("show_image2_7dl", "bg int_coupe_night_7dl"), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.8 yalign 0.93
+        
+screen bgs_7dl_9:
+    tag menu
+    $ next_page_7dl = str(page_7dl) + "/9"
+    textbutton next_page_7dl:
+        text_style "page_7dl_text"
+        style "page_7dl_text"
+        xalign 0.95
+        yalign 0.95
+    if renpy.seen_image("bg int_d3_hideout_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/bgs/int_d3_hideout_7dl_%s.png") xalign 0.19 yalign 0.15 
+            action [Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "bg int_d3_hideout_7dl"), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.19 yalign 0.15
+
 screen arts_7dl_1:
     tag menu
     $ next_page_7dl = str(page_7dl) + "/8"
@@ -930,6 +1022,12 @@ screen arts_7dl_8:
             action [Hide("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d6_us_dance_7dl"), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.5 yalign 0.93 
+    if renpy.seen_image("cg d5_sl_square_us_lead_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/arts/d5_sl_square_us_lead_7dl_%s.png") xalign 0.8 yalign 0.93 
+            action [Hide("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d5_sl_square_us_lead_7dl"), SetVariable("show_image2_7dl", "cg d5_sl_square_sl_lead_7dl"), SetVariable("show_image3_7dl", "cg d5_sl_square_me_lead_7dl"), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.8 yalign 0.93 
         
 screen arts_7dl_un_1:
     tag menu
@@ -1173,13 +1271,13 @@ screen arts_7dl_mi_2:
         
 screen arts_7dl_us_1:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/1"
+    $ next_page_7dl = str(page_7dl) + "/2"
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
         xalign 0.95
         yalign 0.95
-    if renpy.seen_image("cg d2_us_soccer_sunset_7dl"):    # Почему есть этот арт (когда это перерисовка cg из БЛ), но нет d5_us_rendezvous_7dl (точнее есть, но не по фильтру Ульяны) ?
+    if renpy.seen_image("cg d2_us_soccer_sunset_7dl"):
         imagebutton:
             auto get_image_7dl("gui/gallery/arts/d2_us_soccer_sunset_7dl_%s.png") xalign 0.19 yalign 0.15 
             action [Hide("arts_7dl_us_1", transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d2_us_soccer_sunset_7dl"), Jump("show_img_7dl")] 
@@ -1215,6 +1313,21 @@ screen arts_7dl_us_1:
             action [Hide("arts_7dl_us_1", transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d6_us_dance_7dl"), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.8 yalign 0.93
+        
+screen arts_7dl_us_2:
+    tag menu
+    $ next_page_7dl = str(page_7dl) + "/2"
+    textbutton next_page_7dl:
+        text_style "page_7dl_text"
+        style "page_7dl_text"
+        xalign 0.95
+        yalign 0.95
+    if renpy.seen_image("cg d5_us_rendezvous_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/arts/d5_us_rendezvous_7dl_%s.png") xalign 0.19 yalign 0.15 
+            action [Hide("arts_7dl_us_2", transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d5_us_rendezvous_7dl"), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.19 yalign 0.15
         
 screen arts_7dl_mt_1:
     tag menu
