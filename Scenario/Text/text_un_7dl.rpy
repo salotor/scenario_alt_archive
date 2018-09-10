@@ -9338,7 +9338,7 @@ label alt_day6_un_7dl_dance:
         show un smile dress with dspr
         un "Позволю!"
         "Она приняла мою руку и позволила увести себя."
-        show cg d3_un_dance with dissolve
+        scene cg d3_un_dance with dissolve
         "Мы находились в том самом счастливом, конфетно-букетном состоянии, когда надо просто быть вместе, стесывая шероховатости и острые углы, притираясь, беззаветно пользуясь анестезией влюблённости."
         "Великая эпоха компромиссов, когда ты делаешь что-то просто потому, что можешь делать это — но не ради себя."
         "И будь у нас хотя бы на пару недель больше времени…"
@@ -11284,7 +11284,7 @@ label alt_day7_un_7dl_ussr:
     "Протянул ладонь навстречу Земле."
     "И помахал."
     window hide
-    show bg ext_earth_7dl with dissolve
+    scene bg ext_earth_7dl with dissolve
     show frame at truecenter with dspr
     $ set_mode_adv()
     me "Впереди ещё столько хорошего."

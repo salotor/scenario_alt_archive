@@ -1122,7 +1122,7 @@ label alt_day0_d3_prologue:
     window hide
     with fade
     "Декорации за спиной девушки сместились, вспыхнул яркий свет, а когда я проморгался…"
-    show cg d1_uv_bus_7dl
+    scene cg d1_uv_bus_7dl
     pause(.1)
     scene cg d5_me_Alisa_7dl
     show blackout_exh3

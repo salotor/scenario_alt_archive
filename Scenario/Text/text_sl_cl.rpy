@@ -128,7 +128,7 @@
     "И, чувствуя себя бабушкой в платочке, устроился на завалинке.{w} То есть на скамеечке рядом с медпунктом."
     "Мол, наша медицина и опасна, и трудна."
     window hide
-    show bg ext_square_sunset with dissolve
+    scene bg ext_square_sunset with dissolve
 
     "Просто так сидеть мне быстро прискучило, поэтому я сначала вытянул ноги на скамейке, а после и вовсе развалился на разогретых солнцем досках, подпёр щёки ладонями и стал вдумчиво изучать мельтешащую лагерную жизнь."
     "Медпункт, даром что располагался практически в географическом центре лагеря, был так толково отгорожен зеленью и складками местности, что прятался как бы в «кармане», куда почти не добивала бьющая активность гнущих спину пионеров."
@@ -709,9 +709,9 @@ label alt_day4_sl_cl_shurik:
     "Это было оно.{w} Кажется."
     "Я проследил путь следования кабелей и выругался."
     "Здесь, кажется, было намертво напаяно, а для отключения с той стороны необходимо было выбираться на крышу."
-    show bg int_attic2_day_7dl at zenterleft with dissolve
+    scene bg int_attic2_day_7dl at zenterleft with dissolve
     "А у меня и так уже не оставалось времени — меня тошнило всё сильнее, комнату штормило и качало изо всех сил."
-    show bg int_attic2_day_7dl at enterright with dissolve
+    scene bg int_attic2_day_7dl at enterright with dissolve
     "Впрочем, есть один приём."
     "Называется…"
     play sound_loop sfx_head_heartbeat fadein 2
@@ -1147,7 +1147,7 @@ label alt_day4_sl_supper:
     sl "Меня так воспитывали всю мою жизнь, и я так буду воспитывать своих детей."
     me "Суровый манифест, что я могу сказать.{w} Не пробовала баллотиро…"
     "Я не договорил — прямиком к нашему столу тащила поднос Леночка Тихонова, в полном соответствии со своей фамилией, тихоня и себе на уме."
-    show bg int_dining_hall_people_sunset at enterleft
+    scene bg int_dining_hall_people_sunset at enterleft
     show sl normal pioneer at right with moveinright
     show un normal pioneer at cleft
     with dissolve
@@ -1505,7 +1505,7 @@ label alt_day4_sl_party_up:
         sl "Прости, я немного испугалась.{w} Ты как?"
         me "Живой.{w} Просто давайте не будем бежать, и всё будет в порядке."
         un "Тебя пошатывает."
-        show bg ext_path_sunset at enterleft
+        scene bg ext_path_sunset at enterleft
         show sl normal pioneer at left with moveinleft
         show un normal pioneer at right
         with dissolve
@@ -2900,7 +2900,7 @@ label alt_day4_sl_wh_night:
                     linear 10 zoom 1.1
                 with dissolve
                 $ renpy.pause (.4)
-                show bg ext_polyana_night:
+                scene bg ext_polyana_night:
                     zoom 1.1
                     linear 10 xalign .8
                 with dissolve
@@ -5744,7 +5744,7 @@ label alt_day5_sl_dinner:
     with dissolve
     mt "Ребята!"
     "Позвала она."
-    show bg ext_dining_hall_near_day at enterright
+    scene bg ext_dining_hall_near_day at enterright
     show mt normal pioneer at right with moveinright
     show cs normal at cleft
     with dissolve
@@ -6533,7 +6533,7 @@ label alt_day5_sl_dinner:
     "Такая хорошая девочка, а такая вредина!"
     play sound sfx_water_emerge
     scene black
-    show bg ext_beach2_day_7dl with easeintop
+    scene bg ext_beach2_day_7dl with easeintop
     show sl normal swim with dspr 
     sl "Семён, это никуда не годится! После ужина обязательно свожу тебя в баню."
     sl "Мыться надо каждый день."
@@ -8415,11 +8415,11 @@ label alt_day6_sl_begin:
         scene bg int_mine_coalface
         show prologue_dream
         with dissolve
-        show bg int_mine_coalface behind prologue_dream:
+        scene bg int_mine_coalface behind prologue_dream:
             xalign .5 yalign .4 zoom 1.0
             linear .3 xalign .5 yalign .4 zoom 1.1
         "Я сделал шаг."
-        show bg int_mine_coalface behind prologue_dream:
+        scene bg int_mine_coalface behind prologue_dream:
             xalign .5 yalign .4 zoom 1.1
             linear .3 xalign .5 yalign .35 zoom 1.2
         "Ещё один."
@@ -8542,7 +8542,7 @@ label alt_day6_sl_begin:
             mt "Семён, а не скажешь ли мне, где ты был на линейке?"
             sl "Он выполнял одно моё поручение, связанное с вашим заданием."
             "Чётко и по существу отрапортовала Славя, вплывая в кадр."
-            show bg ext_square_sunset at zenterleft
+            scene bg ext_square_sunset at zenterleft
             show mt normal pioneer at right with moveinright
             show sl normal pioneer at cleft
             with dissolve
@@ -9412,7 +9412,7 @@ label alt_day6_sl_ba_quest1:
     ba "А, пионеры."
     "Выдохнул он, принуждая себя успокоиться."
     ba "Чё пришли? Ещё какие-то вопросы есть?"
-    show bg ext_admins_day_7dl at enterleft
+    scene bg ext_admins_day_7dl at enterleft
     show ba evil uniform at right with moveinright
     show sl normal pioneer at cleft
     with dissolve
@@ -10551,7 +10551,7 @@ label alt_day6_sl_true_route:
     cs "Я дала ему сироп ипекакуаны, его должно немного потошнить."
     "Сообщила она."
     cs "Но вы должны понимать, что для полноценной помощи вам нужен ветеринар. {w}И срочно, очень срочно. Иначе всё зря."
-    show bg int_aidpost_day at enterleft
+    scene bg int_aidpost_day at enterleft
     show cs normal at right
     show sl cry pioneer at left
     with dissolve
@@ -11608,7 +11608,7 @@ label alt_day6_sl_concert:
     if alt_day5_sl_extra_house:
         "И сопутствующих сцен с этой же девчонкой спустя пару дней."
         "Длиной в целую ночь — я с утра чувствовал себя прожёванным, а она была бодра. {w}Сейчас мы поменялись ролями."
-    show bg ext_stage_big_clear_day_7dl behind mi at enterleft
+    scene bg ext_stage_big_clear_day_7dl behind mi at enterleft
     show mi smile voca at right with moveinright
     show cs normal at cleft with dspr
     with dissolve
@@ -12390,7 +12390,7 @@ label alt_day6_sl_hala:
     me "Как считаешь, это твоё дело?"
     show dv smile pioneer2 with dspr
     dv "А как же! У меня к ней свой вопрос. Касается тебя, кстати."
-    show bg ext_stage_big_clear_day_7dl at enterright
+    scene bg ext_stage_big_clear_day_7dl at enterright
     show dv normal pioneer2 at left with moveinleft
     show mi smile voca at cright
     with dissolve
@@ -16114,7 +16114,7 @@ label alt_day7_sl_loop2:
     "И одновременно оказалась совсем не той."
     "У неё была самая красивая улыбка на свете, белое облачко-щенок и забота об окружающих."
     "Было всё, кроме того, что она не была Славей."
-    show cg d4_sl_lookup_7dl
+    scene cg d4_sl_lookup_7dl
     pause(0.1)
     hide d4_sl_lookup_7dl
     "Славя - вот она…"
