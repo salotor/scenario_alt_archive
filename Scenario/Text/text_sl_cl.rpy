@@ -14168,8 +14168,8 @@ label alt_day7_sl_square1:
                 return
             else:
                 if (persistent.mi_7dl_good_human or persistent.mi_7dl_good_star) or persistent.dv_7dl_good_ussr or persistent.sl_7dl_good_ussr or persistent.un_7dl_good_ussr or persistent.mt_7dl_good or persistent.us_7dl_good:
-                "Немного посверкав и посияв, символы погасли."
-                "Снова обратившись скучными картинками по железу."
+                    "Немного посверкав и посияв, символы погасли."
+                    "Снова обратившись скучными картинками по железу."
                 "Делать мне здесь больше было нечего, и я, развернувшись, отправился восвояси."
                 th "Славя меня прибьёт, наверное."
                 "Отстранённо подумал я."

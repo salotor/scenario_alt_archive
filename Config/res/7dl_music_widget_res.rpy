@@ -163,7 +163,7 @@ init 1:
     $ music_list_7dl["Mattashi - Together"] = default_7dl_path+"Sound/music/vale_7dl.ogg"
     $ music_list_7dl["Marilyn Manson - If I could be your vampire"] = default_7dl_path+"Sound/music/vampire_7dl.ogg"
 
-    $ music_list_7dl["Limp Bizkit - Walking Away"] = default_7dl_path+"Sound/music/walkingaway_7dl.ogg"
+    $ music_list_7dl["DeadPunk - Regret"] = default_7dl_path+"Sound/music/walkingaway_7dl.ogg"
     $ music_list_7dl["Kaivaan ft. Hikaru Station - Escape (Acoustic guitar cover)"] = default_7dl_path+"Sound/music/what_am_i_doing_here_7dl.ogg"
     $ music_list_7dl["DeVso - DeVso-Music-The Avengers"] = default_7dl_path+"Sound/music/what_cost_7dl.ogg"
     $ music_list_7dl["Curse - Und was ist jetzt (Instrumental)"] = default_7dl_path+"Sound/music/whatnow_7dl.ogg"
@@ -218,3 +218,4 @@ init 1:
     $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/yume_akari_7dl.ogg"
     $ music_list_7dl["Kevin MacLeod - Niles Blues"] = default_7dl_path+"Sound/music/viola_7dl.ogg"
     $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/sorrow_7dl.ogg"
+    $ music_list_7dl["DeadPunk - Smells Like My Grave"] = default_7dl_path+"Sound/music/smlg_7dl.ogg"
