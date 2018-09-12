@@ -2954,7 +2954,7 @@ label alt_day4_neu_supper:
         "Так что она после концерта ещё нянчилась с этими подростками за сорок, отловив каждого по лагерю и сопроводив до комфортабельного автобуса."
         "Она даже не поморщилась привычно, заметив, что Ульяна не в форме."
         th "Интересно, а если бы я сюда в джинсе припёрся, она бы тоже стерпела?"
-        show bg int_dining_hall_sunset with dissolve
+        scene bg int_dining_hall_sunset with dissolve
         play ambience ambience_dining_hall_empty fadein 3
         "Вяло поковыряв ужин, Ольга поднялась и, воровато оглядевшись, скрылась в служебных помещениях столовой."
         stop ambience fadeout 3

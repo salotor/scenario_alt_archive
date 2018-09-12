@@ -142,7 +142,7 @@
     me "А что в этом такого?"
     stop music fadeout 10
     cs "Ровным счётом ничего."
-    show bg int_aidpost_day at enterleft
+    scene bg int_aidpost_day at enterleft
     show mi normal pioneer at right with moveinright
     show cs normal at cleft with dspr
     "В комнате появилось новое действующее лицо."
@@ -1138,7 +1138,7 @@ label alt_day1_alt_S:
         
             "Однако далеко мы не ушли."
             "Не успели мы сделать и пяти шагов, как нас окрикнули."
-            show bg ext_house_of_sl_day at enterleft
+            scene bg ext_house_of_sl_day at enterleft
             show sl normal pioneer at right with moveinright
             show mi smile pioneer at left with dspr
             mi "Славичка, подожди, Славичка!"
@@ -1902,7 +1902,7 @@ label alt_day1_alt_supper:
     scene bg ext_dining_hall_near_sunset at zentercenter
     show us smile sport far at left with moveinleft
     $ renpy.pause(0.5)
-    show bg ext_dining_hall_near_sunset at enterright
+    scene bg ext_dining_hall_near_sunset at enterright
     show us smile sport far at left
     show mt angry pioneer with moveinright
     $ renpy.pause(2)
@@ -2645,7 +2645,7 @@ label alt_day1_alt_ev_A_S:
     "Я откинулся на спинку и стал ждать свою спасительницу."
     hide sl with dissolve
     window hide
-    show cg d1_sl_dinner 
+    scene cg d1_sl_dinner 
     with dissolve
 
     "Через пару минут она появилась с большим блюдом булочек и поставила его на стол."
@@ -2661,7 +2661,7 @@ label alt_day1_alt_ev_A_S:
     me "У меня кефир на носу остался?"
     "Я потёр кончик носа, вызывая её смех."
     window hide
-    show cg d1_sl_dinner_0 with dspr
+    scene cg d1_sl_dinner_0 with dspr
 
     sl "Нет. Просто…"
     "Она улыбнулась."
@@ -2672,7 +2672,7 @@ label alt_day1_alt_ev_A_S:
     "Она совершенно правильно расценила моё молчание."
     sl "Ещё привыкнешь."
     window hide
-    show cg d1_sl_dinner with dspr
+    scene cg d1_sl_dinner with dspr
 
     "Славя мечтательно уставилась в окно, а я отрицательно покачал головой."
     th "Не думаю, что я когда-нибудь привыкну к этому месту."
@@ -2696,7 +2696,7 @@ label alt_day1_alt_ev_A_S:
     me "Как будто оказался в том месте, какое всегда искал."
     "Я наконец успешно отбился от «кавайно», «няшно», «прикольно» и целой когорты других дурацких синонимов милоты."
     window hide
-    show cg d1_sl_dinner_0 with dspr
+    scene cg d1_sl_dinner_0 with dspr
 
     sl "Пожалуй."
     "Славя облегчённо улыбнулась, будто я правильно ответил на важный вопрос."
@@ -2735,7 +2735,7 @@ label alt_day1_alt_ev_A_S:
     "А Славя была ещё и…{w} милой?"
     "Я украдкой посмотрел на неё, не зная что сказать, а она перехватила взгляд."
     window hide
-    show cg d1_sl_dinner with dspr
+    scene cg d1_sl_dinner with dspr
 
     sl "Всё-таки поздно ты приехал, поздно."
     me "Почему ты так говоришь?"
@@ -2766,7 +2766,7 @@ label alt_day1_alt_ev_A_S:
     sl "Начнём с пляжа, пожалуй. {w}Видел пляж?"
     "Я отрицательно покачал головой."
     "Но её идея мне понравилась. В конце концов, это достаточно яркое переживание."
-    show cg d1_sl_dinner_0  with dspr
+    scene cg d1_sl_dinner_0  with dspr
     "Что-то, о чём хотя бы останется память?"
     th "Ну, это точно не сегодня — ночь на дворе."
     window hide

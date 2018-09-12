@@ -10179,7 +10179,7 @@ label alt_day7_mi_7dl_departure_a2th:
     "И я…"
     if lp_mi > 16:
         scene anim prolog_2
-        #show cg d7_mi_hands_2gether_7dl
+        #scene cg d7_mi_hands_2gether_7dl
         with flash
         "Я поймал её пальцы и, не заботясь нисколько о том, что чуть ли не насквозь их прохожу, сжал, стиснул изо всех сил! "
         "Мику громко вскрикнула от боли, её лицо исказилось, но сейчас не было никого времени на жалость."
@@ -10193,7 +10193,7 @@ label alt_day7_mi_7dl_departure_a2th:
         "И её пальцы дрогнули, расслабляясь."
         if alt_hpt >= 9:
             scene anim prolog_1
-            #show cg d7_mi_hands_tight_7dl
+            #scene cg d7_mi_hands_tight_7dl
             with flash
             "Чтобы через секунду найти мои пальцы и переплестись с ними единым узлом-замком."
             mi "Я с тобой, Сенечка."
@@ -10204,7 +10204,7 @@ label alt_day7_mi_7dl_departure_a2th:
             "Продолжал и продолжал сжимать пальцы."
             window hide
             scene expression SS_com("bg int_bus_night")
-            #show cg d7_mi_hands_tight_7dl
+            #scene cg d7_mi_hands_tight_7dl
             with fade
         else:
             "Мику доверилась мне и позволила сделать всё самому."
@@ -10218,7 +10218,7 @@ label alt_day7_mi_7dl_departure_a2th:
             "Я игнорировал его изо всех сил."
             window hide
             scene expression SS_com("bg int_bus_night")
-            #show cg d7_mi_hands_2gether_7dl
+            #scene cg d7_mi_hands_2gether_7dl
             with dissolve
         play sound sfx_wind_gust
         "Незримый вихрь всё усиливался — очертания автобуса расплывались, и становилось непонятно, где сон, где явь."
@@ -10239,7 +10239,7 @@ label alt_day7_mi_7dl_departure_a2th:
         "Страна сказок готова была искалечить меня — но не отдать циановую принцессу."
         if alt_hpt >= 9:
             hide mi
-            #show cg d7_mi_hands_tight_7dl
+            #scene cg d7_mi_hands_tight_7dl
             with dissolve2
             "Но пальцы, переплетённые между собой, не так-то просто было расцепить."
             "Хотя я уже и вплотную подошёл к своему пределу."
@@ -10290,7 +10290,7 @@ label alt_day7_mi_7dl_departure_a2th:
         th "Ей же больно! Я же ей больно делаю, пока тут за руки хватаю."
         window hide
         scene bg int_bus_warp_7dl
-        #show cg d7_mi_hands_2gether_7dl
+        #scene cg d7_mi_hands_2gether_7dl
         with touch
         "Как будто я был выходцем с планеты, где атмосфера враждебна девушке — и она задыхалась каждое мгновение, что проводила там."
         "Конечно, я был эгоист."
@@ -10299,7 +10299,7 @@ label alt_day7_mi_7dl_departure_a2th:
         "Но теперь, когда ставкой стала жизнь самой девушки — я дрогнул и отступил."
         window hide
         scene bg int_bus_warp_7dl
-        #show cg d7_mi_hands_split_7dl
+        #scene cg d7_mi_hands_split_7dl
         with touch
         "Чужой жизнью распоряжаться права я не имел."
         "Глаза заволокло мутной пеленой, и пока я яростно стирал слёзы кулаком, даже само упоминание о Мику истаяло в ночном воздухе."

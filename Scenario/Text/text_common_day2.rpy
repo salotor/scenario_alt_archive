@@ -403,7 +403,7 @@ label alt_day2_lineup:
     "Пионеры одновременно сделали «напра…», и, дождавшись отмашки Ольги, организованным строем поотрядно двинулись питаться."
     "Я было направился вслед за ними…"
     mt "А вас, Семён, я попрошу остаться."
-    show bg ext_square_sunset at enterleft
+    scene bg ext_square_sunset at enterleft
     show sl smile2 pioneer at right with moveinright
     show mt normal pioneer at cleft with dspr
     th "Без сюрпризов нельзя, конечно."
@@ -4194,7 +4194,7 @@ label alt_day2_dinner:
     "Хотя от перемещений по лагерю у меня разыгрался зверский аппетит…{w} Увиденное мной в тарелке буквально подкосило!"
     "Это вот что такое? Нет, я не спорю, к рассольнику ноль претензий, он приготовлен по классическому рецепту Лаврентия Палыча. Но второе! Варёная в какой-то херне с яйцом рыба с пюре? Каждого, кто готовит такое, надо на год запереть в доме и кормить только такой едой!"
     window hide
-    show cg d1_food_normal with dissolve
+    scene cg d1_food_normal with dissolve
     "Стоит ли удивляться, что обед вызвал у меня вполне объяснимое отсутствие энтузиазма? Суп да компот — разве обед?"
     scene bg int_dining_hall_people_day with dissolve
     "Впрочем, и из такой ситуации можно найти определённый выход."
@@ -4496,7 +4496,7 @@ label alt_day2_grand_escape:
     "А я? Может, для меня это единственный шанс вырваться отсюда?"
     "Так, собрались."
     window hide
-    show cg d4_catac_us with fade
+    scene cg d4_catac_us with fade
     play sound sfx_7dl["train_income"]
     "Я сидел в самых тёмных кустах, чтобы нельзя было разглядеть из кабины машиниста, и считал секунды."
     "Времени у нас будет мало, поезд хоть и идёт с малой скоростью, для нас и такая может оказаться чрезмерной."
@@ -4745,7 +4745,7 @@ label alt_day2_siesta:
     "За размышлениями я не заметил, как провалился в сон."
     if ('un' in list_d2_convoy_7dl):
         play music music_list["goodbye_home_shores"] fadein 3
-        show cg d3_un_forest
+        scene cg d3_un_forest
         show prologue_dream
         with fade
         "Мне снился лес."
@@ -4771,7 +4771,7 @@ label alt_day2_siesta:
         stop ambience fadeout 2
     elif ('dv' in list_d2_convoy_7dl):
         play music music_7dl["sheiscool"] fadein 3
-        show cg d5_dv_island
+        scene cg d5_dv_island
         show prologue_dream
         with fade
         if alt_day2_us_dubstep:
@@ -4797,7 +4797,7 @@ label alt_day2_siesta:
         stop ambience fadeout 2
     elif ('sl' in list_d2_convoy_7dl):
         play music music_7dl["unforgotten"] fadein 3
-        show cg d3_sl_dance
+        scene cg d3_sl_dance
         show prologue_dream
         with fade
         "Славя…"
@@ -4818,7 +4818,7 @@ label alt_day2_siesta:
         stop ambience fadeout 2
     elif ('me' in list_d2_convoy_7dl) and ('music' in list_clubs_7dl):
         play music music_7dl["but_why"] fadein 3
-        show cg d5_mi_conv_7dl
+        scene cg d5_mi_conv_7dl
         show prologue_dream
         with fade
         $ lp_mi += 1
@@ -4832,7 +4832,7 @@ label alt_day2_siesta:
         "Про какой-то сценарий — даже не так, а с большой буквы. {w}Сценарий."
         "Про какую-то смежную территорию."
         "И про пространство сказок, где только и возможна наша встреча."
-        show cg d7_mi_hugs_7dl behind prologue_dream:
+        scene cg d7_mi_hugs_7dl:
             pos (0,-1920) 
             linear 15.0 pos (0,-500)
         show prologue_dream
@@ -7645,7 +7645,7 @@ label alt_day2_un_loki_date:
     "Я бы не молчал, но у меня губы заняты…"
     window hide
     play music music_list["i_dont_blame_you"] fadein 1
-    show cg d2_un_kissing_7dl with dissolve 
+    scene cg d2_un_kissing_7dl with dissolve 
     "Всё произошло слишком быстро — вот мы стоим, и она прячется у меня за спиной…"
     "А вот…"
     "Она несколько секунд стояла, не понимая, что произошло…"
@@ -7686,7 +7686,7 @@ label alt_day2_un_loki_date:
     "И вздохнув от разочарования по поводу моей бестолковости, положила ладонь мне на макушку и притянула к себе."
     window hide
     stop ambience fadeout 1
-    show cg d2_un_knees_7dl with dissolve
+    scene cg d2_un_knees_7dl with dissolve
     me "Звёзды здесь какие… Как будто над головой огромный телескоп."
     "Я лежал на теплой мшаной подушке, головой на коленях Лены, а она, больше механически, перебирала пальцами мои волосы."
     un "Да. В крупных городах такого не увидишь…"

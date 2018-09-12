@@ -25,7 +25,7 @@
     with dissolve2
     pause(3)
     if alt_day_binder == 1:
-        show cg d7_trio_7dl with flash
+        scene cg d7_trio_7dl with flash
         $ renpy.pause(.4)
         scene black with fade2
         show alt_credits timeskip_come with dissolve2:

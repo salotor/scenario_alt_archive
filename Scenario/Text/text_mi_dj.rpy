@@ -11846,7 +11846,7 @@ label alt_day7_mi_dj_epilogue_frost:
     show prologue_dream
     with dissolve
     "Я мокну под дождём, пробегая пальцами по выбитым в камне иероглифам."
-    show cg d7_mi_hugs_7dl behind prologue_dream:
+    scene cg d7_mi_hugs_7dl behind prologue_dream:
         pos (0,-1920) 
         linear 15.0 pos (0,-500)
     "{i}Мне шесть, и мы снова видимся.{/i}"
