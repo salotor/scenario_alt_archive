@@ -31,7 +31,7 @@
     
     image alt_letter = ParameterizedText(style = "alt_letter", size = 70)
     
-init 999:
+init:
     if not ((renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761")):
         if renpy.mobile:
             $ style.base_font = Style(style.default)
