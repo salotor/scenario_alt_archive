@@ -13835,7 +13835,7 @@ label alt_day7_dv_7dl_bad_end:
     scene cg d1_grasshopper
     show prologue_dream
     with fade
-    "И проказы мелкой егозы."    # 1 Уля
+    "И проказы мелкой егозы."
     
     window hide
     if alt_day3_duty:
@@ -13844,7 +13844,7 @@ label alt_day7_dv_7dl_bad_end:
         scene cg d5_us_ghost_2  
     show prologue_dream
     with fade
-    "И девочка, которой пронзительно не всё равно."    # 2 Уля. Раз уж это второй раз Уля, надо бы поменять второе предложение. А то выглядит так, будто речь про двух разных девочек ("И проказы мелкой егозы." "И девочка, которой пронзительно не всё равно.")
+    "Девочки, которой пронзительно не всё равно."
     
     window hide
     scene cg d7_mi_epilogue_7dl
