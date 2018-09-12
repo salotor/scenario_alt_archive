@@ -1118,6 +1118,7 @@ init:
     
     $ music_7dl["Sad_Piano"] = get_music_7dl("Sad_Piano_7dl.ogg")
     $ music_7dl["sam_lullaby"] = get_music_7dl("sam_lullaby_7dl.ogg")
+    $ music_7dl["sammy"] = get_music_7dl("sammy_7dl.ogg")
     $ music_7dl["scorpions"] = get_music_7dl("scorpions_7dl.ogg")
     $ music_7dl["Semische"] = get_music_7dl("Semische_7dl.ogg")
     $ music_7dl["seven_summer_days"] = get_music_7dl("seven_summer_days_7dl.ogg")
@@ -1133,7 +1134,7 @@ init:
     $ music_7dl["shib_stereo"] = get_music_7dl("shib_stereo_7dl.ogg")
     $ music_7dl["slavyas_fantazm"] = get_music_7dl("slavyas_fantazm_7dl.ogg")
     $ music_7dl["sky_feather"] = get_music_7dl("sky_feather_7dl.ogg")
-    $ music_7dl["sammy"] = get_music_7dl("sammy_7dl.ogg")
+    $ music_7dl["smlg"] = get_music_7dl("smlg_7dl.ogg")
     $ music_7dl["snatch"] = get_music_7dl("snatch_7dl.ogg")
     $ music_7dl["sneakupon"] = get_music_7dl("sneakupon_7dl.ogg")
     $ music_7dl["so_be_it"] = get_music_7dl("so_be_it_7dl.ogg")
