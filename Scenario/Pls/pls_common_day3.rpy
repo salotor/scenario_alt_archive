@@ -116,7 +116,7 @@
                 call alt_day3_dv_reunion
                 pause(1)
                 scene black
-                call screen alt_timer
+                jump alt_day3_dv_stayhere
         else:
             jump alt_day3_disco
     else:

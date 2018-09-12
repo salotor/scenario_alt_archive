@@ -430,19 +430,19 @@ label random_bg_7dl:
     if len(list_waifu_7dl) == 4: #max 6
         $ list_waifu_7dl = []
     if persistent.waifu_7dl == 0:
-        $ persistent.waifu_7dl = renpy.random.choice([1, 2, 4, 5])
+        $ persistent.waifu_7dl = renpy.random.choice([1, 2, 4, 5])     #moded
     elif persistent.waifu_7dl == 1:
-        $ persistent.waifu_7dl = renpy.random.choice([2, 4, 5])
+        $ persistent.waifu_7dl = renpy.random.choice([2, 4, 5])     #moded
     elif persistent.waifu_7dl == 2:
-        $ persistent.waifu_7dl = renpy.random.choice([1, 4, 5])
+        $ persistent.waifu_7dl = renpy.random.choice([1, 4, 5])     #moded
     #elif persistent.waifu_7dl == 3:
-        #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 4, 5, 6])
+        #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 4, 5, 6])     #moded
     elif persistent.waifu_7dl == 4:
-        $ persistent.waifu_7dl = renpy.random.choice([1, 2, 5])
+        $ persistent.waifu_7dl = renpy.random.choice([1, 2, 5])     #moded
     elif persistent.waifu_7dl == 5:
-        $ persistent.waifu_7dl = renpy.random.choice([1, 2, 4])
+        $ persistent.waifu_7dl = renpy.random.choice([1, 2, 4])     #moded
     #elif persistent.waifu_7dl == 6:
-        #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 3, 4, 5])
+        #$ persistent.waifu_7dl = renpy.random.choice([1, 2, 3, 4, 5])     #moded
     if persistent.waifu_7dl == 1 and 'un' not in list_waifu_7dl:
         play music music_7dl["take_my_hand"] fadein 3
         $ list_waifu_7dl.append('un')

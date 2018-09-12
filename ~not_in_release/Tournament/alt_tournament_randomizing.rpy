@@ -37,15 +37,15 @@ init python:
             'mz':   False
         }
 # ------------------------------------------------
-    alt_day2_gamblers_summary = {                           # результат турнира — кто на каком этапе как сыграл.
-        'me':   [0,0,0],                                    # в списке:  0 — 1 тур, 1 — полуфинал, 2 — финал
-        'un':   [0,0,0],                                    # значение:  0 — результат не определен, 2 — победа, 1 — поражение
-        'sl':   [0,0,0],                                    # в итоге: результат = 10 х индекс + значение
-        'dv':   [0,0,0],                                    # 0 — не участвовал, 2/1 — победа/поражение в 1 коне; 12/11 — в 1/2; 22/21 — в финале
-        'mi':   [0,0,0],
-        'us':   [0,0,0],
-        'sh':   [0,0,0],
-        'mz':   [0,0,0]
+    alt_day2_gamblers_summary = {                           # результат турнира — кто на каком этапе как сыграл.     #moded
+        'me':   [0,0,0],                                    # в списке:  0 — 1 тур, 1 — полуфинал, 2 — финал     #moded
+        'un':   [0,0,0],                                    # значение:  0 — результат не определен, 2 — победа, 1 — поражение     #moded
+        'sl':   [0,0,0],                                    # в итоге: результат = 10 х индекс + значение     #moded
+        'dv':   [0,0,0],                                    # 0 — не участвовал, 2/1 — победа/поражение в 1 коне; 12/11 — в 1/2; 22/21 — в финале     #moded
+        'mi':   [0,0,0],     #moded
+        'us':   [0,0,0],     #moded
+        'sh':   [0,0,0],     #moded
+        'mz':   [0,0,0]     #moded
         }
         
     alt_day2_gamblers_result = {
@@ -1444,9 +1444,9 @@ init 3 python:
         global alt_day2_my_seat
         global alt_day2_gamblers_final
         global alt_rival_final
-        if alt_day2_my_seat in [0,1,4,5]:                                  # если Сэмэн сидел сверху
+        if alt_day2_my_seat in [0,1,4,5]:                                  # если Сэмэн сидел сверху     #moded
             alt_rival_final = alt_day2_gamblers_final[0]        # то его "победитель" — первый финалист
-        elif alt_day2_my_seat in [2,3,6,7]:                                # если Сэмэн сидел снизу
+        elif alt_day2_my_seat in [2,3,6,7]:                                # если Сэмэн сидел снизу     #moded
             alt_rival_final = alt_day2_gamblers_final[1]        # то его "победитель" — второй финалист
         return
 
@@ -1757,7 +1757,7 @@ init 3 python:
             d_combo = 0
         elif residual in [1,2]:
             d_combo = 1
-        elif residual in [3,4,5]:
+        elif residual in [3,4,5]:     #moded
             d_combo = 2
         else:
             d_combo = 3
@@ -1801,11 +1801,11 @@ init 3 python:
                 c_k_L = c_c_L
             if c_k_w == None:
                 c_k_w = c_c_w
-            if loser_hand[0] == 0 and loser_hand[1] not in [1,11,13,14]: # если старшая карта и НЕ туз, король, валет
+            if loser_hand[0] == 0 and loser_hand[1] not in [1,11,13,14]: # если старшая карта и НЕ туз, король, валет     #moded
                 k_L = 1
             else:
                 k_L = 0
-            if winner_hand[0] == 0 and winner_hand[1] not in [1,11,13,14]: # если старшая карта и НЕ туз, король, валет
+            if winner_hand[0] == 0 and winner_hand[1] not in [1,11,13,14]: # если старшая карта и НЕ туз, король, валет     #moded
                 k_w = 1
             else:
                 k_w = 0

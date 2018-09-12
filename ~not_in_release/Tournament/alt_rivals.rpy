@@ -250,7 +250,7 @@ init -50 python:
         #-------------------------------------------
         # проверка на потенциальный стрит от пятёрки (младший)
             values_min = []                                                     # готовим таблицу очков карт
-            for mix in [[2,3,4,14],[2,3,5,14],[2,4,5,14],[3,4,5,14]]:           # проверяем 4-ре возможных сочетания с тузом 
+            for mix in [[2,3,4,14],[2,3,5,14],[2,4,5,14],[3,4,5,14]]:           # проверяем 4-ре возможных сочетания с тузом      #moded
                                                                                 # если все очки карт из сочетания входят в списое очков наших карт
                 if (mix[0] in self.table_card_points) and (mix[1] in self.table_card_points) and (mix[2] in self.table_card_points) and (mix[3] in self.table_card_points):
                     values_min = mix[:]                                         # принимаем это сочетание, как таблицу очков минимума
@@ -416,7 +416,7 @@ init -50 python:
                     if len(self.would_not_want_give) == 0:                                          # если нет недокомбинаций
                         self.selection_cards_for_defense()                                          # сортируем карты под защиту
                     else:                                                                           # есть чем рискнуть
-                        if self.combo_in_hand[0] in [0,1,3]:                                        # если на руках старшая карта, пара или тройка
+                        if self.combo_in_hand[0] in [0,1,3]:                                        # если на руках старшая карта, пара или тройка     #moded
                             for i in range(0,len(self.yourself_need_cards)):                        # перебираем карты в комбинации
                                 if self.yourself_need_cards[i] not in self.would_not_want_give:     # если карты из комбинации нет в нужных
                                     self.can_give_in_a_pinch.append(self.yourself_need_cards[i])    # добавляем эту карту в список первоочередных
@@ -434,7 +434,7 @@ init -50 python:
                     self.selection_cards_for_defense()                                              # сортируем карты под защиту
         # ----------------------------------------------------------- 
             elif self.playstyle == 'succumb':                                                       # если сливаемся
-                if self.combo_in_hand[0] in [7,6,3,2]:                                              # если две пары, тройка, фулл-хаус, покер
+                if self.combo_in_hand[0] in [7,6,3,2]:                                              # если две пары, тройка, фулл-хаус, покер     #moded
                     for i in range(0,n_cards):                                                      # перебираем свои карты
                         if card_value_alt_as_max(cards_rival[i]) == self.combo_in_hand[1]:          # если значение очередной карты - равно старшей карте комбинации
                             if i not in self.this_give_definitely_succumb:                          # если ещё такой карты в списке нет
@@ -560,7 +560,7 @@ init -50 python:
                 self.what_pulled_player()                                       # смотрим, куда потянулся Семён
         #-------------------------------------------
                 if self.pulled_player_card in self.this_give_definitely_succumb:    # если потянулся к той карте, которая у нас в срочном сливе
-                    if self.combo_in_hand[0] not in [4,5,8,9]:                  # если на руках НЕ флэш или стрит
+                    if self.combo_in_hand[0] not in [4,5,8,9]:                  # если на руках НЕ флэш или стрит     #moded
                         renpy.pause(1.0)                                        # немного подумали и.....
                         changes_left = 0                                        # сбрасываем обмены (Сеня заберёт карту)
                     else:                                                       # если флеш или стрит
@@ -570,18 +570,18 @@ init -50 python:
                         renpy.pause(1.0)                                        # немного подумали и.....
                         changes_left = 0                                        # сбрасываем обмены (Сеня заберёт карту)
                     elif len(self.its_urgent_shove) > 1:                        # и совсем ненужных несколько 
-                        k = random.choice([1,2,3])                              # решаем - отдавать карту сразу (1,2) или нет (3) - вероятность 0,66
+                        k = random.choice([1,2,3])                              # решаем - отдавать карту сразу (1,2) или нет (3) - вероятность 0,66     #moded
                         if k in [1,2]:                                          # и если да
                             renpy.pause(1.0)                                    # немного подумали и.....
                             changes_left = 0                                    # сбрасываем обмены (Сеня заберёт карту)
                 elif (self.pulled_player_card in self.these_proposed_to_take) and (self.playstyle != 'succumb'):    # если эта карта - в списке предлагаемых на обмен и НЕ слив
-                    k = random.choice([1,2,3,4])                                # решаем - отдавать карту сразу (1) или нет (2,3,4) - вероятность 0,25
+                    k = random.choice([1,2,3,4])                                # решаем - отдавать карту сразу (1) или нет (2,3,4) - вероятность 0,25     #moded
                     if k == 1:                                                  # и если да
                         renpy.pause(1.0)                                        # немного подумали и.....
                         changes_left = 0                                        # сбрасываем обмены (Сеня заберёт карту)
         #-------------------------------------------
             elif (self.playstyle == 'foolplay') or (self.make_mistakes):        # если включили дурака или ошибаемся
-                k = random.choice([1,2,3,4,5,6,7])                              # решаем - отдавать карту сразу (1) или нет (2..7) - вероятность 0,15
+                k = random.choice([1,2,3,4,5,6,7])                              # решаем - отдавать карту сразу (1) или нет (2..7) - вероятность 0,15     #moded
                 if k == 1:                                                      # и если да
                     renpy.pause(1.0)                                            # немного подумали и.....
                     changes_left = 0                                            # сбрасываем обмены (Сеня заберёт карту)
@@ -748,7 +748,7 @@ init -50 python:
                 if self.combo_was_before == None:                                   # если комбинации еще не сравнивали
                     self.combo_was_before = []                                      # создаём пустой список
                 if len(self.combo_was_before) == 0:                                 # если список пустой
-                    self.combo_was_before = [0,0,0,0]                               # создаём заполнитель для проверки
+                    self.combo_was_before = [0,0,0,0]                               # создаём заполнитель для проверки     #moded
                 
                 if (self.combo_was_before[0] >= 4) and (self.as_changed_combo == 'worse'):  # если был стрит и выше и положение ухудшилось
                     res = self.usual_card_choose()                                          # "обычный выбор" у Семёна, нефиг рисковать
@@ -831,7 +831,7 @@ init -50 python:
             self.how_skill()                                                    # проверяем навык
             if (self.playstyle in ['defense','succumb']) and (not self.make_mistakes): # если защищаемся или сливаем и не ошибаемся
                 if len (self.this_give_definitely_succumb) != 0:                    # если список срочного слива не пустой
-                    if self.combo_in_hand[0] not in [4,5,8,9]:                      # если НЕ флэш или стрит
+                    if self.combo_in_hand[0] not in [4,5,8,9]:                      # если НЕ флэш или стрит     #moded
                         i = random.choice(self.this_give_definitely_succumb)        # случайную карту из срочного слива предлагаем
                     else:                                                           # если есть что сливать, но комбинация старше
                         i = self.give_away_card_think_usual()                       # предлагаем на обмен то, что обычно
@@ -879,7 +879,7 @@ init -50 python:
 # .................................
         def how_skill(self):                                                    # проверка навыка (вероятность ошибки)
             self.make_mistakes = True                                           # включаем режим ошибки
-            i = random.choice([1,2,3,4,5])                                      # рандомно выбираем значение вероятности ошибки, шанс ошибки: 5-0%, 4-20%, 3-40% 2-60% 1-80%
+            i = random.choice([1,2,3,4,5])                                      # рандомно выбираем значение вероятности ошибки, шанс ошибки: 5-0%, 4-20%, 3-40% 2-60% 1-80%     #moded
             if i <= self.mistake_chance:                                        # если вероятность ошибки меньше или равна навыку
                 self.make_mistakes = False                                      # не ошибаемся
 # .................................

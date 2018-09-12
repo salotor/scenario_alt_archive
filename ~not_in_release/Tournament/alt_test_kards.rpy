@@ -3294,7 +3294,7 @@ label alt_day2_current_game_end_compare_hands:                                  
     "%(alt_day2_summary_poker_1)s"
     "%(alt_day2_summary_poker_2)s"
     
-    if alt_day2_current_rout_status in [1,2,3,4]:                                   # если игра не закончена
+    if alt_day2_current_rout_status in [1,2,3,4]:                                   # если игра не закончена     #moded
         call alt_day2_current_game_ending_dialogs                                   # вызов диалога по текущей ситуации
     else:
         pass
@@ -3550,7 +3550,7 @@ label alt_day2_current_game_ending_dialogs:
 #-----------------------------------------------------------------------------------
 # Результат КОНА (называем счёт по играм)
 label alt_day2_summary_poker_round:
-    if alt_day2_result_tour in [1,11,21]:                                                                     # Если проигрыш в КОНЕ
+    if alt_day2_result_tour in [1,11,21]:                                                                     # Если проигрыш в КОНЕ     #moded
         if alt_day2_result_tour == 1:
             $ alt_day2_stage_tournament = 'первый тур'
         elif alt_day2_result_tour == 11:
@@ -3565,7 +3565,7 @@ label alt_day2_summary_poker_round:
             "Я пытался сопротивляться: победитель определился только в третьей игре."
             "Но, как бы там ни было, %(alt_day2_stage_tournament)s %(alt_name_my_rival_d)s я проиграл."
             
-    elif alt_day2_result_tour in [2,12,22]:                                                                   # Если выигрыш в КОНЕ
+    elif alt_day2_result_tour in [2,12,22]:                                                                   # Если выигрыш в КОНЕ     #moded
         if alt_day2_result_tour == 2:
             if alt_day2_revanche:
                 $ alt_day2_stage_tournament = 'в матч-реванше'
