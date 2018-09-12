@@ -741,7 +741,7 @@ label alt_day2_tournament_tour_1_new:
 
     if persistent.altCardsWon1_new or persistent.altCardsFail_new:
         menu:
-            "Играть самостоятельно.":
+            "Играть самостоятельно":
                 pass
             "Победа в финале." if persistent.altCardsWon3_new:
                 $ alt_day2_detour_1_tour = True                         # Пропускаем 1 тур
@@ -758,7 +758,7 @@ label alt_day2_tournament_tour_1_new:
                 $ alt_day2_detour_1_tour = True                         # Пропускаем 1 тур
                 $ alt_day2_detour_semifinal = True                      # Пропускаем полуфинал
                 $ karma -= 10
-            "Поражение в первом же коне.":
+            "Поражение в первом же коне":
                 $ alt_day2_detour_1_tour = True                         # Пропускаем 1 тур
                 
         
@@ -1313,7 +1313,7 @@ label alt_day2_participate_win_end_new:
                         hide dv with dissolve
                         window hide
                         jump alt_day2_1_tour_end
-                    "Партия.":
+                    "Партия":
                         "Алиса кивнула и молча поднялась из-за стола."
                         pass
             else:
@@ -1349,7 +1349,7 @@ label alt_day2_participate_win_end_new:
                     "Блин."
                     "Моя улыбка вышла извиняющейся."
                     me "Тогда увидимся."
-                "Всегда рад.":
+                "Всегда рад":
                     "Я улыбнулся."
                     me "Если вдруг захочешь ещё как-нибудь сыграть, обращайся!"
             "Мику кивнула и встала из-за стола."
@@ -1464,7 +1464,7 @@ label alt_day2_participate_win_end_new:
                             "Правда, попутно наступила мне на ногу — пускай."
                             "Я был благодушен и простил ей эту маленькую шалость."
                             jump alt_day2_1_tour_end                                                 # В ПОЛУФИНАЛ
-                        "Ладно. Как хочешь.":
+                        "Ладно. Как хочешь":
                             $ lp_us += 1
                 elif not alt_day2_revanche:
                     "Я вздохнул."

@@ -45,7 +45,7 @@ label alt_day0_start:
     scene intro_dr with dissolve
     pause(1)
     menu:
-        "Так всё и начиналось.":
+        "Так всё и начиналось":
             $ plthr = u"Дрищ"
             $ alt_chapter0()
             play sound sfx_7dl["role_drisch"]
@@ -53,7 +53,7 @@ label alt_day0_start:
             with fade2
             $ routetag = 'prologue'
             $ prolog_time()
-        "Но я не уверен точно.":
+        "Но я не уверен точно":
             jump alt_day0_prologue
         "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
@@ -65,7 +65,7 @@ label alt_day0_start_herc:
     scene intro_herc with dissolve
     pause(1)
     menu:
-        "Так всё и начиналось.":
+        "Так всё и начиналось":
             $ plthr = u"Герк"
             $ alt_chapter0()
             play sound sfx_7dl["role_herc"]
@@ -74,7 +74,7 @@ label alt_day0_start_herc:
             $ routetag = 'prologue'
             $ prolog_time()
             $ herc = True
-        "Но я не уверен точно.":
+        "Но я не уверен точно":
             jump alt_day0_prologue
         "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
@@ -86,7 +86,7 @@ label alt_day0_start_loki:
     scene intro_loki with dissolve
     pause(1)
     menu:
-        "Так всё и начиналось.":
+        "Так всё и начиналось":
             $ plthr = u"Локи"
             $ alt_chapter0()
             play sound sfx_7dl["role_loki"]
