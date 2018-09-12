@@ -1158,7 +1158,7 @@ label alt_day6_mt_7dl_retail_vg:
     
 label alt_day6_mt_7dl_declaration0:
     menu:
-        "Ольга Дмитриевна, я не тот, за кого вы меня принимаете.":
+        "Ольга Дмитриевна, я не тот, за кого вы меня принимаете":
             $ mt_pt += 2
             if alt_day_binder == 1:
                 $ mt_pt += 2
@@ -2540,7 +2540,7 @@ label alt_day6_mt_7dl_choice:
         return
     else:
         menu:
-            "Вообще-то, есть кое-кто важный.":
+            "Вообще-то, есть кое-кто важный":
                 $ mt_pt += 1
                 "Ответил я."
                 me "И хоть это не твоё дело, я отвечаю: да, она очень много для меня значит."
@@ -4671,9 +4671,9 @@ label alt_day7_mt_7dl_departure:
         window hide
         with fade
         menu:
-            "Прошлое важнее.":
+            "Прошлое важнее":
                 $ alt_day7_mt_7dl_pt = 1
-            "Будущее важнее.":
+            "Будущее важнее":
                 $ alt_day7_mt_7dl_pt = 2
     else:
         $ alt_day7_mt_7dl_pt = 0

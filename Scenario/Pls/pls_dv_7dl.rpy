@@ -214,7 +214,7 @@ label alt_day7_dv_7dl_start:
     if alt_day7_dv_7dl_check == 1:
         if karma > 75:
             menu:
-                "Сесть на место.":
+                "Сесть на место":
                     call alt_day7_dv_7dl_rf_epilogue
                     pause(1)
                 "Прочь из автобуса!":
