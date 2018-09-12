@@ -163,7 +163,7 @@ init 1:
     $ music_list_7dl["Mattashi - Together"] = default_7dl_path+"Sound/music/vale_7dl.ogg"
     $ music_list_7dl["Marilyn Manson - If I could be your vampire"] = default_7dl_path+"Sound/music/vampire_7dl.ogg"
 
-    $ music_list_7dl["Limp Bizkit - Walking Away"] = default_7dl_path+"Sound/music/walkingaway_7dl.ogg"
+    $ music_list_7dl["DeadPunk - Regret"] = default_7dl_path+"Sound/music/walkingaway_7dl.ogg"
     $ music_list_7dl["Kaivaan ft. Hikaru Station - Escape (Acoustic guitar cover)"] = default_7dl_path+"Sound/music/what_am_i_doing_here_7dl.ogg"
     $ music_list_7dl["DeVso - DeVso-Music-The Avengers"] = default_7dl_path+"Sound/music/what_cost_7dl.ogg"
     $ music_list_7dl["Curse - Und was ist jetzt (Instrumental)"] = default_7dl_path+"Sound/music/whatnow_7dl.ogg"
@@ -199,7 +199,7 @@ init 1:
     $ music_list_7dl["Slot - Круги на воде (instrumental)"] = default_7dl_path+"Sound/music/so_be_it_7dl.ogg"
     $ music_list_7dl["SURF - Take Care"] = default_7dl_path+"Sound/music/surf_7dl.ogg"
     $ music_list_7dl["Mattdeguia - Daylight"] = default_7dl_path+"Sound/music/too_serious_7dl.ogg"
-
+#0.34.b
     $ music_list_7dl["DeadPunk - Despair"] = default_7dl_path+"Sound/music/despair_7dl.ogg"
     $ music_list_7dl["Steezy Prime - Explore"] = default_7dl_path+"Sound/music/explore_7dl.ogg"
     $ music_list_7dl["ППВК - Последнее лето"] = default_7dl_path+"Sound/music/last_summer_7dl.ogg"
@@ -210,8 +210,12 @@ init 1:
     $ music_list_7dl["DeadPunk - Vibe"] = default_7dl_path+"Sound/music/Vibe_7dl.ogg"
 #0.35.a
     $ music_list_7dl["Clint Mansell - TOGETHER WE WILL LIVE FOREVER (guitar cover)"] = default_7dl_path+"Sound/music/breath_again_slow_7dl.ogg"
-    $ music_list_7dl["Olafur Arnalds - Not Alone"] = default_7dl_path+"Sound/music/not_alone_7dl.ogg"
-    $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/yume_akari_7dl.ogg"
-    $ music_list_7dl["Beat Bites - Last Train Home"] = default_7dl_path+"Sound/music/lth_7d.ogg"
     $ music_list_7dl["Beat Bites - Game of Shadows"] = default_7dl_path+"Sound/music/game_of_shadows_7dl.ogg"
+    $ music_list_7dl["Beat Bites - Last Train Home"] = default_7dl_path+"Sound/music/lth_7d.ogg"
+    $ music_list_7dl["Olafur Arnalds - Not Alone"] = default_7dl_path+"Sound/music/not_alone_7dl.ogg"
+    $ music_list_7dl["Kevin MacLeod - Your Call High Quality"] = default_7dl_path+"Sound/music/shappihn_7dl.ogg"
+    $ music_list_7dl["April Rain - Im All Crying Inside"] = default_7dl_path+"Sound/music/tearing_sobs_7dl.ogg"
+    $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/yume_akari_7dl.ogg"
     $ music_list_7dl["Kevin MacLeod - Niles Blues"] = default_7dl_path+"Sound/music/viola_7dl.ogg"
+    $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/sorrow_7dl.ogg"
+    $ music_list_7dl["DeadPunk - Smells Like My Grave"] = default_7dl_path+"Sound/music/smlg_7dl.ogg"
