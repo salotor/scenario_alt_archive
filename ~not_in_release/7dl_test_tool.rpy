@@ -195,7 +195,7 @@ label sdl_menu:
                                                 "Огоньки - чаепитие":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_7dl_tea
-                                                "Огоньки - вечер у пристани.":
+                                                "Огоньки - вечер у пристани":
                                                     stop ambience fadeout 2
                                                     call alt_day6_us_px_afterwords
                                                 "Отбой":
@@ -238,7 +238,7 @@ label sdl_menu:
                                             call alt_day7_us_7dl_begin
                                         "Побег (огоньки)":
                                             menu:
-                                                "Со Славей.":
+                                                "Со Славей":
                                                     $ alt_day6_us_px_sl_join = True
                                                     stop ambience fadeout 2
                                                     call alt_day7_us_px_escape
@@ -400,7 +400,7 @@ label sdl_menu:
                             menu:
                                 "Записаться на волейбол":
                                     $ list_clubs_7dl.append('volley')
-                                "Не записываться.":
+                                "Не записываться":
                                     pass
                             menu:
                                 "Записаться в музыкальный клуб":
@@ -557,7 +557,7 @@ label sdl_menu:
                                 jump alt_day7_mi_dj_rf_good_end
                     "Мику-7дл":
                         menu:
-                            "Эпилог.":
+                            "Эпилог":
                                 menu:
                                     "Мику уехала":
                                         $ alt_day6_mi_7dl_left = True
@@ -636,7 +636,7 @@ label sdl_menu:
                                 menu:
                                     "Пьяная-помятая…":
                                         $ alt_day7_dv_7dl_check = 5
-                                    "Плохая концовка.":
+                                    "Плохая концовка":
                                         with fade
                                 stop ambience fadeout 2
                                 jump alt_day7_dv_7dl_bad_end
@@ -696,7 +696,7 @@ label sdl_menu:
                         menu:
                             "Хорошие":
                                 menu:
-                                    "Эпилог.":
+                                    "Эпилог":
                                         stop ambience fadeout 2
                                         jump alt_day7_un_7dl_epilogue
                                     "{color=#9894e0}Вся жизнь впереди (хорошая){/color}":
@@ -713,7 +713,7 @@ label sdl_menu:
                             "{color=#ff3098}Вдоль, а не поперёк (плохая){/color}":
                                 stop ambience fadeout 2
                                 jump alt_day7_un_7dl_epilogue_bad
-                            "Дождь.":
+                            "Дождь":
                                 stop ambience fadeout 2
                                 jump alt_day7_un_7dl_true
                     "Ольга":

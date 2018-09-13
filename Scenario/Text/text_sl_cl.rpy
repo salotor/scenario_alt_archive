@@ -128,7 +128,7 @@
     "И, чувствуя себя бабушкой в платочке, устроился на завалинке.{w} То есть на скамеечке рядом с медпунктом."
     "Мол, наша медицина и опасна, и трудна."
     window hide
-    show bg ext_square_sunset with dissolve
+    scene bg ext_square_sunset with dissolve
 
     "Просто так сидеть мне быстро прискучило, поэтому я сначала вытянул ноги на скамейке, а после и вовсе развалился на разогретых солнцем досках, подпёр щёки ладонями и стал вдумчиво изучать мельтешащую лагерную жизнь."
     "Медпункт, даром что располагался практически в географическом центре лагеря, был так толково отгорожен зеленью и складками местности, что прятался как бы в «кармане», куда почти не добивала бьющая активность гнущих спину пионеров."
@@ -529,7 +529,7 @@ label alt_day4_sl_cl_shurik:
             me "Доброго дела не откладывай."
             $ karma += 10
             $ alt_sp += 2
-        "Давай-ка, пока время есть, сбегаем посмотрим.":
+        "Давай-ка, пока время есть, сбегаем посмотрим":
             me "У меня не очень много времени до возвращения Слави, так что в темпе!"
             $ alt_sp += 1
             $ lp_sl -= 1
@@ -709,9 +709,9 @@ label alt_day4_sl_cl_shurik:
     "Это было оно.{w} Кажется."
     "Я проследил путь следования кабелей и выругался."
     "Здесь, кажется, было намертво напаяно, а для отключения с той стороны необходимо было выбираться на крышу."
-    show bg int_attic2_day_7dl at zenterleft with dissolve
+    scene bg int_attic2_day_7dl at zenterleft with dissolve
     "А у меня и так уже не оставалось времени — меня тошнило всё сильнее, комнату штормило и качало изо всех сил."
-    show bg int_attic2_day_7dl at enterright with dissolve
+    scene bg int_attic2_day_7dl at enterright with dissolve
     "Впрочем, есть один приём."
     "Называется…"
     play sound_loop sfx_head_heartbeat fadein 2
@@ -1067,7 +1067,7 @@ label alt_day4_sl_supper:
     "Вожатая посмотрела на колонку, перевела взгляд на наши столы, но ничего не сказала."
     "Она выглядела измученной — похоже, детский концерт порядком её измотал."
     if not alt_day4_sl_tut_iz:
-        "Славя рядом со мной тоже не блистала здоровьем — всё-таки снова волокла мою безжизненную тушку на себе в епархию добрейшей Виолы."    # Славя тащила Сёму от кружков... (см. ниже)
+        "Славя рядом со мной тоже не блистала здоровьем — всё-таки снова волокла мою безжизненную тушку на себе в епархию добрейшей Виолы."
     scene bg int_dining_hall_people_sunset at zenterright
     show sl normal pioneer at cright
     with dissolve
@@ -1147,7 +1147,7 @@ label alt_day4_sl_supper:
     sl "Меня так воспитывали всю мою жизнь, и я так буду воспитывать своих детей."
     me "Суровый манифест, что я могу сказать.{w} Не пробовала баллотиро…"
     "Я не договорил — прямиком к нашему столу тащила поднос Леночка Тихонова, в полном соответствии со своей фамилией, тихоня и себе на уме."
-    show bg int_dining_hall_people_sunset at enterleft
+    scene bg int_dining_hall_people_sunset at enterleft
     show sl normal pioneer at right with moveinright
     show un normal pioneer at cleft
     with dissolve
@@ -1181,7 +1181,8 @@ label alt_day4_sl_supper:
     sl "Всё удобно."
     "Не терпящим возражений тоном ответила Славя."
     if alt_day4_sl_tut_iz:
-        $ alt_day4_sl_un_rej = True    # Вероятнее всего должно быть $ alt_day4_sl_tut_lf = True. Иначе проспавший весь день Сёма никак не может попасть в шахты и все проверки там на флаг alt_day4_sl_tut_iz бессмысленны. Да и тут повода вроде нет ставить флага отказа Лене.
+        $ alt_day4_sl_un_rej = True
+        $ alt_day4_sl_tut_lf = True
         sl "Семёну здорово досталось, судя по тому, как он проспал весь день, поэтому я его с собой не беру, а одной идти как-то грустно."
         me "Эй, что это значит?!"
         "Я ушам своим не поверил."
@@ -1236,7 +1237,7 @@ label alt_day4_sl_supper:
                     me "Лучше я с вами пойду."
                     "Славя хотела было что-то возразить, но я поднял руку:"
                     me "Этот разговор окончен. {w}Мы идём вместе."
-                "Договорились.":
+                "Договорились":
                     $ alt_sp -= 1
                     $ lp_sl += 1
                     me "Только потом мне всё расскажите, хорошо?"
@@ -1424,7 +1425,7 @@ label alt_day4_sl_party_up:
             play sound sfx_slavya_run
             "Однако спустя несколько минут я услышал сдвоенные приближающиеся звуки шагов."
             menu:
-                "Спрятаться.":
+                "Спрятаться":
                     "Я прыгнул в кусы с тропинки и затих там."
                     show sl normal pioneer at cleft
                     show un normal pioneer at cright
@@ -1435,7 +1436,7 @@ label alt_day4_sl_party_up:
                     hide sl
                     with easeoutright
                     $ alt_day4_sl_lf_solo = 1
-                "Сдаться.":
+                "Сдаться":
                     "Прятаться было поздно."
                     "Я попался."
                     "И через несколько секунд меня ослепил сноп света, бьющий в лицо."
@@ -1505,7 +1506,7 @@ label alt_day4_sl_party_up:
         sl "Прости, я немного испугалась.{w} Ты как?"
         me "Живой.{w} Просто давайте не будем бежать, и всё будет в порядке."
         un "Тебя пошатывает."
-        show bg ext_path_sunset at enterleft
+        scene bg ext_path_sunset at enterleft
         show sl normal pioneer at left with moveinleft
         show un normal pioneer at right
         with dissolve
@@ -1658,7 +1659,7 @@ label alt_day4_sl_old_camp:
             $ alt_day4_sl_wh = True
         else:
             menu:
-                "Покойся с миром, дорогой очкарик.":
+                "Покойся с миром, дорогой очкарик":
                     $ alt_sp -= 1
                     $ karma += 10
                     "А я за тебя потом отомщу."
@@ -1710,7 +1711,7 @@ label alt_day4_sl_old_camp:
             if alt_day4_sl_un_rej:
                 un "Маме он сказал, что служит в десанте и ему скоро уезжать в Афганистан."
                 un "Поверила, конечно, через полгода поженились."
-            elif alt_day4_sl_tut:    # alt_day4_sl_tut_iz ? Или вообще просто else, учитывая предыдущий флаг? Флага alt_day4_sl_tut же нет нигде.
+            else:
                 un "Маму покорил, явившись под окна в костюме, с гвоздикой и корочками союза писателей."
                 show un laugh pioneer with dspr
                 un "У нас до сих пор эти корочки хранятся."
@@ -2639,7 +2640,7 @@ label alt_day4_sl_old_camp2:
     else:
         if not alt_day4_sl_tut_iz:
             me "Видимо, реакция такая. {w}У меня просто голова поболела."
-            sl "Семён, так ты что, БЫЛ там?"    # ... и удивляется тому, что он там был. Хотя сама же тащила его тушку от клубов.
+            sl "Семён, так ты что, БЫЛ там?"
             "Покачала головой Славя."
             me "Как будто что-то плохое."
             sl "Я же просила тебя подождать до обеда!"
@@ -2900,7 +2901,7 @@ label alt_day4_sl_wh_night:
                     linear 10 zoom 1.1
                 with dissolve
                 $ renpy.pause (.4)
-                show bg ext_polyana_night:
+                scene bg ext_polyana_night:
                     zoom 1.1
                     linear 10 xalign .8
                 with dissolve
@@ -3014,7 +3015,7 @@ label alt_day4_sl_wh_night:
                 stop music fadeout 3
                 $ alt_day5_sl_wh_transit = True
                 return
-            "Нафиг все тени.":
+            "Нафиг все тени":
                 "Сон. Вот что имеет значение."
     else:
         "Всё верно."
@@ -3945,7 +3946,7 @@ label alt_day5_sl_begin:
                 scene gameover with flash
                 with vpunch
                 return
-        "Со мной всё в порядке.":
+        "Со мной всё в порядке":
             $ meet('voice',"Голос")
             $ alt_sp += 1
             "Отрезал я."
@@ -5034,7 +5035,7 @@ label alt_day5_sl_begin:
             me "Да. Двигайся за мной, не отставай."
             $ lp_sl += 2
             $ alt_sp += 2
-        "Попробуем пробраться наверх.":
+        "Попробуем пробраться наверх":
             sl "Но…"
             me "Делать всё равно нечего, долго мы здесь не просидим."
             "Да и покушать чего-нибудь было бы совсем не лишним."
@@ -5744,7 +5745,7 @@ label alt_day5_sl_dinner:
     with dissolve
     mt "Ребята!"
     "Позвала она."
-    show bg ext_dining_hall_near_day at enterright
+    scene bg ext_dining_hall_near_day at enterright
     show mt normal pioneer at right with moveinright
     show cs normal at cleft
     with dissolve
@@ -6533,7 +6534,7 @@ label alt_day5_sl_dinner:
     "Такая хорошая девочка, а такая вредина!"
     play sound sfx_water_emerge
     scene black
-    show bg ext_beach2_day_7dl with easeintop
+    scene bg ext_beach2_day_7dl with easeintop
     show sl normal swim with dspr 
     sl "Семён, это никуда не годится! После ужина обязательно свожу тебя в баню."
     sl "Мыться надо каждый день."
@@ -8415,11 +8416,11 @@ label alt_day6_sl_begin:
         scene bg int_mine_coalface
         show prologue_dream
         with dissolve
-        show bg int_mine_coalface behind prologue_dream:
+        scene bg int_mine_coalface behind prologue_dream:
             xalign .5 yalign .4 zoom 1.0
             linear .3 xalign .5 yalign .4 zoom 1.1
         "Я сделал шаг."
-        show bg int_mine_coalface behind prologue_dream:
+        scene bg int_mine_coalface behind prologue_dream:
             xalign .5 yalign .4 zoom 1.1
             linear .3 xalign .5 yalign .35 zoom 1.2
         "Ещё один."
@@ -8542,7 +8543,7 @@ label alt_day6_sl_begin:
             mt "Семён, а не скажешь ли мне, где ты был на линейке?"
             sl "Он выполнял одно моё поручение, связанное с вашим заданием."
             "Чётко и по существу отрапортовала Славя, вплывая в кадр."
-            show bg ext_square_sunset at zenterleft
+            scene bg ext_square_sunset at zenterleft
             show mt normal pioneer at right with moveinright
             show sl normal pioneer at cleft
             with dissolve
@@ -9412,7 +9413,7 @@ label alt_day6_sl_ba_quest1:
     ba "А, пионеры."
     "Выдохнул он, принуждая себя успокоиться."
     ba "Чё пришли? Ещё какие-то вопросы есть?"
-    show bg ext_admins_day_7dl at enterleft
+    scene bg ext_admins_day_7dl at enterleft
     show ba evil uniform at right with moveinright
     show sl normal pioneer at cleft
     with dissolve
@@ -10551,7 +10552,7 @@ label alt_day6_sl_true_route:
     cs "Я дала ему сироп ипекакуаны, его должно немного потошнить."
     "Сообщила она."
     cs "Но вы должны понимать, что для полноценной помощи вам нужен ветеринар. {w}И срочно, очень срочно. Иначе всё зря."
-    show bg int_aidpost_day at enterleft
+    scene bg int_aidpost_day at enterleft
     show cs normal at right
     show sl cry pioneer at left
     with dissolve
@@ -10723,7 +10724,7 @@ label alt_day6_sl_true_route:
     show sl cry pioneer with dspr
     "Я встряхнул её, приводя в чувство."
     menu:
-        "Славя, некогда выбирать.":
+        "Славя, некогда выбирать":
             "Поторопил её я. Счёт и правда перешёл на минуты."
             $ lp_sl += 1
             $ alt_sp += 1
@@ -10733,7 +10734,7 @@ label alt_day6_sl_true_route:
             $ lp_sl += 2
             $ alt_sp += 2
             $ alt_day6_sl_int = 1
-        "Я обязательно вернусь за тобой.":
+        "Я обязательно вернусь за тобой":
             $ lp_sl = 0
             "Меня всего перекосило от дутой фальши этой фразы."
             "Тяжело врать любимому человеку."
@@ -11333,14 +11334,14 @@ label alt_day6_sl_intellectual:
     "Она попробовала звучание имени."
     voice "Семён как Сёмушка?"
     menu:
-        "Да, как Сёмушка.":
+        "Да, как Сёмушка":
             window hide 
             scene anim intro_8
             "Этой улыбке невозможно было сопротивляться."
             me "Сёмушка."
             "Кивнул я."
             $ alt_day6_sl_int = 2
-        "Нет, как Семён.":
+        "Нет, как Семён":
             "Сёмушкой меня могла называть всего одна девушка."
             "Только ей было можно."
             "Плевать на то, что её не существует."
@@ -11608,7 +11609,7 @@ label alt_day6_sl_concert:
     if alt_day5_sl_extra_house:
         "И сопутствующих сцен с этой же девчонкой спустя пару дней."
         "Длиной в целую ночь — я с утра чувствовал себя прожёванным, а она была бодра. {w}Сейчас мы поменялись ролями."
-    show bg ext_stage_big_clear_day_7dl behind mi at enterleft
+    scene bg ext_stage_big_clear_day_7dl behind mi at enterleft
     show mi smile voca at right with moveinright
     show cs normal at cleft with dspr
     with dissolve
@@ -12390,7 +12391,7 @@ label alt_day6_sl_hala:
     me "Как считаешь, это твоё дело?"
     show dv smile pioneer2 with dspr
     dv "А как же! У меня к ней свой вопрос. Касается тебя, кстати."
-    show bg ext_stage_big_clear_day_7dl at enterright
+    scene bg ext_stage_big_clear_day_7dl at enterright
     show dv normal pioneer2 at left with moveinleft
     show mi smile voca at cright
     with dissolve
@@ -14166,8 +14167,9 @@ label alt_day7_sl_square1:
                 with fade
                 return
             else:
-                "Немного посверкав и посияв, символы погасли."      # Если не получено ни одного гуда - ни один из символов не светится.
-                "Снова обратившись скучными картинками по железу."  #
+                if (persistent.mi_7dl_good_human or persistent.mi_7dl_good_star) or persistent.dv_7dl_good_ussr or persistent.sl_7dl_good_ussr or persistent.un_7dl_good_ussr or persistent.mt_7dl_good or persistent.us_7dl_good:
+                    "Немного посверкав и посияв, символы погасли."
+                    "Снова обратившись скучными картинками по железу."
                 "Делать мне здесь больше было нечего, и я, развернувшись, отправился восвояси."
                 th "Славя меня прибьёт, наверное."
                 "Отстранённо подумал я."
@@ -14728,7 +14730,7 @@ label alt_day7_sl_dinner:
     window hide
     if (lp_sl >= 18) or (alt_sp >= 6):
         menu:
-            "За то и любима.":
+            "За то и любима":
                 $ alt_day6_sl_good = 1
                 scene bg ext_admins_day_7dl with flash
                 show mt surprise pioneer at zenterleft
@@ -15005,7 +15007,7 @@ label alt_day7_sl_dinner:
                 "Я не хочу. Мне нельзя."
                 "Если я засну, мне…"
                 "На этой мысли я выключился."
-            "Как всё невовремя.":
+            "Как всё невовремя":
                 play music music_7dl["beth"]
                 th "Надо же, первая размолвка, и под занавес."
                 th "И мы так вот разъедемся, да?"
@@ -15370,7 +15372,7 @@ label alt_day7_sl_dinner:
                     "Для порядку."
                     "Просто для того, чтобы потом сказать самому себе, что не сдался сразу — есть повод гордиться собой."
                     menu:
-                        "Пойти посмотреть снаружи.":
+                        "Пойти посмотреть снаружи":
                             "Я подошёл к месту водителя и, с грехом пополам обнаружив кнопку открытия двери, притопил её."
                             "Зашумела пневматика, но вместо ожидаемого ночного пейзажа за окном почему-то оказалась какая-то непонятная серая пустота."
                             "В голове всплыло какое-то странное, явно нерусское слово."
@@ -15498,7 +15500,7 @@ label alt_day7_sl_dinner:
                         "Так что разбудите меня, когда прибудем."
                         "В глубине сердца затухал окончательно задушенный инстинкт самосохранения."
                         me "Хочу быть вместе с ней."
-            "К этому всё и шло.":
+            "К этому всё и шло":
                 $ alt_day6_sl_good = 3
                 stop ambience fadeout 3
                 pass
@@ -16114,7 +16116,7 @@ label alt_day7_sl_loop2:
     "И одновременно оказалась совсем не той."
     "У неё была самая красивая улыбка на свете, белое облачко-щенок и забота об окружающих."
     "Было всё, кроме того, что она не была Славей."
-    show cg d4_sl_lookup_7dl
+    scene cg d4_sl_lookup_7dl
     pause(0.1)
     hide d4_sl_lookup_7dl
     "Славя - вот она…"

@@ -78,52 +78,52 @@
     
     if persistent.altCardsWon1 or persistent.altCardsFail:
         menu:
-            "Играть самостоятельно.":
+            "Играть самостоятельно":
                 jump alt_day2_participate
             "Победа в финале." if persistent.altCardsWon3:
                 menu:
-                    "Лена.":
+                    "Лена":
                         $ alt_day2_f1 = 1
-                    "Славя.":
+                    "Славя":
                         $ alt_day2_f1 = 2
-                    "Алиса.":
+                    "Алиса":
                         $ alt_day2_f1 = 3
-                    "Мику.":
+                    "Мику":
                         $ alt_day2_f1 = 4
-                    "Ульяна.":
+                    "Ульяна":
                         $ alt_day2_f1 = 5
-                    "Шурик.":
+                    "Шурик":
                         $ alt_day2_f1 = 6
-                    "Женя.":
+                    "Женя":
                         $ alt_day2_f1 = 7
                 $ alt_day2_round3 = 2
                 $ karma += 10
                 jump alt_day2_final_win
             "Поражение в финале." if persistent.altCardsWon2:
                 menu:
-                    "Лена.":
+                    "Лена":
                         $ alt_day2_f1 = 1
-                    "Славя.":
+                    "Славя":
                         $ alt_day2_f1 = 2
-                    "Алиса.":
+                    "Алиса":
                         $ alt_day2_f1 = 3
-                    "Мику.":
+                    "Мику":
                         $ alt_day2_f1 = 4
-                    "Ульяна.":
+                    "Ульяна":
                         $ alt_day2_f1 = 5
-                    "Шурик.":
+                    "Шурик":
                         $ alt_day2_f1 = 6
-                    "Женя.":
+                    "Женя":
                         $ alt_day2_f1 = 7
                 $ alt_day2_round3 = 1
                 $ karma -= 10
                 jump alt_day2_final_fail
-            "Поражение в полуфинале.":
+            "Поражение в полуфинале":
                 call alt_day2_qf_analizer
                 $ alt_day2_round2 = 1
                 $ karma -= 10
                 jump alt_day2_semifinal_fail
-            "Поражение в первом же коне.":
+            "Поражение в первом же коне":
                 $ alt_day2_round1 = 1
                 jump alt_day2_participate_fail
 
@@ -899,7 +899,7 @@ label alt_day2_participate_win:
                         hide dv with dissolve
                         window hide
                         
-                "Партия.":
+                "Партия":
                     "Алиса кивнула и молча поднялась из-за стола."
                     pass
         else:
@@ -934,7 +934,7 @@ label alt_day2_participate_win:
                     "Моя улыбка вышла извиняющейся."
                     me "Тогда увидимся."
                     "Мику кивнула и встала из-за стола."
-                "Всегда рад.":
+                "Всегда рад":
                     "Я улыбнулся."
                     me "Если вдруг захочешь ещё как-нибудь сыграть, обращайся!"
                     "Мику кивнула и встала из-за стола."
@@ -1037,7 +1037,7 @@ label alt_day2_participate_win:
                         "Правда, попутно наступила мне на ногу — пускай."
                         "Я был благодушен и простил ей эту маленькую шалость."
                         jump alt_day2_semifinal
-                    "Ладно. Как хочешь.":
+                    "Ладно. Как хочешь":
                         $ lp_us += 1
                         $ alt_day2_revanche = True
                         jump alt_day2_tournament_start
