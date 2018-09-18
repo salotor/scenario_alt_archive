@@ -55,19 +55,25 @@
                 play music music_7dl["runaway"] fadein 3
                 play sound_loop sfx_run_forest
                 scene expression Dawn("bg ext_backdoor_day_7dl"):
-                    ease 0.2 pos (0, 0)
-                    ease 0.2 pos(25,50)
-                    ease 0.2 pos (0, 0)
-                    ease 0.2 pos(-25,50)
-                    repeat
+                    block:
+                        zoom 1.1 xcenter 0.5 ycenter 0.5
+                    block:
+                        ease 0.2 xoffset 0 yoffset 0
+                        ease 0.2 xoffset 25 yoffset 50
+                        ease 0.2 xoffset 0 yoffset 0
+                        ease 0.2 xoffset -25 yoffset 50
+                        repeat
                 with fade2
                 play sound sfx_7dl["breath"] fadein 0
                 scene expression Dawn("bg ext_backroad_day_7dl"):
-                    ease 0.2 pos (0, 0)
-                    ease 0.2 pos(25,50)
-                    ease 0.2 pos (0, 0)
-                    ease 0.2 pos(-25,50)
-                    repeat
+                    block:
+                        zoom 1.1 xcenter 0.5 ycenter 0.5
+                    block:
+                        ease 0.2 xoffset 0 yoffset 0
+                        ease 0.2 xoffset 25 yoffset 50
+                        ease 0.2 xoffset 0 yoffset 0
+                        ease 0.2 xoffset -25 yoffset 50
+                        repeat
                 with fade2
                 "Да, если бы моё утро ограничивалось лишь воркованием и поглаживаниями, я был бы самым счастливым человеком на Земле!"
                 "Возможно, даже поверил бы в то, что люди вокруг друг другу братья, всё вокруг замечательно, и вообще!"
@@ -78,11 +84,14 @@
                 window hide
                 play sound sfx_7dl["breath"] fadein 0
                 scene expression Dawn("bg ext_lake_sunset_7dl"):
-                    ease 0.2 pos (0, 0)
-                    ease 0.2 pos(25,50)
-                    ease 0.2 pos (0, 0)
-                    ease 0.2 pos(-25,50)
-                    repeat
+                    block:
+                        zoom 1.1 xcenter 0.5 ycenter 0.5
+                    block:
+                        ease 0.2 xoffset 0 yoffset 0
+                        ease 0.2 xoffset 25 yoffset 50
+                        ease 0.2 xoffset 0 yoffset 0
+                        ease 0.2 xoffset -25 yoffset 50
+                        repeat
                 with fade2
                 "В общем, нетрудно предугадать, чем всё закончилось, раз уж я здесь потею, правда?"
                 "Я бросил злой взгляд на обтянутые шортами полушария, ритмично двигающиеся в пяти метрах передо мной."
