@@ -345,6 +345,28 @@ init:
         get_sprite_7dl("custom/un_3_dress_serious_2_7dl.png")
         0.1
         repeat # Не убирать
+        
+    image scenery:
+        get_image("anim/prolog_2.jpg") with Dissolve(.5) 
+        pause 2.6
+        get_image("anim/prolog_1.jpg") with Dissolve(.5) 
+        pause 0.6
+        repeat
+        
+    image scenery2:
+        get_image("anim/prolog_2.jpg") with Dissolve(.4) 
+        pause 2.0
+        get_image("anim/prolog_1.jpg") with Dissolve(.4) 
+        pause 0.4
+        repeat    
+        
+    image scenery3:
+        get_image("anim/prolog_2.jpg") with Dissolve(.25) 
+        pause 1.4
+        get_image("anim/prolog_1.jpg") with Dissolve(.25) 
+        pause 0.25
+        repeat
+        
 #Заставки
     image bg ext_stand3_night_7dl = im.MatrixColor(get_image_7dl("bg/ext_stand3_7dl.jpg"), im.matrix.tint(0.63, 0.78, 0.82))
     image bg ext_stand3_sunset_7dl = im.MatrixColor(get_image_7dl("bg/ext_stand3_7dl.jpg"), im.matrix.tint(0.94, 0.82, 1.0))
