@@ -115,10 +115,7 @@ label scenario__alt_sevendl:
     $ init_map_zones_alt1()
     $ init_map_zones_alt2()
 # пишем версию 7дл в трейсбеках
-    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        $ config.version = "1.1 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
-    else:
-        $ config.version = "1.2 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
+    $ config.version = config.version+" + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
 # ------------------------------------------------
     jump start_menu_7dl
 

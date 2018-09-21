@@ -78,10 +78,9 @@ label after_load:
     if save_name.find(u'7ДЛ') != -1: #Если нашли вхождение '7ДЛ' в имени сохранения игры
 
         # пишем версию 7дл в трейсбеках
-        if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-            $ config.version = "1.1 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
-        else:
-            $ config.version = "1.2 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
+        $ config.version = config.version+" + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
+        # загружаем имена спикеров
+        if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
             $ save_names_known()
 
         # Проверяем, совпадают ли версии сохранения и мода и есть ли версия сохранения в списке совместимых
