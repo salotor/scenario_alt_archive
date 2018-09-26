@@ -173,7 +173,7 @@ label alt_day6_sl_7dl_start:
     else:
         $ routetag = "sl7dlbad"
     if lp_sl > 20:
-        if not alt_day6_sl_7dl_forgive:
+        if not alt_day6_sl_7dl_forgive: #этот кусок не имеет смысла без else
             pass
         call alt_day6_sl_7dl_hentai
         $ alt_day6_sl_7dl_hentai_done = True
