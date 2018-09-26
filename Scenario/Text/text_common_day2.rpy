@@ -5488,7 +5488,7 @@ label alt_day2_ultim:
                 "Но плясать под её дудку я не собираюсь."
                 window hide
             "Чтобы было честно":
-                play music music_7dl["snatch"] fadein 3
+                play music music_7dl["genki"] fadein 3
                 $ lp_dv -= 10
                 $ lp_un -= 5
                 $ alt_day2_dv_harass = True
