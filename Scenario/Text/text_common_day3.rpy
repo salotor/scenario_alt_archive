@@ -9646,7 +9646,7 @@ label alt_day3_max_lp_mi:
     return
     
 label alt_day3_max_lp_sl:
-    me "Не получится, мне ещё Со Славей танцевать."
+    me "Не получится, мне ещё со Славей танцевать."
     $ alt_day3_lp_route = 2
     show sl sad dress at left with moveinleft
     sl "Семён! Как ты можешь говорить такое!"

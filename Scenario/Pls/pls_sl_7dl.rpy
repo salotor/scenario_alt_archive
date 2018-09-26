@@ -179,7 +179,7 @@ label alt_day6_sl_7dl_start:
         $ alt_day6_sl_7dl_hentai_done = True
     call alt_day6_sl_7dl_sleeptime
     pause(1)
-    jump alt_day7_sl_7dl
+    jump alt_day7_sl_7dl_start
 
 label alt_day7_sl_7dl_start:
 

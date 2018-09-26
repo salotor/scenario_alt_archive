@@ -80,7 +80,7 @@
         menu:
             "Играть самостоятельно":
                 jump alt_day2_participate
-            "Победа в финале." if persistent.altCardsWon3:
+            "Победа в финале" if persistent.altCardsWon3:
                 menu:
                     "Лена":
                         $ alt_day2_f1 = 1
@@ -99,7 +99,7 @@
                 $ alt_day2_round3 = 2
                 $ karma += 10
                 jump alt_day2_final_win
-            "Поражение в финале." if persistent.altCardsWon2:
+            "Поражение в финале" if persistent.altCardsWon2:
                 menu:
                     "Лена":
                         $ alt_day2_f1 = 1
