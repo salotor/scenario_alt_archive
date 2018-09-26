@@ -476,6 +476,8 @@ init:
     image bg int_toilet_day_7dl = get_image_7dl("bg/int_toilet_day_7dl.png")
     image bg int_toilet_night_7dl = get_image_7dl("bg/int_toilet_night_7dl.png")
     image bg int_train_7dl = get_image_7dl("bg/int_train_7dl.png")
+    image bg int_wagon_day_7dl = get_image_7dl("bg/int_wagon_day_7dl.jpg")
+    image bg int_wagon_sunset_7dl = get_image_7dl("bg/int_wagon_sunset_7dl.jpg")
     image bg int_wardrobe_7dl = get_image_7dl("bg/int_wardrobe_7dl.jpg")
     image bg int_wardrobe2_7dl = get_image_7dl("bg/int_wardrobe2_7dl.jpg")
     
@@ -687,7 +689,7 @@ init:
     image cg d7_leaving_no_sl_7dl = get_image_7dl("cg/d7_leaving_no_sl_7dl.jpg")
     image cg d7_leaving_no_sl_sam_7dl = get_image_7dl("cg/d7_leaving_no_sl_sam_7dl.jpg")
     
-    image cg d7_mi_club27_7dl = get_image_7dl("cg/d7_mi_club27_7dl.jpg")
+    image cg d7_mi_club27_7dl = get_image_7dl("cg/d7_mi_club27_7dl.png")
     image cg d7_mi_epilogue_7dl = get_image_7dl("cg/d7_mi_epilogue_7dl.jpg")
     image cg d7_mi_farewell_7dl = get_image_7dl("cg/d7_mi_farewell_7dl.jpg")
     image cg d7_mi_ghost_7dl = get_image_7dl("cg/d7_mi_ghost_7dl.png")
@@ -1032,12 +1034,14 @@ init:
     
     $ music_7dl["game_of_shadows"] = get_music_7dl("game_of_shadows.ogg")
     $ music_7dl["genki"] = get_music_7dl("genki_7dl.ogg")
+    $ music_7dl["gimme_hand"] = get_music_7dl("gimme_hand_7dl.ogg")
     $ music_7dl["guitar_under_the_window"] = get_music_7dl("guitar_under_the_window_7dl.ogg")
     $ music_7dl["groovie"] = get_music_7dl("groovie_7dl.ogg")
     $ music_7dl["gonna_be_ok"] = get_music_7dl("gonna_be_ok_7dl.ogg")
     
     $ music_7dl["happy_ending"] = get_music_7dl("happy_ending_7dl.ogg")
     $ music_7dl["hdance_5"] = get_music_7dl("hdance_5_7dl.ogg")
+    $ music_7dl["hear_a_love"] = get_music_7dl("hear_a_love_7dl.ogg")
     $ music_7dl["herc_death"] = get_music_7dl("herc_death_7dl.ogg")
     $ music_7dl["hug_me_already"] = get_music_7dl("hug_me_already_7dl.ogg")
 
@@ -1134,6 +1138,7 @@ init:
     $ music_7dl["shib_stereo"] = get_music_7dl("shib_stereo_7dl.ogg")
     $ music_7dl["slavyas_fantazm"] = get_music_7dl("slavyas_fantazm_7dl.ogg")
     $ music_7dl["sky_feather"] = get_music_7dl("sky_feather_7dl.ogg")
+    $ music_7dl["sammy"] = get_music_7dl("sammy_7dl.ogg")
     $ music_7dl["smlg"] = get_music_7dl("smlg_7dl.ogg")
     $ music_7dl["snatch"] = get_music_7dl("snatch_7dl.ogg")
     $ music_7dl["sneakupon"] = get_music_7dl("sneakupon_7dl.ogg")
@@ -1179,6 +1184,7 @@ init:
     $ music_7dl["what_am_i_doing_here"] = get_music_7dl("what_am_i_doing_here_7dl.ogg")
     $ music_7dl["what_cost"] = get_music_7dl("what_cost_7dl.ogg")
     $ music_7dl["whatnow"] = get_music_7dl("whatnow_7dl.ogg")
+    $ music_7dl["what_if"] = get_music_7dl("what_if_7dl.ogg")
     $ music_7dl["wheres_wonderland"] = get_music_7dl("wheres_wonderland_7dl.ogg")
     $ music_7dl["will_you"] = get_music_7dl("will_you_7dl.ogg")
     $ music_7dl["wonderful_faraway"] = get_music_7dl("wonderful_faraway_7dl.ogg")
