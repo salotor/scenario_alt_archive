@@ -264,7 +264,7 @@ init -265 python:
 init -6 python:
     def alt_chapter0():
         global save_name
-        save_name = (u"7ДЛ v.%s: пролог. %s") % (alt_release_no, plthr)
+        save_name = (u"7ДЛ v.%s.%s: пролог. %s") % (alt_release_no, alt_hotfix_no, plthr)
 
 init -5 python:
     def alt_chapter(alt_day_number, alt_chapter_name):
@@ -272,7 +272,7 @@ init -5 python:
         renpy.block_rollback()
 # ----------------------------------------------------------------------
 # в имя сохраняемого файла добавим номер релиза игры
-        sdn = (u"7ДЛ v.%s: День %d") % (alt_release_no, alt_day_number)
+        sdn = (u"7ДЛ v.%s.%s: День %d") % (alt_release_no, alt_hotfix_no, alt_day_number)
         save_name = ((sdn) + (u" - ")) + (alt_chapter_name)
 # -----------------------------------------------------------------------
         if not persistent.chapter_off_7dl:

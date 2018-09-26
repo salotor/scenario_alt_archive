@@ -262,8 +262,8 @@ label alt_day5_sl_7dl_vars:
     
 label alt_day6_sl_7dl_vars:
     $ alt_day6_sl_7dl_workout = False #Пробежка!
-    $ alt_day6_sl_7dl_transit = False
     $ alt_day6_sl_7dl_hentai_done = False
+    $ alt_day6_sl_7dl_forgive = False
     return
     
 label alt_day7_sl_7dl_vars:

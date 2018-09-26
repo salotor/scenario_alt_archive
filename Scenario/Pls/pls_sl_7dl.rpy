@@ -56,7 +56,7 @@
 
 label alt_day5_sl_7dl_start:
     if herc and alt_day4_sl_7dl_workout :
-        $ routetag = "sl7dl_sport" #Спортивная форма для бегающего к Славе Герка-спортсмена
+        $ routetag = "sl7dl_sport"
     call alt_day5_sl_7dl_vars
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -113,20 +113,15 @@ label alt_day5_sl_7dl_start:
     pause(1)
     window hide
     with fade
-    window hide
-    show spill_red with dspr
-    $ renpy.pause(2, hard=True)
-    show spill_gray with dspr
-    $ renpy.pause(2, hard=True)
-    show alt_credits timeskip_dev at truecenter with dissolve2
-    $ renpy.pause(4, hard=True)
-    with dissolve2
-    return#Отсечка-заглушка
     jump alt_day6_sl_7dl
 
 label alt_day6_sl_7dl_start:
-    if (herc or loki) and (lp_sl > 15):
-        $ routetag = "sl7dl_sport" #Спортивная форма для всех, йоба
+    if herc:
+        call alt_day6_sl_7dl_camping
+        pause(1)
+        call alt_day6_sl_7dl_revenge
+    if not alt_day5_sl_7dl_herc_sick:
+        $ routetag = "sl7dl_sport"
     call alt_day6_sl_7dl_vars
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -157,6 +152,9 @@ label alt_day6_sl_7dl_start:
         call alt_day6_sl_7dl_day
         pause(1)
     call alt_day6_sl_7dl_evening #Концерт - общий
+    pause(1)
+    call alt_day6_sl_7dl_catapult
+    pause(1)
     $ routetag = "sl7dl_dress"
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -170,15 +168,21 @@ label alt_day6_sl_7dl_start:
     elif (lp_sl > 20) and (karma > 120):
         $ routetag = "sl7dlgood"
         pause(1)
-        if persistent.sl_7dl_good_loki or persistent.sl_7dl_good_herc or persistent.sl_7dl_good:
-            call alt_day6_sl_7dl_hentai
-            $ alt_day6_sl_7dl_hentai_done = True
     elif lp_sl > 20:
         $ routetag = "sl7dlneu"
     else:
         $ routetag = "sl7dlbad"
+    if lp_sl > 20:
+        if not alt_day6_sl_7dl_forgive: #этот кусок не имеет смысла без else
+            pass
+        call alt_day6_sl_7dl_hentai
+        $ alt_day6_sl_7dl_hentai_done = True
     call alt_day6_sl_7dl_sleeptime
     pause(1)
+    jump alt_day7_sl_7dl
+
+label alt_day7_sl_7dl_start:
+
     window hide
     show spill_red with dspr
     $ renpy.pause(2, hard=True)
@@ -188,15 +192,16 @@ label alt_day6_sl_7dl_start:
     $ renpy.pause(4, hard=True)
     with dissolve2
     return#Отсечка-заглушка
-    jump alt_day7_sl_7dl
-
-label alt_day7_sl_7dl_start:
+    
     call alt_day7_sl_7dl_vars
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(7, u"Славя. 7ДЛ. Утро")
     pause(1)
     call alt_day7_sl_7dl_begin
+    #Герк - дебаркадер
+    #Локи - склад
+    #Дрищ и пролетевшие на хентай — в домиках
     pause(1)
     $ persistent.sprite_time = "day"
     $ day_time()
