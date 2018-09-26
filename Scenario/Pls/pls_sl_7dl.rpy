@@ -129,7 +129,7 @@ label alt_day6_sl_7dl_start:
     pause(1)
     call alt_day6_sl_7dl_begin
     pause(1)
-    call alt_day6_sl_7dl_breakfast
+    call alt_day6_sl_7dl_breakfast # alt_day5_sl_7dl_herc_sick сюда попадать не должен? он дома спит
     pause(1)
     $ persistent.sprite_time = "day"
     $ day_time()
