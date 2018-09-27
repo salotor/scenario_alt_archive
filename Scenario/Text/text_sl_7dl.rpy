@@ -1834,7 +1834,7 @@ label alt_day4_sl_7dl_herc_day:
             "Я чуть огрызком не подавился, честное слово!"
             me "Славя, нельзя же так людей пугать!"
             show sl smile sport with dissolve
-            "Славя, по непонятной причине переодетая в спортивную форму, легко форсировала забор и подошла ко мне."
+            "Славя, по непонятной причине переодетая в спортивную форму, легко форсировала забор и подошла ко мне."    #
             sl "Вас испугаешь, пожалуй."
             "Она качнула головой, и метко брошенное сверху яблочко стукнуло о землю."
             "Сверху раздался разочарованный вопль."
@@ -1856,7 +1856,7 @@ label alt_day4_sl_7dl_herc_day:
             stop music fadeout 1
             pause(1)
             play sound sfx_7dl["eat_horn"] fadein 1
-            "И будто подтверждая её слова, над лагерем разнёсся горн, призывающий всех в столовую."
+            "И будто подтверждая её слова, над лагерем разнёсся горн, призывающий всех в столовую."    #
             stop sound fadeout 1
             $ alt_day4_sl_7dl_herc_appletree = True
             $ karma += 10
@@ -1880,7 +1880,7 @@ label alt_day4_sl_7dl_herc_day:
         "А стоящая впереди Ульянка вся извертелась:"
         show us dontlike sport at left with dissolve
         us "Эй, можно побыстрее? Всё же без нас съедят!"
-        show sl smile pioneer at right with dissolve
+        show sl smile pioneer at right with dissolve    # если alt_day4_sl_7dl_herc_appletree, то Славя недавно подошла к Семёну с Улей, будучи в спортивной форме. Там же раздался горн на полдник. И когда она успела переодеться?
         sl "Не беспокойся, не съедят."
         us "Или не знаю тогда, скажут, что полдник закончился и кто не успел, получит на ужин."
         show sl laugh pioneer with dspr
@@ -6391,7 +6391,7 @@ label alt_day5_sl_7dl_begin:
                 "Что самое странное, сегодня Славя не решилась заглянуть на огонёк и вытащить меня на утреннюю пробежку."
                 th "Неужели пожалела?"
                 "Но нет, в этом была и некая крохотная доля мести."
-                "Особенно, когда я всё же прибежал к домику и забарабанил в дверь."
+                "Особенно, когда я всё же прибежал к домику и забарабанил в дверь."    # bg внешнего вида домика Слави надо
                 play sound sfx_open_door_clubs
                 pause(1)
                 show sl surprise pioneer with dissolve
@@ -6520,7 +6520,7 @@ label alt_day5_sl_7dl_begin:
                 scene expression Desat("bg int_house_of_mt_sunset")
                 with dissolve
                 pause(1)
-                scene bg ext_houses_rainy_day_7dl
+                scene bg ext_houses_rainy_day_7dl    # лучше тут ext_house_of_mt_rain_7dl, ибо сразу после идёт alt_day5_sl_7dl_breakfast, где первым же bg снова показывают ext_house_of_mt_rain_7dl, а потом ext_houses_rainy_day_7dl. Выглядит странно.
                 with fulldiam
                 "Когда я в полном снаряжении выбрался на улицу, и вожатой, и её помощницы уже след простыл."
                 me "Ожидаемо, что тут скажешь."
@@ -6925,11 +6925,11 @@ label alt_day5_sl_7dl_breakfast:
         play ambience ambience_7dl["rain"] fadein 3
         pause(1)
         scene bg ext_warehouse_rain_day_7dl
-        show sl normal pioneer
+        show sl normal pioneer    #
         with dissolve
         $ volume(1.0, "music")
         $ volume(1.0, "ambience")
-        $ persistent.sprite_time = "sunset"
+        $ persistent.sprite_time = "sunset"    # sprite_time лучше менять перед появлением спрайтов, а то Славя перекрашивается прямо на ходу.
         "Сцапав новый комплект носков и старые сандалии, я вышел на улицу."
         sl "Ты чем сейчас планируешь заниматься?"
         if alt_day4_sl_7dl_herc_rendezvous:
