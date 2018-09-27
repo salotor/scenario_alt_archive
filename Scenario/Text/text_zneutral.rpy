@@ -5164,7 +5164,7 @@ label alt_day5_neu_breakfast:
     $ volume (0.5,'music')
     $ volume (0.5,'ambience')
     menu:
-        "Сесть рядом с Леной." if alt_day4_fz_sh == 1:
+        "Сесть рядом с Леной" if alt_day4_fz_sh == 1:
             me "Можно?"
             "Спросил я, подойдя с подносом к её столу."
             "Она в упор проигнорировала меня, глядя куда-то в глубины стакана с какао."
@@ -5173,7 +5173,7 @@ label alt_day5_neu_breakfast:
             $ alt_day5_neu_candle = 1
             "Молчание."
             "Вздохнув, я решил не доводить этот фарс до уровня «молчание за столом» и сел на отшибе, в одиночестве."
-        "К Ульянке." if alt_day4_neu_mt_volley:
+        "К Ульянке" if alt_day4_neu_mt_volley:
             $ volume (1.0,'music')
             $ volume (1.0,'ambience')
             show us normal pioneer with dissolve
@@ -9310,7 +9310,7 @@ label alt_day5_neu_mi_estrade:
                     $ volume (0.9,'ambience')
                     "Пока я ходил, шевеление в кабинке прекратилось, и голос вожатой позвал:"
                     mt "Семён? Ты где? Почему вещи бросил?"
-                "Залезть в кабинку по соседству." if mt_pt >= 4:
+                "Залезть в кабинку по соседству" if mt_pt >= 4:
                     $ volume (0.9,'music')
                     $ volume (0.9,'ambience')
                     $ mt_pt += 1
