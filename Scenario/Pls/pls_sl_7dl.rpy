@@ -113,7 +113,7 @@ label alt_day5_sl_7dl_start:
     pause(1)
     window hide
     with fade
-    jump alt_day6_sl_7dl
+    jump alt_day6_sl_7dl_start
 
 label alt_day6_sl_7dl_start:
     if herc:
@@ -181,7 +181,7 @@ label alt_day6_sl_7dl_start:
         $ alt_day6_sl_7dl_hentai_done = True
     call alt_day6_sl_7dl_sleeptime
     pause(1)
-    jump alt_day7_sl_7dl
+    jump alt_day7_sl_7dl_start
 
 label alt_day7_sl_7dl_start:
 
