@@ -154,6 +154,8 @@ label alt_day6_sl_7dl_start:
     call alt_day6_sl_7dl_evening #Концерт - общий
     pause(1)
     call alt_day6_sl_7dl_catapult
+    if alt_day_catapult == 1:
+        return
     pause(1)
     $ routetag = "sl7dl_dress"
     $ persistent.sprite_time = "sunset"
