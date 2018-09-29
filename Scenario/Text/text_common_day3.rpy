@@ -2,7 +2,7 @@
     scene bg black
     show prologue_dream
     with fade
-    play music music_7dl["prologue_1"]
+    play music music_7dl["prologue_2"]
     "Мне снилось что-то странное."
     window hide
     scene bg int_sam_house_clean_7dl
@@ -2268,7 +2268,7 @@ label alt_day3_event_beach1:
         "И с усилием повернула голову в сторону подруги:"
         sl "Значит…"
         if alt_day1_un_ignored:
-            "Лена посмотрела на подругу как на умалишённую:"
+            "Лена посмотрела на подругу как на умалишённую:"    # Возможно здесь стоит сменить un shy на какой-то другой спрайт?
             un "Это значит ровно то, что значит."
             un "Доедем до города, а там посмотрим."
             sl "Да как же! Если ты и Семён…"
@@ -7155,7 +7155,7 @@ label alt_day3_eventAf_estrade1:
                     me "Заводи свои пестни."
                     "Сделал отмашку я, готовясь подпевать «Сюзанну»."
                     return
-                "Не думаю, что ты справишься." if not (alt_day3_dv_invite or alt_day3_dv_event):
+                "Не думаю, что ты справишься" if not (alt_day3_dv_invite or alt_day3_dv_event):
                     me "Вообще, ты, может, и права."
                     me "Ты человек творческий, тебе танцевать, наверное, нужнее."
                     me "Попробую-ка я Двачевскую уговорить."
@@ -9646,7 +9646,7 @@ label alt_day3_max_lp_mi:
     return
     
 label alt_day3_max_lp_sl:
-    me "Не получится, мне ещё Со Славей танцевать."
+    me "Не получится, мне ещё со Славей танцевать."
     $ alt_day3_lp_route = 2
     show sl sad dress at left with moveinleft
     sl "Семён! Как ты можешь говорить такое!"
@@ -11533,7 +11533,7 @@ label alt_day3_mi_7dl_init:
             hide mi with dissolve
             "Не слушая возражений, она подняла с земли оторвавшийся шеврон с рубашки Шурика и, спрятав его в карман, отошла ко мне."
             "Я понял вдруг, что безмерно горжусь этой девчонкой."
-        "Ольга Дмитриевна, я пригляжу за ней." if not (herc or loki):
+        "Ольга Дмитриевна, я пригляжу за ней" if not (herc or loki):
             $ alt_day3_mi_donor = True
             $ alt_hpt += 1
             "Пообещал я."

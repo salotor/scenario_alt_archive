@@ -6,7 +6,7 @@ init 1:
     $ music_list_7dl["Josh Powell - Anglegrinder"] = default_7dl_path+"Sound/music/anglegrinder_7dl.ogg"
     $ music_list_7dl["I am waiting for you last summer - Surrender"] = default_7dl_path+"Sound/music/are_you_there_7dl.ogg"
     $ music_list_7dl["Josh Powell - Creeping up"] = default_7dl_path+"Sound/music/areyouabully_7dl.ogg"
-    $ music_list_7dl["Christina Perri - A Thousand years (Piano-Cello ThePianoGuys Cover"] = default_7dl_path+"Sound/music/ask_you_out"
+    $ music_list_7dl["Christina Perri - A Thousand years (Piano-Cello ThePianoGuys Cover)"] = default_7dl_path+"Sound/music/ask_you_out_7dl.ogg"
 
     $ music_list_7dl["Touhou - Bad Apple (Receptor Cover)"] = default_7dl_path+"Sound/music/bad_apple_7dl.ogg"
     $ music_list_7dl["Josh Powell - Beat Symphonic"] = default_7dl_path+"Sound/music/beat_symphonic_7dl.ogg"
@@ -104,7 +104,7 @@ init 1:
     $ music_list_7dl["KPM Music - Bass Renaissaince 1"] = default_7dl_path+"Sound/music/polyhymnia_intro_7dl.ogg"
     $ music_list_7dl["KPM Music - Bass Renaissaince 2"] = default_7dl_path+"Sound/music/polyhymnia_main_7dl.ogg"
     $ music_list_7dl["PPK - Resurrection"] = default_7dl_path+"Sound/music/ppk_7dl.ogg"
-    $ music_list_7dl["Marilyn Manson - Coma White (acoustic cover)"] = default_7dl_path+"Sound/music/prologue_1_7dl.ogg"
+    $ music_list_7dl["Marilyn Manson - Coma White (acoustic cover)"] = default_7dl_path+"Sound/music/prologue_2_7dl.ogg"
     $ music_list_7dl["Arn Andersson & Nights Amore - Farewell Life"] = default_7dl_path+"Sound/music/promise_to_meet_you_7dl.ogg"
 
     $ music_list_7dl["Sergey Eybog – Raindrops"] = default_7dl_path+"sound/sfx/raindrops_radio_7dl.ogg"

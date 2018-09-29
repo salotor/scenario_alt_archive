@@ -453,7 +453,7 @@ label alt_day2_lineup:
             $ karma -= 15
             "За спиной прыснули на два голоса, а когда я обернулся посмотреть — что-то мелькнуло по направлению к столовой."
             "Что-то… рыжее."
-        "Пройти и получить подписи. Ясно." if not loki:
+        "Пройти и получить подписи. Ясно" if not loki:
             $ lp_sl += 1
             sl "Так тебе ничего объяснять не придётся?"
             show sl smile pioneer with dspr
@@ -611,7 +611,7 @@ label alt_day2_bf:
         "Сесть одному":
             scene expression Noir("bg int_dining_hall_people_sunset", brightness = -0.4, saturation = -0.4) at zentercenter
             "Я поел в самые сжатые сроки. Некогда рассиживаться, пора осмотреть это место!"
-        "Рискнуть и сесть с рыжими." if alt_day_binder == 1:
+        "Рискнуть и сесть с рыжими" if alt_day_binder == 1:
             $ alt_day2_bf_dv_us = True
             play music music_7dl["bureaucracy"] fadein 1
             $ lp_dv += 1
@@ -3854,7 +3854,7 @@ label alt_day2_dinner:
                 "Ольга кивнула, проставляя галочку напротив подписи в библиотеке."
                 $ list_clubs_7dl = []
                 $ list_clubs_7dl.append('nwsppr')
-            "Давайте футбол, что ли." if 'soccer' in list_clubs_7dl:
+            "Давайте футбол, что ли" if 'soccer' in list_clubs_7dl:
                 me "Больше-то заняться всё равно нечем."
                 mt "Футбол так футбол."
                 "Кивнула Ольга, проставляя галочку напротив росписи Саныча."
@@ -5491,7 +5491,7 @@ label alt_day2_ultim:
                 "Но плясать под её дудку я не собираюсь."
                 window hide
             "Чтобы было честно":
-                play music music_7dl["snatch"] fadein 3
+                play music music_7dl["genki"] fadein 3
                 $ lp_dv -= 10
                 $ lp_un -= 5
                 $ alt_day2_dv_harass = True

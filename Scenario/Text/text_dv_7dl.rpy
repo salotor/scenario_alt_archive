@@ -12243,7 +12243,7 @@ label alt_day7_dv_7dl_dv:
     me "Вроде того."
     dv "Ладно, можешь считать, что ко мне ты в гости напросился. {w}Недели хватит? Если не хватит, придётся тебе в гараж перебираться, он пока пустой, но там тепло."
     menu:
-        "Подарить плеер." if lp_dv >= 16:
+        "Подарить плеер" if lp_dv >= 16:
             $ alt_day7_dv_7dl_check = 1
             me "Я не уверен в том, что доеду до финальной точки."
             me "Но я не хочу, чтобы всё это закончилось так глупо."
@@ -13746,7 +13746,7 @@ label alt_day7_dv_7dl_bad_end:
     stop sound_loop
     stop music fadeout 3
     $ renpy.pause(3)
-    play music music_7dl["prologue_1"] fadein 3
+    play music music_7dl["prologue_2"] fadein 3
     show laptop
     show laptop_dv_bad
     if herc:
