@@ -11289,7 +11289,7 @@ label alt_day7_mi_7dl_postscriptum:
     play sound sfx_intro_bus_stop_steps
     stop music fadeout 6
     $ set_mode_nvl()
-    play music music_7dl["prologue_1"]
+    play music music_7dl["prologue_2"]
     "Это была сделка — с чем? С совестью, со временем, с дьяволом?"
     "Трудно сказать, однако ни один из этого триумвирата никогда не отличался ни милосердием, ни благотворительностью."
     nvl clear

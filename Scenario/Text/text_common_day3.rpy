@@ -2,7 +2,7 @@
     scene bg black
     show prologue_dream
     with fade
-    play music music_7dl["prologue_1"]
+    play music music_7dl["prologue_2"]
     "Мне снилось что-то странное."
     window hide
     scene bg int_sam_house_clean_7dl

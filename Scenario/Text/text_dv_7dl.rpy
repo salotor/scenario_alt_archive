@@ -13746,7 +13746,7 @@ label alt_day7_dv_7dl_bad_end:
     stop sound_loop
     stop music fadeout 3
     $ renpy.pause(3)
-    play music music_7dl["prologue_1"] fadein 3
+    play music music_7dl["prologue_2"] fadein 3
     show laptop
     show laptop_dv_bad
     if herc:
