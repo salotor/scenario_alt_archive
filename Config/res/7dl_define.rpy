@@ -1054,7 +1054,7 @@ init:
     $ music_7dl["fsl_tn"] = get_music_7dl("fsl_tn_7dl.ogg")
     $ music_7dl["fyrsta"] = get_music_7dl("fyrsta_7dl.ogg")
     
-    $ music_7dl["game_of_shadows"] = get_music_7dl("game_of_shadows.ogg")
+    $ music_7dl["game_of_shadows"] = get_music_7dl("game_of_shadows_7dl.ogg")
     $ music_7dl["genki"] = get_music_7dl("genki_7dl.ogg")
     $ music_7dl["gimme_hand"] = get_music_7dl("gimme_hand_7dl.ogg")
     $ music_7dl["guitar_under_the_window"] = get_music_7dl("guitar_under_the_window_7dl.ogg")
@@ -1103,7 +1103,7 @@ init:
     $ music_7dl["me2ost"] = get_music_7dl("me2ost_7dl.ogg")
     $ music_7dl["melancholy_sun"] = get_music_7dl("melancholy_sun_7dl.ogg")
     $ music_7dl["midday_reverie"] = get_music_7dl("midday_reverie_7dl.ogg")
-    $ music_7dl["misery"] = get_music_7dl("misery_7dl.ogg")
+    $ music_7dl["misery"] = get_music_7dl("misery_2_7dl.ogg")
     $ music_7dl["moment"] = get_music_7dl("moment_7dl.ogg")
     $ music_7dl["more_than_alive"] = get_music_7dl("more_than_alive_7dl.ogg")
     $ music_7dl["morning_dew"] = get_music_7dl("Morning_Dew_7dl.ogg")
@@ -1129,7 +1129,7 @@ init:
     $ music_7dl["polyhymnia_intro"] = get_music_7dl("polyhymnia_intro_7dl.ogg")
     $ music_7dl["polyhymnia_main"] = get_music_7dl("polyhymnia_main_7dl.ogg")
     $ music_7dl["ppk"] = get_music_7dl("ppk_7dl.ogg")
-    $ music_7dl["prologue_1"] = get_music_7dl("prologue_1_7dl.ogg")
+    $ music_7dl["prologue_2"] = get_music_7dl("prologue_2_7dl.ogg")
     $ music_7dl["promise_to_meet_you"] = get_music_7dl("promise_to_meet_you_7dl.ogg")
 
     $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg")

@@ -214,7 +214,7 @@
     scene anim intro_3 
     with fade
     $ volume(0.3, 'music')
-    play music music_7dl["prologue_1"] 
+    play music music_7dl["prologue_2"] 
     $ renpy.pause(3, hard=True)
     scene anim intro_4 
     with fade
@@ -446,7 +446,7 @@ label alt_day0_start_h:
     with fade3
     $ renpy.pause(5, hard=True)
     "День не задался с самого утра."
-    play music music_7dl["prologue_1"] 
+    play music music_7dl["prologue_2"] 
     scene bg ext_entrance_night_clear_7dl
     show uvao_d1 at left
     show prologue_dream
@@ -777,7 +777,7 @@ label alt_day0_start_l:
     scene anim intro_3 
     show blind1_1
     with fade
-    play music music_7dl["prologue_1"] 
+    play music music_7dl["prologue_2"] 
     hide blind1_1
     show blind1_2
     with dissolve

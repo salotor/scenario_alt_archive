@@ -258,6 +258,7 @@ label alt_day5_sl_7dl_vars:
     $ alt_day5_random_val = 0
     $ alt_day5_sl_7dl_hentai_done = False
     $ alt_day5_sl_7dl_olroad = False
+    $ alt_day5_sl_7dl_loki_true = False
     return
     
 label alt_day6_sl_7dl_vars:
