@@ -113,7 +113,7 @@ label alt_day5_sl_7dl_start:
     pause(1)
     window hide
     with fade
-    jump alt_day6_sl_7dl
+    jump alt_day6_sl_7dl_start
 
 label alt_day6_sl_7dl_start:
     if herc:
@@ -129,7 +129,7 @@ label alt_day6_sl_7dl_start:
     pause(1)
     call alt_day6_sl_7dl_begin
     pause(1)
-    call alt_day6_sl_7dl_breakfast
+    call alt_day6_sl_7dl_breakfast # alt_day5_sl_7dl_herc_sick сюда попадать не должен? он дома спит
     pause(1)
     $ persistent.sprite_time = "day"
     $ day_time()
@@ -180,9 +180,10 @@ label alt_day6_sl_7dl_start:
             call alt_day6_sl_7dl_hentai
             $ alt_day6_sl_7dl_hentai_done = True
     pause(1)
-    call alt_day6_sl_7dl_sleeptime
+    if not alt_day6_sl_7dl_hentai_done or not (herc or loki):
+        call alt_day6_sl_7dl_sleeptime
     pause(1)
-    jump alt_day7_sl_7dl
+    jump alt_day7_sl_7dl_start
 
 label alt_day7_sl_7dl_start:
 

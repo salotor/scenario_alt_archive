@@ -6,7 +6,7 @@ init 1:
     $ music_list_7dl["Josh Powell - Anglegrinder"] = default_7dl_path+"Sound/music/anglegrinder_7dl.ogg"
     $ music_list_7dl["I am waiting for you last summer - Surrender"] = default_7dl_path+"Sound/music/are_you_there_7dl.ogg"
     $ music_list_7dl["Josh Powell - Creeping up"] = default_7dl_path+"Sound/music/areyouabully_7dl.ogg"
-    $ music_list_7dl["Christina Perri - A Thousand years (Piano-Cello ThePianoGuys Cover"] = default_7dl_path+"Sound/music/ask_you_out"
+    $ music_list_7dl["Christina Perri - A Thousand years (Piano-Cello ThePianoGuys Cover)"] = default_7dl_path+"Sound/music/ask_you_out_7dl.ogg"
 
     $ music_list_7dl["Touhou - Bad Apple (Receptor Cover)"] = default_7dl_path+"Sound/music/bad_apple_7dl.ogg"
     $ music_list_7dl["Josh Powell - Beat Symphonic"] = default_7dl_path+"Sound/music/beat_symphonic_7dl.ogg"
