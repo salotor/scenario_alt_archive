@@ -180,7 +180,8 @@ label alt_day6_sl_7dl_start:
             call alt_day6_sl_7dl_hentai
             $ alt_day6_sl_7dl_hentai_done = True
     pause(1)
-    call alt_day6_sl_7dl_sleeptime
+    if not alt_day6_sl_7dl_hentai_done or not (herc or loki):
+        call alt_day6_sl_7dl_sleeptime
     pause(1)
     jump alt_day7_sl_7dl_start
 
