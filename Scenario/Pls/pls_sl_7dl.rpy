@@ -154,7 +154,7 @@ label alt_day6_sl_7dl_start:
     call alt_day6_sl_7dl_evening #Концерт - общий
     pause(1)
     call alt_day6_sl_7dl_catapult
-    if (karma < 0) and not herc:
+    if (karma < 50) and not herc:
         pause(1)
         return
     pause(1)

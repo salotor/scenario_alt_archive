@@ -1081,7 +1081,7 @@ init:
     $ music_7dl["me2ost"] = get_music_7dl("me2ost_7dl.ogg")
     $ music_7dl["melancholy_sun"] = get_music_7dl("melancholy_sun_7dl.ogg")
     $ music_7dl["midday_reverie"] = get_music_7dl("midday_reverie_7dl.ogg")
-    $ music_7dl["misery"] = get_music_7dl("misery_7dl.ogg")
+    $ music_7dl["misery"] = get_music_7dl("misery_2_7dl.ogg")
     $ music_7dl["moment"] = get_music_7dl("moment_7dl.ogg")
     $ music_7dl["more_than_alive"] = get_music_7dl("more_than_alive_7dl.ogg")
     $ music_7dl["morning_dew"] = get_music_7dl("Morning_Dew_7dl.ogg")
