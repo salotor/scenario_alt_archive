@@ -104,7 +104,7 @@ init 1:
     $ music_list_7dl["KPM Music - Bass Renaissaince 1"] = default_7dl_path+"Sound/music/polyhymnia_intro_7dl.ogg"
     $ music_list_7dl["KPM Music - Bass Renaissaince 2"] = default_7dl_path+"Sound/music/polyhymnia_main_7dl.ogg"
     $ music_list_7dl["PPK - Resurrection"] = default_7dl_path+"Sound/music/ppk_7dl.ogg"
-    $ music_list_7dl["Marilyn Manson - Coma White (acoustic cover)"] = default_7dl_path+"Sound/music/prologue_1_7dl.ogg"
+    $ music_list_7dl["Marilyn Manson - Coma White (acoustic cover)"] = default_7dl_path+"Sound/music/prologue_2_7dl.ogg"
     $ music_list_7dl["Arn Andersson & Nights Amore - Farewell Life"] = default_7dl_path+"Sound/music/promise_to_meet_you_7dl.ogg"
 
     $ music_list_7dl["Sergey Eybog – Raindrops"] = default_7dl_path+"sound/sfx/raindrops_radio_7dl.ogg"

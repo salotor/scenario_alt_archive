@@ -15591,7 +15591,7 @@ label alt_day7_sl_fear:
     window hide
     $ set_mode_nvl()
     scene bg bus_stop with dissolve
-    play music music_7dl["prologue_1"] fadein 3
+    play music music_7dl["prologue_2"] fadein 3
     play ambience ambience_cold_wind_loop fadein 3
     "Когда мы выходили из автобуса, я подал девушке руку, которую она с благодарностью приняла."
     "Правда, пронёсшийся мимо мотоциклист заставил нас обоих вздрогнуть от неожиданности."

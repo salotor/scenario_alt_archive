@@ -154,6 +154,9 @@ label alt_day6_sl_7dl_start:
     call alt_day6_sl_7dl_evening #Концерт - общий
     pause(1)
     call alt_day6_sl_7dl_catapult
+    if (karma < 0) and not herc:
+        pause(1)
+        return
     pause(1)
     $ routetag = "sl7dl_dress"
     $ persistent.sprite_time = "sunset"
@@ -165,18 +168,18 @@ label alt_day6_sl_7dl_start:
     $ night_time()
     if persistent.sl_7dl_good_loki or persistent.sl_7dl_good_herc or persistent.sl_7dl_good:
         $ routetag = "sl7dltrue"
-    elif (lp_sl > 20) and (karma > 120):
+    elif (lp_sl >= 19) and (karma > 120):
         $ routetag = "sl7dlgood"
         pause(1)
-    elif lp_sl > 20:
+    elif lp_sl >= 19:
         $ routetag = "sl7dlneu"
     else:
         $ routetag = "sl7dlbad"
-    if lp_sl > 20:
-        if not alt_day6_sl_7dl_forgive:
-            pass
-        call alt_day6_sl_7dl_hentai
-        $ alt_day6_sl_7dl_hentai_done = True
+    if lp_sl >= 19:
+        if alt_day6_sl_7dl_forgive or not loki:
+            call alt_day6_sl_7dl_hentai
+            $ alt_day6_sl_7dl_hentai_done = True
+    pause(1)
     call alt_day6_sl_7dl_sleeptime
     pause(1)
     jump alt_day7_sl_7dl
