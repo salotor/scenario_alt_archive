@@ -16572,7 +16572,7 @@ label alt_day6_sl_7dl_loki_morning:
     mi "А говорила «не заметит, не заметит!», Болтунья Петровна!"
     me "Эй, это моя фразочка!"
     sl "Значит, вы нас заметили?"
-    show bg em1 uniform with dissolve
+    show ba em1 uniform with dissolve
     ba "Да сдались вы мне сто лет. Ломитесь как стадо слонов через джунгли — и ломитесь дальше, мне вы спать не мешаете!"
     ba "А вот ваша вожатая решила, что вас съели волки."
     ba "Теперь, когда я вижу, что никто никого не съел, я дам вам минуту на одевание, а потом начну ловить и отдавать вожатой."
@@ -17132,7 +17132,7 @@ label alt_day6_sl_7dl_morning:
         "Но мы сами справимся. {w}Сами всё найдём."
         "Только сначала прочешем лагерь."
         window hide
-        scene bg ext_court_7dl
+        scene bg ext_tennis_court_7dl
         with dissolve
         "На корте было ожидаемо пусто."
         "Весь инвентарь ещё с позавчерашней проверки был убран под ключ, Саныч где-то бродил или спал, так что и игроков не было."
@@ -17882,7 +17882,7 @@ label alt_day6_sl_7dl_herc_day:
         ka "Привет."
         play music music_7dl["midday_reverie"] fadein 3
         "Помахал этот самый «кто-то» рукой, а приметные рогульки качнулись в такт."
-        show sl normal poineer at right with dissolve
+        show sl normal pioneer at right with dissolve
         sl "Здравствуйте."
         me "Виделись."
         #show ka normal swim with dspr
@@ -17928,7 +17928,7 @@ label alt_day6_sl_7dl_herc_day:
         "Я слишком стар, слишком умен, чтобы среагировать на такую безобидную шпильку."
         "Правда ведь?"
         show sl laugh swim at right
-        show ka laugh swim at left
+        #show ka laugh swim at left
         with dissolve
         "До меня с запозданием дошло, что девушки смеются в унисон, а мои уши пылают."
         me "Ну вас всех."
@@ -18863,7 +18863,7 @@ label alt_day6_sl_7dl_loki_day:
     scene bg int_musclub_day
     with dissolve
     play ambience ambience_music_club_day fadein 4
-    play music music_7dl["Morning_Dew"] fadein 3
+    play music music_7dl["morning_dew"] fadein 3
     "Девочки уже разобрали каждая по гитаре, на пульте у рояля стояла тетрадь с нотами."
     "Все были готовы, все что-то умели."
     "Слабым звеном был один я."
@@ -19726,7 +19726,7 @@ label alt_day6_sl_7dl_day:
         uv "А все остальные — слишком старые."
         uv "И ты тоже."
         me "И я?"
-        show uv upset pioneer with dspr
+        show uv upset with dspr
         uv "А ты вообще молчи… Динамщик! {w}Сказано же было, единственный шанс. Куда ты лезешь?"
         me "Это не я."
         uv "А кто, папа Римский?"
@@ -19758,7 +19758,7 @@ label alt_day6_sl_7dl_day:
         un "Ульяна сказала, что я могу прийти туда, где есть моя семья."
         "И покраснела, добавив едва слышимое:"
         un "И любимый."
-        show un grin with dspr
+        show un grin pioneer with dspr
         uv "Любимый? Ай, какая прелесть. {w}Опять жульничаешь, скотина?"
         "Девушка погрозила мне пальцем."
         uv "И, конечно, никому ни полслова. {w}Вставай, пошли."
@@ -20036,7 +20036,7 @@ label alt_day6_sl_7dl_day:
         window hide
         play sound sfx_open_door_clubs
         pause(1)
-        scene be int_clubs_male_day
+        scene bg int_clubs_male_day
         with dissolve
         play ambience ambience_clubs_inside_day fadein 4
         "В клубах был привычный уже бардак."
@@ -20159,7 +20159,7 @@ label alt_day6_sl_7dl_day:
         with flash2_red
         "Кровь снова бросилась мне в лицо."
         me "А если кто-то увидит?!"
-        show sl laugh pioneer2 woth dspr
+        show sl laugh pioneer2 with dspr
         sl "Не увидит, я дверь на ключ закрыла."
         hide sl with dissolve
         "Сбросив рубашку, Славя покрутилась перед зеркалом, критически оглядывая кружки на груди."
@@ -21663,7 +21663,7 @@ label alt_day6_sl_7dl_evening:
         sl "Верно. У кого-то польская косметика и чешская бижа, а у кого-то судорожные поиски."
         hide sl
         show un normal pioneer at right
-        show mr grin pioneert at left
+        show mt grin pioneer at left
         with dissolve
         mt "О, Тихонова вернулась."
         "Язвительно поздоровалась вожатая."
@@ -21688,7 +21688,7 @@ label alt_day6_sl_7dl_evening:
         "Мы проводили её взглядами."
         me "Как так вышло, что ты не имеешь отношения к стенгазете?"
         hide mt with easeoutright
-        show sl normal pioner with dissolve
+        show sl normal pioneer with dissolve
         "Славя отмахнулась:"
         sl "Между возможностью описывать события и эти самые события творить знаешь что я выбираю?"
         me "Догадываюсь."
@@ -22941,7 +22941,7 @@ label alt_day6_sl_7dl_disco:
         scene anim_square_party
         with dissolve
         if alt_day5_sl_7dl_olroad:
-            play music music_7dl[""] fadein 3
+            #play music music_7dl[""] fadein 3
             "Разумеется, мы опоздали к началу дискотеки, разумеется, народ уже успел растанцеваться и вел себя так, будто весь этот мир принадлежит только ему."
             "Святая юность."
             "А я же…"
@@ -23409,7 +23409,7 @@ label alt_day6_sl_7dl_disco:
             "Не знаю, покраснел ли я, но…"
             "Мы молчали всё время, пока нас могли услышать от умывальников, и только отойдя на порядочное расстояние, синхронно повернулись и…"
             window hide
-            scene ext_admins_night_7dl
+            scene bg ext_admins_night_7dl
             show sl normal pioneer
             with dissolve
             sl "Говоришь, на крышу?"

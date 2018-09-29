@@ -1054,7 +1054,7 @@ init:
     $ music_7dl["fsl_tn"] = get_music_7dl("fsl_tn_7dl.ogg")
     $ music_7dl["fyrsta"] = get_music_7dl("fyrsta_7dl.ogg")
     
-    $ music_7dl["game_of_shadows"] = get_music_7dl("game_of_shadows.ogg")
+    $ music_7dl["game_of_shadows"] = get_music_7dl("game_of_shadows_7dl.ogg")
     $ music_7dl["genki"] = get_music_7dl("genki_7dl.ogg")
     $ music_7dl["gimme_hand"] = get_music_7dl("gimme_hand_7dl.ogg")
     $ music_7dl["guitar_under_the_window"] = get_music_7dl("guitar_under_the_window_7dl.ogg")
