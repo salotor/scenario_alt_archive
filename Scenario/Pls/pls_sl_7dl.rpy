@@ -177,8 +177,8 @@ label alt_day6_sl_7dl_start:
         $ routetag = "sl7dlbad"
     if lp_sl >= 19:
         if alt_day6_sl_7dl_forgive or not loki:
-        call alt_day6_sl_7dl_hentai
-        $ alt_day6_sl_7dl_hentai_done = True
+            call alt_day6_sl_7dl_hentai
+            $ alt_day6_sl_7dl_hentai_done = True
     pause(1)
     call alt_day6_sl_7dl_sleeptime
     pause(1)
