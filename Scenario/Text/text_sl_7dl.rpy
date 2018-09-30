@@ -19317,7 +19317,7 @@ label alt_day6_sl_7dl_day:
         me "Галопом по Европам!"
         "Мы сорвались с места."
         window hide
-        scene ext_square_day
+        scene bg ext_square_day
         with fade
         "Видимо, я в самом деле начинаю формировать вокруг себя реальность, какую заслуживаю."
         "Я всю жизнь ненавидел бегать, всю жизнь хотел быть самостийным, самодостаточным."
@@ -19672,7 +19672,7 @@ label alt_day6_sl_7dl_day:
         "Мы оказались у подъёма, похожего на тот, что обычно соединяют вторичные дороги и междугородние трассы."
         play music music_7dl["pixies_playing"] fadein 3
         "И в самой середине этого подъёма топталась на месте Лена, будто не могла пройти дальше."
-        show un normal far pioneer at fleft with dissolve
+        show un normal pioneer far at fleft with dissolve
         "Судя по позе, шла вперёд, целеустремлённо."
         menu:
             "Лена!":
@@ -19687,7 +19687,7 @@ label alt_day6_sl_7dl_day:
                 dn "Не знаю точно, но ты можешь идти вперёд сколько угодно, но останешься на месте."
         "Судя по количеству следов в пыли, выстроившихся бесконечной дорожкой, Лена шла всё утро."
         "И добилась неплохого такого прогресса!"
-        show smile pioneer at left with dissolve
+        #show smile pioneer at left with dissolve # а тут кто?
         dn "Дальше её скорость ещё больше замедлится."
         "Заметил Даня."
         dn "Как-то я потратил почти целый день и дошёл где-то до вон того куста."
@@ -19796,7 +19796,7 @@ label alt_day6_sl_7dl_day:
         show un shy pioneer with dspr
         "И покраснела, добавив едва слышимое:"
         un "И любимый."
-        show uv grin pioneer with dspr
+        show uv grin with dspr
         uv "Любимый? Ай, какая прелесть. {w}Опять жульничаешь, скотина?"
         "Девушка погрозила мне пальцем."
         uv "И, конечно, никому ни полслова. {w}Вставай, пошли."
@@ -19819,7 +19819,7 @@ label alt_day6_sl_7dl_day:
         "А оказалось, может."
         "Когда ветер начал бить в лицо с такой силой, что заслезились глаза, а окрестные деревья слились в одно серое марево, неведомая препона наконец пропустила нас."
         window hide
-        scene expression Desat("ext_road_day")
+        scene expression Desat("bg ext_road_day")
         with dissolve
         "И мы выскочили на шоссе!"
         "Девушка погрозила пальцем Дане."
@@ -21037,14 +21037,14 @@ label alt_day6_sl_7dl_evening:
         stop music fadeout 3
         me "Ольга Дмитриевна, а мне что делать?"
         "Поинтересовался я, подобравшись к эстраде поближе."
-        show mt normal pioneer with dissolve
+        show mt normal pioneer at left with dissolve
         play music music_7dl["iwantmagic"] fadein 3
         mt "Ты, Семён, сегодня инвалид, поэтому придумай себе сам что-нибудь."
         me "С чего это я инвалид?"
         "Оскорбился я."
         hide mt with dissolve 
         "Вожатая высокомерно задрала нос и не ответила."
-        show mi smile pioneer with dissolve
+        show mi smile pioneer at right with dissolve
         mi "Сенечка, а поможешь мне с пластинками?"
         me "Да, конечно, но…"
         mi "Вот и хорошо! {w}Пошли в клуб, в один заход всё и заберём!"
@@ -22971,7 +22971,7 @@ label alt_day6_sl_7dl_disco:
             "Так что..."
             hide sl with dissolve
     else: 
-        scene ext_aidpost_night
+        scene bg ext_aidpost_night
         with dissolve
         play ambience ambience_camp_center_night fadein 5
         play music music_7dl["silent_angel"] fadein 3

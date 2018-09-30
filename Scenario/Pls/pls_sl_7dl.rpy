@@ -129,7 +129,8 @@ label alt_day6_sl_7dl_start:
     pause(1)
     call alt_day6_sl_7dl_begin
     pause(1)
-    call alt_day6_sl_7dl_breakfast # alt_day5_sl_7dl_herc_sick сюда попадать не должен? он дома спит
+    if not alt_day5_sl_7dl_herc_sick:
+        call alt_day6_sl_7dl_breakfast
     pause(1)
     $ persistent.sprite_time = "day"    # может лучше перекрашивать спрайты в каждой ветке отдельно, в момент, когда они выходят из столовой, сменяется bg и ни одного спрайта на экране нет? Чтобы они не перекрашивались прямо на виду.
     $ day_time()
