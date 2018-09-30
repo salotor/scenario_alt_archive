@@ -146,7 +146,7 @@ label alt_day6_sl_7dl_start:
         $ alt_chapter(6, u"Славя. 7ДЛ. День")
         call alt_day6_sl_7dl_herc_day
     else:
-        call alt_day6_sl_7dl_morning
+        call alt_day6_sl_7dl_morning    # тут до сих пор у Дрища routetag = "sl7dl_sport", надо форму на Славе сменить со спортивной
         pause(1)
         $ alt_chapter(6, u"Славя. 7ДЛ. День")
         call alt_day6_sl_7dl_day
@@ -158,7 +158,7 @@ label alt_day6_sl_7dl_start:
         pause(1)
         return
     pause(1)
-    $ routetag = "sl7dl_dress"
+    $ routetag = "sl7dl_dress"    # если Дрищ и not alt_day5_sl_7dl_olroad - Славя не надевает платье из-за банок, а остаётся в пионерской форме
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(6, u"Славя. 7ДЛ. Дискотека")
