@@ -131,7 +131,7 @@ label alt_day6_sl_7dl_start:
     pause(1)
     call alt_day6_sl_7dl_breakfast # alt_day5_sl_7dl_herc_sick сюда попадать не должен? он дома спит
     pause(1)
-    $ persistent.sprite_time = "day"
+    $ persistent.sprite_time = "day"    # может лучше перекрашивать спрайты в каждой ветке отдельно, в момент, когда они выходят из столовой, сменяется bg и ни одного спрайта на экране нет? Чтобы они не перекрашивались прямо на виду.
     $ day_time()
     if loki:
         $ routetag = "sl7dl_loki"
@@ -146,7 +146,7 @@ label alt_day6_sl_7dl_start:
         $ alt_chapter(6, u"Славя. 7ДЛ. День")
         call alt_day6_sl_7dl_herc_day
     else:
-        call alt_day6_sl_7dl_morning
+        call alt_day6_sl_7dl_morning    # тут до сих пор у Дрища routetag = "sl7dl_sport", надо форму на Славе сменить со спортивной
         pause(1)
         $ alt_chapter(6, u"Славя. 7ДЛ. День")
         call alt_day6_sl_7dl_day
@@ -154,11 +154,11 @@ label alt_day6_sl_7dl_start:
     call alt_day6_sl_7dl_evening #Концерт - общий
     pause(1)
     call alt_day6_sl_7dl_catapult
-    if (karma < 0) and not herc:
+    if (karma < 50) and not herc:
         pause(1)
         return
     pause(1)
-    $ routetag = "sl7dl_dress"
+    $ routetag = "sl7dl_dress"    # если Дрищ и not alt_day5_sl_7dl_olroad - Славя не надевает платье из-за банок, а остаётся в пионерской форме
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(6, u"Славя. 7ДЛ. Дискотека")
