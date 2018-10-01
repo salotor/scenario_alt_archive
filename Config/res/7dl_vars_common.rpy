@@ -124,36 +124,32 @@ init 4: # вызываем все переменные в init (необходи
     call alt_day1_vars
     call alt_day2_vars
     call alt_day3_vars
-    call alt_day4_un_fz_vars
-    call alt_day4_mi_cl_vars
     call alt_day5_sl_wh_vars
-    call alt_day4_un_7dl_vars
-    call alt_day5_un_7dl_vars
-    call alt_day6_un_7dl_vars
-    call alt_day4_mi_dj_vars
-    call alt_day5_mi_dj_vars
-    call alt_day6_mi_dj_vars
-    call alt_day4_dv_7dl_vars
-    call alt_day6_dv_7dl_vars
+    call alt_day5_us_7dl_vars
+    call alt_day4_mi_7dl_vars
+    call alt_day5_mi_7dl_vars
+    call alt_day6_mi_7dl_vars
+    call alt_day5_mt_7dl_vars
+    call alt_day6_mt_7dl_vars
+    call alt_day4_neu_us_vars
+    call alt_day5_neu_us_vars
     call alt_day4_sl_cl_vars
     call alt_day5_sl_cl_vars
     call alt_day6_sl_cl_vars
     call alt_day7_sl_cl_vars
-    call alt_day5_mt_7dl_vars
-    call alt_day6_mt_7dl_vars
-    call alt_day4_mi_7dl_vars
-    call alt_day5_mi_7dl_vars
-    call alt_day6_mi_7dl_vars
-    call alt_day4_neu_us_vars
-    call alt_day5_neu_us_vars
-    call alt_day5_us_7dl_vars
-    call alt_day6_us_7dl_vars
+    call alt_day4_mi_dj_vars
+    call alt_day5_mi_dj_vars
+    call alt_day6_mi_dj_vars
+    call alt_day4_un_7dl_vars
+    call alt_day5_un_7dl_vars
+    call alt_day6_un_7dl_vars
+    call alt_day4_un_fz_vars
+    call alt_day4_mi_cl_vars
+    call alt_day4_dv_7dl_vars
+    call alt_day6_dv_7dl_vars
     call alt_day6_us_px_vars
+    call alt_day6_us_7dl_vars
     call alt_day7_us_px_vars
-    call alt_day4_sl_7dl_vars
-    call alt_day5_sl_7dl_vars
-    call alt_day6_sl_7dl_vars
-    call alt_day7_sl_7dl_vars
 
 label alt_day0_vars: #Переменные нулевого дня
     $ make_names_unknown_7dl()
