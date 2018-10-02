@@ -2,27 +2,6 @@
     $ mods["scenario__sdl_selector"] = u"Селектор 7дл"
     $ mod_tags["scenario__sdl_selector"] = ["length:days","gameplay:vn","protagonist:male"]
     
-    image scenery:
-        get_image("anim/prolog_2.jpg") with Dissolve(.5) 
-        pause 2.6
-        get_image("anim/prolog_1.jpg") with Dissolve(.5) 
-        pause 0.6
-        repeat
-        
-    image scenery2:
-        get_image("anim/prolog_2.jpg") with Dissolve(.4) 
-        pause 2.0
-        get_image("anim/prolog_1.jpg") with Dissolve(.4) 
-        pause 0.4
-        repeat    
-        
-    image scenery3:
-        get_image("anim/prolog_2.jpg") with Dissolve(.25) 
-        pause 1.4
-        get_image("anim/prolog_1.jpg") with Dissolve(.25) 
-        pause 0.25
-        repeat
-        
 label scenario__sdl_selector:
 
     $ init_map_zones_alt1()

@@ -6,7 +6,7 @@ init 1:
     $ music_list_7dl["Josh Powell - Anglegrinder"] = default_7dl_path+"Sound/music/anglegrinder_7dl.ogg"
     $ music_list_7dl["I am waiting for you last summer - Surrender"] = default_7dl_path+"Sound/music/are_you_there_7dl.ogg"
     $ music_list_7dl["Josh Powell - Creeping up"] = default_7dl_path+"Sound/music/areyouabully_7dl.ogg"
-    $ music_list_7dl["Christina Perri - A Thousand years (Piano-Cello ThePianoGuys Cover"] = default_7dl_path+"Sound/music/ask_you_out"
+    $ music_list_7dl["Christina Perri - A Thousand years (Piano-Cello ThePianoGuys Cover)"] = default_7dl_path+"Sound/music/ask_you_out_7dl.ogg"
 
     $ music_list_7dl["Touhou - Bad Apple (Receptor Cover)"] = default_7dl_path+"Sound/music/bad_apple_7dl.ogg"
     $ music_list_7dl["Josh Powell - Beat Symphonic"] = default_7dl_path+"Sound/music/beat_symphonic_7dl.ogg"
@@ -82,7 +82,7 @@ init 1:
     $ music_list_7dl["Jack Wall - Suicide Mission"] = default_7dl_path+"Sound/music/me2ost_7dl.ogg"
     $ music_list_7dl["For The Stars - Meet Me There(Silent Owl Cover)"] = default_7dl_path+"Sound/music/meetmethere_tts_7dl.ogg"
     $ music_list_7dl["Marcus D - Kindred Spirit"] = default_7dl_path+"Sound/music/melancholy_sun_7dl.ogg"
-    $ music_list_7dl[u"Алексей Омельчук - Надежда"] = default_7dl_path+"Sound/music/misery_7dl.ogg"
+    $ music_list_7dl[u"Алексей Омельчук - Надежда"] = default_7dl_path+"Sound/music/misery_2_7dl.ogg"
     $ music_list_7dl[u"Олег Анофриев - Есть Только Миг (OST «Земля Санникова»)"] = default_7dl_path+"Sound/music/moment_7dl.ogg"
     $ music_list_7dl["Tom Day - Our World"] = default_7dl_path+"Sound/music/more_than_alive_7dl.ogg"
     $ music_list_7dl["Mark Morgan - My Chrysalis Higwayman"] = default_7dl_path+"Sound/music/my_chrysalis_highwayman_7dl.ogg"
@@ -104,7 +104,7 @@ init 1:
     $ music_list_7dl["KPM Music - Bass Renaissaince 1"] = default_7dl_path+"Sound/music/polyhymnia_intro_7dl.ogg"
     $ music_list_7dl["KPM Music - Bass Renaissaince 2"] = default_7dl_path+"Sound/music/polyhymnia_main_7dl.ogg"
     $ music_list_7dl["PPK - Resurrection"] = default_7dl_path+"Sound/music/ppk_7dl.ogg"
-    $ music_list_7dl["Marilyn Manson - Coma White (acoustic cover)"] = default_7dl_path+"Sound/music/prologue_1_7dl.ogg"
+    $ music_list_7dl["Marilyn Manson - Coma White (acoustic cover)"] = default_7dl_path+"Sound/music/prologue_2_7dl.ogg"
     $ music_list_7dl["Arn Andersson & Nights Amore - Farewell Life"] = default_7dl_path+"Sound/music/promise_to_meet_you_7dl.ogg"
 
     $ music_list_7dl["Sergey Eybog – Raindrops"] = default_7dl_path+"sound/sfx/raindrops_radio_7dl.ogg"
@@ -219,3 +219,9 @@ init 1:
     $ music_list_7dl["Kevin MacLeod - Niles Blues"] = default_7dl_path+"Sound/music/viola_7dl.ogg"
     $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/sorrow_7dl.ogg"
     $ music_list_7dl["DeadPunk - Smells Like My Grave"] = default_7dl_path+"Sound/music/smlg_7dl.ogg"
+#0.36.a
+    $ music_list_7dl["Julian Kruse - Fallen From The Sky"] = default_7dl_path+"Sound/music/think_again_7dl.ogg"
+    $ music_list_7dl["AOA - Miniskirt"] = default_7dl_path+"Sound/music/you_re_dam_funny_7dl.ogg"
+    $ music_list_7dl["PianoPrinceOfAnime - Always Watching Over You (Violet Evergarden OST)"] = default_7dl_path+"Sound/music/gimme_hand_7dl.ogg"
+    $ music_list_7dl["Tracey Chattaway - Love is Here"] = default_7dl_path+"Sound/music/hear_a_love_7dl.ogg"
+    $ music_list_7dl["Fabrizio Paterlini - Week #12"] = default_7dl_path+"Sound/music/what_if_7dl.ogg"

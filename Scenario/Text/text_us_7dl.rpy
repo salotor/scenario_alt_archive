@@ -350,11 +350,16 @@ label alt_day6_us_7dl_exercises:
     hide mi with dissolve
     if (alt_day4_neu_us_pixies != 0 and loki) or alt_day4_neu_us_pixies == 2:
         show dn sick pioneer at zenterleft
+        show tn shy pioneer at fleft behind dn
+        show al normal pioneer at cright behind dn
         with dissolve
         "Данечка сотоварищи тоже были здесь."
         "Оно и ожидаемо: будущий смотритель маяка должен быть в форме."
         "Хотя по Данечкиному лицу было заметно, что в гробу он такую форму видал."
-        hide ml
+        hide dn
+        hide al
+        hide tn
+        with dissolve
     if alt_day4_neu_us_pixies == 3:
         show dv sad sport
         with dissolve
@@ -5754,7 +5759,10 @@ label alt_day6_us_7dl_disco:
             "Платье, в которое она переоделась, выглядело ещё лучше, чем то, в котором она выступала." 
         "Перехватив мой взгляд, она рассмеялась и качнула головой, подзывая."
     elif alt_day4_neu_us_pixies != 0:
-        show dn grin pioneer with dissolve
+        show dn grin pioneer
+        show al smile pioneer at left
+        show tn laugh pioneer at right
+        with dissolve
         "Звено Ульянкиной гвардии тоже было здесь в полном составе."
         "Данечка в своей неизменной расхристанной форме изображал из себя то ли вертолёт, то ли танцора тектоника."
         "Он что-то прокричал."
@@ -5766,6 +5774,7 @@ label alt_day6_us_7dl_disco:
         "Это она смотрела на меня и, поймав взгляд, улыбнулась и поманила к себе рукой."
     "Я отрицательно покачал головой."
     "Хотя музыка и оказалась несколько приличней ожидаемого, танцевать я отнюдь не спешил."
+    window hide
     scene anim_square_party with dissolve
     "Нет, на дискотеки в своё время мне ходить приходилось, и даже танцевал я там наравне с прочими."
     "Но сейчас что-то совсем не было настроения."
@@ -11765,7 +11774,7 @@ label alt_day7_us_px_escape:
         show un normal pioneer at fleft behind us
         with dissolve
         us "Наберись терпения, скоро увидишь."
-        sl "Да я здесь была не раз уже, здесь нет ничего интересного."
+        sl "Да я слышала про это место не раз, здесь нет ничего интересного."
         show us smile sport with dspr
         us "Это потому что ты очень скучная, ничего интересного."
         dreamgirl "Да, ни подмести тебе, ни бумажки пособирать."
@@ -11778,7 +11787,8 @@ label alt_day7_us_px_escape:
         us "Была?"
         "Ухмыльнулась Ульянка."
         us "Значит, ты в курсе, что там в середине ямы, да?"
-        sl "Да ничего там особенного. Просто заросли и песок кое-где."
+        sl "Хорошо, не прямо здесь. Неподалёку."
+        sl "И ничего там особенного. Просто заросли и песок кое-где."
         sl "Даже если играть там, ничего интересного."
         show us laugh2 sport with dspr
         us "Совсем-совсем?"
@@ -12462,7 +12472,7 @@ label alt_day7_us_px_fairytale:
     "Крикнула она, услышав мои шаги."
     dv "Оставь мокрую обувь у порога и проходи в ванную."
     dv "Умеешь газом пользоваться?"
-    am "А…У-умею."
+    am "А… У-умею."
     dv "Я так и думала. Я сейчас."
     stop ambience fadeout 6
     window hide

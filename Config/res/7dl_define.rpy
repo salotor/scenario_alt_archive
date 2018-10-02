@@ -345,6 +345,28 @@ init:
         get_sprite_7dl("custom/un_3_dress_serious_2_7dl.png")
         0.1
         repeat # Не убирать
+        
+    image scenery:
+        get_image("anim/prolog_2.jpg") with Dissolve(.5) 
+        pause 2.6
+        get_image("anim/prolog_1.jpg") with Dissolve(.5) 
+        pause 0.6
+        repeat
+        
+    image scenery2:
+        get_image("anim/prolog_2.jpg") with Dissolve(.4) 
+        pause 2.0
+        get_image("anim/prolog_1.jpg") with Dissolve(.4) 
+        pause 0.4
+        repeat    
+        
+    image scenery3:
+        get_image("anim/prolog_2.jpg") with Dissolve(.25) 
+        pause 1.4
+        get_image("anim/prolog_1.jpg") with Dissolve(.25) 
+        pause 0.25
+        repeat
+        
 #Заставки
     image bg ext_stand3_night_7dl = im.MatrixColor(get_image_7dl("bg/ext_stand3_7dl.jpg"), im.matrix.tint(0.63, 0.78, 0.82))
     image bg ext_stand3_sunset_7dl = im.MatrixColor(get_image_7dl("bg/ext_stand3_7dl.jpg"), im.matrix.tint(0.94, 0.82, 1.0))
@@ -476,6 +498,8 @@ init:
     image bg int_toilet_day_7dl = get_image_7dl("bg/int_toilet_day_7dl.png")
     image bg int_toilet_night_7dl = get_image_7dl("bg/int_toilet_night_7dl.png")
     image bg int_train_7dl = get_image_7dl("bg/int_train_7dl.png")
+    image bg int_wagon_day_7dl = get_image_7dl("bg/int_wagon_day_7dl.png")
+    image bg int_wagon_sunset_7dl = get_image_7dl("bg/int_wagon_sunset_7dl.png")
     image bg int_wardrobe_7dl = get_image_7dl("bg/int_wardrobe_7dl.jpg")
     image bg int_wardrobe2_7dl = get_image_7dl("bg/int_wardrobe2_7dl.jpg")
     
@@ -600,12 +624,8 @@ init:
     image cg d4_sh_met_7dl = get_image_7dl("cg/d4_sh_met_7dl.jpg")
     
     image cg d4_sl_phone_ring_7dl = get_image_7dl("cg/d4_sl_phone_ring_7dl.png")
-    
     image cg d4_sl_phone_up_7dl = get_image_7dl("cg/d4_sl_phone_up_7dl.png")
-
     image cg d4_sl_lookup_7dl = get_image_7dl("cg/d4_sl_lookup_7dl.png")
-    image cg d4_sl_sleeping_7dl = get_image_7dl("cg/d4_sl_sleeping_7dl.jpg")
-    image cg d4_sl_sleep_7dl = get_image_7dl("cg/d4_sl_sleep_7dl.jpg")
     image cg d4_sl_dnd_7dl = get_image_7dl("cg/d4_sl_dnd_7dl.jpg")
     
     image cg d4_un_7dl = get_image_7dl("cg/d4_un_7dl.jpg")
@@ -621,7 +641,7 @@ init:
     image cg d5_rainy_idle_7dl = get_image_7dl("cg/d5_rainy_idle_7dl.jpg")
     
     image cg d5_sl_bed_7dl = get_image_7dl("cg/d5_sl_bed_7dl.jpg")
-    image cg d5_sl_bench_7dl = get_image_7dl("cg/d5_sl_bench_7dl.jpg")
+    image cg d5_sl_bench_7dl = get_image_7dl("cg/d5_sl_bench_7dl.png")
     image cg d5_sl_hugs_7dl = get_image_7dl("cg/d5_sl_hugs_7dl.jpg")
     image cg d5_sl_kissing_7dl = get_image_7dl("cg/d5_sl_kissing_7dl.png")
     image cg d5_sl_moon_7dl = get_image_7dl("cg/d5_sl_moon_7dl.jpg")
@@ -679,7 +699,15 @@ init:
     image cg d7_dv_ep_red_7dl = get_image_7dl("cg/d7_dv_ep_red_7dl.jpg")
     image cg d7_dv_noir_7dl = get_image_7dl("cg/d7_dv_noir_7dl.jpg")
     image cg d7_dv_epilogue_kissing_7dl = get_image_7dl("cg/d7_dv_epilogue_kissing_7dl.jpg")
-    image cg d7_dv_epilogue_bus_7dl = get_image_7dl("cg/d7_dv_epilogue_bus_7dl.jpg")
+    image cg d7_dv_epilogue_bus_7dl = get_image_7dl("cg/d7_dv_epilogue_bus_7dl.png")
+    #image cg d7_mi_epilogue_bus_7dl = get_image_7dl("cg/d7_mi_epilogue_bus_7dl.png")
+    #image cg d7_sl_epilogue_bus_7dl = get_image_7dl("cg/d7_sl_epilogue_bus_7dl.png")
+    #image cg d7_un_epilogue_bus_7dl = get_image_7dl("cg/d7_un_epilogue_bus_7dl.png")
+    #image cg d7_mt_epilogue_bus_7dl = get_image_7dl("cg/d7_mt_epilogue_bus_7dl.png")
+    #image cg d7_us_epilogue_bus_7dl = get_image_7dl("cg/d7_us_epilogue_bus_7dl.png")
+    #image cg d7_me_epilogue_bus_7dl = get_image_7dl("cg/d7_me_epilogue_bus_7dl.png")
+    #image cg d7_ka_epilogue_bus_7dl = get_image_7dl("cg/d7_ka_epilogue_bus_7dl.png")
+    
     image cg d7_dv_rf_reject_7dl = get_image_7dl("cg/d7_dv_rf_reject_7dl.jpg")
     
     image cg d7_frozen_7dl = get_image_7dl("cg/d7_frozen_7dl.jpg")
@@ -687,7 +715,7 @@ init:
     image cg d7_leaving_no_sl_7dl = get_image_7dl("cg/d7_leaving_no_sl_7dl.jpg")
     image cg d7_leaving_no_sl_sam_7dl = get_image_7dl("cg/d7_leaving_no_sl_sam_7dl.jpg")
     
-    image cg d7_mi_club27_7dl = get_image_7dl("cg/d7_mi_club27_7dl.jpg")
+    image cg d7_mi_club27_7dl = get_image_7dl("cg/d7_mi_club27_7dl.png")
     image cg d7_mi_epilogue_7dl = get_image_7dl("cg/d7_mi_epilogue_7dl.jpg")
     image cg d7_mi_farewell_7dl = get_image_7dl("cg/d7_mi_farewell_7dl.jpg")
     image cg d7_mi_ghost_7dl = get_image_7dl("cg/d7_mi_ghost_7dl.png")
@@ -1030,14 +1058,16 @@ init:
     $ music_7dl["fsl_tn"] = get_music_7dl("fsl_tn_7dl.ogg")
     $ music_7dl["fyrsta"] = get_music_7dl("fyrsta_7dl.ogg")
     
-    $ music_7dl["game_of_shadows"] = get_music_7dl("game_of_shadows.ogg")
+    $ music_7dl["game_of_shadows"] = get_music_7dl("game_of_shadows_7dl.ogg")
     $ music_7dl["genki"] = get_music_7dl("genki_7dl.ogg")
+    $ music_7dl["gimme_hand"] = get_music_7dl("gimme_hand_7dl.ogg")
     $ music_7dl["guitar_under_the_window"] = get_music_7dl("guitar_under_the_window_7dl.ogg")
     $ music_7dl["groovie"] = get_music_7dl("groovie_7dl.ogg")
     $ music_7dl["gonna_be_ok"] = get_music_7dl("gonna_be_ok_7dl.ogg")
     
     $ music_7dl["happy_ending"] = get_music_7dl("happy_ending_7dl.ogg")
     $ music_7dl["hdance_5"] = get_music_7dl("hdance_5_7dl.ogg")
+    $ music_7dl["hear_a_love"] = get_music_7dl("hear_a_love_7dl.ogg")
     $ music_7dl["herc_death"] = get_music_7dl("herc_death_7dl.ogg")
     $ music_7dl["hug_me_already"] = get_music_7dl("hug_me_already_7dl.ogg")
 
@@ -1077,7 +1107,7 @@ init:
     $ music_7dl["me2ost"] = get_music_7dl("me2ost_7dl.ogg")
     $ music_7dl["melancholy_sun"] = get_music_7dl("melancholy_sun_7dl.ogg")
     $ music_7dl["midday_reverie"] = get_music_7dl("midday_reverie_7dl.ogg")
-    $ music_7dl["misery"] = get_music_7dl("misery_7dl.ogg")
+    $ music_7dl["misery"] = get_music_7dl("misery_2_7dl.ogg")
     $ music_7dl["moment"] = get_music_7dl("moment_7dl.ogg")
     $ music_7dl["more_than_alive"] = get_music_7dl("more_than_alive_7dl.ogg")
     $ music_7dl["morning_dew"] = get_music_7dl("Morning_Dew_7dl.ogg")
@@ -1103,7 +1133,7 @@ init:
     $ music_7dl["polyhymnia_intro"] = get_music_7dl("polyhymnia_intro_7dl.ogg")
     $ music_7dl["polyhymnia_main"] = get_music_7dl("polyhymnia_main_7dl.ogg")
     $ music_7dl["ppk"] = get_music_7dl("ppk_7dl.ogg")
-    $ music_7dl["prologue_1"] = get_music_7dl("prologue_1_7dl.ogg")
+    $ music_7dl["prologue_2"] = get_music_7dl("prologue_2_7dl.ogg")
     $ music_7dl["promise_to_meet_you"] = get_music_7dl("promise_to_meet_you_7dl.ogg")
 
     $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg")
@@ -1134,6 +1164,7 @@ init:
     $ music_7dl["shib_stereo"] = get_music_7dl("shib_stereo_7dl.ogg")
     $ music_7dl["slavyas_fantazm"] = get_music_7dl("slavyas_fantazm_7dl.ogg")
     $ music_7dl["sky_feather"] = get_music_7dl("sky_feather_7dl.ogg")
+    $ music_7dl["sammy"] = get_music_7dl("sammy_7dl.ogg")
     $ music_7dl["smlg"] = get_music_7dl("smlg_7dl.ogg")
     $ music_7dl["snatch"] = get_music_7dl("snatch_7dl.ogg")
     $ music_7dl["sneakupon"] = get_music_7dl("sneakupon_7dl.ogg")
@@ -1155,6 +1186,7 @@ init:
     $ music_7dl["tender_song"] = get_music_7dl("tender_song_7dl.ogg")
     $ music_7dl["there_you_are"] = get_music_7dl("loop_there_you_are!_7dl.ogg")
     $ music_7dl["the_way"] = get_music_7dl("the_way_7dl.ogg")
+    $ music_7dl["think_again"] = get_music_7dl("think_again_7dl.ogg")
     $ music_7dl["thousand_little_things"] = get_music_7dl("thousand_little_things_7dl.ogg")
     $ music_7dl["thousand_of_pixies"] = get_music_7dl("thousand_of_pixies_7dl.ogg")
     $ music_7dl["tilltheend"] = get_music_7dl("tilltheend_7dl.ogg")
@@ -1179,6 +1211,7 @@ init:
     $ music_7dl["what_am_i_doing_here"] = get_music_7dl("what_am_i_doing_here_7dl.ogg")
     $ music_7dl["what_cost"] = get_music_7dl("what_cost_7dl.ogg")
     $ music_7dl["whatnow"] = get_music_7dl("whatnow_7dl.ogg")
+    $ music_7dl["what_if"] = get_music_7dl("what_if_7dl.ogg")
     $ music_7dl["wheres_wonderland"] = get_music_7dl("wheres_wonderland_7dl.ogg")
     $ music_7dl["will_you"] = get_music_7dl("will_you_7dl.ogg")
     $ music_7dl["wonderful_faraway"] = get_music_7dl("wonderful_faraway_7dl.ogg")
@@ -1187,6 +1220,7 @@ init:
     $ music_7dl["you_are_human"] = get_music_7dl("you_are_human_7dl.ogg")
     $ music_7dl["you_are_soul"] = get_music_7dl("you_are_soul_7dl.ogg")
     $ music_7dl["you_are_star"] = get_music_7dl("you_are_star_7dl.ogg")
+    $ music_7dl["you_re_dam_funny"] = get_music_7dl("you_re_dam_funny_7dl.ogg")
     $ music_7dl["youareours"] = get_music_7dl("youareours_7dl.ogg")
     $ music_7dl["youre_not_real"] = get_music_7dl("youre_not_real_7dl.ogg")
     $ music_7dl["your_life"] = get_music_7dl("your_life_7dl.ogg")

@@ -2817,14 +2817,14 @@ label alt_day4_dv_7dl_aidpost:
                 "Она мило покраснела, и тут же выпустила меня — чем я и воспользовался, мгновенно перейдя от шеи к ключичной впадине, отпуская пальцы гулять по спине."
                 scene anim prolog_1
                 with dissolve2
-                show dv shy body close at center with dissolve
+                show dv shy swim close at center with dissolve
                 "Через секунду упругая резинка сдалась и упала куда-то вниз, оставляя Алису в одной только юбке."
                 "Сосок на языке набух практически мгновенно, стоило лишь мне взять его в рот. А когда я легонько сомкнул челюсти, она как-то со всхлипом вскрикнула и, прижавшись, задрожала — крупно-крупно."
                 dreamgirl "Поздравляю, чувак. Нет, не так. Чувачище!"
                 th "М?"
                 scene anim prolog_1
                 with dissolve2
-                show dv surprise body close at center with dissolve
+                show dv surprise swim close at center with dissolve
                 dreamgirl "Ты только что завёл девочку до такой кондиции, что она разрядилась."
                 th "Во-первых, такого не бывает. А во-вторых — ты что же, и в постели со мной здесь теперь будешь?"
                 dreamgirl "А что не так? Мы же с тобой одно целое. Привыкай."
@@ -12243,7 +12243,7 @@ label alt_day7_dv_7dl_dv:
     me "Вроде того."
     dv "Ладно, можешь считать, что ко мне ты в гости напросился. {w}Недели хватит? Если не хватит, придётся тебе в гараж перебираться, он пока пустой, но там тепло."
     menu:
-        "Подарить плеер." if lp_dv >= 16:
+        "Подарить плеер" if lp_dv >= 16:
             $ alt_day7_dv_7dl_check = 1
             me "Я не уверен в том, что доеду до финальной точки."
             me "Но я не хочу, чтобы всё это закончилось так глупо."
@@ -13746,7 +13746,7 @@ label alt_day7_dv_7dl_bad_end:
     stop sound_loop
     stop music fadeout 3
     $ renpy.pause(3)
-    play music music_7dl["prologue_1"] fadein 3
+    play music music_7dl["prologue_2"] fadein 3
     show laptop
     show laptop_dv_bad
     if herc:

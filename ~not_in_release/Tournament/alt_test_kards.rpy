@@ -743,18 +743,18 @@ label alt_day2_tournament_tour_1_new:
         menu:
             "Играть самостоятельно":
                 pass
-            "Победа в финале." if persistent.altCardsWon3_new:
+            "Победа в финале" if persistent.altCardsWon3_new:
                 $ alt_day2_detour_1_tour = True                         # Пропускаем 1 тур
                 $ alt_day2_detour_semifinal = True                      # Пропускаем полуфинал
                 $ alt_day2_detour_final = True                          # Пропускаем финал
                 $ alt_day2_tournament_fast_win = True                   # Победа в финале на холяву
                 $ karma += 10
-            "Поражение в финале." if persistent.altCardsWon2_new:
+            "Поражение в финале" if persistent.altCardsWon2_new:
                 $ alt_day2_detour_1_tour = True                         # Пропускаем 1 тур
                 $ alt_day2_detour_semifinal = True                      # Пропускаем полуфинал
                 $ alt_day2_detour_final = True                          # Пропускаем финал
                 $ karma -= 10
-            "Поражение в полуфинале." if persistent.altCardsWon1_new:
+            "Поражение в полуфинале" if persistent.altCardsWon1_new:
                 $ alt_day2_detour_1_tour = True                         # Пропускаем 1 тур
                 $ alt_day2_detour_semifinal = True                      # Пропускаем полуфинал
                 $ karma -= 10
