@@ -19203,7 +19203,7 @@ label alt_day6_sl_7dl_loki_day:
     show sl surprise pioneer with dspr
     sl "Что?"
     me "То, что ты не строишь из себя слабенькую и обездоленную. {w}Видимо, большие семьи как раз и производят самых лучших людей."
-    show smile2 pioneer close with dissolve
+    show sl smile2 pioneer close with dissolve
     "Славя перегнулась через перегородку между раковинами и подставила губы для поцелуя."
     sl "Всё, я всё рассказала. {w}Теперь рассказывай ты, что ты там про бас говорил?"
     me "На обратном пути."
