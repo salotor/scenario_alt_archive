@@ -23984,7 +23984,6 @@ label alt_day6_sl_7dl_hentai:
         "Мы пошли не на пляж, мы пошли к пристани."
         "Туда, где ледяная вода, где куча лодок и сторож в сторожке."
         "Где за дебаркадером есть огороженная площадка, от которой к луне протянулась бесконечная серебряная дорожка."
-        $ persistent.hentai_graphics_7dl = True
         if persistent.hentai_graphics_7dl:
             show sl smile body with dissolve
         else:

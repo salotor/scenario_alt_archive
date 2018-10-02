@@ -933,13 +933,13 @@ screen arts_7dl_8:
             action [Hide("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d5_sl_snark_7dl"), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.19 yalign 0.15 
-    if renpy.seen_image("cg d6_dv_hentai_7dl"):
+    if persistent.hentai_graphics_7dl and renpy.seen_image("cg d6_dv_hentai_7dl"):
         imagebutton:
             auto get_image_7dl("gui/gallery/arts/d6_dv_hentai_7dl_%s.png") xalign 0.5 yalign 0.15 
             action [Hide("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d6_dv_hentai_7dl"), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.5 yalign 0.15 
-    if renpy.seen_image("cg d6_dv_hentai2_7dl"):
+    if persistent.hentai_graphics_7dl and renpy.seen_image("cg d6_dv_hentai2_7dl"):    # renpy не засчитывает это cg увиденным
         imagebutton:
             auto get_image_7dl("gui/gallery/arts/d6_dv_hentai2_7dl_%s.png") xalign 0.8 yalign 0.15 
             action [Hide("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d6_dv_hentai2_7dl"), Jump("show_img_7dl")] 
@@ -1101,13 +1101,13 @@ screen arts_7dl_dv_1:
             action [Hide("arts_7dl_dv_1", transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d7_dv_rf_reject_7dl"), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.2 yalign 0.93
-    if renpy.seen_image("cg d6_dv_hentai_7dl"):
+    if persistent.hentai_graphics_7dl and renpy.seen_image("cg d6_dv_hentai_7dl"):
         imagebutton:
             auto get_image_7dl("gui/gallery/arts/d6_dv_hentai_7dl_%s.png") xalign 0.5 yalign 0.93 
             action [Hide("arts_7dl_dv_1", transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d6_dv_hentai_7dl"), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.5 yalign 0.93
-    if renpy.seen_image("cg d6_dv_hentai2_7dl"):
+    if persistent.hentai_graphics_7dl and renpy.seen_image("cg d6_dv_hentai2_7dl"):
         imagebutton:
             auto get_image_7dl("gui/gallery/arts/d6_dv_hentai2_7dl_%s.png") xalign 0.8 yalign 0.93 
             action [Hide("arts_7dl_dv_1", transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d6_dv_hentai2_7dl"), Jump("show_img_7dl")] 
