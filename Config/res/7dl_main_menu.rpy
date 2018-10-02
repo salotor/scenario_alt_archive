@@ -440,6 +440,7 @@ screen settings_7dl():
             hovered Show("settings_hentai_un_new_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'hentai_un_old_7dl',False)
+    # Тут будет переключатель persistent.hentai_graphics_7dl
     if not persistent.chapter_off_7dl:
         textbutton "Заставки: вкл." xpos 0.65 ypos 0.438:
             style "log_button"

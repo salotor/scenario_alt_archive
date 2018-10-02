@@ -2821,13 +2821,20 @@ label alt_day4_dv_7dl_aidpost:
                 "Она мило покраснела, и тут же выпустила меня — чем я и воспользовался, мгновенно перейдя от шеи к ключичной впадине, отпуская пальцы гулять по спине."
                 scene anim prolog_1
                 with dissolve2
+                if persistent.hentai_graphics_7dl:
+                    show dv shy body close at center with dissolve
+                else:
+                    pass
                 "Через секунду упругая резинка сдалась и упала куда-то вниз, оставляя Алису в одной только юбке."
                 "Сосок на языке набух практически мгновенно, стоило лишь мне взять его в рот. А когда я легонько сомкнул челюсти, она как-то со всхлипом вскрикнула и, прижавшись, задрожала — крупно-крупно."
                 dreamgirl "Поздравляю, чувак. Нет, не так. Чувачище!"
                 th "М?"
                 scene anim prolog_1
                 with dissolve2
-                show dv surprise swim close at center with dissolve
+                if persistent.hentai_graphics_7dl:
+                    show dv surprise body close at center with dissolve
+                else:
+                    show dv surprise swim close at center with dissolve
                 dreamgirl "Ты только что завёл девочку до такой кондиции, что она разрядилась."
                 th "Во-первых, такого не бывает. А во-вторых — ты что же, и в постели со мной здесь теперь будешь?"
                 dreamgirl "А что не так? Мы же с тобой одно целое. Привыкай."
@@ -10874,7 +10881,10 @@ label alt_day6_dv_7dl_love_scene:
     "Она с сомнением покачала бутылку."
     dv "А я бы тяпнула. Хотя, как скажешь. Не хочешь анестезию, сам виноват!"
     window hide
-    scene cg d6_dv_hentai_7dl
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_dv_hentai_7dl
+    else:
+        scene black
     with flash
 
     "Последняя фраза меня заинтересовала сильнее всего, я даже открыл рот, чтобы переспросить, но вместо этого обнаружил себя распластанным на матах, и Алису, усевшуюся мне на бёдра."
@@ -10912,7 +10922,8 @@ label alt_day6_dv_7dl_love_scene:
     dv "Ну… {w}Насмотрелся?"
     me "Нет."
     "Честно ответил я."
-    scene cg d6_dv_hentai_7dl
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_dv_hentai_7dl
     with fade
     "Что она там делала? Губы? Шея? Ключицы… {w}Я чувствовал себя отомщённым всякий раз, когда с девичьих губ срывался вскрик."
     "Потом в никуда улетело платье, оставляя Алису в одних белоснежных трусиках."
@@ -10930,7 +10941,8 @@ label alt_day6_dv_7dl_love_scene:
     "…но с танцпола доносилось эхо чего-то такого космического, и тишина вокруг стояла космическая…"
     "…и сопротивление Алисы было чисто символическим, будто и не было его, а потом взаправду не было…"
     window hide
-    scene expression Desat("cg d6_dv_hentai2_7dl")
+    if persistent.hentai_graphics_7dl:
+        scene expression Desat("cg d6_dv_hentai2_7dl")
     with fade
     "…и пахла она опьяняюще – раскалённым песком, дёгтем и самую чуточку страхом…"
     "…впрочем, последний растворился задолго до того, как мне пригрозили отвернуть голову, если я не вернусь в правильную позу…"
