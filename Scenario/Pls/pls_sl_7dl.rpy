@@ -1,8 +1,8 @@
 ﻿label alt_day4_sl_7dl_start:
     if herc or loki:
-        $ routetag = "sl7dl_sport" #Спортивная форма для бегающих со Славей Герка и Локи
+        $ routetag = "sl7dl_sport"
     else:
-        $ routetag = "sl7dl" #Базис
+        $ routetag = "sl7dl"
     call alt_day4_sl_7dl_vars
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -131,7 +131,7 @@ label alt_day6_sl_7dl_start:
     pause(1)
     if not alt_day5_sl_7dl_herc_sick:
         call alt_day6_sl_7dl_breakfast
-        pause(1)
+    pause(1)
     $ persistent.sprite_time = "day"
     $ day_time()
     if loki:
@@ -147,19 +147,21 @@ label alt_day6_sl_7dl_start:
         $ alt_chapter(6, u"Славя. 7ДЛ. День")
         call alt_day6_sl_7dl_herc_day
     else:
+        $ routetag = "sl7dl"
         call alt_day6_sl_7dl_morning
         pause(1)
         $ alt_chapter(6, u"Славя. 7ДЛ. День")
         call alt_day6_sl_7dl_day
         pause(1)
-    call alt_day6_sl_7dl_evening #Концерт - общий
+    call alt_day6_sl_7dl_evening
     pause(1)
     call alt_day6_sl_7dl_catapult
     if (karma < 50) and not herc:
         pause(1)
         return
     pause(1)
-    $ routetag = "sl7dl_dress"
+    if (herc or loki) or alt_day5_sl_7dl_olroad:
+        $ routetag = "sl7dl_dress"
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(6, u"Славя. 7ДЛ. Дискотека")
