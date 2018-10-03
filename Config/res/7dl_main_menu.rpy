@@ -1,4 +1,17 @@
 init 1 python:
+    presentscript_font = default_7dl_path + "Pics/fonts/presentscript.ttf"
+
+    style.settings_textbutton = Style(style.base_font)
+    style.settings_textbutton.font  = presentscript_font
+    style.settings_textbutton.size = 37
+    style.settings_textbutton.kerning = -1
+    style.settings_textbutton.color = "#2f059a"
+    style.settings_textbutton.hover_color = "#9a0505"
+    style.settings_textbutton.selected_color = "#2f059a"
+    style.settings_textbutton.selected_idle_color = "#2f059a"
+    style.settings_textbutton.selected_hover_color = "#9a0505"
+    style.settings_textbutton.insensitive_color = "#2f059a"
+    
     if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
         header_font = "fonts/corbel.ttf"
         style.settings_link = Style(style.base_font)
@@ -293,80 +306,91 @@ screen menu_7dl():
             
 screen settings_7dl():
     tag menu
-    add get_image_7dl("gui/menu_elem/settings/settings_bg.png") xalign 0.9 yalign 0.7
+    add get_image_7dl("gui/menu_elem/settings/settings_bg.png")
     if not persistent.lp_widget_7dl:
-        imagebutton xalign 0.82 yalign 0.315:
-            auto get_image_7dl("gui/menu_elem/settings/settings_wdgmlp_off_%s.png")
+        textbutton "Виджет (ЛП): выкл." xpos 0.65 ypos 0.255:
+            style "log_button"
+            text_style "settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_lp_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_lp_off_7dl", transition=Dissolve(0.2)), Hide("settings_widget_lp_on_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'lp_widget_7dl', True)
     else:
-        imagebutton xalign 0.82 yalign 0.315:
-            auto get_image_7dl("gui/menu_elem/settings/settings_wdgmlp_on_%s.png")
+        textbutton "Виджет (ЛП): вкл." xpos 0.65 ypos 0.255:
+            style "log_button"
+            text_style "settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_lp_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_lp_on_7dl", transition=Dissolve(0.2)), Hide("settings_widget_lp_off_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'lp_widget_7dl', False)
     if not persistent.music_widget_7dl:
-        imagebutton xalign 0.82 yalign 0.365:
-            auto get_image_7dl("gui/menu_elem/settings/settings_wdgmus_off_%s.png")
+        textbutton "Виджет (музыка): выкл." xpos 0.65 ypos 0.3:
+            style "log_button"
+            text_style "settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_music_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_music_off_7dl", transition=Dissolve(0.2)), Hide("settings_widget_music_on_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'music_widget_7dl', True)
     else:
-        imagebutton xalign 0.82 yalign 0.365:
-            auto get_image_7dl("gui/menu_elem/settings/settings_wdgmus_on_%s.png")
+        textbutton "Виджет (музыка): вкл." xpos 0.65 ypos 0.3:
+            style "log_button"
+            text_style "settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_music_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_music_on_7dl", transition=Dissolve(0.2)), Hide("settings_widget_music_off_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'music_widget_7dl', False)
     if not persistent.uv_dlc_on_7dl:
-        imagebutton xalign 0.82 yalign 0.41:
-            auto get_image_7dl("gui/menu_elem/settings/settings_dlc_off_%s.png")
+        textbutton "Кошкорут: выкл." xpos 0.65 ypos 0.345:
+            style "log_button"
+            text_style "settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_dlc_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_dlc_off_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_on_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'uv_dlc_on_7dl',True)
     else:
-        imagebutton xalign 0.82 yalign 0.41:
-            auto get_image_7dl("gui/menu_elem/settings/settings_dlc_on_%s.png")
+        textbutton "Кошкорут: вкл." xpos 0.65 ypos 0.345:
+            style "log_button"
+            text_style "settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_dlc_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_dlc_on_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_off_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'uv_dlc_on_7dl',False)
     if not persistent.hentai_un_old_7dl:
-        imagebutton xalign 0.82 yalign 0.46:
-            auto get_image_7dl("gui/menu_elem/settings/settings_hent_off_%s.png")
+        textbutton "Х-сцены с Леной: новые" xpos 0.65 ypos 0.39:
+            style "log_button"
+            text_style "settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_hentai_un_old_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'hentai_un_old_7dl',True)
     else:
-        imagebutton xalign 0.82 yalign 0.46:
-            auto get_image_7dl("gui/menu_elem/settings/settings_hent_on_%s.png")
+        textbutton "Х-сцены с Леной: старые" xpos 0.65 ypos 0.39:
+            style "log_button"
+            text_style "settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_hentai_un_new_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'hentai_un_old_7dl',False)
     if not persistent.chapter_off_7dl:
-        imagebutton xpos 0.662 ypos 0.49:
-            auto get_image_7dl("gui/menu_elem/settings/settings_chapter_on_%s.png")
+        textbutton "Заставки: вкл." xpos 0.65 ypos 0.438:
+            style "log_button"
+            text_style "settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_chapter_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_chapter_off_7dl", transition=Dissolve(0.2)), Hide("settings_chapter_on_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'chapter_off_7dl',True)
     else:
-        imagebutton xpos 0.662 ypos 0.49:
-            auto get_image_7dl("gui/menu_elem/settings/settings_chapter_off_%s.png")
+        textbutton "Заставки: выкл." xpos 0.65 ypos 0.438:
+            style "log_button"
+            text_style "settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_chapter_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_chapter_on_7dl", transition=Dissolve(0.2)), Hide("settings_chapter_off_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'chapter_off_7dl',False)
     if (compare_music_widget_7dl != persistent.music_widget_7dl) or (compare_lp_widget_7dl != persistent.lp_widget_7dl):
-        imagebutton xalign 0.81 yalign 0.8:
-            auto get_image_7dl("gui/menu_elem/settings/settings_reboot_%s.png")
+        textbutton "ПЕРЕЗАГРУЗИТЬ" xpos 0.65 ypos 0.255:
+            style "log_button"
+            text_style "settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_reboot_7dl", transition=Dissolve(0.2))
             unhovered Hide("settings_reboot_7dl", transition=Dissolve(0.2))
