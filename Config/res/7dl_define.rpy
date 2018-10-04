@@ -175,6 +175,17 @@ init:
                 "sal_black" with dissolve
                 6.0
         repeat
+        
+    transform running:
+        block:
+            zoom 1.1 xcenter 0.5 ycenter 0.5
+        block:
+            ease 0.2 xoffset 0 yoffset 0
+            ease 0.2 xoffset 25 yoffset 50
+            ease 0.2 xoffset 0 yoffset 0
+            ease 0.2 xoffset -25 yoffset 50
+        repeat
+        
 #Наши транзиты, с блекджеком и разными цветами.
     $ flash_cyan = Fade(1, 0, 1, color="#1fa")
     $ fade_red = Fade(2, 2, 2, color="#f11")

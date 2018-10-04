@@ -212,6 +212,7 @@ label alt_day1_vars: #Переменные первого дня
     $ alt_day1_genda_investigation = False
     $ alt_day1_cofront_sl_dv = 0
     $ alt_day1_headshot = False
+    $ alt_day1_alt_sl_conv = False # из 1-го альт. дня
     return
     
 label alt_day2_vars: #Переменные второго дня
