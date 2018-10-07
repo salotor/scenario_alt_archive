@@ -4938,7 +4938,7 @@ label alt_day2_tournament:
     hide us
     hide dv
     with dissolve
-    if not ('library' in list_voyage_7dl) or not (('music_club' in list_voyage_7dl) or alt_day2_mi_met)
+    if not ('library' in list_voyage_7dl) or not (('music_club' in list_voyage_7dl) or alt_day2_mi_met):
         "Было и несколько незнакомых лиц."
     if not ('library' in list_voyage_7dl):
         show mz normal glasses pioneer at right with dissolve
