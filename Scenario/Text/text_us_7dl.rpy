@@ -10499,7 +10499,7 @@ label alt_day7_us_7dl_lenaforever:
     me "Ленка!"
     "Она побежала ко мне, спотыкаясь, крича что-то бессвязное и размахивая руками, понеслась по весь опор, пока я стоял и вспоминал, как дышать."
     "Чувствуя себя невесомым, четырнадцатилетним, будто во сне ступая по поверхности снизошедшей с неба радуги."
-    show un smile winter close with dspr
+    show un cry_smile winter close with dspr
     with vpunch
     "Пока не налетел вихрь, толкнул в грудь, прижал к себе…"
     "Плечи Лены затряслись."
@@ -10515,10 +10515,10 @@ label alt_day7_us_7dl_lenaforever:
     me "У нас не было ни единого шанса не встретиться."
     un "Да. Ни единого…"
     "Она отстранилась немного, заглянула мне в глаза:"
-    show un normal winter with dspr
+    show un smile3 winter close with dspr
     un "Пойдём, я познакомлю тебя с кем-то очень важным."
     me "Кем-то?"
-    show un smile winter with dspr
+    show un smile2 winter with dspr
     un "С моей сестрой."
     window hide
     $ persistent.us_7dl_un = True
