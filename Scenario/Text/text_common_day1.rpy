@@ -760,7 +760,7 @@ label alt_day1_arrival:
         "«СССР» подмигнула мне, хитро улыбнулась и бросилась за ней."
         hide us with easeoutright
     stop music fadeout 2
-    $ persistent.sprite_time = "day"
+    $ persistent.sprite_time = "day"    # в pls-файле в самого начала дня выставлен sprite_time = "day", тут уже нет необходимости. Только если использовать сейв не с самого начала дня, тут происходит перекраска спрайтов с темных на светлые прямо на виду.
     $ day_time()
     hide un with dissolve
     play ambience ambience_camp_center_day fadein 3
@@ -1707,7 +1707,7 @@ label alt_day1_meeting:
             stop music fadeout 3
             "Решив, что лучше не дразнить гусей, я припустил вслед за Электроником и скоро поравнялся с ним."
             window hide
-            $ persistent.sprite_time = "day"
+            $ persistent.sprite_time = "day"    # все спрайты и так уже дневные, зачем?
             scene bg ext_warehouse_day_7dl
             with dissolve
             play ambience ambience_camp_center_day fadein 2
@@ -2952,7 +2952,7 @@ label alt_day1_slavya_saviour:
     play music music_list["sweet_darkness"] fadein 3
     scene bg ext_camp_entrance_night with dissolve
     play ambience ambience_camp_entrance_night fadein 3
-    $ persistent.sprite_time = "night"
+    $ persistent.sprite_time = "night"    # За один отрывок 6 раз подряд устанавливается одно и то же sprite_time. Зачем?
     show sl_shade with dissolve
     "У ворот уже кто-то стоял."
     me "Кто здесь?!"
@@ -3007,7 +3007,7 @@ label alt_day1_slavya_saviour:
     me "Да, конечно. {w}Спасибо."
     "От такого предложения грех было отказываться."
     window hide
-    $ persistent.sprite_time = "night"
+    $ persistent.sprite_time = "night"    #
     $ night_time()
     scene bg ext_square_night with dissolve
     "Когда мы вышли на площадь, уже окончательно стемнело."
@@ -3037,14 +3037,14 @@ label alt_day1_slavya_saviour:
     "Её дом, который она делила с какой-то неизвестной мне Женей, находился на второй улице, и, чтобы попасть туда, надо было пройти мимо столовой."
     window hide
     stop music fadeout 3
-    $ persistent.sprite_time = "night"
+    $ persistent.sprite_time = "night"    #
     scene bg ext_dining_hall_away_night 
     with dissolve
 
     play sound sfx_alisa_picklock
     "Но на крыльце уже кто-то был и, судя по сосредоточенному пыхтению, пытался забраться внутрь."
     window hide
-    $ persistent.sprite_time = "night"
+    $ persistent.sprite_time = "night"    #
     scene bg ext_dining_hall_near_night 
     with dissolve
 
@@ -3163,7 +3163,7 @@ label alt_day1_slavya_saviour:
     play sound sfx_open_door_clubs_2
     pause(1)
     window hide
-    $ persistent.sprite_time = "night"
+    $ persistent.sprite_time = "night"    #
     scene bg int_extra_house_7dl
     with dissolve
     play music music_list["a_promise_from_distant_days"] fadein 5
@@ -3279,7 +3279,7 @@ label alt_day1_slavya_saviour:
     me "Мне бы хотелось, чтобы это сказала ты… Если не слишком сложно."
     sl "Не сложно."
     window hide
-    $ persistent.sprite_time = "night"
+    $ persistent.sprite_time = "night"    #
     scene bg int_extra_house_7dl
     show sl smile pioneer 
     with dissolve
@@ -3802,14 +3802,14 @@ label alt_day1_sleep:
             "Решив, что стучаться во все дома подряд — затея не из разумных, я направился дальше по своим делам."
             "И на чей-то силуэт с длинными, до земли хвостами, вприпрыжку направляющийся мимо меня куда-то в сторону столовой, напевая какую-то песенку голосом Винни-Пуха, я уже даже внимания не обратил — устал."
             "Только ветром донесло «пум-пурум-пум-пум», и всё стихло."
-    $ persistent.sprite_time = "night"
+    $ persistent.sprite_time = "night"    # опять же - зачем повтор?
     $ night_time()
     scene bg ext_houses_night_7dl with dissolve
     "…"
     "Ночь была тихой, пионеры, похоже, разошлись, и в темноте были видны лишь светлые квадраты окон их корпусов."
     "А сверху на всё это улыбались тёплые звёзды. Я добрёл до знакомого домика и постучался в дверь."
     window hide
-    $ persistent.sprite_time = "night"
+    $ persistent.sprite_time = "night"    #
     scene bg ext_house_of_mt_night
     with dissolve
     pause(3)
