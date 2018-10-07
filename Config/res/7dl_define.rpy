@@ -476,6 +476,7 @@ init:
     image bg int_clubs_dj_night_7dl = get_image_7dl("bg/int_clubs_dj_night_7dl.jpg")
     image bg int_clubs_dj_night_nolight_7dl = get_image_7dl("bg/int_clubs_dj_night_nolight_7dl.jpg")
     image bg int_clubs_male_rain_7dl = get_image_7dl("bg/int_clubs_male_rain_7dl.jpg")
+    image bg int_clubs_male_rain_clean_table_7dl = get_image_7dl("bg/int_clubs_male_rain_clean_table_7dl.jpg")
     image bg int_concert_room_7dl = get_image_7dl("bg/int_concert_room_7dl.jpg")
     image bg int_coupe_day_7dl = get_image_7dl("bg/int_coupe_day_7dl.png")
     image bg int_coupe_night_7dl = get_image_7dl("bg/int_coupe_night_7dl.png")
@@ -692,6 +693,7 @@ init:
     image cg d6_mi_vyluthere_7dl = get_image_7dl("cg/d6_mi_vyluthere_7dl.jpg")
     image cg d6_sl_bag_7dl = get_image_7dl("cg/d6_sl_bag_7dl.png")
     image cg d6_sl_clean_7dl = get_image_7dl("cg/d6_sl_clean_7dl.jpg")
+    image cg d6_sl_clean_dress_7dl = get_image_7dl("cg/d6_sl_clean_dress_7dl.jpg")
     image cg d6_sl_zettai_7dl = get_image_7dl("cg/d6_sl_zettai_7dl.jpg")
     
     image cg d6_un_dissolve_7dl = get_image_7dl("cg/d6_un_dissolve_7dl.jpg")
@@ -1020,6 +1022,7 @@ init:
     $ music_7dl = {}
 
     $ music_7dl["alice_theme"] = get_music_7dl("alice_theme_7dl.ogg")
+    $ music_7dl["alone"] = get_music_7dl("alone_7dl.ogg")
     $ music_7dl["afraid_of_destiny"] = get_music_7dl("afraid_of_destiny_7dl.ogg")
     $ music_7dl["anglegrinder"] = get_music_7dl("anglegrinder_7dl.ogg")
     $ music_7dl["areyouabully"] = get_music_7dl("areyouabully_7dl.ogg")
@@ -1160,6 +1163,7 @@ init:
     $ music_7dl["Sad_Piano"] = get_music_7dl("Sad_Piano_7dl.ogg")
     $ music_7dl["sam_lullaby"] = get_music_7dl("sam_lullaby_7dl.ogg")
     $ music_7dl["sammy"] = get_music_7dl("sammy_7dl.ogg")
+    $ music_7dl["saveme"] = get_music_7dl("saveme_7dl.ogg")
     $ music_7dl["scorpions"] = get_music_7dl("scorpions_7dl.ogg")
     $ music_7dl["Semische"] = get_music_7dl("Semische_7dl.ogg")
     $ music_7dl["seven_summer_days"] = get_music_7dl("seven_summer_days_7dl.ogg")

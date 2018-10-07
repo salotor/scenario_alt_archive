@@ -828,6 +828,7 @@ label alt_day4_sl_7dl_herc_morning:
     th "Кто бы это мог быть?"
     "Задумчиво посмотрел я на телефон, вовсе не спеша снять трубку."
     th "Вряд ли сюда ведут какие-то коммуникации."
+    if (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
     menu:
         "Снять трубку":
             stop sound_loop
@@ -909,6 +910,9 @@ label alt_day4_sl_7dl_herc_morning:
         "Не снимать":
             "Телефон звонил ещё с полминуты, прежде чем смолк, и не было в мире силы, способной заставить меня прикоснуться к запыленной трубке."
             "Понятия не имею, мистика, фантастика или просто датчик движения?"
+    else:
+        "Телефон звонил ещё с полминуты, прежде чем смолк, и не было в мире силы, способной заставить меня прикоснуться к запыленной трубке."
+        "Понятия не имею, мистика, фантастика или просто датчик движения?"
     stop sound_loop
     th "Хотя какие, нафиг, датчики в лагере семидесятых?"
     "Однако складывалось впечатление, будто я одним лишь своим присутствием пробудил дремлющее здесь старое зло, вернул к жизни призраков былого, не то оригинальных, с цепями, не то фантомные обрывки в электронных потрохах."
@@ -7635,7 +7639,7 @@ label alt_day5_sl_7dl_candle:
                 show sl sad pioneer with dspr
                 sl "Не получается."
             "О достижениях":
-                $ lp_sl += 1
+                $ lp_sl -= 1
                 me "Есть что-то чего ты достигла в жизни, и этим по-настоящему бы гордилась?"
                 show sl shy pioneer with dspr
                 sl "Ты такие вопросы задаёшь…"
@@ -7685,7 +7689,6 @@ label alt_day5_sl_7dl_candle:
                 me "По-моему, это того стоило."
                 sl "Я тоже так считаю."
             "О дружбе":
-                $ karma += 10
                 me "Что самое важное в дружбе?"
                 sl "Понимание."
                 "После недолгого раздумья ответила Славя."
@@ -7767,7 +7770,7 @@ label alt_day5_sl_7dl_candle:
         window hide
         play sound sfx_open_door_clubs_2
         pause(1)
-        scene expression Desat('bg int_clubs_male_rain_7dl')
+        scene expression Desat('bg int_clubs_male_rain_clean_table_7dl')
         with dissolve
         $ volume(0.5, "ambience")
         stop music fadeout 3
@@ -7784,7 +7787,7 @@ label alt_day5_sl_7dl_candle:
         mt "Тема сегодняшней свечи — случайный попутчик."
         "Сообщила она, задёргивая шторы."
         window hide
-        scene bg int_clubs_male_rain_7dl
+        scene bg int_clubs_male_rain_clean_table_7dl
         show blackout_exh
         with fade
         $ night_time()
@@ -8244,7 +8247,7 @@ label alt_day5_sl_7dl_candle:
         stop music fadeout 6
         pause(1)
         window hide
-        scene bg int_clubs_male_rain_7dl
+        scene bg int_clubs_male_rain_clean_table_7dl
         show mz smile pioneer
         with dissolve
         $ volume(0.5, "ambience")
@@ -8334,7 +8337,7 @@ label alt_day5_sl_7dl_candle:
         window hide
         play sound sfx_open_door_clubs_2
         pause(1)
-        scene bg int_clubs_male_rain_7dl
+        scene bg int_clubs_male_rain_clean_table_7dl
         with dissolve
         "А вот внутри уже всё было готово к мероприятию!"
         "Стол был пуст и даже, кажется, чист, вокруг него расставили табуретки."
@@ -8401,7 +8404,7 @@ label alt_day5_sl_7dl_candle:
         "Дело её."
         mt "А теперь…"
         window hide
-        scene bg int_clubs_male_rain_7dl
+        scene bg int_clubs_male_rain_clean_table_7dl
         show blackout_exh
         with fade
         $ night_time()
@@ -8425,7 +8428,7 @@ label alt_day5_sl_7dl_candle:
         "Огоньки перемещались в потёмках, слышны были переговоры вполголоса."
         mt "И… Наступает день!"
         window hide
-        scene bg int_clubs_male_rain_7dl
+        scene bg int_clubs_male_rain_clean_table_7dl
         with flash
         $ day_time()
         "Шторы разъехались в разные стороны, вынуждая каждого из нас недовольно жмуриться из-за непривычно яркого света."
@@ -8441,7 +8444,7 @@ label alt_day5_sl_7dl_candle:
         mt "Ну, хорошо. Тогда пусть у нас будет долгая, бесконечная ночь."
         mt "Переход хода!"
         window hide
-        scene bg int_clubs_male_rain_7dl
+        scene bg int_clubs_male_rain_clean_table_7dl
         show blackout_exh
         with fade
         $ night_time()
@@ -9773,6 +9776,7 @@ label alt_day5_sl_7dl_herc_evening:
             show mt smile pioneer with dspr
             mt "Ты до конца дня доживи сначала."
         "Ольга Дмитриевна, совесть есть?":
+            $ alt_day5_sl_7dl_defend = True
             $ karma += 10
             $ lp_sl += 1
             me "Если бы не спали во время уборки, то и не потеряли бы никого."
@@ -11886,7 +11890,7 @@ label alt_day5_sl_7dl_evening:
     show us normal sport with dspr
     us "Ничего. Я просто помогу ей."
     us "Главное, вы не ходите разговаривать и извиняться больше! {w}А то вы всё только хуже делаете!"
-    if karma > 50:
+    if karma > 50 and persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
         menu:
             "С превеликим удовольствием!":
                 us "Вот и хорошо!"
@@ -14814,10 +14818,10 @@ label alt_day6_sl_7dl_breakfast:
             me "Нет, три без подготовки я не побегу. У меня здоровье не позволяет!"
             "Славя скептически осмотрела меня и прямо заявила:"
             sl "Да на тебе пахать можно! Побежали уже, время не терпит!"
-    window hide
+        window hide
     play sound_loop sfx_run_forest
     scene bg ext_backroad_day_7dl at running
-    with dissolve
+        with dissolve
     if alt_day4_sl_7dl_workout:
         "В этот раз всё было проще."
         "Я немного настроился по сравнению с предыдущей пробежкой, так что и чувствовал себя получше."
@@ -18129,7 +18133,7 @@ label alt_day6_sl_7dl_herc_day:
             "И снова здесь же?"
             th "Должно быть, та бесноватая так и не досказала то, что хотела."
             "Я огляделся в поисках знакомых кошачьих ушей."
-            "Только вот я стоял на старом разбитом шоссе, чьи бесконечные рукава убегали под самый горизонт, и никаких девушек вокруг и впомине не было."
+            "Только вот я стоял на старом разбитом шоссе, чьи бесконечные рукава убегали под самый горизонт, и никаких девушек вокруг и в помине не было."
         "Здесь были целые кучи пыли, несмотря на периодически веющий ветерок."
         "Периодически тут и там слышался странный шорох, местность озаряло всполохами разных цветов — сизыми, серыми, жёлтыми, розовыми…"
         "Всё движение было впереди, и я зашагал туда, аккуратно ставя ногу, чтобы не провалиться в какую-нибудь особенно широкую трещину."
@@ -23933,8 +23937,7 @@ label alt_day6_sl_7dl_hentai:
         "И Славя…"
         "Она полезла наверх первая, и я, глядя снизу, понял, что спать мы ляжем совсем не скоро."
     elif loki:
-        scene cg d6_sl_clean_7dl
-        #scene cg d6_sl_clean_dress_7dl
+        scene cg d6_sl_clean_dress_7dl
         with dissolve
         play music music_7dl["my_only_hope"] fadein 3
         "Никому это не надо, никому — всё эти размахивания метлой, на самом деле."
@@ -24581,4 +24584,4 @@ label alt_day6_sl_7dl_sleeptime:
     stop ambience fadeout 6
     with fade
     return
-    
+
