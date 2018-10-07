@@ -10820,7 +10820,7 @@ label alt_day3_post_strip:
     "Под стилизованным изображением работающего завода значилось «Баковский республиканский завод резиновых изделий»."
     "Изделие №2. Гост 4645-49"
     show un shy dress with dspr
-    if alt_day3_un_strip_pool_un < 5:
+    if (persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf) and (alt_day3_un_strip_pool_un < 5):
         "Лена уже привела себя в порядок и заглянула мне через плечо."
     else:
         "Она незаметно подошла и встала рядом, читая через плечо."
