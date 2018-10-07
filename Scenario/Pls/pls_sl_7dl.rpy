@@ -189,26 +189,12 @@ label alt_day6_sl_7dl_start:
     jump alt_day7_sl_7dl_start
 
 label alt_day7_sl_7dl_start:
-
-    window hide
-    show spill_red with dspr
-    $ renpy.pause(2, hard=True)
-    show spill_gray with dspr
-    $ renpy.pause(2, hard=True)
-    show alt_credits timeskip_dev at truecenter with dissolve2
-    $ renpy.pause(4, hard=True)
-    with dissolve2
-    return#Отсечка-заглушка
-    
     call alt_day7_sl_7dl_vars
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(7, u"Славя. 7ДЛ. Утро")
     pause(1)
     call alt_day7_sl_7dl_begin
-    #Герк - дебаркадер
-    #Локи - склад
-    #Дрищ и пролетевшие на хентай — в домиках
     pause(1)
     $ persistent.sprite_time = "day"
     $ day_time()
@@ -234,25 +220,37 @@ label alt_day7_sl_7dl_start:
     pause(1)
     $ persistent.sprite_time = "sunset"
     $ prolog_time()
-    if routetag == "sl7dlgood":
-        $ alt_chapter(7, u"Славя. 7ДЛ. Гуд")
-        if loki:
-            call alt_day7_sl_7dl_loki_good
+    if lp_sl > 20:
+        if herc and alt_day4_sl_7dl_phone:
+            call alt_day7_sl_7dl_mistique
+            pause(1)
+            if routetag == "sl7dlgood":#Все внутренние инструкции на 50 строчек необходимо перенести в од.
+                call alt_day7_sl_7dl_mistique_good
+            else:
+                call alt_day7_sl_7dl_mistique_bad
         elif herc:
-            call alt_day7_sl_7dl_herc_good
+            call alt_day7_sl_7dl_unmistique
+            pause(1)
+            if routetag == "sl7dlgood":
+                call alt_day7_sl_7dl_unmistique_good
+            else:
+                call alt_day7_sl_7dl_unmistique_bad
+        elif loki and alt_day6_sl_7dl_forgive:
+            call alt_day7_sl_7dl_dam
+            pause(1)
+            if routetag == "sl7dlgood":
+                call alt_day7_sl_7dl_dam_good
+            else:
+                call alt_day7_sl_7dl_dam_bad
+        elif loki:
+            call alt_day7_sl_7dl_jerc
+            pause(1)
         else:
-            call alt_day7_sl_7dl_good
-    elif routetag == "sl7dlneu":
-        if loki:
-            $ alt_chapter(7, u"Славя. 7ДЛ. Сволочь")
-            call alt_day7_sl_7dl_loki_excl
-        elif herc:
-            $ alt_chapter(7, u"Славя. 7ДЛ. Реджект")
-            call alt_day7_sl_7dl_herc_excl
-        else:
-            $ alt_chapter(7, u"Славя. 7ДЛ. Борец")
-            call alt_day7_sl_7dl_excl
-    elif routetag == "sl7dlbad":
+            if alt_day5_sl_7dl_olroad:
+                call alt_day7_sl_7dl_loop
+            else:
+                call alt_day7_sl_7dl_loopback
+    else:
         call alt_day7_sl_7dl_bad
     pause(1)
     return
