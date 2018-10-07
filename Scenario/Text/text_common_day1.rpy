@@ -3443,7 +3443,6 @@ label alt_day1_lena:
     with fade
     menu:
         "Неплохая книжка":
-            $ alt_day1_un_nicebook = True
             $ lp_un += 1
             $ karma += 10
             me "У тебя очень хороший вкус."

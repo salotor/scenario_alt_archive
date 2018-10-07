@@ -204,7 +204,6 @@ label alt_day1_vars: #Переменные первого дня
     $ alt_day1_sl_keys_took = 0
     $ alt_day1_un_dated = False
     $ alt_day1_un_ignored = False
-    $ alt_day1_un_nicebook = False
     $ alt_day1_un_stopped = False
     $ alt_day1_us_shotted = False
     $ alt_day1_chase = False
