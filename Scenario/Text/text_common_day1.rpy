@@ -1916,6 +1916,10 @@ label alt_day1_dining_room:
     show mt normal pioneer at left with dissolve
     "Вожатая подвела меня к паре столов, которые, судя по всему, принадлежали моему отряду и, немного подумав, указала пальцем на свободное место рядом с мелкой."
     mt "Здесь и будешь сидеть… "
+    show dv normal pioneer2 at right
+    show mt angry pioneer
+    with ease
+    extend "Двачевская, стоять!" with vpunch
     "Она чуть ли не из воздуха добыла рыжую молнию, несущуюся к законному пюре с котлетой."
     show dv surprise pioneer2 with dspr
     dv "Чего ещё?"
