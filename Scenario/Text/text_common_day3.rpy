@@ -2846,7 +2846,7 @@ label alt_day3_event_estrade1:
             "Она мелькнула быстрой улыбкой."
             show dv normal pioneer2 with dspr
             dv "Садись сюда, стерео лучше всего слышно именно здесь."
-        show dv normal pioneer with move
+        show dv normal pioneer with dissolve
         me "Ты какая-то странная сегодня."
         "Задумчиво произнёс я."
         if ('un_herc' in list_d2_date_7dl):
@@ -10809,7 +10809,7 @@ label alt_day3_card_won:
 
 label alt_day3_post_strip:
     hide un with dissolve
-    if alt_day3_un_strip_pool_un < 4:
+    if (persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf) and (alt_day3_un_strip_pool_un < 4):
         "Я отдал ей одежду, а сам между делом решил заглянуть туда, куда нам советовала заглянуть сестра."
     else:
         "Последовательностью действий, я решил заглянуть туда, куда советовала заглянуть медсестра."
