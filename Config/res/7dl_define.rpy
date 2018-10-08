@@ -487,7 +487,7 @@ init:
     image bg int_editorial_day_7dl = get_image_7dl("bg/int_editorial_day_7dl.jpg")
     image bg int_extra_house_7dl = get_image_7dl("bg/int_extra_house_7dl.jpg")
     image bg int_extra_house_day_7dl = get_image_7dl("bg/int_extra_house_day_7dl.jpg")
-    image bg int_hence_day_7dl = get_image_7dl("bg/int_hence_day_7dl.jpg")
+    image bg int_hence_day_7dl = get_image_7dl("bg/int_hence_day_7dl.jpg") # дублирует int_mine_exit_day_7dl
     image bg int_hence_night_7dl = get_image_7dl("bg/int_hence_night_7dl.jpg")
     image bg int_hospital_hall_day_7dl = get_image_7dl("bg/int_hospital_hall_day_7dl.png")
     image bg int_looney_bin_7dl = get_image_7dl("bg/int_looney_bin_7dl.jpg")

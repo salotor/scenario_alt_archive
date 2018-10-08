@@ -11890,7 +11890,7 @@ label alt_day5_sl_7dl_evening:
     show us normal sport with dspr
     us "Ничего. Я просто помогу ей."
     us "Главное, вы не ходите разговаривать и извиняться больше! {w}А то вы всё только хуже делаете!"
-    if karma > 50 and persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
+    if (karma > 50) and (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
         menu:
             "С превеликим удовольствием!":
                 us "Вот и хорошо!"
