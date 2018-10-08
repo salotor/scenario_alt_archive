@@ -4938,6 +4938,22 @@ label alt_day2_tournament:
     hide us
     hide dv
     with dissolve
+    # Всё же стоит добавить к перечислению и 3 персонажей, с которыми мы могли познакомиться, иначе смотрится странно.
+    #if 'library' in list_voyage_7dl:
+    #    show mz normal glasses pioneer with dissolve
+    #    with dissolve
+    #    "Женя."
+    #    hide mz with dissolve
+    #if 'men_clubs' in list_voyage_7dl or 'library' in list_voyage_7dl:
+    #    show sh normal pioneer with dissolve
+    #    with dissolve
+    #    "Шурик."
+    #    hide sh with dissolve
+    #if ('music_club' in list_voyage_7dl) or alt_day2_mi_met:
+    #    show mi normal pioneer with dissolve
+    #    with dissolve
+    #    "Мику."
+    #    hide mi with dissolve
     if not ('library' in list_voyage_7dl) or not (('music_club' in list_voyage_7dl) or alt_day2_mi_met):
         "Было и несколько незнакомых лиц."
     if not ('library' in list_voyage_7dl):
