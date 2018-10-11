@@ -52,7 +52,7 @@
         $ alt_chapter(1, u"Спасительница")
         call alt_day1_slavya_saviour
         pause(1)
-    $ alt_chapter(1, u"Вечер")
+    $ alt_chapter(1, u"Вечер")    # если шли по (counter_sl_7dl == 2), спрайты не перекрасились на night-версию. И у Лены спрайт будет светлым.
     call alt_day1_lena
     pause(1)
     if alt_day1_un_stopped:
