@@ -406,7 +406,7 @@ label alt_day1_firts_met:
             th "Ясно. {w}Так и запишем — играли в пионеров, даже вожатых завезли."
         "Игнорировать её":
             $ lp_sl -= 1
-            $ karma -= 10    # За игнорирование Слави снимается карма. А за игнор Мику - нет?
+            $ karma -= 10
             show sl surprise pioneer with dspr
             sl "Почему ты молчишь?"
             "Незнакомка выглядела обескураженной моим молчанием."
@@ -760,7 +760,7 @@ label alt_day1_arrival:
         "«СССР» подмигнула мне, хитро улыбнулась и бросилась за ней."
         hide us with easeoutright
     stop music fadeout 2
-    $ persistent.sprite_time = "day"    # в pls-файле в самого начала дня выставлен sprite_time = "day", тут уже нет необходимости. Только если использовать сейв не с самого начала дня, тут происходит перекраска спрайтов с темных на светлые прямо на виду.
+    $ persistent.sprite_time = "day"
     $ day_time()
     hide un with dissolve
     play ambience ambience_camp_center_day fadein 3
@@ -1504,7 +1504,7 @@ label alt_day1_elektron:
     "Надо же."
     "Первое существо мужского пола, которое я сумел встретить."
     show el normal pioneer with dissolve
-    "Встрёпанный парень с россыпью мелких веснушек. Лицо классическое среднее."    # у Эла же и правда на спрайте нет веснушек, только одна родинка. Возникает диссонанс текста и картинки. Если он и правда в 7дл должен быть веснушчатым, стоит спрайт подредактировать. Или проще убрать все упоминания веснушек у Эла.
+    "Встрёпанный парень с россыпью мелких веснушек. Лицо классическое среднее."
     if not d3:
         "Семён у нас уже есть, значит, либо Василий, либо Сергей, угу."
     if not (herc or loki) and (counter_sl_7dl != 1):
@@ -1708,7 +1708,7 @@ label alt_day1_meeting:
             stop music fadeout 3
             "Решив, что лучше не дразнить гусей, я припустил вслед за Электроником и скоро поравнялся с ним."
             window hide
-            $ persistent.sprite_time = "day"    # все спрайты и так уже дневные, зачем?
+            $ persistent.sprite_time = "day"
             scene bg ext_warehouse_day_7dl
             with dissolve
             play ambience ambience_camp_center_day fadein 2
@@ -2020,8 +2020,8 @@ label alt_day1_dining_room:
             me "Ты… Съела…"
             us "Так, стоп."
             "Она мгновенно схватила мою тарелку и пропала."
-        "Смириться":
-            me "А и подавись… Не особо-то и хотелось."    # может хоть текст немного другой для Герка сделать? Ну серьёзно, не похоже на него - вот так смириться с тем, что у него что-то забрали и приуныть. Измениться в лагере он бы ещё не успел - только приехал. Значит перед нами должен быть Герк из пролога ("Меня портит моя вспыльчивость."), а тот так не сделает, пусть даже Улька ему не враг и вообще мелкая - вспылить/потребовать он всё равно может, а вот распустить нюни - нет.
+        "Смириться" if not herc:
+            me "А и подавись… Не особо-то и хотелось."
             us "Ну вот…"
             "Она, казалось, сама расстроилась из-за пропажи."
             us "Ты не огорчайся, сейчас что-нибудь организуем."
@@ -2887,7 +2887,7 @@ label alt_day1_headshot:
     "Как это странно, когда подъездной пятачок у лагеря совмещён с автобусной остановкой."
     window hide
     $ night_time
-    $ persistent.sprite_time = "night"    # вообще, sprite_time вполне себе установлен в pls-файле уже. Только надо переместить строчку $ persistent.sprite_time = "night" перед метками alt_day1_headshot и alt_day1_nocatch
+    $ persistent.sprite_time = "night"
     scene bg ext_no_bus_night with dissolve
     play ambience ambience_camp_entrance_night fadein 3
     th "По опыту знаю, что ради лагерей никто никогда не станет останавливать транспорт, значит, нужен либо частный сектор, либо деревня, либо предприятие."
@@ -2953,7 +2953,6 @@ label alt_day1_slavya_saviour:
     play music music_list["sweet_darkness"] fadein 3
     scene bg ext_camp_entrance_night with dissolve
     play ambience ambience_camp_entrance_night fadein 3
-    $ persistent.sprite_time = "night"    # За один отрывок 6 раз подряд устанавливается одно и то же sprite_time. Зачем?
     show sl_shade with dissolve
     "У ворот уже кто-то стоял."
     me "Кто здесь?!"
@@ -3008,7 +3007,7 @@ label alt_day1_slavya_saviour:
     me "Да, конечно. {w}Спасибо."
     "От такого предложения грех было отказываться."
     window hide
-    $ persistent.sprite_time = "night"    #
+    $ persistent.sprite_time = "night"
     $ night_time()
     scene bg ext_square_night with dissolve
     "Когда мы вышли на площадь, уже окончательно стемнело."
@@ -3039,17 +3038,13 @@ label alt_day1_slavya_saviour:
     "Её дом, который она делила с какой-то неизвестной мне Женей, находился на второй улице, и, чтобы попасть туда, надо было пройти мимо столовой."
     window hide
     stop music fadeout 3
-    $ persistent.sprite_time = "night"    #
     scene bg ext_dining_hall_away_night 
     with dissolve
-
     play sound sfx_alisa_picklock
     "Но на крыльце уже кто-то был и, судя по сосредоточенному пыхтению, пытался забраться внутрь."
     window hide
-    $ persistent.sprite_time = "night"    #
     scene bg ext_dining_hall_near_night 
     with dissolve
-
     if not herc:
         "В любое другое время я бы прошёл, стараясь не привлекать к себе особого внимания."
         "В конце концов, это просто не моё дело."
@@ -3165,7 +3160,6 @@ label alt_day1_slavya_saviour:
     play sound sfx_open_door_clubs_2
     pause(1)
     window hide
-    $ persistent.sprite_time = "night"    #
     scene bg int_extra_house_7dl
     with dissolve
     play music music_list["a_promise_from_distant_days"] fadein 5
@@ -3281,7 +3275,6 @@ label alt_day1_slavya_saviour:
     me "Мне бы хотелось, чтобы это сказала ты… Если не слишком сложно."
     sl "Не сложно."
     window hide
-    $ persistent.sprite_time = "night"    #
     scene bg int_extra_house_7dl
     show sl smile pioneer 
     with dissolve
@@ -3804,14 +3797,12 @@ label alt_day1_sleep:
             "Решив, что стучаться во все дома подряд — затея не из разумных, я направился дальше по своим делам."
             "И на чей-то силуэт с длинными, до земли хвостами, вприпрыжку направляющийся мимо меня куда-то в сторону столовой, напевая какую-то песенку голосом Винни-Пуха, я уже даже внимания не обратил — устал."
             "Только ветром донесло «пум-пурум-пум-пум», и всё стихло."
-    $ persistent.sprite_time = "night"    # опять же - зачем повтор?
     $ night_time()
     scene bg ext_houses_night_7dl with dissolve
     "…"
     "Ночь была тихой, пионеры, похоже, разошлись, и в темноте были видны лишь светлые квадраты окон их корпусов."
     "А сверху на всё это улыбались тёплые звёзды. Я добрёл до знакомого домика и постучался в дверь."
     window hide
-    $ persistent.sprite_time = "night"    #
     scene bg ext_house_of_mt_night
     with dissolve
     pause(3)

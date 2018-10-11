@@ -3991,7 +3991,7 @@ label alt_day2_dinner:
                         "Долгие занятия аутотренингом давали плоды, и я сумел нивелировать звук её голоса до фонового уровня."
                         "Это просто белый шум. Просто белый шум."
                         "Я на берегу моря, тут пахнет рыбой и йодом."
-                    "Вздохнуть":    # Почему за игнор Слави снимают карму, в то время как за аналогичный поступок по отношению к Мику - нет? В отличие от ситуации с воровством штекера, тут Сёма не делает ничего на пользу другим, он тупо игнорит Мику, затыкает уши наушниками и смеётся над ней. Да он даже Славю не так нагло игнорировал! А там карму сняли. А здесь - нет. Не логично же.
+                    "Вздохнуть":
                         "Надеюсь, она не будет тут тараторить?"
                         "В конце концов, должны же и у неё быть лимиты болтливости!"
                         me "Мику."
@@ -4004,6 +4004,7 @@ label alt_day2_dinner:
                         mi "Но ведь молча есть скуууучно!"
                         "Я только глаза закатил."
                         $ lp_mi -= 1
+                        $ karma -= 10
                         "Похоже, она совсем не собиралась затыкаться!"
                         "Я достал наушники и выкрутил громкость на максимум."
                         th "Что у нас сегодня в программе?"
@@ -4938,22 +4939,6 @@ label alt_day2_tournament:
     hide us
     hide dv
     with dissolve
-    # Всё же стоит добавить к перечислению и 3 персонажей, с которыми мы могли познакомиться, иначе смотрится странно.
-    #if 'library' in list_voyage_7dl:
-    #    show mz normal glasses pioneer with dissolve
-    #    with dissolve
-    #    "Женя."
-    #    hide mz with dissolve
-    #if 'men_clubs' in list_voyage_7dl or 'library' in list_voyage_7dl:
-    #    show sh normal pioneer with dissolve
-    #    with dissolve
-    #    "Шурик."
-    #    hide sh with dissolve
-    #if ('music_club' in list_voyage_7dl) or alt_day2_mi_met:
-    #    show mi normal pioneer with dissolve
-    #    with dissolve
-    #    "Мику."
-    #    hide mi with dissolve
     if not ('library' in list_voyage_7dl) or not (('music_club' in list_voyage_7dl) or alt_day2_mi_met):
         "Было и несколько незнакомых лиц."
     if not ('library' in list_voyage_7dl):
