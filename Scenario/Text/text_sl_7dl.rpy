@@ -6396,7 +6396,7 @@ label alt_day5_sl_7dl_begin:
                 th "Неужели пожалела?"
                 "Но нет, в этом была и некая крохотная доля мести."
                 window hide
-                scene bg ext_house_of_sl_day
+                scene expression Rained("bg ext_house_of_sl_day")
                 show rain_overlay
                 with dissolve
                 "Особенно, когда я всё же прибежал к домику и забарабанил в дверь."
@@ -18269,8 +18269,8 @@ label alt_day6_sl_7dl_herc_day:
         sl "Но концерт…"
         me "А разве мы с тобой не нарушители?"
         sl "Нет, Сёмушка."
-        show sl smile swim with dissolve
-        "Голубоглазо улыбнулся мне мой ангел."
+        show sl smile pioneer with dissolve
+        "Улыбнулся мне мой ангел."
         sl "Можно играть в нарушителей, но твоё здоровье…"
         show sl happy2 pioneer with dspr
         "Посмотрев на меня, она часто-часто захлопала ресницами, не то размышляя не разрыдаться ли, не то придумывая способы решения проблемы…"
