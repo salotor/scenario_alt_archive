@@ -2542,6 +2542,7 @@ label alt_day1_meeting2:
             "Клубы - это что?" if not 'clubs' in list_slavya_7dl:
                 $ renpy.block_rollback()
                 $list_slavya_7dl.append('clubs')
+                show sl normal pioneer with dspr
                 sl "Это место, где мы Ульянку спугнули, помнишь?"
                 me "А, там ещё девочка такая красивая была."
                 sl "Красивая, да."
@@ -2609,9 +2610,9 @@ label alt_day1_meeting2:
             "Спортплощадка?"  if not 'sports' in list_slavya_7dl:
                 $ renpy.block_rollback()
                 $list_slavya_7dl.append('sports')
+                show sl normal pioneer with dspr
                 sl "Да, футбольная, волейбольная площадки… ты же там был, помнишь?"
                 me "Был. {w}Но вдруг там что-то интересное происходит?"
-                show sl normal pioneer with dspr
                 sl "Сомневаюсь. {w}Первенство по футболу завершилось на прошлой неделе, а по волейболу будет проходить на пляже послезавтра."
                 me "Опять пляж."
                 sl "Да, опять."
@@ -2750,6 +2751,7 @@ label alt_day1_meeting2:
             "Да что-то никуда не хочется":
                 $ renpy.block_rollback()
                 if len(list_slavya_7dl) == 1:
+                    show sl normal pioneer with dspr
                     sl "Уверен?"
                     "Девушка кинула взгляд на небо — ещё довольно светлое."
                     sl "Ещё немного времени есть, но если ты торопишься…"
@@ -2758,9 +2760,11 @@ label alt_day1_meeting2:
                     sl "Что ж, в таком случае, мне пора бежать. {w}Пока!"
                 else:
                     $ lp_sl -= 1
+                    show sl sad pioneer with dspr
                     sl "Ну, раз не хочется…"
                     sl "Тогда оставляю тебя здесь. Найдёшь отсюда дорогу к вожатой?"
                     me "Найду."
+                    show sl normal pioneer with dspr
                     sl "Тогда до скорого!"
                 $ list_slavya_7dl.append('deny1')
                 $ list_slavya_7dl.append('deny2')
