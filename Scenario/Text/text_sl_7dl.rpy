@@ -6369,7 +6369,7 @@ label alt_day5_sl_7dl_begin:
                 th "Неужели пожалела?"
                 "Но нет, в этом была и некая крохотная доля мести."
                 window hide
-                scene bg ext_house_of_sl_day
+                scene expression Rained("bg ext_house_of_sl_day")
                 show rain_overlay
                 with dissolve
                 "Особенно, когда я всё же прибежал к домику и забарабанил в дверь."
@@ -14818,10 +14818,10 @@ label alt_day6_sl_7dl_breakfast:
             me "Нет, три без подготовки я не побегу. У меня здоровье не позволяет!"
             "Славя скептически осмотрела меня и прямо заявила:"
             sl "Да на тебе пахать можно! Побежали уже, время не терпит!"
-    window hide
+        window hide
     play sound_loop sfx_run_forest
     scene bg ext_backroad_day_7dl at running
-    with dissolve
+        with dissolve
     if alt_day4_sl_7dl_workout:
         "В этот раз всё было проще."
         "Я немного настроился по сравнению с предыдущей пробежкой, так что и чувствовал себя получше."
@@ -18316,7 +18316,7 @@ label alt_day6_sl_7dl_herc_day:
         me "А разве мы с тобой не нарушители?"
         sl "Нет, Сёмушка."
         show sl smile pioneer with dissolve
-        "Голубоглазо улыбнулся мне мой ангел."
+        "Улыбнулся мне мой ангел."
         sl "Можно играть в нарушителей, но твоё здоровье…"
         show sl sad pioneer with dspr
         "Посмотрев на меня, она часто-часто захлопала ресницами, не то размышляя не разрыдаться ли, не то придумывая способы решения проблемы…"
