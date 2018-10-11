@@ -1124,7 +1124,7 @@ init:
     $ music_7dl["misery"] = get_music_7dl("misery_2_7dl.ogg")
     $ music_7dl["moment"] = get_music_7dl("moment_7dl.ogg")
     $ music_7dl["more_than_alive"] = get_music_7dl("more_than_alive_7dl.ogg")
-    $ music_7dl["morning_dew"] = get_music_7dl("Morning_Dew_7dl.ogg")
+    $ music_7dl["morning_dew"] = get_music_7dl("Morning_Dew_7dl.ogg") # звук дождя в начале трека сбивает с толку
     $ music_7dl["my_only_hope"] = get_music_7dl("my_only_hope_7dl.ogg")
     
     $ music_7dl["nap_one"] = get_music_7dl("nap_one_7dl.ogg")
@@ -1150,7 +1150,7 @@ init:
     $ music_7dl["prologue_2"] = get_music_7dl("prologue_2_7dl.ogg")
     $ music_7dl["promise_to_meet_you"] = get_music_7dl("promise_to_meet_you_7dl.ogg")
 
-    $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg")
+    $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg") # в треке звучат голоса, может, стоит обрезать эту часть?
     $ music_7dl["Redemption"] = get_music_7dl("Redemption_7dl.ogg")
     $ music_7dl["red_lights"] = get_music_7dl("red_lights_7dl.ogg")
     $ music_7dl["refuse_to_believe"] = get_music_7dl("refuse_to_believe_7dl.ogg")
