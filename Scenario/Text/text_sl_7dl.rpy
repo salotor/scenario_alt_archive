@@ -54,9 +54,11 @@
                 play ambience ambience_forest_evening fadein 6
                 play music music_7dl["runaway"] fadein 3
                 play sound_loop sfx_run_forest
-                scene expression Dawn("bg ext_backdoor_day_7dl") at running with fade2
+                scene expression Dawn("bg ext_backdoor_day_7dl") at running
+                with fade2
                 play sound sfx_7dl["breath"] fadein 0
-                scene expression Dawn("bg ext_backroad_day_7dl") at running with fade2
+                scene expression Dawn("bg ext_backroad_day_7dl") at running
+                with fade2
                 "Да, если бы моё утро ограничивалось лишь воркованием и поглаживаниями, я был бы самым счастливым человеком на Земле!"
                 "Возможно, даже поверил бы в то, что люди вокруг друг другу братья, всё вокруг замечательно, и вообще!"
                 window hide
@@ -65,7 +67,8 @@
                 dreamgirl "Достать и показать!"
                 window hide
                 play sound sfx_7dl["breath"] fadein 0
-                scene expression Dawn("bg ext_lake_sunset_7dl") at running with fade2
+                scene expression Dawn("bg ext_lake_sunset_7dl") at running
+                with fade2
                 "В общем, нетрудно предугадать, чем всё закончилось, раз уж я здесь потею, правда?"
                 "Я бросил злой взгляд на обтянутые шортами полушария, ритмично двигающиеся в пяти метрах передо мной."
                 "Взглянул совсем без эротического подтекста."
@@ -17570,6 +17573,7 @@ label alt_day6_sl_7dl_morning:
         hide mt with dissolve
         stop music fadeout 3
         "Кивнув ещё раз, вожатая удалилась."
+        window hide
         with fade
         show sl normal pioneer with dissolve
         play music music_7dl["imfine"] fadein 3
@@ -17676,6 +17680,7 @@ label alt_day6_sl_7dl_morning:
         me "Запереться можно, никто не потревожит."
         sl "Напомни мне ещё раз, зачем мы туда идём?"
         me "Увидишь. Проходи."
+        window hide
         with fade
         "И прикрыл калитку за собой, закрыл щеколду."
         #show sl happy pioneer with dissolve
@@ -18328,7 +18333,8 @@ label alt_day6_sl_7dl_herc_day:
         show sl sad pioneer with dspr
         "Посмотрев на меня, она часто-часто захлопала ресницами, не то размышляя не разрыдаться ли, не то придумывая способы решения проблемы…"
         me "Ладно, дождёмся наших на полднике и спросим у Ольги Дмитриевны, что делать."
-        show sl normal pioneer with dspr
+        window hide
+        show sl normal pioneer
         #show ka normal pioneer at left
         with fade
         ka "Боюсь, не дождётесь."
@@ -23665,6 +23671,7 @@ label alt_day6_sl_7dl_disco:
             show us dontlike dress with dspr
             us "Да я немножко, это что, противозаконно? {w}Пусти, говорю!"
             sl "Ну-ка, пошли! {w}Семён, не отставай!"
+            window hide
             hide sl
             hide us
             with fade

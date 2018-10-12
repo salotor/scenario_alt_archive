@@ -39,6 +39,7 @@
         $ alt_chapter(1, u"Экскурсия. Вечер")
         call alt_day1_meeting2
         $ persistent.sprite_time = "night"
+        $ night_time()
     else:
         $ alt_chapter(1, u"Погоня")
         call alt_day1_chase
