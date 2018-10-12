@@ -46,152 +46,78 @@ init 300 python:
                                         if 'body2' in body:
                                             who_num = who + '2'
                                         if body[0:2] == 'ori':
-                                            body_path = bl_images + dist + who + '/' + who + '_' + num + '_' + body[4:len(emo)]
-                                        elif body[0:2] == 'ori':
+                                            body_path = bl_images + dist + who + '/' + who + '_' + num + '_' + body[4:len(body)] + '.png'
+                                        elif body[0:2] == '7dl':
+                                            body_path = alt_images + dist + who + '/' + who + '_' + num + '_' + body[4:len(body)] + '.png'
+                                        if clothes[0:2] == 'ori':
+                                            clothes_path = bl_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:len(clothes)] + '.png'
+                                        elif clothes[0:2] == '7dl':
+                                            clothes_path = alt_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:len(clothes)] + '.png'
+                                        if emo[0:2] == 'ori':
+                                            emo_path = bl_images + dist + who + '/' + who + '_' + num + '_' + emo[4:len(emo)] + '.png'
+                                        elif emo[0:2] == '7dl':
+                                            emo_path = alt_images + dist + who + '/' + who + '_' + num + '_' + emo[4:len(emo)] + '.png'
+                                        if acc[0:2] == 'ori':
+                                            acc_path = bl_images + dist + who + '/' + who + '_' + num + '_' + acc[4:len(acc)] + '.png'
+                                        elif acc[0:2] == '7dl':
+                                            acc_path = alt_images + dist + who + '/' + who + '_' + num + '_' + acc[4:len(acc)] + '.png'
                                         renpy.image(who_num + ' ' + emo[4:len(emo)] + ' ' + clothes[4:len(clothes)] + ' ' + acc[4:len(acc)],
                                                             ConditionSwitch("persistent.sprite_time=='sunset'",
                                                             im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                            (0, 0), body,
-                                                            (0, 0), clothes,
-                                                            (0, 0), emo,
-                                                            (0, 0), acc),
+                                                            (0, 0), body_path,
+                                                            (0, 0), clothes_path,
+                                                            (0, 0), emo_path,
+                                                            (0, 0), acc_path),
                                                             im.matrix.tint(0.94, 0.82, 1.0) ),
     
                                                             "persistent.sprite_time=='night'",
                                                             im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                            (0, 0), body,
-                                                            (0, 0), clothes,
-                                                            (0, 0), emo,
-                                                            (0, 0), acc),
+                                                            (0, 0), body_path,
+                                                            (0, 0), clothes_path,
+                                                            (0, 0), emo_path,
+                                                            (0, 0), acc_path),
                                                             im.matrix.tint(0.63, 0.78, 0.82) ),
     
                                                             True,
                                                             im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                            (0, 0), body,
-                                                            (0, 0), clothes,
-                                                            (0, 0), emo,
-                                                            (0, 0), acc), )
+                                                            (0, 0), body_path,
+                                                            (0, 0), clothes_path,
+                                                            (0, 0), emo_path,
+                                                            (0, 0), acc_path), )
                                                             )
-                                
-                                renpy.image('alt_'+who + ' ' + emo[len(alt_images)+21:-4] + ' ' + clothes[len(alt_images)+25:-4],
-                                                ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                (0, 0), body,
-                                                (0, 0), clothes,
-                                                (0, 0), emo),
-                                                im.matrix.tint(0.94, 0.82, 1.0) ),
-    
-                                                "persistent.sprite_time=='night'",
-                                                im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                (0, 0), body,
-                                                (0, 0), clothes,
-                                                (0, 0), emo),
-                                                im.matrix.tint(0.63, 0.78, 0.82) ),
-    
-                                                True,
-                                                im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                (0, 0), body,
-                                                (0, 0), clothes,
-                                                (0, 0), emo),
-                                                )
-                                                )
-                
-                alt_emo_list = {}
-                alt_body_list = {}
-                alt_clothes_list = {}
-                alt_acc_list = {}
-        
-        elif dist == "far/":
-            for who in alt_spr_list_far.keys():
-                for num in alt_spr_list_far[who]:
-                    for file in renpy.list_files():
-                        if file.startswith(alt_images + dist + who + '/' + num + '/'):
-                            if "body" in file and file not in body:
-                                body.append(file)
-                            
-                            if "clothes" in file and file not in clothes:
-                                clothes.append(file)
-                            
-                            if "emo" in file and file not in emo:
-                                emo.append(file)
-                            
-                            if 'acc/' in file:
-                                acc.append(file)
-                    
-                    alt_body_list[num] = body
-                    alt_clothes_list[num] = clothes
-                    alt_emo_list[num] = emo
-                    
-                    if acc:
-                        alt_acc_list[num] = acc
-                    else:
-                        alt_acc_list[num] = []
-                    
-                    body = []
-                    clothes = []
-                    emo = []
-                    acc = []
-                
-                for num in alt_spr_list[who]:
-                    for body in alt_body_list[num]:
-                        for clothes in alt_clothes_list[num]:
-                            for emo in alt_emo_list[num]:
-                                if alt_acc_list[num]:
-                                    for acc in alt_acc_list[num]:
-                                        renpy.image('alt_'+who + ' ' + emo[len(alt_images)+18:-4] + ' ' + clothes[len(alt_images)+22:-4] + ' ' + acc[len(alt_images)+18:-4] + " far",
-                                                            ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                            im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                            (0, 0), body,
-                                                            (0, 0), clothes,
-                                                            (0, 0), emo,
-                                                            (0, 0), acc),
-                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
-    
-                                                            "persistent.sprite_time=='night'",
-                                                            im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                            (0, 0), body,
-                                                            (0, 0), clothes,
-                                                            (0, 0), emo,
-                                                            (0, 0), acc),
-                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
-    
-                                                            True,
-                                                            im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                            (0, 0), body,
-                                                            (0, 0), clothes,
-                                                            (0, 0), emo,
-                                                            (0, 0), acc), )
-                                                            )
-                                
-                                renpy.image('alt_'+who + ' ' + emo[len(alt_images)+18:-4] + ' ' + clothes[len(alt_images)+22:-4] + " far",
-                                                ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                (0, 0), body,
-                                                (0, 0), clothes,
-                                                (0, 0), emo),
-                                                im.matrix.tint(0.94, 0.82, 1.0) ),
-    
-                                                "persistent.sprite_time=='night'",
-                                                im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                (0, 0), body,
-                                                (0, 0), clothes,
-                                                (0, 0), emo),
-                                                im.matrix.tint(0.63, 0.78, 0.82) ),
-    
-                                                True,
-                                                im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
-                                                (0, 0), body,
-                                                (0, 0), clothes,
-                                                (0, 0), emo),
-                                                )
-                                                )
-                
-                alt_emo_list = {}
-                alt_body_list = {}
-                alt_clothes_list = {}
-                alt_acc_list = {}
-    
-    for f in renpy.list_files():
-        if f.startswith('alt/images/'):
-            for fold in ('bg','cg'):
-                renpy.image('alt_'+fold+' '+f[len('alt/images/')+3:-(len(f.split('.')[-1])+1)],f)
+                                else:
+                                    if 'body2' in body:
+                                        who_num = who + '2'
+                                    if body[0:2] == 'ori':
+                                        body_path = bl_images + dist + who + '/' + who + '_' + num + '_' + body[4:len(body)] + '.png'
+                                    elif body[0:2] == '7dl':
+                                        body_path = alt_images + dist + who + '/' + who + '_' + num + '_' + body[4:len(body)] + '.png'
+                                    if clothes[0:2] == 'ori':
+                                        clothes_path = bl_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:len(clothes)] + '.png'
+                                    elif clothes[0:2] == '7dl':
+                                        clothes_path = alt_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:len(clothes)] + '.png'
+                                    if emo[0:2] == 'ori':
+                                        emo_path = bl_images + dist + who + '/' + who + '_' + num + '_' + emo[4:len(emo)] + '.png'
+                                    elif emo[0:2] == '7dl':
+                                        emo_path = alt_images + dist + who + '/' + who + '_' + num + '_' + emo[4:len(emo)] + '.png'
+                                    renpy.image(who_num + ' ' + emo[4:len(emo)] + ' ' + clothes[4:len(clothes)],
+                                                        ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                        im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
+                                                        (0, 0), body_path,
+                                                        (0, 0), clothes_path,
+                                                        (0, 0), emo_path),
+                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                        "persistent.sprite_time=='night'",
+                                                        im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
+                                                        (0, 0), body_path,
+                                                        (0, 0), clothes_path,
+                                                        (0, 0), emo_path),
+                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                        True,
+                                                        im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
+                                                        (0, 0), body_path,
+                                                        (0, 0), clothes_path,
+                                                        (0, 0), emo_path), )
+                                                        )     
