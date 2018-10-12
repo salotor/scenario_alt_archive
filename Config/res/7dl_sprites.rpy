@@ -1,11 +1,4 @@
-python early:
-    def alt_recalculation_function_x(old_pos):
-        return int(old_pos*1920/1920)
-    
-    def alt_recalculation_function_y(old_pos):
-        return int(old_pos*1080/1080)
-        
-init 300 python:
+init 9999 python:
     alt_images = default_7dl_path + "Pics/sprites/"
     bl_images = "images/sprites/"
     
@@ -70,7 +63,7 @@ init 300 python:
                                             acc_path = alt_images + dist + who + '/' + who + '_' + num + '_' + acc[4:] + '.png'
                                         renpy.image(who_num + ' ' + emo[4:] + ' ' + clothes[4:] + ' ' + acc[4:],
                                                             ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                            im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
+                                                            im.MatrixColor(im.Composite((900, 1080),
                                                             (0, 0), body_path,
                                                             (0, 0), clothes_path,
                                                             (0, 0), emo_path,
@@ -78,7 +71,7 @@ init 300 python:
                                                             im.matrix.tint(0.94, 0.82, 1.0) ),
     
                                                             "persistent.sprite_time=='night'",
-                                                            im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
+                                                            im.MatrixColor(im.Composite((900, 1080),
                                                             (0, 0), body_path,
                                                             (0, 0), clothes_path,
                                                             (0, 0), emo_path,
@@ -86,7 +79,7 @@ init 300 python:
                                                             im.matrix.tint(0.63, 0.78, 0.82) ),
     
                                                             True,
-                                                            im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
+                                                            im.Composite((900, 1080),
                                                             (0, 0), body_path,
                                                             (0, 0), clothes_path,
                                                             (0, 0), emo_path,
@@ -111,21 +104,21 @@ init 300 python:
                                         emo_path = alt_images + dist + who + '/' + who + '_' + num + '_' + emo[4:] + '.png'
                                     renpy.image(who_num + ' ' + emo[4:] + ' ' + clothes[4:],
                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                        im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
+                                                        im.MatrixColor(im.Composite((900, 1080),
                                                         (0, 0), body_path,
                                                         (0, 0), clothes_path,
                                                         (0, 0), emo_path),
                                                         im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                         "persistent.sprite_time=='night'",
-                                                        im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
+                                                        im.MatrixColor(im.Composite((900, 1080),
                                                         (0, 0), body_path,
                                                         (0, 0), clothes_path,
                                                         (0, 0), emo_path),
                                                         im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                         True,
-                                                        im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
+                                                        im.Composite((900, 1080),
                                                         (0, 0), body_path,
                                                         (0, 0), clothes_path,
                                                         (0, 0), emo_path), )
