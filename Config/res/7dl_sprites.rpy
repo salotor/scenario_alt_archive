@@ -7,7 +7,7 @@ python early:
         
 init 300 python:
     alt_images = default_7dl_path + "Pics/sprites/"
-    bl_images = "game/images/sprites/"
+    bl_images = "images/sprites/"
     
     alt_body_list = {
                     'dv':{'1':['ori_body','7dl_body2'],
