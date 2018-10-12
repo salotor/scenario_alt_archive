@@ -13,12 +13,12 @@ label alt_test:
                                                 who_num = who + '2'
                                             elif 'body' in body:
                                                 who_num = who
-                                            renpy.show(who_num + ' ' + emo[4:] + ' ' + clothes[4:] + ' ' + acc[4:])
+                                            renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
                                     else:
                                         if 'body2' in body:
                                             who_num = who + '2'
                                         elif 'body' in body:
                                             who_num = who
-                                        renpy.show(who_num + ' ' + emo[4:] + ' ' + clothes[4:])
+                                        renpy.show(who_num + ' ' + emo + ' ' + clothes)
                                     renpy.pause(1.0)
-                                    renpy.hide(who_num + ' ' + emo[4:] + ' ' + clothes[4:])
+                                    renpy.hide(who_num + ' ' + emo + ' ' + clothes)
