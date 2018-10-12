@@ -2326,6 +2326,7 @@ label alt_day3_event_beach1:
         scene bg ext_beach_day with dissolve
         play ambience ambience_lake_shore_day fadein 3
         "На пляже было немноголюдно, а уже присутствующая здесь Ольга Дмитриевна отсекала все планы о возможном купании."
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     window hide
@@ -4989,6 +4990,7 @@ label alt_day3_nightmare:
     else:
         th "Ничего себе я разоспался! А у меня же ещё куча вещей ждёт!"
     "На ходу растирая помятое лицо и пытаясь хоть немного расправить складки формы, я кинулся в сторону столовой."
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     window hide
@@ -6464,6 +6466,7 @@ label alt_day3_eventAf_admins1:
     if alt_day3_duty:
         dreamgirl "Что делать?"
         dreamgirl "Иди дежурить. Пора на полдник накрывать."
+    stop sound fadeout 3
     stop ambience fadeout 6
     window hide
     with fade

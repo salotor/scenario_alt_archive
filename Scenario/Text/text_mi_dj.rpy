@@ -2334,6 +2334,7 @@ label alt_day4_mi_dj_repetition:
     me "Ты права. Побежал я."
     un "Да. Пока!"
     "Она отбросила прутик в сторону, старательно растёрла портрет на песке и помахав мне, обалдевшему, убежала в сторону столовой."
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     window hide
@@ -4023,7 +4024,7 @@ label alt_day5_mi_dj_cinema:
     "Она показала мне свой и упрятала обратно в нагрудный кармашек."
     me "Записку туда же положи, пожалуйста, а то мало ли…"
     window hide
-    play sound sfx_open_door_2
+    play sound2 sfx_open_door_2
     $ persistent.sprite_time = "day"
     $ day_time()
     scene bg ext_clubs_day
@@ -4685,7 +4686,7 @@ label alt_day5_mi_dj_dinner:
     window hide
     play ambience ambience_camp_center_day
     scene bg ext_musclub_day with dissolve
-    play sound sfx_campus_door_rattle
+    play sound2 sfx_campus_door_rattle
 
     "Было ожидаемо заперто."
     th "Что ж, пошли перехватывать её в столовой."
@@ -7646,7 +7647,7 @@ label alt_day6_mi_dj_radio:
     "И выпорхнула наружу."
     window hide
     stop ambience fadeout 2
-    play sound sfx_open_door_clubs
+    play sound2 sfx_open_door_clubs
     pause(1)
     $ persistent.sprite_time = "day"
     scene bg int_clubs_male_day

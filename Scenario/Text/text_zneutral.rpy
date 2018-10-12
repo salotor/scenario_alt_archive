@@ -5915,7 +5915,7 @@ label alt_day5_neu_arrest:
     tn "Всегда умел."
     stop music fadeout 5
     play sound sfx_7dl["eat_horn"] fadein 1
-    play sound sfx_open_door_clubs_2
+    play sound2 sfx_open_door_clubs_2
     pause(1)
     "Наш разговор прервал сигнал горна, несущийся из раструба прямо над крыльцом, и появившаяся Ольга Дмитриевна."
     scene bg int_clubs_male_day

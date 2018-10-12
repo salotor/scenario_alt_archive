@@ -2936,8 +2936,8 @@ label alt_day4_sl_7dl_loki_morning:
     sl "А вот и горн, поспешим!"
     "Мы прибавили шагу."
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
-    stop sound
     stop ambience fadeout 6
     with fade
     return
@@ -5021,8 +5021,8 @@ label alt_day4_sl_7dl_day:
     mt "Про концерт не забудьте!"
     "Донесло до нас эхом."
     th "Да уж, забудешь тут."
-    stop sound fadeout 3
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     with fade
@@ -5644,6 +5644,7 @@ label alt_day4_sl_7dl_evening:
     me "Пошли, будем ловить сестру на ужине."
     "Славя послушно кивнула и пошла к столовой."
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     with fade
@@ -8662,8 +8663,8 @@ label alt_day5_sl_7dl_candle:
         mt "Дождевики, так и быть, можете пока оставить, после обеда переодеться обязательно!"
         us "Ольдмитривна! Мы это слышали уже, не первый дождь!"
         mt "И послушаете ещё раз! {w}Всё, марш на улицу, марш!"
-    stop sound fadeout 1
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     with fade
@@ -10284,6 +10285,7 @@ label alt_day5_sl_7dl_loki_day:
     play sound sfx_7dl["eat_horn"] fadein 1
     "Над нашими головами разнеслись задорные переливы горна."
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     with fade
@@ -17762,6 +17764,7 @@ label alt_day6_sl_7dl_morning:
         "Достаточно плотную, чтобы скрыть отсутствие белья."
         "Но недостаточно — чтобы спрятать набухшие твёрдые бугорки."
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     with fade

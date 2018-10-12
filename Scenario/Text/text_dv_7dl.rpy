@@ -4589,11 +4589,12 @@ label alt_day5_dv_7dl_candle:
     play sound sfx_7dl["eat_horn"] fadein 1
     "От расправы на месте меня спас только сигнал горна, зовущий пионеров на обед."
     "А может, дело в том, что дождь закончился, и выглянувшее солнце на пару пунктов подняло настроение."
-    play sound sfx_open_door_strong
+    play sound2 sfx_open_door_strong
     pause(1)
     window hide
     scene bg ext_clubs_day with flash
     "Как наскипидаренный, я вылетел прочь из клуба, бросив через плечо нечто невразумительное."
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     window hide
@@ -5090,7 +5091,7 @@ label alt_day5_dv_7dl_dinner:
         "Ненавидел ли я себя в этот момент? Наверное, нет."
         "И так слишком много глупостей сегодня сделал, одной больше, одной меньше…"
         "Мотай не мотай головой, а ощущение бесцельно утекающего времени так просто не стряхнёшь."
-        play sound sfx_hiding_in_bush fadein 0
+        play sound2 sfx_hiding_in_bush fadein 0
         stop ambience
         if alt_day4_dv_7dl_portwine:
             "Мы три дня принюхивались, потом я ещё сутки где-то катался, и теперь мы снова привыкаем один к другому. Кому-то, может, и понравятся тридцать первых поцелуев, каждый из которых приходится отвоёвывать."
@@ -7876,13 +7877,14 @@ label alt_day6_dv_7dl_breakfast:
     play sound sfx_7dl["eat_horn"] fadein 1
     "К счастью, от ещё пяти минут позора меня спас горн. Эти ангельские фанфары, их придумал очень-очень хороший человек, и ему, а не Генде, должен стоять памятник на площади!"
     window hide
-    play sound sfx_open_door_kick
+    play sound2 sfx_open_door_kick
     play ambience ambience_camp_center_day fadein 3
     $ persistent.sprite_time = "day"
     scene bg ext_musclub_day
     with dissolve
     "Я мгновенно собрался и выскочил за дверь! Я бежал так, будто за мной гонятся все черти преисподней, разве что только не вилял, опасаясь стрельбы в затылок."
     "Ни одной лишней секунды оставаться у микрофонной стойки я не собирался!"
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     window hide

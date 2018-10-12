@@ -3540,12 +3540,13 @@ label alt_day5_un_7dl_begin:
     mt "Вот и на завтрак пора."
     "Немного деревянно рассмеялась так и не расслабившаяся вожатая."
     mt "Бегите уже!"
-    play sound sfx_open_door_clubs
+    play sound2 sfx_open_door_clubs
     $ renpy.pause(1)
     window hide
     scene black
     with dissolve
     "А на улице правда был дождь!"
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     window hide

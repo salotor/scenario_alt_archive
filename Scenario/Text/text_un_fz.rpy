@@ -502,6 +502,7 @@ label alt_fz_win:
             "Давай ещё разок":
                 sl "Давай."
                 jump alt_day4_fz_play
+    stop sound fadeout 3
     stop music fadeout 3
     window hide
     with fade
@@ -1036,6 +1037,7 @@ label alt_day4_un_fz_dv:
     me "Да уж не совсем бестолковый."
     cs "Прекрасно. Рада, что это досадное падение не отразилось на твоих умственных способностях, пионер. Увидимся."
     "Она накинула халат и сбежала, оставив меня в одиночестве."
+    stop sound fadeout 3
     stop music fadeout 3
     window hide
     with fade

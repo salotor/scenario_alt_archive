@@ -5313,7 +5313,7 @@ label alt_day5_mi_7dl_firecamp:
     with fade
     "На крылечке уже никого не было — мы определённо были последними."
     window hide
-    play sound sfx_open_door_2
+    play sound2 sfx_open_door_2
     pause(1)
     scene bg int_dining_hall_people_sunset with dissolve
     play ambience ambience_dining_hall_full fadein 0

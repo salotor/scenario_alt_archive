@@ -3332,6 +3332,7 @@ label alt_day2_dubstep2:
             "А склероз надо лечить."
             $ list_d2_convoy_7dl = []
             $ list_d2_convoy_7dl.append('me')
+        stop sound fadeout 3
         stop music
         stop ambience
         window hide

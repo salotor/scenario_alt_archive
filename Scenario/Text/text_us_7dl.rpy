@@ -1552,7 +1552,7 @@ label alt_day6_us_7dl_preps:
     play sound sfx_7dl["eat_horn"] fadein 1
     mi "Нет."
     "С обескураживающей честностью ответила японка."
-    play sound sfx_open_door_clubs_2
+    play sound2 sfx_open_door_clubs_2
     show el normal pioneer at zenterleft
     with dissolve
     el "Народ, давайте в темпе. Не хочется на обед опаздывать."
@@ -1852,6 +1852,7 @@ label alt_day6_us_7dl_warehouse:
     "Короче говоря, сегодня я дежурю после дискотеки."
     "Блин."
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 3
     with fade
