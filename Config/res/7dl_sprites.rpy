@@ -31,6 +31,11 @@ init 300 python:
                           '5':['ori_angry','ori_rage']}
         }
     alt_acc_list = {
+                    'dv':{'1':[],
+                          '2':[],
+                          '3':[],
+                          '4':[],
+                          '5':[]}
         }
     
     alt_dist = ['normal/']
@@ -45,23 +50,25 @@ init 300 python:
                                     for acc in alt_acc_list[who][num]:
                                         if 'body2' in body:
                                             who_num = who + '2'
-                                        if body[0:2] == 'ori':
-                                            body_path = bl_images + dist + who + '/' + who + '_' + num + '_' + body[4:len(body)] + '.png'
-                                        elif body[0:2] == '7dl':
-                                            body_path = alt_images + dist + who + '/' + who + '_' + num + '_' + body[4:len(body)] + '.png'
-                                        if clothes[0:2] == 'ori':
-                                            clothes_path = bl_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:len(clothes)] + '.png'
-                                        elif clothes[0:2] == '7dl':
-                                            clothes_path = alt_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:len(clothes)] + '.png'
-                                        if emo[0:2] == 'ori':
-                                            emo_path = bl_images + dist + who + '/' + who + '_' + num + '_' + emo[4:len(emo)] + '.png'
-                                        elif emo[0:2] == '7dl':
-                                            emo_path = alt_images + dist + who + '/' + who + '_' + num + '_' + emo[4:len(emo)] + '.png'
-                                        if acc[0:2] == 'ori':
-                                            acc_path = bl_images + dist + who + '/' + who + '_' + num + '_' + acc[4:len(acc)] + '.png'
-                                        elif acc[0:2] == '7dl':
-                                            acc_path = alt_images + dist + who + '/' + who + '_' + num + '_' + acc[4:len(acc)] + '.png'
-                                        renpy.image(who_num + ' ' + emo[4:len(emo)] + ' ' + clothes[4:len(clothes)] + ' ' + acc[4:len(acc)],
+                                        elif 'body' in body:
+                                            who_num = who
+                                        if body[:3] == 'ori':
+                                            body_path = bl_images + dist + who + '/' + who + '_' + num + '_' + body[4:] + '.png'
+                                        elif body[:3] == '7dl':
+                                            body_path = alt_images + dist + who + '/' + who + '_' + num + '_' + body[4:] + '.png'
+                                        if clothes[:3] == 'ori':
+                                            clothes_path = bl_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:] + '.png'
+                                        elif clothes[:3] == '7dl':
+                                            clothes_path = alt_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:] + '.png'
+                                        if emo[:3] == 'ori':
+                                            emo_path = bl_images + dist + who + '/' + who + '_' + num + '_' + emo[4:] + '.png'
+                                        elif emo[:3] == '7dl':
+                                            emo_path = alt_images + dist + who + '/' + who + '_' + num + '_' + emo[4:] + '.png'
+                                        if acc[:3] == 'ori':
+                                            acc_path = bl_images + dist + who + '/' + who + '_' + num + '_' + acc[4:] + '.png'
+                                        elif acc[:3] == '7dl':
+                                            acc_path = alt_images + dist + who + '/' + who + '_' + num + '_' + acc[4:] + '.png'
+                                        renpy.image(who_num + ' ' + emo[4:] + ' ' + clothes[4:] + ' ' + acc[4:],
                                                             ConditionSwitch("persistent.sprite_time=='sunset'",
                                                             im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
                                                             (0, 0), body_path,
@@ -88,19 +95,21 @@ init 300 python:
                                 else:
                                     if 'body2' in body:
                                         who_num = who + '2'
-                                    if body[0:2] == 'ori':
-                                        body_path = bl_images + dist + who + '/' + who + '_' + num + '_' + body[4:len(body)] + '.png'
-                                    elif body[0:2] == '7dl':
-                                        body_path = alt_images + dist + who + '/' + who + '_' + num + '_' + body[4:len(body)] + '.png'
-                                    if clothes[0:2] == 'ori':
-                                        clothes_path = bl_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:len(clothes)] + '.png'
-                                    elif clothes[0:2] == '7dl':
-                                        clothes_path = alt_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:len(clothes)] + '.png'
-                                    if emo[0:2] == 'ori':
-                                        emo_path = bl_images + dist + who + '/' + who + '_' + num + '_' + emo[4:len(emo)] + '.png'
-                                    elif emo[0:2] == '7dl':
-                                        emo_path = alt_images + dist + who + '/' + who + '_' + num + '_' + emo[4:len(emo)] + '.png'
-                                    renpy.image(who_num + ' ' + emo[4:len(emo)] + ' ' + clothes[4:len(clothes)],
+                                    elif 'body' in body:
+                                        who_num = who
+                                    if body[:3] == 'ori':
+                                        body_path = bl_images + dist + who + '/' + who + '_' + num + '_' + body[4:] + '.png'
+                                    elif body[:3] == '7dl':
+                                        body_path = alt_images + dist + who + '/' + who + '_' + num + '_' + body[4:] + '.png'
+                                    if clothes[:3] == 'ori':
+                                        clothes_path = bl_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:] + '.png'
+                                    elif clothes[:3] == '7dl':
+                                        clothes_path = alt_images + dist + who + '/' + who + '_' + num + '_' + clothes[4:] + '.png'
+                                    if emo[:3] == 'ori':
+                                        emo_path = bl_images + dist + who + '/' + who + '_' + num + '_' + emo[4:] + '.png'
+                                    elif emo[:3] == '7dl':
+                                        emo_path = alt_images + dist + who + '/' + who + '_' + num + '_' + emo[4:] + '.png'
+                                    renpy.image(who_num + ' ' + emo[4:] + ' ' + clothes[4:],
                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
                                                         im.MatrixColor(im.Composite((alt_recalculation_function_x(900),alt_recalculation_function_y(1080)),
                                                         (0, 0), body_path,
