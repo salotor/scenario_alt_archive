@@ -1,7 +1,10 @@
 init 9999 python:
     alt_images = default_7dl_path + "Pics/sprites/"
-    bl_images = "images/sprites/"
-    
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        bl_images = "images/1080/sprites/"
+    else:
+        bl_images = "images/sprites/"
+        
     alt_body_list = {
                     'dv':{'1':['body','body2'],
                           '2':['body','body2'],
