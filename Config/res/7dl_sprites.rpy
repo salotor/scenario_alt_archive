@@ -11,18 +11,96 @@ init 9999 python:
         bl_images = "images/sprites/"
         
     alt_body_dict = {
+                    'ba':{'1':['body']}
+                    'cs':{'1':['body']}
                     'dv':{'1':['body','body2'],
                           '2':['body','body2'],
                           '3':['body','body2'],
                           '4':['body','body2'],
                           '5':['body','body2']}
+                    'el':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'ln':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'mi':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'mt':{'1':['body','body2'],
+                          '2':['body'],
+                          '3':['body']}
+                    'mz':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'sh':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'sl':{'1':['body','body2'],
+                          '2':['body','body2'],
+                          '3':['body','body2'],
+                          '4':['body','body2']}
+                    'un':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'us':{'1':['body','body2'],
+                          '2':['body','body2'],
+                          '3':['body','body2'],
+                          '4':['body']}
+                    'uv':{'1':['body'],
+                          '2':['body'],
+                          '3':['body'],
+                          '4':['body']}
         }
     alt_clothes_dict = {
-                    'dv':{'1':['pioneer','pioneer2','swim','dress','sport','body'],
-                          '2':['pioneer','pioneer2','swim','sport','body'],
-                          '3':['pioneer','pioneer2','dress','sport','body'],
-                          '4':['pioneer','pioneer2','swim','dress','sport','dress_pregnant','winter','body'],
-                          '5':['pioneer','pioneer2','sport','body']}
+                    'al':{'1':['pioneer','shirt']}
+                    'ba':{'1':[]}
+                    'dn':{'1':[],
+                          '2':[],
+                          '3':[]}
+                    'dv':{'1':[],
+                          '2':[],
+                          '3':[],
+                          '4':[],
+                          '5':[]}
+                    'el':{'1':[],
+                          '2':[],
+                          '3':[]}
+                    'ln':{'1':[],
+                          '2':[],
+                          '3':[]}
+                    'mi':{'1':[],
+                          '2':[],
+                          '3':[]}
+                    'mt':{'1':[],
+                          '2':[],
+                          '3':[]}
+                    'mz':{'1':[],
+                          '2':[],
+                          '3':[]}
+                    'sak':{'1':[],
+                          '2':[],
+                          '3':[]}
+                    'sh':{'1':[],
+                          '2':[],
+                          '3':[]}
+                    'sl':{'1':[],
+                          '2':[],
+                          '3':[],
+                          '4':[],
+                          '5':[]}
+                    'tn':{'1':[]}
+                    'un':{'1':[],
+                          '2':[],
+                          '3':[]}
+                    'us':{'1':[],
+                          '2':[],
+                          '3':[],
+                          '4':[]}
+                    'uv':{'1':[],
+                          '2':[],
+                          '3':[],
+                          '4':[]}
         }
     alt_emo_dict = {
                     'dv':{'1':['cry','scared','shocked','surprise'],
