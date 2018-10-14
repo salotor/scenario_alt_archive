@@ -8,13 +8,15 @@ label alt_test:
                             for clothes in alt_clothes_list[who][pose]:
                                 for emo in alt_emo_list[who][pose]:
                                     for acc in alt_acc_list[who][pose]:
-                                        if acc == 'null':
-                                            acc = ''
                                         if 'body2' in body:
                                             who_num = who + '2'
                                         elif 'body' in body:
                                             who_num = who
-                                        renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc, at_list=[left]) 
-                                        renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' ' + 'close', at_list=[right])
+                                        if clothes == '':
+                                            clothes = 'body'
+                                    renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc, at_list=[left]) 
                                     renpy.pause(1.0)
-                                    renpy.hide(who_num + ' ' + emo + ' ' + clothes)
+                                    renpy.hide(who_num + ' ' + emo + ' ' + clothes + ' ' + acc) 
+                                    renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' ' + 'close', at_list=[right])
+                                    renpy.pause(1.0)
+                                    renpy.hide(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' ' + 'close')

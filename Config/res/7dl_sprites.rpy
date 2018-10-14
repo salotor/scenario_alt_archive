@@ -13,11 +13,11 @@ init 9999 python:
                           '5':['body','body2']}
         }
     alt_clothes_list = {
-                    'dv':{'1':['pioneer','pioneer2','swim','dress','sport'],
-                          '2':['pioneer','pioneer2','swim','sport'],
-                          '3':['pioneer','pioneer2','dress','sport'],
-                          '4':['pioneer','pioneer2','swim','dress','sport','dress_pregnant','winter'],
-                          '5':['pioneer','pioneer2','sport']}
+                    'dv':{'1':['pioneer','pioneer2','swim','dress','sport',''],
+                          '2':['pioneer','pioneer2','swim','sport',''],
+                          '3':['pioneer','pioneer2','dress','sport',''],
+                          '4':['pioneer','pioneer2','swim','dress','sport','dress_pregnant','winter',''],
+                          '5':['pioneer','pioneer2','sport','']}
         }
     alt_emo_list = {
                     'dv':{'1':['cry','scared','shocked','surprise'],
@@ -27,11 +27,11 @@ init 9999 python:
                           '5':['angry','rage']}
         }
     alt_acc_list = {
-                    'dv':{'1':['null'],
-                          '2':['null'],
-                          '3':['null'],
-                          '4':['null'],
-                          '5':['null']}
+                    'dv':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':[''],
+                          '5':['']}
         }
     
     alt_dist = ['normal/']
@@ -43,8 +43,6 @@ init 9999 python:
                         for clothes in alt_clothes_list[who][pose]:
                             for emo in alt_emo_list[who][pose]:
                                 for acc in alt_acc_list[who][pose]:
-                                    if acc == 'null':
-                                        acc = ''
                                     if 'body2' in body:
                                         who_num = who + '2'
                                     elif 'body' in body:
@@ -53,10 +51,14 @@ init 9999 python:
                                         body_path = bl_images + dist + who + '/' + who + '_' + pose + '_' + body + '.png'
                                     elif renpy.loadable(alt_images + dist + who + '/' + who + '_' + pose + '_' + body + '.png'):
                                         body_path = alt_images + dist + who + '/' + who + '_' + pose + '_' + body + '.png'
+                                    else:
+                                        body_path = alt_images + 'custom/null.png'
                                     if renpy.loadable(bl_images + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                         clothes_path = bl_images + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
                                     elif renpy.loadable(alt_images + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                         clothes_path = alt_images + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                    else:
+                                        clothes_path = alt_images + 'custom/null.png'
                                     if renpy.loadable(bl_images + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                         emo_path = bl_images + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
                                     elif renpy.loadable(alt_images + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
@@ -66,7 +68,9 @@ init 9999 python:
                                     elif renpy.loadable(alt_images + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                         acc_path = alt_images + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                     else:
-                                        acc_path = ''
+                                        acc_path = alt_images + 'custom/null.png'
+                                    if clothes == '':
+                                        clothes = 'body'
                                     renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc,
                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
                                                         im.MatrixColor(im.Composite((900, 1080),
