@@ -1,3 +1,8 @@
+transform close_sprites:
+    zoom 1.25
+    yoffset 238
+    xoffset 38
+    
 init 9999 python:
     alt_images = default_7dl_path + "Pics/sprites/"
     if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
@@ -532,16 +537,6 @@ init 9999 python:
                                                                     im.Composite((900, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path), )
-                                                                    )
-                                                        
-transform close_sprites:
-    zoom 1.25
-    yoffset 238
-    xoffset 38
-    
-                                    
-                                    
-                                    
-                                    
+                                                                    )                                                  
                                     
                                     
