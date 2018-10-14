@@ -1365,7 +1365,7 @@ label alt_day1_mod_tan:
     window hide
     play sound sfx_open_cabinet_2
     play music music_list["revenga"] fadein 3
-    scene cg d2_mirror:
+    scene cg d1_me_dahell_7dl:
         pause 0.5 
         linear 0.05 pos (-5,-5) 
         linear 0.05 pos (0,0) 
