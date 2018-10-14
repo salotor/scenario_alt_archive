@@ -54,9 +54,11 @@
                 play ambience ambience_forest_evening fadein 6
                 play music music_7dl["runaway"] fadein 3
                 play sound_loop sfx_run_forest
-                scene expression Dawn("bg ext_backdoor_day_7dl") at running with fade2
+                scene expression Dawn("bg ext_backdoor_day_7dl") at running
+                with fade2
                 play sound sfx_7dl["breath"] fadein 0
-                scene expression Dawn("bg ext_backroad_day_7dl") at running with fade2
+                scene expression Dawn("bg ext_backroad_day_7dl") at running
+                with fade2
                 "Да, если бы моё утро ограничивалось лишь воркованием и поглаживаниями, я был бы самым счастливым человеком на Земле!"
                 "Возможно, даже поверил бы в то, что люди вокруг друг другу братья, всё вокруг замечательно, и вообще!"
                 window hide
@@ -65,7 +67,8 @@
                 dreamgirl "Достать и показать!"
                 window hide
                 play sound sfx_7dl["breath"] fadein 0
-                scene expression Dawn("bg ext_lake_sunset_7dl") at running with fade2
+                scene expression Dawn("bg ext_lake_sunset_7dl") at running
+                with fade2
                 "В общем, нетрудно предугадать, чем всё закончилось, раз уж я здесь потею, правда?"
                 "Я бросил злой взгляд на обтянутые шортами полушария, ритмично двигающиеся в пяти метрах передо мной."
                 "Взглянул совсем без эротического подтекста."
@@ -2933,8 +2936,8 @@ label alt_day4_sl_7dl_loki_morning:
     sl "А вот и горн, поспешим!"
     "Мы прибавили шагу."
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
-    stop sound
     stop ambience fadeout 6
     with fade
     return
@@ -5018,8 +5021,8 @@ label alt_day4_sl_7dl_day:
     mt "Про концерт не забудьте!"
     "Донесло до нас эхом."
     th "Да уж, забудешь тут."
-    stop sound fadeout 3
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     with fade
@@ -5641,6 +5644,7 @@ label alt_day4_sl_7dl_evening:
     me "Пошли, будем ловить сестру на ужине."
     "Славя послушно кивнула и пошла к столовой."
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     with fade
@@ -8659,8 +8663,8 @@ label alt_day5_sl_7dl_candle:
         mt "Дождевики, так и быть, можете пока оставить, после обеда переодеться обязательно!"
         us "Ольдмитривна! Мы это слышали уже, не первый дождь!"
         mt "И послушаете ещё раз! {w}Всё, марш на улицу, марш!"
-    stop sound fadeout 1
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     with fade
@@ -10281,6 +10285,7 @@ label alt_day5_sl_7dl_loki_day:
     play sound sfx_7dl["eat_horn"] fadein 1
     "Над нашими головами разнеслись задорные переливы горна."
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     with fade
@@ -14825,7 +14830,7 @@ label alt_day6_sl_7dl_breakfast:
         window hide
     play sound_loop sfx_run_forest
     scene bg ext_backroad_day_7dl at running
-        with dissolve
+    with dissolve
     if alt_day4_sl_7dl_workout:
         "В этот раз всё было проще."
         "Я немного настроился по сравнению с предыдущей пробежкой, так что и чувствовал себя получше."
@@ -17570,6 +17575,7 @@ label alt_day6_sl_7dl_morning:
         hide mt with dissolve
         stop music fadeout 3
         "Кивнув ещё раз, вожатая удалилась."
+        window hide
         with fade
         show sl normal pioneer with dissolve
         play music music_7dl["imfine"] fadein 3
@@ -17676,6 +17682,7 @@ label alt_day6_sl_7dl_morning:
         me "Запереться можно, никто не потревожит."
         sl "Напомни мне ещё раз, зачем мы туда идём?"
         me "Увидишь. Проходи."
+        window hide
         with fade
         "И прикрыл калитку за собой, закрыл щеколду."
         #show sl happy pioneer with dissolve
@@ -17757,6 +17764,7 @@ label alt_day6_sl_7dl_morning:
         "Достаточно плотную, чтобы скрыть отсутствие белья."
         "Но недостаточно — чтобы спрятать набухшие твёрдые бугорки."
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     with fade
@@ -18328,7 +18336,8 @@ label alt_day6_sl_7dl_herc_day:
         show sl sad pioneer with dspr
         "Посмотрев на меня, она часто-часто захлопала ресницами, не то размышляя не разрыдаться ли, не то придумывая способы решения проблемы…"
         me "Ладно, дождёмся наших на полднике и спросим у Ольги Дмитриевны, что делать."
-        show sl normal pioneer with dspr
+        window hide
+        show sl normal pioneer
         #show ka normal pioneer at left
         with fade
         ka "Боюсь, не дождётесь."
@@ -19791,7 +19800,7 @@ label alt_day6_sl_7dl_day:
         play ambience ambience_forest_evening fadein 5
         dn "Мы пришли!"
         "Крикнул Даня."
-        play music music_7dl["uneven_me"] fadein3 
+        play music music_7dl["uneven_me"] fadein 3 
         me "Пришли?"
         "Мы вышли на вытоптанную площадку, усыпанную хвоей, самым своим краем касающуюся отвесного обрыва, огороженного самодельными перилами."
         "Славя деловито оглядывалась вокруг."
@@ -21783,7 +21792,7 @@ label alt_day6_sl_7dl_evening:
         "Застыла."
         "Снова стала той девочкой, какой я её никогда не знал, а одноклассники боготворили настолько, что не побоялись выступить против системы и вернуть в класс."
         "Было в ней что-то…"
-        "Улыбка?"
+        "Улыбка?"    # улыбка в тексте всё равно осталась, хотя на цг она не улыбается
         "Тепло?"
         "Начала рассыпаться медленно тающими фиолетовыми искрами."
         "Мы не успели пошевелиться или что-то сделать, а от неё остался лишь едва различимый контур."
@@ -23665,6 +23674,7 @@ label alt_day6_sl_7dl_disco:
             show us dontlike dress with dspr
             us "Да я немножко, это что, противозаконно? {w}Пусти, говорю!"
             sl "Ну-ка, пошли! {w}Семён, не отставай!"
+            window hide
             hide sl
             hide us
             with fade

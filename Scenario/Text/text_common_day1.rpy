@@ -1365,7 +1365,7 @@ label alt_day1_mod_tan:
     window hide
     play sound sfx_open_cabinet_2
     play music music_list["revenga"] fadein 3
-    scene cg d2_mirror:
+    scene cg d1_me_dahell_7dl:
         pause 0.5 
         linear 0.05 pos (-5,-5) 
         linear 0.05 pos (0,0) 
@@ -1849,13 +1849,16 @@ label alt_day1_soccer_d1:
         show us laugh sport with dspr
         us "Да ты не слишком похож на клоуна."
     if loki and (counter_sl_7dl != 1):
+        show us dontlike sport with dspr
         us "Лентяй ты, вот ты кто."
         me "Будешь обзываться — оболью ещё раз!"
+        play sound sfx_7dl["eat_horn"] fadein 1
         "Девочка хотела было ответить что-то обидное, но её прервали сигналы бессмертного «бери ложку, бери хлеб»."
     else:
         "Можно подумать, счастье — в количестве подтягиваний."
-        "Поняв, что на «слабо» я не ведусь, девочка хотела было вернуться к игре, но её прервал сигнал горна."
-    play music sfx_7dl["eat_horn"] fadein 3
+        play sound sfx_7dl["eat_horn"] fadein 1
+        "Поняв, что на «слабо» я не ведусь, девочка хотела было вернуться к игре, но её прервал сигнал горна."    # Локи на «слабо» Улька и не пытается развести. Надо убрать под if not loki/добавить для него другой текст.
+    show us grin sport with dspr
     us "Бегом до столовой! Кто последний, тот тухлый помидор!"
     hide us with dissolve
     "Дети загалдели и, толкаясь, бросились по направлению к столовой."
@@ -2542,6 +2545,7 @@ label alt_day1_meeting2:
             "Клубы - это что?" if not 'clubs' in list_slavya_7dl:
                 $ renpy.block_rollback()
                 $list_slavya_7dl.append('clubs')
+                show sl normal pioneer with dspr
                 sl "Это место, где мы Ульянку спугнули, помнишь?"
                 me "А, там ещё девочка такая красивая была."
                 sl "Красивая, да."
@@ -2609,9 +2613,9 @@ label alt_day1_meeting2:
             "Спортплощадка?"  if not 'sports' in list_slavya_7dl:
                 $ renpy.block_rollback()
                 $list_slavya_7dl.append('sports')
+                show sl normal pioneer with dspr
                 sl "Да, футбольная, волейбольная площадки… ты же там был, помнишь?"
                 me "Был. {w}Но вдруг там что-то интересное происходит?"
-                show sl normal pioneer with dspr
                 sl "Сомневаюсь. {w}Первенство по футболу завершилось на прошлой неделе, а по волейболу будет проходить на пляже послезавтра."
                 me "Опять пляж."
                 sl "Да, опять."
@@ -2750,6 +2754,7 @@ label alt_day1_meeting2:
             "Да что-то никуда не хочется":
                 $ renpy.block_rollback()
                 if len(list_slavya_7dl) == 1:
+                    show sl normal pioneer with dspr
                     sl "Уверен?"
                     "Девушка кинула взгляд на небо — ещё довольно светлое."
                     sl "Ещё немного времени есть, но если ты торопишься…"
@@ -2758,9 +2763,11 @@ label alt_day1_meeting2:
                     sl "Что ж, в таком случае, мне пора бежать. {w}Пока!"
                 else:
                     $ lp_sl -= 1
+                    show sl sad pioneer with dspr
                     sl "Ну, раз не хочется…"
                     sl "Тогда оставляю тебя здесь. Найдёшь отсюда дорогу к вожатой?"
                     me "Найду."
+                    show sl normal pioneer with dspr
                     sl "Тогда до скорого!"
                 $ list_slavya_7dl.append('deny1')
                 $ list_slavya_7dl.append('deny2')

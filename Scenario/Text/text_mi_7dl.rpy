@@ -2991,9 +2991,10 @@ label alt_day5_mi_7dl_rain_2gether:
     me "Да."
     "Согласился я."
     me "Неотразимо убедительна."
-    play sound sfx_7dl["eat_horn"]
+    play sound sfx_7dl["eat_horn"] fadein 1
     pause(3)
     stop music fadeout 3
+    stop sound fadeout 3
     stop ambience fadeout 6
     window hide
     with fade
@@ -3229,9 +3230,10 @@ label alt_day5_mi_7dl_morning:
             "Я, захваченный совместным стыдом, сочувствием, страшился подняться или хотя бы окликнуть девушку."
             "Странно."
             "На часах было порядка полудня, когда всё произошло, а спустя ещё полчаса я понял, что она не вернётся."
-    play sound sfx_7dl["eat_horn"]
+    play sound sfx_7dl["eat_horn"] fadein 1
     pause(3)
     stop music fadeout 3
+    stop sound fadeout 3
     stop ambience fadeout 6
     window hide
     with fade
@@ -5297,20 +5299,21 @@ label alt_day5_mi_7dl_firecamp:
         play ambience ambience_camp_entrance_day fadein 3
         "Чужая душа — потёмки. Особенно если это девушка, чьё мнение вдруг стало очень важным."
         "А ты вдруг выдал ей такое, от чего с равным успехом можно как просто разорвать со мной все контакты… так и простить…"
-        play sound sfx_7dl["eat_horn"]
-        "Зависит от одного лишь запаса великодушия. "
+        "Зависит от одного лишь запаса великодушия."
+        play sound sfx_7dl["eat_horn"] fadein 1
         "А Мику просто шла рядом, вела меня за руку, и горн застал нас в тот самый момент, когда мы проходили через ворота лагеря."
         "Всё так же, молча, она развернулась и повела меня к столовой."
     else:
         scene bg ext_square_sunset with dissolve
         play ambience ambience_camp_center_evening fadein 3
         "После картошки я устал так, что, похоже, уснул прямо на скамейке на площади."
+        play sound sfx_7dl["eat_horn"] fadein 1
         "Потому что разбудил меня тот самый горн."
     scene bg ext_dining_hall_near_sunset
     with fade
     "На крылечке уже никого не было — мы определённо были последними."
     window hide
-    play sound sfx_open_door_2
+    play sound2 sfx_open_door_2
     pause(1)
     scene bg int_dining_hall_people_sunset with dissolve
     play ambience ambience_dining_hall_full fadein 0

@@ -38,6 +38,8 @@
     if (counter_sl_7dl == 2):
         $ alt_chapter(1, u"Экскурсия. Вечер")
         call alt_day1_meeting2
+        $ persistent.sprite_time = "night"
+        $ night_time()
     else:
         $ alt_chapter(1, u"Погоня")
         call alt_day1_chase
@@ -52,7 +54,7 @@
         $ alt_chapter(1, u"Спасительница")
         call alt_day1_slavya_saviour
         pause(1)
-    $ alt_chapter(1, u"Вечер")    # если шли по (counter_sl_7dl == 2), спрайты не перекрасились на night-версию. И у Лены спрайт будет светлым.
+    $ alt_chapter(1, u"Вечер")
     call alt_day1_lena
     pause(1)
     if alt_day1_un_stopped:
