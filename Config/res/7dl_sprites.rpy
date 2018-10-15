@@ -100,11 +100,55 @@ init 9999 python:
                           '4':['pioneer']}
         }
     alt_emo_dict = {
+                    'al':{'1':['angry','dontlike','laugh','normal','sad','shy','smile']}
+                    'ba':{'1':['em1','evil','norm','smile']}
+                    'cs':{'1':['doubt','fear','glasses_over','glasses_through','grin','laugh','normal','shy','smile']}
+                    'dn':{'1':['dontcare','grin','normal','smile','unsured'],
+                          '2':['dontlike','upset'],
+                          '3':['sad','scared','shocked','sick','surprise']}
                     'dv':{'1':['cry','scared','shocked','surprise'],
                           '2':['grin'],
                           '3':['guilty','sad','shy'],
                           '4':['laugh','normal','smile','soft_smile'],
                           '5':['angry','rage']}
+                    'el':{'1':['grin','normal','smile'],
+                          '2':['fingal','sad','scared','shocked','surprise','upset'],
+                          '3':['angry','laugh','serious']}
+                    'ln':{'1':['angry','normal','sad'],
+                          '2':['dontlike','grin','guilty'],
+                          '3':['serious','smile','surprise']}
+                    'mi':{'1':['cry','dontlike','laugh','scared','shocked','shy','surprise'],
+                          '2':['cry_smile','grin','happy','sad','smile'],
+                          '3':['angry','normal','rage','serious','smile2','upset']}
+                    'mt':{'1':['normal','sad','smile','smile_g','surprise'],
+                          '2':['angry','rage','shocked'],
+                          '3':['feared','grin','laugh','scared']}
+                    'mz':{'1':['bukal','laugh','normal'],
+                          '2':['angry','rage'],
+                          '3':['shy','smile']}
+                    'sak':{'1':['calm','normal','sorrow','unsured'],
+                          '2':['dontlike','sigh','smile','treat'],
+                          '3':['angry','pain','sad','scared']}
+                    'sh':{'1':['laugh','scared','smile','upset'],
+                          '2':['cry','mad_smile','normal_smile','rage'],
+                          '3':['normal','serious','surprise']}
+                    'sl':{'1':['dontlike','normal','serious','smile'],
+                          '2':['grin','happy','laugh','shy','smile2'],
+                          '3':['angry','happy2','sad','shy2','surprise','upset'],
+                          '4':['cry','scared','tender'],
+                          '5':['displeased','fear_1','fear_2','neutral']}
+                    'tn':{'1':['dontlike','grin','laugh','normal','sad','shy','smile']}
+                    'un':{'1':['angry','evil_smile','normal','shy','smile','smile2','sorrow'],
+                          '2':['cry','cry_smile','sad','scared','shocked','surprise'],
+                          '3':['angry2','grin','laugh','rage','serious','smile3']}
+                    'us':{'1':['grin','laugh','laugh2','normal','sad','smile'],
+                          '2':['angry','calml','dontlike','fear','upset'],
+                          '3':['cry','cry2','shy','shy2','surp1','surp2','surp3'],
+                          '4':['grin','laugh','normal','shy','smile']}
+                    'uv':{'1':['dontlike','rage','sad','shocked'],
+                          '2':['normal','smile'],
+                          '3':['grin','laugh','surprise2'],
+                          '4':['guilty','surprise','upset']}
         }
     alt_acc_dict = {
                     'dv':{'1':[''],
