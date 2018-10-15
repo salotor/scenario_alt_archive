@@ -441,7 +441,7 @@ label alt_fz_win:
         $ lp_sl += 1
         show sl laugh pioneer with dspr
         sl "Я подумаю!"
-        play sound sfx_7dl["eat_horn"] fadein 6
+        play sound sfx_7dl["eat_horn"] fadein 1
         "Рассмеялась девочка, поднимаясь."
         "А над лагерем уже разносился сигнал горна, зовущего пионеров спасаться от голодной смерти."
         th "Быстрее бы и мне что-нибудь съедобного принесли."
@@ -486,7 +486,7 @@ label alt_fz_win:
         me "И не подглядывать!"
         show sl laugh pioneer with dspr
         sl "Как прикажет мой повелитель."
-        play sound sfx_7dl["eat_horn"] fadein 6
+        play sound sfx_7dl["eat_horn"] fadein 1
         "Рассмеялась девочка, поднимаясь."
         "А над лагерем уже разносился сигнал горна, зовущего пионеров спасаться от голодной смерти."
         th "Быстрее бы и мне что-нибудь съедобного принесли."
@@ -502,6 +502,7 @@ label alt_fz_win:
             "Давай ещё разок":
                 sl "Давай."
                 jump alt_day4_fz_play
+    stop sound fadeout 3
     stop music fadeout 3
     window hide
     with fade
@@ -1024,7 +1025,7 @@ label alt_day4_un_fz_dv:
     "…"
     "Виола выигрывала как хотела."
     "Честно, я даже обрадовался тому, что мы без ставок играли - быть мне без штанов в противном случае!"
-    play sound sfx_7dl["eat_horn"] fadein 3
+    play sound sfx_7dl["eat_horn"] fadein 1
     "Потому я облегчённо выдохнул, когда из-за полуоткрытого окна донеслось старое доброе «бери ложку, бери хлеб»."
     cs "Ты даже не старался."
     "Улыбнулась Виола."
@@ -1036,6 +1037,7 @@ label alt_day4_un_fz_dv:
     me "Да уж не совсем бестолковый."
     cs "Прекрасно. Рада, что это досадное падение не отразилось на твоих умственных способностях, пионер. Увидимся."
     "Она накинула халат и сбежала, оставив меня в одиночестве."
+    stop sound fadeout 3
     stop music fadeout 3
     window hide
     with fade

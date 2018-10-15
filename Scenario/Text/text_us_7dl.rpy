@@ -488,8 +488,8 @@ label alt_day6_us_7dl_exercises:
         "Так не подняли за полчаса до подъёма, как в прошлый раз!"
     mt "А вечером после ужина — прощальная дискотека!"
     mt "Так как она праздничная, то будет продлена на целый час для старших отрядов!"
+    play sound sfx_7dl["eat_horn"] fadein 1
     "Ликующий вопль заглушил и слова вожатой, и не к спеху заоравший горн."
-    play music sfx_7dl["eat_horn"] fadein 3 
     play ambience ambience_camp_center_evening
     "Ольга Дмитриевна что-то ещё говорила, но никто её не слушал."
     show mt normal pioneer with dspr
@@ -499,6 +499,7 @@ label alt_day6_us_7dl_exercises:
     hide mt
     window hide
     stop music fadeout 3
+    stop sound fadeout 3
     stop ambience fadeout 3
     with fade
     return
@@ -1548,10 +1549,10 @@ label alt_day6_us_7dl_preps:
     mi "Да не стой ты там с коробками! Давай их сюда."
     mi "Нам до обеда хорошо бы всё успеть…"
     me "Думаешь, успеем?"
-    play music sfx_7dl["eat_horn"] fadein 3
+    play sound sfx_7dl["eat_horn"] fadein 1
     mi "Нет."
     "С обескураживающей честностью ответила японка."
-    play sound sfx_open_door_clubs_2
+    play sound2 sfx_open_door_clubs_2
     show el normal pioneer at zenterleft
     with dissolve
     el "Народ, давайте в темпе. Не хочется на обед опаздывать."
@@ -1840,7 +1841,7 @@ label alt_day6_us_7dl_warehouse:
     with swradar
     "Эту и следующую партию мы продули."
     "Последнюю шли нос в нос, банка за банкой…"
-    play music sfx_7dl["eat_horn"] fadein 3
+    play sound sfx_7dl["eat_horn"] fadein 1
     "И только горн на обед не дал нам выяснить до конца, кто же из нас щегол."
     "А жаль."
     "Мне так хотелось реванша!"
@@ -1851,6 +1852,7 @@ label alt_day6_us_7dl_warehouse:
     "Короче говоря, сегодня я дежурю после дискотеки."
     "Блин."
     window hide
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 3
     with fade
@@ -4242,12 +4244,13 @@ label alt_day6_us_7dl_rendezvous:
     "Ибо зачем?"
     "Я улыбнулся."
     me "Мне тоже понравилось. Жаль только, последний."
-    play music sfx_7dl["eat_horn"] fadein 3
+    play sound sfx_7dl["eat_horn"] fadein 1
     "Девочка хотела добавить ещё что-то, но её перебил горн."
     me "Вот. А теперь, если нерадивая жена не хочет меня кормить, я пойду добывать пропитание сам."
     "Над моей головой в дверь врезалась подушка, и я, смеясь, выскочил на улицу."
     window hide
     stop music fadeout 3
+    stop sound fadeout 3
     stop ambience fadeout 3
     with fade
     return
@@ -10499,7 +10502,7 @@ label alt_day7_us_7dl_lenaforever:
     me "Ленка!"
     "Она побежала ко мне, спотыкаясь, крича что-то бессвязное и размахивая руками, понеслась по весь опор, пока я стоял и вспоминал, как дышать."
     "Чувствуя себя невесомым, четырнадцатилетним, будто во сне ступая по поверхности снизошедшей с неба радуги."
-    show un smile winter close with dspr
+    show un cry_smile winter close with dspr
     with vpunch
     "Пока не налетел вихрь, толкнул в грудь, прижал к себе…"
     "Плечи Лены затряслись."
@@ -10514,11 +10517,11 @@ label alt_day7_us_7dl_lenaforever:
     un "Теперь не отпущу. Ни за что!"
     me "У нас не было ни единого шанса не встретиться."
     un "Да. Ни единого…"
+    show un smile3 winter close with dspr
     "Она отстранилась немного, заглянула мне в глаза:"
-    show un normal winter with dspr
     un "Пойдём, я познакомлю тебя с кем-то очень важным."
     me "Кем-то?"
-    show un smile winter with dspr
+    show un smile2 winter with dspr
     un "С моей сестрой."
     window hide
     $ persistent.us_7dl_un = True
