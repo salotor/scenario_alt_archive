@@ -151,11 +151,16 @@ init 9999 python:
                           '4':['guilty','surprise','upset']}
         }
     alt_acc_dict = {
-                    'dv':{'1':[''],
-                          '2':[''],
-                          '3':[''],
-                          '4':[''],
-                          '5':['']}
+                    'cs':{'1':['glasses','stethoscope']}
+                    'mi':{'2':['blond','platinum','red'],
+                          '3':['platinum']}
+                    'mt':{'1':['panama'],
+                          '2':['panama'],
+                          '3':['panama']}
+                    'mz':{'1':['glasses'],
+                          '2':['glasses'],
+                          '3':['glasses']}
+                    'us':{'1':['bear']}
         }
     
     alt_dist = ['normal/','far/']
