@@ -352,12 +352,13 @@
         with dissolve
         "Она грохнула дверью."
         "А я пошёл."
-    play music sfx_7dl["eat_horn"] fadein 3
+    play sound sfx_7dl["eat_horn"] fadein 1
     "Над лагерем своевременно разнёсся сигнал горна."
     "Раз не обломилось с занятиями музыкой, придётся искать себе другие развлечения."
     "Но этим лучше заниматься на полный желудок."
     "Я заспешил к столовой."
     stop music fadeout 3
+    stop sound fadeout 3
     return
     
 label alt_day4_neu_aid:
@@ -967,7 +968,7 @@ label alt_day4_neu_us:
     us "А снимешь потом?"
     $ alt_day4_neu_us_snake = True
     me "Нет, себе заберу и слопаю."
-    play music sfx_7dl["eat_horn"] fadein 3
+    play sound sfx_7dl["eat_horn"] fadein 1
     show us dontlike sport with dspr
     "Она надулась и топнула ногой:"
     us "Ах так! Да я…"
@@ -979,6 +980,7 @@ label alt_day4_neu_us:
     me "Пошли есть, ребёнок!"
     "Не обращая больше на неё внимания, я отправился к столовой."
     stop music fadeout 3
+    stop sound fadeout 3
     stop ambience fadeout 4
     window hide
     return
@@ -1410,10 +1412,11 @@ label alt_day4_neu_un:
                 un "Увидимся."
                 hide un with dissolve
                 "Будто услышав мысленный посыл, она положила ракетку на стенде и, кивнув мне, направилась к выходу с корта."
-                play music sfx_7dl["eat_horn"]
+                play sound sfx_7dl["eat_horn"] fadein 1
                 "А от столовой между тем донеслось приснопамятное «бери ложку»."
                 "И я ощутил вдруг, как сильно проголодался."
                 stop music fadeout 3
+                stop sound fadeout 3
                 return
             "Так четыре дня же":
                 pass
@@ -1614,13 +1617,14 @@ label alt_day4_neu_mi:
     show dv scared pioneer with dspr
     me "Меньше надо греть свои тупые уши!"
     hide dv with dissolve
-    play music sfx_7dl["eat_horn"] fadein 3
+    play sound sfx_7dl["eat_horn"] fadein 1
     "Оттолкнув её c пути, я направился к столовой."
     "Не знаю, почему я психанул."
     "Хотя вру. Знаю. Тоненькие ножки-ручки — одним пальцем сломать можно — а туда же, смеяться надо мной."
     "Право смеяться надо мной надо ещё заслужить."
     window hide
     stop music fadeout 3
+    stop sound fadeout 3
     return
     
 label alt_day4_neu_sl:
@@ -2636,13 +2640,12 @@ label alt_day4_neu_lunch:
             "И я почувствовал, как против воли уголки губ начинают разъезжаться."
             "Ульяна оказывала на меня самое позитивное воздействие."
             "И почему она не постарше лет на пять!"
-            play music sfx_7dl["eat_horn"] fadein 5
+            play sound sfx_7dl["eat_horn"] fadein 1
             show us normal sport with dspr
             us "Нет."
             "Ответила рыжая."
             me "Что?"
             us "Я говорю — нет."
-            stop music fadeout 3
             us "Не стану я с тобой встречаться."
             me "Ааааа!"
             with flash_red
@@ -2656,6 +2659,7 @@ label alt_day4_neu_lunch:
             me "Пошли ужинать, мелкая."
             "Пионеры организованными кучками потянулись в сторону столовой."
             stop music fadeout 3
+            stop sound fadeout 3
             window hide
         "Давайте лучше в волейбол!":
             $ alt_day4_neu_mt_volley = True
@@ -5910,8 +5914,8 @@ label alt_day5_neu_arrest:
     me "Где он только это научился?"
     tn "Всегда умел."
     stop music fadeout 5
-    play sound sfx_7dl["eat_horn"]
-    play sound sfx_open_door_clubs_2
+    play sound sfx_7dl["eat_horn"] fadein 1
+    play sound2 sfx_open_door_clubs_2
     pause(1)
     "Наш разговор прервал сигнал горна, несущийся из раструба прямо над крыльцом, и появившаяся Ольга Дмитриевна."
     scene bg int_clubs_male_day

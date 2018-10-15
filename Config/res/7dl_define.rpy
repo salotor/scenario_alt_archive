@@ -175,6 +175,17 @@ init:
                 "sal_black" with dissolve
                 6.0
         repeat
+        
+    transform running:
+        block:
+            zoom 1.1 xcenter 0.5 ycenter 0.5
+        block:
+            ease 0.2 xoffset 0 yoffset 0
+            ease 0.2 xoffset 25 yoffset 50
+            ease 0.2 xoffset 0 yoffset 0
+            ease 0.2 xoffset -25 yoffset 50
+        repeat
+        
 #Наши транзиты, с блекджеком и разными цветами.
     $ flash_cyan = Fade(1, 0, 1, color="#1fa")
     $ fade_red = Fade(2, 2, 2, color="#f11")
@@ -465,6 +476,7 @@ init:
     image bg int_clubs_dj_night_7dl = get_image_7dl("bg/int_clubs_dj_night_7dl.jpg")
     image bg int_clubs_dj_night_nolight_7dl = get_image_7dl("bg/int_clubs_dj_night_nolight_7dl.jpg")
     image bg int_clubs_male_rain_7dl = get_image_7dl("bg/int_clubs_male_rain_7dl.jpg")
+    image bg int_clubs_male_rain_clean_table_7dl = get_image_7dl("bg/int_clubs_male_rain_clean_table_7dl.jpg")
     image bg int_concert_room_7dl = get_image_7dl("bg/int_concert_room_7dl.jpg")
     image bg int_coupe_day_7dl = get_image_7dl("bg/int_coupe_day_7dl.png")
     image bg int_coupe_night_7dl = get_image_7dl("bg/int_coupe_night_7dl.png")
@@ -475,7 +487,7 @@ init:
     image bg int_editorial_day_7dl = get_image_7dl("bg/int_editorial_day_7dl.jpg")
     image bg int_extra_house_7dl = get_image_7dl("bg/int_extra_house_7dl.jpg")
     image bg int_extra_house_day_7dl = get_image_7dl("bg/int_extra_house_day_7dl.jpg")
-    image bg int_hence_day_7dl = get_image_7dl("bg/int_hence_day_7dl.jpg")
+    image bg int_hence_day_7dl = get_image_7dl("bg/int_hence_day_7dl.jpg") # дублирует int_mine_exit_day_7dl
     image bg int_hence_night_7dl = get_image_7dl("bg/int_hence_night_7dl.jpg")
     image bg int_hospital_hall_day_7dl = get_image_7dl("bg/int_hospital_hall_day_7dl.png")
     image bg int_looney_bin_7dl = get_image_7dl("bg/int_looney_bin_7dl.jpg")
@@ -681,6 +693,7 @@ init:
     image cg d6_mi_vyluthere_7dl = get_image_7dl("cg/d6_mi_vyluthere_7dl.jpg")
     image cg d6_sl_bag_7dl = get_image_7dl("cg/d6_sl_bag_7dl.png")
     image cg d6_sl_clean_7dl = get_image_7dl("cg/d6_sl_clean_7dl.jpg")
+    image cg d6_sl_clean_dress_7dl = get_image_7dl("cg/d6_sl_clean_dress_7dl.jpg")
     image cg d6_sl_zettai_7dl = get_image_7dl("cg/d6_sl_zettai_7dl.jpg")
     
     image cg d6_un_dissolve_7dl = get_image_7dl("cg/d6_un_dissolve_7dl.jpg")
@@ -931,6 +944,8 @@ init:
     image acm_logo_sl_too_late = get_image_7dl("gui/acm/acm_logo_sl_too_late_7dl.png")
     image acm_logo_sl_worth = get_image_7dl("gui/acm/acm_logo_sl_worth_7dl.png")
     
+    image acm_logo_sl_neon = get_image_7dl("gui/acm/acm_logo_sl_neon_7dl.png")
+    
     image acm_logo_un_good = get_image_7dl("gui/acm/acm_logo_un_good_7dl.png")
     image acm_logo_un_good2 = get_image_7dl("gui/acm/acm_logo_un_good2_7dl.png")
     image acm_logo_un_shelter = get_image_7dl("gui/acm/acm_logo_un_shelter_7dl.png")
@@ -1009,6 +1024,7 @@ init:
     $ music_7dl = {}
 
     $ music_7dl["alice_theme"] = get_music_7dl("alice_theme_7dl.ogg")
+    $ music_7dl["alone"] = get_music_7dl("alone_7dl.ogg")
     $ music_7dl["afraid_of_destiny"] = get_music_7dl("afraid_of_destiny_7dl.ogg")
     $ music_7dl["anglegrinder"] = get_music_7dl("anglegrinder_7dl.ogg")
     $ music_7dl["areyouabully"] = get_music_7dl("areyouabully_7dl.ogg")
@@ -1110,7 +1126,7 @@ init:
     $ music_7dl["misery"] = get_music_7dl("misery_2_7dl.ogg")
     $ music_7dl["moment"] = get_music_7dl("moment_7dl.ogg")
     $ music_7dl["more_than_alive"] = get_music_7dl("more_than_alive_7dl.ogg")
-    $ music_7dl["morning_dew"] = get_music_7dl("Morning_Dew_7dl.ogg")
+    $ music_7dl["morning_dew"] = get_music_7dl("Morning_Dew_7dl.ogg") # звук дождя в начале трека сбивает с толку
     $ music_7dl["my_only_hope"] = get_music_7dl("my_only_hope_7dl.ogg")
     
     $ music_7dl["nap_one"] = get_music_7dl("nap_one_7dl.ogg")
@@ -1136,7 +1152,7 @@ init:
     $ music_7dl["prologue_2"] = get_music_7dl("prologue_2_7dl.ogg")
     $ music_7dl["promise_to_meet_you"] = get_music_7dl("promise_to_meet_you_7dl.ogg")
 
-    $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg")
+    $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg") # в треке звучат голоса, может, стоит обрезать эту часть?
     $ music_7dl["Redemption"] = get_music_7dl("Redemption_7dl.ogg")
     $ music_7dl["red_lights"] = get_music_7dl("red_lights_7dl.ogg")
     $ music_7dl["refuse_to_believe"] = get_music_7dl("refuse_to_believe_7dl.ogg")
@@ -1149,6 +1165,7 @@ init:
     $ music_7dl["Sad_Piano"] = get_music_7dl("Sad_Piano_7dl.ogg")
     $ music_7dl["sam_lullaby"] = get_music_7dl("sam_lullaby_7dl.ogg")
     $ music_7dl["sammy"] = get_music_7dl("sammy_7dl.ogg")
+    $ music_7dl["saveme"] = get_music_7dl("saveme_7dl.ogg")
     $ music_7dl["scorpions"] = get_music_7dl("scorpions_7dl.ogg")
     $ music_7dl["Semische"] = get_music_7dl("Semische_7dl.ogg")
     $ music_7dl["seven_summer_days"] = get_music_7dl("seven_summer_days_7dl.ogg")

@@ -2326,7 +2326,7 @@ label alt_day4_mi_dj_repetition:
     un "Чтобы галочку поставить!"
     un "Тебе, объездившему всю Америку, такие мечты, наверное, кажутся глупыми…"
     stop music fadeout 6
-    play sound sfx_7dl["eat_horn"] fadein 5
+    play sound sfx_7dl["eat_horn"] fadein 1
     me "Да нет. Ты есть идешь?"
     show un smile pioneer close with dissolve
     un "Я-то иду. А вот тебе явно придётся заглянуть к умывальникам."
@@ -2334,6 +2334,7 @@ label alt_day4_mi_dj_repetition:
     me "Ты права. Побежал я."
     un "Да. Пока!"
     "Она отбросила прутик в сторону, старательно растёрла портрет на песке и помахав мне, обалдевшему, убежала в сторону столовой."
+    stop sound fadeout 3
     stop music fadeout 3
     stop ambience fadeout 6
     window hide
@@ -4012,7 +4013,7 @@ label alt_day5_mi_dj_cinema:
     dreamgirl "Вот чьим альтер эго мне хотелось бы стать! Ни одного глупого вопроса не задала!"
     th "Цыц. Твоё дело терпеть и сносить лишения."
     dreamgirl "И вести летопись твоих глупостей, не забывай."
-    play music sfx_7dl["eat_horn"] fadein 5
+    play music sfx_7dl["eat_horn"] fadein 1
     "В это время от столовой донёсся звук горна."
     me "Именно."
     "На всякий случай я извлёк кассету из проигрывателя — разогрев аппаратуры с плёнкой частенько приводил к зажёву —  и отключил телевизор."
@@ -4023,7 +4024,7 @@ label alt_day5_mi_dj_cinema:
     "Она показала мне свой и упрятала обратно в нагрудный кармашек."
     me "Записку туда же положи, пожалуйста, а то мало ли…"
     window hide
-    play sound sfx_open_door_2
+    play sound2 sfx_open_door_2
     $ persistent.sprite_time = "day"
     $ day_time()
     scene bg ext_clubs_day
@@ -4678,14 +4679,14 @@ label alt_day5_mi_dj_dinner:
     dreamgirl "А если риск? Если там и правда борода, прокуренный свитер и жевательное внимание пополам с пивом?"
     th "Значит, просто иногда надо уметь сойти с ума."
     "Не слушая больше реплик подсознания, я настропалил лыжи к музыкальному клубу."
-    play sound sfx_7dl["eat_horn"] fadein 6
+    play sound sfx_7dl["eat_horn"] fadein 1
     "Но горн решил, что все извинения должны быть отложены на потом."
     "Впрочем…"
     stop music
     window hide
     play ambience ambience_camp_center_day
     scene bg ext_musclub_day with dissolve
-    play sound sfx_campus_door_rattle
+    play sound2 sfx_campus_door_rattle
 
     "Было ожидаемо заперто."
     th "Что ж, пошли перехватывать её в столовой."
@@ -7628,13 +7629,13 @@ label alt_day6_mi_dj_radio:
     mi "Можешь называть это женским чутьём."
     "Она притянула меня к себе и поцеловала."
     mi "Или самым обыкновенным здравым смыслом."
-    play music sfx_7dl["eat_horn"]
+    stop music fadeout 5
+    play sound sfx_7dl["eat_horn"] fadein 1
     "Она хотела было ещё что-то добавить, но со стороны столовой донёсся сигнал горна."
     mi "Вот и всё."
     "Она отключила магнитофон."
     mi "Радиовещание на сегодня закончено."
     mi "Поможешь мне?"
-    stop music fadeout 5
     "Она указала на микшер."
     mi "Отключи и собери провода, пожалуйста, а я пока магнитофон отключу."
     "Кивнув, я принялся за работу."
@@ -7646,7 +7647,7 @@ label alt_day6_mi_dj_radio:
     "И выпорхнула наружу."
     window hide
     stop ambience fadeout 2
-    play sound sfx_open_door_clubs
+    play sound2 sfx_open_door_clubs
     pause(1)
     $ persistent.sprite_time = "day"
     scene bg int_clubs_male_day
