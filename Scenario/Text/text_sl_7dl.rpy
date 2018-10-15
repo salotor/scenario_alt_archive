@@ -20559,7 +20559,7 @@ label alt_day6_sl_7dl_evening:
         "Сумасшедшие."
         play sound sfx_open_door_clubs
         "Хлопнула дверь."
-        show us smile pioneer at left with dissolve
+        show us smile sport at left with dissolve
         us "Эй, вокально-инструментальный ансамбль! Заканчивайте!"
         dv "Чего тебе, мелкая?"
         us "Чего-чего, на концерт пора!"
