@@ -162,7 +162,141 @@ init 9999 python:
                           '3':['glasses']}
                     'us':{'1':['bear']}
         }
-    
+
+    alt_body_far_dict = {
+                    'cs':{'1':['body']}
+                    'dv':{'1':['body'],
+                          '2':['body'],
+                          '3':['body'],
+                          '4':['body'],
+                          '5':['body']}
+                    'el':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'ln':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'mi':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'mt':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'mz':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'sh':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'sl':{'1':['body'],
+                          '2':['body'],
+                          '3':['body'],
+                          '4':['body']}
+                    'un':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'us':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']}
+                    'uv':{'1':['body'],
+                          '2':['body'],
+                          '3':['body'],
+                          '4':['body']}
+        }
+    alt_clothes_far_dict = {
+                    'dv':{'1':['pioneer','pioneer2','swim'],
+                          '2':['pioneer','pioneer2','swim'],
+                          '3':['pioneer','pioneer2'],
+                          '4':['dress','pioneer','pioneer2','sport','swim'],
+                          '5':['pioneer','pioneer2']}
+                    'el':{'1':['pioneer'],
+                          '2':['pioneer'],
+                          '3':['pioneer']}
+                    'ln':{'1':['dress','pioneer'],
+                          '2':['dress','pioneer'],
+                          '3':['dress','pioneer']}
+                    'mi':{'1':['pioneer','swim','voca_dress'],
+                          '2':['casual','pioneer','swim','voca_dress'],
+                          '3':['pioneer','swim','voca_dress']}
+                    'mt':{'1':['dress','pioneer','swim'],
+                          '2':['dress','pioneer','swim'],
+                          '3':['pioneer']}
+                    'mz':{'1':['pioneer'],
+                          '2':['pioneer'],
+                          '3':['pioneer']}
+                    'sak':{'1':['suit'],
+                          '2':['suit'],
+                          '3':['suit']}
+                    'sl':{'1':['dress','pioneer','sport','swim'],
+                          '2':['dress','pioneer','sport','swim'],
+                          '3':['dress','pioneer','sport','swim'],
+                          '4':['dress','pioneer','sport','swim'],
+                          '5':['25']}
+                    'un':{'1':['dress','pioneer','sport','swim'],
+                          '2':['dress','pioneer','sport','swim'],
+                          '3':['dress','pioneer','sport']}
+                    'us':{'1':['dress','pioneer','sport','swim'],
+                          '2':['dress','pioneer','sport','swim'],
+                          '3':['dress','pioneer','sport','swim']}
+                    'uv':{'1':['pioneer'],
+                          '2':['pioneer'],
+                          '3':['pioneer'],
+                          '4':['pioneer']}
+        }
+    alt_emo_far_dict = {
+                    'cs':{'1':['badgirl','doubt','fear','glasses_over','glasses_through','laugh','normal','shy','smile']}
+                    'dv':{'1':['cry','scared','shocked','surprise'],
+                          '2':['grin'],
+                          '3':['guilty','sad','shy'],
+                          '4':['laugh','normal','smile'],
+                          '5':['angry','rage']}
+                    'el':{'1':['grin','normal','smile'],
+                          '2':['fingal','sad','scared','shocked','surprise','upset'],
+                          '3':['angry','laugh','serious']}
+                    'ln':{'1':['angry','normal','sad'],
+                          '2':['dontlike','grin','guilty'],
+                          '3':['serious','smile','surprise']}
+                    'mi':{'1':['cry','dontlike','laugh','scared','shocked','shy','surprise'],
+                          '2':['cry_smile','grin','happy','sad','smile'],
+                          '3':['angry','normal','rage','serious','upset']}
+                    'mt':{'1':['normal','sad','smile','surprise'],
+                          '2':['angry','rage','shocked'],
+                          '3':['grin','laugh','scared']}
+                    'mz':{'1':['bukal','laugh','normal'],
+                          '2':['angry','rage'],
+                          '3':['shy','smile']}
+                    'sak':{'1':['calm','normal','sorrow','unsured'],
+                          '2':['donlike','sigh','smile','treat'],
+                          '3':['angry','pain','sad','scared']}
+                    'sh':{'1':['laugh','scared','smile','upset'],
+                          '2':['cry','normal_smile','rage'],
+                          '3':['normal','serious','surprise']}
+                    'sl':{'1':['normal','serious','smile'],
+                          '2':['happy','laugh','shy','smile2'],
+                          '3':['angry','sad','surprise'],
+                          '4':['scared','tender'],
+                          '5':['displeased','fear_1','fear_2','neutral']}
+                    'un':{'1':['angry','evil_smile','normal','shy','smile','smile2'],
+                          '2':['cry','cry_smile','sad','scared','shocked','surprise'],
+                          '3':['angry2','grin','laugh','rage','serious','smile3']}
+                    'us':{'1':['grin','laugh','laugh2','normal','sad','smile'],
+                          '2':['angry','calml','dontlike','fear','upset'],
+                          '3':['cry','cry2','shy','shy2','surp1','surp2','surp3']}
+                    'uv':{'1':['dontlike','rage','sad','shocked'],
+                          '2':['normal','smile'],
+                          '3':['grin','laugh','surprise2'],
+                          '4':['guilty','surprise','upset']}
+        }
+    alt_acc_far_dict = {
+                    'cs':{'1':['glasses','stethoscope']}
+                    'mt':{'1':['panama'],
+                          '2':['panama'],
+                          '3':['panama']}
+                    'mz':{'1':['glasses'],
+                          '2':['glasses'],
+                          '3':['glasses']}
+        }
+        
     alt_dist = ['normal/','far/']
     for dist in alt_dist:
         if dist == "normal/":
