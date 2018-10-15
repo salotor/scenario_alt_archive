@@ -11,7 +11,11 @@ init 9999 python:
         bl_images = "images/sprites/"
         
     alt_body_dict = {
+                    'al':{'1':['']},
                     'ba':{'1':['body']},
+                    'dn':{'1':[''],
+                          '2':[''],
+                          '3':['']},
                     'cs':{'1':['body']},
                     'dv':{'1':['body','body2'],
                           '2':['body','body2'],
@@ -33,13 +37,18 @@ init 9999 python:
                     'mz':{'1':['body'],
                           '2':['body'],
                           '3':['body']},
+                    'sak':{'1':[''],
+                           '2':[''],
+                           '3':['']},
                     'sh':{'1':['body'],
                           '2':['body'],
                           '3':['body']},
                     'sl':{'1':['body','body2'],
                           '2':['body','body2'],
                           '3':['body','body2'],
-                          '4':['body','body2']},
+                          '4':['body','body2'],
+                          '5':['']},
+                    'tn':{'1':['']},
                     'un':{'1':['body'],
                           '2':['body'],
                           '3':['body']},
@@ -58,6 +67,7 @@ init 9999 python:
                     'dn':{'1':['pioneer'],
                           '2':['pioneer'],
                           '3':['pioneer']},
+                    'cs':{'1':['']},
                     'dv':{'1':['dress','pioneer','pioneer2','sport','swim','body'],
                           '2':['pioneer','pioneer2','sport','swim','body'],
                           '3':['dress','pioneer','pioneer2','sport','body'],
@@ -79,8 +89,11 @@ init 9999 python:
                           '2':['pioneer'],
                           '3':['pioneer']},
                     'sak':{'1':['suit'],
-                          '2':['suit'],
-                          '3':['suit']},
+                           '2':['suit'],
+                           '3':['suit']},
+                    'sh':{'1':[''],
+                          '2':[''],
+                          '3':['']},
                     'sl':{'1':['casual','dress','pioneer','pioneer2','sport','swim','uniform','body'],
                           '2':['dress','pioneer','pioneer2','sport','swim','body'],
                           '3':['casual','dress','pioneer','pioneer2','sport','swim','voca','body'],
@@ -151,8 +164,25 @@ init 9999 python:
                           '4':['guilty','surprise','upset']}
         }
     alt_acc_dict = {
+                    'al':{'1':['']},
+                    'ba':{'1':['']},
+                    'dn':{'1':[''],
+                          '2':[''],
+                          '3':['']},
                     'cs':{'1':['glasses','stethoscope']},
-                    'mi':{'2':['blond','platinum','red'],
+                    'dv':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':[''],
+                          '5':['']},
+                    'el':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'ln':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'mi':{'1':[''],
+                          '2':['blond','platinum','red'],
                           '3':['platinum']},
                     'mt':{'1':['panama'],
                           '2':['panama'],
@@ -160,7 +190,29 @@ init 9999 python:
                     'mz':{'1':['glasses'],
                           '2':['glasses'],
                           '3':['glasses']},
-                    'us':{'1':['bear']}
+                    'sak':{'1':[''],
+                           '2':[''],
+                           '3':['']},
+                    'sh':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'sl':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':[''],
+                          '5':['']},
+                    'tn':{'1':['']},
+                    'un':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'us':{'1':['bear'],
+                          '2':[''],
+                          '3':[''],
+                          '4':['']},
+                    'uv':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':['']}
         }
 
     alt_body_far_dict = {
@@ -185,13 +237,17 @@ init 9999 python:
                     'mz':{'1':['body'],
                           '2':['body'],
                           '3':['body']},
+                    'sak':{'1':[''],
+                           '2':[''],
+                           '3':['']},
                     'sh':{'1':['body'],
                           '2':['body'],
                           '3':['body']},
                     'sl':{'1':['body'],
                           '2':['body'],
                           '3':['body'],
-                          '4':['body']},
+                          '4':['body'],
+                          '5':['']},
                     'un':{'1':['body'],
                           '2':['body'],
                           '3':['body']},
@@ -204,6 +260,7 @@ init 9999 python:
                           '4':['body']}
         }
     alt_clothes_far_dict = {
+                    'cs':{'1':['']},
                     'dv':{'1':['pioneer','pioneer2','swim'],
                           '2':['pioneer','pioneer2','swim'],
                           '3':['pioneer','pioneer2'],
@@ -225,8 +282,11 @@ init 9999 python:
                           '2':['pioneer'],
                           '3':['pioneer']},
                     'sak':{'1':['suit'],
-                          '2':['suit'],
-                          '3':['suit']},
+                           '2':['suit'],
+                           '3':['suit']},
+                    'sh':{'1':[''],
+                          '2':[''],
+                          '3':['']},
                     'sl':{'1':['dress','pioneer','sport','swim'],
                           '2':['dress','pioneer','sport','swim'],
                           '3':['dress','pioneer','sport','swim'],
@@ -289,17 +349,52 @@ init 9999 python:
         }
     alt_acc_far_dict = {
                     'cs':{'1':['glasses','stethoscope']},
+                    'dv':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':[''],
+                          '5':['']},
+                    'el':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'ln':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'mi':{'1':[''],
+                          '2':[''],
+                          '3':['']},
                     'mt':{'1':['panama'],
                           '2':['panama'],
                           '3':['panama']},
                     'mz':{'1':['glasses'],
                           '2':['glasses'],
-                          '3':['glasses']}
+                          '3':['glasses']},
+                    'sak':{'1':[''],
+                           '2':[''],
+                           '3':['']},
+                    'sh':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'sl':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':[''],
+                          '5':['']},
+                    'un':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'us':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'uv':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':['']}
         }
 
     alt_custom_list = [
-                    'al normal pioneer far'
-                    'ase_clear'
+                    'al normal pioneer far',
+                    'ase_clear',
                     'tn normal pioneer far'
         ]
         
@@ -804,9 +899,9 @@ init 9999 python:
                                                                     (0, 0), emo_path), )
                                                                     )                                                  
                                     
-    for x in alt_custom_list:
-        custom_path = alt_images + 'custom/' + alt_custom_list[x] + '.png'
-        renpy.image(alt_custom_list[x],
+    for custom in alt_custom_list:
+        custom_path = alt_images + 'custom/' + custom + '.png'
+        renpy.image(custom,
                             ConditionSwitch("persistent.sprite_time=='sunset'",
                             im.MatrixColor(im.Composite((900, 1080),
                             (0, 0), custom_path),
