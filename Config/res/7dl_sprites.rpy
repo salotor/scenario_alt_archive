@@ -296,8 +296,15 @@ init 9999 python:
                           '2':['glasses'],
                           '3':['glasses']}
         }
+
+    alt_custom_list = [
+                    'al normal pioneer far'
+                    'ase_clear'
+                    'tn normal pioneer far'
+        ]
         
     alt_dist = ['normal/','far/']
+    
     for dist in alt_dist:
         if dist == "normal/":
             for who in alt_body_dict.keys():
@@ -797,4 +804,20 @@ init 9999 python:
                                                                     (0, 0), emo_path), )
                                                                     )                                                  
                                     
-                                    
+    for x in alt_custom_list:
+        custom_path = alt_images + 'custom/' + alt_custom_list[x] + '.png'
+        renpy.image(alt_custom_list[x],
+                            ConditionSwitch("persistent.sprite_time=='sunset'",
+                            im.MatrixColor(im.Composite((900, 1080),
+                            (0, 0), custom_path),
+                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                            "persistent.sprite_time=='night'",
+                            im.MatrixColor(im.Composite((900, 1080),
+                            (0, 0), custom_path),
+                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                            True,
+                            im.Composite((900, 1080),
+                            (0, 0), custom_path), )
+                            )                                    
