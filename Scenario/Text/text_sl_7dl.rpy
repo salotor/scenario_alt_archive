@@ -16553,10 +16553,10 @@ label alt_day6_sl_7dl_loki_morning:
     sl "Тогда переставай бухтеть и иди поцелуй в этот раз сам!"
     me "Легко сказать «иди»."
     "С моей манерой плавать это был тот ещё квест."
-    hide sl with disslove
+    hide sl with dissolve
     "Потому после трёх гребков я налетел на Славю, и мы хохочущим комом полетели на отмель."
     "И уже только утвердившись там, встав по-человечески, и сделали всё, что хотели."
-    show sl smile swim with disslove
+    show sl smile swim with dissolve
     sl "Я девок знаю, они долго плескаться будут."
     "Отдышавшись, сообщила девушка."
     show sl shy swim with dspr
@@ -18999,10 +18999,10 @@ label alt_day6_sl_7dl_loki_day:
     "Нет, вместо этого обнаружилось кое-что другое."
     "Гитара. Та самая, утерянная на пляже."
     "К грифу была пришпилена записка с одним-единственным словом."
-    show dv surprise pioneer2 with dissolve
+    show dv surprise pioneer2 at right with dissolve
     dv "Обормоты."
     "Растерянно прочитала Алиса."
-    show mi laugh pioneer with dissolve
+    show mi laugh pioneer at left with dissolve
     "Мику прыснула."
     show sl laugh pioneer with dspr
     "Славя за ней."
