@@ -1910,7 +1910,7 @@ label alt_day2_event_clubs1:
                 if counter_sl_cl == 1:
                     me "Мы тут по заданию Ольги Дмитриевны гирлянды проверяли."
                 else:
-                    if not (herc or loki):
+                    if not ('library' in list_voyage_7dl):
                         sh "Бегунок?"
                         me "Угу."
                     else:
