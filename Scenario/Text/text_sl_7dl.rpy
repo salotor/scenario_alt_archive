@@ -20559,7 +20559,7 @@ label alt_day6_sl_7dl_evening:
         "Сумасшедшие."
         play sound sfx_open_door_clubs
         "Хлопнула дверь."
-        show us smile pioneer at left with dissolve
+        show us smile sport at left with dissolve
         us "Эй, вокально-инструментальный ансамбль! Заканчивайте!"
         dv "Чего тебе, мелкая?"
         us "Чего-чего, на концерт пора!"
@@ -24133,7 +24133,7 @@ label alt_day6_sl_7dl_hentai:
         with fade
         "В следующий миг меня обожгло ощущением обнажённой плоти, прижимающийся ко мне сквозь рубашку."
         me "Что ты делаешь?"
-        play music music_7dl["iamsadiamsorry"] fadein 3
+        play music music_7dl["iamsadiamsorry"] fadein 3 #музыка красивая, но печальная. Не подходит она для хентая. Это странно.
         sl "Ты знаешь. {w}Зачем спрашивать?"
         "Я провел ладонью по её спине, она снова вздрогнула, подаваясь навстречу ласке."
         "На ней остались только трусики."
