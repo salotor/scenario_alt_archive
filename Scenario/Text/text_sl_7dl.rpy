@@ -18999,10 +18999,10 @@ label alt_day6_sl_7dl_loki_day:
     "Нет, вместо этого обнаружилось кое-что другое."
     "Гитара. Та самая, утерянная на пляже."
     "К грифу была пришпилена записка с одним-единственным словом."
-    show dv surprise pioneer2 with dissolve
+    show dv surprise pioneer2 at right with dissolve
     dv "Обормоты."
     "Растерянно прочитала Алиса."
-    show mi laugh pioneer with dissolve
+    show mi laugh pioneer at left with dissolve
     "Мику прыснула."
     show sl laugh pioneer with dspr
     "Славя за ней."
