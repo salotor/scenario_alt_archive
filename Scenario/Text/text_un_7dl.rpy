@@ -3543,7 +3543,7 @@ label alt_day5_un_7dl_begin:
     play sound2 sfx_open_door_clubs
     $ renpy.pause(1)
     window hide
-    scene black
+    scene cg d5_rainy_idle_7dl
     with dissolve
     "А на улице правда был дождь!"
     stop sound fadeout 3
@@ -3553,7 +3553,7 @@ label alt_day5_un_7dl_begin:
     with fade2
     return
     
-label alt_day5_un_7dl_breakfast:    
+label alt_day5_un_7dl_breakfast:
     scene bg int_dining_hall_people_rain_7dl with dissolve
     play ambience ambience_medium_crowd_indoors_1 fadein 3
     "Завтрак был как завтрак: каша пшеничная «Заря Полей» на сгущёнке, чай «Белые Ночи» полусладкий и два бутерброда — с сыром и колбасой."
