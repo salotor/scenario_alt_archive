@@ -944,7 +944,11 @@ init:
     image acm_logo_sl_too_late = get_image_7dl("gui/acm/acm_logo_sl_too_late_7dl.png")
     image acm_logo_sl_worth = get_image_7dl("gui/acm/acm_logo_sl_worth_7dl.png")
     
+    image acm_logo_sl_am_home = get_image_7dl("gui/acm/acm_logo_sl_am_home_7dl.png")
     image acm_logo_sl_neon = get_image_7dl("gui/acm/acm_logo_sl_neon_7dl.png")
+    image acm_logo_sl_pan = get_image_7dl("gui/acm/acm_logo_sl_pan_7dl.png")
+    image acm_logo_sl_radio = get_image_7dl("gui/acm/acm_logo_sl_radio_7dl.png")
+    image acm_logo_sl_right_road = get_image_7dl("gui/acm/acm_logo_sl_right_road_7dl.png")
     
     image acm_logo_un_good = get_image_7dl("gui/acm/acm_logo_un_good_7dl.png")
     image acm_logo_un_good2 = get_image_7dl("gui/acm/acm_logo_un_good2_7dl.png")
