@@ -13,55 +13,43 @@ label alt_test:
                                                 who_num = who + '2'
                                             elif 'body' in body:
                                                 who_num = who
-                                            if clothes != 'body':
+                                            if clothes != '' and clothes != 'body':
                                                 if emo != '':
                                                     if acc != '':
                                                         renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
-
-
                                                         renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
-
-
                                                     else:
                                                         renpy.show(who_num + ' ' + emo + ' ' + clothes)
-
-
                                                         renpy.show(who_num + ' ' + emo + ' ' + clothes + ' close')
-
-
-                                            else:
+                                            elif clothes == 'body':
                                                 if emo != '':
                                                     if acc != '':
                                                         renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc)
-
-
                                                         renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' close')
-
-
                                                     else:
                                                         renpy.show(who_num + ' ' + emo + ' ' + 'body')
-
-
                                                         renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' close')
-
-
+                                            else:
+                                                if emo != '':
+                                                    if acc != '':
+                                                        if who == 'cs':
+                                                            renpy.show(who_num + ' ' + emo + ' ' + acc)
+                                                            renpy.show(who_num + ' ' + emo + ' ' + acc + ' close')
+                                                        else:
+                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc)
+                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' close')
+                                                    else:
+                                                        renpy.show(who_num + ' ' + emo + ' ' + 'body')
+                                                        renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' close')
                                         else:
                                             who_num = who
                                             if emo != '':
                                                 if acc != '':
                                                     renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
-
-
                                                     renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
-
-
                                                 else:
                                                     renpy.show(who_num + ' ' + emo + ' ' + clothes)
-
-
                                                     renpy.show(who_num + ' ' + emo + ' ' + clothes + ' close')
-
-
             elif dist == "far/":
                 for who in alt_body_far_dict.keys():
                     for pose in alt_body_far_dict[who]:
@@ -74,42 +62,39 @@ label alt_test:
                                                 who_num = who + '2'
                                             elif 'body' in body:
                                                 who_num = who
-                                            if clothes != 'body':
+                                            if clothes != '' and clothes != 'body':
                                                 if emo != '':
                                                     if acc != '':
                                                         renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
-
-
                                                     else:
                                                         renpy.show(who_num + ' ' + emo + ' ' + clothes + ' far')
-
-
-                                            else:
+                                            elif clothes == 'body':
                                                 if emo != '':
                                                     if acc != '':
                                                         renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far')
-
-
                                                     else:
                                                         renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' far')
-
-
+                                            else:
+                                                if emo != '':
+                                                    if acc != '':
+                                                        if who == 'cs':
+                                                            renpy.show(who_num + ' ' + emo + ' ' + acc + ' far')
+                                                        else:
+                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' far')
+                                                    else:
+                                                        if who == 'cs':
+                                                            renpy.show(who_num + ' ' + emo + ' far')
+                                                        else:
+                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' far')
                                         else:
                                             who_num = who
                                             if emo != '':
                                                 if acc != '':
                                                     renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
-
-
                                                 else:
                                                     renpy.show(who_num + ' ' + emo + ' ' + clothes + ' far')
-
-
-                                        
         for custom in alt_custom_list:
             if 'far' in custom:
                 renpy.show(custom)
-
-
             else:
                 renpy.show(custom)
