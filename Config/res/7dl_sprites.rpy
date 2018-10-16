@@ -747,7 +747,7 @@ init 9999 python:
                                                         acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                     renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far',
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                        im.MatrixColor(im.Composite((675, 1080),
+                                                                        im.MatrixColor(im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path,
@@ -755,7 +755,7 @@ init 9999 python:
                                                                         im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                         "persistent.sprite_time=='night'",
-                                                                        im.MatrixColor(im.Composite((675, 1080),
+                                                                        im.MatrixColor(im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path,
@@ -763,7 +763,7 @@ init 9999 python:
                                                                         im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                         True,
-                                                                        im.Composite((675, 1080),
+                                                                        im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path,
@@ -772,21 +772,21 @@ init 9999 python:
                                                 else:
                                                     renpy.image(who_num + ' ' + emo + ' ' + clothes + ' far',
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                        im.MatrixColor(im.Composite((675, 1080),
+                                                                        im.MatrixColor(im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path),
                                                                         im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                         "persistent.sprite_time=='night'",
-                                                                        im.MatrixColor(im.Composite((675, 1080),
+                                                                        im.MatrixColor(im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path),
                                                                         im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                         True,
-                                                                        im.Composite((675, 1080),
+                                                                        im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path), )
@@ -804,21 +804,21 @@ init 9999 python:
                                                         acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                     renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far',
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                        im.MatrixColor(im.Composite((675, 1080),
+                                                                        im.MatrixColor(im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path,
                                                                         (0, 0), acc_path),
                                                                         im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                         "persistent.sprite_time=='night'",
-                                                                        im.MatrixColor(im.Composite((675, 1080),
+                                                                        im.MatrixColor(im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path,
                                                                         (0, 0), acc_path),
                                                                         im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                         True,
-                                                                        im.Composite((675, 1080),
+                                                                        im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path,
                                                                         (0, 0), acc_path), )
@@ -826,19 +826,19 @@ init 9999 python:
                                                 else:
                                                     renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' far',
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                        im.MatrixColor(im.Composite((675, 1080),
+                                                                        im.MatrixColor(im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path),
                                                                         im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                         "persistent.sprite_time=='night'",
-                                                                        im.MatrixColor(im.Composite((675, 1080),
+                                                                        im.MatrixColor(im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path),
                                                                         im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                         True,
-                                                                        im.Composite((675, 1080),
+                                                                        im.Composite((630, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path), )
                                                                         )
@@ -860,21 +860,21 @@ init 9999 python:
                                                     acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                 renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far',
                                                                     ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                    im.MatrixColor(im.Composite((675, 1080),
+                                                                    im.MatrixColor(im.Composite((630, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path,
                                                                     (0, 0), acc_path),
                                                                     im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                     "persistent.sprite_time=='night'",
-                                                                    im.MatrixColor(im.Composite((675, 1080),
+                                                                    im.MatrixColor(im.Composite((630, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path,
                                                                     (0, 0), acc_path),
                                                                     im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                     True,
-                                                                    im.Composite((675, 1080),
+                                                                    im.Composite((630, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path,
                                                                     (0, 0), acc_path), )
@@ -882,40 +882,57 @@ init 9999 python:
                                             else:
                                                 renpy.image(who_num + ' ' + emo + ' ' + clothes + ' far',
                                                                     ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                    im.MatrixColor(im.Composite((675, 1080),
+                                                                    im.MatrixColor(im.Composite((630, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path),
                                                                     im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                     "persistent.sprite_time=='night'",
-                                                                    im.MatrixColor(im.Composite((675, 1080),
+                                                                    im.MatrixColor(im.Composite((630, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path),
                                                                     im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                     True,
-                                                                    im.Composite((675, 1080),
+                                                                    im.Composite((630, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path), )
                                                                     )                                                  
                                     
     for custom in alt_custom_list:
         custom_path = alt_sprites + 'custom/' + custom + '.png'
-        renpy.image(custom,
-                            ConditionSwitch("persistent.sprite_time=='sunset'",
-                            im.MatrixColor(im.Composite((900, 1080),
-                            (0, 0), custom_path),
-                            im.matrix.tint(0.94, 0.82, 1.0) ),
+        if 'far' in custom:
+            renpy.image(custom,
+                                ConditionSwitch("persistent.sprite_time=='sunset'",
+                                im.MatrixColor(im.Composite((630, 1080),
+                                (0, 0), custom_path),
+                                im.matrix.tint(0.94, 0.82, 1.0) ),
 
-                            "persistent.sprite_time=='night'",
-                            im.MatrixColor(im.Composite((900, 1080),
-                            (0, 0), custom_path),
-                            im.matrix.tint(0.63, 0.78, 0.82) ),
+                                "persistent.sprite_time=='night'",
+                                im.MatrixColor(im.Composite((630, 1080),
+                                (0, 0), custom_path),
+                                im.matrix.tint(0.63, 0.78, 0.82) ),
 
-                            True,
-                            im.Composite((900, 1080),
-                            (0, 0), custom_path), )
-                            )                                    
+                                True,
+                                im.Composite((630, 1080),
+                                (0, 0), custom_path), )
+                                )                                    
+        else:
+            renpy.image(custom,
+                                ConditionSwitch("persistent.sprite_time=='sunset'",
+                                im.MatrixColor(im.Composite((900, 1080),
+                                (0, 0), custom_path),
+                                im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                "persistent.sprite_time=='night'",
+                                im.MatrixColor(im.Composite((900, 1080),
+                                (0, 0), custom_path),
+                                im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                True,
+                                im.Composite((900, 1080),
+                                (0, 0), custom_path), )
+                                )                                    
                             
 init 9999:
 ######## Пионер из 1.1 ########
