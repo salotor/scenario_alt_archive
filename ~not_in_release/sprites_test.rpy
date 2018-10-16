@@ -109,36 +109,43 @@ label alt_sprites_test:
                 custom_sprites_list.append(custom)
             else:
                 custom_sprites_list.append(custom)
+    $ filter1 = renpy.input("Фильтр 1")
+    $ filter2 = renpy.input("Фильтр 2")
     menu:
         "normal":
             python:
                 for x in normal_sprites_list:
-                    renpy.show(x)
-                    ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
-                    ui.text(x, style="button_text", size=30)
-                    renpy.pause(.5)
-                    renpy.hide(x)
+                    if (filter1 in x) and (filter2 in x):
+                        renpy.show(x)
+                        ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
+                        ui.text(x, style="button_text", size=30)
+                        renpy.pause(.5)
+                        renpy.hide(x)
         "close":
             python:
                 for x in close_sprites_list:
-                    renpy.show(x)
-                    ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
-                    ui.text(x, style="button_text", size=30)
-                    renpy.pause(.5)
-                    renpy.hide(x)
+                    if (filter1 in x) and (filter2 in x):
+                        renpy.show(x)
+                        ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
+                        ui.text(x, style="button_text", size=30)
+                        renpy.pause(.5)
+                        renpy.hide(x)
         "far":
             python:
                 for x in far_sprites_list:
-                    renpy.show(x)
-                    ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
-                    ui.text(x, style="button_text", size=30)
-                    renpy.pause(.5)
-                    renpy.hide(x)
+                    if (filter1 in x) and (filter2 in x):
+                        renpy.show(x)
+                        ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
+                        ui.text(x, style="button_text", size=30)
+                        renpy.pause(.5)
+                        renpy.hide(x)
         "custom":
             python:
                 for x in custom_sprites_list:
-                    renpy.show(x)
-                    ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
-                    ui.text(x, style="button_text", size=30)
-                    renpy.pause(.5)
-                    renpy.hide(x)
+                    if (filter1 in x) and (filter2 in x):
+                        renpy.show(x)
+                        ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
+                        ui.text(x, style="button_text", size=30)
+                        renpy.pause(.5)
+                        renpy.hide(x)
+jump alt_sprites_test
