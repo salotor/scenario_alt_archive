@@ -403,55 +403,47 @@ for dist in alt_dist:
                                         who_num = who + '2'
                                     elif 'body' in body:
                                         who_num = who
-                                    if clothes != 'body':
+                                    if clothes != '' and clothes != 'body':
                                         if emo != '':
                                             if acc != '':
                                                 print(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
-
-
                                                 print(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
-
-
                                             else:
                                                 print(who_num + ' ' + emo + ' ' + clothes)
-
-
                                                 print(who_num + ' ' + emo + ' ' + clothes + ' close')
-
-
-                                    else:
+                                    elif clothes == 'body':
                                         if emo != '':
                                             if acc != '':
                                                 print(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc)
-
-
                                                 print(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' close')
-
-
                                             else:
                                                 print(who_num + ' ' + emo + ' ' + 'body')
-
-
                                                 print(who_num + ' ' + emo + ' ' + 'body' + ' close')
-
-
+                                    else:
+                                        if emo != '':
+                                            if acc != '':
+                                                if who == 'cs':
+                                                    print(who_num + ' ' + emo + ' ' + acc)
+                                                    print(who_num + ' ' + emo + ' ' + acc + ' close')
+                                                else:
+                                                    print(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc)
+                                                    print(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' close')
+                                            else:
+                                                if who == 'cs':
+                                                    print(who_num + ' ' + emo)
+                                                    print(who_num + ' ' + emo + ' close')
+                                                else:
+                                                    print(who_num + ' ' + emo + ' ' + 'pioneer')
+                                                    print(who_num + ' ' + emo + ' ' + 'pioneer' + ' close')
                                 else:
                                     who_num = who
                                     if emo != '':
                                         if acc != '':
                                             print(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
-
-
                                             print(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
-
-
                                         else:
                                             print(who_num + ' ' + emo + ' ' + clothes)
-
-
                                             print(who_num + ' ' + emo + ' ' + clothes + ' close')
-
-
     elif dist == "far/":
         for who in alt_body_far_dict.keys():
             for pose in alt_body_far_dict[who]:
@@ -464,42 +456,39 @@ for dist in alt_dist:
                                         who_num = who + '2'
                                     elif 'body' in body:
                                         who_num = who
-                                    if clothes != 'body':
+                                    if clothes != '' and clothes != 'body':
                                         if emo != '':
                                             if acc != '':
                                                 print(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
-
-
                                             else:
                                                 print(who_num + ' ' + emo + ' ' + clothes + ' far')
-
-
-                                    else:
+                                    elif clothes == 'body':
                                         if emo != '':
                                             if acc != '':
                                                 print(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far')
-
-
                                             else:
                                                 print(who_num + ' ' + emo + ' ' + 'body' + ' far')
-
-
+                                    else:
+                                        if emo != '':
+                                            if acc != '':
+                                                if who == 'cs':
+                                                    print(who_num + ' ' + emo + ' ' + acc + ' far')
+                                                else:
+                                                    print(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' far')
+                                            else:
+                                                if who == 'cs':
+                                                    print(who_num + ' ' + emo + ' far')
+                                                else:
+                                                    print(who_num + ' ' + emo + ' ' + 'pioneer' + ' far')
                                 else:
                                     who_num = who
                                     if emo != '':
                                         if acc != '':
                                             print(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
-
-
                                         else:
                                             print(who_num + ' ' + emo + ' ' + clothes + ' far')
-
-
-                                
 for custom in alt_custom_list:
     if 'far' in custom:
         print(custom)
-
-
     else:
         print(custom)

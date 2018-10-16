@@ -717,43 +717,82 @@ init 9999 python:
                                                                             close_sprites)
                                                                             )
                                                 else:
-                                                    renpy.image(who_num + ' ' + emo + ' ' + 'body',
-                                                                        ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
-                                                                        (0, 0), body_path,
-                                                                        (0, 0), emo_path),
-                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+                                                    if who == 'cs':
+                                                        renpy.image(who_num + ' ' + emo,
+                                                                            ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
 
-                                                                        "persistent.sprite_time=='night'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
-                                                                        (0, 0), body_path,
-                                                                        (0, 0), emo_path),
-                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
 
-                                                                        True,
-                                                                        im.Composite((900, 1080),
-                                                                        (0, 0), body_path,
-                                                                        (0, 0), emo_path), )
-                                                                        )
-                                                    renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' close',
-                                                                        At(ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
-                                                                        (0, 0), body_path,
-                                                                        (0, 0), emo_path),
-                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path), )
+                                                                            )
+                                                        renpy.image(who_num + ' ' + emo + ' close',
+                                                                            At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
 
-                                                                        "persistent.sprite_time=='night'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
-                                                                        (0, 0), body_path,
-                                                                        (0, 0), emo_path),
-                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
 
-                                                                        True,
-                                                                        im.Composite((900, 1080),
-                                                                        (0, 0), body_path,
-                                                                        (0, 0), emo_path), ), 
-                                                                        close_sprites)
-                                                                        )
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path), ), 
+                                                                            close_sprites)
+                                                                            )
+                                                    else:
+                                                        renpy.image(who_num + ' ' + emo + ' ' + 'pioneer',
+                                                                            ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path), )
+                                                                            )
+                                                        renpy.image(who_num + ' ' + emo + ' ' + 'pioneer' + ' close',
+                                                                            At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path), ), 
+                                                                            close_sprites)
+                                                                            )
                                     else:
                                         who_num = who
                                         if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):

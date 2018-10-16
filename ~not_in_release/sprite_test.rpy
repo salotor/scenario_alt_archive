@@ -39,8 +39,12 @@ label alt_test:
                                                             renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc)
                                                             renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' close')
                                                     else:
-                                                        renpy.show(who_num + ' ' + emo + ' ' + 'body')
-                                                        renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' close')
+                                                        if who == 'cs':
+                                                            renpy.show(who_num + ' ' + emo)
+                                                            renpy.show(who_num + ' ' + emo + ' close')
+                                                        else:
+                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer')
+                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' close')
                                         else:
                                             who_num = who
                                             if emo != '':
