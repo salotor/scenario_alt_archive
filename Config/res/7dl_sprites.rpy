@@ -747,7 +747,7 @@ init 9999 python:
                                                         acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                     renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far',
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        im.MatrixColor(im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path,
@@ -755,7 +755,7 @@ init 9999 python:
                                                                         im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                         "persistent.sprite_time=='night'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        im.MatrixColor(im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path,
@@ -763,7 +763,7 @@ init 9999 python:
                                                                         im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                         True,
-                                                                        im.Composite((900, 1080),
+                                                                        im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path,
@@ -772,21 +772,21 @@ init 9999 python:
                                                 else:
                                                     renpy.image(who_num + ' ' + emo + ' ' + clothes + ' far',
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        im.MatrixColor(im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path),
                                                                         im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                         "persistent.sprite_time=='night'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        im.MatrixColor(im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path),
                                                                         im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                         True,
-                                                                        im.Composite((900, 1080),
+                                                                        im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), clothes_path,
                                                                         (0, 0), emo_path), )
@@ -804,21 +804,21 @@ init 9999 python:
                                                         acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                     renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far',
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        im.MatrixColor(im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path,
                                                                         (0, 0), acc_path),
                                                                         im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                         "persistent.sprite_time=='night'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        im.MatrixColor(im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path,
                                                                         (0, 0), acc_path),
                                                                         im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                         True,
-                                                                        im.Composite((900, 1080),
+                                                                        im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path,
                                                                         (0, 0), acc_path), )
@@ -826,19 +826,19 @@ init 9999 python:
                                                 else:
                                                     renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' far',
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        im.MatrixColor(im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path),
                                                                         im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                         "persistent.sprite_time=='night'",
-                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        im.MatrixColor(im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path),
                                                                         im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                         True,
-                                                                        im.Composite((900, 1080),
+                                                                        im.Composite((675, 1080),
                                                                         (0, 0), body_path,
                                                                         (0, 0), emo_path), )
                                                                         )
@@ -860,21 +860,21 @@ init 9999 python:
                                                     acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                 renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far',
                                                                     ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    im.MatrixColor(im.Composite((675, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path,
                                                                     (0, 0), acc_path),
                                                                     im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                     "persistent.sprite_time=='night'",
-                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    im.MatrixColor(im.Composite((675, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path,
                                                                     (0, 0), acc_path),
                                                                     im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                     True,
-                                                                    im.Composite((900, 1080),
+                                                                    im.Composite((675, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path,
                                                                     (0, 0), acc_path), )
@@ -882,19 +882,19 @@ init 9999 python:
                                             else:
                                                 renpy.image(who_num + ' ' + emo + ' ' + clothes + ' far',
                                                                     ConditionSwitch("persistent.sprite_time=='sunset'",
-                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    im.MatrixColor(im.Composite((675, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path),
                                                                     im.matrix.tint(0.94, 0.82, 1.0) ),
 
                                                                     "persistent.sprite_time=='night'",
-                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    im.MatrixColor(im.Composite((675, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path),
                                                                     im.matrix.tint(0.63, 0.78, 0.82) ),
 
                                                                     True,
-                                                                    im.Composite((900, 1080),
+                                                                    im.Composite((675, 1080),
                                                                     (0, 0), clothes_path,
                                                                     (0, 0), emo_path), )
                                                                     )                                                  
@@ -917,6 +917,9 @@ init 9999 python:
                             (0, 0), custom_path), )
                             )                                    
                             
+init 9999:
+######## Пионер из 1.1 ########
+                            
     image pi = ConditionSwitch(
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), bl_sprites+"normal/pi/pi_1_pioneer.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), bl_sprites+"normal/pi/pi_1_pioneer.png"), im.matrix.tint(0.63, 0.78, 0.82) ),
@@ -933,6 +936,66 @@ init 9999 python:
     "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((630,1080), (0,0), bl_sprites+"far/pi/pi_1_pioneer.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
     "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((630,1080), (0,0), bl_sprites+"far/pi/pi_1_pioneer.png"), im.matrix.tint(0.63, 0.78, 0.82) ),
     True,im.Composite((630,1080), (0,0), bl_sprites+"far/pi/pi_1_pioneer.png") )
+
+######## Тени ########
+
+#Жужа 1
+    image mz_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mz/mz_1_body.png'), (0, 0), get_sprite_ori('normal/mz/mz_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) ) 
+#ОД 1    
+    image mt_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
+    image mt tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_sad.png')),  im.matrix.opacity(0.8) )
+#Славя 1
+    image sl_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
+    image sl_opaq_dress = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('close/sl/sl_1_dress.png')), im.matrix.opacity(0.8) )
+#Унылка 1
+    image un_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png')), im.matrix.tint(0.01, 0.01, 0.01) )
+    image un tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')),  im.matrix.opacity(0.8) )
+    image un tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
+    image un tr3 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
+    image un tr4 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
+    
+#Дваче 3
+    image dv tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')),  im.matrix.opacity(0.8) )
+    image dv tr21 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.7) )
+    image dv tr22 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
+    image dv tr23 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.5) )
+    image dv tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
+    image dv tr3 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
+    image dv tr4 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
+    
+#Мику
+    image mi tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')),  im.matrix.opacity(0.6) )
+    image mi tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')), im.matrix.tint(0.4, 0.4, 0.4)* im.matrix.opacity(0.4) )
+    image mi tr3 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.2) )
+    
+#Дваче 4
+    image dv_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
+    
+#Ульяна
+    image us tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_normal.png')), im.matrix.tint(0.5, 0.5, 0.5)* im.matrix.opacity(0.5) )
+    image us tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_normal.png')), im.matrix.tint(0.3, 0.3, 0.3)* im.matrix.opacity(0.3) )
+    
+#Кошонка-распашонка 1
+    image uv black silhouette = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/uv/uv_1_body.png'), (0, 0), get_sprite_ori('normal/uv/uv_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
+    image uv shade2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/uv/uv_2_body.png'), (0, 0), get_sprite_ori('normal/uv/uv_2_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
+    image uv shade3 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/uv/uv_3_body.png'), (0, 0), get_sprite_ori('normal/uv/uv_3_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
+    image uv shade4 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/uv/uv_4_body.png'), (0, 0), get_sprite_ori('normal/uv/uv_4_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
+#Ln
+    image ln shade s = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_normal.png')), im.matrix.tint(0.01, 0.01, 0.01) )
+    
+    image ln shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
+                            
+#Унылка отравленная, эмоция сожаление
+    image un sorrow modern poisoned = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.53, 0.88, 0.72)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')))
+
+#Славя с im.matrix.saturation(0.3)    
+    image sl_gr normal casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.saturation(0.3)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')))
+                            
+                            
+                            
+                            
+                            
+                            
                             
                             
                             
