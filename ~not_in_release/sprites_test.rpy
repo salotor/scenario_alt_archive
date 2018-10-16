@@ -119,7 +119,7 @@ label alt_sprites_test:
                         renpy.show(x)
                         ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
                         ui.text(x, style="button_text", size=30)
-                        renpy.pause(.5)
+                        renpy.pause(60)
                         renpy.hide(x)
         "close":
             python:
@@ -128,7 +128,7 @@ label alt_sprites_test:
                         renpy.show(x)
                         ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
                         ui.text(x, style="button_text", size=30)
-                        renpy.pause(.5)
+                        renpy.pause(60)
                         renpy.hide(x)
         "far":
             python:
@@ -137,7 +137,7 @@ label alt_sprites_test:
                         renpy.show(x)
                         ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
                         ui.text(x, style="button_text", size=30)
-                        renpy.pause(.5)
+                        renpy.pause(60)
                         renpy.hide(x)
         "custom":
             python:
@@ -146,6 +146,6 @@ label alt_sprites_test:
                         renpy.show(x)
                         ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
                         ui.text(x, style="button_text", size=30)
-                        renpy.pause(.5)
+                        renpy.pause(60)
                         renpy.hide(x)
 jump alt_sprites_test
