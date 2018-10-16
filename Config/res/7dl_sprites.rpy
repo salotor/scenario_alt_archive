@@ -115,7 +115,7 @@ init 9999 python:
     alt_emo_dict = {
                     'al':{'1':['angry','dontlike','laugh','normal','sad','shy','smile']},
                     'ba':{'1':['em1','evil','normal','smile']},
-                    'cs':{'1':['doubt','fear','glasses_over','glasses_through','grin','laugh','normal','shy','smile']},
+                    'cs':{'1':['doubt','fear','grin','laugh','normal','shy','smile']},
                     'dn':{'1':['dontcare','grin','normal','smile','unsured'],
                           '2':['dontlike','upset'],
                           '3':['sad','scared','shocked','sick','surprise']},
@@ -169,7 +169,7 @@ init 9999 python:
                     'dn':{'1':[''],
                           '2':[''],
                           '3':['']},
-                    'cs':{'1':['glasses','stethoscope','']},
+                    'cs':{'1':['glasses','stethoscope','glasses_over','glasses_through','']},
                     'dv':{'1':[''],
                           '2':[''],
                           '3':[''],
@@ -304,7 +304,7 @@ init 9999 python:
                           '4':['pioneer']}
         }
     alt_emo_far_dict = {
-                    'cs':{'1':['badgirl','doubt','fear','glasses_over','glasses_through','laugh','normal','shy','smile']},
+                    'cs':{'1':['badgirl','doubt','fear','laugh','normal','shy','smile']},
                     'dv':{'1':['cry','scared','shocked','surprise'],
                           '2':['grin'],
                           '3':['guilty','sad','shy'],
@@ -348,7 +348,7 @@ init 9999 python:
                           '4':['guilty','surprise','upset']}
         }
     alt_acc_far_dict = {
-                    'cs':{'1':['glasses','stethoscope','']},
+                    'cs':{'1':['glasses','stethoscope','glasses_over','glasses_through','']},
                     'dv':{'1':[''],
                           '2':[''],
                           '3':[''],
