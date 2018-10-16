@@ -13006,12 +13006,12 @@ label alt_day7_dv_7dl_ussr_epilogue:
     "Из магнитофона на последних микроапмперах аккумуляторов орал Хой."
     nvl clear
     scene bg ext_admins_day_7dl
-    show dv soft smile dress pregnant
+    show dv soft_smile dress_pregnant
     with dissolve
     "И никто не смел шикнуть на меня и потребовать соблюдения тишины, а я не стеснялся того, как расчувствовался — ведь в этом мире что-то чувствовать оказалось совсем не стыдно."
     me "Я люблю тебя."
     "Одними губами произнёс я."
-    show dv laugh dress pregnant with dspr
+    show dv laugh dress_pregnant with dspr
     dv "Сам дурак."
     "Точно так же беззвучно ответила Алиса. И улыбнулась."
     "Светло-светло — как может улыбаться только абсолютно счастливый человек."
@@ -13026,7 +13026,7 @@ label alt_day7_dv_7dl_ussr_epilogue:
     "Значит, никакого возврата к кошмарному старому бытию?"
     "Как сказал голос в автобусе — прошлое должно оставаться прошлым?"
     scene anim prolog_2
-    show dv normal dress pregnant
+    show dv normal dress_pregnant
     with dissolve
     "Значит, здравствуй, светлое настоящее?"
     stop music fadeout 3
