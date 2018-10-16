@@ -1,5 +1,12 @@
-label alt_test:
+init:
+    $ mods["alt_sprites_test"] = u"Тест спрайтов 7дл"
+    $ mod_tags["alt_sprites_test"] = ["length:days","gameplay:vn","protagonist:male"]
+label alt_sprites_test:
     python:
+        normal_sprites_list = []
+        close_sprites_list = []
+        far_sprites_list = []
+        custom_sprites_list = []
         for dist in alt_dist:
             if dist == "normal/":
                 for who in alt_body_dict.keys():
@@ -16,44 +23,44 @@ label alt_test:
                                             if clothes != '' and clothes != 'body':
                                                 if emo != '':
                                                     if acc != '':
-                                                        renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
-                                                        renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
+                                                        normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
+                                                        close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
                                                     else:
-                                                        renpy.show(who_num + ' ' + emo + ' ' + clothes)
-                                                        renpy.show(who_num + ' ' + emo + ' ' + clothes + ' close')
+                                                        normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes)
+                                                        close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' close')
                                             elif clothes == 'body':
                                                 if emo != '':
                                                     if acc != '':
-                                                        renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc)
-                                                        renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' close')
+                                                        normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc)
+                                                        close_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' close')
                                                     else:
-                                                        renpy.show(who_num + ' ' + emo + ' ' + 'body')
-                                                        renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' close')
+                                                        normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'body')
+                                                        close_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' close')
                                             else:
                                                 if emo != '':
                                                     if acc != '':
                                                         if who == 'cs':
-                                                            renpy.show(who_num + ' ' + emo + ' ' + acc)
-                                                            renpy.show(who_num + ' ' + emo + ' ' + acc + ' close')
+                                                            normal_sprites_list.append(who_num + ' ' + emo + ' ' + acc)
+                                                            close_sprites_list.append(who_num + ' ' + emo + ' ' + acc + ' close')
                                                         else:
-                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc)
-                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' close')
+                                                            normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc)
+                                                            close_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' close')
                                                     else:
                                                         if who == 'cs':
-                                                            renpy.show(who_num + ' ' + emo)
-                                                            renpy.show(who_num + ' ' + emo + ' close')
+                                                            normal_sprites_list.append(who_num + ' ' + emo)
+                                                            close_sprites_list.append(who_num + ' ' + emo + ' close')
                                                         else:
-                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer')
-                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' close')
+                                                            normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer')
+                                                            close_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' close')
                                         else:
                                             who_num = who
                                             if emo != '':
                                                 if acc != '':
-                                                    renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
-                                                    renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
+                                                    normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
+                                                    close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
                                                 else:
-                                                    renpy.show(who_num + ' ' + emo + ' ' + clothes)
-                                                    renpy.show(who_num + ' ' + emo + ' ' + clothes + ' close')
+                                                    normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes)
+                                                    close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' close')
             elif dist == "far/":
                 for who in alt_body_far_dict.keys():
                     for pose in alt_body_far_dict[who]:
@@ -69,36 +76,69 @@ label alt_test:
                                             if clothes != '' and clothes != 'body':
                                                 if emo != '':
                                                     if acc != '':
-                                                        renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
+                                                        far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
                                                     else:
-                                                        renpy.show(who_num + ' ' + emo + ' ' + clothes + ' far')
+                                                        far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' far')
                                             elif clothes == 'body':
                                                 if emo != '':
                                                     if acc != '':
-                                                        renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far')
+                                                        far_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far')
                                                     else:
-                                                        renpy.show(who_num + ' ' + emo + ' ' + 'body' + ' far')
+                                                        far_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' far')
                                             else:
                                                 if emo != '':
                                                     if acc != '':
                                                         if who == 'cs':
-                                                            renpy.show(who_num + ' ' + emo + ' ' + acc + ' far')
+                                                            far_sprites_list.append(who_num + ' ' + emo + ' ' + acc + ' far')
                                                         else:
-                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' far')
+                                                            far_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' far')
                                                     else:
                                                         if who == 'cs':
-                                                            renpy.show(who_num + ' ' + emo + ' far')
+                                                            far_sprites_list.append(who_num + ' ' + emo + ' far')
                                                         else:
-                                                            renpy.show(who_num + ' ' + emo + ' ' + 'pioneer' + ' far')
+                                                            far_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' far')
                                         else:
                                             who_num = who
                                             if emo != '':
                                                 if acc != '':
-                                                    renpy.show(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
+                                                    far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
                                                 else:
-                                                    renpy.show(who_num + ' ' + emo + ' ' + clothes + ' far')
+                                                    far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' far')
         for custom in alt_custom_list:
             if 'far' in custom:
-                renpy.show(custom)
+                custom_sprites_list.append(custom)
             else:
-                renpy.show(custom)
+                custom_sprites_list.append(custom)
+    menu:
+        "normal":
+            python:
+                for x in normal_sprites_list:
+                    renpy.show(x)
+                    ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
+                    ui.text(x, style="button_text", size=30)
+                    renpy.pause(.5)
+                    renpy.hide(x)
+        "close":
+            python:
+                for x in close_sprites_list:
+                    renpy.show(x)
+                    ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
+                    ui.text(x, style="button_text", size=30)
+                    renpy.pause(.5)
+                    renpy.hide(x)
+        "far":
+            python:
+                for x in far_sprites_list:
+                    renpy.show(x)
+                    ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
+                    ui.text(x, style="button_text", size=30)
+                    renpy.pause(.5)
+                    renpy.hide(x)
+        "custom":
+            python:
+                for x in custom_sprites_list:
+                    renpy.show(x)
+                    ui.button(clicked=None, xcenter=0.5, ycenter=0.8)
+                    ui.text(x, style="button_text", size=30)
+                    renpy.pause(.5)
+                    renpy.hide(x)
