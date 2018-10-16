@@ -3,7 +3,7 @@
 init -1:
     $ alt_release_no = "0.36.a"
     $ alt_compatible_release_no = ["0.34.a", "0.34.b", "0.35.a", "0.36.a"]
-    $ alt_hotfix_no = "hf0"
+    $ alt_hotfix_no = "hf1"
     $ plthr = u"none"
 
 init 2:
