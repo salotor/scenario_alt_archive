@@ -1,5 +1,14 @@
 init 1:
     $ page_7dl = 1
+    $ max_bgs_page_7dl = 9
+    $ max_arts_page_7dl = 8
+    $ max_un_page_7dl = 2
+    $ max_sl_page_7dl = 1
+    $ max_dv_page_7dl = 1
+    $ max_mi_page_7dl = 2
+    $ max_us_page_7dl = 2
+    $ max_mt_page_7dl = 1
+    
     $ show_image_7dl = ""
     $ show_image2_7dl = ""
     $ show_image3_7dl = ""
@@ -113,82 +122,45 @@ screen gallery_exit_7dl:
         
 screen gallery_bw_7dl:
     if gallery_mode_7dl == "bgs":
-        if renpy.get_screen("bgs_7dl_2"):
+        if not renpy.get_screen("bgs_7dl_1"):
             imagebutton:
                 auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 1), Hide("bgs_7dl_2", transition=Dissolve(0.2)), Show("bgs_7dl_1", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_3"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 2), Hide("bgs_7dl_3", transition=Dissolve(0.2)), Show("bgs_7dl_2", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_4"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 3), Hide("bgs_7dl_4", transition=Dissolve(0.2)), Show("bgs_7dl_3", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_5"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 4), Hide("bgs_7dl_5", transition=Dissolve(0.2)), Show("bgs_7dl_4", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_6"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 5), Hide("bgs_7dl_6", transition=Dissolve(0.2)), Show("bgs_7dl_5", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_7"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 6), Hide("bgs_7dl_7", transition=Dissolve(0.2)), Show("bgs_7dl_6", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_8"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 7), Hide("bgs_7dl_8", transition=Dissolve(0.2)), Show("bgs_7dl_7", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_9"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 8), Hide("bgs_7dl_9", transition=Dissolve(0.2)), Show("bgs_7dl_8", transition=Dissolve(0.2))]
+                action [SetVariable("page_7dl", page_7dl-1), Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("bgs_7dl_%s" % str(page_7dl-1), transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "arts":
-        if renpy.get_screen("arts_7dl_2"):
+        if not renpy.get_screen("arts_7dl_1"):
             imagebutton:
                 auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 1), Hide("arts_7dl_2", transition=Dissolve(0.2)), Show("arts_7dl_1", transition=Dissolve(0.2))]
-        elif renpy.get_screen("arts_7dl_3"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 2), Hide("arts_7dl_3", transition=Dissolve(0.2)), Show("arts_7dl_2", transition=Dissolve(0.2))]
-        elif renpy.get_screen("arts_7dl_4"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 3), Hide("arts_7dl_4", transition=Dissolve(0.2)), Show("arts_7dl_3", transition=Dissolve(0.2))]
-        elif renpy.get_screen("arts_7dl_5"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 4), Hide("arts_7dl_5", transition=Dissolve(0.2)), Show("arts_7dl_4", transition=Dissolve(0.2))]
-        elif renpy.get_screen("arts_7dl_6"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 5), Hide("arts_7dl_6", transition=Dissolve(0.2)), Show("arts_7dl_5", transition=Dissolve(0.2))]
-        elif renpy.get_screen("arts_7dl_7"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 6), Hide("arts_7dl_7", transition=Dissolve(0.2)), Show("arts_7dl_6", transition=Dissolve(0.2))]
-        elif renpy.get_screen("arts_7dl_8"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
-                action [SetVariable("page_7dl", 7), Hide("arts_7dl_8", transition=Dissolve(0.2)), Show("arts_7dl_7", transition=Dissolve(0.2))]
+                action [SetVariable("page_7dl", page_7dl-1), Hide("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_%s" % str(page_7dl-1), transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "un":
         if not renpy.get_screen("arts_7dl_un_1"):
             imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5
-                action [SetVariable("page_7dl", 1), Hide("arts_7dl_un_2", transition=Dissolve(0.2)), Show("arts_7dl_un_1", transition=Dissolve(0.2))]
+                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl-1), Hide("arts_7dl_un_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_un_%s" % str(page_7dl-1), transition=Dissolve(0.2))]
+    elif gallery_mode_7dl == "sl":
+        if not renpy.get_screen("arts_7dl_sl_1"):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl-1), Hide("arts_7dl_sl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_sl_%s" % str(page_7dl-1), transition=Dissolve(0.2))]
+    elif gallery_mode_7dl == "dv":
+        if not renpy.get_screen("arts_7dl_dv_1"):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl-1), Hide("arts_7dl_dv_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_dv_%s" % str(page_7dl-1), transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "mi":
         if not renpy.get_screen("arts_7dl_mi_1"):
             imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5
-                action [SetVariable("page_7dl", 1), Hide("arts_7dl_mi_2", transition=Dissolve(0.2)), Show("arts_7dl_mi_1", transition=Dissolve(0.2))]
+                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl-1), Hide("arts_7dl_mi_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_mi_%s" % str(page_7dl-1), transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "us":
         if not renpy.get_screen("arts_7dl_us_1"):
             imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5
-                action [SetVariable("page_7dl", 1), Hide("arts_7dl_us_2", transition=Dissolve(0.2)), Show("arts_7dl_us_1", transition=Dissolve(0.2))]
+                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl-1), Hide("arts_7dl_us_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_us_%s" % str(page_7dl-1), transition=Dissolve(0.2))]
+    elif gallery_mode_7dl == "mt":
+        if not renpy.get_screen("arts_7dl_mt_1"):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_backward_%s.png") xalign 0.045 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl-1), Hide("arts_7dl_mt_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_mt_%s" % str(page_7dl-1), transition=Dissolve(0.2))]
      
 screen gallery_fw_7dl:
     if gallery_mode_7dl == "start":
@@ -196,82 +168,45 @@ screen gallery_fw_7dl:
             auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
             action [SetVariable("page_7dl", 2), SetVariable("gallery_mode_7dl", "arts"), Hide("arts_7dl_1", transition=Dissolve(0.2)), Show("arts_7dl_2", transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "bgs":
-        if renpy.get_screen("bgs_7dl_1"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
-                action [SetVariable("page_7dl", 2), Hide("bgs_7dl_1", transition=Dissolve(0.2)), Show("bgs_7dl_2", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_2"):
+        if not renpy.get_screen("bgs_7dl_%s" % str(max_bgs_page_7dl)):
             imagebutton:
                 auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                action [SetVariable("page_7dl", 3), Hide("bgs_7dl_2", transition=Dissolve(0.2)), Show("bgs_7dl_3", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_3"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                action [SetVariable("page_7dl", 4), Hide("bgs_7dl_3", transition=Dissolve(0.2)), Show("bgs_7dl_4", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_4"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                action [SetVariable("page_7dl", 5), Hide("bgs_7dl_4", transition=Dissolve(0.2)), Show("bgs_7dl_5", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_5"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                action [SetVariable("page_7dl", 6), Hide("bgs_7dl_5", transition=Dissolve(0.2)), Show("bgs_7dl_6", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_6"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                action [SetVariable("page_7dl", 7), Hide("bgs_7dl_6", transition=Dissolve(0.2)), Show("bgs_7dl_7", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_7"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                action [SetVariable("page_7dl", 8), Hide("bgs_7dl_7", transition=Dissolve(0.2)), Show("bgs_7dl_8", transition=Dissolve(0.2))]
-        elif renpy.get_screen("bgs_7dl_8"):
-            imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                action [SetVariable("page_7dl", 9), Hide("bgs_7dl_8", transition=Dissolve(0.2)), Show("bgs_7dl_9", transition=Dissolve(0.2))]
+                action [SetVariable("page_7dl", page_7dl+1), Hide("bgs_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("bgs_7dl_%s" % str(page_7dl+1), transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "arts":
-            if renpy.get_screen("arts_7dl_1"):
-                imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                    action [SetVariable("page_7dl", 2), Hide("arts_7dl_1", transition=Dissolve(0.2)), Show("arts_7dl_2", transition=Dissolve(0.2))]
-            elif renpy.get_screen("arts_7dl_2"):
-                imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                    action [SetVariable("page_7dl", 3), Hide("arts_7dl_2", transition=Dissolve(0.2)), Show("arts_7dl_3", transition=Dissolve(0.2))]
-            elif renpy.get_screen("arts_7dl_3"):
-                imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                    action [SetVariable("page_7dl", 4), Hide("arts_7dl_3", transition=Dissolve(0.2)), Show("arts_7dl_4", transition=Dissolve(0.2))]
-            elif renpy.get_screen("arts_7dl_4"):
-                imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
-                    action [SetVariable("page_7dl", 5), Hide("arts_7dl_4", transition=Dissolve(0.2)), Show("arts_7dl_5", transition=Dissolve(0.2))]
-            elif renpy.get_screen("arts_7dl_5"):
-                imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                    action [SetVariable("page_7dl", 6), Hide("arts_7dl_5", transition=Dissolve(0.2)), Show("arts_7dl_6", transition=Dissolve(0.2))]
-            elif renpy.get_screen("arts_7dl_6"):
-                imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                    action [SetVariable("page_7dl", 7), Hide("arts_7dl_6", transition=Dissolve(0.2)), Show("arts_7dl_7", transition=Dissolve(0.2))]
-            elif renpy.get_screen("arts_7dl_7"):
-                imagebutton:
-                    auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
-                    action [SetVariable("page_7dl", 8), Hide("arts_7dl_7", transition=Dissolve(0.2)), Show("arts_7dl_8", transition=Dissolve(0.2))]
+        if not renpy.get_screen("arts_7dl_%s" % str(max_arts_page_7dl)):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl+1), Hide("arts_7dl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_%s" % str(page_7dl+1), transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "un":
-        if renpy.get_screen("arts_7dl_un_1"):
+        if not renpy.get_screen("arts_7dl_un_%s" % str(max_un_page_7dl)):
             imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
-                action [SetVariable("page_7dl", 2), Hide("arts_7dl_un_1", transition=Dissolve(0.2)), Show("arts_7dl_un_2", transition=Dissolve(0.2))]
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl+1), Hide("arts_7dl_un_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_un_%s" % str(page_7dl+1), transition=Dissolve(0.2))]
+    elif gallery_mode_7dl == "sl":
+        if not renpy.get_screen("arts_7dl_sl_%s" % str(max_sl_page_7dl)):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl+1), Hide("arts_7dl_sl_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_sl_%s" % str(page_7dl+1), transition=Dissolve(0.2))]
+    elif gallery_mode_7dl == "dv":
+        if not renpy.get_screen("arts_7dl_dv_%s" % str(max_dv_page_7dl)):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl+1), Hide("arts_7dl_dv_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_dv_%s" % str(page_7dl+1), transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "mi":
-        if not renpy.get_screen("arts_7dl_mi_2"):
+        if not renpy.get_screen("arts_7dl_mi_%s" % str(max_mi_page_7dl)):
             imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
-                action [SetVariable("page_7dl", 2), Hide("arts_7dl_mi_1", transition=Dissolve(0.2)), Show("arts_7dl_mi_2", transition=Dissolve(0.2))]
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl+1), Hide("arts_7dl_mi_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_mi_%s" % str(page_7dl+1), transition=Dissolve(0.2))]
     elif gallery_mode_7dl == "us":
-        if not renpy.get_screen("arts_7dl_us_2"):
+        if not renpy.get_screen("arts_7dl_us_%s" % str(max_us_page_7dl)):
             imagebutton:
-                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5
-                action [SetVariable("page_7dl", 2), Hide("arts_7dl_us_1", transition=Dissolve(0.2)), Show("arts_7dl_us_2", transition=Dissolve(0.2))]
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl+1), Hide("arts_7dl_us_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_us_%s" % str(page_7dl+1), transition=Dissolve(0.2))]
+    elif gallery_mode_7dl == "mt":
+        if not renpy.get_screen("arts_7dl_mt_%s" % str(max_mt_page_7dl)):
+            imagebutton:
+                auto get_image_7dl("gui/gallery/gallery_navig_forward_%s.png") xalign 0.957 yalign 0.5 
+                action [SetVariable("page_7dl", page_7dl+1), Hide("arts_7dl_mt_%s" % str(page_7dl), transition=Dissolve(0.2)), Show("arts_7dl_mt_%s" % str(page_7dl+1), transition=Dissolve(0.2))]
 
 screen filter_settings_7dl:
     tag menu
@@ -296,7 +231,7 @@ screen filter_settings_7dl:
                     
 screen bgs_7dl_1:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/9"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_bgs_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -341,7 +276,7 @@ screen bgs_7dl_1:
 
 screen bgs_7dl_2:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/9"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_bgs_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -386,7 +321,7 @@ screen bgs_7dl_2:
        
 screen bgs_7dl_3:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/9"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_bgs_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -431,7 +366,7 @@ screen bgs_7dl_3:
         
 screen bgs_7dl_4:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/9"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_bgs_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -476,7 +411,7 @@ screen bgs_7dl_4:
        
 screen bgs_7dl_5:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/9"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_bgs_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -521,7 +456,7 @@ screen bgs_7dl_5:
         
 screen bgs_7dl_6:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/9"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_bgs_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -566,7 +501,7 @@ screen bgs_7dl_6:
         
 screen bgs_7dl_7:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/9"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_bgs_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -611,7 +546,7 @@ screen bgs_7dl_7:
         
 screen bgs_7dl_8:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/9"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_bgs_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -656,7 +591,7 @@ screen bgs_7dl_8:
         
 screen bgs_7dl_9:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/9"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_bgs_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -671,7 +606,7 @@ screen bgs_7dl_9:
 
 screen arts_7dl_1:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/8"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_arts_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -716,7 +651,7 @@ screen arts_7dl_1:
         
 screen arts_7dl_2:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/8"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_arts_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -761,7 +696,7 @@ screen arts_7dl_2:
        
 screen arts_7dl_3:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/8"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_arts_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -806,7 +741,7 @@ screen arts_7dl_3:
         
 screen arts_7dl_4:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/8"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_arts_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -851,7 +786,7 @@ screen arts_7dl_4:
        
 screen arts_7dl_5:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/8"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_arts_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -896,7 +831,7 @@ screen arts_7dl_5:
      
 screen arts_7dl_6:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/8"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_arts_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -941,7 +876,7 @@ screen arts_7dl_6:
      
 screen arts_7dl_7:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/8"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_arts_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -986,7 +921,7 @@ screen arts_7dl_7:
         
 screen arts_7dl_8:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/8"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_arts_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -1031,7 +966,7 @@ screen arts_7dl_8:
         
 screen arts_7dl_un_1:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/2"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_un_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -1076,7 +1011,7 @@ screen arts_7dl_un_1:
      
 screen arts_7dl_un_2:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/2"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_un_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -1091,7 +1026,7 @@ screen arts_7dl_un_2:
         
 screen arts_7dl_sl_1:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/1"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_sl_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -1136,7 +1071,7 @@ screen arts_7dl_sl_1:
         
 screen arts_7dl_dv_1:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/1"
+    $ next_page_7dl = str(page_7dl) + "/" + str(max_dv_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -1181,7 +1116,7 @@ screen arts_7dl_dv_1:
         
 screen arts_7dl_mi_1:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/2"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_mi_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -1226,7 +1161,7 @@ screen arts_7dl_mi_1:
         
 screen arts_7dl_mi_2:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/2"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_mi_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -1271,7 +1206,7 @@ screen arts_7dl_mi_2:
         
 screen arts_7dl_us_1:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/2"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_us_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -1316,7 +1251,7 @@ screen arts_7dl_us_1:
         
 screen arts_7dl_us_2:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/2"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_us_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
@@ -1331,7 +1266,7 @@ screen arts_7dl_us_2:
         
 screen arts_7dl_mt_1:
     tag menu
-    $ next_page_7dl = str(page_7dl) + "/1"
+    $ next_page_7dl = str(page_7dl)  + "/" + str(max_mt_page_7dl)
     textbutton next_page_7dl:
         text_style "page_7dl_text"
         style "page_7dl_text"
