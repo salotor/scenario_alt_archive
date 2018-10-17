@@ -109,11 +109,11 @@ label alt_sprites_test:
                 custom_sprites_list.append(custom)
             else:
                 custom_sprites_list.append(custom)
-    $ filter1 = renpy.input("Фильтр 1")
-    $ filter2 = renpy.input("Фильтр 2")
     menu:
         "normal":
             python:
+                filter1 = renpy.input("Фильтр 1")
+                filter2 = renpy.input("Фильтр 2")
                 for x in normal_sprites_list:
                     if (filter1 in x) and (filter2 in x):
                         renpy.show(x)
@@ -123,6 +123,8 @@ label alt_sprites_test:
                         renpy.hide(x)
         "close":
             python:
+                filter1 = renpy.input("Фильтр 1")
+                filter2 = renpy.input("Фильтр 2")
                 for x in close_sprites_list:
                     if (filter1 in x) and (filter2 in x):
                         renpy.show(x)
@@ -132,6 +134,8 @@ label alt_sprites_test:
                         renpy.hide(x)
         "far":
             python:
+                filter1 = renpy.input("Фильтр 1")
+                filter2 = renpy.input("Фильтр 2")
                 for x in far_sprites_list:
                     if (filter1 in x) and (filter2 in x):
                         renpy.show(x)
@@ -141,6 +145,8 @@ label alt_sprites_test:
                         renpy.hide(x)
         "custom":
             python:
+                filter1 = renpy.input("Фильтр 1")
+                filter2 = renpy.input("Фильтр 2")
                 for x in custom_sprites_list:
                     if (filter1 in x) and (filter2 in x):
                         renpy.show(x)
@@ -148,4 +154,22 @@ label alt_sprites_test:
                         ui.text(x, style="button_text", size=30)
                         renpy.pause(600)
                         renpy.hide(x)
-jump alt_sprites_test
+        "test all":
+            python:
+                for x in normal_sprites_list:
+                    renpy.show(x)
+                    renpy.pause(.01)
+                    renpy.hide(x)
+                for x in close_sprites_list:
+                    renpy.show(x)
+                    renpy.pause(.01)
+                    renpy.hide(x)
+                for x in far_sprites_list:
+                    renpy.show(x)
+                    renpy.pause(.01)
+                    renpy.hide(x)
+                for x in custom_sprites_list:
+                    renpy.show(x)
+                    renpy.pause(.01)
+                    renpy.hide(x)
+    jump alt_sprites_test
