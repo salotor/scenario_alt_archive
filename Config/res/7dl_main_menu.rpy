@@ -1,4 +1,23 @@
 init 1 python:
+    presentscript_font = default_7dl_path + "Pics/fonts/presentscript.ttf"
+
+    style.alt_settings_textbutton = Style(style.base_font)
+    style.alt_settings_textbutton.font  = presentscript_font
+    style.alt_settings_textbutton.size = 37
+    style.alt_settings_textbutton.kerning = -2
+    style.alt_settings_textbutton.color = "#2f059a"
+    style.alt_settings_textbutton.hover_color = "#9a0505"
+    style.alt_settings_textbutton.selected_color = "#2f059a"
+    style.alt_settings_textbutton.selected_idle_color = "#2f059a"
+    style.alt_settings_textbutton.selected_hover_color = "#9a0505"
+    style.alt_settings_textbutton.insensitive_color = "#2f059a"
+
+    style.alt_settings_text = Style(style.base_font)
+    style.alt_settings_text.font  = presentscript_font
+    style.alt_settings_text.size = 37
+    style.alt_settings_text.kerning = -2
+    style.alt_settings_text.color = "#2f059a"
+    
     if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
         header_font = "fonts/corbel.ttf"
         style.settings_link = Style(style.base_font)
@@ -91,7 +110,7 @@ screen alt_wip:
         xalign 0.5
         action Hide("alt_wip")
 
-screen help_7dl:
+screen alt_help:
     modal True
     add get_image("gui/o_rly/base.png")
     text "Уважаемый читатель,":
@@ -114,54 +133,117 @@ screen help_7dl:
         text_style "settings_link"
         yalign 0.6
         xalign 0.23
-        action [Hide("help_7dl", transition=Dissolve(0.2)), OpenURL("https://vk.com/wall-128046483_29533"), Stop('music', fadeout=2), Return()]
+        action [Hide("alt_help", transition=Dissolve(0.2)), OpenURL("https://vk.com/wall-128046483_29533"), Stop('music', fadeout=2), Return()]
     textbutton _("Закрыть"):
         text_size 40
         style "log_button"
         text_style "settings_link"
         yalign 0.6
         xalign 0.5
-        action [Hide("help_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Return()]
+        action [Hide("alt_help", transition=Dissolve(0.2)), Stop('music', fadeout=2), Return()]
     textbutton _("Больше не показывать"):
         text_size 40
         style "log_button"
         text_style "settings_link"
         yalign 0.6
         xalign 0.83
-        action [Hide("help_7dl", transition=Dissolve(0.2)), SetField(persistent,'dont_disturb', True), Stop('music', fadeout=2), Return()]
+        action [Hide("alt_help", transition=Dissolve(0.2)), SetField(persistent,'dont_disturb', True), Stop('music', fadeout=2), Return()]
         
 screen settings_widget_lp_on_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_wdglp_descr_on.png")
+    text "Включить виджет для" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "отображения прогресса и" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+    text "информации по моду (в" xpos 0.653 ypos 0.692:
+        style "alt_settings_text"
+    text "т.ч. очков отношений)." xpos 0.653 ypos 0.738:
+        style "alt_settings_text"
     
 screen settings_widget_lp_off_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_wdglp_descr_off.png")
+    text "Выключить виджет для" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "отображения прогресса и" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+    text "информации по моду (в" xpos 0.653 ypos 0.692:
+        style "alt_settings_text"
+    text "т.ч. очков отношений)." xpos 0.653 ypos 0.738:
+        style "alt_settings_text"
     
 screen settings_widget_music_on_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_wdgmus_descr_on.png")
+    text "Включить виджет для" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "отображения музыки, иг-" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+    text "рающей в данный момент." xpos 0.653 ypos 0.692:
+        style "alt_settings_text"
     
 screen settings_widget_music_off_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_wdgmus_descr_off.png")
+    text "Выключить виджет для" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "отображения музыки, иг-" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+    text "рающей в данный момент." xpos 0.653 ypos 0.692:
+        style "alt_settings_text"
     
 screen settings_dlc_on_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_dlc_descr_on.png")
+    text "Включить возможность" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "выхода на Кошкорут, пи-" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+    text "шущийся командой добро-" xpos 0.653 ypos 0.692:
+        style "alt_settings_text"
+    text "вольцев (рут недописан)." xpos 0.653 ypos 0.738:
+        style "alt_settings_text"
 
 screen settings_dlc_off_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_dlc_descr_off.png")
+    text "Выключить возможность" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "выхода на Кошкорут, пи-" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+    text "шущийся командой добро-" xpos 0.653 ypos 0.692:
+        style "alt_settings_text"
+    text "вольцев (рут недописан)." xpos 0.653 ypos 0.738:
+        style "alt_settings_text"
 
 screen settings_hentai_un_new_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_hent_descr_new.png")
+    text "Переключить на новую" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "версию хентая в руте" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+    text "Лены-7дл (изменяется" xpos 0.653 ypos 0.692:
+        style "alt_settings_text"
+    text "только текст)." xpos 0.653 ypos 0.738:
+        style "alt_settings_text"
  
 screen settings_hentai_un_old_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_hent_descr_old.png")
-
-screen settings_reboot_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_reboot_descr.png")
+    text "Переключить на старую" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "версию хентая в руте" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+    text "Лены-7дл (изменяется" xpos 0.653 ypos 0.692:
+        style "alt_settings_text"
+    text "только текст)." xpos 0.653 ypos 0.738:
+        style "alt_settings_text"
 
 screen settings_chapter_on_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_chapter_descr_on.png")
+    text "Включить заставки в" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "начале глав." xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
 
 screen settings_chapter_off_7dl():
-    add get_image_7dl("gui/menu_elem/settings/settings_chapter_descr_off.png")
+    text "Выключить заставки в" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "начале глав." xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+
+screen settings_reboot_7dl():
+    text "Для применения" xcenter 0.755 ypos 0.6:
+        style "alt_settings_text"
+    text "изменений необходимо" xcenter 0.755 ypos 0.646:
+        style "alt_settings_text"
+    text "перезагрузить игру." xcenter 0.755 ypos 0.692:
+        style "alt_settings_text"
 
 screen menu_7dl():
     if persistent.waifu_7dl == 1:
@@ -293,80 +375,91 @@ screen menu_7dl():
             
 screen settings_7dl():
     tag menu
-    add get_image_7dl("gui/menu_elem/settings/settings_bg.png") xalign 0.9 yalign 0.7
+    add get_image_7dl("gui/menu_elem/settings/settings_bg.png")
     if not persistent.lp_widget_7dl:
-        imagebutton xalign 0.82 yalign 0.315:
-            auto get_image_7dl("gui/menu_elem/settings/settings_wdgmlp_off_%s.png")
+        textbutton "Виджет (ЛП): выкл." xpos 0.65 ypos 0.255:
+            style "log_button"
+            text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_lp_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_lp_off_7dl", transition=Dissolve(0.2)), Hide("settings_widget_lp_on_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'lp_widget_7dl', True)
     else:
-        imagebutton xalign 0.82 yalign 0.315:
-            auto get_image_7dl("gui/menu_elem/settings/settings_wdgmlp_on_%s.png")
+        textbutton "Виджет (ЛП): вкл." xpos 0.65 ypos 0.255:
+            style "log_button"
+            text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_lp_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_lp_on_7dl", transition=Dissolve(0.2)), Hide("settings_widget_lp_off_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'lp_widget_7dl', False)
     if not persistent.music_widget_7dl:
-        imagebutton xalign 0.82 yalign 0.365:
-            auto get_image_7dl("gui/menu_elem/settings/settings_wdgmus_off_%s.png")
+        textbutton "Виджет (музыка): выкл." xpos 0.65 ypos 0.3:
+            style "log_button"
+            text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_music_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_music_off_7dl", transition=Dissolve(0.2)), Hide("settings_widget_music_on_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'music_widget_7dl', True)
     else:
-        imagebutton xalign 0.82 yalign 0.365:
-            auto get_image_7dl("gui/menu_elem/settings/settings_wdgmus_on_%s.png")
+        textbutton "Виджет (музыка): вкл." xpos 0.65 ypos 0.3:
+            style "log_button"
+            text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_music_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_music_on_7dl", transition=Dissolve(0.2)), Hide("settings_widget_music_off_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'music_widget_7dl', False)
     if not persistent.uv_dlc_on_7dl:
-        imagebutton xalign 0.82 yalign 0.41:
-            auto get_image_7dl("gui/menu_elem/settings/settings_dlc_off_%s.png")
+        textbutton "Кошкорут: выкл." xpos 0.65 ypos 0.347:
+            style "log_button"
+            text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_dlc_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_dlc_off_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_on_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'uv_dlc_on_7dl',True)
     else:
-        imagebutton xalign 0.82 yalign 0.41:
-            auto get_image_7dl("gui/menu_elem/settings/settings_dlc_on_%s.png")
+        textbutton "Кошкорут: вкл." xpos 0.65 ypos 0.347:
+            style "log_button"
+            text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_dlc_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_dlc_on_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_off_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'uv_dlc_on_7dl',False)
     if not persistent.hentai_un_old_7dl:
-        imagebutton xalign 0.82 yalign 0.46:
-            auto get_image_7dl("gui/menu_elem/settings/settings_hent_off_%s.png")
+        textbutton "Х-сцены с Леной: новые" xpos 0.65 ypos 0.392:
+            style "log_button"
+            text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_hentai_un_old_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'hentai_un_old_7dl',True)
     else:
-        imagebutton xalign 0.82 yalign 0.46:
-            auto get_image_7dl("gui/menu_elem/settings/settings_hent_on_%s.png")
+        textbutton "Х-сцены с Леной: старые" xpos 0.65 ypos 0.392:
+            style "log_button"
+            text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_hentai_un_new_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'hentai_un_old_7dl',False)
     if not persistent.chapter_off_7dl:
-        imagebutton xpos 0.662 ypos 0.49:
-            auto get_image_7dl("gui/menu_elem/settings/settings_chapter_on_%s.png")
+        textbutton "Заставки: вкл." xpos 0.65 ypos 0.438:
+            style "log_button"
+            text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_chapter_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_chapter_off_7dl", transition=Dissolve(0.2)), Hide("settings_chapter_on_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'chapter_off_7dl',True)
     else:
-        imagebutton xpos 0.662 ypos 0.49:
-            auto get_image_7dl("gui/menu_elem/settings/settings_chapter_off_%s.png")
+        textbutton "Заставки: выкл." xpos 0.65 ypos 0.438:
+            style "log_button"
+            text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_chapter_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_chapter_on_7dl", transition=Dissolve(0.2)), Hide("settings_chapter_off_7dl", transition=Dissolve(0.2))]
             action SetField(persistent,'chapter_off_7dl',False)
     if (compare_music_widget_7dl != persistent.music_widget_7dl) or (compare_lp_widget_7dl != persistent.lp_widget_7dl):
-        imagebutton xalign 0.81 yalign 0.8:
-            auto get_image_7dl("gui/menu_elem/settings/settings_reboot_%s.png")
+        textbutton "ПЕРЕЗАГРУЗИТЬ" xcenter 0.755 ypos 0.783:
+            style "log_button"
+            text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_reboot_7dl", transition=Dissolve(0.2))
             unhovered Hide("settings_reboot_7dl", transition=Dissolve(0.2))
@@ -408,7 +501,7 @@ label start_menu_7dl:
             scene bg ext_city_night_7dl with fade
             play music music_7dl["seven_summer_days"] fadein 3
             $ renpy.transition(dissolve)
-            call screen help_7dl
+            call screen alt_help
     jump main_menu_7dl
     
 label main_menu_7dl:
