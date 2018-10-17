@@ -23991,7 +23991,10 @@ label alt_day6_sl_7dl_hentai:
         "Сбросив одежду, Славя вопросительно посмотрела на меня."
         sl "Ты не будешь купаться?"
         me "Я… Разве там не холодно?"
-        show sl laugh swim with dissolve
+        if persistent.hentai_graphics_7dl:
+            show sl laugh body with dissolve
+        else:
+            show sl laugh swim with dissolve
         sl "Нет!"
         "Со смехом она наклонилась и брызнула на меня водой."
         sl "Пошли, искупаемся."
