@@ -417,21 +417,29 @@ init 9999 python:
                                             body_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'
                                         elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'):
                                             body_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'
+                                        else:
+                                            body_path = who + '_' + pose + '_' + body + '.png'
                                         if clothes != '' and clothes != 'body':
                                             if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
                                             elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                            else:
+                                                clothes_path = who + '_' + pose + '_' + clothes + '.png'
                                             if emo != '':
                                                 if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                     emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
                                                 elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                     emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
                                                 if acc != '':
                                                     if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                     elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
                                                     renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc,
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
                                                                         im.MatrixColor(im.Composite((900, 1080),
@@ -531,11 +539,15 @@ init 9999 python:
                                                     emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
                                                 elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                     emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
                                                 if acc != '':
                                                     if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                     elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
                                                     renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc,
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
                                                                         im.MatrixColor(im.Composite((900, 1080),
@@ -623,11 +635,15 @@ init 9999 python:
                                                     emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
                                                 elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                     emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
                                                 if acc != '':
                                                     if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                     elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
                                                     if who == 'cs':
                                                         renpy.image(who_num + ' ' + emo + ' ' + acc,
                                                                             ConditionSwitch("persistent.sprite_time=='sunset'",
@@ -799,16 +815,22 @@ init 9999 python:
                                             clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
                                         elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                             clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                        else:
+                                            clothes_path = who + '_' + pose + '_' + clothes + '.png'
                                         if emo != '':
                                             if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                 emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
                                             elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                 emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                            else:
+                                                emo_path = who + '_' + pose + '_' + emo + '.png'
                                             if acc != '':
                                                 if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                     acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                 elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                     acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                else:
+                                                    acc_path = who + '_' + pose + '_' + acc + '.png'
                                                 renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc,
                                                                     ConditionSwitch("persistent.sprite_time=='sunset'",
                                                                     im.MatrixColor(im.Composite((900, 1080),
@@ -906,21 +928,29 @@ init 9999 python:
                                             body_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'
                                         elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'):
                                             body_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'
+                                        else:
+                                            body_path = who + '_' + pose + '_' + body + '.png'
                                         if clothes != '' and clothes != 'body':
                                             if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
                                             elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                            else:
+                                                clothes_path = who + '_' + pose + '_' + clothes + '.png'
                                             if emo != '':
                                                 if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                     emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
                                                 elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                     emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
                                                 if acc != '':
                                                     if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                     elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
                                                     renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far',
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
                                                                         im.MatrixColor(im.Composite((630, 1080),
@@ -973,11 +1003,15 @@ init 9999 python:
                                                     emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
                                                 elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                     emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
                                                 if acc != '':
                                                     if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                     elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
                                                     renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far',
                                                                         ConditionSwitch("persistent.sprite_time=='sunset'",
                                                                         im.MatrixColor(im.Composite((630, 1080),
@@ -1024,11 +1058,15 @@ init 9999 python:
                                                     emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
                                                 elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                     emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
                                                 if acc != '':
                                                     if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                     elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                         acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
                                                     if who == 'cs':
                                                         renpy.image(who_num + ' ' + emo + ' ' + acc + ' far',
                                                                             ConditionSwitch("persistent.sprite_time=='sunset'",
@@ -1118,16 +1156,22 @@ init 9999 python:
                                             clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
                                         elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                             clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                        else:
+                                            clothes_path = who + '_' + pose + '_' + clothes + '.png'
                                         if emo != '':
                                             if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                 emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
                                             elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
                                                 emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                            else:
+                                                emo_path = who + '_' + pose + '_' + emo + '.png'
                                             if acc != '':
                                                 if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                     acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
                                                 elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
                                                     acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                else:
+                                                    acc_path = who + '_' + pose + '_' + acc + '.png'
                                                 renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far',
                                                                     ConditionSwitch("persistent.sprite_time=='sunset'",
                                                                     im.MatrixColor(im.Composite((630, 1080),
