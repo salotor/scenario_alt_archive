@@ -225,6 +225,18 @@ screen settings_hentai_un_old_7dl():
     text "только текст)." xpos 0.653 ypos 0.738:
         style "alt_settings_text"
 
+screen settings_hentai_graphics_on_7dl():
+    text "Включить хентай" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "(графика)" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+ 
+screen settings_hentai_graphics_off_7dl():
+    text "Выключить хентай" xpos 0.653 ypos 0.6:
+        style "alt_settings_text"
+    text "(графика)" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+
 screen settings_chapter_on_7dl():
     text "Включить заставки в" xpos 0.653 ypos 0.6:
         style "alt_settings_text"
@@ -383,7 +395,7 @@ screen settings_7dl():
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_lp_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_lp_off_7dl", transition=Dissolve(0.2)), Hide("settings_widget_lp_on_7dl", transition=Dissolve(0.2))]
-            action SetField(persistent,'lp_widget_7dl', True)
+            action [SetField(persistent,'lp_widget_7dl', True), Hide("settings_widget_lp_on_7dl", transition=Dissolve(0.2)), Show("settings_widget_lp_off_7dl", transition=Dissolve(0.2))]
     else:
         textbutton "Виджет (ЛП): вкл." xpos 0.65 ypos 0.255:
             style "log_button"
@@ -391,7 +403,7 @@ screen settings_7dl():
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_lp_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_lp_on_7dl", transition=Dissolve(0.2)), Hide("settings_widget_lp_off_7dl", transition=Dissolve(0.2))]
-            action SetField(persistent,'lp_widget_7dl', False)
+            action [SetField(persistent,'lp_widget_7dl', False), Hide("settings_widget_lp_off_7dl", transition=Dissolve(0.2)), Show("settings_widget_lp_on_7dl", transition=Dissolve(0.2))]
     if not persistent.music_widget_7dl:
         textbutton "Виджет (музыка): выкл." xpos 0.65 ypos 0.3:
             style "log_button"
@@ -399,7 +411,7 @@ screen settings_7dl():
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_music_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_music_off_7dl", transition=Dissolve(0.2)), Hide("settings_widget_music_on_7dl", transition=Dissolve(0.2))]
-            action SetField(persistent,'music_widget_7dl', True)
+            action [SetField(persistent,'music_widget_7dl', True), Hide("settings_widget_music_on_7dl", transition=Dissolve(0.2)), Show("settings_widget_music_off_7dl", transition=Dissolve(0.2))]
     else:
         textbutton "Виджет (музыка): вкл." xpos 0.65 ypos 0.3:
             style "log_button"
@@ -407,7 +419,7 @@ screen settings_7dl():
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_widget_music_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_music_on_7dl", transition=Dissolve(0.2)), Hide("settings_widget_music_off_7dl", transition=Dissolve(0.2))]
-            action SetField(persistent,'music_widget_7dl', False)
+            action [SetField(persistent,'music_widget_7dl', False), Hide("settings_widget_music_off_7dl", transition=Dissolve(0.2)), Show("settings_widget_music_on_7dl", transition=Dissolve(0.2))]
     if not persistent.uv_dlc_on_7dl:
         textbutton "Кошкорут: выкл." xpos 0.65 ypos 0.347:
             style "log_button"
@@ -415,7 +427,7 @@ screen settings_7dl():
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_dlc_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_dlc_off_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_on_7dl", transition=Dissolve(0.2))]
-            action SetField(persistent,'uv_dlc_on_7dl',True)
+            action [SetField(persistent,'uv_dlc_on_7dl',True), Hide("settings_dlc_on_7dl", transition=Dissolve(0.2)), Show("settings_dlc_off_7dl", transition=Dissolve(0.2))]
     else:
         textbutton "Кошкорут: вкл." xpos 0.65 ypos 0.347:
             style "log_button"
@@ -423,7 +435,7 @@ screen settings_7dl():
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_dlc_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_dlc_on_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_off_7dl", transition=Dissolve(0.2))]
-            action SetField(persistent,'uv_dlc_on_7dl',False)
+            action [SetField(persistent,'uv_dlc_on_7dl',False), Hide("settings_dlc_off_7dl", transition=Dissolve(0.2)), Show("settings_dlc_on_7dl", transition=Dissolve(0.2))]
     if not persistent.hentai_un_old_7dl:
         textbutton "Х-сцены с Леной: новые" xpos 0.65 ypos 0.392:
             style "log_button"
@@ -431,7 +443,7 @@ screen settings_7dl():
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_hentai_un_old_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
-            action SetField(persistent,'hentai_un_old_7dl',True)
+            action [SetField(persistent,'hentai_un_old_7dl',True), Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Show("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
     else:
         textbutton "Х-сцены с Леной: старые" xpos 0.65 ypos 0.392:
             style "log_button"
@@ -439,23 +451,39 @@ screen settings_7dl():
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_hentai_un_new_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
-            action SetField(persistent,'hentai_un_old_7dl',False)
+            action [SetField(persistent,'hentai_un_old_7dl',False), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2)), Show("settings_hentai_un_old_7dl", transition=Dissolve(0.2))]
+    if not persistent.hentai_graphics_7dl:
+        textbutton "Х-графика: выкл." xpos 0.65 ypos 0.438:
+            style "log_button"
+            text_style "alt_settings_textbutton"
+            hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
+            hovered Show("settings_hentai_graphics_on_7dl", transition=Dissolve(0.2))
+            unhovered [Hide("settings_hentai_graphics_on_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_graphics_off_7dl", transition=Dissolve(0.2))]
+            action [SetField(persistent,'hentai_graphics_7dl',True), Hide("settings_hentai_graphics_on_7dl", transition=Dissolve(0.2)), Show("settings_hentai_graphics_off_7dl", transition=Dissolve(0.2))]
+    else:
+        textbutton "Х-графика: вкл." xpos 0.65 ypos 0.438:
+            style "log_button"
+            text_style "alt_settings_textbutton"
+            hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
+            hovered Show("settings_hentai_graphics_off_7dl", transition=Dissolve(0.2))
+            unhovered [Hide("settings_hentai_graphics_off_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_graphics_on_7dl", transition=Dissolve(0.2))]
+            action [SetField(persistent,'hentai_graphics_7dl',False), Hide("settings_hentai_graphics_off_7dl", transition=Dissolve(0.2)), Show("settings_hentai_graphics_on_7dl", transition=Dissolve(0.2))]
     if not persistent.chapter_off_7dl:
-        textbutton "Заставки: вкл." xpos 0.65 ypos 0.438:
+        textbutton "Заставки: вкл." xpos 0.65 ypos 0.483:
             style "log_button"
             text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_chapter_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_chapter_off_7dl", transition=Dissolve(0.2)), Hide("settings_chapter_on_7dl", transition=Dissolve(0.2))]
-            action SetField(persistent,'chapter_off_7dl',True)
+            action [SetField(persistent,'chapter_off_7dl',True), Hide("settings_chapter_off_7dl", transition=Dissolve(0.2)), Show("settings_chapter_on_7dl", transition=Dissolve(0.2))]
     else:
-        textbutton "Заставки: выкл." xpos 0.65 ypos 0.438:
+        textbutton "Заставки: выкл." xpos 0.65 ypos 0.483:
             style "log_button"
             text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_chapter_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_chapter_on_7dl", transition=Dissolve(0.2)), Hide("settings_chapter_off_7dl", transition=Dissolve(0.2))]
-            action SetField(persistent,'chapter_off_7dl',False)
+            action [SetField(persistent,'chapter_off_7dl',False), Hide("settings_chapter_on_7dl", transition=Dissolve(0.2)), Show("settings_chapter_off_7dl", transition=Dissolve(0.2))]
     if (compare_music_widget_7dl != persistent.music_widget_7dl) or (compare_lp_widget_7dl != persistent.lp_widget_7dl):
         textbutton "ПЕРЕЗАГРУЗИТЬ" xcenter 0.755 ypos 0.783:
             style "log_button"

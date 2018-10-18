@@ -23984,11 +23984,17 @@ label alt_day6_sl_7dl_hentai:
         "Мы пошли не на пляж, мы пошли к пристани."
         "Туда, где ледяная вода, где куча лодок и сторож в сторожке."
         "Где за дебаркадером есть огороженная площадка, от которой к луне протянулась бесконечная серебряная дорожка."
-        show sl smile swim with dissolve
+        if persistent.hentai_graphics_7dl:
+            show sl smile body with dissolve
+        else:
+            show sl smile swim with dissolve
         "Сбросив одежду, Славя вопросительно посмотрела на меня."
         sl "Ты не будешь купаться?"
         me "Я… Разве там не холодно?"
-        show sl laugh swim with dissolve
+        if persistent.hentai_graphics_7dl:
+            show sl laugh body with dissolve
+        else:
+            show sl laugh swim with dissolve
         sl "Нет!"
         "Со смехом она наклонилась и брызнула на меня водой."
         sl "Пошли, искупаемся."
@@ -24011,10 +24017,16 @@ label alt_day6_sl_7dl_hentai:
         "Накупавшись, мы не пошли обратно в лагерь."
         "Мы долго сидели на площадке, свесив ноги в воду, болтали, целовались, снова болтали…"
         "А когда сон подобрался совсем вплотную, Славя попросила меня помочь."
-        show sl smile swim with dissolve
+        if persistent.hentai_graphics_7dl:
+            show sl smile body with dissolve
+        else:
+            show sl smile swim with dissolve
         sl "А то одна, боюсь, не справлюсь."
         me "И очередную бессонную ночь не переживёшь."
-        show sl laugh swim with dspr
+        if persistent.hentai_graphics_7dl:
+            show sl laugh body with dspr
+        else:
+            show sl laugh swim with dspr
         sl "Переживу! {w}Правда, не отдохну точно."
         "Рассмеялась она."
         sl "Вот, смотри, видишь лестницу?"

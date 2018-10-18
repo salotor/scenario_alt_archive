@@ -5995,7 +5995,10 @@ label alt_day5_mi_dj_voyeur_3:
     "И всё равно задел чёртово ведро!"
     play sound2 sfx_dropped_chair
     "Я вздрогнул, отвлёкся, открылась дверь, и выглянула Славя."
-    show sl serious swim with dspr
+    if persistent.hentai_graphics_7dl:
+        show sl serious body with dspr
+    else:
+        show sl serious swim with dspr
     "Голая."
     sl "Семён, что ты здесь делаешь?"
     me "Н… Ничего."
@@ -6006,7 +6009,10 @@ label alt_day5_mi_dj_voyeur_3:
     dreamgirl "Так, не отвлекаемся!"
     "А у меня в голове зазвенело от резкого оттока крови и чуточку потемнело в глазах."
     "И от того формы Слави — а я и до сих пор и не подозревал, насколько они шикарные! — виднелись ещё рельефнее."
-    show sl laugh swim with dspr
+    if persistent.hentai_graphics_7dl:
+        show sl laugh body with dspr
+    else:
+        show sl laugh swim with dspr
     "Девушка рассмеялась, глядя на мой ступор."
     sl "Кажется, ты уже пришёл?"
     "Закусив губу, она посмотрела на меня незнакомыми, испытующим глазами."
