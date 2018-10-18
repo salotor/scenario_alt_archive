@@ -209,6 +209,7 @@ label alt_sprites_test:
                     custom_sprites_list.append(custom)
                 else:
                     custom_sprites_full_list.append(custom)
+    scene black
     menu:
         "normal":
             python:
