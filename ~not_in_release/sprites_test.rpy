@@ -7,6 +7,10 @@ label alt_sprites_test:
         close_sprites_list = []
         far_sprites_list = []
         custom_sprites_list = []
+        normal_sprites_full_list = []
+        close_sprites_full_list = []
+        far_sprites_full_list = []
+        custom_sprites_full_list = []
         for dist in alt_dist:
             if dist == "normal/":
                 for who in alt_body_dict.keys():
@@ -23,44 +27,104 @@ label alt_sprites_test:
                                             if clothes != '' and clothes != 'body':
                                                 if emo != '':
                                                     if acc != '':
-                                                        normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
-                                                        close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
+                                                        if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc in bl_sprites_list):
+                                                            normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
+                                                        else:
+                                                            normal_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
+                                                        if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close' in bl_sprites_list):
+                                                            close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
+                                                        else:
+                                                            close_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
                                                     else:
-                                                        normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes)
-                                                        close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' close')
+                                                        if not (who_num + ' ' + emo + ' ' + clothes in bl_sprites_list):
+                                                            normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes)
+                                                        else:
+                                                            normal_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes)
+                                                        if not (who_num + ' ' + emo + ' ' + clothes + ' close' in bl_sprites_list):
+                                                            close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' close')
+                                                        else:
+                                                            close_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes + ' close')
                                             elif clothes == 'body':
                                                 if emo != '':
                                                     if acc != '':
-                                                        normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc)
-                                                        close_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' close')
+                                                        if not (who_num + ' ' + emo + ' ' + 'body' + ' ' + acc in bl_sprites_list):
+                                                            normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc)
+                                                        else:
+                                                            normal_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc)
+                                                        if not (who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' close' in bl_sprites_list):
+                                                            close_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' close')
+                                                        else:
+                                                            close_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' close')
                                                     else:
-                                                        normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'body')
-                                                        close_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' close')
+                                                        if not (who_num + ' ' + emo + ' ' + 'body' in bl_sprites_list):
+                                                            normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'body')
+                                                        else:
+                                                            normal_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'body')
+                                                        if not (who_num + ' ' + emo + ' ' + 'body' + ' close' in bl_sprites_list):
+                                                            close_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' close')
+                                                        else:
+                                                            close_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'body' + ' close')
                                             else:
                                                 if emo != '':
                                                     if acc != '':
                                                         if who == 'cs':
-                                                            normal_sprites_list.append(who_num + ' ' + emo + ' ' + acc)
-                                                            close_sprites_list.append(who_num + ' ' + emo + ' ' + acc + ' close')
+                                                            if not (who_num + ' ' + emo + ' ' + acc in bl_sprites_list):
+                                                                normal_sprites_list.append(who_num + ' ' + emo + ' ' + acc)
+                                                            else:
+                                                                normal_sprites_full_list.append(who_num + ' ' + emo + ' ' + acc)
+                                                            if not (who_num + ' ' + emo + ' ' + acc + ' close' in bl_sprites_list):
+                                                                close_sprites_list.append(who_num + ' ' + emo + ' ' + acc + ' close')
+                                                            else:
+                                                                close_sprites_full_list.append(who_num + ' ' + emo + ' ' + acc + ' close')
                                                         else:
-                                                            normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc)
-                                                            close_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' close')
+                                                            if not (who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc in bl_sprites_list):
+                                                                normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc)
+                                                            else:
+                                                                normal_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc)
+                                                            if not (who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' close' in bl_sprites_list):
+                                                                close_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' close')
+                                                            else:
+                                                                close_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' close')
                                                     else:
                                                         if who == 'cs':
-                                                            normal_sprites_list.append(who_num + ' ' + emo)
-                                                            close_sprites_list.append(who_num + ' ' + emo + ' close')
+                                                            if not (who_num + ' ' + emo in bl_sprites_list):
+                                                                normal_sprites_list.append(who_num + ' ' + emo)
+                                                            else:
+                                                                normal_sprites_full_list.append(who_num + ' ' + emo)
+                                                            if not (who_num + ' ' + emo + ' close' in bl_sprites_list):
+                                                                close_sprites_list.append(who_num + ' ' + emo + ' close')
+                                                            else:
+                                                                close_sprites_full_list.append(who_num + ' ' + emo + ' close')
                                                         else:
-                                                            normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer')
-                                                            close_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' close')
+                                                            if not (who_num + ' ' + emo + ' ' + 'pioneer' in bl_sprites_list):
+                                                                normal_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer')
+                                                            else:
+                                                                normal_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'pioneer')
+                                                            if not (who_num + ' ' + emo + ' ' + 'pioneer' + ' close' in bl_sprites_list):
+                                                                close_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' close')
+                                                            else:
+                                                                close_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' close')
                                         else:
                                             who_num = who
                                             if emo != '':
                                                 if acc != '':
-                                                    normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
-                                                    close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
+                                                    if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc in bl_sprites_list):
+                                                        normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
+                                                    else:
+                                                        normal_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc)
+                                                    if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close' in bl_sprites_list):
+                                                        close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
+                                                    else:
+                                                        close_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close')
                                                 else:
-                                                    normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes)
-                                                    close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' close')
+                                                    if not (who_num + ' ' + emo + ' ' + clothes in bl_sprites_list):
+                                                        normal_sprites_list.append(who_num + ' ' + emo + ' ' + clothes)
+                                                    else:
+                                                        normal_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes)
+                                                    if not (who_num + ' ' + emo + ' ' + clothes + ' close' in bl_sprites_list):
+                                                        close_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' close')
+                                                    else:
+                                                        close_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes + ' close')
             elif dist == "far/":
                 for who in alt_body_far_dict.keys():
                     for pose in alt_body_far_dict[who]:
@@ -76,39 +140,75 @@ label alt_sprites_test:
                                             if clothes != '' and clothes != 'body':
                                                 if emo != '':
                                                     if acc != '':
-                                                        far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
+                                                        if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far' in bl_sprites_list):
+                                                            far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
+                                                        else:
+                                                            far_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
                                                     else:
-                                                        far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' far')
+                                                        if not (who_num + ' ' + emo + ' ' + clothes + ' far' in bl_sprites_list):
+                                                            far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' far')
+                                                        else:
+                                                            far_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes + ' far')
                                             elif clothes == 'body':
                                                 if emo != '':
                                                     if acc != '':
-                                                        far_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far')
+                                                        if not (who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far' in bl_sprites_list):
+                                                            far_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far')
+                                                        else:
+                                                            far_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far')
                                                     else:
-                                                        far_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' far')
+                                                        if not (who_num + ' ' + emo + ' ' + 'body' + ' far' in bl_sprites_list):
+                                                            far_sprites_list.append(who_num + ' ' + emo + ' ' + 'body' + ' far')
+                                                        else:
+                                                            far_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'body' + ' far')
                                             else:
                                                 if emo != '':
                                                     if acc != '':
                                                         if who == 'cs':
-                                                            far_sprites_list.append(who_num + ' ' + emo + ' ' + acc + ' far')
+                                                            if not (who_num + ' ' + emo + ' ' + acc + ' far' in bl_sprites_list):
+                                                                far_sprites_list.append(who_num + ' ' + emo + ' ' + acc + ' far')
+                                                            else:
+                                                                far_sprites_full_list.append(who_num + ' ' + emo + ' ' + acc + ' far')
                                                         else:
-                                                            far_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' far')
+                                                            if not (who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' far' in bl_sprites_list):
+                                                                far_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' far')
+                                                            else:
+                                                                far_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' far')
                                                     else:
                                                         if who == 'cs':
-                                                            far_sprites_list.append(who_num + ' ' + emo + ' far')
+                                                            if not (who_num + ' ' + emo + ' far' in bl_sprites_list):
+                                                                far_sprites_list.append(who_num + ' ' + emo + ' far')
+                                                            else:
+                                                                far_sprites_full_list.append(who_num + ' ' + emo + ' far')
                                                         else:
-                                                            far_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' far')
+                                                            if not (who_num + ' ' + emo + ' ' + 'pioneer' + ' far' in bl_sprites_list):
+                                                                far_sprites_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' far')
+                                                            else:
+                                                                far_sprites_full_list.append(who_num + ' ' + emo + ' ' + 'pioneer' + ' far')
                                         else:
                                             who_num = who
                                             if emo != '':
                                                 if acc != '':
-                                                    far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
+                                                    if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far' in bl_sprites_list):
+                                                        far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
+                                                    else:
+                                                        far_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far')
                                                 else:
-                                                    far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' far')
+                                                    if not (who_num + ' ' + emo + ' ' + clothes + ' far' in bl_sprites_list):
+                                                        far_sprites_list.append(who_num + ' ' + emo + ' ' + clothes + ' far')
+                                                    else:
+                                                        far_sprites_full_list.append(who_num + ' ' + emo + ' ' + clothes + ' far')
         for custom in alt_custom_list:
             if 'far' in custom:
-                custom_sprites_list.append(custom)
+                if not (custom in bl_sprites_list):
+                    custom_sprites_list.append(custom)
+                else:
+                    custom_sprites_full_list.append(custom)
             else:
-                custom_sprites_list.append(custom)
+                if not (custom in bl_sprites_list):
+                    custom_sprites_list.append(custom)
+                else:
+                    custom_sprites_full_list.append(custom)
     menu:
         "normal":
             python:
