@@ -208,7 +208,7 @@ screen settings_dlc_off_7dl():
 screen settings_hentai_un_new_7dl():
     text "Переключить на новую" xpos 0.653 ypos 0.6:
         style "alt_settings_text"
-    text "версию хентая в руте" xpos 0.653 ypos 0.646:
+    text "версию 18+ сцен в руте" xpos 0.653 ypos 0.646:
         style "alt_settings_text"
     text "Лены-7дл (изменяется" xpos 0.653 ypos 0.692:
         style "alt_settings_text"
@@ -218,7 +218,7 @@ screen settings_hentai_un_new_7dl():
 screen settings_hentai_un_old_7dl():
     text "Переключить на старую" xpos 0.653 ypos 0.6:
         style "alt_settings_text"
-    text "версию хентая в руте" xpos 0.653 ypos 0.646:
+    text "версию 18+ сцен в руте" xpos 0.653 ypos 0.646:
         style "alt_settings_text"
     text "Лены-7дл (изменяется" xpos 0.653 ypos 0.692:
         style "alt_settings_text"
@@ -226,15 +226,23 @@ screen settings_hentai_un_old_7dl():
         style "alt_settings_text"
 
 screen settings_hentai_graphics_on_7dl():
-    text "Включить хентай" xpos 0.653 ypos 0.6:
+    text "Включить 18+ арты и" xpos 0.653 ypos 0.6:
         style "alt_settings_text"
-    text "(графика)" xpos 0.653 ypos 0.646:
+    text "убрать цензуру со спрай-" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+    text "тов. Доступно не для" xpos 0.653 ypos 0.692:
+        style "alt_settings_text"
+    text "всех сцен." xpos 0.653 ypos 0.738:
         style "alt_settings_text"
  
 screen settings_hentai_graphics_off_7dl():
-    text "Выключить хентай" xpos 0.653 ypos 0.6:
+    text "Выключить 18+ арты и" xpos 0.653 ypos 0.6:
         style "alt_settings_text"
-    text "(графика)" xpos 0.653 ypos 0.646:
+    text "убрать цензуру со спрай-" xpos 0.653 ypos 0.646:
+        style "alt_settings_text"
+    text "тов. Доступно не для" xpos 0.653 ypos 0.692:
+        style "alt_settings_text"
+    text "всех сцен." xpos 0.653 ypos 0.738:
         style "alt_settings_text"
 
 screen settings_chapter_on_7dl():
