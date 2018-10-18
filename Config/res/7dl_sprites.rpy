@@ -1553,7 +1553,7 @@ init 9999 python:
         'uv upset close',
         'uv upset far']
 
-        alt_dist = ['normal/','far/']
+    alt_dist = ['normal/','far/']
     
     for dist in alt_dist:
         if dist == "normal/":
