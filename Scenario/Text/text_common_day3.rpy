@@ -10788,7 +10788,7 @@ label alt_day3_card_won:
     scene bg int_aidpost_night with dissolve
     if persistent.hentai_graphics_7dl:
         show un sad body close with dissolve
-    if persistent.hentai_graphics_7dl:
+    else:
         show un sad swim close with dissolve
     "Отыграться ей не удалось."
     "Да я бы и не позволил."
@@ -10796,8 +10796,8 @@ label alt_day3_card_won:
     "Моя челюсть с лязганьем приземлилась на пол."
     if persistent.hentai_graphics_7dl:
         show un grin body close with dissolve
-    if persistent.hentai_graphics_7dl:
-        show un grin swim close with dissolve
+    else:
+        show un smile2 swim close with dissolve
     un "Ну что, насмотрелся?"
     "Немного нервным голосом сказала она."
     "Это она меня стесняется? Серьёзно?!"
@@ -11164,9 +11164,12 @@ label alt_day3_bath_voyeur:
     "Я с запозданием понял, что я вообще творю, когда конденсат на стёклах стёк вниз, и расплывчатые контуры сложились в девичью фигурку!"
     window hide
     stop ambience fadeout 2
-    scene cg d3_sl_bath_unplaited_7dl with flash:
-        xalign 0.5 yalign 0.5 zoom 1.15
-        linear 0.5 zoom 1.0 xalign 0.5 yalign 0.5
+    if persistent.hentai_graphics_7dl:
+        scene cg d3_sl_bath_unplaited_7dl with flash:
+            xalign 0.5 yalign 0.5 zoom 1.15
+            linear 0.5 zoom 1.0 xalign 0.5 yalign 0.5
+    else:
+        scene black
     play music music_list["waltz_of_doubts"] fadein 3
     "Славя! Ох, мать!"
     "Я прикусил пальцы. Она, конечно, обещала мне придержать очередь, но, блин, я и не думал, что она проделает это таким образом!"

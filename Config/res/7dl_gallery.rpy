@@ -669,7 +669,7 @@ screen arts_7dl_2:
             action [Hide(gallery_mode_7dl + "_7dl_" + str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d3_mi_dance_afar_7dl"), SetVariable("show_image2_7dl", "cg d3_mi_dance_afar_bordo_7dl"), SetVariable("show_image3_7dl", "cg d3_mi_dance_close_7dl"), SetVariable("show_image4_7dl", "cg d3_mi_dance_close_bordo_7dl"), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.5 yalign 0.15 
-    if renpy.seen_image("cg d3_sl_bath_unplaited_7dl"):
+    if persistent.hentai_graphics_7dl and renpy.seen_image("cg d3_sl_bath_unplaited_7dl"):
         imagebutton:
             auto get_image_7dl("gui/gallery/arts/d3_sl_bath_unplaited_7dl_%s.png") xalign 0.8 yalign 0.15 
             action [Hide(gallery_mode_7dl + "_7dl_" + str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d3_sl_bath_unplaited_7dl"), Jump("show_img_7dl")] 
@@ -1032,7 +1032,7 @@ screen arts_7dl_sl_1:
         style "page_7dl_text"
         xalign 0.95
         yalign 0.95
-    if renpy.seen_image("cg d3_sl_bath_unplaited_7dl"):
+    if persistent.hentai_graphics_7dl and renpy.seen_image("cg d3_sl_bath_unplaited_7dl"):
         imagebutton:
             auto get_image_7dl("gui/gallery/arts/d3_sl_bath_unplaited_7dl_%s.png") xalign 0.19 yalign 0.15 
             action [Hide("arts_7dl_" + gallery_mode_7dl + str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d3_sl_bath_unplaited_7dl"), Jump("show_img_7dl")] 

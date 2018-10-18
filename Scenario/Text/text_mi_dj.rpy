@@ -7161,7 +7161,11 @@ label alt_day6_mi_dj_neutral:
 
 label alt_day6_mi_dj_good:
     play music music_7dl["what_am_i_doing_here"] fadein 5
-    scene cg d6_mi_morning_7dl with dissolve
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_mi_morning_7dl
+    else:
+        scene bg int_clubs_dj_7dl
+    with dissolve
     "Я проснулся от того, что Мику заворочалась подо мной и что-то недовольно забормотала."
     mi "Просыпайся, Сенечка. Нас ждут великие дела!"
     me "Какие же?"
@@ -8030,7 +8034,11 @@ label alt_day6_mi_dj_rendezvous:
     th "Так, стоп!"
     "Я помотал головой, отгоняя соблазнительные образы и позы, возможные только здесь, в практически невесомости, и рванулся наверх — лёгкие уже жгло."
     window hide
-    scene cg d6_mi_swimming_7dl with flash
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_mi_swimming_7dl
+    else:
+        scene bg ext_island_day
+    with flash
     play ambience ambience_boat_station_day
     mi "Меня всегда смущала мысль, что однажды я встречу кого-то, и буду добиваться его благосклонности, а он будет принимать знаки внимания."
     "Немного отдышавшись, начала рассказывать Мику."
