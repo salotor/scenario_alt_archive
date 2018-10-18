@@ -2990,10 +2990,13 @@ label alt_day4_sl_wh_night:
                 "Она покраснела и закусила губу."
                 sl "Только не сделай мне больно."
                 "Прошептала она."
-                show sl normal body close at center:
+                window hide
+                show sl opaq_dress at center:
                     xalign .5 zoom 1.4
-                show sl_opaq_dress at center:
-                    xalign .34 yalign .5 zoom 1.4
+                with dissolve
+                pause(1)
+                show sl normal dress close at center:
+                    xalign .5 zoom 1.4
                 with dissolve
                 "На секунду показалось, что рубашки на ней нет."
                 "Её губы были сладкими, её запах сводил с ума."
