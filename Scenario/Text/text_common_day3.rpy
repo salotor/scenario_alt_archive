@@ -10733,14 +10733,20 @@ label alt_day3_un_strip_play_win:
         un "Давай, победитель."
         "Она опять развернулась спиной."
         un "Забирай трофей."
-        show un surprise body close with dissolve
+        if persistent.hentai_graphics_7dl:
+            show un surprise body close with dissolve
+        else:
+            show un surprise swim close with dissolve
         "Трясущимися пальцами я расстегнул застёжку, вспомнив вдруг, что в некоторых кругах считается особым шиком расстёгивать это кошмарное крючкасто-петлястое устройство одной рукой — за несколько секунд."
         "Она осталась в одних трусиках."
         window hide
         jump alt_day3_un_strip_play
     elif alt_day3_un_strip_pool_un == 2:
         $ alt_day3_un_strip_pool_un = alt_day3_un_strip_pool_un - 1
-        show un sad body close with dissolve
+        if persistent.hentai_graphics_7dl:
+            show un sad body close with dissolve
+        else:
+            show un sad swim close with dissolve
         "Бросив на меня разгневанный взгляд, она чуть привстала, не отнимая левой руки от груди, одним неуловимым движением спустила последний предмет одежды."
         "…на бёдра…"
         "…села сама…"
@@ -10780,12 +10786,18 @@ label alt_day3_card_lose:
     
 label alt_day3_card_won:
     scene bg int_aidpost_night with dissolve
-    show un sad body close with dissolve
+    if persistent.hentai_graphics_7dl:
+        show un sad body close with dissolve
+    if persistent.hentai_graphics_7dl:
+        show un sad swim close with dissolve
     "Отыграться ей не удалось."
     "Да я бы и не позволил."
     "А она подумала и, рассмеявшись, отняла руки от груди."
     "Моя челюсть с лязганьем приземлилась на пол."
-    show un grin body close with dissolve
+    if persistent.hentai_graphics_7dl:
+        show un grin body close with dissolve
+    if persistent.hentai_graphics_7dl:
+        show un grin swim close with dissolve
     un "Ну что, насмотрелся?"
     "Немного нервным голосом сказала она."
     "Это она меня стесняется? Серьёзно?!"
