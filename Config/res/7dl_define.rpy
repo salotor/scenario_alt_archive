@@ -946,9 +946,12 @@ init:
     
     image acm_logo_sl_am_home = get_image_7dl("gui/acm/acm_logo_sl_am_home_7dl.png")
     image acm_logo_sl_neon = get_image_7dl("gui/acm/acm_logo_sl_neon_7dl.png")
+    image acm_logo_sl_no_wonder = get_image_7dl("gui/acm/acm_logo_sl_no_wonder_7dl.png")
     image acm_logo_sl_pan = get_image_7dl("gui/acm/acm_logo_sl_pan_7dl.png")
     image acm_logo_sl_radio = get_image_7dl("gui/acm/acm_logo_sl_radio_7dl.png")
     image acm_logo_sl_right_road = get_image_7dl("gui/acm/acm_logo_sl_right_road_7dl.png")
+    image acm_logo_sl_dr_un = get_image_7dl("gui/acm/acm_logo_sl_dr_un_7dl.png")
+    image acm_logo_sl_wasted = get_image_7dl("gui/acm/acm_logo_sl_wasted_7dl.png")
     
     image acm_logo_un_good = get_image_7dl("gui/acm/acm_logo_un_good_7dl.png")
     image acm_logo_un_good2 = get_image_7dl("gui/acm/acm_logo_un_good2_7dl.png")
@@ -1109,8 +1112,9 @@ init:
     $ music_7dl["laugh_throught_the_universe"] = get_music_7dl("laugh_throught_the_universe_7dl.ogg")
     $ music_7dl["lazy_olga"] = get_music_7dl("lazy_olga_7dl.ogg")
     $ music_7dl["last_pixie"] = get_music_7dl("last_pixie_7dl.ogg")
-    $ music_7dl["lonesome_shepherd"] = get_music_7dl("lonesome_shepherd_7dl.ogg")
+    $ music_7dl["let_me_down"] = get_music_7dl("let_me_down_7dl.ogg")
     $ music_7dl["liliac_ball"] = get_music_7dl("liliac_ball_7dl.ogg")
+    $ music_7dl["lonesome_shepherd"] = get_music_7dl("lonesome_shepherd_7dl.ogg")
     $ music_7dl["loki_on_3"] = get_music_7dl("loki_on_3_7dl.ogg")
     $ music_7dl["lullaby2"] = get_music_7dl("lullaby2_7dl.ogg")
     $ music_7dl["lost_without_you"] = get_music_7dl("lost_without_you_7dl.ogg")
