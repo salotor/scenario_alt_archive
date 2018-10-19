@@ -238,9 +238,9 @@ screen settings_hentai_graphics_on_7dl():
 screen settings_hentai_graphics_off_7dl():
     text "Выключить 18+ арты и" xpos 0.653 ypos 0.6:
         style "alt_settings_text"
-    text "убрать цензуру со спрай-" xpos 0.653 ypos 0.646:
+    text "добавить цензуру на" xpos 0.653 ypos 0.646:
         style "alt_settings_text"
-    text "тов. Доступно не для" xpos 0.653 ypos 0.692:
+    text "спрайты. Доступно не для" xpos 0.653 ypos 0.692:
         style "alt_settings_text"
     text "всех сцен." xpos 0.653 ypos 0.738:
         style "alt_settings_text"
