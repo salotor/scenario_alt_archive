@@ -53,6 +53,7 @@ label alt_day0_start:
             $ routetag = 'prologue'
             $ prolog_time()
         "Но я не уверен точно…":
+            with fade2
             jump Ravsii__role_menu
         "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
@@ -74,6 +75,7 @@ label alt_day0_start_herc:
             $ prolog_time()
             $ herc = True
         "Но я не уверен точно…":
+            with fade2
             jump Ravsii__role_menu
         "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
@@ -100,6 +102,7 @@ label alt_day0_start_loki:
             $ prolog_time()
             $ loki = True
         "Но я не уверен точно…":
+            with fade2
             jump Ravsii__role_menu
         "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
