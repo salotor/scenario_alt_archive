@@ -240,9 +240,7 @@ screen settings_hentai_graphics_off_7dl():
         style "alt_settings_text"
     text "добавить цензуру на" xpos 0.653 ypos 0.646:
         style "alt_settings_text"
-    text "спрайты. Доступно не для" xpos 0.653 ypos 0.692:
-        style "alt_settings_text"
-    text "всех сцен." xpos 0.653 ypos 0.738:
+    text "спрайты." xpos 0.653 ypos 0.692:
         style "alt_settings_text"
 
 screen settings_chapter_on_7dl():
