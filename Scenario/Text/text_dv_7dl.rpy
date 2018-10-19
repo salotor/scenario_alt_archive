@@ -2823,6 +2823,8 @@ label alt_day4_dv_7dl_aidpost:
                 with dissolve2
                 if persistent.hentai_graphics_7dl:
                     show dv shy body close at center with dissolve
+                else:
+                    show dv shy swim close at center with dissolve
                 "Через секунду упругая резинка сдалась и упала куда-то вниз, оставляя Алису в одной только юбке."
                 "Сосок на языке набух практически мгновенно, стоило лишь мне взять его в рот. А когда я легонько сомкнул челюсти, она как-то со всхлипом вскрикнула и, прижавшись, задрожала — крупно-крупно."
                 dreamgirl "Поздравляю, чувак. Нет, не так. Чувачище!"
