@@ -10122,6 +10122,7 @@ label alt_day6_dv_7dl_escape_convince:
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif herc:
@@ -10146,6 +10147,7 @@ label alt_day6_dv_7dl_escape_convince:
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif loki:
@@ -12624,6 +12626,7 @@ label alt_day7_dv_7dl_tulpa_end:
     $ persistent.dv_7dl_tulpa = True
     show acm_logo_dv_tulpa with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13049,6 +13052,7 @@ label alt_day7_dv_7dl_ussr_epilogue:
     $ persistent.dv_7dl_good_ussr = True
     show acm_logo_dv_ussr_good with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13243,6 +13247,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     $ persistent.dv_7dl_good_ussr_rf = True
     show acm_logo_dv_morethanlife with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13482,6 +13487,7 @@ label alt_day7_dv_7dl_rej_ussr_end:
     $ persistent.dv_7dl_reject_ussr = True
     show acm_logo_dv_tillend with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     play music music_7dl["walkingaway"] fadein 3
@@ -13751,6 +13757,7 @@ label alt_day7_dv_7dl_un_end:
     $ persistent.dv_7dl_un = True
     show acm_logo_dv_meetmethere with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     play music music_7dl["danceagain"] fadein 3
@@ -14012,6 +14019,7 @@ label alt_day7_dv_7dl_bad_end:
         $ persistent.dv_7dl_bad = True
         show acm_logo_dv_theresnoway with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         with vpunch
         play music music_7dl["tilltheend"] fadein 3

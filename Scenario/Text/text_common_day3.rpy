@@ -4897,6 +4897,7 @@ label alt_day3_nightmare:
                 $ persistent.alt_deep = True
                 show acm_logo_me_deep with moveinright:
                     pos (1600, 1020)
+                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene black
                 show gameover
@@ -4930,6 +4931,7 @@ label alt_day3_nightmare:
                 $ persistent.alt_deep = True
                 show acm_logo_me_deep with moveinright:
                     pos (1600, 1020)
+                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene black
                 show gameover

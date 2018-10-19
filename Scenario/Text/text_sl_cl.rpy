@@ -3911,6 +3911,7 @@ label alt_day5_sl_begin:
                 $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
+                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -3936,6 +3937,7 @@ label alt_day5_sl_begin:
                 $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
+                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -3952,6 +3954,7 @@ label alt_day5_sl_begin:
                 $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
+                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -10919,6 +10922,7 @@ label alt_day6_sl_cl_become_a_hero:
     $ persistent.sl_cl_cata = True
     show acm_logo_sl_be_ok with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -16421,6 +16425,7 @@ label alt_day7_sl_will:
     $ persistent.sl_cl_int_ok = True
     show acm_logo_sl_ok with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16534,6 +16539,7 @@ label alt_day7_sl_duty:
     $ persistent.sl_cl_int_good = True
     show acm_logo_sl_fantazm with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16557,6 +16563,7 @@ label alt_day7_sl_lone:
     $ persistent.sl_cl_int_bad = True
     show acm_logo_sl_lone with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16749,6 +16756,7 @@ label alt_day7_sl_good:
     $ persistent.sl_cl_good_ussr = True
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16907,6 +16915,7 @@ label alt_day7_sl_rf_good:
     $ persistent.sl_cl_good_rf = True
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17073,6 +17082,7 @@ label alt_day7_sl_reject_same:
     $ persistent.sl_cl_reject_same = True
     show acm_logo_sl_same_place with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17284,6 +17294,7 @@ label alt_day7_sl_rej_end:
     $ persistent.sl_cl_reject_late = True
     show acm_logo_sl_too_late with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17378,6 +17389,7 @@ label alt_day7_sl_cl_bad:
     $ persistent.sl_cl_bad = True
     show acm_logo_sl_bad with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17533,6 +17545,7 @@ label alt_day7_sl_rf2:
     $ persistent.sl_cl_good_rf2 = True
     show acm_logo_sl_worth with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles

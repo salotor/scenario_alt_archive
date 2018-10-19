@@ -9231,6 +9231,7 @@ label alt_day6_un_7dl_letmeout:
     $ persistent.alt_lamp = True
     show acm_logo_me_lamp with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     return
 
@@ -11322,6 +11323,7 @@ label alt_day7_un_7dl_ussr:
     $ persistent.un_7dl_good_ussr = True
     show acm_logo_un_good2 with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -11585,6 +11587,7 @@ label alt_day7_un_7dl_rf:
     $ persistent.un_7dl_good_rf = True
     show acm_logo_un_good with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -11858,6 +11861,7 @@ label alt_day7_un_7dl_true1:
     stop ambience fadeout 3
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     "Ладно, ладно…"
@@ -12114,6 +12118,7 @@ label alt_day7_un_7dl_true1:
     $ persistent.un_7dl_true_transit = True
     show acm_logo_un_transit with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -12202,6 +12207,7 @@ label alt_day7_un_7dl_true:
     $ persistent.un_7dl_true = True
     show acm_logo_un_shelter with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
