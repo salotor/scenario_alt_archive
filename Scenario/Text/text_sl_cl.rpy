@@ -8070,7 +8070,6 @@ label alt_day5_sl_night:
 label alt_day6_sl_begin:
     if alt_day5_sl_extra_house and not alt_day4_sl_tut_iz:
         play music music_7dl["yume_akari"] fadein 3
-        label alt_test:
         scene expression Dawn("cg d5_sl_bed_7dl") with dissolve
         play ambience ambience_int_cabin_night fadein 2
         "Меня разбудило переполняющее счастье."

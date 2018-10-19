@@ -8147,12 +8147,11 @@ label alt_day3_dv_stayhere1:
     window hide
     scene bg ext_house_of_mt_night_without_light with dissolve
     stop ambience fadeout 1
-    show un_shade with dissolve:
-        pos (931, 0)
+    show un_shade at right with dissolve
     "Шезлонг опять заскрипел, на фоне звёздного неба силуэтом мелькнули четыре хвостика…"
-    show un smile dress close with dissolve:
-        pos (931, 0)
-    hide un_shade with dissolve
+    hide un_shade
+    show un smile dress close at right
+    with dissolve
     me "Лена?!"
     "Ахнул я."
     $ meet('un','Лена')
