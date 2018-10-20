@@ -95,12 +95,12 @@ init:
     transform voy_left:
         xalign 0.0
         xanchor 0.5
-        yanchor 0.0
+        yalign 0.0
 
     transform voy_right:
         xalign 1.0
         xanchor 0.5
-        yanchor 0.0
+        yalign 0.0
         
     transform zenterright:
         xalign 0.5 yalign 0.5 zoom 1.0

@@ -4897,6 +4897,7 @@ label alt_day3_nightmare:
                 $ persistent.alt_deep = True
                 show acm_logo_me_deep with moveinright:
                     pos (1600, 1020)
+                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene black
                 show gameover
@@ -4930,6 +4931,7 @@ label alt_day3_nightmare:
                 $ persistent.alt_deep = True
                 show acm_logo_me_deep with moveinright:
                     pos (1600, 1020)
+                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene black
                 show gameover
@@ -8147,12 +8149,11 @@ label alt_day3_dv_stayhere1:
     window hide
     scene bg ext_house_of_mt_night_without_light with dissolve
     stop ambience fadeout 1
-    show un_shade with dissolve:
-        pos (931, 0)
+    show un_shade at right with dissolve
     "Шезлонг опять заскрипел, на фоне звёздного неба силуэтом мелькнули четыре хвостика…"
-    show un smile dress close with dissolve:
-        pos (931, 0)
-    hide un_shade with dissolve
+    hide un_shade
+    show un smile dress close at right
+    with dissolve
     me "Лена?!"
     "Ахнул я."
     $ meet('un','Лена')
@@ -10605,8 +10606,8 @@ label alt_day3_un_cards:
     "Дел и правда оставалось минут на десять, не больше. А судя по тому, как зажигали в уголке обслуживающего персонала, Виола явно не собиралась в скором времени возвращаться."
     "Но на всякий случай я решил внести ясность. Чтобы уж точно недосказанностей не оставалось."
     me "Ты же понимаешь, что такими картами на интерес не играют?"
-    "Она опять зацвела как маков цвет."
     show un surprise dress at center with dspr
+    "Она опять зацвела как маков цвет."
     un "Я бы сыграла…"
     "И тем не менее, продолжает настаивать!"
     me "Хорошо, как скажешь. Давай тогда закончим и сыграем."
@@ -10729,23 +10730,34 @@ label alt_day3_un_strip_play_win:
         jump alt_day3_un_strip_play
     elif alt_day3_un_strip_pool_un == 3:
         $ alt_day3_un_strip_pool_un = alt_day3_un_strip_pool_un - 1
+        show un smile2 swim with dissolve
         "Кажется, она поняла, что я настроен серьёзно, потому что лукавства в глазах вдруг стало через край."
         un "Давай, победитель."
         "Она опять развернулась спиной."
         un "Забирай трофей."
-        show un surprise body close with dissolve
         "Трясущимися пальцами я расстегнул застёжку, вспомнив вдруг, что в некоторых кругах считается особым шиком расстёгивать это кошмарное крючкасто-петлястое устройство одной рукой — за несколько секунд."
+        if persistent.hentai_graphics_7dl:
+            show un surprise body close with dissolve
+        else:
+            show un surprise swim close with dissolve
         "Она осталась в одних трусиках."
         window hide
         jump alt_day3_un_strip_play
     elif alt_day3_un_strip_pool_un == 2:
         $ alt_day3_un_strip_pool_un = alt_day3_un_strip_pool_un - 1
-        show un sad body close with dissolve
+        if persistent.hentai_graphics_7dl:
+            show un angry2 body close with dissolve
+        else:
+            show un angry swim close with dissolve
         "Бросив на меня разгневанный взгляд, она чуть привстала, не отнимая левой руки от груди, одним неуловимым движением спустила последний предмет одежды."
         "…на бёдра…"
         "…села сама…"
         "И потянула дальше, между делом закидывая ногу на ногу."
         "…миновала колени, дошла до голеней."
+        if persistent.hentai_graphics_7dl:
+            show un laugh body close with dissolve
+        else:
+            show un smile2 swim close with dissolve
         "Я судорожно вздохнул, и она, рассмеявшись, одним движением, сняла трусики и бросила их тут же на пол."
         un "У меня последний шанс отыграться."
         un "Я просто так не сдамся!"
@@ -10757,7 +10769,15 @@ label alt_day3_un_strip_play_win:
     
 label alt_day3_card_lose:
     scene bg int_aidpost_night with dissolve
-    show un smile dress with dissolve
+    if alt_day3_un_strip_pool_un > 3:
+        show un smile dress with dissolve
+    elif alt_day3_un_strip_pool_un == 3:
+        show un smile swim with dissolve
+    else:
+        if persistent.hentai_graphics_7dl:
+            show un smile body with dissolve
+        else:
+            show un smile swim with dissolve
     "Да, эта девочка раскатала меня как хотела."
     if (alt_day2_round3 != 0) and (alt_day2_f1 == 1):
         "Ничего другого от финалистки я и не ожидал, если честно."
@@ -10772,7 +10792,15 @@ label alt_day3_card_lose:
     "Я улыбнулся Лене."
     me "Не знаю."
     "Она кинула ещё один взгляд на меня, будто сомневаясь… И бросила в меня формой."
-    show un laugh dress with dissolve
+    if alt_day3_un_strip_pool_un > 3:
+        show un laugh dress with dissolve
+    elif alt_day3_un_strip_pool_un == 3:
+        show un smile2 swim with dissolve
+    else:
+        if persistent.hentai_graphics_7dl:
+            show un laugh body with dissolve
+        else:
+            show un smile2 swim with dissolve
     un "Одевайся уж… проигравший!"
     $ persistent.alt_day3_card_lose = True
     $ lp_un += 1
@@ -10780,12 +10808,18 @@ label alt_day3_card_lose:
     
 label alt_day3_card_won:
     scene bg int_aidpost_night with dissolve
-    show un sad body close with dissolve
+    if persistent.hentai_graphics_7dl:
+        show un sad body close with dissolve
+    else:
+        show un sad swim close with dissolve
     "Отыграться ей не удалось."
     "Да я бы и не позволил."
+    if persistent.hentai_graphics_7dl:
+        show un grin body close with dissolve
+    else:
+        show un smile2 swim close with dissolve
     "А она подумала и, рассмеявшись, отняла руки от груди."
     "Моя челюсть с лязганьем приземлилась на пол."
-    show un grin body close with dissolve
     un "Ну что, насмотрелся?"
     "Немного нервным голосом сказала она."
     "Это она меня стесняется? Серьёзно?!"
@@ -11152,9 +11186,12 @@ label alt_day3_bath_voyeur:
     "Я с запозданием понял, что я вообще творю, когда конденсат на стёклах стёк вниз, и расплывчатые контуры сложились в девичью фигурку!"
     window hide
     stop ambience fadeout 2
-    scene cg d3_sl_bath_unplaited_7dl with flash:
-        xalign 0.5 yalign 0.5 zoom 1.15
-        linear 0.5 zoom 1.0 xalign 0.5 yalign 0.5
+    if persistent.hentai_graphics_7dl:
+        scene cg d3_sl_bath_unplaited_7dl with flash:
+            xalign 0.5 yalign 0.5 zoom 1.15
+            linear 0.5 zoom 1.0 xalign 0.5 yalign 0.5
+    else:
+        scene black
     play music music_list["waltz_of_doubts"] fadein 3
     "Славя! Ох, мать!"
     "Я прикусил пальцы. Она, конечно, обещала мне придержать очередь, но, блин, я и не думал, что она проделает это таким образом!"
