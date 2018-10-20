@@ -2990,11 +2990,15 @@ label alt_day4_sl_wh_night:
                 "Она покраснела и закусила губу."
                 sl "Только не сделай мне больно."
                 "Прошептала она."
-                show sl normal body close at center:
-                    xalign .5 zoom 1.4
-                show sl_opaq_dress at center:
-                    xalign .34 yalign .5 zoom 1.4
-                with dissolve
+                if persistent.hentai_graphics_7dl:
+                    window hide
+                    show sl opaq_dress at center:
+                        xalign .5 zoom 1.4
+                    with dissolve
+                    pause(1)
+                    show sl normal dress close at center:
+                        xalign .5 zoom 1.4
+                    with dissolve
                 "На секунду показалось, что рубашки на ней нет."
                 "Её губы были сладкими, её запах сводил с ума."
                 "Я протянул руку к ней, уже весь находясь там — в том моменте, когда мы оба окажемся на земле."
@@ -3907,6 +3911,7 @@ label alt_day5_sl_begin:
                 $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
+                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -3932,6 +3937,7 @@ label alt_day5_sl_begin:
                 $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
+                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -3948,6 +3954,7 @@ label alt_day5_sl_begin:
                 $ persistent.alt_lamp = True
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
+                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -7590,8 +7597,9 @@ label alt_day5_sl_night:
     "Славя будто подталкивала меня к чему-то."
     "При этом била по рукам и успешно отбивалась ото всех моих домогательств — видимо, ей нужно было нечто другое."
     "А вот что?"
-    window hide
-    scene cg d5_sl_swimming_7dl with dissolve
+    if persistent.hentai_graphics_7dl:
+        window hide
+        scene cg d5_sl_swimming_7dl with dissolve
     "И всё-таки здорово было бы дорваться до комиссарского тела!"
     "А то она вся такая бравая, активная, везде нужная, важная, а я её тут по-своему, на руки, к груди, можно прямо там же в воде…"
     "И никаких трудностей, непонятных тварюшек, подземелий, тумана и систем безопасности запредельного уровня технологии даже по меркам двадцать первого века."
@@ -7628,8 +7636,9 @@ label alt_day5_sl_night:
             "И это помогло справиться с параличом."
             me "Но сначала — купать!"
     "Я сбросил одежду, оставшись в одних семейниках с медведями."
-    window hide
-    scene cg d6_sl_swim with blind_r
+    if persistent.hentai_graphics_7dl:
+        window hide
+        scene cg d6_sl_swim with blind_r
     sl "Смелее!"
     "Она брызнула водой в мою сторону."
     sl "Да не бойся ты так, не съем."
@@ -7698,7 +7707,8 @@ label alt_day5_sl_night:
     sl "Я в этом уверена! {w}Спешка нужна только при ловле блох."
     me "Намекаешь на то, что я, как в анекдотах, быстро закончу свои дела и захраплю?"
     window hide
-    scene cg d5_sl_swimming_7dl with dissolve
+    if persistent.hentai_graphics_7dl:
+        scene cg d5_sl_swimming_7dl with dissolve
     sl "Даже думать не смей об этом."
     sl "Я и так тебя постоянно на себе таскаю!"
     sl "Нет уж, дойдёшь до дома, тогда и засыпай сколько хочешь, а пока терпи."
@@ -7711,7 +7721,8 @@ label alt_day5_sl_night:
     else:
         "И замерла, искусно сохраняя дистанцию."
     window hide
-    scene cg d5_sl_moon_7dl with flash
+    if persistent.hentai_graphics_7dl:
+        scene cg d5_sl_moon_7dl with flash
     sl "А потом…"
     if herc or loki:
         me "Поцелуй в макушку."
@@ -7943,7 +7954,10 @@ label alt_day5_sl_night:
                 me "А что там знать, как ты сама говорила, Природа всё за нас уже придумала."
                 sl "Ох… Страаааашно."
                 window hide
-                scene cg d5_sl_moon_7dl
+                if persistent.hentai_graphics_7dl:
+                    scene cg d5_sl_moon_7dl
+                else:
+                    scene black
                 with fade2
                 "Она прикусила губу и жалобно посмотрела на меня."
                 "Обнажённая, напуганная. {w}Прекрасная."
@@ -7970,7 +7984,8 @@ label alt_day5_sl_night:
                 "И тепла моего не хватало уже, но она постаралась за обоих, уже горячая, запаленно дышащая, сидящая у меня на коленях."
                 "Очень хотела контролировать всё, даже в таком деле."
                 "Но где там."
-                scene cg d6_sl_hentai_2 with flash
+                if persistent.hentai_graphics_7dl:
+                    scene cg d6_sl_hentai_2 with flash
                 "Ещё несколько минут спустя я обнял её и перевернул, оказавшись сверху, прикусывая зацелованную грудь, горящие губы, масленые глаза."
                 "Пришлось повоевать, конечно, прежде чем меня пустили в святая святых — хотя Славя и не стеснялась наготы, но своё самое укромное девичье местечко берегла и пускать долго не хотела."
                 "Но я был убедителен и настойчив, и колени расслабились, разошлись, и я, наконец, сумел попробовать её на вкус."
@@ -8086,12 +8101,16 @@ label alt_day6_sl_begin:
         "Я же так и не рассказал ей, что…"
         "Хотя то, что было раньше, отсюда казалось не то сном, не то ложной памятью, будто подсаженной мне с целью объяснить, как я вообще здесь очутился."
         "Интенсивность впечатлений… Несравнима."
-        scene expression Dawn("cg d5_sl_moon_7dl")
+        if persistent.hentai_graphics_7dl:
+            scene expression Dawn("cg d5_sl_moon_7dl")
+        else:
+            scene black
         show prologue_dream
         with joff
         "В один из наших разов где-то в самой середине, когда от сил остались только воспоминания, меня как током по позвоночнику пронзило жутким ощущением ирреальности бытия."
         scene stars
-        show expression D3_intro("cg d5_sl_moon_7dl")
+        if persistent.hentai_graphics_7dl:
+            show expression D3_intro("cg d5_sl_moon_7dl")
         show prologue_dream
         with joffr
         "Как будто я лежал всё это время завёрнутый в бумагу, и она намокла, стала прозрачной и очень-очень непрочной."
@@ -10841,7 +10860,7 @@ label alt_day6_sl_cl_become_a_hero:
     "Лагерь."
     "Шаг."
     scene stars
-    if alt_day5_sl_extra_house:
+    if alt_day5_sl_extra_house and persistent.hentai_graphics_7dl:
         show expression D3_intro("cg d5_sl_moon_7dl")
     else:
         show expression D3_intro("cg d1_sl_dinner_day_7dl")
@@ -10903,6 +10922,7 @@ label alt_day6_sl_cl_become_a_hero:
     $ persistent.sl_cl_cata = True
     show acm_logo_sl_be_ok with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -16405,6 +16425,7 @@ label alt_day7_sl_will:
     $ persistent.sl_cl_int_ok = True
     show acm_logo_sl_ok with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16518,6 +16539,7 @@ label alt_day7_sl_duty:
     $ persistent.sl_cl_int_good = True
     show acm_logo_sl_fantazm with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16541,6 +16563,7 @@ label alt_day7_sl_lone:
     $ persistent.sl_cl_int_bad = True
     show acm_logo_sl_lone with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16733,6 +16756,7 @@ label alt_day7_sl_good:
     $ persistent.sl_cl_good_ussr = True
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16891,6 +16915,7 @@ label alt_day7_sl_rf_good:
     $ persistent.sl_cl_good_rf = True
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17057,6 +17082,7 @@ label alt_day7_sl_reject_same:
     $ persistent.sl_cl_reject_same = True
     show acm_logo_sl_same_place with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17268,6 +17294,7 @@ label alt_day7_sl_rej_end:
     $ persistent.sl_cl_reject_late = True
     show acm_logo_sl_too_late with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17362,6 +17389,7 @@ label alt_day7_sl_cl_bad:
     $ persistent.sl_cl_bad = True
     show acm_logo_sl_bad with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17517,6 +17545,7 @@ label alt_day7_sl_rf2:
     $ persistent.sl_cl_good_rf2 = True
     show acm_logo_sl_worth with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles

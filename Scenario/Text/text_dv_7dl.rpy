@@ -2821,13 +2821,20 @@ label alt_day4_dv_7dl_aidpost:
                 "Она мило покраснела, и тут же выпустила меня — чем я и воспользовался, мгновенно перейдя от шеи к ключичной впадине, отпуская пальцы гулять по спине."
                 scene anim prolog_1
                 with dissolve2
+                if persistent.hentai_graphics_7dl:
+                    show dv shy body close at center with dissolve
+                else:
+                    show dv shy swim close at center with dissolve
                 "Через секунду упругая резинка сдалась и упала куда-то вниз, оставляя Алису в одной только юбке."
                 "Сосок на языке набух практически мгновенно, стоило лишь мне взять его в рот. А когда я легонько сомкнул челюсти, она как-то со всхлипом вскрикнула и, прижавшись, задрожала — крупно-крупно."
                 dreamgirl "Поздравляю, чувак. Нет, не так. Чувачище!"
                 th "М?"
                 scene anim prolog_1
                 with dissolve2
-                show dv surprise swim close at center with dissolve
+                if persistent.hentai_graphics_7dl:
+                    show dv surprise body close at center with dissolve
+                else:
+                    show dv surprise swim close at center with dissolve
                 dreamgirl "Ты только что завёл девочку до такой кондиции, что она разрядилась."
                 th "Во-первых, такого не бывает. А во-вторых — ты что же, и в постели со мной здесь теперь будешь?"
                 dreamgirl "А что не так? Мы же с тобой одно целое. Привыкай."
@@ -10115,6 +10122,7 @@ label alt_day6_dv_7dl_escape_convince:
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif herc:
@@ -10139,6 +10147,7 @@ label alt_day6_dv_7dl_escape_convince:
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif loki:
@@ -10874,7 +10883,10 @@ label alt_day6_dv_7dl_love_scene:
     "Она с сомнением покачала бутылку."
     dv "А я бы тяпнула. Хотя, как скажешь. Не хочешь анестезию, сам виноват!"
     window hide
-    scene cg d6_dv_hentai_7dl
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_dv_hentai_7dl
+    else:
+        scene black
     with flash
 
     "Последняя фраза меня заинтересовала сильнее всего, я даже открыл рот, чтобы переспросить, но вместо этого обнаружил себя распластанным на матах, и Алису, усевшуюся мне на бёдра."
@@ -10912,7 +10924,8 @@ label alt_day6_dv_7dl_love_scene:
     dv "Ну… {w}Насмотрелся?"
     me "Нет."
     "Честно ответил я."
-    scene cg d6_dv_hentai_7dl
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_dv_hentai_7dl
     with fade
     "Что она там делала? Губы? Шея? Ключицы… {w}Я чувствовал себя отомщённым всякий раз, когда с девичьих губ срывался вскрик."
     "Потом в никуда улетело платье, оставляя Алису в одних белоснежных трусиках."
@@ -10930,7 +10943,8 @@ label alt_day6_dv_7dl_love_scene:
     "…но с танцпола доносилось эхо чего-то такого космического, и тишина вокруг стояла космическая…"
     "…и сопротивление Алисы было чисто символическим, будто и не было его, а потом взаправду не было…"
     window hide
-    scene expression Desat("cg d6_dv_hentai2_7dl")
+    if persistent.hentai_graphics_7dl:
+        scene expression Desat("cg d6_dv_hentai2_7dl")
     with fade
     "…и пахла она опьяняюще – раскалённым песком, дёгтем и самую чуточку страхом…"
     "…впрочем, последний растворился задолго до того, как мне пригрозили отвернуть голову, если я не вернусь в правильную позу…"
@@ -12612,6 +12626,7 @@ label alt_day7_dv_7dl_tulpa_end:
     $ persistent.dv_7dl_tulpa = True
     show acm_logo_dv_tulpa with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13006,12 +13021,12 @@ label alt_day7_dv_7dl_ussr_epilogue:
     "Из магнитофона на последних микроапмперах аккумуляторов орал Хой."
     nvl clear
     scene bg ext_admins_day_7dl
-    show dv soft smile dress pregnant
+    show dv soft_smile dress_pregnant
     with dissolve
     "И никто не смел шикнуть на меня и потребовать соблюдения тишины, а я не стеснялся того, как расчувствовался — ведь в этом мире что-то чувствовать оказалось совсем не стыдно."
     me "Я люблю тебя."
     "Одними губами произнёс я."
-    show dv laugh dress pregnant with dspr
+    show dv laugh dress_pregnant with dspr
     dv "Сам дурак."
     "Точно так же беззвучно ответила Алиса. И улыбнулась."
     "Светло-светло — как может улыбаться только абсолютно счастливый человек."
@@ -13026,7 +13041,7 @@ label alt_day7_dv_7dl_ussr_epilogue:
     "Значит, никакого возврата к кошмарному старому бытию?"
     "Как сказал голос в автобусе — прошлое должно оставаться прошлым?"
     scene anim prolog_2
-    show dv normal dress pregnant
+    show dv normal dress_pregnant
     with dissolve
     "Значит, здравствуй, светлое настоящее?"
     stop music fadeout 3
@@ -13037,6 +13052,7 @@ label alt_day7_dv_7dl_ussr_epilogue:
     $ persistent.dv_7dl_good_ussr = True
     show acm_logo_dv_ussr_good with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13231,6 +13247,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     $ persistent.dv_7dl_good_ussr_rf = True
     show acm_logo_dv_morethanlife with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13470,6 +13487,7 @@ label alt_day7_dv_7dl_rej_ussr_end:
     $ persistent.dv_7dl_reject_ussr = True
     show acm_logo_dv_tillend with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     play music music_7dl["walkingaway"] fadein 3
@@ -13739,6 +13757,7 @@ label alt_day7_dv_7dl_un_end:
     $ persistent.dv_7dl_un = True
     show acm_logo_dv_meetmethere with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     play music music_7dl["danceagain"] fadein 3
@@ -14000,6 +14019,7 @@ label alt_day7_dv_7dl_bad_end:
         $ persistent.dv_7dl_bad = True
         show acm_logo_dv_theresnoway with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         with vpunch
         play music music_7dl["tilltheend"] fadein 3

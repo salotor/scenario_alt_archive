@@ -9,8 +9,9 @@ init -1:
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
+    $ timeskip0 = "Я с трудом вспоминаю, \n с чего всё началось…"
     $ timeskip_come = "Ты пойдёшь со мной?"
-    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 6."
+    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 7."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
     $ timeskip3 = "Я скучаю…"
     $ timeskip4 = "Я хочу к тебе…"

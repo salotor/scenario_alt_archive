@@ -687,7 +687,7 @@ label alt_7dl_titles:
         scene bg ext_city_night_7dl with fade
         play music music_7dl["seven_summer_days"] fadein 3
         $ renpy.transition(dissolve)
-        call screen help_7dl
+        call screen alt_help
     return
     
 label alt_cotocombs:

@@ -8745,6 +8745,7 @@ label alt_day6_mi_7dl_discoteque:
                     $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
+                    $ renpy.save_persistent()
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif herc:
@@ -8773,6 +8774,7 @@ label alt_day6_mi_7dl_discoteque:
                     $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
+                    $ renpy.save_persistent()
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif loki:
@@ -9454,8 +9456,14 @@ label alt_day7_mi_7dl_wakeup:
         play music music_7dl["groovie"] fadein 3
         "Меня разбудил сигнал горна, орущий, казалось, в самое ухо."
         "Недовольно заворчав, я открыл один глаз."
-        window hide
-        scene cg d6_mi_morning_7dl with flash
+        if persistent.hentai_graphics_7dl:
+            window hide
+            scene cg d6_mi_morning_7dl
+        elif alt_day1_sl_keys_took == 1:
+            scene bg int_warehouse_day_7dl
+        else:
+            scene bg int_wardrobe2_7dl
+        with flash
         mi "Проснулся?"
         "Хриплым со сна голосом поинтересовалась Мику."
         "Лежала она в таком интересном положении, что воображение дорисовывало всё необходимое — а с учётом утренних особенностей организма…"
@@ -10452,6 +10460,7 @@ label alt_day7_mi_7dl_happy_again:
     $ persistent.mi_7dl_neutral_human = True
     show acm_logo_mi_happy_again with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -10629,6 +10638,7 @@ label alt_day7_mi_7dl_liar:
     $ persistent.mi_7dl_bad_human = True
     show acm_logo_mi_liar with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -10791,6 +10801,7 @@ label alt_day7_mi_7dl_dark_dreams:
     $ persistent.mi_7dl_good_human = True
     show acm_logo_mi_dark_dreams with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -10928,6 +10939,7 @@ label alt_day7_mi_7dl_club27:
     $ persistent.mi_7dl_neutral_star = True
     show acm_logo_mi_club27 with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -11062,6 +11074,7 @@ label alt_day7_mi_7dl_sparkle:
     $ persistent.mi_7dl_good_star = True
     show acm_logo_mi_sparkle with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -11485,6 +11498,7 @@ label alt_day7_mi_7dl_postscriptum:
     $ persistent.alt_mi_7dl_ps = True
     show acm_logo_mi_bitter_truth with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     return
  
@@ -11618,6 +11632,7 @@ label alt_day7_mi_7dl_dam_CPU:
     $ persistent.mi_7dl_bad_star = True
     show acm_logo_mi_dam_cpu with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -11766,6 +11781,7 @@ label alt_day7_mi_7dl_unlike:
     $ persistent.mi_7dl_herc_exc = True
     show acm_logo_mi_unlike with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -11962,6 +11978,7 @@ label alt_day7_mi_7dl_sinthetic:
     $ persistent.mi_7dl_loki_exc = True
     show acm_logo_mi_come with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -12113,6 +12130,7 @@ label alt_day7_mi_7dl_come_back:
     $ persistent.mi_7dl_dr_exc = True
     show acm_logo_mi_watashi with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -12340,6 +12358,7 @@ label alt_day7_mi_7dl_thank_you:
     $ persistent.mi_7dl_true = True
     show acm_logo_mi_thank_you with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)

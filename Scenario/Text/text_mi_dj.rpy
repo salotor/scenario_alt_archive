@@ -5995,7 +5995,10 @@ label alt_day5_mi_dj_voyeur_3:
     "И всё равно задел чёртово ведро!"
     play sound2 sfx_dropped_chair
     "Я вздрогнул, отвлёкся, открылась дверь, и выглянула Славя."
-    show sl serious swim with dspr
+    if persistent.hentai_graphics_7dl:
+        show sl serious body with dspr
+    else:
+        show sl serious swim with dspr
     "Голая."
     sl "Семён, что ты здесь делаешь?"
     me "Н… Ничего."
@@ -6006,7 +6009,10 @@ label alt_day5_mi_dj_voyeur_3:
     dreamgirl "Так, не отвлекаемся!"
     "А у меня в голове зазвенело от резкого оттока крови и чуточку потемнело в глазах."
     "И от того формы Слави — а я и до сих пор и не подозревал, насколько они шикарные! — виднелись ещё рельефнее."
-    show sl laugh swim with dspr
+    if persistent.hentai_graphics_7dl:
+        show sl laugh body with dspr
+    else:
+        show sl laugh swim with dspr
     "Девушка рассмеялась, глядя на мой ступор."
     sl "Кажется, ты уже пришёл?"
     "Закусив губу, она посмотрела на меня незнакомыми, испытующим глазами."
@@ -7155,7 +7161,11 @@ label alt_day6_mi_dj_neutral:
 
 label alt_day6_mi_dj_good:
     play music music_7dl["what_am_i_doing_here"] fadein 5
-    scene cg d6_mi_morning_7dl with dissolve
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_mi_morning_7dl
+    else:
+        scene bg int_clubs_dj_7dl
+    with dissolve
     "Я проснулся от того, что Мику заворочалась подо мной и что-то недовольно забормотала."
     mi "Просыпайся, Сенечка. Нас ждут великие дела!"
     me "Какие же?"
@@ -8024,7 +8034,11 @@ label alt_day6_mi_dj_rendezvous:
     th "Так, стоп!"
     "Я помотал головой, отгоняя соблазнительные образы и позы, возможные только здесь, в практически невесомости, и рванулся наверх — лёгкие уже жгло."
     window hide
-    scene cg d6_mi_swimming_7dl with flash
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_mi_swimming_7dl
+    else:
+        scene bg ext_island_day
+    with flash
     play ambience ambience_boat_station_day
     mi "Меня всегда смущала мысль, что однажды я встречу кого-то, и буду добиваться его благосклонности, а он будет принимать знаки внимания."
     "Немного отдышавшись, начала рассказывать Мику."
@@ -10288,6 +10302,7 @@ label alt_day6_mi_dj_dance2_fail:
                     $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
+                    $ renpy.save_persistent()
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif herc:
@@ -10312,6 +10327,7 @@ label alt_day6_mi_dj_dance2_fail:
                     $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
+                    $ renpy.save_persistent()
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif loki:
@@ -10348,6 +10364,7 @@ label alt_day6_mi_dj_dance2_fail:
                     $ persistent.alt_lamp = True
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
+                    $ renpy.save_persistent()
                     $ renpy.pause(7.4, hard=True)
                     return
             show unblink
@@ -12136,6 +12153,7 @@ label alt_day7_mi_dj_bad_end:
     $ persistent.mi_dj_bad = True
     show acm_logo_mi_new_happy with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -12297,6 +12315,7 @@ label alt_day7_mi_dj_true_end:
     $ persistent.mi_dj_true = True
     show acm_logo_mi_namiki with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -12669,6 +12688,7 @@ label alt_day7_mi_dj_jp_good_end:
     $ persistent.mi_dj_good_jap = True
     show acm_logo_mi_ricochet with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     play music music_7dl["happy_ending"] fadein 5
     call alt_7dl_titles
@@ -13000,6 +13020,7 @@ label alt_day7_mi_dj_rf_good_end:
     $ persistent.mi_dj_good_rf = True
     show acm_logo_mi_allyours with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
