@@ -265,34 +265,24 @@ label alt_day7_sl_7dl_start:
     $ persistent.sprite_time = "sunset"
     $ prolog_time()
     if lp_sl > 20:
-        if herc and alt_day4_sl_7dl_phone:
-            call alt_day7_sl_7dl_mistique
-            pause(1)
-            $ renpy.save_persistent()
-            if routetag == "sl7dlgood":#Все внутренние инструкции на 50 строчек необходимо перенести в од.
-                call alt_day7_sl_7dl_mistique_good
+        if karma < 120:
+            call alt_day7_sl_7dl_rf_good
+        else:
+            if herc:
+                if alt_day4_sl_7dl_phone:
+                    call alt_day7_sl_7dl_herc_neon
             else:
-                call alt_day7_sl_7dl_mistique_bad
-        elif herc:
-            call alt_day7_sl_7dl_unmistique
-            pause(1)
-            $ renpy.save_persistent()
-            if routetag == "sl7dlgood":
-                call alt_day7_sl_7dl_unmistique_good
+                    call alt_day7_sl_7dl_herc_right_road
+            elif loki:
+                if alt_day6_sl_7dl_forgive:
+                    call alt_day7_sl_7dl_loki_radio
             else:
-                call alt_day7_sl_7dl_unmistique_bad
-        elif loki and alt_day6_sl_7dl_forgive:
-            call alt_day7_sl_7dl_dam
+                    call alt_day7_sl_7dl_loki_rewind
             pause(1)
-            $ renpy.save_persistent()
-            if routetag == "sl7dlgood":
-                call alt_day7_sl_7dl_dam_good
+                    if alt_day7_sl_7dl_loki_park:
+                        call alt_day7_sl_7dl_loki_home
             else:
-                call alt_day7_sl_7dl_dam_bad
-        elif loki:
-            call alt_day7_sl_7dl_jerc
-            pause(1)
-            $ renpy.save_persistent()
+                        call alt_day7_sl_7dl_loki_pan
         else:
             if alt_day5_sl_7dl_olroad:
                 call alt_day7_sl_7dl_loop
