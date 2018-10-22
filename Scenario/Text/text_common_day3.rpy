@@ -2846,7 +2846,7 @@ label alt_day3_event_estrade1:
             "Она мелькнула быстрой улыбкой."
             show dv normal pioneer2 with dspr
             dv "Садись сюда, стерео лучше всего слышно именно здесь."
-        show dv normal pioneer with dissolve
+        show dv normal pioneer2 with dissolve
         me "Ты какая-то странная сегодня."
         "Задумчиво произнёс я."
         if ('un_herc' in list_d2_date_7dl):
