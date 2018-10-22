@@ -810,7 +810,7 @@ label alt_day1_alt_A:
     return
     
 label alt_day1_alt_S:
-    play music music_7dl["slavyas_fantazm"]fadein 1
+    play music music_7dl["slavyas_fantazm"] fadein 1
     scene bg ext_boathouse_day at zenterleft
     show sl normal pioneer at cleft
     with dissolve
