@@ -271,23 +271,23 @@ label alt_day7_sl_7dl_start:
             if herc:
                 if alt_day4_sl_7dl_phone:
                     call alt_day7_sl_7dl_herc_neon
-            else:
+                else:
                     call alt_day7_sl_7dl_herc_right_road
             elif loki:
                 if alt_day6_sl_7dl_forgive:
                     call alt_day7_sl_7dl_loki_radio
-            else:
+                else:
                     call alt_day7_sl_7dl_loki_rewind
-            pause(1)
+                    pause(1)
                     if alt_day7_sl_7dl_loki_park:
                         call alt_day7_sl_7dl_loki_home
-            else:
+                    else:
                         call alt_day7_sl_7dl_loki_pan
-        else:
-            if alt_day5_sl_7dl_olroad:
-                call alt_day7_sl_7dl_loop
             else:
-                call alt_day7_sl_7dl_loopback
+                if alt_day5_sl_7dl_olroad:
+                    call alt_day7_sl_7dl_loop
+                else:
+                    call alt_day7_sl_7dl_loopback
     else:
         call alt_day7_sl_7dl_bad
     pause(1)
