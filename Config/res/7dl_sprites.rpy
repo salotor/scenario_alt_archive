@@ -96,9 +96,9 @@ init 9999 python:
                           '2':[''],
                           '3':['']},
                     'sl':{'1':['casual','dress','pioneer','pioneer2','sport','swim','uniform','body'],
-                          '2':['casual','dress','pioneer','pioneer2','sport','swim','body'], #TODO pioneer|2, swim, sport, dress, casual под body2
-                          '3':['casual','casual','dress','pioneer','pioneer2','sport','swim','voca','body'],
-                          '4':['casual','dress','pioneer','pioneer2','sport','swim','body'],  #TODO pioneer|2, swim, sport, dress, casual под body2
+                          '2':['casual','dress','pioneer','pioneer2','sport','swim','body'], #TODO pioneer|2, swim, sport, dress
+                          '3':['casual','dress','pioneer','pioneer2','sport','swim','voca','body'],
+                          '4':['casual','dress','pioneer','pioneer2','sport','swim','body'],  #TODO pioneer|2, swim, sport, dress
                           '5':['25']},
                     'tn':{'1':['pioneer']},
                     'un':{'1':['dress','modern','pioneer','sleep','sport','swim','winter','body'],
