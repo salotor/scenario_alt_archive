@@ -1577,6 +1577,8 @@ init 9999 python:
                                         if clothes != '' and clothes != 'body':
                                             if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                            elif renpy.loadable(alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'):
+                                                clothes_path = alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'
                                             elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
                                             else:
@@ -2108,6 +2110,8 @@ init 9999 python:
                                         if clothes != '' and clothes != 'body':
                                             if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                            elif renpy.loadable(alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'):
+                                                clothes_path = alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'
                                             elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
                                             else:
