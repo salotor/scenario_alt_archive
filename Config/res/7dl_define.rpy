@@ -946,10 +946,12 @@ init:
     
     image acm_logo_sl_am_home = get_image_7dl("gui/acm/acm_logo_sl_am_home_7dl.png")
     image acm_logo_sl_neon = get_image_7dl("gui/acm/acm_logo_sl_neon_7dl.png")
+    image acm_logo_sl_missed = get_image_7dl("gui/acm/acm_logo_sl_missed_7dl.png")
     image acm_logo_sl_no_wonder = get_image_7dl("gui/acm/acm_logo_sl_no_wonder_7dl.png")
     image acm_logo_sl_pan = get_image_7dl("gui/acm/acm_logo_sl_pan_7dl.png")
     image acm_logo_sl_radio = get_image_7dl("gui/acm/acm_logo_sl_radio_7dl.png")
     image acm_logo_sl_right_road = get_image_7dl("gui/acm/acm_logo_sl_right_road_7dl.png")
+    image acm_logo_sl_till_sunrise = get_image_7dl("gui/acm/acm_logo_sl_till_sunrise_7dl.png")
     image acm_logo_sl_dr_un = get_image_7dl("gui/acm/acm_logo_sl_dr_un_7dl.png")
     image acm_logo_sl_wasted = get_image_7dl("gui/acm/acm_logo_sl_wasted_7dl.png")
     
