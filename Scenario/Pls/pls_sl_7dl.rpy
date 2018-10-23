@@ -238,7 +238,7 @@ label alt_day7_sl_7dl_start:
         elif loki:
             call alt_day7_sl_7dl_begin_loki
     else:
-    call alt_day7_sl_7dl_begin
+        call alt_day7_sl_7dl_begin
     pause(1)
     $ renpy.save_persistent()
     $ persistent.sprite_time = "day"
@@ -248,7 +248,7 @@ label alt_day7_sl_7dl_start:
     elif loki:
         call alt_day7_sl_7dl_packing_loki
     else:
-    call alt_day7_sl_7dl_packing
+        call alt_day7_sl_7dl_packing
     pause(1)
     $ renpy.save_persistent()
     $ alt_chapter(7, u"Славя. 7ДЛ. Отъезд")
@@ -270,7 +270,7 @@ label alt_day7_sl_7dl_start:
         if karma < 120:
             call alt_day7_sl_7dl_rf_good
             pause(1)
-            is alt_day_binder == 1:
+            if alt_day_binder == 1:
                 call alt_day7_sl_7dl_postscriptum
         else:
             if herc:
@@ -278,28 +278,28 @@ label alt_day7_sl_7dl_start:
                 pause(1)
                 if alt_day4_sl_7dl_phone:
                     call alt_day7_sl_7dl_herc_neon
-            else:
+                else:
                     call alt_day7_sl_7dl_herc_right_road
             elif loki:
                 call alt_day7_sl_7dl_loki
                 pause(1)
                 if alt_day6_sl_7dl_forgive:
                     call alt_day7_sl_7dl_loki_radio
-            else:
+                else:
                     call alt_day7_sl_7dl_loki_rewind
-            pause(1)
-                    if alt_day7_sl_7dl_loki_park:
-                        call alt_day7_sl_7dl_loki_am_home
-            else:
+                pause(1)
+                if alt_day7_sl_7dl_loki_park:
+                    call alt_day7_sl_7dl_loki_am_home
+                else:
                         call alt_day7_sl_7dl_loki_oafa
-        else:
+            else:
                 call alt_day7_sl_7dl_epi
                 pause(1)
-            if alt_day5_sl_7dl_olroad:
+                if alt_day5_sl_7dl_olroad:
                     call alt_day7_sl_7dl_loopback
                     if alt_day_binder == 1:
                         call alt_day7_sl_7dl_loop_ps
-            else:
+                else:
                     call alt_day7_sl_7dl_wasted
     else:
         call alt_day7_sl_7dl_missed
