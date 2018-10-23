@@ -232,12 +232,22 @@ label alt_day7_sl_7dl_start:
     $ sunset_time()
     $ alt_chapter(7, u"Славя. 7ДЛ. Утро")
     pause(1)
-    $ renpy.save_persistent()
+    if alt_day6_sl_7dl_hentai_done:
+        if herc:
+            call alt_day7_sl_7dl_begin_herc
+        elif loki:
+            call alt_day7_sl_7dl_begin_loki
+    else:
     call alt_day7_sl_7dl_begin
     pause(1)
     $ renpy.save_persistent()
     $ persistent.sprite_time = "day"
     $ day_time()
+    if herc:
+        call alt_day7_sl_7dl_packing_herc
+    elif loki:
+        call alt_day7_sl_7dl_packing_loki
+    else:
     call alt_day7_sl_7dl_packing
     pause(1)
     $ renpy.save_persistent()
@@ -253,43 +263,46 @@ label alt_day7_sl_7dl_start:
         pause(1)
         $ renpy.save_persistent()
         return
-    $ alt_chapter(7, u"Славя. 7ДЛ. Эпилог")
-    if loki:
-        call alt_day7_sl_7dl_loki_epilogue
-    elif herc:
-        call alt_day7_sl_7dl_herc_epilogue
-    else:
-        call alt_day7_sl_7dl_epilogue
-    pause(1)
-    $ renpy.save_persistent()
     $ persistent.sprite_time = "sunset"
     $ prolog_time()
+    $ alt_chapter(7, u"Славя. 7ДЛ. Эпилог")
     if lp_sl > 20:
         if karma < 120:
             call alt_day7_sl_7dl_rf_good
+            pause(1)
+            is alt_day_binder == 1:
+                call alt_day7_sl_7dl_postscriptum
         else:
             if herc:
+                call alt_day7_sl_7dl_herc
+                pause(1)
                 if alt_day4_sl_7dl_phone:
                     call alt_day7_sl_7dl_herc_neon
-            else:
+                else:
                     call alt_day7_sl_7dl_herc_right_road
             elif loki:
+                call alt_day7_sl_7dl_loki
+                pause(1)
                 if alt_day6_sl_7dl_forgive:
                     call alt_day7_sl_7dl_loki_radio
-            else:
+                else:
                     call alt_day7_sl_7dl_loki_rewind
-            pause(1)
+                    pause(1)
                     if alt_day7_sl_7dl_loki_park:
-                        call alt_day7_sl_7dl_loki_home
+                        call alt_day7_sl_7dl_loki_am_home
+                    else:
+                        call alt_day7_sl_7dl_loki_oafa
             else:
-                        call alt_day7_sl_7dl_loki_pan
-        else:
-            if alt_day5_sl_7dl_olroad:
-                call alt_day7_sl_7dl_loop
-            else:
-                call alt_day7_sl_7dl_loopback
+                call alt_day7_sl_7dl_epi
+                pause(1)
+                if alt_day5_sl_7dl_olroad:
+                    call alt_day7_sl_7dl_loopback
+                    if alt_day_binder == 1:
+                        call alt_day7_sl_7dl_loop_ps
+                else:
+                    call alt_day7_sl_7dl_wasted
     else:
-        call alt_day7_sl_7dl_bad
+        call alt_day7_sl_7dl_missed
     pause(1)
     $ renpy.save_persistent()
     return
