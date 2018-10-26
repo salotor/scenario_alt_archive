@@ -133,7 +133,7 @@ screen alt_help:
         text_style "settings_link"
         yalign 0.6
         xalign 0.23
-        action [Hide("alt_help", transition=Dissolve(0.2)), OpenURL("https://vk.com/wall-128046483_29533"), Stop('music', fadeout=2), Return()]
+        action [Hide("alt_help", transition=Dissolve(0.2)), Show("alt_help_more"), Stop('music', fadeout=2), Return()]
     textbutton _("Закрыть"):
         text_size 40
         style "log_button"
@@ -148,6 +148,17 @@ screen alt_help:
         yalign 0.6
         xalign 0.83
         action [Hide("alt_help", transition=Dissolve(0.2)), SetField(persistent,'dont_disturb', True), Stop('music', fadeout=2), Return()]
+        
+screen alt_help_more:
+    modal True
+    add get_image("anim/stars_1.jpg")
+    text "Проект «7 дней лета» существует благодаря добровольным пожертвованиям неравнодушных читателей.":
+        text_align 0.5
+        yalign 0.44
+        xalign 0.5
+        color "#ffffff"
+        font header_font
+        size 40
         
 screen settings_widget_lp_on_7dl():
     text "Включить виджет для" xpos 0.653 ypos 0.6:
