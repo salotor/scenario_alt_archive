@@ -9456,8 +9456,8 @@ label alt_day7_mi_7dl_wakeup:
         play music music_7dl["groovie"] fadein 3
         "Меня разбудил сигнал горна, орущий, казалось, в самое ухо."
         "Недовольно заворчав, я открыл один глаз."
+        window hide
         if persistent.hentai_graphics_7dl:
-            window hide
             scene cg d6_mi_morning_7dl
         elif alt_day1_sl_keys_took == 1:
             scene bg int_warehouse_day_7dl

@@ -96,9 +96,9 @@ init 9999 python:
                           '2':[''],
                           '3':['']},
                     'sl':{'1':['casual','dress','pioneer','pioneer2','sport','swim','uniform','body'],
-                          '2':['dress','pioneer','pioneer2','sport','swim','body'], #TODO pioneer|2, swim, sport, dress, casual под body2
+                          '2':['casual','dress','pioneer','pioneer2','sport','swim','body'], #TODO pioneer|2, swim, sport, dress
                           '3':['casual','dress','pioneer','pioneer2','sport','swim','voca','body'],
-                          '4':['dress','pioneer','pioneer2','sport','swim','body'],  #TODO pioneer|2, swim, sport, dress, casual под body2
+                          '4':['casual','dress','pioneer','pioneer2','sport','swim','body'],  #TODO pioneer|2, swim, sport, dress
                           '5':['25']},
                     'tn':{'1':['pioneer']},
                     'un':{'1':['dress','modern','pioneer','sleep','sport','swim','winter','body'],
@@ -1575,7 +1575,9 @@ init 9999 python:
                                         else:
                                             body_path = who + '_' + pose + '_' + body + '.png'
                                         if clothes != '' and clothes != 'body':
-                                            if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
+                                            if renpy.loadable(alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'):
+                                                clothes_path = alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'
+                                            elif renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
                                             elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
@@ -2106,7 +2108,9 @@ init 9999 python:
                                         else:
                                             body_path = who + '_' + pose + '_' + body + '.png'
                                         if clothes != '' and clothes != 'body':
-                                            if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
+                                            if renpy.loadable(alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'):
+                                                clothes_path = alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'
+                                            elif renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
                                             elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
                                                 clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
@@ -2463,6 +2467,10 @@ init 9999:
 #Славя 1
     image sl_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
     image sl opaq_dress = ConditionSwitch("persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((1050,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'),(0,0), im.MatrixColor(get_sprite_ori('close/sl/sl_1_dress.png'), im.matrix.opacity(0.8)),(0,0), get_sprite_ori('close/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0) ), "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((1050,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'),(0,0), im.MatrixColor(get_sprite_ori('close/sl/sl_1_dress.png'), im.matrix.opacity(0.8)),(0,0), get_sprite_ori('close/sl/sl_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82) ), True,im.Composite((1050,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'),(0,0), im.MatrixColor(get_sprite_ori('close/sl/sl_1_dress.png'), im.matrix.opacity(0.8)),(0,0), get_sprite_ori('close/sl/sl_1_normal.png')) )
+    image sl tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')),  im.matrix.opacity(0.8) )
+    image sl tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
+    image sl tr3 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
+    image sl tr4 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
 #Унылка 1
     image un_shade = At(im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png')), im.matrix.tint(0.01, 0.01, 0.01) ), close_sprites)
     image un tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')),  im.matrix.opacity(0.8) )
