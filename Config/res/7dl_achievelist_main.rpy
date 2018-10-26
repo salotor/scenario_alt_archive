@@ -88,8 +88,12 @@ screen acm_logo_sl_radio:
     add "acm_logo_sl_radio" xcenter 750 ycenter 860
 screen acm_logo_sl_neon:
     add "acm_logo_sl_neon" xcenter 750 ycenter 860
+screen acm_logo_sl_right_road:
+    add "acm_logo_sl_right_road" xcenter 750 ycenter 860
 screen acm_logo_sl_dr_un:
     add "acm_logo_sl_dr_un" xcenter 750 ycenter 860
+screen acm_logo_sl_wasted:
+    add "acm_logo_sl_wasted" xcenter 750 ycenter 860
 screen acm_logo_sl_fantazm:
     add "acm_logo_sl_fantazm" xcenter 750 ycenter 860
 screen acm_logo_sl_good:
@@ -1520,6 +1524,11 @@ label sdl_achvlist_sl7dl_Author:
     else:
         show de_achiv_lock4 with dissolve:
             xcenter 800 ycenter 258
+        if not (persistent.sl_7dl_good2_herc and persistent.sl_7dl_good2):
+            show de_info_inactive4 with dissolve:
+                pos (590, 232)
+        else:
+            pass
     # Локи-Реджект
     if persistent.sl_7dl_rej_loki:
         show acm_logo_sl_pan with dissolve:
@@ -1529,6 +1538,11 @@ label sdl_achvlist_sl7dl_Author:
     else:
         show de_achiv_lock5 with dissolve:
             xcenter 800 ycenter 322
+        if not (persistent.sl_7dl_good2_herc and persistent.sl_7dl_good2):
+            show de_info_inactive5 with dissolve:
+                pos (590, 296)
+        else:
+            pass
     # Герк-Гуд
     if persistent.sl_7dl_good_herc:
         show acm_logo_sl_neon with dissolve:
@@ -1538,13 +1552,13 @@ label sdl_achvlist_sl7dl_Author:
     else:
         show de_achiv_lock6 with dissolve:
             xcenter 800 ycenter 386
-        if not (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
+        if not (persistent.sl_7dl_good_loki and persistent.sl_7dl_good2):
             show de_info_inactive6 with dissolve:
                 pos (590, 360)
         else:
             pass
     # Герк-Гуд 2
-    if persistent.sl_7dl_herc_good2:
+    if persistent.sl_7dl_good2_herc:
         show acm_logo_sl_right_road_7dl with dissolve:
             xcenter 800 ycenter 450
         show de_check_inactive7 with dissolve:
@@ -1561,7 +1575,7 @@ label sdl_achvlist_sl7dl_Author:
     else:
         show de_achiv_lock8 with dissolve:
             xcenter 800 ycenter 514
-        if not (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
+        if not (persistent.sl_7dl_good_loki and persistent.sl_7dl_good2_herc):
             show de_info_inactive8 with dissolve:
                 pos (590, 488)
         else:
@@ -1661,6 +1675,18 @@ screen sdl_achvlist_sl7dl_Author:
                 hovered [Show ("de_check_active4", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_check_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_loki_am_home", scope={"alt_replay_on" : "True"}, locked=False)]
+        elif not persistent.sl_7dl_good2_herc:
+            hotspot ((590, 232, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active4", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_right_road", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_right_road", transition=Dissolve(0.5))]
+                action [Hide("de_info_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_right_road", transition=Dissolve(0.5))]
+        elif not persistent.sl_7dl_good2:
+            hotspot ((590, 232, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active4", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_wasted", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_wasted", transition=Dissolve(0.5))]
+                action [Hide("de_info_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_wasted", transition=Dissolve(0.5))]
         hotspot ((650, 296, 300, 52)): # Локи-Реджект
             hovered [Show("sdl_achv_rejc_LO_sl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_rejc_LO_sl", transition=Dissolve(0.5))]
@@ -1671,6 +1697,18 @@ screen sdl_achvlist_sl7dl_Author:
                 hovered [Show ("de_check_active5", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_check_active5", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_loki_oafa", scope={"alt_replay_on" : "True"}, locked=False)]
+        elif not persistent.sl_7dl_good2_herc:
+            hotspot ((590, 296, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active5", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_right_road", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active5", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_right_road", transition=Dissolve(0.5))]
+                action [Hide("de_info_active5", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_right_road", transition=Dissolve(0.5))]
+        elif not persistent.sl_7dl_good2:
+            hotspot ((590, 296, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active5", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_wasted", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active5", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_wasted", transition=Dissolve(0.5))]
+                action [Hide("de_info_active5", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_wasted", transition=Dissolve(0.5))]
         hotspot ((650, 360, 300, 52)): # Герк-Гуд
             hovered [Show("sdl_achv_good_HE_sl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_good_HE_sl", transition=Dissolve(0.5))]
@@ -1687,17 +1725,17 @@ screen sdl_achvlist_sl7dl_Author:
                 hovered [Show ("de_info_active6", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_radio", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_info_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_radio", transition=Dissolve(0.5))]
                 action [Hide("de_info_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_radio", transition=Dissolve(0.5))]
-        elif not persistent.sl_7dl_good:
+        elif not persistent.sl_7dl_good2:
             hotspot ((590, 360, 50, 50)): #Ende-Info
                 hover_sound sdl_achv_info
-                hovered [Show ("de_info_active6", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
-                unhovered [Hide ("de_info_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
-                action [Hide("de_info_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
+                hovered [Show ("de_info_active6", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_wasted", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_wasted", transition=Dissolve(0.5))]
+                action [Hide("de_info_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_wasted", transition=Dissolve(0.5))]
         hotspot ((650, 424, 300, 52)): # Герк-Гуд 2
             hovered [Show("sdl_achv_good_HE_sl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_good_HE_sl", transition=Dissolve(0.5))]
             action [Show("sdl_achv_good_HE_sl", transition=Dissolve(0.5))]
-        if persistent.sl_7dl_herc_good2:
+        if persistent.sl_7dl_good2_herc:
             hotspot ((590, 424, 50, 52)): #Ende-Jump
                 hover_sound sdl_achv_click
                 hovered [Show ("de_check_active7", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
@@ -1719,12 +1757,12 @@ screen sdl_achvlist_sl7dl_Author:
                 hovered [Show ("de_info_active8", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_radio", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_info_active8", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_radio", transition=Dissolve(0.5))]
                 action [Hide("de_info_active8", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_radio", transition=Dissolve(0.5))]
-        elif not persistent.sl_7dl_good:
+        elif not persistent.sl_7dl_good2_herc:
             hotspot ((590, 488, 50, 50)): #Ende-Info
                 hover_sound sdl_achv_info
-                hovered [Show ("de_info_active8", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
-                unhovered [Hide ("de_info_active8", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
-                action [Hide("de_info_active8", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
+                hovered [Show ("de_info_active8", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_right_road", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active8", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_right_road", transition=Dissolve(0.5))]
+                action [Hide("de_info_active8", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_right_road", transition=Dissolve(0.5))]
         hotspot ((650, 552, 300, 52)): # Дрищ-Гуд 2
             hovered [Show("sdl_achv_good_DR_sl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_good_DR_sl", transition=Dissolve(0.5))]
@@ -3436,7 +3474,7 @@ label sdl_achvlist_sl7dl_clear_Author:
     $ persistent.sl_7dl_neu_loki = False
     $ persistent.sl_7dl_rej_loki = False
     $ persistent.sl_7dl_good_herc = False
-    $ persistent.sl_7dl_herc_good2 = False
+    $ persistent.sl_7dl_good2_herc = False
     $ persistent.sl_7dl_good = False
     $ persistent.sl_7dl_good2 = False
     $ persistent.sl_7dl_bad = False

@@ -831,7 +831,7 @@ label alt_day4_sl_7dl_herc_morning:
     th "Кто бы это мог быть?"
     "Задумчиво посмотрел я на телефон, вовсе не спеша снять трубку."
     th "Вряд ли сюда ведут какие-то коммуникации."
-    if (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
+    if (persistent.sl_7dl_good_loki and persistent.sl_7dl_good2):
         menu:
             "Снять трубку":
                 stop sound_loop
@@ -11899,7 +11899,7 @@ label alt_day5_sl_7dl_evening:
     show us normal sport with dspr
     us "Ничего. Я просто помогу ей."
     us "Главное, вы не ходите разговаривать и извиняться больше! {w}А то вы всё только хуже делаете!"
-    if (karma > 50) and (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
+    if (karma > 50) and (persistent.sl_7dl_good_loki and persistent.sl_7dl_good2_herc):
         menu:
             "С превеликим удовольствием!":
                 us "Вот и хорошо!"
@@ -29520,7 +29520,7 @@ label alt_day7_sl_7dl_herc_right_road:
     "Единственно верный путь."
     #TODO: цг выше в медленном zoomout
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_herc_good2 = True
+    $ persistent.sl_7dl_good2_herc = True
     show acm_logo_sl_right_road_7dl with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
