@@ -207,7 +207,7 @@ label alt_day6_sl_7dl_start:
     if persistent.sl_7dl_good_loki or persistent.sl_7dl_good_herc or persistent.sl_7dl_good:
         $ routetag = "sl7dltrue"
     elif (lp_sl >= 19) and (karma > 120):
-        $ routetag = "sl7dlgood"
+        $ routetag = "sl7dlgood"    # сейчас в sl7dlgood эмоция - sad, а в sl7dlneu - smile. Судя по всему, должно быть наоборот
         pause(1)
         $ renpy.save_persistent()
     elif lp_sl >= 19:
@@ -237,6 +237,8 @@ label alt_day7_sl_7dl_start:
             call alt_day7_sl_7dl_begin_herc
         elif loki:
             call alt_day7_sl_7dl_begin_loki
+        else:
+            call alt_day7_sl_7dl_begin
     else:
         call alt_day7_sl_7dl_begin
     pause(1)
