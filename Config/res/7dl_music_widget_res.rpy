@@ -217,7 +217,7 @@ init 1:
     $ music_list_7dl["April Rain - Im All Crying Inside"] = default_7dl_path+"Sound/music/tearing_sobs_7dl.ogg"
     $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/yume_akari_7dl.ogg"
     $ music_list_7dl["Kevin MacLeod - Niles Blues"] = default_7dl_path+"Sound/music/viola_7dl.ogg"
-    $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/sorrow_7dl.ogg"
+    $ music_list_7dl["Аревик Аветисян – Воспоминание"] = default_7dl_path+"Sound/music/sorrow_7dl.ogg"
     $ music_list_7dl["DeadPunk - Smells Like My Grave"] = default_7dl_path+"Sound/music/smlg_7dl.ogg"
 #0.36.a
     $ music_list_7dl["Julian Kruse - Fallen From The Sky"] = default_7dl_path+"Sound/music/think_again_7dl.ogg"
