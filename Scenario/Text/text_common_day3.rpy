@@ -605,7 +605,7 @@
         "Я как в первый день понимаю."
         "АЗ ВОЗДАМ!"
         if ('dv' in list_d2_date_7dl):
-            show dv laugh pioneer
+            show dv laugh sport
             "Алиса стояла рядом, опираясь рукой — мокрой! — на кафельную стенку."
             "Похоже, её мотало от хохота."
             dv "Ха-ха-ха!"
@@ -618,7 +618,7 @@
         else:
             me "УЛЬЯНААААА!"
             "Даже не сходя с места, я уже знал — кто!"
-            show us laugh pioneer
+            show us laugh sport
             us "Хи-хи-хи!"
             "Кажется, она нашла своё развлечение на утро."
             "Я сдержался."
@@ -668,9 +668,9 @@
         window hide
         scene bg ext_house_of_mt_day with dissolve
         if ('dv' in list_d2_date_7dl):
-            show dv surprise pioneer at cright
+            show dv surprise sport at cright
         else:
-            show us calml pioneer at cright
+            show us calml sport at cright
             us "Эй! Ты что!"
         "Я со злостью глянул на причину того, что я в очередной раз опростоволосился."
         "Что я? А действительно. Что я? Почему я повёл себя с этой врединой так, что она решила, что ей вообще можно делать такие вещи? "
@@ -679,9 +679,9 @@
         window hide
         stop sound_loop
         if ('dv' in list_d2_date_7dl):
-            show dv surprise pioneer at cright
+            show dv surprise sport at cright
         else:
-            show us calml pioneer at cright
+            show us calml sport at cright
         show mt angry pioneer at cleft
     
         "На пороге показалась Ольга, и я со злостью бросил ладошку, которую, я только заметил, до сих пор сжимал."
@@ -694,7 +694,7 @@
             "Кажется, я действительно выглядел взбешённым, так как Алиса отступила на шаг."
         else:
             us  "А чё сразу я?!"
-            show us sad pioneer at cright
+            show us sad sport at cright
             "Запротестовала она."
             me "Ничего."
         mt "Семён, не объяснишь своё поведение?"
@@ -2846,7 +2846,7 @@ label alt_day3_event_estrade1:
             "Она мелькнула быстрой улыбкой."
             show dv normal pioneer2 with dspr
             dv "Садись сюда, стерео лучше всего слышно именно здесь."
-        show dv normal pioneer with dissolve
+        show dv normal pioneer2 with dissolve
         me "Ты какая-то странная сегодня."
         "Задумчиво произнёс я."
         if ('un_herc' in list_d2_date_7dl):
