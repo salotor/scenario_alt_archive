@@ -1232,6 +1232,12 @@ init 9999:
 #Славя 1
     image sl_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
     image sl_opaq_dress = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('close/sl/sl_1_dress.png')), im.matrix.opacity(0.8) )
+    
+    image sl tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')),  im.matrix.opacity(0.8) )
+    image sl tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
+    image sl tr3 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
+    image sl tr4 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
+    
 #Унылка 1
     image un_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png')), im.matrix.tint(0.01, 0.01, 0.01) )
     image un tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')),  im.matrix.opacity(0.8) )
