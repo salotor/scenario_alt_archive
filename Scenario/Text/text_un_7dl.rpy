@@ -1646,7 +1646,10 @@ label alt_day4_un_7dl_dinner:
                 "На язык капнула первая капля — с небольшой кислинкой, пахнущая так, что с ума сводило."
                 "Ногти, до боли впивающиеся мне в ноги."
                 show un sad pioneer at center with dissolve
-                scene cg d7_un_hentai
+                if persistent.hentai_graphics_7dl:
+                    scene cg d7_un_hentai
+                else:
+                    scene black
                 "Вкус женщины, которая хочет тебя."
                 "Язык скользнул внутрь неё и упёрся в естественную преграду, а я не к месту вдруг вспомнил, что анатомия этой позы позволяет проникнуть вглубь чуть ли не глубже, чем это можно сделать в естественной позе."
                 un "Сейчас."
@@ -2190,9 +2193,10 @@ label alt_day4_un_7dl_dinner:
         "Она трудно сглотнула и показала кончик языка."
         "Зажмурилась от ужаса."
         "Легко преодолев символическое сопротивление, я уже несколько секунд спустя осязал кончик её языка."
-        "И когда пять секунд спустя я отшатнулся назад, она с некоторым даже возмущением посмотрела на меня."
         hide un
-        show un angry pioneer with dspr
+        show un angry2 pioneer
+        with dissolve
+        "И когда пять секунд спустя я отшатнулся назад, она с некоторым даже возмущением посмотрела на меня."
         un "Эй, ты куда?! Вернись немедленно!"
         me "Ну уж нет. Мой ответ, а потом ты тащишь следующий фант."
         me "Там был вопрос о лжи… Ничего сложного. {w}Я вру постоянно. Дальше."
@@ -7808,7 +7812,10 @@ label alt_day5_un_7dl_video:
         "Она — не столько в ласку, сколько в удивление — изучала меня касаниями, а я отвечал ей, рассказывая шее, груди и бокам о том, что давно и безнадёжно болен ей, млея и приходя в восторг от срывающихся с губ тихих стонов."
         "Которые, правда, становились всё настойчивее и требовательнее — нащупав стол, она отошла и села на него, притягивая меня к себе ближе, ближе, обвивая ногами бёдра."
         "Я и заметить не успел, как лишился и шорт, и семейников."
-        scene cg d7_un_hentai
+        if persistent.hentai_graphics_7dl:
+            scene cg d7_un_hentai
+        else:
+            scene black
         with dissolve
         th "Если любовь — это радость, счастье, позитив… То почему все занимаются любовью с такими серьёзными мордами."
         "Не к месту вспомнилось вдруг."
@@ -9224,6 +9231,7 @@ label alt_day6_un_7dl_letmeout:
     $ persistent.alt_lamp = True
     show acm_logo_me_lamp with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     return
 
@@ -11315,6 +11323,7 @@ label alt_day7_un_7dl_ussr:
     $ persistent.un_7dl_good_ussr = True
     show acm_logo_un_good2 with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -11578,6 +11587,7 @@ label alt_day7_un_7dl_rf:
     $ persistent.un_7dl_good_rf = True
     show acm_logo_un_good with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -11851,6 +11861,7 @@ label alt_day7_un_7dl_true1:
     stop ambience fadeout 3
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     "Ладно, ладно…"
@@ -12107,6 +12118,7 @@ label alt_day7_un_7dl_true1:
     $ persistent.un_7dl_true_transit = True
     show acm_logo_un_transit with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -12195,6 +12207,7 @@ label alt_day7_un_7dl_true:
     $ persistent.un_7dl_true = True
     show acm_logo_un_shelter with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles

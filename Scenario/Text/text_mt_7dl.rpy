@@ -2624,6 +2624,7 @@ label alt_day6_mt_7dl_catha:
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif herc:
@@ -2648,6 +2649,7 @@ label alt_day6_mt_7dl_catha:
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif loki:
@@ -2687,6 +2689,7 @@ label alt_day6_mt_7dl_catha:
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
 
@@ -4968,6 +4971,7 @@ label alt_day7_mt_7dl_good:
     mt "Семён! Проснись!"
     with vpunch
     mt "Семёёёёёён!!!!"
+    window hide
     scene bg int_sam_house_clean_7dl with flash
     stop music fadeout 3
     "И я резко открыл глаза."
@@ -5044,6 +5048,7 @@ label alt_day7_mt_7dl_good:
     $ persistent.mt_7dl_good = True
     show acm_logo_mt_named_olga with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
@@ -5177,6 +5182,7 @@ label alt_day7_mt_7dl_bad:
     $ persistent.mt_7dl_bad = True
     show acm_logo_mt_cause with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
@@ -5362,6 +5368,7 @@ label alt_day7_mt_7dl_ever_after:
     $ persistent.mt_7dl_neutral = True
     show acm_logo_mt_ever_after with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     play music music_7dl["someone_like_you_guitar"] fadein 3
     call alt_7dl_titles
@@ -5436,6 +5443,7 @@ label alt_day7_mt_7dl_true:
     $ persistent.mt_7dl_true = True
     show acm_logo_mt_ending with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)

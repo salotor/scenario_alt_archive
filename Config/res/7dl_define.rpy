@@ -95,12 +95,12 @@ init:
     transform voy_left:
         xalign 0.0
         xanchor 0.5
-        yanchor 0.0
+        yalign 0.0
 
     transform voy_right:
         xalign 1.0
         xanchor 0.5
-        yanchor 0.0
+        yalign 0.0
         
     transform zenterright:
         xalign 0.5 yalign 0.5 zoom 1.0
@@ -944,7 +944,16 @@ init:
     image acm_logo_sl_too_late = get_image_7dl("gui/acm/acm_logo_sl_too_late_7dl.png")
     image acm_logo_sl_worth = get_image_7dl("gui/acm/acm_logo_sl_worth_7dl.png")
     
+    image acm_logo_sl_am_home = get_image_7dl("gui/acm/acm_logo_sl_am_home_7dl.png")
     image acm_logo_sl_neon = get_image_7dl("gui/acm/acm_logo_sl_neon_7dl.png")
+    image acm_logo_sl_missed = get_image_7dl("gui/acm/acm_logo_sl_missed_7dl.png")
+    image acm_logo_sl_no_wonder = get_image_7dl("gui/acm/acm_logo_sl_no_wonder_7dl.png")
+    image acm_logo_sl_pan = get_image_7dl("gui/acm/acm_logo_sl_pan_7dl.png")
+    image acm_logo_sl_radio = get_image_7dl("gui/acm/acm_logo_sl_radio_7dl.png")
+    image acm_logo_sl_right_road = get_image_7dl("gui/acm/acm_logo_sl_right_road_7dl.png")
+    image acm_logo_sl_till_sunrise = get_image_7dl("gui/acm/acm_logo_sl_till_sunrise_7dl.png")
+    image acm_logo_sl_dr_un = get_image_7dl("gui/acm/acm_logo_sl_dr_un_7dl.png")
+    image acm_logo_sl_wasted = get_image_7dl("gui/acm/acm_logo_sl_wasted_7dl.png")
     
     image acm_logo_un_good = get_image_7dl("gui/acm/acm_logo_un_good_7dl.png")
     image acm_logo_un_good2 = get_image_7dl("gui/acm/acm_logo_un_good2_7dl.png")
@@ -1066,6 +1075,7 @@ init:
     $ music_7dl["everyday"] = get_music_7dl("everyday_7dl.ogg")
     $ music_7dl["explore"] = get_music_7dl("explore_7dl.ogg")
 
+    $ music_7dl["faraway"] = get_music_7dl("faraway_7dl.ogg")
     $ music_7dl["feel_you_inside"] = get_music_7dl("feel_you_inside_7dl.ogg")
     $ music_7dl["finale_farewell"] = get_music_7dl("finale_farewell_7dl.ogg")
     $ music_7dl["canon_d_flamenco"] = get_music_7dl("canon_d_flamenco_7dl.ogg")
@@ -1102,11 +1112,13 @@ init:
     $ music_7dl["lastlight_guitar"] = get_music_7dl("lastlight_guitar_7dl.ogg")
     $ music_7dl["lastlight_piano"] = get_music_7dl("lastlight_piano_7dl.ogg")
     $ music_7dl["last_summer"] = get_music_7dl("last_summer_7dl.ogg")
+    $ music_7dl["last_hope"] = get_music_7dl("last_hope_7dl.ogg")
     $ music_7dl["laugh_throught_the_universe"] = get_music_7dl("laugh_throught_the_universe_7dl.ogg")
     $ music_7dl["lazy_olga"] = get_music_7dl("lazy_olga_7dl.ogg")
     $ music_7dl["last_pixie"] = get_music_7dl("last_pixie_7dl.ogg")
-    $ music_7dl["lonesome_shepherd"] = get_music_7dl("lonesome_shepherd_7dl.ogg")
+    $ music_7dl["let_me_down"] = get_music_7dl("let_me_down_7dl.ogg")
     $ music_7dl["liliac_ball"] = get_music_7dl("liliac_ball_7dl.ogg")
+    $ music_7dl["lonesome_shepherd"] = get_music_7dl("lonesome_shepherd_7dl.ogg")
     $ music_7dl["loki_on_3"] = get_music_7dl("loki_on_3_7dl.ogg")
     $ music_7dl["lullaby2"] = get_music_7dl("lullaby2_7dl.ogg")
     $ music_7dl["lost_without_you"] = get_music_7dl("lost_without_you_7dl.ogg")
@@ -1135,6 +1147,7 @@ init:
     $ music_7dl["not_alone"] = get_music_7dl("not_alone_7dl.ogg")
     $ music_7dl["nowyouseeme"] = get_music_7dl("nowyouseeme_7dl.ogg")
     
+    $ music_7dl["ofrust"] = get_music_7dl("ofrust.ogg")
     $ music_7dl["old_kiss"] = get_music_7dl("old_kiss_7dl.ogg")
     $ music_7dl["one_little_lone_cloud"] = get_music_7dl("one_little_lone_cloud_7dl.ogg")
     $ music_7dl["ourfirstmet"] = get_music_7dl("ourfirstmet_7dl.ogg") 
@@ -1151,7 +1164,9 @@ init:
     $ music_7dl["ppk"] = get_music_7dl("ppk_7dl.ogg")
     $ music_7dl["prologue_2"] = get_music_7dl("prologue_2_7dl.ogg")
     $ music_7dl["promise_to_meet_you"] = get_music_7dl("promise_to_meet_you_7dl.ogg")
+    $ music_7dl["pure_energy"] = get_music_7dl("pure_energy_7dl.ogg")
 
+    $ music_7dl["radio_void"] = get_music_7dl("radio_void_7dl.ogg")
     $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg") # в треке звучат голоса, может, стоит обрезать эту часть?
     $ music_7dl["Redemption"] = get_music_7dl("Redemption_7dl.ogg")
     $ music_7dl["red_lights"] = get_music_7dl("red_lights_7dl.ogg")
@@ -1192,6 +1207,7 @@ init:
     $ music_7dl["sorrow"] = get_music_7dl("sorrow_7dl.ogg")
     $ music_7dl["splin"] = get_music_7dl("splin1_7dl.ogg")
     $ music_7dl["stilllovingyou"] = get_music_7dl("stilllovingyou_7dl.ogg")
+    $ music_7dl["summer_ends_soon"] = get_music_7dl("summer_ends_soon_7dl.ogg")
     $ music_7dl["summer_ends_soon2"] = get_music_7dl("summer_ends_soon2_7dl.ogg")
     $ music_7dl["surf"] = get_music_7dl("surf_7dl.ogg")
 
@@ -1225,6 +1241,7 @@ init:
     $ music_7dl["viola"] = get_music_7dl("viola_7dl.ogg")
     
     $ music_7dl["walkingaway"] = get_music_7dl("walkingaway_7dl.ogg")
+    $ music_7dl["war_to_fight"] = get_music_7dl("war_to_fight_7dl.ogg")
     $ music_7dl["what_am_i_doing_here"] = get_music_7dl("what_am_i_doing_here_7dl.ogg")
     $ music_7dl["what_cost"] = get_music_7dl("what_cost_7dl.ogg")
     $ music_7dl["whatnow"] = get_music_7dl("whatnow_7dl.ogg")

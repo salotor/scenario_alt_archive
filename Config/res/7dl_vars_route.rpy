@@ -270,5 +270,6 @@ label alt_day6_sl_7dl_vars:
     
 label alt_day7_sl_7dl_vars:
     $ alt_day7_sl_7dl_workout = False #Пробежка!
+    $ alt_day7_sl_7dl_loki_park = False #Выбор
     return
     
