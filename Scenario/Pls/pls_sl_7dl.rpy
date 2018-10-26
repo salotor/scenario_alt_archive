@@ -204,10 +204,10 @@ label alt_day6_sl_7dl_start:
     $ renpy.save_persistent()
     $ persistent.sprite_time = "night"
     $ night_time()
-    if persistent.sl_7dl_good_loki or persistent.sl_7dl_good_herc or persistent.sl_7dl_good:
+    if persistent.sl_7dl_good_loki and persistent.sl_7dl_good_herc and persistent.sl_7dl_good:
         $ routetag = "sl7dltrue"
     elif (lp_sl >= 19) and (karma > 120):
-        $ routetag = "sl7dlgood"
+        $ routetag = "sl7dlgood"    # сейчас в sl7dlgood эмоция - sad, а в sl7dlneu - smile. Судя по всему, должно быть наоборот
         pause(1)
         $ renpy.save_persistent()
     elif lp_sl >= 19:
@@ -237,6 +237,8 @@ label alt_day7_sl_7dl_start:
             call alt_day7_sl_7dl_begin_herc
         elif loki:
             call alt_day7_sl_7dl_begin_loki
+        else:
+            call alt_day7_sl_7dl_begin
     else:
         call alt_day7_sl_7dl_begin
     pause(1)
@@ -254,8 +256,7 @@ label alt_day7_sl_7dl_start:
     $ alt_chapter(7, u"Славя. 7ДЛ. Отъезд")
     call alt_day7_sl_7dl_leaving
     pause(1)
-    $ renpy.save_persistent()
-    if routetag == "sl7dltrue":
+    if routetag == "sl7dltrue" and not alt_day7_sl_7dl_freewill:
         $ persistent.sprite_time = "sunset"
         $ prolog_time()
         $ alt_chapter(6, u"Славя. 7ДЛ. Тру")
@@ -287,10 +288,10 @@ label alt_day7_sl_7dl_start:
                     call alt_day7_sl_7dl_loki_radio
                 else:
                     call alt_day7_sl_7dl_loki_rewind
-                pause(1)
-                if alt_day7_sl_7dl_loki_park:
-                    call alt_day7_sl_7dl_loki_am_home
-                else:
+                    pause(1)
+                    if alt_day7_sl_7dl_loki_park:
+                        call alt_day7_sl_7dl_loki_am_home
+                    else:
                         call alt_day7_sl_7dl_loki_oafa
             else:
                 call alt_day7_sl_7dl_epi
