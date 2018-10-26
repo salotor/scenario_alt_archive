@@ -4971,6 +4971,7 @@ label alt_day7_mt_7dl_good:
     mt "Семён! Проснись!"
     with vpunch
     mt "Семёёёёёён!!!!"
+    window hide
     scene bg int_sam_house_clean_7dl with flash
     stop music fadeout 3
     "И я резко открыл глаза."

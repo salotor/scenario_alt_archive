@@ -270,7 +270,7 @@ label alt_day7_sl_7dl_start:
         if karma < 120:
             call alt_day7_sl_7dl_rf_good
             pause(1)
-            is alt_day_binder == 1:
+            if alt_day_binder == 1:
                 call alt_day7_sl_7dl_postscriptum
         else:
             if herc:
