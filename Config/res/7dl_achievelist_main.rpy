@@ -41,13 +41,13 @@ screen de_check_active5:
 screen de_check_active6:
     add "de_check_active6" pos (590, 360)
 screen de_check_active7:
-    add "de_check_active7" pos (590, 424)    
+    add "de_check_active7" pos (590, 424)
 screen de_check_active8:
     add "de_check_active8" pos (590, 488)
 screen de_check_active9:
     add "de_check_active9" pos (590, 552)
 screen de_check_active10:
-    add "de_check_active10" pos (590, 616)          
+    add "de_check_active10" pos (590, 616)
 screen de_check_active11:
     add "de_check_active11" pos (590, 680)
 screen de_check_active12:
@@ -59,7 +59,7 @@ screen de_info_active1:
 screen de_info_active2:
     add "de_info_active2" pos (590, 104)
 screen de_info_active3:
-    add "de_info_active3" pos (590,168)
+    add "de_info_active3" pos (590, 168)
 screen de_info_active4:
     add "de_info_active4" pos (590, 232)
 screen de_info_active5:
@@ -67,13 +67,13 @@ screen de_info_active5:
 screen de_info_active6:
     add "de_info_active6" pos (590, 360)
 screen de_info_active7:
-    add "de_info_active7" pos (590, 424)    
+    add "de_info_active7" pos (590, 424)
 screen de_info_active8:
     add "de_info_active8" pos (590, 488)
 screen de_info_active9:
     add "de_info_active9" pos (590, 552)
 screen de_info_active10:
-    add "de_info_active10" pos (590, 616)          
+    add "de_info_active10" pos (590, 616)
 screen de_info_active11:
     add "de_info_active11" pos (590, 680)
 screen de_info_active12:
@@ -84,6 +84,12 @@ screen acm_logo_mt_cause:
     add "acm_logo_mt_cause" xcenter 750 ycenter 860
 screen acm_logo_mt_named_olga:
     add "acm_logo_mt_named_olga" xcenter 750 ycenter 860
+screen acm_logo_sl_radio:
+    add "acm_logo_sl_radio" xcenter 750 ycenter 860
+screen acm_logo_sl_neon:
+    add "acm_logo_sl_neon" xcenter 750 ycenter 860
+screen acm_logo_sl_dr_un:
+    add "acm_logo_sl_dr_un" xcenter 750 ycenter 860
 screen acm_logo_sl_fantazm:
     add "acm_logo_sl_fantazm" xcenter 750 ycenter 860
 screen acm_logo_sl_good:
@@ -274,20 +280,32 @@ screen sdl_achv_tran_HE_dv:
     add "sdl_achv_tran_HE_dv" xcenter 700 ycenter 840
     
 #Надписи концовок Славя
+screen sdl_achv_true_sl:
+    add "sdl_achv_true_sl" xcenter 700 ycenter 840
 screen sdl_achv_true_IN_sl:
-    add "sdl_achv_true_IN_sl" xcenter 700 ycenter 840 
+    add "sdl_achv_true_IN_sl" xcenter 700 ycenter 840
 screen sdl_achv_bad_IN_sl:
-    add "sdl_achv_bad_IN_sl" xcenter 700 ycenter 840 
+    add "sdl_achv_bad_IN_sl" xcenter 700 ycenter 840
 screen sdl_achv_bad_sl:
-    add "sdl_achv_bad_sl" xcenter 700 ycenter 840 
+    add "sdl_achv_bad_sl" xcenter 700 ycenter 840
 screen sdl_achv_excl_LO_sl:
-    add "sdl_achv_excl_LO_sl" xcenter 700 ycenter 840 
+    add "sdl_achv_excl_LO_sl" xcenter 700 ycenter 840
+screen sdl_achv_good_LO_sl:
+    add "sdl_achv_good_LO_sl" xcenter 700 ycenter 840
+screen sdl_achv_neutral_LO_sl:
+    add "sdl_achv_neutral_LO_sl" xcenter 700 ycenter 840
+screen sdl_achv_rejc_LO_sl:
+    add "sdl_achv_rejc_LO_sl" xcenter 700 ycenter 840
+screen sdl_achv_good_HE_sl:
+    add "sdl_achv_good_HE_sl" xcenter 700 ycenter 840
+screen sdl_achv_good_DR_sl:
+    add "sdl_achv_good_DR_sl" xcenter 700 ycenter 840
 screen sdl_achv_good_US_sl:
-    add "sdl_achv_good_US_sl" xcenter 700 ycenter 840 
+    add "sdl_achv_good_US_sl" xcenter 700 ycenter 840
 screen sdl_achv_good_RF_sl:
-    add "sdl_achv_good_RF_sl" xcenter 700 ycenter 840 
+    add "sdl_achv_good_RF_sl" xcenter 700 ycenter 840
 screen sdl_achv_good_IN_sl:
-    add "sdl_achv_good_IN_sl" xcenter 700 ycenter 840 
+    add "sdl_achv_good_IN_sl" xcenter 700 ycenter 840
 screen sdl_achv_rejc_RF_sl:
     add "sdl_achv_rejc_RF_sl" xcenter 700 ycenter 840
 
@@ -1402,9 +1420,9 @@ label sdl_achvlist_sl_Author:
             ground "intro_transparent"
             hotspot ((980, 18, 113,65)): #7DL Route
                 hover_sound sdl_achv_click
-                hovered [Show("sdl_achv_7dl_route", transition=Dissolve(1.0)), Show("sdl_logo_active", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Show("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Show("sdl_achv_need_routeA", transition=Dissolve(0.5))]
-                unhovered [Hide("sdl_achv_7dl_route", transition=Dissolve(1.0)), Hide ("sdl_logo_active", transition=Dissolve(1.0)), Show ("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Hide("sdl_achv_need_routeA", transition=Dissolve(0.5))]
-                action [Hide("sdl_achv_7dl_route", transition=Dissolve(1.0)), Show("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Show("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Show("sdl_achv_need_routeA", transition=Dissolve(0.5)), Jump("sdl_achvlist_sl7dl_Author")]
+                hovered [Show("sdl_achv_7dl_route", transition=Dissolve(1.0)), Show("sdl_logo_active", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Show("sdl_achv_sl_7dlA", transition=Dissolve(0.5))]
+                unhovered [Hide("sdl_achv_7dl_route", transition=Dissolve(1.0)), Hide ("sdl_logo_active", transition=Dissolve(1.0)), Show ("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5))]
+                action [Hide("sdl_achv_7dl_route", transition=Dissolve(1.0)), Show("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Show("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Jump("sdl_achvlist_sl7dl_Author")]
             hotspot ((1110,18, 113,65)): #Klassishe Route
                 hover_sound sdl_achv_click
                 hovered [Show("sdl_achv_clt_route", transition=Dissolve(1.0)), Show("sdl_sl_cl_active", transition=Dissolve(1.0)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Show("sdl_achv_sl_cltA", transition=Dissolve(0.5))]
@@ -1458,8 +1476,115 @@ label sdl_achvlist_sl7dl_Author:
     with dissolve
     show sdl_achv_delB_7dl: #Иконка удалятора
         pos (380, 680)
-    show sdl_achv_extB_7dl: #Иконка Ausgang  
+    show sdl_achv_extB_7dl: #Иконка Ausgang
         pos(380, 350)
+    
+    # Тру
+    if persistent.sl_7dl_true:
+        show acm_logo_sl_no_wonder with dissolve:
+            xcenter 800 ycenter 66
+        show de_check_inactive1 with dissolve:
+            pos (590, 40)
+    else:
+        show de_achiv_lock1 with dissolve:
+            xcenter 800 ycenter 66
+        if not (persistent.sl_7dl_good_loki and persistent.sl_7dl_good_herc and persistent.sl_7dl_good):
+            show de_info_inactive1 with dissolve:
+                pos (590, 40)
+        else:
+            pass
+    # РФ-гуд
+    if persistent.sl_7dl_good_rf:
+        show acm_logo_sl_till_sunrise with dissolve:
+            xcenter 800 ycenter 130
+        show de_check_inactive2 with dissolve:
+            pos (590, 104)
+    else:
+        show de_achiv_lock2 with dissolve:
+            xcenter 800 ycenter 130
+    # Локи-Гуд
+    if persistent.sl_7dl_good_loki:
+        show acm_logo_sl_radio with dissolve:
+            xcenter 800 ycenter 194
+        show de_check_inactive3 with dissolve:
+            pos (590, 168)
+    else:
+        show de_achiv_lock3 with dissolve:
+            xcenter 800 ycenter 194
+    # Локи-Нейтрал
+    if persistent.sl_7dl_neu_loki:
+        show acm_logo_sl_am_home with dissolve:
+            xcenter 800 ycenter 258
+        show de_check_inactive4 with dissolve:
+            pos (590, 232)
+    else:
+        show de_achiv_lock4 with dissolve:
+            xcenter 800 ycenter 258
+    # Локи-Реджект
+    if persistent.sl_7dl_rej_loki:
+        show acm_logo_sl_pan with dissolve:
+            xcenter 800 ycenter 322
+        show de_check_inactive5 with dissolve:
+            pos (590, 296)
+    else:
+        show de_achiv_lock5 with dissolve:
+            xcenter 800 ycenter 322
+    # Герк-Гуд
+    if persistent.sl_7dl_good_herc:
+        show acm_logo_sl_neon with dissolve:
+            xcenter 800 ycenter 386
+        show de_check_inactive6 with dissolve:
+            pos (590, 360)
+    else:
+        show de_achiv_lock6 with dissolve:
+            xcenter 800 ycenter 386
+        if not (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
+            show de_info_inactive6 with dissolve:
+                pos (590, 360)
+        else:
+            pass
+    # Герк-Гуд 2
+    if persistent.sl_7dl_herc_good2:
+        show acm_logo_sl_right_road_7dl with dissolve:
+            xcenter 800 ycenter 450
+        show de_check_inactive7 with dissolve:
+            pos (590, 424)
+    else:
+        show de_achiv_lock7 with dissolve:
+            xcenter 800 ycenter 450
+    # Дрищ-Гуд
+    if persistent.sl_7dl_good:
+        show acm_logo_sl_dr_un with dissolve:
+            xcenter 800 ycenter 514
+        show de_check_inactive8 with dissolve:
+            pos (590, 488)
+    else:
+        show de_achiv_lock8 with dissolve:
+            xcenter 800 ycenter 514
+        if not (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
+            show de_info_inactive8 with dissolve:
+                pos (590, 488)
+        else:
+            pass
+    # Дрищ-Гуд 2
+    if persistent.sl_7dl_good2:
+        show acm_logo_sl_wasted with dissolve:
+            xcenter 800 ycenter 578
+        show de_check_inactive9 with dissolve:
+            pos (590, 552)
+    else:
+        show de_achiv_lock9 with dissolve:
+            xcenter 800 ycenter 578
+    # Бэд
+    if persistent.sl_7dl_bad:
+        show acm_logo_sl_missed with dissolve:
+            xcenter 800 ycenter 642
+        show de_check_inactive10 with dissolve:
+            pos (590, 616)
+    else:
+        show de_achiv_lock10 with dissolve:
+            xcenter 800 ycenter 642
+    
     call screen sdl_achvlist_sl7dl_Author
 # ------------------------------------------------ 
 screen sdl_achvlist_sl7dl_Author:
@@ -1469,51 +1594,195 @@ screen sdl_achvlist_sl7dl_Author:
         ground "intro_transparent"
         hotspot ((1110,18, 113,65)): #Klassishe Route
             hover_sound sdl_achv_click
-            hovered [Show("sdl_sl_cl_active", transition=Dissolve(1.0)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Show("sdl_achv_sl_cltA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Hide("sdl_achv_need_routeA", transition=Dissolve(0.5))]
-            unhovered [Hide ("sdl_sl_cl_active", transition=Dissolve(1.0)), Show ("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_cltA", transition=Dissolve(0.5)), Show("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Show("sdl_achv_need_routeA", transition=Dissolve(0.5))]
+            hovered [Show("sdl_sl_cl_active", transition=Dissolve(1.0)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Show("sdl_achv_sl_cltA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5))]
+            unhovered [Hide ("sdl_sl_cl_active", transition=Dissolve(1.0)), Show ("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_cltA", transition=Dissolve(0.5)), Show("sdl_achv_sl_7dlA", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Show("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Show("sdl_sl_cl_active", transition=Dissolve(0.5)), Show("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Jump("sdl_achvlist_slclt_Author")]
         hotspot ((1215, 18, 113,65)): #Speziell Route
             hover_sound sdl_achv_click
-            hovered [Show("sdl_sl_wh_active", transition=Dissolve(1.0)), Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Show("sdl_achv_sl_whtA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5))]
-            unhovered [Hide ("sdl_sl_wh_active", transition=Dissolve(1.0)), Show ("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_whtA", transition=Dissolve(0.5)), Show("sdl_achv_sl_7dlA", transition=Dissolve(0.5))]
+            hovered [Show("sdl_sl_wh_active", transition=Dissolve(1.0)), Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Show("sdl_achv_sl_whtA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Show("sdl_achv_need_routeA", transition=Dissolve(0.5))]
+            unhovered [Hide ("sdl_sl_wh_active", transition=Dissolve(1.0)), Show ("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_whtA", transition=Dissolve(0.5)), Show("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Hide("sdl_achv_need_routeA", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(1.0)), Show("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Show("sdl_sl_wh_active", transition=Dissolve(0.5)), Show("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Jump("sdl_achvlist_slwht_Author")]
+        
+        hotspot ((650, 40, 300, 52)): # Тру
+            hovered [Show("sdl_achv_true_sl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_true_sl", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_true_sl", transition=Dissolve(0.5))]
+        if persistent.sl_7dl_true:
+            hotspot ((590, 40, 50, 52)): #Ende-Jump
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active1", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_true", scope={"alt_replay_on" : "True"}, locked=False)]
+        elif not persistent.sl_7dl_good_loki:
+            hotspot ((590, 40, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active1", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_radio", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_radio", transition=Dissolve(0.5))]
+                action [Hide("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_radio", transition=Dissolve(0.5))]
+        elif not persistent.sl_7dl_good_herc:
+            hotspot ((590, 40, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active1", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_neon", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_neon", transition=Dissolve(0.5))]
+                action [Hide("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_neon", transition=Dissolve(0.5))]
+        elif not persistent.sl_7dl_good:
+            hotspot ((590, 40, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active1", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
+                action [Hide("de_info_active1", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
+        hotspot ((650, 104, 300, 52)): # РФ-гуд
+            hovered [Show("sdl_achv_good_RF_sl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_good_RF_sl", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_good_RF_sl", transition=Dissolve(0.5))]
+        if persistent.sl_7dl_good_rf:
+            hotspot ((590, 104, 50, 52)): #RF-gut-Ende-Jump
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active2", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active2", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_rf_good", scope={"alt_replay_on" : "True"}, locked=False)]
+        hotspot ((650, 168, 300, 52)): # Локи-Гуд
+            hovered [Show("sdl_achv_good_LO_sl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_good_LO_sl", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_good_LO_sl", transition=Dissolve(0.5))]
+        if persistent.sl_7dl_good_loki:
+            hotspot ((590, 168, 50, 52)): #Ende-Jump
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active3", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active3", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_loki_radio", scope={"alt_replay_on" : "True"}, locked=False)]
+        hotspot ((650, 232, 300, 52)): # Локи-Нейтрал
+            hovered [Show("sdl_achv_neutral_LO_sl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_neutral_LO_sl", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_neutral_LO_sl", transition=Dissolve(0.5))]
+        if persistent.sl_7dl_neu_loki:
+            hotspot ((590, 232, 50, 52)): #Ende-Jump
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active4", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_loki_am_home", scope={"alt_replay_on" : "True"}, locked=False)]
+        hotspot ((650, 296, 300, 52)): # Локи-Реджект
+            hovered [Show("sdl_achv_rejc_LO_sl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_rejc_LO_sl", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_rejc_LO_sl", transition=Dissolve(0.5))]
+        if persistent.sl_7dl_rej_loki:
+            hotspot ((590, 296, 50, 52)): #Ende-Jump
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active5", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active5", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_loki_oafa", scope={"alt_replay_on" : "True"}, locked=False)]
+        hotspot ((650, 360, 300, 52)): # Герк-Гуд
+            hovered [Show("sdl_achv_good_HE_sl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_good_HE_sl", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_good_HE_sl", transition=Dissolve(0.5))]
+        if persistent.sl_7dl_good_herc:
+            hotspot ((590, 360, 50, 52)): #Ende-Jump
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active6", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_herc_neon", scope={"alt_replay_on" : "True"}, locked=False)]
+        elif not persistent.sl_7dl_good_loki:
+            hotspot ((590, 360, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active6", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_radio", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_radio", transition=Dissolve(0.5))]
+                action [Hide("de_info_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_radio", transition=Dissolve(0.5))]
+        elif not persistent.sl_7dl_good:
+            hotspot ((590, 360, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active6", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
+                action [Hide("de_info_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
+        hotspot ((650, 424, 300, 52)): # Герк-Гуд 2
+            hovered [Show("sdl_achv_good_HE_sl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_good_HE_sl", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_good_HE_sl", transition=Dissolve(0.5))]
+        if persistent.sl_7dl_herc_good2:
+            hotspot ((590, 424, 50, 52)): #Ende-Jump
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active7", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active7", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_herc_right_road", scope={"alt_replay_on" : "True"}, locked=False)]
+        hotspot ((650, 488, 300, 52)): # Дрищ-Гуд
+            hovered [Show("sdl_achv_good_DR_sl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_good_DR_sl", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_good_DR_sl", transition=Dissolve(0.5))]
+        if persistent.sl_7dl_good:
+            hotspot ((590, 488, 50, 52)): #Ende-Jump
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active8", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active8", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_loopback", scope={"alt_replay_on" : "True"}, locked=False)]
+        elif not persistent.sl_7dl_good_loki:
+            hotspot ((590, 488, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active8", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_radio", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active8", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_radio", transition=Dissolve(0.5))]
+                action [Hide("de_info_active8", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_radio", transition=Dissolve(0.5))]
+        elif not persistent.sl_7dl_good:
+            hotspot ((590, 488, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active8", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active8", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
+                action [Hide("de_info_active8", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_sl_dr_un", transition=Dissolve(0.5))]
+        hotspot ((650, 552, 300, 52)): # Дрищ-Гуд 2
+            hovered [Show("sdl_achv_good_DR_sl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_good_DR_sl", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_good_DR_sl", transition=Dissolve(0.5))]
+        if persistent.sl_7dl_good2:
+            hotspot ((590, 552, 50, 52)): #Ende-Jump
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active9", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active9", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_wasted", scope={"alt_replay_on" : "True"}, locked=False)]
+        hotspot ((650, 616, 300, 52)): # Бэд
+            hovered [Show("sdl_achv_bad_sl", transition=Dissolve(0.5))]
+            unhovered [Hide("sdl_achv_bad_sl", transition=Dissolve(0.5))]
+            action [Show("sdl_achv_bad_sl", transition=Dissolve(0.5))]
+        if persistent.sl_7dl_bad:
+            hotspot ((590, 616, 50, 52)): #Ende-Jump
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active10", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active10", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active1", transition=Dissolve(0.5)), Replay("alt_day7_sl_7dl_missed", scope={"alt_replay_on" : "True"}, locked=False)]
+        
         
         hotspot ((0, 0, 550, 340)): #Мику
             hover_sound sdl_achv_pagina
             hovered [Show("mi_button_active", transition=Dissolve(0.5))]
             unhovered [Hide("mi_button_active", transition=Dissolve(0.5))]
-            action [Hide("mi_button_active", transition=Dissolve(0.5)), Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Jump("sdl_achvlist_mi_Author")]
+            action [Hide("mi_button_active", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Jump("sdl_achvlist_mi_Author")]
         hotspot ((0, 344, 360, 390)): #Алисхен
             hover_sound sdl_achv_pagina
             hovered [Show("dv_button_active", transition=Dissolve(0.5))]
             unhovered [Hide("dv_button_active", transition=Dissolve(0.5))]
-            action [Hide("dv_button_active", transition=Dissolve(0.5)), Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Jump("sdl_achvlist_dv_Author")]
+            action [Hide("dv_button_active", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Jump("sdl_achvlist_dv_Author")]
         hotspot ((1380, 0, 600, 340)): #Лена
             hover_sound sdl_achv_pagina
             hovered [Show("un_button_active", transition=Dissolve(0.5))]
             unhovered [Hide("un_button_active", transition=Dissolve(0.5))]
-            action [Hide("un_button_active", transition=Dissolve(0.5)), Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)),  Jump("sdl_achvlist_un_Author")]
+            action [Hide("un_button_active", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)),  Jump("sdl_achvlist_un_Author")]
         hotspot ((1560, 343, 360, 185)): #Ольга
             hover_sound sdl_achv_pagina
             hovered [Show("mt_button_active", transition=Dissolve(0.5))]
             unhovered [Hide("mt_button_active", transition=Dissolve(0.5))]
-            action [Hide("mt_button_active", transition=Dissolve(0.5)), Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)),  Jump("sdl_achvlist_mt_Author")]
+            action [Hide("mt_button_active", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)),  Jump("sdl_achvlist_mt_Author")]
         hotspot ((1561, 530, 359, 202)): #Ульяна
             hover_sound sdl_achv_pagina
             hovered [Show("us_button_active", transition=Dissolve(0.5))]
             unhovered [Hide("us_button_active", transition=Dissolve(0.5))]
-            action [Hide("us_button_active", transition=Dissolve(0.5)), Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)),  Jump("sdl_achvlist_us_Author")]
+            action [Hide("us_button_active", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)),  Jump("sdl_achvlist_us_Author")]
         hotspot ((1380, 735, 600, 345)): #Одиночка
             hover_sound sdl_achv_pagina
             hovered [Show("me_button_active", transition=Dissolve(0.5))]
             unhovered [Hide("me_button_active", transition=Dissolve(0.5))]
-            action [Hide("me_button_active", transition=Dissolve(0.5)), Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)),  Jump("sdl_achvlist_me_Author")]
+            action [Hide("me_button_active", transition=Dissolve(0.5)), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)),  Jump("sdl_achvlist_me_Author")]
         
         hotspot ((380, 350, 170, 50)): #Выход
             hover_sound sdl_achv_click
             hovered [Show("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5))]
-            action [Hide("sdl_achv_need_routeA", transition=Dissolve(0.5)), Stop ("ambience"), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
+            action [Stop ("ambience"), Hide("sdl_logo_active", transition=Dissolve(0.5)),Hide("sdl_sl_cl_inactive", transition=Dissolve(0.5)),Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_extA_7dl", transition=Dissolve(0.5)), Jump("main_menu_7dl")]
         hotspot ((380, 680, 170, 50)): #Удалятор
             hover_sound sdl_achv_click
             activate_sound sdl_achv_clear
@@ -1527,7 +1796,7 @@ label sdl_achvlist_slclt_Author:
     with dissolve
     show sdl_achv_delB_7dl: #Иконка удалятора
         pos (380, 680)
-    show sdl_achv_extB_7dl: #Иконка Ausgang  
+    show sdl_achv_extB_7dl: #Иконка Ausgang
         pos(380, 350)
     #Инт-ТруЪ
     if persistent.sl_cl_int_ok:
@@ -1572,7 +1841,7 @@ label sdl_achvlist_slclt_Author:
     else:
         pass
     #СССР-гуд
-    if persistent.sl_cl_good_ussr: 
+    if persistent.sl_cl_good_ussr:
         show acm_logo_sl_good with dissolve:
             xcenter 800 ycenter 258 
         show de_check_inactive4 with dissolve:
@@ -1643,8 +1912,8 @@ screen sdl_achvlist_slclt_Author:
         ground "intro_transparent"
         hotspot ((980, 18, 113,65)): #7DL Route
             hover_sound sdl_achv_click
-            hovered [Show("sdl_logo_active", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Show("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_cltA", transition=Dissolve(0.5)), Show("sdl_achv_need_routeA", transition=Dissolve(0.5))]
-            unhovered [Hide ("sdl_logo_active", transition=Dissolve(1.0)), Show ("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Show("sdl_achv_sl_cltA", transition=Dissolve(0.5)), Hide("sdl_achv_need_routeA", transition=Dissolve(0.5))]
+            hovered [Show("sdl_logo_active", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Show("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_cltA", transition=Dissolve(0.5))]
+            unhovered [Hide ("sdl_logo_active", transition=Dissolve(1.0)), Show ("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Show("sdl_achv_sl_cltA", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_sl_cltA", transition=Dissolve(0.5)), Show("sdl_sl_cl_inactive", transition=Dissolve(0.5)), Hide ("sdl_sl_cl_active", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Show("sdl_logo_active", transition=Dissolve(0.5)), Show("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Jump("sdl_achvlist_sl7dl_Author")]
         hotspot ((1215, 18, 113,65)): #Speziell Route
             hover_sound sdl_achv_click
@@ -1828,8 +2097,8 @@ screen sdl_achvlist_slwht_Author:
         ground "intro_transparent"
         hotspot ((980, 18, 113,65)): #7DL Route
             hover_sound sdl_achv_click
-            hovered [Show("sdl_logo_active", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Show("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_whtA", transition=Dissolve(0.5))]
-            unhovered [Hide ("sdl_logo_active", transition=Dissolve(1.0)), Show ("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Show("sdl_achv_sl_whtA", transition=Dissolve(0.5))]
+            hovered [Show("sdl_logo_active", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Show("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Hide("sdl_achv_sl_whtA", transition=Dissolve(0.5)), Hide("sdl_achv_need_routeA", transition=Dissolve(0.5))]
+            unhovered [Hide ("sdl_logo_active", transition=Dissolve(1.0)), Show ("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_sl_7dlA", transition=Dissolve(0.5)), Show("sdl_achv_sl_whtA", transition=Dissolve(0.5)), Show("sdl_achv_need_routeA", transition=Dissolve(0.5))]
             action [Hide("sdl_achv_sl_whtA", transition=Dissolve(0.5)), Show("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Hide ("sdl_sl_wh_active", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Show("sdl_logo_active", transition=Dissolve(0.5)), Show("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Jump("sdl_achvlist_sl7dl_Author")]
         hotspot ((1110,18, 113,65)): #Klassishe Route
             hover_sound sdl_achv_click
@@ -3161,8 +3430,16 @@ label sdl_achvlist_dvdjt_clear_Author:
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\БЛОК СЛАВИ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
 ######################СЛАВЯ-7ДЛ######################################
 label sdl_achvlist_sl7dl_clear_Author:
-    #Нужны флаги
-    $ persistent.sl_7dl_good_ussr = False
+    $ persistent.sl_7dl_true = False
+    $ persistent.sl_7dl_good_rf = False
+    $ persistent.sl_7dl_good_loki = False
+    $ persistent.sl_7dl_neu_loki = False
+    $ persistent.sl_7dl_rej_loki = False
+    $ persistent.sl_7dl_good_herc = False
+    $ persistent.sl_7dl_herc_good2 = False
+    $ persistent.sl_7dl_good = False
+    $ persistent.sl_7dl_good2 = False
+    $ persistent.sl_7dl_bad = False
     call screen sdl_achvlist_sl7dl_Author
 # ------------------------------------------------ 
 ######################СЛАВЯ-КЛАССИК######################################

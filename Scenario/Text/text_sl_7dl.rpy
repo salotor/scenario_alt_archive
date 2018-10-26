@@ -32155,7 +32155,7 @@ label alt_day7_sl_7dl_missed:
     th "Неужели я…"
     dreamgirl "Промазал."
     play sound sfx_7dl["aunl"]
-    $ persistent.mt_7dl_bad = True
+    $ persistent.sl_7dl_bad = True
     show acm_logo_sl_missed with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
