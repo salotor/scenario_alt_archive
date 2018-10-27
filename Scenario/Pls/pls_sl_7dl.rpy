@@ -297,7 +297,7 @@ label alt_day7_sl_7dl_start:
             else:
                 call alt_day7_sl_7dl_epi
                 pause(1)
-                if alt_day5_sl_7dl_olroad:
+                if alt_day5_sl_7dl_olroad: # набрать 21 лп для выхода сюда можно только с турнирным бонусом
                     call alt_day7_sl_7dl_loopback
                     if alt_day_binder == 1:
                         call alt_day7_sl_7dl_loop_ps
