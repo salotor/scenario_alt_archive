@@ -25058,7 +25058,7 @@ label alt_day7_sl_7dl_begin_loki:
     "Набившая оскомину, зато так замечательно заглушающая посторонние голоса в голове."
     window hide
     scene bg ext_camp_entrance_day
-    show sl2 pioneer
+    show sl2 pioneer    # где эмоция?
     show prologue_dream
     with dissolve
     play ambience ambience_camp_entrance_day fadein 3
@@ -25882,7 +25882,7 @@ label alt_day7_sl_7dl_packing_herc:
         dv "Ой!"
         show dv shocked sport at fleft with move
         us "Ай!"
-        show us surp3 soirt at fright with move
+        show us surp3 sport at fright with move
         #show ka grin pioneer
         with fade
         ka "Что тут у нас?"
@@ -26362,7 +26362,7 @@ label alt_day7_sl_7dl_packing_loki:
         "А находясь рядом с нами, такой же энергией она заряжала и нас."
         "Так что сплин, царящий здесь ещё парой минут назад, исчез, как и не было."
         show sl smile casual
-        show dv smile casual
+        show dv smile sport
         with dspr
         "Все зашумели, засмеялись…"
         "И смотрели в будущее с гораздо большим оптимизмом."
@@ -27639,9 +27639,9 @@ label alt_day7_sl_7dl_true:
     stop music fadeout 3
     "Последнее, что…"
     window hide
-    scene bg intro_5
+    scene anim intro_5
     $ set_mode_nvl()
-    play music music_7dl["regret"] fadein 3
+    play music music_7dl["regret"] fadein 3    # нет такой музыки
     "Сёмушка, здравствуй!"
     "Мне хотелось просто написать тебе."
     "Пусть ты ушёл, но всё ещё дорог мне."
@@ -27976,7 +27976,7 @@ label alt_day7_sl_7dl_rf_good:
     "Надежда есть, пока есть жизнь."
     "Теперь же…"
     window hide
-    scene bg intro_1
+    scene anim intro_1
     pause(1)
     scene anim intro_2
     with dissolve
@@ -29570,7 +29570,7 @@ label alt_day7_sl_7dl_herc_right_road:
     #TODO: цг выше в медленном zoomout
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_herc_good = True
-    show acm_logo_sl_right_road_7dl with moveinright:
+    show acm_logo_sl_right_road with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
@@ -31345,7 +31345,7 @@ label alt_day7_sl_7dl_loop_ps:
     return
 
 label alt_day7_sl_7dl_wasted:
-    play music music_7dl["Exodus"] fadein 3
+    play music music_7dl["exodus"] fadein 3
     "Вернулся за руль и, немного потыкав в кнопки, нашёл как закрыть дверь, повернул ключ в зажигании…"
     "Автобус неторопливо двинулся вперёд."
     window hide

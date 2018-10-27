@@ -1542,7 +1542,7 @@ label sdl_achvlist_sl7dl_Author:
             xcenter 800 ycenter 322
     # Герк-Гуд
     if persistent.sl_7dl_herc_good:
-        show acm_logo_sl_right_road_7dl with dissolve:
+        show acm_logo_sl_right_road with dissolve:
             xcenter 800 ycenter 386
         show de_check_inactive6 with dissolve:
             pos (590, 360)
