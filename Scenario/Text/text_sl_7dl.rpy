@@ -831,7 +831,7 @@ label alt_day4_sl_7dl_herc_morning:
     th "Кто бы это мог быть?"
     "Задумчиво посмотрел я на телефон, вовсе не спеша снять трубку."
     th "Вряд ли сюда ведут какие-то коммуникации."
-    if (persistent.sl_7dl_good_loki and persistent.sl_7dl_good2):
+    if persistent.sl_7dl_herc_good:
         menu:
             "Снять трубку":
                 stop sound_loop
@@ -12430,7 +12430,7 @@ label alt_day5_sl_7dl_campfire:
         mi "Самое главное! Самое… важное. Сказать слова, какие не успела сказать, сделать то, что следовало сделать."
         "Внутри меня поселилось некое сосущее чувство, как предвкушение чего-то необыкновенного, что вот-вот должно произойти."
         "Я посмотрел на Славю, она на меня."
-        if herc and (lp_sl > 16) and (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
+        if herc and (lp_sl > 16) and (persistent.sl_7dl_loki_good and persistent.sl_7dl_good):
             sl "Да."
             "Медленно проговорила Славя."
             sl "Столько нужно успеть."
@@ -23265,7 +23265,7 @@ label alt_day6_sl_7dl_disco:
         "Она умоляюще заглянула мне в глаза."
         sl "Ну? Простишь?"
         "Я заколебался."
-        if lp_sl >= 19:
+        if lp_sl >= 19 and (persistent.sl_7dl_good_loki_neu or persistent.sl_7dl_good_loki_rej):
             menu:
                 "Я не злюсь":
                     $ lp_sl -= 1
@@ -29323,7 +29323,7 @@ label alt_day7_sl_7dl_herc_neon:
     "Скатившийся по щеке слезинка запуталась в моей щетине."
     "Но это уже не имело значения."
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_good_herc = True
+    $ persistent.sl_7dl_herc_good2 = True
     show acm_logo_sl_neon with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -29568,7 +29568,7 @@ label alt_day7_sl_7dl_herc_right_road:
     "Единственно верный путь."
     #TODO: цг выше в медленном zoomout
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_good2_herc = True
+    $ persistent.sl_7dl_herc_good = True
     show acm_logo_sl_right_road_7dl with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -29996,7 +29996,7 @@ label alt_day7_sl_7dl_loki_radio:
     "Значит, в сердце моём больше не было для них места."
     "На то они и радио «Пустота»."
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_good_loki = True
+    $ persistent.sl_7dl_loki_good = True
     show acm_logo_sl_radio with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -30411,7 +30411,7 @@ label alt_day7_sl_7dl_loki_am_home:
     "Я улыбнулся и улегся как мог удобно — насколько позволяли ремни смирительной рубашки."
     th "Я дома. {w}Куда мне торопиться?"
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_neu_loki = True
+    $ persistent.sl_7dl_loki_neu = True
     show acm_logo_sl_am_home with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -30464,7 +30464,7 @@ label alt_day7_sl_7dl_loki_oafa:
     me "Я хочу спасти твою жизнь. {w}И записать с тобой песню."
     "Нажал и застыл в ожидании, не зная ещё, что ждёт впереди."
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_rej_loki = True
+    $ persistent.sl_7dl_loki_rej = True
     show acm_logo_sl_pan with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -31067,7 +31067,7 @@ label alt_day7_sl_7dl_loopback:
     "Улыбнулась медсестра, и я расслышал мурлыкающие нотки в её голосе."
     me "Домой."
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_good = True
+    $ persistent.sl_7dl_good2 = True
     show acm_logo_sl_dr_un with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -31713,7 +31713,7 @@ label alt_day7_sl_7dl_wasted:
     "Значит, не зря был целый год ожидания?"
     "Не напрасно?"
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_good2 = True
+    $ persistent.sl_7dl_good = True
     show acm_logo_sl_wasted with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -31729,7 +31729,7 @@ label alt_day7_sl_7dl_missed:
     if herc:
         "Сычёв Семён."
     else:
-        "Персунов Семён."
+    "Персунов Семён."
     "Подающий надежды, перспективный, возлюбленный, прошедший через невероятную историю — это всё я."
     "А ещё предатель, который легко отказался от своего счастья, когда потребовалось просто приложить чуточку больше усилий, чем раньше."
     "И, разумеется, завсегдатай сетевых ресурсов, где люди ненавидят людей, где высшей доблестью выступает способность довести собеседника до белого каления, такой же, ничем не выделяющийся."

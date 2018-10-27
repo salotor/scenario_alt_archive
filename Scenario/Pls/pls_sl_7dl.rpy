@@ -257,6 +257,7 @@ label alt_day7_sl_7dl_start:
     call alt_day7_sl_7dl_leaving
     pause(1)
     if routetag == "sl7dltrue" and not alt_day7_sl_7dl_freewill:
+    $ renpy.save_persistent()
         $ persistent.sprite_time = "sunset"
         $ prolog_time()
         $ alt_chapter(6, u"Славя. 7ДЛ. Тру")
@@ -288,10 +289,10 @@ label alt_day7_sl_7dl_start:
                     call alt_day7_sl_7dl_loki_radio
                 else:
                     call alt_day7_sl_7dl_loki_rewind
-                    pause(1)
-                    if alt_day7_sl_7dl_loki_park:
-                        call alt_day7_sl_7dl_loki_am_home
-                    else:
+                pause(1)
+                if alt_day7_sl_7dl_loki_park:
+                    call alt_day7_sl_7dl_loki_am_home
+                else:
                         call alt_day7_sl_7dl_loki_oafa
             else:
                 call alt_day7_sl_7dl_epi
