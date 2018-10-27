@@ -4,6 +4,8 @@
     show prologue_dream
     "Мой сон уместился в один короткий вдох между слогами."
     "Али — веки смыкаются, пряча закатывающийся зрачок."
+    scene bg int_extra_house_day_7dl
+    show prologue_dream
     "Са — и вот в лицо уже светит солнце."
     "Вообще, я до последнего думал, что ещё не проснулся. {w}У меня частенько во снах бывает, что я общаюсь с вымышленными или мёртвыми представителями человечества, лёжа в кровати."
     "Как будто приращённая реальность, натянутая на костяк уже привычного мне мира. Кое-что остаётся незыблемым." 
@@ -45,7 +47,7 @@
     "ОНА ПРОСТО ВЗЯЛА И ОПУСТИЛА УГОЛОК ГАЛСТУКА МНЕ В НОС!"
     window hide
     with vpunch
-    scene bg int_extra_house_7dl
+    scene bg int_extra_house_day_7dl
     show dv normal pioneer2
     with dissolve
     "Я завопил и, отмахиваясь, сел, уже понимая, что не сплю."
@@ -1219,6 +1221,8 @@ label alt_day4_dv_7dl_silent_hour:
     scene bg ext_house_of_dv_day with dissolve
 
     "Я улыбнулся и, обувшись, двинулся на юг в сторону домика, где совместно проживали Алиса и Ульяна."
+    play sound sfx_open_dooor_campus_2
+    scene bg int_house_of_dv_day with dissolve
     show us smile sport with dissolve
     "С мелкой проблем не возникло, она без лишних разговоров отдала требуемое, лукаво подмигнув:    "
     us "На раздевание играть будете, да?"
@@ -1232,8 +1236,10 @@ label alt_day4_dv_7dl_silent_hour:
     me "Ммм… Спасибо?"
     us "Удачи тебе. В твоих занудных играх."
     hide us with dissolve
+    scene bg ext_house_of_dv_day
+    with dissolve
     "Я рассмеялся и покинул домик. {w}Теперь оставались сущие мелочи — пробраться через весь лагерь с колодой в кармане." 
-    "И не допустить, чтобы вожатая реквизровала её в счёт будущих турниров."
+    "И не допустить, чтобы вожатая реквизировала её в счёт будущих турниров."
     "Напрямую, конечно, бежать выгоднее и быстрее. {w}Однако таким образом шанс самый высокий. Я воскресил перед глазами карту лагеря и попытался проложить маршрут так, чтобы минимизировать шанс пересечения с траекторией движения."
     "Идеально оказалось двигаться вдоль здания клубов, дальше повернуть к месту обитания Мику — между делом обещая собственной совести обязательно навестить японку «как только появится время»." 
     "И, с небольшим заходом в лес, обежать по периметру умывальники…"
@@ -1401,6 +1407,7 @@ label alt_day4_dv_7dl_silent_hour:
     "…и еле успел спрятать колоду обратно в карман!"
     show mt normal pioneer with dissolve
     "Вопреки прогнозам, Ольга Дмитриевна сунула нос повторно. И, разумеется, сразу заметила меня."
+    show mt angry pioneer with dissolve
     "Нахмурилась и поманила пальцем."
     mt "Семён."
     "Я тяжело вздохнул и подошёл."
@@ -1408,27 +1415,31 @@ label alt_day4_dv_7dl_silent_hour:
     me "Два часа."
     mt "И где ты должен быть в это время?"
     me "В постели."
+    show mt normal pioneer
     show dv normal pioneer2 at left
-    mt"Вот и отправляйся. Алиса, ты тоже иди."
-    dv "Но я не могу!" 
+    with dissolve
+    mt "Вот и отправляйся. Алиса, ты тоже иди."
+    dv "Но я не могу!"
     "Возмутилась она."
     mt "Почему?"
-    dv "Потому что мы с… Семёном." 
+    dv "Потому что мы с… Семёном."    # многоточие в конце? Она ведь дальше продолжает фразу
     "Она с трудом произнесла моё имя."
     show dv smile pioneer2 with dspr
-    dv "Должны репетировать выступление на день самодеятельности!"
+    dv "Должны репетировать выступление на день самодеятельности!"    #
     me "Да. Мы здесь собрались, и теперь пойдём к Мику."
-    mt "И, разумеется, без Лены в этом деле не обойтись?" 
-    "Cладко улыбнулась Ольга.     "
+    show mt grin pioneer with dissolve
+    mt "И, разумеется, без Лены в этом деле не обойтись?"
+    "Cладко улыбнулась Ольга."
     me "Конечно! Она наш самый суровый критик."
     mt "Понятно всё с вами." 
     "Махнула рукой вожатая." 
     mt "Делайте что хотите, только на глаза родителям не попадайтесь."
     un "Мои уже…"
     mt "Я про чужих родителей." 
-    mt "Мы тут пытаемся создать вид образцового лагеря, будет очень печально." 
+    mt "Мы тут пытаемся создать вид образцового лагеря, будет очень печально."
+    show mt angry pioneer with dissolve
     mt "Вплоть до отказа принять в Комсомол — если кое-кто испортит эффект."
-    hide mt 
+    hide mt
     show un normal pioneer at right
     with dissolve
     "Запугав нас таким образом, она развернулась и ушла." 
@@ -1865,7 +1876,7 @@ label alt_day4_dv_7dl_silent_hour:
     me "Никого со свечкой я сюда не пущу, а если кто-то сунется – я порву ему горло. Это понятно?"
     show dv surprise pioneer2
     pause(.2)
-    show dv normal pioneer with dissolve
+    show dv normal pioneer2 with dissolve
     "Она удивлённо посмотрела на меня, но, немного подумав, кивнула."
     me "Что тебе понятно?"
     dv "Что ты очень дорожишь нами."
@@ -2821,13 +2832,20 @@ label alt_day4_dv_7dl_aidpost:
                 "Она мило покраснела, и тут же выпустила меня — чем я и воспользовался, мгновенно перейдя от шеи к ключичной впадине, отпуская пальцы гулять по спине."
                 scene anim prolog_1
                 with dissolve2
+                if persistent.hentai_graphics_7dl:
+                    show dv shy body close at center with dissolve
+                else:
+                    show dv shy swim close at center with dissolve
                 "Через секунду упругая резинка сдалась и упала куда-то вниз, оставляя Алису в одной только юбке."
                 "Сосок на языке набух практически мгновенно, стоило лишь мне взять его в рот. А когда я легонько сомкнул челюсти, она как-то со всхлипом вскрикнула и, прижавшись, задрожала — крупно-крупно."
                 dreamgirl "Поздравляю, чувак. Нет, не так. Чувачище!"
                 th "М?"
                 scene anim prolog_1
                 with dissolve2
-                show dv surprise swim close at center with dissolve
+                if persistent.hentai_graphics_7dl:
+                    show dv surprise body close at center with dissolve
+                else:
+                    show dv surprise swim close at center with dissolve
                 dreamgirl "Ты только что завёл девочку до такой кондиции, что она разрядилась."
                 th "Во-первых, такого не бывает. А во-вторых — ты что же, и в постели со мной здесь теперь будешь?"
                 dreamgirl "А что не так? Мы же с тобой одно целое. Привыкай."
@@ -3593,7 +3611,13 @@ label alt_day5_dv_7dl_alco_morning:
     "Половина седьмого!"
     th "Ох, мать. Надеюсь, Виола ещё в пути, и у нас есть ещё время!"
     me "Алиса, подъём!"
-    show dv angry pioneer2 with dissolve
+    if alt_day4_dv_7dl_hentai:
+        if persistent.hentai_graphics_7dl:
+            show dv angry body with dissolve
+        else:
+            show dv angry swim with dissolve
+    else:
+        show dv angry pioneer2 with dissolve
     dv "Чё ты кричишь?!"
     "Недовольно скрипнула она, не поворачиваясь."
     dv "Скажи вожатой, что я уже встаю…"
@@ -3601,22 +3625,29 @@ label alt_day5_dv_7dl_alco_morning:
         "Она было повернулась на другой бок, но тут осознала, что лежит полностью обнажённая."
         "Похоже, вчерашний сон про чужие ладошки был в руку?"
         me "Поднимайся, говорю! Не хватало ещё, чтобы нас тут застукали!"
+        if persistent.hentai_graphics_7dl:
+            show dv shy body with dissolve
+        else:
+            show dv shy swim with dissolve
         "Кажется, она припоминала что-то вчерашнее, так как вдруг жарко-жарко покраснела."
         dv "Скажи, это мне от водки показалось, или ты и правда…"
         "Она красноречиво стрельнула глазами куда-то вниз."
     else:
         "Тут до неё дошла вся пикантность ситуации, и она скатилась с кушетки."
         "Не к месту вдруг вспомнился третий способ самоубийства с бодуна — резкий кувырок через голову!"
+        show dv guilty pioneer2 with dissolve
         "Алиса схватилась за голову — гудящую так, что слышно было и отсюда."
         dv "Пили."
         "Убито констатировала она."
     me "Поговорим об этом, когда уберёмся отсюда, ладно?"
+    hide dv with dissolve
     th "Окно надо будет оставить открытым и, по возможности подтереть жидкости."
     th "Запах мы, конечно, не убьём, но хотя бы что-то."
     if alt_day4_dv_7dl_hentai:
         "Я размышлял, между делом кидая Алисе одежду, ставя бутылку в холодильник и протирая там, где, возможно, вчера что-нибудь да пролилось."
     else:
         "Обнаружив бесхозный кусок марли, я намочил его в раковине и тщательно протёр все обнаруженные пятна."
+    show dv normal pioneer2 with dissolve
     dv "Ты с чего это вдруг уборку тут затеял?"
     "Она уже стояла готова и с интересом наблюдала за мной."
     me "Не уборку, а следы заметаю! {w}Попробую выгадать нам время."
@@ -10115,6 +10146,7 @@ label alt_day6_dv_7dl_escape_convince:
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif herc:
@@ -10139,6 +10171,7 @@ label alt_day6_dv_7dl_escape_convince:
         $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif loki:
@@ -10874,7 +10907,10 @@ label alt_day6_dv_7dl_love_scene:
     "Она с сомнением покачала бутылку."
     dv "А я бы тяпнула. Хотя, как скажешь. Не хочешь анестезию, сам виноват!"
     window hide
-    scene cg d6_dv_hentai_7dl
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_dv_hentai_7dl
+    else:
+        scene black
     with flash
 
     "Последняя фраза меня заинтересовала сильнее всего, я даже открыл рот, чтобы переспросить, но вместо этого обнаружил себя распластанным на матах, и Алису, усевшуюся мне на бёдра."
@@ -10912,7 +10948,8 @@ label alt_day6_dv_7dl_love_scene:
     dv "Ну… {w}Насмотрелся?"
     me "Нет."
     "Честно ответил я."
-    scene cg d6_dv_hentai_7dl
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_dv_hentai_7dl
     with fade
     "Что она там делала? Губы? Шея? Ключицы… {w}Я чувствовал себя отомщённым всякий раз, когда с девичьих губ срывался вскрик."
     "Потом в никуда улетело платье, оставляя Алису в одних белоснежных трусиках."
@@ -10930,7 +10967,8 @@ label alt_day6_dv_7dl_love_scene:
     "…но с танцпола доносилось эхо чего-то такого космического, и тишина вокруг стояла космическая…"
     "…и сопротивление Алисы было чисто символическим, будто и не было его, а потом взаправду не было…"
     window hide
-    scene expression Desat("cg d6_dv_hentai2_7dl")
+    if persistent.hentai_graphics_7dl:
+        scene expression Desat("cg d6_dv_hentai2_7dl")
     with fade
     "…и пахла она опьяняюще – раскалённым песком, дёгтем и самую чуточку страхом…"
     "…впрочем, последний растворился задолго до того, как мне пригрозили отвернуть голову, если я не вернусь в правильную позу…"
@@ -12612,6 +12650,7 @@ label alt_day7_dv_7dl_tulpa_end:
     $ persistent.dv_7dl_tulpa = True
     show acm_logo_dv_tulpa with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13037,6 +13076,7 @@ label alt_day7_dv_7dl_ussr_epilogue:
     $ persistent.dv_7dl_good_ussr = True
     show acm_logo_dv_ussr_good with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13231,6 +13271,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     $ persistent.dv_7dl_good_ussr_rf = True
     show acm_logo_dv_morethanlife with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13470,6 +13511,7 @@ label alt_day7_dv_7dl_rej_ussr_end:
     $ persistent.dv_7dl_reject_ussr = True
     show acm_logo_dv_tillend with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     play music music_7dl["walkingaway"] fadein 3
@@ -13739,6 +13781,7 @@ label alt_day7_dv_7dl_un_end:
     $ persistent.dv_7dl_un = True
     show acm_logo_dv_meetmethere with moveinright:
         pos (1600, 1020)
+    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     play music music_7dl["danceagain"] fadein 3
@@ -14000,6 +14043,7 @@ label alt_day7_dv_7dl_bad_end:
         $ persistent.dv_7dl_bad = True
         show acm_logo_dv_theresnoway with moveinright:
             pos (1600, 1020)
+        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         with vpunch
         play music music_7dl["tilltheend"] fadein 3

@@ -1,9 +1,11 @@
 ﻿label alt_day4_un_fz_start:
     pause(1)
+    $ renpy.save_persistent()
     call alt_day4_un_fz_vars
     call alt_day4_neu_us_vars
     call alt_day4_sl_cl_vars
     pause(1)
+    $ renpy.save_persistent()
     $ persistent.sprite_time = "prolog"
     $ prolog_time()
     $ alt_chapter(4, u"Лена. ФЗ. Утро")
@@ -20,26 +22,34 @@
         call alt_day4_fz_dv_dinner
     call alt_day4_fz_lost_coun
     pause(1)
+    $ renpy.save_persistent()
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(4, u"Лена. ФЗ. Вечер.")
     call alt_day4_fz_supper
     pause(1)
+    $ renpy.save_persistent()
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(4, u"Лена. ФЗ. Шурик.")
     call alt_day4_fz_sh_choose
     pause(1)
+    $ renpy.save_persistent()
     call alt_day4_fz_sh_menu
     pause(1)
+    $ renpy.save_persistent()
     call alt_day4_fz_old_camp
     pause(1)
+    $ renpy.save_persistent()
     call alt_day4_fz_xroad
     pause(1)
+    $ renpy.save_persistent()
     call alt_day4_fz_exit
     pause(1)
+    $ renpy.save_persistent()
     call alt_day4_fz_herbs
     pause(1)
+    $ renpy.save_persistent()
     if alt_day4_fz_sh == 1 or alt_day4_fz_sh == 4:
         jump alt_day5_fz_start
     elif alt_day4_fz_sh == 2:
@@ -55,6 +65,7 @@ label alt_day5_fz_start:
     $ alt_chapter(5, u"Лена. ФЗ. Утро.")
     call alt_day5_fz_begin
     pause(1)
+    $ renpy.save_persistent()
     if routetag == "prologue":
         jump alt_day5_neu_begin
     else:
