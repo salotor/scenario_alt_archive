@@ -204,10 +204,10 @@ label alt_day6_sl_7dl_start:
     $ renpy.save_persistent()
     $ persistent.sprite_time = "night"
     $ night_time()
-    if persistent.sl_7dl_good_loki and persistent.sl_7dl_good_herc and persistent.sl_7dl_good:
+    if persistent.sl_7dl_loki_good and persistent.sl_7dl_herc_good2 and persistent.sl_7dl_good2:
         $ routetag = "sl7dltrue"
-    elif (lp_sl >= 19) and (karma > 120):
-        $ routetag = "sl7dlgood"    # сейчас в sl7dlgood эмоция - sad, а в sl7dlneu - smile. Судя по всему, должно быть наоборот
+    elif (lp_sl >= 19) and (karma > 120):    # надо ещё не простившего Локи тут проверять, он же на гуд не выходит
+        $ routetag = "sl7dlgood"
         pause(1)
         $ renpy.save_persistent()
     elif lp_sl >= 19:
@@ -256,6 +256,7 @@ label alt_day7_sl_7dl_start:
     $ alt_chapter(7, u"Славя. 7ДЛ. Отъезд")
     call alt_day7_sl_7dl_leaving
     pause(1)
+    $ renpy.save_persistent()
     if routetag == "sl7dltrue" and not alt_day7_sl_7dl_freewill:
         $ persistent.sprite_time = "sunset"
         $ prolog_time()
@@ -267,7 +268,7 @@ label alt_day7_sl_7dl_start:
     $ persistent.sprite_time = "sunset"
     $ prolog_time()
     $ alt_chapter(7, u"Славя. 7ДЛ. Эпилог")
-    if lp_sl > 20:
+    if lp_sl > 20:    # мб >= сделать? Тогда у непростившего Локи будет шанс попасть сюда, без поинта за карточный турнир
         if karma < 120: # не простивший Локи разве должен сюда попадать? and (alt_day6_sl_7dl_forgive or not loki) нужно
             call alt_day7_sl_7dl_rf_good
             pause(1)

@@ -211,7 +211,7 @@ init 1:
 #0.35.a
     $ music_list_7dl["Clint Mansell - TOGETHER WE WILL LIVE FOREVER (guitar cover)"] = default_7dl_path+"Sound/music/breath_again_slow_7dl.ogg"
     $ music_list_7dl["Beat Bites - Game of Shadows"] = default_7dl_path+"Sound/music/game_of_shadows_7dl.ogg"
-    $ music_list_7dl["Beat Bites - Last Train Home"] = default_7dl_path+"Sound/music/lth_7d.ogg"
+    $ music_list_7dl["Beat Bites - Last Train Home"] = default_7dl_path+"Sound/music/lth_7dl.ogg"
     $ music_list_7dl["Olafur Arnalds - Not Alone"] = default_7dl_path+"Sound/music/not_alone_7dl.ogg"
     $ music_list_7dl["Kevin MacLeod - Your Call High Quality"] = default_7dl_path+"Sound/music/shappihn_7dl.ogg"
     $ music_list_7dl["April Rain - Im All Crying Inside"] = default_7dl_path+"Sound/music/tearing_sobs_7dl.ogg"
