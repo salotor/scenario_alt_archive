@@ -10584,7 +10584,7 @@ label alt_day5_neu_campfire_doom:
     "И всё то время, что мы шли, я никак не мог отделаться от мысли, что с каждым шагом отбрасываю в прошлое тенью несвершившееся."
     "Будто я сделал что-то обыденное, вместо того, чтобы делать полезное и важное."
     "И всё же, всё же…"
-    if not alt_day5_neu_sl_voyeur:
+    if alt_day5_neu_sl_voyeur:
         stop music fadeout 8
         stop ambience fadeout 6
         show sl normal pioneer with dissolve
@@ -10661,13 +10661,13 @@ label alt_day5_neu_sleepnight:
     play sound sfx_click_2
     scene bg int_house_of_mt_night2 with fade
     "Гуте нахт, лагерь."
-    if not alt_day5_neu_sl_voyeur:
+    if alt_day5_neu_sl_voyeur:
         "Гуте нахт, стукачка Славя."
         "Чувство товарищества не подсказало тебе уничтожить анонимку? Вот оно, чувство товарищества, да."
     window hide
     scene cg wtf_end_of_day with dissolve
     "Беззвучно послав непечатное словцо в потолок, я прикрыл глаза и расслабился."
-    if not alt_day5_neu_sl_voyeur:
+    if alt_day5_neu_sl_voyeur:
         "И, уже почти засыпая, расслышал, как скрипнула дверь, и в помещение зашла вожатая."
         mt "Сём?"
         me "У?"
@@ -10698,7 +10698,7 @@ label alt_day5_neu_sleepnight:
                     $ volume (0.9,'music')
                     $ volume (0.9,'ambience')
                     mt "Да? И когда вы поняли, что это не так?"
-                    me "Когда оказались на костровой."
+                    me "Когда она начала раздеваться."
                     "Ольга расхохоталась в голос."
                     "Правда, тут же прикрыла рот и замолчала."
                     mt "Ладно, спи."
