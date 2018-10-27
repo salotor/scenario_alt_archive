@@ -25552,7 +25552,7 @@ label alt_day7_sl_7dl_begin:
     with dissolve
     play ambience ambience_int_cabin_day fadein 5
     play music music_7dl["you_re_dam_funny"] fadein 3
-    $ day_time()    # зачем здесь? в pls же установлен sunset_time, а day_time ставится только после завтрака, что логично
+    $ day_time()    # зачем здесь? в pls же установлен sunset_time, а day_time ставится только после завтрака, что логично # там в начале лейбла prolog_time стоит, который после пробуждения нужно заменить
     "Я выдохнул и резко открыл глаза."
     "Нет, вокруг не было никаких бетонных стен, был привычный домик и привычно бьющее в лицо."    # бьющее в лицо солнце
     "Что-то я такое видел."
@@ -27641,7 +27641,7 @@ label alt_day7_sl_7dl_true:
     window hide
     scene anim intro_5
     $ set_mode_nvl()
-    play music music_7dl["regret"] fadein 3    # нет такой музыки
+    play music music_7dl["walkingaway"] fadein 3
     "Сёмушка, здравствуй!"
     "Мне хотелось просто написать тебе."
     "Пусть ты ушёл, но всё ещё дорог мне."
