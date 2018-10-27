@@ -206,7 +206,7 @@ label alt_day6_sl_7dl_start:
     $ night_time()
     if persistent.sl_7dl_good_loki and persistent.sl_7dl_good_herc and persistent.sl_7dl_good:
         $ routetag = "sl7dltrue"
-    elif (lp_sl >= 19) and (karma > 120):
+    elif (lp_sl >= 19) and (karma > 120):    # надо ещё не простившего Локи тут проверять, он же на гуд не выходит
         $ routetag = "sl7dlgood"
         pause(1)
         $ renpy.save_persistent()
@@ -289,10 +289,10 @@ label alt_day7_sl_7dl_start:
                     call alt_day7_sl_7dl_loki_radio
                 else:
                     call alt_day7_sl_7dl_loki_rewind
-                pause(1)
-                if alt_day7_sl_7dl_loki_park:
-                    call alt_day7_sl_7dl_loki_am_home
-                else:
+                    pause(1)
+                    if alt_day7_sl_7dl_loki_park:
+                        call alt_day7_sl_7dl_loki_am_home
+                    else:
                         call alt_day7_sl_7dl_loki_oafa
             else:
                 call alt_day7_sl_7dl_epi
