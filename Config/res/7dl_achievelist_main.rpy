@@ -1559,7 +1559,7 @@ label sdl_achvlist_sl7dl_Author:
             pass
     # Герк-Гуд 2
     if persistent.sl_7dl_good2_herc:
-        show acm_logo_sl_right_road_7dl with dissolve:
+        show acm_logo_sl_right_road with dissolve:
             xcenter 800 ycenter 450
         show de_check_inactive7 with dissolve:
             pos (590, 424)
