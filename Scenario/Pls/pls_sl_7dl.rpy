@@ -268,7 +268,7 @@ label alt_day7_sl_7dl_start:
     $ persistent.sprite_time = "sunset"
     $ prolog_time()
     $ alt_chapter(7, u"Славя. 7ДЛ. Эпилог")
-    if lp_sl > 20:
+    if lp_sl > 20:    # мб >= сделать? Тогда у непростившего Локи будет шанс попасть сюда, без поинта за карточный турнир
         if karma < 120: # не простивший Локи разве должен сюда попадать? and (alt_day6_sl_7dl_forgive or not loki) нужно
             call alt_day7_sl_7dl_rf_good
             pause(1)
