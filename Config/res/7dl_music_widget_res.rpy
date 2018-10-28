@@ -211,7 +211,7 @@ init 1:
 #0.35.a
     $ music_list_7dl["Clint Mansell - TOGETHER WE WILL LIVE FOREVER (guitar cover)"] = default_7dl_path+"Sound/music/breath_again_slow_7dl.ogg"
     $ music_list_7dl["Beat Bites - Game of Shadows"] = default_7dl_path+"Sound/music/game_of_shadows_7dl.ogg"
-    $ music_list_7dl["Beat Bites - Last Train Home"] = default_7dl_path+"Sound/music/lth_7d.ogg"
+    $ music_list_7dl["Beat Bites - Last Train Home"] = default_7dl_path+"Sound/music/lth_7dl.ogg"
     $ music_list_7dl["Olafur Arnalds - Not Alone"] = default_7dl_path+"Sound/music/not_alone_7dl.ogg"
     $ music_list_7dl["Kevin MacLeod - Your Call High Quality"] = default_7dl_path+"Sound/music/shappihn_7dl.ogg"
     $ music_list_7dl["April Rain - Im All Crying Inside"] = default_7dl_path+"Sound/music/tearing_sobs_7dl.ogg"
@@ -233,3 +233,5 @@ init 1:
     $ music_list_7dl["Acid Jazz vs. Drum'n'Bass - Jungle Radio"] = default_7dl_path+"Sound/music/radio_void_7dl.ogg"
     $ music_list_7dl["Кино - Кончится Лето"] = default_7dl_path+"Sound/music/summer_ends_soon_7dl.ogg"
     $ music_list_7dl["Portishead - Roads (Instrumental Cover)"] = default_7dl_path+"Sound/music/war_to_fight_7dl.ogg"
+    $ music_list_7dl["DeadPunk - Alone"] = default_7dl_path+"Sound/music/alone_7dl.ogg"
+    $ music_list_7dl["DeadPunk - Save Me"] = default_7dl_path+"Sound/music/saveme_7dl.ogg"

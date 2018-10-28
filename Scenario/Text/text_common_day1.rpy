@@ -1873,6 +1873,7 @@ label alt_day1_soccer_d1:
         "Мы направились в столовую. Благо, я теперь знал, где она."
     else:
         "А я неторопливо двинул за ними."
+    stop sound fadeout 3
     stop music fadeout 4
     stop ambience fadeout 6
     window hide

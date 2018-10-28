@@ -124,7 +124,7 @@ label alt_day5_sl_7dl_start:
     call alt_day5_sl_7dl_campfire
     pause(1)
     $ renpy.save_persistent()
-    if herc and (lp_sl > 16) and (persistent.sl_7dl_good_loki and persistent.sl_7dl_good):
+    if herc and (lp_sl > 16) and persistent.sl_7dl_herc_good
         call alt_day5_sl_7dl_hentai
         $ alt_day5_sl_7dl_hentai_done = True
     pause(1)
@@ -204,9 +204,9 @@ label alt_day6_sl_7dl_start:
     $ renpy.save_persistent()
     $ persistent.sprite_time = "night"
     $ night_time()
-    if persistent.sl_7dl_good_loki and persistent.sl_7dl_good_herc and persistent.sl_7dl_good:
+    if persistent.sl_7dl_loki_good and persistent.sl_7dl_herc_good2 and persistent.sl_7dl_good2:
         $ routetag = "sl7dltrue"
-    elif (lp_sl >= 19) and (karma > 120):
+    elif (lp_sl >= 19) and (karma > 120):    # надо ещё не простившего Локи тут проверять, он же на гуд не выходит
         $ routetag = "sl7dlgood"
         pause(1)
         $ renpy.save_persistent()
@@ -256,8 +256,8 @@ label alt_day7_sl_7dl_start:
     $ alt_chapter(7, u"Славя. 7ДЛ. Отъезд")
     call alt_day7_sl_7dl_leaving
     pause(1)
-    if routetag == "sl7dltrue" and not alt_day7_sl_7dl_freewill:
     $ renpy.save_persistent()
+    if routetag == "sl7dltrue" and not alt_day7_sl_7dl_freewill:
         $ persistent.sprite_time = "sunset"
         $ prolog_time()
         $ alt_chapter(6, u"Славя. 7ДЛ. Тру")
@@ -268,8 +268,8 @@ label alt_day7_sl_7dl_start:
     $ persistent.sprite_time = "sunset"
     $ prolog_time()
     $ alt_chapter(7, u"Славя. 7ДЛ. Эпилог")
-    if lp_sl > 20:
-        if karma < 120: # не простивший Локи разве должен сюда попадать? and (alt_day6_sl_7dl_forgive or not loki) нужно
+    if lp_sl >= 20:
+        if karma < 120:
             call alt_day7_sl_7dl_rf_good
             pause(1)
             if alt_day_binder == 1:
@@ -293,11 +293,11 @@ label alt_day7_sl_7dl_start:
                     if alt_day7_sl_7dl_loki_park:
                         call alt_day7_sl_7dl_loki_am_home
                     else:
-                            call alt_day7_sl_7dl_loki_oafa
+                        call alt_day7_sl_7dl_loki_oafa
             else:
                 call alt_day7_sl_7dl_epi
                 pause(1)
-                if alt_day5_sl_7dl_olroad:
+                if alt_day5_sl_7dl_olroad: # набрать 21 лп для выхода сюда можно только с турнирным бонусом
                     call alt_day7_sl_7dl_loopback
                     if alt_day_binder == 1:
                         call alt_day7_sl_7dl_loop_ps
