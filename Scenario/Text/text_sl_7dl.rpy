@@ -25395,7 +25395,7 @@ label alt_day7_sl_7dl_begin:
     scene bg int_d3_hideout_7dl
     show prologue_dream
     with fade
-    play music music_7dl["despair"] fadein 3
+    play music music_7dl["despair"] fadein 3 #Именована как despair, а на деле Hell. Виджет отображает соответствующе.
     "Я уже очень давно не был в этом месте."
     "Или это вовсе был не я?"
     "Довольно трудно разобраться во всех моих многочисленных «я», когда речь заходит о встречах и знакомых местах."
