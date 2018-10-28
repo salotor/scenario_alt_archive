@@ -124,7 +124,7 @@ label alt_day5_sl_7dl_start:
     call alt_day5_sl_7dl_campfire
     pause(1)
     $ renpy.save_persistent()
-    if herc and (lp_sl > 16) and (persistent.sl_7dl_loki_good and persistent.sl_7dl_good):    # теперь судя по всему должно быть persistent.sl_7dl_herc_good
+    if herc and (lp_sl > 16) and persistent.sl_7dl_herc_good
         call alt_day5_sl_7dl_hentai
         $ alt_day5_sl_7dl_hentai_done = True
     pause(1)
@@ -268,8 +268,8 @@ label alt_day7_sl_7dl_start:
     $ persistent.sprite_time = "sunset"
     $ prolog_time()
     $ alt_chapter(7, u"Славя. 7ДЛ. Эпилог")
-    if lp_sl > 20:    # мб >= сделать? Тогда у непростившего Локи будет шанс попасть сюда, без поинта за карточный турнир
-        if karma < 120: # не простивший Локи разве должен сюда попадать? and (alt_day6_sl_7dl_forgive or not loki) нужно
+    if lp_sl >= 20:
+        if karma < 120:
             call alt_day7_sl_7dl_rf_good
             pause(1)
             if alt_day_binder == 1:

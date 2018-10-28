@@ -859,6 +859,7 @@ init:
     image eye_s = get_image_7dl("sprites/custom/eye_s_7dl.png")
 #Сотик
     image frame = get_image_7dl("gui/phone/frame.png")
+    image frame_sl = get_image_7dl("gui/phone/frame_sl.png")
     image cam_ui = get_image_7dl("gui/phone/cam_ui.png")
 #Пека
     image laptop = get_image_7dl("gui/laptop/laptop.png")
