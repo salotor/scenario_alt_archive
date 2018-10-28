@@ -204,7 +204,7 @@ label alt_day6_sl_7dl_start:
     $ renpy.save_persistent()
     $ persistent.sprite_time = "night"
     $ night_time()
-    if persistent.sl_7dl_loki_good and persistent.sl_7dl_herc_good2 and persistent.sl_7dl_good2:
+    if persistent.sl_7dl_loki_good and persistent.sl_7dl_herc_good2 and persistent.sl_7dl_good2:    # лучше это делать не здесь, а при выборе, ведущем на тру
         $ routetag = "sl7dltrue"
     elif (lp_sl >= 19) and (karma > 120):    # надо ещё не простившего Локи тут проверять, он же на гуд не выходит
         $ routetag = "sl7dlgood"
