@@ -235,3 +235,4 @@ init 1:
     $ music_list_7dl["Portishead - Roads (Instrumental Cover)"] = default_7dl_path+"Sound/music/war_to_fight_7dl.ogg"
     $ music_list_7dl["DeadPunk - Alone"] = default_7dl_path+"Sound/music/alone_7dl.ogg"
     $ music_list_7dl["DeadPunk - SaveMe"] = default_7dl_path+"Sound/music/saveme_7dl.ogg"
+    $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/let_me_down_7dl.ogg"
