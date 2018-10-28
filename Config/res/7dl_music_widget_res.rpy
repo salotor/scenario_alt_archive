@@ -233,3 +233,5 @@ init 1:
     $ music_list_7dl["Acid Jazz vs. Drum'n'Bass - Jungle Radio"] = default_7dl_path+"Sound/music/radio_void_7dl.ogg"
     $ music_list_7dl["Кино - Кончится Лето"] = default_7dl_path+"Sound/music/summer_ends_soon_7dl.ogg"
     $ music_list_7dl["Portishead - Roads (Instrumental Cover)"] = default_7dl_path+"Sound/music/war_to_fight_7dl.ogg"
+    $ music_list_7dl["DeadPunk - Alone"] = default_7dl_path+"Sound/music/alone_7dl.ogg"
+    $ music_list_7dl["DeadPunk - SaveMe"] = default_7dl_path+"Sound/music/saveme_7dl.ogg"
