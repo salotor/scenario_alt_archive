@@ -4520,7 +4520,8 @@ label alt_day7_mt_7dl_departure:
     voices "Поехали!"
     "Автобус швырнул себя в раскалённый полдень."
     window hide
-    scene bg int_bus_people_day with fade
+    scene cg d7_mt_epilogue_bus_7dl
+    with dissolve
     play sound_loop sfx_bus_interior_moving fadein 2
     "Я не смотрел назад, не оборачивался и старательно избегал зеркал заднего вида."
     "Мне было тоскливо и жутко, будто чувствовал я неким миллионным чутьём, что очень скоро грядёт моя привычная битва, в которой я всегда до того проигрывал."
