@@ -204,9 +204,9 @@ label alt_day6_sl_7dl_start:
     $ renpy.save_persistent()
     $ persistent.sprite_time = "night"
     $ night_time()
-    if persistent.sl_7dl_loki_good and persistent.sl_7dl_herc_good2 and persistent.sl_7dl_good2:    # лучше это делать не здесь, а при выборе, ведущем на тру
+    if persistent.sl_7dl_loki_good and persistent.sl_7dl_herc_good2 and persistent.sl_7dl_good2:
         $ routetag = "sl7dltrue"
-    elif (lp_sl >= 19) and (karma > 120):    # надо ещё не простившего Локи тут проверять, он же на гуд не выходит
+    elif (lp_sl >= 19) and (karma > 120) and ((not loki) or (alt_day6_sl_7dl_forgive)):
         $ routetag = "sl7dlgood"
         pause(1)
         $ renpy.save_persistent()
@@ -267,14 +267,25 @@ label alt_day7_sl_7dl_start:
         return
     $ persistent.sprite_time = "sunset"
     $ prolog_time()
+    if lp_sl >= 20:
+        if loki and not alt_day6_sl_7dl_forgive:
+            $ routetag = "sl7dlneu"
+        elif herc and not alt_day4_sl_7dl_phone:
+            $ routetag = "sl7dluv"
+        else:
+            $ routetag = "sl7dlgood"
+    else:
+        $ routetag = "sl7dlbad"
     $ alt_chapter(7, u"Славя. 7ДЛ. Эпилог")
     if lp_sl >= 20:
+        $ routetag = "sl7dlgood"
         if karma < 120:
             call alt_day7_sl_7dl_rf_good
             pause(1)
             if alt_day_binder == 1:
                 call alt_day7_sl_7dl_postscriptum
         else:
+            
             if herc:
                 call alt_day7_sl_7dl_herc
                 pause(1)
