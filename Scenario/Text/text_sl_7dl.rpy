@@ -25574,7 +25574,10 @@ label alt_day7_sl_7dl_begin:
         $ karma += 15
         "А проснулся я, как оказалось, не сам."
         play sound sfx_knock_door7_polite
-        "Кто-то стучался в окошко."
+        if herc:
+            "Кто-то стучался в окошко."
+        else:
+            "Кто-то стучался."
         "Стучался настойчиво, но смолк, едва лишь я открыл глаза."
         "Будто почувствовал, что я не сплю."
         th "На Славю не похоже."
@@ -27922,7 +27925,7 @@ label alt_day7_sl_7dl_true:
     return
 
 label alt_day7_sl_7dl_rf_good:
-    scene bg int_sam_house_clean_7dl
+    scene bg semen_room
     with dissolve
     play music music_7dl["lth"] fadein 3
     "Высшая несправедливость любого сна в том, что ты всегда просыпаешься."
@@ -28028,7 +28031,6 @@ label alt_day7_sl_7dl_rf_good:
     "Оттуда на меня ясноглазо улыбнулась одна знакомая блондинка."
     window hide
     play sound sfx_home_phone_break
-    with
     pause(1)
     scene bg semen_room_window
     with flash
@@ -28473,7 +28475,7 @@ label alt_day7_sl_7dl_postscriptum:
     "Вот только не будет у нас никаких личных отношений."
     th "Хотя было бы неплохо — такая-то экономия на терапевте."
     $ meet('ka','Доктор Славя')
-    #show sl normal casual with dissolve
+    show sl normal casual with dissolve
     ka "Здравствуй, Семён."
     me "Охайо."
     ka "Снова вернулся к японскому?"
@@ -28502,7 +28504,7 @@ label alt_day7_sl_7dl_postscriptum:
     "Золотые косы оказались париком."
     "А за контактными линзами глаза оказались вовсе зелёными."
     hide sl
-    show ka normal casual
+    #show ka normal casual
     with dissolve2
     me "Но… зачем?"
     "Я пытаюсь вглядеться как следует, сделать что-то но не вижу Славю."
@@ -28531,17 +28533,17 @@ label alt_day7_sl_7dl_postscriptum:
     sl "А я тебе подарок принесла."
     "С жалостью сообщила Стася."
     sl "Взамен утерянного."
-    "Она развернула плакат, и я жадно вгляделся в любимые черты."
     hide sl
     show frame_sl
     with dissolve
+    "Она развернула плакат, и я жадно вгляделся в любимые черты."
     "Здесь моя Славя, моя…"
     me "Спасибо…"
     sl "А я похожа на неё?"
-    "Спросила меня сероглазая блондинка."
     hide frame_sl
     #possible KOLHOZ со спрайтами
     with fade
+    "Спросила меня сероглазая блондинка."
     "Невысокая, хрупкая с прозрачной кожей, со взглядом аниме-девочки."
     "Похожа ли она на Славю?"
     "Да ничего общего."
