@@ -520,6 +520,7 @@ init:
     image bg ext_countryside_day_7dl = get_image_7dl("bg/outro/ext_countryside_day_7dl.png")
     image bg ext_dining_hall_near_snowy_day_7dl = get_image_7dl("bg/outro/ext_dining_hall_near_snowy_day_7dl.jpg")
     image bg ext_earth_7dl = get_image_7dl("bg/outro/ext_earth_7dl.jpg")
+    image bg ext_emptiness_7dl = get_image_7dl("bg/outro/ext_emptiness_7dl.jpg")
     image bg ext_entrance_winter_7dl = get_image_7dl("bg/outro/ext_entrance_winter_7dl.jpg")
     image bg ext_graveyard_rain_7dl = get_image_7dl("bg/outro/ext_graveyard_rain_7dl.png")
     image bg ext_houses_snowy_day_7dl = get_image_7dl("bg/outro/ext_houses_snowy_day_7dl.jpg")
@@ -1034,6 +1035,7 @@ init:
 #music
     $ music_7dl = {}
 
+    $ music_7dl["abyss_call"] = get_music_7dl("abyss_call_7dl.ogg")
     $ music_7dl["alice_theme"] = get_music_7dl("alice_theme_7dl.ogg")
     $ music_7dl["alone"] = get_music_7dl("alone_7dl.ogg")
     $ music_7dl["afraid_of_destiny"] = get_music_7dl("afraid_of_destiny_7dl.ogg")
