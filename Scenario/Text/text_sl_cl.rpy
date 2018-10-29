@@ -3909,9 +3909,9 @@ label alt_day5_sl_begin:
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
                 $ persistent.alt_lamp = True
+                $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
-                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -3935,9 +3935,9 @@ label alt_day5_sl_begin:
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
                 $ persistent.alt_lamp = True
+                $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
-                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -3952,9 +3952,9 @@ label alt_day5_sl_begin:
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
                 $ persistent.alt_lamp = True
+                $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
-                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -10920,9 +10920,9 @@ label alt_day6_sl_cl_become_a_hero:
     with dissolve
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_cata = True
+    $ renpy.save_persistent()
     show acm_logo_sl_be_ok with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -16423,9 +16423,9 @@ label alt_day7_sl_will:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_int_ok = True
+    $ renpy.save_persistent()
     show acm_logo_sl_ok with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16537,9 +16537,9 @@ label alt_day7_sl_duty:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_int_good = True
+    $ renpy.save_persistent()
     show acm_logo_sl_fantazm with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16561,9 +16561,9 @@ label alt_day7_sl_lone:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_int_bad = True
+    $ renpy.save_persistent()
     show acm_logo_sl_lone with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16754,9 +16754,9 @@ label alt_day7_sl_good:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_good_ussr = True
+    $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16913,9 +16913,9 @@ label alt_day7_sl_rf_good:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_good_rf = True
+    $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17080,9 +17080,9 @@ label alt_day7_sl_reject_same:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_reject_same = True
+    $ renpy.save_persistent()
     show acm_logo_sl_same_place with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17292,9 +17292,9 @@ label alt_day7_sl_rej_end:
     play sound sfx_7dl["aunl"]
     stop ambience fadeout 4
     $ persistent.sl_cl_reject_late = True
+    $ renpy.save_persistent()
     show acm_logo_sl_too_late with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17387,9 +17387,9 @@ label alt_day7_sl_cl_bad:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_bad = True
+    $ renpy.save_persistent()
     show acm_logo_sl_bad with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17543,9 +17543,9 @@ label alt_day7_sl_rf2:
     play sound sfx_7dl["aunl"]
     play music music_7dl["refuse_to_replay"] fadein 3
     $ persistent.sl_cl_good_rf2 = True
+    $ renpy.save_persistent()
     show acm_logo_sl_worth with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles

@@ -43,7 +43,6 @@ label alt_day0_start:
     play sound sfx_wind_gust
     scene intro_dr with dissolve
     pause(1)
-    $ renpy.save_persistent()
     menu:
         "Так всё и начиналось":
             $ plthr = u"Дрищ"
@@ -65,7 +64,6 @@ label alt_day0_start_herc:
     play sound sfx_7dl["mpbt"] fadein 0
     scene intro_herc with dissolve
     pause(1)
-    $ renpy.save_persistent()
     menu:
         "Так всё и начиналось":
             $ plthr = u"Герк"
@@ -88,7 +86,6 @@ label alt_day0_start_loki:
     play sound sfx_punch_medium
     scene intro_loki with dissolve
     pause(1)
-    $ renpy.save_persistent()
     menu:
         "Так всё и начиналось":
             $ plthr = u"Локи"
@@ -159,6 +156,7 @@ label alt_day0_opening:
     show expression Desat1("logo_day") :
         pos (400,150)
     with dissolve2
+    $ renpy.save_persistent()
     show acm_logo with zoomin:
         pos (1200,350)
     with vpunch 
@@ -169,7 +167,6 @@ label alt_day0_opening:
     $ renpy.pause(5, hard=True)
     call alt_day1_begin
     pause(1)
-    $ renpy.save_persistent()
     if alt_day1_loop or (alt_day_binder != 1):
         jump alt_day1_start
     else:

@@ -2622,9 +2622,9 @@ label alt_day6_mt_7dl_catha:
         scene gameover with flash
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
+        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
-        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif herc:
@@ -2647,9 +2647,9 @@ label alt_day6_mt_7dl_catha:
         stop sound_loop
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
+        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
-        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif loki:
@@ -2687,9 +2687,9 @@ label alt_day6_mt_7dl_catha:
         scene gameover with flash
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
+        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
-        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
 
@@ -5047,9 +5047,9 @@ label alt_day7_mt_7dl_good:
     stop sound_loop
     play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_good = True
+    $ renpy.save_persistent()
     show acm_logo_mt_named_olga with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
@@ -5181,9 +5181,9 @@ label alt_day7_mt_7dl_bad:
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
     $ persistent.mt_7dl_bad = True
+    $ renpy.save_persistent()
     show acm_logo_mt_cause with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
@@ -5367,9 +5367,9 @@ label alt_day7_mt_7dl_ever_after:
     $ renpy.pause(2)
     play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_neutral = True
+    $ renpy.save_persistent()
     show acm_logo_mt_ever_after with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     play music music_7dl["someone_like_you_guitar"] fadein 3
     call alt_7dl_titles
@@ -5442,9 +5442,9 @@ label alt_day7_mt_7dl_true:
     with dissolve
     play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_true = True
+    $ renpy.save_persistent()
     show acm_logo_mt_ending with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)

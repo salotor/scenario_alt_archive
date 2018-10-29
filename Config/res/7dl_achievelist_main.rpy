@@ -493,6 +493,7 @@ label sdl_achvlist_mi7dl_Author:
         pos(380, 350)
     #ТруЪ-энд
     if persistent.mi_7dl_true: 
+        $ renpy.save_persistent()
         show acm_logo_mi_thank_you  with dissolve:
             xcenter 800 ycenter 66 
         show de_check_inactive1 with dissolve:
@@ -507,6 +508,7 @@ label sdl_achvlist_mi7dl_Author:
         pass
     #Гуд-M
     if persistent.mi_7dl_good_human:
+        $ renpy.save_persistent()
         show acm_logo_mi_dark_dreams  with dissolve:
             xcenter 800 ycenter 130 
         show de_check_inactive2 with dissolve:
@@ -516,6 +518,7 @@ label sdl_achvlist_mi7dl_Author:
             xcenter 800 ycenter 130
     #Гуд-S
     if persistent.mi_7dl_good_star:
+        $ renpy.save_persistent()
         show acm_logo_mi_sparkle  with dissolve:
             xcenter 800 ycenter 194  
         show de_check_inactive3 with dissolve:
@@ -525,6 +528,7 @@ label sdl_achvlist_mi7dl_Author:
             xcenter 800 ycenter 194
     #Эксклюзив-Дрищ
     if persistent.mi_7dl_dr_exc:
+        $ renpy.save_persistent()
         show acm_logo_mi_watashi  with dissolve:
             xcenter 800 ycenter 258 
         show de_check_inactive4 with dissolve:
@@ -539,6 +543,7 @@ label sdl_achvlist_mi7dl_Author:
         pass
     #Эксклюзив-Локи
     if persistent.mi_7dl_loki_exc:
+        $ renpy.save_persistent()
         show acm_logo_mi_come  with dissolve:
             xcenter 800 ycenter 322 
         show de_check_inactive5 with dissolve:
@@ -553,6 +558,7 @@ label sdl_achvlist_mi7dl_Author:
         pass
     #Эксклюзив-Герк
     if persistent.mi_7dl_herc_exc:
+        $ renpy.save_persistent()
         show acm_logo_mi_unlike  with dissolve:
             xcenter 800 ycenter 386 
         show de_check_inactive6 with dissolve:
@@ -567,6 +573,7 @@ label sdl_achvlist_mi7dl_Author:
         pass
     #Нейтрал-M
     if persistent.mi_7dl_neutral_human:
+        $ renpy.save_persistent()
         show acm_logo_mi_happy_again  with dissolve:
             xcenter 800 ycenter 450 
         show de_check_inactive7 with dissolve:
@@ -576,6 +583,7 @@ label sdl_achvlist_mi7dl_Author:
             xcenter 800 ycenter 450 
     #Нейтрал-S
     if persistent.mi_7dl_neutral_star:
+        $ renpy.save_persistent()
         show acm_logo_mi_club27  with dissolve:
             xcenter 800 ycenter 514 
         show de_check_inactive8 with dissolve:
@@ -585,6 +593,7 @@ label sdl_achvlist_mi7dl_Author:
             xcenter 800 ycenter 514            
     #Бэд-M       
     if persistent.mi_7dl_bad_human: 
+        $ renpy.save_persistent()
         show acm_logo_mi_liar  with dissolve:
             xcenter 800 ycenter 578 
         show de_check_inactive9 with dissolve:
@@ -594,6 +603,7 @@ label sdl_achvlist_mi7dl_Author:
             xcenter 800 ycenter 578    
     #Бэд-S
     if persistent.mi_7dl_bad_star: 
+        $ renpy.save_persistent()
         show acm_logo_mi_dam_cpu  with dissolve:
             xcenter 800 ycenter 642 
         show de_check_inactive10 with dissolve:
@@ -856,6 +866,7 @@ label sdl_achvlist_midjt_Author:
         pos(380, 350)
     #ТруЪ-энд
     if persistent.mi_dj_true:
+        $ renpy.save_persistent()
         show acm_logo_mi_namiki  with dissolve:
             xcenter 800 ycenter 66 
         show de_check_inactive1 with dissolve:
@@ -865,6 +876,7 @@ label sdl_achvlist_midjt_Author:
             xcenter 800 ycenter 66
     #Гуд-Япония
     if persistent.mi_dj_good_jap:
+        $ renpy.save_persistent()
         show acm_logo_mi_ricochet  with dissolve:
             xcenter 800 ycenter 130 
         show de_check_inactive2 with dissolve:
@@ -874,6 +886,7 @@ label sdl_achvlist_midjt_Author:
             xcenter 800 ycenter 130
     #Гуд-РФ
     if persistent.mi_dj_good_rf:
+        $ renpy.save_persistent()
         show acm_logo_mi_allyours  with dissolve:
             xcenter 800 ycenter 194  
         show de_check_inactive3 with dissolve:
@@ -883,6 +896,7 @@ label sdl_achvlist_midjt_Author:
             xcenter 800 ycenter 194
     #Бэд
     if persistent.mi_dj_bad:
+        $ renpy.save_persistent()
         show acm_logo_mi_new_happy  with dissolve:
             xcenter 800 ycenter 258 
         show de_check_inactive4 with dissolve:
@@ -1072,6 +1086,7 @@ label sdl_achvlist_dv7dl_Author:
         pos(380, 350)
     #Гуд-СССР
     if persistent.dv_7dl_good_ussr: 
+        $ renpy.save_persistent()
         show acm_logo_dv_ussr_good  with dissolve:
             xcenter 800 ycenter 66 
         show de_check_inactive1 with dissolve:
@@ -1081,6 +1096,7 @@ label sdl_achvlist_dv7dl_Author:
             xcenter 800 ycenter 66
     #Гуд-РФ
     if persistent.dv_7dl_good_ussr_rf:
+        $ renpy.save_persistent()
         show acm_logo_dv_morethanlife  with dissolve:
             xcenter 800 ycenter 130 
         show de_check_inactive2 with dissolve:
@@ -1090,6 +1106,7 @@ label sdl_achvlist_dv7dl_Author:
             xcenter 800 ycenter 130
     #Реджект-РФ
     if persistent.dv_7dl_reject_rf:
+        $ renpy.save_persistent()
         show acm_logo_dv_gohome  with dissolve:
             xcenter 800 ycenter 194  
         show de_check_inactive3 with dissolve:
@@ -1099,6 +1116,7 @@ label sdl_achvlist_dv7dl_Author:
             xcenter 800 ycenter 194
     #Реджект-СССР
     if persistent.dv_7dl_reject_ussr:
+        $ renpy.save_persistent()
         show acm_logo_dv_tillend  with dissolve:
             xcenter 800 ycenter 258 
         show de_check_inactive4 with dissolve:
@@ -1108,6 +1126,7 @@ label sdl_achvlist_dv7dl_Author:
             xcenter 800 ycenter 258 
     #Транзит-Ольга
     if persistent.dv_7dl_bad_mt:
+        $ renpy.save_persistent()
         show acm_logo_dv_drunk  with dissolve:
             xcenter 800 ycenter 322 
         show de_check_inactive5 with dissolve:
@@ -1117,6 +1136,7 @@ label sdl_achvlist_dv7dl_Author:
             xcenter 800 ycenter 322 
     #Транзит-Лена
     if persistent.dv_7dl_un:
+        $ renpy.save_persistent()
         show acm_logo_dv_meetmethere  with dissolve:
             xcenter 800 ycenter 386 
         show de_check_inactive6 with dissolve:
@@ -1126,6 +1146,7 @@ label sdl_achvlist_dv7dl_Author:
             xcenter 800 ycenter 386 
     #Эксклюзив-Локи
     if persistent.dv_7dl_tulpa:
+        $ renpy.save_persistent()
         show acm_logo_dv_tulpa  with dissolve:
             xcenter 800 ycenter 450 
         show de_check_inactive7 with dissolve:
@@ -1135,6 +1156,7 @@ label sdl_achvlist_dv7dl_Author:
             xcenter 800 ycenter 450 
     #Бэд
     if persistent.dv_7dl_bad:
+        $ renpy.save_persistent()
         show acm_logo_dv_theresnoway  with dissolve:
             xcenter 800 ycenter 514 
         show de_check_inactive8 with dissolve:
@@ -1487,6 +1509,7 @@ label sdl_achvlist_sl7dl_Author:
     
     # Тру
     if persistent.sl_7dl_true:
+        $ renpy.save_persistent()
         show acm_logo_sl_no_wonder with dissolve:
             xcenter 800 ycenter 66
         show de_check_inactive1 with dissolve:
@@ -1501,6 +1524,7 @@ label sdl_achvlist_sl7dl_Author:
             pass
     # РФ-гуд
     if persistent.sl_7dl_good_rf:
+        $ renpy.save_persistent()
         show acm_logo_sl_till_sunrise with dissolve:
             xcenter 800 ycenter 130
         show de_check_inactive2 with dissolve:
@@ -1510,6 +1534,7 @@ label sdl_achvlist_sl7dl_Author:
             xcenter 800 ycenter 130
     # Локи-Гуд
     if persistent.sl_7dl_loki_good:
+        $ renpy.save_persistent()
         show acm_logo_sl_radio with dissolve:
             xcenter 800 ycenter 194
         show de_check_inactive3 with dissolve:
@@ -1524,6 +1549,7 @@ label sdl_achvlist_sl7dl_Author:
             pass
     # Локи-Нейтрал
     if persistent.sl_7dl_loki_neu:
+        $ renpy.save_persistent()
         show acm_logo_sl_am_home with dissolve:
             xcenter 800 ycenter 258
         show de_check_inactive4 with dissolve:
@@ -1533,6 +1559,7 @@ label sdl_achvlist_sl7dl_Author:
             xcenter 800 ycenter 258
     # Локи-Реджект
     if persistent.sl_7dl_loki_rej:
+        $ renpy.save_persistent()
         show acm_logo_sl_pan with dissolve:
             xcenter 800 ycenter 322
         show de_check_inactive5 with dissolve:
@@ -1542,6 +1569,7 @@ label sdl_achvlist_sl7dl_Author:
             xcenter 800 ycenter 322
     # Герк-Гуд
     if persistent.sl_7dl_herc_good:
+        $ renpy.save_persistent()
         show acm_logo_sl_right_road with dissolve:
             xcenter 800 ycenter 386
         show de_check_inactive6 with dissolve:
@@ -1551,6 +1579,7 @@ label sdl_achvlist_sl7dl_Author:
             xcenter 800 ycenter 386
     # Герк-Гуд 2
     if persistent.sl_7dl_herc_good2:
+        $ renpy.save_persistent()
         show acm_logo_sl_neon with dissolve:
             xcenter 800 ycenter 450
         show de_check_inactive7 with dissolve:
@@ -1565,6 +1594,7 @@ label sdl_achvlist_sl7dl_Author:
             pass
     # Дрищ-Гуд
     if persistent.sl_7dl_good:
+        $ renpy.save_persistent()
         show acm_logo_sl_wasted with dissolve:
             xcenter 800 ycenter 514
         show de_check_inactive8 with dissolve:
@@ -1574,6 +1604,7 @@ label sdl_achvlist_sl7dl_Author:
             xcenter 800 ycenter 514
     # Дрищ-Гуд 2
     if persistent.sl_7dl_good2:
+        $ renpy.save_persistent()
         show acm_logo_sl_dr_un with dissolve:
             xcenter 800 ycenter 578
         show de_check_inactive9 with dissolve:
@@ -1588,6 +1619,7 @@ label sdl_achvlist_sl7dl_Author:
             pass
     # Бэд
     if persistent.sl_7dl_bad:
+        $ renpy.save_persistent()
         show acm_logo_sl_missed with dissolve:
             xcenter 800 ycenter 642
         show de_check_inactive10 with dissolve:
@@ -1805,6 +1837,7 @@ label sdl_achvlist_slclt_Author:
         pos(380, 350)
     #Инт-ТруЪ
     if persistent.sl_cl_int_ok:
+        $ renpy.save_persistent()
         show acm_logo_sl_ok  with dissolve:
             xcenter 800 ycenter 66 
         show de_check_inactive1 with dissolve:
@@ -1819,6 +1852,7 @@ label sdl_achvlist_slclt_Author:
             pass
     #Инт-гуд
     if persistent.sl_cl_int_good: 
+        $ renpy.save_persistent()
         show acm_logo_sl_fantazm  with dissolve:
             xcenter 800 ycenter 130 
         show de_check_inactive2 with dissolve:
@@ -1833,6 +1867,7 @@ label sdl_achvlist_slclt_Author:
         pass
     #Инт-бэд        
     if persistent.sl_cl_int_bad: 
+        $ renpy.save_persistent()
         show acm_logo_sl_lone with dissolve:
             xcenter 800 ycenter 194  
         show de_check_inactive3 with dissolve:
@@ -1847,6 +1882,7 @@ label sdl_achvlist_slclt_Author:
         pass
     #СССР-гуд
     if persistent.sl_cl_good_ussr:
+        $ renpy.save_persistent()
         show acm_logo_sl_good with dissolve:
             xcenter 800 ycenter 258 
         show de_check_inactive4 with dissolve:
@@ -1856,6 +1892,7 @@ label sdl_achvlist_slclt_Author:
             xcenter 800 ycenter 258 
     #РФ-гуд
     if persistent.sl_cl_good_rf2: 
+        $ renpy.save_persistent()
         show acm_logo_sl_worth  with dissolve:
             xcenter 800 ycenter 322 
         show de_check_inactive5 with dissolve:
@@ -1865,6 +1902,7 @@ label sdl_achvlist_slclt_Author:
             xcenter 800 ycenter 322 
     #РФ-гуд (Плюс-минус)
     if persistent.sl_cl_good_rf: 
+        $ renpy.save_persistent()
         show acm_logo_sl_good1  with dissolve:
             xcenter 800 ycenter 386 
         show de_check_inactive6 with dissolve:
@@ -1874,6 +1912,7 @@ label sdl_achvlist_slclt_Author:
             xcenter 800 ycenter 386 
     #Реджект-РФ 
     if persistent.sl_cl_reject_same:          
+        $ renpy.save_persistent()
         show acm_logo_sl_same_place with dissolve:
             xcenter 800 ycenter 450 
         show de_check_inactive7 with dissolve:
@@ -1883,6 +1922,7 @@ label sdl_achvlist_slclt_Author:
             xcenter 800 ycenter 450 
     #Реджект-2        
     if persistent.sl_cl_reject_late: 
+        $ renpy.save_persistent()
         show acm_logo_sl_too_late  with dissolve:
             xcenter 800 ycenter 514 
         show de_check_inactive8 with dissolve:
@@ -1892,6 +1932,7 @@ label sdl_achvlist_slclt_Author:
             xcenter 800 ycenter 514            
     #Эксклюзив-Локи        
     if persistent.sl_cl_cata: 
+        $ renpy.save_persistent()
         show acm_logo_sl_be_ok with dissolve:
             xcenter 800 ycenter 578 
         show de_check_inactive9 with dissolve:
@@ -1901,6 +1942,7 @@ label sdl_achvlist_slclt_Author:
             xcenter 800 ycenter 578    
     #Бэд
     if persistent.sl_cl_bad: 
+        $ renpy.save_persistent()
         show acm_logo_sl_bad  with dissolve:
             xcenter 800 ycenter 642 
         show de_check_inactive10 with dissolve:
@@ -2228,6 +2270,7 @@ label sdl_achvlist_un7dl_Author:
         pos(380, 350)
     #ТруЪ
     if persistent.un_7dl_true: 
+        $ renpy.save_persistent()
         show acm_logo_un_shelter  with dissolve:
             xcenter 800 ycenter 66 
         show de_check_inactive1 with dissolve:
@@ -2242,6 +2285,7 @@ label sdl_achvlist_un7dl_Author:
             pass 
     #ТруЪ-транзит
     if persistent.un_7dl_true_transit: 
+        $ renpy.save_persistent()
         show acm_logo_un_transit  with dissolve:
             xcenter 800 ycenter 130 
         show de_check_inactive2 with dissolve:
@@ -2251,6 +2295,7 @@ label sdl_achvlist_un7dl_Author:
             xcenter 800 ycenter 130
     #Гуд-СССР
     if persistent.un_7dl_good_ussr:
+        $ renpy.save_persistent()
         show acm_logo_un_good2  with dissolve:
             xcenter 800 ycenter 194 
         show de_check_inactive3 with dissolve:
@@ -2260,6 +2305,7 @@ label sdl_achvlist_un7dl_Author:
             xcenter 800 ycenter 194
     #Гуд-РФ
     if persistent.un_7dl_good_rf:
+        $ renpy.save_persistent()
         show acm_logo_un_good  with dissolve:
             xcenter 800 ycenter 258  
         show de_check_inactive4 with dissolve:
@@ -2269,6 +2315,7 @@ label sdl_achvlist_un7dl_Author:
             xcenter 800 ycenter 258
     #Бэд
     if persistent.un_7dl_bad:
+        $ renpy.save_persistent()
         show acm_logo_un_sui  with dissolve:
             xcenter 800 ycenter 322 
         show de_check_inactive5 with dissolve:
@@ -2530,6 +2577,7 @@ label sdl_achvlist_mt_Author:
         xcenter 960 ycenter 1010 
     #ТруЪ
     if persistent.mt_7dl_true:
+        $ renpy.save_persistent()
         show acm_logo_mt_ending  with dissolve:
             xcenter 800 ycenter 66 
         show de_check_inactive1 with dissolve:
@@ -2544,6 +2592,7 @@ label sdl_achvlist_mt_Author:
             pass
     #Гуд
     if persistent.mt_7dl_good: 
+        $ renpy.save_persistent()
         show acm_logo_mt_named_olga  with dissolve:
             xcenter 800 ycenter 130 
         show de_check_inactive2 with dissolve:
@@ -2558,6 +2607,7 @@ label sdl_achvlist_mt_Author:
             pass
     #Нейтрал       
     if persistent.mt_7dl_neutral: 
+        $ renpy.save_persistent()
         show acm_logo_mt_ever_after with dissolve:
             xcenter 800 ycenter 194  
         show de_check_inactive3 with dissolve:
@@ -2572,6 +2622,7 @@ label sdl_achvlist_mt_Author:
             pass
     #Бэд
     if persistent.mt_7dl_bad: 
+        $ renpy.save_persistent()
         show acm_logo_mt_cause with dissolve:
             xcenter 800 ycenter 258 
         show de_check_inactive4 with dissolve:
@@ -2761,6 +2812,7 @@ label sdl_achvlist_us7dl_Author:
 
     #Тру-7дл
     if persistent.us_7dl_true:
+        $ renpy.save_persistent()
         show acm_logo_us_true  with dissolve:
             xcenter 800 ycenter 66
         show de_check_inactive6 with dissolve:
@@ -2775,6 +2827,7 @@ label sdl_achvlist_us7dl_Author:
             pass
     #Гуд-7дл
     if persistent.us_7dl_good:
+        $ renpy.save_persistent()
         show acm_logo_us_semische  with dissolve:
             xcenter 800 ycenter 130
         show de_check_inactive1 with dissolve:
@@ -2784,6 +2837,7 @@ label sdl_achvlist_us7dl_Author:
             xcenter 800 ycenter 130
     #Лена
     if persistent.us_7dl_un:
+        $ renpy.save_persistent()
         show acm_logo_us_hi  with dissolve:
             xcenter 800 ycenter 194
         show de_check_inactive2 with dissolve:
@@ -2793,6 +2847,7 @@ label sdl_achvlist_us7dl_Author:
             xcenter 800 ycenter 194
     #Мику
     if persistent.us_7dl_mi:
+        $ renpy.save_persistent()
         show acm_logo_us_openup  with dissolve:
             xcenter 800 ycenter 258
         show de_check_inactive3 with dissolve:
@@ -2802,6 +2857,7 @@ label sdl_achvlist_us7dl_Author:
             xcenter 800 ycenter 258
     #Бэд-7дл
     if persistent.us_7dl_bad:
+        $ renpy.save_persistent()
         show acm_logo_us_bad  with dissolve:
             xcenter 800 ycenter 322
         show de_check_inactive7 with dissolve:
@@ -2940,6 +2996,7 @@ label sdl_achvlist_uspxs_Author:
 
     #Тру-Огоньки
     if persistent.us_px_true:
+        $ renpy.save_persistent()
         show acm_logo_us_fairytale with dissolve:
             xcenter 800 ycenter 66
         show de_check_inactive5 with dissolve:
@@ -2954,6 +3011,7 @@ label sdl_achvlist_uspxs_Author:
             pass
     #Гуд-Огоньки
     if persistent.us_px_rf_good:
+        $ renpy.save_persistent()
         show acm_logo_us_px  with dissolve:
             xcenter 800 ycenter 130
         show de_check_inactive4 with dissolve:
@@ -3248,6 +3306,7 @@ label sdl_achvlist_mesmt_Author:
         pos(380, 350)
     #Ламповость
     if persistent.alt_lamp == True:
+        $ renpy.save_persistent()
         show acm_logo_me_lamp  with dissolve:
             xcenter 800 ycenter 66 
         show de_check_inactive1 with dissolve:
@@ -3257,6 +3316,7 @@ label sdl_achvlist_mesmt_Author:
             xcenter 800 ycenter 66
     #Глубина
     if persistent.alt_deep == True:
+        $ renpy.save_persistent()
         show acm_logo_me_deep  with dissolve:
             xcenter 800 ycenter 130 
         show de_check_inactive2 with dissolve:
@@ -3266,6 +3326,7 @@ label sdl_achvlist_mesmt_Author:
             xcenter 800 ycenter 130
     #QTE
     if persistent.alt_qte == True:
+        $ renpy.save_persistent()
         show acm_logo_me_qte  with dissolve:
             xcenter 800 ycenter 194  
     else:
@@ -3273,6 +3334,7 @@ label sdl_achvlist_mesmt_Author:
             xcenter 800 ycenter 194
     #Горькая правда
     if persistent.alt_mi_7dl_ps == True:
+        $ renpy.save_persistent()
         show acm_logo_mi_bitter_truth  with dissolve:
             xcenter 800 ycenter 258 
         show de_check_active4 with dissolve:
@@ -3578,6 +3640,7 @@ label alt_achv_deep_deep_Author:
     play sound sfx_water_emerge
     window hide
     $ persistent.alt_deep = True
+    $ renpy.save_persistent()
     show acm_logo_me_deep with moveinright:
     pause(3)
     scene black

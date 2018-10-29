@@ -1,19 +1,16 @@
 ﻿label alt_day3_start:
     call alt_day3_vars
     pause(1)
-    $ renpy.save_persistent()
     $ persistent.sprite_time = "sunset"
     $ prolog_time() 
     $ alt_chapter(3, u"Утро")
     call alt_day3_begin
     pause(1)
-    $ renpy.save_persistent()
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(3, u"Завтрак")   
     call alt_day3_bf
     pause(1)
-    $ renpy.save_persistent()
     if alt_day3_un_event and not alt_day3_duty:
         $ persistent.sprite_time = "day"
         call alt_day3_event_library1
@@ -24,7 +21,6 @@
     elif alt_day3_duty:
         call alt_day3_bf_duty
         pause(1)
-        $ renpy.save_persistent()
         if ('un_fz' in list_d2_date_7dl):
             call alt_day3_event_camp_entrance
         else:
@@ -34,14 +30,12 @@
     else:
         call alt_day3_map_prepare
     pause(1)
-    $ renpy.save_persistent()
 # обед
     $ persistent.sprite_time = "day"
     $ day_time()
     $ alt_chapter(3, u"Обед")
     call alt_day3_dinner
     pause(1)
-    $ renpy.save_persistent()
     if alt_day3_duty:
         if ('dv' in list_d2_date_7dl) and alt_day3_dv_event:
             pass
@@ -50,7 +44,6 @@
     else:
         call alt_day3_dinner_menu
     pause(1)
-    $ renpy.save_persistent()
     if ('dv' in list_d2_date_7dl) and alt_day3_dv_event and alt_day3_duty:
         call alt_day3_eventAf_music_club1
     elif alt_day3_un_fz_dinner:
@@ -60,24 +53,19 @@
     else:
         call alt_day3_mapAf_prepare
     pause(1)
-    $ renpy.save_persistent()
     if alt_day3_un_fz_dinner or alt_day3_dv_rep:
         call alt_day3_aftermath
         pause(1)
-        $ renpy.save_persistent()
         call alt_day3_nightmare
         if alt_day_catapult == 1:
             return
         pause(1)
-        $ renpy.save_persistent()
         $ persistent.sprite_time = "sunset"
         $ sunset_time()
         $ alt_chapter(3, u"Ужин")
         pause(1)
-        $ renpy.save_persistent()
         call alt_day3_supper1
         pause(1)
-        $ renpy.save_persistent()
         if not alt_day3_un_fz_dinner:
             $ sunset_time ()
             $ persistent.sprite_time = "sunset"
@@ -88,7 +76,6 @@
         $ alt_chapter(3, u"Ужин")
         call alt_day3_supper
         pause(1)
-        $ renpy.save_persistent()
         if alt_day3_mi_invite2:
             pass
         else:
@@ -96,48 +83,38 @@
             $ persistent.sprite_time = "sunset"
             call alt_day3_supper2
     pause(1)
-    $ renpy.save_persistent()
 # вечер
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
     $ alt_chapter(3, u"Танцы")
     call alt_day3_dance_dance
     pause(1)
-    $ renpy.save_persistent()
     if not alt_day3_dv_dj:
         call alt_day3_makeup
         pause(1)
-        $ renpy.save_persistent()
         if ('un_fz' in list_d2_date_7dl):
             if alt_day3_un_fz_evening:
                 jump alt_day3_disco
             else:
                 call alt_day3_dv_lf
                 pause(1)
-                $ renpy.save_persistent()
                 call alt_day3_rockstar
                 pause(1)
-                $ renpy.save_persistent()
                 call alt_day3_sleeptime
                 pause(1)
-                $ renpy.save_persistent()
                 jump alt_day3_slots
         elif alt_day3_dv_date or (alt_day3_dv2_event and not alt_day3_dv_dj):
             call alt_day3_dv_lf
             pause(1)
-            $ renpy.save_persistent()
             call alt_day3_rockstar
             pause(1)
-            $ renpy.save_persistent()
             if alt_day3_dv2_event:
                 call alt_day3_sleeptime
                 pause(1)
-                $ renpy.save_persistent()
                 jump alt_day3_slots
             else:
                 call alt_day3_dv_reunion
                 pause(1)
-                $ renpy.save_persistent()
                 scene black
                 call screen alt_timer
         else:
@@ -148,20 +125,16 @@
 label alt_day3_dv_stayhere:
     call alt_day3_dv_stayhere1
     pause(1)
-    $ renpy.save_persistent()
     $ persistent.sprite_time = "night"
     call alt_day3_bath_voyeur
     pause(1)
-    $ renpy.save_persistent()
     call alt_day3_sleeptime
     pause(1)
-    $ renpy.save_persistent()
     jump alt_day3_slots
     
 label alt_day3_leave:
     call alt_day3_leave1
     pause(1)
-    $ renpy.save_persistent()
     return
 
 label alt_day3_disco:
@@ -169,64 +142,49 @@ label alt_day3_disco:
     $ night_time()
     call alt_day3_choose
     pause(1)
-    $ renpy.save_persistent()
     if ((counter_sl_7dl >= 4) or (counter_sl_cl >= 6)) and (alt_day3_dancing == 2) and (lp_sl >= 12):
         if counter_sl_7dl == 5:
             pause(1)
-            $ renpy.save_persistent()
             call alt_day3_bath_voyeur
             pause(1)
-            $ renpy.save_persistent()
             call alt_day3_sleeptime
             pause(1)
-            $ renpy.save_persistent()
             jump alt_day3_slots
         elif counter_sl_cl == 7:
             call alt_day3_technoquest3
             pause(1)
-            $ renpy.save_persistent()
             jump alt_day3_slots
         else:
             jump alt_day3_disco2 
     else:
         call alt_day3_dance_dance2
         pause(1)
-        $ renpy.save_persistent()
         if alt_day3_un_med_help == 1:
             $ alt_chapter(3, u"Медпункт. Вечер.")
             call alt_day3_med_un
             pause(1)
-            $ renpy.save_persistent()
             if persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf:
                 call alt_day3_un_cards
                 pause(1)
-                $ renpy.save_persistent()
                 call alt_day3_un_strip_play
                 pause(1)
-                $ renpy.save_persistent()
                 if alt_day3_un_strip_pool_sp == 0:
                     call alt_day3_card_lose
                 elif alt_day3_un_strip_pool_un == 0:
                     call alt_day3_card_won
                 pause(1)
-                $ renpy.save_persistent()
             call alt_day3_post_strip
             pause(1)
-            $ renpy.save_persistent()
             call alt_day3_sleeptime
             pause(1)
-            $ renpy.save_persistent()
             jump alt_day3_slots
         elif alt_day3_us_bugs == 1 and not ('un_fz' in list_d2_date_7dl):
             call alt_day3_mt_scare
             pause(1)
-            $ renpy.save_persistent()
             call alt_day3_bath_voyeur
             pause(1)
-            $ renpy.save_persistent()
             call alt_day3_sleeptime
             pause(1)
-            $ renpy.save_persistent()
             jump alt_day3_slots
         elif alt_day3_technoquest_st3 == 1:
             if alt_day3_mi_dj or (lp_mi > 7):
@@ -234,20 +192,17 @@ label alt_day3_disco:
             else:
                 call alt_day3_dance_dance2_menu
                 pause(1)
-                $ renpy.save_persistent()
                 if alt_day3_technoquest_st3_help:
                     if alt_day3_dv_dj or alt_day3_mi_dj:
                         jump alt_day3_disco2
                     else:
                         call alt_day3_technoquest3
                         pause(1)
-                        $ renpy.save_persistent()
                         jump alt_day3_slots
                 else:
                     if ('un_fz' in list_d2_date_7dl):
                         call alt_day3_technoquest3
                         pause(1)
-                        $ renpy.save_persistent()
                         jump alt_day3_slots
                     else:
                         $ girls_list = ('dv', 'un', 'mi', 'sl')
@@ -258,7 +213,6 @@ label alt_day3_disco:
                         if alt_day3_lp_route == 1 or alt_day3_lp_route == 2:
                             call alt_day3_technoquest3
                             pause(1)
-                            $ renpy.save_persistent()
                             jump alt_day3_slots
                         else:
                             jump alt_day3_disco2
@@ -270,20 +224,15 @@ label alt_day3_disco2:
     $ night_time()
     call alt_day3_choose3
     pause(1)
-    $ renpy.save_persistent()
     if alt_day3_mi_date and ('mi' in list_d2_date_7dl) and ((alt_day3_dancing == 41) or (alt_day3_dancing == 40)):
         call alt_day3_mi_7dl_init
         pause(1)
-        $ renpy.save_persistent()
         jump alt_day4_mi_7dl_start
     elif alt_day3_dancing != 5:
         call alt_day3_disco_past_d2
         pause(1)
-        $ renpy.save_persistent()
         call alt_day3_bath_voyeur
         pause(1)
-        $ renpy.save_persistent()
     call alt_day3_sleeptime
     pause(1)
-    $ renpy.save_persistent()
     jump alt_day3_slots
