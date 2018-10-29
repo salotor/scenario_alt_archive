@@ -16291,6 +16291,9 @@ label alt_day6_sl_7dl_herc_morning:
         sl "Еле успели!"
         me "Успели к чему?"
         sl "Он опрокинул коробку с крысиным ядом и собирался попробовать на вкус."
+        window hide
+        scene cg d6_sl_puppy_7dl
+        with dissolve
         voice "Буф."
         "Возразил щенок. {w}Мол, глупая тётенька, я же чую запахи!"
         "Да, скотинка с характером!"
@@ -16306,7 +16309,10 @@ label alt_day6_sl_7dl_herc_morning:
         "Коробка из плотного картона была вся изгрызена и истрёпана."
         th "Так вот ты какой, щенок-самоубийца…"
         me "Давай забирать его отсюда. {w}У него много вещей?"
-        show sl smile pioneer with dspr
+        window hide
+        scene bg int_attic2_day_7dl
+        show sl smile pioneer
+        with dissolve
         sl "Да какие там вещи, коробка да миска."
         sl "Клади его."
         "Видимо, щенка утомили наши разговоры, и он зевнул, широко разевая розовую пасть с зубами-иглами."
@@ -27105,7 +27111,7 @@ label alt_day7_sl_7dl_leaving:
         voices "Поехали!"
         "Автобус швырнул себя в раскалённый полдень."
     window hide
-    scene bg int_bus_people_day
+    scene cg d7_sl_epilogue_bus_7dl
     with dissolve
     play sound_loop sfx_bus_interior_moving fadein 2
     "Автобус катил по асфальту, в салоне было душно, не спасали даже открытые люки."

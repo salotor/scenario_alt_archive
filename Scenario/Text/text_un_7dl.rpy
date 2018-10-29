@@ -11021,7 +11021,8 @@ label alt_day7_un_7dl_epilogue_bad:
 label alt_day7_un_7dl_epilogue_rt:
     stop ambience
     play music music_7dl["tilltheend"] fadein 3
-    scene bg int_bus_people_day with fade
+    scene bg d7_un_epilogue_bus_7dl
+    with dissolve
     play sound_loop sfx_bus_interior_moving fadein 2
     "Сколько всего было, сколько всего могло бы быть."
     "Я до сих пор не понимал: была ли та эпичная сцена в туалете, или мне всё и правда приснилось?"
