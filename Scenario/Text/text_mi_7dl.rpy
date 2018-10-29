@@ -7856,6 +7856,7 @@ label alt_day6_mi_7dl_miku_farewell_finale:
     return
 
 label alt_day6_mi_7dl_miku_farewell_soul:
+    scene anim intro_16 with dsps
     play music music_7dl["you_are_soul"] fadein 10
     "Выдохнул я. В горле острой режущей изжогой толкнулось отчаяние: почему она тянет?!"
     if not alt_day5_mi_7dl_voyeur:
@@ -12137,6 +12138,7 @@ label alt_day7_mi_7dl_come_back:
     return
     
 label alt_day7_mi_7dl_thank_you:
+    scene anim intro_16 with dsps
     play music music_7dl["sh_ai_rejuv"] fadein 3
     "Размышлять не стоило."
     "Незачем оно было."
