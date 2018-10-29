@@ -185,7 +185,7 @@ label alt_day0_vars: #Переменные нулевого дня
     $ d3 = False
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
-    if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good: # условия не соответствуют появлению кусочков паззла
+    if persistent.dv_7dl_tulpa and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_7dl_true:
         $ alt_day_binder = 1
     else:
         $ alt_day_binder = 0
