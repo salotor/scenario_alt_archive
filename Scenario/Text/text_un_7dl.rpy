@@ -11022,7 +11022,7 @@ label alt_day7_un_7dl_epilogue_bad:
 label alt_day7_un_7dl_epilogue_rt:
     stop ambience
     play music music_7dl["tilltheend"] fadein 3
-    scene bg d7_un_epilogue_bus_7dl
+    scene cg d7_un_epilogue_bus_7dl
     with dissolve
     play sound_loop sfx_bus_interior_moving fadein 2
     "Сколько всего было, сколько всего могло бы быть."
