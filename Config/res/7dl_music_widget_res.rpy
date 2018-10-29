@@ -215,7 +215,7 @@ init 1:
     $ music_list_7dl["Olafur Arnalds - Not Alone"] = default_7dl_path+"Sound/music/not_alone_7dl.ogg"
     $ music_list_7dl["Kevin MacLeod - Your Call High Quality"] = default_7dl_path+"Sound/music/shappihn_7dl.ogg"
     $ music_list_7dl["April Rain - Im All Crying Inside"] = default_7dl_path+"Sound/music/tearing_sobs_7dl.ogg"
-    $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/yume_akari_7dl.ogg"
+    $ music_list_7dl["My Royal Guardian - Yume Akari"] = default_7dl_path+"Sound/music/yume_akari_7dl.ogg"
     $ music_list_7dl["Kevin MacLeod - Niles Blues"] = default_7dl_path+"Sound/music/viola_7dl.ogg"
     $ music_list_7dl["Аревик Аветисян – Воспоминание"] = default_7dl_path+"Sound/music/sorrow_7dl.ogg"
     $ music_list_7dl["DeadPunk - Smells Like My Grave"] = default_7dl_path+"Sound/music/smlg_7dl.ogg"

@@ -27213,6 +27213,8 @@ label alt_day7_sl_7dl_leaving:
             sl "Ты же сам понимаешь, что это ерунда. {w}Мир не плохой или хороший, он просто есть."
             me "Просто есть… А вот меня в нём…"
             th "Не будет."
+    $ persistent.sprite_time = 'night'
+    $ night_time()
     window hide
     scene expression Desat1("bg int_bus_night")
     show sl_gr scared casual
