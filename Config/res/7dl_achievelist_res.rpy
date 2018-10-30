@@ -266,7 +266,7 @@ init:
     
     image sdl_achv_need_routeA = Text("Рут не дописан", style="sdl_achvlistB_de_st")
     image sdl_achv_jumpchkA = Text(" Перейти\nна концовку", style="sdl_achvlistB_de_st")
-    image sdl_achv_infochkD = Text(" Требует\nпрохождения\n концовки", style="sdl_achvlistB_de_st")
+    image sdl_achv_infochkD = Text("Требует прохождения\n      концовки", style="sdl_achvlistB_de_st")
     image sdl_achv_infochkAD = Text("Требует начала с\nальтернативного\n  первого дня", style="sdl_achvlistB_de_st")
     # ------------------------------------------------
     #Типология рутов
@@ -284,6 +284,7 @@ init:
     image sdl_achv_excl_LO_mi = Text("Эксклюзивная \nконцовка Локи", style="sdl_achvlistA_mi_st")
     image sdl_achv_good_RF_mi = Text(" Хорошая \nРФ-концовка", style="sdl_achvlistA_mi_st")
     image sdl_achv_good_mi = Text("Хорошая\nконцовка", style="sdl_achvlistA_mi_st")
+    image sdl_achv_pst_mi = Text("Постскриптум", style="sdl_achvlistA_mi_st")
     # ------------------------------------------------
     #Концовки-описание (Алисхен расцветка)
     image sdl_achv_bad_dv = Text(" Плохая\nконцовка", style="sdl_achvlistA_dv_st")
@@ -293,7 +294,7 @@ init:
     image sdl_achv_rejc_RF_dv = Text(" Реджект\nРФ-концовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_rejc_US_dv = Text(" Реджект \nСССР-концовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_tran_dv = Text("Транзитная\n концовка", style="sdl_achvlistA_dv_st")
-    image sdl_achv_tran_HE_dv = Text("Транзитная \nконцовка Герка", style="sdl_achvlistA_dv_st")
+    image sdl_achv_tran_HE_dv = Text("  Транзитная\nконцовка Герка", style="sdl_achvlistA_dv_st")
     # ------------------------------------------------
     #Концовки-описание (Славя расцветка)
     image sdl_achv_true_sl = Text("Истинная\nконцовка", style="sdl_achvlistA_sl_st")
@@ -332,7 +333,6 @@ init:
     image sdl_achv_us_mi = Text("Концовка\n Мику", style="sdl_achvlistA_us_st")
     # ------------------------------------------------
     #Концовки-описание (Одиночка расцветка)
-    image sdl_achv_pst_me = Text("Постскриптум", style="sdl_achvlistA_me_st")
     image sdl_achv_qte_me = Text(" Тест на реакцию\nи сообразительность", style="sdl_achvlistA_me_st")
     image sdl_achv_kat_me = Text("Катапультная\n концовка", style="sdl_achvlistA_me_st")
     
