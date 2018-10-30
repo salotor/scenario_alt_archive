@@ -263,21 +263,24 @@ label alt_day7_dv_7dl_start:
     $ renpy.save_persistent()
     $ persistent.sprite_time = "prolog"
     $ prolog_time()
+    if persistent.dv_7dl_good_ussr:
+        menu:
+            "Логичный исход…":
+                call alt_day7_dv_7dl_true
+                pause(1)
+                $ renpy.save_persistent()
+            "Я иду!":
+               pass
     if alt_day7_dv_7dl_check == 1:
         if karma > 75:
-            menu:
-                "Сесть на место":
-                    call alt_day7_dv_7dl_rf_epilogue
-                    pause(1)
-                    $ renpy.save_persistent()
-                "Прочь из автобуса!":
-                    call alt_day7_dv_7dl_ussr_epilogue
-                    pause(1)
-                    $ renpy.save_persistent()
+            call alt_day7_dv_7dl_ussr_epilogue
+            pause(1)
+            $ renpy.save_persistent()
         else:
             call alt_day7_dv_7dl_rf_epilogue
             pause(1)
             $ renpy.save_persistent()
+
     elif alt_day7_dv_7dl_check == 2:
         if karma > 75:
             call alt_day7_dv_7dl_rej_ussr_end
