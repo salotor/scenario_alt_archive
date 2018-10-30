@@ -7935,6 +7935,7 @@ label alt_day3_dv_reunion:
 label alt_day3_leave1:
     "Я открыл глаза."
     $ persistent.d3_deep = True
+    $ renpy.save_persistent()
     $ renpy.pause(1.0, hard=True)
     window hide
     scene black
@@ -7947,11 +7948,11 @@ label alt_day3_dv_stayhere1:
     if alt_day_binder != 1 and persistent.dv_7dl_good_ussr:
         play sound sfx_7dl["tousche"]
         play sound2 sfx_concert_applause
-        $ renpy.save_persistent()
         show acm_logo_me_qte with moveinright:
             pos (1600, 1020)
         $ renpy.pause(9.4, hard=True)
     $ persistent.alt_qte = True
+    $ renpy.save_persistent()
     $ night_time()
     with vpunch
     stop music

@@ -156,7 +156,6 @@ label alt_day0_opening:
     show expression Desat1("logo_day") :
         pos (400,150)
     with dissolve2
-    $ renpy.save_persistent()
     show acm_logo with zoomin:
         pos (1200,350)
     with vpunch 

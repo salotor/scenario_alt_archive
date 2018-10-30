@@ -10480,8 +10480,8 @@ label alt_day7_us_7dl_mikuforever:
     "Я ступил на первую ступеньку автобуса."
     window hide
     $ persistent.us_7dl_mi = True
-    play sound sfx_7dl["aunl"]
     $ renpy.save_persistent()
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_openup with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -10712,8 +10712,8 @@ label alt_day7_us_7dl_lenaforever:
     un "С моей сестрой."
     window hide
     $ persistent.us_7dl_un = True
-    play sound sfx_7dl["aunl"]
     $ renpy.save_persistent()
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_hi with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -10867,8 +10867,8 @@ label alt_day7_us_7dl_reunite:
     us "Пошли, Сёмище! А то билетов не хватит!"
     window hide
     $ persistent.us_7dl_good = True
-    play sound sfx_7dl["aunl"]
     $ renpy.save_persistent()
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_semische with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11671,8 +11671,8 @@ label alt_day7_us_7dl_ever_after:
     "Мы долго смотрим друг на друга, а затем хохочем."
     window hide
     $ persistent.us_7dl_true = True
-    play sound sfx_7dl["aunl"]
     $ renpy.save_persistent()
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_true with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11856,8 +11856,8 @@ label alt_day7_us_7dl_bad:
     show spill_red with dspr
     window hide
     $ persistent.us_7dl_bad = True
-    play sound sfx_7dl["aunl"]
     $ renpy.save_persistent()
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_bad with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12901,8 +12901,8 @@ label alt_day7_us_px_fairytale:
     "Отблеск познакомившего нас лета."
     window hide
     $ persistent.us_px_true = True
-    play sound sfx_7dl["aunl"]
     $ renpy.save_persistent()
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_fairytale with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -13467,8 +13467,8 @@ label alt_day7_us_px_dejavu:
         me "Тай-тай…"
     window hide
     $ persistent.us_px_rf_good = True
-    play sound sfx_7dl["aunl"]
     $ renpy.save_persistent()
+    play sound sfx_7dl["aunl"]
     show acm_logo_us_px with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
