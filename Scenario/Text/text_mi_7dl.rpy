@@ -11500,7 +11500,7 @@ label alt_day7_mi_7dl_postscriptum:
     stop sound_loop
     $ renpy.pause(3)
     play sound sfx_7dl["aunl"]
-    $ persistent.alt_mi_7dl_ps = True
+    $ persistent.mi_7dl_ps = True
     $ renpy.save_persistent()
     show acm_logo_mi_bitter_truth with moveinright:
         pos (1600, 1020)

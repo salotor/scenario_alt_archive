@@ -5997,9 +5997,9 @@ label alt_day5_mi_dj_voyeur_3:
     play sound2 sfx_dropped_chair
     "Я вздрогнул, отвлёкся, открылась дверь, и выглянула Славя."
     if persistent.hentai_graphics_7dl:
-        show sl serious body with dspr
+        show sl2 serious body with dspr
     else:
-        show sl serious swim with dspr
+        show sl2 serious swim with dspr
     "Голая."
     sl "Семён, что ты здесь делаешь?"
     me "Н… Ничего."
@@ -6011,15 +6011,15 @@ label alt_day5_mi_dj_voyeur_3:
     "А у меня в голове зазвенело от резкого оттока крови и чуточку потемнело в глазах."
     "И от того формы Слави — а я и до сих пор и не подозревал, насколько они шикарные! — виднелись ещё рельефнее."
     if persistent.hentai_graphics_7dl:
-        show sl laugh body with dspr
+        show sl2 laugh body with dspr
     else:
-        show sl laugh swim with dspr
+        show sl2 laugh swim with dspr
     "Девушка рассмеялась, глядя на мой ступор."
     sl "Кажется, ты уже пришёл?"
     "Закусив губу, она посмотрела на меня незнакомыми, испытующим глазами."
     sl "Ты знаешь…"
     sl "А впрочем, подожди."
-    hide sl 
+    hide sl2
     "Она скрылась в клубах пара."
     "Изнутри донеслось журчание воды."
     sl "Вот!"

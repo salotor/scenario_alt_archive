@@ -9,7 +9,7 @@
     $ renpy.pause(2, hard=True)
     show spill_gray with dspr
     $ renpy.pause(2, hard=True)
-    if persistent.dv_7dl_tulpa:
+    if persistent.dv_7dl_true:
         show acm_a
     if persistent.un_7dl_true:
         show acm_l
