@@ -7831,7 +7831,7 @@ label alt_day5_sl_night:
     "Целовать Славю было… сладко."
     window hide
     scene bg ext_entrance_night_clear_closed_7dl with dissolve
-    show sl normal pioneer2
+    show sl2 normal pioneer2
     with dissolve
     sl "Не думал о том, чтобы выступить на прощальном концерте?"
     if ('un_fz' in list_d2_date_7dl):
@@ -7843,7 +7843,7 @@ label alt_day5_sl_night:
     sl "Ну, может быть, мы что-нибудь подготовим?"
     me "Прости, но не за один день же."
     "Славя прикусила губу, явно немного расcтроенная."
-    show sl sad pioneer2 with dspr 
+    show sl2 sad pioneer2 with dspr
     sl "Эх. Я думала, может быть стоило бы сделать что-нибудь, чтобы было чем гордиться."
     if alt_day4_sl_lf_solo == 2:
         me "Спасение Шурика — чем не повод?"
@@ -7855,12 +7855,12 @@ label alt_day5_sl_night:
     "Отмахнулась она."
     sl "Я о том, чтобы люди говорили немного."
     me "Надо же! Не замечал в тебе тщеславия."
-    show sl smile pioneer2 with dspr 
+    show sl2 smile pioneer2 with dspr
     sl "А его и нет. Я хочу, чтобы люди о тебе говорили."
     "Девушка хочет гордиться своим избранником. {w}Как это мило."
     me "Прости, придётся оценивать мои заслуги пока только на невидимом фронте."
     sl "Да…"
-    show sl normal pioneer2 with dspr 
+    show sl2 normal pioneer2 with dspr
     sl "Ты хоть на танцы-то пойдёшь?"
     me "Спрашиваешь! Если ты пойдёшь, то и я — тоже."
     "Она кивнула."
@@ -7876,7 +7876,7 @@ label alt_day5_sl_night:
     play ambience ambience_camp_entrance_night fadein 3
     me "Не впервые вторгаешься в частные владения?"
     "Пошутил я."
-    show sl normal pioneer2 with dspr 
+    show sl2 normal pioneer2 with dspr
     sl "Что?"
     me "Ничего."
     "Я придержал створку для своей дамы, пропустил её, зашёл сам."
@@ -7886,12 +7886,12 @@ label alt_day5_sl_night:
     play ambience ambience_camp_center_night
     "Со стороны клубов не слышно было ни странных шумов, ни гудения."
     "Славя закрыла замок и кивнула."
-    show sl normal pioneer2 with dspr 
+    show sl2 normal pioneer2 with dspr
     sl "Ну что, спать?"
     me "Пожалуй, провожу тебя, если ты не против."
     "Нам всё равно было в одну сторону."
     "Она кивнула и взяла меня под руку."
-    show sl smile pioneer2 with dspr 
+    show sl2 smile pioneer2 with dspr
     sl "Будем с тобой гулять, как взрослые люди, рука об руку."
     show dreamgirl_overlay with dspr 
     dreamgirl "Главное, чтобы эти «рука об руку» не переоделись в свадебные облачения слишком рано."
@@ -7906,7 +7906,7 @@ label alt_day5_sl_night:
     "Скотина озабоченная."
     window hide
     scene bg ext_houses_night_7dl with dissolve
-    show sl smile2 pioneer2 with dspr
+    show sl2 smile2 pioneer2 with dspr
     "Славе было направо, мне прямо."
     sl "Ну… Это был очень длинный день."
     "Я согласно кивнул."
@@ -7918,16 +7918,16 @@ label alt_day5_sl_night:
         menu:
             "Я не хочу!":
                 "Жалостливо произнёс я."
-                show sl laugh pioneer2 with dspr
+                show sl2 laugh pioneer2 with dspr
                 sl "И что ты предлагаешь?"
                 "Я с намёком покосился на связку в её руках."
-                show sl scared pioneer2 with dspr
+                show sl2 scared pioneer2 with dspr
                 sl "Что? И думать не смей, что люди подумают?!"
                 me "Ничего нового они всё равно не подумают."
                 "Я взял её за руку."
                 me "Я видел тут один домик на отшибе…"
                 $ alt_day5_sl_extra_house = True
-                show sl tender pioneer2 with dspr
+                show sl2 tender pioneer2 with dspr
                 sl "Должно быть, ты шутишь."
                 me "Я убийственно серьёзен."
                 "Она попыталась что-то возразить, но я положил палец ей на губы:"
@@ -8021,7 +8021,7 @@ label alt_day5_sl_night:
     sl "Сладких снов."
     "Шепнула она."
     me "А нельзя мне к тебе?"
-    show sl normal pioneer2 with dspr 
+    show sl2 normal pioneer2 with dspr
     sl "Нет, Сёмушка."
     "С сожалением покачала головой."
     sl "Сегодня Женя ночует дома, так что никаких приводов мальчиков."
@@ -8029,7 +8029,7 @@ label alt_day5_sl_night:
     me "Грусть."
     "Вздохнул я."
     me "Тогда до завтра?"
-    hide sl with dissolve
+    hide sl2 with dissolve
     "Кивнув мне, девочка растаяла в темноте."
     "А я поплёлся домой."
     "Вожатая уже точно спит, надо действовать тихо и наверняка."
@@ -8357,13 +8357,19 @@ label alt_day6_sl_begin:
         sl "Пират."
         "Больше похожее на медведя, чем на кого-либо другого."
         "А у Слави был такой напряжённый голос."
+        window hide
+        scene cg d6_sl_puppy_7dl
+        with dissolve
         "Она поставила щенка на землю, и тот, неловко перебирая лапами, побрёл ко мне."
         "Арктический шпиц, саамская лайка — в моём городе их называли самоедами и отвечали, что нет, саму себя не ест."
         "Я протянул ему руку и поёжился, когда в ладонь сначала ткнули мокрым носом, а потом вежливо лизнули."
         me "Здравствуй, щен."
         "Я потрепал Пирата по голове."
         me "Как твои дела? {w}Почему Пират?"
-        show sl laugh sport with dspr
+        window hide
+        scene bg int_attic2_day_7dl
+        show sl laugh sport
+        with dissolve
         sl "Потому что бандит!"
         "Хихикнула девушка."
         sl "Когда ты только приехал, а я должна была тебе лагерь показывать, он мне форму испачкал, а на замену ничего моего размера не нашлось, пришлось переодеваться в спортивное."
