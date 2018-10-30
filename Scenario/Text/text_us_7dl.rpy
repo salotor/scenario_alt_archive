@@ -9374,7 +9374,7 @@ label alt_day7_us_7dl_leaving:
         "Лены и Мику."
         "И, конечно, улыбающейся Ульянки под боком."
         window hide
-        scene bg d7_us_epilogue_bus_7dl
+        scene cg d7_us_epilogue_bus_7dl
         with dissolve
         "Я поймал её ладошку и сжал."
         stop music fadeout 5
@@ -9385,7 +9385,7 @@ label alt_day7_us_7dl_leaving:
         "И, конечно, болтливой и такой очаровательной японской красавицы."
         me "Я хотел бы умереть — так я сейчас счастлив."
         window hide
-        scene bg d7_mi_epilogue_bus_7dl
+        scene cg d7_mi_epilogue_bus_7dl
         with dissolve
         stop music fadeout 5
         "Мику накинулась на меня с руганью, но я уже не слушал."
@@ -9395,7 +9395,7 @@ label alt_day7_us_7dl_leaving:
         "И, конечно, любимки под боком."
         "Я понял и принял это только сейчас."
         window hide
-        scene bg d7_un_epilogue_bus_7dl
+        scene cg d7_un_epilogue_bus_7dl
         with dissolve
         stop music fadeout 5
         "Так же естественно и спокойно, как однажды предложу ей взять мою фамилию."
@@ -9550,7 +9550,7 @@ label alt_day7_us_7dl_leaving:
             stop ambience
             stop music fadeout 3
             window hide
-            scene anim prolog2
+            scene anim prolog_2
             with dissolve
             "Вот тогда-то я и испугался."
             play music music_7dl["abyss_call"] fadein 3
@@ -9633,11 +9633,11 @@ label alt_day7_us_7dl_leaving:
             "Вспомнил о том, что «я» — это самое важное, что есть."
             "Что только от «я» зависит, буду ли я быть."
             "Что только я вижу, я слышу, я понимаю, чувствую и люблю."
-            "Это было противостояние небытие."
+            "Это было противостояние небытию."
             "Глупое, заранее обречённое на провал, как попытка драться со смертью, но «я» уже не мог остановиться."
             me "Скучать не приходится, здесь бой, незримый бой."
             "Не на жизнь, а на существование."
-            "Изъязвлённым пустой языком я начал выговаривать непонятные, глупые слова."
+            "Изъязвлённым пустотой языком я начал выговаривать непонятные, глупые слова."
             me "Жажду крови утолить должна, да не утоляет…"
             "Самый странный бой в жизни «я»."
             "Выстраивание цепочек эмоций и ассоциаций."
@@ -9703,6 +9703,7 @@ label alt_day7_us_7dl_leaving:
             "Я уже понял, как здесь что работает."
             "Какие силы имеют парадоксы и прецеденты."
             stop music fadeout 3
+            stop ambience fadeout 3
             "В результате пространство сморщилось и выплюнуло нас в автобус."
             window hide
             scene bg int_bus_night
@@ -9713,7 +9714,7 @@ label alt_day7_us_7dl_leaving:
             play sound sfx_face_slap
             with vpunch
             with flash_red
-            show us angry sport with dissolve
+            show us angry sport close with dissolve
             us "Ты что натворил, гад! Гад!"
             me "Успокойся."
             hide us with dissolve
@@ -9755,15 +9756,16 @@ label alt_day7_us_7dl_leaving:
             us "Что бы и как бы я ни делала!"
             us "Я завтра проснусь такой же, как была."
             us "А если была дурой, то кусок моей памяти просто исчезнет, так как он должен перестроить меня."
-            us "Всё исчезнет, от и до!"
             us "А мне нельзя перестраиваться!"
             us "Мне ещё целый год нельзя."
+            us "Всё исчезнет, от и до!"
             us "Перестань меня мучать, отпусти!"
             us "Со мной ничего не случится, я буду в порядке!"
             us "Даже если со мной что-то случится —  уж лучше так, чем снова делать что велят, носить эти чёртовы ракеты и чувствовать себя вечно младшей."
             us "Маленькая собачка всю жизнь щенок."
             us "Так вот."
             us "Я ненавижу быть щенком!"
+            show us2 angry sport close with dissolve
             "Я снова поймал её."
             "И несмотря на то, что она продолжала колотить меня, я продолжал прижимать её к себе."
             "Глупая девочка не понимает, что с ней произошло, и где она оказалась."
@@ -9776,12 +9778,14 @@ label alt_day7_us_7dl_leaving:
             "Я не знаю как."
             "А и знал бы..."
             me "Ты хочешь обратно в лагерь? К своим?"
+            show us2 dontlike sport close with dspr
             us "Не хочу."
             "Сварливо сообщила Ульяна."
             us "Я хочу обратно."
             me "Тебе нельзя. Я тебя едва вытащил."
             us "Дурак, я не хочу в пустоту, я хочу туда, куда она ведёт!"
             me "Куда?"
+            show us2 smile close with dspr
             us "Э… Пошли!"
             "Она ткнула пальцем в кнопку и удовлетворённо кивнула, когда пневматика, зашипев, открыла дверь."
             "По ту сторону не было видно ровным счётом ничего — у самого нижнего среза ступеней сплошной стеной клубился непроглядный серый туман."
@@ -10480,10 +10484,10 @@ label alt_day7_us_7dl_mikuforever:
     "Я ступил на первую ступеньку автобуса."
     window hide
     $ persistent.us_7dl_mi = True
+    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_openup with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     return
@@ -10712,10 +10716,10 @@ label alt_day7_us_7dl_lenaforever:
     un "С моей сестрой."
     window hide
     $ persistent.us_7dl_un = True
+    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_hi with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -10867,10 +10871,10 @@ label alt_day7_us_7dl_reunite:
     us "Пошли, Сёмище! А то билетов не хватит!"
     window hide
     $ persistent.us_7dl_good = True
+    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_semische with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     stop music fadeout 3
@@ -10979,7 +10983,7 @@ label alt_day7_us_7dl_ever_after:
     "Тут я обратил внимание на то, что до сих пор держу кого-то за руку и медленно-медленно повернулся."
     window hide
     scene anim intro_7
-    show us laugh2 sport
+    show us2 laugh2 sport
     with dissolve
     "И задохнулся от счастья, прижимая к себе пищащую Ульянку."
     "Как я умудрился выдернуть её вместе с собой? Никто не знает."
@@ -10989,12 +10993,12 @@ label alt_day7_us_7dl_ever_after:
     "Захотел."
     me "Разве такое бывает?"
     "Отпускать Ульянку очень не хотелось, но…"
-    show us sad sport with dissolve
+    show us2 sad sport with dissolve
     us "Бррр, как же холодно здесь."
     "Пожаловалась она, обнимая себя за плечи."
     us "Куда ты меня затащил?"
     me "Да что же это я… Сейчас!"
-    hide us with dissolve
+    hide us2 with dissolve
     "Сбросив пальто, я немедленно укутал зябнущую девочку."
     "У меня была майка, был свитер — сколько-то времени я мог продержаться."
     "В отличие от неё, одетую в одну лишь тонкую футболку с символикой Союза."
@@ -11033,52 +11037,53 @@ label alt_day7_us_7dl_ever_after:
     "Крикнул я, когда шум воды стих."
     us "Автобус, что же ещё?{w} Сёмыч, ты же не забыл?.."
     "Донеслось в ответ из ванной, и она явилась мне на глаза всё в той же спортивной форме."
-    show us smile sport with dissolve
+    show us2 smile sport with dissolve
     us "Так вот, значит, как ты живёшь…"
     "Она раздумчиво оглядела пыльную люстру, букли отклеившихся и свернувшихся обоев…"
     me "Живу, как видишь."
-    show us sad sport with dspr
+    show us2 sad sport with dspr
     us "Это никуда не годится. Жильё какого-то холостяка."
     me "Так и есть!"
     "Я приложил руку к пустой голове — мол, на том и стоим!"
     us "Здесь нужна женская рука."
     me "Не смеши, женщина."
-    show us grin sport with move
+    show us2 grin sport with move
     us "Да. Женщина."
     "Показала язык Ульянка."
     "Белое и красное: алая футболка, алые волосы — и серебристый лунный свет от заглядывающего в окошко месяца."
     us "Привыкай к мысли, что теперь в твоей жизни есть жен…"
     play sound sfx_stomach_growl
-    show us sad sport with dissolve
+    show us2 sad sport with dissolve
     us "Слушай, есть что слопать? Есть хочу — спасу нет!"
     "Жалобно протянула она."
     "Я рассмеялся и потянулся к телефону, на ходу вспоминая адрес доставки пиццы и суши."
     window hide
     with fade
-    show us surp1 sport with dissolve
+    show us2 surp1 sport with dissolve
     us "Ты уверен, что это съедобно?"
     "Доставка прибыла с задержкой в час, как это и ожидаемо в предновогодние праздники."
     "Мы ждали её, балуясь чайком и периодически отбивая друг у друга последнюю пачку пельмешек."
     "Так что встретили квадратные коробки с символикой далеко без того энтузиазма, что звучал в голосах, когда я повесил трубку и сообщил, что скоро будет еда."
+    show us2 smile sport with dspr
     "Ульяна подцепила вилкой замеченный ролл и с сомнением потыкала его пальцем."
     me "Да это вкусно, сама попробуй."
     if alt_day_binder != 1:
         us "Он выглядит подозрительнее того жука у тебя в тарелке."
         me "К-какого жука?!"
-        show us laugh sport with dspr
+        show us2 laugh sport with dspr
         us "Того, что я подложила тебе в лагере!"
         "Сейчас я и в самом деле вспомнил о некотором разнообразии рациона, но на всякий случай решил контролировать, чтобы не было сюрпризов."
         "Ульяна наблюдала за мной и смеялась каждый раз, когда я подозрительно осматривал ролл или кусок пиццы."
         "Сама она осмелилась съесть только один, подналегла на мучное."
         "Вся японская кухня ушла в мой желудок."
-    show us smile sport with dspr
+    show us2 smile sport with dspr
     us "Вкусно."
     "Улыбнулась она."
     us "А теперь на правах женщины заявляю: спишь ты на полу."
     me "Да с чего б?"
     us "Потому что вот! Я так сказала."
     me "Так вот я и нашёл себе притеснителя на свою шею. Но мои злоключения ещё только начинались."
-    show us laugh2 sport with dspr
+    show us2 laugh2 sport with dspr
     us "Вот именно!"
     hide us with dissolve
     "Я только рукой махнул и отправился умываться."
@@ -11149,7 +11154,7 @@ label alt_day7_us_7dl_ever_after:
     $ set_mode_adv()
     me "Всё хорошо?"
     "Я осторожно подошёл к ней сзади, готовясь не то отпрыгивать, не то обнимать."
-    show us normal sport with dspr
+    show us2 normal sport with dspr
     "А она обернулась."
     us "Сёмыч, нам надо поговорить."
     "Обычно все неприятности начинаются с этой фразы."
@@ -11157,23 +11162,23 @@ label alt_day7_us_7dl_ever_after:
     me "О чём?"
     us "Ты можешь рассказать мне о том, как оказался в лагере?"
     me "Эм… А зачем тебе это знать?"
-    show us sad sport with dspr
+    show us2 sad sport with dspr
     us "Сёмыч, просто расскажи, ладно?"
     "Воспоминания снова нахлынули на меня, пришлось сделать глубокий вдох и несколько секунд успокаиваться."
     "Старательно загоняемое внутрь чувство страха, беспомощности снова всплыло в памяти."
     "На секунду даже показалось, что я снова оказался там — в безжалостной, ледяной смерти."
     me "Это тяжело."
-    show us normal sport with dspr
+    show us2 normal sport with dspr
     us "Прости. Но мне правда надо знать."
     me "Да зачем?!"
     us "Доверься мне. Просто расскажи…"
     me "Хорошо."
     "Сходив на кухню и хлобыстнув горячительного, чтобы не тряслись руки, сел на кровать и начал:"
     me "Дело в том, что я оказался в лагере в результате несчастного случая."
-    show us surp1 sport with dspr
+    show us2 surp1 sport with dspr
     us "Что же такого несчастного было в лагере?"
     me "Да не в лагере, а… Короче говоря, перед тем, как проснуться в автобусе, я умер."
-    show us fear sport with dspr
+    show us2 fear sport with dspr
     us "Как умер?"
     me "Молча."
     us "Может быть, тебе приснилось?"
@@ -11181,7 +11186,7 @@ label alt_day7_us_7dl_ever_after:
         me "Их было четверо, они были крайне злы, обуты в тяжёлые ботинки и целенаправленно убивали."
         me "У них были свои причины."
         me "Более того, я даже считаю, что у них была своя правота."
-        show us normal sport with dspr
+        show us2 normal sport with dspr
         us "Просто так взяли и избили?"
         me "Нет, история куда длиннее. Но всё, что тебе надо знать — когда они закончили своё дело, на снегу остался нежизнеспособный кусок мяса, неспособный к дальнейшему существованию."
         me "Прибавь сюда тридцатиградусный мороз, и получишь ответ на вопрос — могло ли мне такое присниться."
@@ -11197,7 +11202,7 @@ label alt_day7_us_7dl_ever_after:
         me "Вода заливается в горло. Всё."
     us "А потом?"
     me "Понимаешь… Мне всю жизнь снилась одна странная девушка."
-    show us smile sport with dspr
+    show us2 smile sport with dspr
     us "Продолжай."
     me "Примерно с тебя ростом, шатенка в коротком красном платье."
     me "Каждый раз она появлялась во всё новых декорациях, протягивала мне руку и спрашивала, пойду ли я с ней."
@@ -11209,27 +11214,27 @@ label alt_day7_us_7dl_ever_after:
     me "Я взял её за руку, и мы пошли."
     me "Очнулся уже в автобусе."
     me "Счастлива теперь?"
-    show us sad sport with dspr
+    show us2 sad sport with dspr
     us "Всё сходится."
     "Задумчиво пробормотала Ульяна."
     me "Что сходится?"
     us "Я знаю, кто ты такой! Ты — ПСР."
     me "Пээсэр? Что это?"
-    show us smile sport with dspr
+    show us2 smile sport with dspr
     us "Подселенец."
     me "Я ничего не понял."
     us "Ты — это временно освободившаяся душа, дух, сознание, если хочешь."
     us "Ты можешь найти человека, готового принять себя и задержаться там ненадолго."
     us "Я не знаю, как это работает, но вы должны быть похожи."
     us "Вот почему ты и тот Сёмыч из лагеря выглядите близнецами-братьями."
-    show us laugh sport with dspr
+    show us2 laugh sport with dspr
     us "Только тот моложе и в моём вкусе."
     me "А я?"
-    show us laugh sport with dspr
+    show us2 laugh sport with dspr
     us "А ты — старый дед."
     "Расхохоталась она."
     me "Спасибо. Очень приятно."
-    show us smile sport with dspr
+    show us2 smile sport with dspr
     us "Не дуйся."
     "Она уселась рядом со мной на диване и ткнула кулачком в бок."
     us "Ты тоже очень хороший дяденька."
@@ -11239,7 +11244,7 @@ label alt_day7_us_7dl_ever_after:
     me "Хорошо. А что с тобой тогда?"
     me "И если мы вернулись домой, то почему я жив и с тобой болтаю сейчас?"
     us "В этом-то и дело, Сёмыч."
-    show us normal sport with dspr
+    show us2 normal sport with dspr
     "Ульяна перестала улыбаться и выглядела неподдельно серьёзной."
     us "Мы не у тебя дома сейчас. И вернуться не можем."
     stop music fadeout 5
@@ -11247,12 +11252,12 @@ label alt_day7_us_7dl_ever_after:
     "Она покачала головой."
     window hide
     scene bg int_sam_room_7dl
-    show us normal sport
+    show us2 normal sport
     with dissolve
     play music music_7dl["out_of_your_tier"] fadein 3
     us "Со мной всё не так просто, Сёмыч."
     me "Да уж, непросто — и не дома, и вернуться нельзя, ещё и ты со своими загадками…"
-    show us sad sport with dspr
+    show us2 sad sport with dspr
     us "Помолчи и послушай, хорошо?"
     "Тихо попросила маленькая женщина, и я заткнулся."
     "Ульяна же, поколебавшись, села на дальний угол дивана, подобрала ноги под себя."
@@ -11261,19 +11266,19 @@ label alt_day7_us_7dl_ever_after:
     us "Просто потому, что была в обоих."
     me "Но разве старый лагерь не закрыли 15 лет назад?"
     us "Закрыли."
-    "Нехотя кивнула она, тряхнув хвостом."
+    "Нехотя кивнула она, тряхнув хвостами."
     us "В том числе из-за меня."
-    me "Да тебя четырнадцать лет назад и в проекте…"
+    me "Да тебя пятнадцать лет назад и в проекте…"
     us "Тем не менее."
     "Она строго заглянула мне в глаза."
     us "Таких, как мы, называют «стёртыми», Семён."
     me "Стёртыми?"
     us "Люди, подвергшиеся полному стиранию личности."
     me "И за что такому можно подвергнуться? Ты же никого не убила?"
-    show us smile sport with dspr
+    show us2 smile sport with dspr
     us "Разве что саму себя."
     "Горько усмехнулась девочка."
-    show us sad sport with dspr
+    show us2 sad sport with dspr
     us "Хронологически мне далеко не 14, на которые я выгляжу."
     us "А вот биологически, и по умственному развитию…"
     me "Ты говоришь как взрослый человек."
@@ -11330,7 +11335,7 @@ label alt_day7_us_7dl_ever_after:
     nvl clear
     $ set_mode_adv()
     scene bg int_sam_room_7dl
-    show us normal sport
+    show us2 normal sport
     with dissolve
     play music music_7dl["pixies_playing"] fadein 3
     us "И её подопечного, некоего пионера Персунова."
@@ -11343,7 +11348,7 @@ label alt_day7_us_7dl_ever_after:
     us "Похоже на то."
     us "Только мы были тому свидетелями."
     me "Как в него кто-то… кхм… вселяется?"
-    show us sad sport with dspr
+    show us2 sad sport with dspr
     "Ульяна кивнула."
     us "Когда он приехал, это был просто мальчик-мажор, богатые родители, импортные джинсы…"
     us "Говорил странные вещи, верил в то, что доллар спасёт человечество."
@@ -11373,17 +11378,17 @@ label alt_day7_us_7dl_ever_after:
     us "Выход на дорогу открыт только детям. Только они способны интуитивно делать правильный выбор и делать правильные шаги."
     window hide
     with fade
-    show us smile sport with dissolve
+    show us2 smile sport with dissolve
     us "В этом году я хотела пойти на дорогу, но снова встретила тебя."
-    show us shy sport with dspr
+    show us2 shy sport with dspr
     us "А тебя уже не интересовало это всё."
     us "Ты стал слишком взрослым."
-    show us shy2 sport with dspr
+    show us2 shy2 sport with dspr
     us "И я, похоже, тоже."
     me "Так а зачем тебе вообще было всё это нужно? Это такая игра?"
-    show us dontlike sport with dspr
+    show us2 dontlike sport with dspr
     us "Сам ты игра!"
-    show us normal sport with dspr
+    show us2 normal sport with dspr
     us "Мне важно понять, что загадала та, первая я."
     us "Получилось ли у неё.{w} А я не готова умереть или убить тебя, чтобы просто проверить."
     us "Да и не сработает это.{w} Я просто временно замещу кого-то в одном из миров, где есть моё подобие."
@@ -11391,7 +11396,7 @@ label alt_day7_us_7dl_ever_after:
     me "М-да…"
     "Почесал затылок я, выслушав весь этот бред."
     me "Так и что нам делать теперь?"
-    show us normal sport with dspr
+    show us2 normal sport with dspr
     us "Я не знаю, Сёмыч. Я хотела бы, чтобы ты не пропадал никуда."
     us "Но… У меня есть желание, и ты можешь помочь его исполнить."
     me "Махнуть палочкой и крикнуть «сим-салабим»?"
@@ -11671,10 +11676,10 @@ label alt_day7_us_7dl_ever_after:
     "Мы долго смотрим друг на друга, а затем хохочем."
     window hide
     $ persistent.us_7dl_true = True
+    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_true with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -11856,10 +11861,10 @@ label alt_day7_us_7dl_bad:
     show spill_red with dspr
     window hide
     $ persistent.us_7dl_bad = True
+    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_bad with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -12901,10 +12906,10 @@ label alt_day7_us_px_fairytale:
     "Отблеск познакомившего нас лета."
     window hide
     $ persistent.us_px_true = True
+    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_fairytale with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -13467,10 +13472,10 @@ label alt_day7_us_px_dejavu:
         me "Тай-тай…"
     window hide
     $ persistent.us_px_rf_good = True
+    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_px with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     stop music fadeout 6
     play music music_7dl["happy_ending"] fadein 1

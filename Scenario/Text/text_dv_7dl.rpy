@@ -10144,9 +10144,9 @@ label alt_day6_dv_7dl_escape_convince:
         window hide
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
+        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
-        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif herc:
@@ -10169,9 +10169,9 @@ label alt_day6_dv_7dl_escape_convince:
         stop sound_loop fadeout 0
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
+        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
-        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         return
     elif loki:
@@ -10210,6 +10210,7 @@ label alt_day6_dv_7dl_escape_convince:
         window hide
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
+        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -12378,6 +12379,7 @@ label alt_day7_dv_7dl_dv:
     return
 
 label alt_day7_dv_7dl_loki:
+    scene bg ext_sky2_7dl with dissolve
     dv "А где бы ты хотел оказаться, если бы мог оказаться везде-везде?"
     "Я никогда не думал об этом. {w}Нет во мне этой патологической тяге к перемене мест. Наверное, потому, что корней у меня нет, я постоянно кочую мало-помалу."
     me "Да, наверное, на море."
@@ -12647,9 +12649,9 @@ label alt_day7_dv_7dl_tulpa_end:
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_tulpa = True
+    $ renpy.save_persistent()
     show acm_logo_dv_tulpa with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13082,9 +13084,9 @@ label alt_day7_dv_7dl_ussr_epilogue:
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_good_ussr = True
+    $ renpy.save_persistent()
     show acm_logo_dv_ussr_good with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13277,9 +13279,9 @@ label alt_day7_dv_7dl_rf_epilogue:
     stop ambience fadeout 3
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_good_ussr_rf = True
+    $ renpy.save_persistent()
     show acm_logo_dv_morethanlife with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13517,9 +13519,9 @@ label alt_day7_dv_7dl_rej_ussr_end:
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_reject_ussr = True
+    $ renpy.save_persistent()
     show acm_logo_dv_tillend with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     play music music_7dl["walkingaway"] fadein 3
@@ -13659,6 +13661,7 @@ label alt_day7_dv_7dl_rej_rf_end:
     scene cg d7_dv_ep_red_7dl with dissolve
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_reject_rf = True
+    $ renpy.save_persistent()
     show acm_logo_dv_gohome with moveinright:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
@@ -13787,9 +13790,9 @@ label alt_day7_dv_7dl_un_end:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_un = True
+    $ renpy.save_persistent()
     show acm_logo_dv_meetmethere with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     with vpunch
     play music music_7dl["danceagain"] fadein 3
@@ -14039,6 +14042,7 @@ label alt_day7_dv_7dl_bad_end:
         window hide
         play sound sfx_7dl["aunl"]
         $ persistent.dv_7dl_bad_mt = True
+        $ renpy.save_persistent()
         show acm_logo_dv_drunk with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -14049,9 +14053,9 @@ label alt_day7_dv_7dl_bad_end:
     else:
         play sound sfx_7dl["aunl"]
         $ persistent.dv_7dl_bad = True
+        $ renpy.save_persistent()
         show acm_logo_dv_theresnoway with moveinright:
             pos (1600, 1020)
-        $ renpy.save_persistent()
         $ renpy.pause(7.4, hard=True)
         with vpunch
         play music music_7dl["tilltheend"] fadein 3

@@ -4895,9 +4895,9 @@ label alt_day3_nightmare:
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
                 $ persistent.alt_deep = True
+                $ renpy.save_persistent()
                 show acm_logo_me_deep with moveinright:
                     pos (1600, 1020)
-                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene black
                 show gameover
@@ -4929,9 +4929,9 @@ label alt_day3_nightmare:
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
                 $ persistent.alt_deep = True
+                $ renpy.save_persistent()
                 show acm_logo_me_deep with moveinright:
                     pos (1600, 1020)
-                $ renpy.save_persistent()
                 $ renpy.pause(7.4, hard=True)
                 scene black
                 show gameover
@@ -4958,6 +4958,7 @@ label alt_day3_nightmare:
                 play sound sfx_water_emerge
                 window hide
                 $ persistent.alt_deep = True
+                $ renpy.save_persistent()
                 show acm_logo_me_deep with moveinright:
                 pause(3)
                 scene black
@@ -7869,6 +7870,7 @@ label alt_day3_dv_reunion:
         window hide
         play sound sfx_7dl["aunl"]
         $ persistent.alt_deep = True
+        $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7896,6 +7898,7 @@ label alt_day3_dv_reunion:
         stop sound_loop fadeout 0
         play sound sfx_7dl["aunl"]
         $ persistent.alt_deep = True
+        $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7918,6 +7921,7 @@ label alt_day3_dv_reunion:
         window hide
         play sound sfx_7dl["aunl"]
         $ persistent.alt_deep = True
+        $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7931,6 +7935,7 @@ label alt_day3_dv_reunion:
 label alt_day3_leave1:
     "Я открыл глаза."
     $ persistent.d3_deep = True
+    $ renpy.save_persistent()
     $ renpy.pause(1.0, hard=True)
     window hide
     scene black
@@ -7947,6 +7952,7 @@ label alt_day3_dv_stayhere1:
             pos (1600, 1020)
         $ renpy.pause(9.4, hard=True)
     $ persistent.alt_qte = True
+    $ renpy.save_persistent()
     $ night_time()
     with vpunch
     stop music

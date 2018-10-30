@@ -594,7 +594,7 @@ label sdl_menu:
                                 stop ambience fadeout 2
                                 $ alt_day5_mi_7dl_voyeur = True
                                 $ persistent.mi_7dl_dr_exc = True
-                                jump alt_day6_mi_7dl_miku_farewell_finale
+                                jump alt_day7_mi_7dl_thank_you
                             "{color=#8a59dd}Так честнее":
                                 stop ambience fadeout 2
                                 jump alt_day7_mi_7dl_liar

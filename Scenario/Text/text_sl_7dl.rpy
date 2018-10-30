@@ -22530,6 +22530,7 @@ label alt_day6_sl_7dl_catapult:
         scene gameover with flash
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
+        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(3, hard=True)
@@ -24132,7 +24133,6 @@ label alt_day6_sl_7dl_hentai:
         "Я развернул её к себе лицом, посмотрел в глаза — а они оказались с подводкой. {w}Сердце ёкнуло и пропустило удар."
         me "Накрасилась."
         sl "А Алиса меня шлюхандром обозвала."
-        "Пожаловалась Славя."
         sl "Мол, наштукатурилась как девица лёгкого поведения. {w}А я же не штукатурилась, только глаза подвела!"
         show sl upset dress with dissolve
         sl "Думала, тебе понравится, ты танцевать позовёшь, а тебя всё нет и нет."
@@ -25582,7 +25582,10 @@ label alt_day7_sl_7dl_begin:
         $ karma += 15
         "А проснулся я, как оказалось, не сам."
         play sound sfx_knock_door7_polite
-        "Кто-то стучался в окошко."
+        if herc:
+            "Кто-то стучался в окошко."
+        else:
+            "Кто-то стучался."
         "Стучался настойчиво, но смолк, едва лишь я открыл глаза."
         "Будто почувствовал, что я не сплю."
         th "На Славю не похоже."
@@ -27218,6 +27221,8 @@ label alt_day7_sl_7dl_leaving:
             sl "Ты же сам понимаешь, что это ерунда. {w}Мир не плохой или хороший, он просто есть."
             me "Просто есть… А вот меня в нём…"
             th "Не будет."
+    $ persistent.sprite_time = 'night'
+    $ night_time()
     window hide
     scene expression Desat1("bg int_bus_night")
     show sl_gr scared casual
@@ -27921,6 +27926,7 @@ label alt_day7_sl_7dl_true:
     "Ведь чудес не бывает."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_true = True
+    $ renpy.save_persistent()
     show acm_logo_sl_no_wonder with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -27930,7 +27936,7 @@ label alt_day7_sl_7dl_true:
     return
 
 label alt_day7_sl_7dl_rf_good:
-    scene bg int_sam_house_clean_7dl
+    scene bg semen_room
     with dissolve
     play music music_7dl["lth"] fadein 3
     "Высшая несправедливость любого сна в том, что ты всегда просыпаешься."
@@ -28036,7 +28042,6 @@ label alt_day7_sl_7dl_rf_good:
     "Оттуда на меня ясноглазо улыбнулась одна знакомая блондинка."
     window hide
     play sound sfx_home_phone_break
-    with
     pause(1)
     scene bg semen_room_window
     with flash
@@ -28226,6 +28231,7 @@ label alt_day7_sl_7dl_rf_good:
         $ meet('sl', 'Славя')
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_good_rf = True
+    $ renpy.save_persistent()
     show acm_logo_sl_till_sunrise with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -28481,7 +28487,7 @@ label alt_day7_sl_7dl_postscriptum:
     "Вот только не будет у нас никаких личных отношений."
     th "Хотя было бы неплохо — такая-то экономия на терапевте."
     $ meet('ka','Доктор Славя')
-    #show sl normal casual with dissolve
+    show sl normal casual with dissolve
     ka "Здравствуй, Семён."
     me "Охайо."
     ka "Снова вернулся к японскому?"
@@ -28510,7 +28516,7 @@ label alt_day7_sl_7dl_postscriptum:
     "Золотые косы оказались париком."
     "А за контактными линзами глаза оказались вовсе зелёными."
     hide sl
-    show ka normal casual
+    #show ka normal casual
     with dissolve2
     me "Но… зачем?"
     "Я пытаюсь вглядеться как следует, сделать что-то но не вижу Славю."
@@ -28539,17 +28545,17 @@ label alt_day7_sl_7dl_postscriptum:
     sl "А я тебе подарок принесла."
     "С жалостью сообщила Стася."
     sl "Взамен утерянного."
-    "Она развернула плакат, и я жадно вгляделся в любимые черты."
     hide sl
     show frame_sl
     with dissolve
+    "Она развернула плакат, и я жадно вгляделся в любимые черты."
     "Здесь моя Славя, моя…"
     me "Спасибо…"
     sl "А я похожа на неё?"
-    "Спросила меня сероглазая блондинка."
     hide frame_sl
     #possible KOLHOZ со спрайтами
     with fade
+    "Спросила меня сероглазая блондинка."
     "Невысокая, хрупкая с прозрачной кожей, со взглядом аниме-девочки."
     "Похожа ли она на Славю?"
     "Да ничего общего."
@@ -29449,6 +29455,7 @@ label alt_day7_sl_7dl_herc_neon:
     "Но это уже не имело значения."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_herc_good2 = True
+    $ renpy.save_persistent()
     show acm_logo_sl_neon with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -29706,6 +29713,7 @@ label alt_day7_sl_7dl_herc_right_road:
     #TODO: цг выше в медленном zoomout
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_herc_good = True
+    $ renpy.save_persistent()
     show acm_logo_sl_right_road with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -30134,6 +30142,7 @@ label alt_day7_sl_7dl_loki_radio:
     "На то они и радио «Пустота»."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_loki_good = True
+    $ renpy.save_persistent()
     show acm_logo_sl_radio with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -30549,6 +30558,7 @@ label alt_day7_sl_7dl_loki_am_home:
     th "Я дома. {w}Куда мне торопиться?"
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_loki_neu = True
+    $ renpy.save_persistent()
     show acm_logo_sl_am_home with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -30603,6 +30613,7 @@ label alt_day7_sl_7dl_loki_oafa:
     "Нажал и застыл в ожидании, не зная ещё, что ждёт впереди."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_loki_rej = True
+    $ renpy.save_persistent()
     show acm_logo_sl_pan with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -31217,6 +31228,7 @@ label alt_day7_sl_7dl_loopback:
     me "Домой."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_good2 = True
+    $ renpy.save_persistent()
     show acm_logo_sl_dr_un with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -31875,6 +31887,7 @@ label alt_day7_sl_7dl_wasted:
     "Не напрасно?"
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_good = True
+    $ renpy.save_persistent()
     show acm_logo_sl_wasted with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -32386,6 +32399,7 @@ label alt_day7_sl_7dl_missed:
     dreamgirl "Промазал."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_bad = True
+    $ renpy.save_persistent()
     show acm_logo_sl_missed with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
