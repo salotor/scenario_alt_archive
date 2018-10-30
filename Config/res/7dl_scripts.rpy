@@ -403,11 +403,15 @@ init -5 python:
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
             elif routetag == "sl7dlneu": #Ветка 7дл, тру
-                renpy.show("sl smile casual", zorder=1, at_list=[left])
+                renpy.show("sl serious casual", zorder=1, at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
             elif routetag == "sl7dlgood": #Ветка 7дл, тру
                 renpy.show("sl happy casual", zorder=1, at_list=[left])
+                renpy.transition(moveinleft)
+                renpy.pause(2.0)
+            elif routetag == "sl7dluv": #Ветка 7дл, тру
+                renpy.show("sl normal_uv dress", zorder=1, at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
             elif routetag == "sl7dlbad": #Ветка 7дл, тру

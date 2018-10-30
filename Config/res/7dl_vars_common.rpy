@@ -120,7 +120,8 @@ label scenario__alt_sevendl:
 # ------------------------------------------------
     jump start_menu_7dl
 
-init 4: # вызываем все переменные в init (необходимо для работы повторов)
+init 4:
+# вызываем все переменные в init (необходимо для работы повторов)
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars
@@ -155,6 +156,9 @@ init 4: # вызываем все переменные в init (необходи
     call alt_day5_sl_7dl_vars
     call alt_day6_sl_7dl_vars
     call alt_day7_sl_7dl_vars
+# устанавливаем при загрузке стандартные значения из БЛ для th
+    $ th_prefix = "~ "
+    $ th_suffix = " ~"
 
 label alt_day0_vars: #Переменные нулевого дня
     $ make_names_unknown_7dl()
@@ -181,7 +185,7 @@ label alt_day0_vars: #Переменные нулевого дня
     $ d3 = False
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
-    if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good: # условия не соответствуют появлению кусочков паззла
+    if persistent.dv_7dl_tulpa and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_7dl_true:
         $ alt_day_binder = 1
     else:
         $ alt_day_binder = 0

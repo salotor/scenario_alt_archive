@@ -5129,15 +5129,16 @@ label alt_day5_mi_dj_supper:
     "Я обогнал её и встал на пути."
     window hide
     scene bg ext_musclub_day
-    show mi dontlike pioneer
+    show mi_shade
     with dissolve
-
     "Штаб-квартира Мику располагалась в одной из самых высоких точек лагеря, поэтому сюда свободно добивало садящееся светило."
     "Поэтому я смотрел на Мику, а видел чёрный силуэт без опознавательных знаков."
     "И жутковато становилось от мысли, что, возможно, она и внутри сейчас такая же — нивелированно-чёрная."
     "И виноват в этом мой длинный язык."
     me "Слышишь? Я хочу, чтобы ты вернулась."
-    show mi normal pioneer with dspr
+    hide mi_shade
+    show mi normal pioneer
+    with dspr
     mi "Я здесь… Понесёшь гитару?"
     me "Да, конечно."
     mi "Тогда бери ту, что у стены. Нас ждут на площади."
@@ -10300,9 +10301,9 @@ label alt_day6_mi_dj_dance2_fail:
                     window hide
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
+                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
-                    $ renpy.save_persistent()
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif herc:
@@ -10325,9 +10326,9 @@ label alt_day6_mi_dj_dance2_fail:
                     stop sound_loop fadeout 0
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
+                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
-                    $ renpy.save_persistent()
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif loki:
@@ -10362,9 +10363,9 @@ label alt_day6_mi_dj_dance2_fail:
                     window hide
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
+                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
-                    $ renpy.save_persistent()
                     $ renpy.pause(7.4, hard=True)
                     return
             show unblink
@@ -12151,9 +12152,9 @@ label alt_day7_mi_dj_bad_end:
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_bad = True
+    $ renpy.save_persistent()
     show acm_logo_mi_new_happy with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -12313,9 +12314,9 @@ label alt_day7_mi_dj_true_end:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_true = True
+    $ renpy.save_persistent()
     show acm_logo_mi_namiki with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -12686,9 +12687,9 @@ label alt_day7_mi_dj_jp_good_end:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_good_jap = True
+    $ renpy.save_persistent()
     show acm_logo_mi_ricochet with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     play music music_7dl["happy_ending"] fadein 5
     call alt_7dl_titles
@@ -13018,9 +13019,9 @@ label alt_day7_mi_dj_rf_good_end:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_good_rf = True
+    $ renpy.save_persistent()
     show acm_logo_mi_allyours with moveinright:
         pos (1600, 1020)
-    $ renpy.save_persistent()
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
