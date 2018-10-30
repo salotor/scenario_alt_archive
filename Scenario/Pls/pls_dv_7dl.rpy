@@ -212,11 +212,12 @@ label alt_day7_dv_7dl_start:
     $ persistent.sprite_time = "prolog"
     $ prolog_time()
     if persistent.dv_7dl_good_ussr:
-        menu:
+        menu:    # нужно перенести это в прошлый лейбл под alt_day7_dv_7dl_check == 1, иначе текст вообще не стыкуется. И return организовать, чтобы не продолжался текст после концовки
             "Логичный исход…":
                 call alt_day7_dv_7dl_true
                 pause(1)
                 $ renpy.save_persistent()
+                return
             "Я иду!":
                pass
     if alt_day7_dv_7dl_check == 1:
