@@ -200,7 +200,7 @@ init 1:
     $ music_list_7dl["SURF - Take Care"] = default_7dl_path+"Sound/music/surf_7dl.ogg"
     $ music_list_7dl["Mattdeguia - Daylight"] = default_7dl_path+"Sound/music/too_serious_7dl.ogg"
 #0.34.b
-    $ music_list_7dl["DeadPunk - Despair"] = default_7dl_path+"Sound/music/despair_7dl.ogg"
+    $ music_list_7dl["DeadPunk - Hell"] = default_7dl_path+"Sound/music/despair_7dl.ogg"
     $ music_list_7dl["Steezy Prime - Explore"] = default_7dl_path+"Sound/music/explore_7dl.ogg"
     $ music_list_7dl["ППВК - Последнее лето"] = default_7dl_path+"Sound/music/last_summer_7dl.ogg"
     $ music_list_7dl["ППВК - Волшебство уходит"] = default_7dl_path+"Sound/music/magic_is_gone_7dl.ogg"
@@ -215,7 +215,7 @@ init 1:
     $ music_list_7dl["Olafur Arnalds - Not Alone"] = default_7dl_path+"Sound/music/not_alone_7dl.ogg"
     $ music_list_7dl["Kevin MacLeod - Your Call High Quality"] = default_7dl_path+"Sound/music/shappihn_7dl.ogg"
     $ music_list_7dl["April Rain - Im All Crying Inside"] = default_7dl_path+"Sound/music/tearing_sobs_7dl.ogg"
-    $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/yume_akari_7dl.ogg"
+    $ music_list_7dl["My Royal Guardian - Yume Akari"] = default_7dl_path+"Sound/music/yume_akari_7dl.ogg"
     $ music_list_7dl["Kevin MacLeod - Niles Blues"] = default_7dl_path+"Sound/music/viola_7dl.ogg"
     $ music_list_7dl["Аревик Аветисян – Воспоминание"] = default_7dl_path+"Sound/music/sorrow_7dl.ogg"
     $ music_list_7dl["DeadPunk - Smells Like My Grave"] = default_7dl_path+"Sound/music/smlg_7dl.ogg"
@@ -235,3 +235,5 @@ init 1:
     $ music_list_7dl["Portishead - Roads (Instrumental Cover)"] = default_7dl_path+"Sound/music/war_to_fight_7dl.ogg"
     $ music_list_7dl["DeadPunk - Alone"] = default_7dl_path+"Sound/music/alone_7dl.ogg"
     $ music_list_7dl["DeadPunk - SaveMe"] = default_7dl_path+"Sound/music/saveme_7dl.ogg"
+    $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/let_me_down_7dl.ogg"
+    $ music_list_7dl["Natureworld1986 - Underworld"] = default_7dl_path+"Sound/music/abyss_call_7dl.ogg"
