@@ -678,6 +678,7 @@ init:
     
     image cg d6_dance_alt_7dl = get_image_7dl("cg/d6_dance_alt_7dl.jpg")
     image cg d6_dv_dance_7dl = get_image_7dl("cg/d6_dv_dance_7dl.jpg")
+    image cg d6_dv_dance_normal_7dl = get_image_7dl("cg/d6_dv_dance_normal_7dl.jpg")
     image cg d6_dv_hentai_7dl = get_image_7dl("cg/d6_dv_hentai_7dl.png")
     image cg d6_dv_hentai2_7dl = get_image_7dl("cg/d6_dv_hentai2_7dl.jpg")
     
@@ -907,6 +908,7 @@ init:
     image acm_logo_dv_theresnoway = get_image_7dl("gui/acm/acm_logo_dv_theresnoway_7dl.png")
     image acm_logo_dv_tillend = get_image_7dl("gui/acm/acm_logo_dv_tillend_7dl.png")
     image acm_logo_dv_tulpa = get_image_7dl("gui/acm/acm_logo_dv_tulpa_7dl.png")
+    image acm_logo_dv_true = get_image_7dl("gui/acm/acm_logo_dv_true_7dl.png") 
     image acm_logo_me_lamp = get_image_7dl("gui/acm/acm_logo_me_lamp_7dl.png") 
     image acm_logo_dv_ussr_good = get_image_7dl("gui/acm/acm_logo_dv_ussr_good_7dl.png")
     
@@ -1036,6 +1038,7 @@ init:
     $ music_7dl = {}
 
     $ music_7dl["abyss_call"] = get_music_7dl("abyss_call_7dl.ogg")
+    $ music_7dl["aftermath"] = get_music_7dl("aftermath_7dl.ogg")
     $ music_7dl["alice_theme"] = get_music_7dl("alice_theme_7dl.ogg")
     $ music_7dl["alone"] = get_music_7dl("alone_7dl.ogg")
     $ music_7dl["afraid_of_destiny"] = get_music_7dl("afraid_of_destiny_7dl.ogg")
@@ -1061,6 +1064,7 @@ init:
     $ music_7dl["closetoyou"] = get_music_7dl("closetoyou_7dl.ogg")
     $ music_7dl["clueless_hope"] = get_music_7dl("clueless_hope_7dl.ogg")
     
+    $ music_7dl["dawn"] = get_music_7dl("dawn_7dl.ogg")
     $ music_7dl["danceagain"] = get_music_7dl("danceagain_7dl.ogg")
     $ music_7dl["dance_with_me"] = get_music_7dl("dance_with_me_7dl.ogg")
     $ music_7dl["dance_with_me_piano"] = get_music_7dl("dance_with_me_piano_7dl.ogg")
@@ -1068,6 +1072,7 @@ init:
     $ music_7dl["dead_silence"] = get_music_7dl("dead_silence_7dl.ogg")
     $ music_7dl["deep_inside"] = get_music_7dl("deep_inside_7dl.ogg")
     $ music_7dl["despair"] = get_music_7dl("despair_7dl.ogg")
+    $ music_7dl["devastated"] = get_music_7dl("devastated_7dl.ogg")
     $ music_7dl["dropit"] = get_music_7dl("dropit_7dl.ogg")
     $ music_7dl["dv_guitar"] = get_music_7dl("dv_guitar_7dl.ogg")
 
@@ -1109,6 +1114,7 @@ init:
     $ music_7dl["intro1"] = get_music_7dl("intro1_7dl.ogg")
     $ music_7dl["intro2"] = get_music_7dl("intro2_7dl.ogg")
     $ music_7dl["iwantmagic"] = get_music_7dl("iwantmagic_7dl.ogg")
+    $ music_7dl["i_will_find_you"] = get_music_7dl("i_will_find_you_7dl.ogg")
     
     $ music_7dl["knock"] = get_music_7dl("knock_7dl.ogg")
     $ music_7dl["kiss_you"] = get_music_7dl("kiss_you_7dl.ogg")
