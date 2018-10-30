@@ -601,6 +601,17 @@ label sdl_achvlist_mi7dl_Author:
     else:
         show de_achiv_lock10 with dissolve:
             xcenter 800 ycenter 642     
+    #Горькая правда
+    if persistent.alt_mi_7dl_ps == True:
+        show acm_logo_mi_bitter_truth  with dissolve:
+            xcenter 800 ycenter 706 
+        show de_check_active4 with dissolve:
+            pos (590, 680)
+    else:
+        show de_achiv_lock4 with dissolve:
+            xcenter 800 ycenter 706 
+        show de_info_inactive4 with dissolve:
+            pos (590, 680)
     call screen sdl_achvlist_mi7dl_Author
 # ------------------------------------------------  
 screen sdl_achvlist_mi7dl_Author:
@@ -741,6 +752,18 @@ screen sdl_achvlist_mi7dl_Author:
                 hovered [Show ("de_check_active10", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_check_active10", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 action [Hide("sdl_mi_cl_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Hide("sdl_mi_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active10", transition=Dissolve(0.5)), Replay("alt_day7_mi_7dl_dam_CPU", scope={"alt_replay_on" : "True"}, locked=False), Play('ambience', default_7dl_path+"Sound/ambience/ambience_safe_7dl.ogg", selected=None)]
+        if persistent.alt_mi_7dl_ps:
+            hotspot ((590, 680, 50, 52)): #Postscriptum-Miku-Bitter-Jump
+                hover_sound sdl_achv_click
+                hovered [Show ("de_check_active4", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_check_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))] 
+                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_me_smtA", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_me_sm_active", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active3", transition=Dissolve(0.5)), Replay("alt_day7_mi_7dl_postscriptum", scope={"alt_replay_on" : "True"}, locked=False), Play('ambience', default_7dl_path+"Sound/ambience/ambience_safe_7dl.ogg", selected=None)]
+        else:
+            hotspot ((590, 680, 50, 50)): #Ende-Info
+                hover_sound sdl_achv_info
+                hovered [Show ("de_info_active4", transition=Dissolve(0.5)), Show ("sdl_achv_infochkAD", transition=Dissolve(0.5))]
+                unhovered [Hide ("de_info_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkAD", transition=Dissolve(0.5))]
+                action [Hide("de_info_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkAD", transition=Dissolve(0.5))]        
         
         hotspot ((0, 344, 360, 390)): #Алисхен
             hover_sound sdl_achv_pagina
@@ -3271,17 +3294,6 @@ label sdl_achvlist_mesmt_Author:
     else:
         show de_achiv_lock3 with dissolve:
             xcenter 800 ycenter 194
-    #Горькая правда
-    if persistent.alt_mi_7dl_ps == True:
-        show acm_logo_mi_bitter_truth  with dissolve:
-            xcenter 800 ycenter 258 
-        show de_check_active4 with dissolve:
-            pos (590, 232)
-    else:
-        show de_achiv_lock4 with dissolve:
-            xcenter 800 ycenter 258 
-        show de_info_inactive4 with dissolve:
-            pos (590, 232)
     call screen sdl_achvlist_mesmt_Author
 # ------------------------------------------------ 
 screen sdl_achvlist_mesmt_Author:
@@ -3327,18 +3339,6 @@ screen sdl_achvlist_mesmt_Author:
             hovered [Show("sdl_achv_pst_me", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_pst_me", transition=Dissolve(0.5))]
             action [Show("sdl_achv_pst_me", transition=Dissolve(0.5))] 
-        if persistent.alt_mi_7dl_ps:
-            hotspot ((590, 232, 50, 52)): #Postscriptum-Miku-Bitter-Jump
-                hover_sound sdl_achv_click
-                hovered [Show ("de_check_active4", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
-                unhovered [Hide ("de_check_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))] 
-                action [Hide("sdl_sl_wh_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_me_smtA", transition=Dissolve(1.0)), Hide("sdl_logo_inactive", transition=Dissolve(0.5)), Hide("sdl_me_sm_active", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active3", transition=Dissolve(0.5)), Replay("alt_day7_mi_7dl_postscriptum", scope={"alt_replay_on" : "True"}, locked=False), Play('ambience', default_7dl_path+"Sound/ambience/ambience_safe_7dl.ogg", selected=None)]
-        else:
-            hotspot ((590, 232, 50, 50)): #Ende-Info
-                hover_sound sdl_achv_info
-                hovered [Show ("de_info_active4", transition=Dissolve(0.5)), Show ("sdl_achv_infochkAD", transition=Dissolve(0.5))]
-                unhovered [Hide ("de_info_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkAD", transition=Dissolve(0.5))]
-                action [Hide("de_info_active4", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkAD", transition=Dissolve(0.5))]        
         hotspot ((0, 0, 550, 340)): #Мику
             hover_sound sdl_achv_pagina
             hovered [Show("mi_button_active", transition=Dissolve(0.5))]
@@ -3396,6 +3396,7 @@ label sdl_achvlist_mi7dl_clear_Author:
     $ persistent.mi_7dl_herc_exc = False
     $ persistent.mi_7dl_loki_exc = False
     $ persistent.mi_7dl_dr_exc = False
+    $ persistent.alt_mi_7dl_ps = False
     call screen sdl_achvlist_mi7dl_Author
 # ------------------------------------------------ 
 ######################МИКУ-КЛАССИК######################################
@@ -3522,7 +3523,6 @@ label sdl_achvlist_mesmt_clear_Author:
     $ persistent.alt_lamp = False
     $ persistent.alt_deep = False
     $ persistent.alt_qte = False
-    $ persistent.alt_mi_7dl_ps = False
     call screen sdl_achvlist_mesmt_Author
     
 ##|||||||||||||||||||||||||||||||||||ДУБЛИ КОНЦОВОК||||||||||||||||||||||||||||||||||||||||||||||||      
