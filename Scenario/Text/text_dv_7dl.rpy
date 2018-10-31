@@ -13278,7 +13278,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     "Но Алиса… {w}Алиса значила куда больше."
     stop ambience fadeout 3
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_good_ussr_rf = True
+    $ persistent.dv_7dl_good_rf = True
     $ renpy.save_persistent()
     show acm_logo_dv_morethanlife with moveinright:
         pos (1600, 1020)
