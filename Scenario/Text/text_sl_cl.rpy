@@ -7906,7 +7906,7 @@ label alt_day5_sl_night:
     "Скотина озабоченная."
     window hide
     scene bg ext_houses_night_7dl with dissolve
-    show sl2 smile2 pioneer2 with dspr
+    show sl2 smile2 pioneer2 with dspr    # нужен pioneer2 под sl2
     "Славе было направо, мне прямо."
     sl "Ну… Это был очень длинный день."
     "Я согласно кивнул."
@@ -7918,16 +7918,16 @@ label alt_day5_sl_night:
         menu:
             "Я не хочу!":
                 "Жалостливо произнёс я."
-                show sl2 laugh pioneer2 with dspr
+                show sl2 laugh pioneer2 with dspr    # нужен pioneer2 под sl2
                 sl "И что ты предлагаешь?"
                 "Я с намёком покосился на связку в её руках."
-                show sl2 scared pioneer2 with dspr
+                show sl2 scared pioneer2 with dspr    # нужен pioneer2 под sl2
                 sl "Что? И думать не смей, что люди подумают?!"
                 me "Ничего нового они всё равно не подумают."
                 "Я взял её за руку."
                 me "Я видел тут один домик на отшибе…"
                 $ alt_day5_sl_extra_house = True
-                show sl2 tender pioneer2 with dspr
+                show sl2 tender pioneer2 with dspr    # нужен pioneer2 под sl2
                 sl "Должно быть, ты шутишь."
                 me "Я убийственно серьёзен."
                 "Она попыталась что-то возразить, но я положил палец ей на губы:"

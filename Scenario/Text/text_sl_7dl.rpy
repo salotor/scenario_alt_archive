@@ -13744,7 +13744,10 @@ label alt_day6_sl_7dl_camping:
     sl "А чего мне стесняться?"
     if alt_day5_sl_7dl_hentai_done:
         "Я повернулся на голос и стал жадно разглядывать девушку."
-        show sl2 serious body with dissolve
+        if persistent.hentai_graphics_7dl:
+            show sl2 serious body with dissolve
+        else:
+            show sl2 serious swim with dissolve
         "Не знаю, что на меня нашло, о чём я думал вообще, но не мог оторваться."
         "Мы уже видели друг друга обнажёнными."
         "Но одно дело — в тёмном домике, практически под одеялом, и совсем другое — так."
@@ -13755,7 +13758,10 @@ label alt_day6_sl_7dl_camping:
         "Точка кульминации генетического отбора, шедевр эволюции."
         sl "Если продолжишь так смотреть на меня, боюсь, нам придётся искать местечко поудобнее."
         me "Извини, что?"
-        show sl2 shy body with dissolve
+        if persistent.hentai_graphics_7dl:
+            show sl2 shy body with dissolve
+        else:
+            show sl2 shy swim with dissolve
         "Впервые за всё время, что мы стояли, она сделала движение рукой, будто пытаясь прикрыть низ живота."
         sl "У нас желания на двоих. {w}Ты хочешь попробовать продолжить то, что у нас не получилось."
         me "Очень хочу."
@@ -13763,20 +13769,35 @@ label alt_day6_sl_7dl_camping:
         "В голове всплыли слова, которые я, кажется, уже говорил кому-то сегодня."
         me "Память. Я хочу, чтобы тебе было что вспомнить."
         me "Значит, и сделано всё должно быть по-человечески."
+        if persistent.hentai_graphics_7dl:
+            show sl2 laugh body with dspr
+        else:
+            show sl2 laugh swim with dspr
         sl "Говоришь как ловелас со стажем."
-        show sl2 laugh body with dspr
         "Несмело рассмеялась Славя."
+        if persistent.hentai_graphics_7dl:
+            show sl2 smile body with dspr
+        else:
+            show sl2 smile swim with dspr
     else:
         me "Да, тебе определённо стесняться нечего."
         "Я едва успел отвернуться."
         me "Если у вас такие нравы…"
     sl "Пустишь к костру? Холодно…"
     me "Только при условии, что ты оденешься."
+    if alt_day5_sl_7dl_hentai_done:
+        if persistent.hentai_graphics_7dl:
+            show sl2 laugh body with dissolve
+        else:
+            show sl2 laugh swim with dissolve
     "Славя рассмеялась каким-то незнакомым, грудным смехом."
-    show sl2 laugh body close with dissolve
+    if persistent.hentai_graphics_7dl:
+        show sl2 smile2 body close with dissolve
+    else:
+        show sl2 smile2 swim close with dissolve
     "Встала передо мной и, наклонившись, поцеловала в губы."
     sl "Какой рассеянный юноша… {w}Так легко отвлекается."
-    show sl2 normal body with dissolve
+    hide sl2 with dissolve
     "Вместо ответа я потянул с себя свитер."
     "В отличие от девочки я не был сколько-то мокрым, потому никакой ветерок мне угрозой не был."
     me "Наденешь, когда закончишь с формой."
@@ -13903,11 +13924,11 @@ label alt_day6_sl_7dl_camping:
     sl "Значит, это правда, что я — это последний шанс, который ты дал миру?"
     me "И самому себе. {w}Давай собираться, скоро роса выпадет."
     sl "Озябнем, да."
-    show sl2 normal pioneer far with dissolve
+    show sl2 normal pioneer far with dissolve    # far-версий для sl2 не планируется?
     "Неохотно высвободившись из моих рук, Славя поднялась."
     sl "Потушишь костёр?"
     me "Э…"
-    show sl2 laugh pioneer far with dspr
+    show sl2 laugh pioneer far with dspr    # far-версий для sl2 не планируется?
     sl "Да, это я тоже знаю."
     "Уже не скрываясь, рассмеялась Славя."
     me "Мне кажется, это нечестно — понимать такие вещи в одностороннем порядке!"
@@ -26970,7 +26991,7 @@ label alt_day7_sl_7dl_leaving:
         "Махали мне, призывая выйти и присоединиться, но плевать я хотел."
         "Ещё одну благоглупость от вожатой на посошок? Увольте."
         "Лучше я усну как можно быстрее и всё это закончится уже."
-        "Так и не доЗвавшись нас, Ольга что-то наскоро сказала стоящим вокруг неё пионерам."
+        "Так и не дозвавшись нас, Ольга что-то наскоро сказала стоящим вокруг неё пионерам."
         "Все сплотились вокруг неё и изобразили некое подобие коллективных объятий."
         th "Коллективизм, прости рандом."
         "Потянулись потихоньку в салон."
