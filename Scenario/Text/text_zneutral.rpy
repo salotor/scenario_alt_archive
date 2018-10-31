@@ -3104,7 +3104,7 @@ label alt_day4_neu_supper:
         "И я сделал единственное, что мог в такой ситуации."
         "Я мужественно {w}побежал."
         window hide
-        scene bg ext_dining_hall_away_sunset with dspr    # running
+        scene bg ext_dining_hall_away_sunset at running
         with zoomin
     
         th "Почему она не заметила некоторые изменения в рецепте?"
@@ -3178,14 +3178,16 @@ label alt_day4_neu_supper:
         "Я подошёл."
         "И наконец узнал страшный секрет активистки."
         play music music_7dl["beasteye"] fadein 3
-        "В огромном гнезде из тряпок, на полу, в окружении коробок с консервами, сухим молоком и вакуумными упаковками копошился крохотный, лобастый щен!"    # цг со щенком
+        window hide
+        scene cg d6_sl_puppy_7dl
+        with dissolve
+        "В огромном гнезде из тряпок, на полу, в окружении коробок с консервами, сухим молоком и вакуумными упаковками копошился крохотный, лобастый щен!"
         "Белоснежный, с резко выделяющимся чёрным носом и пуговками-глазами."
         "Больше похожий на медведя или плюшевую игрушку."
         
         "Буф!" with vpunch
         "Он задрал голову и звонко тявкнул на нас."
         me "Самоед."
-        show mi normal pioneer with dspr
         mi "Нет."
         "Серьёзно ответила Мику."
         mi "Это собака."
@@ -3198,7 +3200,10 @@ label alt_day4_neu_supper:
         mi "Эх. А мне тоже никогда собаку не разрешали заводить."
         me "Но, наверное, их запрещено держать на территории?"
         mi "Именно поэтому ты никому ничего не скажешь."
-        show mi smile pioneer with dspr
+        window hide
+        scene bg int_attic2_night_7dl
+        show mi smile pioneer
+        with dissolve
         "В приветливой улыбке японки я разглядел нечто зловещее и поспешил согласиться."
         me "Но так держать собаку…"
         show sl normal pioneer at left with dissolve
