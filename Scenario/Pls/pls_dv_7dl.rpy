@@ -220,7 +220,7 @@ label alt_day7_dv_7dl_start:
                     $ renpy.save_persistent()
                     return
                 "Я иду!":
-                   pass
+                    pass
         if karma > 75:
             call alt_day7_dv_7dl_ussr_epilogue
             pause(1)
