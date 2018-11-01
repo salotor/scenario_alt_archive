@@ -194,7 +194,10 @@ label alt_day7_un_7dl_start:
                     call alt_day7_un_7dl_rf
                     pause(1)
                 "Прочь из автобуса!":
-                    call alt_day7_un_7dl_ussr
+                    if persistent.un_7dl_good_rf and persistent.un_7dl_good_ussr:
+                        call alt_day7_un_7dl_true
+                    else:
+                        call alt_day7_un_7dl_ussr
                     pause(1)
         else:
             call alt_day7_un_7dl_rf
