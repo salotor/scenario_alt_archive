@@ -499,6 +499,7 @@ init:
     image bg int_mine_water_7dl = get_image_7dl("bg/int_mine_water_7dl.jpg")
     image bg int_mt_sam_room_close_7dl = get_image_7dl("bg/int_mt_sam_room_close_7dl.jpg")
     image bg int_mt_sam_room_7dl = get_image_7dl("bg/int_mt_sam_room_7dl.jpg")
+    image bg int_mt_sam_room_night_7dl = get_image_7dl("bg/int_mt_sam_room_night_7dl.jpg")
     image bg int_mt_sam_room_away_7dl = get_image_7dl("bg/int_mt_sam_room_away_7dl.jpg")
     image bg int_old_building_day_7dl = get_image_7dl("bg/int_old_building_day_7dl.jpg")
     image bg int_potato_storage_7dl = get_image_7dl("bg/int_potato_storage_7dl.png")
