@@ -12277,7 +12277,7 @@ label alt_day7_un_7dl_true:
     scene bg ext_city_night_7dl
     with dissolve
     play ambience ambience_7dl["night_city"] fadein 3
-    play musiplay music music_7dl["dawn"] fadein 3
+    play music music_7dl["dawn"] fadein 3
     "Честно сказать, я думал, она откажет мне в гостеприимстве."
     "Всё-таки её отъезд в другой город больше был похож на бегство, а оно обычно сопровождается сжиганием мостов."
     "Пусть я был здорово младше, я тоже был таким мостом."

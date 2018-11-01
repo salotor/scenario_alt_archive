@@ -14299,7 +14299,7 @@ label alt_day7_dv_7dl_true:
     "Вот только не сейчас."
     "На часах было значилась половина седьмого — как раз достаточно времени, чтобы помыться, одеться и хотя бы чуть-чуть проснуться."
     window hide
-    scene bg ext_railbridge_sunset_7dl
+    scene bg ext_railbridge_sunset_7dl    # ext_railstation_7dl
     with dissolve
     "…"
     "Чемодан за ней я нёс к поезду."
