@@ -532,6 +532,7 @@ init:
     image bg ext_musclub_snowy_day_7dl = get_image_7dl("bg/outro/ext_musclub_snowy_day_7dl.jpg")
     image bg ext_mv2_7dl = get_image_7dl("bg/outro/ext_mv2_7dl.jpg")
     image bg ext_railbridge_sunset_7dl = get_image_7dl("bg/outro/ext_railbridge_sunset_7dl.png")
+    image bg ext_railstation_7dl = get_image_7dl("bg/outro/ext_railstation_7dl.png")
     image bg ext_road_winter_7dl = get_image_7dl("bg/outro/ext_road_winter_7dl.jpg")
     image bg ext_winter_night_7dl = get_image_7dl("bg/outro/ext_winter_night_7dl.png")
     image bg ext_winter_night_rotate_7dl = get_image_7dl("bg/outro/ext_winter_night_rotate_7dl.png")
@@ -965,6 +966,7 @@ init:
     image acm_logo_un_shelter = get_image_7dl("gui/acm/acm_logo_un_shelter_7dl.png")
     image acm_logo_un_sui = get_image_7dl("gui/acm/acm_logo_un_sui_7dl.png")
     image acm_logo_un_transit = get_image_7dl("gui/acm/acm_logo_un_transit_7dl.png")
+    image acm_logo_un_7dl_true = get_image_7dl("gui/acm/acm_logo_un_7dl_true_7dl.png")
     
     image acm_logo_us_bad = get_image_7dl("gui/acm/acm_logo_us_bad_7dl.png")
     image acm_logo_us_fairytale = get_image_7dl("gui/acm/acm_logo_us_fairytale_7dl.png")
@@ -1055,6 +1057,7 @@ init:
     $ music_7dl["breath_again"] = get_music_7dl("breath_again_7dl.ogg")
     $ music_7dl["breath_again_slow"] = get_music_7dl("breath_again_slow_7dl.ogg")
     $ music_7dl["breath_me"] = get_music_7dl("breath_me_7dl.ogg")
+    $ music_7dl["brigh_you"] = get_music_7dl("brigh_you_7dl.ogg")
     $ music_7dl["brim"] = get_music_7dl("brim_7dl.ogg")
     $ music_7dl["bureaucracy"] = get_music_7dl("bureaucracy_7dl.ogg")
     
@@ -1117,6 +1120,7 @@ init:
     $ music_7dl["i_will_find_you"] = get_music_7dl("i_will_find_you_7dl.ogg")
     
     $ music_7dl["knock"] = get_music_7dl("knock_7dl.ogg")
+    $ music_7dl["keep_looking"] = get_music_7dl("keep_looking_7dl.ogg")
     $ music_7dl["kiss_you"] = get_music_7dl("kiss_you_7dl.ogg")
     
     $ music_7dl["lastlight_guitar"] = get_music_7dl("lastlight_guitar_7dl.ogg")
