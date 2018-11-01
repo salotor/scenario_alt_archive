@@ -2298,8 +2298,8 @@ label sdl_achvlist_un7dl_Author:
     show sdl_achv_extB_7dl: #Иконка Ausgang  
         pos(380, 350)
     #ТруЪ
-    if persistent.un_7dl_true: 
-        show acm_logo_un_7dl_true  with dissolve:
+    if persistent.un_7dl_true:
+        show acm_logo_un_true  with dissolve:
             xcenter 800 ycenter 66
         show de_check_inactive1 with dissolve:
             pos (590, 40)
