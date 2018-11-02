@@ -504,7 +504,7 @@ label sdl_achvlist_mi7dl_Author:
     #ТруЪ-энд
     if persistent.mi_7dl_true: 
         show acm_logo_mi_thank_you  with dissolve:
-            xcenter 800 ycenter 66 
+            xcenter 800 ycenter 66
         show de_check_inactive1 with dissolve:
             pos (590, 40)
     else:
@@ -518,7 +518,7 @@ label sdl_achvlist_mi7dl_Author:
     #Гуд-M
     if persistent.mi_7dl_good_human:
         show acm_logo_mi_dark_dreams  with dissolve:
-            xcenter 800 ycenter 130 
+            xcenter 800 ycenter 130
         show de_check_inactive2 with dissolve:
             pos (590, 104)
     else:
@@ -527,7 +527,7 @@ label sdl_achvlist_mi7dl_Author:
     #Гуд-S
     if persistent.mi_7dl_good_star:
         show acm_logo_mi_sparkle  with dissolve:
-            xcenter 800 ycenter 194  
+            xcenter 800 ycenter 194
         show de_check_inactive3 with dissolve:
             pos (590, 168)
     else:
@@ -536,12 +536,12 @@ label sdl_achvlist_mi7dl_Author:
     #Эксклюзив-Дрищ
     if persistent.mi_7dl_dr_exc:
         show acm_logo_mi_watashi  with dissolve:
-            xcenter 800 ycenter 258 
+            xcenter 800 ycenter 258
         show de_check_inactive4 with dissolve:
             pos (590, 232)
     else:
         show de_achiv_lock4 with dissolve:
-            xcenter 800 ycenter 258 
+            xcenter 800 ycenter 258
         if not (persistent.mi_7dl_good_human or persistent.mi_7dl_good_star):
             show de_info_inactive4 with dissolve:
                 pos (590, 232)
@@ -550,12 +550,12 @@ label sdl_achvlist_mi7dl_Author:
     #Эксклюзив-Локи
     if persistent.mi_7dl_loki_exc:
         show acm_logo_mi_come  with dissolve:
-            xcenter 800 ycenter 322 
+            xcenter 800 ycenter 322
         show de_check_inactive5 with dissolve:
             pos (590, 296)
     else:
         show de_achiv_lock5 with dissolve:
-            xcenter 800 ycenter 322 
+            xcenter 800 ycenter 322
         if not (persistent.mi_7dl_good_human or persistent.mi_7dl_good_star):
             show de_info_inactive5 with dissolve:
                 pos (590, 296)
@@ -564,12 +564,12 @@ label sdl_achvlist_mi7dl_Author:
     #Эксклюзив-Герк
     if persistent.mi_7dl_herc_exc:
         show acm_logo_mi_unlike  with dissolve:
-            xcenter 800 ycenter 386 
+            xcenter 800 ycenter 386
         show de_check_inactive6 with dissolve:
             pos (590, 360)
     else:
         show de_achiv_lock6 with dissolve:
-            xcenter 800 ycenter 386 
+            xcenter 800 ycenter 386
         if not (persistent.mi_7dl_good_human or persistent.mi_7dl_good_star):
             show de_info_inactive6 with dissolve:
                 pos (590, 360)
@@ -578,7 +578,7 @@ label sdl_achvlist_mi7dl_Author:
     #Нейтрал-M
     if persistent.mi_7dl_neutral_human:
         show acm_logo_mi_happy_again  with dissolve:
-            xcenter 800 ycenter 450 
+            xcenter 800 ycenter 450
         show de_check_inactive7 with dissolve:
             pos (590, 424)
     else:
@@ -592,7 +592,7 @@ label sdl_achvlist_mi7dl_Author:
             pos (590, 488)
     else:
         show de_achiv_lock8 with dissolve:
-            xcenter 800 ycenter 514            
+            xcenter 800 ycenter 514
     #Бэд-M       
     if persistent.mi_7dl_bad_human: 
         show acm_logo_mi_liar  with dissolve:
@@ -601,16 +601,16 @@ label sdl_achvlist_mi7dl_Author:
             pos (590, 552)
     else:
         show de_achiv_lock9 with dissolve:
-            xcenter 800 ycenter 578    
+            xcenter 800 ycenter 578
     #Бэд-S
-    if persistent.mi_7dl_bad_star: 
+    if persistent.mi_7dl_bad_star:
         show acm_logo_mi_dam_cpu  with dissolve:
-            xcenter 800 ycenter 642 
+            xcenter 800 ycenter 642
         show de_check_inactive10 with dissolve:
             pos (590, 616)
     else:
         show de_achiv_lock10 with dissolve:
-            xcenter 800 ycenter 642     
+            xcenter 800 ycenter 642
     #Горькая правда
     if persistent.mi_7dl_ps == True:
         show acm_logo_mi_bitter_truth  with dissolve:
@@ -666,7 +666,7 @@ screen sdl_achvlist_mi7dl_Author:
                 hovered [Show ("de_check_active2", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_check_active2", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 action [Hide("sdl_logo_active", transition=Dissolve(0.5)), Hide("sdl_mi_cl_inactive", transition=Dissolve(0.5)), Hide("sdl_mi_dj_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_mi_7dlA", transition=Dissolve(1.0)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active2", transition=Dissolve(0.5)), Replay("alt_day7_mi_7dl_dark_dreams", scope={"alt_replay_on" : "True"}, locked=False), Play('ambience', default_7dl_path+"Sound/ambience/ambience_safe_7dl.ogg", selected=None, fadein=5.0)]
-        hotspot ((650, 168, 300, 52)): #Гуд-S      
+        hotspot ((650, 168, 300, 52)): #Гуд-S
             hovered [Show("sdl_achv_good_RF_mi", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_good_RF_mi", transition=Dissolve(0.5))]
             action [Show("sdl_achv_good_RF_mi", transition=Dissolve(0.5))] 
