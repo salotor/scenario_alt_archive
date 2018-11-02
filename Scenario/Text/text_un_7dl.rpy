@@ -3338,8 +3338,8 @@ label alt_day4_un_7dl_sleeptime:
 
 label alt_day5_un_7dl_begin:
     play music music_list["waltz_of_doubts"] fadein 3
+    play ambience ambience_7dl["rain"] fadein 3
     scene expression Rained("bg int_house_of_mt_sunset")
-    play sound sfx_7dl["rainy"] fadein 1
     with fade2
     "Этот сон был слишком сладок, чтобы оказаться правдой."
     "Как и всегда, впрочем."
