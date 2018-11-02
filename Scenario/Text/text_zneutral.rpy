@@ -9923,7 +9923,7 @@ label alt_day5_neu_lunch:
             scene bg ext_path2_day
             with dissolve
             sl "Что здесь…"
-            show sl surprise pioneer at zenterleft
+            show sl2 surprise pioneer at zenterleft
             extend " Семён?!"
             "Изумилась Славя."
             me "Привет."
