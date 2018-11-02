@@ -217,18 +217,15 @@ label alt_day7_dv_7dl_start:
                 "Логичный исход…":
                     call alt_day7_dv_7dl_true
                     pause(1)
-                    $ renpy.save_persistent()
                     return
                 "Я иду!":
                     pass
         if karma > 75:
             call alt_day7_dv_7dl_ussr_epilogue
             pause(1)
-            $ renpy.save_persistent()
         else:
             call alt_day7_dv_7dl_rf_epilogue
             pause(1)
-            $ renpy.save_persistent()
     elif alt_day7_dv_7dl_check == 2:
         if karma > 75:
             call alt_day7_dv_7dl_rej_ussr_end
