@@ -967,7 +967,7 @@ init:
     image acm_logo_un_shelter = get_image_7dl("gui/acm/acm_logo_un_shelter_7dl.png")
     image acm_logo_un_sui = get_image_7dl("gui/acm/acm_logo_un_sui_7dl.png")
     image acm_logo_un_transit = get_image_7dl("gui/acm/acm_logo_un_transit_7dl.png")
-    image acm_logo_un_7dl_true = get_image_7dl("gui/acm/acm_logo_un_7dl_true_7dl.png")
+    image acm_logo_un_true = get_image_7dl("gui/acm/acm_logo_un_true_7dl.png")
     
     image acm_logo_us_bad = get_image_7dl("gui/acm/acm_logo_us_bad_7dl.png")
     image acm_logo_us_fairytale = get_image_7dl("gui/acm/acm_logo_us_fairytale_7dl.png")
