@@ -702,7 +702,7 @@ label alt_day2_tournament_tour_1_new:
 
     elif alt_my_rival_1_tour.take == 'sl':
         show sl smile2 pioneer at cright with dspr
-        sl "Знаешь, я не очень хорошо в картах."
+        sl "Знаешь, я не очень хороша в картах."
         me "Да я вообще ничего про эту игру не знаю."
         "Славя улыбнулась мне и села напротив."
 

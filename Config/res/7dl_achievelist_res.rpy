@@ -266,7 +266,7 @@ init:
     
     image sdl_achv_need_routeA = Text("Рут не дописан", style="sdl_achvlistB_de_st")
     image sdl_achv_jumpchkA = Text(" Перейти\nна концовку", style="sdl_achvlistB_de_st")
-    image sdl_achv_infochkD = Text(" Требует\nпрохождения\n концовки", style="sdl_achvlistB_de_st")
+    image sdl_achv_infochkD = Text("Требует прохождения\n      концовки", style="sdl_achvlistB_de_st")
     image sdl_achv_infochkAD = Text("Требует начала с\nальтернативного\n  первого дня", style="sdl_achvlistB_de_st")
     # ------------------------------------------------
     #Типология рутов
@@ -284,22 +284,30 @@ init:
     image sdl_achv_excl_LO_mi = Text("Эксклюзивная \nконцовка Локи", style="sdl_achvlistA_mi_st")
     image sdl_achv_good_RF_mi = Text(" Хорошая \nРФ-концовка", style="sdl_achvlistA_mi_st")
     image sdl_achv_good_mi = Text("Хорошая\nконцовка", style="sdl_achvlistA_mi_st")
+    image sdl_achv_pst_mi = Text("Постскриптум", style="sdl_achvlistA_mi_st")
     # ------------------------------------------------
     #Концовки-описание (Алисхен расцветка)
-    image sdl_achv_bad_dv = Text(" Плохая\nконцовка", style="sdl_achvlistA_dv_st")
+    image sdl_achv_true_dv = Text("Истинная\nконцовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_excl_LO_dv = Text("Эксклюзивная \nконцовка Локи", style="sdl_achvlistA_dv_st")
     image sdl_achv_good_RF_dv = Text(" Хорошая \nРФ-концовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_good_US_dv = Text("  Хорошая \nСССР-концовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_rejc_RF_dv = Text(" Реджект\nРФ-концовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_rejc_US_dv = Text(" Реджект \nСССР-концовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_tran_dv = Text("Транзитная\n концовка", style="sdl_achvlistA_dv_st")
-    image sdl_achv_tran_HE_dv = Text("Транзитная \nконцовка Герка", style="sdl_achvlistA_dv_st")
+    image sdl_achv_tran_HE_dv = Text("  Транзитная\nконцовка Герка", style="sdl_achvlistA_dv_st")
+    image sdl_achv_bad_dv = Text(" Плохая\nконцовка", style="sdl_achvlistA_dv_st")
     # ------------------------------------------------
     #Концовки-описание (Славя расцветка)
+    image sdl_achv_true_sl = Text("Истинная\nконцовка", style="sdl_achvlistA_sl_st")
     image sdl_achv_true_IN_sl = Text(" Истинная\nинт-концовка", style="sdl_achvlistA_sl_st")
     image sdl_achv_bad_IN_sl = Text("  Плохая\nинт-концовка", style="sdl_achvlistA_sl_st")
     image sdl_achv_bad_sl = Text(" Плохая\nконцовка", style="sdl_achvlistA_sl_st")
     image sdl_achv_excl_LO_sl = Text("Эксклюзивная \nконцовка Локи", style="sdl_achvlistA_sl_st")
+    image sdl_achv_good_LO_sl = Text(" Хорошая \nконцовка Локи", style="sdl_achvlistA_sl_st")
+    image sdl_achv_neutral_LO_sl = Text("Нейтральная\nконцовка Локи", style="sdl_achvlistA_sl_st")
+    image sdl_achv_rejc_LO_sl = Text(" Реджект\nконцовка Локи", style="sdl_achvlistA_sl_st")
+    image sdl_achv_good_HE_sl = Text(" Хорошая \nконцовка Герка", style="sdl_achvlistA_sl_st")
+    image sdl_achv_good_DR_sl = Text(" Хорошая \nконцовка Дрища", style="sdl_achvlistA_sl_st")
     image sdl_achv_good_US_sl = Text("  Хорошая \nСССР-концовка", style="sdl_achvlistA_sl_st")
     image sdl_achv_good_RF_sl = Text(" Хорошая \nРФ-концовка", style="sdl_achvlistA_sl_st")
     image sdl_achv_good_IN_sl = Text(" Хорошая\nинт-концовка", style="sdl_achvlistA_sl_st")
@@ -308,9 +316,10 @@ init:
     #Концовки-описание (Лена расцветка)
     image sdl_achv_true_un = Text("Истинная\nконцовка", style="sdl_achvlistA_un_st")
     image sdl_achv_true_un_transit = Text("Истинная\nконцовка-транзит", style="sdl_achvlistA_un_st")
-    image sdl_achv_bad_un = Text(" Плохая\nконцовка", style="sdl_achvlistA_un_st")
     image sdl_achv_good_US_un = Text("  Хорошая \nСССР-концовка", style="sdl_achvlistA_un_st")
     image sdl_achv_good_RF_un = Text(" Хорошая \nРФ-концовка", style="sdl_achvlistA_un_st")
+    image sdl_achv_rejc_un = Text("Реджект\nконцовка", style="sdl_achvlistA_un_st")
+    image sdl_achv_bad_un = Text(" Плохая\nконцовка", style="sdl_achvlistA_un_st")
     # ------------------------------------------------
     #Концовки-описание (Ольга расцветка)
     image sdl_achv_true_mt = Text("Истинная\nконцовка", style="sdl_achvlistA_mt_st")
@@ -326,7 +335,6 @@ init:
     image sdl_achv_us_mi = Text("Концовка\n Мику", style="sdl_achvlistA_us_st")
     # ------------------------------------------------
     #Концовки-описание (Одиночка расцветка)
-    image sdl_achv_pst_me = Text("Постскриптум", style="sdl_achvlistA_me_st")
     image sdl_achv_qte_me = Text(" Тест на реакцию\nи сообразительность", style="sdl_achvlistA_me_st")
     image sdl_achv_kat_me = Text("Катапультная\n концовка", style="sdl_achvlistA_me_st")
     

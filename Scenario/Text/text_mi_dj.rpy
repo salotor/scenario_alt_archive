@@ -5129,15 +5129,16 @@ label alt_day5_mi_dj_supper:
     "Я обогнал её и встал на пути."
     window hide
     scene bg ext_musclub_day
-    show mi dontlike pioneer
+    show mi_shade
     with dissolve
-
     "Штаб-квартира Мику располагалась в одной из самых высоких точек лагеря, поэтому сюда свободно добивало садящееся светило."
     "Поэтому я смотрел на Мику, а видел чёрный силуэт без опознавательных знаков."
     "И жутковато становилось от мысли, что, возможно, она и внутри сейчас такая же — нивелированно-чёрная."
     "И виноват в этом мой длинный язык."
     me "Слышишь? Я хочу, чтобы ты вернулась."
-    show mi normal pioneer with dspr
+    hide mi_shade
+    show mi normal pioneer
+    with dspr
     mi "Я здесь… Понесёшь гитару?"
     me "Да, конечно."
     mi "Тогда бери ту, что у стены. Нас ждут на площади."
@@ -5995,7 +5996,10 @@ label alt_day5_mi_dj_voyeur_3:
     "И всё равно задел чёртово ведро!"
     play sound2 sfx_dropped_chair
     "Я вздрогнул, отвлёкся, открылась дверь, и выглянула Славя."
-    show sl serious swim with dspr
+    if persistent.hentai_graphics_7dl:
+        show sl2 serious body with dspr
+    else:
+        show sl2 serious swim with dspr
     "Голая."
     sl "Семён, что ты здесь делаешь?"
     me "Н… Ничего."
@@ -6006,13 +6010,16 @@ label alt_day5_mi_dj_voyeur_3:
     dreamgirl "Так, не отвлекаемся!"
     "А у меня в голове зазвенело от резкого оттока крови и чуточку потемнело в глазах."
     "И от того формы Слави — а я и до сих пор и не подозревал, насколько они шикарные! — виднелись ещё рельефнее."
-    show sl laugh swim with dspr
+    if persistent.hentai_graphics_7dl:
+        show sl2 laugh body with dspr
+    else:
+        show sl2 laugh swim with dspr
     "Девушка рассмеялась, глядя на мой ступор."
     sl "Кажется, ты уже пришёл?"
     "Закусив губу, она посмотрела на меня незнакомыми, испытующим глазами."
     sl "Ты знаешь…"
     sl "А впрочем, подожди."
-    hide sl 
+    hide sl2
     "Она скрылась в клубах пара."
     "Изнутри донеслось журчание воды."
     sl "Вот!"
@@ -7155,7 +7162,11 @@ label alt_day6_mi_dj_neutral:
 
 label alt_day6_mi_dj_good:
     play music music_7dl["what_am_i_doing_here"] fadein 5
-    scene cg d6_mi_morning_7dl with dissolve
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_mi_morning_7dl
+    else:
+        scene bg int_clubs_dj_7dl
+    with dissolve
     "Я проснулся от того, что Мику заворочалась подо мной и что-то недовольно забормотала."
     mi "Просыпайся, Сенечка. Нас ждут великие дела!"
     me "Какие же?"
@@ -8024,7 +8035,11 @@ label alt_day6_mi_dj_rendezvous:
     th "Так, стоп!"
     "Я помотал головой, отгоняя соблазнительные образы и позы, возможные только здесь, в практически невесомости, и рванулся наверх — лёгкие уже жгло."
     window hide
-    scene cg d6_mi_swimming_7dl with flash
+    if persistent.hentai_graphics_7dl:
+        scene cg d6_mi_swimming_7dl
+    else:
+        scene bg ext_island_day
+    with flash
     play ambience ambience_boat_station_day
     mi "Меня всегда смущала мысль, что однажды я встречу кого-то, и буду добиваться его благосклонности, а он будет принимать знаки внимания."
     "Немного отдышавшись, начала рассказывать Мику."
@@ -10286,6 +10301,7 @@ label alt_day6_mi_dj_dance2_fail:
                     window hide
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
+                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -10310,6 +10326,7 @@ label alt_day6_mi_dj_dance2_fail:
                     stop sound_loop fadeout 0
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
+                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -10346,6 +10363,7 @@ label alt_day6_mi_dj_dance2_fail:
                     window hide
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
+                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -12134,6 +12152,7 @@ label alt_day7_mi_dj_bad_end:
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_bad = True
+    $ renpy.save_persistent()
     show acm_logo_mi_new_happy with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12295,6 +12314,7 @@ label alt_day7_mi_dj_true_end:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_true = True
+    $ renpy.save_persistent()
     show acm_logo_mi_namiki with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12667,6 +12687,7 @@ label alt_day7_mi_dj_jp_good_end:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_good_jap = True
+    $ renpy.save_persistent()
     show acm_logo_mi_ricochet with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12998,6 +13019,7 @@ label alt_day7_mi_dj_rf_good_end:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_good_rf = True
+    $ renpy.save_persistent()
     show acm_logo_mi_allyours with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

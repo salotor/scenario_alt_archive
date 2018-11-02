@@ -1,16 +1,17 @@
 ﻿#Мод пилится на базе нетленки от АБЦБ - его сюжет и подача мне куда симпатичнее оригинальной стори.
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
-    $ alt_release_no = "0.36.a"
-    $ alt_compatible_release_no = ["0.34.a", "0.34.b", "0.35.a", "0.36.a"]
-    $ alt_hotfix_no = "hf1"
+    $ alt_release_no = "0.37.a"
+    $ alt_compatible_release_no = ["0.34.a", "0.34.b", "0.35.a", "0.36.a", "0.37.a"]
+    $ alt_hotfix_no = "hf0"
     $ plthr = u"none"
 
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
+    $ timeskip0 = "Я с трудом вспоминаю, \n с чего всё началось…"
     $ timeskip_come = "Ты пойдёшь со мной?"
-    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 6."
+    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 7."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
     $ timeskip3 = "Я скучаю…"
     $ timeskip4 = "Я хочу к тебе…"
@@ -23,7 +24,7 @@ init 2:
     $ timeskip11 = "Прощай."
     $ timeskip12 = "Ты потерялся, малыш?"
     $ timeskip13 = "ПРИДИ В СЕБЯ!"
-    $ alt_credits_text ="{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nDeadPunk\n\nППВК\n\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nТоварищи, помогавшие финансово:\nDarkness Inc\nAlex Traven\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
+    $ alt_credits_text ="{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nDeadPunk\n\nППВК\n\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nТоварищи, помогавшие финансово на Patreon:\nDarkness Inc\nAlex Traven\n\nТеоретик\n\nDon Diego\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
 
     #Day - базис
     #Sunset - 94%, 82%, 100%
@@ -119,7 +120,8 @@ label scenario__alt_sevendl:
 # ------------------------------------------------
     jump start_menu_7dl
 
-init 4: # вызываем все переменные в init (необходимо для работы повторов)
+init 4:
+# вызываем все переменные в init (необходимо для работы повторов)
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars
@@ -154,6 +156,9 @@ init 4: # вызываем все переменные в init (необходи
     call alt_day5_sl_7dl_vars
     call alt_day6_sl_7dl_vars
     call alt_day7_sl_7dl_vars
+# устанавливаем при загрузке стандартные значения из БЛ для th
+    $ th_prefix = "~ "
+    $ th_suffix = " ~"
 
 label alt_day0_vars: #Переменные нулевого дня
     $ make_names_unknown_7dl()
@@ -180,7 +185,7 @@ label alt_day0_vars: #Переменные нулевого дня
     $ d3 = False
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
-    if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good: # условия не соответствуют появлению кусочков паззла
+    if persistent.dv_7dl_true and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_7dl_true: 
         $ alt_day_binder = 1
     else:
         $ alt_day_binder = 0

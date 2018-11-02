@@ -112,7 +112,7 @@ label alt_day7_mt_7dl_start:
             call alt_day7_mt_7dl_good
             pause(1)
             if (alt_day_binder == 1) or alt_day1_loop:
-                call alt_day7_mt_7dl_postscriptum  
+                call alt_day7_mt_7dl_postscriptum
         else:
             call alt_day7_mt_7dl_bad
     pause(1)

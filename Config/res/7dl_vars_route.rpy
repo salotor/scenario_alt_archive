@@ -164,7 +164,7 @@ label alt_day6_un_7dl_vars:
     return
     
 label alt_day7_un_7dl_vars:
-    $ alt_day7_un_7dl_true_end = False
+    $ alt_day7_un_7dl_rej_end = False
     return
 
 label alt_day4_un_fz_vars:
@@ -270,5 +270,7 @@ label alt_day6_sl_7dl_vars:
     
 label alt_day7_sl_7dl_vars:
     $ alt_day7_sl_7dl_workout = False #Пробежка!
+    $ alt_day7_sl_7dl_freewill = False
+    $ alt_day7_sl_7dl_loki_park = False #Выбор
     return
     

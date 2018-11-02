@@ -2622,6 +2622,7 @@ label alt_day6_mt_7dl_catha:
         scene gameover with flash
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
+        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -2646,6 +2647,7 @@ label alt_day6_mt_7dl_catha:
         stop sound_loop
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
+        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -2685,6 +2687,7 @@ label alt_day6_mt_7dl_catha:
         scene gameover with flash
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
+        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -4517,7 +4520,8 @@ label alt_day7_mt_7dl_departure:
     voices "Поехали!"
     "Автобус швырнул себя в раскалённый полдень."
     window hide
-    scene bg int_bus_people_day with fade
+    scene cg d7_mt_epilogue_bus_7dl
+    with dissolve
     play sound_loop sfx_bus_interior_moving fadein 2
     "Я не смотрел назад, не оборачивался и старательно избегал зеркал заднего вида."
     "Мне было тоскливо и жутко, будто чувствовал я неким миллионным чутьём, что очень скоро грядёт моя привычная битва, в которой я всегда до того проигрывал."
@@ -4968,6 +4972,7 @@ label alt_day7_mt_7dl_good:
     mt "Семён! Проснись!"
     with vpunch
     mt "Семёёёёёён!!!!"
+    window hide
     scene bg int_sam_house_clean_7dl with flash
     stop music fadeout 3
     "И я резко открыл глаза."
@@ -5042,6 +5047,7 @@ label alt_day7_mt_7dl_good:
     stop sound_loop
     play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_good = True
+    $ renpy.save_persistent()
     show acm_logo_mt_named_olga with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -5175,6 +5181,7 @@ label alt_day7_mt_7dl_bad:
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
     $ persistent.mt_7dl_bad = True
+    $ renpy.save_persistent()
     show acm_logo_mt_cause with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -5360,6 +5367,7 @@ label alt_day7_mt_7dl_ever_after:
     $ renpy.pause(2)
     play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_neutral = True
+    $ renpy.save_persistent()
     show acm_logo_mt_ever_after with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -5434,6 +5442,7 @@ label alt_day7_mt_7dl_true:
     with dissolve
     play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_true = True
+    $ renpy.save_persistent()
     show acm_logo_mt_ending with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
