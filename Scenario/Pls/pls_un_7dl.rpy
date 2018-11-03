@@ -206,6 +206,13 @@ label alt_day7_un_7dl_start:
         call alt_day7_un_7dl_epilogue_bad
         pause(1)
     elif routetag == "un":
-        call alt_day7_un_7dl_transit
+        if alt_day7_un_7dl_rnm > 75 and karma >= 75:
+            call alt_day7_un_7dl_epilogue
+            pause(1)
+            call alt_day7_un_7dl_epilogue_rt
+            pause(1)
+            call alt_day7_un_7dl_ussr
+        else:
+            call alt_day7_un_7dl_transit
         pause(1)
     return
