@@ -6005,7 +6005,7 @@ label alt_day2_slot_us_try:
     "А когда я уже привычно приготовился свернуть на спортплощадку — Ульяна побежала совсем в другую сторону."
     "Она бежала к лесу."
     play sound_loop sfx_run_forest fadein 1
-    scene bg ext_path_day with dissolve:    # running
+    scene bg ext_path_day with dissolve:    # running (или сделать новый трансформ, раз оно отличается - некий fast_running)
         linear 0.1 pos (5,3)
         linear 0.1 pos (5,0)
         linear 0.1 pos (-5,5)
@@ -6013,7 +6013,7 @@ label alt_day2_slot_us_try:
         repeat
     "И через несколько шагов мы нырнули в заросли, так что из виду я её сразу же потерял."
     "Дальше преследовать мне её приходилось по звуку трещавших веток…"
-    scene bg ext_path_sunset with dissolve:    # running
+    scene bg ext_path_sunset with dissolve:    # running (или сделать новый трансформ, раз оно отличается - некий fast_running)
         linear 0.1 pos (5,3)
         linear 0.1 pos (5,0)
         linear 0.1 pos (-5,5)
