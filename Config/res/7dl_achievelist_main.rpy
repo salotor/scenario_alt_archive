@@ -1039,7 +1039,7 @@ label sdl_achvlist_dv_Author:
         pos (1110, 18)
     show sdl_dv_dj_inactive: #Speziell logo
         pos (1215, 18)
-    show sdl_achv_extB_7dl: #Иконка Ausgang  
+    show sdl_achv_extB_7dl: #Иконка Ausgang
         pos(380, 350)
     call screen sdl_achvlist_dv_Author
     screen sdl_achvlist_dv_Author:   
@@ -1105,7 +1105,7 @@ label sdl_achvlist_dv7dl_Author:
     with dissolve
     show sdl_achv_delB_7dl: #Иконка удалятора
         pos (380, 680)
-    show sdl_achv_extB_7dl: #Иконка Ausgang  
+    show sdl_achv_extB_7dl: #Иконка Ausgang
         pos(380, 350)
     
     #Тру
@@ -1129,7 +1129,7 @@ label sdl_achvlist_dv7dl_Author:
         show de_check_inactive2 with dissolve:
             pos (590, 104)
     else:
-        show de_achiv_lock1 with dissolve:
+        show de_achiv_lock2 with dissolve:
             xcenter 800 ycenter 130
     #Гуд-РФ
     if persistent.dv_7dl_good_rf:
@@ -1138,7 +1138,7 @@ label sdl_achvlist_dv7dl_Author:
         show de_check_inactive3 with dissolve:
             pos (590, 168)
     else:
-        show de_achiv_lock2 with dissolve:
+        show de_achiv_lock3 with dissolve:
             xcenter 800 ycenter 194
     #Реджект-РФ
     if persistent.dv_7dl_reject_rf:
@@ -1147,7 +1147,7 @@ label sdl_achvlist_dv7dl_Author:
         show de_check_inactive4 with dissolve:
             pos (590, 232)
     else:
-        show de_achiv_lock3 with dissolve:
+        show de_achiv_lock4 with dissolve:
             xcenter 800 ycenter 258
     #Реджект-СССР
     if persistent.dv_7dl_reject_ussr:
@@ -1156,7 +1156,7 @@ label sdl_achvlist_dv7dl_Author:
         show de_check_inactive5 with dissolve:
             pos (590, 296)
     else:
-        show de_achiv_lock4 with dissolve:
+        show de_achiv_lock5 with dissolve:
             xcenter 800 ycenter 322
     #Транзит-Ольга
     if persistent.dv_7dl_bad_mt:
@@ -1165,7 +1165,7 @@ label sdl_achvlist_dv7dl_Author:
         show de_check_inactive6 with dissolve:
             pos (590, 360)
     else:
-        show de_achiv_lock5 with dissolve:
+        show de_achiv_lock6 with dissolve:
             xcenter 800 ycenter 386
     #Транзит-Лена
     if persistent.dv_7dl_un:
@@ -1174,7 +1174,7 @@ label sdl_achvlist_dv7dl_Author:
         show de_check_inactive7 with dissolve:
             pos (590, 424)
     else:
-        show de_achiv_lock6 with dissolve:
+        show de_achiv_lock7 with dissolve:
             xcenter 800 ycenter 450
     #Эксклюзив-Локи
     if persistent.dv_7dl_tulpa:
@@ -1183,7 +1183,7 @@ label sdl_achvlist_dv7dl_Author:
         show de_check_inactive8 with dissolve:
             pos (590, 488)
     else:
-        show de_achiv_lock7 with dissolve:
+        show de_achiv_lock8 with dissolve:
             xcenter 800 ycenter 514
     #Бэд
     if persistent.dv_7dl_bad:
@@ -1192,7 +1192,7 @@ label sdl_achvlist_dv7dl_Author:
         show de_check_inactive9 with dissolve:
             pos (590, 552)
     else:
-        show de_achiv_lock8 with dissolve:
+        show de_achiv_lock9 with dissolve:
             xcenter 800 ycenter 578
     
     call screen sdl_achvlist_dv7dl_Author
@@ -1279,7 +1279,7 @@ screen sdl_achvlist_dv7dl_Author:
                 hovered [Show ("de_check_active6", transition=Dissolve(0.5)), Show ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_check_active6", transition=Dissolve(0.5)), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5))]
                 action [Hide("sdl_dv_cl_inactive", transition=Dissolve(0.5)), Stop ("ambience"), Hide ("sdl_achv_jumpchkA", transition=Dissolve(0.5)), Hide("sdl_achv_dv_7dlA", transition=Dissolve(1.0)), Hide("sdl_logo_active", transition=Dissolve(0.5)), Hide("sdl_dv_dj_inactive", transition=Dissolve(0.5)), Hide("sdl_achv_delA_7dl", transition=Dissolve(0.5)), Hide("de_check_active6", transition=Dissolve(0.5)), SetVariable("alt_day7_dv_7dl_check", 5), SetVariable("herc", "True"), Replay("alt_day7_dv_7dl_bad_end", scope={"alt_replay_on" : "True"}, locked=False), Play('ambience', default_7dl_path+"Sound/ambience/ambience_safe_7dl.ogg", fadein=5.0)]
-        hotspot ((650, 424, 300, 52)): #Транзит-Лена       
+        hotspot ((650, 424, 300, 52)): #Транзит-Лена
             hovered [Show("sdl_achv_tran_dv", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_tran_dv", transition=Dissolve(0.5))]
             action [Show("sdl_achv_tran_dv", transition=Dissolve(0.5))] 
@@ -2229,10 +2229,10 @@ label sdl_achvlist_un_Author:
         pos (1110, 18)
     show sdl_un_fz_inactive: #Speziell logo
         pos (1215, 18)
-    show sdl_achv_extB_7dl: #Иконка Ausgang  
+    show sdl_achv_extB_7dl: #Иконка Ausgang
         pos(380, 350)
     call screen sdl_achvlist_un_Author
-    screen sdl_achvlist_un_Author:   
+    screen sdl_achvlist_un_Author:
         tag menu
         modal True
         imagemap:
