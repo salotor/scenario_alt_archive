@@ -583,20 +583,20 @@ label sdl_achvlist_mi7dl_Author:
             pos (590, 424)
     else:
         show de_achiv_lock7 with dissolve:
-            xcenter 800 ycenter 450 
+            xcenter 800 ycenter 450
     #Нейтрал-S
     if persistent.mi_7dl_neutral_star:
         show acm_logo_mi_club27  with dissolve:
-            xcenter 800 ycenter 514 
+            xcenter 800 ycenter 514
         show de_check_inactive8 with dissolve:
             pos (590, 488)
     else:
         show de_achiv_lock8 with dissolve:
             xcenter 800 ycenter 514
-    #Бэд-M       
-    if persistent.mi_7dl_bad_human: 
+    #Бэд-M
+    if persistent.mi_7dl_bad_human:
         show acm_logo_mi_liar  with dissolve:
-            xcenter 800 ycenter 578 
+            xcenter 800 ycenter 578
         show de_check_inactive9 with dissolve:
             pos (590, 552)
     else:
@@ -614,16 +614,15 @@ label sdl_achvlist_mi7dl_Author:
     #Горькая правда
     if persistent.mi_7dl_ps == True:
         show acm_logo_mi_bitter_truth  with dissolve:
-            xcenter 800 ycenter 706 
-        show de_check_active4 with dissolve:
+            xcenter 800 ycenter 706
+        show de_check_inactive11 with dissolve:
             pos (590, 680)
     else:
-        show de_achiv_lock4 with dissolve:
-            xcenter 800 ycenter 706 
-        show de_info_inactive4 with dissolve:
-            pos (590, 680)
+        show de_achiv_lock11 with dissolve:
+            xcenter 800 ycenter 706
+    
     call screen sdl_achvlist_mi7dl_Author
-# ------------------------------------------------  
+# ------------------------------------------------
 screen sdl_achvlist_mi7dl_Author:
     tag menu
     modal True
@@ -708,7 +707,7 @@ screen sdl_achvlist_mi7dl_Author:
                 hovered [Show ("de_info_active5", transition=Dissolve(0.5)), Show ("sdl_achv_infochkD", transition=Dissolve(0.5)), Show ("acm_logo_mi_sparkle", transition=Dissolve(0.5))]
                 unhovered [Hide ("de_info_active5", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_mi_sparkle", transition=Dissolve(0.5))]
                 action [Hide("de_info_active5", transition=Dissolve(0.5)), Hide ("sdl_achv_infochkD", transition=Dissolve(0.5)), Hide ("acm_logo_mi_sparkle", transition=Dissolve(0.5))]   
-        hotspot ((650, 360, 300, 52)): #Эксклюзив-Герк       
+        hotspot ((650, 360, 300, 52)): #Эксклюзив-Герк
             hovered [Show("sdl_achv_excl_HE_mi", transition=Dissolve(0.5))]
             unhovered [Hide("sdl_achv_excl_HE_mi", transition=Dissolve(0.5))]
             action [Show("sdl_achv_excl_HE_mi", transition=Dissolve(0.5))] 
