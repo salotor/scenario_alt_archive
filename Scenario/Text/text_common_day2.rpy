@@ -3778,7 +3778,7 @@ label alt_day2_event_boat_station1:
     "Этот путь, как самый очевидный, не давал мне покоя."
     if (('me' in list_d2_convoy_7dl)) and ('music' in list_clubs_7dl):
         "Щурясь от яркого солнца, я заметил странный отсверк на дальнем краю понтонов — там, где были привязаны лодки."
-        "В это время мимо меня куда-то пробежал какой-то лохматый пионер, примерно ровесник Ульяны."
+        "В это время мимо меня куда-то пробежал какой-то лохматый пионер, примерно ровесник Ульяны."    # спрайт Данечки показать пробегающий?
         menu:
             "Проследить за пионером":
                 "Если я правильно понял, убежал пионер куда-то к площади."
@@ -5019,7 +5019,7 @@ label alt_day2_tournament:
         mi "Электроник! У нас тут один новый игрок!"
     hide mi
     show el smile pioneer at left
-    show us laugh sport
+    show us laugh pioneer
     with dissolve
     us "То есть, два!"
     "Ну да, куда ж без Ульяны-то…"
@@ -5030,13 +5030,13 @@ label alt_day2_tournament:
     me "Турнир, значит."
     me "Спасибо, {w=.9}что поинтересовались моим мнением."
     hide dv with hpunch
-    show us smile sport at cright
+    show us smile pioneer at cright
     us "Не кисни." with vpunch
     "Сзади ткнула в спину Ульянка."
     us "Будет весело, и я всех победю! Или побежу?"
     me "Побегу."
     "Подсказал я."
-    show us normal sport at cright
+    show us normal pioneer at cright
     hide el
     with dissolve
     me "И упаду."
@@ -5993,11 +5993,11 @@ label alt_day2_sup2:
     return
 
 label alt_day2_slot_us_try:
-    scene bg ext_dining_hall_near_sunset with fade
+    scene bg ext_dining_hall_near_sunset with fade    # running
     play ambience ambience_camp_center_evening fadein 1
     play music music_7dl["sneakupon"] fadein 3
     "У выхода из столовой я ощутил странное чувство дежа вю…"
-    scene bg ext_dining_hall_away_sunset with dissolve
+    scene bg ext_dining_hall_away_sunset with dissolve    # running
     if alt_day_binder != 1:
         th "Вчера я точно так же гнался за Ульяной…"
     "Только на этот раз кое-что всё-таки отличалось…"
@@ -6005,7 +6005,7 @@ label alt_day2_slot_us_try:
     "А когда я уже привычно приготовился свернуть на спортплощадку — Ульяна побежала совсем в другую сторону."
     "Она бежала к лесу."
     play sound_loop sfx_run_forest fadein 1
-    scene bg ext_path_day with dissolve:
+    scene bg ext_path_day with dissolve:    # running (или сделать новый трансформ, раз оно отличается - некий fast_running)
         linear 0.1 pos (5,3)
         linear 0.1 pos (5,0)
         linear 0.1 pos (-5,5)
@@ -6013,7 +6013,7 @@ label alt_day2_slot_us_try:
         repeat
     "И через несколько шагов мы нырнули в заросли, так что из виду я её сразу же потерял."
     "Дальше преследовать мне её приходилось по звуку трещавших веток…"
-    scene bg ext_path_sunset with dissolve:
+    scene bg ext_path_sunset with dissolve:    # running (или сделать новый трансформ, раз оно отличается - некий fast_running)
         linear 0.1 pos (5,3)
         linear 0.1 pos (5,0)
         linear 0.1 pos (-5,5)

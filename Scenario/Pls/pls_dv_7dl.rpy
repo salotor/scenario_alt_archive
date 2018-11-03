@@ -23,10 +23,10 @@
         call alt_day4_dv_7dl_alco
         pause(1)
         call alt_day4_dv_7dl_back_to_camp
-    else: # отказался, остался с рыжей
+    else:
         call alt_day4_dv_7dl_append
         pause(1)
-        if alt_day4_dv_7dl_aidpost: # новая переменная
+        if alt_day4_dv_7dl_aidpost:
             call alt_day4_dv_7dl_aidpost
             pause(1)
             if not alt_day4_dv_7dl_drank_vodka:
@@ -104,7 +104,7 @@ label alt_day6_dv_7dl_start:
     if alt_day6_dv_7dl_sl_route:
         call alt_day6_dv_7dl_sl 
         pause(1)
-        if alt_day6_dv_7dl_sl_help_agree or not alt_day1_cofront_sl_dv == 3:#новая переменная согласился помочь
+        if alt_day6_dv_7dl_sl_help_agree or not alt_day1_cofront_sl_dv == 3:
             call alt_day6_dv_7dl_sl_help
             pause(1)
         call alt_day6_dv_7dl_sl_help2
@@ -188,7 +188,7 @@ label alt_day7_dv_7dl_start:
         if alt_day6_dv_7dl_dance == 1:
             call alt_day7_dv_7dl_un
             pause(1)
-        if alt_day6_dv_7dl_dance == 22 or alt_day6_dv_7dl_dance == 21: # проверить 21 и 22
+        if alt_day6_dv_7dl_dance == 22 or alt_day6_dv_7dl_dance == 21:
             call alt_day7_dv_7dl_sl
             pause(1)
     else:
@@ -198,7 +198,7 @@ label alt_day7_dv_7dl_start:
         else:
             call alt_day7_dv_7dl_dv
             pause(1)
-            if alt_day7_dv_7dl_loki_catapult: # новая переменная
+            if alt_day7_dv_7dl_loki_catapult:
                 call alt_day7_dv_7dl_loki
                 pause(1)
                 call alt_day7_dv_7dl_tulpa_end
@@ -217,18 +217,15 @@ label alt_day7_dv_7dl_start:
                 "Логичный исход…":
                     call alt_day7_dv_7dl_true
                     pause(1)
-                    $ renpy.save_persistent()
                     return
                 "Я иду!":
-                   pass
+                    pass
         if karma > 75:
             call alt_day7_dv_7dl_ussr_epilogue
             pause(1)
-            $ renpy.save_persistent()
         else:
             call alt_day7_dv_7dl_rf_epilogue
             pause(1)
-            $ renpy.save_persistent()
     elif alt_day7_dv_7dl_check == 2:
         if karma > 75:
             call alt_day7_dv_7dl_rej_ussr_end

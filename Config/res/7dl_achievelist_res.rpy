@@ -287,7 +287,7 @@ init:
     image sdl_achv_pst_mi = Text("Постскриптум", style="sdl_achvlistA_mi_st")
     # ------------------------------------------------
     #Концовки-описание (Алисхен расцветка)
-    image sdl_achv_bad_dv = Text(" Плохая\nконцовка", style="sdl_achvlistA_dv_st")
+    image sdl_achv_true_dv = Text("Истинная\nконцовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_excl_LO_dv = Text("Эксклюзивная \nконцовка Локи", style="sdl_achvlistA_dv_st")
     image sdl_achv_good_RF_dv = Text(" Хорошая \nРФ-концовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_good_US_dv = Text("  Хорошая \nСССР-концовка", style="sdl_achvlistA_dv_st")
@@ -295,6 +295,7 @@ init:
     image sdl_achv_rejc_US_dv = Text(" Реджект \nСССР-концовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_tran_dv = Text("Транзитная\n концовка", style="sdl_achvlistA_dv_st")
     image sdl_achv_tran_HE_dv = Text("  Транзитная\nконцовка Герка", style="sdl_achvlistA_dv_st")
+    image sdl_achv_bad_dv = Text(" Плохая\nконцовка", style="sdl_achvlistA_dv_st")
     # ------------------------------------------------
     #Концовки-описание (Славя расцветка)
     image sdl_achv_true_sl = Text("Истинная\nконцовка", style="sdl_achvlistA_sl_st")
@@ -315,9 +316,10 @@ init:
     #Концовки-описание (Лена расцветка)
     image sdl_achv_true_un = Text("Истинная\nконцовка", style="sdl_achvlistA_un_st")
     image sdl_achv_true_un_transit = Text("Истинная\nконцовка-транзит", style="sdl_achvlistA_un_st")
-    image sdl_achv_bad_un = Text(" Плохая\nконцовка", style="sdl_achvlistA_un_st")
     image sdl_achv_good_US_un = Text("  Хорошая \nСССР-концовка", style="sdl_achvlistA_un_st")
     image sdl_achv_good_RF_un = Text(" Хорошая \nРФ-концовка", style="sdl_achvlistA_un_st")
+    image sdl_achv_rejc_un = Text("Реджект\nконцовка", style="sdl_achvlistA_un_st")
+    image sdl_achv_bad_un = Text(" Плохая\nконцовка", style="sdl_achvlistA_un_st")
     # ------------------------------------------------
     #Концовки-описание (Ольга расцветка)
     image sdl_achv_true_mt = Text("Истинная\nконцовка", style="sdl_achvlistA_mt_st")

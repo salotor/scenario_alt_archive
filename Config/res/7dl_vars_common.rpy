@@ -24,7 +24,7 @@ init 2:
     $ timeskip11 = "Прощай."
     $ timeskip12 = "Ты потерялся, малыш?"
     $ timeskip13 = "ПРИДИ В СЕБЯ!"
-    $ alt_credits_text ="{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nDeadPunk\n\nППВК\n\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nТоварищи, помогавшие финансово:\nDarkness Inc\nAlex Traven\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
+    $ alt_credits_text ="{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nDeadPunk\n\nППВК\n\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nТоварищи, помогавшие финансово на Patreon:\nDarkness Inc\nAlex Traven\n\nТеоретик\n\nDon Diego\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
 
     #Day - базис
     #Sunset - 94%, 82%, 100%
@@ -189,6 +189,7 @@ label alt_day0_vars: #Переменные нулевого дня
         $ alt_day_binder = 1
     else:
         $ alt_day_binder = 0
+    $ alt_day1_loop = False
     return
     
 label alt_day1_vars: #Переменные первого дня
@@ -198,7 +199,6 @@ label alt_day1_vars: #Переменные первого дня
     $ list_slavya_7dl = []
     $ list_slavya_7dl = []
     $ alt_route_flag = 1
-    $ alt_day1_loop = False
     $ alt_day1_alt_chase = False
     $ alt_day1_alt_us_robbed = False
     $ alt_day1_alt_robbery = False

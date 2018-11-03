@@ -54,6 +54,14 @@ init 1:
     image bg us_bg_7dl = get_image_7dl("gui/menu_main/us_bg.png")
     #image bg mt_bg_7dl = get_image_7dl("gui/menu_main/mt_bg.png")
     
+    if not persistent.not_first_start_7dl:
+        $ persistent.not_first_start_7dl = True
+        if persistent.dv_7dl_good_ussr_rf:
+            $ persistent.dv_7dl_good_rf = True
+        if persistent.un_7dl_true:
+            $ persistent.un_7dl_rej = True
+            $ persistent.un_7dl_true = False
+    
 init 9001 python:
     def add_lp_widget_7dl():
         for i in persistent.filters:
