@@ -11464,7 +11464,7 @@ label alt_day7_us_7dl_ever_after:
     uv "Целуйтесь и плодитесь, что вам надо ещё?"
     uv "Нет, давай умрём! Давай пострадаем и просрём всё, чего добились!"
     show uv dontlike at right
-    show us dontlike sport at zenterleft
+    show us2 dontlike sport at zenterleft
     with move
     us "А кто вы такая вообще, тётенька?"
     "Только сейчас я обратил внимание на то, что до сих пор сжимаю в руке ладошку Ульяны."
@@ -11475,7 +11475,7 @@ label alt_day7_us_7dl_ever_after:
     me "Но мы и правда не знаем, кто ты такая!"
     "Возмутился я."
     me "Я спать ложился, думал… Обо всяком. А тут ты. И кричишь."
-    show us smile sport with dspr
+    show us2 smile sport with dspr
     us "Злая кошка!"
     show uv surprise2 with dspr
     uv "Значит, вы ничего не знаете и не помните?"
@@ -11483,7 +11483,7 @@ label alt_day7_us_7dl_ever_after:
     show uv surprise with dspr
     uv "И как вы тогда здесь оказались?"
     "Мы с Ульяной переглянулись."
-    show us normal sport with dspr
+    show us2 normal sport with dspr
     us "Тётенька, а откуда у вас уши кошачьи?"
     show uv shocked with dspr
     uv "Да отстань ты от моих ушей!"
@@ -11491,7 +11491,7 @@ label alt_day7_us_7dl_ever_after:
     show uv normal with dspr
     uv "Вы мне можете сказать, два идиота, за каким псом вам обратно в лагерь потребовалось?"
     uv "Вам же уже выдали счастья в обе руки, что вам надо ещё?"
-    show us sad sport with dspr
+    show us2 sad sport with dspr
     us "Сёмыч, кто это такая?"
     me "Да не знаю я. Но она, похоже, сама нас знает."
     show uv smile with dspr
@@ -11504,17 +11504,17 @@ label alt_day7_us_7dl_ever_after:
     me "Смеётся ещё…"
     show uv normal with dspr
     uv "Я повторяю вопрос в третий раз: зачем вам понадобилось возвращаться в лагерь?"
-    show us calml sport with dspr
+    show us2 calml sport with dspr
     "Ульяна снова посмотрела на меня, а я кивнул."
     "Ей это не очень понравилось, тем не менее, она забубнила:"
     us "Там есть один причал, с которого…"
     show uv grin with dspr
     uv "Да, наслышана про это ваше мракобесие. Но при чём здесь лагерь?"
-    show us surp3 sport with dspr
+    show us2 surp3 sport with dspr
     us "В смысле?! Огоньки можно запускать только оттуда!"
     show uv laugh with dspr
     uv "И правда, идиоты. Огоньки можно запускать откуда угодно."
-    show us dontlike sport with dspr
+    show us2 dontlike sport with dspr
     us "Тётенька, хватит обзываться! Я пробовала запускать, ничего не получилось!"
     uv "Плохо пробовала, значит! Надо стараться лучше."
     me "Ладно, от нас ты что хотела узнала, теперь твой черёд отвечать на вопросы."
@@ -11525,7 +11525,7 @@ label alt_day7_us_7dl_ever_after:
     "Девушка тут же встряхнулась, сбросила с себя плохое настроение и снова озорно блеснула глазами:"
     uv "Жизнь вообще штука сложная. Привыкай."
     uv "Но я правильно понимаю, что вы, два дурака, собрались помирать, чтобы вернуться в лагерь?"
-    show us shy sport with dspr
+    show us2 shy sport with dspr
     "Мы синхронно отвели взгляд."
     uv "И всё ради каких-то дурацких ритуалов?"
     uv "Огоньков?"
@@ -11534,13 +11534,13 @@ label alt_day7_us_7dl_ever_after:
     "Отрезала девушка."
     uv "А для этого вовсе необязательно заниматься чепухой, вроде той, что ты задумал."
     "Если можно идти прямо на Дорогу."
-    show us normal sport with dspr
+    show us2 normal sport with dspr
     us "Сёмыч, можно я её придушу?"
     me "Да я и сам борюсь с тем же желанием."
     show uv shocked with dspr
     uv "Какое трогательное единодушие. Сразу видно сложившуюся пару."
     uv "Только вот, Сёмище, она для тебя не маловата?"
-    show us angry sport with dspr
+    show us2 angry sport with dspr
     us "Убию!"
     "Крикнула Ульянка, бросаясь на кошкоухую."
     show uv laugh far with move
@@ -11548,7 +11548,7 @@ label alt_day7_us_7dl_ever_after:
     "Она отскочила от нас на добрый метр разом."
     hide uv with easeoutleft
     us "Сёмыч, она моя!"
-    hide us with easeoutleft
+    hide us2 with easeoutleft
     "Ульянка припустила за девушкой со всех ног."
     "А мне ничего не оставалось, как бежать за ними."
     window hide
@@ -11568,7 +11568,7 @@ label alt_day7_us_7dl_ever_after:
     "Будто и не было."
     "Ульяна пробежала по инерции несколько метров, потом поняла, что преследовать в сущности некого."
     "Остановилась и обернулась ко мне."
-    show us dontlike sport with dspr
+    show us2 dontlike sport with dspr
     us "Ну и куда та гадина делась?"
     "Выглядела она рассерженной и недовольной."
     me "Не знаю…"
@@ -11584,10 +11584,10 @@ label alt_day7_us_7dl_ever_after:
     $ night_time()
     scene expression Notch("bg ext_busstop_dust_7dl")
     with dissolve
-    show us smile sport with dspr
+    show us2 smile sport with dspr
     us "Сёмыч, а мы знаешь где?"
     me "Где?"
-    show us laugh sport with dspr
+    show us2 laugh sport with dspr
     us "Ну ты тормоз, Сёмыч! Я же тебе рассказывала! И эта курлядь тоже."
     me "Я ничего не понял."
     "Честно признался я."
@@ -11627,14 +11627,14 @@ label alt_day7_us_7dl_ever_after:
     "Но только здесь всё иначе, всё не так совсем."
     "Здесь не было бетонированного пятачка, не было стен, ворот…"
     "Лагеря не было вовсе!"
-    show us sad sport with dspr
+    show us2 sad sport with dspr
     us "Так не бывает."
     "Прошептала Ульяна, увлекая меня за собой на едва заметную тропинку, ведущую в лес."
     us "Не бывает."
     "Я мимоходом посмотрел на часы — дата снова слетела."
     "Сигнал снова не ловил. Всё как всегда."
     me "Ты мне скажешь, куда ты меня ведёшь?"
-    show us normal sport with dspr
+    show us2 normal sport with dspr
     us "Пожалуйста, Сёмыч! Это очень важно!"
     "Ну, раз важно…"
     window hide
@@ -11657,7 +11657,7 @@ label alt_day7_us_7dl_ever_after:
     us "Спасибо."
     window hide
     scene bg ext_road_day
-    show us sad sport
+    show us2 sad sport
     with dissolve
     $ renpy.pause(2)
     show us normal old
