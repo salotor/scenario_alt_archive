@@ -32485,7 +32485,7 @@ label alt_day7_sl_7dl_missed:
             sl "Мы знакомы?.."
             th "Да, Славя, да! Мы знакомы, мы близки, мы…"
         else:
-            show sl normal_uv pioneer with dspr
+            show sl normal_uv pioneer with dspr    # можно же серые глаза нафотошопить, чтобы с Юлей не путать. Да и для Стаси в послесловии пригодится
             sl "Кто?"
             "Звеняще стерильным голосом уточнила девушка."
         show mt surprise pioneer with dspr

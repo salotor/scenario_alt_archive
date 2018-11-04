@@ -189,6 +189,7 @@ label alt_day0_vars: #Переменные нулевого дня
         $ alt_day_binder = 1
     else:
         $ alt_day_binder = 0
+    $ alt_day1_loop = False
     return
     
 label alt_day1_vars: #Переменные первого дня
@@ -198,7 +199,6 @@ label alt_day1_vars: #Переменные первого дня
     $ list_slavya_7dl = []
     $ list_slavya_7dl = []
     $ alt_route_flag = 1
-    $ alt_day1_loop = False
     $ alt_day1_alt_chase = False
     $ alt_day1_alt_us_robbed = False
     $ alt_day1_alt_robbery = False
