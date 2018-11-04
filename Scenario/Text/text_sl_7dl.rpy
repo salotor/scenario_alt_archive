@@ -28094,6 +28094,7 @@ label alt_day7_sl_7dl_rf_good:
         xalign 0.5 yalign 0.20
     "Оттуда на меня ясноглазо улыбнулась одна знакомая блондинка."
     window hide
+    with vpunch
     play sound sfx_home_phone_break
     pause(1)
     scene bg semen_room_window
@@ -30370,6 +30371,9 @@ label alt_day7_sl_7dl_loki_rewind:
     nvl clear
     "Вот только доехал поздно."
     play music music_7dl["you_were_late"] fadein 3
+    window hide
+    scene bg int_church_7dl
+    with fade
     "В тот момент, когда я писал ей предложение увидеться, девушку корчило на полу от боли."
     "Это странное состояние, когда организм не хочет работать как надо."
     "Он начинает вредить самому себе."
@@ -30588,9 +30592,8 @@ label alt_day7_sl_7dl_loki_am_home:
     "А потому следует поспешить, пока моё эго ещё не распалось."
     "Будто услышав мои мысли, девушка прибавила шагу, и…"
     window hide
-    scene bg int_hospital_hall_day_7dl
+    scene cg d7_me_looney_7dl
     with dissolve
-    #TODO: твик ЦГ с двачевской/бг с психушкой
     "Мы влетели в квадратное, крохотное помещение, обшитое со всех сторон матрацами."
     th "Дом… с мягкими стенами?"
     dreamgirl "А ты кто?.."
@@ -32246,7 +32249,7 @@ label alt_day7_sl_7dl_missed:
     "Просто помогите ей."
     "Пожалуйста. {w}Спасите мою Славю."
     window hide
-    scene bg int_hospital_hall_day_7dl
+    scene bg int_hospital_corridor_7dl
     with dissolve
     voice "Состояние удалось стабилизировать, но она очень слаба."
     "И какие-то ещё очень умные слова про инфекцию, слабый иммунитет, неприспособленность к жизни…"
