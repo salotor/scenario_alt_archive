@@ -32483,11 +32483,11 @@ label alt_day7_sl_7dl_missed:
         if karma > 120:
             show sl surprise pioneer with dspr
             sl "Мы знакомы?.."
+            th "Да, Славя, да! Мы знакомы, мы близки, мы…"
         else:
-            show sl normal_uv pioneer with dspr
+            show sl normal_uv pioneer with dspr    # можно же серые глаза нафотошопить, чтобы с Юлей не путать. Да и для Стаси в послесловии пригодится
             sl "Кто?"
             "Звеняще стерильным голосом уточнила девушка."
-            th "Да, Славя, да! Мы знакомы, мы близки, мы…"
         show mt surprise pioneer with dspr
         mt "Откуда ты её знаешь? Вы же никогда не встречались, насколько я помню."
         th "Как не встречались?! Да мы, знаете ли… Мы…"

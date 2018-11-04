@@ -32,7 +32,7 @@
     call alt_day4_un_7dl_sleeptime
     pause(1)
     jump alt_day5_un_7dl_start
-    
+
 label alt_day5_un_7dl_start:
     pause(1)
     call alt_day5_un_7dl_vars
@@ -120,7 +120,7 @@ label alt_day5_un_7dl_start:
     call alt_day5_un_7dl_sleeptime
     pause(1)
     jump alt_day6_un_7dl_start
-    
+
 label alt_day6_un_7dl_start:
     pause(1)
     call alt_day6_un_7dl_vars
@@ -167,7 +167,6 @@ label alt_day6_un_7dl_start:
     else:
         $ routetag = "un7dlgood"
     jump alt_day7_un_7dl_start
-    
 
 label alt_day7_un_7dl_start:
     call alt_day7_un_7dl_vars
@@ -206,6 +205,13 @@ label alt_day7_un_7dl_start:
         call alt_day7_un_7dl_epilogue_bad
         pause(1)
     elif routetag == "un":
-        call alt_day7_un_7dl_transit
+        if alt_day7_un_7dl_rnm > 75 and karma >= 75:
+            call alt_day7_un_7dl_epilogue
+            pause(1)
+            call alt_day7_un_7dl_epilogue_rt
+            pause(1)
+            call alt_day7_un_7dl_ussr
+        else:
+            call alt_day7_un_7dl_transit
         pause(1)
     return
