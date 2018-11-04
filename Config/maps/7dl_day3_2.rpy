@@ -9,7 +9,7 @@
         $ set_chibi_alt1("music_club_alt1",   "dv")
     else:
         $ set_chibi_alt1("music_club_alt1", "mi")
-    if counter_sl_cl != 3:
+    if counter_sl_cl != 4:
         $ set_zone_alt1("clubs_alt1",        "alt_day3_eventAf_clubs")
         $ set_chibi_alt1("clubs_alt1",        "el")
     $ set_zone_alt1("dining_hall_alt1",  "alt_day3_eventAf_dining_hall")
