@@ -9,9 +9,9 @@
         $ set_chibi_alt1("music_club_alt1",   "dv")
     else:
         $ set_chibi_alt1("music_club_alt1", "mi")
-    if not (alt_day3_mi_invite or (counter_sl_cl == 3)):
-            $ set_zone_alt1("clubs_alt1",        "alt_day3_eventAf_clubs")
-            $ set_chibi_alt1("clubs_alt1",        "el")
+    if counter_sl_cl != 3:
+        $ set_zone_alt1("clubs_alt1",        "alt_day3_eventAf_clubs")
+        $ set_chibi_alt1("clubs_alt1",        "el")
     $ set_zone_alt1("dining_hall_alt1",  "alt_day3_eventAf_dining_hall")
     $ set_chibi_alt1("dining_hall_alt1",  "us")
     if (counter_sl_cl == 4):
