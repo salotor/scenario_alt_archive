@@ -28606,9 +28606,11 @@ label alt_day7_sl_7dl_postscriptum:
     me "Спасибо…"
     sl "А я похожа на неё?"
     hide frame_sl
-    #possible KOLHOZ со спрайтами
     with fade
+    #possible KOLHOZ со спрайтами
+    show sl normal_gr casual with dissolve
     "Спросила меня сероглазая блондинка."
+    hide sl with dissolve
     "Невысокая, хрупкая с прозрачной кожей, со взглядом аниме-девочки."
     "Похожа ли она на Славю?"
     "Да ничего общего."
