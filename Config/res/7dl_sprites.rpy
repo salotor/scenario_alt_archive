@@ -149,7 +149,7 @@ init 9999 python:
                     'sl':{'1':['dontlike','normal','serious','smile','normal_uv','normal_gr','serious_uv','serious_gr'],
                           '2':['grin','happy','laugh','shy','smile2'],
                           '3':['angry','happy2','sad','shy2','surprise','upset','sad_uv','sad_gr'],
-                          '4':['cry','scared','tender','cry_uv','cry_gr'],
+                          '4':['cry','scared','tender','cry_uv'],
                           '5':['displeased','fear_1','fear_2','neutral']},
                     'tn':{'1':['dontlike','grin','laugh','normal','sad','shy','smile']},
                     'un':{'1':['angry','evil_smile','normal','shy','smile','smile2','sorrow'],
