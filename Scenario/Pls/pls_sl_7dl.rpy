@@ -236,7 +236,6 @@ label alt_day7_sl_7dl_start:
         $ routetag = "sl7dlbad"
     $ alt_chapter(7, u"Славя. 7ДЛ. Эпилог")
     if lp_sl >= 20:
-        $ routetag = "sl7dlgood"    # это точно надо? оно же отменяет только что выставленные sl7dlneu и sl7dluv
         if karma < 120:
             call alt_day7_sl_7dl_rf_good
             pause(1)

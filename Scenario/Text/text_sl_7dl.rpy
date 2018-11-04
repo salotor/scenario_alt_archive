@@ -28606,9 +28606,11 @@ label alt_day7_sl_7dl_postscriptum:
     me "Спасибо…"
     sl "А я похожа на неё?"
     hide frame_sl
-    #possible KOLHOZ со спрайтами
     with fade
+    #possible KOLHOZ со спрайтами
+    show sl normal_gr casual with dissolve
     "Спросила меня сероглазая блондинка."
+    hide sl with dissolve
     "Невысокая, хрупкая с прозрачной кожей, со взглядом аниме-девочки."
     "Похожа ли она на Славю?"
     "Да ничего общего."
@@ -32485,7 +32487,7 @@ label alt_day7_sl_7dl_missed:
             sl "Мы знакомы?.."
             th "Да, Славя, да! Мы знакомы, мы близки, мы…"
         else:
-            show sl normal_uv pioneer with dspr    # можно же серые глаза нафотошопить, чтобы с Юлей не путать. Да и для Стаси в послесловии пригодится
+            show sl normal_gr pioneer with dspr
             sl "Кто?"
             "Звеняще стерильным голосом уточнила девушка."
         show mt surprise pioneer with dspr
@@ -32495,6 +32497,7 @@ label alt_day7_sl_7dl_missed:
         "Такое кристальное неузнавание невозможно было сыграть."
         "Славя не узнавала меня. Не помнила."
         "Я никогда не был в её жизни."
+        show mt normal pioneer with dspr
         mt "Давайте знакомиться!"
         if karma > 120:
             mt "Славя, позволь представить тебе Семёна. {w}Он всегда опаздывает."

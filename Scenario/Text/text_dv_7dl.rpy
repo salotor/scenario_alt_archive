@@ -13668,7 +13668,7 @@ label alt_day7_dv_7dl_rej_rf_end:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
     with vpunch
-    play music music_7dl["walkingaway"] fadein 3    # настроение у концовки совсем другое. Старый вариант музыки - Limp Bizkit - Walking Away подходил тут в самый раз, а это не подходит совсем
+    play music music_7dl["walkingaway"] fadein 3
     call alt_7dl_titles
     $ renpy.pause(2)
     return

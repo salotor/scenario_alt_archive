@@ -2813,9 +2813,9 @@ label alt_day1_meeting2:
     window hide
     with fade
     return
-   
+
 label alt_day1_chase:
-    scene bg ext_dining_hall_near_day with dissolve
+    scene bg ext_dining_hall_near_day with dissolve    # running
     play ambience ambience_camp_center_day fadein 2
     play sound_loop sfx_run_forest fadein 1
     play music music_list["went_fishing_caught_a_girl"] fadein 2
@@ -2828,7 +2828,7 @@ label alt_day1_chase:
     window hide
     menu:
         "Бежать на площадь!":
-            scene bg ext_square_sunset with dissolve
+            scene bg ext_square_sunset with dissolve    # running
         
             th "Сколь-ко мож-но у-же бе-гать!"
             "Волка ноги кормят, но я сегодня что-то всё больше бегаю, чем кормлюсь."
@@ -2855,7 +2855,7 @@ label alt_day1_chase:
             "Красная футболка с надписью «СССР» мелькала среди зелени заметным пятном."
             "И я прибавил ходу, не обращая внимания на возмущённо ноющие ноги."
             window hide
-            scene bg ext_playground_day 
+            scene bg ext_playground_day     # running
             with dissolve
             "Впрочем, долго их игнорировать не удалось бы, и я почувствовал, что ещё немного — и начну сдавать."
             "Скорости было недостаточно, дыхалки было недостаточно."
@@ -2891,7 +2891,7 @@ label alt_day1_chase:
     window hide
     with fade
     return
-                    
+
 label alt_day1_headshot:
     scene bg ext_path_day with fade
     play music music_7dl["slavyas_fantazm"]fadein 1
@@ -3446,7 +3446,7 @@ label alt_day1_lena:
     "Рррромантика, что же ещё."
     window hide
     scene bg ext_square_night
-    show un normal pioneer
+    show un normal pioneer with dissolve
     with fade
     menu:
         "Неплохая книжка":
@@ -3470,8 +3470,8 @@ label alt_day1_lena:
                     $ karma += 10
                     me "Спокойной ночи."
                     un "Спокойной ночи."
-                    "Она поднялась со скамейки, поколебалась с секунду, а потом отправилась прочь."
                     hide un with dissolve
+                    "Она поднялась со скамейки, поколебалась с секунду, а потом отправилась прочь."
                     window hide
                     return
                 "Задержать":
@@ -3745,7 +3745,6 @@ label alt_day1_un_stay:
     th "Вроде бы, ничего особенного, типичный образ самой обыкновенной застенчивой пионерки. Но…"
     "Но… Лена прочно заняла место в списке козырей, которыми играл лагерь против моей старой жизни."
     "Как там в той песенке… Я гляжу ей вслед — ничего в ней нет. Ничего в ней нет. Ничего в ней нет."
-    hide un with dissolve
     stop music fadeout 4
     stop ambience fadeout 6
     window hide
