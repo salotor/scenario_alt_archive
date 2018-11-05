@@ -1294,13 +1294,13 @@ label alt_day2_event_music_club1:
             "Я поднялся на террасу в поисках девочки, и моё внимание привлёк клочок бумажки, придавленный скамейкой."
             "Я наклонился и поднял бумажку."
             "На ней вычурным девичьим почерком было написано одно слово."
-            "{b}ПРИДУРОК.{/b} }"
+            "{b}ПРИДУРОК.{/b}"
             $ lp_dv -= 5
             $ list_d2_convoy_7dl.append('dv_rej')
             $ list_d2_convoy_7dl.append('me')
             "Ммммда. Похоже, с Алиской не срослось."
             dreamgirl "Вау! И как ты догадался?!"
-            $ disable_current_zone_alt1()
+            $ disable_current_zone_alt1()    # зачем полностью блокировать музклуб? После этого посетить его и познакомиться с Мику будет нельзя, хотя с Алисой это никак не должно быть связано
             window hide
             return
         show blinking
@@ -2653,6 +2653,7 @@ label alt_day2_event_library1:
                 dv "Пожалуй, я теперь знаю, куда я буду приходить вместо тихого часа."
                 show sh scared pioneer far at cright with dspr
                 sh "Что?!"
+                show dv grin pioneer2 far with dspr
                 dv "Ну а что, вожатая тут не ходит, спрятаться можно. Раздолье."
                 show un shy pioneer far at fleft with dspr
                 un "Может, лучше сделать, как они хотят?"
@@ -3938,12 +3939,12 @@ label alt_day2_dinner:
     "Кажется, сегодня пионеры были голоднее обычного. Во всяком случае, свободных мест было здорово меньше, чем на завтраке или даже вчерашнем ужине…"
     if (alt_day_binder != 1):
         extend " Том самом, с малазийской кухней."
-    "Рядом с Алисой была пара незанятых мест."
+    "Рядом с Алисой была пара незанятых мест."    ## 1
     if ('dv' in list_d2_convoy_7dl):
         "И после сегодняшнего мне казалось, что она неплохая девочка. Во всяком случае, сесть рядом можно."
     else:
         "Но лучше поголодать недельку, чем рискнуть сесть рядом."
-    "Также свободно было рядом с Ульяной, но тут всё понятно было – если мелкая вознамерится накормить меня жуком…"
+    "Также свободно было рядом с Ульяной, но тут всё понятно было – если мелкая вознамерится накормить меня жуком…"    ## 2 - по этим строчкам создаётся впечатление, что Алиса и Улька сидят за разными столами. Но если это так - почему, когда Сёма садится к Алисе, он в итоге сидит с Улькой и устраивает ей ловушку со стаканом? При этом Алиса в той сцене как будто напрочь отсутствует...
     if (alt_day_binder == 1) and not 'music_club' in list_voyage_7dl:
         "И ещё одно место было рядом с девушкой, с которой я уже второй день обещаю себе познакомиться."
         "У нас постоянно такие странные встречи были."
@@ -4179,7 +4180,7 @@ label alt_day2_dinner:
             if alt_day2_us_dubstep:
                 $ lp_dv += 1
                 $ list_d2_convoy_7dl.append('dv_dinner')
-                show dv normal pioneer2 at center
+                show dv normal pioneer2 at center with dissolve
                 if herc:
                     me "Привет ещё раз. Можно присесть?"
                 elif loki:
@@ -4200,7 +4201,7 @@ label alt_day2_dinner:
                 return
         "С Ульяной" if (not alt_day1_headshot) and (not ('dv_rej' in list_d2_convoy_7dl)):
             $ lp_us += 1
-            show us smile pioneer
+            show us smile pioneer with dissolve
             us "Приятнавааппетита!"
             "Оттарабанила она, а я подозрительно заглянул в тарелку."
             "Нет, вроде новой жизни в тарелке не обнаружено."
@@ -4219,9 +4220,9 @@ label alt_day2_dinner:
     "Я тронул локтем Ульяну, задумчиво наблюдающую за моими действиями."
     me "Уль, спорим а спорим!"
     if 'dv_dinner' in list_d2_convoy_7dl:
-        show us sad pioneer at left
+        show us sad pioneer at left with dissolve
     else:
-        show us sad pioneer at center
+        show us sad pioneer at center with dissolve
     us "Чего тебе?"
     "Грустно спросила уныло копающаяся в тарелке Ульяна. Кажется, ей тоже не слишком по нраву местная кухня."
     me "Давай поспорим, что ты стакан от тарелки не оторвёшь!"
@@ -4233,13 +4234,13 @@ label alt_day2_dinner:
     us "Легко!"
     "Она протянула руку, схватила стакан покрепче, дернула, и…"
     play music music_7dl["Semische"] fadein 1
-    show us angry pioneer
+    show us angry pioneer with dspr
     if alt_day_binder != 1:
         "В этот день мы поменялись ролями, и от двери уже в голос хохочу я, а из зала слышен самый матерный вопль:"
     us " {b}СЕМЁЁЁЁООООООН!{/b} "
     stop ambience
     window hide
-    hide us with dissolve 
+    hide us with dissolve
     hide dv with dissolve
     $ renpy.pause (3)
     scene bg ext_dining_hall_near_day with fade

@@ -139,7 +139,7 @@ label alt_day6_dv_7dl_start:
     else:
         call alt_day6_dv_7dl_dv_dancing
         pause(1)
-    if alt_day6_dv_7dl_transit:       
+    if alt_day6_dv_7dl_transit:
         call alt_day6_dv_7dl_sleeptime
         pause(1)
     else: 

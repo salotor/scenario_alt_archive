@@ -2815,7 +2815,7 @@ label alt_day1_meeting2:
     return
 
 label alt_day1_chase:
-    scene bg ext_dining_hall_near_day with dissolve    # running
+    scene bg ext_dining_hall_near_day with dissolve
     play ambience ambience_camp_center_day fadein 2
     play sound_loop sfx_run_forest fadein 1
     play music music_list["went_fishing_caught_a_girl"] fadein 2
@@ -2828,8 +2828,7 @@ label alt_day1_chase:
     window hide
     menu:
         "Бежать на площадь!":
-            scene bg ext_square_sunset with dissolve    # running
-        
+            scene bg ext_square_sunset at running
             th "Сколь-ко мож-но у-же бе-гать!"
             "Волка ноги кормят, но я сегодня что-то всё больше бегаю, чем кормлюсь."
             "За весь день я даже воды не попил, откуда ж силам взяться. А ещё эта мерзавка."
@@ -2851,12 +2850,12 @@ label alt_day1_chase:
             window hide
             return
         "Бежать на спортплощадку!":
+            scene bg ext_dining_hall_near_day at running
             "То, что я выбрал верное направление, стало понятно уже через десять секунд."
             "Красная футболка с надписью «СССР» мелькала среди зелени заметным пятном."
             "И я прибавил ходу, не обращая внимания на возмущённо ноющие ноги."
             window hide
-            scene bg ext_playground_day     # running
-            with dissolve
+            scene bg ext_playground_day at running
             "Впрочем, долго их игнорировать не удалось бы, и я почувствовал, что ещё немного — и начну сдавать."
             "Скорости было недостаточно, дыхалки было недостаточно."
             "К несчастью, демонёнок в алой футболке, казалось, не знал устали и лишь наращивал темп."
@@ -2866,6 +2865,7 @@ label alt_day1_chase:
             stop sound_loop
             menu:
                 "Пнуть мячик":
+                    scene bg ext_playground_day with dissolve
                     $ karma -= 10
                     $ alt_day1_us_shotted = True
                     me "Сбежать захотела?"
@@ -2894,7 +2894,7 @@ label alt_day1_chase:
 
 label alt_day1_headshot:
     scene bg ext_path_day with fade
-    play music music_7dl["slavyas_fantazm"]fadein 1
+    play music music_7dl["slavyas_fantazm"] fadein 1
     "Пробормотав отходную молитву по безвременно почившему ужину, я направился куда глаза глядят, и уже очень скоро уткнулся в знакомые ворота с пятиконечной звездой."
     "Как это странно, когда подъездной пятачок у лагеря совмещён с автобусной остановкой."
     window hide
