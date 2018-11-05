@@ -27164,7 +27164,10 @@ label alt_day7_sl_7dl_leaving:
         voices "Поехали!"
         "Автобус швырнул себя в раскалённый полдень." ##
     window hide
-    scene cg d7_sl_epilogue_bus_7dl
+    if (not loki) or alt_day6_sl_7dl_forgive:
+        scene cg d7_sl_epilogue_bus_7dl
+    else:
+        scene cg d7_me_epilogue_bus_7dl
     with dissolve
     play sound_loop sfx_bus_interior_moving fadein 2
     "Автобус катил по асфальту, в салоне было душно, не спасали даже открытые люки." ## фразы подряд начинаются со слова "автобус"
