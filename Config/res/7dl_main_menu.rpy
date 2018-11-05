@@ -553,7 +553,7 @@ label main_menu_7dl:
     stop sound_loop
     window hide
     
-    call alt_day0_vars
+    call alt_vars
     $ renpy.block_rollback()
     $ chk_music_widget_7dl()
     $ chk_lp_widget_7dl()
@@ -624,6 +624,5 @@ label widgets_on_off_7dl:
         renpy.utter_restart()
 
 label start_7dl:
-    call alt_day0_vars
-    call alt_day0_prologue
+    call alt_vars
     jump main_menu_7dl
