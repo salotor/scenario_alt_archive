@@ -5872,7 +5872,7 @@ label alt_day2_sup2:
     if alt_day2_round3 == 2:
         return
     else:
-        show dv normal pioneer2 with dspr
+        show dv normal pioneer2 with dissolve
         "Проходящая мимо Алиса задела меня  плечом."
         show dv normal pioneer2 close with dspr
         dv "Поговорим?"
@@ -5880,7 +5880,7 @@ label alt_day2_sup2:
         "Я пожал плечами и отправился вслед за ней."
         window hide
         scene bg ext_dining_hall_near_sunset with fade
-        show dv angry pioneer2
+        show dv angry pioneer2 with dissolve
         stop ambience
         "Несколькими минутами спустя мы вышли на крылечко, и Двачевская мгновенно напустилась на меня. Кажется, она была в бешенстве."
         play music music_7dl["catch_the_hedge"] fadein 2
@@ -5900,18 +5900,18 @@ label alt_day2_sup2:
                 if herc:
                     me "Алис, давай, мы все глубоко вздохнём и успокоимся."
                     dv "Ты придурок!"
-                    show dv sad pioneer2 with dissolve
+                    show dv sad pioneer2 with dspr
                     dv "Ты сам не знаешь, чего хочешь!"
-                    "Она испепелила меня взглядом и провалилась в подпространство."
                     $ alt_day2_dv_tears = True
-                    hide dv
+                    hide dv with dissolve
+                    "Она испепелила меня взглядом и провалилась в подпространство."
                     "А я еще долго стоял на крыльце и задумчиво смотрел в сторону, куда скрылась Алиса."
                 else:
                     me "Я не понимаю, на что ты злишься."
                     if alt_day2_dv_bet_approve:
                         dv "У нас было пари, и ты всё испортил!"
                     "Она смерила меня презрительным взглядом."
-                    show dv normal pioneer2
+                    show dv normal pioneer2 with dspr
                     dv "Ты и в самом деле тормоз."
                     hide dv with easeoutleft
                     "А я еще долго стоял на крыльце и задумчиво смотрел в сторону, куда скрылась Алиса."
@@ -5952,13 +5952,13 @@ label alt_day2_sup2:
                     dv "Ты подмигивал, я видела!"
                     me "С чего ты решила? Может, мне просто попала соринка в глаз."
                     dv "Конечно, соринка."
-                    show dv sad pioneer2 with dissolve
+                    show dv sad pioneer2 with dspr
                     if alt_day2_dv_bet_approve:
                         dv "Короче, пари ты проиграл. Теперь готовься."
                         me "Ты и правда собираешься рассказать им?"
                         "Я не скрывал ужаса."
                         dv "Да!"
-                        show dv laugh pioneer2 with dissolve
+                        show dv laugh pioneer2 with dspr
                         dv "Очень интересно будет посмотреть, что с тобой случится."
                         hide dv with dissolve
                         "Её смех был злым и нервным. Она сошла с крыльца, оттолкнув меня с дороги."
@@ -5968,7 +5968,7 @@ label alt_day2_sup2:
                         me "Да плевать я хотел."
                         me "У тебя ноль доказательств и ноль свидетелей."
                         me "А твою мелкую придурочную подружку, которая в кустах сидела, вожатая даже слушать не станет."
-                        show dv rage pioneer2 with dissolve
+                        show dv rage pioneer2 with dspr
                         dv "Думаешь, самый умный, всё продумал?"
                         hide dv with dissolve
                         "Я пожал плечами и развернулся."
@@ -5981,7 +5981,7 @@ label alt_day2_sup2:
                         me "Но это же неправда!"
                         "Она и в самом деле собирается испортить мне жизнь?! Просто так? Из-за какой-то там игры?!"
                         dv "А как ты думаешь, кому поверят?"
-                        show dv laugh pioneer2 with dissolve
+                        show dv laugh pioneer2 with dspr
                         dv "Очень интересно будет посмотреть, что с тобой случится."
                         hide dv with dissolve
                         "Её смех был злым и нервным. Она сошла с крыльца, оттолкнув меня с дороги."
