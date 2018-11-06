@@ -3856,7 +3856,7 @@ label alt_day2_dinner:
         me "А что не так?"
         mt "Да времени у тебя на всё это не хватит, так что давай не жадничай, выбери что-то одно!"
         menu:
-            "А я и в газету, и на музыку успею!" if (('un' in list_d2_convoy_7dl)) and 'music' in list_clubs_7dl and 'nwsppr' in list_clubs_7dl:
+            "А я и в газету, и на музыку успею!" if ('un' in list_d2_convoy_7dl) and 'music' in list_clubs_7dl and 'nwsppr' in list_clubs_7dl:
                 mt "Уверен?"
                 show un normal pioneer at left with dissolve
                 "Стоящая рядом со мной Лена кивнула."
@@ -3903,7 +3903,7 @@ label alt_day2_dinner:
                 mt "Хорошо, оставляем кибернетику."
                 $ list_clubs_7dl = []
                 $ list_clubs_7dl.append('cyber')
-        if (('un' in list_d2_convoy_7dl)) and 'music' in list_clubs_7dl and 'nwsppr' in list_clubs_7dl:
+        if ('un' in list_d2_convoy_7dl) and 'music' in list_clubs_7dl and 'nwsppr' in list_clubs_7dl:
             mt "Так и запишем."
         else:
             mt "Но всё остальное — вычёркиваю!"
