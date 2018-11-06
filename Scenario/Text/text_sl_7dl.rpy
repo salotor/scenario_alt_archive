@@ -28616,7 +28616,6 @@ label alt_day7_sl_7dl_postscriptum:
     sl "А я похожа на неё?"
     hide frame_sl
     with fade
-    #possible KOLHOZ со спрайтами
     show sl normal_gr casual with dissolve
     "Спросила меня сероглазая блондинка."
     hide sl with dissolve

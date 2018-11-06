@@ -153,7 +153,6 @@ label alt_day5_un_7dl_vars:
     $ alt_day5_un_7dl_cleanse = False
     $ alt_day5_un_7dl_square_duty = False
     $ alt_day5_un_7dl_club_day = False
-    $ alt_day5_un_7dl_cube = False
     $ alt_day5_un_7dl_sl_un_washing = False
     $ alt_day5_un_7dl_solo_washing = False
     $ alt_day5_un_7dl_sl_fight = False
