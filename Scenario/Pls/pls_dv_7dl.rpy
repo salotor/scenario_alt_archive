@@ -125,9 +125,9 @@ label alt_day6_dv_7dl_start:
     if alt_day_catapult == 1:
         call alt_day6_dv_7dl_escape_convince
         return
-    call alt_day6_dv_7dl_predance
-    pause(1)
     if alt_day6_dv_7dl_transit:
+        call alt_day6_dv_7dl_predance
+        pause(1)
         if alt_day6_dv_7dl_sl_route:
             call alt_day6_dv_7dl_sl_dancing
             pause(1)

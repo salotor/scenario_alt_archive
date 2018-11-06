@@ -10220,7 +10220,6 @@ label alt_day6_dv_7dl_escape_convince:
         "Всплыло в гаснущем сознании."
         window hide
         show blink
-        s
         "Мой труп должен прилично выглядеть. А значит, остатки тающих сил надо инвестировать в улыбку."
         "Пусть знают, я ушёл светло и ни о чём не жалел."
         window hide
@@ -10232,10 +10231,10 @@ label alt_day6_dv_7dl_escape_convince:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
         return
-        
+
 label alt_day6_dv_7dl_predance:
     scene anim_square_party with dissolve
-    if (alt_day4_dv_7dl_portwine or alt_day4_dv_7dl_vodka) and not alt_day4_dv_7dl_ba_conv:
+    if (alt_day4_dv_7dl_portwine or alt_day4_dv_7dl_vodka) and not alt_day4_dv_7dl_ba_conv and (lp_mi >= 4) and (lp_sl < 4):
         "Когда я вернулся обратно на танцпол, то успел увидеть тревожную гримаску на лице Мику — тут же сменившуюся улыбкой, когда она разглядела меня."
         show mi normal dress with dspr
         me "Привет, потанцуем?"
@@ -10276,7 +10275,7 @@ label alt_day6_dv_7dl_predance:
             "Впрочем, я этого ожидал."
             "Можно даже сказать, я этого добивался."
             window hide
-            scene anim_square_party with dissolve 
+            scene anim_square_party with dissolve
             mt "{b}СЕМЁЁЁЁЁЁН!{/b}"
             show mt rage dress close with dspr
             stop music fadeout 4
@@ -10298,7 +10297,7 @@ label alt_day6_dv_7dl_predance:
             "Вместо этого она взяла микрофон:"
     else:
         "Славя притащила меня на танцпол тютелька в тютельку, когда закончилась очередная задорная песенка, под которую выламывались пионеры, думающие, что умеют танцевать."
-        "Ей на смену пришла композиция понежнее, а вожатая вдруг уведомила в микрофона на весь лагерь:"
+        "Ей на смену пришла композиция понежнее, а вожатая вдруг уведомила в микрофон на весь лагерь:"
     mt "По лагерю объявляется белый танец: дамы приглашают кавалеров."
     "По лагерю объявляется белый танец."
     play music music_7dl["ourfirstmet"] fadein 4
@@ -10605,7 +10604,7 @@ label alt_day6_dv_7dl_mt_dancing:
     window hide
     show mt smile dress with dissolve
     th "Оу… эм… джииии…"
-    if (alt_day4_dv_7dl_portwine or alt_day4_dv_7dl_vodka) and alt_day4_dv_7dl_ba_conv and alt_day2_loki_minijack:
+    if (alt_day4_dv_7dl_portwine or alt_day4_dv_7dl_vodka) and not alt_day4_dv_7dl_ba_conv and alt_day2_loki_minijack:
         th "А сейчас меня будут медленно и печально убивать."
     mt "Попался."
     "Улыбнулась она."
