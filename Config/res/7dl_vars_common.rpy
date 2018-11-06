@@ -122,6 +122,12 @@ label scenario__alt_sevendl:
 
 init 4:
 # вызываем все переменные в init (необходимо для работы повторов)
+    call alt_vars
+# устанавливаем при загрузке стандартные значения из БЛ для th
+    $ th_prefix = "~ "
+    $ th_suffix = " ~"
+
+label alt_vars:
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars
@@ -156,10 +162,8 @@ init 4:
     call alt_day5_sl_7dl_vars
     call alt_day6_sl_7dl_vars
     call alt_day7_sl_7dl_vars
-# устанавливаем при загрузке стандартные значения из БЛ для th
-    $ th_prefix = "~ "
-    $ th_suffix = " ~"
-
+    return
+    
 label alt_day0_vars: #Переменные нулевого дня
     $ make_names_unknown_7dl()
     $ lp_mi = 0
