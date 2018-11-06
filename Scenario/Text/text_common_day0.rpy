@@ -1120,7 +1120,7 @@ label alt_day0_d3_prologue:
     dreamgirl "Дороги?"
     am "Да, ближе их у меня никого…"
     window hide
-    scene whiter
+    scene white
     with flash
     "Декорации за спиной девушки сместились, вспыхнул яркий свет, а когда я проморгался…"
     window hide

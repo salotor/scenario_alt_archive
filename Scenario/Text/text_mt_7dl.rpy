@@ -2903,7 +2903,7 @@ label alt_day6_mt_7dl_declare:
     "А моя челюсть гулко ударилась о мои же колени."
     me "Э…"
     "Не самая блестящая моя речь, согласен."
-    show mt normal dress close with dspr
+    show mt smile dress close with dspr
     "Ольга улыбнулась:"
     mt "Я предпочла бы просто поцелуй."
     mt "Если ты, конечно, всё ещё {i}хочешь{/i} поцеловать меня."
