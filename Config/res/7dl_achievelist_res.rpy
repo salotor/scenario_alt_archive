@@ -203,26 +203,33 @@ init:
     image sdl_logo_inactive = get_image_7dl("gui/ach_list/acm_logo_unhoverA.png")
     image sdl_logo_active = get_image_7dl("gui/ach_list/acm_logo_hoverA.png")
     #Мику
+    image sdl_mi_7dl_active = get_image_7dl("gui/ach_list/mi_7dl_active.png")
     image sdl_mi_cl_active = get_image_7dl("gui/ach_list/mi_cl_active1.png")
     image sdl_mi_cl_inactive = get_image_7dl("gui/ach_list/mi_cl_inactive1.png")
     image sdl_mi_dj_active = get_image_7dl("gui/ach_list/mi_dj_active1.png")
     image sdl_mi_dj_inactive = get_image_7dl("gui/ach_list/mi_dj_inactive1.png")
     #Алисхен
+    image sdl_dv_7dl_active = get_image_7dl("gui/ach_list/dv_7dl_active.png")
     image sdl_dv_cl_active = get_image_7dl("gui/ach_list/dv_cl_active1.png")
     image sdl_dv_cl_inactive = get_image_7dl("gui/ach_list/dv_cl_inactive1.png")
     image sdl_dv_dj_active = get_image_7dl("gui/ach_list/dv_dj_active1.png")
     image sdl_dv_dj_inactive = get_image_7dl("gui/ach_list/dv_dj_inactive1.png")
     #Славя
+    image sdl_sl_7dl_active = get_image_7dl("gui/ach_list/sl_7dl_active.png")
     image sdl_sl_cl_active = get_image_7dl("gui/ach_list/sl_cl_active1.png")
     image sdl_sl_cl_inactive = get_image_7dl("gui/ach_list/sl_cl_inactive1.png")
     image sdl_sl_wh_active = get_image_7dl("gui/ach_list/sl_wh_active1.png")
     image sdl_sl_wh_inactive = get_image_7dl("gui/ach_list/sl_wh_inactive1.png")
     #Лена
+    image sdl_un_7dl_active = get_image_7dl("gui/ach_list/un_7dl_active.png")
     image sdl_un_cl_active = get_image_7dl("gui/ach_list/un_cl_active1.png")
     image sdl_un_cl_inactive = get_image_7dl("gui/ach_list/un_cl_inactive1.png")
     image sdl_un_fz_active = get_image_7dl("gui/ach_list/un_fz_active1.png")
     image sdl_un_fz_inactive = get_image_7dl("gui/ach_list/un_fz_inactive1.png")
+    #Ольга
+    image sdl_mt_7dl_active = get_image_7dl("gui/ach_list/mt_7dl_active.png")
     #Ульяна
+    image sdl_us_7dl_active = get_image_7dl("gui/ach_list/us_7dl_active.png")
     image sdl_us_px_active = get_image_7dl("gui/ach_list/us_px_active1.png")
     image sdl_us_px_inactive = get_image_7dl("gui/ach_list/us_px_inactive1.png")
     #Одиночка
