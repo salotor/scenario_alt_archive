@@ -126,6 +126,8 @@ label alt_day6_dv_7dl_start:
         call alt_day6_dv_7dl_escape_convince
         return
     if alt_day6_dv_7dl_transit:
+        call alt_day6_dv_7dl_predance
+        pause(1)
         if alt_day6_dv_7dl_sl_route:
             call alt_day6_dv_7dl_sl_dancing
             pause(1)
@@ -139,7 +141,7 @@ label alt_day6_dv_7dl_start:
     else:
         call alt_day6_dv_7dl_dv_dancing
         pause(1)
-    if alt_day6_dv_7dl_transit:       
+    if alt_day6_dv_7dl_transit:
         call alt_day6_dv_7dl_sleeptime
         pause(1)
     else: 
