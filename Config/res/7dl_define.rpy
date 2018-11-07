@@ -662,7 +662,13 @@ init:
     image cg d5_rainy_idle_7dl = get_image_7dl("cg/d5_rainy_idle_7dl.jpg")
     
     image cg d5_sl_bed_7dl = get_image_7dl("cg/d5_sl_bed_7dl.jpg")
-    image cg d5_sl_bench_7dl = get_image_7dl("cg/d5_sl_bench_7dl.png")
+    
+    image cg d5_sl_bench_day_7dl = get_image_7dl("cg/d5_sl_bench_day_7dl.png")
+    image cg d5_sl_bench_neutral_7dl = get_image_7dl("cg/d5_sl_bench_neutral_7dl.png")
+    image cg d5_sl_bench_night_7dl = get_image_7dl("cg/d5_sl_bench_night_7dl.png")
+    image cg d5_sl_bench_sunset_7dl = get_image_7dl("cg/d5_sl_bench_sunset_7dl.png")
+    
+    
     image cg d5_sl_hugs_7dl = get_image_7dl("cg/d5_sl_hugs_7dl.jpg")
     image cg d5_sl_kissing_7dl = get_image_7dl("cg/d5_sl_kissing_7dl.png")
     image cg d5_sl_moon_7dl = get_image_7dl("cg/d5_sl_moon_7dl.jpg")
