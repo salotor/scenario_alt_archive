@@ -11020,8 +11020,9 @@ label alt_day5_neu_mt_tea_party:
     window hide
     stop music fadeout 3
     scene black with fade
-    window hide
-    scene bg ext_houses_night_7dl with dissolve 
+    pause(1)
+    scene bg ext_houses_night_7dl
+    with dissolve 
     "Было уже часа три ночи, когда я отправился ночевать в другой дом, уступая странному требованию этой женщины."
     "Меня немного шатало от усталости и щедро раздаренных сил, но я всё равно глупо и счастливо улыбался."
     "Как бы то ни было."
