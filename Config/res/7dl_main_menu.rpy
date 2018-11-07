@@ -625,4 +625,5 @@ label widgets_on_off_7dl:
 
 label start_7dl:
     call alt_vars
+    call alt_day0_prologue
     jump main_menu_7dl
