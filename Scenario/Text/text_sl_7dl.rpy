@@ -27123,7 +27123,7 @@ label alt_day7_sl_7dl_leaving:
             mt "Вот."
             "Ольга сняла с плеча синюю сумку и протянула мне."
             "А та оказалась…"
-            show backpack at left with dissolve:
+            show backpack with dissolve:
                 pos(760,675)
             me "Да быть этого не может!"
             mt "Рюкзак, как я понимаю. {w}Правда, странный какой-то, на одной лямке всего."
@@ -27465,6 +27465,7 @@ label alt_day7_sl_7dl_true:
     "Слишком уж это личное."
     "Слишком моё!"
     "И, как оказалось, не зря, совсем не зря я терпел."
+    stop ambience fadeout 3
     stop music fadeout 3
     window hide
     play sound sfx_open_door_1
@@ -27755,8 +27756,8 @@ label alt_day7_sl_7dl_true:
     "И письмо."
     "Которое я перечитывал уже несколько раз."
     "И не мог перестать перечитывать."
-    "В конце концов, это было последнее, что мне осталось от Слави."
     stop music fadeout 3
+    "В конце концов, это было последнее, что мне осталось от Слави."
     "Последнее, что…"
     window hide
     scene anim intro_5
@@ -27880,7 +27881,7 @@ label alt_day7_sl_7dl_true:
     "И можно ли теперь считать, что она нашла Алису?"
     window hide
     scene bg int_wagon_day_7dl
-    with dissolve
+    with fade
     play ambience ambience_7dl["train"] fadein 3
     "Исход из земель Тверских был скомканным, паническим, на грани истерики."
     "Мне нечего было здесь делать."
@@ -27985,6 +27986,10 @@ label alt_day7_sl_7dl_true:
     am "На счёт «три»."
     "Скомандовал сам себе."
     am "Раз… Два…"
+    scene black
+    with fade
+    stop sound_loop fadeout 1
+    stop ambience fadeout 1
     "Дальше была только темнота и тишина."
     "И всё закончилось."
     "Ведь чудес не бывает."
@@ -28044,6 +28049,7 @@ label alt_day7_sl_7dl_rf_good:
     "И так во всём."
     play sound sfx_7dl["ringtone"] fadein 1
     "Телефон зазвонил, я взял трубку:"
+    stop sound
     me "Алло."
     "Спросонок мой голос звучал хрипло и уныло."
     "Впрочем, так он бы звучал и не со сна."
@@ -28127,6 +28133,7 @@ label alt_day7_sl_7dl_rf_good:
     "Теперь же…"
     window hide
     scene anim intro_1
+    with dissolve
     pause(1)
     scene anim intro_2
     with dissolve
@@ -28181,7 +28188,7 @@ label alt_day7_sl_7dl_rf_good:
     "Реквием по человечеству. {w}По надежде."
     "Когда нас всех не станет, планета оправится через пару столетий, не больше."
     "И никто никогда о нас не вспомнит."
-    "Так стоит ли трепыхаться."
+    "Так стоит ли трепыхаться?"
     "Если ты песчинка перед вечностью, если твоё существование бессмысленно по определению, а создали тебя просто для того, чтобы забыть… Стоит ли трепыхаться?"
     "Может быть, нужно найти свой вариант счастья и держаться его?"
     stop music fadeout 3
@@ -28403,9 +28410,9 @@ label alt_day7_sl_7dl_postscriptum:
     "Сказала, что видеть меня больше не желает."
     "Уходит от меня."
     window hide
-    play sound sfx_open_door_kick
-    pause(1)
     hide sl with easeoutright
+    pause(1)
+    play sound sfx_open_door_kick
     with hpunch
     "Хлопнула дверь."
     "И я снова остался один."
@@ -28646,7 +28653,7 @@ label alt_day7_sl_7dl_postscriptum:
     scene bg ext_khruschevka_rain_7dl
     with dissolve
     "Зато через две недели я увидел корпуса снаружи."
-    "Одетый уже не в казённую безразмерную пижаму, а в привычные уже горнолыжные штаны и пальто."
+    "Одетый уже не в казённую безразмерную пижаму, а в привычные уже горнолыжные штаны и пальто." # уже-уже
     "Окинул прощальным взглядом ладненькие домики."
     "Вздрогнул от привычного, хозяйского жеста, с каким меня взяли под руку."
     sl "Что-то не так?"
@@ -28659,7 +28666,6 @@ label alt_day7_sl_7dl_postscriptum:
     stop ambience fadeout 6
     with fade
     return
-    
 
 label alt_day7_sl_7dl_herc:
     play music music_7dl["what_if"] fadein 3
