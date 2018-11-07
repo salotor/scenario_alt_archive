@@ -289,14 +289,7 @@ label alt_day4_mi_dj_hedg_hunt:
     "И…"
     window hide
     play music music_7dl["catch_the_hedge"] fadein 2
-    scene cg d4_mi_hedgehod_7dl:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene cg d4_mi_hedgehod_7dl at fast_running
     with dissolve
     "Из тёмного прогала под обиталищем Лены и Мику в лунный свет вырвалась та самая округлая хищная тень, по чью душу я здесь и стоял."
     "Глубоко вздохнув, я взял низкий старт и ускорился."
@@ -324,14 +317,7 @@ label alt_day4_mi_dj_hedg_hunt:
     window hide
     play sound sfx_slavya_run
     $ night_time()
-    scene bg ext_musclub_night_7dl:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_musclub_night_7dl at fast_running
     with dissolve
 
     "Я пронёсся мимо умывальников, через небольшую рощицу и, наконец, вырулил по направлению к притихшему в ночи зданию музыкального кружка."
@@ -4552,14 +4538,7 @@ label alt_day5_mi_dj_dinner:
     window hide 
     play sound sfx_open_door_kick
     pause(1)
-    scene bg ext_musclub_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_musclub_day at fast_running
     with dissolve
     "Не помня себя от ужаса, я насилу выбрался из помещения клуба и со всех ног кинулся в душную жару."
     "Остатки совести подсказывали мне, что я сейчас сделал что-то очень плохое."
@@ -4576,27 +4555,13 @@ label alt_day5_mi_dj_dinner:
     dreamgirl "Возможно."
     dreamgirl "А возможно, что это и есть настоящая реальность, а ты до этого видел скучный сон."
     window hide 
-    scene bg ext_square_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_square_day at fast_running
     with dissolve
     if not loki:
         th "Логика в этом есть. Я никогда не ломал конечностей, несмотря на то, что все мои знакомые хоть раз да… Даже травм особых не получал."
     "Мысли прыгали с пятого на десятое, спорить с самим собой получалось с трудом, но страх гнал меня вперёд."
     window hide 
-    scene bg ext_boathouse_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_boathouse_day at fast_running
     with dissolve
     stop music fadeout 6
     $ persistent.sprite_time = "day"

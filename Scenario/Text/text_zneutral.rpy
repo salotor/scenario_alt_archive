@@ -8136,27 +8136,13 @@ label alt_day5_neu_us_warm_evening:
     "…перепрыгнуть её!"
     "…приземлиться неудачно и, припадая на ушибленную при падении ногу, припустить к медпункту, игнорируя возмущённое «эй» за спиной."
     window hide
-    scene bg ext_square_night with dissolve:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_square_night at fast_running
     with dissolve
     "За спиной ни на миг не смолкал топот, однако звучал он достаточно странно."
     "Но я в тот момент не отвлекался на глупости."
     "Я всеми силами старался не быть запятнанным!"
     window hide
-    scene bg ext_aidpost_night with dissolve:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_aidpost_night at fast_running
     with dissolve
     "Мы не бегали по тропинкам, выложенным плитами и даже просто протоптанными «скороходами» брезговали."
     "Нет, была какая-то особая прелесть в том, чтобы проламываться сквозь кусты, пробивать ветки и перепрыгивать через воздушные корни сосен."

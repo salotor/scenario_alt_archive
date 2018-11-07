@@ -1372,14 +1372,8 @@ label alt_day1_alt_L:
             "Но здесь и сейчас…"
             "У меня будет полное право долго и остервенело пинать воришку."
             window hide
-            scene bg ext_houses_day with flash:
-                pos (0,0) 
-                linear 0.1 pos (-5,-5) 
-                linear 0.1 pos (5,5) 
-                pos (0,0) 
-                linear 0.1 pos (0,-5) 
-                linear 0.1 pos (0,5) 
-                repeat
+            scene bg ext_houses_day at fast_running
+            with flash
         
             "А тот, видимо, почуяв мои самые неблагие намерения, с душой так поднажал."
             me "Врёшь, тварь!"
@@ -2354,14 +2348,8 @@ label alt_day1_alt_U:
             "Ага, так я и послушался."
             voices "Стой, кому говорят!"
             window hide
-            scene bg ext_dining_hall_near_sunset with flash:
-                pos (0,0) 
-                linear 0.1 pos (-5,-5) 
-                linear 0.1 pos (5,5) 
-                pos (0,0) 
-                linear 0.1 pos (0,-5) 
-                linear 0.1 pos (0,5) 
-                repeat
+            scene bg ext_dining_hall_near_sunset at fast_running
+            with flash
         
             "За спиной послышался топот, и я припустил изо всех сил."
             "Кажется, дежурные клюнули на приманку."

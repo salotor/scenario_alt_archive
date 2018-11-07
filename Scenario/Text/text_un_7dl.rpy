@@ -8671,7 +8671,7 @@ label alt_day6_un_7dl_dinner:
         mi "Вроде ничего, да? Я-то с Леной не очень много общаюсь…"
         "А я стоял, красный как рак, больше всего боясь, что та, кого я всё утро искал, найдёт меня сама…"
         dreamgirl "Да, у нас с тобой талант влипать в ситуации."
-        show mi smile voce with dspr
+        show mi smile voca with dspr
         mi "Но я оценила, какой ты заботливый и внимательный."
         me "Ни… кхм…"
         "Засорился."
@@ -10506,14 +10506,8 @@ label alt_day7_un_7dl_epilogue_all:
     play sound sfx_close_water_sink
     pause(1)
     un "Два часа, Семён. Меня уже нет."
-    scene bg ext_aidpost_night with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_aidpost_night at fast_running
+    with flash
     with dissolve
     "Я стиснул зубы и выскочил из туалета, пронёсся через весь лагерь к зданию поста первой помощи, и трясущимися руками долго не мог попасть в замочную скважину."
     window hide

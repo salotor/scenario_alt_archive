@@ -15145,25 +15145,13 @@ label alt_day7_sl_dinner:
                 me "Спасибо!"
                 "Новая надежда колотилась в висках, толкала ноги вперёд, прибавляя жару."
                 "И я бежал, бежал изо всех сил."
-                scene bg ext_house_of_sl_day with flash:
-                    pos (0,0) 
-                    linear 0.1 pos (-5,-5) 
-                    linear 0.1 pos (5,5) 
-                    pos (0,0) 
-                    linear 0.1 pos (0,-5) 
-                    linear 0.1 pos (0,5) 
-                    repeat
+                scene bg ext_house_of_sl_day at fast_running
+                with flash
                 dreamgirl "Если ты хочешь помолиться — сейчас самое время."
                 "Из-за бега голос моей карманной шизофрении слышался урывками."
                 th "Не накаркай!"
-                scene bg ext_square_day with flash:
-                    pos (0,0) 
-                    linear 0.1 pos (-5,-5) 
-                    linear 0.1 pos (5,5) 
-                    pos (0,0) 
-                    linear 0.1 pos (0,-5) 
-                    linear 0.1 pos (0,5) 
-                    repeat
+                scene bg ext_square_day at fast_running
+                with flash
                 dreamgirl "Но если я правильно помню регламент, начальник всегда уезжает в пересменок — чтобы сдать документацию и получить путёвки на следующую смену."
                 dreamgirl "А так как ему некому махать платочком, то вполне допустимо, что он мог…"
                 th "Заткнись!"

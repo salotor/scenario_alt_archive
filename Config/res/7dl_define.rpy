@@ -185,6 +185,25 @@ init:
             ease 0.2 xoffset 0 yoffset 0
             ease 0.2 xoffset -25 yoffset 50
         repeat
+
+    transform fast_running:
+        pos (0,0) 
+        linear 0.1 pos (-5,-5) 
+        linear 0.1 pos (5,5) 
+        pos (0,0) 
+        linear 0.1 pos (0,-5) 
+        linear 0.1 pos (0,5) 
+        repeat
+
+    transform fast_running2:
+        block:
+            zoom 1.1 xcenter 0.5 ycenter 0.5
+        block:
+            ease 0.1 xoffset 0 yoffset 0
+            ease 0.1 xoffset 12 yoffset 25
+            ease 0.1 xoffset 0 yoffset 0
+            ease 0.1 xoffset -12 yoffset 25
+        repeat
         
 #Наши транзиты, с блекджеком и разными цветами.
     $ flash_cyan = Fade(1, 0, 1, color="#1fa")

@@ -635,14 +635,7 @@
             hide us with dissolve
         stop sound fadeout 3
         stop sound_loop
-        scene bg  ext_house_of_mt_day with dissolve:
-                pos (0,0) 
-                linear 0.1 pos (-5,-5) 
-                linear 0.1 pos (5,5) 
-                pos (0,0) 
-                linear 0.1 pos (0,-5) 
-                linear 0.1 pos (0,5) 
-                repeat
+        scene bg  ext_house_of_mt_day at fast_running
         with dissolve
         "Небольшая погоня, чтобы разогнать кровь."
         "И, забежав в домик, захлопнуть дверь и привалиться к ней, чуть дыша."

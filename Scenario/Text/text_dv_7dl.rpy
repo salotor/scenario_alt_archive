@@ -240,7 +240,7 @@
         linear 0.1 pos (0,0) 
         linear 0.1 pos (5,0) 
         linear 0.1 pos (0,0) 
-        repeat 5
+        repeat (5)
     dv "У-уйди, психопат! Аааа! Отцепись, ненормальный!"
     "Полухохоча, полукрича, она пыталась отбиться, но я беззастенчиво пользовался грубой физической силой, сначала перехватив её руки, а потом просто притиснув как в вагоне метро в час пик."
     play music music_7dl["yume_akari"] fadein 3
@@ -2386,39 +2386,18 @@ label alt_day4_dv_7dl_mt_aid:
     play music music_list["pile"] fadein 5
     "Надо спешить! Мне и так было не слишком приятно оставлять Алису в таком состоянии…"
     window hide
-    scene bg ext_washstand_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_washstand_day at fast_running
+    with flash
 
     "Я решил двигать напрямки, поэтому сразу развернулся к умывальникам."
     window hide
-    scene bg ext_houses_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_houses_day at fast_running
+    with flash
 
     "Развернулся у того места, где сегодня прятался с Ульяной."
 
-    scene bg ext_house_of_mt_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_house_of_mt_day at fast_running
+    with flash
 
     "И, наконец, добравшись до нашего с Ольгой домика "
     play sound sfx_open_door_strong
@@ -4926,43 +4905,22 @@ label alt_day5_dv_7dl_dinner:
 
     play music music_7dl["walkingaway"] fadein 3
     window hide
-    scene bg ext_square_day with pixellate:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_square_day at fast_running
+    with pixellate
 
     "Я бежал неизвестно сколько. Наверное, в первый день, когда я только-только прибыл сюда, я так бежал."
     "Вот и сейчас. Внутри снова поселилось это невозможно жестокое чувство загнанности, когда из угла уже не вырваться, а Природа-мать обделила клыками или хотя бы когтями в мягких подушечках лап."
     window hide
-    scene bg ext_houses_day with pixellate:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_houses_day at fast_running
+    with pixellate
 
     "Что я мог рассказать этим людям, этим детям?"
     "Всё будет плохо, ваша борьба заранее проиграна, и обещанного коммунизма нет ни в будущем, ни за горизонтом, ни даже за поворотом дороги, по которой вы выбрали свои двести километров в час?"
     "Вот я и попытался… Притвориться? Приспособиться? Стать одним из них."
     "Эх, жаль, врать я так и не научился, и любому, кто худо-бедно умеет читать мои жесты, модус операнди мой — будет очевидно, когда я честен, а когда кривлю душой."
     window hide
-    scene bg ext_path_day with pixellate:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_path_day at fast_running
+    with pixellate
 
     "Например, Алиса. Она слишком пристально ко мне приглядывалась и слишком знакомое высокомерное недоверие светилось в янтарных глазах."
     "Она считает меня… А кем?"
@@ -6974,28 +6932,14 @@ label alt_day6_dv_7dl_begin:
         "По-хорошему, надо бы закрыть дверь на замок…"
         "Но с площади уже приближался Электроник, и мы, не откладывая дел в долгий ящик, припустили к домику Алисы. Ну а где ещё прятать такой трофей? Не в вожатской же!"
         window hide
-        scene bg ext_houses_sunset with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
-            repeat
-        with dissolve
+        scene bg ext_houses_sunset at fast_running
+        with flash
     
         $ lp_dv += 2
         "Как некий размотанный клубок, мы миновали в обратной последовательности первые три домика, переместились к зданию администрации и уже почти вышли на финишную прямую мимо душевых к логову рыжих, "
         window hide
-        scene bg ext_square_sunset with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
-            repeat
-        with dissolve
+        scene bg ext_square_sunset at fast_running
+        with flash
     
         extend "как нас тормознули на месте."
     else:
@@ -10231,10 +10175,10 @@ label alt_day6_dv_7dl_escape_convince:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
         return
-        
+
 label alt_day6_dv_7dl_predance:
     scene anim_square_party with dissolve
-    if (alt_day4_dv_7dl_portwine or alt_day4_dv_7dl_vodka) and not alt_day4_dv_7dl_ba_conv:
+    if (alt_day4_dv_7dl_portwine or alt_day4_dv_7dl_vodka) and not alt_day4_dv_7dl_ba_conv and (lp_mi >= 4) and (lp_sl < 4):
         "Когда я вернулся обратно на танцпол, то успел увидеть тревожную гримаску на лице Мику — тут же сменившуюся улыбкой, когда она разглядела меня."
         show mi normal dress with dspr
         me "Привет, потанцуем?"
@@ -10275,7 +10219,7 @@ label alt_day6_dv_7dl_predance:
             "Впрочем, я этого ожидал."
             "Можно даже сказать, я этого добивался."
             window hide
-            scene anim_square_party with dissolve 
+            scene anim_square_party with dissolve
             mt "{b}СЕМЁЁЁЁЁЁН!{/b}"
             show mt rage dress close with dspr
             stop music fadeout 4
@@ -10297,7 +10241,7 @@ label alt_day6_dv_7dl_predance:
             "Вместо этого она взяла микрофон:"
     else:
         "Славя притащила меня на танцпол тютелька в тютельку, когда закончилась очередная задорная песенка, под которую выламывались пионеры, думающие, что умеют танцевать."
-        "Ей на смену пришла композиция понежнее, а вожатая вдруг уведомила в микрофона на весь лагерь:"
+        "Ей на смену пришла композиция понежнее, а вожатая вдруг уведомила в микрофон на весь лагерь:"
     mt "По лагерю объявляется белый танец: дамы приглашают кавалеров."
     "По лагерю объявляется белый танец."
     play music music_7dl["ourfirstmet"] fadein 4
@@ -10604,7 +10548,7 @@ label alt_day6_dv_7dl_mt_dancing:
     window hide
     show mt smile dress with dissolve
     th "Оу… эм… джииии…"
-    if (alt_day4_dv_7dl_portwine or alt_day4_dv_7dl_vodka) and alt_day4_dv_7dl_ba_conv and alt_day2_loki_minijack:
+    if (alt_day4_dv_7dl_portwine or alt_day4_dv_7dl_vodka) and not alt_day4_dv_7dl_ba_conv and alt_day2_loki_minijack:
         th "А сейчас меня будут медленно и печально убивать."
     mt "Попался."
     "Улыбнулась она."

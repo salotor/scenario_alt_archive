@@ -3856,7 +3856,7 @@ label alt_day2_dinner:
         me "А что не так?"
         mt "Да времени у тебя на всё это не хватит, так что давай не жадничай, выбери что-то одно!"
         menu:
-            "А я и в газету, и на музыку успею!" if (('un' in list_d2_convoy_7dl)) and 'music' in list_clubs_7dl and 'nwsppr' in list_clubs_7dl:
+            "А я и в газету, и на музыку успею!" if ('un' in list_d2_convoy_7dl) and 'music' in list_clubs_7dl and 'nwsppr' in list_clubs_7dl:
                 mt "Уверен?"
                 show un normal pioneer at left with dissolve
                 "Стоящая рядом со мной Лена кивнула."
@@ -3903,7 +3903,7 @@ label alt_day2_dinner:
                 mt "Хорошо, оставляем кибернетику."
                 $ list_clubs_7dl = []
                 $ list_clubs_7dl.append('cyber')
-        if (('un' in list_d2_convoy_7dl)) and 'music' in list_clubs_7dl and 'nwsppr' in list_clubs_7dl:
+        if ('un' in list_d2_convoy_7dl) and 'music' in list_clubs_7dl and 'nwsppr' in list_clubs_7dl:
             mt "Так и запишем."
         else:
             mt "Но всё остальное — вычёркиваю!"
@@ -4530,14 +4530,7 @@ label alt_day2_grand_escape:
     me "Марш!"
     play music music_7dl["runaway"] fadein 3
     window hide
-    scene cg d2_us_trainhop_7dl:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene cg d2_us_trainhop_7dl at fast_running
     with flash
     "Поезд шёл тридцать-сорок километров в час, поэтому из кустов я бросился параллельно его движению.{w} Это должно будет смягчить рывок, если я схвачусь."
     "Куда более быстрая Ульяна уже убежала вперёд и сейчас, как и я, искала, где бы можно зацепиться."
@@ -6176,37 +6169,17 @@ label alt_day2_eventEv_beach1:
         with flash_red
         play music music_7dl["catch_the_hedge"]
         "Последние слова прозвучали из пустого воздуха. {w}Быть битым мне совершенно не улыбалось, но после таких слов я бы себе сам подзатыльник отвесил точно."
-        scene bg ext_square_sunset with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
-            repeat
-        with dissolve
+        scene bg ext_square_sunset at fast_running
+        with flash
         "Пока я шевелил ногами, мне пришло в голову, что в этом лагере я бегаю столько, сколько не бегал никогда. Каждый день, да в полную силу, да на длинные дистанции."
         "Ещё я гадал, сразу ли Алиса даст мне в нос, когда догонит. То есть, ЕСЛИ догонит."
-        scene bg ext_aidpost_sunset_7dl with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
-            repeat
-        with dissolve
+        scene bg ext_aidpost_sunset_7dl at fast_running
+        with flash
         "Все возможности у неё были. И она, кажется, не хотела их упускать. Однако по сравнению со вчерашней гонкой, эта была чуть милосерднее, в конце концов, это не я сегодня за кем-то гонялся."
-        scene bg ext_dining_hall_away_sunset with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
-            repeat
-        with dissolve
-        scene bg ext_square_sunset
+        scene bg ext_dining_hall_away_sunset at fast_running
+        with flash
+        pause(1)
+        scene bg ext_square_sunset with dissolve
         "Мы пробежали подмышкой у Генды, обогнули склад, свернули к волейбольной площадке."
         window hide
         scene bg ext_volley_court_7dl with dspr
@@ -8762,14 +8735,7 @@ label alt_day2_slot_dv:
     "Шанс не сесть в лужу у меня один, и он не самый большой. {w}Может, она ещё не успела далеко уйти. {w}Тогда я догоню её, и… {w}Отберу одежду." 
     "Бегом!"
     $ persistent.sprite_time = "night"
-    scene bg ext_beach_night with dissolve:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat (3)
+    scene bg ext_beach_night at fast_running
     with dissolve
     pause(1)
     scene bg ext_square_night
