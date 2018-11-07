@@ -192,7 +192,7 @@ label alt_day5_neu_begin:
             return
     jump alt_day6_neu_begin
     
-label alt_day6_neu_begin:
+label alt_day6_neu_begin: #Загони себя в лютую жопу.
     call alt_day6_neu_start
     pause(1)
     return
@@ -210,10 +210,3 @@ label alt_day7_neu_begin:
     else:
         call alt_day7_neu_ending_d3
 return
-
-
-#D3-route
-#Сделаю, как ты хочешь - ждать время (+пт) или выглянуть на улицу
-#Кодовый замок - искать код(+пт) или искать обходной путь
-#Эпилог - бог на полставочки(гуд) или порридж(бэд)
-#Флаг получения биндера.
