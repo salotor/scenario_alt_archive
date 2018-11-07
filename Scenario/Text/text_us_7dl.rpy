@@ -3064,29 +3064,15 @@ label alt_day6_us_7dl_button:
     th "Нельзя её ногой по шее."
     "Хотя хотелось, что уж там."
     window hide
-    scene bg ext_house_of_dv_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_house_of_dv_day at fast_running
+    with flash
     "Но так или иначе, мы понеслись по лагерю, искусно лавируя между там и сям вышагивающими вожатыми, пионерами…"
     "Которые, по идее, должны бы спать, ибо тихий час по лагерю!"
     "Или хотя бы репетировать."
     stop music fadeout 3
     window hide
-    scene bg ext_square_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_square_day at fast_running
+    with flash
     play music music_list["went_fishing_caught_a_girl"] fadein 3
     us "Сёмыч, если будешь делать такое лицо, я отведу тебя к Виоле, чтобы дала тебе слабительного."
     "Пропыхтела Ульяна, не сбавляя шага."
@@ -3516,27 +3502,13 @@ label alt_day6_us_7dl_button:
                 "Из окошка захохотали, и надо мной из окна белой молнией вылетело привидение."
                 "Хохочущее знакомым смехом!"
                 "Сгруппировавшись и перекатившись, оно, завывая и улюлюкая, бросилось бежать."
-                scene bg ext_clubs_day with flash:
-                    pos (0,0) 
-                    linear 0.1 pos (-5,-5) 
-                    linear 0.1 pos (5,5) 
-                    pos (0,0) 
-                    linear 0.1 pos (0,-5) 
-                    linear 0.1 pos (0,5) 
-                    repeat
-                with dissolve
+                scene bg ext_clubs_day at fast_running
+                with flash
                 "Ну, а я, соответственно, за ним."
                 th "Догоню — высеку."
                 "Пообещал себе я."
-                scene bg ext_square_day with flash:
-                    pos (0,0) 
-                    linear 0.1 pos (-5,-5) 
-                    linear 0.1 pos (5,5) 
-                    pos (0,0) 
-                    linear 0.1 pos (0,-5) 
-                    linear 0.1 pos (0,5) 
-                    repeat
-                with dissolve
+                scene bg ext_square_day at fast_running
+                with flash
                 "Внутренний голос пытался добавлять какие-то похабности, но мной сейчас двигала жажда воспитательной мести!"
                 "Ульянка в невесть откуда взявшемся пододеяльнике, бежала впереди меня и размахивала руками."
                 "Мне не удавалось сократить дистанцию, но и ей оторваться не получалось."
@@ -12943,27 +12915,13 @@ label alt_day7_us_px_mourning:
         sl "Бежим!"
         play ambience ambience_camp_center_day fadein 7
         window hide
-        scene bg ext_dining_hall_away_day with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
-            repeat
-        with dissolve
+        scene bg ext_dining_hall_away_day at fast_running
+        with flash
         "Она с места стартанула в сторону площади, а я припустил вслед за ней."
         $ volume(0.8, "sound")
         window hide
-        scene bg ext_square_day with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
-            repeat
-        with dissolve
+        scene bg ext_square_day at fast_running
+        with flash
     else:
         "Лена мгновенно ушла куда-то, стоило нам только добраться до ворот."
         "Я уселся на бревно у входа и задумался."
@@ -13021,15 +12979,8 @@ label alt_day7_us_px_mourning:
     if alt_day6_us_px_sl_join:
         sl "Неужели опоздали?"
     window hide
-    scene bg ext_clubs_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_clubs_day at fast_running
+    with flash
     "Ещё рывок к воротам."
     "Обычно здесь всегда кто-то был: либо малыши играли, либо кибернетики строили что-нибудь."
     "Но вот в этот раз…"
