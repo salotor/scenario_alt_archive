@@ -1,121 +1,185 @@
 init -10 python:
-    #Шрифты
+    ##\\\\\\\\\\\\\\\\\\\\\\\\\ШРИФТЫ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # ------------------------------------------------
-    #Удалятор-цвет-актив-маленький
+    # Удалятор-цвет-актив-маленький
     style.sdl_achvlistA_de_kurz = Style(style.default)
     style.sdl_achvlistA_de_kurz.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_de_kurz.size = 32
     style.sdl_achvlistA_de_kurz.color = "#cc0000"
-    #Удалятор-цвет-пассив-маленький
+    # Удалятор-цвет-пассив-маленький
     style.sdl_achvlistB_de_kurz = Style(style.default)
     style.sdl_achvlistB_de_kurz.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistB_de_kurz.size = 32
-    style.sdl_achvlistB_de_kurz.color = "#989898" 
-    #Удалятор-цвет-пассив-стандартный
+    style.sdl_achvlistB_de_kurz.color = "#989898"
+    # Удалятор-цвет-пассив-стандартный
     style.sdl_achvlistB_de_st = Style(style.default)
     style.sdl_achvlistB_de_st.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistB_de_st.size = 54
-    style.sdl_achvlistB_de_st.color = "#989898" 
+    style.sdl_achvlistB_de_st.color = "#989898"
     
-    #Мику-цвет-большой
+    # Мику-цвет-большой
     style.sdl_achvlistA_mi_gross = Style(style.default)
     style.sdl_achvlistA_mi_gross.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_mi_gross.size = 98
-    style.sdl_achvlistA_mi_gross.color = "#00deff" 
-    #Мику-цвет-стандартный
+    style.sdl_achvlistA_mi_gross.color = "#00deff"
+    # Мику-цвет-стандартный
     style.sdl_achvlistA_mi_st = Style(style.default)
     style.sdl_achvlistA_mi_st.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_mi_st.size = 54
-    style.sdl_achvlistA_mi_st.color = "#00deff" 
+    style.sdl_achvlistA_mi_st.color = "#00deff"
     
-    #Алисхен-цвет-большой
+    # Алисхен-цвет-большой
     style.sdl_achvlistA_dv_gross = Style(style.default)
     style.sdl_achvlistA_dv_gross.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_dv_gross.size = 98
-    style.sdl_achvlistA_dv_gross.color = "#ff7e00" 
-    #Алисхен-цвет-стандартный
+    style.sdl_achvlistA_dv_gross.color = "#ff7e00"
+    # Алисхен-цвет-стандартный
     style.sdl_achvlistA_dv_st = Style(style.default)
     style.sdl_achvlistA_dv_st.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_dv_st.size = 54
-    style.sdl_achvlistA_dv_st.color = "#ff7e00" 
+    style.sdl_achvlistA_dv_st.color = "#ff7e00"
     
-    #Славя-цвет-большой
+    # Славя-цвет-большой
     style.sdl_achvlistA_sl_gross = Style(style.default)
     style.sdl_achvlistA_sl_gross.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_sl_gross.size = 98
-    style.sdl_achvlistA_sl_gross.color = "#ffd200" 
-    #Славя-цвет-стандартный
+    style.sdl_achvlistA_sl_gross.color = "#ffd200"
+    # Славя-цвет-стандартный
     style.sdl_achvlistA_sl_st = Style(style.default)
     style.sdl_achvlistA_sl_st.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_sl_st.size = 54
-    style.sdl_achvlistA_sl_st.color = "#ffd200" 
+    style.sdl_achvlistA_sl_st.color = "#ffd200"
     
-    #Лена-цвет-большой
+    # Лена-цвет-большой
     style.sdl_achvlistA_un_gross = Style(style.default)
     style.sdl_achvlistA_un_gross.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_un_gross.size = 98
-    style.sdl_achvlistA_un_gross.color = "#b956ff" 
-    #Лена-цвет-стандартный
+    style.sdl_achvlistA_un_gross.color = "#b956ff"
+    # Лена-цвет-стандартный
     style.sdl_achvlistA_un_st = Style(style.default)
     style.sdl_achvlistA_un_st.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_un_st.size = 54
     style.sdl_achvlistA_un_st.color = "#b956ff"
     
-    #Ольга-цвет-большой
+    # Ольга-цвет-большой
     style.sdl_achvlistA_mt_gross = Style(style.default)
     style.sdl_achvlistA_mt_gross.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_mt_gross.size = 98
-    style.sdl_achvlistA_mt_gross.color = "#00ea32" 
-    #Ольга-цвет-стандартный
+    style.sdl_achvlistA_mt_gross.color = "#00ea32"
+    # Ольга-цвет-стандартный
     style.sdl_achvlistA_mt_st = Style(style.default)
     style.sdl_achvlistA_mt_st.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_mt_st.size = 54
-    style.sdl_achvlistA_mt_st.color = "#00ea32" 
+    style.sdl_achvlistA_mt_st.color = "#00ea32"
     
-    #Ульяна-цвет-большой
+    # Ульяна-цвет-большой
     style.sdl_achvlistA_us_gross = Style(style.default)
     style.sdl_achvlistA_us_gross.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_us_gross.size = 98
-    style.sdl_achvlistA_us_gross.color = "#ff0000" 
-    #Ульяна-цвет-стандартный
+    style.sdl_achvlistA_us_gross.color = "#ff0000"
+    # Ульяна-цвет-стандартный
     style.sdl_achvlistA_us_st = Style(style.default)
     style.sdl_achvlistA_us_st.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_us_st.size = 54
-    style.sdl_achvlistA_us_st.color = "#ff0000" 
+    style.sdl_achvlistA_us_st.color = "#ff0000"
     
-    #Одиночка-цвет-большой
+    # Одиночка-цвет-большой
     style.sdl_achvlistA_me_gross = Style(style.default)
     style.sdl_achvlistA_me_gross.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_me_gross.size = 98
-    style.sdl_achvlistA_me_gross.color = "#ffffff" 
-    #Одиночка-цвет-стандартный
+    style.sdl_achvlistA_me_gross.color = "#ffffff"
+    # Одиночка-цвет-стандартный
     style.sdl_achvlistA_me_st = Style(style.default)
     style.sdl_achvlistA_me_st.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achvlistA_me_st.size = 54
-    style.sdl_achvlistA_me_st.color = "#ffffff" 
+    style.sdl_achvlistA_me_st.color = "#ffffff"
 
 
-    
+
 init:
-    image bg sdl_ach_inactive = get_image_7dl("gui/ach_list/7dl_ach_inactive1.png")
-    image bg sdl_ach_inactive_mi = get_image_7dl("gui/ach_list/ach_mi_7dlB.png")
-    image bg sdl_ach_inactive_dv = get_image_7dl("gui/ach_list/ach_dv_7dlB.png")
-    image bg sdl_ach_inactive_sl = get_image_7dl("gui/ach_list/ach_sl_7dlB.png")
-    image bg sdl_ach_inactive_un = get_image_7dl("gui/ach_list/ach_un_7dlB.png")
-    image bg sdl_ach_inactive_mt = get_image_7dl("gui/ach_list/ach_mt_7dlB.png")
-    image bg sdl_ach_inactive_us = get_image_7dl("gui/ach_list/ach_us_7dlB.png")
-    image bg sdl_ach_inactive_me = get_image_7dl("gui/ach_list/ach_me_7dlB.png")
+    ##\\\\\\\\\\\\\\\\\\\\\\\\\ЭКРАНЫ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    image sdl_achv_inactive = get_image_7dl("gui/ach_list/7dl_ach_inactive.png")
+    image bg sdl_achv_inactive_mi = get_image_7dl("gui/ach_list/ach_mi_7dlB.png")
+    image bg sdl_achv_inactive_dv = get_image_7dl("gui/ach_list/ach_dv_7dlB.png")
+    image bg sdl_achv_inactive_sl = get_image_7dl("gui/ach_list/ach_sl_7dlB.png")
+    image bg sdl_achv_inactive_un = get_image_7dl("gui/ach_list/ach_un_7dlB.png")
+    image bg sdl_achv_inactive_mt = get_image_7dl("gui/ach_list/ach_mt_7dlB.png")
+    image bg sdl_achv_inactive_us = get_image_7dl("gui/ach_list/ach_us_7dlB.png")
+    image bg sdl_achv_inactive_me = get_image_7dl("gui/ach_list/ach_me_7dlB.png")
     ##\\\\\\\\\\\\\\\\\\\\\\\\\КНОПКИ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # ------------------------------------------------
-    #Кнопки первичного меню
-    image mi_button_active = get_image_7dl("gui/ach_list/mi_button_active.png")
-    image dv_button_active = get_image_7dl("gui/ach_list/dv_button_active1.png")
-    image sl_button_active = get_image_7dl("gui/ach_list/sl_button_active.png")
-    image un_button_active = get_image_7dl("gui/ach_list/un_button_active.png")
-    image mt_button_active = get_image_7dl("gui/ach_list/mt_button_active.png")
-    image us_button_active = get_image_7dl("gui/ach_list/us_button_active.png")
-    image me_button_active = get_image_7dl("gui/ach_list/me_button_active.png")
-    #Кнопки информации о способах получения концовки-актив
+    # Кнопки первичного меню
+    ## Мику
+    image sdl_achv_mi_button_active = get_image_7dl("gui/ach_list/mi_button_active.png")
+    image sdl_achv_mi_button_inactive = get_image_7dl("gui/ach_list/mi_button_inactive.png")
+    image sdl_achv_mi_button:
+        "sdl_achv_mi_button_inactive"
+        on idle:
+            "sdl_achv_mi_button_inactive" with Dissolve(0.5, alpha=True)
+        on hover:
+            "sdl_achv_mi_button_active" with Dissolve(0.5, alpha=True)
+        on selected_idle:
+            "sdl_achv_mi_button_active" with dissolve
+        on selected_hover:
+            "sdl_achv_mi_button_active" with dissolve
+    ## Алиса
+    image sdl_achv_dv_button_active = get_image_7dl("gui/ach_list/dv_button_active.png")
+    image sdl_achv_dv_button_inactive = get_image_7dl("gui/ach_list/dv_button_inactive.png")
+    image sdl_achv_dv_button:
+        "sdl_achv_dv_button_inactive"
+        on idle:
+            "sdl_achv_dv_button_inactive" with dissolve
+        on hover:
+            "sdl_achv_dv_button_active" with dissolve
+    ## Славя
+    image sdl_achv_sl_button_active = get_image_7dl("gui/ach_list/sl_button_active.png")
+    image sdl_achv_sl_button_inactive = get_image_7dl("gui/ach_list/sl_button_inactive.png")
+    image sdl_achv_sl_button:
+        "sdl_achv_sl_button_inactive"
+        on idle:
+            "sdl_achv_sl_button_inactive" with dissolve
+        on hover:
+            "sdl_achv_sl_button_active" with dissolve
+    ## Лена
+    image sdl_achv_un_button_active = get_image_7dl("gui/ach_list/un_button_active.png")
+    image sdl_achv_un_button_inactive = get_image_7dl("gui/ach_list/un_button_inactive.png")
+    image sdl_achv_un_button:
+        "sdl_achv_un_button_inactive"
+        on idle:
+            "sdl_achv_un_button_inactive" with dissolve
+        on hover:
+            "sdl_achv_un_button_active" with dissolve
+    ## Ольга
+    image sdl_achv_mt_button_active = get_image_7dl("gui/ach_list/mt_button_active.png")
+    image sdl_achv_mt_button_inactive = get_image_7dl("gui/ach_list/mt_button_inactive.png")
+    image sdl_achv_mt_button:
+        "sdl_achv_mt_button_inactive"
+        on idle:
+            "sdl_achv_mt_button_inactive" with dissolve
+        on hover:
+            "sdl_achv_mt_button_active" with dissolve
+    ## Ульяна
+    image sdl_achv_us_button_active = get_image_7dl("gui/ach_list/us_button_active.png")
+    image sdl_achv_us_button_inactive = get_image_7dl("gui/ach_list/us_button_inactive.png")
+    image sdl_achv_us_button:
+        "sdl_achv_us_button_inactive"
+        on idle:
+            "sdl_achv_us_button_inactive" with dissolve
+        on hover:
+            "sdl_achv_us_button_active" with dissolve
+    ## Одиночка
+    image sdl_achv_me_button_active = get_image_7dl("gui/ach_list/me_button_active.png")
+    image sdl_achv_me_button_inactive = get_image_7dl("gui/ach_list/me_button_inactive.png")
+    image sdl_achv_me_button:
+        "sdl_achv_me_button_inactive"
+        on idle:
+            "sdl_achv_me_button_inactive" with dissolve
+        on hover:
+            "sdl_achv_me_button_active" with dissolve
+    
+    
+    
+    # Кнопки информации о способах получения концовки-актив
     image de_info_active = get_image_7dl("gui/ach_list/de_info_active.png")
     image de_info_active1 = get_image_7dl("gui/ach_list/de_info_active.png")
     image de_info_active2 = get_image_7dl("gui/ach_list/de_info_active.png")
@@ -131,7 +195,7 @@ init:
     image de_info_active12 = get_image_7dl("gui/ach_list/de_info_active.png")
     image de_info_active13 = get_image_7dl("gui/ach_list/de_info_active.png")
     image de_info_active14 = get_image_7dl("gui/ach_list/de_info_active.png")
-    #Кнопки информации о способах получения концовки-пассив
+    # Кнопки информации о способах получения концовки-пассив
     image de_info_inactive = get_image_7dl("gui/ach_list/de_info_inactive.png")
     image de_info_inactive1 = get_image_7dl("gui/ach_list/de_info_inactive.png")
     image de_info_inactive2 = get_image_7dl("gui/ach_list/de_info_inactive.png")
@@ -147,7 +211,7 @@ init:
     image de_info_inactive12 = get_image_7dl("gui/ach_list/de_info_inactive.png")
     image de_info_inactive13 = get_image_7dl("gui/ach_list/de_info_inactive.png")
     image de_info_inactive14 = get_image_7dl("gui/ach_list/de_info_inactive.png")
-    #Кнопки перехода на концовку-актив
+    # Кнопки перехода на концовку-актив
     image de_check_active = get_image_7dl("gui/ach_list/de_check_active.png")
     image de_check_active1 = get_image_7dl("gui/ach_list/de_check_active.png")
     image de_check_active2 = get_image_7dl("gui/ach_list/de_check_active.png")
@@ -163,7 +227,7 @@ init:
     image de_check_active12 = get_image_7dl("gui/ach_list/de_check_active.png")
     image de_check_active13 = get_image_7dl("gui/ach_list/de_check_active.png")
     image de_check_active14 = get_image_7dl("gui/ach_list/de_check_active.png")
-    #Кнопки перехода на концовку-пассив
+    # Кнопки перехода на концовку-пассив
     image de_check_inactive = get_image_7dl("gui/ach_list/de_check_inactive.png")
     image de_check_inactive1 = get_image_7dl("gui/ach_list/de_check_inactive.png")
     image de_check_inactive2 = get_image_7dl("gui/ach_list/de_check_inactive.png")
@@ -179,7 +243,7 @@ init:
     image de_check_inactive12 = get_image_7dl("gui/ach_list/de_check_inactive.png")
     image de_check_inactive13 = get_image_7dl("gui/ach_list/de_check_inactive.png")
     image de_check_inactive14 = get_image_7dl("gui/ach_list/de_check_inactive.png")
-    #Заглушки под неполученные достижения
+    # Заглушки под неполученные достижения
     image de_achiv_lock = get_image_7dl("gui/ach_list/de_achiv_lock.png")
     image de_achiv_lock1 = get_image_7dl("gui/ach_list/de_achiv_lock.png")
     image de_achiv_lock2 = get_image_7dl("gui/ach_list/de_achiv_lock.png")
@@ -195,48 +259,48 @@ init:
     image de_achiv_lock12 = get_image_7dl("gui/ach_list/de_achiv_lock.png")
     image de_achiv_lock13 = get_image_7dl("gui/ach_list/de_achiv_lock.png")
     image de_achiv_lock14 = get_image_7dl("gui/ach_list/de_achiv_lock.png")
-    #Заглушки под дубли достижений (не понимает иначе модуль screen RenPy)
+    # Заглушки под дубли достижений (не понимает иначе модуль screen RenPy)
     image acm_logo_sl_good1 = get_image_7dl("gui/acm/acm_logo_sl_good_7dl.png")
     # ------------------------------------------------
-    #Иконки рутов
-    #7ДЛ-руты
-    image sdl_logo_inactive = get_image_7dl("gui/ach_list/acm_logo_unhoverA.png")
-    image sdl_logo_active = get_image_7dl("gui/ach_list/acm_logo_hoverA.png")
-    #Мику
+    # Иконки рутов
+    ## Общее
+    image sdl_logo_inactive = get_image_7dl("gui/ach_list/acm_7dl_inactive.png")
+    ## Мику
     image sdl_mi_7dl_active = get_image_7dl("gui/ach_list/mi_7dl_active.png")
-    image sdl_mi_cl_active = get_image_7dl("gui/ach_list/mi_cl_active1.png")
-    image sdl_mi_cl_inactive = get_image_7dl("gui/ach_list/mi_cl_inactive1.png")
-    image sdl_mi_dj_active = get_image_7dl("gui/ach_list/mi_dj_active1.png")
-    image sdl_mi_dj_inactive = get_image_7dl("gui/ach_list/mi_dj_inactive1.png")
-    #Алисхен
+    image sdl_mi_cl_active = get_image_7dl("gui/ach_list/mi_cl_active.png")
+    image sdl_mi_cl_inactive = get_image_7dl("gui/ach_list/mi_cl_inactive.png")
+    image sdl_mi_dj_active = get_image_7dl("gui/ach_list/mi_dj_active.png")
+    image sdl_mi_dj_inactive = get_image_7dl("gui/ach_list/mi_dj_inactive.png")
+    ## Алисхен
     image sdl_dv_7dl_active = get_image_7dl("gui/ach_list/dv_7dl_active.png")
-    image sdl_dv_cl_active = get_image_7dl("gui/ach_list/dv_cl_active1.png")
-    image sdl_dv_cl_inactive = get_image_7dl("gui/ach_list/dv_cl_inactive1.png")
-    image sdl_dv_dj_active = get_image_7dl("gui/ach_list/dv_dj_active1.png")
-    image sdl_dv_dj_inactive = get_image_7dl("gui/ach_list/dv_dj_inactive1.png")
-    #Славя
+    image sdl_dv_cl_active = get_image_7dl("gui/ach_list/dv_cl_active.png")
+    image sdl_dv_cl_inactive = get_image_7dl("gui/ach_list/dv_cl_inactive.png")
+    image sdl_dv_dj_active = get_image_7dl("gui/ach_list/dv_dj_active.png")
+    image sdl_dv_dj_inactive = get_image_7dl("gui/ach_list/dv_dj_inactive.png")
+    ## Славя
     image sdl_sl_7dl_active = get_image_7dl("gui/ach_list/sl_7dl_active.png")
-    image sdl_sl_cl_active = get_image_7dl("gui/ach_list/sl_cl_active1.png")
-    image sdl_sl_cl_inactive = get_image_7dl("gui/ach_list/sl_cl_inactive1.png")
-    image sdl_sl_wh_active = get_image_7dl("gui/ach_list/sl_wh_active1.png")
-    image sdl_sl_wh_inactive = get_image_7dl("gui/ach_list/sl_wh_inactive1.png")
-    #Лена
+    image sdl_sl_cl_active = get_image_7dl("gui/ach_list/sl_cl_active.png")
+    image sdl_sl_cl_inactive = get_image_7dl("gui/ach_list/sl_cl_inactive.png")
+    image sdl_sl_wh_active = get_image_7dl("gui/ach_list/sl_wh_active.png")
+    image sdl_sl_wh_inactive = get_image_7dl("gui/ach_list/sl_wh_inactive.png")
+    ## Лена
     image sdl_un_7dl_active = get_image_7dl("gui/ach_list/un_7dl_active.png")
-    image sdl_un_cl_active = get_image_7dl("gui/ach_list/un_cl_active1.png")
-    image sdl_un_cl_inactive = get_image_7dl("gui/ach_list/un_cl_inactive1.png")
-    image sdl_un_fz_active = get_image_7dl("gui/ach_list/un_fz_active1.png")
-    image sdl_un_fz_inactive = get_image_7dl("gui/ach_list/un_fz_inactive1.png")
-    #Ольга
+    image sdl_un_cl_active = get_image_7dl("gui/ach_list/un_cl_active.png")
+    image sdl_un_cl_inactive = get_image_7dl("gui/ach_list/un_cl_inactive.png")
+    image sdl_un_fz_active = get_image_7dl("gui/ach_list/un_fz_active.png")
+    image sdl_un_fz_inactive = get_image_7dl("gui/ach_list/un_fz_inactive.png")
+    ## Ольга
     image sdl_mt_7dl_active = get_image_7dl("gui/ach_list/mt_7dl_active.png")
-    #Ульяна
+    ## Ульяна
     image sdl_us_7dl_active = get_image_7dl("gui/ach_list/us_7dl_active.png")
-    image sdl_us_px_active = get_image_7dl("gui/ach_list/us_px_active1.png")
-    image sdl_us_px_inactive = get_image_7dl("gui/ach_list/us_px_inactive1.png")
-    #Одиночка
-    image sdl_me_no_active = get_image_7dl("gui/ach_list/me_no_active1.png")
-    image sdl_me_no_inactive = get_image_7dl("gui/ach_list/me_no_inactive1.png")
-    image sdl_me_sm_active = get_image_7dl("gui/ach_list/me_sm_active1.png")
-    image sdl_me_sm_inactive = get_image_7dl("gui/ach_list/me_sm_inactive1.png")
+    image sdl_us_px_active = get_image_7dl("gui/ach_list/us_px_active.png")
+    image sdl_us_px_inactive = get_image_7dl("gui/ach_list/us_px_inactive.png")
+    ## Одиночка
+    image sdl_me_7dl_active = get_image_7dl("gui/ach_list/me_7dl_active.png")
+    image sdl_me_no_active = get_image_7dl("gui/ach_list/me_no_active.png")
+    image sdl_me_no_inactive = get_image_7dl("gui/ach_list/me_no_inactive.png")
+    image sdl_me_sm_active = get_image_7dl("gui/ach_list/me_sm_active.png")
+    image sdl_me_sm_inactive = get_image_7dl("gui/ach_list/me_sm_inactive.png")
     # ------------------------------------------------
     ##\\\\\\\\\\\\\\\\\\\\\\\\\ОПИСАНИЕ РУТОВ И КОНЦОВОК\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     #Мику-руты
@@ -265,11 +329,21 @@ init:
     image sdl_achv_me_noiA = Text("Нуар", style="sdl_achvlistA_me_gross")
     image sdl_achv_me_d3rA = Text("Основная история", style="sdl_achvlistA_me_gross")
     # ------------------------------------------------
-    #Общие фразы
+    # Общие фразы
     image sdl_achv_delA_7dl = Text(" Обнулить\nпрохождения", style="sdl_achvlistA_de_kurz")
     image sdl_achv_delB_7dl = Text(" Обнулить\nпрохождения", style="sdl_achvlistB_de_kurz")
-    image sdl_achv_extA_7dl = Text(" Выход\n в меню", style="sdl_achvlistA_de_kurz")
-    image sdl_achv_extB_7dl = Text(" Выход\n в меню", style="sdl_achvlistB_de_kurz")
+    image sdl_achv_ext_active   = Text(" Выход\n в меню", style="sdl_achvlistA_de_kurz")
+    image sdl_achv_ext_inactive = Text(" Выход\n в меню", style="sdl_achvlistB_de_kurz")
+    image sdl_achv_ext:
+        "sdl_achv_ext_inactive"
+        on idle:
+            "sdl_achv_ext_inactive" with dissolve
+        on hover:
+            "sdl_achv_ext_active" with dissolve
+        on selected_idle:
+            "sdl_achv_ext_active" with dissolve
+        on selected_hover:
+            "sdl_achv_ext_active" with dissolve
     
     image sdl_achv_need_routeA = Text("Рут не дописан", style="sdl_achvlistB_de_st")
     image sdl_achv_jumpchkA = Text(" Перейти\nна концовку", style="sdl_achvlistB_de_st")
