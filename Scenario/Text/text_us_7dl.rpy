@@ -11639,6 +11639,7 @@ label alt_day7_us_7dl_ever_after:
     show us2 sad sport
     with dissolve
     $ renpy.pause(2)
+    hide us2
     show us normal old
     with dissolve2
     "Когда мы вышли на дорогу, Ульяна уже успела немного измениться."
