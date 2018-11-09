@@ -115,6 +115,9 @@ init python:
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\МЕЛКИЕ ЭКРАНЫ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 # Кнопки персонажей
 screen sdl_achv_main_buttons(parent_screen, character):
+    tag main_buttons
+    modal True
+    
     # Мику
     if character == "mi":
         add "sdl_achv_mi_button_active" pos (0, 0)
@@ -188,7 +191,7 @@ screen sdl_achv_main_buttons(parent_screen, character):
 # ------------------------------------------------------------------------------------------------
 # Экран рута
 screen sdl_achv_route(parent_screen, achv_list):
-    tag menu
+    tag route
     modal True
     
     # Удалятор
@@ -237,7 +240,7 @@ screen sdl_achv_route(parent_screen, achv_list):
                         hover ("sdl_achv_info_active")
                         hovered [SetVariable("sdl_achv_hovered_info", prerequisite)]
                         unhovered [SetVariable("sdl_achv_hovered_info", None)]
-                        action [Hide(parent_screen, transition=Dissolve(0.5)), Jump("sdl_achvlist_mt_Author")]
+                        action [SetVariable("sdl_achv_hovered_info", prerequisite)]
                     $ sdl_achv_prerequisites = {}
         $ sdl_achv_count += 1
     
@@ -273,9 +276,6 @@ screen sdl_achvlist_main:
     
     # Кнопки персонажей
     use sdl_achv_main_buttons("sdl_achvlist_main", None)
-    
-    # Прячем внутренние экраны
-    on "hide" action [Hide("sdl_achv_main_buttons")]
 
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ЭКРАН ПЕРСОНАЖА\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 label sdl_achvlist_character(character, route_list):
@@ -322,9 +322,6 @@ screen sdl_achvlist_character(character, route_list):
     # Выбранный рут
     if sdl_achv_selected_route != None:
         use sdl_achv_route("sdl_achvlist_character", sdl_achv_selected_route.get_achv_list())
-    
-    # Прячем внутренние экраны
-    on "hide" action [Hide("sdl_achv_main_buttons"), Hide("sdl_achv_route")]
 
 
 

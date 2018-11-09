@@ -194,7 +194,7 @@ init:
     # Типология рутов
     image sdl_achv_7dl_route = Text("7ДЛ-рут", style="sdl_achvlistB_de_kurz")
     image sdl_achv_clt_route = Text("Классик-рут", style="sdl_achvlistB_de_kurz")
-    image sdl_achv_xxx_route = Text("Специальный рут", style="sdl_achvlistB_de_kurz")
+    image sdl_achv_xxx_route = Text("Специальный\nрут", style="sdl_achvlistB_de_kurz")
     image sdl_achv_d3r_route = Text("Д3-рут", style="sdl_achvlistB_de_kurz")
     image sdl_achv_smt_route = Text("Прочее", style="sdl_achvlistB_de_kurz")
     # ------------------------------------------------
