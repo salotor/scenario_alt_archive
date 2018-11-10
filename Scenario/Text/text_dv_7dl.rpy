@@ -240,7 +240,7 @@
         linear 0.1 pos (0,0) 
         linear 0.1 pos (5,0) 
         linear 0.1 pos (0,0) 
-        repeat 5
+        repeat (5)
     dv "У-уйди, психопат! Аааа! Отцепись, ненормальный!"
     "Полухохоча, полукрича, она пыталась отбиться, но я беззастенчиво пользовался грубой физической силой, сначала перехватив её руки, а потом просто притиснув как в вагоне метро в час пик."
     play music music_7dl["yume_akari"] fadein 3
@@ -2386,39 +2386,18 @@ label alt_day4_dv_7dl_mt_aid:
     play music music_list["pile"] fadein 5
     "Надо спешить! Мне и так было не слишком приятно оставлять Алису в таком состоянии…"
     window hide
-    scene bg ext_washstand_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_washstand_day at fast_running
+    with flash
 
     "Я решил двигать напрямки, поэтому сразу развернулся к умывальникам."
     window hide
-    scene bg ext_houses_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_houses_day at fast_running
+    with flash
 
     "Развернулся у того места, где сегодня прятался с Ульяной."
 
-    scene bg ext_house_of_mt_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_house_of_mt_day at fast_running
+    with flash
 
     "И, наконец, добравшись до нашего с Ольгой домика "
     play sound sfx_open_door_strong
@@ -4926,43 +4905,22 @@ label alt_day5_dv_7dl_dinner:
 
     play music music_7dl["walkingaway"] fadein 3
     window hide
-    scene bg ext_square_day with pixellate:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_square_day at fast_running
+    with pixellate
 
     "Я бежал неизвестно сколько. Наверное, в первый день, когда я только-только прибыл сюда, я так бежал."
     "Вот и сейчас. Внутри снова поселилось это невозможно жестокое чувство загнанности, когда из угла уже не вырваться, а Природа-мать обделила клыками или хотя бы когтями в мягких подушечках лап."
     window hide
-    scene bg ext_houses_day with pixellate:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_houses_day at fast_running
+    with pixellate
 
     "Что я мог рассказать этим людям, этим детям?"
     "Всё будет плохо, ваша борьба заранее проиграна, и обещанного коммунизма нет ни в будущем, ни за горизонтом, ни даже за поворотом дороги, по которой вы выбрали свои двести километров в час?"
     "Вот я и попытался… Притвориться? Приспособиться? Стать одним из них."
     "Эх, жаль, врать я так и не научился, и любому, кто худо-бедно умеет читать мои жесты, модус операнди мой — будет очевидно, когда я честен, а когда кривлю душой."
     window hide
-    scene bg ext_path_day with pixellate:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_path_day at fast_running
+    with pixellate
 
     "Например, Алиса. Она слишком пристально ко мне приглядывалась и слишком знакомое высокомерное недоверие светилось в янтарных глазах."
     "Она считает меня… А кем?"
@@ -6974,28 +6932,14 @@ label alt_day6_dv_7dl_begin:
         "По-хорошему, надо бы закрыть дверь на замок…"
         "Но с площади уже приближался Электроник, и мы, не откладывая дел в долгий ящик, припустили к домику Алисы. Ну а где ещё прятать такой трофей? Не в вожатской же!"
         window hide
-        scene bg ext_houses_sunset with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
-            repeat
-        with dissolve
+        scene bg ext_houses_sunset at fast_running
+        with flash
     
         $ lp_dv += 2
         "Как некий размотанный клубок, мы миновали в обратной последовательности первые три домика, переместились к зданию администрации и уже почти вышли на финишную прямую мимо душевых к логову рыжих, "
         window hide
-        scene bg ext_square_sunset with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
-            repeat
-        with dissolve
+        scene bg ext_square_sunset at fast_running
+        with flash
     
         extend "как нас тормознули на месте."
     else:
@@ -12887,6 +12831,7 @@ label alt_day7_dv_7dl_ending_router:
         "Влюблённую."
         me "Я буду не спать изо всех сил. Ты проверяй меня, если что, хорошо?"
         "Она улыбнулась и кивнула."
+        stop sound_loop fadeout 6
         "Видимость за стёклами сократилась до нескольких метров, через далёкое отсюда лобовое стекло можно было разглядеть, как вгрызлись в белесую взвесь жёлтые конусы противотуманок."
         "Можно было целоваться."
         "Болтать."
@@ -13144,7 +13089,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     scene anim intro_4
     show blind2_1
     with fade 
-    "На углу с Дальневосточным снова пробка, добивающая до самого Тельмана — по пятницам это уже привычно, автомобилисты перемигиваются друг другу, улыбаются, когде-где уже видны планшеты и телефоны."
+    "На углу с Дальневосточным снова пробка, добивающая до самого Тельмана — по пятницам это уже привычно, автомобилисты перемигиваются друг другу, улыбаются, кое-где уже видны планшеты и телефоны."
     hide blind2_1
     show blind2_2
     with dissolve
@@ -14090,7 +14035,7 @@ label alt_day7_dv_7dl_bad_end:
 label alt_day7_dv_7dl_true:
     play music music_7dl["dawn"] fadein 3
     scene bg ext_countryside_day_7dl
-    with dissolve
+    with fade
     play ambience ambience_7dl["town_day"] fadein 3
     "Когда за нами закрыл двери автобус, будто закрылась и целая глава истории."
     "И я посмотрел на Алису."
@@ -14099,7 +14044,7 @@ label alt_day7_dv_7dl_true:
     "Наверное, было что-то новое в моём взгляде, так как она смутилась, отвернулась."
     "Немного покраснела даже."
     am "Алиса?"
-    show dv normal sport with dspr
+    show dv sad sport with dspr
     dv "Н-нет, ничего. {w}Всё хорошо."
     "Только вот заблестевшие глаза выдавали её с головой."
     "Несгибаемая, непоколебимая Алиса собиралась разрыдаться как самая обыкновенная девчонка."
@@ -14271,6 +14216,7 @@ label alt_day7_dv_7dl_true:
     dv "У меня ещё есть желание прийти домой как популярный человек!"
     dv "Ты веришь мне?"
     "Я хотел сказать, что верю ей, но не верю всем прочим, но горло перехватило, и я беззвучно кивнул."
+    stop music fadeout 3
     dv "Вот и хорошо. Пойдём домой."
     "Домой…"
     play music music_7dl["aftermath"] fadein 3
@@ -14312,16 +14258,16 @@ label alt_day7_dv_7dl_true:
     "Поезд в половине восьмого, поэтому не будет ни утреннего завтрака, ни зарядки."
     "Не будет общего утра вместе — только будильник и гонка к перрону."
     "Голос смолкнет, но музыка останется, она будет с тобой, напоминая о том, кто всегда был рядом."
+    stop music fadeout 3
     "Несколько секунд спустя я уже спал."
     window hide
-    stop music fadeout 3
     scene anim prolog_3
     with dissolve
     play music music_7dl["devastated"] fadein 3
     "Меня разбудил сигнал будильника — мало того, что пронзительный, он был подключён к усилителю, так как после отъезда в собственное жилище девушка перестала подниматься."
     "Всегда и везде просыпала."
     "Вот только не сейчас."
-    "На часах было значилась половина седьмого — как раз достаточно времени, чтобы помыться, одеться и хотя бы чуть-чуть проснуться."
+    "На часах было значилась половина седьмого — как раз достаточно времени, чтобы помыться, одеться и хотя бы чуть-чуть проснуться." # было значилась
     window hide
     scene bg ext_railstation_7dl
     with dissolve
@@ -14335,7 +14281,7 @@ label alt_day7_dv_7dl_true:
     "Чтобы не считать часы в кровати до рассвета, чтобы не погружаться в грёзы, где есть красное летнее солнце, работающий мотор и улыбка, и огонь в узнающих глазах."
     "И выбросить уже всю эту ерунду из головы!"
     "Ошибки, глупости…"
-    show dv soft_smile dress with dissolve
+    show dv smile dress with dissolve
     dv "Поезд скоро."
     "Улыбнулась девушка."
     dv "Если есть что-то сказать на прощание — говори."
@@ -14348,6 +14294,7 @@ label alt_day7_dv_7dl_true:
     am "Прощай!"
     "Я говорил это потому, что изо всех сил старался не броситься вдогонку, не запрыгнуть на подножку поезда."
     play ambience ambience_7dl["railroad"] fadein 3
+    show dv soft_smile dress with dspr
     "Алиса улыбнулась и крепко обняла меня."
     dv "Не кисни. Ты самый лучший. {w}Я обязательно привезу тебе что-нибудь."
     am "Привези себя."

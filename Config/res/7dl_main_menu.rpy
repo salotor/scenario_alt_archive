@@ -283,7 +283,7 @@ screen menu_7dl():
                 action [Show("settings_7dl", transition=Dissolve(0.2))]
             hotspot (162, 615, 307, 40):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
-                action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("scenario__sdl_achvlist_Author")]
+                action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
             hotspot (165, 665, 233, 43):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("contacts_7dl", transition=Dissolve(0.2))]
@@ -304,7 +304,7 @@ screen menu_7dl():
                 action [Show("settings_7dl", transition=Dissolve(0.2))]
             hotspot (162, 615, 307, 40):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
-                action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("scenario__sdl_achvlist_Author")]
+                action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
             hotspot (165, 665, 233, 43):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("contacts_7dl", transition=Dissolve(0.2))]
@@ -325,7 +325,7 @@ screen menu_7dl():
                 # action [Show("settings_7dl", transition=Dissolve(0.2))]
             # hotspot (162, 615, 307, 40):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
-                # action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("scenario__sdl_achvlist_Author")]
+                # action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
             # hotspot (165, 665, 233, 43):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Show("contacts_7dl", transition=Dissolve(0.2))]
@@ -346,7 +346,7 @@ screen menu_7dl():
                 action [Show("settings_7dl", transition=Dissolve(0.2))]
             hotspot (162, 615, 307, 40):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
-                action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("scenario__sdl_achvlist_Author")]
+                action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
             hotspot (165, 665, 233, 43):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("contacts_7dl", transition=Dissolve(0.2))]
@@ -367,7 +367,7 @@ screen menu_7dl():
                 action [Show("settings_7dl", transition=Dissolve(0.2))]
             hotspot (162, 615, 307, 40):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
-                action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("scenario__sdl_achvlist_Author")]
+                action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
             hotspot (165, 665, 233, 43):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("contacts_7dl", transition=Dissolve(0.2))]
@@ -388,7 +388,7 @@ screen menu_7dl():
                 # action [Show("settings_7dl", transition=Dissolve(0.2))]
             # hotspot (162, 615, 307, 40):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
-                # action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("scenario__sdl_achvlist_Author")]
+                # action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
             # hotspot (165, 665, 233, 43):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Show("contacts_7dl", transition=Dissolve(0.2))]
@@ -625,4 +625,5 @@ label widgets_on_off_7dl:
 
 label start_7dl:
     call alt_vars
+    call alt_day0_prologue
     jump main_menu_7dl

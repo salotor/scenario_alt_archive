@@ -1022,38 +1022,17 @@ label alt_day1_chase1:
     "Топот за спиной не смолкал, однако на кураже я выжал из своих ног такую скорость, какую уже давно не выдавал."
     "Истово, от души, хохоча, я пересёк площадь в другую сторону."
     window hide
-    scene bg ext_square_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_square_day at fast_running
+    with flash
     "Помахал бронзовому балбесу…"
     window hide
-    scene bg ext_aidpost_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_aidpost_day at fast_running
+    with flash
     "…пробежал мимо какого-то здания с флагом."
     th "Красный крест? Медпункт?{w} Будет актуально, если я сейчас не оторвусь."
     window hide
-    scene bg ext_dining_hall_away_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_dining_hall_away_day at fast_running
+    with flash
     "Я прибавил ходу."
     "Вихрем пронёсся мимо здания — однозначно, столовой!"
     stop music fadeout 3

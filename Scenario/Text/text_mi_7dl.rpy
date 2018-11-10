@@ -4562,14 +4562,7 @@ label alt_day5_mi_7dl_branch:
     me "На старт… {w}Внимание… {w}Ёж!"
     "С первобытным улюлюканьем я, размахивая над головой невесть как снятой рубашкой, погнал хыщника прямиком к воде."
     play music music_7dl["catch_the_hedge"] fadein 2
-    scene cg d4_mi_hedgehod_day_7dl:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene cg d4_mi_hedgehod_day_7dl at fast_running
     with dissolve
     "Видел бы я-прежний себя настоящего!"
     "Я же всегда был такой… такой солидный! Неторопливый."
@@ -4594,14 +4587,7 @@ label alt_day5_mi_7dl_branch:
     dreamgirl "В темпе! Некогда ржать!"
     window hide
     play sound sfx_slavya_run
-    scene bg ext_un_hideout_day_7dl:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_un_hideout_day_7dl at fast_running
     with dissolve
     play sound sfx_7dl["breath"] fadein 3
     "Дыхалки уже почти не оставалось, но я добился своей цели — ёж в панике выскочил на крохотный пляжик рядом с пристанью и, увязая в песке, кинулся вправо."
