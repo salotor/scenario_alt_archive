@@ -28807,7 +28807,7 @@ label alt_day7_sl_7dl_herc:
     with dissolve
     "А дома было всё привычно — спящая консьержка в своём закутке, дребезжащий лифт, на мгновение отключающий свет на пятом этаже…"
     window hide
-    scene bg int_sam_house_clean_7dl
+    scene bg semen_room
     with dissolve
     "И мурчалка в режиме трактора, которая встречала меня у двери."
     me "Привет, скотинка."
@@ -28840,6 +28840,7 @@ label alt_day7_sl_7dl_herc:
     return
 
 label alt_day7_sl_7dl_herc_neon:
+    scene bg semen_room    # это нужно, чтобы при запуске концовок из ачивлиста был какой-то фон.
     "Закончив с кошкой, я вернулся в комнату и, проигнорировав компьютер, растянулся на диване."
     play music music_7dl["alone"] fadein 3
     "Ещё было довольно рано, но я чувствовал, как сильно устал."
@@ -28873,7 +28874,7 @@ label alt_day7_sl_7dl_herc_neon:
     th "Всё пыталась что-то донести."
     th "Но вот что?"
     window hide
-    scene bg int_sam_house_clean_7dl
+    scene bg semen_room
     with dissolve
     "Я сел на краю дивана, стянул джинсы, бросил их в ноги."
     "Из их кармана вывалилось и запрыгало по полу нечто твёрдое."
