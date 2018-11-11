@@ -1284,7 +1284,7 @@ init:
     $ music_7dl["unfulfilled"] = get_music_7dl("unfulfilled_7dl.ogg")
     $ music_7dl["uneven_me"] = get_music_7dl("uneven_me_7dl.ogg")
     $ music_7dl["unfinished_life"] = get_music_7dl("unfinished_life_7dl.ogg")
-    $ music_7dl["unforgotten"] = get_music_7dl("Unforgotten_7dl.ogg")
+    $ music_7dl["unforgotten"] = get_music_7dl("unforgotten_7dl.ogg")
     $ music_7dl["unholy_you"] = get_music_7dl("unholy_you_7dl.ogg")
     
     $ music_7dl["vale"] = get_music_7dl("vale_7dl.ogg")
