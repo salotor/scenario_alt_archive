@@ -4237,7 +4237,7 @@ label alt_day2_dinner:
     me "Жги! Всё равно сил не хватит!"
     us "Легко!"
     "Она протянула руку, схватила стакан покрепче, дернула, и…"
-    play music music_7dl["Semische"] fadein 1
+    play music music_7dl["semische"] fadein 1
     show us angry pioneer with dspr
     if alt_day_binder != 1:
         "В этот день мы поменялись ролями, и от двери уже в голос хохочу я, а из зала слышен самый матерный вопль:"

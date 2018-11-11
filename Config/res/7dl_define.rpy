@@ -1115,7 +1115,7 @@ init:
     $ music_7dl["dv_guitar"] = get_music_7dl("dv_guitar_7dl.ogg")
 
     $ music_7dl["escape_2"] = get_music_7dl("escape_2_7dl.ogg")
-    $ music_7dl["exodus"] = get_music_7dl("Exodus_7dl.ogg")
+    $ music_7dl["exodus"] = get_music_7dl("exodus_7dl.ogg")
     $ music_7dl["emptiness"] = get_music_7dl("emptiness_7dl.ogg")
     $ music_7dl["es_downmix"] = get_music_7dl("es_downmix_7dl.ogg")
     $ music_7dl["everlasting_summer_alice"] = get_music_7dl("everlasting_summer_alice_7dl.ogg")
@@ -1188,7 +1188,7 @@ init:
     $ music_7dl["misery"] = get_music_7dl("misery_2_7dl.ogg")
     $ music_7dl["moment"] = get_music_7dl("moment_7dl.ogg")
     $ music_7dl["more_than_alive"] = get_music_7dl("more_than_alive_7dl.ogg")
-    $ music_7dl["morning_dew"] = get_music_7dl("Morning_Dew_7dl.ogg") # звук дождя в начале трека сбивает с толку
+    $ music_7dl["morning_dew"] = get_music_7dl("morning_dew_7dl.ogg") # звук дождя в начале трека сбивает с толку
     $ music_7dl["my_only_hope"] = get_music_7dl("my_only_hope_7dl.ogg")
     
     $ music_7dl["nap_one"] = get_music_7dl("nap_one_7dl.ogg")
@@ -1201,7 +1201,7 @@ init:
     $ music_7dl["old_kiss"] = get_music_7dl("old_kiss_7dl.ogg")
     $ music_7dl["one_little_lone_cloud"] = get_music_7dl("one_little_lone_cloud_7dl.ogg")
     $ music_7dl["ourfirstmet"] = get_music_7dl("ourfirstmet_7dl.ogg") 
-    $ music_7dl["outer"] = get_music_7dl("Outer_Science_7dl.ogg") 
+    $ music_7dl["outer"] = get_music_7dl("outer_science_7dl.ogg") 
     $ music_7dl["out_of_your_tier"] = get_music_7dl("out_of_your_tier_7dl.ogg") 
     $ music_7dl["out_of_painkillers"] = get_music_7dl("out_of_painkillers_7dl.ogg") 
     
@@ -1233,7 +1233,7 @@ init:
     $ music_7dl["sammy"] = get_music_7dl("sammy_7dl.ogg")
     $ music_7dl["saveme"] = get_music_7dl("saveme_7dl.ogg")
     $ music_7dl["scorpions"] = get_music_7dl("scorpions_7dl.ogg")
-    $ music_7dl["Semische"] = get_music_7dl("Semische_7dl.ogg")
+    $ music_7dl["semische"] = get_music_7dl("semische_7dl.ogg")
     $ music_7dl["see_one_day"] = get_music_7dl("see_one_day_7dl.ogg")
     $ music_7dl["seven_summer_days"] = get_music_7dl("seven_summer_days_7dl.ogg")
     $ music_7dl["sign_of_blood"] = get_music_7dl("sign_of_blood_7dl.ogg")
@@ -1289,7 +1289,7 @@ init:
     
     $ music_7dl["vale"] = get_music_7dl("vale_7dl.ogg")
     $ music_7dl["vampire"] = get_music_7dl("vampire_7dl.ogg")
-    $ music_7dl["vibe"] = get_music_7dl("Vibe_7dl.ogg")
+    $ music_7dl["vibe"] = get_music_7dl("vibe_7dl.ogg")
     $ music_7dl["viola"] = get_music_7dl("viola_7dl.ogg")
     
     $ music_7dl["war_to_fight"] = get_music_7dl("war_to_fight_7dl.ogg")

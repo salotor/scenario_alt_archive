@@ -4435,7 +4435,7 @@ label alt_day5_un_7dl_cleaning:
     window hide
     scene bg ext_warehouse_day_7dl
     show sl surprise pioneer with dspr
-    play music music_7dl["Semische"] fadein 5
+    play music music_7dl["semische"] fadein 5
     "И когда я её завидел, то поступил так, как логично было поступить — заголосил и припустил к ней навстречу."
     me "Эгегей, Славя! Погоди!"
     show sl scared pioneer with dspr

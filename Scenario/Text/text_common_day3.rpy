@@ -5970,7 +5970,7 @@ label alt_day3_eventAf_un_mi_house1:
 
 label alt_day3_eventAf_dining_hall1:
     scene bg ext_dining_hall_away_day with dissolve
-    play music music_7dl["Semische"] fadein 5
+    play music music_7dl["semische"] fadein 5
     "Ульянка далеко не ушла от кухни — она стояла чуть ли не под самой дверью, что-то старательно высматривая у себя под ногами."
     me "Ку."
     "Я подошёл слева, а похлопал её по правому плечу."
