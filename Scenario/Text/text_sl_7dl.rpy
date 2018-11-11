@@ -28807,7 +28807,7 @@ label alt_day7_sl_7dl_herc:
     with dissolve
     "А дома было всё привычно — спящая консьержка в своём закутке, дребезжащий лифт, на мгновение отключающий свет на пятом этаже…"
     window hide
-    scene bg int_sam_house_clean_7dl ##
+    scene bg int_sam_house_clean_7dl
     with dissolve
     "И мурчалка в режиме трактора, которая встречала меня у двери."
     me "Привет, скотинка."
@@ -28840,7 +28840,6 @@ label alt_day7_sl_7dl_herc:
     return
 
 label alt_day7_sl_7dl_herc_neon:
-    scene bg int_sam_house_clean_7dl
     "Закончив с кошкой, я вернулся в комнату и, проигнорировав компьютер, растянулся на диване."
     play music music_7dl["alone"] fadein 3
     "Ещё было довольно рано, но я чувствовал, как сильно устал."
@@ -28919,7 +28918,7 @@ label alt_day7_sl_7dl_herc_neon:
     window hide
     scene black
     with dissolve
-    play ambience ambience_camp_center_day fadein 3
+    play ambience ambience_camp_entrance_evening fadein 3
     play music music_7dl["game_of_shadows"] fadein 3
     th "Надо бы сходить, окно закрыть."
     "Вяло подумал я."
@@ -29001,6 +29000,7 @@ label alt_day7_sl_7dl_herc_neon:
     me "Даже если она меня не узнает, я хотя бы её увижу! {w}Веди."
     ka "Как скажешь. {w}Пошли."
     window hide
+    play ambience ambience_cold_wind_loop fadein 3
     scene bg ext_road_winter_7dl
     with dissolve
     "Спрыгнув со скамейки, девушка выскочила на дорогу, пробежала несколько шагов, оставляя за собой следы на свежевыпавшем снеге."
@@ -29080,6 +29080,7 @@ label alt_day7_sl_7dl_herc_neon:
     ka "Поднажмём! {w}Мы почти пришли!"
     "Почти…"
     window hide
+    play ambience ambience_camp_entrance_evening fadein 3
     scene bg ext_countryside_day_7dl
     with dissolve
     "На горизонте показался небольшой городок или, скорее, посёлок городского типа."
@@ -29113,6 +29114,7 @@ label alt_day7_sl_7dl_herc_neon:
     "И…"
     $ day_time()
     window hide
+    play ambience ambience_7dl["town_day"] fadein 3
     scene bg ext_townscape_ph_day_7dl
     with flash
     play music music_7dl["what_am_i_doing_here"] fadein 3
@@ -29212,7 +29214,7 @@ label alt_day7_sl_7dl_herc_neon:
     "И…"
     window hide
     $ set_mode_adv()
-    scene bg ext_countryside_day_7dl
+    scene bg ext_townscape_ph_day_7dl
     with dissolve
     "Здесь была какая-то бесконечная стена и «карман», на котором, похоже, разворачивались грузовики."
     "Сейчас же выстроившись цепочкой стояли знакомые уже «икарусы», а с другой стороны «кармана» расположились две знакомые процессии из японцев и представительских машин."
@@ -29365,9 +29367,12 @@ label alt_day7_sl_7dl_herc_neon:
     me "Стабилизируете?"
     "Я пристегнул ремень, за что удостоился ещё одного уважительного взгляда от старого физрука."
     ba "На месте увидишь."
+    stop ambience
+    play sound_loop sfx_intro_bus_engine_loop
     "«Таврия» прогазовала на месте, полностью демаскируя форсированный движок, и рванула вперёд."
     stop music fadeout 3
     "И всё время я чувствовал взгляд Слави, сменившийся с уныло-грустного на недоверчиво-скептический."
+    stop sound_loop fadeout 1
     "Дальше события полетели вскачь!"
     play music music_7dl["hug_me_already"] fadein 3
     $ set_mode_nvl()
@@ -29395,6 +29400,7 @@ label alt_day7_sl_7dl_herc_neon:
     "А завтра… будет завтра."
     nvl clear
     window hide
+    play ambience ambience_camp_entrance_evening fadein 3
     scene bg ext_busstop_sun_7dl
     show uv smile
     show prologue_dream
@@ -29440,6 +29446,7 @@ label alt_day7_sl_7dl_herc_neon:
     me "И, может быть, когда она станет взрослее…"
     nvl clear
     window hide
+    stop ambience
     scene anim prolog_2
     with dissolve
     "Так и оставшаяся безымянной девушка исчезла, а я проснулся."
@@ -29450,6 +29457,7 @@ label alt_day7_sl_7dl_herc_neon:
     "Было в этом что-то."
     "С утра за мной прислали машину со всё тем же Санычем за рулём."
     "Он снова попытался раздавить мне лапу — с тем же результатом."
+    play sound_loop sfx_intro_bus_engine_loop
     "Снова уважительно кивнув моим кондициям, он стронул машину с места."
     "Судя по направлению, мы снова отправились в сторону местной службы безопасности."
     stop music fadeout 3
@@ -29482,7 +29490,9 @@ label alt_day7_sl_7dl_herc_neon:
     me "Точно?"
     ba "Вали-вали."
     "Пришлось выбираться."
+    stop sound_loop fadeout 1
     window hide
+    play ambience ambience_7dl["town_day"]
     scene bg ext_townscape_ph_day_7dl
     with fade
     $ set_mode_adv()
