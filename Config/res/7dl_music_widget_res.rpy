@@ -33,7 +33,7 @@ init 1:
     $ music_list_7dl[u"Владимир Зеленцов - Emptiness"] = default_7dl_path+"Sound/music/emptiness_7dl.ogg"
     $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer (cut 2)"] = default_7dl_path+"Sound/music/es_downmix_7dl.ogg"
     $ music_list_7dl["Josh Kramer (feat. Tina Guo) - Where The Light Goes"] = default_7dl_path+"Sound/music/escape_2_7dl.ogg"
-    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"] = default_7dl_path+"Sound/music/Everlasting_Summer_Alice_7dl.ogg"
+    $ music_list_7dl[u"С. Ейбог feat. Liru - Everlasting Summer"] = default_7dl_path+"Sound/music/everlasting_summer_alice_7dl.ogg"
     $ music_list_7dl["April Rain – Exodus "] = default_7dl_path+"Sound/music/Exodus_7dl.ogg"
 
     $ music_list_7dl["Stefano Mocini - Inside"] = default_7dl_path+"Sound/music/feel_you_inside_7dl.ogg"
@@ -100,7 +100,7 @@ init 1:
 
     $ music_list_7dl["Micheal Ortega - Night of rain"] = default_7dl_path+"Sound/music/pathways_7dl.ogg"
     $ music_list_7dl["Sonic Librarian - Firefly Mist"] = default_7dl_path+"Sound/music/pixies_playing_7dl.ogg"
-    $ music_list_7dl["Slava Jamm feat. Please Reprise - WTCS11"] = default_7dl_path+"Sound/music/Please_Reprise_7dl.ogg"
+    $ music_list_7dl["Slava Jamm feat. Please Reprise - WTCS11"] = default_7dl_path+"Sound/music/please_reprise_7dl.ogg"
     $ music_list_7dl["KPM Music - Bass Renaissaince 1"] = default_7dl_path+"Sound/music/polyhymnia_intro_7dl.ogg"
     $ music_list_7dl["KPM Music - Bass Renaissaince 2"] = default_7dl_path+"Sound/music/polyhymnia_main_7dl.ogg"
     $ music_list_7dl["PPK - Resurrection"] = default_7dl_path+"Sound/music/ppk_7dl.ogg"
@@ -109,7 +109,7 @@ init 1:
 
     $ music_list_7dl["Sergey Eybog – Raindrops"] = default_7dl_path+"sound/sfx/raindrops_radio_7dl.ogg"
     $ music_list_7dl["Qrown - Gokagetu"] = default_7dl_path+"Sound/music/red_lights_7dl.ogg"
-    $ music_list_7dl["Mitchell Broom – Redemption"] = default_7dl_path+"Sound/music/Redemption_7dl.ogg"
+    $ music_list_7dl["Mitchell Broom – Redemption"] = default_7dl_path+"Sound/music/redemption_7dl.ogg"
     $ music_list_7dl["Moonlight - Electric Cello (Inspired by Beethoven) - The Piano Guys"] = default_7dl_path+"Sound/music/refuse_to_believe_7dl.ogg"
     $ music_list_7dl["Oi Va Voi - Yesterday's Mistakes"] = default_7dl_path+"Sound/music/refuse_to_replay_7dl.ogg" 
     $ music_list_7dl["KPM Music - Change Times"] = default_7dl_path+"Sound/music/rewind_7dl.ogg"
@@ -117,7 +117,7 @@ init 1:
     $ music_list_7dl["Heavenly - The Ritual"] = default_7dl_path+"Sound/music/ritual2_7dl.ogg"
     $ music_list_7dl["The Neighbourhood - Sweater Weather (Instrumental)"] = default_7dl_path+"Sound/music/runaway_7dl.ogg"
 
-    $ music_list_7dl["Olexandr Ignatov - Sad Piano"] = default_7dl_path+"Sound/music/Sad_Piano_7dl.ogg"
+    $ music_list_7dl["Olexandr Ignatov - Sad Piano"] = default_7dl_path+"Sound/music/sad_piano_7dl.ogg"
     $ music_list_7dl["19's Sound Factory - Dear (Music Box Cover)"] = default_7dl_path+"Sound/music/sam_lullaby_7dl.ogg"
     $ music_list_7dl["Scorpions - Still Loving You (Cover by Kfir Ochaion)"] = default_7dl_path+"Sound/music/scorpions_7dl.ogg"
     $ music_list_7dl["Purgatory Bunny - Light Chain"] = default_7dl_path+"Sound/music/Semische_7dl.ogg"
@@ -163,7 +163,7 @@ init 1:
     $ music_list_7dl["Mattashi - Together"] = default_7dl_path+"Sound/music/vale_7dl.ogg"
     $ music_list_7dl["Marilyn Manson - If I could be your vampire"] = default_7dl_path+"Sound/music/vampire_7dl.ogg"
 
-    $ music_list_7dl["DeadPunk - Regret"] = default_7dl_path+"Sound/music/walkingaway_7dl.ogg"
+    $ music_list_7dl["DeadPunk - Regret"] = default_7dl_path+"Sound/music/regret_7dl.ogg"
     $ music_list_7dl["Kaivaan ft. Hikaru Station - Escape (Acoustic guitar cover)"] = default_7dl_path+"Sound/music/what_am_i_doing_here_7dl.ogg"
     $ music_list_7dl["DeVso - DeVso-Music-The Avengers"] = default_7dl_path+"Sound/music/what_cost_7dl.ogg"
     $ music_list_7dl["Curse - Und was ist jetzt (Instrumental)"] = default_7dl_path+"Sound/music/whatnow_7dl.ogg"
@@ -200,12 +200,12 @@ init 1:
     $ music_list_7dl["SURF - Take Care"] = default_7dl_path+"Sound/music/surf_7dl.ogg"
     $ music_list_7dl["Mattdeguia - Daylight"] = default_7dl_path+"Sound/music/too_serious_7dl.ogg"
 #0.34.b
-    $ music_list_7dl["DeadPunk - Hell"] = default_7dl_path+"Sound/music/despair_7dl.ogg"
+    $ music_list_7dl["DeadPunk - Hell"] = default_7dl_path+"Sound/music/hell_7dl.ogg"
     $ music_list_7dl["Steezy Prime - Explore"] = default_7dl_path+"Sound/music/explore_7dl.ogg"
     $ music_list_7dl["ППВК - Последнее лето"] = default_7dl_path+"Sound/music/last_summer_7dl.ogg"
     $ music_list_7dl["ППВК - Волшебство уходит"] = default_7dl_path+"Sound/music/magic_is_gone_7dl.ogg"
     $ music_list_7dl["Matt Quentin - Morning Dew"] = default_7dl_path+"Sound/music/Morning_Dew_7dl.ogg"
-    $ music_list_7dl["DeadPunk - PleaseStopIt"] = default_7dl_path+"Sound/music/PleaseStopItMastered_7dl.ogg"
+    $ music_list_7dl["DeadPunk - PleaseStopIt"] = default_7dl_path+"Sound/music/please_stop_it_mastered_7dl.ogg"
     $ music_list_7dl["Kazam - Raindrops"] = default_7dl_path+"Sound/music/raindrops_7dl.ogg"
     $ music_list_7dl["DeadPunk - Vibe"] = default_7dl_path+"Sound/music/Vibe_7dl.ogg"
 #0.35.a

@@ -2810,7 +2810,7 @@ label alt_day2_final_win_end_new:
 
     elif alt_my_rival_final.take == 'sl':
         $ lp_sl += 1
-        play music music_7dl["Please_Reprise"] fadein 3
+        play music music_7dl["please_reprise"] fadein 3
         show sl smile pioneer with dspr
         "Я победил?"
         "Победил?!"

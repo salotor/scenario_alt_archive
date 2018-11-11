@@ -8667,7 +8667,7 @@ label alt_day6_sl_begin:
             "Какие у него есть доказательства?"
             "Я закурил — последняя, как символично."
             stop music
-            play music music_7dl["PleaseStopItMastered"] fadein 3
+            play music music_7dl["please_stop_it_mastered"] fadein 3
             window hide
             scene bg ext_square_day
             show prologue_dream
@@ -12605,7 +12605,7 @@ label alt_day6_sl_hala:
     me "Видишь ли, дело в том"
     if alt_sp >= 6:
         extend ", что там, у себя дома я умер."
-        play music music_7dl["Please_Reprise"] fadein 3
+        play music music_7dl["please_reprise"] fadein 3
         show sl scared pioneer close with dspr
         sl "ЧТО?!"
         "Славя прижала руки ко рту, глядя на меня широко распахнутыми глазами."
@@ -16571,7 +16571,7 @@ label alt_day7_sl_good:
     with fade3
     stop music fadeout 3
     $ renpy.pause(3)
-    play music music_7dl["Please_Reprise"] fadeout 3
+    play music music_7dl["please_reprise"] fadeout 3
 
     "В мире ничто не даётся задаром, забесплатно и просто так."
     "Абсолютно за всё приходится платить — даже за иллюзию сохранения status quo."

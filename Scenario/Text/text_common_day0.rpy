@@ -897,7 +897,7 @@ label alt_day0_start_l:
     "Оголодавшие хищники, рвущие жертву стаей."
     window hide
     $ volume(1.0, 'music')
-    play music music_7dl["Redemption"] fadein 3
+    play music music_7dl["redemption"] fadein 3
     $ renpy.pause(3)
     scene anim prolog_2 
     with fade

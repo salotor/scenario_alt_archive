@@ -9720,7 +9720,7 @@ label alt_day6_un_7dl_sleeptime:
 
 label alt_day7_un_7dl_begin:
     scene black
-    play music music_7dl["PleaseStopItMastered"] fadein 3
+    play music music_7dl["please_stop_it_mastered"] fadein 3
     $ renpy.pause(2)
     $ persistent.sprite_time = "night"
     scene bg int_sam_house_clean_7dl
@@ -10487,9 +10487,9 @@ label alt_day7_un_7dl_begin:
     window hide
     with fade2
     return
-    
+
 label alt_day7_un_7dl_epilogue_all:
-    play music music_7dl["PleaseStopItMastered"] fadein 5
+    play music music_7dl["please_stop_it_mastered"] fadein 5
     "Я потряс за плечи порывающуюся уснуть девочку."
     me "Не спи! Отвечай!" with vpunch
     un "В медпункте. У меня же ключ."
@@ -11259,7 +11259,7 @@ label alt_day7_un_7dl_ussr:
     $ renpy.pause(3)
     $ set_mode_nvl()
     $ night_time()
-    play music music_7dl["Please_Reprise"] fadein 3
+    play music music_7dl["please_reprise"] fadein 3
     "Я — не нужен."
     "За без малого тридцать лет я не научился абсолютно ничему, что могло бы быть действительно полезным, отвязанным от цивилизации."
     if loki:
@@ -11958,7 +11958,7 @@ label alt_day7_un_7dl_transit:
     "Поверили?"
     window hide
     scene bg ext_railbridge_sunset_7dl with dissolve
-    play music music_7dl["Sad_Piano"] fadein 3
+    play music music_7dl["sad_piano"] fadein 3
     $ set_mode_nvl()
     "Ладно, на самом деле была ещё целая куча всего."
     "Было и солнце, и лето, и счастливый смех."

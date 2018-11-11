@@ -2217,7 +2217,7 @@ label alt_day2_final_win:
         hide dv with dissolve
     elif alt_day2_f1 == 2:
         $ lp_sl += 1
-        play music music_7dl["Please_Reprise"] fadein 3
+        play music music_7dl["please_reprise"] fadein 3
         show sl smile pioneer with dspr
         "Я победил?"
         "Победил?!"

@@ -8517,7 +8517,7 @@ label alt_day5_sl_7dl_candle:
         stop music fadeout 2
         hide mt with dissolve
         "Стащив меня с подоконника, девушка заняла моё место."
-        play music music_7dl["Redemption"] fadein 3
+        play music music_7dl["redemption"] fadein 3
         "А я… Я оказался в темноте."
         "Лишь справа от меня светилась неподвижная лампа на столе, да где-то далеко в темноте плыл собрат огонька в моей руке."
         me "Я ничего не вижу."
@@ -11295,7 +11295,7 @@ label alt_day5_sl_7dl_day:
     pause(1)
     "С этой стороны было хотя бы тихо и мирно."
     "Всё так же возюкал кисточкой картавенький Олежка, всё так же кемарила в теньке Ольга свет Батьковна."
-    play music music_7dl["walkingaway"] fadein 3
+    play music music_7dl["regret"] fadein 3
     mt "Что за вопли на том берегу?"
     "Лениво поинтересовалась вожатая."
     me "Да ну."
@@ -13924,11 +13924,11 @@ label alt_day6_sl_7dl_camping:
     sl "Значит, это правда, что я — это последний шанс, который ты дал миру?"
     me "И самому себе. {w}Давай собираться, скоро роса выпадет."
     sl "Озябнем, да."
-    show sl2 normal pioneer far with dissolve
+    show sl2 normal pioneer far with dissolve    # нет у sl2 far-версий!
     "Неохотно высвободившись из моих рук, Славя поднялась."
     sl "Потушишь костёр?"
     me "Э…"
-    show sl2 laugh pioneer far with dspr
+    show sl2 laugh pioneer far with dspr    # нет у sl2 far-версий!
     sl "Да, это я тоже знаю."
     "Уже не скрываясь, рассмеялась Славя."
     me "Мне кажется, это нечестно — понимать такие вещи в одностороннем порядке!"
@@ -25437,7 +25437,7 @@ label alt_day7_sl_7dl_begin:
     scene bg int_d3_hideout_7dl
     show prologue_dream
     with fade
-    play music music_7dl["despair"] fadein 3
+    play music music_7dl["hell"] fadein 3
     "Я уже очень давно не был в этом месте."
     "Или это вовсе был не я?"
     "Довольно трудно разобраться во всех моих многочисленных «я», когда речь заходит о встречах и знакомых местах."
@@ -29457,7 +29457,7 @@ label alt_day7_sl_7dl_herc_neon:
     "Но к этому я оказался готов."
     "Даже находил некую прелесть в сложившемся положении."
     "А вот к чему я готов не был, так это к метнувшейся с тротуара на проезжую часть фигурке в синем джинсовом платье."
-    play music music_7dl["Everlasting_Summer_Alice"] fadein 3
+    play music music_7dl["everlasting_summer_alice"] fadein 3
     "Двух кварталов проехать не успели."
     ba "Эй!"
     "Саныч открыл боковое стекло и рявкнул:"
