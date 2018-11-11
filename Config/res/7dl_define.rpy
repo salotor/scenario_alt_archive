@@ -1154,9 +1154,10 @@ init:
     $ music_7dl["iwantmagic"] = get_music_7dl("iwantmagic_7dl.ogg")
     $ music_7dl["i_will_find_you"] = get_music_7dl("i_will_find_you_7dl.ogg")
     
-    $ music_7dl["knock"] = get_music_7dl("knock_7dl.ogg")
     $ music_7dl["keep_looking"] = get_music_7dl("keep_looking_7dl.ogg")
     $ music_7dl["kiss_you"] = get_music_7dl("kiss_you_7dl.ogg")
+    $ music_7dl["knock"] = get_music_7dl("knock_7dl.ogg")
+    $ music_7dl["krwling"] = get_music_7dl("krwling_7dl.ogg")
     
     $ music_7dl["lastlight_guitar"] = get_music_7dl("lastlight_guitar_7dl.ogg")
     $ music_7dl["lastlight_piano"] = get_music_7dl("lastlight_piano_7dl.ogg")
@@ -1216,7 +1217,7 @@ init:
     $ music_7dl["pure_energy"] = get_music_7dl("pure_energy_7dl.ogg")
 
     $ music_7dl["radio_void"] = get_music_7dl("radio_void_7dl.ogg")
-    $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg") # в треке звучат голоса, может, стоит обрезать эту часть?
+    $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg")
     $ music_7dl["Redemption"] = get_music_7dl("Redemption_7dl.ogg")
     $ music_7dl["red_lights"] = get_music_7dl("red_lights_7dl.ogg")
     $ music_7dl["refuse_to_believe"] = get_music_7dl("refuse_to_believe_7dl.ogg")
@@ -1232,6 +1233,7 @@ init:
     $ music_7dl["saveme"] = get_music_7dl("saveme_7dl.ogg")
     $ music_7dl["scorpions"] = get_music_7dl("scorpions_7dl.ogg")
     $ music_7dl["Semische"] = get_music_7dl("Semische_7dl.ogg")
+    $ music_7dl["see_one_day"] = get_music_7dl("see_one_day_7dl.ogg")
     $ music_7dl["seven_summer_days"] = get_music_7dl("seven_summer_days_7dl.ogg")
     $ music_7dl["sign_of_blood"] = get_music_7dl("sign_of_blood_7dl.ogg")
     $ music_7dl["silent_angel"] = get_music_7dl("silent_angel_7dl.ogg")
