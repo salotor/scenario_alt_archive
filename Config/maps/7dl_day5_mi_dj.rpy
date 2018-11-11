@@ -29,6 +29,7 @@ label alt_day5_mi_dj_map:
         th "Уже пора ужинать. Время-то как летит."
         dreamgirl "Пойдёшь набивать утробу?"
         th "Да нет. Но там будет вожатая. И Славя. Кажется, пришла пора попросить помощи."
+        stop sound fadeout 3
         window hide
         return
     else:

@@ -78,7 +78,6 @@ label alt_day2_event_sport_area:
     jump alt_day2_map
 
 label alt_day2_event_beach:
-    $ list_voyage_7dl.append('beach')
     call alt_day2_event_beach1
     $ disable_current_zone_alt1()
     jump alt_day2_map

@@ -63,6 +63,8 @@
     $ alt_chapter(6, u"Ольга. Воссоединение")
     call alt_day6_mt_7dl_nighttime
     pause(1)
+    if mt_pt < 13:
+        $ routetag = "mt7dl_bad"
     jump alt_day7_mt_7dl_start
     
 label alt_day7_mt_7dl_start:
@@ -110,7 +112,7 @@ label alt_day7_mt_7dl_start:
             call alt_day7_mt_7dl_good
             pause(1)
             if (alt_day_binder == 1) or alt_day1_loop:
-                call alt_day7_mt_7dl_postscriptum  
+                call alt_day7_mt_7dl_postscriptum
         else:
             call alt_day7_mt_7dl_bad
     pause(1)

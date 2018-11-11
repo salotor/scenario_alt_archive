@@ -47,7 +47,7 @@
         jump alt_day5_sl_start
     elif alt_day4_fz_sh == 3:
         $ routetag = "dv"
-        jump alt_day5_dv_start
+        jump alt_day5_dv_cl_start
 
 label alt_day5_fz_start:
     $ persistent.sprite_time = "sunset"

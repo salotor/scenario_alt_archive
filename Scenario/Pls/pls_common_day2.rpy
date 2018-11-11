@@ -11,7 +11,7 @@
     $ alt_chapter(2, u"Завтрак")
     call alt_day2_bf
     pause(1)
-    if alt_day1_un_dated == 1:
+    if alt_day1_un_dated:
         call alt_day2_un_guide
     elif (counter_sl_7dl == 3):
         call alt_day2_sl_guide

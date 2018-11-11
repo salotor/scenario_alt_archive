@@ -37,7 +37,7 @@
             call alt_day4_neu_us
             pause(1)
     else:
-        call alt_day4_neu_home #Домик ведёт к Ульянке, Ольге, Лене и Мику. 
+        call alt_day4_neu_home
         pause(1)
         if alt_day3_us_bugs == 1:
             $ alt_day4_neu_transit = 5
@@ -68,7 +68,7 @@
     $ persistent.sprite_time = "day"
     $ day_time()
     $ alt_chapter(4, u"Одиночка. День")
-    call alt_day4_neu_dinner #На обеде подводим итоги
+    call alt_day4_neu_dinner
     pause(1)
     call alt_day4_neu_curl
     pause(1)
@@ -192,7 +192,7 @@ label alt_day5_neu_begin:
             return
     jump alt_day6_neu_begin
     
-label alt_day6_neu_begin:
+label alt_day6_neu_begin: #Загони себя в лютую жопу.
     call alt_day6_neu_start
     pause(1)
     return
@@ -210,10 +210,3 @@ label alt_day7_neu_begin:
     else:
         call alt_day7_neu_ending_d3
 return
-
-
-#D3-route
-#Сделаю, как ты хочешь - ждать время (+пт) или выглянуть на улицу
-#Кодовый замок - искать код(+пт) или искать обходной путь
-#Эпилог - бог на полставочки(гуд) или порридж(бэд)
-#Флаг получения биндера.
