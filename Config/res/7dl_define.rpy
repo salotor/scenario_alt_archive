@@ -1217,7 +1217,7 @@ init:
     $ music_7dl["pure_energy"] = get_music_7dl("pure_energy_7dl.ogg")
 
     $ music_7dl["radio_void"] = get_music_7dl("radio_void_7dl.ogg")
-    $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg")
+    $ music_7dl["raindrops"] = get_music_7dl("raindrops_7dl.ogg") # в треке звучат голоса, стоит обрезать эту часть
     $ music_7dl["Redemption"] = get_music_7dl("Redemption_7dl.ogg")
     $ music_7dl["red_lights"] = get_music_7dl("red_lights_7dl.ogg")
     $ music_7dl["refuse_to_believe"] = get_music_7dl("refuse_to_believe_7dl.ogg")
@@ -1297,11 +1297,11 @@ init:
     $ music_7dl["what_cost"] = get_music_7dl("what_cost_7dl.ogg")
     $ music_7dl["whatnow"] = get_music_7dl("whatnow_7dl.ogg")
     $ music_7dl["what_if"] = get_music_7dl("what_if_7dl.ogg")
-    $ music_7dl["wheres_wonderland"] = get_music_7dl("wheres_wonderland_7dl.ogg")
+    $ music_7dl["wheres_wonderland"] = get_music_7dl("wheres_wonderland_7dl.ogg") # хреново зациклено
     $ music_7dl["will_you"] = get_music_7dl("will_you_7dl.ogg")
     $ music_7dl["wonderful_faraway"] = get_music_7dl("wonderful_faraway_7dl.ogg")
     
-    $ music_7dl["you_were_late"] = get_music_7dl("you_were_late_7dl.ogg")
+    $ music_7dl["you_were_late"] = get_music_7dl("you_were_late_7dl.ogg") # хреново зациклено
     $ music_7dl["you_are_human"] = get_music_7dl("you_are_human_7dl.ogg")
     $ music_7dl["you_are_soul"] = get_music_7dl("you_are_soul_7dl.ogg")
     $ music_7dl["you_are_star"] = get_music_7dl("you_are_star_7dl.ogg")
