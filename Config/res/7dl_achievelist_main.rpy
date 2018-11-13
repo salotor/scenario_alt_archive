@@ -207,7 +207,7 @@ screen sdl_achv_route(parent_screen, achv_list):
     for achv in achv_list:
         if getattr(persistent, achv.get_persistent()):
             # Значок ачивки
-            imagebutton xcenter 800 ycenter 66 + 64 * sdl_achv_count:
+            imagebutton xcenter 800 ycenter (66 + 64 * sdl_achv_count):
                 idle (achv.get_icon())
                 hovered [SetVariable("sdl_achv_hovered_achv", achv)]
                 unhovered [SetVariable("sdl_achv_hovered_achv", None)]
@@ -224,7 +224,7 @@ screen sdl_achv_route(parent_screen, achv_list):
                     action [Stop("ambience"), SetVariable("sdl_achv_hovered_jump", False), Replay(achv.get_replay().get_label(), scope=achv.get_replay().get_scope(), locked=False), Play('ambience', default_7dl_path+"Sound/ambience/ambience_safe_7dl.ogg", fadein=5.0)]
         else:
             # Заблокированная ачивка
-            imagebutton xcenter 800 ycenter 66 + 64 * sdl_achv_count:
+            imagebutton xcenter 800 ycenter (66 + 64 * sdl_achv_count):
                 idle ("sdl_achv_lock")
                 hovered [SetVariable("sdl_achv_hovered_achv", achv)]
                 unhovered [SetVariable("sdl_achv_hovered_achv", None)]
@@ -287,7 +287,7 @@ screen sdl_achvlist_character(character, route_list):
     tag menu
     modal True
     
-    add "sdl_achv_screen_" + character
+    add ("sdl_achv_screen_" + character)
     
     # Руты
     $ sdl_route_count = 0
