@@ -116,7 +116,7 @@ init 9999 python:
     alt_emo_dict = {
                     'al':{'1':['angry','dontlike','laugh','normal','sad','shy','smile']},
                     'ba':{'1':['em1','evil','normal','smile']},
-                    'cs':{'1':['doubt','fear','grin','laugh','normal','shy','smile']},
+                    'cs':{'1':['doubt','fear','grin','laugh','normal','shy','smile','sad','upset','cry','angry','rage']},
                     'dn':{'1':['dontcare','grin','normal','smile','unsured'],
                           '2':['dontlike','upset'],
                           '3':['sad','scared','shocked','sick','surprise']},
