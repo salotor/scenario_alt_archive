@@ -13759,9 +13759,9 @@ label alt_day6_sl_7dl_camping:
         sl "Если продолжишь так смотреть на меня, боюсь, нам придётся искать местечко поудобнее."
         me "Извини, что?"
         if persistent.hentai_graphics_7dl:
-            show sl2 shy body with dissolve
+            show sl2 shy body with dspr
         else:
-            show sl2 shy swim with dissolve
+            show sl2 shy swim with dspr
         "Впервые за всё время, что мы стояли, она сделала движение рукой, будто пытаясь прикрыть низ живота."
         sl "У нас желания на двоих. {w}Ты хочешь попробовать продолжить то, что у нас не получилось."
         me "Очень хочу."
@@ -13787,9 +13787,9 @@ label alt_day6_sl_7dl_camping:
     me "Только при условии, что ты оденешься."
     if alt_day5_sl_7dl_hentai_done:
         if persistent.hentai_graphics_7dl:
-            show sl2 laugh body with dissolve
+            show sl2 laugh body with dspr
         else:
-            show sl2 laugh swim with dissolve
+            show sl2 laugh swim with dspr
     "Славя рассмеялась каким-то незнакомым, грудным смехом."
     if persistent.hentai_graphics_7dl:
         show sl2 smile2 body close with dissolve
@@ -13817,11 +13817,11 @@ label alt_day6_sl_7dl_camping:
     sl "Не станет, Сёмушка."
     "Парой минут спустя шуршание одежды стихло, рядом со мной опустилась девочка."
     "Шутливо толкнула плечом, протянула ладошки к костру."
-    show sl2 smile pioneer with dissolve
+    show sl2 smile pioneer close with dspr
     sl "Я же не совсем глупая, понимаю."
     sl "До сих пор у нас не было ничего хоть сколько-то своего, личного."
     me "Серьёзного?"
-    show sl2 grin pioneer with dspr
+    show sl2 grin pioneer close with dspr
     "Славя подмигнула."
     sl "Нам с тобой сколько лет, говорить о серьёзном?"
     th "Больше, чем тебе кажется."
@@ -13834,14 +13834,14 @@ label alt_day6_sl_7dl_camping:
     "Оставалось просто обнять её, прижать к себе и бесконечно смотреть в огонь…"
     "Музыка ночного озера и горящих веток, аромат хвои и земляники."
     me "Я тебе ягод собрал."
-    show sl2 smile pioneer with dspr
+    show sl2 smile pioneer close with dspr
     sl "Правда?"
     "Поискав за бревном, я достал лежащий там лист и явил на суд девочке."
-    show sl2 happy pioneer with dspr
+    show sl2 happy pioneer close with dspr
     sl "Земляника!"
     "Обрадовалась она."
     me "Да. Здесь недалеко собирал."
-    show sl2 smile pioneer with dspr
+    show sl2 smile pioneer close with dspr
     sl "Спасибо огромное. Будешь?"
     me "Я тебе собирал, сам успел поесть на месте."
     sl "Я так не могу! Мы должны все вместе.{w} Давай, открой рот и скажи «Аааа»."
@@ -13849,7 +13849,7 @@ label alt_day6_sl_7dl_camping:
     "Послушно сказал я."
     "Ягоды были сладкие и невероятно ароматные."
     "Должно быть, потому я и смог учуять их в ночном лесу."
-    show sl2 normal pioneer with dspr
+    show sl2 normal pioneer close with dspr
     sl "Ты только не обижайся на «несерьёзность», хорошо?"
     "Внезапно попросила девочка."
     me "Да я уже и думать забыл."
@@ -13880,13 +13880,13 @@ label alt_day6_sl_7dl_camping:
     sl "Ты принимаешь человека в свой мир, он сам становится твоим миром."
     me "А с миром у нас свои взаимоотношения…"
     stop music fadeout 3
-    show sl2 normal pioneer with dspr
+    show sl2 normal pioneer close with dspr
     sl "Будущее неполно без тебя, Семён."
     "Спокойно сообщила Славя."
     sl "Значит, всё очень серьёзно. {w}Поможешь переплести косы?"
     play music music_7dl["beasteye"] fadein 3
     "Меня настолько подкосил её утилитарный подход к вопросу, что я некоторое время сидел, ловя ртом воздух."
-    show sl2 smile2 pioneer with dspr
+    show sl2 smile2 pioneer close with dspr
     sl "Тебе нехорошо?"
     me "Кхм… Мне очень хорошо. Просто ты ведёшь себя странно!"
     "Я ожидал каких-то трепетных признаний, треволнений, нервов, в конце концов!"
@@ -13899,20 +13899,20 @@ label alt_day6_sl_7dl_camping:
     "Те же, кто может этим похвастаться, не выходят из дома."
     "Да-да, по причине всё той же самодостаточности."
     me "То есть, ты не стесняешься, не беспокоишься и далее по списку?"
-    show sl2 smile pioneer with dspr
+    show sl2 smile pioneer close with dspr
     sl "А чего стесняться?"
     "Пожала плечами эта невероятная девочка."
     sl "Я как поняла, так сразу стесняться и перестала.{w} Всё же просто: неравнодушны — будьте вместе."
     me "И моя реакция и взаимность тебя не интересуют?"
     sl "Я бы просто ушла, не будь всё взаимным."
-    show sl2 serious pioneer with dspr
+    show sl2 serious pioneer close with dspr
     sl "Но я чувствую тебя, Сёмушка.{w} Чувствую как хорошо настроенный компас."
     me "Значит, знаешь мои переживания?"
     "Чужое самоуправство меня не напрягало с армии."
     "Я прекрасно уживался с мыслью, что кто-то может принять какое-то решение вместо меня."
     "Но решил уточнить на всякий случай."
     "Просто потому, что сам не мог понять, что чувствую к этой девочке, кроме восторженной нежности."
-    show sl2 smile2 pioneer with dspr
+    show sl2 smile2 pioneer close with dspr
     sl "Знаю. Понимаю. Вижу."
     sl "С твоей отстранённости у автобуса до последнего дня, когда мы сбежали ото всех, а внутри меня была такая сладкая жуть, что казалось, я на всё способна!"
     me "Сладкая…"
@@ -13924,11 +13924,11 @@ label alt_day6_sl_7dl_camping:
     sl "Значит, это правда, что я — это последний шанс, который ты дал миру?"
     me "И самому себе. {w}Давай собираться, скоро роса выпадет."
     sl "Озябнем, да."
-    show sl2 normal pioneer far with dissolve    # нет у sl2 far-версий!
+    show sl2 normal pioneer with dissolve
     "Неохотно высвободившись из моих рук, Славя поднялась."
     sl "Потушишь костёр?"
     me "Э…"
-    show sl2 laugh pioneer far with dspr    # нет у sl2 far-версий!
+    show sl2 laugh pioneer with dspr
     sl "Да, это я тоже знаю."
     "Уже не скрываясь, рассмеялась Славя."
     me "Мне кажется, это нечестно — понимать такие вещи в одностороннем порядке!"
