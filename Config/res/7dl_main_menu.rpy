@@ -18,6 +18,17 @@ init 1 python:
     style.alt_settings_text.kerning = -2
     style.alt_settings_text.color = "#2f059a"
     
+    style.settings_textbutton2 = Style(style.base_font)
+    style.settings_textbutton2.font  = link_font
+    style.settings_textbutton2.size = 60
+    style.settings_textbutton2.kerning = 3
+    style.settings_textbutton2.color = "#909ca3"
+    style.settings_textbutton2.hover_color = "#000000"
+    style.settings_textbutton2.selected_color = "#909ca3"
+    style.settings_textbutton2.selected_idle_color = "#909ca3"
+    style.settings_textbutton2.selected_hover_color = "#000000"
+    style.settings_textbutton2.insensitive_color = "#909ca3"
+    
     if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
         header_font = "fonts/corbel.ttf"
         style.settings_link = Style(style.base_font)
@@ -53,6 +64,7 @@ init 1:
     image bg mi_bg_7dl = get_image_7dl("gui/menu_main/mi_bg.png")
     image bg us_bg_7dl = get_image_7dl("gui/menu_main/us_bg.png")
     #image bg mt_bg_7dl = get_image_7dl("gui/menu_main/mt_bg.png")
+    $ dlc_is_here = False # по умолчанию кошочка не в директории БЛ
     
     if not persistent.not_first_start_7dl:
         $ persistent.not_first_start_7dl = True
@@ -61,6 +73,10 @@ init 1:
         if persistent.un_7dl_true:
             $ persistent.un_7dl_rej = True
             $ persistent.un_7dl_true = False
+    
+init 3:
+    if not dlc_is_here:
+        $ persistent.uv_dlc_on_7dl = False
     
 init 9001 python:
     def add_lp_widget_7dl():
@@ -141,7 +157,7 @@ screen alt_help:
         text_style "settings_link"
         yalign 0.6
         xalign 0.23
-        action [Hide("alt_help", transition=Dissolve(0.2)), OpenURL("https://vk.com/wall-128046483_29533"), Stop('music', fadeout=2), Return()]
+        action [Hide("alt_help", transition=Dissolve(0.2)), Show("alt_help_more", transition=Dissolve(0.5))]
     textbutton _("Закрыть"):
         text_size 40
         style "log_button"
@@ -156,6 +172,87 @@ screen alt_help:
         yalign 0.6
         xalign 0.83
         action [Hide("alt_help", transition=Dissolve(0.2)), SetField(persistent,'dont_disturb', True), Stop('music', fadeout=2), Return()]
+        
+screen alt_help_more:
+    modal True
+    add get_image_7dl("gui/menu_elem/other/help_bg.png")
+    text "Проект «7 дней лета» существует благодаря добровольным пожертвованиям неравнодушных читателей.":
+        text_align 0.5
+        yalign 0.2
+        xalign 0.5
+        color "#000000"
+        font header_font
+        size 40
+    text "Эти деньги тратятся как на заказ графики для проекта, так и дают средства к существованию":
+        text_align 0.5
+        yalign 0.25
+        xalign 0.5
+        color "#000000"
+        font header_font
+        size 40
+    text "автору «7 дней лета», который занят работой над сценарием по 8 часов в день. Это позволяет":
+        text_align 0.5
+        yalign 0.3
+        xalign 0.5
+        color "#000000"
+        font header_font
+        size 40
+    text "писать один день рута (около 200 страниц текста) за месяц, а не заставлять ждать аудиторию":
+        text_align 0.5
+        yalign 0.35
+        xalign 0.5
+        color "#000000"
+        font header_font
+        size 40
+    text "по нескольку лет.":
+        text_align 0.5
+        yalign 0.4
+        xalign 0.5
+        color "#000000"
+        font header_font
+        size 40
+    text "Если вам небезразлична судьба проекта, просим вас поддержать его любой суммой, которую":
+        text_align 0.5
+        yalign 0.45
+        xalign 0.5
+        color "#000000"
+        font header_font
+        size 40
+    text "считаете нужной. Особенная благодарность тем, кто решит подписаться на Патреоне - регулярная":
+        text_align 0.5
+        yalign 0.5
+        xalign 0.5
+        color "#000000"
+        font header_font
+        size 40
+    text "поддержка очень важна.":
+        text_align 0.5
+        yalign 0.55
+        xalign 0.5
+        color "#000000"
+        font header_font
+        size 40
+    text "Страница на Патреоне: {a=https://www.patreon.com/7dl/}https://www.patreon.com/7dl/{/a}":
+        text_align 0.5
+        yalign 0.6
+        xalign 0.5
+        color "#000000"
+        font header_font
+        size 40
+    text "Виджет (Яндекс.Деньги, Paypal, VK Pay): {a=https://vk.com/app5727453_-128046483}https://vk.com/app5727453_-128046483{/a}":
+        text_align 0.5
+        yalign 0.65
+        xalign 0.5
+        color "#000000"
+        font header_font
+        size 40
+    textbutton _("Закрыть"):
+        text_size 40
+        style "log_button"
+        text_style "settings_textbutton2"
+        yalign 0.75
+        xalign 0.5
+        action [Hide("alt_help_more", transition=Dissolve(0.2)), Stop('music', fadeout=2), Return()]
         
 screen settings_widget_lp_on_7dl():
     text "Включить виджет для" xpos 0.653 ypos 0.6:
@@ -434,24 +531,8 @@ screen settings_7dl():
             hovered Show("settings_widget_music_off_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_widget_music_on_7dl", transition=Dissolve(0.2)), Hide("settings_widget_music_off_7dl", transition=Dissolve(0.2))]
             action [SetField(persistent,'music_widget_7dl', False), Hide("settings_widget_music_off_7dl", transition=Dissolve(0.2)), Show("settings_widget_music_on_7dl", transition=Dissolve(0.2))]
-    if not persistent.uv_dlc_on_7dl:
-        textbutton "Кошкорут: выкл." xpos 0.65 ypos 0.347:
-            style "log_button"
-            text_style "alt_settings_textbutton"
-            hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
-            hovered Show("settings_dlc_on_7dl", transition=Dissolve(0.2))
-            unhovered [Hide("settings_dlc_off_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_on_7dl", transition=Dissolve(0.2))]
-            action [SetField(persistent,'uv_dlc_on_7dl',True), Hide("settings_dlc_on_7dl", transition=Dissolve(0.2)), Show("settings_dlc_off_7dl", transition=Dissolve(0.2))]
-    else:
-        textbutton "Кошкорут: вкл." xpos 0.65 ypos 0.347:
-            style "log_button"
-            text_style "alt_settings_textbutton"
-            hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
-            hovered Show("settings_dlc_off_7dl", transition=Dissolve(0.2))
-            unhovered [Hide("settings_dlc_on_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_off_7dl", transition=Dissolve(0.2))]
-            action [SetField(persistent,'uv_dlc_on_7dl',False), Hide("settings_dlc_off_7dl", transition=Dissolve(0.2)), Show("settings_dlc_on_7dl", transition=Dissolve(0.2))]
     if not persistent.hentai_un_old_7dl:
-        textbutton "Х-сцены с Леной: новые" xpos 0.65 ypos 0.392:
+        textbutton "Х-сцены с Леной: новые" xpos 0.65 ypos 0.347:
             style "log_button"
             text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
@@ -459,7 +540,7 @@ screen settings_7dl():
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
             action [SetField(persistent,'hentai_un_old_7dl',True), Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Show("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
     else:
-        textbutton "Х-сцены с Леной: старые" xpos 0.65 ypos 0.392:
+        textbutton "Х-сцены с Леной: старые" xpos 0.65 ypos 0.347:
             style "log_button"
             text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
@@ -467,7 +548,7 @@ screen settings_7dl():
             unhovered [Hide("settings_hentai_un_old_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2))]
             action [SetField(persistent,'hentai_un_old_7dl',False), Hide("settings_hentai_un_new_7dl", transition=Dissolve(0.2)), Show("settings_hentai_un_old_7dl", transition=Dissolve(0.2))]
     if not persistent.hentai_graphics_7dl:
-        textbutton "Х-графика: выкл." xpos 0.65 ypos 0.438:
+        textbutton "Х-графика: выкл." xpos 0.65 ypos 0.392:
             style "log_button"
             text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
@@ -475,7 +556,7 @@ screen settings_7dl():
             unhovered [Hide("settings_hentai_graphics_on_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_graphics_off_7dl", transition=Dissolve(0.2))]
             action [SetField(persistent,'hentai_graphics_7dl',True), Hide("settings_hentai_graphics_on_7dl", transition=Dissolve(0.2)), Show("settings_hentai_graphics_off_7dl", transition=Dissolve(0.2))]
     else:
-        textbutton "Х-графика: вкл." xpos 0.65 ypos 0.438:
+        textbutton "Х-графика: вкл." xpos 0.65 ypos 0.392:
             style "log_button"
             text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
@@ -483,7 +564,7 @@ screen settings_7dl():
             unhovered [Hide("settings_hentai_graphics_off_7dl", transition=Dissolve(0.2)), Hide("settings_hentai_graphics_on_7dl", transition=Dissolve(0.2))]
             action [SetField(persistent,'hentai_graphics_7dl',False), Hide("settings_hentai_graphics_off_7dl", transition=Dissolve(0.2)), Show("settings_hentai_graphics_on_7dl", transition=Dissolve(0.2))]
     if not persistent.chapter_off_7dl:
-        textbutton "Заставки: вкл." xpos 0.65 ypos 0.483:
+        textbutton "Заставки: вкл." xpos 0.65 ypos 0.438:
             style "log_button"
             text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
@@ -491,13 +572,30 @@ screen settings_7dl():
             unhovered [Hide("settings_chapter_off_7dl", transition=Dissolve(0.2)), Hide("settings_chapter_on_7dl", transition=Dissolve(0.2))]
             action [SetField(persistent,'chapter_off_7dl',True), Hide("settings_chapter_off_7dl", transition=Dissolve(0.2)), Show("settings_chapter_on_7dl", transition=Dissolve(0.2))]
     else:
-        textbutton "Заставки: выкл." xpos 0.65 ypos 0.483:
+        textbutton "Заставки: выкл." xpos 0.65 ypos 0.438:
             style "log_button"
             text_style "alt_settings_textbutton"
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             hovered Show("settings_chapter_on_7dl", transition=Dissolve(0.2))
             unhovered [Hide("settings_chapter_on_7dl", transition=Dissolve(0.2)), Hide("settings_chapter_off_7dl", transition=Dissolve(0.2))]
             action [SetField(persistent,'chapter_off_7dl',False), Hide("settings_chapter_on_7dl", transition=Dissolve(0.2)), Show("settings_chapter_off_7dl", transition=Dissolve(0.2))]
+    if dlc_is_here:
+        if not persistent.uv_dlc_on_7dl:
+            textbutton "Кошкорут: выкл." xpos 0.65 ypos 0.483:
+                style "log_button"
+                text_style "alt_settings_textbutton"
+                hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
+                hovered Show("settings_dlc_on_7dl", transition=Dissolve(0.2))
+                unhovered [Hide("settings_dlc_off_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_on_7dl", transition=Dissolve(0.2))]
+                action [SetField(persistent,'uv_dlc_on_7dl',True), Hide("settings_dlc_on_7dl", transition=Dissolve(0.2)), Show("settings_dlc_off_7dl", transition=Dissolve(0.2))]
+        else:
+            textbutton "Кошкорут: вкл." xpos 0.65 ypos 0.483:
+                style "log_button"
+                text_style "alt_settings_textbutton"
+                hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
+                hovered Show("settings_dlc_off_7dl", transition=Dissolve(0.2))
+                unhovered [Hide("settings_dlc_on_7dl", transition=Dissolve(0.2)), Hide("settings_dlc_off_7dl", transition=Dissolve(0.2))]
+                action [SetField(persistent,'uv_dlc_on_7dl',False), Hide("settings_dlc_off_7dl", transition=Dissolve(0.2)), Show("settings_dlc_on_7dl", transition=Dissolve(0.2))]
     if (compare_music_widget_7dl != persistent.music_widget_7dl) or (compare_lp_widget_7dl != persistent.lp_widget_7dl):
         textbutton "ПЕРЕЗАГРУЗИТЬ" xcenter 0.755 ypos 0.783:
             style "log_button"
@@ -539,7 +637,7 @@ label start_menu_7dl:
     window hide
     
     if not persistent.dont_disturb:
-        if persistent.mi_7dl_true or persistent.mi_7dl_good_human or persistent.mi_7dl_neutral_human or persistent.mi_7dl_bad_human or persistent.mi_7dl_good_star or persistent.mi_7dl_neutral_star or persistent.mi_7dl_bad_star or persistent.mi_7dl_herc_exc or persistent.mi_7dl_loki_exc or persistent.mi_7dl_dr_exc or persistent.mi_dj_true or persistent.mi_dj_good_jap or persistent.mi_dj_good_rf or persistent.mi_dj_bad or persistent.dv_7dl_good_ussr or persistent.dv_7dl_good_ussr_rf or persistent.dv_7dl_reject_rf or persistent.dv_7dl_reject_ussr or persistent.dv_7dl_bad_mt or persistent.dv_7dl_un or persistent.dv_7dl_tulpa or persistent.dv_7dl_bad or persistent.sl_cl_int_bad or persistent.sl_cl_int_ok or persistent.sl_cl_int_good or persistent.sl_cl_good_rf2 or persistent.sl_cl_good_rf or persistent.sl_cl_good_ussr or persistent.sl_cl_reject_same or persistent.sl_cl_reject_late or persistent.sl_cl_cata or persistent.sl_cl_bad or persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf or persistent.un_7dl_true or persistent.un_7dl_true_transit or persistent.un_7dl_bad or persistent.mt_7dl_true or persistent.mt_7dl_good or persistent.mt_7dl_neutral or persistent.mt_7dl_bad or persistent.us_px_rf_good or persistent.us_px_true or persistent.us_7dl_bad or persistent.us_7dl_good or persistent.us_7dl_true or persistent.us_7dl_un or persistent.us_7dl_mi:
+        if persistent.dv_7dl_bad or persistent.dv_7dl_bad_mt or persistent.dv_7dl_good_rf or persistent.dv_7dl_good_rf or persistent.dv_7dl_good_ussr or persistent.dv_7dl_reject_rf or persistent.dv_7dl_reject_ussr or persistent.dv_7dl_true or persistent.dv_7dl_tulpa or persistent.dv_7dl_un or persistent.mi_7dl_bad_human or persistent.mi_7dl_bad_star or persistent.mi_7dl_dr_exc or persistent.mi_7dl_dr_exc or persistent.mi_7dl_good_human or persistent.mi_7dl_good_star or persistent.mi_7dl_herc_exc or persistent.mi_7dl_loki_exc or persistent.mi_7dl_neutral_human or persistent.mi_7dl_neutral_star or persistent.mi_7dl_ps or persistent.mi_7dl_true or persistent.mi_dj_bad or persistent.mi_dj_good_jap or persistent.mi_dj_good_rf or persistent.mi_dj_true or persistent.mt_7dl_bad or persistent.mt_7dl_good or persistent.mt_7dl_neutral or persistent.mt_7dl_true or persistent.not_first_start_7dl or persistent.sl_7dl_bad or persistent.sl_7dl_good or persistent.sl_7dl_good2 or persistent.sl_7dl_good_rf or persistent.sl_7dl_herc_good or persistent.sl_7dl_herc_good2 or persistent.sl_7dl_loki_good or persistent.sl_7dl_loki_neu or persistent.sl_7dl_loki_rej or persistent.sl_7dl_true or persistent.sl_cl_bad or persistent.sl_cl_cata or persistent.sl_cl_good_rf or persistent.sl_cl_good_rf2 or persistent.sl_cl_good_ussr or persistent.sl_cl_int_bad or persistent.sl_cl_int_good or persistent.sl_cl_int_ok or persistent.sl_cl_reject_late or persistent.sl_cl_reject_same or persistent.un_7dl_bad or persistent.un_7dl_good_rf or persistent.un_7dl_good_ussr or persistent.un_7dl_rej or persistent.un_7dl_rej or persistent.un_7dl_true or persistent.un_7dl_true_transit or persistent.us_7dl_bad or persistent.us_7dl_good or persistent.us_7dl_mi or persistent.us_7dl_true or persistent.us_7dl_un or persistent.us_px_rf_good or persistent.us_px_true:
             scene bg ext_city_night_7dl with fade
             play music music_7dl["seven_summer_days"] fadein 3
             $ renpy.transition(dissolve)

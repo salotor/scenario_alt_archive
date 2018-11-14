@@ -526,7 +526,7 @@ label alt_day4_un_7dl_breakfast:
     un "Так что начну, пожалуй, готовиться."
     me "Готовиться?"
     un "Ну… Мне, как гуманитарию, точные науки сложновато даются — придётся алгебру подтягивать."
-    play music music_7dl["genki"] fadein 3    # genki тут не подходит совершенно
+    play music music_7dl["what_if"] fadein 3
     un "Поможешь?"
     if herc or loki:
         me "Политех, значит?"
@@ -4270,7 +4270,8 @@ label alt_day5_un_7dl_clubs:
     me "Плевать я хотел. {w}Отправляйте. {w}Посмотрим, куда быстрее придёт — моё в партком или ваше в Комсомол."
     me "Будем играть в кто кого перестучит?"
     un "ПЕРЕСТАНЬТЕ!" with hpunch
-    "Удивила нас обоих Лена, рявкнув так, как я никогда ещё не слы… хотя стоп. В библиотеке, второго дня, когда мы «отпрашивались» на карьер."    # При этом наезд на Женю и поход на карьер датируется третьим днём
+    "Удивила нас обоих Лена, рявкнув так, как я никогда ещё не слы… хотя стоп."
+    "В библиотеке, третьего дня, когда мы «отпрашивались» на карьер."
     show un angry2 pioneer at left with dspr
     un "Что вы как дети малые? Семён, уступи. Извинись."
     un "Ольга Дмитриевна, едой не наказывают — это непедагогично."
@@ -4434,7 +4435,7 @@ label alt_day5_un_7dl_cleaning:
     window hide
     scene bg ext_warehouse_day_7dl
     show sl surprise pioneer with dspr
-    play music music_7dl["Semische"] fadein 5
+    play music music_7dl["semische"] fadein 5
     "И когда я её завидел, то поступил так, как логично было поступить — заголосил и припустил к ней навстречу."
     me "Эгегей, Славя! Погоди!"
     show sl scared pioneer with dspr
@@ -9719,7 +9720,7 @@ label alt_day6_un_7dl_sleeptime:
 
 label alt_day7_un_7dl_begin:
     scene black
-    play music music_7dl["PleaseStopItMastered"] fadein 3
+    play music music_7dl["please_stop_it_mastered"] fadein 3
     $ renpy.pause(2)
     $ persistent.sprite_time = "night"
     scene bg int_sam_house_clean_7dl
@@ -10486,9 +10487,9 @@ label alt_day7_un_7dl_begin:
     window hide
     with fade2
     return
-    
+
 label alt_day7_un_7dl_epilogue_all:
-    play music music_7dl["PleaseStopItMastered"] fadein 5
+    play music music_7dl["please_stop_it_mastered"] fadein 5
     "Я потряс за плечи порывающуюся уснуть девочку."
     me "Не спи! Отвечай!" with vpunch
     un "В медпункте. У меня же ключ."
@@ -11258,7 +11259,7 @@ label alt_day7_un_7dl_ussr:
     $ renpy.pause(3)
     $ set_mode_nvl()
     $ night_time()
-    play music music_7dl["Please_Reprise"] fadein 3
+    play music music_7dl["please_reprise"] fadein 3
     "Я — не нужен."
     "За без малого тридцать лет я не научился абсолютно ничему, что могло бы быть действительно полезным, отвязанным от цивилизации."
     if loki:
@@ -11957,7 +11958,7 @@ label alt_day7_un_7dl_transit:
     "Поверили?"
     window hide
     scene bg ext_railbridge_sunset_7dl with dissolve
-    play music music_7dl["Sad_Piano"] fadein 3
+    play music music_7dl["sad_piano"] fadein 3
     $ set_mode_nvl()
     "Ладно, на самом деле была ещё целая куча всего."
     "Было и солнце, и лето, и счастливый смех."
@@ -12403,7 +12404,7 @@ label alt_day7_un_7dl_true:
     "Она села на поезд и уехала туда, где ей предложили место."
     "А я поехал за ней."
     am "Больше не рисуешь?"
-    show un normal modern with dissolve # почему Лена в пионерской форме, а не в платье?
+    show un normal modern with dissolve
     un "Не хватает сил, если честно. Да и бессмысленно всё это."
     am "Бессмысленно?"
     "Я не поверил ушам."

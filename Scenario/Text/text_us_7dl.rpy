@@ -10427,7 +10427,7 @@ label alt_day7_us_7dl_mikuforever:
     me "Мику."
     "Упавшим голосом констатировал я."
     me "Но тебя же не существует, ты же…"
-    play music music_7dl["Semische"] fadein 3
+    play music music_7dl["semische"] fadein 3
     voice "Хватит хулиганить, я сейчас полицию вызову!"
     "Донёсся откуда-то скрипучий голос."
     "Но я его уже не слышал."

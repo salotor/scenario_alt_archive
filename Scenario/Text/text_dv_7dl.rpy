@@ -4903,7 +4903,7 @@ label alt_day5_dv_7dl_dinner:
     window hide
     with flash
 
-    play music music_7dl["walkingaway"] fadein 3
+    play music music_7dl["regret"] fadein 3
     window hide
     scene bg ext_square_day at fast_running
     with pixellate
@@ -13457,7 +13457,7 @@ label alt_day7_dv_7dl_rej_ussr_end:
     show blackout
     with fade
 
-    play music music_7dl["walkingaway"] fadein 3
+    play music music_7dl["regret"] fadein 3
     voice "Двачевская, на выход."
     "Донёс голос из жестяного динамика."
     voice "Свидание окончено."
@@ -13493,7 +13493,7 @@ label alt_day7_dv_7dl_rej_ussr_end:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
-    play music music_7dl["walkingaway"] fadein 3
+    play music music_7dl["regret"] fadein 3
     call alt_7dl_titles
     $ renpy.pause(2)
     return
@@ -13549,7 +13549,7 @@ label alt_day7_dv_7dl_rej_rf_end:
     nvl clear
     stop music fadeout 3
     "И она, то ли растрогавшись от тёплой реакции, то ли расстроившись каким-то собственным мыслям, пытается сморгнуть, резким движением стряхнуть выступившие слёзы, и вязаная шапочка съезжает. И на лоб мгновенно выскакивает непокорный рыжий чуб. "
-    play music music_7dl["Everlasting_Summer_Alice"] fadein 3
+    play music music_7dl["everlasting_summer_alice"] fadein 3
     me "Так это…"
     "Шепчу я, невольно замедляя шаг."
     me "Алиса?!"
@@ -13635,7 +13635,7 @@ label alt_day7_dv_7dl_rej_rf_end:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
     with vpunch
-    play music music_7dl["walkingaway"] fadein 3
+    play music music_7dl["regret"] fadein 3
     call alt_7dl_titles
     $ renpy.pause(2)
     return
@@ -14267,7 +14267,7 @@ label alt_day7_dv_7dl_true:
     "Меня разбудил сигнал будильника — мало того, что пронзительный, он был подключён к усилителю, так как после отъезда в собственное жилище девушка перестала подниматься."
     "Всегда и везде просыпала."
     "Вот только не сейчас."
-    "На часах было значилась половина седьмого — как раз достаточно времени, чтобы помыться, одеться и хотя бы чуть-чуть проснуться." # было значилась
+    "На часах значилась половина седьмого — как раз достаточно времени, чтобы помыться, одеться и хотя бы чуть-чуть проснуться."
     window hide
     scene bg ext_railstation_7dl
     with dissolve
@@ -14281,7 +14281,7 @@ label alt_day7_dv_7dl_true:
     "Чтобы не считать часы в кровати до рассвета, чтобы не погружаться в грёзы, где есть красное летнее солнце, работающий мотор и улыбка, и огонь в узнающих глазах."
     "И выбросить уже всю эту ерунду из головы!"
     "Ошибки, глупости…"
-    show dv smile dress with dissolve
+    show dv soft_smile dress with dissolve
     dv "Поезд скоро."
     "Улыбнулась девушка."
     dv "Если есть что-то сказать на прощание — говори."
