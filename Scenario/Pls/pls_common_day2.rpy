@@ -22,17 +22,12 @@
     pause(1)
     call alt_day2_event_estrade
     pause(1)
-    if ('dv' in list_d2_convoy_7dl):
-        if alt_day2_loki_minijack:
-            $ persistent.sprite_time = "day"
-            call alt_day2_dubstep2
-        else:
-            call alt_day2_phone
+    call alt_day2_dubstep
+    pause(1)
+    if alt_day2_loki_minijack:
+        call alt_day2_dubstep2
     else:
-        call alt_day2_dubstep
-        pause(1)
-        if alt_day2_loki_minijack:
-            call alt_day2_dubstep2
+        call alt_day2_phone
     pause(1)
     call alt_day2_dinner
     pause(1)
