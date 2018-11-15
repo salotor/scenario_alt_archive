@@ -4475,7 +4475,7 @@ label alt_day5_mi_dj_dinner:
     "Я запнулся на полуслове. И в ужасе уставился на Мику."
     show mi serious pioneer with dspr
     mi "Сенечка?"
-    play music music_7dl["PleaseStopItMastered"] fadein 3
+    play music music_7dl["please_stop_it_mastered"] fadein 3
     "Мику непонимающе уставилась на меня."
     mi "Ты почему побледнел? Опять плохо? Может, действительно к врачу тебя отвести?"
     me "И зовут его, этого вокалоида."
@@ -12992,7 +12992,7 @@ label alt_day7_mi_dj_rf_good_end:
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
-    if alt_day_binder == 1:
+    if (alt_day_binder == 1) or alt_day1_loop:
         $ prolog_time()
         play music music_7dl["unfinished_life"] fadein 3
         scene expression Noir("bg int_sam_house_clean_7dl", brightness = 0.1, tint_r = 0.2, tint_g = 0.9, tint_b = 0.7, saturation = 0.7)
