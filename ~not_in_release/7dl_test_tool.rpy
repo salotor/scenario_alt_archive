@@ -2,27 +2,6 @@
     $ mods["scenario__sdl_selector"] = u"Селектор 7дл"
     $ mod_tags["scenario__sdl_selector"] = ["length:days","gameplay:vn","protagonist:male"]
     
-    image scenery:
-        get_image("anim/prolog_2.jpg") with Dissolve(.5) 
-        pause 2.6
-        get_image("anim/prolog_1.jpg") with Dissolve(.5) 
-        pause 0.6
-        repeat
-        
-    image scenery2:
-        get_image("anim/prolog_2.jpg") with Dissolve(.4) 
-        pause 2.0
-        get_image("anim/prolog_1.jpg") with Dissolve(.4) 
-        pause 0.4
-        repeat    
-        
-    image scenery3:
-        get_image("anim/prolog_2.jpg") with Dissolve(.25) 
-        pause 1.4
-        get_image("anim/prolog_1.jpg") with Dissolve(.25) 
-        pause 0.25
-        repeat
-        
 label scenario__sdl_selector:
 
     $ init_map_zones_alt1()
@@ -31,40 +10,7 @@ label scenario__sdl_selector:
     $ day_time()
     $ persistent.sprite_time = "day"
 
-    call alt_day0_vars
-    call alt_day1_vars
-    call alt_day2_vars
-    call alt_day3_vars
-    call alt_day5_sl_wh_vars
-    call alt_day5_us_7dl_vars
-    call alt_day4_mi_7dl_vars
-    call alt_day5_mi_7dl_vars
-    call alt_day6_mi_7dl_vars
-    call alt_day5_mt_7dl_vars
-    call alt_day6_mt_7dl_vars
-    call alt_day4_neu_us_vars
-    call alt_day5_neu_us_vars
-    call alt_day4_sl_cl_vars
-    call alt_day5_sl_cl_vars
-    call alt_day6_sl_cl_vars
-    call alt_day7_sl_cl_vars
-    call alt_day4_sl_7dl_vars
-    call alt_day5_sl_7dl_vars
-    call alt_day6_sl_7dl_vars
-    call alt_day7_sl_7dl_vars
-    call alt_day4_mi_dj_vars
-    call alt_day5_mi_dj_vars
-    call alt_day6_mi_dj_vars
-    call alt_day4_un_7dl_vars
-    call alt_day5_un_7dl_vars
-    call alt_day6_un_7dl_vars
-    call alt_day4_un_fz_vars
-    call alt_day4_mi_cl_vars
-    call alt_day4_dv_7dl_vars
-    call alt_day6_dv_7dl_vars
-    call alt_day6_us_px_vars
-    call alt_day6_us_7dl_vars
-    call alt_day7_us_px_vars
+    call alt_vars
     
     $ make_names_known_7dl()
     $ plthr = u"Дрищ"
@@ -615,7 +561,7 @@ label sdl_menu:
                                 stop ambience fadeout 2
                                 $ alt_day5_mi_7dl_voyeur = True
                                 $ persistent.mi_7dl_dr_exc = True
-                                jump alt_day6_mi_7dl_miku_farewell_finale
+                                jump alt_day7_mi_7dl_thank_you
                             "{color=#8a59dd}Так честнее":
                                 stop ambience fadeout 2
                                 jump alt_day7_mi_7dl_liar

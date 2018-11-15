@@ -9,18 +9,17 @@
     $ renpy.pause(2, hard=True)
     show spill_gray with dspr
     $ renpy.pause(2, hard=True)
-    $ timeskip0 = "Я с трудом вспоминаю, \n с чего всё началось…"
-    if persistent.dv_7dl_good_ussr:
+    if persistent.dv_7dl_true:
         show acm_a
-    if persistent.un_7dl_good_rf or persistent.un_7dl_good_ussr:
+    if persistent.un_7dl_true:
         show acm_l
-    if persistent.mi_7dl_good_human or persistent.mi_7dl_good_star:
+    if persistent.mi_7dl_true:
         show acm_m
-    if persistent.mt_7dl_good:
+    if persistent.mt_7dl_true:
         show acm_o
-    if persistent.sl_7dl_good_ussr:
+    if persistent.sl_7dl_true:
         show acm_s
-    if persistent.us_7dl_good:
+    if persistent.us_7dl_true:
         show acm_u
     with dissolve2
     pause(3)
@@ -53,8 +52,9 @@ label alt_day0_start:
             with fade2
             $ routetag = 'prologue'
             $ prolog_time()
-        "Но я не уверен точно":
-            jump alt_day0_prologue
+        "Но я не уверен точно…":
+            with fade2
+            jump Ravsii__role_menu
         "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
             $ d3 = True
@@ -74,8 +74,9 @@ label alt_day0_start_herc:
             $ routetag = 'prologue'
             $ prolog_time()
             $ herc = True
-        "Но я не уверен точно":
-            jump alt_day0_prologue
+        "Но я не уверен точно…":
+            with fade2
+            jump Ravsii__role_menu
         "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
             $ d3 = True
@@ -101,7 +102,8 @@ label alt_day0_start_loki:
             $ prolog_time()
             $ loki = True
         "Но я не уверен точно…":
-            jump alt_day0_prologue
+            with fade2
+            jump Ravsii__role_menu
         "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
             $ plthr = u"Септим"
             $ d3 = True

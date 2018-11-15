@@ -32,7 +32,7 @@
     call alt_day4_un_7dl_sleeptime
     pause(1)
     jump alt_day5_un_7dl_start
-    
+
 label alt_day5_un_7dl_start:
     pause(1)
     call alt_day5_un_7dl_vars
@@ -120,7 +120,7 @@ label alt_day5_un_7dl_start:
     call alt_day5_un_7dl_sleeptime
     pause(1)
     jump alt_day6_un_7dl_start
-    
+
 label alt_day6_un_7dl_start:
     pause(1)
     call alt_day6_un_7dl_vars
@@ -167,7 +167,6 @@ label alt_day6_un_7dl_start:
     else:
         $ routetag = "un7dlgood"
     jump alt_day7_un_7dl_start
-    
 
 label alt_day7_un_7dl_start:
     call alt_day7_un_7dl_vars
@@ -185,8 +184,8 @@ label alt_day7_un_7dl_start:
         pause(1)
         call alt_day7_un_7dl_epilogue_rt
         pause(1)
-        if alt_day7_un_7dl_true_end:
-            call alt_day7_un_7dl_true
+        if alt_day7_un_7dl_rej_end:
+            call alt_day7_un_7dl_rej
             pause(1)
         elif karma >= 75:
             menu:
@@ -194,7 +193,10 @@ label alt_day7_un_7dl_start:
                     call alt_day7_un_7dl_rf
                     pause(1)
                 "Прочь из автобуса!":
-                    call alt_day7_un_7dl_ussr
+                    if persistent.un_7dl_good_rf and persistent.un_7dl_good_ussr:
+                        call alt_day7_un_7dl_true
+                    else:
+                        call alt_day7_un_7dl_ussr
                     pause(1)
         else:
             call alt_day7_un_7dl_rf
@@ -203,6 +205,13 @@ label alt_day7_un_7dl_start:
         call alt_day7_un_7dl_epilogue_bad
         pause(1)
     elif routetag == "un":
-        call alt_day7_un_7dl_true1
+        if alt_day7_un_7dl_rnm > 75 and karma >= 75:
+            call alt_day7_un_7dl_epilogue
+            pause(1)
+            call alt_day7_un_7dl_epilogue_rt
+            pause(1)
+            call alt_day7_un_7dl_ussr
+        else:
+            call alt_day7_un_7dl_transit
         pause(1)
     return

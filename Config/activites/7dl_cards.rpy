@@ -15,7 +15,7 @@
     show mt normal pioneer with dspr
     mt "Всё хорошо! {w}Тянем жребий и по нему распределяемся на пары."
     mt "А то знаю я эти договорные матчи!"
-    "Не прошло и пяти минут, а мы уже разбились по парам."
+    "Не прошло и пяти минут, а мы уже разбились по парам."    # надо бы здесь уже выводить менюшку выбора исхода турнира. А то возникают ситуации, когда игрок выбирает результат игры в финале с тем, с кем уже в первом коне должен был играть. Да и проблемы с инициализацией переменных турнира случаются (попалась Лена в первом коне - выбран результат поражения Лене в финале - Герк у домика Лены думает о том, что победил Лену в 1 коне).
     "Мне в оппоненты рандом послал"
     call alt_shuffler
     
@@ -80,7 +80,7 @@
         menu:
             "Играть самостоятельно":
                 jump alt_day2_participate
-            "Победа в финале." if persistent.altCardsWon3:
+            "Победа в финале" if persistent.altCardsWon3:
                 menu:
                     "Лена":
                         $ alt_day2_f1 = 1
@@ -99,7 +99,7 @@
                 $ alt_day2_round3 = 2
                 $ karma += 10
                 jump alt_day2_final_win
-            "Поражение в финале." if persistent.altCardsWon2:
+            "Поражение в финале" if persistent.altCardsWon2:
                 menu:
                     "Лена":
                         $ alt_day2_f1 = 1
@@ -2217,7 +2217,7 @@ label alt_day2_final_win:
         hide dv with dissolve
     elif alt_day2_f1 == 2:
         $ lp_sl += 1
-        play music music_7dl["Please_Reprise"] fadein 3
+        play music music_7dl["please_reprise"] fadein 3
         show sl smile pioneer with dspr
         "Я победил?"
         "Победил?!"

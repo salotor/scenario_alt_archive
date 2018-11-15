@@ -1,927 +1,2464 @@
-﻿init 999999:
-#Мику
-#Мику в платье
-    image mi upset dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')))
-    
-    image mi normal dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')))
-    
-    image mi serious dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')))
-    
-    image mi smile dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')))
-    
-#Мику в цивильном
-    image mi cry casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_cry.png')))
-    
-    image mi dontlike casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_dontlike.png')))
-    
-    image mi laugh casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_laugh.png')))
-    
-    image mi scared casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_scared.png')))
-    
-    image mi shocked casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shocked.png')))
-    
-    image mi shy casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shy.png')))
-    
-    image mi surprise casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_surprise.png')))
-    
-    image mi cry_smile casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_cry_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_cry_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_cry_smile.png')))
-    
-    image mi grin casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_grin.png')))
-    
-    image mi happy casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png')))
-    
-    image mi sad casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')), im.matrix.tint(0.9, 0.2, 0.7)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')))
-    
-    image mi smile casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png')))
-    
-    image mi angry casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png')))
-    
-    image mi normal casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')))
-    
-    image mi rage casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_rage.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_rage.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_rage.png')))
-    
-    image mi serious casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_serious.png')))
-    
-    image mi upset casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')))
-    
-#Мику в платье вокалоида (ожидаемо, ага)
-    image mi cry voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_cry.png')))
-    
-    image mi dontlike voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_dontlike.png')))
-    
-    image mi laugh voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_laugh.png')))
-    
-    image mi scared voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_scared.png')))
-    
-    image mi shocked voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shocked.png')))
-    
-    image mi shy voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_shy.png')))
-    
-    image mi surprise voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_surprise.png')))
-
-    image mi cry_smile voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_cry_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_cry_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_cry_smile.png')))
-    
-    image mi grin voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_grin.png')))
-    
-    image mi happy voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png')))
-    
-    image mi sad voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')))
-    
-    image mi smile voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png')))
-    image mi cry voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_cry.png')))
-    
-    image mi dontlike voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_dontlike.png')))
-    
-    image mi laugh voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_laugh.png')))
-    
-    image mi scared voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_scared.png')))
-    
-    image mi shocked voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_shocked.png')))
-    
-    image mi shy voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_shy.png')))
-    
-    image mi surprise voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_1_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_1_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_1_surprise.png')))
-
-    image mi angry voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png')))
-    
-    image mi normal voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')))
-    
-    image mi rage voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_rage.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_rage.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_rage.png')))
-    
-    image mi cry_smile voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_cry_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_cry_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_cry_smile.png')))
-    
-    image mi grin voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_grin.png')))
-    
-    image mi happy voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_happy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_happy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_happy.png')))
-    
-    image mi sad voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_sad.png')))
-    
-    image mi smile voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_2_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_2_smile.png')))
-    
-    image mi serious voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_serious.png')))
-    
-    image mi upset voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')))
-    
-    image mi angry voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_angry.png')))
-    
-    image mi normal voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_normal.png')))
-    
-    image mi rage voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_rage.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_rage.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_rage.png')))
-    
-    image mi serious voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_serious.png')))
-    
-    image mi upset voca far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('far/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_ori('far/mi/mi_3_upset.png')))
-
-#Мику-бака (red, blond, platinum) - cry_smile, grin, happy, sad, smile -  в пионерской форме
-    image mi smile pioneer red = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_red.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_red.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_red.png')))
-    
-    image mi happy pioneer red = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_red.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_red.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_red.png')))
-    
-    image mi happy pioneer blond = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_blond.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_blond.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_blond.png')))
-    
-    image mi happy pioneer platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_happy.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')))
-    
-    image mi smile pioneer platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_smile.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')))
-    
-    image mi sad pioneer platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')))
-    
-    image mi grin pioneer platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_grin.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_grin.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_pioneer.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_grin.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_platinum.png')))
-    
-#Мику-бака в платье и форме
-    image mi smile voca platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_voca_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')))
-    
-    image mi upset dress platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')))
-    
-    image mi normal dress platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')))
-    
-    image mi serious dress platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_serious.png')))
-    
-    image mi smile dress platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')))
-    
-    image mi angry dress platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_dress.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png'))) 
-    
-    image mi upset pioneer platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_upset.png')))
-    
-    image mi normal pioneer platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')))
-    
-    image mi serious pioneer platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_normal.png')))
-    
-    image mi smile pioneer platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')))
-    
-    image mi smile2 pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0),  get_sprite_7dl('normal/mi/mi_3_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_smile2.png')))
-    
-    image mi angry pioneer platinum = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mi/mi_3_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mi/mi_3_platinum.png'), (0, 0), get_sprite_ori('normal/mi/mi_3_angry.png'))) 
-    
-#Алиса
-#Рыжевская в платье
-    image dv cry dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')))
-    
-    image dv scared dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')))
-    
-    image dv shocked dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')))
-    
-    image dv surprise dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')))
-    
-    image dv sad dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')))
-    
-    image dv shy dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')))
-    
-    image dv guilty dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')))
-
-    image dv laugh dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('far/dv/dv_4_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('far/dv/dv_4_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('far/dv/dv_4_laugh.png')))
-    
-    image dv laugh dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')))
-    
-    image dv normal dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('far/dv/dv_4_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('far/dv/dv_4_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('far/dv/dv_4_normal.png')))
-    
-    image dv normal dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')))
-    
-    image dv smile dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('far/dv/dv_4_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('far/dv/dv_4_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('far/dv/dv_4_smile.png')))
-    
-    image dv smile dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')))
-    
-    image dv soft smile dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')))
-    
-#Беремчатая ДваЧе в платье
-    image dv smile dress pregnant = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')))
-    
-    image dv laugh dress pregnant = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')))
-    
-    image dv normal dress pregnant = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')))
-    
-#Новая grin-эмоция, более уместная для нового амплуа ДваЧе
-    image dv soft smile dress pregnant = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress_pregnant.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')))
-
-#Рыжевская в спортивном костюме
-    image dv laugh sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')))
-    
-    image dv laugh sport far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('far/dv/dv_4_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('far/dv/dv_4_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('far/dv/dv_4_laugh.png')))
-    
-    image dv normal sport far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('far/dv/dv_4_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('far/dv/dv_4_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('far/dv/dv_4_normal.png')))
-    
-    image dv normal sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')))
-    
-    image dv smile sport far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('far/dv/dv_4_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('far/dv/dv_4_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_ori('far/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('far/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('far/dv/dv_4_smile.png')))
-    
-    image dv smile sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')))
-    
-    image dv soft smile sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')))
-    
-    image dv soft smile pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')))
-    
-    image dv soft smile pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')))
-    
-    image dv grin sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_2_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_2_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_2_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_2_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_2_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_2_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')))
-    
-    image dv surprise sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')))
-    
-    image dv shocked sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')))
-    
-    image dv scared sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')))
-    
-    image dv cry sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')))
-    
-    image dv guilty sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')))
-    
-    image dv sad sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')))
-    
-    image dv shy sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')))
-    
-    image dv angry sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_5_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_5_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_5_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')))
-    
-    image dv rage sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_5_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_5_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_5_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')))
-    
-#Рыжевская в пальто
-    image dv normal winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')))
-    
-    image dv laugh winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')))
-    
-    image dv smile winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')))
-#Больше уже не Рыжевская
-    #Дваче-брюнетка в платье
-    image dv2 cry dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')))
-    
-    image dv2 scared dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')))
-    
-    image dv2 shocked dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')))
-    
-    image dv2 surprise dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')))
-    
-    image dv2 sad dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')))
-    
-    image dv2 shy dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')))
-    
-    image dv2 guilty dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')))
-
-    image dv2 laugh dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')))
-
-    image dv2 normal dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')))
-    
-    image dv2 smile dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')))
-    
-    image dv2 soft smile dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_dress.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')))
-    
-#Дваче-брюнетка в спортивном костюме
-    image dv2 laugh sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')))
-    
-    image dv2 normal sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')))
-    
-    image dv2 smile sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')))
-    
-    image dv2 soft smile sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_sport.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')))
-    
-    image dv2 soft smile pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')))
-    
-    image dv2 soft smile pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')))
-    
-    image dv2 grin sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_2_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_2_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_2_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_2_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_2_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_2_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')))
-    
-    image dv2 surprise sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')))
-    
-    image dv2 shocked sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')))
-    
-    image dv2 scared sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')))
-    
-    image dv2 cry sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_1_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')))
-    
-    image dv2 guilty sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')))
-    
-    image dv2 sad sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')))
-    
-    image dv2 shy sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')))
-    
-    image dv2 angry sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')))
-    
-    image dv2 rage sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_5_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')))
-    
-#Дваче-брюнетка в пальто
-    image dv2 normal winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')))
-    
-    image dv2 laugh winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')))
-    
-    image dv2 smile winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_winter.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')))
-
-#Дваче-брюнетка в pioneer
-    image dv2 cry pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')))
-
-    image dv2 scared pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')))
-
-    image dv2 shocked pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')))
-
-    image dv2 surprise pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')))
-
-    image dv2 grin pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_2_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_2_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_2_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')))
-
-    image dv2 guilty pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')))
-    
-    image dv2 sad pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')))
-
-    image dv2 shy pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')))
-
-    image dv2 laugh pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')))
-
-    image dv2 normal pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')))
-
-    image dv2 smile pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')))
-
-    image dv2 soft smile pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')))
-
-    image dv2 angry pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')))
-
-    image dv2 rage pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')))
-    
-    #Дваче-брюнетка в pioneer2
-    image dv2 cry pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_cry.png')))
-
-    image dv2 scared pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_scared.png')))
-
-    image dv2 shocked pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_shocked.png')))
-
-    image dv2 surprise pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_1_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')))
-
-    image dv2 grin pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_2_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_2_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_2_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_2_grin.png')))
-
-    image dv2 guilty pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')))
-    
-    image dv2 sad pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_sad.png')))
-
-    image dv2 shy pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_3_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_shy.png')))
-
-    image dv2 laugh pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_laugh.png')))
-
-    image dv2 normal pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_normal.png')))
-
-    image dv2 smile pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_smile.png')))
-
-    image dv2 soft smile pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_4_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/dv/dv_4_soft_smile.png')))
-
-    image dv2 angry pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_angry.png')))
-
-    image dv2 rage pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dv2/dv_5_body2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_5_rage.png')))
-
-#Славя
-#В swim по сюжету не появляется, но если вдруг что - то юзаем обычный body
-#Славя dontlike (на sl_1_body)
-    image sl dontlike pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')))
-    
-    image sl dontlike dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')))
-    
-    image sl dontlike sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')))
-    
-    image sl dontlike swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')))
-    
-#Сдавя grin (на sl_2_body)
-    image sl grin pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')))
-    
-    image sl grin dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')))
-    
-    image sl grin sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')))
-    
-    image sl grin swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')))
-
-#Славя shy2/happy2/upset (на sl_3_body)
-    image sl shy2 pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')))
-    
-    image sl happy2 pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')))
-    
-    image sl upset pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')))
-    
-    image sl shy2 dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')))
-    
-    image sl happy2 dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')))
-    
-    image sl upset dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')))
-    
-    image sl shy2 sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')))
-    
-    image sl happy2 sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')))
-    
-    image sl upset sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sport.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')))
-    
-    image sl shy2 swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')))
-    
-    image sl happy2 swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')))
-    
-    image sl upset swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')))
-    
-    image sl shy2 casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')))
-    
-    image sl happy2 casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')))
-    
-    image sl upset casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')))
-    
-#Славя спёрла voca dress у Мику.
-    image sl angry voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_angry.png')))
-    
-    image sl happy2 voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')))
-    
-    image sl sad voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sad.png')))
-    
-    image sl shy2 voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')))
-
-    image sl surprise voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_surprise.png')))
-    
-    image sl upset voca = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_voca.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')))
-    
-#Славя uniform
-    image sl normal uniform = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_uniform.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_uniform.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_uniform.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')))
-
-    image sl serious uniform = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_uniform.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_uniform.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_uniform.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_serious.png')))
-    
-    image sl dontlike uniform = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_uniform.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_uniform.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_uniform.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')))
-
-#Славя без галстука
-    image sl normal pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')))
-
-    image sl serious pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_serious.png')))
-    
-    image sl dontlike pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')))
-    
-    image sl smile pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_smile.png')))
-    
-    image sl grin pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_grin.png')))
-    
-    image sl happy pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_happy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_happy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_happy.png')))
-    
-    image sl laugh pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_laugh.png')))
-    
-    image sl shy pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_shy.png')))
-    
-    image sl shy2 pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_shy2.png')))
-    
-    image sl happy2 pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_happy2.png')))
-    
-    image sl upset pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')))
-    
-    image sl smile2 pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_smile2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_2_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_2_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_2_smile2.png')))
-
-    image sl angry pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_angry.png')))
-    
-    image sl sad pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_sad.png')))
-    
-    image sl surprise pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_3_surprise.png')))
-
-    image sl scared pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_scared.png')))
-    
-    image sl tender pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_tender.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_tender.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_pioneer2.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_tender.png')))
-    
-    image sl shy2 pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_shy2.png')))
-    
-    image sl happy2 pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_happy2.png')))
-    
-#Славая-казуал
-    image sl dontlike casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_dontlike.png')))
-    
-    image sl smile casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_smile.png')))
-    
-    image sl_gr normal casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.saturation(0.3)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')))
-    
-    image sl normal casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')))
-    
-    image sl serious casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_serious.png')))
-    
-#Плачущая Славя
-    image sl cry dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_dress.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')))
-    
-    image sl cry swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_swim.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')))
-    
-    image sl cry body = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')))
-   
-    image sl cry pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_pioneer.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')))
-
-    image sl cry pioneer2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_pioneer2.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_cry.png')))
-    
-#Лена
-#Унылка в зимней одежде    
-    image un angry winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_angry.png')))
-
-    image un evil_smile winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_evil_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_evil_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_evil_smile.png')))
-
-    image un normal winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_normal.png')))
-
-    image un shy winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_shy.png')))
-
-    image un smile winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile.png')))
-
-    image un smile2 winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')))
-
-    image un sorrow winter = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_winter.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')))
-
-    image un angry winter close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_angry.png')))
-
-    image un evil_smile winter close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_evil_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_evil_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_evil_smile.png')))
-
-    image un normal winter close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_normal.png')))
-
-    image un shy winter close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_shy.png')))
-
-    image un smile winter close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_smile.png')))
-
-    image un smile2 winter close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_smile2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_ori('close/un/un_1_smile2.png')))
-
-    image un sorrow winter close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_7dl('close/un/un_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_7dl('close/un/un_1_sorrow.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_winter.png'), (0, 0), get_sprite_7dl('close/un/un_1_sorrow.png')))
-
-#Унылка отравленная, эмоция сожаление
-    image un sorrow modern poisoned = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.53, 0.88, 0.72)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')))
-    
-#Унылка в рубашке
-    image un smile modern = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile.png')))
-    
-    image un sorrow modern = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')))
-    
-    image un angry modern = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_angry.png')))
-    
-    image un normal modern = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_normal.png')))
-    
-    image un shy modern = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_shy.png')))
-    
-    image un smile2 modern = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')))
-
-    image un sorrow modern close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_7dl('close/un/un_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_7dl('close/un/un_1_sorrow.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_7dl('close/un/un_1_sorrow.png')))
-    
-    image un angry modern close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_angry.png')))
-    
-    image un normal modern close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_normal.png')))
-    
-    image un shy modern close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_shy.png')))
-    
-    image un smile2 modern close = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((1125, 1080), (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_smile2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((1125, 1080),  (0, 0), get_sprite_ori('close/un/un_1_body.png'), (0, 0), get_sprite_7dl('close/un/un_1_modern.png'), (0, 0), get_sprite_ori('close/un/un_1_smile2.png')))
-
-#Клеим sorrow-мордочку на прочие шмотки #TODO - casual-шмотки
-    image un sorrow pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')))
-    
-    image un sorrow dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_dress.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_dress.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_dress.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')))
-    
-    image un sorrow sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_sport.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_sport.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_sport.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')))
-
-#Унылка в ночнушке
-    image un cry sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_cry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_cry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_cry.png')))
-
-    image un surprise sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_surprise.png')))
-
-    image un cry_smile sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_cry_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_cry_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_cry_smile.png')))
-    
-    image un sad sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_sad.png')))
-    
-    image un scared sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_scared.png')))
-
-    image un shocked sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_2_body.png'), (0, 0), get_sprite_7dl('normal/un/un_2_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_2_shocked.png')))
-    
-    image un angry2 sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_angry2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_angry2.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_angry2.png')))
-
-    image un grin sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_grin.png')))
-
-    image un laugh sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_laugh.png')))
-    
-    image un rage sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_rage.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_rage.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_rage.png')))
-    
-    image un serious sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_serious.png')))
-
-    image un smile3 sleep = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_smile3.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_smile3.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_3_body.png'), (0, 0), get_sprite_7dl('normal/un/un_3_sleep.png'), (0, 0), get_sprite_ori('normal/un/un_3_smile3.png')))
-    
-#Ольга
-#Допилинг платья
-    image mt shocked dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_dress.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_dress.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_dress.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_shocked.png')))
-
-    image mt laugh dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_laugh.png')))
-    
-    image mt grin dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_grin.png')))
-    
-    image mt feared dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')))
-    
-#Ольга в спортивном костюме mt_1_sport.png
-    image mt smile_g pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')))
-    
-    image mt smile_g dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_dress.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_dress.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_dress.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')))
-    
-    image mt smile_g sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')))
-    
-    image mt normal sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_normal.png')))
-    
-    image mt sad sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_sad.png')))
-    
-    image mt smile sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_smile.png')))
-    
-    image mt surprise sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_surprise.png')))
-    
-#Хайр для Ольги, торжественно стыренный у блохастой
-    image mt2 normal sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_normal.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_normal.png')))
-    
-    image mt2 sad sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_sad.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_sad.png')))
-    
-    image mt2 smile sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_smile.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_smile.png')))
-    
-    image mt2 surprise sport = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_surprise.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_surprise.png')))
-
-#Новый купальник для Ольги
-    image mt normal swim2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_normal.png')))
-    
-    image mt sad swim2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_sad.png')))
-    
-    image mt smile swim2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_smile.png')))
-    
-    image mt smile_g swim2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_smile_g.png')))
-    
-    image mt surprise swim2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_1_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_surprise.png')))
-    
-    image mt angry swim2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_2_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_2_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_2_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_angry.png')))
-    
-    image mt rage swim2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_2_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_rage.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_2_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_rage.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_2_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_rage.png')))
-    
-    image mt shocked swim2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_2_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_2_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_2_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_2_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_2_shocked.png')))
-    
-    image mt grin swim2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_grin.png')))
-    
-    image mt laugh swim2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_swim2.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_laugh.png')))
-    
-#Эмоция feared для Ольги взамен оригинального убожества
-    image mt feared swim2 = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_swim2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_swim2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_swim2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')))
-    
-    image mt feared dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_dress.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')))
-    
-    image mt feared pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/mt/mt_3_body.png'), (0, 0), get_sprite_ori('normal/mt/mt_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/mt/mt_3_feared.png')))
-    
-#Ульяна
-#Ульянка с педобиром
-    image us grin sport bear = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_grin.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_grin.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_grin.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')))
-    
-    image us laugh sport bear = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_laugh.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_laugh.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_laugh.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')))
-    
-    image us laugh2 sport bear = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_laugh2.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_laugh2.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_laugh2.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')))
-    
-    image us normal sport bear = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_normal.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_normal.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_normal.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')))
-    
-    image us sad sport bear = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_sad.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_sad.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_sad.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')))
-    
-    image us smile sport bear = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_smile.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_smile.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_smile.png'), (0, 0), get_sprite_7dl('normal/us/us_1_bear.png')))
-    
-#Честно стыренная взрослая Ульянка.
-    image us grin old = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_grin.png')))
-    
-    image us laugh old = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_laugh.png')))
-    
-    image us normal old = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_normal.png')))
-    
-    image us shy old = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_shy.png')))
-    
-    image us smile old = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/us/us_1_old_body.png'), (0, 0), get_sprite_7dl('normal/us/us_1_old_smile.png')))
-    
-#Все прочие
-#Саныч от Mannych
-    image ba em1 uniform = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_em1.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_em1.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_em1.png')))
-    
-    image ba evil uniform = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_evil.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_evil.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_evil.png')))
-    
-    image ba smile uniform = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_smile.png')))
-    
-    image ba normal uniform = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_norm.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_norm.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ba/ba_1_body.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_dress.png'), (0, 0), get_sprite_7dl('normal/ba/ba_1_norm.png')))
-#LN с присными
-    image ln sad pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_sad.png')))
-    
-    image ln normal pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_normal.png')))
-    
-    image ln angry pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_angry.png')))
-    
-    image ln guilty pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_guilty.png')))
-    
-    image ln grin pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_grin.png')))
-    
-    image ln dontlike pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dontlike.png')))
-    
-    image ln surprise pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_surprise.png')))
-    
-    image ln smile pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_smile.png')))
-    
-    image ln serious pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_serious.png')))
-    
-#ln normal swim 
-    image ln sad swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_sad.png')))
-    
-    image ln normal swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_normal.png')))
-    
-    image ln angry swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_angry.png')))
-    
-    image ln guilty swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_guilty.png')))
-    
-    image ln grin swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_grin.png')))
-    
-    image ln dontlike swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dontlike.png')))
-    
-    image ln surprise swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_surprise.png')))
-    
-    image ln smile swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_smile.png')))
-    
-    image ln serious swim = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_serious.png')))
-    
-#ln normal dress
-    image ln sad dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_sad.png')))
-    
-    image ln normal dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_normal.png')))
-    
-    image ln angry dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_angry.png')))
-    
-    image ln guilty dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_guilty.png')))
-    
-    image ln grin dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_grin.png')))
-    
-    image ln dontlike dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_2_dontlike.png')))
-    
-    image ln surprise dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_surprise.png')))
-    
-    image ln smile dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_smile.png')))
-    
-    image ln serious dress = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('normal/ln/ln_3_serious.png')))
-    
-#ln far pioneer
-    image ln sad pioneer far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_sad.png')))
-    
-    image ln normal pioneer far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_normal.png')))
-    
-    image ln angry pioneer far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_angry.png')))
-    
-    image ln guilty pioneer far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_guilty.png')))
-    
-    image ln grin pioneer far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_grin.png')))
-    
-    image ln dontlike pioneer far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dontlike.png')))
-    
-    image ln surprise pioneer far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_surprise.png')))
-    
-    image ln smile pioneer far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_smile.png')))
-    
-    image ln serious pioneer far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_pioneer.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_serious.png')))
-    
-#ln far swim
-    image ln sad swim far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_sad.png')))
-    
-    image ln normal swim far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_normal.png')))
-    
-    image ln angry swim far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_angry.png')))
-    
-    image ln guilty swim far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_guilty.png')))
-    
-    image ln grin swim far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_grin.png')))
-    
-    image ln dontlike swim far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dontlike.png')))
-    
-    image ln surprise swim far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_surprise.png')))
-    
-    image ln smile swim far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_smile.png')))
-    
-    image ln serious swim far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_serious.png')))
-    
-#ln far dress
-    image ln sad dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_sad.png')))
-    
-    image ln normal dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_normal.png')))
-    
-    image ln angry dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_1_angry.png')))
-    
-    image ln guilty dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_guilty.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_guilty.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_guilty.png')))
-    
-    image ln grin dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_grin.png')))
-    
-    image ln dontlike dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_2_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_2_dontlike.png')))
-    
-    image ln surprise dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_surprise.png')))
-    
-    image ln smile dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_smile.png')))
-    
-    image ln serious dress far = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((675, 1080), (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_serious.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_serious.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((675, 1080),  (0, 0), get_sprite_7dl('far/ln/ln_3_body.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_dress.png'), (0, 0), get_sprite_7dl('far/ln/ln_3_serious.png')))
-    
-#Подмигивающая Виола
-    image cs grin = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/cs/cs_1_body.png'), (0, 0),  get_sprite_7dl('normal/cs/cs_1_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/cs/cs_1_body.png'), (0, 0), get_sprite_7dl('normal/cs/cs_1_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/cs/cs_1_body.png'), (0, 0), get_sprite_7dl('normal/cs/cs_1_grin.png')))
-
-#Камео Селезнёвой
-    image ase_clear = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('custom/alice_sprite2_7dl.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('custom/alice_sprite2_7dl.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('custom/alice_sprite2_7dl.png')))
-    
-#Эта штука сейчас не используется. Она не работает без полноразмерного модпака, поэтому при нужде придётся доставать ресурсы оттуда.
-    # image slavya_ms = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), 'images/3500/sprites/full/sl/sl_1_body.png', (0, 0), 'images/3500/sprites/full/sl/sl_1_pioneer.png', (0, 0), 'images/3500/sprites/full/sl/sl_1_smile.png'), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), 'images/3500/sprites/full/sl/sl_1_body.png', (0, 0), 'images/3500/sprites/full/sl/sl_1_pioneer.png', (0, 0), 'images/3500/sprites/full/sl/sl_1_smile.png'), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), 'images/3500/sprites/full/sl/sl_1_body.png', (0, 0), 'images/3500/sprites/full/sl/sl_1_pioneer.png', (0, 0), 'images/3500/sprites/full/sl/sl_1_smile.png'))
-    
-#Данечка
-    image dn dontcare pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'),  (0, 0), get_sprite_7dl('normal/dn/dn_1_dontcare.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_1_dontcare.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_1_dontcare.png')))
-
-    image dn grin pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'),  (0, 0), get_sprite_7dl('normal/dn/dn_1_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_1_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_1_grin.png')))
-
-    image dn normal pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'),  (0, 0), get_sprite_7dl('normal/dn/dn_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_1_normal.png')))
-
-    image dn smile pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'),  (0, 0), get_sprite_7dl('normal/dn/dn_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_1_smile.png')))
-
-    image dn unsured pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'),  (0, 0), get_sprite_7dl('normal/dn/dn_1_unsured.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_1_unsured.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_1_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_1_unsured.png')))
-    
-    image dn dontlike pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_2_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_2_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_2_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_2_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_2_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_2_dontlike.png')))
-
-    image dn upset pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_2_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_2_upset.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_2_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_2_upset.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_2_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_2_upset.png')))
-
-    image dn sad pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'),  (0, 0), get_sprite_7dl('normal/dn/dn_3_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_3_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_3_sad.png')))
-
-    image dn scared pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'),  (0, 0), get_sprite_7dl('normal/dn/dn_3_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_3_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_3_scared.png')))
-
-    image dn shocked pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'),  (0, 0), get_sprite_7dl('normal/dn/dn_3_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_3_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_3_shocked.png')))
-
-    image dn sick pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'),  (0, 0), get_sprite_7dl('normal/dn/dn_3_sick.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_3_sick.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_3_sick.png')))
-
-    image dn surprise pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'),  (0, 0), get_sprite_7dl('normal/dn/dn_3_surprise.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_3_surprise.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/dn/dn_3_body.png'), (0, 0), get_sprite_7dl('normal/dn/dn_3_surprise.png')))
-    
-#Алька - pioneer/shirt - angry/dontlike/laugh/normal/sad/shy/smile
-    image al angry shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')))
-    
-    image al dontlike shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')))
-    
-    image al laugh shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')))
-    
-    image al normal shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')))
-    
-    image al sad shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')))
-    
-    image al shy shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')))
-    
-    image al smile shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')))
-    
-    image al angry shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')))
-    
-    image al dontlike shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')))
-    
-    image al laugh shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')))
-    
-    image al normal shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')))
-    
-    image al sad shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')))
-    
-    image al shy shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')))
-    
-    image al smile shirt = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_shirt.png'), (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')))
-    
-    image al angry pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')))
-    
-    image al dontlike pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')))
-    
-    image al laugh pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')))
-    
-    image al normal pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')))
-    
-    image al sad pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')))
-    
-    image al shy pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')))
-    
-    image al smile pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')))
-    
-    image al angry pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_angry.png')))
-    
-    image al dontlike pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_dontlike.png')))
-    
-    image al laugh pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_laugh.png')))
-    
-    image al normal pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_normal.png')))
-    
-    image al sad pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_sad.png')))
-    
-    image al shy pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_shy.png')))
-    
-    image al smile pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/al/al_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/al/al_1_smile.png')))
-    
-#Toник - dontlike/laugh/normal/sad/shy/smile/grin
-    image tn grin pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/tn/tn_1_grin.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_grin.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_grin.png')))
-    
-    image tn dontlike pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/tn/tn_1_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_dontlike.png')))
-    
-    image tn laugh pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/tn/tn_1_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_laugh.png')))
-    
-    image tn normal pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/tn/tn_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_normal.png')))
-    
-    image tn sad pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/tn/tn_1_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_sad.png')))
-    
-    image tn shy pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/tn/tn_1_shy.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_shy.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_shy.png')))
-    
-    image tn smile pioneer = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'),  (0, 0), get_sprite_7dl('normal/tn/tn_1_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/tn/tn_1_pioneer.png'), (0, 0), get_sprite_7dl('normal/tn/tn_1_smile.png')))
-
-#Сакишита
-    image sak calm suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_1_calm.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_1_calm.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_1_calm.png')))
-
-    image sak normal suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_1_normal.png')))
-
-    image sak sorrow suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_1_sorrow.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_1_sorrow.png')))
-
-    image sak unsured suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_1_unsured.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_1_unsured.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_1_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_1_unsured.png')))
-
-    image sak dontlike suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_2_dontlike.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_2_dontlike.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_2_dontlike.png')))
-
-    image sak sigh suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_2_sigh.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_2_sigh.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_2_sigh.png')))
-
-    image sak smile suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_2_smile.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_2_smile.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_2_smile.png')))
-
-    image sak treat suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_2_treat.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_2_treat.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_2_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_2_treat.png')))
-
-    image sak angry suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_3_angry.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_3_angry.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_3_angry.png')))
-
-    image sak pain suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_3_pain.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_3_pain.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_3_pain.png')))
-
-    image sak sad suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_3_sad.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_3_sad.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_3_sad.png')))
-
-    image sak scared suit = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'),  (0, 0), get_sprite_7dl('normal/sak/sak_3_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_3_scared.png')), im.matrix.tint(0.63, 0.78, 0.82)), True, im.Composite((900, 1080),  (0, 0), get_sprite_7dl('normal/sak/sak_3_body.png'), (0, 0), get_sprite_7dl('normal/sak/sak_3_scared.png')))
-
-#Тени
-
+transform close_sprites:
+    zoom 1.25
+    yalign 0.0
+    xoffset 38
+    yoffset -33
+    
+init 9999 python:
+    alt_sprites = default_7dl_path + "Pics/sprites/"
+    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
+        bl_sprites = "images/1080/sprites/"
+    else:
+        bl_sprites = "images/sprites/"
+        
+    alt_body_dict = {
+                    'al':{'1':['']},
+                    'ba':{'1':['body']},
+                    'dn':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'cs':{'1':['body']},
+                    'dv':{'1':['body','body2'],
+                          '2':['body','body2'],
+                          '3':['body','body2'],
+                          '4':['body','body2'],
+                          '5':['body','body2']},
+                    'el':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'ln':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'mi':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'mt':{'1':['body','body2'],
+                          '2':['body'],
+                          '3':['body']},
+                    'mz':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'sak':{'1':[''],
+                           '2':[''],
+                           '3':['']},
+                    'sh':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'sl':{'1':['body','body2'],
+                          '2':['body','body2'],
+                          '3':['body','body2'],
+                          '4':['body','body2'],
+                          '5':['']},
+                    'tn':{'1':['']},
+                    'un':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'us':{'1':['body','body2'],
+                          '2':['body','body2'],
+                          '3':['body','body2'],
+                          '4':['body']},
+                    'uv':{'1':['body'],
+                          '2':['body'],
+                          '3':['body'],
+                          '4':['body']}
+        }
+    alt_clothes_dict = {
+                    'al':{'1':['pioneer','shirt']},
+                    'ba':{'1':['uniform']},
+                    'dn':{'1':['pioneer'],
+                          '2':['pioneer'],
+                          '3':['pioneer']},
+                    'cs':{'1':['']},
+                    'dv':{'1':['dress','pioneer','pioneer2','sport','swim','body'],
+                          '2':['pioneer','pioneer2','sport','swim','body'],
+                          '3':['dress','pioneer','pioneer2','sport','swim','body'],
+                          '4':['dress','dress_pregnant','pioneer','pioneer2','sport','swim','winter','body'],
+                          '5':['pioneer','pioneer2','sport','swim','body']},
+                    'el':{'1':['pioneer'],
+                          '2':['pioneer'],
+                          '3':['pioneer']},
+                    'ln':{'1':['dress','pioneer','body'],
+                          '2':['dress','pioneer','body'],
+                          '3':['dress','pioneer','body']},
+                    'mi':{'1':['casual','dress','pioneer','swim','voca','body'],
+                          '2':['casual','dress','pioneer','swim','voca','body'],
+                          '3':['casual','dress','pioneer','swim','voca','body']},
+                    'mt':{'1':['dress','pioneer','sport','swim','swim2','body'],
+                          '2':['dress','pioneer','sport','swim','swim2','body'],
+                          '3':['dress','pioneer','sport','swim2','body']},
+                    'mz':{'1':['pioneer'],
+                          '2':['pioneer'],
+                          '3':['pioneer']},
+                    'sak':{'1':['suit'],
+                           '2':['suit'],
+                           '3':['suit']},
+                    'sh':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'sl':{'1':['casual','dress','pioneer','pioneer2','sport','swim','uniform','body'],
+                          '2':['casual','dress','pioneer','pioneer2','sport','swim','body'],
+                          '3':['casual','dress','pioneer','pioneer2','sport','swim','voca','body'],
+                          '4':['casual','dress','pioneer','pioneer2','sport','swim','body'],
+                          '5':['25']},
+                    'tn':{'1':['pioneer']},
+                    'un':{'1':['dress','modern','pioneer','sleep','sport','swim','winter','body'],
+                          '2':['dress','pioneer','sleep','sport','swim','winter','body'],
+                          '3':['dress','pioneer','sleep','sport','winter','body']},
+                    'us':{'1':['dress','pioneer','sport','swim'],
+                          '2':['dress','pioneer','sport','swim'],
+                          '3':['dress','pioneer','sport','swim'],
+                          '4':['old']},
+                    'uv':{'1':['pioneer'],
+                          '2':['pioneer'],
+                          '3':['pioneer'],
+                          '4':['pioneer']}
+        }
+    alt_emo_dict = {
+                    'al':{'1':['angry','dontlike','laugh','normal','sad','shy','smile']},
+                    'ba':{'1':['em1','evil','normal','smile']},
+                    'cs':{'1':['doubt','fear','grin','laugh','normal','shy','smile']},
+                    'dn':{'1':['dontcare','grin','normal','smile','unsured'],
+                          '2':['dontlike','upset'],
+                          '3':['sad','scared','shocked','sick','surprise']},
+                    'dv':{'1':['cry','scared','shocked','surprise'],
+                          '2':['grin'],
+                          '3':['guilty','sad','shy'],
+                          '4':['laugh','normal','smile','soft_smile'],
+                          '5':['angry','rage']},
+                    'el':{'1':['grin','normal','smile'],
+                          '2':['fingal','sad','scared','shocked','surprise','upset'],
+                          '3':['angry','laugh','serious']},
+                    'ln':{'1':['angry','normal','sad'],
+                          '2':['dontlike','grin','guilty'],
+                          '3':['serious','smile','surprise']},
+                    'mi':{'1':['cry','dontlike','laugh','scared','shocked','shy','surprise'],
+                          '2':['cry_smile','grin','happy','sad','smile'],
+                          '3':['angry','normal','rage','serious','smile2','upset']},
+                    'mt':{'1':['normal','sad','smile','smile_g','surprise'],
+                          '2':['angry','rage','shocked'],
+                          '3':['feared','grin','laugh','scared']},
+                    'mz':{'1':['bukal','laugh','normal'],
+                          '2':['angry','rage'],
+                          '3':['shy','smile']},
+                    'sak':{'1':['calm','normal','sorrow','unsured'],
+                           '2':['dontlike','sigh','smile','treat'],
+                           '3':['angry','pain','sad','scared']},
+                    'sh':{'1':['laugh','scared','smile','upset'],
+                          '2':['cry','mad_smile','normal_smile','rage'],
+                          '3':['normal','serious','surprise']},
+                    'sl':{'1':['dontlike','normal','serious','smile','normal_uv','normal_gr','serious_uv','serious_gr'],
+                          '2':['grin','happy','laugh','shy','smile2'],
+                          '3':['angry','happy2','sad','shy2','surprise','upset','sad_uv','sad_gr'],
+                          '4':['cry','scared','tender','cry_uv'],
+                          '5':['displeased','fear_1','fear_2','neutral']},
+                    'tn':{'1':['dontlike','grin','laugh','normal','sad','shy','smile']},
+                    'un':{'1':['angry','evil_smile','normal','shy','smile','smile2','sorrow'],
+                          '2':['cry','cry_smile','sad','scared','shocked','surprise'],
+                          '3':['angry2','grin','laugh','rage','serious','smile3']},
+                    'us':{'1':['grin','laugh','laugh2','normal','sad','smile'],
+                          '2':['angry','calml','dontlike','fear','upset'],
+                          '3':['cry','cry2','shy','shy2','surp1','surp2','surp3'],
+                          '4':['grin','laugh','normal','shy','smile']},
+                    'uv':{'1':['dontlike','rage','sad','shocked'],
+                          '2':['normal','smile'],
+                          '3':['grin','laugh','surprise2'],
+                          '4':['guilty','surprise','upset']}
+        }
+    alt_acc_dict = {
+                    'al':{'1':['']},
+                    'ba':{'1':['']},
+                    'dn':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'cs':{'1':['glasses','stethoscope','glasses_over','glasses_through','']},
+                    'dv':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':[''],
+                          '5':['']},
+                    'el':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'ln':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'mi':{'1':[''],
+                          '2':['blond','platinum','red',''],
+                          '3':['platinum','']},
+                    'mt':{'1':['panama',''],
+                          '2':['panama',''],
+                          '3':['panama','']},
+                    'mz':{'1':['glasses',''],
+                          '2':['glasses'],
+                          '3':['glasses','']},
+                    'sak':{'1':[''],
+                           '2':[''],
+                           '3':['']},
+                    'sh':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'sl':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':[''],
+                          '5':['']},
+                    'tn':{'1':['']},
+                    'un':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'us':{'1':['bear',''],
+                          '2':[''],
+                          '3':[''],
+                          '4':['']},
+                    'uv':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':['']}
+        }
+
+    alt_body_far_dict = {
+                    'cs':{'1':['body']},
+                    'dv':{'1':['body'],
+                          '2':['body'],
+                          '3':['body'],
+                          '4':['body'],
+                          '5':['body']},
+                    'el':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'ln':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'mi':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'mt':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'mz':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'sak':{'1':[''],
+                           '2':[''],
+                           '3':['']},
+                    'sh':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'sl':{'1':['body'],
+                          '2':['body'],
+                          '3':['body'],
+                          '4':['body'],
+                          '5':['']},
+                    'un':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'us':{'1':['body'],
+                          '2':['body'],
+                          '3':['body']},
+                    'uv':{'1':['body'],
+                          '2':['body'],
+                          '3':['body'],
+                          '4':['body']}
+        }
+    alt_clothes_far_dict = {
+                    'cs':{'1':['']},
+                    'dv':{'1':['pioneer','pioneer2','swim','body'],
+                          '2':['pioneer','pioneer2','swim','body'],
+                          '3':['pioneer','pioneer2','body'],
+                          '4':['dress','pioneer','pioneer2','sport','swim','body'],
+                          '5':['pioneer','pioneer2','body']},
+                    'el':{'1':['pioneer'],
+                          '2':['pioneer'],
+                          '3':['pioneer']},
+                    'ln':{'1':['dress','pioneer','body'],
+                          '2':['dress','pioneer','body'],
+                          '3':['dress','pioneer','body']},
+                    'mi':{'1':['pioneer','swim','voca','body'],
+                          '2':['casual','pioneer','swim','voca','body'],
+                          '3':['pioneer','swim','voca','body']},
+                    'mt':{'1':['dress','pioneer','swim','body'],
+                          '2':['dress','pioneer','swim','body'],
+                          '3':['pioneer','body']},
+                    'mz':{'1':['pioneer'],
+                          '2':['pioneer'],
+                          '3':['pioneer']},
+                    'sak':{'1':['suit'],
+                           '2':['suit'],
+                           '3':['suit']},
+                    'sh':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'sl':{'1':['dress','pioneer','sport','swim','body'],
+                          '2':['dress','pioneer','sport','swim','body'],
+                          '3':['dress','pioneer','sport','swim','body'],
+                          '4':['dress','pioneer','sport','swim','body'],
+                          '5':['25']},
+                    'un':{'1':['dress','modern','pioneer','sport','swim','body'],
+                          '2':['dress','pioneer','sport','swim','body'],
+                          '3':['dress','pioneer','sport','body']},
+                    'us':{'1':['dress','pioneer','sport','swim'],
+                          '2':['dress','pioneer','sport','swim'],
+                          '3':['dress','pioneer','sport','swim']},
+                    'uv':{'1':['pioneer'],
+                          '2':['pioneer'],
+                          '3':['pioneer'],
+                          '4':['pioneer']}
+        }
+    alt_emo_far_dict = {
+                    'cs':{'1':['badgirl','doubt','fear','laugh','normal','shy','smile']},
+                    'dv':{'1':['cry','scared','shocked','surprise'],
+                          '2':['grin'],
+                          '3':['guilty','sad','shy'],
+                          '4':['laugh','normal','smile'],
+                          '5':['angry','rage']},
+                    'el':{'1':['grin','normal','smile'],
+                          '2':['fingal','sad','scared','shocked','surprise','upset'],
+                          '3':['angry','laugh','serious']},
+                    'ln':{'1':['angry','normal','sad'],
+                          '2':['dontlike','grin','guilty'],
+                          '3':['serious','smile','surprise']},
+                    'mi':{'1':['cry','dontlike','laugh','scared','shocked','shy','surprise'],
+                          '2':['cry_smile','grin','happy','sad','smile'],
+                          '3':['angry','normal','rage','serious','upset']},
+                    'mt':{'1':['normal','sad','smile','surprise'],
+                          '2':['angry','rage','shocked'],
+                          '3':['grin','laugh','scared']},
+                    'mz':{'1':['bukal','laugh','normal'],
+                          '2':['angry','rage'],
+                          '3':['shy','smile']},
+                    'sak':{'1':['calm','normal','sorrow','unsured'],
+                           '2':['donlike','sigh','smile','treat'],
+                           '3':['angry','pain','sad','scared']},
+                    'sh':{'1':['laugh','scared','smile','upset'],
+                          '2':['cry','normal_smile','rage'],
+                          '3':['normal','serious','surprise']},
+                    'sl':{'1':['normal','serious','smile'],
+                          '2':['happy','laugh','shy','smile2'],
+                          '3':['angry','sad','surprise'],
+                          '4':['scared','tender'],
+                          '5':['displeased','fear_1','fear_2','neutral']},
+                    'un':{'1':['angry','evil_smile','normal','shy','smile','smile2'],
+                          '2':['cry','cry_smile','sad','scared','shocked','surprise'],
+                          '3':['angry2','grin','laugh','rage','serious','smile3']},
+                    'us':{'1':['grin','laugh','laugh2','normal','sad','smile'],
+                          '2':['angry','calml','dontlike','fear','upset'],
+                          '3':['cry','cry2','shy','shy2','surp1','surp2','surp3']},
+                    'uv':{'1':['dontlike','rage','sad','shocked'],
+                          '2':['normal','smile'],
+                          '3':['grin','laugh','surprise2'],
+                          '4':['guilty','surprise','upset']}
+        }
+    alt_acc_far_dict = {
+                    'cs':{'1':['glasses','stethoscope','glasses_over','glasses_through','']},
+                    'dv':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':[''],
+                          '5':['']},
+                    'el':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'ln':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'mi':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'mt':{'1':['panama',''],
+                          '2':['panama',''],
+                          '3':['panama','']},
+                    'mz':{'1':['glasses',''],
+                          '2':['glasses'],
+                          '3':['glasses','']},
+                    'sak':{'1':[''],
+                           '2':[''],
+                           '3':['']},
+                    'sh':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'sl':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':[''],
+                          '5':['']},
+                    'un':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'us':{'1':[''],
+                          '2':[''],
+                          '3':['']},
+                    'uv':{'1':[''],
+                          '2':[''],
+                          '3':[''],
+                          '4':['']}
+        }
+
+    alt_custom_list = [
+        'al normal pioneer far',
+        'ase_clear',
+        'tn normal pioneer far']
+        
+    bl_sprites_list = [
+        'cs normal',
+        'cs normal close',
+        'cs normal far',
+        'cs normal glasses',
+        'cs normal glasses close',
+        'cs normal glasses far',
+        'cs normal stethoscope',
+        'cs normal stethoscope close',
+        'cs normal stethoscope far',
+        'cs shy',
+        'cs shy close',
+        'cs shy far',
+        'cs shy glasses',
+        'cs shy glasses close',
+        'cs shy glasses far',
+        'cs shy stethoscope',
+        'cs shy stethoscope close',
+        'cs shy stethoscope far',
+        'cs smile',
+        'cs smile close',
+        'cs smile far',
+        'cs smile glasses',
+        'cs smile glasses close',
+        'cs smile glasses far',
+        'cs smile stethoscope',
+        'cs smile stethoscope close',
+        'cs smile stethoscope far',
+        'dv angry body',
+        'dv angry body close',
+        'dv angry pioneer',
+        'dv angry pioneer close',
+        'dv angry pioneer far',
+        'dv angry pioneer2',
+        'dv angry pioneer2 close',
+        'dv angry pioneer2 far',
+        'dv cry body',
+        'dv cry body close',
+        'dv cry pioneer',
+        'dv cry pioneer close',
+        'dv cry pioneer far',
+        'dv cry pioneer2',
+        'dv cry pioneer2 close',
+        'dv cry pioneer2 far',
+        'dv cry swim',
+        'dv cry swim close',
+        'dv cry swim far',
+        'dv grin body',
+        'dv grin body close',
+        'dv grin pioneer',
+        'dv grin pioneer close',
+        'dv grin pioneer far',
+        'dv grin pioneer2',
+        'dv grin pioneer2 close',
+        'dv grin pioneer2 far',
+        'dv grin swim',
+        'dv grin swim close',
+        'dv grin swim far',
+        'dv guilty body',
+        'dv guilty body close',
+        'dv guilty pioneer',
+        'dv guilty pioneer close',
+        'dv guilty pioneer far',
+        'dv guilty pioneer2',
+        'dv guilty pioneer2 close',
+        'dv guilty pioneer2 far',
+        'dv laugh body',
+        'dv laugh body close',
+        'dv laugh pioneer',
+        'dv laugh pioneer close',
+        'dv laugh pioneer far',
+        'dv laugh pioneer2',
+        'dv laugh pioneer2 close',
+        'dv laugh pioneer2 far',
+        'dv laugh swim',
+        'dv laugh swim close',
+        'dv laugh swim far',
+        'dv normal body',
+        'dv normal body close',
+        'dv normal pioneer',
+        'dv normal pioneer close',
+        'dv normal pioneer far',
+        'dv normal pioneer2',
+        'dv normal pioneer2 close',
+        'dv normal pioneer2 far',
+        'dv normal swim',
+        'dv normal swim close',
+        'dv normal swim far',
+        'dv rage body',
+        'dv rage body close',
+        'dv rage pioneer',
+        'dv rage pioneer close',
+        'dv rage pioneer far',
+        'dv rage pioneer2',
+        'dv rage pioneer2 close',
+        'dv rage pioneer2 far',
+        'dv sad body',
+        'dv sad body close',
+        'dv sad pioneer',
+        'dv sad pioneer close',
+        'dv sad pioneer far',
+        'dv sad pioneer2',
+        'dv sad pioneer2 close',
+        'dv sad pioneer2 far',
+        'dv scared body',
+        'dv scared body close',
+        'dv scared pioneer',
+        'dv scared pioneer close',
+        'dv scared pioneer far',
+        'dv scared pioneer2',
+        'dv scared pioneer2 close',
+        'dv scared pioneer2 far',
+        'dv scared swim',
+        'dv scared swim close',
+        'dv scared swim far',
+        'dv shocked body',
+        'dv shocked body close',
+        'dv shocked pioneer',
+        'dv shocked pioneer close',
+        'dv shocked pioneer far',
+        'dv shocked pioneer2',
+        'dv shocked pioneer2 close',
+        'dv shocked pioneer2 far',
+        'dv shocked swim',
+        'dv shocked swim close',
+        'dv shocked swim far',
+        'dv shy body',
+        'dv shy body close',
+        'dv shy pioneer',
+        'dv shy pioneer close',
+        'dv shy pioneer far',
+        'dv shy pioneer2',
+        'dv shy pioneer2 close',
+        'dv shy pioneer2 far',
+        'dv smile body',
+        'dv smile body close',
+        'dv smile pioneer',
+        'dv smile pioneer close',
+        'dv smile pioneer far',
+        'dv smile pioneer2',
+        'dv smile pioneer2 close',
+        'dv smile pioneer2 far',
+        'dv smile swim',
+        'dv smile swim close',
+        'dv smile swim far',
+        'dv surprise body',
+        'dv surprise body close',
+        'dv surprise pioneer',
+        'dv surprise pioneer close',
+        'dv surprise pioneer far',
+        'dv surprise pioneer2',
+        'dv surprise pioneer2 close',
+        'dv surprise pioneer2 far',
+        'dv surprise swim',
+        'dv surprise swim close',
+        'dv surprise swim far',
+        'el angry pioneer',
+        'el angry pioneer close',
+        'el angry pioneer far',
+        'el fingal pioneer',
+        'el fingal pioneer close',
+        'el fingal pioneer far',
+        'el grin pioneer',
+        'el grin pioneer close',
+        'el grin pioneer far',
+        'el laugh pioneer',
+        'el laugh pioneer close',
+        'el laugh pioneer far',
+        'el normal pioneer',
+        'el normal pioneer close',
+        'el normal pioneer far',
+        'el sad pioneer',
+        'el sad pioneer close',
+        'el sad pioneer far',
+        'el scared pioneer',
+        'el scared pioneer close',
+        'el scared pioneer far',
+        'el serious pioneer',
+        'el serious pioneer close',
+        'el serious pioneer far',
+        'el shocked pioneer',
+        'el shocked pioneer close',
+        'el shocked pioneer far',
+        'el smile pioneer',
+        'el smile pioneer close',
+        'el smile pioneer far',
+        'el surprise pioneer',
+        'el surprise pioneer close',
+        'el surprise pioneer far',
+        'el upset pioneer',
+        'el upset pioneer close',
+        'el upset pioneer far',
+        'mi angry pioneer',
+        'mi angry pioneer close',
+        'mi angry pioneer far',
+        'mi angry swim',
+        'mi angry swim close',
+        'mi angry swim far',
+        'mi cry pioneer',
+        'mi cry pioneer close',
+        'mi cry pioneer far',
+        'mi cry swim',
+        'mi cry swim close',
+        'mi cry swim far',
+        'mi cry_smile pioneer',
+        'mi cry_smile pioneer close',
+        'mi cry_smile pioneer far',
+        'mi cry_smile swim',
+        'mi cry_smile swim close',
+        'mi cry_smile swim far',
+        'mi dontlike pioneer',
+        'mi dontlike pioneer close',
+        'mi dontlike pioneer far',
+        'mi dontlike swim',
+        'mi dontlike swim close',
+        'mi dontlike swim far',
+        'mi grin pioneer',
+        'mi grin pioneer close',
+        'mi grin pioneer far',
+        'mi grin swim',
+        'mi grin swim close',
+        'mi grin swim far',
+        'mi happy pioneer',
+        'mi happy pioneer close',
+        'mi happy pioneer far',
+        'mi happy swim',
+        'mi happy swim close',
+        'mi happy swim far',
+        'mi laugh pioneer',
+        'mi laugh pioneer close',
+        'mi laugh pioneer far',
+        'mi laugh swim',
+        'mi laugh swim close',
+        'mi laugh swim far',
+        'mi normal pioneer',
+        'mi normal pioneer close',
+        'mi normal pioneer far',
+        'mi normal swim',
+        'mi normal swim close',
+        'mi normal swim far',
+        'mi rage pioneer',
+        'mi rage pioneer close',
+        'mi rage pioneer far',
+        'mi rage swim',
+        'mi rage swim close',
+        'mi rage swim far',
+        'mi sad pioneer',
+        'mi sad pioneer close',
+        'mi sad pioneer far',
+        'mi sad swim',
+        'mi sad swim close',
+        'mi sad swim far',
+        'mi scared pioneer',
+        'mi scared pioneer close',
+        'mi scared pioneer far',
+        'mi scared swim',
+        'mi scared swim close',
+        'mi scared swim far',
+        'mi serious pioneer',
+        'mi serious pioneer close',
+        'mi serious pioneer far',
+        'mi serious swim',
+        'mi serious swim close',
+        'mi serious swim far',
+        'mi shocked pioneer',
+        'mi shocked pioneer close',
+        'mi shocked pioneer far',
+        'mi shocked swim',
+        'mi shocked swim close',
+        'mi shocked swim far',
+        'mi shy pioneer',
+        'mi shy pioneer close',
+        'mi shy pioneer far',
+        'mi shy swim',
+        'mi shy swim close',
+        'mi shy swim far',
+        'mi smile pioneer',
+        'mi smile pioneer close',
+        'mi smile pioneer far',
+        'mi smile swim',
+        'mi smile swim close',
+        'mi smile swim far',
+        'mi surprise pioneer',
+        'mi surprise pioneer close',
+        'mi surprise pioneer far',
+        'mi surprise swim',
+        'mi surprise swim close',
+        'mi surprise swim far',
+        'mi upset pioneer',
+        'mi upset pioneer close',
+        'mi upset pioneer far',
+        'mi upset swim',
+        'mi upset swim close',
+        'mi upset swim far',
+        'mt angry dress',
+        'mt angry dress close',
+        'mt angry dress far',
+        'mt angry panama dress',
+        'mt angry panama dress close',
+        'mt angry panama dress far',
+        'mt angry panama pioneer',
+        'mt angry panama pioneer close',
+        'mt angry panama pioneer far',
+        'mt angry panama swim',
+        'mt angry panama swim close',
+        'mt angry panama swim far',
+        'mt angry pioneer',
+        'mt angry pioneer close',
+        'mt angry pioneer far',
+        'mt angry swim',
+        'mt angry swim close',
+        'mt angry swim far',
+        'mt grin panama pioneer',
+        'mt grin panama pioneer close',
+        'mt grin panama pioneer far',
+        'mt grin pioneer',
+        'mt grin pioneer close',
+        'mt grin pioneer far',
+        'mt laugh panama pioneer',
+        'mt laugh panama pioneer close',
+        'mt laugh panama pioneer far',
+        'mt laugh pioneer',
+        'mt laugh pioneer close',
+        'mt laugh pioneer far',
+        'mt normal dress',
+        'mt normal dress close',
+        'mt normal dress far',
+        'mt normal panama dress',
+        'mt normal panama dress close',
+        'mt normal panama dress far',
+        'mt normal panama pioneer',
+        'mt normal panama pioneer close',
+        'mt normal panama pioneer far',
+        'mt normal panama swim',
+        'mt normal panama swim close',
+        'mt normal panama swim far',
+        'mt normal pioneer',
+        'mt normal pioneer close',
+        'mt normal pioneer far',
+        'mt normal swim',
+        'mt normal swim close',
+        'mt normal swim far',
+        'mt rage dress',
+        'mt rage dress close',
+        'mt rage dress far',
+        'mt rage panama dress',
+        'mt rage panama dress close',
+        'mt rage panama dress far',
+        'mt rage panama pioneer',
+        'mt rage panama pioneer close',
+        'mt rage panama pioneer far',
+        'mt rage panama swim',
+        'mt rage panama swim close',
+        'mt rage panama swim far',
+        'mt rage pioneer',
+        'mt rage pioneer close',
+        'mt rage pioneer far',
+        'mt rage swim',
+        'mt rage swim close',
+        'mt rage swim far',
+        'mt sad dress',
+        'mt sad dress close',
+        'mt sad dress far',
+        'mt sad panama dress',
+        'mt sad panama dress close',
+        'mt sad panama dress far',
+        'mt sad panama pioneer',
+        'mt sad panama pioneer close',
+        'mt sad panama pioneer far',
+        'mt sad panama swim',
+        'mt sad panama swim close',
+        'mt sad panama swim far',
+        'mt sad pioneer',
+        'mt sad pioneer close',
+        'mt sad pioneer far',
+        'mt sad swim',
+        'mt sad swim close',
+        'mt sad swim far',
+        'mt scared pioneer',
+        'mt shocked pioneer',
+        'mt smile dress',
+        'mt smile dress close',
+        'mt smile dress far',
+        'mt smile panama dress',
+        'mt smile panama dress close',
+        'mt smile panama dress far',
+        'mt smile panama pioneer',
+        'mt smile panama pioneer close',
+        'mt smile panama pioneer far',
+        'mt smile panama swim',
+        'mt smile panama swim close',
+        'mt smile panama swim far',
+        'mt smile pioneer',
+        'mt smile pioneer close',
+        'mt smile pioneer far',
+        'mt smile swim',
+        'mt smile swim close',
+        'mt smile swim far',
+        'mt surprise dress',
+        'mt surprise dress close',
+        'mt surprise dress far',
+        'mt surprise panama dress',
+        'mt surprise panama dress close',
+        'mt surprise panama dress far',
+        'mt surprise panama pioneer',
+        'mt surprise panama pioneer close',
+        'mt surprise panama pioneer far',
+        'mt surprise panama swim',
+        'mt surprise panama swim close',
+        'mt surprise panama swim far',
+        'mt surprise pioneer',
+        'mt surprise pioneer close',
+        'mt surprise pioneer far',
+        'mt surprise swim',
+        'mt surprise swim close',
+        'mt surprise swim far',
+        'mz angry glasses pioneer',
+        'mz angry glasses pioneer close',
+        'mz angry glasses pioneer far',
+        'mz angry pioneer',
+        'mz angry pioneer close',
+        'mz angry pioneer far',
+        'mz bukal glasses pioneer',
+        'mz bukal glasses pioneer close',
+        'mz bukal glasses pioneer far',
+        'mz bukal pioneer',
+        'mz bukal pioneer close',
+        'mz bukal pioneer far',
+        'mz laugh glasses pioneer',
+        'mz laugh glasses pioneer close',
+        'mz laugh glasses pioneer far',
+        'mz laugh pioneer',
+        'mz laugh pioneer close',
+        'mz laugh pioneer far',
+        'mz normal glasses pioneer',
+        'mz normal glasses pioneer close',
+        'mz normal glasses pioneer far',
+        'mz normal pioneer',
+        'mz normal pioneer close',
+        'mz normal pioneer far',
+        'mz rage glasses pioneer',
+        'mz rage glasses pioneer close',
+        'mz rage glasses pioneer far',
+        'mz rage pioneer',
+        'mz rage pioneer close',
+        'mz rage pioneer far',
+        'mz shy glasses pioneer',
+        'mz shy glasses pioneer close',
+        'mz shy glasses pioneer far',
+        'mz shy pioneer',
+        'mz shy pioneer close',
+        'mz shy pioneer far',
+        'mz smile glasses pioneer',
+        'mz smile glasses pioneer close',
+        'mz smile glasses pioneer far',
+        'mz smile pioneer',
+        'mz smile pioneer close',
+        'mz smile pioneer far',
+        'pi',
+        'pi close',
+        'pi far',
+        'pi smile',
+        'sh cry',
+        'sh cry close',
+        'sh cry far',
+        'sh cry pioneer',
+        'sh cry pioneer close',
+        'sh cry pioneer far',
+        'sh laugh',
+        'sh laugh close',
+        'sh laugh far',
+        'sh laugh pioneer',
+        'sh laugh pioneer close',
+        'sh laugh pioneer far',
+        'sh normal',
+        'sh normal close',
+        'sh normal far',
+        'sh normal pioneer',
+        'sh normal pioneer close',
+        'sh normal pioneer far',
+        'sh normal_smile',
+        'sh normal_smile close',
+        'sh normal_smile far',
+        'sh normal_smile pioneer',
+        'sh normal_smile pioneer close',
+        'sh normal_smile pioneer far',
+        'sh rage',
+        'sh rage close',
+        'sh rage far',
+        'sh rage pioneer',
+        'sh rage pioneer close',
+        'sh rage pioneer far',
+        'sh scared',
+        'sh scared close',
+        'sh scared far',
+        'sh scared pioneer',
+        'sh scared pioneer close',
+        'sh scared pioneer far',
+        'sh serious',
+        'sh serious close',
+        'sh serious far',
+        'sh serious pioneer',
+        'sh serious pioneer close',
+        'sh serious pioneer far',
+        'sh smile',
+        'sh smile close',
+        'sh smile far',
+        'sh smile pioneer',
+        'sh smile pioneer close',
+        'sh smile pioneer far',
+        'sh surprise',
+        'sh surprise close',
+        'sh surprise far',
+        'sh surprise pioneer',
+        'sh surprise pioneer close',
+        'sh surprise pioneer far',
+        'sh upset',
+        'sh upset close',
+        'sh upset far',
+        'sh upset pioneer',
+        'sh upset pioneer close',
+        'sh upset pioneer far',
+        'sl angry dress',
+        'sl angry dress close',
+        'sl angry dress far',
+        'sl angry pioneer',
+        'sl angry pioneer close',
+        'sl angry pioneer far',
+        'sl angry sport',
+        'sl angry sport close',
+        'sl angry sport far',
+        'sl angry swim',
+        'sl angry swim close',
+        'sl angry swim far',
+        'sl happy dress',
+        'sl happy dress close',
+        'sl happy dress far',
+        'sl happy pioneer',
+        'sl happy pioneer close',
+        'sl happy pioneer far',
+        'sl happy sport',
+        'sl happy sport close',
+        'sl happy sport far',
+        'sl happy swim',
+        'sl happy swim close',
+        'sl happy swim far',
+        'sl laugh dress',
+        'sl laugh dress close',
+        'sl laugh dress far',
+        'sl laugh pioneer',
+        'sl laugh pioneer close',
+        'sl laugh pioneer far',
+        'sl laugh sport',
+        'sl laugh sport close',
+        'sl laugh sport far',
+        'sl laugh swim',
+        'sl laugh swim close',
+        'sl laugh swim far',
+        'sl normal dress',
+        'sl normal dress close',
+        'sl normal dress far',
+        'sl normal pioneer',
+        'sl normal pioneer close',
+        'sl normal pioneer far',
+        'sl normal sport',
+        'sl normal sport close',
+        'sl normal sport far',
+        'sl normal swim',
+        'sl normal swim close',
+        'sl normal swim far',
+        'sl sad dress',
+        'sl sad dress close',
+        'sl sad dress far',
+        'sl sad pioneer',
+        'sl sad pioneer close',
+        'sl sad pioneer far',
+        'sl sad sport',
+        'sl sad sport close',
+        'sl sad sport far',
+        'sl sad swim',
+        'sl sad swim close',
+        'sl sad swim far',
+        'sl scared dress',
+        'sl scared dress close',
+        'sl scared dress far',
+        'sl scared pioneer',
+        'sl scared pioneer close',
+        'sl scared pioneer far',
+        'sl scared sport',
+        'sl scared sport close',
+        'sl scared sport far',
+        'sl scared swim',
+        'sl scared swim close',
+        'sl scared swim far',
+        'sl serious dress',
+        'sl serious dress close',
+        'sl serious dress far',
+        'sl serious pioneer',
+        'sl serious pioneer close',
+        'sl serious pioneer far',
+        'sl serious sport',
+        'sl serious sport close',
+        'sl serious sport far',
+        'sl serious swim',
+        'sl serious swim close',
+        'sl serious swim far',
+        'sl shy dress',
+        'sl shy dress close',
+        'sl shy dress far',
+        'sl shy pioneer',
+        'sl shy pioneer close',
+        'sl shy pioneer far',
+        'sl shy sport',
+        'sl shy sport close',
+        'sl shy sport far',
+        'sl shy swim',
+        'sl shy swim close',
+        'sl shy swim far',
+        'sl smile dress',
+        'sl smile dress close',
+        'sl smile dress far',
+        'sl smile pioneer',
+        'sl smile pioneer close',
+        'sl smile pioneer far',
+        'sl smile sport',
+        'sl smile sport close',
+        'sl smile sport far',
+        'sl smile swim',
+        'sl smile swim close',
+        'sl smile swim far',
+        'sl smile2 dress',
+        'sl smile2 dress close',
+        'sl smile2 dress far',
+        'sl smile2 pioneer',
+        'sl smile2 pioneer close',
+        'sl smile2 pioneer far',
+        'sl smile2 sport',
+        'sl smile2 sport close',
+        'sl smile2 sport far',
+        'sl smile2 swim',
+        'sl smile2 swim close',
+        'sl smile2 swim far',
+        'sl surprise dress',
+        'sl surprise dress close',
+        'sl surprise dress far',
+        'sl surprise pioneer',
+        'sl surprise pioneer close',
+        'sl surprise pioneer far',
+        'sl surprise sport',
+        'sl surprise sport close',
+        'sl surprise sport far',
+        'sl surprise swim',
+        'sl surprise swim close',
+        'sl surprise swim far',
+        'sl tender dress',
+        'sl tender dress close',
+        'sl tender dress far',
+        'sl tender pioneer',
+        'sl tender pioneer close',
+        'sl tender pioneer far',
+        'sl tender sport',
+        'sl tender sport close',
+        'sl tender sport far',
+        'sl tender swim',
+        'sl tender swim close',
+        'sl tender swim far',
+        'un angry body',
+        'un angry body close',
+        'un angry dress',
+        'un angry dress close',
+        'un angry dress far',
+        'un angry pioneer',
+        'un angry pioneer close',
+        'un angry pioneer far',
+        'un angry sport',
+        'un angry sport close',
+        'un angry sport far',
+        'un angry swim',
+        'un angry swim close',
+        'un angry swim far',
+        'un angry2 body',
+        'un angry2 body close',
+        'un angry2 dress',
+        'un angry2 dress close',
+        'un angry2 dress far',
+        'un angry2 pioneer',
+        'un angry2 pioneer close',
+        'un angry2 pioneer far',
+        'un angry2 sport',
+        'un angry2 sport close',
+        'un angry2 sport far',
+        'un cry body',
+        'un cry body close',
+        'un cry dress',
+        'un cry dress close',
+        'un cry dress far',
+        'un cry pioneer',
+        'un cry pioneer close',
+        'un cry pioneer far',
+        'un cry sport',
+        'un cry sport close',
+        'un cry sport far',
+        'un cry swim',
+        'un cry swim close',
+        'un cry swim far',
+        'un cry_smile body',
+        'un cry_smile body close',
+        'un cry_smile dress',
+        'un cry_smile dress close',
+        'un cry_smile dress far',
+        'un cry_smile pioneer',
+        'un cry_smile pioneer close',
+        'un cry_smile pioneer far',
+        'un cry_smile sport',
+        'un cry_smile sport close',
+        'un cry_smile sport far',
+        'un cry_smile swim',
+        'un cry_smile swim close',
+        'un cry_smile swim far',
+        'un evil_smile body',
+        'un evil_smile body close',
+        'un evil_smile dress',
+        'un evil_smile dress close',
+        'un evil_smile dress far',
+        'un evil_smile pioneer',
+        'un evil_smile pioneer close',
+        'un evil_smile pioneer far',
+        'un evil_smile sport',
+        'un evil_smile sport close',
+        'un evil_smile sport far',
+        'un evil_smile swim',
+        'un evil_smile swim close',
+        'un evil_smile swim far',
+        'un grin body',
+        'un grin body close',
+        'un grin dress',
+        'un grin dress close',
+        'un grin dress far',
+        'un grin pioneer',
+        'un grin pioneer close',
+        'un grin pioneer far',
+        'un grin sport',
+        'un grin sport close',
+        'un grin sport far',
+        'un laugh body',
+        'un laugh body close',
+        'un laugh dress',
+        'un laugh dress close',
+        'un laugh dress far',
+        'un laugh pioneer',
+        'un laugh pioneer close',
+        'un laugh pioneer far',
+        'un laugh sport',
+        'un laugh sport close',
+        'un laugh sport far',
+        'un normal body',
+        'un normal body close',
+        'un normal dress',
+        'un normal dress close',
+        'un normal dress far',
+        'un normal pioneer',
+        'un normal pioneer close',
+        'un normal pioneer far',
+        'un normal pioneer red',
+        'un normal sport',
+        'un normal sport close',
+        'un normal sport far',
+        'un normal swim',
+        'un normal swim close',
+        'un normal swim far',
+        'un rage body',
+        'un rage body close',
+        'un rage dress',
+        'un rage dress close',
+        'un rage dress far',
+        'un rage pioneer',
+        'un rage pioneer close',
+        'un rage pioneer far',
+        'un rage sport',
+        'un rage sport close',
+        'un rage sport far',
+        'un sad body',
+        'un sad body close',
+        'un sad dress',
+        'un sad dress close',
+        'un sad dress far',
+        'un sad pioneer',
+        'un sad pioneer close',
+        'un sad pioneer far',
+        'un sad sport',
+        'un sad sport close',
+        'un sad sport far',
+        'un sad swim',
+        'un sad swim close',
+        'un sad swim far',
+        'un scared body',
+        'un scared body close',
+        'un scared dress',
+        'un scared dress close',
+        'un scared dress far',
+        'un scared pioneer',
+        'un scared pioneer close',
+        'un scared pioneer far',
+        'un scared sport',
+        'un scared sport close',
+        'un scared sport far',
+        'un scared swim',
+        'un scared swim close',
+        'un scared swim far',
+        'un serious body',
+        'un serious body close',
+        'un serious dress',
+        'un serious dress close',
+        'un serious dress far',
+        'un serious pioneer',
+        'un serious pioneer close',
+        'un serious pioneer far',
+        'un serious sport',
+        'un serious sport close',
+        'un serious sport far',
+        'un shocked body',
+        'un shocked body close',
+        'un shocked dress',
+        'un shocked dress close',
+        'un shocked dress far',
+        'un shocked pioneer',
+        'un shocked pioneer close',
+        'un shocked pioneer far',
+        'un shocked sport',
+        'un shocked sport close',
+        'un shocked sport far',
+        'un shocked swim',
+        'un shocked swim close',
+        'un shocked swim far',
+        'un shy body',
+        'un shy body close',
+        'un shy dress',
+        'un shy dress close',
+        'un shy dress far',
+        'un shy pioneer',
+        'un shy pioneer close',
+        'un shy pioneer far',
+        'un shy sport',
+        'un shy sport close',
+        'un shy sport far',
+        'un shy swim',
+        'un shy swim close',
+        'un shy swim far',
+        'un smile body',
+        'un smile body close',
+        'un smile dress',
+        'un smile dress close',
+        'un smile dress far',
+        'un smile pioneer',
+        'un smile pioneer close',
+        'un smile pioneer far',
+        'un smile sport',
+        'un smile sport close',
+        'un smile sport far',
+        'un smile swim',
+        'un smile swim close',
+        'un smile swim far',
+        'un smile2 body',
+        'un smile2 body close',
+        'un smile2 dress',
+        'un smile2 dress close',
+        'un smile2 dress far',
+        'un smile2 pioneer',
+        'un smile2 pioneer close',
+        'un smile2 pioneer far',
+        'un smile2 sport',
+        'un smile2 sport close',
+        'un smile2 sport far',
+        'un smile2 swim',
+        'un smile2 swim close',
+        'un smile2 swim far',
+        'un smile3 body',
+        'un smile3 body close',
+        'un smile3 dress',
+        'un smile3 dress close',
+        'un smile3 dress far',
+        'un smile3 pioneer',
+        'un smile3 pioneer close',
+        'un smile3 pioneer far',
+        'un smile3 sport',
+        'un smile3 sport close',
+        'un smile3 sport far',
+        'un surprise body',
+        'un surprise body close',
+        'un surprise dress',
+        'un surprise dress close',
+        'un surprise dress far',
+        'un surprise pioneer',
+        'un surprise pioneer close',
+        'un surprise pioneer far',
+        'un surprise pioneer red',
+        'un surprise sport',
+        'un surprise sport close',
+        'un surprise sport far',
+        'un surprise swim',
+        'un surprise swim close',
+        'un surprise swim far',
+        'us angry dress',
+        'us angry dress close',
+        'us angry dress far',
+        'us angry pioneer',
+        'us angry pioneer close',
+        'us angry pioneer far',
+        'us angry sport',
+        'us angry sport close',
+        'us angry sport far',
+        'us angry swim',
+        'us angry swim close',
+        'us angry swim far',
+        'us calml dress',
+        'us calml dress close',
+        'us calml dress far',
+        'us calml pioneer',
+        'us calml pioneer close',
+        'us calml pioneer far',
+        'us calml sport',
+        'us calml sport close',
+        'us calml sport far',
+        'us calml swim',
+        'us calml swim close',
+        'us calml swim far',
+        'us cry dress',
+        'us cry dress close',
+        'us cry dress far',
+        'us cry pioneer',
+        'us cry pioneer close',
+        'us cry pioneer far',
+        'us cry sport',
+        'us cry sport close',
+        'us cry sport far',
+        'us cry swim',
+        'us cry swim close',
+        'us cry swim far',
+        'us cry2 dress',
+        'us cry2 dress close',
+        'us cry2 dress far',
+        'us cry2 pioneer',
+        'us cry2 pioneer close',
+        'us cry2 pioneer far',
+        'us cry2 sport',
+        'us cry2 sport close',
+        'us cry2 sport far',
+        'us cry2 swim',
+        'us cry2 swim close',
+        'us cry2 swim far',
+        'us dontlike dress',
+        'us dontlike dress close',
+        'us dontlike dress far',
+        'us dontlike pioneer',
+        'us dontlike pioneer close',
+        'us dontlike pioneer far',
+        'us dontlike sport',
+        'us dontlike sport close',
+        'us dontlike sport far',
+        'us dontlike swim',
+        'us dontlike swim close',
+        'us dontlike swim far',
+        'us fear dress',
+        'us fear dress close',
+        'us fear dress far',
+        'us fear pioneer',
+        'us fear pioneer close',
+        'us fear pioneer far',
+        'us fear sport',
+        'us fear sport close',
+        'us fear sport far',
+        'us fear swim',
+        'us fear swim close',
+        'us fear swim far',
+        'us grin dress',
+        'us grin dress close',
+        'us grin dress far',
+        'us grin pioneer',
+        'us grin pioneer close',
+        'us grin pioneer far',
+        'us grin sport',
+        'us grin sport close',
+        'us grin sport far',
+        'us grin swim',
+        'us grin swim close',
+        'us grin swim far',
+        'us laugh dress',
+        'us laugh dress close',
+        'us laugh dress far',
+        'us laugh pioneer',
+        'us laugh pioneer close',
+        'us laugh pioneer far',
+        'us laugh sport',
+        'us laugh sport close',
+        'us laugh sport far',
+        'us laugh swim',
+        'us laugh swim close',
+        'us laugh swim far',
+        'us laugh2 dress',
+        'us laugh2 dress close',
+        'us laugh2 dress far',
+        'us laugh2 pioneer',
+        'us laugh2 pioneer close',
+        'us laugh2 pioneer far',
+        'us laugh2 sport',
+        'us laugh2 sport close',
+        'us laugh2 sport far',
+        'us laugh2 swim',
+        'us laugh2 swim close',
+        'us laugh2 swim far',
+        'us normal dress',
+        'us normal dress close',
+        'us normal dress far',
+        'us normal pioneer',
+        'us normal pioneer close',
+        'us normal pioneer far',
+        'us normal sport',
+        'us normal sport close',
+        'us normal sport far',
+        'us normal swim',
+        'us normal swim close',
+        'us normal swim far',
+        'us sad dress',
+        'us sad dress close',
+        'us sad dress far',
+        'us sad pioneer',
+        'us sad pioneer close',
+        'us sad pioneer far',
+        'us sad sport',
+        'us sad sport close',
+        'us sad sport far',
+        'us sad swim',
+        'us sad swim close',
+        'us sad swim far',
+        'us shy dress',
+        'us shy dress close',
+        'us shy dress far',
+        'us shy pioneer',
+        'us shy pioneer close',
+        'us shy pioneer far',
+        'us shy sport',
+        'us shy sport close',
+        'us shy sport far',
+        'us shy swim',
+        'us shy swim close',
+        'us shy swim far',
+        'us shy2 dress',
+        'us shy2 dress close',
+        'us shy2 dress far',
+        'us shy2 pioneer',
+        'us shy2 pioneer close',
+        'us shy2 pioneer far',
+        'us shy2 sport',
+        'us shy2 sport close',
+        'us shy2 sport far',
+        'us shy2 swim',
+        'us shy2 swim close',
+        'us shy2 swim far',
+        'us smile dress',
+        'us smile dress close',
+        'us smile dress far',
+        'us smile pioneer',
+        'us smile pioneer close',
+        'us smile pioneer far',
+        'us smile sport',
+        'us smile sport close',
+        'us smile sport far',
+        'us smile swim',
+        'us smile swim close',
+        'us smile swim far',
+        'us surp1 dress',
+        'us surp1 dress close',
+        'us surp1 dress far',
+        'us surp1 pioneer',
+        'us surp1 pioneer close',
+        'us surp1 pioneer far',
+        'us surp1 sport',
+        'us surp1 sport close',
+        'us surp1 sport far',
+        'us surp1 swim',
+        'us surp1 swim close',
+        'us surp1 swim far',
+        'us surp2 dress',
+        'us surp2 dress close',
+        'us surp2 dress far',
+        'us surp2 pioneer',
+        'us surp2 pioneer close',
+        'us surp2 pioneer far',
+        'us surp2 sport',
+        'us surp2 sport close',
+        'us surp2 sport far',
+        'us surp2 swim',
+        'us surp2 swim close',
+        'us surp2 swim far',
+        'us surp3 dress',
+        'us surp3 dress close',
+        'us surp3 dress far',
+        'us surp3 pioneer',
+        'us surp3 pioneer close',
+        'us surp3 pioneer far',
+        'us surp3 sport',
+        'us surp3 sport close',
+        'us surp3 sport far',
+        'us surp3 swim',
+        'us surp3 swim close',
+        'us surp3 swim far',
+        'us upset dress',
+        'us upset dress close',
+        'us upset dress far',
+        'us upset pioneer',
+        'us upset pioneer close',
+        'us upset pioneer far',
+        'us upset sport',
+        'us upset sport close',
+        'us upset sport far',
+        'us upset swim',
+        'us upset swim close',
+        'us upset swim far',
+        'uv dontlike',
+        'uv dontlike close',
+        'uv dontlike far',
+        'uv grin',
+        'uv grin close',
+        'uv grin far',
+        'uv guilty',
+        'uv guilty close',
+        'uv guilty far',
+        'uv laugh',
+        'uv laugh close',
+        'uv laugh far',
+        'uv normal',
+        'uv normal close',
+        'uv normal far',
+        'uv rage',
+        'uv rage close',
+        'uv rage far',
+        'uv sad',
+        'uv sad close',
+        'uv sad far',
+        'uv shocked',
+        'uv shocked close',
+        'uv shocked far',
+        'uv smile',
+        'uv smile close',
+        'uv smile far',
+        'uv surprise',
+        'uv surprise close',
+        'uv surprise far',
+        'uv surprise2',
+        'uv surprise2 close',
+        'uv surprise2 far',
+        'uv upset',
+        'uv upset close',
+        'uv upset far']
+
+    alt_dist = ['normal/','far/']
+    
+    for dist in alt_dist:
+        if dist == "normal/":
+            for who in alt_body_dict.keys():
+                for pose in alt_body_dict[who]:
+                    for body in alt_body_dict[who][pose]:
+                        for clothes in alt_clothes_dict[who][pose]:
+                            for emo in alt_emo_dict[who][pose]:
+                                for acc in alt_acc_dict[who][pose]:
+                                    if body != '':
+                                        if 'body2' in body:
+                                            who_num = who + '2'
+                                        elif 'body' in body:
+                                            who_num = who
+                                        if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'):
+                                            body_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'
+                                        elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'):
+                                            body_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'
+                                        else:
+                                            body_path = who + '_' + pose + '_' + body + '.png'
+                                        if clothes != '' and clothes != 'body':
+                                            if renpy.loadable(alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'):
+                                                clothes_path = alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'
+                                            elif renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
+                                                clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                            elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
+                                                clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                            else:
+                                                clothes_path = who + '_' + pose + '_' + clothes + '.png'
+                                            if emo != '':
+                                                if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
+                                                if acc != '':
+                                                    if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
+                                                    if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc,
+                                                                        ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path), )
+                                                                        )
+                                                    if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close' in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close',
+                                                                        At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path), ), 
+                                                                        close_sprites)
+                                                                        )
+                                                else:
+                                                    if not (who_num + ' ' + emo + ' ' + clothes in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + clothes,
+                                                                        ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path), )
+                                                                        )
+                                                    if not (who_num + ' ' + emo + ' ' + clothes + ' close' in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + clothes + ' close',
+                                                                        At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path), ), 
+                                                                        close_sprites)
+                                                                        )
+                                        elif clothes == 'body':
+                                            if emo != '':
+                                                if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
+                                                if acc != '':
+                                                    if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
+                                                    if not (who_num + ' ' + emo + ' ' + 'body' + ' ' + acc in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc,
+                                                                        ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path), )
+                                                                        )
+                                                    if not (who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' close' in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' close',
+                                                                        At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path), ), 
+                                                                        close_sprites)
+                                                                        )
+                                                else:
+                                                    if not (who_num + ' ' + emo + ' ' + 'body' in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + 'body',
+                                                                        ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path), )
+                                                                        )
+                                                    if not (who_num + ' ' + emo + ' ' + 'body' + ' close' in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' close',
+                                                                        At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((900, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path), ), 
+                                                                        close_sprites)
+                                                                        )
+                                        else:
+                                            if emo != '':
+                                                if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
+                                                if acc != '':
+                                                    if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
+                                                    if who == 'cs':
+                                                        if not (who_num + ' ' + emo + ' ' + acc in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo + ' ' + acc,
+                                                                            ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path), )
+                                                                            )
+                                                        if not (who_num + ' ' + emo + ' ' + acc + ' close' in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo + ' ' + acc + ' close',
+                                                                            At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path), ), 
+                                                                            close_sprites)
+                                                                            )
+                                                    else:
+                                                        if not (who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc,
+                                                                            ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path), )
+                                                                            )
+                                                        if not (who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' close' in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' close',
+                                                                            At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path), ), 
+                                                                            close_sprites)
+                                                                            )
+                                                else:
+                                                    if who == 'cs':
+                                                        if not (who_num + ' ' + emo in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo,
+                                                                            ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path), )
+                                                                            )
+                                                        if not (who_num + ' ' + emo + ' close' in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo + ' close',
+                                                                            At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path), ), 
+                                                                            close_sprites)
+                                                                            )
+                                                    else:
+                                                        if not (who_num + ' ' + emo + ' ' + 'pioneer' in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo + ' ' + 'pioneer',
+                                                                            ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path), )
+                                                                            )
+                                                        if not (who_num + ' ' + emo + ' ' + 'pioneer' + ' close' in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo + ' ' + 'pioneer' + ' close',
+                                                                            At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((900, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path), ), 
+                                                                            close_sprites)
+                                                                            )
+                                    else:
+                                        who_num = who
+                                        if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
+                                            clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                        elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
+                                            clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                        else:
+                                            clothes_path = who + '_' + pose + '_' + clothes + '.png'
+                                        if emo != '':
+                                            if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                            elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                            else:
+                                                emo_path = who + '_' + pose + '_' + emo + '.png'
+                                            if acc != '':
+                                                if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                    acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                    acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                else:
+                                                    acc_path = who + '_' + pose + '_' + acc + '.png'
+                                                if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc in bl_sprites_list):
+                                                    renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc,
+                                                                    ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path,
+                                                                    (0, 0), acc_path),
+                                                                    im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                    "persistent.sprite_time=='night'",
+                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path,
+                                                                    (0, 0), acc_path),
+                                                                    im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                    True,
+                                                                    im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path,
+                                                                    (0, 0), acc_path), )
+                                                                    )
+                                                if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close' in bl_sprites_list):
+                                                    renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' close',
+                                                                    At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path,
+                                                                    (0, 0), acc_path),
+                                                                    im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                    "persistent.sprite_time=='night'",
+                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path,
+                                                                    (0, 0), acc_path),
+                                                                    im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                    True,
+                                                                    im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path,
+                                                                    (0, 0), acc_path), ), 
+                                                                    close_sprites)
+                                                                    )
+                                            else:
+                                                if not (who_num + ' ' + emo + ' ' + clothes in bl_sprites_list):
+                                                    renpy.image(who_num + ' ' + emo + ' ' + clothes,
+                                                                    ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path),
+                                                                    im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                    "persistent.sprite_time=='night'",
+                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path),
+                                                                    im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                    True,
+                                                                    im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path), )
+                                                                    )
+                                                if not (who_num + ' ' + emo + ' ' + clothes + ' close' in bl_sprites_list):
+                                                    renpy.image(who_num + ' ' + emo + ' ' + clothes + ' close',
+                                                                    At(ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path),
+                                                                    im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                    "persistent.sprite_time=='night'",
+                                                                    im.MatrixColor(im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path),
+                                                                    im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                    True,
+                                                                    im.Composite((900, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path), ), 
+                                                                    close_sprites)
+                                                                    )
+        elif dist == "far/":
+            for who in alt_body_far_dict.keys():
+                for pose in alt_body_far_dict[who]:
+                    for body in alt_body_far_dict[who][pose]:
+                        for clothes in alt_clothes_far_dict[who][pose]:
+                            for emo in alt_emo_far_dict[who][pose]:
+                                for acc in alt_acc_far_dict[who][pose]:
+                                    if body != '':
+                                        if 'body2' in body:
+                                            who_num = who + '2'
+                                        elif 'body' in body:
+                                            who_num = who
+                                        if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'):
+                                            body_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'
+                                        elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'):
+                                            body_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + body + '.png'
+                                        else:
+                                            body_path = who + '_' + pose + '_' + body + '.png'
+                                        if clothes != '' and clothes != 'body':
+                                            if renpy.loadable(alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'):
+                                                clothes_path = alt_sprites + dist + who + '/' + who_num + '_' + pose + '_' + clothes + '.png'
+                                            elif renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
+                                                clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                            elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
+                                                clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                            else:
+                                                clothes_path = who + '_' + pose + '_' + clothes + '.png'
+                                            if emo != '':
+                                                if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
+                                                if acc != '':
+                                                    if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
+                                                    if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far' in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far',
+                                                                        ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path), )
+                                                                        )
+                                                else:
+                                                    if not (who_num + ' ' + emo + ' ' + clothes + ' far' in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + clothes + ' far',
+                                                                        ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), clothes_path,
+                                                                        (0, 0), emo_path), )
+                                                                        )
+                                        elif clothes == 'body':
+                                            if emo != '':
+                                                if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
+                                                if acc != '':
+                                                    if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
+                                                    if not (who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far' in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' ' + acc + ' far',
+                                                                        ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path,
+                                                                        (0, 0), acc_path), )
+                                                                        )
+                                                else:
+                                                    if not (who_num + ' ' + emo + ' ' + 'body' + ' far' in bl_sprites_list):
+                                                        renpy.image(who_num + ' ' + emo + ' ' + 'body' + ' far',
+                                                                        ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                        im.MatrixColor(im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                        "persistent.sprite_time=='night'",
+                                                                        im.MatrixColor(im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path),
+                                                                        im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                        True,
+                                                                        im.Composite((630, 1080),
+                                                                        (0, 0), body_path,
+                                                                        (0, 0), emo_path), )
+                                                                        )
+                                        else:
+                                            if emo != '':
+                                                if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                    emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                                else:
+                                                    emo_path = who + '_' + pose + '_' + emo + '.png'
+                                                if acc != '':
+                                                    if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                        acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                    else:
+                                                        acc_path = who + '_' + pose + '_' + acc + '.png'
+                                                    if who == 'cs':
+                                                        if not (who_num + ' ' + emo + ' ' + acc + ' far' in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo + ' ' + acc + ' far',
+                                                                            ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path), )
+                                                                            )
+                                                    else:
+                                                        if not (who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' far' in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo + ' ' + 'pioneer' + ' ' + acc + ' far',
+                                                                            ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path,
+                                                                            (0, 0), acc_path), )
+                                                                            )
+                                                else:
+                                                    if who == 'cs':
+                                                        if not (who_num + ' ' + emo + ' far' in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo + ' far',
+                                                                            ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path), )
+                                                                            )
+                                                    else:
+                                                        if not (who_num + ' ' + emo + ' ' + 'pioneer' + ' far' in bl_sprites_list):
+                                                            renpy.image(who_num + ' ' + emo + ' ' + 'pioneer' + ' far',
+                                                                            ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                            im.MatrixColor(im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                            "persistent.sprite_time=='night'",
+                                                                            im.MatrixColor(im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path),
+                                                                            im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                            True,
+                                                                            im.Composite((630, 1080),
+                                                                            (0, 0), body_path,
+                                                                            (0, 0), emo_path), )
+                                                                            )
+                                    else:
+                                        who_num = who
+                                        if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
+                                            clothes_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                        elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'):
+                                            clothes_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + clothes + '.png'
+                                        else:
+                                            clothes_path = who + '_' + pose + '_' + clothes + '.png'
+                                        if emo != '':
+                                            if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                emo_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                            elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'):
+                                                emo_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + emo + '.png'
+                                            else:
+                                                emo_path = who + '_' + pose + '_' + emo + '.png'
+                                            if acc != '':
+                                                if renpy.loadable(bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                    acc_path = bl_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                elif renpy.loadable(alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'):
+                                                    acc_path = alt_sprites + dist + who + '/' + who + '_' + pose + '_' + acc + '.png'
+                                                else:
+                                                    acc_path = who + '_' + pose + '_' + acc + '.png'
+                                                if not (who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far' in bl_sprites_list):
+                                                    renpy.image(who_num + ' ' + emo + ' ' + clothes + ' ' + acc + ' far',
+                                                                    ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                    im.MatrixColor(im.Composite((630, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path,
+                                                                    (0, 0), acc_path),
+                                                                    im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                    "persistent.sprite_time=='night'",
+                                                                    im.MatrixColor(im.Composite((630, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path,
+                                                                    (0, 0), acc_path),
+                                                                    im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                    True,
+                                                                    im.Composite((630, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path,
+                                                                    (0, 0), acc_path), )
+                                                                    )
+                                            else:
+                                                if not (who_num + ' ' + emo + ' ' + clothes + ' far' in bl_sprites_list):
+                                                    renpy.image(who_num + ' ' + emo + ' ' + clothes + ' far',
+                                                                    ConditionSwitch("persistent.sprite_time=='sunset'",
+                                                                    im.MatrixColor(im.Composite((630, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path),
+                                                                    im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                                                    "persistent.sprite_time=='night'",
+                                                                    im.MatrixColor(im.Composite((630, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path),
+                                                                    im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                                                    True,
+                                                                    im.Composite((630, 1080),
+                                                                    (0, 0), clothes_path,
+                                                                    (0, 0), emo_path), )
+                                                                    )                                                  
+                                    
+    for custom in alt_custom_list:
+        custom_path = alt_sprites + 'custom/' + custom + '.png'
+        if 'far' in custom:
+            if not (custom in bl_sprites_list):
+                renpy.image(custom,
+                                ConditionSwitch("persistent.sprite_time=='sunset'",
+                                im.MatrixColor(im.Composite((630, 1080),
+                                (0, 0), custom_path),
+                                im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                "persistent.sprite_time=='night'",
+                                im.MatrixColor(im.Composite((630, 1080),
+                                (0, 0), custom_path),
+                                im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                True,
+                                im.Composite((630, 1080),
+                                (0, 0), custom_path), )
+                                )                                    
+        else:
+            if not (custom in bl_sprites_list):
+                renpy.image(custom,
+                                ConditionSwitch("persistent.sprite_time=='sunset'",
+                                im.MatrixColor(im.Composite((900, 1080),
+                                (0, 0), custom_path),
+                                im.matrix.tint(0.94, 0.82, 1.0) ),
+
+                                "persistent.sprite_time=='night'",
+                                im.MatrixColor(im.Composite((900, 1080),
+                                (0, 0), custom_path),
+                                im.matrix.tint(0.63, 0.78, 0.82) ),
+
+                                True,
+                                im.Composite((900, 1080),
+                                (0, 0), custom_path), )
+                                )                                    
+                            
+init 9999:
+######## Пионер из 1.1 ########
+    image pi = ConditionSwitch(
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), bl_sprites+"normal/pi/pi_1_pioneer.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), bl_sprites+"normal/pi/pi_1_pioneer.png"), im.matrix.tint(0.63, 0.78, 0.82) ),
+    True,im.Composite((900,1080), (0,0), bl_sprites+"normal/pi/pi_1_pioneer.png") )
+    image pi smile = ConditionSwitch(
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), bl_sprites+"normal/pi/pi_1_pioneer_smile.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), bl_sprites+"normal/pi/pi_1_pioneer_smile.png"), im.matrix.tint(0.63, 0.78, 0.82) ),
+    True,im.Composite((900,1080), (0,0), bl_sprites+"normal/pi/pi_1_pioneer_smile.png") )
+    image pi close = ConditionSwitch(
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((1050,1080), (0,0), bl_sprites+"close/pi/pi_1_pioneer.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((1050,1080), (0,0), bl_sprites+"close/pi/pi_1_pioneer.png"), im.matrix.tint(0.63, 0.78, 0.82) ),
+    True,im.Composite((1050,1080), (0,0), bl_sprites+"close/pi/pi_1_pioneer.png") )
+    image pi far = ConditionSwitch(
+    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((630,1080), (0,0), bl_sprites+"far/pi/pi_1_pioneer.png"), im.matrix.tint(0.94, 0.82, 1.0) ),
+    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((630,1080), (0,0), bl_sprites+"far/pi/pi_1_pioneer.png"), im.matrix.tint(0.63, 0.78, 0.82) ),
+    True,im.Composite((630,1080), (0,0), bl_sprites+"far/pi/pi_1_pioneer.png") )
+
+######## Тени ########
 #Жужа 1
     image mz_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mz/mz_1_body.png'), (0, 0), get_sprite_ori('normal/mz/mz_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) ) 
 #ОД 1    
@@ -929,14 +2466,24 @@
     image mt tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/mt/mt_1_body2.png'), (0, 0), get_sprite_7dl('normal/mt/mt_1_sport.png'), (0, 0), get_sprite_ori('normal/mt/mt_1_sad.png')),  im.matrix.opacity(0.8) )
 #Славя 1
     image sl_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
-    image sl_opaq_dress = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('close/sl/sl_1_dress.png')), im.matrix.opacity(0.8) )
-#Унылка 1
-    image un_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png')), im.matrix.tint(0.01, 0.01, 0.01) )
-    image un tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')),  im.matrix.opacity(0.8) )
-    image un tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
-    image un tr3 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
-    image un tr4 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
+    image sl2_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/sl/sl_1_body2.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_dress.png')), im.matrix.tint(0.01, 0.01, 0.01) )
     
+    image sl opaq_dress = ConditionSwitch("persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((1050,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'),(0,0), im.MatrixColor(get_sprite_ori('close/sl/sl_1_dress.png'), im.matrix.opacity(0.8)),(0,0), get_sprite_ori('close/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0) ), "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((1050,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'),(0,0), im.MatrixColor(get_sprite_ori('close/sl/sl_1_dress.png'), im.matrix.opacity(0.8)),(0,0), get_sprite_ori('close/sl/sl_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82) ), True,im.Composite((1050,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'),(0,0), im.MatrixColor(get_sprite_ori('close/sl/sl_1_dress.png'), im.matrix.opacity(0.8)),(0,0), get_sprite_ori('close/sl/sl_1_normal.png')) )
+    
+    image sl tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')),  im.matrix.opacity(0.8) )
+    image sl tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
+    image sl tr3 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_upset.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
+    image sl tr4 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
+#Унылка 1
+    image un_shade = At(im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png')), im.matrix.tint(0.01, 0.01, 0.01) ), close_sprites)
+    image un tr1 modern = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')),  im.matrix.opacity(0.8) )
+    image un tr2 modern = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
+    image un tr3 modern = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
+    image un tr4 modern = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
+    image un tr1 dress = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_dress.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')),  im.matrix.opacity(0.8) )
+    image un tr2 dress = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_dress.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
+    image un tr3 dress = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_dress.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
+    image un tr4 dress = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_dress.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
 #Дваче 3
     image dv tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')),  im.matrix.opacity(0.8) )
     image dv tr21 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.7) )
@@ -945,19 +2492,17 @@
     image dv tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
     image dv tr3 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
     image dv tr4 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
-    
 #Мику
     image mi tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')),  im.matrix.opacity(0.6) )
     image mi tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')), im.matrix.tint(0.4, 0.4, 0.4)* im.matrix.opacity(0.4) )
     image mi tr3 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_2_body.png'), (0, 0), get_sprite_7dl('normal/mi/mi_2_casual.png'), (0, 0), get_sprite_ori('normal/mi/mi_2_sad.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.2) )
     
+    image mi_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/mi/mi_1_body.png'), (0, 0), get_sprite_ori('normal/mi/mi_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
 #Дваче 4
     image dv_shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_4_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_4_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
-    
 #Ульяна
     image us tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_normal.png')), im.matrix.tint(0.5, 0.5, 0.5)* im.matrix.opacity(0.5) )
     image us tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/us/us_1_body.png'), (0, 0), get_sprite_ori('normal/us/us_1_sport.png'), (0, 0), get_sprite_ori('normal/us/us_1_normal.png')), im.matrix.tint(0.3, 0.3, 0.3)* im.matrix.opacity(0.3) )
-    
 #Кошонка-распашонка 1
     image uv black silhouette = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/uv/uv_1_body.png'), (0, 0), get_sprite_ori('normal/uv/uv_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
     image uv shade2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/uv/uv_2_body.png'), (0, 0), get_sprite_ori('normal/uv/uv_2_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
@@ -965,36 +2510,13 @@
     image uv shade4 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/uv/uv_4_body.png'), (0, 0), get_sprite_ori('normal/uv/uv_4_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
 #Ln
     image ln shade s = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_normal.png')), im.matrix.tint(0.01, 0.01, 0.01) )
-    
     image ln shade = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_7dl('normal/ln/ln_1_body.png'), (0, 0), get_sprite_7dl('normal/ln/ln_1_pioneer.png')), im.matrix.tint(0.01, 0.01, 0.01) )
 
-#extra
-    image sl serious body = ConditionSwitch(
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_1_body.png'), (0,0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_1_body.png'), (0,0), get_sprite_ori('normal/sl/sl_1_serious.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
-    True,im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_1_body.png'), (0,0), get_sprite_ori('normal/sl/sl_1_serious.png')) )
-    
-    image sl laugh body = ConditionSwitch(
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_2_body.png'), (0,0), get_sprite_ori('normal/sl/sl_2_laugh.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_2_body.png'), (0,0), get_sprite_ori('normal/sl/sl_2_laugh.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
-    True,im.Composite((900,1080), (0,0), get_sprite_ori('normal/sl/sl_2_body.png'), (0,0), get_sprite_ori('normal/sl/sl_2_laugh.png')) )
-    
-    image sl normal body close = ConditionSwitch(
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((675,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'), (0,0), get_sprite_ori('close/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((675,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'), (0,0), get_sprite_ori('close/sl/sl_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
-    True,im.Composite((675,1080), (0,0), get_sprite_ori('close/sl/sl_1_body.png'), (0,0), get_sprite_ori('close/sl/sl_1_normal.png')) )
-    
-    image mt shocked pioneer close = ConditionSwitch(
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((675,1080), (0,0), get_sprite_ori('close/mt/mt_2_body.png'), (0,0), get_sprite_ori('close/mt/mt_2_pioneer.png'), (0,0), get_sprite_ori('close/mt/mt_2_shocked.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((675,1080), (0,0), get_sprite_ori('close/mt/mt_2_body.png'), (0,0), get_sprite_ori('close/mt/mt_2_pioneer.png'), (0,0), get_sprite_ori('close/mt/mt_2_shocked.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
-    True,im.Composite((675,1080), (0,0), get_sprite_ori('close/mt/mt_2_body.png'), (0,0), get_sprite_ori('close/mt/mt_2_pioneer.png'), (0,0), get_sprite_ori('close/mt/mt_2_shocked.png')) )
-    
-    image pi = ConditionSwitch(
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/pi/pi_1_pioneer.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((900,1080), (0,0), get_sprite_ori('normal/pi/pi_1_pioneer.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
-    True,im.Composite((900,1080), (0,0), get_sprite_ori('normal/pi/pi_1_pioneer.png')) )
-    
-    image sl normal sport far = ConditionSwitch(
-    "persistent.sprite_time=='sunset'",im.MatrixColor( im.Composite((630,1080), (0,0), get_sprite_ori('far/sl/sl_1_body.png'),(0,0), get_sprite_ori('far/sl/sl_1_sport.png'),(0,0), get_sprite_ori('far/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0) ),
-    "persistent.sprite_time=='night'",im.MatrixColor( im.Composite((630,1080), (0,0), get_sprite_ori('far/sl/sl_1_body.png'),(0,0), get_sprite_ori('far/sl/sl_1_sport.png'),(0,0), get_sprite_ori('far/sl/sl_1_normal.png')), im.matrix.tint(0.63, 0.78, 0.82) ),
-    True,im.Composite((630,1080), (0,0), get_sprite_ori('far/sl/sl_1_body.png'),(0,0), get_sprite_ori('far/sl/sl_1_sport.png'),(0,0), get_sprite_ori('far/sl/sl_1_normal.png')) )
+######## Разное ########
+#Унылка отравленная, эмоция сожаление
+    image un sorrow modern poisoned = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.53, 0.88, 0.72)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')))
+    image un smile2 modern poisoned = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')), im.matrix.tint(0.53, 0.88, 0.72)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')))
+
+#Славя с im.matrix.saturation(0.3)    
+    image sl_gr normal casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.saturation(0.3)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')))
+    image sl_gr scared casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_scared.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_scared.png')), im.matrix.saturation(0.3)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_4_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_4_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_4_scared.png')))

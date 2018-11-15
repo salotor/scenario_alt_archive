@@ -702,7 +702,7 @@ label alt_day2_tournament_tour_1_new:
 
     elif alt_my_rival_1_tour.take == 'sl':
         show sl smile2 pioneer at cright with dspr
-        sl "Знаешь, я не очень хорошо в картах."
+        sl "Знаешь, я не очень хороша в картах."
         me "Да я вообще ничего про эту игру не знаю."
         "Славя улыбнулась мне и села напротив."
 
@@ -743,18 +743,18 @@ label alt_day2_tournament_tour_1_new:
         menu:
             "Играть самостоятельно":
                 pass
-            "Победа в финале." if persistent.altCardsWon3_new:
+            "Победа в финале" if persistent.altCardsWon3_new:
                 $ alt_day2_detour_1_tour = True                         # Пропускаем 1 тур
                 $ alt_day2_detour_semifinal = True                      # Пропускаем полуфинал
                 $ alt_day2_detour_final = True                          # Пропускаем финал
                 $ alt_day2_tournament_fast_win = True                   # Победа в финале на холяву
                 $ karma += 10
-            "Поражение в финале." if persistent.altCardsWon2_new:
+            "Поражение в финале" if persistent.altCardsWon2_new:
                 $ alt_day2_detour_1_tour = True                         # Пропускаем 1 тур
                 $ alt_day2_detour_semifinal = True                      # Пропускаем полуфинал
                 $ alt_day2_detour_final = True                          # Пропускаем финал
                 $ karma -= 10
-            "Поражение в полуфинале." if persistent.altCardsWon1_new:
+            "Поражение в полуфинале" if persistent.altCardsWon1_new:
                 $ alt_day2_detour_1_tour = True                         # Пропускаем 1 тур
                 $ alt_day2_detour_semifinal = True                      # Пропускаем полуфинал
                 $ karma -= 10
@@ -2810,7 +2810,7 @@ label alt_day2_final_win_end_new:
 
     elif alt_my_rival_final.take == 'sl':
         $ lp_sl += 1
-        play music music_7dl["Please_Reprise"] fadein 3
+        play music music_7dl["please_reprise"] fadein 3
         show sl smile pioneer with dspr
         "Я победил?"
         "Победил?!"
