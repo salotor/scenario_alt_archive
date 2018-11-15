@@ -1,6 +1,6 @@
 init 1 python:
     presentscript_font = default_7dl_path + "Pics/fonts/presentscript.ttf"
-    link_font = default_7dl_path + "Pics/fonts/calibri"
+    link_font = default_7dl_path + "Pics/fonts/calibri.ttf"
     
     style.alt_settings_textbutton = Style(style.base_font)
     style.alt_settings_textbutton.font  = presentscript_font
