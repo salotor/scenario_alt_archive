@@ -181,14 +181,14 @@ init 9999 python:
             "dv_7dl_reject_ussr",
             "sdl_achv_dv_rejc_US",
             {},
-            sdl_achv_Replay("alt_day7_dv_7dl_rej_rf_end", {"alt_replay_on" : "True"})
+            sdl_achv_Replay("alt_day7_dv_7dl_rej_ussr_end", {"alt_replay_on" : "True"})
         ),
         sdl_achv_Achievement(    # Реджект-РФ
             "acm_logo_dv_gohome",
             "dv_7dl_reject_rf",
             "sdl_achv_dv_rejc_RF",
             {},
-            sdl_achv_Replay("alt_day7_dv_7dl_rej_ussr_end", {"alt_replay_on" : "True"})
+            sdl_achv_Replay("alt_day7_dv_7dl_rej_rf_end", {"alt_replay_on" : "True"})
         ),
         sdl_achv_Achievement(    # Транзит-Ольга
             "acm_logo_dv_drunk",
