@@ -1294,6 +1294,7 @@ init:
     $ music_7dl["vibe"] = get_music_7dl("vibe_7dl.ogg")
     $ music_7dl["viola"] = get_music_7dl("viola_7dl.ogg")
     
+    $ music_7dl["walking_away"] = get_music_7dl("walking_away_7dl.ogg")
     $ music_7dl["war_to_fight"] = get_music_7dl("war_to_fight_7dl.ogg")
     $ music_7dl["what_am_i_doing_here"] = get_music_7dl("what_am_i_doing_here_7dl.ogg")
     $ music_7dl["what_cost"] = get_music_7dl("what_cost_7dl.ogg")

@@ -13635,7 +13635,7 @@ label alt_day7_dv_7dl_rej_rf_end:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
     with vpunch
-    play music music_7dl["regret"] fadein 3
+    play music music_7dl["walking_away"] fadein 3
     call alt_7dl_titles
     $ renpy.pause(2)
     return
