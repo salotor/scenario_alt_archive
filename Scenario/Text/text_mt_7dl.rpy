@@ -864,7 +864,7 @@ label alt_day6_mt_7dl_un_morning:
     stop music fadeout 3
     "Я кивнул. Каким-то тысячным чувством понимал, что скажут мне сейчас нечто крайне важное."
     "Крайне…"
-    play music music_7dl["Sad_Piano"] fadein 3
+    play music music_7dl["sad_piano"] fadein 3
     un "Одна моя подруга ездила в лагерь, где познакомилась с мальчиком."
     "Лена замолчала."
     me "Суровая история. Это всё?"
