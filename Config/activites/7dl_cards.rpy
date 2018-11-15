@@ -15,7 +15,7 @@
     show mt normal pioneer with dspr
     mt "Всё хорошо! {w}Тянем жребий и по нему распределяемся на пары."
     mt "А то знаю я эти договорные матчи!"
-    "Не прошло и пяти минут, а мы уже разбились по парам."
+    "Не прошло и пяти минут, а мы уже разбились по парам."    # надо бы здесь уже выводить менюшку выбора исхода турнира. А то возникают ситуации, когда игрок выбирает результат игры в финале с тем, с кем уже в первом коне должен был играть. Да и проблемы с инициализацией переменных турнира случаются (попалась Лена в первом коне - выбран результат поражения Лене в финале - Герк у домика Лены думает о том, что победил Лену в 1 коне).
     "Мне в оппоненты рандом послал"
     call alt_shuffler
     
@@ -32,7 +32,7 @@
         me "И снова добрый вечер."
         "Она смущённо улыбнулась, но ничего не сказала."
 
-    elif alt_pe == 2:#
+    elif alt_pe == 2:
         show sl smile2 pioneer at cright with dspr
         extend " Славю."
         sl "Знаешь, я не очень хорошо в картах."
@@ -46,13 +46,13 @@
         "Усмехнулась она, садясь на противоположное место."
         me "А как же. {w}Я принесу на твою могилку два гладиолуса."
 
-    elif alt_pe == 4:#
+    elif alt_pe == 4:
         show mi smile pioneer at cright with dspr
         extend " Мику."
         mi "Ой, привет, Сенечка, а что за игра такая, ты не знаешь? А то меня позвали играть, а правила не объяснили."
         "Не переставая болтать, она села за стол и сложила руки."
 
-    elif alt_pe == 5:#
+    elif alt_pe == 5:
         show us laugh pioneer at cright with dspr
         extend " Ульяну."
         us "Готов поддаваться?"
@@ -62,13 +62,13 @@
         me "Это по каким это?"
         us "Увидишь!"
         
-    elif alt_pe == 6:#
+    elif alt_pe == 6:
         show sh normal pioneer at cright with dspr
         extend " Шурика."
         sh "Ну что, пусть победит сильнейший?"
         "Я молча пожал ему руку."
 
-    elif alt_pe == 7:#
+    elif alt_pe == 7:
         show mz normal pioneer at cright with dspr
         extend " Женю."
         mz "Я твой противник."
@@ -78,52 +78,52 @@
     
     if persistent.altCardsWon1 or persistent.altCardsFail:
         menu:
-            "Играть самостоятельно.":
+            "Играть самостоятельно":
                 jump alt_day2_participate
-            "Победа в финале." if persistent.altCardsWon3:
+            "Победа в финале" if persistent.altCardsWon3:
                 menu:
-                    "Лена.":
+                    "Лена":
                         $ alt_day2_f1 = 1
-                    "Славя.":
+                    "Славя":
                         $ alt_day2_f1 = 2
-                    "Алиса.":
+                    "Алиса":
                         $ alt_day2_f1 = 3
-                    "Мику.":
+                    "Мику":
                         $ alt_day2_f1 = 4
-                    "Ульяна.":
+                    "Ульяна":
                         $ alt_day2_f1 = 5
-                    "Шурик.":
+                    "Шурик":
                         $ alt_day2_f1 = 6
-                    "Женя.":
+                    "Женя":
                         $ alt_day2_f1 = 7
                 $ alt_day2_round3 = 2
                 $ karma += 10
                 jump alt_day2_final_win
-            "Поражение в финале." if persistent.altCardsWon2:
+            "Поражение в финале" if persistent.altCardsWon2:
                 menu:
-                    "Лена.":
+                    "Лена":
                         $ alt_day2_f1 = 1
-                    "Славя.":
+                    "Славя":
                         $ alt_day2_f1 = 2
-                    "Алиса.":
+                    "Алиса":
                         $ alt_day2_f1 = 3
-                    "Мику.":
+                    "Мику":
                         $ alt_day2_f1 = 4
-                    "Ульяна.":
+                    "Ульяна":
                         $ alt_day2_f1 = 5
-                    "Шурик.":
+                    "Шурик":
                         $ alt_day2_f1 = 6
-                    "Женя.":
+                    "Женя":
                         $ alt_day2_f1 = 7
                 $ alt_day2_round3 = 1
                 $ karma -= 10
                 jump alt_day2_final_fail
-            "Поражение в полуфинале.":
+            "Поражение в полуфинале":
                 call alt_day2_qf_analizer
                 $ alt_day2_round2 = 1
                 $ karma -= 10
                 jump alt_day2_semifinal_fail
-            "Поражение в первом же коне.":
+            "Поражение в первом же коне":
                 $ alt_day2_round1 = 1
                 jump alt_day2_participate_fail
 
@@ -758,7 +758,7 @@ label alt_day2_participate_win:
         hide un with dissolve
         "А я не мог сдержать ликования."
         th "Я подебил! То есть, я победил."
-        dreamgirl "Ура! {w=.4} У девочки. {w=.4}В игру, которую ни ты, ни она не знаете. {w}Велико достижение."
+        dreamgirl "Ура! {w=.4}У девочки. {w=.4}В игру, которую ни ты, ни она не знаете. {w}Велико достижение."
         th "Заткнись, внутренний голос."
         th "Я буду радоваться победе так, как буду радоваться только в финале, когда раскатаю эту рыжую нахалку с сухим счётом!"
         dreamgirl "Нет, ну ты и правда герой. Спору нет."
@@ -899,7 +899,7 @@ label alt_day2_participate_win:
                         hide dv with dissolve
                         window hide
                         
-                "Партия.":
+                "Партия":
                     "Алиса кивнула и молча поднялась из-за стола."
                     pass
         else:
@@ -934,7 +934,7 @@ label alt_day2_participate_win:
                     "Моя улыбка вышла извиняющейся."
                     me "Тогда увидимся."
                     "Мику кивнула и встала из-за стола."
-                "Всегда рад.":
+                "Всегда рад":
                     "Я улыбнулся."
                     me "Если вдруг захочешь ещё как-нибудь сыграть, обращайся!"
                     "Мику кивнула и встала из-за стола."
@@ -1037,7 +1037,7 @@ label alt_day2_participate_win:
                         "Правда, попутно наступила мне на ногу — пускай."
                         "Я был благодушен и простил ей эту маленькую шалость."
                         jump alt_day2_semifinal
-                    "Ладно. Как хочешь.":
+                    "Ладно. Как хочешь":
                         $ lp_us += 1
                         $ alt_day2_revanche = True
                         jump alt_day2_tournament_start
@@ -2217,7 +2217,7 @@ label alt_day2_final_win:
         hide dv with dissolve
     elif alt_day2_f1 == 2:
         $ lp_sl += 1
-        play music music_7dl["Please_Reprise"] fadein 3
+        play music music_7dl["please_reprise"] fadein 3
         show sl smile pioneer with dspr
         "Я победил?"
         "Победил?!"
@@ -2237,7 +2237,7 @@ label alt_day2_final_win:
         sl "Ты — победитель."
         "Как в боксе, она стоит рядом со мной."
         "Хватает меня за запястье."
-        "И тянет к небу поднятой рукой"
+        "И тянет к небу поднятой рукой."
         sl "Се-{w}мён!  Се-{w}мён!"
         "Скандирует она."
         "Трудно бороться с чувством сюрреалистичности происходящего."
@@ -2256,7 +2256,10 @@ label alt_day2_final_win:
         "Судя по сузившимся глазам Слави, не я один."
         "Но я обернулся."
         show dv smile pioneer2 at cleft with dissolve
-        dv "Ты победил в споре и турнире."
+        if alt_day2_dv_bet_approve:
+            dv "Ты победил в споре и турнире."
+        else:
+            dv "Молоток!"
         "Она ткнула меня кулаком в плечо и, развернувшись, растворилась в толпе."
         window hide
     elif alt_day2_f1 == 3:
@@ -2404,7 +2407,7 @@ label alt_day2_final_win:
         show sh rage pioneer with dspr
         sh "Значит, победил?"
         "Медленно произнёс он."
-        "Он так странно стоял, что никак не мог разглядеть его глаз из-за бликов на очках."
+        "Он так странно стоял, что я никак не мог разглядеть его глаз из-за бликов на очках."
         show sh serious pioneer with dspr
         "Да и сама его поза…"
         "Почему-то вдруг вспомнился персонаж Элайджи Вуда из «Города Грехов»."
@@ -2425,6 +2428,7 @@ label alt_day2_final_win:
             ease 0.3 yalign .4 zoom 1.25
         "Он сделал резкий шаг в мою сторону и протянул руку."
         mt "Шурик!"
+        stop music fadeout 3
         play ambience ambience_dining_hall_full fadein 5
         show blinking
         scene bg int_dining_hall_sunset
