@@ -383,7 +383,8 @@ label alt_day4_sl_7dl_breakfast:
     sl "Один ты, боюсь, не справишься, так что я тебе несколько мальчиков из второго отряда пришлю."
     if herc or loki:
         menu:
-            "Пусть Шварценеггер таскает!" if loki:    # урезать карму за отлынивание не нужно? А то у Локи без разницы, что выбирать - ни карма, ни лп не меняются в обоих вариантах
+            "Пусть Шварценеггер таскает!" if loki:
+                $ karma -= 10
                 show sl serious pioneer with dspr
                 sl "Неужели помочь не хочешь?"
                 me "Как ты догадалась?"
@@ -28918,7 +28919,7 @@ label alt_day7_sl_7dl_herc_neon:
     window hide
     scene black
     with dissolve
-    play ambience ambience_camp_entrance_evening fadein 3
+    play ambience ambience_camp_center_day fadein 3
     play music music_7dl["game_of_shadows"] fadein 3
     th "Надо бы сходить, окно закрыть."
     "Вяло подумал я."
