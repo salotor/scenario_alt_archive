@@ -2364,13 +2364,13 @@ label alt_day1_meeting2:
                     "Нечто…"
                     show blackout_exh
                     if herc:
-                        show expression SS_com{"bg int_store_7dl"}
+                        show expression SS_com("bg int_store_7dl")
                     elif loki:
-                        show expression SS_com{"cg d7_sl_gonna_be_ok_7dl"}
+                        show expression SS_com("cg d7_sl_gonna_be_ok_7dl")
                     elif d3:
-                        show expression SS_com{"cg d5_me_Alisa_7dl"}
+                        show expression SS_com("cg d5_me_Alisa_7dl")
                     else:
-                        show expression SS_com{"bg ext_underwater_7dl"}
+                        show expression SS_com("bg ext_underwater_7dl")
                     pause(.2)
                     scene expression Desat("bg ext_stage_big_sunset_7dl")
                     "Я шумно выдохнул, смахивая с глаз пелену."
@@ -3768,7 +3768,7 @@ label alt_day1_sleep:
             "Я последовательно вспомнил всех, кого довелось сегодня встретить, и согласно кивнул."
         else:
             $ alt_day1_sl_keys_took = 1
-            "Я уже обогнул постамент бронзовому балбесу с непонятным не то именем, не то фамилией, как вдруг моё внимание привлёк металлический блеск."
+            "Я уже обогнул памятник бронзовому балбесу с непонятным не то именем, не то фамилией, как вдруг моё внимание привлёк металлический блеск."
             th "Что это…"
             "Я подошёл поближе и подобрал…"
             th "Бесхозные ключики? {w}Должно быть, наша активистка их обронила."

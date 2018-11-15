@@ -726,6 +726,8 @@ init:
     image cg d6_mi_swimming_7dl = get_image_7dl("cg/d6_mi_swimming_7dl.jpg")
     image cg d6_mi_vyluthere_7dl = get_image_7dl("cg/d6_mi_vyluthere_7dl.jpg")
     
+    image cg d6_mt_salute_7dl = get_image_7dl("cg/d6_mt_salute_7dl.jpg")
+    
     image cg d6_sl_bag_7dl = get_image_7dl("cg/d6_sl_bag_7dl.png")
     image cg d6_sl_clean_7dl = get_image_7dl("cg/d6_sl_clean_7dl.jpg")
     image cg d6_sl_clean_dress_7dl = get_image_7dl("cg/d6_sl_clean_dress_7dl.jpg")
