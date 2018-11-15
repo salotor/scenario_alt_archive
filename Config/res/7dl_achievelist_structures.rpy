@@ -524,7 +524,7 @@ init 9999 python:
             {
                 sdl_achv_Prerequisite({"us_7dl_good"}, "sdl_achv_info_end", "acm_logo_us_semische")
             },
-            sdl_achv_Replay("alt_day7_us_7dl_ever_after", {"alt_replay_on" : "True"})
+            sdl_achv_Replay("alt_day7_us_px_fairytale", {"alt_replay_on" : "True"})
         ),
         sdl_achv_Achievement(    # Гуд
             "acm_logo_us_px",
