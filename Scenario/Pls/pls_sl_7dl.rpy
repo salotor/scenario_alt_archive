@@ -219,7 +219,7 @@ label alt_day7_sl_7dl_start:
     if routetag == "sl7dltrue" and not alt_day7_sl_7dl_freewill:
         $ persistent.sprite_time = "sunset"
         $ prolog_time()
-        $ alt_chapter(6, u"Славя. 7ДЛ. Тру")
+        $ alt_chapter(6, u"Славя. 7ДЛ. Истинная")
         call alt_day7_sl_7dl_true
         pause(1)
         return
@@ -236,7 +236,6 @@ label alt_day7_sl_7dl_start:
         $ routetag = "sl7dlbad"
     $ alt_chapter(7, u"Славя. 7ДЛ. Эпилог")
     if lp_sl >= 20:
-        $ routetag = "sl7dlgood"    # это точно надо? оно же отменяет только что выставленные sl7dlneu и sl7dluv
         if karma < 120:
             call alt_day7_sl_7dl_rf_good
             pause(1)

@@ -2744,7 +2744,7 @@ label alt_day4_sl_old_camp2:
     "На плечо опустилось что-то тяжёлое."
     sl "Нельзя же… наверное."
     window hide
-    scene cg d5_sl_bench_7dl with dissolve
+    scene cg d5_sl_bench_sunset_7dl with dissolve
     "Славя положила голову мне на плечо и прикрыла глаза."
     sl "Неправильно это…"
     me "Но я же сегодня совершил подвиг."
@@ -7083,7 +7083,7 @@ label alt_day5_sl_fire:
     stop music fadeout 3
     "Бахнуло довольно громко — так, что все повскакивали с мест."
     "Показав мне язык, Ульянка убрала рогатку в карман и убежала."
-    play music music_7dl["Semische"] fadein 3
+    play music music_7dl["semische"] fadein 3
     "Лагерь загудел."
     "Все перепугались, мало приятного в том, что ты медитируешь, глядя в огонь, а тот вдруг взрывается."
     "Так и поседеть недолго."
@@ -7345,7 +7345,7 @@ label alt_day5_sl_fire:
     sl "День сегодня маетный выдался."
     me "Как и всегда у тебя."
     window hide
-    scene cg d5_sl_bench_7dl with blind_l
+    scene cg d5_sl_bench_night_7dl with blind_l
     sl "Тоже верно."
     me "Ты не дуешься на меня за сцену у костровой?"
     me "А то мало ли."
@@ -8667,7 +8667,7 @@ label alt_day6_sl_begin:
             "Какие у него есть доказательства?"
             "Я закурил — последняя, как символично."
             stop music
-            play music music_7dl["PleaseStopItMastered"] fadein 3
+            play music music_7dl["please_stop_it_mastered"] fadein 3
             window hide
             scene bg ext_square_day
             show prologue_dream
@@ -10990,7 +10990,7 @@ label alt_day6_sl_intellectual:
     "Пообещала дебелая тётка-ветеринар с добрыми, усталыми глазами человека, привыкшего спасать чужое счастье."
     voice "Просто не надо вам сейчас смотреть. Я позову."
     nvl clear
-    scene cg d5_sl_bench_7dl with dissolve
+    scene cg d5_sl_bench_neutral_7dl with dissolve
     "Сумасшедшее напряжение последних нескольких дней, постоянный недосып, усталость…"
     sl "Мы сделали это."
     me "Да. Сделали."
@@ -12605,7 +12605,7 @@ label alt_day6_sl_hala:
     me "Видишь ли, дело в том"
     if alt_sp >= 6:
         extend ", что там, у себя дома я умер."
-        play music music_7dl["Please_Reprise"] fadein 3
+        play music music_7dl["please_reprise"] fadein 3
         show sl scared pioneer close with dspr
         sl "ЧТО?!"
         "Славя прижала руки ко рту, глядя на меня широко распахнутыми глазами."
@@ -15145,25 +15145,13 @@ label alt_day7_sl_dinner:
                 me "Спасибо!"
                 "Новая надежда колотилась в висках, толкала ноги вперёд, прибавляя жару."
                 "И я бежал, бежал изо всех сил."
-                scene bg ext_house_of_sl_day with flash:
-                    pos (0,0) 
-                    linear 0.1 pos (-5,-5) 
-                    linear 0.1 pos (5,5) 
-                    pos (0,0) 
-                    linear 0.1 pos (0,-5) 
-                    linear 0.1 pos (0,5) 
-                    repeat
+                scene bg ext_house_of_sl_day at fast_running
+                with flash
                 dreamgirl "Если ты хочешь помолиться — сейчас самое время."
                 "Из-за бега голос моей карманной шизофрении слышался урывками."
                 th "Не накаркай!"
-                scene bg ext_square_day with flash:
-                    pos (0,0) 
-                    linear 0.1 pos (-5,-5) 
-                    linear 0.1 pos (5,5) 
-                    pos (0,0) 
-                    linear 0.1 pos (0,-5) 
-                    linear 0.1 pos (0,5) 
-                    repeat
+                scene bg ext_square_day at fast_running
+                with flash
                 dreamgirl "Но если я правильно помню регламент, начальник всегда уезжает в пересменок — чтобы сдать документацию и получить путёвки на следующую смену."
                 dreamgirl "А так как ему некому махать платочком, то вполне допустимо, что он мог…"
                 th "Заткнись!"
@@ -16382,13 +16370,13 @@ label alt_day7_sl_will:
     "И в обжигающе ледяной белизне протаяло:"
     "{i}Страшно хочется, чтоб она тебя обожала.{/i}"
     scene stars
-    show expression D3_intro("cg d5_sl_bench_7dl")
+    show expression D3_intro("cg d5_sl_bench_neutral_7dl")
     with dissolve
     "{i}Баловала и берегла.{/i}"
     "Отозвалась пустота."
     $ volume(0.3, 'music')
     window hide
-    scene cg d5_sl_bench_7dl with flash
+    scene cg d5_sl_bench_neutral_7dl with flash
     play sound sfx_7dl["nesmogla"] fadein 2
     "Стишок, что когда-то я так и не прочитал ей."
     $ volume(0.9, 'music')
@@ -16405,7 +16393,7 @@ label alt_day7_sl_will:
     "Завершающим vale письма…"
     show alt_letter timeskip11 at truecenter with zoomin
     $ renpy.pause(3, hard=True)
-    scene cg d5_sl_bench_7dl with dissolve
+    scene cg d5_sl_bench_neutral_7dl with dissolve
     "А я часто-часто моргаю в дырчатые панели звукоизоляции потолка, стараясь не разреветься."
     me "Не смогла…"
     "Зачем-то внятно произношу я."
@@ -16583,7 +16571,7 @@ label alt_day7_sl_good:
     with fade3
     stop music fadeout 3
     $ renpy.pause(3)
-    play music music_7dl["Please_Reprise"] fadeout 3
+    play music music_7dl["please_reprise"] fadeout 3
 
     "В мире ничто не даётся задаром, забесплатно и просто так."
     "Абсолютно за всё приходится платить — даже за иллюзию сохранения status quo."

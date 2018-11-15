@@ -835,7 +835,7 @@ label alt_day6_us_7dl_helping:
         "Отчаянно выкрикнула девочка."
         us "Я думала вчера, сегодня."
         us "Что тебе нужно от меня, Сёмыч, можешь сказать? Зачем ты ходишь за мной?"
-        "Я почувствовал, как краснею."
+        "Я почувствовал, как краснею."    # with flash_pink/red?
         me "Да ничего! Разве для помощи товарищу нужен какой-нибудь повод?"
         show us normal pioneer with dspr
         us "Балда ты, Сёмыч."
@@ -3064,29 +3064,15 @@ label alt_day6_us_7dl_button:
     th "Нельзя её ногой по шее."
     "Хотя хотелось, что уж там."
     window hide
-    scene bg ext_house_of_dv_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_house_of_dv_day at fast_running
+    with flash
     "Но так или иначе, мы понеслись по лагерю, искусно лавируя между там и сям вышагивающими вожатыми, пионерами…"
     "Которые, по идее, должны бы спать, ибо тихий час по лагерю!"
     "Или хотя бы репетировать."
     stop music fadeout 3
     window hide
-    scene bg ext_square_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_square_day at fast_running
+    with flash
     play music music_list["went_fishing_caught_a_girl"] fadein 3
     us "Сёмыч, если будешь делать такое лицо, я отведу тебя к Виоле, чтобы дала тебе слабительного."
     "Пропыхтела Ульяна, не сбавляя шага."
@@ -3516,27 +3502,13 @@ label alt_day6_us_7dl_button:
                 "Из окошка захохотали, и надо мной из окна белой молнией вылетело привидение."
                 "Хохочущее знакомым смехом!"
                 "Сгруппировавшись и перекатившись, оно, завывая и улюлюкая, бросилось бежать."
-                scene bg ext_clubs_day with flash:
-                    pos (0,0) 
-                    linear 0.1 pos (-5,-5) 
-                    linear 0.1 pos (5,5) 
-                    pos (0,0) 
-                    linear 0.1 pos (0,-5) 
-                    linear 0.1 pos (0,5) 
-                    repeat
-                with dissolve
+                scene bg ext_clubs_day at fast_running
+                with flash
                 "Ну, а я, соответственно, за ним."
                 th "Догоню — высеку."
                 "Пообещал себе я."
-                scene bg ext_square_day with flash:
-                    pos (0,0) 
-                    linear 0.1 pos (-5,-5) 
-                    linear 0.1 pos (5,5) 
-                    pos (0,0) 
-                    linear 0.1 pos (0,-5) 
-                    linear 0.1 pos (0,5) 
-                    repeat
-                with dissolve
+                scene bg ext_square_day at fast_running
+                with flash
                 "Внутренний голос пытался добавлять какие-то похабности, но мной сейчас двигала жажда воспитательной мести!"
                 "Ульянка в невесть откуда взявшемся пододеяльнике, бежала впереди меня и размахивала руками."
                 "Мне не удавалось сократить дистанцию, но и ей оторваться не получалось."
@@ -9436,7 +9408,7 @@ label alt_day7_us_7dl_leaving:
     "Я послушно кивнул, глядя на то, как снаружи на стёкла автобуса плотной пеленой лёг серый туман, гасящий звуки, краски, свет…"
     window hide
     stop sound_loop fadeout 6
-    scene bg int_bus
+    scene bg int_bus_night
     with fade2
     "Последним осталось только биение сердца да затухающее эхо гула двигателя автобуса."
     if alt_day6_us_7dl_tr:
@@ -9456,6 +9428,8 @@ label alt_day7_us_7dl_leaving:
         me "Мне почему-то не по себе."
         "Признался я."
         us "Ты боишься чего-то?"
+        scene cg d7_us_epilogue_bus_7dl
+        with dissolve
         "Ульяна подвинулась ещё поближе ко мне и положила голову на плечо."
         "Настолько естественно и доверчиво, что я на миг захлебнулся от переполнявшей нежности."
         "И к кому?"
@@ -9536,9 +9510,12 @@ label alt_day7_us_7dl_leaving:
         us "Помоги мне, я не умею без тебя, не могу!"
         dreamgirl "Прощай."
         us "Не отпущу. Слышишь, не смей."
+        play sound sfx_face_slap
         "Она залепила мне ещё одну пощёчину и, наклонившись, впилась губами в мои губы."
         us "Давай же. Открывай глаза!"
+        play sound sfx_face_slap
         "Ещё пощёчина."
+        play sound sfx_face_slap
         "Ещё одна."
         dreamgirl "Лето завершено."
         us "Время… время просыпаться, Сёмыч!"
@@ -9657,7 +9634,7 @@ label alt_day7_us_7dl_leaving:
             "Я знал, понимал!"
             "Если в этой пустоте есть что-то, она перестаёт быть таковой."
             "Значит, нам нужно…"
-            "От кровоточащей спины во все стороны полоснуло чем—то ослепляюще ярким."
+            "От кровоточащей спины во все стороны полоснуло чем-то ослепляюще ярким."
             me "В глазах снова ясно, адреналин захлестнул!"
             "Вот оно самое страшное оружие против пустоты, которое я контрабандой пронёс сюда."
             "Я принёс «мы»."
@@ -9710,11 +9687,11 @@ label alt_day7_us_7dl_leaving:
             with dissolve
             play music music_7dl["emptiness"] fadein 3
             "И тут же Мы перестали существовать."
-            "Щёку мне обожгло не по-детски злой пощёчиной."
             play sound sfx_face_slap
             with vpunch
             with flash_red
             show us angry sport close with dissolve
+            "Щёку мне обожгло не по-детски злой пощёчиной."
             us "Ты что натворил, гад! Гад!"
             me "Успокойся."
             hide us with dissolve
@@ -9725,6 +9702,8 @@ label alt_day7_us_7dl_leaving:
             "Слёзы брызнули из глаз девочки."
             "Она так яростно замотала головой, что её «ракеты» потеряли форму."
             "А мне по носу прилетело полурасплетённым хвостом."
+            with vpunch
+            with flash_red
             "И пока я жмурился и наощупь проверял наличие глаза, получил ещё один пинок в живот."
             "Ульяна отскочила."
             show us2 dontlike sport with dissolve
@@ -9943,17 +9922,17 @@ label alt_day7_us_7dl_leaving:
         un "Она стёртая, Семён. Восстановленная стёртая, вторичное свидетельство о рождении…"
         un "А у меня теперь есть хотя бы уверенность в том, что у нас хоть что-то получится."
         me "Но к чему это? Зачем? Разве я не мог бы сам…"
-        show un tr1 with dissolve
+        show un tr1 dress with dissolve
         un "Тебе казалось, что ты следуешь зову сердца, своей воле."
         un "А на самом деле, ты просто исполнил отчаянное желание влюблённой в тебя дурочки."
         un "И сейчас исполняешь."
         me "Я выбрал тебя сам. Осознанно!"
-        show un tr2 with dspr
+        show un tr2 dress with dspr
         un "Я знаю."
         "Улыбнулись прозрачные уже губы."
         un "Потому что я загадала тебя."
         un "Я так сильно тебя любила, что ничего другого не могла загадать."
-        show un tr3 with dspr
+        show un tr3 dress with dspr
         un "А теперь прощай."
         me "Что? Но как же твоё желание?"
         un "Оно обязательно исполнится."
@@ -10448,7 +10427,7 @@ label alt_day7_us_7dl_mikuforever:
     me "Мику."
     "Упавшим голосом констатировал я."
     me "Но тебя же не существует, ты же…"
-    play music music_7dl["Semische"] fadein 3
+    play music music_7dl["semische"] fadein 3
     voice "Хватит хулиганить, я сейчас полицию вызову!"
     "Донёсся откуда-то скрипучий голос."
     "Но я его уже не слышал."
@@ -10885,7 +10864,7 @@ label alt_day7_us_7dl_reunite:
         play ambience ambience_cold_wind_loop fadein 3
         scene bg ext_road_winter_7dl
         "Когда мы дошли от остановки до самого места, где по моим подсчётам должен был располагаться лагерь, там не было ничего."
-        "Мы с Ульяной облазили все окрестности, обыскали все места — нет, нет и нет."
+        "Мы с Ульяной облазили все окрестности, обыскали все места — нет, нет и нет."    ##
         "Да и откуда бы ему взяться в мире, где слыхом никто не слыхивал про Генду?"
         "Кого б им тогда на центральной площади поставить? Ленина? Или Иосифа Виссарионыча?"
         "Зря только ездили."
@@ -10898,7 +10877,7 @@ label alt_day7_us_7dl_reunite:
         "Но что есть, то есть. Мы теперь постоянно вместе."
         "Как Шерочка с Машерочкой."
         "Вот только из машины она не пошла, отмахнулась, мол, дудки, дураков мёрзнуть нема."
-        "Вот и лазил я один по сугробам и буеракам, прекрасно понимая, что никакого лагеря здесь нет и быть не может."
+        "Вот и лазил я один по сугробам и буеракам, прекрасно понимая, что никакого лагеря здесь нет и быть не может."    ## так он один или с Улькой всё облазил?
         "В итоге это понял и я."
         "Вздохнул и отправился обратно."
         "Только вот дойти я не успел."
@@ -10912,7 +10891,7 @@ label alt_day7_us_7dl_reunite:
         "Она хитро улыбнулась."
         "Развернув обёртку и открыв футляр, я недоуменно уставился на Ульяну."
         me "Труба? Но зачем?!"
-        "Девочка уставилась себе под ноги, ковыряя пяткой ботинка снег."
+        "Девочка уставилась себе под ноги, ковыряя пяткой ботинка снег."    # grin надо сменить. shy2?
         us "Я вижу, как ты тоскуешь. Вижу."
         us "Тебе очень нужна музыка, так что я немного подкопила, и вот…"
         "Я схватился за голову и простонал:"
@@ -10941,7 +10920,7 @@ label alt_day7_us_7dl_reunite:
         "Всё застыло в единственном хрупком миге."
         "Я набрал в грудь побольше воздуха, и…"
         play music music_7dl["moment"] fadein 3
-        "Под потолок квартиры вспорхнула полузабытая песня, о которой, пожалуй, я больше всего тосковал всё это время."
+        "Под потолок квартиры вспорхнула полузабытая песня, о которой, пожалуй, я больше всего тосковал всё это время."    # они вроде как на месте, где должен быть лагерь, а не в квартире были. А если это глюки Сёмы - надо бг на квартиру сменить
         us "Сёмыч, ты плачешь."
         me "Я знаю."
         stop music fadeout 3
@@ -11464,7 +11443,7 @@ label alt_day7_us_7dl_ever_after:
     uv "Целуйтесь и плодитесь, что вам надо ещё?"
     uv "Нет, давай умрём! Давай пострадаем и просрём всё, чего добились!"
     show uv dontlike at right
-    show us dontlike sport at zenterleft
+    show us2 dontlike sport at zenterleft
     with move
     us "А кто вы такая вообще, тётенька?"
     "Только сейчас я обратил внимание на то, что до сих пор сжимаю в руке ладошку Ульяны."
@@ -11475,7 +11454,7 @@ label alt_day7_us_7dl_ever_after:
     me "Но мы и правда не знаем, кто ты такая!"
     "Возмутился я."
     me "Я спать ложился, думал… Обо всяком. А тут ты. И кричишь."
-    show us smile sport with dspr
+    show us2 smile sport with dspr
     us "Злая кошка!"
     show uv surprise2 with dspr
     uv "Значит, вы ничего не знаете и не помните?"
@@ -11483,7 +11462,7 @@ label alt_day7_us_7dl_ever_after:
     show uv surprise with dspr
     uv "И как вы тогда здесь оказались?"
     "Мы с Ульяной переглянулись."
-    show us normal sport with dspr
+    show us2 normal sport with dspr
     us "Тётенька, а откуда у вас уши кошачьи?"
     show uv shocked with dspr
     uv "Да отстань ты от моих ушей!"
@@ -11491,7 +11470,7 @@ label alt_day7_us_7dl_ever_after:
     show uv normal with dspr
     uv "Вы мне можете сказать, два идиота, за каким псом вам обратно в лагерь потребовалось?"
     uv "Вам же уже выдали счастья в обе руки, что вам надо ещё?"
-    show us sad sport with dspr
+    show us2 sad sport with dspr
     us "Сёмыч, кто это такая?"
     me "Да не знаю я. Но она, похоже, сама нас знает."
     show uv smile with dspr
@@ -11504,17 +11483,17 @@ label alt_day7_us_7dl_ever_after:
     me "Смеётся ещё…"
     show uv normal with dspr
     uv "Я повторяю вопрос в третий раз: зачем вам понадобилось возвращаться в лагерь?"
-    show us calml sport with dspr
+    show us2 calml sport with dspr
     "Ульяна снова посмотрела на меня, а я кивнул."
     "Ей это не очень понравилось, тем не менее, она забубнила:"
     us "Там есть один причал, с которого…"
     show uv grin with dspr
     uv "Да, наслышана про это ваше мракобесие. Но при чём здесь лагерь?"
-    show us surp3 sport with dspr
+    show us2 surp3 sport with dspr
     us "В смысле?! Огоньки можно запускать только оттуда!"
     show uv laugh with dspr
     uv "И правда, идиоты. Огоньки можно запускать откуда угодно."
-    show us dontlike sport with dspr
+    show us2 dontlike sport with dspr
     us "Тётенька, хватит обзываться! Я пробовала запускать, ничего не получилось!"
     uv "Плохо пробовала, значит! Надо стараться лучше."
     me "Ладно, от нас ты что хотела узнала, теперь твой черёд отвечать на вопросы."
@@ -11525,7 +11504,7 @@ label alt_day7_us_7dl_ever_after:
     "Девушка тут же встряхнулась, сбросила с себя плохое настроение и снова озорно блеснула глазами:"
     uv "Жизнь вообще штука сложная. Привыкай."
     uv "Но я правильно понимаю, что вы, два дурака, собрались помирать, чтобы вернуться в лагерь?"
-    show us shy sport with dspr
+    show us2 shy sport with dspr
     "Мы синхронно отвели взгляд."
     uv "И всё ради каких-то дурацких ритуалов?"
     uv "Огоньков?"
@@ -11534,13 +11513,13 @@ label alt_day7_us_7dl_ever_after:
     "Отрезала девушка."
     uv "А для этого вовсе необязательно заниматься чепухой, вроде той, что ты задумал."
     "Если можно идти прямо на Дорогу."
-    show us normal sport with dspr
+    show us2 normal sport with dspr
     us "Сёмыч, можно я её придушу?"
     me "Да я и сам борюсь с тем же желанием."
     show uv shocked with dspr
     uv "Какое трогательное единодушие. Сразу видно сложившуюся пару."
     uv "Только вот, Сёмище, она для тебя не маловата?"
-    show us angry sport with dspr
+    show us2 angry sport with dspr
     us "Убию!"
     "Крикнула Ульянка, бросаясь на кошкоухую."
     show uv laugh far with move
@@ -11548,7 +11527,7 @@ label alt_day7_us_7dl_ever_after:
     "Она отскочила от нас на добрый метр разом."
     hide uv with easeoutleft
     us "Сёмыч, она моя!"
-    hide us with easeoutleft
+    hide us2 with easeoutleft
     "Ульянка припустила за девушкой со всех ног."
     "А мне ничего не оставалось, как бежать за ними."
     window hide
@@ -11568,7 +11547,7 @@ label alt_day7_us_7dl_ever_after:
     "Будто и не было."
     "Ульяна пробежала по инерции несколько метров, потом поняла, что преследовать в сущности некого."
     "Остановилась и обернулась ко мне."
-    show us dontlike sport with dspr
+    show us2 dontlike sport with dspr
     us "Ну и куда та гадина делась?"
     "Выглядела она рассерженной и недовольной."
     me "Не знаю…"
@@ -11584,10 +11563,10 @@ label alt_day7_us_7dl_ever_after:
     $ night_time()
     scene expression Notch("bg ext_busstop_dust_7dl")
     with dissolve
-    show us smile sport with dspr
+    show us2 smile sport with dspr
     us "Сёмыч, а мы знаешь где?"
     me "Где?"
-    show us laugh sport with dspr
+    show us2 laugh sport with dspr
     us "Ну ты тормоз, Сёмыч! Я же тебе рассказывала! И эта курлядь тоже."
     me "Я ничего не понял."
     "Честно признался я."
@@ -11627,14 +11606,14 @@ label alt_day7_us_7dl_ever_after:
     "Но только здесь всё иначе, всё не так совсем."
     "Здесь не было бетонированного пятачка, не было стен, ворот…"
     "Лагеря не было вовсе!"
-    show us sad sport with dspr
+    show us2 sad sport with dspr
     us "Так не бывает."
     "Прошептала Ульяна, увлекая меня за собой на едва заметную тропинку, ведущую в лес."
     us "Не бывает."
     "Я мимоходом посмотрел на часы — дата снова слетела."
     "Сигнал снова не ловил. Всё как всегда."
     me "Ты мне скажешь, куда ты меня ведёшь?"
-    show us normal sport with dspr
+    show us2 normal sport with dspr
     us "Пожалуйста, Сёмыч! Это очень важно!"
     "Ну, раз важно…"
     window hide
@@ -11657,9 +11636,10 @@ label alt_day7_us_7dl_ever_after:
     us "Спасибо."
     window hide
     scene bg ext_road_day
-    show us sad sport
+    show us2 sad sport
     with dissolve
     $ renpy.pause(2)
+    hide us2
     show us normal old
     with dissolve2
     "Когда мы вышли на дорогу, Ульяна уже успела немного измениться."
@@ -12943,27 +12923,13 @@ label alt_day7_us_px_mourning:
         sl "Бежим!"
         play ambience ambience_camp_center_day fadein 7
         window hide
-        scene bg ext_dining_hall_away_day with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
-            repeat
-        with dissolve
+        scene bg ext_dining_hall_away_day at fast_running
+        with flash
         "Она с места стартанула в сторону площади, а я припустил вслед за ней."
         $ volume(0.8, "sound")
         window hide
-        scene bg ext_square_day with flash:
-            pos (0,0) 
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (5,5) 
-            pos (0,0) 
-            linear 0.1 pos (0,-5) 
-            linear 0.1 pos (0,5) 
-            repeat
-        with dissolve
+        scene bg ext_square_day at fast_running
+        with flash
     else:
         "Лена мгновенно ушла куда-то, стоило нам только добраться до ворот."
         "Я уселся на бревно у входа и задумался."
@@ -13021,15 +12987,8 @@ label alt_day7_us_px_mourning:
     if alt_day6_us_px_sl_join:
         sl "Неужели опоздали?"
     window hide
-    scene bg ext_clubs_day with flash:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
-    with dissolve
+    scene bg ext_clubs_day at fast_running
+    with flash
     "Ещё рывок к воротам."
     "Обычно здесь всегда кто-то был: либо малыши играли, либо кибернетики строили что-нибудь."
     "Но вот в этот раз…"

@@ -289,14 +289,7 @@ label alt_day4_mi_dj_hedg_hunt:
     "И…"
     window hide
     play music music_7dl["catch_the_hedge"] fadein 2
-    scene cg d4_mi_hedgehod_7dl:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene cg d4_mi_hedgehod_7dl at fast_running
     with dissolve
     "Из тёмного прогала под обиталищем Лены и Мику в лунный свет вырвалась та самая округлая хищная тень, по чью душу я здесь и стоял."
     "Глубоко вздохнув, я взял низкий старт и ускорился."
@@ -324,14 +317,7 @@ label alt_day4_mi_dj_hedg_hunt:
     window hide
     play sound sfx_slavya_run
     $ night_time()
-    scene bg ext_musclub_night_7dl:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_musclub_night_7dl at fast_running
     with dissolve
 
     "Я пронёсся мимо умывальников, через небольшую рощицу и, наконец, вырулил по направлению к притихшему в ночи зданию музыкального кружка."
@@ -4489,7 +4475,7 @@ label alt_day5_mi_dj_dinner:
     "Я запнулся на полуслове. И в ужасе уставился на Мику."
     show mi serious pioneer with dspr
     mi "Сенечка?"
-    play music music_7dl["PleaseStopItMastered"] fadein 3
+    play music music_7dl["please_stop_it_mastered"] fadein 3
     "Мику непонимающе уставилась на меня."
     mi "Ты почему побледнел? Опять плохо? Может, действительно к врачу тебя отвести?"
     me "И зовут его, этого вокалоида."
@@ -4552,14 +4538,7 @@ label alt_day5_mi_dj_dinner:
     window hide 
     play sound sfx_open_door_kick
     pause(1)
-    scene bg ext_musclub_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_musclub_day at fast_running
     with dissolve
     "Не помня себя от ужаса, я насилу выбрался из помещения клуба и со всех ног кинулся в душную жару."
     "Остатки совести подсказывали мне, что я сейчас сделал что-то очень плохое."
@@ -4576,27 +4555,13 @@ label alt_day5_mi_dj_dinner:
     dreamgirl "Возможно."
     dreamgirl "А возможно, что это и есть настоящая реальность, а ты до этого видел скучный сон."
     window hide 
-    scene bg ext_square_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_square_day at fast_running
     with dissolve
     if not loki:
         th "Логика в этом есть. Я никогда не ломал конечностей, несмотря на то, что все мои знакомые хоть раз да… Даже травм особых не получал."
     "Мысли прыгали с пятого на десятое, спорить с самим собой получалось с трудом, но страх гнал меня вперёд."
     window hide 
-    scene bg ext_boathouse_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
-        repeat
+    scene bg ext_boathouse_day at fast_running
     with dissolve
     stop music fadeout 6
     $ persistent.sprite_time = "day"
@@ -12010,7 +11975,7 @@ label alt_day7_mi_dj_epilogue_frost:
     "Тупо смотря в потолок, произнёс я."
     am "А ты… Обманула."
     "Дальнейшее было как во сне — растаможка, брошенные вещи в камере хранения, двенадцатичасовой перелёт в «Пулково», марш-бросок до Московского вокзала и…"
-    am "До Твери один, любой."
+    am "До Калинина один, любой."
     voice "Плац, боковой, у туалета."
     "Плевать."
     voice "Паспорт давайте. Паспорт, мужчина."
@@ -12033,7 +11998,9 @@ label alt_day7_mi_dj_bad_end:
     window hide
     scene bg ext_winter_night_7dl with dissolve
     play sound_loop sfx_bus_interior_moving fadein 4
-    "Выходить мне не в Москве, чуть раньше — маршрут провешен от Твери в область и автобусом до места моего индивидуального паломничества."
+    "Хотя не думаю, что они мне понадобятся."
+    "Но нужно же думать ещё и о том, что останется после меня."
+    "Так что прямым до Калинина, а там… Там поглядим."
     "Зачем я еду туда? Что за дурацкие вопросы?!"
     "Я не задаю глупых вопросов окружающим, они, уважая моё мнение, не лезут ко мне в душу."
     "Или, может, дело в повсеместной неприветливости москвичей?"
@@ -13025,7 +12992,7 @@ label alt_day7_mi_dj_rf_good_end:
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
-    if alt_day_binder == 1:
+    if (alt_day_binder == 1) or alt_day1_loop:
         $ prolog_time()
         play music music_7dl["unfinished_life"] fadein 3
         scene expression Noir("bg int_sam_house_clean_7dl", brightness = 0.1, tint_r = 0.2, tint_g = 0.9, tint_b = 0.7, saturation = 0.7)

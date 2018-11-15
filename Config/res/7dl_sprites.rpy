@@ -146,10 +146,10 @@ init 9999 python:
                     'sh':{'1':['laugh','scared','smile','upset'],
                           '2':['cry','mad_smile','normal_smile','rage'],
                           '3':['normal','serious','surprise']},
-                    'sl':{'1':['dontlike','normal','serious','smile','normal_uv','serious_uv'],
+                    'sl':{'1':['dontlike','normal','serious','smile','normal_uv','normal_gr','serious_uv','serious_gr'],
                           '2':['grin','happy','laugh','shy','smile2'],
-                          '3':['angry','happy2','sad','shy2','surprise','upset','sad_uv'],
-                          '4':['cry','scared','tender', 'cry_uv'],
+                          '3':['angry','happy2','sad','shy2','surprise','upset','sad_uv','sad_gr'],
+                          '4':['cry','scared','tender','cry_uv'],
                           '5':['displeased','fear_1','fear_2','neutral']},
                     'tn':{'1':['dontlike','grin','laugh','normal','sad','shy','smile']},
                     'un':{'1':['angry','evil_smile','normal','shy','smile','smile2','sorrow'],
@@ -293,7 +293,7 @@ init 9999 python:
                           '3':['dress','pioneer','sport','swim','body'],
                           '4':['dress','pioneer','sport','swim','body'],
                           '5':['25']},
-                    'un':{'1':['dress','pioneer','sport','swim','body'],
+                    'un':{'1':['dress','modern','pioneer','sport','swim','body'],
                           '2':['dress','pioneer','sport','swim','body'],
                           '3':['dress','pioneer','sport','body']},
                     'us':{'1':['dress','pioneer','sport','swim'],
@@ -2476,10 +2476,14 @@ init 9999:
     image sl tr4 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_3_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_3_casual.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
 #Унылка 1
     image un_shade = At(im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png')), im.matrix.tint(0.01, 0.01, 0.01) ), close_sprites)
-    image un tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')),  im.matrix.opacity(0.8) )
-    image un tr2 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
-    image un tr3 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
-    image un tr4 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
+    image un tr1 modern = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')),  im.matrix.opacity(0.8) )
+    image un tr2 modern = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
+    image un tr3 modern = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
+    image un tr4 modern = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
+    image un tr1 dress = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_dress.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')),  im.matrix.opacity(0.8) )
+    image un tr2 dress = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_dress.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.6) )
+    image un tr3 dress = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_dress.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.2, 0.2, 0.2)* im.matrix.opacity(0.4) )
+    image un tr4 dress = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_ori('normal/un/un_1_dress.png')), im.matrix.tint(0.01, 0.01, 0.01)* im.matrix.opacity(0.1) )
 #Дваче 3
     image dv tr1 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_3_body.png'), (0, 0), get_sprite_7dl('normal/dv/dv_3_sport.png'), (0, 0), get_sprite_ori('normal/dv/dv_3_guilty.png')),  im.matrix.opacity(0.8) )
     image dv tr21 = im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/dv/dv_1_body.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_pioneer2.png'), (0, 0), get_sprite_ori('normal/dv/dv_1_surprise.png')), im.matrix.tint(0.6, 0.6, 0.6)* im.matrix.opacity(0.7) )
@@ -2511,6 +2515,7 @@ init 9999:
 ######## Разное ########
 #Унылка отравленная, эмоция сожаление
     image un sorrow modern poisoned = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')), im.matrix.tint(0.53, 0.88, 0.72)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_7dl('normal/un/un_1_sorrow.png')))
+    image un smile2 modern poisoned = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')), im.matrix.tint(0.53, 0.88, 0.72)), True, im.Composite((900, 1080),  (0, 0), get_sprite_ori('normal/un/un_1_body.png'), (0, 0), get_sprite_7dl('normal/un/un_1_modern.png'), (0, 0), get_sprite_ori('normal/un/un_1_smile2.png')))
 
 #Славя с im.matrix.saturation(0.3)    
     image sl_gr normal casual = ConditionSwitch("persistent.sprite_time=='sunset'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.tint(0.94, 0.82, 1.0)), "persistent.sprite_time=='night'", im.MatrixColor(im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')), im.matrix.saturation(0.3)), True, im.Composite((900, 1080), (0, 0), get_sprite_ori('normal/sl/sl_1_body.png'), (0, 0), get_sprite_7dl('normal/sl/sl_1_casual.png'), (0, 0), get_sprite_ori('normal/sl/sl_1_normal.png')))
