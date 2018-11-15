@@ -897,7 +897,7 @@ label alt_day0_start_l:
     "Оголодавшие хищники, рвущие жертву стаей."
     window hide
     $ volume(1.0, 'music')
-    play music music_7dl["Redemption"] fadein 3
+    play music music_7dl["redemption"] fadein 3
     $ renpy.pause(3)
     scene anim prolog_2 
     with fade
@@ -1188,6 +1188,7 @@ label alt_day0_d3_prologue:
     stop music fadeout 6
     "А вот так и не ставшая двадцатилетней мечта детства…"
     play music music_7dl["fyrsta"] fadein 3
+    with fade
     "Я успел посмотреть три серии, так и не притронувшись к чаю."
     "Я смотрел мимо экрана, наблюдая не столько за творящимся действом, сколько за изменениями внутри себя."
     "Я задавал себе один простой вопрос:"
@@ -1214,7 +1215,7 @@ label alt_day0_d3_prologue:
     "В этом виноваты только вы сами."
     "Вот и всё."
     "Да, быть может, немного переоценённые ожидания."
-    "Идеальное поведение человека с пониженным болевым порогом — это ночь, пьяные посиделки накоротке с монитором да пустые сообщение ВК самому себе."
+    "Идеальное поведение человека с пониженным болевым порогом — это ночь, пьяные посиделки накоротке с монитором да пустые сообщения ВК самому себе."
     "Никого никогда никуда не пускать."
     "Так проще. {w}Безопаснее."
     window hide
@@ -1285,9 +1286,9 @@ label alt_day0_d3_prologue:
     "Деньги."
     "Которых у меня на тот момент было мало."
     "Так что вместо тренировки к отборочным я отправился на собеседование."
+    stop music fadeout 3
     "И вышел на работу."
     "Здесь всё началось."
-    stop music fadeout 5
     window hide
     with fade
     play music music_7dl["wonderful_faraway"] fadein 3
@@ -1416,7 +1417,7 @@ label alt_day0_d3_prologue:
     show blink
     $ night_time()
     play ambience ambience_camp_center_night fadein 3
-    stop music fadeout 3
+    stop music fadeout 5
     "Потому я улыбнулся, когда серый потолок моей квартиры сменился старыми знакомыми."
     "Стальными воротами, выкрашенными шаровой краской."
     play music music_7dl["too_quiet"] fadein 3
@@ -1438,6 +1439,7 @@ label alt_day0_d3_prologue:
     show blackout_exh3
     show uvao_d1 at left
     show prologue_dream
+    with dissolve
     dreamgirl "Привет."
     am "Привет. {w}Только без этих твоих выкрутасов, ладно?"
     "Девушка улыбнулась, по-кошачьи потягиваясь."

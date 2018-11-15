@@ -3097,7 +3097,10 @@ label alt_day2_dubstep:
     play ambience ambience_camp_center_day fadein 3
     th "Какие-то пульты, колонки… Неплохая аппаратура! Домой бы такую…"
     th "Микрофон!"
-    if alt_day2_loki_minijack:
+    if not alt_day2_loki_minijack:
+        "Много всякого полезного и не очень барахла."
+        "Походив немного по сцене, я спустился и отправился на обед."
+    else:
         if ('sl' in list_d2_convoy_7dl):
             "Походив немного по сцене, я не смог заставить себя немного похулиганить под испытующим взглядом Слави."
             th "Пора себя поздравлять, Сёма с длинными ушами?"
@@ -4237,7 +4240,7 @@ label alt_day2_dinner:
     me "Жги! Всё равно сил не хватит!"
     us "Легко!"
     "Она протянула руку, схватила стакан покрепче, дернула, и…"
-    play music music_7dl["Semische"] fadein 1
+    play music music_7dl["semische"] fadein 1
     show us angry pioneer with dspr
     if alt_day_binder != 1:
         "В этот день мы поменялись ролями, и от двери уже в голос хохочу я, а из зала слышен самый матерный вопль:"
@@ -8233,7 +8236,7 @@ label alt_day2_slot_un:
     "Лена догнала меня и нерешительно коснулась руки."
     me "Что? Почему?"
     un "Там…"
-    play music music_7dl["PleaseStopItMastered"] fadein 4
+    play music music_7dl["please_stop_it_mastered"] fadein 4
     "Лена запнулась и отвела глаза, ощутимо побледнев."
     "О чём бы она ни хотела рассказать, пугало оно её явно сильнее, чем свалившийся сверху под ноги пионер."
     un "Там ОНО. Нечто."

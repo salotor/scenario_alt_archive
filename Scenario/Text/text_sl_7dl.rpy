@@ -384,6 +384,7 @@ label alt_day4_sl_7dl_breakfast:
     if herc or loki:
         menu:
             "Пусть Шварценеггер таскает!" if loki:
+                $ karma -= 10
                 show sl serious pioneer with dspr
                 sl "Неужели помочь не хочешь?"
                 me "Как ты догадалась?"
@@ -8517,7 +8518,7 @@ label alt_day5_sl_7dl_candle:
         stop music fadeout 2
         hide mt with dissolve
         "Стащив меня с подоконника, девушка заняла моё место."
-        play music music_7dl["Redemption"] fadein 3
+        play music music_7dl["redemption"] fadein 3
         "А я… Я оказался в темноте."
         "Лишь справа от меня светилась неподвижная лампа на столе, да где-то далеко в темноте плыл собрат огонька в моей руке."
         me "Я ничего не вижу."
@@ -11295,7 +11296,7 @@ label alt_day5_sl_7dl_day:
     pause(1)
     "С этой стороны было хотя бы тихо и мирно."
     "Всё так же возюкал кисточкой картавенький Олежка, всё так же кемарила в теньке Ольга свет Батьковна."
-    play music music_7dl["walkingaway"] fadein 3
+    play music music_7dl["regret"] fadein 3
     mt "Что за вопли на том берегу?"
     "Лениво поинтересовалась вожатая."
     me "Да ну."
@@ -13759,9 +13760,9 @@ label alt_day6_sl_7dl_camping:
         sl "Если продолжишь так смотреть на меня, боюсь, нам придётся искать местечко поудобнее."
         me "Извини, что?"
         if persistent.hentai_graphics_7dl:
-            show sl2 shy body with dissolve
+            show sl2 shy body with dspr
         else:
-            show sl2 shy swim with dissolve
+            show sl2 shy swim with dspr
         "Впервые за всё время, что мы стояли, она сделала движение рукой, будто пытаясь прикрыть низ живота."
         sl "У нас желания на двоих. {w}Ты хочешь попробовать продолжить то, что у нас не получилось."
         me "Очень хочу."
@@ -13787,9 +13788,9 @@ label alt_day6_sl_7dl_camping:
     me "Только при условии, что ты оденешься."
     if alt_day5_sl_7dl_hentai_done:
         if persistent.hentai_graphics_7dl:
-            show sl2 laugh body with dissolve
+            show sl2 laugh body with dspr
         else:
-            show sl2 laugh swim with dissolve
+            show sl2 laugh swim with dspr
     "Славя рассмеялась каким-то незнакомым, грудным смехом."
     if persistent.hentai_graphics_7dl:
         show sl2 smile2 body close with dissolve
@@ -13817,11 +13818,11 @@ label alt_day6_sl_7dl_camping:
     sl "Не станет, Сёмушка."
     "Парой минут спустя шуршание одежды стихло, рядом со мной опустилась девочка."
     "Шутливо толкнула плечом, протянула ладошки к костру."
-    show sl2 smile pioneer with dissolve
+    show sl2 smile pioneer close with dspr
     sl "Я же не совсем глупая, понимаю."
     sl "До сих пор у нас не было ничего хоть сколько-то своего, личного."
     me "Серьёзного?"
-    show sl2 grin pioneer with dspr
+    show sl2 grin pioneer close with dspr
     "Славя подмигнула."
     sl "Нам с тобой сколько лет, говорить о серьёзном?"
     th "Больше, чем тебе кажется."
@@ -13834,14 +13835,14 @@ label alt_day6_sl_7dl_camping:
     "Оставалось просто обнять её, прижать к себе и бесконечно смотреть в огонь…"
     "Музыка ночного озера и горящих веток, аромат хвои и земляники."
     me "Я тебе ягод собрал."
-    show sl2 smile pioneer with dspr
+    show sl2 smile pioneer close with dspr
     sl "Правда?"
     "Поискав за бревном, я достал лежащий там лист и явил на суд девочке."
-    show sl2 happy pioneer with dspr
+    show sl2 happy pioneer close with dspr
     sl "Земляника!"
     "Обрадовалась она."
     me "Да. Здесь недалеко собирал."
-    show sl2 smile pioneer with dspr
+    show sl2 smile pioneer close with dspr
     sl "Спасибо огромное. Будешь?"
     me "Я тебе собирал, сам успел поесть на месте."
     sl "Я так не могу! Мы должны все вместе.{w} Давай, открой рот и скажи «Аааа»."
@@ -13849,7 +13850,7 @@ label alt_day6_sl_7dl_camping:
     "Послушно сказал я."
     "Ягоды были сладкие и невероятно ароматные."
     "Должно быть, потому я и смог учуять их в ночном лесу."
-    show sl2 normal pioneer with dspr
+    show sl2 normal pioneer close with dspr
     sl "Ты только не обижайся на «несерьёзность», хорошо?"
     "Внезапно попросила девочка."
     me "Да я уже и думать забыл."
@@ -13880,13 +13881,13 @@ label alt_day6_sl_7dl_camping:
     sl "Ты принимаешь человека в свой мир, он сам становится твоим миром."
     me "А с миром у нас свои взаимоотношения…"
     stop music fadeout 3
-    show sl2 normal pioneer with dspr
+    show sl2 normal pioneer close with dspr
     sl "Будущее неполно без тебя, Семён."
     "Спокойно сообщила Славя."
     sl "Значит, всё очень серьёзно. {w}Поможешь переплести косы?"
     play music music_7dl["beasteye"] fadein 3
     "Меня настолько подкосил её утилитарный подход к вопросу, что я некоторое время сидел, ловя ртом воздух."
-    show sl2 smile2 pioneer with dspr
+    show sl2 smile2 pioneer close with dspr
     sl "Тебе нехорошо?"
     me "Кхм… Мне очень хорошо. Просто ты ведёшь себя странно!"
     "Я ожидал каких-то трепетных признаний, треволнений, нервов, в конце концов!"
@@ -13899,20 +13900,20 @@ label alt_day6_sl_7dl_camping:
     "Те же, кто может этим похвастаться, не выходят из дома."
     "Да-да, по причине всё той же самодостаточности."
     me "То есть, ты не стесняешься, не беспокоишься и далее по списку?"
-    show sl2 smile pioneer with dspr
+    show sl2 smile pioneer close with dspr
     sl "А чего стесняться?"
     "Пожала плечами эта невероятная девочка."
     sl "Я как поняла, так сразу стесняться и перестала.{w} Всё же просто: неравнодушны — будьте вместе."
     me "И моя реакция и взаимность тебя не интересуют?"
     sl "Я бы просто ушла, не будь всё взаимным."
-    show sl2 serious pioneer with dspr
+    show sl2 serious pioneer close with dspr
     sl "Но я чувствую тебя, Сёмушка.{w} Чувствую как хорошо настроенный компас."
     me "Значит, знаешь мои переживания?"
     "Чужое самоуправство меня не напрягало с армии."
     "Я прекрасно уживался с мыслью, что кто-то может принять какое-то решение вместо меня."
     "Но решил уточнить на всякий случай."
     "Просто потому, что сам не мог понять, что чувствую к этой девочке, кроме восторженной нежности."
-    show sl2 smile2 pioneer with dspr
+    show sl2 smile2 pioneer close with dspr
     sl "Знаю. Понимаю. Вижу."
     sl "С твоей отстранённости у автобуса до последнего дня, когда мы сбежали ото всех, а внутри меня была такая сладкая жуть, что казалось, я на всё способна!"
     me "Сладкая…"
@@ -13924,11 +13925,11 @@ label alt_day6_sl_7dl_camping:
     sl "Значит, это правда, что я — это последний шанс, который ты дал миру?"
     me "И самому себе. {w}Давай собираться, скоро роса выпадет."
     sl "Озябнем, да."
-    show sl2 normal pioneer far with dissolve
+    show sl2 normal pioneer with dissolve
     "Неохотно высвободившись из моих рук, Славя поднялась."
     sl "Потушишь костёр?"
     me "Э…"
-    show sl2 laugh pioneer far with dspr
+    show sl2 laugh pioneer with dspr
     sl "Да, это я тоже знаю."
     "Уже не скрываясь, рассмеялась Славя."
     me "Мне кажется, это нечестно — понимать такие вещи в одностороннем порядке!"
@@ -25437,7 +25438,7 @@ label alt_day7_sl_7dl_begin:
     scene bg int_d3_hideout_7dl
     show prologue_dream
     with fade
-    play music music_7dl["despair"] fadein 3
+    play music music_7dl["hell"] fadein 3
     "Я уже очень давно не был в этом месте."
     "Или это вовсе был не я?"
     "Довольно трудно разобраться во всех моих многочисленных «я», когда речь заходит о встречах и знакомых местах."
@@ -25712,6 +25713,7 @@ label alt_day7_sl_7dl_begin:
                     show sl happy sport with dspr
                     sl "И мне понравилось!"
                     me "Ого! Ты хочешь повторения партии?"
+                    sl "Ну!"
                 else:
                     me "Да ладно, всё было чинно, скромно, благородно."
                     sl "Подозреваю, что Ольга Дмитриевна с тобой не согласится."
@@ -25906,7 +25908,7 @@ label alt_day7_sl_7dl_packing_herc:
             us "Нет, но…"
         else:
             show us calml sport with dspr
-            us "Эй, если ты будешь драться со киллджоем, мне придётся этого лба пинать? {w}Я не справлюсь!"
+            us "Эй, если ты будешь драться с киллджоем, мне придётся этого лба пинать? {w}Я не справлюсь!"
             show dv smile sport with dspr
             dv "Тогда дерись сама со своим киллджоем."
             "Логично предложила Алиса."
@@ -27216,7 +27218,7 @@ label alt_day7_sl_7dl_leaving:
             th "Верно. А на надгробии чтобы осталось: «неловко вышло, да?»"
             dreamgirl "Но лучше уж так, чем плакать о мечте, что превратилась в судьбу."
             th "Согласен."
-            show blinking
+            show blink
             "Я прикрыл глаза."
             th "Бог покинул здание."
             "И ни о чём уже не жалел."
@@ -28299,8 +28301,6 @@ label alt_day7_sl_7dl_rf_good:
     sl "Значит, я могу украсть больше твоего времени, чем просто часик в кафе?"
     me "Да хоть целый день."
     me "С утра до ночи."
-    if alt_day_binder == 1:
-        $ meet('sl', 'Славя')
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_good_rf = True
     $ renpy.save_persistent()
@@ -29001,6 +29001,7 @@ label alt_day7_sl_7dl_herc_neon:
     me "Даже если она меня не узнает, я хотя бы её увижу! {w}Веди."
     ka "Как скажешь. {w}Пошли."
     window hide
+    play ambience ambience_cold_wind_loop fadein 3
     scene bg ext_road_winter_7dl
     with dissolve
     "Спрыгнув со скамейки, девушка выскочила на дорогу, пробежала несколько шагов, оставляя за собой следы на свежевыпавшем снеге."
@@ -29080,6 +29081,7 @@ label alt_day7_sl_7dl_herc_neon:
     ka "Поднажмём! {w}Мы почти пришли!"
     "Почти…"
     window hide
+    play ambience ambience_camp_entrance_evening fadein 3
     scene bg ext_countryside_day_7dl
     with dissolve
     "На горизонте показался небольшой городок или, скорее, посёлок городского типа."
@@ -29113,6 +29115,7 @@ label alt_day7_sl_7dl_herc_neon:
     "И…"
     $ day_time()
     window hide
+    play ambience ambience_7dl["town_day"] fadein 3
     scene bg ext_townscape_ph_day_7dl
     with flash
     play music music_7dl["what_am_i_doing_here"] fadein 3
@@ -29212,7 +29215,7 @@ label alt_day7_sl_7dl_herc_neon:
     "И…"
     window hide
     $ set_mode_adv()
-    scene bg ext_countryside_day_7dl
+    scene bg ext_townscape_ph_day_7dl
     with dissolve
     "Здесь была какая-то бесконечная стена и «карман», на котором, похоже, разворачивались грузовики."
     "Сейчас же выстроившись цепочкой стояли знакомые уже «икарусы», а с другой стороны «кармана» расположились две знакомые процессии из японцев и представительских машин."
@@ -29365,9 +29368,12 @@ label alt_day7_sl_7dl_herc_neon:
     me "Стабилизируете?"
     "Я пристегнул ремень, за что удостоился ещё одного уважительного взгляда от старого физрука."
     ba "На месте увидишь."
+    stop ambience
+    play sound_loop sfx_intro_bus_engine_loop
     "«Таврия» прогазовала на месте, полностью демаскируя форсированный движок, и рванула вперёд."
     stop music fadeout 3
     "И всё время я чувствовал взгляд Слави, сменившийся с уныло-грустного на недоверчиво-скептический."
+    stop sound_loop fadeout 1
     "Дальше события полетели вскачь!"
     play music music_7dl["hug_me_already"] fadein 3
     $ set_mode_nvl()
@@ -29395,6 +29401,7 @@ label alt_day7_sl_7dl_herc_neon:
     "А завтра… будет завтра."
     nvl clear
     window hide
+    play ambience ambience_camp_entrance_evening fadein 3
     scene bg ext_busstop_sun_7dl
     show uv smile
     show prologue_dream
@@ -29440,6 +29447,7 @@ label alt_day7_sl_7dl_herc_neon:
     me "И, может быть, когда она станет взрослее…"
     nvl clear
     window hide
+    stop ambience
     scene anim prolog_2
     with dissolve
     "Так и оставшаяся безымянной девушка исчезла, а я проснулся."
@@ -29450,6 +29458,7 @@ label alt_day7_sl_7dl_herc_neon:
     "Было в этом что-то."
     "С утра за мной прислали машину со всё тем же Санычем за рулём."
     "Он снова попытался раздавить мне лапу — с тем же результатом."
+    play sound_loop sfx_intro_bus_engine_loop
     "Снова уважительно кивнув моим кондициям, он стронул машину с места."
     "Судя по направлению, мы снова отправились в сторону местной службы безопасности."
     stop music fadeout 3
@@ -29458,7 +29467,7 @@ label alt_day7_sl_7dl_herc_neon:
     "Но к этому я оказался готов."
     "Даже находил некую прелесть в сложившемся положении."
     "А вот к чему я готов не был, так это к метнувшейся с тротуара на проезжую часть фигурке в синем джинсовом платье."
-    play music music_7dl["Everlasting_Summer_Alice"] fadein 3
+    play music music_7dl["everlasting_summer_alice"] fadein 3
     "Двух кварталов проехать не успели."
     ba "Эй!"
     "Саныч открыл боковое стекло и рявкнул:"
@@ -29482,7 +29491,9 @@ label alt_day7_sl_7dl_herc_neon:
     me "Точно?"
     ba "Вали-вали."
     "Пришлось выбираться."
+    stop sound_loop fadeout 1
     window hide
+    play ambience ambience_7dl["town_day"]
     scene bg ext_townscape_ph_day_7dl
     with fade
     $ set_mode_adv()

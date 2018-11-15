@@ -526,7 +526,7 @@ label alt_day4_un_7dl_breakfast:
     un "Так что начну, пожалуй, готовиться."
     me "Готовиться?"
     un "Ну… Мне, как гуманитарию, точные науки сложновато даются — придётся алгебру подтягивать."
-    play music music_7dl["genki"] fadein 3
+    play music music_7dl["what_if"] fadein 3
     un "Поможешь?"
     if herc or loki:
         me "Политех, значит?"
@@ -4274,7 +4274,8 @@ label alt_day5_un_7dl_clubs:
     me "Плевать я хотел. {w}Отправляйте. {w}Посмотрим, куда быстрее придёт — моё в партком или ваше в Комсомол."
     me "Будем играть в кто кого перестучит?"
     un "ПЕРЕСТАНЬТЕ!" with hpunch
-    "Удивила нас обоих Лена, рявкнув так, как я никогда ещё не слы… хотя стоп. В библиотеке, второго дня, когда мы «отпрашивались» на карьер."
+    "Удивила нас обоих Лена, рявкнув так, как я никогда ещё не слы… хотя стоп."
+    "В библиотеке, третьего дня, когда мы «отпрашивались» на карьер."
     show un angry2 pioneer at left with dspr
     un "Что вы как дети малые? Семён, уступи. Извинись."
     un "Ольга Дмитриевна, едой не наказывают — это непедагогично."
@@ -4438,7 +4439,7 @@ label alt_day5_un_7dl_cleaning:
     window hide
     scene bg ext_warehouse_day_7dl
     show sl surprise pioneer with dspr
-    play music music_7dl["Semische"] fadein 5
+    play music music_7dl["semische"] fadein 5
     "И когда я её завидел, то поступил так, как логично было поступить — заголосил и припустил к ней навстречу."
     me "Эгегей, Славя! Погоди!"
     show sl scared pioneer with dspr
@@ -5219,10 +5220,9 @@ label alt_day5_un_7dl_unl:
     th "А то оба бы мялись и смущались, и в жизни бы не расслабились до нужной кондиции."
     "Мог бы я представить себе хихикающую Лену, прячущуюся у меня за плечом и тыкающую пальцем мне в бок, чтобы нос не задирал?"
     "Да где там! Она же такая… такая… В общем, не наш случай."
+    stop music fadeout 3
     "Ключ провернулся бесшумно, и мы ввалились в помещение, захлопнув дверь за собой."
     window hide
-    stop music fadeout 3
-    
     scene bg int_library_day
     with dissolve
     play ambience ambience_library_day fadein 3
@@ -9727,7 +9727,7 @@ label alt_day6_un_7dl_sleeptime:
 
 label alt_day7_un_7dl_begin:
     scene black
-    play music music_7dl["PleaseStopItMastered"] fadein 3
+    play music music_7dl["please_stop_it_mastered"] fadein 3
     $ renpy.pause(2)
     $ persistent.sprite_time = "night"
     scene bg int_sam_house_clean_7dl
@@ -10502,9 +10502,9 @@ label alt_day7_un_7dl_begin:
     window hide
     with fade2
     return
-    
+
 label alt_day7_un_7dl_epilogue_all:
-    play music music_7dl["PleaseStopItMastered"] fadein 5
+    play music music_7dl["please_stop_it_mastered"] fadein 5
     "Я потряс за плечи порывающуюся уснуть девочку."
     me "Не спи! Отвечай!" with vpunch
     un "В медпункте. У меня же ключ."
@@ -11211,25 +11211,22 @@ label alt_day7_un_7dl_epilogue_rt:
     me "Сделаем что?"
     dreamgirl "Забыл регламент? {w}Волшебным девочкам не место в стране бытовухи."
     dreamgirl "Целуй её быстренько, пока она окончательно материальность не утратила, и пока."
-    show un tr1 with dissolve
+    show un tr1 modern with dissolve
     "Я обернулся к Лене, которая и правда напоминала нематериальную тень."
     "Смотрела строго и печально, будто понимая что-то крайне важное."
     un "Ты ведь знал, да?"
     "Тихо прошептала она."
-    show un tr2
-    with dissolve
+    show un tr2 modern with dissolve
     un "С самого начала всё знал…"
     "Она растворялась в чистом воздухе."
     un "И всё равно попытался."
     "Самое жуткое, что не было в её глазах ни грамма обвинений."
     "Лишь тихое и смиренное ожидание того, что она сейчас…"
-    show un tr3
-    with dissolve
+    show un tr3 modern with dissolve
     me "Нет, это неправда: я ничего, ничего не знал — я клянусь тебе."
     "Я попытался поймать её руку, но мои пальцы прошли насквозь."
     dreamgirl "Прощай."
-    show un tr4
-    with dissolve
+    show un tr4 modern with dissolve
     un "Прощай."
     "Голос стих."
     "От Лены остался едва различимый силуэт."
@@ -11277,7 +11274,7 @@ label alt_day7_un_7dl_ussr:
     $ renpy.pause(3)
     $ set_mode_nvl()
     $ night_time()
-    play music music_7dl["Please_Reprise"] fadein 3
+    play music music_7dl["please_reprise"] fadein 3
     "Я — не нужен."
     "За без малого тридцать лет я не научился абсолютно ничему, что могло бы быть действительно полезным, отвязанным от цивилизации."
     if loki:
@@ -11785,7 +11782,7 @@ label alt_day7_un_7dl_transit:
     "Я шёл уже битый час, но несчастный кубик лишь немного увеличился в размерах."
     "Возможно, это было связано с тем, что я шёл еле-еле."
     "Возможно — с тем, что я поминутно отгонял преследовавшего меня призрака одной никогда не существовавшей девчонки."
-    show un tr1 with dspr
+    show un tr1 modern with dspr
     $ renpy.pause(.05)
     hide un
     th "Возможно, и всего, что я помню, не было?"
@@ -11818,7 +11815,7 @@ label alt_day7_un_7dl_transit:
     "Одежда осталась той же, что и была в лагере, и это было странно."
     "Странным было и то, что вся она была в какой-то дряни."
     "Похоже, измазался, пока пытался откачать…"
-    show un tr1 with dspr
+    show un tr1 modern with dspr
     $ renpy.pause(.05)
     hide un
     "Я закашлялся."
@@ -11852,7 +11849,7 @@ label alt_day7_un_7dl_transit:
     dreamgirl "А где больно?"
     "Я показал на грудь."
     "Как будто это было можно объяснить словами — стальной занозой засевшее в груди кровоточащее сожаление."
-    show un tr1 with dspr
+    show un tr1 modern with dspr
     $ renpy.pause(.12)
     hide un
     show uv guilty with dspr
@@ -11976,7 +11973,7 @@ label alt_day7_un_7dl_transit:
     "Поверили?"
     window hide
     scene bg ext_railbridge_sunset_7dl with dissolve
-    play music music_7dl["Sad_Piano"] fadein 3
+    play music music_7dl["sad_piano"] fadein 3
     $ set_mode_nvl()
     "Ладно, на самом деле была ещё целая куча всего."
     "Было и солнце, и лето, и счастливый смех."
@@ -12278,7 +12275,7 @@ label alt_day7_un_7dl_rej:
     scene bg int_excalator_7dl with fade
     "И хорошо: с глаз долой — из сердца вон."
     play ambience ambience_7dl["railroad"] fadein 3
-    show un tr1 at left
+    show un tr1 modern at left
     show mt tr1 at right
     with dissolve
     "Разве что весь путь до метро терзали меня образы двух красивых зеленоглазок."
@@ -12408,6 +12405,7 @@ label alt_day7_un_7dl_true:
     "Прихожая в старом доме Лены… Прихожая в общежитии, куда её поселили теперь, была исполнена настолько достоверно похожей, что я на секунду даже испугался, что перепутал город."
     "Да только Лена улыбнулась, открыла дверь, запустила меня в комнату."
     window hide
+    stop ambience fadeout 3
     scene bg int_sam_room_7dl
     with dissolve
     "Иллюзия исчезла, как и не бывало."
@@ -12465,7 +12463,7 @@ label alt_day7_un_7dl_true:
     "Честно сказать, я не знал точно, сколько ей лет. {w}Но она будто бы не менялась с возрастом."
     "Я догонял её, догонял."
     "И вот догнал."
-    stop music fadeout 3
+    stop music fadeout 5
     "Уже тогда, шесть лет назад, когда я один побежал в магазин, а вернувшись, удостоился поцелуя в щёку от прекрасной дамы, ей приходилось тянуться ко мне."
     play music music_7dl["last_hope"] fadein 3
     "Сейчас же, наверное, пришлось бы вставать на носочки."
@@ -12489,14 +12487,13 @@ label alt_day7_un_7dl_true:
     "Я не слушаю то, что говорят люди, мне дорогие."
     "Я слышу то, что они на самом деле хотят сказать."
     "Так что шаг навстречу мы сделали одновременно."
-    show un normal modern close with dspr
+    show un normal modern close with dissolve
     "Ещё шаг."
     "Не знаю, с кем она меня сравнивала, кого видела во мне, но это было что-то судорожно резкое."
     "Как будто в меня вцепились, обхватив сразу всеми конечностями, распластали по груди, вжали в себя."
+    play sound sfx_open_door_2
     "Но через мгновение загремел замок входной двери, и меня спасла соседка Лены по комнате."
     $ meet('ka', 'Соседка')
-    play sound sfx_open_door_2
-    pause(1)
     show un shy modern at left
     #show ka grin casual at right
     with dissolve
@@ -12524,6 +12521,7 @@ label alt_day7_un_7dl_true:
     $ meet('ka', 'Катюшка')
     ka "Не кричи. Конечно же, чая я попью, только потом поеду. {w}И мальчика твоего покормлю, кожа да кости."
     window hide
+    play ambience ambience_7dl["night_city"] fadein 3
     scene bg ext_city_night_7dl
     with dissolve
     "Вот так за шутливой перебранкой мы встретили вечер."
@@ -12545,7 +12543,7 @@ label alt_day7_un_7dl_true:
     with dissolve
     "Новый год мы встретили в одной квартире…"
     "Не помогли нам знакомые семьи Тихоновых."
-    "Не помогли ни в службе МСБ, не в милиции — нигде."
+    "Не помогли ни в службе МСБ, ни в милиции — нигде."
     "Суд признаёт человека без вести пропавшим через год с момента начала поисков."
     "Мёртвым — спустя пять лет."
     "Такие вот дурацкие законы."
@@ -12565,6 +12563,7 @@ label alt_day7_un_7dl_true:
     with dissolve
     "Я улыбнулся, предвкушая, как сейчас буду колдовать на кухне, ожидая Лену с завода, как в полночь мы откроем шампанское, встречая две тысячи второй…"
     window hide
+    stop ambience fadeout 3
     scene bg int_sam_house_clean_7dl
     with dissolve
     "Когда я открыл дверь, в квартире было тихо и одиноко, это место ещё не проснулось."
@@ -12612,8 +12611,8 @@ label alt_day7_un_7dl_true:
     "Боюсь, Лена не оценит, если вернувшись в одиннадцать вечера со смены, она обнаружит только спящего меня и никакого стола."
     "Потому…"
     "Не зажигая газа, прыгнул под ледяную воду."
+    stop music fadeout 5
     "Кричал, разбрызгивая холод по телу, дышал через раз, крутился, ругался."
-    stop music fadeout 3
     "Истерика выходила через поры."
     play music music_7dl["keep_looking"] fadein 3
     "А ещё два часа спустя салаты были готовы, шампанское стыло в мокрых полотенцах в холодильнике, а я курил на балконе."

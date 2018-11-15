@@ -1047,6 +1047,12 @@ screen arts_7dl_10:
             action [Hide(gallery_mode_7dl + "_7dl_" + str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d7_us_epilogue_bus_7dl"), SetVariable("show_image2_7dl", ""), SetVariable("show_image3_7dl", ""), SetVariable("show_image4_7dl", ""), Jump("show_img_7dl")]
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.2 yalign 0.93        
+    if renpy.seen_image("cg d5_sl_bench_day_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/arts/d5_sl_bench_day_7dl_%s.png") xalign 0.5 yalign 0.93 
+            action [Hide(gallery_mode_7dl + "_7dl_" + str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d5_sl_bench_day_7dl"), SetVariable("show_image2_7dl", "d5_sl_bench_sunset_7dl"), SetVariable("show_image3_7dl", "d5_sl_bench_night_7dl"), SetVariable("show_image4_7dl", ""), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.5 yalign 0.93 
         
 screen arts_7dl_un_1:
     tag menu
@@ -1173,6 +1179,12 @@ screen arts_7dl_sl_2:
             action [Hide("arts_7dl_" + gallery_mode_7dl + "_" + str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d7_sl_epilogue_bus_7dl"), SetVariable("show_image2_7dl", ""), SetVariable("show_image3_7dl", ""), SetVariable("show_image4_7dl", ""), Jump("show_img_7dl")] 
     else:
         add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.19 yalign 0.15        
+    if renpy.seen_image("cg d5_sl_bench_day_7dl"):
+        imagebutton:
+            auto get_image_7dl("gui/gallery/arts/d5_sl_bench_day_7dl_%s.png") xalign 0.5 yalign 0.15 
+            action [Hide("arts_7dl_" + gallery_mode_7dl + "_" + str(page_7dl), transition=Dissolve(0.2)), Hide("gallery_bw_7dl", transition=Dissolve(0.2)), Hide("gallery_fw_7dl", transition=Dissolve(0.2)), Hide("gallery_exit_7dl", transition=Dissolve(0.2)), SetVariable("show_image_7dl", "cg d5_sl_bench_day_7dl"), SetVariable("show_image2_7dl", "d5_sl_bench_sunset_7dl"), SetVariable("show_image3_7dl", "d5_sl_bench_night_7dl"), SetVariable("show_image4_7dl", ""), Jump("show_img_7dl")] 
+    else:
+        add get_image_7dl("gui/gallery/locked_img/" + renpy.random.choice(locked_img_7dl)) xalign 0.5 yalign 0.15
         
 screen arts_7dl_dv_1:
     tag menu
@@ -1495,7 +1507,7 @@ label show_img_7dl:
         $ show_image4_7dl = ""
     $ renpy.show("bg black")
     jump alt_gallery
-    
+
 # screen bgs_7dl_x: # x - pagenum
     # tag menu
     # $ next_page_7dl = str(page_7dl)  + "/" + str(max_bgs_page_7dl)
