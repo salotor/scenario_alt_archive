@@ -49,10 +49,10 @@ init 1 python:
         #t = strftime("%H:%M:%S", localtime())
         #hour, min, sec = t.split(":")
         #hour = int(hour)
-        #if hour in (6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18):
+        #if hour in (6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 11, 12):     #moded: #if hour in (6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18):
             #time_7dl = "day"
             #return time_7dl
-        #elif hour in (19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5):
+        #elif hour in (19, 20, 21, 22, 23, 0, 1, 2, 3, 3, 3):     #moded: #elif hour in (19, 20, 21, 22, 23, 0, 1, 2, 3, 4, 5):
             #time_7dl = "night"
             #return time_7dl
             
@@ -374,127 +374,127 @@ screen menu_7dl():
     if persistent.waifu_7dl == 1:
         imagemap at left_menu_7dl(0.1, 0.7):
             auto get_image_7dl("gui/menu_main/un_menu_%s.png")
-            hotspot (170, 511, 300, 38):
+            hotspot (113, 341,  200, 25):     #moded: hotspot (170, 511, 300, 38):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("start_7dl")]
-            hotspot (170, 563, 300, 36):
+            hotspot (113, 375,  200, 24):     #moded: hotspot (170, 563, 300, 36):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("settings_7dl", transition=Dissolve(0.2))]
-            hotspot (162, 615, 307, 40):
+            hotspot (108, 410,  205, 27):     #moded: hotspot (162, 615, 307, 40):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
-            hotspot (165, 665, 233, 43):
+            hotspot (110, 443,  155, 29):     #moded: hotspot (165, 665, 233, 43):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("contacts_7dl", transition=Dissolve(0.2))]
-            hotspot (164, 718, 153, 41):
+            hotspot (109, 479,  102, 27):     #moded: hotspot (164, 718, 153, 41):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("media_7dl", transition=Dissolve(0.2))]
-            hotspot (164, 772, 146, 38):
+            hotspot (109, 515,  97, 25):     #moded: hotspot (164, 772, 146, 38):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]   
     elif persistent.waifu_7dl == 2:
         imagemap at left_menu_7dl(0.1, 0.7):
             auto get_image_7dl("gui/menu_main/sl_menu_%s.png")
-            hotspot (170, 511, 300, 38):
+            hotspot (113, 341,  200, 25):     #moded: hotspot (170, 511, 300, 38):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("start_7dl")]
-            hotspot (170, 563, 300, 36):
+            hotspot (113, 375,  200, 24):     #moded: hotspot (170, 563, 300, 36):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("settings_7dl", transition=Dissolve(0.2))]
-            hotspot (162, 615, 307, 40):
+            hotspot (108, 410,  205, 27):     #moded: hotspot (162, 615, 307, 40):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
-            hotspot (165, 665, 233, 43):
+            hotspot (110, 443,  155, 29):     #moded: hotspot (165, 665, 233, 43):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("contacts_7dl", transition=Dissolve(0.2))]
-            hotspot (164, 718, 153, 41):
+            hotspot (109, 479,  102, 27):     #moded: hotspot (164, 718, 153, 41):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("media_7dl", transition=Dissolve(0.2))]
-            hotspot (164, 772, 146, 38):
+            hotspot (109, 515,  97, 25):     #moded: hotspot (164, 772, 146, 38):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
     # elif persistent.waifu_7dl == 3:
         # imagemap at left_menu_7dl(0.1, 0.7):
             # auto get_image_7dl("gui/menu_main/dv_menu_%s.png"
-            # hotspot (170, 511, 300, 38):
+            # hotspot (113, 341,  200, 25):     #moded: # hotspot (170, 511, 300, 38):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("start_7dl")]
-            # hotspot (170, 563, 300, 36):
+            # hotspot (113, 375,  200, 24):     #moded: # hotspot (170, 563, 300, 36):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Show("settings_7dl", transition=Dissolve(0.2))]
-            # hotspot (162, 615, 307, 40):
+            # hotspot (108, 410,  205, 27):     #moded: # hotspot (162, 615, 307, 40):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
-            # hotspot (165, 665, 233, 43):
+            # hotspot (110, 443,  155, 29):     #moded: # hotspot (165, 665, 233, 43):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Show("contacts_7dl", transition=Dissolve(0.2))]
-            # hotspot (164, 718, 153, 41):
+            # hotspot (109, 479,  102, 27):     #moded: # hotspot (164, 718, 153, 41):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Show("media_7dl", transition=Dissolve(0.2))]
-            # hotspot (164, 772, 146, 38):
+            # hotspot (109, 515,  97, 25):     #moded: # hotspot (164, 772, 146, 38):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
     elif persistent.waifu_7dl == 4:
         imagemap at left_menu_7dl(0.1, 0.7):
             auto get_image_7dl("gui/menu_main/mi_menu_%s.png")
-            hotspot (170, 511, 300, 38):
+            hotspot (113, 341,  200, 25):     #moded: hotspot (170, 511, 300, 38):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("start_7dl")]
-            hotspot (170, 563, 300, 36):
+            hotspot (113, 375,  200, 24):     #moded: hotspot (170, 563, 300, 36):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("settings_7dl", transition=Dissolve(0.2))]
-            hotspot (162, 615, 307, 40):
+            hotspot (108, 410,  205, 27):     #moded: hotspot (162, 615, 307, 40):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
-            hotspot (165, 665, 233, 43):
+            hotspot (110, 443,  155, 29):     #moded: hotspot (165, 665, 233, 43):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("contacts_7dl", transition=Dissolve(0.2))]
-            hotspot (164, 718, 153, 41):
+            hotspot (109, 479,  102, 27):     #moded: hotspot (164, 718, 153, 41):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("media_7dl", transition=Dissolve(0.2))]
-            hotspot (164, 772, 146, 38):
+            hotspot (109, 515,  97, 25):     #moded: hotspot (164, 772, 146, 38):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]     
     elif persistent.waifu_7dl == 5:
         imagemap at left_menu_7dl(0.1, 0.7):
             auto get_image_7dl("gui/menu_main/us_menu_%s.png")
-            hotspot (170, 511, 300, 38):
+            hotspot (113, 341,  200, 25):     #moded: hotspot (170, 511, 300, 38):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("start_7dl")]
-            hotspot (170, 563, 300, 36):
+            hotspot (113, 375,  200, 24):     #moded: hotspot (170, 563, 300, 36):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("settings_7dl", transition=Dissolve(0.2))]
-            hotspot (162, 615, 307, 40):
+            hotspot (108, 410,  205, 27):     #moded: hotspot (162, 615, 307, 40):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
-            hotspot (165, 665, 233, 43):
+            hotspot (110, 443,  155, 29):     #moded: hotspot (165, 665, 233, 43):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("contacts_7dl", transition=Dissolve(0.2))]
-            hotspot (164, 718, 153, 41):
+            hotspot (109, 479,  102, 27):     #moded: hotspot (164, 718, 153, 41):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Show("media_7dl", transition=Dissolve(0.2))]
-            hotspot (164, 772, 146, 38):
+            hotspot (109, 515,  97, 25):     #moded: hotspot (164, 772, 146, 38):
                 hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
     # elif persistent.waifu_7dl == 6:
         # imagemap at left_menu_7dl(0.1, 0.7):
             # auto get_image_7dl("gui/menu_main/mt_menu_%s.png"
-            # hotspot (170, 511, 300, 38):
+            # hotspot (113, 341,  200, 25):     #moded: # hotspot (170, 511, 300, 38):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("start_7dl")]
-            # hotspot (170, 563, 300, 36):
+            # hotspot (113, 375,  200, 24):     #moded: # hotspot (170, 563, 300, 36):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Show("settings_7dl", transition=Dissolve(0.2))]
-            # hotspot (162, 615, 307, 40):
+            # hotspot (108, 410,  205, 27):     #moded: # hotspot (162, 615, 307, 40):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Show("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("sdl_achvlist_main")]
-            # hotspot (165, 665, 233, 43):
+            # hotspot (110, 443,  155, 29):     #moded: # hotspot (165, 665, 233, 43):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Show("contacts_7dl", transition=Dissolve(0.2))]
-            # hotspot (164, 718, 153, 41):
+            # hotspot (109, 479,  102, 27):     #moded: # hotspot (164, 718, 153, 41):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Show("media_7dl", transition=Dissolve(0.2))]
-            # hotspot (164, 772, 146, 38):
+            # hotspot (109, 515,  97, 25):     #moded: # hotspot (164, 772, 146, 38):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
             
@@ -611,23 +611,23 @@ screen contacts_7dl():
     tag menu
     imagemap xalign 0.9 yalign 0.7:
         auto get_image_7dl("gui/menu_elem/contacts/contacts_%s.png")
-        hotspot(1265, 330, 329, 59):
+        hotspot(843, 220,  219, 39):     #moded: hotspot(1265, 330, 329, 59):
             action OpenURL("http://7dneyleta.ru") 
-        hotspot(1265, 389, 329, 59):
+        hotspot(843, 259,  219, 39):     #moded: hotspot(1265, 389, 329, 59):
             action OpenURL("https://vk.com/bl_7dl") 
-        hotspot(1265, 449, 329, 59):
+        hotspot(843, 299,  219, 39):     #moded: hotspot(1265, 449, 329, 59):
             action OpenURL("https://steamcommunity.com/sharedfiles/filedetails/?id=441054187") 
-        hotspot(1265, 508, 329, 59):
+        hotspot(843, 339,  219, 39):     #moded: hotspot(1265, 508, 329, 59):
             action OpenURL("https://vk.com/page-128046483_52530462") 
             
 screen media_7dl():
     tag menu
     imagemap:   
         auto get_image_7dl("gui/menu_elem/media/media_%s.png")
-        hotspot(1333, 224, 540, 160):
+        hotspot(889, 149,  360, 107):     #moded: hotspot(1333, 224, 540, 160):
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             clicked [Show("alt_wip", transition=Dissolve(0.2))]
-        hotspot(1218, 394, 700, 700):
+        hotspot(812, 263,  467, 467):     #moded: hotspot(1218, 394, 700, 700):
             hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
             clicked [Hide("media_7dl", transition=Dissolve(0.2)), Hide("menu_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("alt_gallery_start")]
         
@@ -727,3 +727,5 @@ label start_7dl:
     call alt_vars
     call alt_day0_prologue
     jump main_menu_7dl
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

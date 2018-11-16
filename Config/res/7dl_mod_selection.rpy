@@ -97,11 +97,11 @@ init python:
         style.futaba_button.hover_background = Solid("#ffd591")
         style.futaba_button.insensitive_background = Solid("#b5b5b5")
         style.futaba_vscrollbar = Style(style.vscrollbar)
-        style.futaba_vscrollbar.bottom_bar       = img_bar("vscrollbar",       "#EEAA88", 0, 12)
-        style.futaba_vscrollbar.top_bar          = img_bar("vscrollbar",       "#EEAA88", 0, 12)
+        style.futaba_vscrollbar.bottom_bar       = img_bar("vscrollbar",       "#EEAA88", 0, 8)     #moded: style.futaba_vscrollbar.bottom_bar       = img_bar("vscrollbar",       "#EEAA88", 0, 12)
+        style.futaba_vscrollbar.top_bar          = img_bar("vscrollbar",       "#EEAA88", 0, 8)     #moded: style.futaba_vscrollbar.top_bar          = img_bar("vscrollbar",       "#EEAA88", 0, 12)
         style.futaba_vscrollbar.thumb            = img_bar("vscrollbar_thumb", "#EEAA88")
-        style.futaba_vscrollbar.hover_bottom_bar = img_bar("vscrollbar",       "#FFD591", 0, 12)
-        style.futaba_vscrollbar.hover_top_bar    = img_bar("vscrollbar",       "#FFD591", 0, 12)
+        style.futaba_vscrollbar.hover_bottom_bar = img_bar("vscrollbar",       "#FFD591", 0, 8)     #moded: style.futaba_vscrollbar.hover_bottom_bar = img_bar("vscrollbar",       "#FFD591", 0, 12)
+        style.futaba_vscrollbar.hover_top_bar    = img_bar("vscrollbar",       "#FFD591", 0, 8)     #moded: style.futaba_vscrollbar.hover_top_bar    = img_bar("vscrollbar",       "#FFD591", 0, 12)
         style.futaba_vscrollbar.hover_thumb      = img_bar("vscrollbar_thumb", "#FFD591")
 
 label mods_selection_7dl_loop:
@@ -190,3 +190,6 @@ label filters_selection_7dl:
     if  result == "exit":
         return
     jump filters_selection_7dl
+
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

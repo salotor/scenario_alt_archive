@@ -696,24 +696,24 @@ label alt_day4_neu_us:
     "Так как мелкая неслась как метеор, игнорируя углы и, подозреваю, кое-где проходя сквозь них."
     window hide
     scene bg ext_houses_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (-3, -3)      #moded: linear 0.1 pos (-5,-5)
+        linear 0.1 pos (3, 3)      #moded: linear 0.1 pos (5,5)
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (0, -3)      #moded: linear 0.1 pos (0,-5)
+        linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
         repeat (12)
     with dissolve
 
     "Я, не обладающий такими навыками, разумеется, поймал полный запас шишек, веток и стенок."
     window hide
     scene bg ext_boathouse_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (-3, -3)      #moded: linear 0.1 pos (-5,-5)
+        linear 0.1 pos (3, 3)      #moded: linear 0.1 pos (5,5)
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (0, -3)      #moded: linear 0.1 pos (0,-5)
+        linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
         repeat (12)
     with dissolve
     play ambience ambience_boat_station_day fadein 5
@@ -734,12 +734,12 @@ label alt_day4_neu_us:
     "За спиной разнёсся чей-то крик, остро завоняло палёной пластмассой."
     window hide
     scene bg ext_boathouse_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (-3, -3)      #moded: linear 0.1 pos (-5,-5)
+        linear 0.1 pos (3, 3)      #moded: linear 0.1 pos (5,5)
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (0, -3)      #moded: linear 0.1 pos (0,-5)
+        linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
         repeat (12)
     with dissolve
 
@@ -1777,7 +1777,7 @@ label alt_day4_neu_curl:
         "Ещё чуть-чуть, может быть, несколько часов, и я, наконец, уберусь из чёртова лагеря."
         play music music_7dl["anglegrinder"] fadein 3
         "Скорость всё нарастала."
-        show ftl_anim with Shake((0, 0, 0, 0), 30.0, dist=10)
+        show ftl_anim with Shake((0, 0, 0,  0), 30.0, dist=10)     #moded: show ftl_anim with Shake((0, 0, 0, 0), 30.0, dist=10)
         "Меня буквально вжало в кресло."
         "К счастью, скоро удалось справиться с ускорением."
         hide ftl_anim with dspr
@@ -1866,11 +1866,11 @@ label alt_day4_neu_curl:
     
         "Педали крутились легко, и я набрал приличную скорость."
         show ftl_anim
-        with Shake((0, 0, 0, 0), 30.0, dist=10)
+        with Shake((0, 0, 0,  0), 30.0, dist=10)     #moded: with Shake((0, 0, 0, 0), 30.0, dist=10)
         "Ветер дул в лицо, солнце светило сбоку."
-        with Shake((0, 0, 0, 0), 30.0, dist=10)
+        with Shake((0, 0, 0,  0), 30.0, dist=10)     #moded: with Shake((0, 0, 0, 0), 30.0, dist=10)
         "Настроение было отличное — то самое, какое необходимо беглецу."
-        with Shake((0, 0, 0, 0), 30.0, dist=10)
+        with Shake((0, 0, 0,  0), 30.0, dist=10)     #moded: with Shake((0, 0, 0, 0), 30.0, dist=10)
         hide ftl_anim with dspr
         show blinking
         "Правда, почему-то жутко хочется…"
@@ -3050,7 +3050,7 @@ label alt_day4_neu_supper:
         me "Как обезья…"
         "Бац!"
         show us angry sport with dspr
-        with Shake((0, 0, 0, 0), 0.3, dist=50)
+        with Shake((0, 0, 0,  0), 0.3, dist=50)     #moded: with Shake((0, 0, 0, 0), 0.3, dist=50)
         "Мороженое ударило меня прямо в лицо!"
         "И я машинально поймал его, не давая упасть."
         "И, протерев лоб, облизнул пальцы."
@@ -3283,7 +3283,7 @@ label alt_day4_neu_map_me_mt_house:
     "Но сейчас её не было."
     "Наверное, сбежала куда-нибудь на дикий пляж за территорией, палит костерок, смотрит на закат…"
     show backpack_tiny:
-        pos(760,675)
+        pos(507, 450)     #moded: pos(760,675)
     "На спинке стула дожидался своего часа удивительно знакомый тёмно-синий рюкзак с принтом в виде отпечатка ноги."
     "Мой «гризли» родом из моей реальности… И почему я не удивляюсь?"
     "А что касается остальной части комнаты…"
@@ -11046,3 +11046,5 @@ label alt_day6_neu_start:
     with dissolve2
     window hide
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

@@ -1343,25 +1343,25 @@ label alt_day1_mod_tan:
     play music music_list["revenga"] fadein 3
     scene cg d1_me_dahell_7dl:
         pause 0.5 
-        linear 0.05 pos (-5,-5) 
-        linear 0.05 pos (0,0) 
-        linear 0.05 pos (5,5) 
-        linear 0.05 pos (5,0) 
-        linear 0.05 pos (0,0) 
-        linear 0.05 pos (-5,-5) 
-        linear 0.05 pos (0,0) 
-        linear 0.05 pos (5,5) 
-        linear 0.05 pos (0,5) 
-        linear 0.05 pos (0,0) 
-        linear 0.05 pos (-5,-5) 
-        linear 0.05 pos (0,0) 
-        linear 0.05 pos (5,5) 
-        linear 0.05 pos (0,5) 
-        linear 0.05 pos (0,0) 
-        linear 0.05 pos (-5,-5) 
-        linear 0.05 pos (0,0) 
-        linear 0.05 pos (5,5) 
-        linear 0.05 pos (0,0) 
+        linear 0.05 pos (-3, -3)      #moded: linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
+        linear 0.05 pos (3, 3)      #moded: linear 0.05 pos (5,5)
+        linear 0.05 pos (3, 0)      #moded: linear 0.05 pos (5,0)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
+        linear 0.05 pos (-3, -3)      #moded: linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
+        linear 0.05 pos (3, 3)      #moded: linear 0.05 pos (5,5)
+        linear 0.05 pos (0, 3)      #moded: linear 0.05 pos (0,5)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
+        linear 0.05 pos (-3, -3)      #moded: linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
+        linear 0.05 pos (3, 3)      #moded: linear 0.05 pos (5,5)
+        linear 0.05 pos (0, 3)      #moded: linear 0.05 pos (0,5)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
+        linear 0.05 pos (-3, -3)      #moded: linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
+        linear 0.05 pos (3, 3)      #moded: linear 0.05 pos (5,5)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
     with dissolve
     "Я отказывался верить тому, что увидел в зеркале."
     "Из-под чёлки взирал товарищ лет восемнадцати, будто немного уменьшенный относительно меня настоящего."
@@ -3894,3 +3894,5 @@ label alt_day1_sleep:
     scene black
     with fade
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

@@ -4540,7 +4540,7 @@ label alt_day2_grand_escape:
     us "Давай! Ещё немножечко!"
     "Она легла на пол и протянула в мою сторону руку, подбадривая. Вряд ли она смогла бы затянуть меня в вагон, если поймает мою руку. Однако такой жест заставил ненадолго забыть о том, что я устал, что дыхалка сбилась, и в боку вообще колет."
     window hide
-    show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=15)
+    show ftl_anim with Shake((0, 0, 0,  0), 4.0, dist=15)     #moded: show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=15)
     "Я зарычал и прибавил ходу, чувствуя, как ускоряется поезд. Ещё… Чуть-чуть. Ещё. И…"
     "Я запрыгнул на подножку. С грехом пополам продвинувшись немного вдоль движущегося поезда, забрался внутрь вагона и упал на пол, не в силах отдышаться."
     window hide
@@ -4846,8 +4846,8 @@ label alt_day2_siesta:
         "Про какую-то смежную территорию."
         "И про пространство сказок, где только и возможна наша встреча."
         scene cg d7_mi_hugs_7dl:
-            pos (0,-1920) 
-            linear 15.0 pos (0,-500)
+            pos (0, -1280)      #moded: pos (0,-1920)
+            linear 15.0 pos (0, -333)     #moded: linear 15.0 pos (0,-500)
         show prologue_dream
         with dissolve
         "Я ничего не понял и протянул ладонь, чтобы погладить её волосы."
@@ -6002,18 +6002,18 @@ label alt_day2_slot_us_try:
     "Она бежала к лесу."
     play sound_loop sfx_run_forest fadein 1
     scene bg ext_path_day with dissolve:
-        linear 0.1 pos (5,3)
-        linear 0.1 pos (5,0)
-        linear 0.1 pos (-5,5)
-        linear 0.1 pos (-5,0)
+        linear 0.1 pos (3, 2)     #moded: linear 0.1 pos (5,3)
+        linear 0.1 pos (3, 0)     #moded: linear 0.1 pos (5,0)
+        linear 0.1 pos (-3, 3)     #moded: linear 0.1 pos (-5,5)
+        linear 0.1 pos (-3, 0)     #moded: linear 0.1 pos (-5,0)
         repeat
     "И через несколько шагов мы нырнули в заросли, так что из виду я её сразу же потерял."
     "Дальше преследовать мне её приходилось по звуку трещавших веток…"
     scene bg ext_path_sunset with dissolve:
-        linear 0.1 pos (5,3)
-        linear 0.1 pos (5,0)
-        linear 0.1 pos (-5,5)
-        linear 0.1 pos (-5,0)
+        linear 0.1 pos (3, 2)     #moded: linear 0.1 pos (5,3)
+        linear 0.1 pos (3, 0)     #moded: linear 0.1 pos (5,0)
+        linear 0.1 pos (-3, 3)     #moded: linear 0.1 pos (-5,5)
+        linear 0.1 pos (-3, 0)     #moded: linear 0.1 pos (-5,0)
         repeat
     "Гнался я за Ульяной уже довольно долго…"
     "На лагерь понемногу опускался вечер."
@@ -6558,7 +6558,7 @@ label alt_day2_eventEv_me_mt_house1:
     
 label alt_day2_eventEv_library1:
     scene bg ext_library_day with dspr
-    $ alt_day2_random_val = renpy.random.choice([1, 2, 3])
+    $ alt_day2_random_val = renpy.random.choice([1, 1, 2])     #moded: $ alt_day2_random_val = renpy.random.choice([1, 2, 3])
     if alt_day2_random_val == 1:
         th "Библиотека наверняка уже закрыта…"
     else:
@@ -8647,9 +8647,9 @@ label alt_day2_slot_dv:
     play music music_7dl["alice_theme"] fadein 3
     window hide
     scene cg d2_2ch_beach:
-        pos (0,-1920)
-        linear 10.0 pos (0,0)
-        linear 2.0 pos (0, -250)
+        pos (0, -1280)     #moded: pos (0,-1920)
+        linear 10.0 pos (0, 0)     #moded: linear 10.0 pos (0,0)
+        linear 2.0 pos (0, -167)     #moded: linear 2.0 pos (0, -250)
     "Краска щедро бросилась в лицо, и я поспешил отвернуться."
     "Фигурку Алисы в бикини чётко очерчивал лунный свет, а я вдруг подумал, что её слова…"
     "Пари это…"
@@ -9127,3 +9127,5 @@ label alt_day2_slot_sl:
     window hide
     with fade
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

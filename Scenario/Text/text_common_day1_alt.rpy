@@ -57,7 +57,7 @@
     with dissolve
     show mi grin pioneer at cleft with dspr
     show name_mi with flash:
-        pos(1160,460)
+        pos(773, 307)     #moded: pos(1160,460)
     show mi happy pioneer with dspr
     $ renpy.pause(2)
     scene bg int_aidpost_day
@@ -312,7 +312,7 @@ label alt_day1_alt_A:
     with dissolve
     show dv laugh pioneer2 at cleft
     show name_dv with flash:
-        pos(1220,500)
+        pos(813, 333)     #moded: pos(1220,500)
     show dv normal pioneer2 at cleft
     $ renpy.pause(2)
     scene bg ext_aidpost_day
@@ -322,7 +322,7 @@ label alt_day1_alt_A:
     "Она действительно была огненно-рыжей."
     "И очень, очень злой!"
     play sound sfx_punch_medium
-    with Shake((0, 0, 0, 0), 0.1, dist=50)
+    with Shake((0, 0, 0,  0), 0.1, dist=50)     #moded: with Shake((0, 0, 0, 0), 0.1, dist=50)
     "Судя по тому хлопку, который пришлось пережить моей несчастной спине, новая вредина вложила в него всю злость за то, что была обнаружена."
     me "Эй, за что?!"
     dv "Заткнись и пошли."
@@ -639,8 +639,8 @@ label alt_day1_alt_A:
         window hide
         show dv scared pioneer2
         show alt_credits timeskip5:
-                pos (747,250)
-        with Shake((0, 0, 0, 0), 2.0, dist=50)
+                pos (498, 167)     #moded: pos (747,250)
+        with Shake((0, 0, 0,  0), 2.0, dist=50)     #moded: with Shake((0, 0, 0, 0), 2.0, dist=50)
         $ renpy.pause(2, hard=True)
         scene bg ext_boathouse_alt_day_7dl with flash
     
@@ -800,8 +800,8 @@ label alt_day1_alt_A:
     show sl smile pioneer at right
     with dissolve
     show name_sl with flash:
-        pos(760,480)
-        linear 1.0 pos (670,420)
+        pos(507, 320)     #moded: pos(760,480)
+        linear 1.0 pos (447, 280)     #moded: linear 1.0 pos (670,420)
     $ renpy.pause(2)
     scene bg ext_boathouse_alt_day_7dl
     show dv angry pioneer2 at left
@@ -938,7 +938,7 @@ label alt_day1_alt_S:
     scene cg d2_mirror:
         xalign 0.55 yalign 0.45 zoom 1.25
         linear 2.0 zoom 1.0 xalign 0.45 yalign 0.55
-    with Shake((0, 0, 0, 0), 2.0, dist=50)
+    with Shake((0, 0, 0,  0), 2.0, dist=50)     #moded: with Shake((0, 0, 0, 0), 2.0, dist=50)
     $ renpy.pause(2, hard=True)
 
     th "Ох и {image=alt_KS_censor} же я вас за ваше {image=alt_KS_censor2} {image=alt_KS_censor} с {image=alt_KS_censor2} {image=alt_KS_censor} {image=alt_KS_censor}."
@@ -1246,7 +1246,7 @@ label alt_day1_alt_L:
     with dissolve
     show un smile pioneer at cleft with dspr
     show name_un with flash:
-        pos(1060,480)
+        pos(707, 320)     #moded: pos(1060,480)
     show un shy pioneer at cleft with dspr
     $ renpy.pause(2)
     scene bg ext_house_of_sl_day
@@ -1385,20 +1385,20 @@ label alt_day1_alt_L:
             "В старом «квейке» она называлась…"
             "Распрыжкой."
             window hide
-            show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=10)
+            show ftl_anim with Shake((0, 0, 0,  0), 4.0, dist=10)     #moded: show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=10)
         
             "Я поймаю его и утрамбую в бетон, чтобы наружу торчали одни только уши."
             "Надо просто быть ещё чуточку быстрее…"
             window hide
-            show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=15)
+            show ftl_anim with Shake((0, 0, 0,  0), 4.0, dist=15)     #moded: show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=15)
         
             "Ещё…"
             window hide
-            show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=20)
+            show ftl_anim with Shake((0, 0, 0,  0), 4.0, dist=20)     #moded: show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=20)
         
             "Чуточку…"
             window hide
-            show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=15)
+            show ftl_anim with Shake((0, 0, 0,  0), 4.0, dist=15)     #moded: show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=15)
         
             "Быстрее…"
             "Икроножные мышцы заныли, когда я, оставляя за собой инверсионный след, вышел на первую космическую."
@@ -1411,7 +1411,7 @@ label alt_day1_alt_L:
                 xalign 0.5 yalign 0.5 zoom 1.25
                 linear 0.3 zoom 1.0 xalign 0.5 yalign 0.5
             show blackout_exh
-            show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=15)
+            show ftl_anim with Shake((0, 0, 0,  0), 4.0, dist=15)     #moded: show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=15)
             with flash
         
             voice "Эй, лови!"
@@ -1732,8 +1732,8 @@ label alt_day1_alt_O:
     show mt normal pioneer at cright
     with dissolve
     show name_mt with flash:
-        pos(460,350)
-        linear 1.0 pos (260,330)
+        pos(307, 233)     #moded: pos(460,350)
+        linear 1.0 pos (173, 220)     #moded: linear 1.0 pos (260,330)
     show mt smile pioneer at cright with dissolve
     $ renpy.pause(2)
     scene bg int_house_of_mt_day
@@ -1980,7 +1980,7 @@ label alt_day1_alt_supper:
     show us normal sport
     with dissolve
     show name_us:
-        pos(660,180)
+        pos(440, 120)     #moded: pos(660,180)
     show us smile sport
     with flash
     $ renpy.pause(2)
@@ -2889,3 +2889,5 @@ label alt_day1_alt_ev_A_S:
     window hide
     with fade
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

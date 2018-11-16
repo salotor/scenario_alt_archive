@@ -135,51 +135,51 @@ label alt_day2_participate:
     with dissolve
     if alt_pe == 1:
         show un_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         show me_playon:
-            pos (1315,775)
+            pos (877, 517)     #moded: pos (1315,775)
         with diam
         "Мне противостояла Лена"
     elif alt_pe == 2:
         show sl_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         show me_playon:
-            pos (1315,775)
+            pos (877, 517)     #moded: pos (1315,775)
         with diam
         "Мне противостояла Славя"
     elif alt_pe == 3:
         show dv_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         show me_playon:
-            pos (1315,775)
+            pos (877, 517)     #moded: pos (1315,775)
         with diam
         "Алиса, улыбаясь, сидела напротив меня"
     elif alt_pe == 4:
         show mi_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         show me_playon:
-            pos (1315,775)
+            pos (877, 517)     #moded: pos (1315,775)
         with diam
         "По ту сторону стола мне лучезарно улыбалась японка"
     elif alt_pe == 5:
         show us_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         show me_playon:
-            pos (1315,775)
+            pos (877, 517)     #moded: pos (1315,775)
         with diam
         "Ульянка корчила мне рожи с той стороны стола"
     elif alt_pe == 6:
         show sh_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         show me_playon:
-            pos (1315,775)
+            pos (877, 517)     #moded: pos (1315,775)
         with diam
         "У нас здесь образовалась мужская компания"
     elif alt_pe == 7:
         show mz_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         show me_playon:
-            pos (1315,775)
+            pos (877, 517)     #moded: pos (1315,775)
         with diam
         "Из-за стёкол очков на меня зыркала нелюдимая библиотекарша"
 
@@ -188,79 +188,79 @@ label alt_day2_participate:
     "Первый стол заняли"
     if alt_player1 == 1:
         show un_playon:
-            pos (459,157)
+            pos (306, 105)     #moded: pos (459,157)
         with dissolve
         extend " Лена"
     elif alt_player1 == 2:
         show sl_playon:
-            pos (459,157)
+            pos (306, 105)     #moded: pos (459,157)
         with dissolve
         extend " Славя"
     elif alt_player1 == 3:
         show dv_playon:
-            pos (459,157)
+            pos (306, 105)     #moded: pos (459,157)
         with dissolve
         extend " Алиса"
     elif alt_player1 == 4:
         show mi_playon:
-            pos (459,157)
+            pos (306, 105)     #moded: pos (459,157)
         with dissolve
         extend " Мику"
     elif alt_player1 == 5:
         show us_playon:
-            pos (459,157)
+            pos (306, 105)     #moded: pos (459,157)
         with dissolve
         extend " Ульяна"
     elif alt_player1 == 6:
         show sh_playon:
-            pos (459,157)
+            pos (306, 105)     #moded: pos (459,157)
         with dissolve
         extend " Шурик"
     elif alt_player1 == 7:
         show mz_playon:
-            pos (459,157)
+            pos (306, 105)     #moded: pos (459,157)
         with dissolve
         extend " Женя"
     
     if alt_player2 == 1:
         show un_playon:
-            pos (459,312)
+            pos (306, 208)     #moded: pos (459,312)
         with dissolve
         extend " и Лена."
         "Девочка перехватила мой взгляд и вся покраснела."
     elif alt_player2 == 2:
         show sl_playon:
-            pos (459,312)
+            pos (306, 208)     #moded: pos (459,312)
         with dissolve
         extend " и Славя."
         "Славя почувствовала, что я на неё смотрю, и улыбнулась."
     elif alt_player2 == 3:
         show dv_playon:
-            pos (459,312)
+            pos (306, 208)     #moded: pos (459,312)
         with dissolve
         extend " и рыжая."
         "Она расхохоталась, увидев, как я притворяюсь, что не смотрю на неё."
     elif alt_player2 == 4:
         show mi_playon:
-            pos (459,312)
+            pos (306, 208)     #moded: pos (459,312)
         with dissolve
         extend " и Мику."
         "Вид у японки был забавный — она изо всех сил притворялась, что знает, зачем здесь находится."
     elif alt_player2 == 5:
         show us_playon:
-            pos (459,312)
+            pos (306, 208)     #moded: pos (459,312)
         with dissolve
         extend " и Ульяна."
         "Мелкая показала мне язык и отвернулась."
     elif alt_player2 == 6:
         show sh_playon:
-            pos (459,312)
+            pos (306, 208)     #moded: pos (459,312)
         with dissolve
         extend " и Шурик."
         "Он подмигнул мне и выставил большой палец."
     elif alt_player2 == 7:
         show mz_playon:
-            pos (459,312)
+            pos (306, 208)     #moded: pos (459,312)
         with dissolve
         extend " и Жужелица."
         "Она, как обычно, проигнорировала меня."
@@ -269,79 +269,79 @@ label alt_day2_participate:
     "Следующий стол принадлежал "
     if alt_player3 == 1:
         show un_playon:
-            pos (459,620)
+            pos (306, 413)     #moded: pos (459,620)
         with dissolve
         extend " Лене"
     elif alt_player3 == 2:
         show sl_playon:
-            pos (459,620)
+            pos (306, 413)     #moded: pos (459,620)
         with dissolve
         extend " Славе"
     elif alt_player3 == 3:
         show dv_playon:
-            pos (459,620)
+            pos (306, 413)     #moded: pos (459,620)
         with dissolve
         extend " Алисе"
     elif alt_player3 == 4:
         show mi_playon:
-            pos (459,620)
+            pos (306, 413)     #moded: pos (459,620)
         with dissolve
         extend " Мику"
     elif alt_player3 == 5:
         show us_playon:
-            pos (459,620)
+            pos (306, 413)     #moded: pos (459,620)
         with dissolve
         extend " Ульянке"
     elif alt_player3 == 6:
         show sh_playon:
-            pos (459,620)
+            pos (306, 413)     #moded: pos (459,620)
         with dissolve
         extend " Шурику"
     elif alt_player3 == 7:
         show mz_playon:
-            pos (459,620)
+            pos (306, 413)     #moded: pos (459,620)
         with dissolve
         extend " Жене"
 
     if alt_player4 == 1:
         show un_playon:
-            pos (459,775)
+            pos (306, 517)     #moded: pos (459,775)
         with dissolve
         extend " и Лене."
         "Девочка притворилась, что не заметила, как я смотрю на неё."
     elif alt_player4 == 2:
         show sl_playon:
-            pos (459,775)
+            pos (306, 517)     #moded: pos (459,775)
         with dissolve
         extend " и Славе."
         "Славя ободряюще кивнула мне."
     elif alt_player4 == 3:
         show dv_playon:
-            pos (459,775)
+            pos (306, 517)     #moded: pos (459,775)
         with dissolve
         extend " и Алиске."
         "Надеюсь, она слетит в первом же раунде!"
     elif alt_player4 == 4:
         show mi_playon:
-            pos (459,775)
+            pos (306, 517)     #moded: pos (459,775)
         with dissolve
         extend " и Мику."
         "За эту переживать не приходится — она, похоже, вообще к картам равнодушна."
     elif alt_player4 == 5:
         show us_playon:
-            pos (459,775)
+            pos (306, 517)     #moded: pos (459,775)
         with dissolve
         extend " и Ульяне."
         "Мелкая была занята запугиванием оппонента."
     elif alt_player4 == 6:
         show sh_playon:
-            pos (459,775)
+            pos (306, 517)     #moded: pos (459,775)
         with dissolve
         extend " и Шурику."
         "Прикрыв глаза, кибернетик что-то высчитывал в уме. Шансы на победу?"
     elif alt_player4 == 7:
         show mz_playon:
-            pos (459,775)
+            pos (306, 517)     #moded: pos (459,775)
         with dissolve
         extend " и Жене."
         "Видно было, что она рада бы всё бросить и пойти в библиотеку."
@@ -350,78 +350,78 @@ label alt_day2_participate:
     "За ним сидели"
     if alt_player5 == 1:
         show un_playon:
-            pos (1315,157)
+            pos (877, 105)     #moded: pos (1315,157)
         with dissolve
         extend " Лена"
     elif alt_player5 == 2:
         show sl_playon:
-            pos (1315,157)
+            pos (877, 105)     #moded: pos (1315,157)
         with dissolve
         extend " Славя"
     elif alt_player5 == 3:
         show dv_playon:
-            pos (1315,157)
+            pos (877, 105)     #moded: pos (1315,157)
         with dissolve
         extend " Алиса"
     elif alt_player5 == 4:
         show mi_playon:
-            pos (1315,157)
+            pos (877, 105)     #moded: pos (1315,157)
         with dissolve
         extend " Мику"
     elif alt_player5 == 5:
         show us_playon:
-            pos (1315,157)
+            pos (877, 105)     #moded: pos (1315,157)
         with dissolve
         extend " Ульяна"
     elif alt_player5 == 6:
         show sh_playon:
-            pos (1315,157)
+            pos (877, 105)     #moded: pos (1315,157)
         with dissolve
         extend " Шурик"
     elif alt_player5 == 7:
         show mz_playon:
-            pos (1315,157)
+            pos (877, 105)     #moded: pos (1315,157)
         with dissolve
         extend " Женя"
     if alt_player6 == 1:
         show un_playon:
-            pos (1315,312)
+            pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         extend " и Лена."
         "Удивлён, что она согласилась участвовать в публичном мероприятии."
     elif alt_player6 == 2:
         show sl_playon:
-            pos (1315,312)
+            pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         extend " и Славя."
         "Странно было видеть «правильную» девочку с картами в зубах."
     elif alt_player6 == 3:
         show dv_playon:
-            pos (1315,312)
+            pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         extend " и Алиса."
         "Ну уж это-та своего не упустит."
     elif alt_player6 == 4:
         show mi_playon:
-            pos (1315,312)
+            pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         extend " и Мику."
         "Японка явно была чем-то взволнована. {w}И дело было совсем не в картах."
     elif alt_player6 == 5:
         show us_playon:
-            pos (1315,312)
+            pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         extend " и Ульяна."
         "Она улыбалась и качала головой, готовясь к решительной победе!"
     elif alt_player6 == 6:
         show sh_playon:
-            pos (1315,312)
+            pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         extend " и Шурик."
         "Парень, похоже, и в самом деле ни разу не слышал про такую игру — выглядел он растерянным."
     elif alt_player6 == 7:
         show mz_playon:
-            pos (1315,312)
+            pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         extend " и Женя."
         "Вот уж кто тут явно выглядит чужеродно."
@@ -626,70 +626,70 @@ label alt_day2_participate_fail:
     show alt_tournament_bg with dissolve
     "Я остаюсь в первом коне."
     show me_playon:
-        pos (1315,775)
+        pos (877, 517)     #moded: pos (1315,775)
     with diam
     "Мой оппонент направляется в полуфинал."
     if alt_pe == 1:
         show un_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(.3)
         hide un_playon
         show un_playon:
-            pos (1135,698)
+            pos (757, 465)     #moded: pos (1135,698)
         with diam
         $ alt_day2_hf4 = 1
     elif alt_pe == 2:
         show sl_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(.3)
         hide sl_playon
         show sl_playon:
-            pos (1135,698)
+            pos (757, 465)     #moded: pos (1135,698)
         with diam
         $ alt_day2_hf4 = 2
     elif alt_pe == 3:
         show dv_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(.3)
         hide dv_playon
         show dv_playon:
-            pos (1135,698)
+            pos (757, 465)     #moded: pos (1135,698)
         with diam
         $ alt_day2_hf4 = 3
     elif alt_pe == 4:
         show mi_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(.3)
         hide mi_playon
         show mi_playon:
-            pos (1135,698)
+            pos (757, 465)     #moded: pos (1135,698)
         with diam
         $ alt_day2_hf4 = 4
     elif alt_pe == 5:
         show us_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(.3)
         hide us_playon
         show us_playon:
-            pos (1135,698)
+            pos (757, 465)     #moded: pos (1135,698)
         with diam
         $ alt_day2_hf4 = 5
     elif alt_pe == 6:
         show sh_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(.3)
         hide sh_playon
         show sh_playon:
-            pos (1135,698)
+            pos (757, 465)     #moded: pos (1135,698)
         with diam
         $ alt_day2_hf4 = 6
     elif alt_pe == 7:
         show mz_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(.3)
         hide mz_playon
         show mz_playon:
-            pos (1135,698)
+            pos (757, 465)     #moded: pos (1135,698)
         with diam
         $ alt_day2_hf4 = 7
 
@@ -1101,45 +1101,45 @@ label alt_day2_participate_win:
     "Ситуация, между тем, складывалась следующая:"
     show alt_tournament_bg with dissolve
     show me_playon:
-        pos (1315,775)
+        pos (877, 517)     #moded: pos (1315,775)
     "Я направляюсь к победе."
     $ renpy.pause(1)
     show me_playon:
-        pos (1135,698)
+        pos (757, 465)     #moded: pos (1135,698)
     with diam
     if alt_pe == 1:
         show un_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(1)
         hide un_playon with diam
     elif alt_pe == 2:
         show sl_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(1)
         hide sl_playon with diam
     elif alt_pe == 3:
         show dv_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(1)
         hide dv_playon with diam
     elif alt_pe == 4:
         show mi_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(1)
         hide mi_playon with diam
     elif alt_pe == 5:
         show us_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(1)
         hide us_playon with diam
     elif alt_pe == 6:
         show sh_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(1)
         hide sh_playon with diam
     elif alt_pe == 7:
         show mz_playon:
-            pos (1315,620)
+            pos (877, 413)     #moded: pos (1315,620)
         $ renpy.pause(1)
         hide mz_playon with diam
         
@@ -1471,70 +1471,70 @@ label alt_day2_semifinal_fail:
     show alt_tournament_bg with dissolve
     "Я выбыл в полуфинале."
     show me_playon:
-        pos (890,360)
+        pos (593, 240)     #moded: pos (890,360)
     with diam
     "А мой оппонент отправился дальше."
     if alt_day2_hf2 == 1:
         show un_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(.3)
         hide un_playon
         show un_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         $ alt_day2_f2 = 1
     elif alt_day2_hf2 == 2:
         show sl_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(.3)
         hide sl_playon
         show sl_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         $ alt_day2_f2 = 2
     elif alt_day2_hf2 == 3:
         show dv_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(.3)
         hide dv_playon
         show dv_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         $ alt_day2_f2 = 3
     elif alt_day2_hf2 == 4:
         show mi_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(.3)
         hide mi_playon
         show mi_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         $ alt_day2_f2 = 4
     elif alt_day2_hf2 == 5:
         show us_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(.3)
         hide us_playon
         show us_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         $ alt_day2_f2 = 5
     elif alt_day2_hf2 == 6:
         show sh_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(.3)
         hide sh_playon
         show sh_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         $ alt_day2_f2 = 6
     elif alt_day2_hf2 == 7:
         show mz_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(.3)
         hide mz_playon
         show mz_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         $ alt_day2_f2 = 7
 
@@ -1765,61 +1765,61 @@ label alt_day2_final_fail:
     scene bg int_dining_hall_sunset
     show alt_tournament_bg
     show me_playon:
-        pos (890,575)
+        pos (593, 383)     #moded: pos (890,575)
     if alt_day2_f1 == 1:
         show un_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         $ renpy.pause (.3)
         show un_playon:
-            pos (1051,460)
+            pos (701, 307)     #moded: pos (1051,460)
         hide me_playon
         with diam
     if alt_day2_f1 == 2:
         show sl_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         $ renpy.pause (.3)
         show sl_playon:
-            pos (1051,460)
+            pos (701, 307)     #moded: pos (1051,460)
         hide me_playon
         with diam
     if alt_day2_f1 == 3:
         show dv_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         $ renpy.pause (.3)
         show dv_playon:
-            pos (1051,460)
+            pos (701, 307)     #moded: pos (1051,460)
         hide me_playon
         with diam
     if alt_day2_f1 == 4:
         show mi_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         $ renpy.pause (.3)
         show mi_playon:
-            pos (1051,460)
+            pos (701, 307)     #moded: pos (1051,460)
         hide me_playon
         with diam
     if alt_day2_f1 == 5:
         show us_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         $ renpy.pause (.3)
         show us_playon:
-            pos (1051,460)
+            pos (701, 307)     #moded: pos (1051,460)
         hide me_playon
         with diam
     if alt_day2_f1 == 6:
         show sh_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         $ renpy.pause (.3)
         show sh_playon:
-            pos (1051,460)
+            pos (701, 307)     #moded: pos (1051,460)
         hide me_playon
         with diam
     if alt_day2_f1 == 7:
         show mz_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         $ renpy.pause (.3)
         show mz_playon:
-            pos (1051,460)
+            pos (701, 307)     #moded: pos (1051,460)
         hide me_playon
         with diam
     window show
@@ -2151,31 +2151,31 @@ label alt_day2_final_win:
     scene bg int_dining_hall_sunset
     show alt_tournament_bg
     show me_playon:
-        pos (890,575)
+        pos (593, 383)     #moded: pos (890,575)
     if alt_day2_f1 == 1:
         show un_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
     if alt_day2_f1 == 2:
         show sl_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
     if alt_day2_f1 == 3:
         show dv_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
     if alt_day2_f1 == 4:
         show mi_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
     if alt_day2_f1 == 5:
         show us_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
     if alt_day2_f1 == 6:
         show sh_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
     if alt_day2_f1 == 7:
         show mz_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
     $ renpy.pause(1)
     show me_playon:
-        pos (1051,460)
+        pos (701, 307)     #moded: pos (1051,460)
     with diam
     window show
     scene bg int_dining_hall_sunset
@@ -2473,93 +2473,93 @@ label alt_day2_qf_analizer:
         extend " Лене."
         if alt_day2_hf1 == alt_player1:
             show un_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show un_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
     elif alt_day2_hf1 == 2:
         extend " Славе."
         if alt_day2_hf1 == alt_player1:
             show sl_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show sl_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
     elif alt_day2_hf1 == 3:
         extend " Алисе."
         if alt_day2_hf1 == alt_player1:
             show dv_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show dv_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
     elif alt_day2_hf1 == 4:
         extend " Мику."
         if alt_day2_hf1 == alt_player1:
             show mi_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show mi_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
     elif alt_day2_hf1 == 5:
         extend " Ульяне."
         if alt_day2_hf1 == alt_player1:
             show us_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show us_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
     elif alt_day2_hf1 == 6:
         extend " Шурику."
         if alt_day2_hf1 == alt_player1:
             show sh_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show sh_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
     elif alt_day2_hf1 == 7:
         extend " Жене."
         if alt_day2_hf1 == alt_player1:
             show mz_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show mz_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
     $ renpy.pause(.3)
     if alt_day2_hf1 == 1:
         show un_playon:
-            pos (648,235)
+            pos (432, 157)     #moded: pos (648,235)
         with diam
         "Ей пришлось потрудиться, но победа оказалась за ней."
     elif alt_day2_hf1 == 2:
         show sl_playon:
-            pos (648,235)
+            pos (432, 157)     #moded: pos (648,235)
         with diam
         "Активистка, похоже, не поняла, что произошло, но покорно пересела за стол полуфиналистов."
     elif alt_day2_hf1 == 3:
         show dv_playon:
-            pos (648,235)
+            pos (432, 157)     #moded: pos (648,235)
         with diam
         "Она раскатала противника с разгромным счётом — кажется, наслаждалась игрой."
     elif alt_day2_hf1 == 4:
         show mi_playon:
-            pos (648,235)
+            pos (432, 157)     #moded: pos (648,235)
         with diam
         "Да уж, талантливый человек талантлив во всём."
     elif alt_day2_hf1 == 5:
         show us_playon:
-            pos (648,235)
+            pos (432, 157)     #moded: pos (648,235)
         with diam
         "Мелкая и не думала учить правила игры."
         "Вместо этого она явно прибегла к какому-то жульничеству."
     elif alt_day2_hf1 == 6:
         show sh_playon:
-            pos (648,235)
+            pos (432, 157)     #moded: pos (648,235)
         with diam
         "Честно сказать, не удивлён. У него были все шансы."
     elif alt_day2_hf1 == 7:
         show mz_playon:
-            pos (648,235)
+            pos (432, 157)     #moded: pos (648,235)
         with diam
         "Она с неудовольствием скривилась, кажется, поняла, что победа значит ещё и дальнейшее участие в этой дурацкой игре."
     
@@ -2567,30 +2567,30 @@ label alt_day2_qf_analizer:
     if ((alt_player1 == 1) or (alt_player2 == 1)) and (alt_day2_hf1 != 1):
         if alt_player1 == 1:
             show un_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show un_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
         with dissolve
         "Лена тихо поднялась и присоединилась к болельщикам."
         hide un_playon with diam
     elif ((alt_player1 == 2) or (alt_player2 == 2)) and (alt_day2_hf1 != 2):
         if alt_player1 == 3:
             show sl_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show sl_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
         with dissolve
         "Славя пожала плечами и поднялась — кажется, она куда-то торопилась."
         hide sl_playon with diam
     elif ((alt_player1 == 3) or (alt_player2 == 3)) and (alt_day2_hf1 != 3):
         if alt_player1 == 3:
             show dv_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show dv_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
         with dissolve
         "Увидеть лицо Двачевской, терпящей поражение — бесценно!"
         "Я расхохотался, прикрываясь рукой, но она, похоже, услышала — обожгла взглядом."
@@ -2598,10 +2598,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player1 == 4) or (alt_player2 == 4)) and (alt_day2_hf1 != 4):
         if alt_player1 == 4:
             show mi_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show mi_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
         with dissolve
         "Мику поднялась, помахала всем и встала к болельщикам."
         "Она была чем-то очень довольная."
@@ -2609,10 +2609,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player1 == 5) or (alt_player2 == 5)) and (alt_day2_hf1 != 5):
         if alt_player1 == 5:
             show us_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show us_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
         with dissolve
         "Ульяна надулась, закричала что-то и пробовала было топать ногами, но Ольга Дмитриевна быстро успокоила её."
         "Понурившись, мелкая побрела прочь из столовой."
@@ -2620,10 +2620,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player1 == 6) or (alt_player2 == 6)) and (alt_day2_hf1 != 6):
         if alt_player1 == 6:
             show sh_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show sh_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
         with dissolve
         "Шурик среагировал так, как я и ожидал — поправил очки, резким движением отбросил чёлку со лба и встал."
         "Коротко наклонил голову и занял своё место в толпе."
@@ -2631,10 +2631,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player1 == 7) or (alt_player2 == 7)) and (alt_day2_hf1 != 7):
         if alt_player1 == 7:
             show mz_playon:
-                pos (459,157)
+                pos (306, 105)     #moded: pos (459,157)
         else:
             show mz_playon:
-                pos (459,312)
+                pos (306, 208)     #moded: pos (459,312)
         with dissolve
         "С видом величайшего облегчения Женя бросила карты на стол и, встав, направилась на улицу."
         hide mz_playon with diam
@@ -2651,93 +2651,93 @@ label alt_day2_qf_analizer:
         extend " Лене."
         if alt_day2_hf2 == alt_player3:
             show un_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show un_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
     elif alt_day2_hf2 == 2:
         extend " Славе."
         if alt_day2_hf2 == alt_player3:
             show sl_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show sl_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
     elif alt_day2_hf2 == 3:
         extend " Алисе."
         if alt_day2_hf2 == alt_player3:
             show dv_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show dv_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
     elif alt_day2_hf2 == 4:
         extend " Мику."
         if alt_day2_hf2 == alt_player3:
             show mi_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show mi_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
     elif alt_day2_hf2 == 5:
         extend " Ульяне."
         if alt_day2_hf2 == alt_player3:
             show us_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show us_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
     elif alt_day2_hf2 == 6:
         extend " Шурику."
         if alt_day2_hf2 == alt_player3:
             show sh_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show sh_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
     elif alt_day2_hf2 == 7:
         extend " Жене."
         if alt_day2_hf2 == alt_player3:
             show mz_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show mz_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
     $ renpy.pause(.3)
     if alt_day2_hf2 == 1:
         show un_playon:
-            pos (648,698)
+            pos (432, 465)     #moded: pos (648,698)
         with diam
         "Ей пришлось потрудиться, но победа оказалась за ней."
     elif alt_day2_hf2 == 2:
         show sl_playon:
-            pos (648,698)
+            pos (432, 465)     #moded: pos (648,698)
         with diam
         "Активистка, похоже, не поняла, что произошло, но покорно пересела за стол полуфиналистов."
     elif alt_day2_hf2 == 3:
         show dv_playon:
-            pos (648,698)
+            pos (432, 465)     #moded: pos (648,698)
         with diam
         "Она раскатала противника с разгромным счётом — кажется, наслаждалась игрой."
     elif alt_day2_hf2 == 4:
         show mi_playon:
-            pos (648,698)
+            pos (432, 465)     #moded: pos (648,698)
         with diam
         "Да уж, талантливый человек талантлив во всём."
     elif alt_day2_hf2 == 5:
         show us_playon:
-            pos (648,698)
+            pos (432, 465)     #moded: pos (648,698)
         with diam
         "Мелкая и не думала учить правила игры."
         "Вместо этого она явно прибегла к какому-то жульничеству."
     elif alt_day2_hf2 == 6:
         show sh_playon:
-            pos (648,698)
+            pos (432, 465)     #moded: pos (648,698)
         with diam
         "Честно сказать, не удивлён. У него были все шансы."
     elif alt_day2_hf2 == 7:
         show mz_playon:
-            pos (648,698)
+            pos (432, 465)     #moded: pos (648,698)
         with diam
         "Она с неудовольствием скривилась, кажется, поняла, что победа значит ещё и дальнейшее участие в этой дурацкой игре."
     
@@ -2745,30 +2745,30 @@ label alt_day2_qf_analizer:
     if ((alt_player3 == 1) or (alt_player4 == 1)) and (alt_day2_hf2 != 1):
         if alt_player3 == 1:
             show un_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show un_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
         with dissolve
         "Лена тихо поднялась и присоединилась к болельщикам."
         hide un_playon with diam
     elif ((alt_player3 == 2) or (alt_player4 == 2)) and (alt_day2_hf2 != 2):
         if alt_player3 == 1:
             show sl_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show sl_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
         with dissolve
         "Славя пожала плечами и поднялась — кажется, она куда-то торопилась."
         hide sl_playon with diam
     elif ((alt_player3 == 3) or (alt_player4 == 3)) and (alt_day2_hf2 != 3):
         if alt_player3 == 1:
             show dv_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show dv_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
         with dissolve
         "Увидеть лицо Двачевской, терпящей поражение — бесценно!"
         "Я расхохотался, прикрываясь рукой, но она, похоже, услышала — обожгла взглядом."
@@ -2776,10 +2776,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player3 == 4) or (alt_player4 == 4)) and (alt_day2_hf2 != 4):
         if alt_player3 == 1:
             show mi_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show mi_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
         with dissolve
         "Мику поднялась, помахала всем и встала к болельщикам."
         "Она была чем-то очень довольная."
@@ -2787,10 +2787,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player3 == 5) or (alt_player4 == 5)) and (alt_day2_hf2 != 5):
         if alt_player3 == 1:
             show us_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show us_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
         with dissolve
         "Ульяна надулась, закричала что-то и пробовала было топать ногами, но Ольга Дмитриевна быстро успокоила её."
         "Понурившись, мелкая побрела прочь из столовой."
@@ -2798,10 +2798,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player3 == 6) or (alt_player4 == 6)) and (alt_day2_hf2 != 6):
         if alt_player3 == 1:
             show sh_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show sh_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
         with dissolve
         "Шурик среагировал так, как я и ожидал — поправил очки, резким движением отбросил чёлку со лба и встал."
         "Коротко наклонил голову и занял своё место в толпе."
@@ -2809,10 +2809,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player3 == 7) or (alt_player4 == 7)) and (alt_day2_hf2 != 7):
         if alt_player3 == 1:
             show mz_playon:
-                pos (459,620)
+                pos (306, 413)     #moded: pos (459,620)
         else:
             show mz_playon:
-                pos (459,775)
+                pos (306, 517)     #moded: pos (459,775)
         with dissolve
         "С видом величайшего облегчения Женя бросила карты на стол и, встав, направилась на улицу."
         hide mz_playon with diam
@@ -2828,93 +2828,93 @@ label alt_day2_qf_analizer:
         extend " Лене."
         if alt_day2_hf3 == alt_player5:
             show un_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show un_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
     elif alt_day2_hf3 == 2:
         extend " Славе."
         if alt_day2_hf3 == alt_player5:
             show sl_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show sl_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
     elif alt_day2_hf3 == 3:
         extend " Алисе."
         if alt_day2_hf3 == alt_player5:
             show dv_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show dv_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
     elif alt_day2_hf3 == 4:
         extend " Мику."
         if alt_day2_hf3 == alt_player5:
             show mi_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show mi_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
     elif alt_day2_hf3 == 5:
         extend " Ульяне."
         if alt_day2_hf3 == alt_player5:
             show us_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show us_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
     elif alt_day2_hf3 == 6:
         extend " Шурику."
         if alt_day2_hf3 == alt_player5:
             show sh_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show sh_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
     elif alt_day2_hf3 == 7:
         extend " Жене."
         if alt_day2_hf3 == alt_player5:
             show mz_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show mz_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
     $ renpy.pause(.3)
     if alt_day2_hf3 == 1:
         show un_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         with diam
         "Ей пришлось потрудиться, но победа оказалась за ней."
     elif alt_day2_hf3 == 2:
         show sl_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         with diam
         "Активистка, похоже, не поняла, что произошло, но покорно пересела за стол полуфиналистов."
     elif alt_day2_hf3 == 3:
         show dv_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         with diam
         "Она раскатала противника с разгромным счётом — кажется, наслаждалась игрой."
     elif alt_day2_hf3 == 4:
         show mi_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         with diam
         "Да уж, талантливый человек талантлив во всём."
     elif alt_day2_hf3 == 5:
         show us_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         with diam
         "Мелкая и не думала учить правила игры."
         "Вместо этого она явно прибегла к какому-то жульничеству."
     elif alt_day2_hf3 == 6:
         show sh_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         with diam
         "Честно сказать, не удивлён. У него были все шансы."
     elif alt_day2_hf3 == 7:
         show mz_playon:
-            pos (1135,235)
+            pos (757, 157)     #moded: pos (1135,235)
         with diam
         "Она с неудовольствием скривилась, кажется, поняла, что победа значит ещё и дальнейшее участие в этой дурацкой игре."
     
@@ -2922,30 +2922,30 @@ label alt_day2_qf_analizer:
     if ((alt_player5 == 1) or (alt_player6 == 1)) and (alt_day2_hf3 != 1):
         if alt_player5 == 1:
             show un_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show un_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         "Лена тихо поднялась и присоединилась к болельщикам."
         hide un_playon with diam
     elif ((alt_player5 == 2) or (alt_player6 == 2)) and (alt_day2_hf3 != 2):
         if alt_player5 == 1:
             show sl_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show sl_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         "Славя пожала плечами и поднялась — кажется, она куда-то торопилась."
         hide sl_playon with diam
     elif ((alt_player5 == 3) or (alt_player6 == 3)) and (alt_day2_hf3 != 3):
         if alt_player5 == 1:
             show dv_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show dv_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         "Увидеть лицо Двачевской, терпящей поражение — бесценно!"
         "Я расхохотался, прикрываясь рукой, но она, похоже, услышала — обожгла взглядом."
@@ -2953,10 +2953,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player5 == 4) or (alt_player6 == 4)) and (alt_day2_hf3 != 4):
         if alt_player5 == 1:
             show mi_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show mi_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         "Мику поднялась, помахала всем и встала к болельщикам."
         "Она была чем-то очень довольная."
@@ -2964,10 +2964,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player5 == 5) or (alt_player6 == 5)) and (alt_day2_hf3 != 5):
         if alt_player5 == 1:
             show us_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show us_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         "Ульяна надулась, закричала что-то и пробовала было топать ногами, но Ольга Дмитриевна быстро успокоила её."
         "Понурившись, мелкая побрела прочь из столовой."
@@ -2975,10 +2975,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player5 == 6) or (alt_player6 == 6)) and (alt_day2_hf3 != 6):
         if alt_player5 == 1:
             show sh_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show sh_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         "Шурик среагировал так, как я и ожидал — поправил очки, резким движением отбросил чёлку со лба и встал."
         "Коротко наклонил голову и занял своё место в толпе."
@@ -2986,10 +2986,10 @@ label alt_day2_qf_analizer:
     elif ((alt_player5 == 7) or (alt_player6 == 7)) and (alt_day2_hf3 != 7):
         if alt_player5 == 1:
             show mz_playon:
-                pos (1315,157)
+                pos (877, 105)     #moded: pos (1315,157)
         else:
             show mz_playon:
-                pos (1315,312)
+                pos (877, 208)     #moded: pos (1315,312)
         with dissolve
         "С видом величайшего облегчения Женя бросила карты на стол и, встав, направилась на улицу."
         hide mz_playon with diam
@@ -3010,94 +3010,94 @@ label alt_day2_hf_analizer:
         extend " Лене."
         if alt_day2_hf1 == 1:
             show un_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:        
             show un_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
     elif alt_day2_f1 == 2:
         extend " Славе."
         if alt_day2_hf1 == 2:
             show sl_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:        
             show sl_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
     elif alt_day2_f1 == 3:
         extend " Алисе."
         if alt_day2_hf1 == 3:
             show dv_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:        
             show dv_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
     elif alt_day2_f1 == 4:
         extend " Мику."
         if alt_day2_hf1 == 1:
             show mi_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:        
             show mi_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
     elif alt_day2_f1 == 5:
         extend " Ульянке."
         if alt_day2_hf1 == 5:
             show us_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:        
             show us_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
     elif alt_day2_f1 == 6:
         extend " Шурику."
         if alt_day2_hf1 == 6:
             show sh_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:        
             show sh_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
     elif alt_day2_f1 == 7:
         extend " Жужелице."
         if alt_day2_hf1 == 7:
             show mz_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:        
             show mz_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
                 
     $ renpy.pause(.3)
     if alt_day2_hf1 == 1:
         show un_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         "Вот уже вторую игру подряд она сидит с потерянным видом, но ей достаются всё более сильные комбинации. Не подыгрывает ли ей крупье?"
     elif alt_day2_hf1 == 2:
         show sl_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         "Девушка ворчала и пожимала плечами, не особо желая продолжать игру, кажется, она и присоединиться-то решила из одного лишь чувства товарищества."
     elif alt_day2_hf1 == 3:
         show dv_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         "Рыжая пёрла бульдозером, не задерживаясь ни на одном из оппонентов — её целью был финал, и никак иначе!"
     elif alt_day2_hf1 == 4:
         show mi_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         "Она радовалась каждой удачной карте как маленький ребёнок, а когда вскрылись и сверили комбинации — то от радости завизжала и полезла было на стол петь, но была вовремя удалена оттуда бдительной вожатой."
     elif alt_day2_hf1 == 5:
         show us_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         "Мелкая сегодня в ударе."
         "Вторая игра подряд без знания правил — практически как вождение автомобиля без рук."
     elif alt_day2_hf1 == 6:
         show sh_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         "Он не показывал особого интереса. Быть может, в этом и был его секрет?"
     elif alt_day2_hf1 == 7:
         show mz_playon:
-            pos (890,360)
+            pos (593, 240)     #moded: pos (890,360)
         with diam
         "Меня откровенно забавляло то, что она-то как раз меньше всего хотела играть."
         "А ушла так далеко."
@@ -3106,20 +3106,20 @@ label alt_day2_hf_analizer:
     if ((alt_day2_hf1 == 1) or (alt_day2_hf3 == 1)) and (alt_day2_f1 != 1):
         if alt_day2_hf1 == 1:
             show un_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:
             show un_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(1)
         hide un_playon with diam
         "Лена тихо поднялась и присоединилась к болельщикам."
     elif ((alt_day2_hf1 == 2) or (alt_day2_hf3 == 2)) and (alt_day2_f1 != 2):
         if alt_day2_hf1 == 2:
             show sl_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:
             show sl_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(1)
         hide sl_playon with diam
         "Славя замученно улыбнулась и с огромным облегчением отодвинула карты."
@@ -3128,10 +3128,10 @@ label alt_day2_hf_analizer:
     elif ((alt_day2_hf1 == 3) or (alt_day2_hf3 == 3)) and (alt_day2_f1 != 3):
         if alt_day2_hf1 == 3:
             show dv_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:
             show dv_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(1)
         hide dv_playon with diam
         "Алиса долго не хотела верить в то, что проиграла."
@@ -3140,10 +3140,10 @@ label alt_day2_hf_analizer:
     elif ((alt_day2_hf1 == 4) or (alt_day2_hf3 == 4)) and (alt_day2_f1 != 4):
         if alt_day2_hf1 == 4:
             show mi_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:
             show mi_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(1)
         hide mi_playon with diam
         "Девочка посмотрела на свои карты ещё раз, видимо, пытаясь запомнить получше."
@@ -3152,10 +3152,10 @@ label alt_day2_hf_analizer:
     elif ((alt_day2_hf1 == 5) or (alt_day2_hf3 == 5)) and (alt_day2_f1 != 5):
         if alt_day2_hf1 == 5:
             show us_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:
             show us_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(1)
         hide us_playon with diam
         us "Эй, вы все неправильно играли! Вы все жулики, жулики!"
@@ -3165,10 +3165,10 @@ label alt_day2_hf_analizer:
     elif ((alt_day2_hf1 == 6) or (alt_day2_hf3 == 6)) and (alt_day2_f1 != 6):
         if alt_day2_hf1 == 6:
             show sh_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:
             show sh_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(1)
         hide sh_playon with diam
         "Шурик кивнул и поднялся из-за стола."
@@ -3176,10 +3176,10 @@ label alt_day2_hf_analizer:
     elif ((alt_day2_hf1 == 7) or (alt_day2_hf3 == 7)) and (alt_day2_f1 != 7):
         if alt_day2_hf1 == 7:
             show mz_playon:
-                pos (648,235)
+                pos (432, 157)     #moded: pos (648,235)
         else:
             show mz_playon:
-                pos (1135,235)
+                pos (757, 157)     #moded: pos (1135,235)
         $ renpy.pause(1)
         hide mz_playon with diam
         "Давненько я не видел, чтобы так бурно радовались поражению."
@@ -3195,65 +3195,65 @@ label alt_day2_hf_analizer:
         if alt_day2_hf2 == 1:
             extend " Лена"
             show un_playon:
-                pos (720,698)
+                pos (480, 465)     #moded: pos (720,698)
             $ renpy.pause(.3)
             hide un_playon
             show un_playon:
-                pos (890,575)
+                pos (593, 383)     #moded: pos (890,575)
             with diam
         elif alt_day2_hf2 == 2:
             extend " Славя"
             show sl_playon:
-                pos (720,698)
+                pos (480, 465)     #moded: pos (720,698)
             $ renpy.pause(.3)
             hide sl_playon
             show sl_playon:
-                pos (890,575)
+                pos (593, 383)     #moded: pos (890,575)
             with diam
         elif alt_day2_hf2 == 3:
             extend " Алиса"
             show dv_playon:
-                pos (720,698)
+                pos (480, 465)     #moded: pos (720,698)
             $ renpy.pause(.3)
             hide dv_playon
             show dv_playon:
-                pos (890,575)
+                pos (593, 383)     #moded: pos (890,575)
             with diam
         elif alt_day2_hf2 == 4:
             extend " Мику"
             show mi_playon:
-                pos (720,698)
+                pos (480, 465)     #moded: pos (720,698)
             $ renpy.pause(.3)
             hide mi_playon
             show mi_playon:
-                pos (890,575)
+                pos (593, 383)     #moded: pos (890,575)
             with diam
         elif alt_day2_hf2 == 5:
             extend " Ульяна"
             show us_playon:
-                pos (720,698)
+                pos (480, 465)     #moded: pos (720,698)
             $ renpy.pause(.3)
             hide us_playon
             show us_playon:
-                pos (890,575)
+                pos (593, 383)     #moded: pos (890,575)
             with diam
         elif alt_day2_hf2 == 6:
             extend " Шурик"
             show sh_playon:
-                pos (720,698)
+                pos (480, 465)     #moded: pos (720,698)
             $ renpy.pause(.3)
             hide sh_playon
             show sh_playon:
-                pos (890,575)
+                pos (593, 383)     #moded: pos (890,575)
             with diam
         elif alt_day2_hf2 == 7:
             extend " Женя"
             show mz_playon:
-                pos (720,698)
+                pos (480, 465)     #moded: pos (720,698)
             $ renpy.pause(.3)
             hide mz_playon
             show mz_playon:
-                pos (890,575)
+                pos (593, 383)     #moded: pos (890,575)
         with diam
         extend ", где встретит"
         if alt_day2_f1 == 1:
@@ -3279,7 +3279,7 @@ label alt_day2_hf_analizer:
             "Во. Жужелица."
     else:
         show me_playon:
-            pos (890,575)
+            pos (593, 383)     #moded: pos (890,575)
         with diam
         "Я двигаюсь уверенно, следующая моя жертва уже видна на горизонте."
         if alt_day2_f1 == 1:
@@ -3305,3 +3305,6 @@ label alt_day2_hf_analizer:
             "Может быть, и скрипит о том, что играть не хочет, но — блин, она же в финале!"
             "Придётся потрудиться."
     return
+
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

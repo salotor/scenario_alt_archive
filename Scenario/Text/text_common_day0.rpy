@@ -1,7 +1,7 @@
 ﻿label alt_day0_start_d:
     scene black with fade
     show alt_credits timeskip6 with dissolve2:
-        pos (200,540)
+        pos (133, 360)     #moded: pos (200,540)
     $ renpy.pause(4, hard=True)
     scene anim prolog_2
     with dissolve2
@@ -26,7 +26,7 @@
     "А не вечные блуждания непонятно где."
     scene expression Desat1("anim prolog_5")
     show alt_credits timeskip_come with dissolve2:
-        pos (747,105)
+        pos (498, 70)     #moded: pos (747,105)
     pause(0.4)
     scene anim prolog_4
     with dissolve
@@ -357,7 +357,7 @@
     play ambience ambience_camp_center_night fadein 2
     scene bg ext_entrance_night_clear_7dl 
     show owl behind prologue_dream:
-        pos (931, 88)
+        pos (621, 59)     #moded: pos (931, 88)
     show uvao_d1 at left
     show prologue_dream 
     with fade3
@@ -368,7 +368,7 @@
     th "Так о чём…"
     stop sound_loop fadeout 3
     show alt_credits timeskip_come with dissolve2:
-        pos (747,105)
+        pos (498, 70)     #moded: pos (747,105)
     $ renpy.pause(3, hard=True)
     scene bg ext_entrance_night_clear_7dl
     show uvao_d1 at left
@@ -406,7 +406,7 @@
 label alt_day0_start_h:
     scene black with fade
     show alt_credits timeskip6 with dissolve2:
-        pos (200,540)
+        pos (133, 360)     #moded: pos (200,540)
     $ renpy.pause(4, hard=True)
     window hide
     play sound sfx_shoulder_dive_water
@@ -595,7 +595,7 @@ label alt_day0_start_h:
     "Но если немного поднапрячься, взять себя в руки, найти правильный путь…"
     $ set_mode_adv()
     show alt_credits timeskip_come with dissolve2:
-        pos (747,105)
+        pos (498, 70)     #moded: pos (747,105)
     nvl clear
     window hide
     play sound sfx_intro_bus_engine_start
@@ -680,12 +680,12 @@ label alt_day0_start_h:
     with fade3
     scene bg ext_entrance_night_clear_7dl
     show owl behind prologue_dream:
-        pos (931, 88)
+        pos (621, 59)     #moded: pos (931, 88)
     show uvao_d1 at left
     show prologue_dream 
     with fade3
     show alt_credits timeskip_come with dissolve2:
-        pos (747,105)
+        pos (498, 70)     #moded: pos (747,105)
     $ renpy.pause(3, hard=True)
     scene bg ext_entrance_night_clear_7dl
     show uvao_d1 at left
@@ -1046,7 +1046,7 @@ label alt_day0_start_l:
     "А под захлопнувшимся веком обнаружилась странная картинка:"
     show expression D3_intro("bg ext_entrance_night_clear_7dl")
     show owl behind prologue_dream:
-        pos (931, 88)
+        pos (621, 59)     #moded: pos (931, 88)
     show prologue_dream
     with blind_d
     "Застывшие во мгновении полёта гипсовые пионеры, стоящие по разные стороны от полуоткрытых фигурных ворот с колышками сверху."
@@ -1055,12 +1055,12 @@ label alt_day0_start_l:
     window hide
     scene bg ext_entrance_night_clear_7dl 
     show owl behind prologue_dream:
-        pos (931, 88)
+        pos (621, 59)     #moded: pos (931, 88)
     show expression D3_intro("uvao_d1") at left
     show prologue_dream
     with fade3
     show alt_credits timeskip_come with dissolve2:
-        pos (747,105)
+        pos (498, 70)     #moded: pos (747,105)
     $ renpy.pause(3, hard=True)
     scene bg ext_entrance_night_clear_7dl
     show uvao_d1 at left
@@ -1424,7 +1424,7 @@ label alt_day0_d3_prologue:
     "И совёнком у притолоки."
     show expression D3_intro("bg ext_entrance_night_clear_closed_7dl")
     show owl behind prologue_dream:
-        pos (931, 88)
+        pos (621, 59)     #moded: pos (931, 88)
     show prologue_dream
     with fdiam
     "Лето."
@@ -1517,3 +1517,5 @@ label alt_day0_epic_fail:
     with gopr
     $ renpy.pause(3, hard=True)
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

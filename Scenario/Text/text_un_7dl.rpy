@@ -55,7 +55,7 @@
     show mt normal pioneer at center
     mt "Семён! Проснулся? Очень хорошо."
     show backpack_tiny behind mt:
-        pos(760,675)
+        pos(507, 450)     #moded: pos(760,675)
     "Она кивнула на подозрительно знакомый голубой рюкзак с трафаретным белым отпечатком «гриндерса» повдоль."
     th "Это же мой старый добрый «Гризли»! Где она его только взяла?"
     mt "Сегодня родительский день, к тебе родители приезжали, кое-что принесли. {w}Посмотришь?"
@@ -4412,22 +4412,22 @@ label alt_day5_un_7dl_cleaning:
     hide un with dissolve
     
     scene bg ext_square_day:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (-3, -3)      #moded: linear 0.1 pos (-5,-5)
+        linear 0.1 pos (3, 3)      #moded: linear 0.1 pos (5,5)
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (0, -3)      #moded: linear 0.1 pos (0,-5)
+        linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
         repeat (12)
     with dissolve
     "Тележка громыхала на стыках между плитами, но вела себя смирно."
     scene bg ext_warehouse_day_7dl:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (-3, -3)      #moded: linear 0.1 pos (-5,-5)
+        linear 0.1 pos (3, 3)      #moded: linear 0.1 pos (5,5)
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (0, -3)      #moded: linear 0.1 pos (0,-5)
+        linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
         repeat (12)
     with dissolve
     
@@ -9328,7 +9328,7 @@ label alt_day6_un_7dl_letmeout:
     $ persistent.alt_lamp = True
     $ renpy.save_persistent()
     show acm_logo_me_lamp with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     return
 
@@ -10854,8 +10854,8 @@ label alt_day7_un_7dl_epilogue_bad:
     window hide
     $ renpy.pause(3)
     scene cg d7_un_suicide:
-        pos (0,-360) 
-        linear 10.0 pos (0,0) 
+        pos (0, -240)      #moded: pos (0,-360)
+        linear 10.0 pos (0, 0)      #moded: linear 10.0 pos (0,0)
     with dissolve
     "И не важно, были ли это похмельные видения, предшествующие смерти на рассвете, фантазии впечатлительной натуры после прочтения книжки или закидоны расшалившегося подсознания."
     "Просто однажды ты открываешь глаза и смиряешься с тем, что на краешке кровати никого не сидит, тепло соприкосновения губ иллюзорно, а под подушкой ни записки, ни даже пистолета."
@@ -11109,7 +11109,7 @@ label alt_day7_un_7dl_epilogue_bad:
     scene cg d7_un_epilogue_bad2_7dl
     show spill_red
     show alt_credits timeskip_come with dissolve2:
-        pos (747,115)
+        pos (498, 77)     #moded: pos (747,115)
     with flash
     $ renpy.pause(4.4, hard=True)
     stop sound_loop fadeout 0
@@ -11117,7 +11117,7 @@ label alt_day7_un_7dl_epilogue_bad:
     $ persistent.un_7dl_bad = True
     $ renpy.save_persistent()
     show acm_logo_un_sui with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
     play music music_7dl["danceagain"] fadein 5
     with vpunch
@@ -11428,7 +11428,7 @@ label alt_day7_un_7dl_ussr:
     $ persistent.un_7dl_good_ussr = True
     $ renpy.save_persistent()
     show acm_logo_un_good2 with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -11693,7 +11693,7 @@ label alt_day7_un_7dl_rf:
     $ persistent.un_7dl_good_rf = True
     $ renpy.save_persistent()
     show acm_logo_un_good with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -12215,7 +12215,7 @@ label alt_day7_un_7dl_transit:
     scene cg d7_un_epilogue_bad2_7dl
     show spill_red
     show alt_credits timeskip_come with dissolve2:
-        pos (747,115)
+        pos (498, 77)     #moded: pos (747,115)
     with flash
     with dissolve
     play sound sfx_7dl["aunl"]
@@ -12223,7 +12223,7 @@ label alt_day7_un_7dl_transit:
     $ persistent.un_7dl_true_transit = True
     $ renpy.save_persistent()
     show acm_logo_un_transit with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -12312,7 +12312,7 @@ label alt_day7_un_7dl_rej:
     $ persistent.un_7dl_rej = True
     $ renpy.save_persistent()
     show acm_logo_un_shelter with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -12672,9 +12672,11 @@ label alt_day7_un_7dl_true:
     $ persistent.un_7dl_true = True
     $ renpy.save_persistent()
     show acm_logo_un_true with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
     pause(1)
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

@@ -28,11 +28,11 @@
         $ renpy.pause(.4)
         scene black with fade2
         show alt_credits timeskip_come with dissolve2:
-            pos (200,540)
+            pos (133, 360)     #moded: pos (200,540)
     else:
         scene black with fade2
         show alt_credits timeskip0 with dissolve2:
-            pos (200,540)
+            pos (133, 360)     #moded: pos (200,540)
     with dissolve2
     window hide
     
@@ -96,7 +96,7 @@ label alt_day0_start_loki:
             $ routetag = 'prologue'
             scene black with fade
             show alt_credits timeskip6 with dissolve2:
-                pos (200,540)
+                pos (133, 360)     #moded: pos (200,540)
             $ renpy.pause(4, hard=True)
             scene expression Dawn("bg ext_winterpark_7dl") with dissolve
             $ prolog_time()
@@ -154,10 +154,10 @@ label alt_day0_opening:
     with dissolve2
     $ renpy.pause(2, hard=True)
     show expression Desat1("logo_day") :
-        pos (400,150)
+        pos (267, 100)     #moded: pos (400,150)
     with dissolve2
     show acm_logo with zoomin:
-        pos (1200,350)
+        pos (800, 233)     #moded: pos (1200,350)
     with vpunch 
     $ renpy.pause(2, hard=True)
     scene black 
@@ -170,3 +170,5 @@ label alt_day0_opening:
         jump alt_day1_start
     else:
         jump alt_day1_alt_start
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

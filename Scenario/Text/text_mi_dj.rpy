@@ -10268,7 +10268,7 @@ label alt_day6_mi_dj_dance2_fail:
                     $ persistent.alt_lamp = True
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
-                        pos (1600, 1020)
+                        pos (1067, 680)     #moded: pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif herc:
@@ -10293,7 +10293,7 @@ label alt_day6_mi_dj_dance2_fail:
                     $ persistent.alt_lamp = True
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
-                        pos (1600, 1020)
+                        pos (1067, 680)     #moded: pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif loki:
@@ -10330,7 +10330,7 @@ label alt_day6_mi_dj_dance2_fail:
                     $ persistent.alt_lamp = True
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
-                        pos (1600, 1020)
+                        pos (1067, 680)     #moded: pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
                     return
             show unblink
@@ -11794,7 +11794,7 @@ label alt_day7_mi_dj_epilogue_frost:
     show prologue_dream
     with dissolve
     show alt_credits timeskip12 with dissolve2:
-        pos (1227,105)
+        pos (818, 70)     #moded: pos (1227,105)
     am "{i}Нет!{/i}"
     "{i}Я маленький, но очень самостоятельный.{/i}"
     am "{i}Мама газету покупает, а я её охраняю.{/i}"
@@ -11831,8 +11831,8 @@ label alt_day7_mi_dj_epilogue_frost:
     with dissolve
     "Я мокну под дождём, пробегая пальцами по выбитым в камне иероглифам."
     scene cg d7_mi_hugs_7dl behind prologue_dream:
-        pos (0,-1920) 
-        linear 15.0 pos (0,-500)
+        pos (0, -1280)      #moded: pos (0,-1920)
+        linear 15.0 pos (0, -333)     #moded: linear 15.0 pos (0,-500)
     "{i}Мне шесть, и мы снова видимся.{/i}"
     "{i}Я сказал, что женюсь на ней, когда вырасту.{/i}"
     "{i}Она всегда смеялась, когда я говорил такие вещи.{/i}"
@@ -11897,8 +11897,8 @@ label alt_day7_mi_dj_epilogue_frost:
     "Но всё не то."
     "В них тебя нет, понимаешь?"
     show alt_letter timeskip3 with dissolve2:
-        pos (1400,360)
-        linear 3.0 pos (1400,220)
+        pos (933, 240)     #moded: pos (1400,360)
+        linear 3.0 pos (933, 147)     #moded: linear 3.0 pos (1400,220)
     hide alt_letter with dissolve2
     "Иногда хочется закрыть глаза и вернуться в лагерь — туда, где ты заходишь ко мне в гости, прячущей слёзы под чёлкой, ярость под ударами по клавишам."
     "Но так бывает только в сказках."
@@ -11938,8 +11938,8 @@ label alt_day7_mi_dj_epilogue_frost:
     "Но я всё равно надеюсь."
     window hide
     show alt_letter timeskip4 with dissolve2:
-        pos (1200,360)
-        linear 3.0 pos (1100,220)
+        pos (800, 240)     #moded: pos (1200,360)
+        linear 3.0 pos (733, 147)     #moded: linear 3.0 pos (1100,220)
     hide alt_letter with dissolve2
     nvl clear
     scene cg d7_mi_letter_rain_tears_7dl with flash
@@ -12121,7 +12121,7 @@ label alt_day7_mi_dj_bad_end:
     $ persistent.mi_dj_bad = True
     $ renpy.save_persistent()
     show acm_logo_mi_new_happy with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -12283,7 +12283,7 @@ label alt_day7_mi_dj_true_end:
     $ persistent.mi_dj_true = True
     $ renpy.save_persistent()
     show acm_logo_mi_namiki with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -12656,7 +12656,7 @@ label alt_day7_mi_dj_jp_good_end:
     $ persistent.mi_dj_good_jap = True
     $ renpy.save_persistent()
     show acm_logo_mi_ricochet with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     play music music_7dl["happy_ending"] fadein 5
     call alt_7dl_titles
@@ -12988,7 +12988,7 @@ label alt_day7_mi_dj_rf_good_end:
     $ persistent.mi_dj_good_rf = True
     $ renpy.save_persistent()
     show acm_logo_mi_allyours with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -13040,3 +13040,5 @@ label alt_day7_mi_dj_rf_good_end:
         with joff
         $ renpy.pause(3)
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

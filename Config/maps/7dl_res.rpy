@@ -26,27 +26,27 @@ init -997 python:
 init -996 python:
     store.map_zones_alt1 = {
 # зоны, определенные в классике
-            "me_mt_house_alt1":   {"position":[960,178,992,227],"default_bg":bg_tmp_image(u"Мой домик")},
-            "estrade_alt1":       {"position":[1062,54,1154,135],"default_bg":bg_tmp_image(u"Эстрада")},
-            "music_club_alt1":    {"position":[627,255,692,337],"default_bg":bg_tmp_image(u"Музклуб")},
-            "square_alt1":        {"position":[887,360,998,545],"default_bg":bg_tmp_image(u"Площадь")},
-            "dining_hall_alt1":   {"position":[1010,458,1140,581],"default_bg":bg_tmp_image(u"Столовая")},
-            "sport_area_alt1":    {"position":[1220,481,1574,658],"default_bg":bg_tmp_image(u"Спорткомплекс")},
-            "beach_alt1":         {"position":[1198,674,1488,831],"default_bg":bg_tmp_image(u"Пляж")},
-            "boat_station_alt1":  {"position":[832,801,957,855],"default_bg":bg_tmp_image(u"Лодочный причал")},
-            "clubs_alt1":         {"position":[437,437,647,597],"default_bg":bg_tmp_image(u"Клубы")},
-            "library_alt1":       {"position":[1158,271,1285,357],"default_bg":bg_tmp_image(u"Библиотека")},
-            "medic_house_alt1":   {"position":[1042,357,1138,444],"default_bg":bg_tmp_image(u"Медпункт")},
-            "camp_entrance_alt1": {"position":[284,440,412,554],"default_bg":bg_tmp_image(u"Ворота в лагерь")},
-            "forest_alt1":        {"position":[562,50,690,188],"default_bg":bg_tmp_image(u"о. Лес")},
+            "me_mt_house_alt1":   {"position":[640, 119, 661, 151],"default_bg":bg_tmp_image(u"Мой домик")},     #moded: "me_mt_house_alt1":   {"position":[960,178,992,227],"default_bg":bg_tmp_image(u"Мой домик")},
+            "estrade_alt1":       {"position":[708, 36, 769, 90],"default_bg":bg_tmp_image(u"Эстрада")},     #moded: "estrade_alt1":       {"position":[1062,54,1154,135],"default_bg":bg_tmp_image(u"Эстрада")},
+            "music_club_alt1":    {"position":[418, 170, 461, 225],"default_bg":bg_tmp_image(u"Музклуб")},     #moded: "music_club_alt1":    {"position":[627,255,692,337],"default_bg":bg_tmp_image(u"Музклуб")},
+            "square_alt1":        {"position":[591, 240, 665, 363],"default_bg":bg_tmp_image(u"Площадь")},     #moded: "square_alt1":        {"position":[887,360,998,545],"default_bg":bg_tmp_image(u"Площадь")},
+            "dining_hall_alt1":   {"position":[673, 305, 760, 387],"default_bg":bg_tmp_image(u"Столовая")},     #moded: "dining_hall_alt1":   {"position":[1010,458,1140,581],"default_bg":bg_tmp_image(u"Столовая")},
+            "sport_area_alt1":    {"position":[813, 321, 1049, 439],"default_bg":bg_tmp_image(u"Спорткомплекс")},     #moded: "sport_area_alt1":    {"position":[1220,481,1574,658],"default_bg":bg_tmp_image(u"Спорткомплекс")},
+            "beach_alt1":         {"position":[799, 449, 992, 554],"default_bg":bg_tmp_image(u"Пляж")},     #moded: "beach_alt1":         {"position":[1198,674,1488,831],"default_bg":bg_tmp_image(u"Пляж")},
+            "boat_station_alt1":  {"position":[555, 534, 638, 570],"default_bg":bg_tmp_image(u"Лодочный причал")},     #moded: "boat_station_alt1":  {"position":[832,801,957,855],"default_bg":bg_tmp_image(u"Лодочный причал")},
+            "clubs_alt1":         {"position":[291, 291, 431, 398],"default_bg":bg_tmp_image(u"Клубы")},     #moded: "clubs_alt1":         {"position":[437,437,647,597],"default_bg":bg_tmp_image(u"Клубы")},
+            "library_alt1":       {"position":[772, 181, 857, 238],"default_bg":bg_tmp_image(u"Библиотека")},     #moded: "library_alt1":       {"position":[1158,271,1285,357],"default_bg":bg_tmp_image(u"Библиотека")},
+            "medic_house_alt1":   {"position":[695, 238, 759, 296],"default_bg":bg_tmp_image(u"Медпункт")},     #moded: "medic_house_alt1":   {"position":[1042,357,1138,444],"default_bg":bg_tmp_image(u"Медпункт")},
+            "camp_entrance_alt1": {"position":[189, 293, 275, 369],"default_bg":bg_tmp_image(u"Ворота в лагерь")},     #moded: "camp_entrance_alt1": {"position":[284,440,412,554],"default_bg":bg_tmp_image(u"Ворота в лагерь")},
+            "forest_alt1":        {"position":[375, 33, 460, 125],"default_bg":bg_tmp_image(u"о. Лес")},     #moded: "forest_alt1":        {"position":[562,50,690,188],"default_bg":bg_tmp_image(u"о. Лес")},
 # зоны, определенные в моде
-            "un_mi_house_alt1":  {"position":[811,154,848,195],"default_bg":bg_tmp_image(u"Лена и Мику")},
-            "sl_mz_house_alt1":  {"position":[1027,257,1058,300],"default_bg":bg_tmp_image(u"Славя и Женя")},
-            "el_sh_house_alt1":  {"position":[854,292,884,331],"default_bg":bg_tmp_image(u"Эл и Шурик")},
-            "dv_us_house_alt1":  {"position":[717,624,758,670],"default_bg":bg_tmp_image(u"Алиса и Ульяна")},
-            "shed_alt1":         {"position":[1144,488,1211,584],"default_bg":bg_tmp_image(u"Склад")},
-            "admin_house_alt1":  {"position":[775,350,875,447],"default_bg":bg_tmp_image(u"Администрация")},
-            "old_house_alt1":    {"position":[238,1005,340,1071],"default_bg":bg_tmp_image(u"Старый корпус")}
+            "un_mi_house_alt1":  {"position":[541, 103, 565, 130],"default_bg":bg_tmp_image(u"Лена и Мику")},     #moded: "un_mi_house_alt1":  {"position":[811,154,848,195],"default_bg":bg_tmp_image(u"Лена и Мику")},
+            "sl_mz_house_alt1":  {"position":[685, 171, 705, 200],"default_bg":bg_tmp_image(u"Славя и Женя")},     #moded: "sl_mz_house_alt1":  {"position":[1027,257,1058,300],"default_bg":bg_tmp_image(u"Славя и Женя")},
+            "el_sh_house_alt1":  {"position":[569, 195, 589, 221],"default_bg":bg_tmp_image(u"Эл и Шурик")},     #moded: "el_sh_house_alt1":  {"position":[854,292,884,331],"default_bg":bg_tmp_image(u"Эл и Шурик")},
+            "dv_us_house_alt1":  {"position":[478, 416, 505, 447],"default_bg":bg_tmp_image(u"Алиса и Ульяна")},     #moded: "dv_us_house_alt1":  {"position":[717,624,758,670],"default_bg":bg_tmp_image(u"Алиса и Ульяна")},
+            "shed_alt1":         {"position":[763, 325, 807, 389],"default_bg":bg_tmp_image(u"Склад")},     #moded: "shed_alt1":         {"position":[1144,488,1211,584],"default_bg":bg_tmp_image(u"Склад")},
+            "admin_house_alt1":  {"position":[517, 233, 583, 298],"default_bg":bg_tmp_image(u"Администрация")},     #moded: "admin_house_alt1":  {"position":[775,350,875,447],"default_bg":bg_tmp_image(u"Администрация")},
+            "old_house_alt1":    {"position":[159, 670, 227, 714],"default_bg":bg_tmp_image(u"Старый корпус")}     #moded: "old_house_alt1":    {"position":[238,1005,340,1071],"default_bg":bg_tmp_image(u"Старый корпус")}
 
     }
 
@@ -256,42 +256,42 @@ init -997 python:
 
 init -996 python:
     store.map_zones_alt2 = {
-            "un_mi_house_alt2":   {"position":[659,312,692,352],"default_bg":bg_tmp_image(u"Лена и Мику")},
-            "me_mt_house_alt2":   {"position":[785,334,819,374],"default_bg":bg_tmp_image(u"Мой домик")},
-            "sl_mz_house_alt2":   {"position":[837,396,870,438],"default_bg":bg_tmp_image(u"Славя и Женя")},
-            "estrade_alt2":       {"position":[870,234,939,306],"default_bg":bg_tmp_image(u"Эстрада")},
-            "el_sh_house_alt2":   {"position":[693,425,721,465],"default_bg":bg_tmp_image(u"Эл и Шурик")},
-            "music_club_alt2":    {"position":[509,400,568,468],"default_bg":bg_tmp_image(u"Музклуб")},
-            "admin_house_alt2":   {"position":[632,479,715,560],"default_bg":bg_tmp_image(u"Админкорпус")},
-            "wash_house_alt2":    {"position":[1061,292,1118,324],"default_bg":bg_tmp_image(u"Баня")},
-            "square_alt2":        {"position":[723,490,818,646],"default_bg":bg_tmp_image(u"Площадь")},
-            "dining_hall_alt2":   {"position":[825,565,934,671],"default_bg":bg_tmp_image(u"Столовая")},
-            "dv_us_house_alt2":   {"position":[582,698,622,740],"default_bg":bg_tmp_image(u"Алиса и Ульяна")},
-            "store_house_alt2":   {"position":[939,591,992,671],"default_bg":bg_tmp_image(u"Склад")},
-            "cape_alt2":          {"position":[1211,948,1328,1070],"default_bg":bg_tmp_image(u"Мыс")},
-            "sport_area_alt2":    {"position":[1000,508,1293,732],"default_bg":bg_tmp_image(u"Спорткомплекс")},
-            "beach_alt2":         {"position":[976,746,1222,871],"default_bg":bg_tmp_image(u"Пляж")},
-            "boat_station_alt2":  {"position":[679,849,781,892],"default_bg":bg_tmp_image(u"Лодочный причал")},
-            "old_house_alt2":     {"position":[8,1019,88,1071],"default_bg":bg_tmp_image(u"Старый корпус")},
-            "clubs_alt2":         {"position":[354,554,531,688],"default_bg":bg_tmp_image(u"Клубы")},
-            "library_alt2":       {"position":[953,416,1052,485],"default_bg":bg_tmp_image(u"Библиотека")},
-            "sandpit_alt2":       {"position":[1728,463,1918,721],"default_bg":bg_tmp_image(u"Карьер")},
-            "medic_house_alt2":   {"position":[853,486,931,557],"default_bg":bg_tmp_image(u"Медпункт")},
-            "camp_entrance_alt2": {"position":[229,554,333,645],"default_bg":bg_tmp_image(u"Остановка автобуса")},
-            "forest_alt2":        {"position":[454,275,538,324],"default_bg":bg_tmp_image(u"Умывальники")},
-            "islaone_alt2":       {"position":[453,960,706,1076],"default_bg":bg_tmp_image(u"о. Ближний")},
-            "islatwo_alt2":       {"position":[711,992,1084,1077],"default_bg":bg_tmp_image(u"о. Длинный")},
-            "lake_alt2":          {"position":[74,27,223,148],"default_bg":bg_tmp_image(u"Озеро")},
-            "meadow_alt2":        {"position":[297,991,405,1079],"default_bg":bg_tmp_image(u"Луг")},
-            "campfire_alt2":      {"position":[1501,970,1673,1072],"default_bg":bg_tmp_image(u"Костровая поляна")},
+            "un_mi_house_alt2":   {"position":[439, 208, 461, 235],"default_bg":bg_tmp_image(u"Лена и Мику")},     #moded: "un_mi_house_alt2":   {"position":[659,312,692,352],"default_bg":bg_tmp_image(u"Лена и Мику")},
+            "me_mt_house_alt2":   {"position":[523, 223, 546, 249],"default_bg":bg_tmp_image(u"Мой домик")},     #moded: "me_mt_house_alt2":   {"position":[785,334,819,374],"default_bg":bg_tmp_image(u"Мой домик")},
+            "sl_mz_house_alt2":   {"position":[558, 264, 580, 292],"default_bg":bg_tmp_image(u"Славя и Женя")},     #moded: "sl_mz_house_alt2":   {"position":[837,396,870,438],"default_bg":bg_tmp_image(u"Славя и Женя")},
+            "estrade_alt2":       {"position":[580, 156, 626, 204],"default_bg":bg_tmp_image(u"Эстрада")},     #moded: "estrade_alt2":       {"position":[870,234,939,306],"default_bg":bg_tmp_image(u"Эстрада")},
+            "el_sh_house_alt2":   {"position":[462, 283, 481, 310],"default_bg":bg_tmp_image(u"Эл и Шурик")},     #moded: "el_sh_house_alt2":   {"position":[693,425,721,465],"default_bg":bg_tmp_image(u"Эл и Шурик")},
+            "music_club_alt2":    {"position":[339, 267, 379, 312],"default_bg":bg_tmp_image(u"Музклуб")},     #moded: "music_club_alt2":    {"position":[509,400,568,468],"default_bg":bg_tmp_image(u"Музклуб")},
+            "admin_house_alt2":   {"position":[421, 319, 477, 373],"default_bg":bg_tmp_image(u"Админкорпус")},     #moded: "admin_house_alt2":   {"position":[632,479,715,560],"default_bg":bg_tmp_image(u"Админкорпус")},
+            "wash_house_alt2":    {"position":[707, 195, 745, 216],"default_bg":bg_tmp_image(u"Баня")},     #moded: "wash_house_alt2":    {"position":[1061,292,1118,324],"default_bg":bg_tmp_image(u"Баня")},
+            "square_alt2":        {"position":[482, 327, 545, 431],"default_bg":bg_tmp_image(u"Площадь")},     #moded: "square_alt2":        {"position":[723,490,818,646],"default_bg":bg_tmp_image(u"Площадь")},
+            "dining_hall_alt2":   {"position":[550, 377, 623, 447],"default_bg":bg_tmp_image(u"Столовая")},     #moded: "dining_hall_alt2":   {"position":[825,565,934,671],"default_bg":bg_tmp_image(u"Столовая")},
+            "dv_us_house_alt2":   {"position":[388, 465, 415, 493],"default_bg":bg_tmp_image(u"Алиса и Ульяна")},     #moded: "dv_us_house_alt2":   {"position":[582,698,622,740],"default_bg":bg_tmp_image(u"Алиса и Ульяна")},
+            "store_house_alt2":   {"position":[626, 394, 661, 447],"default_bg":bg_tmp_image(u"Склад")},     #moded: "store_house_alt2":   {"position":[939,591,992,671],"default_bg":bg_tmp_image(u"Склад")},
+            "cape_alt2":          {"position":[807, 632, 885, 713],"default_bg":bg_tmp_image(u"Мыс")},     #moded: "cape_alt2":          {"position":[1211,948,1328,1070],"default_bg":bg_tmp_image(u"Мыс")},
+            "sport_area_alt2":    {"position":[667, 339, 862, 488],"default_bg":bg_tmp_image(u"Спорткомплекс")},     #moded: "sport_area_alt2":    {"position":[1000,508,1293,732],"default_bg":bg_tmp_image(u"Спорткомплекс")},
+            "beach_alt2":         {"position":[651, 497, 815, 581],"default_bg":bg_tmp_image(u"Пляж")},     #moded: "beach_alt2":         {"position":[976,746,1222,871],"default_bg":bg_tmp_image(u"Пляж")},
+            "boat_station_alt2":  {"position":[453, 566, 521, 595],"default_bg":bg_tmp_image(u"Лодочный причал")},     #moded: "boat_station_alt2":  {"position":[679,849,781,892],"default_bg":bg_tmp_image(u"Лодочный причал")},
+            "old_house_alt2":     {"position":[5, 679, 59, 714],"default_bg":bg_tmp_image(u"Старый корпус")},     #moded: "old_house_alt2":     {"position":[8,1019,88,1071],"default_bg":bg_tmp_image(u"Старый корпус")},
+            "clubs_alt2":         {"position":[236, 369, 354, 459],"default_bg":bg_tmp_image(u"Клубы")},     #moded: "clubs_alt2":         {"position":[354,554,531,688],"default_bg":bg_tmp_image(u"Клубы")},
+            "library_alt2":       {"position":[635, 277, 701, 323],"default_bg":bg_tmp_image(u"Библиотека")},     #moded: "library_alt2":       {"position":[953,416,1052,485],"default_bg":bg_tmp_image(u"Библиотека")},
+            "sandpit_alt2":       {"position":[1152, 309, 1279, 481],"default_bg":bg_tmp_image(u"Карьер")},     #moded: "sandpit_alt2":       {"position":[1728,463,1918,721],"default_bg":bg_tmp_image(u"Карьер")},
+            "medic_house_alt2":   {"position":[569, 324, 621, 371],"default_bg":bg_tmp_image(u"Медпункт")},     #moded: "medic_house_alt2":   {"position":[853,486,931,557],"default_bg":bg_tmp_image(u"Медпункт")},
+            "camp_entrance_alt2": {"position":[153, 369, 222, 430],"default_bg":bg_tmp_image(u"Остановка автобуса")},     #moded: "camp_entrance_alt2": {"position":[229,554,333,645],"default_bg":bg_tmp_image(u"Остановка автобуса")},
+            "forest_alt2":        {"position":[303, 183, 359, 216],"default_bg":bg_tmp_image(u"Умывальники")},     #moded: "forest_alt2":        {"position":[454,275,538,324],"default_bg":bg_tmp_image(u"Умывальники")},
+            "islaone_alt2":       {"position":[302, 640, 471, 717],"default_bg":bg_tmp_image(u"о. Ближний")},     #moded: "islaone_alt2":       {"position":[453,960,706,1076],"default_bg":bg_tmp_image(u"о. Ближний")},
+            "islatwo_alt2":       {"position":[474, 661, 723, 718],"default_bg":bg_tmp_image(u"о. Длинный")},     #moded: "islatwo_alt2":       {"position":[711,992,1084,1077],"default_bg":bg_tmp_image(u"о. Длинный")},
+            "lake_alt2":          {"position":[49, 18, 149, 99],"default_bg":bg_tmp_image(u"Озеро")},     #moded: "lake_alt2":          {"position":[74,27,223,148],"default_bg":bg_tmp_image(u"Озеро")},
+            "meadow_alt2":        {"position":[198, 661, 270, 719],"default_bg":bg_tmp_image(u"Луг")},     #moded: "meadow_alt2":        {"position":[297,991,405,1079],"default_bg":bg_tmp_image(u"Луг")},
+            "campfire_alt2":      {"position":[1001, 647, 1115, 715],"default_bg":bg_tmp_image(u"Костровая поляна")},     #moded: "campfire_alt2":      {"position":[1501,970,1673,1072],"default_bg":bg_tmp_image(u"Костровая поляна")},
 # раздельные локации спорткомплекса и клубов
-            "sports_hall_alt2":   {"position":[1082,584,1290,732],"default_bg":bg_tmp_image(u"Спортзал и футбольное поле")},
-            "volleyball_alt2":    {"position":[999,593,1079,685],"default_bg":bg_tmp_image(u"Воллейбольная площадка")},
-            "court_alt2":         {"position":[1107,509,1176,576],"default_bg":bg_tmp_image(u"Теннисный корт")},
-            "kyber_club_alt2":    {"position":[354,608,461,687],"default_bg":bg_tmp_image(u"Клуб кибернетиков")},
+            "sports_hall_alt2":   {"position":[721, 389, 860, 488],"default_bg":bg_tmp_image(u"Спортзал и футбольное поле")},     #moded: "sports_hall_alt2":   {"position":[1082,584,1290,732],"default_bg":bg_tmp_image(u"Спортзал и футбольное поле")},
+            "volleyball_alt2":    {"position":[666, 395, 719, 457],"default_bg":bg_tmp_image(u"Воллейбольная площадка")},     #moded: "volleyball_alt2":    {"position":[999,593,1079,685],"default_bg":bg_tmp_image(u"Воллейбольная площадка")},
+            "court_alt2":         {"position":[738, 339, 784, 384],"default_bg":bg_tmp_image(u"Теннисный корт")},     #moded: "court_alt2":         {"position":[1107,509,1176,576],"default_bg":bg_tmp_image(u"Теннисный корт")},
+            "kyber_club_alt2":    {"position":[236, 405, 307, 458],"default_bg":bg_tmp_image(u"Клуб кибернетиков")},     #moded: "kyber_club_alt2":    {"position":[354,608,461,687],"default_bg":bg_tmp_image(u"Клуб кибернетиков")},
 # секретнные зоны
-            "secret_up_alt2":     {"position":[855,20,953,148],"default_bg":bg_tmp_image(u"Секретная зона вверху")},
-            "secret_down_alt2":   {"position":[1758,849,1886,1007],"default_bg":bg_tmp_image(u"Секретная зона внизу")}
+            "secret_up_alt2":     {"position":[570, 13, 635, 99],"default_bg":bg_tmp_image(u"Секретная зона вверху")},     #moded: "secret_up_alt2":     {"position":[855,20,953,148],"default_bg":bg_tmp_image(u"Секретная зона вверху")},
+            "secret_down_alt2":   {"position":[1172, 566, 1257, 671],"default_bg":bg_tmp_image(u"Секретная зона внизу")}     #moded: "secret_down_alt2":   {"position":[1758,849,1886,1007],"default_bg":bg_tmp_image(u"Секретная зона внизу")}
 
     }
 
@@ -392,7 +392,7 @@ init -51 python:
                             ypos = pos[1]
                         )
                         if  data["chibi"] != None:
-                            chibi_scale = im.Scale(data["chibi"],40,40) # масштабируем картинку чибика до нужного размера (напр. 40х40 пикс)
+                            chibi_scale = im.Scale(data["chibi"],27, 27) # масштабируем картинку чибика до нужного размера (напр. 40х40 пикс)     #moded: chibi_scale = im.Scale(data["chibi"],40,40) # масштабируем картинку чибика до нужного размера (напр. 40х40 пикс)
                             ui.imagebutton(
                                 anim.Blink(chibi_scale), #показываем с измененным размером
                                 anim.Blink(chibi_scale),
@@ -485,3 +485,5 @@ label _show_map_alt2:
 #
 #    Но вышенаписанное вроде бы как работает.
 #    Скорее всего - в этом коде можно выкинуть что-то без потери функционала.
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

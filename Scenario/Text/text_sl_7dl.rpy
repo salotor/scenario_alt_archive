@@ -22563,7 +22563,7 @@ label alt_day6_sl_7dl_catapult:
         $ persistent.alt_lamp = True
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
-            pos (1600, 1020)
+            pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(3, hard=True)
     window hide
     stop music fadeout 3
@@ -27126,7 +27126,7 @@ label alt_day7_sl_7dl_leaving:
             "Ольга сняла с плеча синюю сумку и протянула мне."
             "А та оказалась…"
             show backpack with dissolve:
-                pos(760,675)
+                pos(507, 450)     #moded: pos(760,675)
             me "Да быть этого не может!"
             mt "Рюкзак, как я понимаю. {w}Правда, странный какой-то, на одной лямке всего."
             th "Разумеется, вы не понимаете, тётенька! {w}Он же не из этого времени, чистый анахронизм!"
@@ -27999,7 +27999,7 @@ label alt_day7_sl_7dl_true:
     $ persistent.sl_7dl_true = True
     $ renpy.save_persistent()
     show acm_logo_sl_no_wonder with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -28305,7 +28305,7 @@ label alt_day7_sl_7dl_rf_good:
     $ persistent.sl_7dl_good_rf = True
     $ renpy.save_persistent()
     show acm_logo_sl_till_sunrise with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -29552,7 +29552,7 @@ label alt_day7_sl_7dl_herc_neon:
     $ persistent.sl_7dl_herc_good2 = True
     $ renpy.save_persistent()
     show acm_logo_sl_neon with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -29810,7 +29810,7 @@ label alt_day7_sl_7dl_herc_right_road:
     $ persistent.sl_7dl_herc_good = True
     $ renpy.save_persistent()
     show acm_logo_sl_right_road with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -30144,7 +30144,7 @@ label alt_day7_sl_7dl_loki_radio:
     window hide
     scene bg ext_entrance_night_clear_closed_7dl
     show owl behind prologue_dream:
-        pos (931, 88)
+        pos (621, 59)     #moded: pos (931, 88)
     show expression D3_intro("uvao_d1") at left
     show prologue_dream
     with fade3
@@ -30239,7 +30239,7 @@ label alt_day7_sl_7dl_loki_radio:
     $ persistent.sl_7dl_loki_good = True
     $ renpy.save_persistent()
     show acm_logo_sl_radio with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -30657,7 +30657,7 @@ label alt_day7_sl_7dl_loki_am_home:
     $ persistent.sl_7dl_loki_neu = True
     $ renpy.save_persistent()
     show acm_logo_sl_am_home with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -30712,7 +30712,7 @@ label alt_day7_sl_7dl_loki_oafa:
     $ persistent.sl_7dl_loki_rej = True
     $ renpy.save_persistent()
     show acm_logo_sl_pan with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -31332,7 +31332,7 @@ label alt_day7_sl_7dl_loopback:
     $ persistent.sl_7dl_good2 = True
     $ renpy.save_persistent()
     show acm_logo_sl_dr_un with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
@@ -31997,7 +31997,7 @@ label alt_day7_sl_7dl_wasted:
     $ persistent.sl_7dl_good = True
     $ renpy.save_persistent()
     show acm_logo_sl_wasted with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
@@ -32582,8 +32582,10 @@ label alt_day7_sl_7dl_missed:
     $ persistent.sl_7dl_bad = True
     $ renpy.save_persistent()
     show acm_logo_sl_missed with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

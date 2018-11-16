@@ -4219,12 +4219,12 @@ label alt_day3_eventAf_music_club1:
         "Я вскочил!"
         show mi sad pioneer close
         scene bg ext_musclub_day:
-            linear 0.1 pos (-5,-5) 
-            linear 0.1 pos (0,0) 
-            linear 0.1 pos (5,5) 
-            linear 0.1 pos (0,5) 
-            linear 0.1 pos (5,0) 
-            linear 0.1 pos (0,0) 
+            linear 0.1 pos (-3, -3)      #moded: linear 0.1 pos (-5,-5)
+            linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
+            linear 0.1 pos (3, 3)      #moded: linear 0.1 pos (5,5)
+            linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
+            linear 0.1 pos (3, 0)      #moded: linear 0.1 pos (5,0)
+            linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
         show mi sad pioneer with dissolve
         me "Не приближайся! Нет!"
         dv "Семён."
@@ -4919,7 +4919,7 @@ label alt_day3_nightmare:
                 $ persistent.alt_deep = True
                 $ renpy.save_persistent()
                 show acm_logo_me_deep with moveinright:
-                    pos (1600, 1020)
+                    pos (1067, 680)     #moded: pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 scene black
                 show gameover
@@ -4953,7 +4953,7 @@ label alt_day3_nightmare:
                 $ persistent.alt_deep = True
                 $ renpy.save_persistent()
                 show acm_logo_me_deep with moveinright:
-                    pos (1600, 1020)
+                    pos (1067, 680)     #moded: pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 scene black
                 show gameover
@@ -7896,7 +7896,7 @@ label alt_day3_dv_reunion:
         $ persistent.alt_deep = True
         $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
-            pos (1600, 1020)
+            pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
         with vpunch
     elif herc:
@@ -7924,7 +7924,7 @@ label alt_day3_dv_reunion:
         $ persistent.alt_deep = True
         $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
-            pos (1600, 1020)
+            pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
         with vpunch
     else:
@@ -7947,7 +7947,7 @@ label alt_day3_dv_reunion:
         $ persistent.alt_deep = True
         $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
-            pos (1600, 1020)
+            pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
         with vpunch
     stop music fadeout 3
@@ -7973,7 +7973,7 @@ label alt_day3_dv_stayhere1:
         play sound sfx_7dl["tousche"]
         play sound2 sfx_concert_applause
         show acm_logo_me_qte with moveinright:
-            pos (1600, 1020)
+            pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(9.4, hard=True)
     $ persistent.alt_qte = True
     $ renpy.save_persistent()
@@ -11857,3 +11857,5 @@ label alt_day3_sleeptime:
     window hide
     with fade
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

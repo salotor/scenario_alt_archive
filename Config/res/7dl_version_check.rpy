@@ -21,13 +21,13 @@ screen alt_incompatible_release:
         text u"РЕКОМЕНДУЕТСЯ НАЧАТЬ ИГРУ ЗАНОВО"  align(0.5, 0.45) color aicr_colors_hover[persistent.timeofday] font 'fonts/corbel.ttf' size 60 bold True text_align 0.5 line_spacing 20
         text u"Ваши действия:"  align(0.5, 0.55) color aicr_colors_hover[persistent.timeofday] font 'fonts/corbel.ttf' size 55 bold True text_align 0.5 line_spacing 20
 
-        right_padding 75
-        bottom_padding 50
+        right_padding 55     #moded: right_padding 75
+        bottom_padding 30     #moded: bottom_padding 50
         yalign 0.5
-        top_padding 50
+        top_padding 30     #moded: top_padding 50
         xfill True
-        background (Frame(get_image((('gui/choice/' + persistent.timeofday) + '/choice_box.png')), 50, 50))
-        left_padding 75
+        background (Frame(get_image((('gui/choice/' + persistent.timeofday) + '/choice_box.png')), 33, 33))     #moded: background (Frame(get_image((('gui/choice/' + persistent.timeofday) + '/choice_box.png')), 50, 50))
+        left_padding 55     #moded: left_padding 75
 # кнопки выборов
         button: # начинаем заново
             xalign 0.5
@@ -96,3 +96,5 @@ label after_load:
 
 label alt_continue_game:
     return # .. и если все нормально - возвращаемся в игру
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

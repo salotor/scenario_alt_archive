@@ -4552,7 +4552,7 @@ label alt_day5_mi_7dl_branch:
     me "Ату его! Ату-туту!"
     "Завопил я и припустил во всю прыть."
     window hide
-    show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=10)
+    show ftl_anim with Shake((0, 0, 0,  0), 4.0, dist=10)     #moded: show ftl_anim with Shake((0, 0, 0, 0), 4.0, dist=10)
     "Шевеление было здесь же — вот оно, десять шагов, не видно из-за травы."
     "Я присмотрелся и удовлетворённо кивнул."
     "Именно это я и ожидал увидеть."
@@ -8732,7 +8732,7 @@ label alt_day6_mi_7dl_discoteque:
                     $ persistent.alt_lamp = True
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
-                        pos (1600, 1020)
+                        pos (1067, 680)     #moded: pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif herc:
@@ -8761,7 +8761,7 @@ label alt_day6_mi_7dl_discoteque:
                     $ persistent.alt_lamp = True
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
-                        pos (1600, 1020)
+                        pos (1067, 680)     #moded: pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
                     return
                 elif loki:
@@ -8797,7 +8797,7 @@ label alt_day6_mi_7dl_discoteque:
                     $ persistent.alt_lamp = True
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
-                        pos (1600, 1020)
+                        pos (1067, 680)     #moded: pos (1600, 1020)
                     $ renpy.pause(4.4, hard=True)
                     return
             "Думаю, не стоит":
@@ -10451,7 +10451,7 @@ label alt_day7_mi_7dl_happy_again:
     $ persistent.mi_7dl_neutral_human = True
     $ renpy.save_persistent()
     show acm_logo_mi_happy_again with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -10629,7 +10629,7 @@ label alt_day7_mi_7dl_liar:
     $ persistent.mi_7dl_bad_human = True
     $ renpy.save_persistent()
     show acm_logo_mi_liar with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -10792,7 +10792,7 @@ label alt_day7_mi_7dl_dark_dreams:
     $ persistent.mi_7dl_good_human = True
     $ renpy.save_persistent()
     show acm_logo_mi_dark_dreams with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -10930,7 +10930,7 @@ label alt_day7_mi_7dl_club27:
     $ persistent.mi_7dl_neutral_star = True
     $ renpy.save_persistent()
     show acm_logo_mi_club27 with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -11065,7 +11065,7 @@ label alt_day7_mi_7dl_sparkle:
     $ persistent.mi_7dl_good_star = True
     $ renpy.save_persistent()
     show acm_logo_mi_sparkle with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -11118,7 +11118,7 @@ label alt_day7_mi_7dl_postscriptum:
     show prologue_dream
     with dissolve
     show alt_credits timeskip12 with dissolve2:
-        pos (1227,105)
+        pos (818, 70)     #moded: pos (1227,105)
     "Девушка присела передо мной на корточки, сохраняя зрительный контакт, оставясь на одном уровне."
     am "Нет!"
     "Гордо ответил я."
@@ -11489,14 +11489,14 @@ label alt_day7_mi_7dl_postscriptum:
     show prologue_dream
     with dissolve
     show alt_credits timeskip12 with dissolve2:
-        pos (1227,105)
+        pos (818, 70)     #moded: pos (1227,105)
     stop sound_loop
     $ renpy.pause(3)
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_ps = True
     $ renpy.save_persistent()
     show acm_logo_mi_bitter_truth with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     return
  
@@ -11630,7 +11630,7 @@ label alt_day7_mi_7dl_dam_CPU:
     $ persistent.mi_7dl_bad_star = True
     $ renpy.save_persistent()
     show acm_logo_mi_dam_cpu with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -11779,7 +11779,7 @@ label alt_day7_mi_7dl_unlike:
     $ persistent.mi_7dl_herc_exc = True
     $ renpy.save_persistent()
     show acm_logo_mi_unlike with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -11964,19 +11964,19 @@ label alt_day7_mi_7dl_sinthetic:
     window hide
     scene bg ext_entrance_night_clear_7dl 
     show owl:
-        pos (931, 88)
+        pos (621, 59)     #moded: pos (931, 88)
     show expression D3_intro("uvao_d1") at left
     show prologue_dream
     with fade3
     show alt_credits timeskip_come with dissolve2:
-        pos (747,105)
+        pos (498, 70)     #moded: pos (747,105)
     $ renpy.pause(3, hard=True)
     
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_loki_exc = True
     $ renpy.save_persistent()
     show acm_logo_mi_come with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -12019,8 +12019,8 @@ label alt_day7_mi_7dl_come_back:
     "И шептал «аригато». "
     window hide
     scene cg d7_dv_rf_reject_7dl:
-        pos (0,-1261)
-        linear 10.0 pos (0,0)
+        pos (0, -841)     #moded: pos (0,-1261)
+        linear 10.0 pos (0, 0)     #moded: linear 10.0 pos (0,0)
     "Алису видели на многих квартирниках."
     "Поговаривали, что после переезда в Лениград она водила дружбу с Бутусовым, Науменко и Дягилевой."
     "Но то ли рыжая бестия разочаровалась в собственных песнях, то ли пересмотрела отношение к музыке вовсе — теперь её всё реже можно было встретить с гитарой."
@@ -12128,7 +12128,7 @@ label alt_day7_mi_7dl_come_back:
     $ persistent.mi_7dl_dr_exc = True
     $ renpy.save_persistent()
     show acm_logo_mi_watashi with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
@@ -12317,9 +12317,9 @@ label alt_day7_mi_7dl_thank_you:
     "Но скоро пустота подобралась к девочке вплотную, замерла, будто в раздумьи, и…"
     window hide
     scene cg d7_mi_ghost_7dl:
-        pos (0,-1920)
-        linear 10.0 pos (0,0)
-        linear 2.0 pos (0, -250)
+        pos (0, -1280)     #moded: pos (0,-1920)
+        linear 10.0 pos (0, 0)     #moded: linear 10.0 pos (0,0)
+        linear 2.0 pos (0, -167)     #moded: linear 2.0 pos (0, -250)
     "Девочка открыла глаза."
     "Проверила ещё раз базы данных — несколько кластеров вышли из строя, но запасных винчестеров хватало."
     "Проверила системы жизнеобеспечения — на поверхности бушевал радиоактивный шторм и системы очистки воздуха трудились вовсю."
@@ -12346,7 +12346,7 @@ label alt_day7_mi_7dl_thank_you:
     show prologue_dream
     with dissolve
     show alt_credits timeskip12 with dissolve2:
-        pos (1227,105)
+        pos (818, 70)     #moded: pos (1227,105)
     "А в почти безвоздушном пространстве лишь вибрация донесла до сердца, спящего вот уже как триста лет:"
     window hide
     scene black 
@@ -12357,7 +12357,9 @@ label alt_day7_mi_7dl_thank_you:
     $ persistent.mi_7dl_true = True
     $ renpy.save_persistent()
     show acm_logo_mi_thank_you with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(1)
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

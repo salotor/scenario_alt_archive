@@ -236,10 +236,10 @@
     "Она расслабилась, что и дало мне время подскочить и защекотать."
     show dv surprise pioneer2 close at center with dissolve:
         xalign 0.0 xalign -0.20 zoom 1.0
-        linear 0.1 pos (0,5) 
-        linear 0.1 pos (0,0) 
-        linear 0.1 pos (5,0) 
-        linear 0.1 pos (0,0) 
+        linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
+        linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
+        linear 0.1 pos (3, 0)      #moded: linear 0.1 pos (5,0)
+        linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
         repeat (5)
     dv "У-уйди, психопат! Аааа! Отцепись, ненормальный!"
     "Полухохоча, полукрича, она пыталась отбиться, но я беззастенчиво пользовался грубой физической силой, сначала перехватив её руки, а потом просто притиснув как в вагоне метро в час пик."
@@ -6785,13 +6785,13 @@ label alt_day6_dv_7dl_begin:
         scene bg map_alt1 with dissolve
         with flash
         show dvsem_el:
-            pos (645,296)
+            pos (430, 197)     #moded: pos (645,296)
     
         "Схватив меня за руку, Алиса протащила меня мимо умывальников и, добежав до зданий администрации, припала к стеночке в лучших традициях храброго коммандера – ох, ему и икается сейчас, наверное!"
         window hide
         with flash
         show dvsem_el:
-            pos (778,362)
+            pos (519, 241)     #moded: pos (778,362)
     
         "Заглянув за угол, она несколько минут гипнотизировала взглядом пространство."
         me "Что там?"
@@ -6827,7 +6827,7 @@ label alt_day6_dv_7dl_begin:
         window hide
         scene bg map_alt1 with dissolve
         show dvsem_el:
-            pos (876,283)
+            pos (584, 189)     #moded: pos (876,283)
         "Пригибаясь, держась стенки здания, мы вихрем промчались вдоль восточного края администрации, выскочили на дорожку – я отстранённо отметил, что в самом конце дорожки стоит Саныч и, скрестив руки на груди, наблюдает за делающими зарядку пионерами."
         "Стоял он к нам спиной, так что, двигаясь на цырлах, мы успешно миновали и эту препону."
         window hide
@@ -10107,7 +10107,7 @@ label alt_day6_dv_7dl_escape_convince:
         $ persistent.alt_lamp = True
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
-            pos (1600, 1020)
+            pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
         return
     elif herc:
@@ -10134,7 +10134,7 @@ label alt_day6_dv_7dl_escape_convince:
         $ persistent.alt_lamp = True
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
-            pos (1600, 1020)
+            pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
         return
     elif loki:
@@ -10172,7 +10172,7 @@ label alt_day6_dv_7dl_escape_convince:
         $ persistent.alt_lamp = True
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
-            pos (1600, 1020)
+            pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
         return
 
@@ -12611,13 +12611,13 @@ label alt_day7_dv_7dl_tulpa_end:
     scene cg d7_dv_noir_7dl
     with dissolve2
     show alt_credits timeskip_come with dissolve2:
-        pos (747,105)
+        pos (498, 70)     #moded: pos (747,105)
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_tulpa = True
     $ renpy.save_persistent()
     show acm_logo_dv_tulpa with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13054,7 +13054,7 @@ label alt_day7_dv_7dl_ussr_epilogue:
     $ persistent.dv_7dl_good_ussr = True
     $ renpy.save_persistent()
     show acm_logo_dv_ussr_good with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13249,7 +13249,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     $ persistent.dv_7dl_good_rf = True
     $ renpy.save_persistent()
     show acm_logo_dv_morethanlife with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -13490,7 +13490,7 @@ label alt_day7_dv_7dl_rej_ussr_end:
     $ persistent.dv_7dl_reject_ussr = True
     $ renpy.save_persistent()
     show acm_logo_dv_tillend with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     play music music_7dl["regret"] fadein 3
@@ -13534,9 +13534,9 @@ label alt_day7_dv_7dl_rej_rf_end:
     play music music_7dl["dv_guitar"] fadein 7
     "Нечто в духе Игоря Преснякова со скидкой на то, что в подземке все нюансы игры щипковым стилем всё равно не расслышишь."
     scene cg d7_dv_rf_reject_7dl:
-        pos (0,-1261)
-        linear 10.0 pos (0,0)
-        linear 2.0 pos (0, -200)
+        pos (0, -841)     #moded: pos (0,-1261)
+        linear 10.0 pos (0, 0)     #moded: linear 10.0 pos (0,0)
+        linear 2.0 pos (0, -133)     #moded: linear 2.0 pos (0, -200)
     "Очень высокий класс — прохожие невольно замедляют шаг, а неподалёку уже собралась преданная аудитория…"
     "Что характерно, включающая в себя и троицу случайно приблудившихся полицмейстеров. "
     "И даром что перед исполнителем не лежит раскрытый чехол — деньги сыплются рекой в какую-то коробочку, которую чья-то добрая душа явно подставила, чтобы наличность не загорала в ледяной февральской грязи."
@@ -13632,7 +13632,7 @@ label alt_day7_dv_7dl_rej_rf_end:
     $ persistent.dv_7dl_reject_rf = True
     $ renpy.save_persistent()
     show acm_logo_dv_gohome with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
     with vpunch
     play music music_7dl["regret"] fadein 3
@@ -13761,7 +13761,7 @@ label alt_day7_dv_7dl_un_end:
     $ persistent.dv_7dl_un = True
     $ renpy.save_persistent()
     show acm_logo_dv_meetmethere with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     play music music_7dl["danceagain"] fadein 3
@@ -14013,7 +14013,7 @@ label alt_day7_dv_7dl_bad_end:
         $ persistent.dv_7dl_bad_mt = True
         $ renpy.save_persistent()
         show acm_logo_dv_drunk with moveinright:
-            pos (1600, 1020)
+            pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
         with vpunch
         call alt_7dl_titles
@@ -14024,7 +14024,7 @@ label alt_day7_dv_7dl_bad_end:
         $ persistent.dv_7dl_bad = True
         $ renpy.save_persistent()
         show acm_logo_dv_theresnoway with moveinright:
-            pos (1600, 1020)
+            pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
         with vpunch
         play music music_7dl["tilltheend"] fadein 3
@@ -14368,9 +14368,11 @@ label alt_day7_dv_7dl_true:
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_true = True
     show acm_logo_dv_true with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2)
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

@@ -1906,8 +1906,8 @@ label alt_day4_sl_old_camp2:
         sl "Аккуратнее только, там последняя ступенька гуляет."
         me "Ясно."
         scene bg int_catacombs_entrance with diam:
-            linear 0.2 pos (0,50) 
-            linear 0.2 pos (0,0) 
+            linear 0.2 pos (0, 33)      #moded: linear 0.2 pos (0,50)
+            linear 0.2 pos (0, 0)      #moded: linear 0.2 pos (0,0)
         "Ещё две минуты — и мы проводим беглую ревизию нашего состояния.{w} Вроде бы, всё на месте, все живы и здоровы: я болею, Славя улыбается, Лена смущается.{w} Модус вивенди."
     play music music_7dl["dead_silence"] fadein 3
     play ambience ambience_catacombs fadein 3
@@ -3911,7 +3911,7 @@ label alt_day5_sl_begin:
                 $ persistent.alt_lamp = True
                 $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
-                    pos (1600, 1020)
+                    pos (1067, 680)     #moded: pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -3937,7 +3937,7 @@ label alt_day5_sl_begin:
                 $ persistent.alt_lamp = True
                 $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
-                    pos (1600, 1020)
+                    pos (1067, 680)     #moded: pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -3954,7 +3954,7 @@ label alt_day5_sl_begin:
                 $ persistent.alt_lamp = True
                 $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
-                    pos (1600, 1020)
+                    pos (1067, 680)     #moded: pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
                 scene gameover with flash
                 with vpunch
@@ -4867,7 +4867,7 @@ label alt_day5_sl_begin:
     "Но ничего больше сделать не успел."
     "В меня затормозило что-то большое и тяжёлое."
     scene expression Dawn("bg int_mine_door") at zentercenter
-    show ftl_anim with Shake((0, 0, 0, 0), 0.3, dist=10)
+    show ftl_anim with Shake((0, 0, 0,  0), 0.3, dist=10)     #moded: show ftl_anim with Shake((0, 0, 0, 0), 0.3, dist=10)
     play sound sfx_punch_medium
     $ renpy.pause(2)
     scene black with pixellate
@@ -5073,42 +5073,42 @@ label alt_day5_sl_begin:
     "Не так уж и далеко от истины."
     "Туннелей лучше было избегать, иначе нас опять могут взять в клещи."
     scene expression Noon("bg int_mine_halt"):
-        linear 0.05 pos (-5,-5) 
-        linear 0.05 pos (0,0) 
-        linear 0.05 pos (5,5) 
-        linear 0.05 pos (0,5) 
-        linear 0.05 pos (5,0) 
-        linear 0.05 pos (0,0) 
+        linear 0.05 pos (-3, -3)      #moded: linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
+        linear 0.05 pos (3, 3)      #moded: linear 0.05 pos (5,5)
+        linear 0.05 pos (0, 3)      #moded: linear 0.05 pos (0,5)
+        linear 0.05 pos (3, 0)      #moded: linear 0.05 pos (5,0)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
         repeat
     "Поэтому я старался выбирать маршрут, где в случае чего можно будет отступить в поворот."
     scene expression Noon("bg int_mine"):
-        linear 0.05 pos (-5,-5) 
-        linear 0.05 pos (0,0) 
-        linear 0.05 pos (5,5) 
-        linear 0.05 pos (0,5) 
-        linear 0.05 pos (5,0) 
-        linear 0.05 pos (0,0) 
+        linear 0.05 pos (-3, -3)      #moded: linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
+        linear 0.05 pos (3, 3)      #moded: linear 0.05 pos (5,5)
+        linear 0.05 pos (0, 3)      #moded: linear 0.05 pos (0,5)
+        linear 0.05 pos (3, 0)      #moded: linear 0.05 pos (5,0)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
         repeat
     "Хотя какое там «выбирать» — приходилось ориентироваться по обстоятельствам да уповать на чутьё."
     scene expression Noon("bg int_mine_crossroad"):
-        linear 0.05 pos (-5,-5) 
-        linear 0.05 pos (0,0) 
-        linear 0.05 pos (5,5) 
-        linear 0.05 pos (0,5) 
-        linear 0.05 pos (5,0) 
-        linear 0.05 pos (0,0) 
+        linear 0.05 pos (-3, -3)      #moded: linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
+        linear 0.05 pos (3, 3)      #moded: linear 0.05 pos (5,5)
+        linear 0.05 pos (0, 3)      #moded: linear 0.05 pos (0,5)
+        linear 0.05 pos (3, 0)      #moded: linear 0.05 pos (5,0)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
         repeat
     "Я не знал, что это за твари, и знать не хотел."
     "До сих пор я вообще не знал, что такие звери существуют."
     "Но они смутно напоминали крыс."
     "А я прекрасно понимал, на что способны крысы, работающие кворумом."
     scene expression Noon("bg int_mine"):
-        linear 0.05 pos (-5,-5) 
-        linear 0.05 pos (0,0) 
-        linear 0.05 pos (5,5) 
-        linear 0.05 pos (0,5) 
-        linear 0.05 pos (5,0) 
-        linear 0.05 pos (0,0) 
+        linear 0.05 pos (-3, -3)      #moded: linear 0.05 pos (-5,-5)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
+        linear 0.05 pos (3, 3)      #moded: linear 0.05 pos (5,5)
+        linear 0.05 pos (0, 3)      #moded: linear 0.05 pos (0,5)
+        linear 0.05 pos (3, 0)      #moded: linear 0.05 pos (5,0)
+        linear 0.05 pos (0, 0)      #moded: linear 0.05 pos (0,0)
         repeat
     "А потому — во все лопатки, марш, марш!"
     "К центровой штольне бежалось легко, так как двигаться приходилось с горки, а дальше нас гнал адреналин."
@@ -5214,7 +5214,7 @@ label alt_day5_sl_begin:
         dreamgirl "Рррр… Ненавижу, когда приходится это делать."
         "Я утратил контроль над телом, а то само перехватило Славю за торс, увлекая за собой, шагнуло назад."
     else:
-        show myst_mh with Shake((0, 1, 0, 1), 0.3, dist=5)
+        show myst_mh with Shake((0, 1,  0, 1), 0.3, dist=5)     #moded: show myst_mh with Shake((0, 1, 0, 1), 0.3, dist=5)
         "И самое жуткое то, что и я полностью разделил её желание шагать и шагать туда, потом пропустить между пальцами кудлатые клочья, погладить как старого, верного друга."
         show dreamgirl_overlay with dspr 
         dreamgirl "Какого?!"
@@ -5286,7 +5286,7 @@ label alt_day5_sl_begin:
     scene bg int_mine_heart_7dl with diam
     play music music_7dl["sneakupon"] fadein 3
     show sl angry pioneer at cleft
-    with Shake((1, 0, 2, 0), 0.3, dist=10)
+    with Shake((1, 0,  1, 0), 0.3, dist=10)     #moded: with Shake((1, 0, 2, 0), 0.3, dist=10)
     "Убедившись в правоте моих слов, девочка взвизгнула и попыталась освободиться — с понятным результатом."
     me "Бесполезно."
     me "Пока ты там ласкалась с этой дрянью, увязла глубже некуда."
@@ -10468,45 +10468,45 @@ label alt_day6_sl_true_route:
         "Куда бы она ни направлялась, дело бы крайне важным."
     window hide
     scene bg ext_clubs_day:
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (0,0) 
-        linear 0.1 pos (5,5) 
-        linear 0.1 pos (0,5) 
-        linear 0.1 pos (5,0) 
-        linear 0.1 pos (0,0) 
+        linear 0.1 pos (-3, -3)      #moded: linear 0.1 pos (-5,-5)
+        linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
+        linear 0.1 pos (3, 3)      #moded: linear 0.1 pos (5,5)
+        linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
+        linear 0.1 pos (3, 0)      #moded: linear 0.1 pos (5,0)
+        linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
         repeat
     "Мы бежали так, будто от нашего бега зависела чья-то жизнь."
     "Вполне вероятно, что наша."
     window hide
     scene bg ext_square_day:
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (0,0) 
-        linear 0.1 pos (5,5) 
-        linear 0.1 pos (0,5) 
-        linear 0.1 pos (5,0) 
-        linear 0.1 pos (0,0) 
+        linear 0.1 pos (-3, -3)      #moded: linear 0.1 pos (-5,-5)
+        linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
+        linear 0.1 pos (3, 3)      #moded: linear 0.1 pos (5,5)
+        linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
+        linear 0.1 pos (3, 0)      #moded: linear 0.1 pos (5,0)
+        linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
         repeat
     "Не вопрос существования, а вопрос бытия — появится ли когда-нибудь ещё на этих полных губах та приветливая улыбка, в которую я когда-то влюбился?"
     window hide
     scene bg ext_dining_hall_away_day:
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (0,0) 
-        linear 0.1 pos (5,5) 
-        linear 0.1 pos (0,5) 
-        linear 0.1 pos (5,0) 
-        linear 0.1 pos (0,0) 
+        linear 0.1 pos (-3, -3)      #moded: linear 0.1 pos (-5,-5)
+        linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
+        linear 0.1 pos (3, 3)      #moded: linear 0.1 pos (5,5)
+        linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
+        linear 0.1 pos (3, 0)      #moded: linear 0.1 pos (5,0)
+        linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
         repeat
     "Я уже выдыхался и начал сдавать, но воспоминание о полном безнадёжной тоски взгляде Слави придало мне сил."
     if alt_day5_sl_extra_house:
         "Мне и самому не хотелось бы, чтобы с Пиратом что-то случилось, но для Слави это был вообще вопрос жизни и смерти!"
     window hide
     scene bg ext_dining_hall_near_day:
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (0,0) 
-        linear 0.1 pos (5,5) 
-        linear 0.1 pos (0,5) 
-        linear 0.1 pos (5,0) 
-        linear 0.1 pos (0,0) 
+        linear 0.1 pos (-3, -3)      #moded: linear 0.1 pos (-5,-5)
+        linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
+        linear 0.1 pos (3, 3)      #moded: linear 0.1 pos (5,5)
+        linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
+        linear 0.1 pos (3, 0)      #moded: linear 0.1 pos (5,0)
+        linear 0.1 pos (0, 0)      #moded: linear 0.1 pos (0,0)
         repeat
     "Пробежав двор по диагонали, мы остановились у закрытых на замок дверей."
     window hide
@@ -10928,7 +10928,7 @@ label alt_day6_sl_cl_become_a_hero:
     $ persistent.sl_cl_cata = True
     $ renpy.save_persistent()
     show acm_logo_sl_be_ok with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -16229,7 +16229,7 @@ label alt_day7_sl_loop2:
     scene black with fade
     pause(1)
     show alt_credits timeskip13 with flash:
-        pos (747,105)
+        pos (498, 70)     #moded: pos (747,105)
     stop music fadeout 5
     pause(5)
     scene black
@@ -16419,7 +16419,7 @@ label alt_day7_sl_will:
     $ persistent.sl_cl_int_ok = True
     $ renpy.save_persistent()
     show acm_logo_sl_ok with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16533,7 +16533,7 @@ label alt_day7_sl_duty:
     $ persistent.sl_cl_int_good = True
     $ renpy.save_persistent()
     show acm_logo_sl_fantazm with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16557,7 +16557,7 @@ label alt_day7_sl_lone:
     $ persistent.sl_cl_int_bad = True
     $ renpy.save_persistent()
     show acm_logo_sl_lone with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16750,7 +16750,7 @@ label alt_day7_sl_good:
     $ persistent.sl_cl_good_ussr = True
     $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -16909,7 +16909,7 @@ label alt_day7_sl_rf_good:
     $ persistent.sl_cl_good_rf = True
     $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17076,7 +17076,7 @@ label alt_day7_sl_reject_same:
     $ persistent.sl_cl_reject_same = True
     $ renpy.save_persistent()
     show acm_logo_sl_same_place with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17288,7 +17288,7 @@ label alt_day7_sl_rej_end:
     $ persistent.sl_cl_reject_late = True
     $ renpy.save_persistent()
     show acm_logo_sl_too_late with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17383,7 +17383,7 @@ label alt_day7_sl_cl_bad:
     $ persistent.sl_cl_bad = True
     $ renpy.save_persistent()
     show acm_logo_sl_bad with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17539,7 +17539,7 @@ label alt_day7_sl_rf2:
     $ persistent.sl_cl_good_rf2 = True
     $ renpy.save_persistent()
     show acm_logo_sl_worth with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
@@ -17560,3 +17560,5 @@ label alt_day7_d3_rejuv:
     with dissolve2
     window hide
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

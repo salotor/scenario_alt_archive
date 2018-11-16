@@ -1039,7 +1039,7 @@ label alt_day4_rps_fail:
     show mi laugh pioneer at center
     me "Ладно, Мику, ты победила. Следующая песня по твоему выбору."
     "Она призадумалась, наморщила лобик и, наконец, выдала:"
-    $ alt_day4_miku_chart = renpy.random.choice([1, 2, 3, 4])
+    $ alt_day4_miku_chart = renpy.random.choice([1, 1,  2, 3])     #moded: $ alt_day4_miku_chart = renpy.random.choice([1, 2, 3, 4])
     if alt_day4_miku_chart == 1:
         mi "Мою любимую!"
         play music music_list["raindrops"] fadein 3
@@ -3569,3 +3569,5 @@ label alt_day5_mi_begin:
     $ renpy.pause(4, hard=True)
     with dissolve2
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

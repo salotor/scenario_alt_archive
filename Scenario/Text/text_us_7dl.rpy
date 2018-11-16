@@ -10466,7 +10466,7 @@ label alt_day7_us_7dl_mikuforever:
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_openup with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     return
@@ -10698,7 +10698,7 @@ label alt_day7_us_7dl_lenaforever:
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_hi with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -10853,7 +10853,7 @@ label alt_day7_us_7dl_reunite:
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_semische with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     stop music fadeout 3
@@ -11659,7 +11659,7 @@ label alt_day7_us_7dl_ever_after:
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_true with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -11844,7 +11844,7 @@ label alt_day7_us_7dl_bad:
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_bad with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -12889,7 +12889,7 @@ label alt_day7_us_px_fairytale:
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_fairytale with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     $ renpy.pause(2)
@@ -13434,10 +13434,12 @@ label alt_day7_us_px_dejavu:
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_px with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     stop music fadeout 6
     play music music_7dl["happy_ending"] fadein 1
     call alt_7dl_titles
     $ renpy.pause(2)
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

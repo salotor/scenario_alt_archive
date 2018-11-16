@@ -129,61 +129,61 @@ screen sdl_achv_main_buttons(parent_screen, character):
             action [Hide(parent_screen, transition=Dissolve(0.5)), Call("sdl_achvlist_character", "mi", sdl_achv_mi_routes)]
     # Алисхен
     if character == "dv":
-        add "sdl_achv_dv_button_active" pos (0, 343)
+        add "sdl_achv_dv_button_active" pos (0, 229)     #moded: add "sdl_achv_dv_button_active" pos (0, 343)
     else:
-        imagebutton pos (0, 343):
+        imagebutton pos (0, 229):     #moded: imagebutton pos (0, 343):
             hover_sound sdl_achv_pagina
             idle ("sdl_achv_dv_button_inactive")
             hover ("sdl_achv_dv_button_active")
             action [Hide(parent_screen, transition=Dissolve(0.5)), Call("sdl_achvlist_character", "dv", sdl_achv_dv_routes)]
     # Славя
     if character == "sl":
-        add "sdl_achv_sl_button_active" pos (0, 734)
+        add "sdl_achv_sl_button_active" pos (0, 489)     #moded: add "sdl_achv_sl_button_active" pos (0, 734)
     else:
-        imagebutton pos (0, 734):
+        imagebutton pos (0, 489):     #moded: imagebutton pos (0, 734):
             hover_sound sdl_achv_pagina
             idle ("sdl_achv_sl_button_inactive")
             hover ("sdl_achv_sl_button_active")
             action [Hide(parent_screen, transition=Dissolve(0.5)), Call("sdl_achvlist_character", "sl", sdl_achv_sl_routes)]
     # Лена
     if character == "un":
-        add "sdl_achv_un_button_active" pos (1289, 0)
+        add "sdl_achv_un_button_active" pos (859, 0)     #moded: add "sdl_achv_un_button_active" pos (1289, 0)
     else:
-        imagebutton pos (1289, 0):
+        imagebutton pos (859, 0):     #moded: imagebutton pos (1289, 0):
             hover_sound sdl_achv_pagina
             idle ("sdl_achv_un_button_inactive")
             hover ("sdl_achv_un_button_active")
             action [Hide(parent_screen, transition=Dissolve(0.5)), Call("sdl_achvlist_character", "un", sdl_achv_un_routes)]
     # Ольга
     if character == "mt":
-        add "sdl_achv_mt_button_active" pos (1560, 343)
+        add "sdl_achv_mt_button_active" pos (1040, 229)     #moded: add "sdl_achv_mt_button_active" pos (1560, 343)
     else:
-        imagebutton pos (1560, 343):
+        imagebutton pos (1040, 229):     #moded: imagebutton pos (1560, 343):
             hover_sound sdl_achv_pagina
             idle ("sdl_achv_mt_button_inactive")
             hover ("sdl_achv_mt_button_active")
             action [Hide(parent_screen, transition=Dissolve(0.5)), Call("sdl_achvlist_character", "mt", sdl_achv_mt_routes)]
     # Ульяна
     if character == "us":
-        add "sdl_achv_us_button_active" pos (1562, 530)
+        add "sdl_achv_us_button_active" pos (1041, 353)     #moded: add "sdl_achv_us_button_active" pos (1562, 530)
     else:
-        imagebutton pos (1562, 530):
+        imagebutton pos (1041, 353):     #moded: imagebutton pos (1562, 530):
             hover_sound sdl_achv_pagina
             idle ("sdl_achv_us_button_inactive")
             hover ("sdl_achv_us_button_active")
             action [Hide(parent_screen, transition=Dissolve(0.5)), Call("sdl_achvlist_character", "us", sdl_achv_us_routes)]
     # Одиночка
     if character == "me":
-        add "sdl_achv_me_button_active" pos (1289, 735)
+        add "sdl_achv_me_button_active" pos (859, 490)     #moded: add "sdl_achv_me_button_active" pos (1289, 735)
     else:
-        imagebutton pos (1289, 735):
+        imagebutton pos (859, 490):     #moded: imagebutton pos (1289, 735):
             hover_sound sdl_achv_pagina
             idle ("sdl_achv_me_button_inactive")
             hover ("sdl_achv_me_button_active")
             action [Hide(parent_screen, transition=Dissolve(0.5)), Call("sdl_achvlist_character", "me", sdl_achv_me_routes)]
     
     # Выход
-    imagebutton pos (380, 350):
+    imagebutton pos (253, 233):     #moded: imagebutton pos (380, 350):
         hover_sound sdl_achv_pagina
         idle ("sdl_achv_ext_inactive")
         hover ("sdl_achv_ext_active")
@@ -195,7 +195,7 @@ screen sdl_achv_route(parent_screen, achv_list):
     modal True
     
     # Удалятор
-    imagebutton pos (380, 680):
+    imagebutton pos (253, 453):     #moded: imagebutton pos (380, 680):
         hover_sound sdl_achv_click
         activate_sound sdl_achv_clear
         idle ("sdl_achv_del_inactive")
@@ -207,7 +207,7 @@ screen sdl_achv_route(parent_screen, achv_list):
     for achv in achv_list:
         if getattr(persistent, achv.get_persistent()):
             # Значок ачивки
-            imagebutton xcenter 800 ycenter (66 + 64 * sdl_achv_count):
+            imagebutton xcenter 533 ycenter (66 + 64 * sdl_achv_count):     #moded: imagebutton xcenter 800 ycenter (66 + 64 * sdl_achv_count):
                 idle (achv.get_icon())
                 hovered [SetVariable("sdl_achv_hovered_achv", achv)]
                 unhovered [SetVariable("sdl_achv_hovered_achv", None)]
@@ -224,7 +224,7 @@ screen sdl_achv_route(parent_screen, achv_list):
                     action [Stop("ambience"), SetVariable("sdl_achv_hovered_jump", False), Replay(achv.get_replay().get_label(), scope=achv.get_replay().get_scope(), locked=False), Play('ambience', default_7dl_path+"Sound/ambience/ambience_safe_7dl.ogg", fadein=5.0)]
         else:
             # Заблокированная ачивка
-            imagebutton xcenter 800 ycenter (66 + 64 * sdl_achv_count):
+            imagebutton xcenter 533 ycenter (66 + 64 * sdl_achv_count):     #moded: imagebutton xcenter 800 ycenter (66 + 64 * sdl_achv_count):
                 idle ("sdl_achv_lock")
                 hovered [SetVariable("sdl_achv_hovered_achv", achv)]
                 unhovered [SetVariable("sdl_achv_hovered_achv", None)]
@@ -246,15 +246,15 @@ screen sdl_achv_route(parent_screen, achv_list):
     
     # Всплывающая инфа
     if sdl_achv_hovered_achv != None:
-        add sdl_achv_hovered_achv.get_text() xcenter 700 ycenter 840
+        add sdl_achv_hovered_achv.get_text() xcenter 467 ycenter 560     #moded: add sdl_achv_hovered_achv.get_text() xcenter 700 ycenter 840
     
     if sdl_achv_hovered_jump == True:
-        add "sdl_achv_jump" xcenter 700 ycenter 840
+        add "sdl_achv_jump" xcenter 467 ycenter 560     #moded: add "sdl_achv_jump" xcenter 700 ycenter 840
     
     if sdl_achv_hovered_info != None:
-        add sdl_achv_hovered_info.get_text() xcenter 750 ycenter 824
+        add sdl_achv_hovered_info.get_text() xcenter 500 ycenter 554     #moded: add sdl_achv_hovered_info.get_text() xcenter 750 ycenter 824
         if sdl_achv_hovered_info.get_image() != None:
-            add sdl_achv_hovered_info.get_image() xcenter 750 ycenter 900
+            add sdl_achv_hovered_info.get_image() xcenter 500 ycenter 600     #moded: add sdl_achv_hovered_info.get_image() xcenter 750 ycenter 900
 
 
 
@@ -268,7 +268,7 @@ label sdl_achvlist_main:
         play ambience ambience_7dl["safe"] fadein 5
         scene bg sdl_old_ach_inactive
         show sdl_old_achv_extB_7dl:
-            pos(380, 350)
+            pos(253, 233)     #moded: pos(380, 350)
         $ renpy.block_rollback()
         call screen sdl_old_achvlist_Author
 ###
@@ -322,16 +322,19 @@ screen sdl_achvlist_character(character, route_list):
     
     # Всплывающая инфа
     if sdl_achv_hovered_route != None:
-        add sdl_achv_hovered_route.get_typology() pos (380, 540)
-        add sdl_achv_hovered_route.get_title() xcenter 960 ycenter 1010
+        add sdl_achv_hovered_route.get_typology() pos (253, 360)     #moded: add sdl_achv_hovered_route.get_typology() pos (380, 540)
+        add sdl_achv_hovered_route.get_title() xcenter 640 ycenter 670     #moded: add sdl_achv_hovered_route.get_title() xcenter 960 ycenter 1010
         if not sdl_achv_hovered_route.is_completed():
-            add "sdl_achv_need_route" xcenter 700 ycenter 840
+            add "sdl_achv_need_route" xcenter 467 ycenter 560     #moded: add "sdl_achv_need_route" xcenter 700 ycenter 840
     elif sdl_achv_selected_route != None:
-        add sdl_achv_selected_route.get_typology() pos (380, 540)
-        add sdl_achv_selected_route.get_title() xcenter 960 ycenter 1010
+        add sdl_achv_selected_route.get_typology() pos (253, 360)     #moded: add sdl_achv_selected_route.get_typology() pos (380, 540)
+        add sdl_achv_selected_route.get_title() xcenter 640 ycenter 670     #moded: add sdl_achv_selected_route.get_title() xcenter 960 ycenter 1010
         if not sdl_achv_selected_route.is_completed():
-            add "sdl_achv_need_route" xcenter 700 ycenter 840
+            add "sdl_achv_need_route" xcenter 467 ycenter 560     #moded: add "sdl_achv_need_route" xcenter 700 ycenter 840
     
     # Выбранный рут
     if sdl_achv_selected_route != None:
         use sdl_achv_route("sdl_achvlist_character", sdl_achv_selected_route.get_achv_list())
+
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916

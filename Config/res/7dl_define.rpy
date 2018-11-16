@@ -12,15 +12,15 @@ screen role_menu_7dl:
     modal False
     imagemap:
         ground "intro_transparent"
-        hotspot ((0, 0, 635, 1080)):
+        hotspot ((0, 0,  423, 720)):     #moded: hotspot ((0, 0, 635, 1080)):
             hovered [Show("intro_loki_screen", transition=Dissolve(0.5))]
             unhovered [Hide("intro_loki_screen", transition=Dissolve(1.0))]
             action [Hide("intro_loki_screen", transition=Dissolve(0.5)), Jump("alt_day0_start_loki")]
-        hotspot ((635, 0, 652, 1080)):
+        hotspot ((423, 0,  435, 720)):     #moded: hotspot ((635, 0, 652, 1080)):
             hovered [Show("intro_herc_screen", transition=Dissolve(0.5))]
             unhovered [Hide("intro_herc_screen", transition=Dissolve(1.0))]
             action [Hide("intro_herc_screen", transition=Dissolve(0.5)), Jump("alt_day0_start_herc")]
-        hotspot ((1287, 0, 634, 1080)):
+        hotspot ((858, 0,  423, 720)):     #moded: hotspot ((1287, 0, 634, 1080)):
             hovered [Show("intro_dr_screen", transition=Dissolve(0.5))]
             unhovered [Hide("intro_dr_screen", transition=Dissolve(1.0))]
             action [Hide("intro_dr_screen", transition=Dissolve(0.5)), Jump("alt_day0_start")]
@@ -143,9 +143,9 @@ init:
         linear 0.8 zoom 1.0 xalign 0.5 yalign 0.5
         
     transform bottotop:
-        pos (0,-1261)
-        linear 10.0 pos (0,0)
-        linear 2.0 pos (0, -200)
+        pos (0, -841)     #moded: pos (0,-1261)
+        linear 10.0 pos (0, 0)     #moded: linear 10.0 pos (0,0)
+        linear 2.0 pos (0, -133)     #moded: linear 2.0 pos (0, -200)
     
     transform salute_main_black(salute):
         "sal_black"
@@ -181,18 +181,18 @@ init:
             zoom 1.1 xcenter 0.5 ycenter 0.5
         block:
             ease 0.2 xoffset 0 yoffset 0
-            ease 0.2 xoffset 25 yoffset 50
+            ease 0.2 xoffset 17 yoffset 30     #moded: ease 0.2 xoffset 25 yoffset 50
             ease 0.2 xoffset 0 yoffset 0
-            ease 0.2 xoffset -25 yoffset 50
+            ease 0.2 xoffset -17 yoffset 30     #moded: ease 0.2 xoffset -25 yoffset 50
         repeat
 
     transform fast_running:
-        pos (0,0) 
-        linear 0.1 pos (-5,-5) 
-        linear 0.1 pos (5,5) 
-        pos (0,0) 
-        linear 0.1 pos (0,-5) 
-        linear 0.1 pos (0,5) 
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (-3, -3)      #moded: linear 0.1 pos (-5,-5)
+        linear 0.1 pos (3, 3)      #moded: linear 0.1 pos (5,5)
+        pos (0, 0)      #moded: pos (0,0)
+        linear 0.1 pos (0, -3)      #moded: linear 0.1 pos (0,-5)
+        linear 0.1 pos (0, 3)      #moded: linear 0.1 pos (0,5)
         repeat
 
     transform fast_running2:
@@ -200,9 +200,9 @@ init:
             zoom 1.1 xcenter 0.5 ycenter 0.5
         block:
             ease 0.1 xoffset 0 yoffset 0
-            ease 0.1 xoffset 12 yoffset 25
+            ease 0.1 xoffset 8 yoffset 15     #moded: ease 0.1 xoffset 12 yoffset 25
             ease 0.1 xoffset 0 yoffset 0
-            ease 0.1 xoffset -12 yoffset 25
+            ease 0.1 xoffset -8 yoffset 15     #moded: ease 0.1 xoffset -12 yoffset 25
         repeat
         
 #Наши транзиты, с блекджеком и разными цветами.
@@ -323,7 +323,7 @@ init:
         pause 2.0
         repeat
     
-    image salute = LiveComposite((1920,1080),
+    image salute = LiveComposite((1280, 720),     #moded: image salute = LiveComposite((1920,1080),
                                   (0,0), salute_main(get_image_7dl("screens/salute/spoloh1.png")),
                                   (0,0), salute_main(get_image_7dl("screens/salute/spoloh11.png")),
                                   (0,0), salute_main(get_image_7dl("screens/salute/spoloh2.png")),
@@ -1363,3 +1363,5 @@ init:
     $ sfx_7dl["wakeup"] = get_sfx_7dl("wakeup_7dl.ogg")
     $ sfx_7dl["white_noise"] = get_sfx_7dl("white_noise_7dl.ogg")
     $ sfx_7dl["window_glass_break"] = get_sfx_7dl("window_glass_break_7dl.ogg")
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916
