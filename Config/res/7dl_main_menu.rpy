@@ -1,6 +1,20 @@
 init 1 python:
+    if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
+        link_font = default_7dl_path + "Pics/fonts/calibri.ttf"
+        header_font = "fonts/corbel.ttf"
+        
+        style.settings_link = Style(style.base_font)
+        style.settings_link.font  = header_font
+        style.settings_link.size = 60
+        style.settings_link.kerning = 3
+        style.settings_link.color = "#909ca3"
+        style.settings_link.hover_color = "#ffffff"
+        style.settings_link.selected_color = "#909ca3"
+        style.settings_link.selected_idle_color = "#909ca3"
+        style.settings_link.selected_hover_color = "#ffffff"
+        style.settings_link.insensitive_color = "#909ca3"
+
     presentscript_font = default_7dl_path + "Pics/fonts/presentscript.ttf"
-    link_font = default_7dl_path + "Pics/fonts/calibri.ttf"
     
     style.alt_settings_textbutton = Style(style.base_font)
     style.alt_settings_textbutton.font  = presentscript_font
@@ -30,19 +44,6 @@ init 1 python:
     style.settings_textbutton2.selected_hover_color = "#000000"
     style.settings_textbutton2.insensitive_color = "#909ca3"
     
-    if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
-        header_font = "fonts/corbel.ttf"
-        style.settings_link = Style(style.base_font)
-        style.settings_link.font  = header_font
-        style.settings_link.size = 60
-        style.settings_link.kerning = 3
-        style.settings_link.color = "#909ca3"
-        style.settings_link.hover_color = "#ffffff"
-        style.settings_link.selected_color = "#909ca3"
-        style.settings_link.selected_idle_color = "#909ca3"
-        style.settings_link.selected_hover_color = "#ffffff"
-        style.settings_link.insensitive_color = "#909ca3"
-        
     #def check_time_7dl(time_7dl):
         #from time import localtime, strftime
         #t = strftime("%H:%M:%S", localtime())
