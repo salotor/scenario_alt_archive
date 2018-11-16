@@ -3429,7 +3429,7 @@ label alt_day4_neu_map_me_mt_house:
                 "Но обидку затаил!"
                 hide us with dspr
             stop music fadeout 3
-            stop ambience fadeout 3    
+            stop ambience fadeout 3
             window hide
             with fade2
     return
@@ -4229,7 +4229,7 @@ label alt_day4_neu_map_dining_hall:
     window hide
     scene bg ext_seashore_7dl with dissolve
     $ persistent.sprite_time = "night"
-    show mt_shade with dspr
+    show mt shade with dspr
     play music music_7dl["shestheone"] fadein 3
     mt "Значит, я твоя вожатая, ты мой подопечный."
     mt "Всё верно?"

@@ -6137,7 +6137,7 @@ label alt_day6_us_7dl_disco:
         window hide
         with fade
         "И поднявшись, было, услышал от одной из них:"
-        show un_shade with dissolve
+        show un shade with dissolve
         un "П-потанцуем?"
         if alt_day3_un_invite == 2:
             un "П-помнишь, песня, как та…"
@@ -6148,6 +6148,7 @@ label alt_day6_us_7dl_disco:
         else:
             un "Т-ты п-приглашал."
             me "Э… Пошли. Лена."
+        show un smile pioneer with dspr
         "Улыбнувшись, грустная девочка позволила мне взять себя под руку и отвести на танцпол."
         "Мы несколько секунд неловко перекладывали руки, пока, наконец, я не обнял её в старом как мир вальсовом хвате."
         window hide
