@@ -27075,7 +27075,10 @@ label alt_day7_sl_7dl_leaving:
         #scene cg d7_aio_leaving_7dl #полный вариант
         with fade
         mt "Сейчас в порядке живой очереди занимаем места, из окон не высовываемся и так далее. Двачевская, тебя первой касается."
-        show dv surprise sport at fleft with dissolve
+        if herc or loki:
+            show dv surprise sport at fleft with dissolve
+        else:
+            show dv2 surprise sport at fleft with dissolve
         dv "А что сразу я?"
         "Возмутилась Алиса под дружный смех ребят."
         "И мой тоже."
@@ -27085,7 +27088,10 @@ label alt_day7_sl_7dl_leaving:
         "Но я чувствовал себя гораздо живее, чем в самом начале этой истории."
         "Значит, не зря всё?"
         "Значит, не зря."
-        show dv smile sport
+        if herc or loki:
+            show dv smile sport
+        else:
+            show dv2 smile sport
         show mt smile sport
         with dspr
         mt "Ребята."
@@ -27093,7 +27099,10 @@ label alt_day7_sl_7dl_leaving:
         mt "Это была замечательная смена, пожалуй, одна из лучших, какие я помню."
         mt "Пусть не всегда мы находили общий язык, но мы в итоге всё равно все сдружились!"
         mt "Да-да, и нечего так кривиться, Двачевская. {w}Думаешь, я не знаю, что ты с Ульянкой номерами обменялась?"
-        show dv normal sport with dspr
+        if herc or loki:
+            show dv normal sport with dspr
+        else:
+            show dv2 normal sport with dspr
         mt "Самое главное — это то, что мы рады друг другу. {w}А потому я предлагаю устроить вечер встречи в первую субботу сентября."
         mt "Как вы на это смотрите?"
         show mt grin sport with dspr
