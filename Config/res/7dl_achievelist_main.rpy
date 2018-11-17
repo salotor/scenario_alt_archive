@@ -207,7 +207,7 @@ screen sdl_achv_route(parent_screen, achv_list):
     for achv in achv_list:
         if getattr(persistent, achv.get_persistent()):
             # Значок ачивки
-            imagebutton xcenter 533 ycenter (66 + 64 * sdl_achv_count):     #moded: imagebutton xcenter 800 ycenter (66 + 64 * sdl_achv_count):
+            imagebutton xcenter 533 ycenter (44 + 43 * sdl_achv_count):     #moded: imagebutton xcenter 800 ycenter (66 + 64 * sdl_achv_count):
                 idle (achv.get_icon())
                 hovered [SetVariable("sdl_achv_hovered_achv", achv)]
                 unhovered [SetVariable("sdl_achv_hovered_achv", None)]
@@ -215,7 +215,7 @@ screen sdl_achv_route(parent_screen, achv_list):
             
             if achv.get_replay() != None:
                 # Кнопка перехода к концовке
-                imagebutton pos (590, 40 + 64 * sdl_achv_count):
+                imagebutton pos (393, 27 + 43 * sdl_achv_count):     #moded
                     hover_sound sdl_achv_click
                     idle ("sdl_achv_check_inactive")
                     hover ("sdl_achv_check_active")
@@ -224,7 +224,7 @@ screen sdl_achv_route(parent_screen, achv_list):
                     action [Stop("ambience"), SetVariable("sdl_achv_hovered_jump", False), Replay(achv.get_replay().get_label(), scope=achv.get_replay().get_scope(), locked=False), Play('ambience', default_7dl_path+"Sound/ambience/ambience_safe_7dl.ogg", fadein=5.0)]
         else:
             # Заблокированная ачивка
-            imagebutton xcenter 533 ycenter (66 + 64 * sdl_achv_count):     #moded: imagebutton xcenter 800 ycenter (66 + 64 * sdl_achv_count):
+            imagebutton xcenter 533 ycenter (44 + 43 * sdl_achv_count):     #moded: imagebutton xcenter 800 ycenter (66 + 64 * sdl_achv_count):
                 idle ("sdl_achv_lock")
                 hovered [SetVariable("sdl_achv_hovered_achv", achv)]
                 unhovered [SetVariable("sdl_achv_hovered_achv", None)]
@@ -234,7 +234,7 @@ screen sdl_achv_route(parent_screen, achv_list):
             $ sdl_achv_prerequisites = achv.get_prerequisites()
             for prerequisite in sdl_achv_prerequisites:
                 if not prerequisite.check_conditions():
-                    imagebutton pos (590, 40 + 64 * sdl_achv_count):
+                    imagebutton pos (393, 27 + 43 * sdl_achv_count):     #moded
                         hover_sound sdl_achv_info
                         idle ("sdl_achv_info_inactive")
                         hover ("sdl_achv_info_active")
@@ -306,9 +306,9 @@ screen sdl_achvlist_character(character, route_list):
     $ sdl_route_count = 0
     for route in route_list:
         if sdl_achv_selected_route == route:
-            add route.get_icon_active() pos (980 + 117 * sdl_route_count, 18)
+            add route.get_icon_active() pos (653 + 78 * sdl_route_count, 12)     #moded
         else:
-            imagebutton pos (980 + 117 * sdl_route_count, 18):
+            imagebutton pos (653 + 78 * sdl_route_count, 12):     #moded
                 hover_sound sdl_achv_click
                 idle (route.get_icon_inactive())
                 hover (route.get_icon_active())
