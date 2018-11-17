@@ -14165,11 +14165,11 @@ label alt_day7_sl_square1:
             "Песочные часы."
             "Молнию."
             "Пятиконечную звезду с длинным хвостом — или это была звезда на палочке? Волшебная палочка, какой её рисуют дети?"
-            if persistent.dv_7dl_good_ussr or persistent.dv_7dl_good_rf:
+            if persistent.dv_7dl_true:
                 "Молния подмигнула мне тёплым оранжевым цветом, как старому знакомому, старому другу. Старому… Возлюбленному?"
-            if persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf:
+            if persistent.un_7dl_true:
                 "Корона на миг перелилась фиолетовым-сиреневым цветом, на миг — я даже не успел понять, показалось ли мне это."
-            if persistent.mi_7dl_good_human or persistent.mi_7dl_good_star:
+            if persistent.mi_7dl_true:
                 "Нота вздрогнула под ладонью, отозвалась неожиданно, засветившись уютным аквамариновым светом."
                 if persistent.mi_7dl_good_human:
                     "Тёплым таким, живым — как будто одна знакомая девочка улыбнулась мне."
@@ -14177,18 +14177,18 @@ label alt_day7_sl_square1:
                     "Разве что не был этот свет ни тёплым, ни холодным — никаким."
                     "А должен бы!"
                     "Видимо, я пока ещё недостаточно понимаю, как надо — правильно. Потому половину попросту не чувствую."
-            if persistent.mt_7dl_good:
+            if persistent.mt_7dl_true:
                 "Песочные часы будто сжались под взглядом, потемнели, приобрели в объеме — и резко-резко перевернулись."
                 "Нарисованный в них песок потёк вниз."
-            if persistent.sl_7dl_good_rf or persistent.sl_7dl_good_ussr:
+            if persistent.sl_7dl_true:
                 "Солнце вспыхнуло золотом, напоминая цвет волос одной моей знакомой златовласки."
                 "Одной очень дорогой златовласки."
                 th "Она меня там ждёт, а я тут лазаю."
-            if persistent.us_7dl_good:
+            if persistent.us_7dl_true:
                 "Всё-таки, волшебная палочка — она засветилась неоново-синим по периметру."
                 "И тут же резко сменила цвет на красный — такой, какой я видел всего один раз в жизни."
                 "Увязанный снопами-ракетами, инверсионным следом одной катастрофы с алым колером волос."
-            if (persistent.mi_7dl_good_human or persistent.mi_7dl_good_star) and persistent.dv_7dl_good_ussr and persistent.sl_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mt_7dl_good and persistent.us_7dl_good:
+            if (alt_day_binder == 1) or alt_day1_loop:
                 "Яркие, чистые цвета, будто подтверждающие теорию цвета — они вспыхнули одновременно, мало-помалу сливаясь в единое неяркое белое сияние."
                 "Я знал каждый цвет, каждую историю, что стоит за ними."
                 "Я переживал с ними всё, что когда-то привнёс в их жизнь, каялся в том, что станет в их жизни тогда, когда неумолимой отдачей меня бросало домой."
@@ -14203,7 +14203,7 @@ label alt_day7_sl_square1:
                 with fade
                 return
             else:
-                if (persistent.mi_7dl_good_human or persistent.mi_7dl_good_star) or persistent.dv_7dl_good_ussr or persistent.sl_7dl_good_ussr or persistent.un_7dl_good_ussr or persistent.mt_7dl_good or persistent.us_7dl_good:
+                if persistent.mi_7dl_true or persistent.dv_7dl_true or persistent.sl_7dl_true or persistent.un_7dl_true or persistent.mt_7dl_true or persistent.us_7dl_true:
                     "Немного посверкав и посияв, символы погасли."
                     "Снова обратившись скучными картинками по железу."
                 "Делать мне здесь больше было нечего, и я, развернувшись, отправился восвояси."
