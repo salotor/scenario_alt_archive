@@ -5,7 +5,7 @@ init 1 python:
         
         style.settings_link = Style(style.base_font)
         style.settings_link.font  = header_font
-        style.settings_link.size = 60
+        style.settings_link.size = 40
         style.settings_link.kerning = 3
         style.settings_link.color = "#909ca3"
         style.settings_link.hover_color = "#ffffff"
@@ -18,7 +18,7 @@ init 1 python:
     
     style.alt_settings_textbutton = Style(style.base_font)
     style.alt_settings_textbutton.font  = presentscript_font
-    style.alt_settings_textbutton.size = 37
+    style.alt_settings_textbutton.size = 25
     style.alt_settings_textbutton.kerning = -2
     style.alt_settings_textbutton.color = "#2f059a"
     style.alt_settings_textbutton.hover_color = "#9a0505"
@@ -29,13 +29,13 @@ init 1 python:
 
     style.alt_settings_text = Style(style.base_font)
     style.alt_settings_text.font  = presentscript_font
-    style.alt_settings_text.size = 37
+    style.alt_settings_text.size = 25
     style.alt_settings_text.kerning = -2
     style.alt_settings_text.color = "#2f059a"
     
     style.settings_textbutton2 = Style(style.base_font)
     style.settings_textbutton2.font  = link_font
-    style.settings_textbutton2.size = 60
+    style.settings_textbutton2.size = 40
     style.settings_textbutton2.kerning = 3
     style.settings_textbutton2.color = "#909ca3"
     style.settings_textbutton2.hover_color = "#000000"
@@ -127,9 +127,9 @@ screen alt_wip:
         xalign 0.5
         color "#64483c"
         font header_font
-        size 40
+        size 27
     textbutton _("OK"):
-        text_size 60
+        text_size 40
         style "log_button"
         text_style "settings_link"
         yalign 0.6
@@ -145,30 +145,30 @@ screen alt_help:
         xalign 0.5
         color "#64483c"
         font header_font
-        size 40
+        size 27
     text "проекту требуется ваша помощь!":
         text_align 0.5
         yalign 0.49
         xalign 0.5
         color "#64483c"
         font header_font
-        size 40
+        size 27
     textbutton _("Подробнее"):
-        text_size 40
+        text_size 27
         style "log_button"
         text_style "settings_link"
         yalign 0.6
         xalign 0.23
         action [Hide("alt_help", transition=Dissolve(0.2)), Show("alt_help_more", transition=Dissolve(0.5))]
     textbutton _("Закрыть"):
-        text_size 40
+        text_size 27
         style "log_button"
         text_style "settings_link"
         yalign 0.6
         xalign 0.5
         action [Hide("alt_help", transition=Dissolve(0.2)), Stop('music', fadeout=2), Return()]
     textbutton _("Больше не показывать"):
-        text_size 40
+        text_size 27
         style "log_button"
         text_style "settings_link"
         yalign 0.6
@@ -184,72 +184,72 @@ screen alt_help_more:
         xalign 0.5
         color "#000000"
         font header_font
-        size 40
+        size 27
     text "Эти деньги тратятся как на заказ графики для проекта, так и дают средства к существованию":
         text_align 0.5
         yalign 0.25
         xalign 0.5
         color "#000000"
         font header_font
-        size 40
+        size 27
     text "автору «7 дней лета», который занят работой над сценарием по 8 часов в день. Это позволяет":
         text_align 0.5
         yalign 0.3
         xalign 0.5
         color "#000000"
         font header_font
-        size 40
+        size 27
     text "писать один день рута (около 200 страниц текста) за месяц, а не заставлять ждать аудиторию":
         text_align 0.5
         yalign 0.35
         xalign 0.5
         color "#000000"
         font header_font
-        size 40
+        size 27
     text "по нескольку лет.":
         text_align 0.5
         yalign 0.4
         xalign 0.5
         color "#000000"
         font header_font
-        size 40
+        size 27
     text "Если вам небезразлична судьба проекта, просим вас поддержать его любой суммой, которую":
         text_align 0.5
         yalign 0.45
         xalign 0.5
         color "#000000"
         font header_font
-        size 40
+        size 27
     text "считаете нужной. Особенная благодарность тем, кто решит подписаться на Патреоне - регулярная":
         text_align 0.5
         yalign 0.5
         xalign 0.5
         color "#000000"
         font header_font
-        size 40
+        size 27
     text "поддержка очень важна.":
         text_align 0.5
         yalign 0.55
         xalign 0.5
         color "#000000"
         font header_font
-        size 40
+        size 27
     text "Страница на Патреоне: {a=https://www.patreon.com/7dl/}https://www.patreon.com/7dl/{/a}":
         text_align 0.5
         yalign 0.6
         xalign 0.5
         color "#000000"
         font header_font
-        size 40
+        size 27
     text "Виджет (Яндекс.Деньги, Paypal, VK Pay): {a=https://vk.com/app5727453_-128046483}https://vk.com/app5727453_-128046483{/a}":
         text_align 0.5
         yalign 0.65
         xalign 0.5
         color "#000000"
         font header_font
-        size 40
+        size 27
     textbutton _("Закрыть"):
-        text_size 40
+        text_size 27
         style "log_button"
         text_style "settings_textbutton2"
         yalign 0.75

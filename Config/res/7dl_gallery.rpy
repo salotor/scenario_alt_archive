@@ -18,7 +18,7 @@ init 1:
     $ style.page_7dl_text = Style(style.default)
     $ style.page_7dl_text.font  = get_image_7dl("fonts/a_AvanteLtNr.ttf")
     $ style.page_7dl_text.color = "#ffffff"
-    $ style.page_7dl_text.size = 60
+    $ style.page_7dl_text.size = 40
     
     image bg gallery_7dl = get_image_7dl("gui/gallery/gallery_bg.png")
     image bg gallery_moments_7dl = get_image_7dl("gui/gallery/gallery_moments_bg.png")

@@ -3,7 +3,7 @@ init 999 python:
 
     style.replays_textbutton = Style(style.base_font)
     style.replays_textbutton.font  = olgactt_font
-    style.replays_textbutton.size = 42
+    style.replays_textbutton.size = 28
     style.replays_textbutton.color = "#7847f3"
     style.replays_textbutton.hover_color = "#2f059a"
     style.replays_textbutton.selected_color = "#7847f3"
@@ -13,12 +13,12 @@ init 999 python:
 
     style.replays_text = Style(style.base_font)
     style.replays_text.font  = olgactt_font
-    style.replays_text.size = 42
+    style.replays_text.size = 28
     style.replays_text.color = "#7847f3"
 
     style.replays_text_locked = Style(style.base_font)
     style.replays_text_locked.font  = olgactt_font
-    style.replays_text_locked.size = 42
+    style.replays_text_locked.size = 28
     style.replays_text_locked.color = "#808080"
     
 init 99:
