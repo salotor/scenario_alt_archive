@@ -518,13 +518,13 @@ init 9999 python:
     ## Ульяна-Огоньки
     sdl_achv_array_us_pxs = [
         sdl_achv_Achievement(    # ТруЪ
-            "acm_logo_us_fairytale",
+            "acm_logo_us_px_true",
             "us_px_true",
             "sdl_achv_us_true",
             {
-                sdl_achv_Prerequisite({"us_7dl_good"}, "sdl_achv_info_end", "acm_logo_us_semische")
+                sdl_achv_Prerequisite({"us_px_fairytale"}, "sdl_achv_info_end", "acm_logo_us_fairytale")
             },
-            sdl_achv_Replay("alt_day7_us_7dl_ever_after", {"alt_replay_on" : "True"})
+            sdl_achv_Replay("alt_day7_us_px_true", {"alt_replay_on" : "True"})
         ),
         sdl_achv_Achievement(    # Гуд
             "acm_logo_us_px",
@@ -532,6 +532,15 @@ init 9999 python:
             "sdl_achv_us_good",
             {},
             sdl_achv_Replay("alt_day7_us_px_dejavu", {"alt_replay_on" : "True"})
+        ),
+        sdl_achv_Achievement(    # Нейтрал
+            "acm_logo_us_fairytale",
+            "us_px_fairytale",
+            "sdl_achv_us_neutral",
+            {
+                sdl_achv_Prerequisite({"us_7dl_good"}, "sdl_achv_info_end", "acm_logo_us_semische")
+            },
+            sdl_achv_Replay("alt_day7_us_px_fairytale", {"alt_replay_on" : "True"})
         )
     ]
     

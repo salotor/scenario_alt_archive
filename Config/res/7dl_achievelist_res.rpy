@@ -274,11 +274,12 @@ init:
     image sdl_achv_mt_neutral = Text("Нейтральная\n  концовка", style="sdl_achvlistA_mt_st")
     image sdl_achv_mt_bad     = Text(" Плохая\nконцовка", style="sdl_achvlistA_mt_st")
     ## Ульянка расцветка
-    image sdl_achv_us_true = Text("Истинная\nконцовка", style="sdl_achvlistA_us_st")
-    image sdl_achv_us_good = Text("Хорошая\nконцовка", style="sdl_achvlistA_us_st")
-    image sdl_achv_us_un   = Text("Концовка\n Лены", style="sdl_achvlistA_us_st")
-    image sdl_achv_us_mi   = Text("Концовка\n Мику", style="sdl_achvlistA_us_st")
-    image sdl_achv_us_bad  = Text(" Плохая\nконцовка", style="sdl_achvlistA_us_st")
+    image sdl_achv_us_true    = Text("Истинная\nконцовка", style="sdl_achvlistA_us_st")
+    image sdl_achv_us_good    = Text("Хорошая\nконцовка", style="sdl_achvlistA_us_st")
+    image sdl_achv_us_neutral = Text("Нейтральная\n  концовка", style="sdl_achvlistA_us_st")
+    image sdl_achv_us_un      = Text("Концовка\n Лены", style="sdl_achvlistA_us_st")
+    image sdl_achv_us_mi      = Text("Концовка\n Мику", style="sdl_achvlistA_us_st")
+    image sdl_achv_us_bad     = Text(" Плохая\nконцовка", style="sdl_achvlistA_us_st")
     ## Одиночка расцветка
     image sdl_achv_me_kat = Text("Катапультная\n концовка", style="sdl_achvlistA_me_st")
     image sdl_achv_me_qte = Text(" Тест на реакцию\nи сообразительность", style="sdl_achvlistA_me_st")

@@ -1010,6 +1010,7 @@ init:
     image acm_logo_us_hi = get_image_7dl("gui/acm/acm_logo_us_hi_7dl.png")
     image acm_logo_us_openup = get_image_7dl("gui/acm/acm_logo_us_openup_7dl.png")
     image acm_logo_us_px = get_image_7dl("gui/acm/acm_logo_us_px_7dl.png")
+    image acm_logo_us_px_true = get_image_7dl("gui/acm/acm_logo_us_px_true_7dl.png")
     image acm_logo_us_semische = get_image_7dl("gui/acm/acm_logo_us_semische_7dl.png")
     image acm_logo_us_true = get_image_7dl("gui/acm/acm_logo_us_true_7dl.png")
     

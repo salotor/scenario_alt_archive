@@ -115,6 +115,14 @@ label alt_day7_us_7dl_start:
             call alt_day7_us_px_bus
             pause(1)
             if alt_day7_us_px_escaped:
+                if persistent.us_px_fairytale:
+                    menu:
+                        "Так и должно быть…":
+                            call alt_day7_us_px_true
+                            pause(1)
+                            return
+                        "Поехали!":
+                            pass
                 call alt_day7_us_px_wastelands
                 pause(1)
                 $ persistent.sprite_time = "prolog"
