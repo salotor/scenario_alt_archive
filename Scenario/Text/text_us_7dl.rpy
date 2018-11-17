@@ -817,6 +817,7 @@ label alt_day6_us_7dl_helping:
         us "Показалось, что ты сможешь заменить Мирю."
         me "Разве не смогу?"
         us "Я не знаю. Сможешь?"
+        me "Ну…"
         show us dontlike pioneer with dspr
         us "Вот видишь."
     elif alt_day4_neu_us_pixies != 0:
