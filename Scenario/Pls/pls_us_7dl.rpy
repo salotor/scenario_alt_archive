@@ -55,10 +55,10 @@
             call alt_day6_us_7dl_button
             pause(1)
             if alt_day6_us_7dl_tr:
-                $ alt_chapter(6, u"Ульяна. 7дл. Ррромантика")
+                $ alt_chapter(6, u"Ульяна. 7ДЛ. Ррромантика")
                 call alt_day6_us_7dl_rendezvous
             else:
-                $ alt_chapter(6, u"Ульяна. 7дл. Концерт")
+                $ alt_chapter(6, u"Ульяна. 7ДЛ. Концерт")
                 call alt_day6_us_7dl_concert
     pause(1)
     $ persistent.sprite_time = "sunset"
