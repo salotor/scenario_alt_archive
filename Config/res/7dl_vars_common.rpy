@@ -116,7 +116,8 @@ label scenario__alt_sevendl:
     $ init_map_zones_alt1()
     $ init_map_zones_alt2()
 # пишем версию 7дл в трейсбеках
-    $ config.version = config.version+" + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
+    if not "7DL" in config.version:
+        $ config.version = config.version+" + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
 # ------------------------------------------------
     jump start_menu_7dl
 
