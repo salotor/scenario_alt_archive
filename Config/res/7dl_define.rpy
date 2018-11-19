@@ -406,6 +406,8 @@ init:
     image bg ext_adductius_7dl = get_image_7dl("bg/ext_adductius_7dl.png")
     image bg ext_admins_day_7dl = get_image_7dl("bg/ext_admins_day_7dl.jpg")
     image bg ext_admins_night_7dl = get_image_7dl("bg/ext_admins_night_7dl.jpg")
+    image bg ext_admins_dawn_7dl = get_image_7dl("bg/ext_admins_dawn_7dl.jpg")
+    image bg ext_admins_sunset_7dl = get_image_7dl("bg/ext_admins_sunset_7dl.jpg")
     image bg ext_admins_rain_7dl = get_image_7dl("bg/ext_admins_rain_7dl.jpg")
     image bg ext_aidpost_rain_7dl = get_image_7dl("bg/ext_aidpost_rain_7dl.jpg")
     image bg ext_aidpost_sunset_7dl = get_image_7dl("bg/ext_aidpost_sunset_7dl.jpg")

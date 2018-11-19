@@ -8991,7 +8991,7 @@ label alt_day2_slot_sl:
     window hide
     show sl normal pioneer
     with dissolve
-    play music music_7dl["not_alone"] fadein 2
+    play music music_list["forest_maiden"] fadein 2
     "Я остановился и поднял голову."
     "Она догоняла меня быстрым шагом, почти не тревожа окружение."
     "Идеально вписываясь, будто являясь частью всего этого — ничего удивительного в том, что я не сумел заметить её до сих пор."
