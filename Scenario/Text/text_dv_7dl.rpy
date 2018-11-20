@@ -12806,7 +12806,8 @@ label alt_day7_dv_7dl_bus:
     with fade
     return
 
-label alt_day7_dv_7dl_ending_router:    # лейбл происходит в полной тишине, что для сцены отъезда явно неправильно. Нужна музыка (deadman как обычно?)
+label alt_day7_dv_7dl_ending_router:
+    play music music_7dl["tilltheend"] fadein 3
     if alt_day7_dv_7dl_check == 1:
         scene expression Notch("cg d7_dv_epilogue_bus_7dl") with dissolve
         "Алиса, скептически смотрящая на меня с самого момента отбытия, будто заразилась моей паникой — она взяла меня за руку и изо всех сил боролась с дремотой."
