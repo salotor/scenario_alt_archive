@@ -2095,7 +2095,8 @@ label alt_day3_event_camp_entrance1:
             "Ульянку и её саранчу!"
         if 'sl' in list_d2_date_7dl:
             "Славю и волшебную встречу в лесу…"
-        "Да хотя бы то, как меня отсюда практически за руку отвели в первый день и накормили!"
+        if counter_sl_7dl < 2:
+            "Да хотя бы то, как меня отсюда практически за руку отвели в первый день и накормили!"
         "В моём мире всем было бы плевать."
         "Хвала рандому, я не в своём мире."
     stop music fadeout 3
@@ -8179,11 +8180,9 @@ label alt_day3_dv_stayhere1:
     window hide
     scene bg ext_house_of_mt_night_without_light with dissolve
     stop ambience fadeout 1
-    show un_shade at right with dissolve
+    show un shade at right with dissolve
     "Шезлонг опять заскрипел, на фоне звёздного неба силуэтом мелькнули четыре хвостика…"
-    hide un_shade
-    show un smile dress close at right
-    with dissolve
+    show un smile dress close at right with dspr
     me "Лена?!"
     "Ахнул я."
     $ meet('un','Лена')
