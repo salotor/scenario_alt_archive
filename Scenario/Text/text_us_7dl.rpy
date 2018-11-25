@@ -817,6 +817,7 @@ label alt_day6_us_7dl_helping:
         us "Показалось, что ты сможешь заменить Мирю."
         me "Разве не смогу?"
         us "Я не знаю. Сможешь?"
+        me "Ну…"
         show us dontlike pioneer with dspr
         us "Вот видишь."
     elif alt_day4_neu_us_pixies != 0:
@@ -835,7 +836,8 @@ label alt_day6_us_7dl_helping:
         "Отчаянно выкрикнула девочка."
         us "Я думала вчера, сегодня."
         us "Что тебе нужно от меня, Сёмыч, можешь сказать? Зачем ты ходишь за мной?"
-        "Я почувствовал, как краснею."    # with flash_pink/red?
+        with flash2_red
+        "Я почувствовал, как краснею."
         me "Да ничего! Разве для помощи товарищу нужен какой-нибудь повод?"
         show us normal pioneer with dspr
         us "Балда ты, Сёмыч."
@@ -4597,7 +4599,7 @@ label alt_day6_us_px_dinner:
     "Ушёл."
     "В вопросе, брошенном вслед, явно послышались слёзы:"
     us "И что, так и уйдёшь?! Это и твоя мечта!"
-    dn "Меня поставили отвечать за отряд на концерте"
+    dn "Меня поставили отвечать за отряд на концерте."
     "Отрезал Даня."
     us "Да что мне делать?"
     "Заголосила она."
@@ -6137,7 +6139,7 @@ label alt_day6_us_7dl_disco:
         window hide
         with fade
         "И поднявшись, было, услышал от одной из них:"
-        show un_shade with dissolve
+        show un shade with dissolve
         un "П-потанцуем?"
         if alt_day3_un_invite == 2:
             un "П-помнишь, песня, как та…"
@@ -6148,6 +6150,7 @@ label alt_day6_us_7dl_disco:
         else:
             un "Т-ты п-приглашал."
             me "Э… Пошли. Лена."
+        show un smile pioneer with dspr
         "Улыбнувшись, грустная девочка позволила мне взять себя под руку и отвести на танцпол."
         "Мы несколько секунд неловко перекладывали руки, пока, наконец, я не обнял её в старом как мир вальсовом хвате."
         window hide
@@ -9771,7 +9774,7 @@ label alt_day7_us_7dl_leaving:
             me "Обратно?!"
             show us2 laugh sport with dspr
             "Ни за какие коврижки я бы не согласился на то, чтобы…"
-            "И Ульяна, не давая мне ни передумать, ни сделать что-то, с резбега прыгнула со ступенек, увлекая меня за собой."
+            "И Ульяна, не давая мне ни передумать, ни сделать что-то, с разбега прыгнула со ступенек, увлекая меня за собой."
             "Обратно!"
             show blink
         else:
@@ -10462,7 +10465,7 @@ label alt_day7_us_7dl_mikuforever:
     "В груди перехватило что-то, все слова враз забылись."
     "Я ступил на первую ступеньку автобуса."
     window hide
-    $ persistent.us_7dl_mi = True
+    $ persistent.us_7dl_mi += 1
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_openup with moveinright:
@@ -10694,7 +10697,7 @@ label alt_day7_us_7dl_lenaforever:
     show un smile2 winter with dspr
     un "С моей сестрой."
     window hide
-    $ persistent.us_7dl_un = True
+    $ persistent.us_7dl_un += 1
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_hi with moveinright:
@@ -10849,7 +10852,7 @@ label alt_day7_us_7dl_reunite:
     play music music_7dl["happy_ending"] fadein 3
     us "Пошли, Сёмище! А то билетов не хватит!"
     window hide
-    $ persistent.us_7dl_good = True
+    $ persistent.us_7dl_good += 1
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_semische with moveinright:
@@ -10864,7 +10867,7 @@ label alt_day7_us_7dl_reunite:
         play ambience ambience_cold_wind_loop fadein 3
         scene bg ext_road_winter_7dl
         "Когда мы дошли от остановки до самого места, где по моим подсчётам должен был располагаться лагерь, там не было ничего."
-        "Мы с Ульяной облазили все окрестности, обыскали все места — нет, нет и нет."    ##
+        "Мы с Ульяной облазили все окрестности, обыскали все места — нет, нет и нет."
         "Да и откуда бы ему взяться в мире, где слыхом никто не слыхивал про Генду?"
         "Кого б им тогда на центральной площади поставить? Ленина? Или Иосифа Виссарионыча?"
         "Зря только ездили."
@@ -10877,7 +10880,8 @@ label alt_day7_us_7dl_reunite:
         "Но что есть, то есть. Мы теперь постоянно вместе."
         "Как Шерочка с Машерочкой."
         "Вот только из машины она не пошла, отмахнулась, мол, дудки, дураков мёрзнуть нема."
-        "Вот и лазил я один по сугробам и буеракам, прекрасно понимая, что никакого лагеря здесь нет и быть не может."    ## так он один или с Улькой всё облазил?
+        "Так что в этот раз лазить пришлось в гордом одиночестве."
+        "Вот и лазил я один по сугробам и буеракам, прекрасно понимая, что никакого лагеря здесь нет и быть не может."
         "В итоге это понял и я."
         "Вздохнул и отправился обратно."
         "Только вот дойти я не успел."
@@ -10891,11 +10895,13 @@ label alt_day7_us_7dl_reunite:
         "Она хитро улыбнулась."
         "Развернув обёртку и открыв футляр, я недоуменно уставился на Ульяну."
         me "Труба? Но зачем?!"
-        "Девочка уставилась себе под ноги, ковыряя пяткой ботинка снег."    # grin надо сменить. shy2?
+        show us shy2 sport with dspr
+        "Девочка уставилась себе под ноги, ковыряя пяткой ботинка снег."
         us "Я вижу, как ты тоскуешь. Вижу."
         us "Тебе очень нужна музыка, так что я немного подкопила, и вот…"
         "Я схватился за голову и простонал:"
         me "Да я же не могу, не понимаешь? У меня травма, я сразу кровью кашлять начинаю…"
+        show us smile sport with dspr
         us "Это у тебя старого была, дурак."
         us "Разве ты не понял ещё? Здесь всё действует так, как нам хочется!"
         us "А мне хочется, чтобы ты перестал грустить."
@@ -10920,7 +10926,7 @@ label alt_day7_us_7dl_reunite:
         "Всё застыло в единственном хрупком миге."
         "Я набрал в грудь побольше воздуха, и…"
         play music music_7dl["moment"] fadein 3
-        "Под потолок квартиры вспорхнула полузабытая песня, о которой, пожалуй, я больше всего тосковал всё это время."    # они вроде как на месте, где должен быть лагерь, а не в квартире были. А если это глюки Сёмы - надо бг на квартиру сменить
+        "Под белёсый небосклон вспорхнула полузабытая песня, о которой, пожалуй, я больше всего тосковал всё это время."
         us "Сёмыч, ты плачешь."
         me "Я знаю."
         stop music fadeout 3
@@ -11655,7 +11661,7 @@ label alt_day7_us_7dl_ever_after:
     show us laugh old with dspr
     "Мы долго смотрим друг на друга, а затем хохочем."
     window hide
-    $ persistent.us_7dl_true = True
+    $ persistent.us_7dl_true += 1
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_true with moveinright:
@@ -11840,7 +11846,7 @@ label alt_day7_us_7dl_bad:
     "Я стал настоящим."
     show spill_red with dspr
     window hide
-    $ persistent.us_7dl_bad = True
+    $ persistent.us_7dl_bad += 1
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_bad with moveinright:
@@ -12885,7 +12891,7 @@ label alt_day7_us_px_fairytale:
     "Солнце блеснуло медью в волосах, в радужке снова поселилось то самое спокойствие и любовь, ради которой мы и прожили всё это время."
     "Отблеск познакомившего нас лета."
     window hide
-    $ persistent.us_px_true = True
+    $ persistent.us_px_true += 1
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_fairytale with moveinright:
@@ -13430,7 +13436,7 @@ label alt_day7_us_px_dejavu:
         "Зашептал:"
         me "Тай-тай…"
     window hide
-    $ persistent.us_px_rf_good = True
+    $ persistent.us_px_rf_good += 1
     $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_px with moveinright:

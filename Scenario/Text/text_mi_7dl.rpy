@@ -5607,7 +5607,7 @@ label alt_day5_mi_7dl_firecamp:
     "Бах. Бах. Бах."
     "Что это колотится? Сердце?"
     "Моё? Или её?"
-    mi"Ах…"
+    mi "Ах…"
     dreamgirl "Конечно же. Канон жанра.{w} Вы просто не могли не оказаться один на другом."
     "Я вспоминал об этом постоянно, но в самый важный момент попросту забыл."
     "Я на ней."
@@ -8729,7 +8729,7 @@ label alt_day6_mi_7dl_discoteque:
                     "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
                     window hide
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp = True
+                    $ persistent.alt_lamp += 1
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
@@ -8758,7 +8758,7 @@ label alt_day6_mi_7dl_discoteque:
                     play sound sfx_bodyfall_1
                     stop sound_loop fadeout 0
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp = True
+                    $ persistent.alt_lamp += 1
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
@@ -8794,7 +8794,7 @@ label alt_day6_mi_7dl_discoteque:
                     th "Ксана. {w}Ненавижу."
                     window hide
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp = True
+                    $ persistent.alt_lamp += 1
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
@@ -10448,7 +10448,7 @@ label alt_day7_mi_7dl_happy_again:
     me "Никогда."
     play music music_7dl["sam_lullaby"] fadein 3
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_7dl_neutral_human = True
+    $ persistent.mi_7dl_neutral_human += 1
     $ renpy.save_persistent()
     show acm_logo_mi_happy_again with moveinright:
         pos (1600, 1020)
@@ -10626,7 +10626,7 @@ label alt_day7_mi_7dl_liar:
     "А то, что ледяной снег в морду, так даже удобнее."
     "Честнее."
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_7dl_bad_human = True
+    $ persistent.mi_7dl_bad_human += 1
     $ renpy.save_persistent()
     show acm_logo_mi_liar with moveinright:
         pos (1600, 1020)
@@ -10789,7 +10789,7 @@ label alt_day7_mi_7dl_dark_dreams:
     show mi smile casual with dissolve
     "Я перестану видеть эти унылые сны."
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_7dl_good_human = True
+    $ persistent.mi_7dl_good_human += 1
     $ renpy.save_persistent()
     show acm_logo_mi_dark_dreams with moveinright:
         pos (1600, 1020)
@@ -10927,7 +10927,7 @@ label alt_day7_mi_7dl_club27:
     stop sound_loop
     $ set_mode_adv()
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_7dl_neutral_star = True
+    $ persistent.mi_7dl_neutral_star += 1
     $ renpy.save_persistent()
     show acm_logo_mi_club27 with moveinright:
         pos (1600, 1020)
@@ -11062,7 +11062,7 @@ label alt_day7_mi_7dl_sparkle:
     me "Да…"
     "Какая теперь разница?"
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_7dl_good_star = True
+    $ persistent.mi_7dl_good_star += 1
     $ renpy.save_persistent()
     show acm_logo_mi_sparkle with moveinright:
         pos (1600, 1020)
@@ -11493,7 +11493,7 @@ label alt_day7_mi_7dl_postscriptum:
     stop sound_loop
     $ renpy.pause(3)
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_7dl_ps = True
+    $ persistent.mi_7dl_ps += 1
     $ renpy.save_persistent()
     show acm_logo_mi_bitter_truth with moveinright:
         pos (1600, 1020)
@@ -11627,7 +11627,7 @@ label alt_day7_mi_7dl_dam_CPU:
     mi "Сенечка."
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_7dl_bad_star = True
+    $ persistent.mi_7dl_bad_star += 1
     $ renpy.save_persistent()
     show acm_logo_mi_dam_cpu with moveinright:
         pos (1600, 1020)
@@ -11732,6 +11732,7 @@ label alt_day7_mi_7dl_unlike:
     scene anim prolog_1 with dissolve
     "Так что же нужно мне? Неужели просто несколько часов под одеялом, грустная музыка да сговорчивая лялька из Мэйдо-кафе? Или…"
     "Несмотря на то, что сейчас в разгаре зима, настроение в воздухе витает самое празднично-летнее, какое бывает лишь по вечерам четверга, если тебе вдруг посчастливилось сбежать от привычного тебе мира в страну несбывшихся грёз и Настоящих Друзей."
+    stop music fadeout 5
     "Сейчас бы молчать в небосклон цвета индиго, переплетать облачка с кольцами дыма и сочинять глупые стихи о том, чего не бывает. Но…"
     play music music_7dl["ask_you_out"] fadein 3
     window hide
@@ -11768,7 +11769,7 @@ label alt_day7_mi_7dl_unlike:
     scene cg d7_mi_meeting_7dl with flash
     "Здесь я поднял глаза и застыл. Потому что увидел чудо."
     "А чудо продолжало:"
-    voice "Она же совсем на меня не похожа."
+    mi "Она же совсем на меня не похожа."
     "Я застыл."
     me "Чем же? Не похожа."
     "Хрипло переспросил я."
@@ -11776,7 +11777,7 @@ label alt_day7_mi_7dl_unlike:
     mi "И тем, конечно, что она тебя совсем-совсем не любит."
     play music music_7dl["happy_ending"] fadein 3
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_7dl_herc_exc = True
+    $ persistent.mi_7dl_herc_exc += 1
     $ renpy.save_persistent()
     show acm_logo_mi_unlike with moveinright:
         pos (1600, 1020)
@@ -11813,8 +11814,13 @@ label alt_day7_mi_7dl_sinthetic:
     scene bg ext_night_sky_7dl
     show expression Notch("d6_miku_cries")
     with fade
-    "Проблема оказалась в наследственности — Хатсуне Саки родилась и некоторое время жила возле Нагасаки, а потому в её ДНК забралась крохотная ошибка."
-    "Которая никак не отразилась на её прекрасной дочери — внешне."
+    "Была лишь крохотная проблемка…"
+    "Замалчиваемая. Ведь в стране Советов никогда не было никаких проблем."
+    "Исключая разве что озеро Кыштым и один заводик на её берегу."
+    "Там жил отец Хатсуне Саки, такой же, как отец Мику — советский инженер."
+    "Все называли его счастливчиком, одним из немногих, на ком никак не отразилась авария в конце пятидесятых. Дочку родил прекрасную, внучку…"
+    "Как оказалось, не всё прошло бесследно. {w}Вкралась в его генокод одна крохотная ошибка."
+    "Которая никак не отразилась на его прекрасной внучке — внешне."
     "Но внутренне…"
     window hide
     scene cg d4_mi_dj_dancing_7dl with dissolve
@@ -11973,7 +11979,7 @@ label alt_day7_mi_7dl_sinthetic:
     $ renpy.pause(3, hard=True)
     
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_7dl_loki_exc = True
+    $ persistent.mi_7dl_loki_exc += 1
     $ renpy.save_persistent()
     show acm_logo_mi_come with moveinright:
         pos (1600, 1020)
@@ -12000,7 +12006,7 @@ label alt_day7_mi_7dl_come_back:
     "Иногда бывает так, что и не встряхнёшься, не посмотришь на себя со стороны, пока кто-нибудь не возьмёт тебя за шкирку и носом не натыкает."
     window hide
     scene anim intro_6 with dissolve
-    "Только тогда, ужаснувшись, начинаешь что-то делать"
+    "Только тогда, ужаснувшись, начинаешь что-то делать."
     window hide
     scene cg d5_mi_conv_7dl
     show gfx bokeh
@@ -12074,9 +12080,9 @@ label alt_day7_mi_7dl_come_back:
     "Неясно даже, а был ли «мальчик»?"
     "То есть никто не мог с твёрдостью ручаться за то, что во второй смене 89-го года в «Совёнке» и правда был пионер по фамилии Персунов."
     "Или нет?"
+    stop music fadeout 10
     "Но ему слово."
     stop ambience fadeout 3
-    stop music fadeout 10
     window hide
     scene bg ext_musclub_snowy_day_7dl
     play music music_7dl["sam_lullaby"]
@@ -12125,7 +12131,7 @@ label alt_day7_mi_7dl_come_back:
     me "В-ваташи ва?"
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_7dl_dr_exc = True
+    $ persistent.mi_7dl_dr_exc += 1
     $ renpy.save_persistent()
     show acm_logo_mi_watashi with moveinright:
         pos (1600, 1020)
@@ -12354,7 +12360,7 @@ label alt_day7_mi_7dl_thank_you:
     window hide
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_7dl_true = True
+    $ persistent.mi_7dl_true += 1
     $ renpy.save_persistent()
     show acm_logo_mi_thank_you with moveinright:
         pos (1600, 1020)
