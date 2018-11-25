@@ -10104,7 +10104,7 @@ label alt_day6_dv_7dl_escape_convince:
         window hide
         scene gameover with flash
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_lamp = True
+        $ persistent.alt_lamp += 1
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
@@ -10131,7 +10131,7 @@ label alt_day6_dv_7dl_escape_convince:
         stop sound_loop fadeout 0
         scene gameover with flash
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_lamp = True
+        $ persistent.alt_lamp += 1
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
@@ -10169,7 +10169,7 @@ label alt_day6_dv_7dl_escape_convince:
         window hide
         scene gameover with flash
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_lamp = True
+        $ persistent.alt_lamp += 1
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
@@ -12614,7 +12614,7 @@ label alt_day7_dv_7dl_tulpa_end:
         pos (747,105)
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_tulpa = True
+    $ persistent.dv_7dl_tulpa += 1
     $ renpy.save_persistent()
     show acm_logo_dv_tulpa with moveinright:
         pos (1600, 1020)
@@ -13062,7 +13062,7 @@ label alt_day7_dv_7dl_ussr_epilogue:
     window hide
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_good_ussr = True
+    $ persistent.dv_7dl_good_ussr += 1
     $ renpy.save_persistent()
     show acm_logo_dv_ussr_good with moveinright:
         pos (1600, 1020)
@@ -13257,7 +13257,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     "Но Алиса… {w}Алиса значила куда больше."
     stop ambience fadeout 3
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_good_rf = True
+    $ persistent.dv_7dl_good_rf += 1
     $ renpy.save_persistent()
     show acm_logo_dv_morethanlife with moveinright:
         pos (1600, 1020)
@@ -13498,7 +13498,7 @@ label alt_day7_dv_7dl_rej_ussr_end:
     window hide
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_reject_ussr = True
+    $ persistent.dv_7dl_reject_ussr += 1
     $ renpy.save_persistent()
     show acm_logo_dv_tillend with moveinright:
         pos (1600, 1020)
@@ -13641,7 +13641,7 @@ label alt_day7_dv_7dl_rej_rf_end:
     $ set_mode_adv()
     scene cg d7_dv_ep_red_7dl with dissolve
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_reject_rf = True
+    $ persistent.dv_7dl_reject_rf += 1
     $ renpy.save_persistent()
     show acm_logo_dv_gohome with moveinright:
         pos (1600, 1020)
@@ -13770,7 +13770,7 @@ label alt_day7_dv_7dl_un_end:
     "И укатил прочь."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_un = True
+    $ persistent.dv_7dl_un += 1
     $ renpy.save_persistent()
     show acm_logo_dv_meetmethere with moveinright:
         pos (1600, 1020)
@@ -14022,7 +14022,7 @@ label alt_day7_dv_7dl_bad_end:
         voices "Здрав… жалам… товарищ директор!"
         window hide
         play sound sfx_7dl["aunl"]
-        $ persistent.dv_7dl_bad_mt = True
+        $ persistent.dv_7dl_bad_mt += 1
         $ renpy.save_persistent()
         show acm_logo_dv_drunk with moveinright:
             pos (1600, 1020)
@@ -14033,7 +14033,7 @@ label alt_day7_dv_7dl_bad_end:
         return
     else:
         play sound sfx_7dl["aunl"]
-        $ persistent.dv_7dl_bad = True
+        $ persistent.dv_7dl_bad += 1
         $ renpy.save_persistent()
         show acm_logo_dv_theresnoway with moveinright:
             pos (1600, 1020)
@@ -14378,7 +14378,7 @@ label alt_day7_dv_7dl_true:
     "«План поисков Алисы»."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_true = True
+    $ persistent.dv_7dl_true += 1
     show acm_logo_dv_true with moveinright:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)

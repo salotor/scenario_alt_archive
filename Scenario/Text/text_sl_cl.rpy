@@ -3908,7 +3908,7 @@ label alt_day5_sl_begin:
                 window hide
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
-                $ persistent.alt_lamp = True
+                $ persistent.alt_lamp += 1
                 $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
@@ -3934,7 +3934,7 @@ label alt_day5_sl_begin:
                 window hide
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
-                $ persistent.alt_lamp = True
+                $ persistent.alt_lamp += 1
                 $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
@@ -3951,7 +3951,7 @@ label alt_day5_sl_begin:
                 play sound sfx_water_emerge
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
-                $ persistent.alt_lamp = True
+                $ persistent.alt_lamp += 1
                 $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
@@ -10925,7 +10925,7 @@ label alt_day6_sl_cl_become_a_hero:
     show blackout_exh
     with dissolve
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_cata = True
+    $ persistent.sl_cl_cata += 1
     $ renpy.save_persistent()
     show acm_logo_sl_be_ok with moveinright:
         pos (1600, 1020)
@@ -16417,7 +16417,7 @@ label alt_day7_sl_will:
     "В свои права вступал новый день, а с ним — и новые надежды!"
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_int_ok = True
+    $ persistent.sl_cl_int_ok += 1
     $ renpy.save_persistent()
     show acm_logo_sl_ok with moveinright:
         pos (1600, 1020)
@@ -16531,7 +16531,7 @@ label alt_day7_sl_duty:
     "Подмигнул я."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_int_good = True
+    $ persistent.sl_cl_int_good += 1
     $ renpy.save_persistent()
     show acm_logo_sl_fantazm with moveinright:
         pos (1600, 1020)
@@ -16555,7 +16555,7 @@ label alt_day7_sl_lone:
     "В безликое сетевое существование."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_int_bad = True
+    $ persistent.sl_cl_int_bad += 1
     $ renpy.save_persistent()
     show acm_logo_sl_lone with moveinright:
         pos (1600, 1020)
@@ -16748,7 +16748,7 @@ label alt_day7_sl_good:
     sl "Как стараться будешь."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_good_ussr = True
+    $ persistent.sl_cl_good_ussr += 1
     $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
@@ -16907,7 +16907,7 @@ label alt_day7_sl_rf_good:
     th "Неужели  я пытаюсь вспомнить, что такое сомнения?"
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_good_rf = True
+    $ persistent.sl_cl_good_rf += 1
     $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
@@ -17074,7 +17074,7 @@ label alt_day7_sl_reject_same:
     me "И что ты — всё-таки — не сон."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_reject_same = True
+    $ persistent.sl_cl_reject_same += 1
     $ renpy.save_persistent()
     show acm_logo_sl_same_place with moveinright:
         pos (1600, 1020)
@@ -17286,7 +17286,7 @@ label alt_day7_sl_rej_end:
     window hide
     play sound sfx_7dl["aunl"]
     stop ambience fadeout 4
-    $ persistent.sl_cl_reject_late = True
+    $ persistent.sl_cl_reject_late += 1
     $ renpy.save_persistent()
     show acm_logo_sl_too_late with moveinright:
         pos (1600, 1020)
@@ -17381,7 +17381,7 @@ label alt_day7_sl_cl_bad:
     "Неужели мы оба ошиблись?"
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_bad = True
+    $ persistent.sl_cl_bad += 1
     $ renpy.save_persistent()
     show acm_logo_sl_bad with moveinright:
         pos (1600, 1020)
@@ -17537,7 +17537,7 @@ label alt_day7_sl_rf2:
     window hide
     play sound sfx_7dl["aunl"]
     play music music_7dl["refuse_to_replay"] fadein 3
-    $ persistent.sl_cl_good_rf2 = True
+    $ persistent.sl_cl_good_rf2 += 1
     $ renpy.save_persistent()
     show acm_logo_sl_worth with moveinright:
         pos (1600, 1020)
