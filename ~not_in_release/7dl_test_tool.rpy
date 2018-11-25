@@ -547,13 +547,13 @@ label sdl_menu:
                             "{color=#66dd66}Синтетическое счастье{/color}":
                                 stop ambience fadeout 2
                                 jump alt_day7_mi_7dl_sinthetic
-                            "{color=#6666dd}Возвращайся{/color}":
+                            "{color=#6666dd}Можно?{/color}":
                                 stop ambience fadeout 2
                                 jump alt_day7_mi_7dl_come_back
                             "{color=#ac7bff}Странные сны{/color}":
                                 stop ambience fadeout 2
                                 jump alt_day7_mi_7dl_dark_dreams
-                            "{color=#9b6aee}Развесели снова":
+                            "{color=#9b6aee}Не надоест":
                                 stop ambience fadeout 2
                                 jump alt_day7_mi_7dl_happy_again
                             "{color=#dd598a}Спасибо тебе…{/color}":
@@ -562,7 +562,7 @@ label sdl_menu:
                                 $ alt_day5_mi_7dl_voyeur = True
                                 $ persistent.mi_7dl_dr_exc = True
                                 jump alt_day7_mi_7dl_thank_you
-                            "{color=#8a59dd}Так честнее":
+                            "{color=#8a59dd}Экземпляр":
                                 stop ambience fadeout 2
                                 jump alt_day7_mi_7dl_liar
                     "Алиса":

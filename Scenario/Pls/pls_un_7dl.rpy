@@ -173,12 +173,12 @@ label alt_day7_un_7dl_start:
     pause(1)
     $ persistent.sprite_time = "prolog"
     $ prolog_time()
-    $ alt_chapter(7, u"Лена. 7дл. Утро")
+    $ alt_chapter(7, u"Лена. 7ДЛ. Утро")
     call alt_day7_un_7dl_begin
     pause(1)
     call alt_day7_un_7dl_epilogue_all
     pause(1)
-    $ alt_chapter(7, u"Лена. 7дл. Эпилог")
+    $ alt_chapter(7, u"Лена. 7ДЛ. Эпилог")
     if routetag == "un7dlgood":
         call alt_day7_un_7dl_epilogue
         pause(1)

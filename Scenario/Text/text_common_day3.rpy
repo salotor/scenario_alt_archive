@@ -2095,7 +2095,8 @@ label alt_day3_event_camp_entrance1:
             "Ульянку и её саранчу!"
         if 'sl' in list_d2_date_7dl:
             "Славю и волшебную встречу в лесу…"
-        "Да хотя бы то, как меня отсюда практически за руку отвели в первый день и накормили!"
+        if counter_sl_7dl < 2:
+            "Да хотя бы то, как меня отсюда практически за руку отвели в первый день и накормили!"
         "В моём мире всем было бы плевать."
         "Хвала рандому, я не в своём мире."
     stop music fadeout 3
@@ -8179,11 +8180,9 @@ label alt_day3_dv_stayhere1:
     window hide
     scene bg ext_house_of_mt_night_without_light with dissolve
     stop ambience fadeout 1
-    show un_shade at right with dissolve
+    show un shade at right with dissolve
     "Шезлонг опять заскрипел, на фоне звёздного неба силуэтом мелькнули четыре хвостика…"
-    hide un_shade
-    show un smile dress close at right
-    with dissolve
+    show un smile dress close at right with dspr
     me "Лена?!"
     "Ахнул я."
     $ meet('un','Лена')
@@ -10061,7 +10060,7 @@ label alt_day3_choose3:
             "Я же, блин, вам не штамм, чтобы безболезненно подселяться!"
             "Я не хочу и буду активно противодействовать."
             "Наконец кошмар закончился, и вожатая со значением посмотрела на меня."
-            show mt smile dress with dissolve
+            show mt smile dress far with dissolve
             mt "Это был прекрасный вечер, спасибо ведущему!"
             "Она вся светилась от удовольствия."
             if not ('mt' in list_d2_date_7dl):
@@ -10069,7 +10068,7 @@ label alt_day3_choose3:
                 th "Нагарцевалась."
             mt "Объявляется последний медленный танец. Белый танец."
             mt "Дамы приглашают кавалеров."
-            show mt normal dress with dissolve
+            show mt normal dress far with dspr
             "Твою ж дивизию."
             "Я наметил себе Генду в качестве надёжи и опоры."
             "Спрячусь за него и пережду. Обижать Славю ещё раз в мои планы не входит — а то вдруг до неё в прошлый раз не дошло."
@@ -10079,6 +10078,7 @@ label alt_day3_choose3:
             window hide
             "Мать! Мать! Мать!"
             dreamgirl "То, что называется «плавно слился», да?"
+            show mt normal dress with dissolve
             "Она подошла ко мне и, взяв за плечо, развернула к танцполу."
             mt "Пошли… Семён."
             mt "Ты же не откажешь девушке в такой мелочи, как танец?"
