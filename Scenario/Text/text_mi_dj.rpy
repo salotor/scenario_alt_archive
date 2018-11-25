@@ -10262,7 +10262,10 @@ label alt_day6_mi_dj_dance2_fail:
                     "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
                     window hide
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp += 1
+                    if persistent.alt_lamp:
+                        $ persistent.alt_lamp += 1
+                    else:
+                        $ persistent.alt_lamp = 1
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
@@ -10287,7 +10290,10 @@ label alt_day6_mi_dj_dance2_fail:
                     play sound sfx_bodyfall_1
                     stop sound_loop fadeout 0
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp += 1
+                    if persistent.alt_lamp:
+                        $ persistent.alt_lamp += 1
+                    else:
+                        $ persistent.alt_lamp = 1
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
@@ -10324,7 +10330,10 @@ label alt_day6_mi_dj_dance2_fail:
                     th "Мику… До встречи."
                     window hide
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp += 1
+                    if persistent.alt_lamp:
+                        $ persistent.alt_lamp += 1
+                    else:
+                        $ persistent.alt_lamp = 1
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
@@ -12115,7 +12124,10 @@ label alt_day7_mi_dj_bad_end:
     scene black
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_bad += 1
+    if persistent.mi_dj_bad:
+        $ persistent.mi_dj_bad += 1
+    else:
+        $ persistent.mi_dj_bad = 1
     $ renpy.save_persistent()
     show acm_logo_mi_new_happy with moveinright:
         pos (1600, 1020)
@@ -12277,7 +12289,10 @@ label alt_day7_mi_dj_true_end:
     stop ambience
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_true += 1
+    if persistent.mi_dj_true:
+        $ persistent.mi_dj_true += 1
+    else:
+        $ persistent.mi_dj_true = 1
     $ renpy.save_persistent()
     show acm_logo_mi_namiki with moveinright:
         pos (1600, 1020)
@@ -12650,7 +12665,10 @@ label alt_day7_mi_dj_jp_good_end:
     hide mi with dissolve
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_good_jap += 1
+    if persistent.mi_dj_good_jap:
+        $ persistent.mi_dj_good_jap += 1
+    else:
+        $ persistent.mi_dj_good_jap = 1
     $ renpy.save_persistent()
     show acm_logo_mi_ricochet with moveinright:
         pos (1600, 1020)
@@ -12982,7 +13000,10 @@ label alt_day7_mi_dj_rf_good_end:
     stop ambience
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_good_rf += 1
+    if persistent.mi_dj_good_rf:
+        $ persistent.mi_dj_good_rf += 1
+    else:
+        $ persistent.mi_dj_good_rf = 1
     $ renpy.save_persistent()
     show acm_logo_mi_allyours with moveinright:
         pos (1600, 1020)

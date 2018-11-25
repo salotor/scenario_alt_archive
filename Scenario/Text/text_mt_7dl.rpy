@@ -2621,7 +2621,10 @@ label alt_day6_mt_7dl_catha:
         th "Ожидаемо."
         scene gameover with flash
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_lamp += 1
+        if persistent.alt_lamp:
+            $ persistent.alt_lamp += 1
+        else:
+            $ persistent.alt_lamp = 1
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
@@ -2646,7 +2649,10 @@ label alt_day6_mt_7dl_catha:
         scene gameover with flash
         stop sound_loop
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_lamp += 1
+        if persistent.alt_lamp:
+            $ persistent.alt_lamp += 1
+        else:
+            $ persistent.alt_lamp = 1
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
@@ -2686,7 +2692,10 @@ label alt_day6_mt_7dl_catha:
         pause(5)
         scene gameover with flash
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_lamp += 1
+        if persistent.alt_lamp:
+            $ persistent.alt_lamp += 1
+        else:
+            $ persistent.alt_lamp = 1
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
@@ -5047,7 +5056,10 @@ label alt_day7_mt_7dl_good:
     stop ambience
     stop sound_loop
     play sound sfx_7dl["aunl"]
-    $ persistent.mt_7dl_good += 1
+    if persistent.mt_7dl_good:
+        $ persistent.mt_7dl_good += 1
+    else:
+        $ persistent.mt_7dl_good = 1
     $ renpy.save_persistent()
     show acm_logo_mt_named_olga with moveinright:
         pos (1600, 1020)
@@ -5181,7 +5193,10 @@ label alt_day7_mt_7dl_bad:
     with dissolve
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
-    $ persistent.mt_7dl_bad += 1
+    if persistent.mt_7dl_bad:
+        $ persistent.mt_7dl_bad += 1
+    else:
+        $ persistent.mt_7dl_bad = 1
     $ renpy.save_persistent()
     show acm_logo_mt_cause with moveinright:
         pos (1600, 1020)
@@ -5367,7 +5382,10 @@ label alt_day7_mt_7dl_ever_after:
     scene black with fade
     $ renpy.pause(2)
     play sound sfx_7dl["aunl"]
-    $ persistent.mt_7dl_neutral += 1
+    if persistent.mt_7dl_neutral:
+        $ persistent.mt_7dl_neutral += 1
+    else:
+        $ persistent.mt_7dl_neutral = 1
     $ renpy.save_persistent()
     show acm_logo_mt_ever_after with moveinright:
         pos (1600, 1020)
@@ -5442,7 +5460,10 @@ label alt_day7_mt_7dl_true:
     show blackout_exh
     with dissolve
     play sound sfx_7dl["aunl"]
-    $ persistent.mt_7dl_true += 1
+    if persistent.mt_7dl_true:
+        $ persistent.mt_7dl_true += 1
+    else:
+        $ persistent.mt_7dl_true = 1
     $ renpy.save_persistent()
     show acm_logo_mt_ending with moveinright:
         pos (1600, 1020)
