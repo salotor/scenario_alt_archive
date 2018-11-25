@@ -20410,6 +20410,7 @@ label alt_day6_sl_7dl_day:
         hide sl with dissolve
         "И под аккомпанемент смешков в спину, гордо потащил плёнки на улицу."
         window hide
+        stop ambience fadeout 6
         play sound sfx_open_door_clubs_2
         pause(1)
         scene bg ext_clubs_day
