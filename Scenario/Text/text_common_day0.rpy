@@ -741,7 +741,7 @@ label alt_day0_start_l:
     show uvao_d1 at left
     show prologue_dream
     pause(.05)
-    scene anim prolog_3 with fade
+    scene anim prolog_3
     with fade
     play music music_7dl["exodus"] fadein 3
     "Я всегда считал, что каждый получает только ту реальность, какую заслуживает."
@@ -752,7 +752,7 @@ label alt_day0_start_l:
     "Я не гордился этим, но к своей мечте, связать жизнь с музыкой, шёл бульдозером."
     "Просто потому, что с первой мечтой в моей жизни, стать космонавтом, меня развернули — что-то в моём светлом детстве пошло не так, что-то со внутренними органами."
     window hide
-    scene anim intro_1 
+    scene anim intro_1
     with fade
     $ renpy.pause(3, hard=True)
     "Как результат, моя реальность состояла из нотных тетрадей, бесконечных репетиций, сольфеджио и попыток считать мелодию «с листа»."

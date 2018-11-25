@@ -346,7 +346,7 @@ label alt_achv_deep_deep:
     "И как бесконечные полторы секунды невесомости спустя, мы боком ударились о поверхность грязной чёрной воды."
     play sound sfx_water_emerge
     window hide
-    $ persistent.alt_deep = True
+    $ persistent.alt_deep += 1
     show acm_logo_me_deep with moveinright:
     pause(3)
     scene black

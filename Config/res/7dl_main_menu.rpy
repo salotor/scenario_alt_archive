@@ -415,7 +415,7 @@ screen menu_7dl():
                 action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
     # elif persistent.waifu_7dl == 3:
         # imagemap at left_menu_7dl(0.1, 0.7):
-            # auto get_image_7dl("gui/menu_main/dv_menu_%s.png"
+            # auto get_image_7dl("gui/menu_main/dv_menu_%s.png")
             # hotspot (113, 341,  200, 25):     #moded: # hotspot (170, 511, 300, 38):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("start_7dl")]
@@ -478,7 +478,7 @@ screen menu_7dl():
                 action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), MainMenu(confirm=False)]
     # elif persistent.waifu_7dl == 6:
         # imagemap at left_menu_7dl(0.1, 0.7):
-            # auto get_image_7dl("gui/menu_main/mt_menu_%s.png"
+            # auto get_image_7dl("gui/menu_main/mt_menu_%s.png")
             # hotspot (113, 341,  200, 25):     #moded: # hotspot (170, 511, 300, 38):
                 # hover_sound get_sfx_7dl("ach_list/achv_click_7dl.ogg")
                 # action [Hide("menu_7dl", transition=Dissolve(0.2)), Hide("settings_7dl", transition=Dissolve(0.2)), Hide("contacts_7dl", transition=Dissolve(0.2)), Hide("media_7dl", transition=Dissolve(0.2)), Stop('music', fadeout=2), Jump("start_7dl")]
@@ -726,6 +726,5 @@ label widgets_on_off_7dl:
 label start_7dl:
     call alt_vars
     call alt_day0_prologue
-    jump main_menu_7dl
-# Android version created with ESTOOL-0.009 by Smalser
+    jump main_menu_7dl# Android version created with ESTOOL-0.009 by Smalser
 # More info there https://vk.com/topic-93304648_35130916

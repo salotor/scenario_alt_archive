@@ -3940,7 +3940,7 @@ label alt_day5_dv_7dl_roadtrip:
     "Или следует начать чуть раньше? По порядку, так сказать."
     window hide
     $ persistent.sprite_time = "sunset"
-    scene bg int_clubs_male_day
+    scene bg int_clubs_male_rain_7dl
     show us laugh pioneer
     show prologue_dream
     with dissolve
@@ -4516,7 +4516,7 @@ label alt_day5_dv_7dl_candle:
     window hide
     stop ambience
     stop music
-    scene bg int_clubs_male_day with dissolve
+    scene bg int_clubs_male_rain_7dl with dissolve
     show mt normal pioneer far
     show dv normal pioneer2 far at fright
     show mz normal glasses pioneer far at right
@@ -4944,7 +4944,7 @@ label alt_day5_dv_7dl_dinner:
     with fade2
 
     "Дыхание, наконец, пришло в норму."
-    "В чём-то, похоже, я совершенно не повзрослел. Во всяком случае, так и не научился относиться ко лжи по-взрослому просто, без затей. Не получилось врать, глядя в семь пар глаз, ни в шутку, ни всерьёз."
+    "В чём-то, похоже, я совершенно не повзрослел. Во всяком случае, так и не научился относиться ко лжи по-взрослому просто, без затей. Не получилось врать, глядя в шесть пар глаз, ни в шутку, ни всерьёз."
     "А правда оказалась… Что ж, говорить правду, заведомо зная, что никто в неё не поверит — можно ли назвать это ложью?"
     dreamgirl "Красота… Смотря, конечно, как смотреть!"
     th "Что?"
@@ -6438,7 +6438,7 @@ label alt_day5_dv_7dl_night:
         "Утренний дождь и пробуждение в «Волге» добрейшей нашей медсестры."
         "Надо будет навестить её завтра, да и про Шурика узнать. {w}И забрать уже трофей из города!"
     window hide
-    scene bg int_clubs_male_day
+    scene bg int_clubs_male_rain_7dl
     show mt normal pioneer at center
     show sh normal pioneer at fright
     show dv laugh pioneer2 at left
@@ -7033,7 +7033,7 @@ label alt_day6_dv_7dl_begin:
     dv "О ней, родимой."
     me "Но она же вчера была нормальная, с чего бы срыв?"
     dv "Это ты просто плохо её знаешь."
-    dv "В тихом омуте — там не только черти, так крокодилы!"
+    dv "В тихом омуте — там не только черти, там крокодилы!"
     me "Нельзя так о подруге!"
     dv "Только о подруге так и можно! Если я ей буду врать, то зачем я нужна?"
     "Вопрос был интересный, но в философские дебри утянуть себя я не позволил – вожатая кивнула, и Славя бодрым шагом заспешила к флагштоку."
@@ -9700,7 +9700,7 @@ label alt_day6_dv_7dl_concert:
         dv "Перекантуешься у нас, значит."
         "Рыжая пожала плечами с очаровательной непосредственностью."
         me "Да?"
-        "Что-то такое про то, что Ольга вместе со мной на автобусе была, я смутно припоминал, но уверен не был."
+        "Что-то такое про то, что Ольга вместе со мной в автобусе была, я смутно припоминал, но уверен не был."
         show dv grin pioneer with dspr
         dv "Ты ведь не застесняешься спать в одной комнате с девочкой?"
         me "Угу… Но в любом случае, номер я тебе оставить не смогу, так как не привязан к одному месту."
@@ -10016,7 +10016,7 @@ label alt_day6_dv_7dl_dance:
                     show sl serious dress with dspr
                     sl "А то ты сам не догадываешься?"
                     if alt_day6_dv_7dl_mi_route:
-                        sl "Я не знаю, что у вас там за территорией произошло, после которой вы вернулись врагами."
+                        sl "Я не знаю, что у вас там за территорией произошло, после чего вы вернулись врагами."
                         sl "Но твоё участие там видно невооружённым глазом."
                     sl "Её нервяк на концерте — такой, что она в санчасть попала."
                     sl "А ты добить её хочешь. Не выйдет."
@@ -10104,7 +10104,7 @@ label alt_day6_dv_7dl_escape_convince:
         window hide
         scene gameover with flash
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_lamp = True
+        $ persistent.alt_lamp += 1
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1067, 680)     #moded: pos (1600, 1020)
@@ -10131,7 +10131,7 @@ label alt_day6_dv_7dl_escape_convince:
         stop sound_loop fadeout 0
         scene gameover with flash
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_lamp = True
+        $ persistent.alt_lamp += 1
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1067, 680)     #moded: pos (1600, 1020)
@@ -10169,7 +10169,7 @@ label alt_day6_dv_7dl_escape_convince:
         window hide
         scene gameover with flash
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_lamp = True
+        $ persistent.alt_lamp += 1
         $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1067, 680)     #moded: pos (1600, 1020)
@@ -12237,7 +12237,7 @@ label alt_day7_dv_7dl_dv:
     show dv grin pioneer2 with dspr
     "Алиса погрозила пальцем:"
     dv "Почти убедил!"
-    me "Такого нет даже у спецслужб пока.{w} Технологию твердотелых накопителей изобретут только через пять лет. Универсальную шину через четыре, если не ошибаюсь."
+    me "Такого нет даже у спецслужб пока.{w} Технологию твердотельных накопителей изобретут только через пять лет. Универсальную шину через четыре, если не ошибаюсь."
     dv "Я ничего не поняла."
     "Алиса с трудом сдерживала смех, глядя на то, как я серьёзно рассказываю ей весь этот бред."
     me "У меня ещё есть телефон, но там заряда на полчиха осталось.{w} Думал сделать фотографию с тобой, но, боюсь, не хватит."
@@ -12305,7 +12305,7 @@ label alt_day7_dv_7dl_dv:
             $ alt_day7_dv_7dl_check = 5
             "Я фыркнул."
             me "Не хочешь — не верь. Я тебе всё сказал."
-            me "Просто если однажды будет проездом в Питере…"
+            me "Просто если однажды будешь проездом в Питере…"
     show dv smile pioneer2 with dspr
     "Она улыбнулась и легко поднялась."
     dv "В конце концов, самое главное — это то, что ты честен со мной."
@@ -12614,7 +12614,7 @@ label alt_day7_dv_7dl_tulpa_end:
         pos (498, 70)     #moded: pos (747,105)
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_tulpa = True
+    $ persistent.dv_7dl_tulpa += 1
     $ renpy.save_persistent()
     show acm_logo_dv_tulpa with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -12664,7 +12664,7 @@ label alt_day7_dv_7dl_bus:
         "Через пару минут ко мне присоединилась Славя."
     elif alt_day7_dv_7dl_check == 4:
         show un normal pioneer with dissolve
-        "Я выбрал место в середине салона, пропустив к окну Лену."
+        "Я выбрал место в середине салона рядом с Леной."
         "Она улыбнулась мне и села, крепко сжав мою руку."
     elif alt_day7_dv_7dl_check == 5:
         "Моё место было у самой двери, у окна."
@@ -12745,7 +12745,7 @@ label alt_day7_dv_7dl_bus:
         window hide
         scene cg d7_dv_epilogue_bus_7dl
         with dissolve
-        "Алиса, будто разделяя мою тревогу, продолжала улыбаться и улыбаться, но в её глаза то и дело проглядывало беспокойство."
+        "Алиса, будто разделяя мою тревогу, продолжала улыбаться и улыбаться, но в её глазах то и дело проглядывало беспокойство."
         "Но такой уж она человечек, что не может сложить лапки и загрустить только потому, что у неё предчувствие нехорошее."
         "За то и любима — искренне и нежно."
     elif alt_day7_dv_7dl_check == 22:
@@ -12807,6 +12807,7 @@ label alt_day7_dv_7dl_bus:
     return
 
 label alt_day7_dv_7dl_ending_router:
+    play music music_7dl["tilltheend"] fadein 3
     if alt_day7_dv_7dl_check == 1:
         scene expression Notch("cg d7_dv_epilogue_bus_7dl") with dissolve
         "Алиса, скептически смотрящая на меня с самого момента отбытия, будто заразилась моей паникой — она взяла меня за руку и изо всех сил боролась с дремотой."
@@ -12831,6 +12832,16 @@ label alt_day7_dv_7dl_ending_router:
         "Влюблённую."
         me "Я буду не спать изо всех сил. Ты проверяй меня, если что, хорошо?"
         "Она улыбнулась и кивнула."
+        "Я включил плеер, активировал диктофон и, сбиваясь, начал наговаривать туда то, что казалось сейчас важным."
+        "Имена, адреса, контакты…"
+        "Самое важное."
+        "Хотя сейчас им были бы тёплые слова в адрес дорогого человека."
+        "Но, наверное, поздно уже отыгрывать назад?"
+        "Завершив запись, я отключил устройство и протянул его Алисе."
+        me "Держи. Сохрани его как можешь долго."
+        me "Справишься?"
+        dv "Смотри…"
+        "Я огляделся."
         stop sound_loop fadeout 6
         "Видимость за стёклами сократилась до нескольких метров, через далёкое отсюда лобовое стекло можно было разглядеть, как вгрызлись в белесую взвесь жёлтые конусы противотуманок."
         "Можно было целоваться."
@@ -13051,7 +13062,7 @@ label alt_day7_dv_7dl_ussr_epilogue:
     window hide
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_good_ussr = True
+    $ persistent.dv_7dl_good_ussr += 1
     $ renpy.save_persistent()
     show acm_logo_dv_ussr_good with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -13098,7 +13109,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     hide blind2_2
     with dissolve
     "На стелле, несмотря на непогоду, снова собрались мальчики на коньках и досках."
-    "И в любое иное время я не преминул бы возможностью остановиться и поглазеть."
+    "И в любое иное время я не пренебрёг бы возможностью остановиться и поглазеть."
     "Но не сегодня."
     scene anim intro_3
     show blind1_1
@@ -13246,7 +13257,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     "Но Алиса… {w}Алиса значила куда больше."
     stop ambience fadeout 3
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_good_rf = True
+    $ persistent.dv_7dl_good_rf += 1
     $ renpy.save_persistent()
     show acm_logo_dv_morethanlife with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -13338,7 +13349,7 @@ label alt_day7_dv_7dl_rej_ussr_end:
     "Дождался, пока шофёр в белых перчатках распахнёт передо мной дверь, и уселся рядом с позвавшим меня мужчиной."
     voice "Как отдохнул?"
     me "Лучше всех."
-    "Отвисшие челюсти девочек и безмерное удивление на лице вожатой были мне наградой."
+    "Отвисшие челюсти девочек были мне наградой."
     th "Кажется, про родителей из посольства кое-кто не наврал?"
     "А Алиса, будто чувствуя мой взгляд сквозь тонированное стекло, так и стояла, глядя мне прямо в глаза."
     "Потом её позвали — она отмахнулась. Утащили за руку."
@@ -13465,8 +13476,8 @@ label alt_day7_dv_7dl_rej_ussr_end:
     dv "Как скоро его выпустят?"
     "Спросила она у лечащего врача."
     voice "Я не могу вам сказать."
-    voice "С навязчивой идеей прибытия из чужого мира такой силы нам нечасто приходится сталкиваться."
-    voice "К сожалению, обычные меры лечения не помогают, мы собираемся использовать электрошоковую терапию."
+    voice "С навязчивой идеей такой силы нам нечасто приходится сталкиваться."
+    voice "К сожалению, обычные меры лечения с такими людьми не работают, мы собираемся использовать электрошоковую терапию."
     voice "Вы вроде как единственный близкий человек Семёна?"
     dv "Да. А что?"
     voice "Нет, ничего. Просто восхищаюсь тем, как вы, умная, красивая девушка губите свою молодость."
@@ -13487,7 +13498,7 @@ label alt_day7_dv_7dl_rej_ussr_end:
     window hide
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_reject_ussr = True
+    $ persistent.dv_7dl_reject_ussr += 1
     $ renpy.save_persistent()
     show acm_logo_dv_tillend with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -13522,6 +13533,7 @@ label alt_day7_dv_7dl_rej_rf_end:
     with fade
     "Что там дальше? Автозаправочная станция, которую обнимает поворотом трамвайный путь — если она рванёт, от меня не останется даже мокрого места, я даже почувствовать ничего не успею."
     "Но это чуть позже, перед этим всегда есть шанс, что собственно трамвай сковырнётся с виадука, куда то и дело заезжают «хозяева жизни» на «туарегах» и «кайенах»."
+    stop sound fadeout 2
     "Спускаясь в метро и вдыхая неистребимый дегтярный дух, делающий подземку моего города втройне привлекательной относительно любого другого мегаполиса, я вспоминаю о том, что в том же Москау-сити только с начала года аварий в метро случилось больше десятка."
     "И это только известных, там, где пострадали люди."
     "Последний случай как будто подчистую списан с фильма-катастрофы, и я понимаю, что случись что здесь — и у нас не будет шансов, мы слишком глубоко."
@@ -13629,7 +13641,7 @@ label alt_day7_dv_7dl_rej_rf_end:
     $ set_mode_adv()
     scene cg d7_dv_ep_red_7dl with dissolve
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_reject_rf = True
+    $ persistent.dv_7dl_reject_rf += 1
     $ renpy.save_persistent()
     show acm_logo_dv_gohome with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -13650,7 +13662,7 @@ label alt_day7_dv_7dl_un_end:
     "Поэтому, когда автобус начал видоизменяться, я нисколько не удивился."
     "Просто в какой-то момент событийной инерцией меня перетащило из некой точки в кресле «Икаруса» — сюда, на лучшее месте в доме, с самым шикарным обзором."
     "О лагере не напоминало ничего — ни записей, ни телефонов — ничего."
-    "Даже память подводила периодически, подсовывая то зелень глаз Лены, то мягкий смех Слави. И всё это спаивалось в единый синергетический образ, в то, что на востоке принято называть «Вайфу»."
+    "Даже память подводила периодически, подсовывая то зелень глаз Лены, то мягкий смех Слави. И всё это спаивалось в единый синергический образ, в то, что на востоке принято называть «Вайфу»."
     "И шевелятся безупречной формы губы, и скулы припорошило померанцем, и в воздух уходят звуки, что прекраснее любой музыки."
     window hide
     stop sound_loop
@@ -13758,7 +13770,7 @@ label alt_day7_dv_7dl_un_end:
     "И укатил прочь."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_un = True
+    $ persistent.dv_7dl_un += 1
     $ renpy.save_persistent()
     show acm_logo_dv_meetmethere with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -14010,7 +14022,7 @@ label alt_day7_dv_7dl_bad_end:
         voices "Здрав… жалам… товарищ директор!"
         window hide
         play sound sfx_7dl["aunl"]
-        $ persistent.dv_7dl_bad_mt = True
+        $ persistent.dv_7dl_bad_mt += 1
         $ renpy.save_persistent()
         show acm_logo_dv_drunk with moveinright:
             pos (1067, 680)     #moded: pos (1600, 1020)
@@ -14021,7 +14033,7 @@ label alt_day7_dv_7dl_bad_end:
         return
     else:
         play sound sfx_7dl["aunl"]
-        $ persistent.dv_7dl_bad = True
+        $ persistent.dv_7dl_bad += 1
         $ renpy.save_persistent()
         show acm_logo_dv_theresnoway with moveinright:
             pos (1067, 680)     #moded: pos (1600, 1020)
@@ -14366,7 +14378,7 @@ label alt_day7_dv_7dl_true:
     "«План поисков Алисы»."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.dv_7dl_true = True
+    $ persistent.dv_7dl_true += 1
     show acm_logo_dv_true with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)

@@ -476,7 +476,7 @@ init -5 python:
                 renpy.pause(2.0)
                 
             elif routetag == "uv_unknown": #Кошочку еще не знаем
-                renpy.show("uv black silhouette", zorder=1, at_list=[left])
+                renpy.show("uv shade", zorder=1, at_list=[left])
                 renpy.transition(moveinleft)
                 renpy.pause(2.0)
             elif routetag == "uv": #Кошонка-распашонка

@@ -5094,16 +5094,14 @@ label alt_day5_mi_dj_supper:
     "Я обогнал её и встал на пути."
     window hide
     scene bg ext_musclub_day
-    show mi_shade
+    show mi shade
     with dissolve
     "Штаб-квартира Мику располагалась в одной из самых высоких точек лагеря, поэтому сюда свободно добивало садящееся светило."
     "Поэтому я смотрел на Мику, а видел чёрный силуэт без опознавательных знаков."
     "И жутковато становилось от мысли, что, возможно, она и внутри сейчас такая же — нивелированно-чёрная."
     "И виноват в этом мой длинный язык."
     me "Слышишь? Я хочу, чтобы ты вернулась."
-    hide mi_shade
-    show mi normal pioneer
-    with dspr
+    show mi normal pioneer with dspr
     mi "Я здесь… Понесёшь гитару?"
     me "Да, конечно."
     mi "Тогда бери ту, что у стены. Нас ждут на площади."
@@ -5803,7 +5801,7 @@ label alt_day5_mi_dj_supper:
     scene bg ext_path_night
     with dissolve
 
-    show sl_shade at center with dspr
+    show sl shade at center with dspr
     "Рядом со мной в шаг пристроился некий силуэт, ступающий удивительно бесшумно."
     "Что-то во мне задевал такой тип походки."
     "Где-то я его уже встречал."
@@ -5815,7 +5813,6 @@ label alt_day5_mi_dj_supper:
     th "Ты, безусловно, классная. Но такта тебе точно недостаёт."
     dreamgirl "Кто бы говорил, коновал!"
     me "Славя, пожалуйста, перестань. А то мне кажется, что ты надо мной издеваешься."
-    hide sl_shade
     show sl serious pioneer with dspr
     sl "Я не издеваюсь!"
     me "И тем не менее. Просто попробуй доверить мне — решение моих личных проблем, хорошо? И если мне не хватит сил, я клянусь тебе, что приду к тебе первой за помощью."
@@ -5899,14 +5896,14 @@ label alt_day5_mi_dj_supper:
 
     "Пока я двигался в сторону спортивного сектора, краем глаза ухватил чей-то силуэт."
     "Разглядеть удавалось, если честно, с огромным трудом."
-    show sl_shade at center with dissolve
+    show sl shade at center with dissolve
     "Но, похоже, это была она!"
     "Хотя чёртово чутьё молчало, да и сердце почему-то восприняло находку довольно спокойно."
     "Но узнаваемую, {i}cценическую{/i} подпрыгивающую походку удавалось разглядеть без труда."
     "И длинные волосы… Ни у кого в лагере не было таких приметных длинных волос. Ведь верно?"
     "Силуэт дошёл до душевых и растворился на их фоне, оставляя меня гадать, куда идти дальше."
     window hide
-    hide sl_shade with fade2
+    hide sl with fade2
     play sound sfx_open_water_sink
     $ renpy.pause(1)
     play sound_loop sfx_water_sink_stream
@@ -6063,7 +6060,7 @@ label alt_day5_mi_dj_voyeur_2:
             $ alt_day5_mi_dj_dv_kissing = True
         "Фактически, я отошёл от шока, только тогда, когда меня с хохотом вытолкала в промокшей одежде вон из душа."
         hide dv
-        show sl_shade
+        show sl shade
         with dissolve
         sl "А ты, я вижу, не скучаешь."
         me "Ага. Развлекаюсь как могу."
@@ -10265,7 +10262,7 @@ label alt_day6_mi_dj_dance2_fail:
                     "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
                     window hide
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp = True
+                    $ persistent.alt_lamp += 1
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -10290,7 +10287,7 @@ label alt_day6_mi_dj_dance2_fail:
                     play sound sfx_bodyfall_1
                     stop sound_loop fadeout 0
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp = True
+                    $ persistent.alt_lamp += 1
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -10327,7 +10324,7 @@ label alt_day6_mi_dj_dance2_fail:
                     th "Мику… До встречи."
                     window hide
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp = True
+                    $ persistent.alt_lamp += 1
                     $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -12118,7 +12115,7 @@ label alt_day7_mi_dj_bad_end:
     scene black
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_bad = True
+    $ persistent.mi_dj_bad += 1
     $ renpy.save_persistent()
     show acm_logo_mi_new_happy with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -12280,7 +12277,7 @@ label alt_day7_mi_dj_true_end:
     stop ambience
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_true = True
+    $ persistent.mi_dj_true += 1
     $ renpy.save_persistent()
     show acm_logo_mi_namiki with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -12653,7 +12650,7 @@ label alt_day7_mi_dj_jp_good_end:
     hide mi with dissolve
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_good_jap = True
+    $ persistent.mi_dj_good_jap += 1
     $ renpy.save_persistent()
     show acm_logo_mi_ricochet with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -12857,9 +12854,9 @@ label alt_day7_mi_dj_rf_good_end:
     "Красивая игрушка. Для игрока, которому она не нужна."
     me "И где мне тебя искать…"
     "Шепнул я в никуда."
-    $ volume (0.0,'music')
+    stop music fadeout 3
     stop sound_loop
-    play sound sfx_7dl["ringtone"]
+    play sound_loop sfx_7dl["ringtone"]
     $ renpy.pause(3)
     "Телефон зазвонил — номер чей-то незнакомый."
     "Впрочем, я уже очень давно не утруждал себя запоминаниями номеров. Чей-то МТС, питерский…"
@@ -12871,13 +12868,13 @@ label alt_day7_mi_dj_rf_good_end:
     "Пять звонков — это деловой этикет, звонить меньше значит проявить нетерпение, звонить больше значит проявить настырность."
     "Кого-то, кажется, не смущала такая перспектива."
     "Зато оператор отключает после двадцатого гудка."
+    stop sound_loop
     "Наконец, телефон заткнулся."
     window hide
     scene bg int_sam_house_clean_7dl with dissolve
 
     "А я вернулся за машину — у меня, кажется, появилась мысль."
     "Но кто-то свыше явно собрался сегодня не дать мне посидеть у монитора."
-    stop music
     play sound sfx_door_bell
     "В дверь позвонили…"
     me "Да вы издеваетесь, что ли!"
@@ -12895,7 +12892,7 @@ label alt_day7_mi_dj_rf_good_end:
     me "Кто там балуется…"
     "Я повернулся чуть вбок, так, чтобы видеть пространство под звонком."
     "И там стояла… "
-    $ volume (1.0,'music')
+    play music music_7dl["tellyourworld"] fadein 3
     show mi sad voca with dissolve
     "Она вполне заметно нервничала, дёргала в руках какой-то листок, то и дело сверяясь с ним."
     play sound sfx_door_bell
@@ -12905,9 +12902,9 @@ label alt_day7_mi_dj_rf_good_end:
     show mi normal voca with dissolve
     mi "Привет, Се…"
     "Бодро начала она."
+    show mi surprise voca with dspr
     "И осеклась."
     "Всё-таки, выглядел я действительно иначе."
-    show mi surprise voca with dspr
     mi "Сеня?"
     me "Мику…"
     "Одними губами произнёс я."
@@ -12965,13 +12962,13 @@ label alt_day7_mi_dj_rf_good_end:
     me "Да нет, ничего, а что?"
     show mi serious voca with dspr
     mi "Тогда вопрос номер два."
-    show mi shy voca with dspr
+    show mi shy voca close with dissolve
     "Мику подошла близко-близко и с вызовом заглянула мне в глаза."
     mi "Ты не передумал? Насчёт своих обязательств."
     "И она ещё смеет спрашивать? Да я же… Два месяца…"
     with flash
     me "Конечно, нет!"
-    show mi smile voca with dspr
+    show mi smile voca with dissolve
     mi "Прекрасно! Тогда собирайся. Поехали."
     me "Куда?"
     mi "У меня концерт через полчаса, а кто-то обещал ждать меня за кулисами."
@@ -12985,7 +12982,7 @@ label alt_day7_mi_dj_rf_good_end:
     stop ambience
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_good_rf = True
+    $ persistent.mi_dj_good_rf += 1
     $ renpy.save_persistent()
     show acm_logo_mi_allyours with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -13022,7 +13019,7 @@ label alt_day7_mi_dj_rf_good_end:
         if herc:
             "Улыбнётся консьержке: «К Сычёву, седьмой этаж.»"
         else:
-            "Консьержке: «здравствуйте, я к Персунову.»"
+            "Консьержке: «Здравствуйте, я к Персунову.»"
         "И минутой позже выйдет на моей лестничной площадке."
         "Моя дверь первая слева от лифта."
         "Она уточнит ещё раз номер квартиры, найдёт звонок и…"

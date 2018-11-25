@@ -326,11 +326,12 @@ label alt_day1_firts_met:
     "Донёсся голос из ниоткуда."
     "И я завертел головой, пытаясь понять, откуда говорят."
     play sound sfx_punch_medium
-    scene expression Noon("bg ext_bus1_7dl") with blind_l
     with vpunch
+    scene expression Noon("bg ext_bus1_7dl")
+    show unblink
     play ambience ambience_camp_entrance_day fadein 9
     "И, пребольно стукнувшись головой о дверку, открыл глаза."
-    show sl_shade with flash
+    show sl shade with flash
     play music music_7dl["slavyas_fantazm"]fadein 1
     "Из-за яркого солнца, бьющего прямо в лицо, никак не удавалось разглядеть, кто со мной говорит."
     "Но хотя бы контуры фигуры — явно женской — различить удалось." 
@@ -2814,12 +2815,12 @@ label alt_day1_chase:
             "Я ещё не очень хорошо придумал, что сделаю с Ульянкой, когда её догоню, но это будет очень медленно и мучительно."
             window hide
             stop ambience fadeout 1
-            scene bg ext_path_sunset with dissolve
+            scene bg ext_path_sunset at running
             $ renpy.pause (1)
             play ambience ambience_forest_day fadein 1
             play sound sfx_7dl["breath"] fadein 3
-        
             "Пробежав весь лагерь насквозь, я начал понимать, что где-то разминулся с жертвой."
+            scene bg ext_path_sunset with dissolve
             "Я остановился, со злостью ударив кулаком по дереву, и, согнувшись, попробовал восстановить дыхание."
             if alt_dlc_active:
                 call alt_day1_uvao_ch1
@@ -2944,7 +2945,7 @@ label alt_day1_slavya_saviour:
     play music music_list["sweet_darkness"] fadein 3
     scene bg ext_camp_entrance_night with dissolve
     play ambience ambience_camp_entrance_night fadein 3
-    show sl_shade with dissolve
+    show sl shade with dissolve
     "У ворот уже кто-то стоял."
     me "Кто здесь?!"
     "Я вздрогнул от неожиданности, а неизвестный произнёс знакомым уже голосом:"
@@ -2954,7 +2955,6 @@ label alt_day1_slavya_saviour:
     "Китайская марка «Цюзые» тоже бы подошла, я не привередливый."
     "Да и нет у меня своих – моя пачка успешно укатила вместе с автобусом."
     sl "Я видела, ты за Ульяной побежал."
-    hide sl_shade
     show sl smile pioneer with dissolve2
     "Собеседник вышел под свет фонаря, и я, наконец, разглядел, с кем честь имею."
     show sl smile2 pioneer with dspr
@@ -3103,7 +3103,7 @@ label alt_day1_slavya_saviour:
         "Встать на сторону Слави":
             if (counter_sl_7dl == 1):
                 $ karma += 10
-            show sl surprise pioneer far at fleft
+            show sl surprise pioneer far at fleft with dissolve
             "Я отодвинул Славю за спину."
             "Не то чтобы во мне заговорил какой-то героизм, но появилась неплохая возможность расплатиться со всеми долгами сразу."
             "Чтобы не смотрели на меня потом, будто я взял денег в долг."
@@ -3785,9 +3785,9 @@ label alt_day1_sleep:
             "Или нет."
             "Кормила она меня в каком-то чужом домике, так что я могу только приблизительно догадываться, где она квартирует."
             "Решив, что стучаться во все дома подряд — затея не из разумных, я направился дальше по своим делам."
-            show mi_shade with easeinleft
+            show mi shade far with easeinleft
             "И на чей-то силуэт с длинными, до земли хвостами, вприпрыжку направляющийся мимо меня куда-то в сторону столовой, напевая какую-то песенку голосом Винни-Пуха, я уже даже внимания не обратил — устал."
-            hide mi_shade with easeoutright
+            hide mi with easeoutright
             "Только ветром донесло «пум-пурум-пум-пум», и всё стихло."
     $ night_time()
     scene bg ext_houses_night_7dl with dissolve

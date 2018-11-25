@@ -2744,7 +2744,7 @@ label alt_day4_sl_old_camp2:
     "На плечо опустилось что-то тяжёлое."
     sl "Нельзя же… наверное."
     window hide
-    scene cg d5_sl_bench_sunset_7dl with dissolve
+    scene cg d5_sl_bench_night_7dl with dissolve
     "Славя положила голову мне на плечо и прикрыла глаза."
     sl "Неправильно это…"
     me "Но я же сегодня совершил подвиг."
@@ -3908,7 +3908,7 @@ label alt_day5_sl_begin:
                 window hide
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
-                $ persistent.alt_lamp = True
+                $ persistent.alt_lamp += 1
                 $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1067, 680)     #moded: pos (1600, 1020)
@@ -3934,7 +3934,7 @@ label alt_day5_sl_begin:
                 window hide
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
-                $ persistent.alt_lamp = True
+                $ persistent.alt_lamp += 1
                 $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1067, 680)     #moded: pos (1600, 1020)
@@ -3951,7 +3951,7 @@ label alt_day5_sl_begin:
                 play sound sfx_water_emerge
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
-                $ persistent.alt_lamp = True
+                $ persistent.alt_lamp += 1
                 $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1067, 680)     #moded: pos (1600, 1020)
@@ -7831,7 +7831,7 @@ label alt_day5_sl_night:
     "Целовать Славю было… сладко."
     window hide
     scene bg ext_entrance_night_clear_closed_7dl with dissolve
-    show sl2 normal pioneer2
+    show sl2 normal pioneer # отсюда и до hide sl2 должен быть pioneer2, но временно используется pioneer
     with dissolve
     sl "Не думал о том, чтобы выступить на прощальном концерте?"
     if ('un_fz' in list_d2_date_7dl):
@@ -7843,7 +7843,7 @@ label alt_day5_sl_night:
     sl "Ну, может быть, мы что-нибудь подготовим?"
     me "Прости, но не за один день же."
     "Славя прикусила губу, явно немного расcтроенная."
-    show sl2 sad pioneer2 with dspr
+    show sl2 sad pioneer with dspr
     sl "Эх. Я думала, может быть стоило бы сделать что-нибудь, чтобы было чем гордиться."
     if alt_day4_sl_lf_solo == 2:
         me "Спасение Шурика — чем не повод?"
@@ -7855,12 +7855,12 @@ label alt_day5_sl_night:
     "Отмахнулась она."
     sl "Я о том, чтобы люди говорили немного."
     me "Надо же! Не замечал в тебе тщеславия."
-    show sl2 smile pioneer2 with dspr
+    show sl2 smile pioneer with dspr
     sl "А его и нет. Я хочу, чтобы люди о тебе говорили."
     "Девушка хочет гордиться своим избранником. {w}Как это мило."
     me "Прости, придётся оценивать мои заслуги пока только на невидимом фронте."
     sl "Да…"
-    show sl2 normal pioneer2 with dspr
+    show sl2 normal pioneer with dspr
     sl "Ты хоть на танцы-то пойдёшь?"
     me "Спрашиваешь! Если ты пойдёшь, то и я — тоже."
     "Она кивнула."
@@ -7876,7 +7876,7 @@ label alt_day5_sl_night:
     play ambience ambience_camp_entrance_night fadein 3
     me "Не впервые вторгаешься в частные владения?"
     "Пошутил я."
-    show sl2 normal pioneer2 with dspr
+    show sl2 normal pioneer with dspr
     sl "Что?"
     me "Ничего."
     "Я придержал створку для своей дамы, пропустил её, зашёл сам."
@@ -7886,12 +7886,12 @@ label alt_day5_sl_night:
     play ambience ambience_camp_center_night
     "Со стороны клубов не слышно было ни странных шумов, ни гудения."
     "Славя закрыла замок и кивнула."
-    show sl2 normal pioneer2 with dspr
+    show sl2 normal pioneer with dspr
     sl "Ну что, спать?"
     me "Пожалуй, провожу тебя, если ты не против."
     "Нам всё равно было в одну сторону."
     "Она кивнула и взяла меня под руку."
-    show sl2 smile pioneer2 with dspr
+    show sl2 smile pioneer with dspr
     sl "Будем с тобой гулять, как взрослые люди, рука об руку."
     show dreamgirl_overlay with dspr 
     dreamgirl "Главное, чтобы эти «рука об руку» не переоделись в свадебные облачения слишком рано."
@@ -7906,7 +7906,7 @@ label alt_day5_sl_night:
     "Скотина озабоченная."
     window hide
     scene bg ext_houses_night_7dl with dissolve
-    show sl2 smile2 pioneer2 with dspr    # нужен pioneer2 под sl2
+    show sl2 smile2 pioneer with dspr
     "Славе было направо, мне прямо."
     sl "Ну… Это был очень длинный день."
     "Я согласно кивнул."
@@ -7918,16 +7918,16 @@ label alt_day5_sl_night:
         menu:
             "Я не хочу!":
                 "Жалостливо произнёс я."
-                show sl2 laugh pioneer2 with dspr    # нужен pioneer2 под sl2
+                show sl2 laugh pioneer with dspr
                 sl "И что ты предлагаешь?"
                 "Я с намёком покосился на связку в её руках."
-                show sl2 scared pioneer2 with dspr    # нужен pioneer2 под sl2
+                show sl2 scared pioneer with dspr
                 sl "Что? И думать не смей, что люди подумают?!"
                 me "Ничего нового они всё равно не подумают."
                 "Я взял её за руку."
                 me "Я видел тут один домик на отшибе…"
                 $ alt_day5_sl_extra_house = True
-                show sl2 tender pioneer2 with dspr    # нужен pioneer2 под sl2
+                show sl2 tender pioneer with dspr
                 sl "Должно быть, ты шутишь."
                 me "Я убийственно серьёзен."
                 "Она попыталась что-то возразить, но я положил палец ей на губы:"
@@ -8021,7 +8021,7 @@ label alt_day5_sl_night:
     sl "Сладких снов."
     "Шепнула она."
     me "А нельзя мне к тебе?"
-    show sl2 normal pioneer2 with dspr
+    show sl2 normal pioneer with dspr
     sl "Нет, Сёмушка."
     "С сожалением покачала головой."
     sl "Сегодня Женя ночует дома, так что никаких приводов мальчиков."
@@ -10925,7 +10925,7 @@ label alt_day6_sl_cl_become_a_hero:
     show blackout_exh
     with dissolve
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_cata = True
+    $ persistent.sl_cl_cata += 1
     $ renpy.save_persistent()
     show acm_logo_sl_be_ok with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -12217,7 +12217,7 @@ label alt_day6_sl_sh_tug:
     "А всё равно вся физика ощущалась как-то отстранённо, будто происходя не со мной."
     "А с кем?"
     "С тем, кто чувствует боль и молится всем на свете высшим силам, включая те, чьё имя не к ночи будь помянуто?"
-    "Дверь отперла Виола, встрепанная, в мокром и  мятом  халате с длинными, безобразными потёками туши на лице."
+    "Дверь отперла Виола, встрепанная, в мокром и мятом халате с длинными, безобразными потёками туши на лице."
     window hide
     play sound sfx_open_door_kick
     pause(1)
@@ -12244,8 +12244,9 @@ label alt_day6_sl_sh_tug:
     cs "У меня есть алпразолам, пионер. Небольшая таблетка — и ты будешь вспоминать этот день как что-то, тебе приснившееся и неопасное."
     me "Что ж вы сами тогда…"
     me "Не пьёте."
-    "Виола вскочила, изо всех сил грохнув костяшками об оргалит стола."
     play sound sfx_table_hit
+    with vpunch
+    "Виола вскочила, изо всех сил грохнув костяшками об оргалит стола."
     show cs normal with dissolve
     cs "Потому что я дура и виновата. Я должна страдать."
     cs "Письмо видел?"
@@ -14165,11 +14166,11 @@ label alt_day7_sl_square1:
             "Песочные часы."
             "Молнию."
             "Пятиконечную звезду с длинным хвостом — или это была звезда на палочке? Волшебная палочка, какой её рисуют дети?"
-            if persistent.dv_7dl_good_ussr or persistent.dv_7dl_good_rf:
+            if persistent.dv_7dl_true:
                 "Молния подмигнула мне тёплым оранжевым цветом, как старому знакомому, старому другу. Старому… Возлюбленному?"
-            if persistent.un_7dl_good_ussr or persistent.un_7dl_good_rf:
+            if persistent.un_7dl_true:
                 "Корона на миг перелилась фиолетовым-сиреневым цветом, на миг — я даже не успел понять, показалось ли мне это."
-            if persistent.mi_7dl_good_human or persistent.mi_7dl_good_star:
+            if persistent.mi_7dl_true:
                 "Нота вздрогнула под ладонью, отозвалась неожиданно, засветившись уютным аквамариновым светом."
                 if persistent.mi_7dl_good_human:
                     "Тёплым таким, живым — как будто одна знакомая девочка улыбнулась мне."
@@ -14177,18 +14178,18 @@ label alt_day7_sl_square1:
                     "Разве что не был этот свет ни тёплым, ни холодным — никаким."
                     "А должен бы!"
                     "Видимо, я пока ещё недостаточно понимаю, как надо — правильно. Потому половину попросту не чувствую."
-            if persistent.mt_7dl_good:
+            if persistent.mt_7dl_true:
                 "Песочные часы будто сжались под взглядом, потемнели, приобрели в объеме — и резко-резко перевернулись."
                 "Нарисованный в них песок потёк вниз."
-            if persistent.sl_7dl_good_rf or persistent.sl_7dl_good_ussr:
+            if persistent.sl_7dl_true:
                 "Солнце вспыхнуло золотом, напоминая цвет волос одной моей знакомой златовласки."
                 "Одной очень дорогой златовласки."
                 th "Она меня там ждёт, а я тут лазаю."
-            if persistent.us_7dl_good:
+            if persistent.us_7dl_true:
                 "Всё-таки, волшебная палочка — она засветилась неоново-синим по периметру."
                 "И тут же резко сменила цвет на красный — такой, какой я видел всего один раз в жизни."
                 "Увязанный снопами-ракетами, инверсионным следом одной катастрофы с алым колером волос."
-            if (persistent.mi_7dl_good_human or persistent.mi_7dl_good_star) and persistent.dv_7dl_good_ussr and persistent.sl_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mt_7dl_good and persistent.us_7dl_good:
+            if (alt_day_binder == 1) or alt_day1_loop:
                 "Яркие, чистые цвета, будто подтверждающие теорию цвета — они вспыхнули одновременно, мало-помалу сливаясь в единое неяркое белое сияние."
                 "Я знал каждый цвет, каждую историю, что стоит за ними."
                 "Я переживал с ними всё, что когда-то привнёс в их жизнь, каялся в том, что станет в их жизни тогда, когда неумолимой отдачей меня бросало домой."
@@ -14203,7 +14204,7 @@ label alt_day7_sl_square1:
                 with fade
                 return
             else:
-                if (persistent.mi_7dl_good_human or persistent.mi_7dl_good_star) or persistent.dv_7dl_good_ussr or persistent.sl_7dl_good_ussr or persistent.un_7dl_good_ussr or persistent.mt_7dl_good or persistent.us_7dl_good:
+                if persistent.mi_7dl_true or persistent.dv_7dl_true or persistent.sl_7dl_true or persistent.un_7dl_true or persistent.mt_7dl_true or persistent.us_7dl_true:
                     "Немного посверкав и посияв, символы погасли."
                     "Снова обратившись скучными картинками по железу."
                 "Делать мне здесь больше было нечего, и я, развернувшись, отправился восвояси."
@@ -16416,7 +16417,7 @@ label alt_day7_sl_will:
     "В свои права вступал новый день, а с ним — и новые надежды!"
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_int_ok = True
+    $ persistent.sl_cl_int_ok += 1
     $ renpy.save_persistent()
     show acm_logo_sl_ok with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -16530,7 +16531,7 @@ label alt_day7_sl_duty:
     "Подмигнул я."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_int_good = True
+    $ persistent.sl_cl_int_good += 1
     $ renpy.save_persistent()
     show acm_logo_sl_fantazm with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -16554,7 +16555,7 @@ label alt_day7_sl_lone:
     "В безликое сетевое существование."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_int_bad = True
+    $ persistent.sl_cl_int_bad += 1
     $ renpy.save_persistent()
     show acm_logo_sl_lone with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -16747,7 +16748,7 @@ label alt_day7_sl_good:
     sl "Как стараться будешь."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_good_ussr = True
+    $ persistent.sl_cl_good_ussr += 1
     $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -16906,7 +16907,7 @@ label alt_day7_sl_rf_good:
     th "Неужели  я пытаюсь вспомнить, что такое сомнения?"
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_good_rf = True
+    $ persistent.sl_cl_good_rf += 1
     $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -17073,7 +17074,7 @@ label alt_day7_sl_reject_same:
     me "И что ты — всё-таки — не сон."
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_reject_same = True
+    $ persistent.sl_cl_reject_same += 1
     $ renpy.save_persistent()
     show acm_logo_sl_same_place with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -17285,7 +17286,7 @@ label alt_day7_sl_rej_end:
     window hide
     play sound sfx_7dl["aunl"]
     stop ambience fadeout 4
-    $ persistent.sl_cl_reject_late = True
+    $ persistent.sl_cl_reject_late += 1
     $ renpy.save_persistent()
     show acm_logo_sl_too_late with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -17380,7 +17381,7 @@ label alt_day7_sl_cl_bad:
     "Неужели мы оба ошиблись?"
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_cl_bad = True
+    $ persistent.sl_cl_bad += 1
     $ renpy.save_persistent()
     show acm_logo_sl_bad with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -17536,7 +17537,7 @@ label alt_day7_sl_rf2:
     window hide
     play sound sfx_7dl["aunl"]
     play music music_7dl["refuse_to_replay"] fadein 3
-    $ persistent.sl_cl_good_rf2 = True
+    $ persistent.sl_cl_good_rf2 += 1
     $ renpy.save_persistent()
     show acm_logo_sl_worth with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
