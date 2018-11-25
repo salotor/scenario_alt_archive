@@ -261,15 +261,15 @@ label alt_day5_sl_7dl_vars:
     return
     
 label alt_day6_sl_7dl_vars:
-    $ alt_day6_sl_7dl_workout = False #Пробежка!
+    $ alt_day6_sl_7dl_workout = False
     $ alt_day6_sl_7dl_hentai_done = False
     $ alt_day6_sl_7dl_forgive = False
     $ alt_day5_sl_7dl_loki_true = False
     return
     
 label alt_day7_sl_7dl_vars:
-    $ alt_day7_sl_7dl_workout = False #Пробежка!
+    $ alt_day7_sl_7dl_workout = False
     $ alt_day7_sl_7dl_freewill = False
-    $ alt_day7_sl_7dl_loki_park = False #Выбор
+    $ alt_day7_sl_7dl_loki_park = False
     return
     
