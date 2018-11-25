@@ -192,21 +192,52 @@ label alt_day5_neu_begin:
             return
     jump alt_day6_neu_begin
     
-label alt_day6_neu_begin: #Загони себя в лютую жопу.
+label alt_day6_neu_begin:
+
+    #not ready yet
+    return
+    
     call alt_day6_neu_start
     pause(1)
-    return
+    call alt_day6_neu_morning
+    pause(1)
+    if loki:
+        call alt_day6_neu_loki_day
+        pause(1)
+        call alt_day6_neu_loki_concert
+        pause(1)
+        call alt_day6_neu_loki_disco
+        pause(1)
+        call alt_day6_neu_loki_evening
+    else:
+        call alt_day6_neu_day
+        pause(1)
+        call alt_day6_neu_concert
+        pause(1)
+        call alt_day6_neu_disco
+        pause(1)
+        call alt_day6_neu_evening
+    pause(1)
+    call alt_day6_neu_sleeptime
+    pause(1)
     jump alt_day7_neu_begin
 
 label alt_day7_neu_begin:
+    window hide
+    show spill_red with dspr
+    $ renpy.pause(2, hard=True)
+    show spill_gray with dspr
+    $ renpy.pause(2, hard=True)
+    show alt_credits timeskip_dev at truecenter with dissolve2
+    $ renpy.pause(4, hard=True)
+    with dissolve2
+    window hide
+    return
+    
     call alt_day7_neu_departure
     pause(1)
-    if alt_day6_neu_var1:
-        call alt_day7_neu_ending_good
-    elif alt_day6_neu_var2:
-        call alt_day7_neu_ending_bad
-    elif alt_day6_neu_var3:
-        call alt_day7_neu_ending_mi
+    if persistent.neu_bad:
+        call alt_day7_neu_true
     else:
-        call alt_day7_neu_ending_d3
+        call alt_day7_neu_bad
 return
