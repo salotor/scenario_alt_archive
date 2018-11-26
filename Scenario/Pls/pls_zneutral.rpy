@@ -193,29 +193,42 @@ label alt_day5_neu_begin:
     jump alt_day6_neu_begin
     
 label alt_day6_neu_begin:
-
-    #not ready yet
-    return
-    
+    $ persistent.sprite_time = "sunset"
+    $ sunset_time()
+    $ alt_chapter(6, u"Одиночка. Утро")
     call alt_day6_neu_start
     pause(1)
+    $ persistent.sprite_time = "day"
+    $ day_time()
     call alt_day6_neu_morning
     pause(1)
     if loki:
+        $ alt_chapter(6, u"Одиночка. День")
         call alt_day6_neu_loki_day
         pause(1)
         call alt_day6_neu_loki_concert
         pause(1)
+        $ persistent.sprite_time = "sunset"
+        $ sunset_time()
+        $ alt_chapter(6, u"Одиночка. Танцы")
         call alt_day6_neu_loki_disco
         pause(1)
+        $ persistent.sprite_time = "night"
+        $ night_time()
         call alt_day6_neu_loki_evening
     else:
+        $ alt_chapter(6, u"Одиночка. День")
         call alt_day6_neu_day
         pause(1)
         call alt_day6_neu_concert
         pause(1)
+        $ persistent.sprite_time = "sunset"
+        $ sunset_time()
+        $ alt_chapter(6, u"Одиночка. Танцы")
         call alt_day6_neu_disco
         pause(1)
+        $ persistent.sprite_time = "night"
+        $ night_time()
         call alt_day6_neu_evening
     pause(1)
     call alt_day6_neu_sleeptime
@@ -233,9 +246,20 @@ label alt_day7_neu_begin:
     with dissolve2
     window hide
     return
-    
+    $ persistent.sprite_time = "sunset"
+    $ sunset_time()
+    $ alt_chapter(7, u"Одиночка. Утро")
+    call alt_day7_neu_start
+    pause(1)
+    $ persistent.sprite_time = "day"
+    $ day_time()
+    call alt_day7_neu_packing
+    pause(1)
+    $ alt_chapter(7, u"Одиночка. Отъезд")
     call alt_day7_neu_departure
     pause(1)
+    $ prolog_time()
+    $ alt_chapter(7, u"Одиночка. Эпилог")
     if persistent.neu_bad:
         call alt_day7_neu_true
     else:
