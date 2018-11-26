@@ -58,13 +58,15 @@ python early:
                     ui.text("%s: %d" % ("Мику", lp_mi), style="button_text", size=13)
                 else:
                     if alt_day3_mi_date and 'mi' in list_d2_date_7dl and ((alt_day3_dancing == 41) or (alt_day3_dancing == 40)):
-                        ui.text("%s: %d" % ("Мику-7ДЛ", lp_mi), style="button_text", size=14, color="#00bbbb")
                         if (alt_spt >= 8) or ((alt_hpt >= 9) and (lp_mi > 16)):
                             ui.text("%s: %d" % ("Мику-7ДЛ", lp_mi), style="button_text", size=15, color="#00ffff")
+                        else:
+                            ui.text("%s: %d" % ("Мику-7ДЛ", lp_mi), style="button_text", size=14, color="#00bbbb")
                     elif (lp_mi >= 13) and alt_day3_mi_dj:
-                        ui.text("%s: %d" % ("Мику-DJ", lp_mi), style="button_text", size=14, color="#00bbbb")
-                        if alt_day6_mi_dj_hentai2 or alt_day6_mi_dj_no_hentai:
+                        if (lp_mi >= 13) and alt_day3_mi_dj and (alt_day6_mi_dj_hentai2 or alt_day6_mi_dj_no_hentai):
                             ui.text("%s: %d" % ("Мику-DJ", lp_mi), style="button_text", size=15, color="#00ffff")
+                        else:
+                            ui.text("%s: %d" % ("Мику-DJ", lp_mi), style="button_text", size=14, color="#00bbbb")
                     else:
                         ui.text("%s: %d" % ("Мику", lp_mi), style="button_text", size=14)
                     
@@ -90,7 +92,7 @@ python early:
                     elif counter_sl_7dl == 5:
                         if (lp_sl >= 20) and (karma > 120):
                             ui.text("%s: %d" % ("Славя-7ДЛ", lp_sl), style="button_text", size=15, color="#ffaa00")
-                        if (lp_sl >= 20):
+                        elif (lp_sl >= 20):
                             ui.text("%s: %d" % ("Славя-7ДЛ", lp_sl), style="button_text", size=15, color="#bbb200")
                         else:
                             ui.text("%s: %d" % ("Славя-7ДЛ", lp_sl), style="button_text", size=14, color="#bbb200")

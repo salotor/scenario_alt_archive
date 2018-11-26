@@ -153,7 +153,6 @@ label alt_day5_un_7dl_vars:
     $ alt_day5_un_7dl_cleanse = False
     $ alt_day5_un_7dl_square_duty = False
     $ alt_day5_un_7dl_club_day = False
-    $ alt_day5_un_7dl_cube = False
     $ alt_day5_un_7dl_sl_un_washing = False
     $ alt_day5_un_7dl_solo_washing = False
     $ alt_day5_un_7dl_sl_fight = False
@@ -164,7 +163,7 @@ label alt_day6_un_7dl_vars:
     return
     
 label alt_day7_un_7dl_vars:
-    $ alt_day7_un_7dl_true_end = False
+    $ alt_day7_un_7dl_rej_end = False
     return
 
 label alt_day4_un_fz_vars:
@@ -258,15 +257,19 @@ label alt_day5_sl_7dl_vars:
     $ alt_day5_random_val = 0
     $ alt_day5_sl_7dl_hentai_done = False
     $ alt_day5_sl_7dl_olroad = False
+    $ alt_day5_sl_7dl_loki_true = False
     return
     
 label alt_day6_sl_7dl_vars:
-    $ alt_day6_sl_7dl_workout = False #Пробежка!
-    $ alt_day6_sl_7dl_transit = False
+    $ alt_day6_sl_7dl_workout = False
     $ alt_day6_sl_7dl_hentai_done = False
+    $ alt_day6_sl_7dl_forgive = False
+    $ alt_day5_sl_7dl_loki_true = False
     return
     
 label alt_day7_sl_7dl_vars:
-    $ alt_day7_sl_7dl_workout = False #Пробежка!
+    $ alt_day7_sl_7dl_workout = False
+    $ alt_day7_sl_7dl_freewill = False
+    $ alt_day7_sl_7dl_loki_park = False
     return
     

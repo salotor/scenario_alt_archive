@@ -55,10 +55,10 @@
             call alt_day6_us_7dl_button
             pause(1)
             if alt_day6_us_7dl_tr:
-                $ alt_chapter(6, u"Ульяна. 7дл. Ррромантика")
+                $ alt_chapter(6, u"Ульяна. 7ДЛ. Ррромантика")
                 call alt_day6_us_7dl_rendezvous
             else:
-                $ alt_chapter(6, u"Ульяна. 7дл. Концерт")
+                $ alt_chapter(6, u"Ульяна. 7ДЛ. Концерт")
                 call alt_day6_us_7dl_concert
     pause(1)
     $ persistent.sprite_time = "sunset"
@@ -141,7 +141,7 @@ label alt_day7_us_7dl_start:
     call alt_day7_us_7dl_leaving
     $ persistent.sprite_time = "prolog"
     $ prolog_time()
-    if (persistent.us_7dl_un or persistent.us_7dl_mi) and persistent.us_px_rf_good and (alt_day4_neu_us_pixies != 0) and alt_day6_us_7dl_tr :
+    if (persistent.us_7dl_un or persistent.us_7dl_mi) and persistent.us_px_rf_good and (alt_day4_neu_us_pixies != 0) and alt_day6_us_7dl_tr:
         $ alt_chapter(7, u"Ульяна. Спасибо.")
         call alt_day7_us_7dl_ever_after
         pause(1)

@@ -29,7 +29,7 @@
         pause(1)
     $ persistent.sprite_time = "night"
     $ night_time()
-    $ alt_chapter(1, u"Вечер.")                
+    $ alt_chapter(1, u"Вечер.")
     call alt_day1_alt_ev_A_S
     pause(1)
     $ alt_chapter(1, u"Вечер")

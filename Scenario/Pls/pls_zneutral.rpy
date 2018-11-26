@@ -37,7 +37,7 @@
             call alt_day4_neu_us
             pause(1)
     else:
-        call alt_day4_neu_home #Домик ведёт к Ульянке, Ольге, Лене и Мику. 
+        call alt_day4_neu_home
         pause(1)
         if alt_day3_us_bugs == 1:
             $ alt_day4_neu_transit = 5
@@ -68,7 +68,7 @@
     $ persistent.sprite_time = "day"
     $ day_time()
     $ alt_chapter(4, u"Одиночка. День")
-    call alt_day4_neu_dinner #На обеде подводим итоги
+    call alt_day4_neu_dinner
     pause(1)
     call alt_day4_neu_curl
     pause(1)
@@ -193,27 +193,75 @@ label alt_day5_neu_begin:
     jump alt_day6_neu_begin
     
 label alt_day6_neu_begin:
+    $ persistent.sprite_time = "sunset"
+    $ sunset_time()
+    $ alt_chapter(6, u"Одиночка. Утро")
     call alt_day6_neu_start
     pause(1)
-    return
+    $ persistent.sprite_time = "day"
+    $ day_time()
+    call alt_day6_neu_morning
+    pause(1)
+    if loki:
+        $ alt_chapter(6, u"Одиночка. День")
+        call alt_day6_neu_loki_day
+        pause(1)
+        call alt_day6_neu_loki_concert
+        pause(1)
+        $ persistent.sprite_time = "sunset"
+        $ sunset_time()
+        $ alt_chapter(6, u"Одиночка. Танцы")
+        call alt_day6_neu_loki_disco
+        pause(1)
+        $ persistent.sprite_time = "night"
+        $ night_time()
+        call alt_day6_neu_loki_evening
+    else:
+        $ alt_chapter(6, u"Одиночка. День")
+        call alt_day6_neu_day
+        pause(1)
+        call alt_day6_neu_concert
+        pause(1)
+        $ persistent.sprite_time = "sunset"
+        $ sunset_time()
+        $ alt_chapter(6, u"Одиночка. Танцы")
+        call alt_day6_neu_disco
+        pause(1)
+        $ persistent.sprite_time = "night"
+        $ night_time()
+        call alt_day6_neu_evening
+    pause(1)
+    call alt_day6_neu_sleeptime
+    pause(1)
     jump alt_day7_neu_begin
 
 label alt_day7_neu_begin:
+    window hide
+    show spill_red with dspr
+    $ renpy.pause(2, hard=True)
+    show spill_gray with dspr
+    $ renpy.pause(2, hard=True)
+    show alt_credits timeskip_dev at truecenter with dissolve2
+    $ renpy.pause(4, hard=True)
+    with dissolve2
+    window hide
+    return
+    $ persistent.sprite_time = "sunset"
+    $ sunset_time()
+    $ alt_chapter(7, u"Одиночка. Утро")
+    call alt_day7_neu_start
+    pause(1)
+    $ persistent.sprite_time = "day"
+    $ day_time()
+    call alt_day7_neu_packing
+    pause(1)
+    $ alt_chapter(7, u"Одиночка. Отъезд")
     call alt_day7_neu_departure
     pause(1)
-    if alt_day6_neu_var1:
-        call alt_day7_neu_ending_good
-    elif alt_day6_neu_var2:
-        call alt_day7_neu_ending_bad
-    elif alt_day6_neu_var3:
-        call alt_day7_neu_ending_mi
+    $ prolog_time()
+    $ alt_chapter(7, u"Одиночка. Эпилог")
+    if persistent.neu_bad:
+        call alt_day7_neu_true
     else:
-        call alt_day7_neu_ending_d3
+        call alt_day7_neu_bad
 return
-
-
-#D3-route
-#Сделаю, как ты хочешь - ждать время (+пт) или выглянуть на улицу
-#Кодовый замок - искать код(+пт) или искать обходной путь
-#Эпилог - бог на полставочки(гуд) или порридж(бэд)
-#Флаг получения биндера.
