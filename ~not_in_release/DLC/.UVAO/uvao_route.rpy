@@ -3108,7 +3108,7 @@ label alt_day5_uvao_mines_sh:
     "Я бросил спичку, чтобы не обжечь пальцы, и всё погрузилось во тьму…"
     window hide
     scene bg int_mines_halt_spotlight_7dl with fade2
-    show uv black silhouette at cleft
+    show uv shade at cleft
     with dissolve
 
     "…но не полностью! Я заметил какой-то тусклый свет из-за поворота."

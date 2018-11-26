@@ -1,8 +1,8 @@
 ﻿#Мод пилится на базе нетленки от АБЦБ - его сюжет и подача мне куда симпатичнее оригинальной стори.
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
-    $ alt_release_no = "0.37.a"
-    $ alt_compatible_release_no = ["0.34.a", "0.34.b", "0.35.a", "0.36.a", "0.37.a"]
+    $ alt_release_no = "0.38.a"
+    $ alt_compatible_release_no = ["0.34.a", "0.34.b", "0.35.a", "0.36.a", "0.37.a", "0.38.a"]
     $ alt_hotfix_no = "hf0"
     $ plthr = u"none"
 
@@ -11,7 +11,7 @@ init 2:
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
     $ timeskip0 = "Я с трудом вспоминаю, \n с чего всё началось…"
     $ timeskip_come = "Ты пойдёшь со мной?"
-    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 7."
+    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Одиночка. День 6."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
     $ timeskip3 = "Я скучаю…"
     $ timeskip4 = "Я хочу к тебе…"
@@ -116,7 +116,8 @@ label scenario__alt_sevendl:
     $ init_map_zones_alt1()
     $ init_map_zones_alt2()
 # пишем версию 7дл в трейсбеках
-    $ config.version = config.version+" + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
+    if not "7DL" in config.version:
+        $ config.version = config.version+" + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
 # ------------------------------------------------
     jump start_menu_7dl
 
@@ -189,18 +190,15 @@ label alt_day0_vars: #Переменные нулевого дня
     $ d3 = False
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
+    $ alt_day_binder = 0
     if persistent.dv_7dl_true and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_7dl_true: 
-        $ alt_day_binder = 1
-    else:
-        $ alt_day_binder = 0
-    $ alt_day1_loop = False
+        $ persistent.7dl_binder = True
     return
-    
+
 label alt_day1_vars: #Переменные первого дня
     $ counter_sl_cl = 0 #Счётчик рута (Славя-классик in progress)
     $ counter_sl_7dl = 0 #Счётчик рута (Славя-7дл)
     #TODO - same shit для прочих девочек
-    $ list_slavya_7dl = []
     $ list_slavya_7dl = []
     $ alt_route_flag = 1
     $ alt_day1_alt_chase = False

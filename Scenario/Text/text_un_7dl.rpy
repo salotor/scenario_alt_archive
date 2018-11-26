@@ -11698,7 +11698,7 @@ label alt_day7_un_7dl_rf:
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2.4, hard=True)
-    if (alt_day_binder == 1) or alt_day1_loop:
+    if persistent.7dl_binder:
         $ prolog_time()
         play music music_7dl["sh_ai_rejuv"] fadein 3
         scene expression Noir("bg ext_city_night_7dl", brightness = 0.1, tint_r = 0.2, tint_g = 0.9, tint_b = 0.7, saturation = 0.7)
