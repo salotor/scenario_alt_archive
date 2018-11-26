@@ -23,7 +23,7 @@
         show acm_u
     with dissolve2
     pause(3)
-    if alt_day_binder == 1:
+    if persistent.alt_binder:
         scene cg d7_trio_7dl with flash
         $ renpy.pause(.4)
         scene black with fade2
@@ -55,7 +55,7 @@ label alt_day0_start:
         "Но я не уверен точно…":
             with fade2
             jump Ravsii__role_menu
-        "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
+        "На самом деле всё было совсем иначе!" if persistent.alt_binder:
             $ plthr = u"Септим"
             $ d3 = True
     jump alt_day0_start1
@@ -77,7 +77,7 @@ label alt_day0_start_herc:
         "Но я не уверен точно…":
             with fade2
             jump Ravsii__role_menu
-        "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
+        "На самом деле всё было совсем иначе!" if persistent.alt_binder:
             $ plthr = u"Септим"
             $ d3 = True
     jump alt_day0_start1
@@ -104,7 +104,7 @@ label alt_day0_start_loki:
         "Но я не уверен точно…":
             with fade2
             jump Ravsii__role_menu
-        "На самом деле всё было совсем иначе!" if alt_day_binder == 1:
+        "На самом деле всё было совсем иначе!" if persistent.alt_binder:
             $ plthr = u"Септим"
             $ d3 = True
     jump alt_day0_start1
@@ -125,10 +125,10 @@ label alt_day0_start1:
 
 label alt_day0_opening:
     $ renpy.pause(2, hard=True)
-    if alt_day_binder != 1:
-        play music music_7dl["intro2"] fadein 5
-    else:
+    if persistent.alt_binder:
         play music music_7dl["seven_summer_days"] fadein 5
+    else:
+        play music music_7dl["intro2"] fadein 5
     scene black 
     $ renpy.pause(3, hard=True)
     scene op_back
@@ -166,7 +166,7 @@ label alt_day0_opening:
     $ renpy.pause(5, hard=True)
     call alt_day1_begin
     pause(1)
-    if alt_day1_loop or (alt_day_binder != 1):
-        jump alt_day1_start
-    else:
+    if d3:
         jump alt_day1_alt_start
+    else:
+        jump alt_day1_start

@@ -48,3 +48,6 @@ init -5 python:
             ret[dst] = ComposeSprite(*subargs)
         return ret
     # /ComposeSpriteSet(type, *argv)    
+
+init 2:
+    $ dlc_is_here = True # кошочка в директории БЛ
