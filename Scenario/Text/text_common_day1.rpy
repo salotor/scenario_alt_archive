@@ -201,7 +201,7 @@ label alt_day1_bus_start:
         dreamgirl "«…шанс…»"
     window hide
     scene bg ext_road_day with dissolve
-    if persistent.alt_binder
+    if persistent.alt_binder:
         "Я открыл глаза, ещё чувствуя щекой тепло её дыхания."
         "Когда она звала меня с собой, я думал, всё будет как-то более традиционно."
         "Мы возьмёмся за руки и пойдём."
