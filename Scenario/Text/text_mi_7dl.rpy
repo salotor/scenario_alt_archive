@@ -8277,7 +8277,7 @@ label alt_day6_mi_7dl_human_day:
     window hide
     with fade2
     "Но пока у меня есть время — мы те же, там же."
-    if persistent.7dl_binder:
+    if alt_day_binder == 1:
         "Только в этот раз мы несколько поменялись местами."
     "Усмехнувшись этой мысли, я подтащил стул к кушетке и собрался бдить."
     show cs normal with dissolve

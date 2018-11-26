@@ -9178,7 +9178,7 @@ label alt_day6_mi_dj_late_supper:
         show mi normal pioneer with dspr
         show dv normal pioneer at left with dspr
         show el normal pioneer at right with dspr
-        if persistent.7dl_binder:
+        if alt_day_binder == 1:
             "Мы расселись у того самого столика, где меня в прошлый раз спасали от кошмарной смерти от недоедания и, обмениваясь короткими репликами, стали ждать активистку."
         dv "Да, что ни говори, а дружить с нашей выскочкой выгодно."
         show mi serious pioneer with dspr
