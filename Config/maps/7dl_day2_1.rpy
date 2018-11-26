@@ -78,7 +78,6 @@ label alt_day2_event_sport_area:
     jump alt_day2_map
 
 label alt_day2_event_beach:
-    $ list_voyage_7dl.append('beach')
     call alt_day2_event_beach1
     $ disable_current_zone_alt1()
     jump alt_day2_map
@@ -120,7 +119,7 @@ label alt_day2_event_square:
         if 'cleaning_sl' in list_voyage_7dl:# пришёл после уборки
             $ disable_current_zone_alt1()
         else:
-            if ('sl_prep' in list_d2_convoy_7dl): # первое посещение со Славей
+            if ('sl_prep' in list_d2_convoy_7dl) and (len(list_voyage_7dl) < 2): # первое посещение со Славей
                 $ set_chibi_alt1('square_alt1', 'sl')
                 window hide
             else:

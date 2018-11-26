@@ -1,15 +1,17 @@
 ﻿#Мод пилится на базе нетленки от АБЦБ - его сюжет и подача мне куда симпатичнее оригинальной стори.
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
-    $ alt_release_no = "0.34.a"
+    $ alt_release_no = "0.38.a"
+    $ alt_compatible_release_no = ["0.34.a", "0.34.b", "0.35.a", "0.36.a", "0.37.a", "0.38.a"]
     $ alt_hotfix_no = "hf0"
     $ plthr = u"none"
 
 init 2:
     $ mods["scenario__alt_sevendl"] = u"7 Дней Лета"
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
+    $ timeskip0 = "Я с трудом вспоминаю, \n с чего всё началось…"
     $ timeskip_come = "Ты пойдёшь со мной?"
-    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Славя-7дл. День 5."
+    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Одиночка. День 6."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
     $ timeskip3 = "Я скучаю…"
     $ timeskip4 = "Я хочу к тебе…"
@@ -22,7 +24,7 @@ init 2:
     $ timeskip11 = "Прощай."
     $ timeskip12 = "Ты потерялся, малыш?"
     $ timeskip13 = "ПРИДИ В СЕБЯ!"
-    $ alt_credits_text = "{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nYungPunk\n\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
+    $ alt_credits_text ="{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nDeadPunk\n\nППВК\n\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nТоварищи, помогавшие финансово на Patreon:\nDarkness Inc\nAlex Traven\n\nТеоретик\n\nDon Diego\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
 
     #Day - базис
     #Sunset - 94%, 82%, 100%
@@ -114,45 +116,55 @@ label scenario__alt_sevendl:
     $ init_map_zones_alt1()
     $ init_map_zones_alt2()
 # пишем версию 7дл в трейсбеках
-    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        $ config.version = "1.1 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
-    else:
-        $ config.version = "1.2 + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
+    if not "7DL" in config.version:
+        $ config.version = config.version+" + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
 # ------------------------------------------------
-    jump main_menu_7dl
+    jump start_menu_7dl
 
-init 4: # вызываем все переменные в init (необходимо для работы повторов)
+init 4:
+# вызываем все переменные в init (необходимо для работы повторов)
+    call alt_vars
+# устанавливаем при загрузке стандартные значения из БЛ для th
+    $ th_prefix = "~ "
+    $ th_suffix = " ~"
+
+label alt_vars:
     call alt_day0_vars
     call alt_day1_vars
     call alt_day2_vars
     call alt_day3_vars
+    call alt_day4_un_fz_vars
+    call alt_day4_mi_cl_vars
     call alt_day5_sl_wh_vars
-    call alt_day5_us_7dl_vars
-    call alt_day4_mi_7dl_vars
-    call alt_day5_mi_7dl_vars
-    call alt_day6_mi_7dl_vars
-    call alt_day5_mt_7dl_vars
-    call alt_day6_mt_7dl_vars
-    call alt_day4_neu_us_vars
-    call alt_day5_neu_us_vars
+    call alt_day4_un_7dl_vars
+    call alt_day5_un_7dl_vars
+    call alt_day6_un_7dl_vars
+    call alt_day4_mi_dj_vars
+    call alt_day5_mi_dj_vars
+    call alt_day6_mi_dj_vars
+    call alt_day4_dv_7dl_vars
+    call alt_day6_dv_7dl_vars
     call alt_day4_sl_cl_vars
     call alt_day5_sl_cl_vars
     call alt_day6_sl_cl_vars
     call alt_day7_sl_cl_vars
-    call alt_day4_mi_dj_vars
-    call alt_day5_mi_dj_vars
-    call alt_day6_mi_dj_vars
-    call alt_day4_un_7dl_vars
-    call alt_day5_un_7dl_vars
-    call alt_day6_un_7dl_vars
-    call alt_day4_un_fz_vars
-    call alt_day4_mi_cl_vars
-    call alt_day4_dv_7dl_vars
-    call alt_day6_dv_7dl_vars
-    call alt_day6_us_px_vars
+    call alt_day5_mt_7dl_vars
+    call alt_day6_mt_7dl_vars
+    call alt_day4_mi_7dl_vars
+    call alt_day5_mi_7dl_vars
+    call alt_day6_mi_7dl_vars
+    call alt_day4_neu_us_vars
+    call alt_day5_neu_us_vars
+    call alt_day5_us_7dl_vars
     call alt_day6_us_7dl_vars
+    call alt_day6_us_px_vars
     call alt_day7_us_px_vars
-
+    call alt_day4_sl_7dl_vars
+    call alt_day5_sl_7dl_vars
+    call alt_day6_sl_7dl_vars
+    call alt_day7_sl_7dl_vars
+    return
+    
 label alt_day0_vars: #Переменные нулевого дня
     $ make_names_unknown_7dl()
     $ lp_mi = 0
@@ -178,20 +190,17 @@ label alt_day0_vars: #Переменные нулевого дня
     $ d3 = False
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
-    if persistent.dv_7dl_good_ussr and persistent.un_7dl_good_ussr and persistent.mi_7dl_good_human and persistent.mt_7dl_good and persistent.sl_7dl_good_ussr and persistent.us_7dl_good:
-        $ alt_day_binder = 1
-    else:
-        $ alt_day_binder = 0
+    if persistent.dv_7dl_true and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_7dl_true: 
+        $ persistent.7dl_binder = True
     return
-    
-label alt_day1_vars: #Переменные первого дня
+
+    label alt_day1_vars: #Переменные первого дня
     $ counter_sl_cl = 0 #Счётчик рута (Славя-классик in progress)
     $ counter_sl_7dl = 0 #Счётчик рута (Славя-7дл)
     #TODO - same shit для прочих девочек
     $ list_slavya_7dl = []
     $ list_slavya_7dl = []
     $ alt_route_flag = 1
-    $ alt_day1_loop = False
     $ alt_day1_alt_chase = False
     $ alt_day1_alt_us_robbed = False
     $ alt_day1_alt_robbery = False
@@ -202,7 +211,6 @@ label alt_day1_vars: #Переменные первого дня
     $ alt_day1_sl_keys_took = 0
     $ alt_day1_un_dated = False
     $ alt_day1_un_ignored = False
-    $ alt_day1_un_nicebook = False
     $ alt_day1_un_stopped = False
     $ alt_day1_us_shotted = False
     $ alt_day1_chase = False
@@ -210,6 +218,7 @@ label alt_day1_vars: #Переменные первого дня
     $ alt_day1_genda_investigation = False
     $ alt_day1_cofront_sl_dv = 0
     $ alt_day1_headshot = False
+    $ alt_day1_alt_sl_conv = False # из 1-го альт. дня
     return
     
 label alt_day2_vars: #Переменные второго дня
@@ -228,11 +237,10 @@ label alt_day2_vars: #Переменные второго дня
     $ alt_day2_dv_us_house_visited = False
     $ alt_day2_loki_minijack = False
     $ alt_day2_mi_kumuhimo = 0
-    $ alt_day2_mi_met = False
-    $ alt_day2_mi_met2 = False
     $ alt_day2_mi_rejected = False
     $ alt_day2_mi_hyst = False
     $ alt_day2_mt_help = False
+    $ alt_day2_mi_met = False
     $ alt_day2_mi_snap = False
     $ alt_day2_sl_bf = False
     $ alt_day2_un_secret_spot = 0

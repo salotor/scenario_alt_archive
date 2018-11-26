@@ -69,7 +69,7 @@ label alt_day3_event_sport_area:
 
 label alt_day3_event_beach:
     call alt_day3_event_beach1
-    if (counter_sl_cl == 2):
+    if (counter_sl_cl == 3):
         return
     else:
         $ disable_current_zone_alt1()

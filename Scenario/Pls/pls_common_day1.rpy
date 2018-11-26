@@ -38,6 +38,8 @@
     if (counter_sl_7dl == 2):
         $ alt_chapter(1, u"Экскурсия. Вечер")
         call alt_day1_meeting2
+        $ persistent.sprite_time = "night"
+        $ night_time()
     else:
         $ alt_chapter(1, u"Погоня")
         call alt_day1_chase
@@ -61,6 +63,15 @@
     call alt_day1_sleep
     pause(1)
     if d3:
-        jump alt_day2_d3
+        window hide
+        show spill_red with dspr
+        $ renpy.pause(2, hard=True)
+        show spill_gray with dspr
+        $ renpy.pause(2, hard=True)
+        show alt_credits timeskip_dev at truecenter with dissolve2
+        $ renpy.pause(4, hard=True)
+        with dissolve2
+        window hide
+        return
     else:
         jump alt_day2_start

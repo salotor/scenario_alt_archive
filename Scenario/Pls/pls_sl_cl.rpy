@@ -1,5 +1,5 @@
 ﻿label alt_day4_sl_start:
-    if (counter_sl_cl == 5) and lp_sl >= 13: # прямой выход
+    if (counter_sl_cl == 7) and lp_sl >= 13: # прямой выход
         call alt_day4_sl_cl_vars
         call alt_day4_un_fz_vars
         call alt_day4_neu_us_vars
@@ -184,6 +184,8 @@ label alt_day7_sl_start:
     call alt_day7_sl_breakfast
     pause(1)
     call alt_day7_sl_bl_tt_map
+    if alt_day7_d3_transit:
+        jump alt_day7_d3_rejuv
     pause(1)
     call alt_day7_sl_dinner
     if (lp_sl >= 18) or (alt_sp >= 6):
@@ -200,7 +202,7 @@ label alt_day7_sl_start:
         elif alt_day6_sl_good == 3:
             call alt_day7_sl_cl_bad
         else:
-            if (alt_day6_sl_arc == 1) and (lp_sl >= 20):
+            if (alt_day6_sl_arc == 1) and (lp_sl > 20):
                 if alt_day6_sl_good == 2:
                     call alt_day7_sl_rf_good
                 else:

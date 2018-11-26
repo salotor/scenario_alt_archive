@@ -115,6 +115,7 @@ label alt_day6_mi_7dl_start:
         call alt_day6_mi_7dl_miku_farewell_finale
         pause(1)
         if alt_day7_mi_7dl_trait == 3:
+            call alt_day7_mi_7dl_thank_you
             return
         call alt_day6_mi_7dl_miku_farewell_soul
     elif alt_hpt < alt_spt:
@@ -191,7 +192,7 @@ label alt_day7_mi_7dl_start:
         else:
             if alt_spt >= 8:
                 call alt_day7_mi_7dl_sparkle
-                if (alt_day_binder == 1) or alt_day1_loop:
+                if persistent.7dl_binder:
                      call alt_day7_mi_7dl_postscriptum
             elif alt_spt > 6 and alt_day5_mi_7dl_kiss:
                 call alt_day7_mi_7dl_club27

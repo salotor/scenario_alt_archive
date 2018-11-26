@@ -91,6 +91,7 @@ label alt_day6_sl_cl_vars:
     return
     
 label alt_day7_sl_cl_vars:
+    $ alt_day7_d3_transit = False
     $ alt_day7_sl_map_progress = 0
     $ alt_day7_sl_code = False
     return
@@ -152,7 +153,6 @@ label alt_day5_un_7dl_vars:
     $ alt_day5_un_7dl_cleanse = False
     $ alt_day5_un_7dl_square_duty = False
     $ alt_day5_un_7dl_club_day = False
-    $ alt_day5_un_7dl_cube = False
     $ alt_day5_un_7dl_sl_un_washing = False
     $ alt_day5_un_7dl_solo_washing = False
     $ alt_day5_un_7dl_sl_fight = False
@@ -163,7 +163,7 @@ label alt_day6_un_7dl_vars:
     return
     
 label alt_day7_un_7dl_vars:
-    $ alt_day7_un_7dl_true_end = False
+    $ alt_day7_un_7dl_rej_end = False
     return
 
 label alt_day4_un_fz_vars:
@@ -190,6 +190,8 @@ label alt_day4_mi_cl_vars:
     $ alt_day4_mi_photo_slavya = False
     $ alt_day4_mi_photo = False
     $ alt_day4_mi_rival_won = False
+    $ alt_day4_mi_dance = False
+    $ alt_day4_mi_comfort = False
     return
     
 label alt_day4_dv_7dl_vars:
@@ -241,28 +243,33 @@ label alt_day7_us_px_vars:
     return
     
 label alt_day4_sl_7dl_vars:
-    $ alt_day4_sl_7dl_workout = False #Пробежка!
-    $ alt_day4_sl_7dl_herc_appletree = False #Ульянкина яблонька
-    $ alt_day4_sl_7dl_help1 = False #Помощь с колонками
-    $ alt_day4_sl_7dl_phone = False #Поднял телефон?
-    $ alt_day4_sl_7dl_herc_rendezvous = False #Согласился на встречу?
+    $ alt_day4_sl_7dl_workout = False
+    $ alt_day4_sl_7dl_herc_appletree = False
+    $ alt_day4_sl_7dl_help1 = False
+    $ alt_day4_sl_7dl_phone = False
+    $ alt_day4_sl_7dl_herc_rendezvous = False
     return
 
 label alt_day5_sl_7dl_vars:
-    $ alt_day5_sl_7dl_defend = False #Спасение!
-    $ alt_day5_sl_7dl_workout = False #Пробежка!
-    $ alt_day5_sl_7dl_herc_sick = False #Последствия
+    $ alt_day5_sl_7dl_workout = False
+    $ alt_day5_sl_7dl_defend = False
+    $ alt_day5_sl_7dl_herc_sick = False
     $ alt_day5_random_val = 0
     $ alt_day5_sl_7dl_hentai_done = False
+    $ alt_day5_sl_7dl_olroad = False
+    $ alt_day5_sl_7dl_loki_true = False
     return
     
 label alt_day6_sl_7dl_vars:
-    $ alt_day6_sl_7dl_workout = False #Пробежка!
-    $ alt_day6_sl_7dl_transit = False
+    $ alt_day6_sl_7dl_workout = False
     $ alt_day6_sl_7dl_hentai_done = False
+    $ alt_day6_sl_7dl_forgive = False
+    $ alt_day5_sl_7dl_loki_true = False
     return
     
 label alt_day7_sl_7dl_vars:
-    $ alt_day7_sl_7dl_workout = False #Пробежка!
+    $ alt_day7_sl_7dl_workout = False
+    $ alt_day7_sl_7dl_freewill = False
+    $ alt_day7_sl_7dl_loki_park = False
     return
     

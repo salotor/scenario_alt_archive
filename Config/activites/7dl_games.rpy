@@ -361,8 +361,8 @@
         if rhyme_tone9 == 10:
             $ alt_rhyme_tone9 = "наготы"
         "Мику откашлялась, расправила плечи и с выражением прочитала:"
-        mi "%(alt_rhyme_tone)s %(alt_rhyme_tone1)s %(alt_rhyme_tone2)s — \n%(alt_rhyme_tone3)s %(alt_rhyme_tone4)s !"
-        mi "Как %(alt_rhyme_tone5)s %(alt_rhyme_tone6)s,\nКак %(alt_rhyme_tone7)s %(alt_rhyme_tone8)s %(alt_rhyme_tone9)s !"
+        mi "%(alt_rhyme_tone)s %(alt_rhyme_tone1)s %(alt_rhyme_tone2)s — \n%(alt_rhyme_tone3)s %(alt_rhyme_tone4)s!"
+        mi "Как %(alt_rhyme_tone5)s %(alt_rhyme_tone6)s,\nКак %(alt_rhyme_tone7)s %(alt_rhyme_tone8)s %(alt_rhyme_tone9)s!"
         mi "Понравилось?"
         if rhyme_tone1 == 1:
             me "Что-то пушкиновщиной отдаёт."
@@ -677,19 +677,24 @@ label alt_7dl_titles:
     show alt_credits alt_credits_text:
         xalign 0.5 
         ypos 1.0 
-        linear 67.0 ypos -2.2 
-    $ renpy.pause(67, hard=True)
+        linear 15.0 ypos -2.2 
+    $ renpy.pause(15, hard=True)
     scene black
     with dissolve2
     stop music fadeout 3
-    $ renpy.pause(4, hard=True)
+    $ renpy.pause(3, hard=True)
+    if not persistent.dont_disturb:
+        scene bg ext_city_night_7dl with fade
+        play music music_7dl["seven_summer_days"] fadein 3
+        $ renpy.transition(dissolve)
+        call screen alt_help
     return
     
 label alt_cotocombs:
     menu:
         "Открыть карту?":
             jump alt_cotocombs_map
-        "Воспользоваться автопилотом.":
+        "Воспользоваться автопилотом":
             "Я решил прислушаться к интуиции и, прикинув направление, зашагал в нужную сторону."
             return 
 label alt_cotocombs_map:
