@@ -186,7 +186,7 @@ label alt_day1_bus_start:
     show prologue_dream
     with flash
     "Её губы почти касались моего уха, и от тепла дыхания было и щекотно, и приятно."
-    if persistent.7dl_binder:
+    if persistent.alt_binder:
         dreamgirl "Ты помнишь, кто ты?"
         me "Я…"
         dreamgirl "А с чего всё начиналось, помнишь?"
@@ -201,7 +201,7 @@ label alt_day1_bus_start:
         dreamgirl "«…шанс…»"
     window hide
     scene bg ext_road_day with dissolve
-    if persistent.7dl_binder
+    if persistent.alt_binder:
         "Я открыл глаза, ещё чувствуя щекой тепло её дыхания."
         "Когда она звала меня с собой, я думал, всё будет как-то более традиционно."
         "Мы возьмёмся за руки и пойдём."
@@ -1395,8 +1395,7 @@ label alt_day1_mod_tan:
     hide cs with dissolve
     stop music fadeout 3
     show sl normal pioneer at right with dspr
-    mt "Превосходно."
-    extend " Семён, придёшь в себя, и марш на бельевой склад."
+    mt "Превосходно. Семён, придёшь в себя, и марш на бельевой склад."
     mt "Притащишь себе матрац и постельное бельё. Пионер должен самостоятельно ухаживать за своей постелью."
     "Я посмотрел на Славю."
     sl "Встретимся там!"
@@ -1440,6 +1439,7 @@ label alt_day1_elektron:
     "Первое существо мужского пола, которое я сумел встретить."
     show el normal pioneer with dissolve
     "Встрёпанный парень с россыпью мелких веснушек. Лицо классическое среднее."
+    "Семён у нас уже есть, значит, либо Василий, либо Сергей, угу." # похоже, по ошибке убрали
     if not (herc or loki) and (counter_sl_7dl != 1):
         el "Ты штаны забыл надеть!"
         "Поделился он."
@@ -2307,7 +2307,7 @@ label alt_day1_meeting2:
                 "Я хотел было что-то спросить, но обнаружил у себя на губах указательный палец."
                 sl "Слышишь?"
                 "Я прислушался."
-                if persistent.7dl_binder:
+                if persistent.alt_binder:
                     play music music_7dl["unholy_you"] fadein 3
                     "В неуклонно катящийся к ночи вечер ввинчивались тревожные нотки."
                     "Едва-едва уловимые, едва-едва знакомые."
@@ -2318,8 +2318,6 @@ label alt_day1_meeting2:
                         show expression SS_com("bg int_store_7dl")
                     elif loki:
                         show expression SS_com("cg d7_sl_gonna_be_ok_7dl")
-                    elif persistent.7dl_binder:
-                        show expression SS_com("cg d5_me_Alisa_7dl")
                     else:
                         show expression SS_com("bg ext_underwater_7dl")
                     pause(.2)
@@ -3280,7 +3278,7 @@ label alt_day1_lena:
     "Будто повторяла только что прочитанное."
     "Или грезила наяву."
     th "Волшебная девочка в волшебной стране."
-    if persistent.7dl_binder:
+    if persistent.alt_binder:
         dreamgirl "Чувак, присмотрись внимательнее. {w}Неужели ты не узнаёшь её?"
         th "В смысле? Я знаю, что её зовут Лена…"
         dreamgirl "Дурак, она же вылитая…"
@@ -3318,7 +3316,7 @@ label alt_day1_lena:
     window hide
     $ lp_un += 1
     "Я подошёл к ней поближе."
-    if (persistent.7dl_binder) and not alt_day1_alt_chase :
+    if (alt_day_binder == 1) and not alt_day1_alt_chase :
         "Услышав мои шаги, девушка подняла голову."
         window hide
         scene bg ext_square_night at zenterleft
@@ -3684,8 +3682,7 @@ label alt_day1_sleep:
             th "Бесхозные ключики? {w}Должно быть, наша активистка их обронила."
             "Мы как раз стояли именно здесь, когда Славя окрикнула воришек у столовой."
             th "Или нет?"
-            "Я задумался о том, как она открыла дверь домика, где кормили голодного Семёна, "
-            extend "и нашёл, что тот, похоже, был попросту открыт…"
+            "Я задумался о том, как она открыла дверь домика, где кормили голодного Семёна, и нашёл, что тот, похоже, был попросту открыт…"
             me "Как она их потерять умудрилась — такая же вещь важная."
             "Я подобрал артефакт и ссыпал его в карман."
             "Надо будет потом найти Славю и отдать ей."
@@ -3731,7 +3728,7 @@ label alt_day1_sleep:
     "Прервала меня она."
     mt "Сейчас это не важно."
     "Она задумчиво посмотрела на меня."
-    if persistent.7dl_binder:
+    if alt_day_binder == 1:
         mt "Славя тебя одела, это хорошо, значит, голым ходить не будешь."
         mt "Всё остальное тебе тоже выдадим, не волнуйся."
     else:
@@ -3745,7 +3742,7 @@ label alt_day1_sleep:
     mt "Спать будешь там, где сидишь, можешь начинать заправляться."
     me "Что?!"
     "Я растерялся."
-    if persistent.7dl_binder:
+    if alt_day_binder == 1:
         th "Да, помнится, Славя говорила что-то в этом духе, но я не обратил внимания."
         th "Потому что ну не может же вожатая и правда жить с пионером!"
     mt "Ты не маленький, стесняться меня нечего."
