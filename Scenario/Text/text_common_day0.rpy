@@ -455,7 +455,9 @@ label alt_day0_start_h:
     with fade
     "В холодильнике было шаром покати, а из двух последних яиц, что предназначались мне на завтрак, одно оказалось тухлым."
     "Я узнал об этом, когда вылил его к первому в сковородку."
-    "Так что вместо завтрака я убирал за кошкой, наевшейся ватных палочек."
+    "Так что вместо завтрака я убирал за Махой, снова чего-то наевшейся и, как результат…"
+    "Маха — это моя кошка."
+    "А я — дурак."
     window hide
     scene anim intro_1 
     with fade
@@ -627,7 +629,7 @@ label alt_day0_start_h:
     stop ambience fadeout 2
     play sound_loop sfx_bus_interior_moving fadein 4
     $ volume(0.5, 'music')
-    if alt_day_binder == 1:
+    if persistent.7dl_binder:
         play music music_7dl["shib_mono"] fadein 5
     else:
         play music music_list["lightness_radio_bus"] fadein 7
