@@ -7425,7 +7425,7 @@ label alt_day5_un_7dl_runaway:
     "Триста метров до того берега, со сношенными по самое не хочу ладонями, с четырьмя передышками и таинственной улыбкой Лены."
     me "Значит, ты не первый год здесь?"
     "Лена улыбнулась, спохватилась, что сидит ссутулившись, и разогнула спину."
-    if alt_day_binder == 1:
+    if persistent.7dl_binder:
         un "Я говорила уже."
     un "Да… С нами добрые люди поделились путёвкой."
     if herc or loki or not 'nwsppr' in list_clubs_7dl:
@@ -8042,7 +8042,7 @@ label alt_day6_un_7dl_begin:
         th "Как в первый день друг другу приглянулись, так и…"
         if alt_day_binder != 1:
             th "Поэтому клубы отпадают — там мы впервые увиделись."
-        elif alt_day_binder == 1:
+        elif persistent.7dl_binder:
             th "Сильно сомневаюсь, что она намекала на скамейку около дома Слави."
         th "Значит, остаётся что? Правильно: площадь, Генда и вторая скамейка слева."
         th "Туда очень удобно падает свет от фонаря, и можно читать до тех пор, пока по лагерю не объявят отбой."
@@ -9626,7 +9626,7 @@ label alt_day6_un_7dl_dance:
             me "К тому же, космос — это просто волшебная мечта, как сказка."
             me "На деле я боюсь даже высоты, что уж говорить про прыжки с парашютом или попытки забраться за пределы земной атмосферы."
         un "Это не значит, что я не буду поддерживать тебя."
-        if alt_day_binder == 1:
+        if persistent.7dl_binder:
             un "Что бы с тобой ни произошло, где бы ты ни оказался — я всегда буду на твоей стороне."
             un "Для меня это стало очевидно ещё тогда, у домика Слави."
             "Я улыбнулся:"
@@ -9644,7 +9644,7 @@ label alt_day6_un_7dl_dance:
         scene stars
         with dissolve
 
-        if alt_day_binder == 1:
+        if persistent.7dl_binder:
             "Я улыбнулся и приобнял девочку за плечи."
         else:
             "Я не стал её разубеждать, а просто притянул к себе, обнимая за плечи."
@@ -11698,7 +11698,7 @@ label alt_day7_un_7dl_rf:
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2.4, hard=True)
-    if (alt_day_binder == 1) or alt_day1_loop:
+    if persistent.7dl_binder:
         $ prolog_time()
         play music music_7dl["sh_ai_rejuv"] fadein 3
         scene expression Noir("bg ext_city_night_7dl", brightness = 0.1, tint_r = 0.2, tint_g = 0.9, tint_b = 0.7, saturation = 0.7)

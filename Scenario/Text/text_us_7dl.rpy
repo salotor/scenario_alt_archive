@@ -8834,7 +8834,7 @@ label alt_day7_us_7dl_packing:
         me "Просто я стал чуть-чуть моложе внешне."
         th "И старше ровно на одно разочарование."
     "Свитер решил не надевать, повязал рукавами на талии."
-    if alt_day_binder == 1:
+    if persistent.7dl_binder:
         "Пальто тоже оставил — не таскаться же с ним по лагерю."
     if not loki and (alt_day_binder != 1) and (counter_sl_7dl == 0):
         "Я пощупал подкладку: уже успело высохнуть за это время."
@@ -8899,7 +8899,7 @@ label alt_day7_us_7dl_packing:
     sl "Насколько пораньше?"
     mt "На полдень. Фактически, автобусы уже прибыли, так что у вас двадцать минут на сборы, потом жду вас на пятачке."
     mt "Ты уже переоделся, хорошо, не придётся тебя ждать."
-    if alt_day_binder == 1:
+    if persistent.7dl_binder:
         mt "Пальто только своё не забудь."
     hide mt with moveoutleft
     "Вожатая кивнула нам и просочилась мимо Слави в дверь."
@@ -9198,7 +9198,7 @@ label alt_day7_us_7dl_leaving:
         "А там собрался уже весь отряд. Вообще весь."
         "Даже Славя, которая убежала не так давно, красовалась платьем и внушительным чемоданом."
         "Только я один красавец: в зимних ботинках, толстых джинсах"
-        if alt_day_binder == 1:
+        if persistent.7dl_binder:
             extend " и пальто, перекинутом через руку."
         else:
             extend "…"
@@ -10861,7 +10861,7 @@ label alt_day7_us_7dl_reunite:
     call alt_7dl_titles
     stop music fadeout 3
     $ renpy.pause(2)
-    if ((alt_day_binder == 1) or alt_day1_loop) and loki:
+    if persistent.7dl_binder and loki:
         play music music_7dl["beasteye"] fadein 3
         window hide
         play ambience ambience_cold_wind_loop fadein 3

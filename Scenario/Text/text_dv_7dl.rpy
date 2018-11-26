@@ -736,7 +736,7 @@ label alt_day4_dv_7dl_forest:
         else:
             "Мисс Двачевской по нраву пришлось, что я согласился играть по её правилам — включая и какую-никакую — а ставку."
     "Я стал на два дня и одну историю старше. Сейчас я уже с улыбкой вспоминаю все перипетии нашего знакомства"
-    if alt_day_binder == 1:
+    if persistent.7dl_binder:
         extend " — от принудительного купания, обернувшегося известно чем"
     elif herc and (counter_sl_7dl == 0):
         extend " — с момента, когда я носил её на руках… Ну, как на руках — на плече, если быть более точным"
@@ -13265,7 +13265,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2)
-    if (alt_day_binder == 1) or alt_day1_loop:
+    if persistent.7dl_binder:
         $ prolog_time()
         play music music_7dl["herc_death"] fadein 3
         scene expression Noir("bg int_sam_house_clean_7dl", brightness = 0.1, tint_r = 0.2, tint_g = 0.9, tint_b = 0.7, saturation = 0.7)

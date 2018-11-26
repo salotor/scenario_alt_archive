@@ -1,9 +1,9 @@
 ﻿#Мод пилится на базе нетленки от АБЦБ - его сюжет и подача мне куда симпатичнее оригинальной стори.
 #За что ему огромный респектище и, по возможности, оставлены отсылки на оригинальные правки.
 init -1:
-    $ alt_release_no = "0.37.a"
-    $ alt_compatible_release_no = ["0.34.a", "0.34.b", "0.35.a", "0.36.a", "0.37.a"]
-    $ alt_hotfix_no = "hf1"
+    $ alt_release_no = "0.38.a"
+    $ alt_compatible_release_no = ["0.34.a", "0.34.b", "0.35.a", "0.36.a", "0.37.a", "0.38.a"]
+    $ alt_hotfix_no = "hf0"
     $ plthr = u"none"
 
 init 2:
@@ -191,13 +191,10 @@ label alt_day0_vars: #Переменные нулевого дня
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
     if persistent.dv_7dl_true and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_7dl_true: 
-        $ alt_day_binder = 1
-    else:
-        $ alt_day_binder = 0
-    $ alt_day1_loop = False
+        $ persistent.7dl_binder = True
     return
-    
-label alt_day1_vars: #Переменные первого дня
+
+    label alt_day1_vars: #Переменные первого дня
     $ counter_sl_cl = 0 #Счётчик рута (Славя-классик in progress)
     $ counter_sl_7dl = 0 #Счётчик рута (Славя-7дл)
     #TODO - same shit для прочих девочек
