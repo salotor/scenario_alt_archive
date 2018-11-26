@@ -186,7 +186,7 @@ label alt_day1_bus_start:
     show prologue_dream
     with flash
     "Её губы почти касались моего уха, и от тепла дыхания было и щекотно, и приятно."
-    if persistent.7dl_binder:
+    if persistent.alt_binder:
         dreamgirl "Ты помнишь, кто ты?"
         me "Я…"
         dreamgirl "А с чего всё начиналось, помнишь?"
@@ -201,7 +201,7 @@ label alt_day1_bus_start:
         dreamgirl "«…шанс…»"
     window hide
     scene bg ext_road_day with dissolve
-    if persistent.7dl_binder
+    if persistent.alt_binder:
         "Я открыл глаза, ещё чувствуя щекой тепло её дыхания."
         "Когда она звала меня с собой, я думал, всё будет как-то более традиционно."
         "Мы возьмёмся за руки и пойдём."
@@ -2307,7 +2307,7 @@ label alt_day1_meeting2:
                 "Я хотел было что-то спросить, но обнаружил у себя на губах указательный палец."
                 sl "Слышишь?"
                 "Я прислушался."
-                if persistent.7dl_binder:
+                if persistent.alt_binder:
                     play music music_7dl["unholy_you"] fadein 3
                     "В неуклонно катящийся к ночи вечер ввинчивались тревожные нотки."
                     "Едва-едва уловимые, едва-едва знакомые."
@@ -3278,7 +3278,7 @@ label alt_day1_lena:
     "Будто повторяла только что прочитанное."
     "Или грезила наяву."
     th "Волшебная девочка в волшебной стране."
-    if persistent.7dl_binder:
+    if persistent.alt_binder:
         dreamgirl "Чувак, присмотрись внимательнее. {w}Неужели ты не узнаёшь её?"
         th "В смысле? Я знаю, что её зовут Лена…"
         dreamgirl "Дурак, она же вылитая…"

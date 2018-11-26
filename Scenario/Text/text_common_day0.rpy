@@ -629,7 +629,7 @@ label alt_day0_start_h:
     stop ambience fadeout 2
     play sound_loop sfx_bus_interior_moving fadein 4
     $ volume(0.5, 'music')
-    if persistent.7dl_binder:
+    if persistent.alt_binder:
         play music music_7dl["shib_mono"] fadein 5
     else:
         play music music_list["lightness_radio_bus"] fadein 7

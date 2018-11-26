@@ -13265,7 +13265,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2)
-    if persistent.7dl_binder:
+    if persistent.alt_binder:
         $ prolog_time()
         play music music_7dl["herc_death"] fadein 3
         scene expression Noir("bg int_sam_house_clean_7dl", brightness = 0.1, tint_r = 0.2, tint_g = 0.9, tint_b = 0.7, saturation = 0.7)
