@@ -10861,7 +10861,7 @@ label alt_day7_us_7dl_reunite:
     call alt_7dl_titles
     stop music fadeout 3
     $ renpy.pause(2)
-    if persistent.7dl_binder and loki:
+    if persistent.alt_binder and loki:
         play music music_7dl["beasteye"] fadein 3
         window hide
         play ambience ambience_cold_wind_loop fadein 3
