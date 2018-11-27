@@ -11826,7 +11826,7 @@ label alt_day6_neu_loki_day:
     th "Не, сейчас дождусь, когда она уйдёт…"
     window hide
     scene black
-    show expression Noir("bg ext_showers"):
+    show expression Noir("bg ext_shower_day_7dl"):
         xalign .5 yalign .5 zoom 1.0 rotate -15
         ease 1 rotate 15
     "Колени снова ослабли, земля сделала лишний оборот круг своей оси."
@@ -12315,7 +12315,7 @@ label alt_day6_neu_loki_concert:
     with swradar
     play music music_7dl["shappihn"] fadein 3
     window hide
-    scene bg ext_stage_normal_day_7dl
+    scene bg ext_stage_normal_day
     with dissolve
     play ambience ambience_camp_entrance_day fadein 3
     "Про происходящее далее мне вспоминать не хотелось бы."
@@ -12369,7 +12369,7 @@ label alt_day6_neu_loki_concert:
     "Блондинка во плоти."
     "Странно даже, ведь японская нация поголовно брюнеты."
     "Очень странно."
-    hide mt with dissolve
+    hide mi with dissolve
     "Я понятливо хмыкнул и объявил следующий номер."
     "А вслед за ним и очередное выступление Мику."
     "Над моим плечом кто-то отчётливо скрипнул зубами."
