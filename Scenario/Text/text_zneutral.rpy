@@ -668,11 +668,12 @@ label alt_day4_neu_aid_generic:
             $ alt_day4_neu_transit = 5
             "Пришлось расслабиться и позволить себя тащить по лагерю."
         "Нет, я хочу побыть один":
+            hide us with dissolve
             "Прогнав Ульянку, я остался в одиночестве, и…"
             "Решил поискать вожатую."
             $ alt_day4_neu_transit = 6
 
-    return 
+    return
     
 label alt_day4_neu_us:
     $ persistent.sprite_time = "day"
@@ -2171,25 +2172,23 @@ label alt_day4_neu_lunch:
         "Её улыбка была очень, очень, очень ласковой."
         me "Эээ… Нет."
         "Сглотнул я."
-        cs "Тогда подожди меня в медпункте, посмотрим, как там у тебя там дела."
-        hide cs
+        cs "Тогда подожди меня в медпункте, посмотрим, как там у тебя там дела."    # дважды "там"
+        hide cs with dissolve
         "Одарив меня на прощанье подмигиванием, медсестра телепортировалась прочь."
         window hide
-        scene bg ext_aidpost_day
+        stop ambience fadeout 2
+        scene bg ext_aidpost_day with dissolve
         play music music_7dl["explore"] fadein 5
-        with dissolve
-    
         "Делать нечего, пришлось делать что она говорит."
         "К тому же, комиссия будет очень недовольна, если прознает, что медицинская станция закрыта без веской на то причины."
         th "Оу, это сейчас что было? {w}Местный Кашпировский открыл во мне очередную чакру, отвечающую за ответственность?"
         "Видимо, водичка в графине непростая была."
-        "Усмехнувшись, я отпер дверь и, накинув на плечи белый халат, сделал умное лицо."
         play sound sfx_open_door_clubs
         window hide
         $ persistent.sprite_time = "day"
         scene bg int_aidpost_day
         with dissolve
-    
+        "Усмехнувшись, я отпер дверь и, накинув на плечи белый халат, сделал умное лицо."
         "Первые пять минут я пыжился, надувал щёки и строил из себя важную птицу."
         "Надоело."
         "На столе обнаружил журнал моды восьмидесятых, от нечего делать попробовал полистать и его."
@@ -2200,6 +2199,8 @@ label alt_day4_neu_lunch:
         th "Похоже, что даже в местной деятельной реальности я умудряюсь оставаться крикуном-болельщиком с обочины."
         "Уныло резюмировал я и от нечего делать вышел на крылечко."
         window hide
+        play sound sfx_open_door_1
+        $ renpy.pause(1)
         $ persistent.sprite_time = "sunset"
         scene bg ext_aidpost_sunset_7dl
         with dissolve
@@ -2215,6 +2216,7 @@ label alt_day4_neu_lunch:
         dreamgirl "Иногда мне кажется, что Ольга и Виола учились в одном педагогическом."
         dreamgirl "Во всяком случае, по части озадачивания пионеров они одинаково виртуозны!"
         window hide
+        play sound sfx_open_door_clubs
         $ persistent.sprite_time = "sunset"
         scene bg int_aidpost_day_apple
         with dissolve
@@ -2224,6 +2226,7 @@ label alt_day4_neu_lunch:
         th "Так говоришь, будто у тебя в этом личная заинтересованность!"
         "Ответом мне был тихий смех."
         dreamgirl "На самом деле, кое-какая заинтересованность есть."
+        stop music fadeout 3
         dreamgirl "Кстати, хочешь яблоко?"
         th "Что?"
         play music music_list["mystery_girl_v2"] fadein 3
@@ -2248,7 +2251,7 @@ label alt_day4_neu_lunch:
             th "И прежде, чем ты начнёшь кидаться непонятными словами вроде «лоликона», спешу напомнить, что она единственная, кто хотя бы поздоровался со мной с утра!"
         dreamgirl "Или вдруг оно заколдованное, и ты теперь будешь триста лет спать, пока тебя не поцелует усатый принц."
         th "Так оно отравленное было или нет?"
-        dreamgirl "… Нет."
+        dreamgirl "… {w=0.5}Нет."
         dreamgirl "Это должно было стать шуткой вроде выбора из «Матрицы» — на одной ладони яблоко и Вундерланд."
         th "А на другой…"
         dreamgirl "Ну ты на столе посмотри."
@@ -2289,14 +2292,17 @@ label alt_day4_neu_lunch:
         "Окликнула она, когда я добрался уже до самой двери."
         me "Да, Виола?"
         cs "Ты не видел, я тут яблоко где-то забыла?"
+        with flash_red
         "Я покраснел."
         me "Н-нет! {w}Наверное, вы его дома оставили!"
         window hide
         play sound sfx_open_door_kick
         $ renpy.pause(1)
-        scene bg ext_aidpost_day
+        scene bg ext_aidpost_day    ## см ниже
         with dissolve
         "И сопровождаемый хохотом внутреннего голоса, вылетел на улицу."
+        play ambience ambience_camp_center_day fadein 2
+        play music music_list["get_to_know_me_better"] fadein 5
     else:
         window hide
         $ persistent.sprite_time = "day"
@@ -2306,15 +2312,15 @@ label alt_day4_neu_lunch:
         play music music_list["get_to_know_me_better"] fadein 5
         "Во мгновение ока расправившись с коврижкой, я вышел на крылечко и на пару секунд завис, размышляя о том, куда бы податься."
     us "Эй, псст!"
-    show us smile sport at voy_right with dspr
+    show us smile sport at voy_right with dspr    ## вот этот спрайт Ульки по ветке alt_day3_technoquest_st3 == 2 отображается ещё у медпункта...
     "В спину больно стукнуло шишкой."
     hide us with easeoutright
     us "Новичок!"
     us "Глухой, что ли?"
-    scene bg ext_dining_hall_near_day:
+    scene bg ext_dining_hall_near_day:    ## по ветке alt_day3_technoquest_st3 == 2 Сёма только что был у медпункта и там видел Ульку, а тут его РЕЗКО телепортирует к столовой. Возможно стоит добавить пару строк о том, как он подошёл к столовой и уже там появляется Улька?
         xalign 0.5 yalign 0.5 zoom 1.0
         linear 0.5 zoom 1.25 xalign 0.75 yalign 0.5
-    show us smile sport at right
+    show us smile sport at right    ## ...а вот этот уже у столовой
     with dspr
     me "Ты меня теперь постоянно называть новичком собираешься?"
     "Шуточка затянулась, если честно."
@@ -2327,9 +2333,10 @@ label alt_day4_neu_lunch:
     "Рявкнул я."
     show us surp2 sport with dspr
     us "Ни{w=.2}че{w=.15}го себе!"
-    us "А какое?" 
+    us "А какое?"
     "Она спросила это с таким невинным видом, что я только рукой махнул."
     me "Чего ты хотела?"
+    show us smile sport with dspr
     us "Давай в волейбол?"
     "На долю секунды я представил себе картину — Ульяна, застреленная одним особо сильным резаком, и помотал головой."
     me "Не думаю, что это хорошая идея."
@@ -2343,8 +2350,8 @@ label alt_day4_neu_lunch:
     dreamgirl "А то всю дорогу ощущение, будто попали в какой-то кукольный домик, где идеальные люди не болеют и не ходят в туалет."
     me "Так и сходи с ней посиди, вместо того, чтобы дурочку валять."
     "Резонно предложил я."
-    "Ульянка нахмурилась."
     show us dontlike sport with dspr
+    "Ульянка нахмурилась."
     us "Я что, похожа на самоубийцу?"
     me "Именно."
     show us grin sport with dspr
@@ -2364,10 +2371,14 @@ label alt_day4_neu_lunch:
     me "Семёну!"
     us "…насос, пожалуйста!"
     "Продолжила Ульяна так, будто я её не перебивал."
+    show mt angry pioneer with dspr
     "Вожатая ненадолго нахмурилась."
     mt "Вообще я хотела, чтобы вы помогли мне проконтролировать детский концерт."
     menu:
         "Концерт? Мы в деле!":
+            show mt normal pioneer
+            show us dontlike sport
+            with dspr
             us "Эй! Я не соглашалась."
             me "Ты вызвалась добровольцем… Старичок."
             show us calml sport with dspr
@@ -2678,6 +2689,7 @@ label alt_day4_neu_lunch:
             "Повторил я, когда молчание затянулось."
             mt "Семён, ты не слышал? {w}У меня концерт."
             me "Не у вас, а у пионеров, которые даже не в вашем отряде!"
+            show mt normal pioneer with dspr
             "Ольга всё ещё пребывала в сомнениях."
             me "К тому же, неужели там не будет остальной администрации?"
             show mt sad pioneer with dspr
@@ -2687,6 +2699,7 @@ label alt_day4_neu_lunch:
             me "Простите?"
             "Мне кажется, я ослышался."
             "Кто-то только что назвал физрука…"
+            show mt normal pioneer with dspr
             mt "Ладно."
             "Кивнула она."
             "Кажется, мне удалось её уболтать."
@@ -2726,9 +2739,12 @@ label alt_day4_neu_lunch:
             mt "Развлекаетесь?"
             "Пум!" with vpunch
             "Последняя шишка прилетела мне в лоб!"
+            show mt normal sport at fright with moveinright
+            show us grin sport with dissolve
             us "И победила — я!"
             play ambience ambience_7dl["volley"] fadeout 2
             play music music_list["went_fishing_caught_a_girl"] fadein 2
+            show mt smile sport with dspr
             mt "Давай играть, победитель!"
             "Ольга резко хлопнула по мячу."
             "Да, накачала она его на совесть."
@@ -2777,7 +2793,7 @@ label alt_day4_neu_lunch:
             scene bg ext_volley_court_7dl with dspr
             show blackout_exh
             play music music_7dl["anglegrinder"] fadein 3
-            scene cg d4_volley_rage_7dl with flash
+            scene cg d4_volley_rage_7dl with flash    # Ольге надо новую форму нафотошопить
             with vpunch
             $ renpy.pause (1)
             show dv_us_volley with vpunch
@@ -2894,7 +2910,7 @@ label alt_day4_neu_supper:
     scene bg int_dining_hall_people_day
     with dissolve
     play ambience ambience_dining_hall_full
-    play music music_7dl["tellyourworld"] fadein 3
+    play music music_7dl["tellyourworld"] fadein 3    # под "подавленное настроение царило в столовой" это явно не самая подходящая музыка
     "Мы молодые, и мы будем жить на всю катушку."
     "За решётками в психушке."
     "Странно так — день получился юным, солнечным."
@@ -2938,11 +2954,12 @@ label alt_day4_neu_supper:
     dreamgirl "У этой сказки плохой конец. {w}Добравшись до конца полюбившейся серии, покупает самую свежую книжку, завершающую серию."
     dreamgirl "И понимает, что автор исписался, истрепался и больше не вхож в страну сказки."
     hide un with dissolve
-    show us normal sport with dspr
+    show us sad sport with dissolve
     if alt_day4_neu_mt_volley:
         "Ульянка хмурилась из-за матча и собиралась злобно мстить."
     else:
         "Ульянка тоже была чем-то огорчена."
+        show us surp1 sport with dspr
         "Хотя, перехватив мой взгляд, не удержалась — прижала большие пальцы растопыренных ладоней к ушам и покачала головой."
     hide us with dissolve
     "Говоря короче — подавленное настроение царило в столовой."
@@ -3243,7 +3260,7 @@ label alt_day4_neu_supper:
         window hide
     play music music_7dl["nap_one"] fadein 3
     window hide
-    scene bg ext_square_sunset
+    scene bg ext_square_sunset with dissolve
     play ambience ambience_camp_center_evening
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -3286,8 +3303,8 @@ label alt_day4_neu_map_me_mt_house:
     "Мало удивительного в том, что Ольга всеми правдами и неправдами старалась отбрыкаться от своих обязанностей."
     "Но сейчас её не было."
     "Наверное, сбежала куда-нибудь на дикий пляж за территорией, палит костерок, смотрит на закат…"
-    show backpack_tiny:
-        pos(760,675)
+    show backpack_tiny
+    with dissolve
     "На спинке стула дожидался своего часа удивительно знакомый тёмно-синий рюкзак с принтом в виде отпечатка ноги."
     "Мой «гризли» родом из моей реальности… И почему я не удивляюсь?"
     "А что касается остальной части комнаты…"
@@ -3428,7 +3445,7 @@ label alt_day4_neu_map_me_mt_house:
                 th "Да нет, лажа какая-то, не могу это представить."
                 "Я помотал головой, отгоняя кошмарное зрелище."
                 me "Теперь-то всё?"
-                us "Всё. Вали. Мне нужно забраться в своё секретное убежище, а я не могу сделать это, когда рядом ходят  посторонние."
+                us "Всё. Вали. Мне нужно забраться в своё секретное убежище, а я не могу сделать это, когда рядом ходят посторонние."
                 "Проглотив «постороннего», я развернулся и ушёл оттуда."
                 "Но обидку затаил!"
                 hide us with dspr
@@ -3437,7 +3454,7 @@ label alt_day4_neu_map_me_mt_house:
             window hide
             with fade2
     return
-            
+
 label alt_day4_neu_us_guards:
     $ persistent.sprite_time = "night"
     play ambience ambience_forest_night fadein 3
@@ -4144,6 +4161,7 @@ label alt_day4_neu_map_dining_hall:
     "Я покачался с пятки на носок, прикидывая возможное развитие сегодняшнего вечера."
     $ mt_pt += 1
     th "Хотя что тут прикидывать? Под лежачий камень вода не течёт."
+    show blink
     "Я растянулся на скамейке и прикрыл глаза."
     "У меня сиеста — и пусть весь мир подождёт!"
     window hide
@@ -4167,10 +4185,12 @@ label alt_day4_neu_map_dining_hall:
     "Наконец, продавщица освободилась и подошла ко мне."
     show mt normal dress with dissolve
     mt "Здравствуйте."
+    show mt smile dress with dspr
     "Профессионально улыбнулась она."
     mt "Чем я могу вам помочь?"
     me "Да я, понимаете… {w}Скажите, а что со всеми этими дисками?"
     "Невольно понизив голос, спросил я."
+    show mt normal dress with dspr
     mt "А, это… Это пользовательские сценарии."
     me "Простите, что?"
     show mt smile dress with dspr
@@ -4205,10 +4225,10 @@ label alt_day4_neu_map_dining_hall:
     mt "Верно. {w}Некоторых ещё при жизни могут канонизировать и причислить к лику DLC."
     me "Но в любом случае, вряд ли там может быть что-то действительно заслуживающее внимания."
     me "Сюжет, да ещё и неплохой… В модификациях."
+    show mt smile dress with dspr
     "Девушка с улыбкой слушала моё горячечное выступление."
     me "Может быть, я однажды сойду с ума окончательно и решусь прочесть что-нибудь такое."
     me "Но пока что я не какой-нибудь долбанутый на всю голову отаку, чтобы пропадать в этом всём."
-    show mt smile dress with dspr
     mt "Между прочим, наш магазин разыгрывает приз — на одном из дисков есть указание адреса, где можно будет его забрать."
     "Улыбается продавщица."
     me "И что за приз?"
@@ -4234,7 +4254,7 @@ label alt_day4_neu_map_dining_hall:
     scene bg ext_seashore_7dl with dissolve
     $ persistent.sprite_time = "night"
     show mt shade with dspr
-    play music music_7dl["shestheone"] fadein 3
+    play music music_7dl["shestheone"] fadein 3    # не очень подходящая музыка для отрывка. Может нужно что-то чуть-чуть более драматичное до момента, когда Сёма просыпается?
     mt "Значит, я твоя вожатая, ты мой подопечный."
     mt "Всё верно?"
     "Она опять говорит это чуть слышно, больше для себя."
@@ -4286,7 +4306,7 @@ label alt_day4_neu_map_dining_hall:
     "Инфаркт миокарда, рубец девять миллиметров."
     "Любопытно, почему вояки стреляются в сердце?"
     "Она погладила меня по щеке."
-    show mt normal pioneer with dspr
+    show mt normal pioneer with dissolve
     mt "Не кисни, Сёмчик."
     $ meet('mt','Ольга Дмитриевна')
     show blinking
@@ -4304,18 +4324,20 @@ label alt_day4_neu_map_dining_hall:
     "Улыбнулась Ольга, сидящая рядом со мной на скамейке."
     "И я понял вдруг, что проснулся."
     "Что…"
+    with flash2_red
     "Я покраснел."
     "Вот попал так попал!"
     me "Да я не… Да вы…"
     show mt smile pioneer with dspr
     mt "Вот как? Мы больше не на «ты»?"
     "Легонько улыбнулась вожатая."
+    show mt normal pioneer with dspr
     mt "Да я поняла, что это был сон."
     voice "Глупо было бы надеяться, что ты всё вспомнил."
     me "Простите?!"
     mt "Я ничего не говорила."
     me "А кто… {w}А… Ладно. Как вы меня нашли?"
-    show mt normal pioneer with dspr
+    show mt smile pioneer with dspr
     mt "Я знаю тебя лучше, чем тебе кажется."
     "Улыбнулась вожатая."
     mt "У меня для тебя поручение появилось небольшое."
@@ -4323,11 +4345,13 @@ label alt_day4_neu_map_dining_hall:
     "Ню-ню. {w}Чем сильнее склонна преуменьшать нагрузку вожатая, тем б{b}о{/b}льшие проблемы ожидают на том берегу."
     me "Ну, Оооольга Дмитриевна!"
     "Заканючил я."
-    show mt smile pioneer with dspr
+    show mt grin pioneer with dspr
     mt "Что случилось?"
     me "Вы же отдыхать шли!"
-    mt "С вами отдохнёшь, пожалуй… "
+    show mt sad pioneer with dspr
+    mt "С вами отдохнёшь, пожалуй…"
     "Она вздохнула."
+    show mt smile pioneer with dspr
     "Но тут же улыбнулась:"
     mt "А вот это дело сделаю, и сразу отдыхать пойду!"
     "Ага, в деле досуга вожатой надорвались пятьсот пионеров."
@@ -4341,12 +4365,14 @@ label alt_day4_neu_map_dining_hall:
     "Рассмеялась Ольга и поднялась."
     show mt laugh pioneer far with zoomout
     me "Ольга Дмитриевна!"
+    show mt smile pioneer far with dspr
     mt "Что?"
     "Бросила вожатая — она, похоже, уже вся пребывала в радужных мечтах об отдыхе."
     me "Где мне их искать?"
     mt "А. На эстраде, они должны там после концерта убираться."
+    hide mt with dissolve
     "Помахала мне рукой и убежала."
-    window hide        
+    window hide
     scene bg ext_stage_big_sunset_7dl with dissolve
     play music music_list["your_bright_side"] fadein 5
     $ persistent.sprite_time = "sunset"
@@ -4393,6 +4419,7 @@ label alt_day4_neu_map_dining_hall:
             $ mt_pt += 1
             play music music_7dl["yume_akari"] fadein 3
             "Фигу ей, а не помощь. Приказ вожатой есть приказ вожатой!"
+            show dv angry pioneer2 with dspr
             "Процедив нечто непечатное, Алиса грохнула дверью подсобки и, захлопнув навесной замок, осведомилась:"
             dv "Ну мы идём или как?"
             window hide
@@ -4406,7 +4433,7 @@ label alt_day4_neu_map_dining_hall:
             me "Может, здесь посидим?"
             "Предложил я, особо не надеясь на согласие девочек."
             "Но не хотелось лезть в помещение в такой вечер."
-            show mi upset pioneer at left with dspr
+            show mi upset pioneer at left with dissolve
             if alt_day4_neu_date == 4:
                 "Мику покосилась на меня вопросительно — видимо, утренние события ещё были свежи в её памяти."
                 "Но ничего не сказала."
@@ -4414,7 +4441,7 @@ label alt_day4_neu_map_dining_hall:
             mi "А как же мы тогда…"
             me "Давай пока просто лампочку включим, чтобы вы мимо струн не промахивались, а там посмотрим."
             me "Может, уже того, что мы вспомним, хватит на то, что полностью сформировать программу выступлений."
-            show dv normal pioneer2 at right with dspr
+            show dv normal pioneer2 at right with dissolve
             dv "Не люблю этого олуха, но соглашусь."
             dv "Там жарко и душно, давай лучше тут посидим."
             mi "Если вы так говорите."
@@ -4501,13 +4528,15 @@ label alt_day4_neu_map_dining_hall:
             me "Вот и всё. Артисты так устали, что жрать охота и переночевать негде. Концерт откладывается до завтрашнего костра."
             window hide
             scene bg ext_musclub_night_7dl
-            show mi smile pioneer at cleft with dspr
-            show dv normal pioneer2 at right with dspr
+            show mi smile pioneer at cleft
+            show dv normal pioneer2 at right
+            with dissolve
             window hide
             "Девушки наметили шутливый поклон."
-            show mt normal pioneer at fleft behind mi with dspr
+            show mt normal pioneer at fleft behind mi with dissolve
             mt "Если завтра выступите так же, представлю к награде."
             me "Спасибочки. Флаг поднимать, да?"
+            show mt smile pioneer with dspr
             mt "А как ты догадался?"
             me "Да уж догадался. {w}Девушки, сколько песен?"
             "Мику подняла кулак с прижатым сбоку пальцем:"
@@ -4752,6 +4781,7 @@ label alt_day4_neu_sleeptime:
         dreamgirl "Как вы там, селянe?"
         th "Ну тебя! Я уже сам запутался."
         "В любом случае, завтра будет новый день."
+        play sound sfx_open_dooor_campus_2
     else:
         "Уничтожив следы своей деятельности в домике, я вернулся на свою половину."
         "Главное, чтобы Ольга ничего не заметила."
@@ -4771,7 +4801,7 @@ label alt_day4_neu_sleeptime:
     "Но вместо этого я выбрал куда более привлекательную возможность."
     "Я выбрал роман — с целым лагерем!"
     "И мне это уже начало аукаться."
-    if d3_pt > 1:
+    if d3_pt > 1:    # не выполнимо - за 4 день только 1 поинт в самом начале даётся в любом случае. Больше нигде не получить за весь день
         "Я за сегодня узнал столько, сколько не успел за прошлые три дня."
     elif us_pt >= 3:
         th "Я подружился с Ульянкой…"
