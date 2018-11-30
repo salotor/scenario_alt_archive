@@ -16,6 +16,13 @@ label sdl_achv_reset_vars:
 
 init python:
     # Сброс перзистентов
+    def sdl_achv_clear_persistents_ask(achv_list):
+        layout.yesno_screen(
+            "Сбросить полученные концовки текущего рута?",
+            yes = [Function(sdl_achv_clear_persistents, achv_list), Play("sound", sdl_achv_clear)],
+            no  = NullAction()
+            )
+    
     def sdl_achv_clear_persistents(achv_list):
         for achv in achv_list:
             setattr(persistent, achv.get_persistent(), False)
@@ -197,10 +204,9 @@ screen sdl_achv_route(parent_screen, achv_list):
     # Удалятор
     imagebutton pos (380, 680):
         hover_sound sdl_achv_click
-        activate_sound sdl_achv_clear
         idle ("sdl_achv_del_inactive")
         hover ("sdl_achv_del_active")
-        action [Function(sdl_achv_clear_persistents, achv_list)]
+        action [Function(sdl_achv_clear_persistents_ask, achv_list)]
     
     # Ачивки
     $ sdl_achv_count = 0
