@@ -11407,7 +11407,7 @@ label alt_day6_neu_morning:
     play sound sfx_open_dooor_campus_2
     pause(1)
     scene bg int_aidpost_day
-    show cs normal pioneer
+    show cs normal with dissolve
     with fade
     play music music_7dl["viola"] fadein 3
     cs "Ох ты, какие у нас гости."
@@ -11416,7 +11416,7 @@ label alt_day6_neu_morning:
     "Её грудь заходила вверх-вниз, видимо, в качестве демонстрации волнения."
     "Только в текущем моём состоянии… {w}Впрочем, некая часть организма была готова к разного рода экспериментам даже будучи на смертном одре."
     "Семнадцать лет, простихоспади."
-    show cs shy with dissolve
+    show cs shy with dspr
     "Внезапно, одна из пуговичек, с трудом удерживающая тугую грудь, совершенно самопроизвольно (да-да! Это просто случайность!) расстегнулась, обнажая ещё больше."
     if loki:
         "Я поморщился:"
@@ -11433,7 +11433,7 @@ label alt_day6_neu_morning:
         me "Простите…"
         "Просипел я."
         me "У вас не будет водички изжогу запить?"
-    show cs normal with dissolve
+    show cs normal with dspr
     "И сестра мгновенно успокоилась."
     cs "Ненормальная реакция."
     show cs normal close with dissolve
@@ -11442,9 +11442,9 @@ label alt_day6_neu_morning:
     me "Было."
     cs "Всё понятно. {w}Отравление парами ртути."
     me "Что?!"
-    show cs grin
+    show cs grin with dissolve
     pause(.1)
-    show cs normal
+    show cs normal with dspr
     cs "Шучу, шучу. Это самое обычное нервное перенапряжение. {w}Полежи, почитай, отдохни."
     if alt_day3_technoquest_st3 == 2:
         cs "Говорила же я тебе — не рвись ты так из медпункта."
@@ -11456,7 +11456,7 @@ label alt_day6_neu_morning:
     show cs normal with dissolve
     cs "Раздели пополам. Первую часть сейчас, вторую после еды. {w}Натощак есть не вздумай."
     me "Вот как? По причине?"
-    show cs smile with dissolve
+    show cs smile with dspr
     cs "Там достаточно забавные побочные эффекты."
     "Загадочно улыбнулась Виола."
     cs "Постарайся сегодня воздержаться от физических нагрузок и перегрева на солнце, дай организму отдохнуть."
@@ -12368,7 +12368,7 @@ label alt_day6_neu_loki_concert:
     mi "Ой, знаешь, Лены нигде нет, а я так за неё волнуюсь, а вожатая сказала не искать, так как Лена отпросилась!"
     me "И выступления помогают тебе «заесть стресс»?"
     "Понятливо кивнул я."
-    show mi surprise voca platinum with dspr
+    show mi surprise voca platinum with dspr    # platinum-Мику для 1 позы нет
     mi "Эй, я же не ем."
     "Блондинка во плоти."
     "Странно даже, ведь японская нация поголовно брюнеты."
@@ -13197,7 +13197,7 @@ label alt_day6_neu_disco:
     #show ka smile pioneer at left
     show dn normal pioneer at right
     show al normal pioneer at fright
-    show tn normal pioneer a cright
+    show tn normal pioneer at cright
     with dissolve
     ka "Всё приготовили?"
     "Деловито осведомилась девушка."
@@ -13672,7 +13672,7 @@ label alt_day6_neu_evening:
     "Я воочию представил, как багром с земли подцепляют лестницу, как тащат её на землю, а потом над краем крыши появляется голова начальника лагеря."
     "Как нас ведут по лагерю, песочат, как собирают экстренно линейку и ставят перед всем лагерем."
     window hide
-    show SS_com_r("cg d4_cs_car_day_cs_coat_7dl")
+    scene expression SS_com_r("cg d4_cs_car_day_cs_coat_7dl")
     show prologue_dream
     with fade
     "И, дав собрать вещи, упаковывают в «Волгу»."
