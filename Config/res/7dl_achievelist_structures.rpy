@@ -113,7 +113,7 @@ init 9999 python:
             "mi_7dl_ps",
             "sdl_achv_mi_pst",
             {
-                sdl_achv_Prerequisite(None, "sdl_achv_info_alt", None)    # TODO: заменить условия на сбор сердечка?
+                sdl_achv_Prerequisite(None, "sdl_achv_info_pst", None)
             },
             sdl_achv_Replay("alt_day7_mi_7dl_postscriptum", {"alt_replay_on" : "True"})
         )

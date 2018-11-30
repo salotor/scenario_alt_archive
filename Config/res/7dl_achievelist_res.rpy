@@ -190,7 +190,7 @@ init:
     image sdl_achv_need_route  = Text("Рут не дописан", style="sdl_achvlistB_de_st")
     image sdl_achv_jump        = Text(" Перейти\nна концовку", style="sdl_achvlistB_de_st")
     image sdl_achv_info_end    = Text("Требует прохождения\n      концовки", style="sdl_achvlistB_de_st")
-    image sdl_achv_info_alt    = Text("Требует начала с\nальтернативного\n  первого дня", style="sdl_achvlistB_de_st")
+    image sdl_achv_info_pst    = Text("Требует сбора\nпаззла-сердечка", style="sdl_achvlistB_de_st")
     # Типология рутов
     image sdl_achv_7dl_route = Text("7ДЛ-рут", style="sdl_achvlistB_de_kurz")
     image sdl_achv_clt_route = Text("Классик-рут", style="sdl_achvlistB_de_kurz")
