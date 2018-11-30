@@ -86,24 +86,23 @@ init python:
     
     # Требование к ачивке
     class sdl_achv_Prerequisite:
-        def __init__(self, conditions, text, image):
-            self.conditions = conditions
+        def __init__(self, text, achievements):
             self.text = text
-            self.image = image
+            self.achievements = achievements
         
         def check_conditions(self):
-            if self.conditions == None:
+            if self.achievements == None:
                 return False
-            for cond in self.conditions:
-                if getattr(persistent, cond):
+            for achv in self.achievements:
+                if getattr(persistent, achv.get_persistent()):
                     return True
             return False
         
         def get_text(self):
             return self.text
         
-        def get_image(self):
-            return self.image
+        def get_achievements(self):
+            return self.achievements
     
     # Повтор
     class sdl_achv_Replay:
@@ -244,9 +243,9 @@ screen sdl_achv_route(parent_screen, achv_list):
                         hover_sound sdl_achv_info
                         idle ("sdl_achv_info_inactive")
                         hover ("sdl_achv_info_active")
-                        hovered [SetVariable("sdl_achv_hovered_info", prerequisite)]
+                        hovered [SetVariable("sdl_achv_hovered_info", achv.get_prerequisites())]
                         unhovered [SetVariable("sdl_achv_hovered_info", None)]
-                        action [SetVariable("sdl_achv_hovered_info", prerequisite)]
+                        action [SetVariable("sdl_achv_hovered_info", achv.get_prerequisites())]
                     $ sdl_achv_prerequisites = {}
         $ sdl_achv_count += 1
     
@@ -258,9 +257,38 @@ screen sdl_achv_route(parent_screen, achv_list):
         add "sdl_achv_jump" xcenter 700 ycenter 840
     
     if sdl_achv_hovered_info != None:
-        add sdl_achv_hovered_info.get_text() xcenter 750 ycenter 824
-        if sdl_achv_hovered_info.get_image() != None:
-            add sdl_achv_hovered_info.get_image() xcenter 750 ycenter 900
+        use sdl_achv_prerequisites(sdl_achv_hovered_info)
+
+# Экран пререквизитов
+screen sdl_achv_prerequisites(prerequisites):
+    frame xalign 0.5 yalign 0.5:
+        background Frame("sdl_achv_frame", 0, 0)
+        
+        vbox:
+            spacing 25
+            null height 25
+            for prerequisite in prerequisites:
+                if not prerequisite.check_conditions():
+                    hbox xalign 0.5:
+                        spacing 25
+                        null width 25
+                        add prerequisite.get_text() xalign 0.5
+                        null width 25
+                    if prerequisite.get_achievements() != None:
+                        hbox xalign 0.5:
+                            spacing 25
+                            null width 25
+                            $ sdl_not_first_image = False
+                            for prereq_achv in prerequisite.get_achievements():
+                                if sdl_not_first_image:
+                                    add "sdl_achv_info_or"
+                                vbox:
+                                    spacing 10
+                                    add prereq_achv.get_icon()
+                                    add prereq_achv.get_text() maxsize (300, 50) xalign 0.5
+                                $ sdl_not_first_image = True
+                            null width 25
+            null height 25
 
 
 
