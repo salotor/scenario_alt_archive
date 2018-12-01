@@ -20,7 +20,7 @@ init -10 python:
     style.sdl_achv_font_prereq = Style(style.default)
     style.sdl_achv_font_prereq.font = get_image_7dl("fonts/stylo_Bold.ttf")
     style.sdl_achv_font_prereq.size = 54
-    style.sdl_achv_font_prereq.color = "#000000"
+    style.sdl_achv_font_prereq.color = "#ffffff"
     
     # Мику-цвет-большой
     style.sdl_achvlistA_mi_gross = Style(style.default)
