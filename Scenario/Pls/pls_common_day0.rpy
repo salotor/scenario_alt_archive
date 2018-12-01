@@ -19,7 +19,7 @@
         show acm_o
     if persistent.sl_7dl_true:
         show acm_s
-    if persistent.us_7dl_true:
+    if persistent.us_px_true:
         show acm_u
     with dissolve2
     pause(3)

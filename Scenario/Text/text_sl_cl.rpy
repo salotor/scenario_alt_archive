@@ -14185,7 +14185,7 @@ label alt_day7_sl_square1:
                 "Солнце вспыхнуло золотом, напоминая цвет волос одной моей знакомой златовласки."
                 "Одной очень дорогой златовласки."
                 th "Она меня там ждёт, а я тут лазаю."
-            if persistent.us_7dl_true:
+            if persistent.us_px_true:
                 "Всё-таки, волшебная палочка — она засветилась неоново-синим по периметру."
                 "И тут же резко сменила цвет на красный — такой, какой я видел всего один раз в жизни."
                 "Увязанный снопами-ракетами, инверсионным следом одной катастрофы с алым колером волос."
@@ -14204,7 +14204,7 @@ label alt_day7_sl_square1:
                 with fade
                 return
             else:
-                if persistent.mi_7dl_true or persistent.dv_7dl_true or persistent.sl_7dl_true or persistent.un_7dl_true or persistent.mt_7dl_true or persistent.us_7dl_true:
+                if persistent.mi_7dl_true or persistent.dv_7dl_true or persistent.sl_7dl_true or persistent.un_7dl_true or persistent.mt_7dl_true or persistent.us_px_true:
                     "Немного посверкав и посияв, символы погасли."
                     "Снова обратившись скучными картинками по железу."
                 "Делать мне здесь больше было нечего, и я, развернувшись, отправился восвояси."
