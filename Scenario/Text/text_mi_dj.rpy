@@ -10261,7 +10261,6 @@ label alt_day6_mi_dj_dance2_fail:
                     window hide
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
-                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -10286,7 +10285,6 @@ label alt_day6_mi_dj_dance2_fail:
                     stop sound_loop fadeout 0
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
-                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -10323,7 +10321,6 @@ label alt_day6_mi_dj_dance2_fail:
                     window hide
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
-                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -12114,7 +12111,6 @@ label alt_day7_mi_dj_bad_end:
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_bad = True
-    $ renpy.save_persistent()
     show acm_logo_mi_new_happy with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12276,7 +12272,6 @@ label alt_day7_mi_dj_true_end:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_true = True
-    $ renpy.save_persistent()
     show acm_logo_mi_namiki with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12649,7 +12644,6 @@ label alt_day7_mi_dj_jp_good_end:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_good_jap = True
-    $ renpy.save_persistent()
     show acm_logo_mi_ricochet with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12981,7 +12975,6 @@ label alt_day7_mi_dj_rf_good_end:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.mi_dj_good_rf = True
-    $ renpy.save_persistent()
     show acm_logo_mi_allyours with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

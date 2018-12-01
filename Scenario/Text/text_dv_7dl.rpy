@@ -10105,7 +10105,6 @@ label alt_day6_dv_7dl_escape_convince:
         scene gameover with flash
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
-        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -10132,7 +10131,6 @@ label alt_day6_dv_7dl_escape_convince:
         scene gameover with flash
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
-        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -10170,7 +10168,6 @@ label alt_day6_dv_7dl_escape_convince:
         scene gameover with flash
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
-        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -12615,7 +12612,6 @@ label alt_day7_dv_7dl_tulpa_end:
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_tulpa = True
-    $ renpy.save_persistent()
     show acm_logo_dv_tulpa with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -13063,7 +13059,6 @@ label alt_day7_dv_7dl_ussr_epilogue:
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_good_ussr = True
-    $ renpy.save_persistent()
     show acm_logo_dv_ussr_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -13258,7 +13253,6 @@ label alt_day7_dv_7dl_rf_epilogue:
     stop ambience fadeout 3
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_good_rf = True
-    $ renpy.save_persistent()
     show acm_logo_dv_morethanlife with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -13499,7 +13493,6 @@ label alt_day7_dv_7dl_rej_ussr_end:
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_reject_ussr = True
-    $ renpy.save_persistent()
     show acm_logo_dv_tillend with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -13642,7 +13635,6 @@ label alt_day7_dv_7dl_rej_rf_end:
     scene cg d7_dv_ep_red_7dl with dissolve
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_reject_rf = True
-    $ renpy.save_persistent()
     show acm_logo_dv_gohome with moveinright:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
@@ -13771,7 +13763,6 @@ label alt_day7_dv_7dl_un_end:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.dv_7dl_un = True
-    $ renpy.save_persistent()
     show acm_logo_dv_meetmethere with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -14023,7 +14014,6 @@ label alt_day7_dv_7dl_bad_end:
         window hide
         play sound sfx_7dl["aunl"]
         $ persistent.dv_7dl_bad_mt = True
-        $ renpy.save_persistent()
         show acm_logo_dv_drunk with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -14034,7 +14024,6 @@ label alt_day7_dv_7dl_bad_end:
     else:
         play sound sfx_7dl["aunl"]
         $ persistent.dv_7dl_bad = True
-        $ renpy.save_persistent()
         show acm_logo_dv_theresnoway with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
