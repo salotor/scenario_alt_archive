@@ -22558,7 +22558,6 @@ label alt_day6_sl_7dl_catapult:
         scene gameover with flash
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
-        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(3, hard=True)
@@ -28003,7 +28002,6 @@ label alt_day7_sl_7dl_true:
     "Ведь чудес не бывает."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_true = True
-    $ renpy.save_persistent()
     show acm_logo_sl_no_wonder with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -28309,7 +28307,6 @@ label alt_day7_sl_7dl_rf_good:
     me "С утра до ночи."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_good_rf = True
-    $ renpy.save_persistent()
     show acm_logo_sl_till_sunrise with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -29051,7 +29048,7 @@ label alt_day7_sl_7dl_herc_neon:
         ka "Парадокс!"
         me "Ты не обманываешь?"
         #show ka grin casual with dspr
-        ka "Могу поклясться, положив руку на ногу"
+        ka "Могу поклясться, положив руку на ногу."
     me "Но как я тогда могу находиться одновременно и здесь?"
     ka "Субъективное время."
     "Отмахнулась девушка."
@@ -29556,7 +29553,6 @@ label alt_day7_sl_7dl_herc_neon:
     "Но это уже не имело значения."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_herc_good2 = True
-    $ renpy.save_persistent()
     show acm_logo_sl_neon with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -29814,7 +29810,6 @@ label alt_day7_sl_7dl_herc_right_road:
     #TODO: цг выше в медленном zoomout
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_herc_good = True
-    $ renpy.save_persistent()
     show acm_logo_sl_right_road with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -30243,7 +30238,6 @@ label alt_day7_sl_7dl_loki_radio:
     "На то они и радио «Пустота»."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_loki_good = True
-    $ renpy.save_persistent()
     show acm_logo_sl_radio with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -30661,7 +30655,6 @@ label alt_day7_sl_7dl_loki_am_home:
     th "Я дома. {w}Куда мне торопиться?"
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_loki_neu = True
-    $ renpy.save_persistent()
     show acm_logo_sl_am_home with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -30716,7 +30709,6 @@ label alt_day7_sl_7dl_loki_oafa:
     "Нажал и застыл в ожидании, не зная ещё, что ждёт впереди."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_loki_rej = True
-    $ renpy.save_persistent()
     show acm_logo_sl_pan with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -31336,7 +31328,6 @@ label alt_day7_sl_7dl_loopback:
     me "Домой."
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_good2 = True
-    $ renpy.save_persistent()
     show acm_logo_sl_dr_un with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -32001,7 +31992,6 @@ label alt_day7_sl_7dl_wasted:
     "Не напрасно?"
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_good = True
-    $ renpy.save_persistent()
     show acm_logo_sl_wasted with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -32586,7 +32576,6 @@ label alt_day7_sl_7dl_missed:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_7dl_bad = True
-    $ renpy.save_persistent()
     show acm_logo_sl_missed with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
