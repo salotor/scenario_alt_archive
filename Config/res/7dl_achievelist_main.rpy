@@ -285,7 +285,7 @@ screen sdl_achv_prerequisites(prerequisites):
                                 vbox:
                                     spacing 10
                                     add prereq_achv.get_icon()
-                                    add prereq_achv.get_text() maxsize (300, 50) xalign 0.5
+                                    add prereq_achv.get_text() zoom 0.5 xalign 0.5
                                 $ sdl_not_first_image = True
                             null width 25
             null height 25

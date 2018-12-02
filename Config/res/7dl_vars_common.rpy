@@ -193,6 +193,8 @@ label alt_day0_vars: #Переменные нулевого дня
     $ alt_day_binder = 0
     if persistent.dv_7dl_true and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_px_true: 
         $ persistent.alt_binder = True
+    else:
+        $ persistent.alt_binder = False
     return
 
 label alt_day1_vars: #Переменные первого дня
