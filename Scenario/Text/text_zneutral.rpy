@@ -14236,7 +14236,10 @@ label alt_day7_neu_departure:
 label alt_day7_neu_bad:
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.neu_bad = True
+    if persistent.neu_bad:
+        $ persistent.neu_bad += 1
+    else:
+        $ persistent.neu_bad = 1
     show acm_logo_neu_bad with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -14247,7 +14250,10 @@ label alt_day7_neu_bad:
 label alt_day7_neu_true:
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.neu_true = True
+    if persistent.neu_true:
+        $ persistent.neu_true += 1
+    else:
+        $ persistent.neu_true = 1
     show acm_logo_neu_true with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
