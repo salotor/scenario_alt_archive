@@ -12611,7 +12611,7 @@ label alt_day7_un_7dl_true:
     play music music_7dl["keep_looking"] fadein 3
     "А ещё два часа спустя салаты были готовы, шампанское стыло в мокрых полотенцах в холодильнике, а я курил на балконе."
     window hide
-    scene semen_room_window
+    scene bg semen_room_window
     with dissolve
     un "Молодой человек!"
     "Раздался смех снизу."
