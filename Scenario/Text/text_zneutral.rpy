@@ -13927,7 +13927,7 @@ label alt_day6_neu_sleeptime:
     "Но ничего."
     "Пьют же некоторые чай без сахара — не померли ещё."
     "Значит, и я не помру."
-    stop musis fadeout 3
+    stop music fadeout 3
     window hide
     scene stars
     with dissolve
