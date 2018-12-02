@@ -239,7 +239,7 @@ label alt_day7_sl_7dl_start:
         if karma < 120:
             call alt_day7_sl_7dl_rf_good
             pause(1)
-            if persistent.7dl_binder:
+            if persistent.alt_binder:
                 call alt_day7_sl_7dl_postscriptum
         else:
             
@@ -268,7 +268,7 @@ label alt_day7_sl_7dl_start:
                 if alt_day5_sl_7dl_olroad:
                     call alt_day7_sl_7dl_loopback
                     pause(1)
-                    if persistent.7dl_binder:
+                    if persistent.alt_binder:
                         call alt_day7_sl_7dl_loop_ps
                 else:
                     call alt_day7_sl_7dl_wasted

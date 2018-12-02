@@ -455,7 +455,7 @@ label alt_day0_start_h:
     with fade
     "В холодильнике было шаром покати, а из двух последних яиц, что предназначались мне на завтрак, одно оказалось тухлым."
     "Я узнал об этом, когда вылил его к первому в сковородку."
-    "Так что вместо завтрака я убирал за Махой, снова чего-то наевшейся и, как результат…"
+    "Так что вместо завтрака я убирал за Махой, снова наевшейся ватных палочек и, как результат…"
     "Маха — это моя кошка."
     "А я — дурак."
     window hide
@@ -629,7 +629,7 @@ label alt_day0_start_h:
     stop ambience fadeout 2
     play sound_loop sfx_bus_interior_moving fadein 4
     $ volume(0.5, 'music')
-    if persistent.7dl_binder:
+    if persistent.alt_binder:
         play music music_7dl["shib_mono"] fadein 5
     else:
         play music music_list["lightness_radio_bus"] fadein 7
@@ -899,7 +899,7 @@ label alt_day0_start_l:
     "Оголодавшие хищники, рвущие жертву стаей."
     window hide
     $ volume(1.0, 'music')
-    play music music_7dl["redemption"] fadein 3
+    play music music_7dl["beth"] fadein 3
     $ renpy.pause(3)
     scene anim prolog_2 
     with fade

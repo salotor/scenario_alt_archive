@@ -111,7 +111,7 @@ label alt_day7_mt_7dl_start:
         if (mt_pt >= 13) and ('mt' in list_d2_date_7dl) and (alt_day3_dancing == 5) and alt_day4_neu_mt_fire:
             call alt_day7_mt_7dl_good
             pause(1)
-            if persistent.7dl_binder:
+            if persistent.alt_binder:
                 call alt_day7_mt_7dl_postscriptum
         else:
             call alt_day7_mt_7dl_bad

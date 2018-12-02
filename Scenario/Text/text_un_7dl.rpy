@@ -7425,7 +7425,7 @@ label alt_day5_un_7dl_runaway:
     "Триста метров до того берега, со сношенными по самое не хочу ладонями, с четырьмя передышками и таинственной улыбкой Лены."
     me "Значит, ты не первый год здесь?"
     "Лена улыбнулась, спохватилась, что сидит ссутулившись, и разогнула спину."
-    if persistent.7dl_binder:
+    if alt_day_binder == 1:
         un "Я говорила уже."
     un "Да… С нами добрые люди поделились путёвкой."
     if herc or loki or not 'nwsppr' in list_clubs_7dl:
@@ -8042,7 +8042,7 @@ label alt_day6_un_7dl_begin:
         th "Как в первый день друг другу приглянулись, так и…"
         if alt_day_binder != 1:
             th "Поэтому клубы отпадают — там мы впервые увиделись."
-        elif persistent.7dl_binder:
+        elif alt_day_binder == 1:
             th "Сильно сомневаюсь, что она намекала на скамейку около дома Слави."
         th "Значит, остаётся что? Правильно: площадь, Генда и вторая скамейка слева."
         th "Туда очень удобно падает свет от фонаря, и можно читать до тех пор, пока по лагерю не объявят отбой."
@@ -9326,7 +9326,6 @@ label alt_day6_un_7dl_letmeout:
     scene gameover with flash
     play sound sfx_7dl["aunl"]
     $ persistent.alt_lamp = True
-    $ renpy.save_persistent()
     show acm_logo_me_lamp with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -9626,7 +9625,7 @@ label alt_day6_un_7dl_dance:
             me "К тому же, космос — это просто волшебная мечта, как сказка."
             me "На деле я боюсь даже высоты, что уж говорить про прыжки с парашютом или попытки забраться за пределы земной атмосферы."
         un "Это не значит, что я не буду поддерживать тебя."
-        if persistent.7dl_binder:
+        if alt_day_binder == 1:
             un "Что бы с тобой ни произошло, где бы ты ни оказался — я всегда буду на твоей стороне."
             un "Для меня это стало очевидно ещё тогда, у домика Слави."
             "Я улыбнулся:"
@@ -9644,7 +9643,7 @@ label alt_day6_un_7dl_dance:
         scene stars
         with dissolve
 
-        if persistent.7dl_binder:
+        if alt_day_binder == 1:
             "Я улыбнулся и приобнял девочку за плечи."
         else:
             "Я не стал её разубеждать, а просто притянул к себе, обнимая за плечи."
@@ -11115,7 +11114,6 @@ label alt_day7_un_7dl_epilogue_bad:
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
     $ persistent.un_7dl_bad = True
-    $ renpy.save_persistent()
     show acm_logo_un_sui with moveinright:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
@@ -11426,7 +11424,6 @@ label alt_day7_un_7dl_ussr:
     with dspr
     play sound sfx_7dl["aunl"]
     $ persistent.un_7dl_good_ussr = True
-    $ renpy.save_persistent()
     show acm_logo_un_good2 with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11691,14 +11688,13 @@ label alt_day7_un_7dl_rf:
     $ set_mode_adv()
     play sound sfx_7dl["aunl"]
     $ persistent.un_7dl_good_rf = True
-    $ renpy.save_persistent()
     show acm_logo_un_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2.4, hard=True)
-    if persistent.7dl_binder:
+    if persistent.alt_binder:
         $ prolog_time()
         play music music_7dl["sh_ai_rejuv"] fadein 3
         scene expression Noir("bg ext_city_night_7dl", brightness = 0.1, tint_r = 0.2, tint_g = 0.9, tint_b = 0.7, saturation = 0.7)
@@ -12221,7 +12217,6 @@ label alt_day7_un_7dl_transit:
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
     $ persistent.un_7dl_true_transit = True
-    $ renpy.save_persistent()
     show acm_logo_un_transit with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12310,7 +12305,6 @@ label alt_day7_un_7dl_rej:
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
     $ persistent.un_7dl_rej = True
-    $ renpy.save_persistent()
     show acm_logo_un_shelter with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12617,7 +12611,7 @@ label alt_day7_un_7dl_true:
     play music music_7dl["keep_looking"] fadein 3
     "А ещё два часа спустя салаты были готовы, шампанское стыло в мокрых полотенцах в холодильнике, а я курил на балконе."
     window hide
-    scene semen_room_window
+    scene bg semen_room_window
     with dissolve
     un "Молодой человек!"
     "Раздался смех снизу."
@@ -12670,7 +12664,6 @@ label alt_day7_un_7dl_true:
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
     $ persistent.un_7dl_true = True
-    $ renpy.save_persistent()
     show acm_logo_un_true with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

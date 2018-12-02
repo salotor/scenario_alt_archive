@@ -5960,7 +5960,7 @@ label alt_day6_us_7dl_disco:
         me "Не заговаривай мне зубы."
         us "А может, я не хочу отвечать!"
         me "Какая-то большая тайна? Страшно секретная?"
-        "Она так не хотела отвечать, что мне чем дальше, тем сильнее становилось любопытнее."
+        "Она так не хотела отвечать, что мне чем дальше, тем любопытнее становилось."
         "Всё правильно, чем крепче охраняют тайну, тем она интересней."
         "Ульяна же молчала как партизан, так что я немного усилил нажим:"
         me "Не хочешь — и не говори. Мне вообще не интересно."
@@ -8834,7 +8834,7 @@ label alt_day7_us_7dl_packing:
         me "Просто я стал чуть-чуть моложе внешне."
         th "И старше ровно на одно разочарование."
     "Свитер решил не надевать, повязал рукавами на талии."
-    if persistent.7dl_binder:
+    if alt_day_binder == 1:
         "Пальто тоже оставил — не таскаться же с ним по лагерю."
     if not loki and (alt_day_binder != 1) and (counter_sl_7dl == 0):
         "Я пощупал подкладку: уже успело высохнуть за это время."
@@ -8899,7 +8899,7 @@ label alt_day7_us_7dl_packing:
     sl "Насколько пораньше?"
     mt "На полдень. Фактически, автобусы уже прибыли, так что у вас двадцать минут на сборы, потом жду вас на пятачке."
     mt "Ты уже переоделся, хорошо, не придётся тебя ждать."
-    if persistent.7dl_binder:
+    if alt_day_binder == 1:
         mt "Пальто только своё не забудь."
     hide mt with moveoutleft
     "Вожатая кивнула нам и просочилась мимо Слави в дверь."
@@ -9198,7 +9198,7 @@ label alt_day7_us_7dl_leaving:
         "А там собрался уже весь отряд. Вообще весь."
         "Даже Славя, которая убежала не так давно, красовалась платьем и внушительным чемоданом."
         "Только я один красавец: в зимних ботинках, толстых джинсах"
-        if persistent.7dl_binder:
+        if alt_day_binder == 1:
             extend " и пальто, перекинутом через руку."
         else:
             extend "…"
@@ -10466,7 +10466,6 @@ label alt_day7_us_7dl_mikuforever:
     "Я ступил на первую ступеньку автобуса."
     window hide
     $ persistent.us_7dl_mi = True
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_openup with moveinright:
         pos (1600, 1020)
@@ -10698,7 +10697,6 @@ label alt_day7_us_7dl_lenaforever:
     un "С моей сестрой."
     window hide
     $ persistent.us_7dl_un = True
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_hi with moveinright:
         pos (1600, 1020)
@@ -10853,7 +10851,6 @@ label alt_day7_us_7dl_reunite:
     us "Пошли, Сёмище! А то билетов не хватит!"
     window hide
     $ persistent.us_7dl_good = True
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_semische with moveinright:
         pos (1600, 1020)
@@ -10861,7 +10858,7 @@ label alt_day7_us_7dl_reunite:
     call alt_7dl_titles
     stop music fadeout 3
     $ renpy.pause(2)
-    if persistent.7dl_binder and loki:
+    if persistent.alt_binder and loki:
         play music music_7dl["beasteye"] fadein 3
         window hide
         play ambience ambience_cold_wind_loop fadein 3
@@ -11662,7 +11659,6 @@ label alt_day7_us_7dl_ever_after:
     "Мы долго смотрим друг на друга, а затем хохочем."
     window hide
     $ persistent.us_7dl_true = True
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_true with moveinright:
         pos (1600, 1020)
@@ -11847,7 +11843,6 @@ label alt_day7_us_7dl_bad:
     show spill_red with dspr
     window hide
     $ persistent.us_7dl_bad = True
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_bad with moveinright:
         pos (1600, 1020)
@@ -12892,7 +12887,6 @@ label alt_day7_us_px_fairytale:
     "Отблеск познакомившего нас лета."
     window hide
     $ persistent.us_px_true = True
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_fairytale with moveinright:
         pos (1600, 1020)
@@ -13437,7 +13431,6 @@ label alt_day7_us_px_dejavu:
         me "Тай-тай…"
     window hide
     $ persistent.us_px_rf_good = True
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_px with moveinright:
         pos (1600, 1020)

@@ -425,7 +425,7 @@ label alt_day6_mt_7dl_morning:
     "Может показаться странным, но я и в самом деле крайне бесконфликтный человек."
     th "А что, поход на пляж — это какого-то рода поощрение?"
     dreamgirl "А нет?"
-    if (counter_sl_7dl >= 1) or (persistent.7dl_binder) or not (herc or loki):
+    if (counter_sl_7dl >= 1) or (alt_day_binder == 1) or not (herc or loki):
         dreamgirl "Ты только представь её в купальнике? Там же явно всё по заветам Ильича!"
     else:
         dreamgirl "Могу напомнить, как она выглядит в своём бронебойном бикини."
@@ -768,7 +768,7 @@ label alt_day6_mt_7dl_un_morning:
     "Хотя, конечно, вряд ли."
     "Наиболее правдоподобной выглядела гипотеза, согласно которой Ольга просто путает меня с кем-то."
     "С кем-то, с кем-то…"
-    if persistent.7dl_binder:
+    if alt_day_binder == 1:
         "С кем-то, кто оставил мне письмецо."
         $ mt_pt += 1
     else:
@@ -1160,7 +1160,7 @@ label alt_day6_mt_7dl_declaration0:
     menu:
         "Ольга Дмитриевна, я не тот, за кого вы меня принимаете":
             $ mt_pt += 2
-            if persistent.7dl_binder:
+            if alt_day_binder == 1:
                 $ mt_pt += 2
             else:
                 $ mt_pt += 1
@@ -2622,7 +2622,6 @@ label alt_day6_mt_7dl_catha:
         scene gameover with flash
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
-        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -2647,7 +2646,6 @@ label alt_day6_mt_7dl_catha:
         stop sound_loop
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
-        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -2687,7 +2685,6 @@ label alt_day6_mt_7dl_catha:
         scene gameover with flash
         play sound sfx_7dl["aunl"]
         $ persistent.alt_lamp = True
-        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -3427,7 +3424,7 @@ label alt_day7_mt_7dl_morning:
     "За спорами с раздвоением личности я сам не заметил, как выбрался за ворота и зашагал по дороге куда-то в сторону юго-запада, ориентируясь на стену."
     window hide
     scene bg ext_adductius_7dl with dissolve
-    if persistent.7dl_binder:
+    if alt_day_binder == 1:
         $ mt_pt += 1
     dreamgirl "Ну, как бы тебе сказать…"
     "Задумчиво протянул внутренний голос."
@@ -5048,7 +5045,6 @@ label alt_day7_mt_7dl_good:
     stop sound_loop
     play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_good = True
-    $ renpy.save_persistent()
     show acm_logo_mt_named_olga with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -5182,7 +5178,6 @@ label alt_day7_mt_7dl_bad:
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
     $ persistent.mt_7dl_bad = True
-    $ renpy.save_persistent()
     show acm_logo_mt_cause with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -5368,7 +5363,6 @@ label alt_day7_mt_7dl_ever_after:
     $ renpy.pause(2)
     play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_neutral = True
-    $ renpy.save_persistent()
     show acm_logo_mt_ever_after with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -5443,7 +5437,6 @@ label alt_day7_mt_7dl_true:
     with dissolve
     play sound sfx_7dl["aunl"]
     $ persistent.mt_7dl_true = True
-    $ renpy.save_persistent()
     show acm_logo_mt_ending with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

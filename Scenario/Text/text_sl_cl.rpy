@@ -3909,7 +3909,6 @@ label alt_day5_sl_begin:
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
                 $ persistent.alt_lamp = True
-                $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -3935,7 +3934,6 @@ label alt_day5_sl_begin:
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
                 $ persistent.alt_lamp = True
-                $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -3952,7 +3950,6 @@ label alt_day5_sl_begin:
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
                 $ persistent.alt_lamp = True
-                $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -7257,7 +7254,7 @@ label alt_day5_sl_fire:
     me "Да я и не…"
     "Запротестовал я."
     cs "Обожди."
-    if persistent.7dl_binder:
+    if alt_day_binder == 1:
         "Она отошла к столу, где, как я помнил, хранились некоторые крайне любопытные вещи."
         "Само появление которых в общении между мужчиной и женщиной несколько накаляет обстановку."
     "Я замер."
@@ -10926,7 +10923,6 @@ label alt_day6_sl_cl_become_a_hero:
     with dissolve
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_cata = True
-    $ renpy.save_persistent()
     show acm_logo_sl_be_ok with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -14185,11 +14181,11 @@ label alt_day7_sl_square1:
                 "Солнце вспыхнуло золотом, напоминая цвет волос одной моей знакомой златовласки."
                 "Одной очень дорогой златовласки."
                 th "Она меня там ждёт, а я тут лазаю."
-            if persistent.us_7dl_true:
+            if persistent.us_px_true:
                 "Всё-таки, волшебная палочка — она засветилась неоново-синим по периметру."
                 "И тут же резко сменила цвет на красный — такой, какой я видел всего один раз в жизни."
                 "Увязанный снопами-ракетами, инверсионным следом одной катастрофы с алым колером волос."
-            if persistent.7dl_binder:
+            if alt_day_binder == 1:
                 "Яркие, чистые цвета, будто подтверждающие теорию цвета — они вспыхнули одновременно, мало-помалу сливаясь в единое неяркое белое сияние."
                 "Я знал каждый цвет, каждую историю, что стоит за ними."
                 "Я переживал с ними всё, что когда-то привнёс в их жизнь, каялся в том, что станет в их жизни тогда, когда неумолимой отдачей меня бросало домой."
@@ -14204,7 +14200,7 @@ label alt_day7_sl_square1:
                 with fade
                 return
             else:
-                if persistent.mi_7dl_true or persistent.dv_7dl_true or persistent.sl_7dl_true or persistent.un_7dl_true or persistent.mt_7dl_true or persistent.us_7dl_true:
+                if persistent.mi_7dl_true or persistent.dv_7dl_true or persistent.sl_7dl_true or persistent.un_7dl_true or persistent.mt_7dl_true or persistent.us_px_true:
                     "Немного посверкав и посияв, символы погасли."
                     "Снова обратившись скучными картинками по железу."
                 "Делать мне здесь больше было нечего, и я, развернувшись, отправился восвояси."
@@ -14396,7 +14392,7 @@ label alt_day7_sl_boat_station1:
     "Вспомнить хотя бы то, что сегодня произошло с утра."
     if (alt_day_binder != 1) and (counter_sl_7dl != 1) and (herc or loki):
         "И в первый день, когда я спасся от рыжих здесь, а она вышла мне навстречу."
-    elif persistent.7dl_binder:
+    elif alt_day_binder == 1:
         "И в первый день, когда она спасла меня от рыжей вредины."
     "Причал и Славя — неизменно позитивные последствия! Почти рекламный слоган."
     "Я прикрылся ладонью от бьющего в глаза солнца, перевёл взгляд вниз и обратил внимание на то, что не один я здесь желаю «оставить след»."
@@ -16418,7 +16414,6 @@ label alt_day7_sl_will:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_int_ok = True
-    $ renpy.save_persistent()
     show acm_logo_sl_ok with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -16532,7 +16527,6 @@ label alt_day7_sl_duty:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_int_good = True
-    $ renpy.save_persistent()
     show acm_logo_sl_fantazm with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -16556,7 +16550,6 @@ label alt_day7_sl_lone:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_int_bad = True
-    $ renpy.save_persistent()
     show acm_logo_sl_lone with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -16749,7 +16742,6 @@ label alt_day7_sl_good:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_good_ussr = True
-    $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -16908,7 +16900,6 @@ label alt_day7_sl_rf_good:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_good_rf = True
-    $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -17075,7 +17066,6 @@ label alt_day7_sl_reject_same:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_reject_same = True
-    $ renpy.save_persistent()
     show acm_logo_sl_same_place with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -17287,7 +17277,6 @@ label alt_day7_sl_rej_end:
     play sound sfx_7dl["aunl"]
     stop ambience fadeout 4
     $ persistent.sl_cl_reject_late = True
-    $ renpy.save_persistent()
     show acm_logo_sl_too_late with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -17382,7 +17371,6 @@ label alt_day7_sl_cl_bad:
     window hide
     play sound sfx_7dl["aunl"]
     $ persistent.sl_cl_bad = True
-    $ renpy.save_persistent()
     show acm_logo_sl_bad with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -17538,7 +17526,6 @@ label alt_day7_sl_rf2:
     play sound sfx_7dl["aunl"]
     play music music_7dl["refuse_to_replay"] fadein 3
     $ persistent.sl_cl_good_rf2 = True
-    $ renpy.save_persistent()
     show acm_logo_sl_worth with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

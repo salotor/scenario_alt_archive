@@ -11,7 +11,7 @@ init 2:
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
     $ timeskip0 = "Я с трудом вспоминаю, \n с чего всё началось…"
     $ timeskip_come = "Ты пойдёшь со мной?"
-    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Одиночка. День 6."
+    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Одиночка. День 7."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
     $ timeskip3 = "Я скучаю…"
     $ timeskip4 = "Я хочу к тебе…"
@@ -190,15 +190,15 @@ label alt_day0_vars: #Переменные нулевого дня
     $ d3 = False
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
-    if persistent.dv_7dl_true and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_7dl_true: 
-        $ persistent.7dl_binder = True
+    $ alt_day_binder = 0
+    if persistent.dv_7dl_true and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_px_true: 
+        $ persistent.alt_binder = True
     return
 
-    label alt_day1_vars: #Переменные первого дня
+label alt_day1_vars: #Переменные первого дня
     $ counter_sl_cl = 0 #Счётчик рута (Славя-классик in progress)
     $ counter_sl_7dl = 0 #Счётчик рута (Славя-7дл)
     #TODO - same shit для прочих девочек
-    $ list_slavya_7dl = []
     $ list_slavya_7dl = []
     $ alt_route_flag = 1
     $ alt_day1_alt_chase = False

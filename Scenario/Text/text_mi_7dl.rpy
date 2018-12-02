@@ -8277,7 +8277,7 @@ label alt_day6_mi_7dl_human_day:
     window hide
     with fade2
     "Но пока у меня есть время — мы те же, там же."
-    if persistent.7dl_binder:
+    if alt_day_binder == 1:
         "Только в этот раз мы несколько поменялись местами."
     "Усмехнувшись этой мысли, я подтащил стул к кушетке и собрался бдить."
     show cs normal with dissolve
@@ -8730,7 +8730,6 @@ label alt_day6_mi_7dl_discoteque:
                     window hide
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
-                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -8759,7 +8758,6 @@ label alt_day6_mi_7dl_discoteque:
                     stop sound_loop fadeout 0
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
-                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -8795,7 +8793,6 @@ label alt_day6_mi_7dl_discoteque:
                     window hide
                     play sound sfx_7dl["aunl"]
                     $ persistent.alt_lamp = True
-                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(4.4, hard=True)
@@ -10449,7 +10446,6 @@ label alt_day7_mi_7dl_happy_again:
     play music music_7dl["sam_lullaby"] fadein 3
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_neutral_human = True
-    $ renpy.save_persistent()
     show acm_logo_mi_happy_again with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -10627,7 +10623,6 @@ label alt_day7_mi_7dl_liar:
     "Честнее."
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_bad_human = True
-    $ renpy.save_persistent()
     show acm_logo_mi_liar with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -10790,7 +10785,6 @@ label alt_day7_mi_7dl_dark_dreams:
     "Я перестану видеть эти унылые сны."
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_good_human = True
-    $ renpy.save_persistent()
     show acm_logo_mi_dark_dreams with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -10928,7 +10922,6 @@ label alt_day7_mi_7dl_club27:
     $ set_mode_adv()
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_neutral_star = True
-    $ renpy.save_persistent()
     show acm_logo_mi_club27 with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11063,7 +11056,6 @@ label alt_day7_mi_7dl_sparkle:
     "Какая теперь разница?"
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_good_star = True
-    $ renpy.save_persistent()
     show acm_logo_mi_sparkle with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11494,7 +11486,6 @@ label alt_day7_mi_7dl_postscriptum:
     $ renpy.pause(3)
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_ps = True
-    $ renpy.save_persistent()
     show acm_logo_mi_bitter_truth with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11628,7 +11619,6 @@ label alt_day7_mi_7dl_dam_CPU:
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_bad_star = True
-    $ renpy.save_persistent()
     show acm_logo_mi_dam_cpu with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11778,7 +11768,6 @@ label alt_day7_mi_7dl_unlike:
     play music music_7dl["happy_ending"] fadein 3
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_herc_exc = True
-    $ renpy.save_persistent()
     show acm_logo_mi_unlike with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11980,7 +11969,6 @@ label alt_day7_mi_7dl_sinthetic:
     
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_loki_exc = True
-    $ renpy.save_persistent()
     show acm_logo_mi_come with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12132,7 +12120,6 @@ label alt_day7_mi_7dl_come_back:
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_dr_exc = True
-    $ renpy.save_persistent()
     show acm_logo_mi_watashi with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12361,7 +12348,6 @@ label alt_day7_mi_7dl_thank_you:
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
     $ persistent.mi_7dl_true = True
-    $ renpy.save_persistent()
     show acm_logo_mi_thank_you with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
