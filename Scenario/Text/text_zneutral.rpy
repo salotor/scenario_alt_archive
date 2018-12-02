@@ -6643,7 +6643,7 @@ label alt_day5_neu_cndl:
     "Дождавшись разрозненных кивков, Ольга кивнула Электронику, и тот опустил шторы, погрузив комнату в полумрак."
     $ persistent.sprite_time = "night"
     $ night_time()
-    scene bg int_clubs_male_rain_clean_table_7dl
+    scene expression Desat1("bg int_clubs_male_rain_clean_table_7dl") #Ы
     show mt normal pioneer
     with dissolve
     th "Свечку зажигает тот, кому все верят. Или хотя бы тот, чья кандидатура вызывает меньше всего вопросов."
@@ -6795,7 +6795,7 @@ label alt_day5_neu_cndl:
         play sound sfx_open_door_clubs
         pause(1)
         window hide
-        scene bg int_clubs_male_rain_clean_table_7dl
+        scene expression Desat1("bg int_clubs_male_rain_clean_table_7dl") #Ы
         with dissolve
         "Повздыхав немного о грехах своих тяжких и отсутствии курева, я вернулся обратно в клуб."
         "Досматривать."
@@ -11252,7 +11252,7 @@ label alt_day6_neu_start:
     "Это мало того, что сбросило с неё пяток лет, так ещё и мгновенно поставило на одну ступеньку со мной."
     "В целом ряде смыслов, да."
     mt "После завтрака пойдёшь к Виоле, объяснишь, что с тобой происходит. {w}У неё есть кое-что, как раз для таких случаев."
-    if 'medic' in list_voyage_7dl
+    if 'medic' in list_voyage_7dl:
         me "Надеюсь, не обтирания?"
     else:
         me "Опять что-нибудь непристойное?"

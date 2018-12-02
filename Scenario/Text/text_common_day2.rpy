@@ -5008,7 +5008,7 @@ label alt_day2_tournament:
     hide sh
     show mi smile pioneer at cright
     with dissolve
-    if (('music_club' in list_voyage_7dl) or alt_day2_mi_met):
+    if (('music_club' in list_voyage_7dl) or alt_day2_mi_met):    ## нужен текст под else (когда мы не знакомились с Мику) о том, как Мику подбежала и обратилась к Семёну, чтобы связать с последующим...
         mi "А где наш новенький? Семён. Сеня?"
         "Мику углядела меня и тут же сбежала с крыльца, и подбежала ко мне."
         show el normal pioneer at left with dissolve
@@ -5017,7 +5017,7 @@ label alt_day2_tournament:
         mi "И в кружок не пришёл."
         mi "Забыл или не хотел? Не страшно, если забыл, мы открыты каждый день. То есть, я. То есть, мы. Короче, не важно! Электроник! У нас тут один новый игрок!"
     else:
-        me "Да я…"
+        me "Да я…"    ## ...вот с этим
         mi "Электроник! У нас тут один новый игрок!"
     hide mi
     show el smile pioneer at left
