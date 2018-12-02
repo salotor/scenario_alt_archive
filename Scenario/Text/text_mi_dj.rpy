@@ -12864,10 +12864,10 @@ label alt_day7_mi_dj_rf_good_end:
     "Наконец, телефон заткнулся."
     window hide
     scene bg int_sam_house_clean_7dl with dissolve
-
     "А я вернулся за машину — у меня, кажется, появилась мысль."
     "Но кто-то свыше явно собрался сегодня не дать мне посидеть у монитора."
     play sound sfx_door_bell
+    $ volume (0.0,'music')
     "В дверь позвонили…"
     me "Да вы издеваетесь, что ли!"
     "Рявкнул я."
@@ -12884,7 +12884,7 @@ label alt_day7_mi_dj_rf_good_end:
     me "Кто там балуется…"
     "Я повернулся чуть вбок, так, чтобы видеть пространство под звонком."
     "И там стояла… "
-    play music music_7dl["tellyourworld"] fadein 3
+    $ volume (1.0,'music')
     show mi sad voca with dissolve
     "Она вполне заметно нервничала, дёргала в руках какой-то листок, то и дело сверяясь с ним."
     play sound sfx_door_bell
