@@ -213,9 +213,6 @@ label alt_day6_neu_begin:
         $ alt_chapter(6, u"Одиночка. Танцы")
         call alt_day6_neu_loki_disco
         pause(1)
-        $ persistent.sprite_time = "night"
-        $ night_time()
-        call alt_day6_neu_loki_evening
     else:
         $ alt_chapter(6, u"Одиночка. День")
         call alt_day6_neu_day
@@ -226,6 +223,17 @@ label alt_day6_neu_begin:
         $ sunset_time()
         $ alt_chapter(6, u"Одиночка. Танцы")
         call alt_day6_neu_disco
+        pause(1)
+    call alt_day6_neu_pirate:
+    pause(1)
+    if loki:
+        call alt_day6_neu_loki_disco2
+        pause(1)
+        $ persistent.sprite_time = "night"
+        $ night_time()
+        call alt_day6_neu_loki_evening
+    else:
+        call alt_day6_neu_disco2
         pause(1)
         $ persistent.sprite_time = "night"
         $ night_time()

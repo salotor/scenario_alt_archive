@@ -4917,7 +4917,10 @@ label alt_day3_nightmare:
                 window hide
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
-                $ persistent.alt_deep = True
+                if persistent.alt_deep:
+                    $ persistent.alt_deep += 1
+                else:
+                    $ persistent.alt_deep = 1
                 show acm_logo_me_deep with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -4950,7 +4953,10 @@ label alt_day3_nightmare:
                 window hide
                 stop sound_loop fadeout 0
                 play sound sfx_7dl["aunl"]
-                $ persistent.alt_deep = True
+                if persistent.alt_deep:
+                    $ persistent.alt_deep += 1
+                else:
+                    $ persistent.alt_deep = 1
                 show acm_logo_me_deep with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -4978,7 +4984,10 @@ label alt_day3_nightmare:
                 "И как бесконечные полторы секунды невесомости спустя, мы боком ударились о поверхность грязной чёрной воды."
                 play sound sfx_water_emerge
                 window hide
-                $ persistent.alt_deep = True
+                if persistent.alt_deep:
+                    $ persistent.alt_deep += 1
+                else:
+                    $ persistent.alt_deep = 1
                 show acm_logo_me_deep with moveinright:
                 pause(3)
                 scene black
@@ -7891,7 +7900,10 @@ label alt_day3_dv_reunion:
         "Надеюсь, в следующей жизни у меня будет шанс всё исправить."
         window hide
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_deep = True
+        if persistent.alt_deep:
+            $ persistent.alt_deep += 1
+        else:
+            $ persistent.alt_deep = 1
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7918,7 +7930,10 @@ label alt_day3_dv_reunion:
         play sound sfx_bodyfall_1
         stop sound_loop fadeout 0
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_deep = True
+        if persistent.alt_deep:
+            $ persistent.alt_deep += 1
+        else:
+            $ persistent.alt_deep = 1
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7940,7 +7955,10 @@ label alt_day3_dv_reunion:
         "Не страшно, не жутко, не интересно. Просто вяло любопытно."
         window hide
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_deep = True
+        if persistent.alt_deep:
+            $ persistent.alt_deep += 1
+        else:
+            $ persistent.alt_deep = 1
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7953,7 +7971,10 @@ label alt_day3_dv_reunion:
 
 label alt_day3_leave1:
     "Я открыл глаза."
-    $ persistent.d3_deep = True
+    if persistent.d3_deep:
+        $ persistent.d3_deep += 1
+    else:
+        $ persistent.d3_deep = 1
     $ renpy.pause(1.0, hard=True)
     window hide
     scene black
@@ -7969,7 +7990,10 @@ label alt_day3_dv_stayhere1:
         show acm_logo_me_qte with moveinright:
             pos (1600, 1020)
         $ renpy.pause(9.4, hard=True)
-    $ persistent.alt_qte = True
+    if persistent.alt_qte:
+        $ persistent.alt_qte += 1
+    else:
+        $ persistent.alt_qte = 1
     $ night_time()
     with vpunch
     stop music
