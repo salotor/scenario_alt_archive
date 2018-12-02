@@ -191,7 +191,7 @@ label alt_day0_vars: #Переменные нулевого дня
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
     $ alt_day_binder = 0
-    if persistent.dv_7dl_true and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_7dl_true: 
+    if persistent.dv_7dl_true and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_px_true: 
         $ persistent.alt_binder = True
     return
 
