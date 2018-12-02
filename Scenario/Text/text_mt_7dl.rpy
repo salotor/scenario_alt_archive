@@ -1819,7 +1819,7 @@ label alt_day6_mt_7dl_dinner:
     "И на самый кончик этой проволоки пионеры цепляли то, что им было нужно."
     "Было и ещё несколько тайников — под вожатской, в дупле ели рядом со столовой."
     "Ну и так… По мелочи."
-    "Но куда интереснее здесь было то, что окнами администрация выходила на линейку, и оттуда нас частенько фотографировал Саныч."
+    "Но куда интереснее здесь было то, что окнами администрация смотрела вдоль линейки, и оттуда нас частенько фотографировал Саныч."
     "Особенно в восемьдесят седьмом, когда по лагерю объявили тематическую смену, а наш третий отряд так и не сошёлся во мнениях, кого будем ставить."
     "В результате половина отряда щеголяла сложенными пополам покрывалами с нашитым голубым крестом и шляпами с широченными полями, другая — треуголками и рубашками с кружевными воротниками."
     "Так и назывались «Мушкетёры и Гардемарины». Посмешище."
@@ -1877,7 +1877,7 @@ label alt_day6_mt_7dl_dinner:
     "И не заметить разницы."
     me "Тебе нравится здесь?"
     show us laugh sport with dspr
-    us "Ещё как! Отсюда же весь лагерь видно!"
+    us "Ещё как! Отсюда же никто нас не заметит!"
     dreamgirl "Матильде не хватает только оптики с красящими маркерами?"
     dreamgirl "Готовый киллер растёт."
     me "А тебя — наоборот, никто…"
@@ -2621,11 +2621,7 @@ label alt_day6_mt_7dl_catha:
         th "Ожидаемо."
         scene gameover with flash
         play sound sfx_7dl["aunl"]
-        if persistent.alt_lamp:
-            $ persistent.alt_lamp += 1
-        else:
-            $ persistent.alt_lamp = 1
-        $ renpy.save_persistent()
+        $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -2649,11 +2645,7 @@ label alt_day6_mt_7dl_catha:
         scene gameover with flash
         stop sound_loop
         play sound sfx_7dl["aunl"]
-        if persistent.alt_lamp:
-            $ persistent.alt_lamp += 1
-        else:
-            $ persistent.alt_lamp = 1
-        $ renpy.save_persistent()
+        $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -2692,11 +2684,7 @@ label alt_day6_mt_7dl_catha:
         pause(5)
         scene gameover with flash
         play sound sfx_7dl["aunl"]
-        if persistent.alt_lamp:
-            $ persistent.alt_lamp += 1
-        else:
-            $ persistent.alt_lamp = 1
-        $ renpy.save_persistent()
+        $ persistent.alt_lamp = True
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -5056,11 +5044,7 @@ label alt_day7_mt_7dl_good:
     stop ambience
     stop sound_loop
     play sound sfx_7dl["aunl"]
-    if persistent.mt_7dl_good:
-        $ persistent.mt_7dl_good += 1
-    else:
-        $ persistent.mt_7dl_good = 1
-    $ renpy.save_persistent()
+    $ persistent.mt_7dl_good = True
     show acm_logo_mt_named_olga with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -5193,11 +5177,7 @@ label alt_day7_mt_7dl_bad:
     with dissolve
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
-    if persistent.mt_7dl_bad:
-        $ persistent.mt_7dl_bad += 1
-    else:
-        $ persistent.mt_7dl_bad = 1
-    $ renpy.save_persistent()
+    $ persistent.mt_7dl_bad = True
     show acm_logo_mt_cause with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -5382,11 +5362,7 @@ label alt_day7_mt_7dl_ever_after:
     scene black with fade
     $ renpy.pause(2)
     play sound sfx_7dl["aunl"]
-    if persistent.mt_7dl_neutral:
-        $ persistent.mt_7dl_neutral += 1
-    else:
-        $ persistent.mt_7dl_neutral = 1
-    $ renpy.save_persistent()
+    $ persistent.mt_7dl_neutral = True
     show acm_logo_mt_ever_after with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -5460,11 +5436,7 @@ label alt_day7_mt_7dl_true:
     show blackout_exh
     with dissolve
     play sound sfx_7dl["aunl"]
-    if persistent.mt_7dl_true:
-        $ persistent.mt_7dl_true += 1
-    else:
-        $ persistent.mt_7dl_true = 1
-    $ renpy.save_persistent()
+    $ persistent.mt_7dl_true = True
     show acm_logo_mt_ending with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
