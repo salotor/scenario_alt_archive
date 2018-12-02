@@ -10827,7 +10827,7 @@ label alt_day6_dv_7dl_non_love:
     with fade
     return
 
-label alt_day6_dv_7dl_love_scene:
+label alt_day6_dv_7dl_love_scene:    # весь хентай происходит без музыки, что не есть хорошо
     "Куда бегом, чего бегом, я не понял, но мы пронеслись через весь лагерь, и остановились у знакомой полукруглой громады."
     me "Значит, ты…"
     window hide
