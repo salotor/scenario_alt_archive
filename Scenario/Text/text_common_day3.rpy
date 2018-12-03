@@ -154,6 +154,7 @@
         show dv normal sport at right
         show mi normal casual at left
         show un normal sport at center
+        with dissolve #Ы
         "Алиса… Лена… Мику…"
         hide dv with dissolve
         hide mi with dissolve
