@@ -4547,6 +4547,7 @@ label alt_day4_neu_map_dining_hall:
             dv "И можешь не трястись так, тебя это никак не заденет."
             me "А делать-то что надо?"
             dv "Отойдём."
+            hide dv with dissolve #Ы
             window hide
             $ persistent.sprite_time = "night" #Ы
             $ night_time()
