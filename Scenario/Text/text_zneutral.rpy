@@ -1850,7 +1850,6 @@ label alt_day4_neu_curl:
         "К выходу из этого чёртова лагеря."
         "У ворот, как обычно, никого не было."
         "Значит, никто помешать мне не сумеет." 
-        label alt_test:
         window hide
         $ persistent.sprite_time = "day"
         scene bg ext_road_day
