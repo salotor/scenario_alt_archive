@@ -3912,7 +3912,6 @@ label alt_day5_sl_begin:
                     $ persistent.alt_lamp += 1
                 else:
                     $ persistent.alt_lamp = 1
-                $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -3941,7 +3940,6 @@ label alt_day5_sl_begin:
                     $ persistent.alt_lamp += 1
                 else:
                     $ persistent.alt_lamp = 1
-                $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -3961,7 +3959,6 @@ label alt_day5_sl_begin:
                     $ persistent.alt_lamp += 1
                 else:
                     $ persistent.alt_lamp = 1
-                $ renpy.save_persistent()
                 show acm_logo_me_lamp with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -10938,7 +10935,6 @@ label alt_day6_sl_cl_become_a_hero:
         $ persistent.sl_cl_cata += 1
     else:
         $ persistent.sl_cl_cata = 1
-    $ renpy.save_persistent()
     show acm_logo_sl_be_ok with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -16433,7 +16429,6 @@ label alt_day7_sl_will:
         $ persistent.sl_cl_int_ok += 1
     else:
         $ persistent.sl_cl_int_ok = 1
-    $ renpy.save_persistent()
     show acm_logo_sl_ok with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -16550,7 +16545,6 @@ label alt_day7_sl_duty:
         $ persistent.sl_cl_int_good += 1
     else:
         $ persistent.sl_cl_int_good = 1
-    $ renpy.save_persistent()
     show acm_logo_sl_fantazm with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -16577,7 +16571,6 @@ label alt_day7_sl_lone:
         $ persistent.sl_cl_int_bad += 1
     else:
         $ persistent.sl_cl_int_bad = 1
-    $ renpy.save_persistent()
     show acm_logo_sl_lone with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -16773,7 +16766,6 @@ label alt_day7_sl_good:
         $ persistent.sl_cl_good_ussr += 1
     else:
         $ persistent.sl_cl_good_ussr = 1
-    $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -16935,7 +16927,6 @@ label alt_day7_sl_rf_good:
         $ persistent.sl_cl_good_rf += 1
     else:
         $ persistent.sl_cl_good_rf = 1
-    $ renpy.save_persistent()
     show acm_logo_sl_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -17105,7 +17096,6 @@ label alt_day7_sl_reject_same:
         $ persistent.sl_cl_reject_same += 1
     else:
         $ persistent.sl_cl_reject_same = 1
-    $ renpy.save_persistent()
     show acm_logo_sl_same_place with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -17320,7 +17310,6 @@ label alt_day7_sl_rej_end:
         $ persistent.sl_cl_reject_late += 1
     else:
         $ persistent.sl_cl_reject_late = 1
-    $ renpy.save_persistent()
     show acm_logo_sl_too_late with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -17418,7 +17407,6 @@ label alt_day7_sl_cl_bad:
         $ persistent.sl_cl_bad += 1
     else:
         $ persistent.sl_cl_bad = 1
-    $ renpy.save_persistent()
     show acm_logo_sl_bad with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -17577,7 +17565,6 @@ label alt_day7_sl_rf2:
         $ persistent.sl_cl_good_rf2 += 1
     else:
         $ persistent.sl_cl_good_rf2 = 1
-    $ renpy.save_persistent()
     show acm_logo_sl_worth with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
