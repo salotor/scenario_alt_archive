@@ -10266,7 +10266,6 @@ label alt_day6_mi_dj_dance2_fail:
                         $ persistent.alt_lamp += 1
                     else:
                         $ persistent.alt_lamp = 1
-                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -10294,7 +10293,6 @@ label alt_day6_mi_dj_dance2_fail:
                         $ persistent.alt_lamp += 1
                     else:
                         $ persistent.alt_lamp = 1
-                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -10334,7 +10332,6 @@ label alt_day6_mi_dj_dance2_fail:
                         $ persistent.alt_lamp += 1
                     else:
                         $ persistent.alt_lamp = 1
-                    $ renpy.save_persistent()
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -12128,7 +12125,6 @@ label alt_day7_mi_dj_bad_end:
         $ persistent.mi_dj_bad += 1
     else:
         $ persistent.mi_dj_bad = 1
-    $ renpy.save_persistent()
     show acm_logo_mi_new_happy with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12293,7 +12289,6 @@ label alt_day7_mi_dj_true_end:
         $ persistent.mi_dj_true += 1
     else:
         $ persistent.mi_dj_true = 1
-    $ renpy.save_persistent()
     show acm_logo_mi_namiki with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12669,7 +12664,6 @@ label alt_day7_mi_dj_jp_good_end:
         $ persistent.mi_dj_good_jap += 1
     else:
         $ persistent.mi_dj_good_jap = 1
-    $ renpy.save_persistent()
     show acm_logo_mi_ricochet with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -13004,7 +12998,6 @@ label alt_day7_mi_dj_rf_good_end:
         $ persistent.mi_dj_good_rf += 1
     else:
         $ persistent.mi_dj_good_rf = 1
-    $ renpy.save_persistent()
     show acm_logo_mi_allyours with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

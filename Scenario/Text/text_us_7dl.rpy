@@ -10469,7 +10469,6 @@ label alt_day7_us_7dl_mikuforever:
         $ persistent.us_7dl_mi += 1
     else:
         $ persistent.us_7dl_mi = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_openup with moveinright:
         pos (1600, 1020)
@@ -10704,7 +10703,6 @@ label alt_day7_us_7dl_lenaforever:
         $ persistent.us_7dl_un += 1
     else:
         $ persistent.us_7dl_un = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_hi with moveinright:
         pos (1600, 1020)
@@ -10862,7 +10860,6 @@ label alt_day7_us_7dl_reunite:
         $ persistent.us_7dl_good += 1
     else:
         $ persistent.us_7dl_good = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_semische with moveinright:
         pos (1600, 1020)
@@ -11674,7 +11671,6 @@ label alt_day7_us_7dl_ever_after:
         $ persistent.us_7dl_true += 1
     else:
         $ persistent.us_7dl_true = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_true with moveinright:
         pos (1600, 1020)
@@ -11862,7 +11858,6 @@ label alt_day7_us_7dl_bad:
         $ persistent.us_7dl_bad += 1
     else:
         $ persistent.us_7dl_bad = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_bad with moveinright:
         pos (1600, 1020)
@@ -12910,7 +12905,6 @@ label alt_day7_us_px_fairytale:
         $ persistent.us_px_true += 1
     else:
         $ persistent.us_px_true = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_fairytale with moveinright:
         pos (1600, 1020)
@@ -13458,7 +13452,6 @@ label alt_day7_us_px_dejavu:
         $ persistent.us_px_rf_good += 1
     else:
         $ persistent.us_px_rf_good = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_px with moveinright:
         pos (1600, 1020)

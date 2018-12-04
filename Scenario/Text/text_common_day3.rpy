@@ -4921,7 +4921,6 @@ label alt_day3_nightmare:
                     $ persistent.alt_deep += 1
                 else:
                     $ persistent.alt_deep = 1
-                $ renpy.save_persistent()
                 show acm_logo_me_deep with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -4958,7 +4957,6 @@ label alt_day3_nightmare:
                     $ persistent.alt_deep += 1
                 else:
                     $ persistent.alt_deep = 1
-                $ renpy.save_persistent()
                 show acm_logo_me_deep with moveinright:
                     pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -4990,7 +4988,6 @@ label alt_day3_nightmare:
                     $ persistent.alt_deep += 1
                 else:
                     $ persistent.alt_deep = 1
-                $ renpy.save_persistent()
                 show acm_logo_me_deep with moveinright:
                 pause(3)
                 scene black
@@ -7907,7 +7904,6 @@ label alt_day3_dv_reunion:
             $ persistent.alt_deep += 1
         else:
             $ persistent.alt_deep = 1
-        $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7938,7 +7934,6 @@ label alt_day3_dv_reunion:
             $ persistent.alt_deep += 1
         else:
             $ persistent.alt_deep = 1
-        $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7964,7 +7959,6 @@ label alt_day3_dv_reunion:
             $ persistent.alt_deep += 1
         else:
             $ persistent.alt_deep = 1
-        $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7981,7 +7975,6 @@ label alt_day3_leave1:
         $ persistent.d3_deep += 1
     else:
         $ persistent.d3_deep = 1
-    $ renpy.save_persistent()
     $ renpy.pause(1.0, hard=True)
     window hide
     scene black
@@ -8001,7 +7994,6 @@ label alt_day3_dv_stayhere1:
         $ persistent.alt_qte += 1
     else:
         $ persistent.alt_qte = 1
-    $ renpy.save_persistent()
     $ night_time()
     with vpunch
     stop music

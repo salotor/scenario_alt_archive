@@ -10108,7 +10108,6 @@ label alt_day6_dv_7dl_escape_convince:
             $ persistent.alt_lamp += 1
         else:
             $ persistent.alt_lamp = 1
-        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -10138,7 +10137,6 @@ label alt_day6_dv_7dl_escape_convince:
             $ persistent.alt_lamp += 1
         else:
             $ persistent.alt_lamp = 1
-        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
@@ -10179,7 +10177,6 @@ label alt_day6_dv_7dl_escape_convince:
             $ persistent.alt_lamp += 1
         else:
             $ persistent.alt_lamp = 1
-        $ renpy.save_persistent()
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -12627,7 +12624,6 @@ label alt_day7_dv_7dl_tulpa_end:
         $ persistent.dv_7dl_tulpa += 1
     else:
         $ persistent.dv_7dl_tulpa = 1
-    $ renpy.save_persistent()
     show acm_logo_dv_tulpa with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -13078,7 +13074,6 @@ label alt_day7_dv_7dl_ussr_epilogue:
         $ persistent.dv_7dl_good_ussr += 1
     else:
         $ persistent.dv_7dl_good_ussr = 1
-    $ renpy.save_persistent()
     show acm_logo_dv_ussr_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -13276,7 +13271,6 @@ label alt_day7_dv_7dl_rf_epilogue:
         $ persistent.dv_7dl_good_rf += 1
     else:
         $ persistent.dv_7dl_good_rf = 1
-    $ renpy.save_persistent()
     show acm_logo_dv_morethanlife with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -13520,7 +13514,6 @@ label alt_day7_dv_7dl_rej_ussr_end:
         $ persistent.dv_7dl_reject_ussr += 1
     else:
         $ persistent.dv_7dl_reject_ussr = 1
-    $ renpy.save_persistent()
     show acm_logo_dv_tillend with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -13666,7 +13659,6 @@ label alt_day7_dv_7dl_rej_rf_end:
         $ persistent.dv_7dl_reject_rf += 1
     else:
         $ persistent.dv_7dl_reject_rf = 1
-    $ renpy.save_persistent()
     show acm_logo_dv_gohome with moveinright:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
@@ -13798,7 +13790,6 @@ label alt_day7_dv_7dl_un_end:
         $ persistent.dv_7dl_un += 1
     else:
         $ persistent.dv_7dl_un = 1
-    $ renpy.save_persistent()
     show acm_logo_dv_meetmethere with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -14053,7 +14044,6 @@ label alt_day7_dv_7dl_bad_end:
             $ persistent.dv_7dl_bad_mt += 1
         else:
             $ persistent.dv_7dl_bad_mt = 1
-        $ renpy.save_persistent()
         show acm_logo_dv_drunk with moveinright:
             pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -14067,7 +14057,6 @@ label alt_day7_dv_7dl_bad_end:
             $ persistent.dv_7dl_bad += 1
         else:
             $ persistent.dv_7dl_bad = 1
-        $ renpy.save_persistent()
         show acm_logo_dv_theresnoway with moveinright:
             pos (1600, 1020)
         $ renpy.pause(7.4, hard=True)
