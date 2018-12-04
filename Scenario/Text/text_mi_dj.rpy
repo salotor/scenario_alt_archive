@@ -2713,7 +2713,7 @@ label alt_day4_mi_dj_night:
     "В общем, это был танец босиком."
     "Под красивую медленную мелодию в свете луны."
     mi "Какая красивая луна. {w}И огромная…"
-    "Её голос быть чуть слышен."
+    "Её голос был чуть слышен."
     "Она положила руку мне на плечо, а я обнял её за талию."
     "Даже после почти часа танцев дышала Мику легко и почти не взмокла."
     "Вот что значит выучка."
@@ -10260,7 +10260,10 @@ label alt_day6_mi_dj_dance2_fail:
                     "Автобус занесло — и он, прокатившись юзом, проломил поручни моста, с места, с высоты пятнадцати метров ухнув в ледяную чёрную воду."
                     window hide
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp = True
+                    if persistent.alt_lamp:
+                        $ persistent.alt_lamp += 1
+                    else:
+                        $ persistent.alt_lamp = 1
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -10284,7 +10287,10 @@ label alt_day6_mi_dj_dance2_fail:
                     play sound sfx_bodyfall_1
                     stop sound_loop fadeout 0
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp = True
+                    if persistent.alt_lamp:
+                        $ persistent.alt_lamp += 1
+                    else:
+                        $ persistent.alt_lamp = 1
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -10320,7 +10326,10 @@ label alt_day6_mi_dj_dance2_fail:
                     th "Мику… До встречи."
                     window hide
                     play sound sfx_7dl["aunl"]
-                    $ persistent.alt_lamp = True
+                    if persistent.alt_lamp:
+                        $ persistent.alt_lamp += 1
+                    else:
+                        $ persistent.alt_lamp = 1
                     show acm_logo_me_lamp with moveinright:
                         pos (1600, 1020)
                     $ renpy.pause(7.4, hard=True)
@@ -12110,7 +12119,10 @@ label alt_day7_mi_dj_bad_end:
     scene black
     play music music_7dl["emptiness"] fadein 3
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_bad = True
+    if persistent.mi_dj_bad:
+        $ persistent.mi_dj_bad += 1
+    else:
+        $ persistent.mi_dj_bad = 1
     show acm_logo_mi_new_happy with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12271,7 +12283,10 @@ label alt_day7_mi_dj_true_end:
     stop ambience
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_true = True
+    if persistent.mi_dj_true:
+        $ persistent.mi_dj_true += 1
+    else:
+        $ persistent.mi_dj_true = 1
     show acm_logo_mi_namiki with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12386,7 +12401,7 @@ label alt_day7_mi_dj_good:
     return
 
 label alt_day7_mi_dj_jp_good_end:
-    scene black
+    scene black    ## здесь очень долго показывается только чёрный экран. Если для Японии подходящих бгшек нет, то пока Сёма в Питере можно использовать стандартные бгшки автобуса/города/etc
     nvl clear
     window hide
     $ renpy.pause(3)
@@ -12413,7 +12428,7 @@ label alt_day7_mi_dj_jp_good_end:
     "А вот что именно разрешить, он и сам не знал."
     "Просто вдруг если окажется, что… Мне надо убедиться самостоятельно, понимаете?"
     "Я должен увидеть всё сам, должен заглянуть ей в глаза."
-    "Уход на новый виток реинкарнации слишком ответственный шаг, чтобы решаться на него, не собрав всей информации о том, что я оказался здесь по ошибке."
+    "Уход на новый виток реинкарнации слишком ответственный шаг, чтобы решаться на него, не собрав всей информации о том, что я оказался здесь по ошибке."    ## ... по крайней мере до сюда
     nvl clear
     window hide
     $ renpy.pause(3)
@@ -12643,7 +12658,10 @@ label alt_day7_mi_dj_jp_good_end:
     hide mi with dissolve
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_good_jap = True
+    if persistent.mi_dj_good_jap:
+        $ persistent.mi_dj_good_jap += 1
+    else:
+        $ persistent.mi_dj_good_jap = 1
     show acm_logo_mi_ricochet with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12846,7 +12864,10 @@ label alt_day7_mi_dj_rf_good_end:
     "Красивая игрушка. Для игрока, которому она не нужна."
     me "И где мне тебя искать…"
     "Шепнул я в никуда."
-    stop music fadeout 3
+    if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
+        $ volume (0.0,'music')
+    else:
+        stop music fadeout 3
     stop sound_loop
     play sound_loop sfx_7dl["ringtone"]
     $ renpy.pause(3)
@@ -12864,7 +12885,6 @@ label alt_day7_mi_dj_rf_good_end:
     "Наконец, телефон заткнулся."
     window hide
     scene bg int_sam_house_clean_7dl with dissolve
-
     "А я вернулся за машину — у меня, кажется, появилась мысль."
     "Но кто-то свыше явно собрался сегодня не дать мне посидеть у монитора."
     play sound sfx_door_bell
@@ -12884,7 +12904,10 @@ label alt_day7_mi_dj_rf_good_end:
     me "Кто там балуется…"
     "Я повернулся чуть вбок, так, чтобы видеть пространство под звонком."
     "И там стояла… "
-    play music music_7dl["tellyourworld"] fadein 3
+    if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
+        $ volume (1.0,'music')
+    else:
+        play music "<from 124.4>" + music_7dl["tellyourworld"]
     show mi sad voca with dissolve
     "Она вполне заметно нервничала, дёргала в руках какой-то листок, то и дело сверяясь с ним."
     play sound sfx_door_bell
@@ -12974,7 +12997,10 @@ label alt_day7_mi_dj_rf_good_end:
     stop ambience
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.mi_dj_good_rf = True
+    if persistent.mi_dj_good_rf:
+        $ persistent.mi_dj_good_rf += 1
+    else:
+        $ persistent.mi_dj_good_rf = 1
     show acm_logo_mi_allyours with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

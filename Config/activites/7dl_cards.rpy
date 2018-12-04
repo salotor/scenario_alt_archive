@@ -2380,12 +2380,12 @@ label alt_day2_final_win:
         "Бац!" with vpunch
         with flash_red
         play music music_7dl["genki"] fadein 3
-        show us calml pioneer with dspr
+        show us calml pioneer with dissolve
         us "И ничего ты не выиграл!"
         "Она хмуро смотрела на меня снизу вверх."
         us "Ты играл неправильно, переигрываем!"
         me "Что это значит, «неправильно»?"
-        show us dontlike pioneer with dissolve
+        show us dontlike pioneer with dspr
         me "Я выиграл турнир! {w}Как я могу играть неправильно?"
         us "Молча! Ты жульничал!"
         "Она топнула ногой."
@@ -2395,16 +2395,18 @@ label alt_day2_final_win:
             th "Если она сейчас всем про него раcскажет, меня линчуют на ближайшей осине."
         us "Ты плохо мне поддавался."
         "А. Ну, это меняло всё дело."
+        hide us with dissolve
         "Я расхохотался и отошёл."
+        show dv smile pioneer2 with dissolve
         "А Алиса наконец поднялась со своего места и, проходя мимо меня, хлопнула по плечу."
         dv "Поздравляю!"
         "И от этих слов мне стало так радостно!"
         th "Я победил!!!"
-        window hide
         hide dv with dissolve
+        window hide
     elif alt_day2_f1 == 6:
         play music music_7dl["dead_silence"] fadein 3
-        show sh rage pioneer with dspr
+        show sh rage pioneer with dissolve
         sh "Значит, победил?"
         "Медленно произнёс он."
         "Он так странно стоял, что я никак не мог разглядеть его глаз из-за бликов на очках."
@@ -2433,16 +2435,17 @@ label alt_day2_final_win:
         show blinking
         scene bg int_dining_hall_sunset
         with diam
+        show sh upset pioneer with dissolve
         "Наваждение момента исчезло, Шурик из зловещей фигуры превратился обратно в обычного, чуть рассеянного, парня."
         "Серые, давящие стены уступили место красноватому свету катящегося на закат светила."
         "И самое главное — "
         "Ведь я же победитель!"
+        hide sh with dissolve
         "Электроник внёс моё имя в список победителей."
         el "А после ужина…"
         "Ольга Дмитриевна заткнула ему рот рукой."
         th "Правильно, пусть будет сюрпризом. А для спойлерщиков в аду отдельный котёл стоит."
         window hide
-        hide dv with dissolve
     elif alt_day2_f1 == 7:
         "Реакция Жужелицы была обескураживающей."
         "Её не было."

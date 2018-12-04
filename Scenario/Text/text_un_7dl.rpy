@@ -9325,7 +9325,10 @@ label alt_day6_un_7dl_letmeout:
     window hide
     scene gameover with flash
     play sound sfx_7dl["aunl"]
-    $ persistent.alt_lamp = True
+    if persistent.alt_lamp:
+        $ persistent.alt_lamp += 1
+    else:
+        $ persistent.alt_lamp = 1
     show acm_logo_me_lamp with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11113,7 +11116,10 @@ label alt_day7_un_7dl_epilogue_bad:
     $ renpy.pause(4.4, hard=True)
     stop sound_loop fadeout 0
     play sound sfx_7dl["aunl"]
-    $ persistent.un_7dl_bad = True
+    if persistent.un_7dl_bad:
+        $ persistent.un_7dl_bad += 1
+    else:
+        $ persistent.un_7dl_bad = 1
     show acm_logo_un_sui with moveinright:
         pos (1600, 1020)
     $ renpy.pause(4.4, hard=True)
@@ -11423,7 +11429,10 @@ label alt_day7_un_7dl_ussr:
     show blackout_exh
     with dspr
     play sound sfx_7dl["aunl"]
-    $ persistent.un_7dl_good_ussr = True
+    if persistent.un_7dl_good_ussr:
+        $ persistent.un_7dl_good_ussr += 1
+    else:
+        $ persistent.un_7dl_good_ussr = 1
     show acm_logo_un_good2 with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -11687,7 +11696,10 @@ label alt_day7_un_7dl_rf:
     window hide
     $ set_mode_adv()
     play sound sfx_7dl["aunl"]
-    $ persistent.un_7dl_good_rf = True
+    if persistent.un_7dl_good_rf:
+        $ persistent.un_7dl_good_rf += 1
+    else:
+        $ persistent.un_7dl_good_rf = 1
     show acm_logo_un_good with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12216,7 +12228,10 @@ label alt_day7_un_7dl_transit:
     with dissolve
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
-    $ persistent.un_7dl_true_transit = True
+    if persistent.un_7dl_true_transit:
+        $ persistent.un_7dl_true_transit += 1
+    else:
+        $ persistent.un_7dl_true_transit = 1
     show acm_logo_un_transit with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12304,7 +12319,10 @@ label alt_day7_un_7dl_rej:
     with dissolve
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
-    $ persistent.un_7dl_rej = True
+    if persistent.un_7dl_rej:
+        $ persistent.un_7dl_rej += 1
+    else:
+        $ persistent.un_7dl_rej = 1
     show acm_logo_un_shelter with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -12611,7 +12629,7 @@ label alt_day7_un_7dl_true:
     play music music_7dl["keep_looking"] fadein 3
     "А ещё два часа спустя салаты были готовы, шампанское стыло в мокрых полотенцах в холодильнике, а я курил на балконе."
     window hide
-    scene semen_room_window
+    scene bg semen_room_window
     with dissolve
     un "Молодой человек!"
     "Раздался смех снизу."
@@ -12663,7 +12681,10 @@ label alt_day7_un_7dl_true:
     un "Да!"
     play sound sfx_7dl["aunl"]
     stop sound_loop fadeout 3
-    $ persistent.un_7dl_true = True
+    if persistent.un_7dl_true:
+        $ persistent.un_7dl_true += 1
+    else:
+        $ persistent.un_7dl_true = 1
     show acm_logo_un_true with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
