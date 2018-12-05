@@ -12864,10 +12864,11 @@ label alt_day7_mi_dj_rf_good_end:
     "Красивая игрушка. Для игрока, которому она не нужна."
     me "И где мне тебя искать…"
     "Шепнул я в никуда."
-    if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
-        $ volume (0.0,'music')
-    else:
-        stop music fadeout 3
+    $ volume (0.0,'music')
+    # if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
+        # $ volume (0.0,'music')
+    # else:
+        # stop music fadeout 3
     stop sound_loop
     play sound_loop sfx_7dl["ringtone"]
     $ renpy.pause(3)
@@ -12904,10 +12905,11 @@ label alt_day7_mi_dj_rf_good_end:
     me "Кто там балуется…"
     "Я повернулся чуть вбок, так, чтобы видеть пространство под звонком."
     "И там стояла… "
-    if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
-        $ volume (1.0,'music')
-    else:
-        play music "<from 124.4>" + music_7dl["tellyourworld"]
+    $ volume (1.0,'music')
+    # if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
+        # $ volume (1.0,'music')
+    # else:
+        # play music "<from 124.4>" + music_7dl["tellyourworld"]
     show mi sad voca with dissolve
     "Она вполне заметно нервничала, дёргала в руках какой-то листок, то и дело сверяясь с ним."
     play sound sfx_door_bell
