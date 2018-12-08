@@ -7358,7 +7358,7 @@ label alt_day5_sl_7dl_candle:
     mt "Люди идут по свету."
     "Начала вожатая."
     mt "Этой строчкой я хотела бы открыть сегодняшнюю свечу."
-    mt "Раньше пионерами называли людей, которые открывали новые земли, первопроходцев, их жизнь была связана с риском для здоровья, иногда даже жизни."
+    mt "Раньше пионерами называли людей, которые открывали новые земли, первопроходцев, их работа была связана с риском для здоровья, иногда даже жизни."
     mt "Каждый день им приходилось проходить через множество нелёгких испытаний, опасностей — и всё ради того, чтобы на карте появилась ещё одна отметка, куда можно будет привести людей."
     mt "Не каждый день был удачным, не каждый успешным, но каждый вечер, под конец дня, они собирались вокруг огня для того, чтобы отдохнуть, пообщаться и обсудить день уходящий, да просто почувствовать, что они не одиноки."
     "Окружающие пионеры молчаливо внимали словам вожатой, будто это они сейчас карабкались на горы, проходили пешком пустыни и покоряли места, доселе никем не изведанные."
@@ -14891,7 +14891,7 @@ label alt_day6_sl_7dl_breakfast:
         "Так что на Славины пасторали я смотрел без возможного интереса."
         "Меня куда сильнее интересовало выживание."
     window hide
-    scene bg ext_camp_entrance_sunset
+    scene bg ext_camp_entrance_sunset    ## по-хорошему, здесь нужна версия bg с закрытыми воротами. Из night-версии нельзя нафотошопить sunset-версию закрытых ворот? #Нет, нельзя, но ты можешь попробовать.
     with dissolve
     stop sound_loop
     "К воротам мы прибежали бок о бок."
@@ -21036,7 +21036,7 @@ label alt_day6_sl_7dl_evening:
         "А Катюшка со мной в качестве консорта отправилась кормить отряд."
         "Не было печали, да."
         "К счастью, это не заняло много времени: как я понял, первые семь минут всегда занимала Мику."
-        "Со своей болтологией и долгими песнями, он позволяла всем прочим подготовиться."
+        "Со своей болтологией и долгими песнями, она позволяла всем прочим подготовиться."
         "Так что отряд был частью на скамейках, частью на низком старте ожидал своего выхода."
         "И отпустили меня меньше чем через три минуты."
         #hide ka with dissolve
@@ -22557,8 +22557,10 @@ label alt_day6_sl_7dl_catapult:
         window hide
         scene gameover with flash
         play sound sfx_7dl["aunl"]
-        $ persistent.alt_lamp = True
-        $ renpy.save_persistent()
+        if persistent.alt_lamp:
+            $ persistent.alt_lamp += 1
+        else:
+            $ persistent.alt_lamp = 1
         show acm_logo_me_lamp with moveinright:
             pos (1600, 1020)
         $ renpy.pause(3, hard=True)
@@ -28002,8 +28004,10 @@ label alt_day7_sl_7dl_true:
     "И всё закончилось."
     "Ведь чудес не бывает."
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_true = True
-    $ renpy.save_persistent()
+    if persistent.sl_7dl_true:
+        $ persistent.sl_7dl_true += 1
+    else:
+        $ persistent.sl_7dl_true = 1
     show acm_logo_sl_no_wonder with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -28308,8 +28312,10 @@ label alt_day7_sl_7dl_rf_good:
     me "Да хоть целый день."
     me "С утра до ночи."
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_good_rf = True
-    $ renpy.save_persistent()
+    if persistent.sl_7dl_good_rf:
+        $ persistent.sl_7dl_good_rf += 1
+    else:
+        $ persistent.sl_7dl_good_rf = 1
     show acm_logo_sl_till_sunrise with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -29051,7 +29057,7 @@ label alt_day7_sl_7dl_herc_neon:
         ka "Парадокс!"
         me "Ты не обманываешь?"
         #show ka grin casual with dspr
-        ka "Могу поклясться, положив руку на ногу"
+        ka "Могу поклясться, положив руку на ногу."
     me "Но как я тогда могу находиться одновременно и здесь?"
     ka "Субъективное время."
     "Отмахнулась девушка."
@@ -29555,8 +29561,10 @@ label alt_day7_sl_7dl_herc_neon:
     "Скатившаяся по щеке слезинка запуталась в моей щетине."
     "Но это уже не имело значения."
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_herc_good2 = True
-    $ renpy.save_persistent()
+    if persistent.sl_7dl_herc_good2:
+        $ persistent.sl_7dl_herc_good2 += 1
+    else:
+        $ persistent.sl_7dl_herc_good2 = 1
     show acm_logo_sl_neon with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -29813,8 +29821,10 @@ label alt_day7_sl_7dl_herc_right_road:
     "Единственно верный путь."
     #TODO: цг выше в медленном zoomout
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_herc_good = True
-    $ renpy.save_persistent()
+    if persistent.sl_7dl_herc_good:
+        $ persistent.sl_7dl_herc_good += 1
+    else:
+        $ persistent.sl_7dl_herc_good = 1
     show acm_logo_sl_right_road with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -30242,8 +30252,10 @@ label alt_day7_sl_7dl_loki_radio:
     "Значит, в сердце моём больше не было для них места."
     "На то они и радио «Пустота»."
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_loki_good = True
-    $ renpy.save_persistent()
+    if persistent.sl_7dl_loki_good:
+        $ persistent.sl_7dl_loki_good += 1
+    else:
+        $ persistent.sl_7dl_loki_good = 1
     show acm_logo_sl_radio with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -30660,8 +30672,10 @@ label alt_day7_sl_7dl_loki_am_home:
     "Я улыбнулся и улёгся как мог удобно — насколько позволяли ремни смирительной рубашки."
     th "Я дома. {w}Куда мне торопиться?"
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_loki_neu = True
-    $ renpy.save_persistent()
+    if persistent.sl_7dl_loki_neu:
+        $ persistent.sl_7dl_loki_neu += 1
+    else:
+        $ persistent.sl_7dl_loki_neu = 1
     show acm_logo_sl_am_home with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -30715,8 +30729,10 @@ label alt_day7_sl_7dl_loki_oafa:
     me "Я хочу спасти твою жизнь. {w}И записать с тобой песню."
     "Нажал и застыл в ожидании, не зная ещё, что ждёт впереди."
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_loki_rej = True
-    $ renpy.save_persistent()
+    if persistent.sl_7dl_loki_rej:
+        $ persistent.sl_7dl_loki_rej += 1
+    else:
+        $ persistent.sl_7dl_loki_rej = 1
     show acm_logo_sl_pan with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -31335,8 +31351,10 @@ label alt_day7_sl_7dl_loopback:
     "Улыбнулась медсестра, и я расслышал мурлыкающие нотки в её голосе."
     me "Домой."
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_good2 = True
-    $ renpy.save_persistent()
+    if persistent.sl_7dl_good2:
+        $ persistent.sl_7dl_good2 += 1
+    else:
+        $ persistent.sl_7dl_good2 = 1
     show acm_logo_sl_dr_un with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -32000,8 +32018,10 @@ label alt_day7_sl_7dl_wasted:
     "Значит, не зря был целый год ожидания?"
     "Не напрасно?"
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_good = True
-    $ renpy.save_persistent()
+    if persistent.sl_7dl_good:
+        $ persistent.sl_7dl_good += 1
+    else:
+        $ persistent.sl_7dl_good = 1
     show acm_logo_sl_wasted with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
@@ -32585,8 +32605,10 @@ label alt_day7_sl_7dl_missed:
         "Как и то, насколько же я…"
     window hide
     play sound sfx_7dl["aunl"]
-    $ persistent.sl_7dl_bad = True
-    $ renpy.save_persistent()
+    if persistent.sl_7dl_bad:
+        $ persistent.sl_7dl_bad += 1
+    else:
+        $ persistent.sl_7dl_bad = 1
     show acm_logo_sl_missed with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)

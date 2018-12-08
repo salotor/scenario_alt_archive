@@ -61,86 +61,77 @@ init:
     transform fleft:
         xalign 0.16
         xanchor 0.5
-        yalign 0.0
 
     transform left:
         xalign 0.28
         xanchor 0.5
-        yalign 0.0
 
     transform cleft:
         xalign 0.355
         xanchor 0.5
-        yalign 0.0
 
     transform center:
         xalign 0.5
-        yalign 0.0
 
     transform cright:
         xalign 0.645
         xanchor 0.5
-        yalign 0.0
 
     transform right:
         xalign 0.72
         xanchor 0.5
-        yalign 0.0
 
     transform fright:
         xalign 0.84
         xanchor 0.5
-        yalign 0.0
 
     transform voy_left:
         xalign 0.0
         xanchor 0.5
-        yalign 0.0
 
     transform voy_right:
         xalign 1.0
         xanchor 0.5
-        yalign 0.0
         
     transform zenterright:
-        xalign 0.5 yalign 0.5 zoom 1.0
-        linear 0.4 zoom 1.02 xalign 0.7 yalign 0.5
+        xalign 0.5 zoom 1.0
+        linear 0.4 zoom 1.02 xalign 0.7
         
     transform enterright:
-        xalign 0.5 yalign 0.5 zoom 1.02
-        linear 0.6 zoom 1.05 xalign 0.9 yalign 0.5
+        xalign 0.5 zoom 1.02
+        linear 0.6 zoom 1.05 xalign 0.9
         
     transform zenterleft:
-        xalign 0.5 yalign 0.5 zoom 1.0
-        linear 0.4 zoom 1.02 xalign 0.3 yalign 0.5
+        xalign 0.5 zoom 1.0
+        linear 0.4 zoom 1.02 xalign 0.3
         
     transform enterleft: #по левую
-        xalign 0.5 yalign 0.5 zoom 1.02
-        linear 0.6 zoom 1.05 xalign 0.1 yalign 0.5
+        xalign 0.5 zoom 1.02
+        linear 0.6 zoom 1.05 xalign 0.1
         
     transform zentercenter: #для открывающихся дверей
-        xalign 0.5 yalign 0.5 zoom 1.0
-        linear 0.8 zoom 1.05 xalign 0.5 yalign 0.5
+        xalign 0.5 zoom 1.0
+        linear 0.8 zoom 1.05 xalign 0.5
         
     transform zentercenter2: #для открывающихся дверей
-        xalign 0.5 yalign 0.5 zoom 1.0 subpixel True
-        linear 20.0 zoom 1.5 xalign 0.5 yalign 0.5
+        xalign 0.5 zoom 1.0 subpixel True
+        linear 20.0 zoom 1.5 xalign 0.5
         
     transform zexitcenter: #отдаляющий эффект от центра
-        xalign 0.5 yalign 0.5 zoom 1.05 subpixel True
-        linear 0.8 zoom 1.0 xalign 0.5 yalign 0.5
+        xalign 0.5 zoom 1.05 subpixel True
+        linear 0.8 zoom 1.0 xalign 0.5
         
     transform zexitcenter2: #отдаляющий эффект от центра
-        xalign 0.5 yalign 0.5 zoom 1.5
-        linear 20 zoom 1.0 xalign 0.5 yalign 0.5
+        xalign 0.5 zoom 1.5
+        linear 20 zoom 1.0 xalign 0.5
         
     transform zexitright: #отдалаюящий эффект от левого края к центру
-        xalign 0.7 yalign 0.5 zoom 1.05
-        linear 0.8 zoom 1.0 xalign 0.5 yalign 0.5
+        xalign 0.7 zoom 1.05
+        linear 0.8 zoom 1.0 xalign 0.5
         
     transform zexitleft: #отдаляющий эффект от правого края к центру 
-        xalign 0.3 yalign 0.5 zoom 1.05
-        linear 0.8 zoom 1.0 xalign 0.5 yalign 0.5
+        xalign 0.3 zoom 1.05
+        linear 0.8 zoom 1.0 xalign 0.5
         
     transform bottotop:
         pos (0,-1261)

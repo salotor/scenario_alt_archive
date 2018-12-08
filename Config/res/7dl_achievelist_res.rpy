@@ -1,21 +1,26 @@
 init -10 python:
     ##\\\\\\\\\\\\\\\\\\\\\\\\\ШРИФТЫ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # ------------------------------------------------
-    # Удалятор-цвет-актив-маленький
-    style.sdl_achvlistA_de_kurz = Style(style.default)
-    style.sdl_achvlistA_de_kurz.font = get_image_7dl("fonts/stylo_Bold.ttf")
-    style.sdl_achvlistA_de_kurz.size = 32
-    style.sdl_achvlistA_de_kurz.color = "#cc0000"
-    # Удалятор-цвет-пассив-маленький
-    style.sdl_achvlistB_de_kurz = Style(style.default)
-    style.sdl_achvlistB_de_kurz.font = get_image_7dl("fonts/stylo_Bold.ttf")
-    style.sdl_achvlistB_de_kurz.size = 32
-    style.sdl_achvlistB_de_kurz.color = "#989898"
-    # Удалятор-цвет-пассив-стандартный
-    style.sdl_achvlistB_de_st = Style(style.default)
-    style.sdl_achvlistB_de_st.font = get_image_7dl("fonts/stylo_Bold.ttf")
-    style.sdl_achvlistB_de_st.size = 54
-    style.sdl_achvlistB_de_st.color = "#989898"
+    # Мелкие общие фразы - актив
+    style.sdl_achv_font_small_active = Style(style.default)
+    style.sdl_achv_font_small_active.font = get_image_7dl("fonts/stylo_Bold.ttf")
+    style.sdl_achv_font_small_active.size = 32
+    style.sdl_achv_font_small_active.color = "#cc0000"
+    # Мелкие общие фразы - пассив
+    style.sdl_achv_font_small_inactive = Style(style.default)
+    style.sdl_achv_font_small_inactive.font = get_image_7dl("fonts/stylo_Bold.ttf")
+    style.sdl_achv_font_small_inactive.size = 32
+    style.sdl_achv_font_small_inactive.color = "#989898"
+    # Крупные общие фразы
+    style.sdl_achv_font_big = Style(style.default)
+    style.sdl_achv_font_big.font = get_image_7dl("fonts/stylo_Bold.ttf")
+    style.sdl_achv_font_big.size = 54
+    style.sdl_achv_font_big.color = "#989898"
+    # Пререквезиты
+    style.sdl_achv_font_prereq = Style(style.default)
+    style.sdl_achv_font_prereq.font = get_image_7dl("fonts/stylo_Bold.ttf")
+    style.sdl_achv_font_prereq.size = 54
+    style.sdl_achv_font_prereq.color = "#ffffff"
     
     # Мику-цвет-большой
     style.sdl_achvlistA_mi_gross = Style(style.default)
@@ -107,6 +112,9 @@ init:
     image sdl_achv_screen_us = get_image_7dl("gui/ach_list/ach_screen_us.png")
     image sdl_achv_screen_me = get_image_7dl("gui/ach_list/ach_screen_me.png")
     
+    # Экран отображения требований к получению концовки
+    image sdl_achv_frame = get_image_7dl("gui/ach_list/ach_frame.png")
+    
     ##\\\\\\\\\\\\\\\\\\\\\\\\\КНОПКИ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # Кнопки первичного меню
     ## Мику
@@ -182,21 +190,23 @@ init:
     
     ##\\\\\\\\\\\\\\\\\\\\\\\\\ОПИСАНИЕ РУТОВ И КОНЦОВОК\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # Общие фразы
-    image sdl_achv_del_active   = Text(" Обнулить\nпрохождения", style="sdl_achvlistA_de_kurz")
-    image sdl_achv_del_inactive = Text(" Обнулить\nпрохождения", style="sdl_achvlistB_de_kurz")
-    image sdl_achv_ext_active   = Text(" Выход\n в меню", style="sdl_achvlistA_de_kurz")
-    image sdl_achv_ext_inactive = Text(" Выход\n в меню", style="sdl_achvlistB_de_kurz")
+    image sdl_achv_del_active   = Text(" Обнулить\nпрохождения", style="sdl_achv_font_small_active")
+    image sdl_achv_del_inactive = Text(" Обнулить\nпрохождения", style="sdl_achv_font_small_inactive")
+    image sdl_achv_ext_active   = Text(" Выход\n в меню", style="sdl_achv_font_small_active")
+    image sdl_achv_ext_inactive = Text(" Выход\n в меню", style="sdl_achv_font_small_inactive")
     
-    image sdl_achv_need_route  = Text("Рут не дописан", style="sdl_achvlistB_de_st")
-    image sdl_achv_jump        = Text(" Перейти\nна концовку", style="sdl_achvlistB_de_st")
-    image sdl_achv_info_end    = Text("Требует прохождения\n      концовки", style="sdl_achvlistB_de_st")
-    image sdl_achv_info_alt    = Text("Требует начала с\nальтернативного\n  первого дня", style="sdl_achvlistB_de_st")
+    image sdl_achv_need_route  = Text("Рут не дописан", style="sdl_achv_font_big")
+    image sdl_achv_jump        = Text(" Перейти\nна концовку", style="sdl_achv_font_big")
+    
+    image sdl_achv_info_or     = Text("или", style="sdl_achv_font_prereq")
+    image sdl_achv_info_end    = Text("Требует прохождения\n      концовки", style="sdl_achv_font_prereq")
+    image sdl_achv_info_pst    = Text("Требует сбора\nпаззла-сердечка", style="sdl_achv_font_prereq")
     # Типология рутов
-    image sdl_achv_7dl_route = Text("7ДЛ-рут", style="sdl_achvlistB_de_kurz")
-    image sdl_achv_clt_route = Text("Классик-рут", style="sdl_achvlistB_de_kurz")
-    image sdl_achv_xxx_route = Text("Специальный\nрут", style="sdl_achvlistB_de_kurz")
-    image sdl_achv_d3r_route = Text("Д3-рут", style="sdl_achvlistB_de_kurz")
-    image sdl_achv_smt_route = Text("Прочее", style="sdl_achvlistB_de_kurz")
+    image sdl_achv_7dl_route = Text("7ДЛ-рут", style="sdl_achv_font_small_inactive")
+    image sdl_achv_clt_route = Text("Классик-рут", style="sdl_achv_font_small_inactive")
+    image sdl_achv_xxx_route = Text("Специальный\nрут", style="sdl_achv_font_small_inactive")
+    image sdl_achv_d3r_route = Text("Д3-рут", style="sdl_achv_font_small_inactive")
+    image sdl_achv_smt_route = Text("Прочее", style="sdl_achv_font_small_inactive")
     # ------------------------------------------------
     # Названия рутов
     ## Мику-руты
@@ -346,7 +356,10 @@ label alt_achv_deep_deep:
     "И как бесконечные полторы секунды невесомости спустя, мы боком ударились о поверхность грязной чёрной воды."
     play sound sfx_water_emerge
     window hide
-    $ persistent.alt_deep = True
+    if persistent.alt_deep:
+        $ persistent.alt_deep += 1
+    else:
+        $ persistent.alt_deep = 1
     show acm_logo_me_deep with moveinright:
     pause(3)
     scene black

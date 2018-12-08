@@ -5960,7 +5960,7 @@ label alt_day6_us_7dl_disco:
         me "Не заговаривай мне зубы."
         us "А может, я не хочу отвечать!"
         me "Какая-то большая тайна? Страшно секретная?"
-        "Она так не хотела отвечать, что мне чем дальше, тем сильнее становилось любопытнее."
+        "Она так не хотела отвечать, что мне чем дальше, тем любопытнее становилось."
         "Всё правильно, чем крепче охраняют тайну, тем она интересней."
         "Ульяна же молчала как партизан, так что я немного усилил нажим:"
         me "Не хочешь — и не говори. Мне вообще не интересно."
@@ -10465,8 +10465,10 @@ label alt_day7_us_7dl_mikuforever:
     "В груди перехватило что-то, все слова враз забылись."
     "Я ступил на первую ступеньку автобуса."
     window hide
-    $ persistent.us_7dl_mi = True
-    $ renpy.save_persistent()
+    if persistent.us_7dl_mi:
+        $ persistent.us_7dl_mi += 1
+    else:
+        $ persistent.us_7dl_mi = 1
     play sound sfx_7dl["aunl"]
     show acm_logo_us_openup with moveinright:
         pos (1600, 1020)
@@ -10697,8 +10699,10 @@ label alt_day7_us_7dl_lenaforever:
     show un smile2 winter with dspr
     un "С моей сестрой."
     window hide
-    $ persistent.us_7dl_un = True
-    $ renpy.save_persistent()
+    if persistent.us_7dl_un:
+        $ persistent.us_7dl_un += 1
+    else:
+        $ persistent.us_7dl_un = 1
     play sound sfx_7dl["aunl"]
     show acm_logo_us_hi with moveinright:
         pos (1600, 1020)
@@ -10852,8 +10856,10 @@ label alt_day7_us_7dl_reunite:
     play music music_7dl["happy_ending"] fadein 3
     us "Пошли, Сёмище! А то билетов не хватит!"
     window hide
-    $ persistent.us_7dl_good = True
-    $ renpy.save_persistent()
+    if persistent.us_7dl_good:
+        $ persistent.us_7dl_good += 1
+    else:
+        $ persistent.us_7dl_good = 1
     play sound sfx_7dl["aunl"]
     show acm_logo_us_semische with moveinright:
         pos (1600, 1020)
@@ -11661,8 +11667,10 @@ label alt_day7_us_7dl_ever_after:
     show us laugh old with dspr
     "Мы долго смотрим друг на друга, а затем хохочем."
     window hide
-    $ persistent.us_7dl_true = True
-    $ renpy.save_persistent()
+    if persistent.us_7dl_true:
+        $ persistent.us_7dl_true += 1
+    else:
+        $ persistent.us_7dl_true = 1
     play sound sfx_7dl["aunl"]
     show acm_logo_us_true with moveinright:
         pos (1600, 1020)
@@ -11846,8 +11854,10 @@ label alt_day7_us_7dl_bad:
     "Я стал настоящим."
     show spill_red with dspr
     window hide
-    $ persistent.us_7dl_bad = True
-    $ renpy.save_persistent()
+    if persistent.us_7dl_bad:
+        $ persistent.us_7dl_bad += 1
+    else:
+        $ persistent.us_7dl_bad = 1
     play sound sfx_7dl["aunl"]
     show acm_logo_us_bad with moveinright:
         pos (1600, 1020)
@@ -12891,8 +12901,10 @@ label alt_day7_us_px_fairytale:
     "Солнце блеснуло медью в волосах, в радужке снова поселилось то самое спокойствие и любовь, ради которой мы и прожили всё это время."
     "Отблеск познакомившего нас лета."
     window hide
-    $ persistent.us_px_true = True
-    $ renpy.save_persistent()
+    if persistent.us_px_true:
+        $ persistent.us_px_true += 1
+    else:
+        $ persistent.us_px_true = 1
     play sound sfx_7dl["aunl"]
     show acm_logo_us_fairytale with moveinright:
         pos (1600, 1020)
@@ -13436,8 +13448,10 @@ label alt_day7_us_px_dejavu:
         "Зашептал:"
         me "Тай-тай…"
     window hide
-    $ persistent.us_px_rf_good = True
-    $ renpy.save_persistent()
+    if persistent.us_px_rf_good:
+        $ persistent.us_px_rf_good += 1
+    else:
+        $ persistent.us_px_rf_good = 1
     play sound sfx_7dl["aunl"]
     show acm_logo_us_px with moveinright:
         pos (1600, 1020)

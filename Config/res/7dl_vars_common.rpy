@@ -11,7 +11,7 @@ init 2:
     $ mod_tags["scenario__alt_sevendl"] = ["length:days","gameplay:vn","protagonist:male"]
     $ timeskip0 = "Я с трудом вспоминаю, \n с чего всё началось…"
     $ timeskip_come = "Ты пойдёшь со мной?"
-    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Одиночка. День 6."
+    $ timeskip_dev = "Рут находится в разработке…\nВ активной разработке: Одиночка. День 7."
     $ timeskip33 = "ВЕЛИКОЕ ОГРАБЛЕНИЕ!"
     $ timeskip3 = "Я скучаю…"
     $ timeskip4 = "Я хочу к тебе…"
@@ -24,8 +24,9 @@ init 2:
     $ timeskip11 = "Прощай."
     $ timeskip12 = "Ты потерялся, малыш?"
     $ timeskip13 = "ПРИДИ В СЕБЯ!"
-    $ alt_credits_text ="{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nDeadPunk\n\nППВК\n\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nТоварищи, помогавшие финансово на Patreon:\nDarkness Inc\nAlex Traven\n\nТеоретик\n\nDon Diego\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
-
+    $ alt_credits_text ="{image=acm_logo}\n\nАвтор сценария, режиссёр и постановщик:\n\n{color=#99ff00}{b}7дл-кун aka Inakrin{/b}{/color}\n\nГрафика:\n\n\nGoodbyeNona - фоны и спрайты\n\nMannych - спрайт физрука\n\nМакс Смолев(sorasora) - cg-сценки\n\nАлексей - фоны и модели\n\nАлексей «kef34» Никифоров - а я помогал!\◐__◑/ ໒( • ͜ʖ • ) \n\n☆ FairyApple ☆ - cg-сценки\n\n\n\nМУЗЫКА\n\nApril Rain\n\nTym Nyman\n\nDeadPunk\n\nППВК\n\n\nКОД И АДАПТАЦИЯ\n\nNuttyprof, openplace - новая карта лагеря и новый карточный турнир.\n\nSalotor - галерея, порт сценария в {u}Steam{/u}\n\nEldhenn - порт сценария в {u}Steam{/u}\n\nЛенофаг Простой, Ravsii - стартовые меню\n\nАльфа-, бета- и гамма-тестеры:\n\nМакс Ветров, Drago23, Arlien, Peregarrett, Demiurge-kun, Дельта, KirillZ89, Ленофаг Простой, Ленивый Бегун, Занудный, Serge Domingo, Ravsii, Dantiras, salotor, Gr0m, Sitzileon, shers.\n\nТоварищи, помогавшие финансово на Patreon:\nDarkness Inc\nAlex Traven\n\nТеоретик\n\nIngwe\n\nСпасибо всем, кого не упомянул, но не забыл - за то, что помогали и поддерживали!\n\n\n\nКОНЕЦ."
+    #Former Patrons:
+    #Don Diego
     #Day - базис
     #Sunset - 94%, 82%, 100%
     #Night - 58%, 67%, 67%
@@ -191,8 +192,10 @@ label alt_day0_vars: #Переменные нулевого дня
     $ routetag = "prologue"
     $ role_bg = "intro_ground"
     $ alt_day_binder = 0
-    if persistent.dv_7dl_true and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_7dl_true: 
+    if persistent.dv_7dl_true and persistent.un_7dl_true and persistent.mi_7dl_true and persistent.mt_7dl_true and persistent.sl_7dl_true and persistent.us_px_true: 
         $ persistent.alt_binder = True
+    else:
+        $ persistent.alt_binder = False
     return
 
 label alt_day1_vars: #Переменные первого дня
