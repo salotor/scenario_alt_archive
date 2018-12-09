@@ -154,11 +154,12 @@
         show dv normal sport at right
         show mi normal casual at left
         show un normal sport at center
-        with dissolve #Ы
+        with dissolve
         "Алиса… Лена… Мику…"
-        hide dv with dissolve
-        hide mi with dissolve
-        hide un with dissolve
+        hide dv
+        hide mi
+        hide un
+        with dissolve
         if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl):
             "Оп, стоять!"
             "Я догнал процессию и пошёл с ними в шаг."
@@ -8133,7 +8134,8 @@ label alt_day3_dv_stayhere1:
         me "Булочки и кефир. Уж что нашлось."
     show dv smile pioneer far at center with dissolve
     dv "Теперь я тебе ещё больше должна."
-    "Улыбнулась она, без обычного своего высокомерия — почти как тогда, на пляже." # только при 'dv' in list_d2_date_7dl
+    if 'dv' in list_d2_date_7dl:
+        "Улыбнулась она, без обычного своего высокомерия — почти как тогда, на пляже."
     "Но уговаривать себя не заставила и подмела всё подчистую, уплетая с таким аппетитом, что и мне кусочек захотелось."
     "Не досталось — зубы клацнули в опасной близости от вытянутой руки" with vpunch
     extend ", и я поспешил спрятать конечность."
