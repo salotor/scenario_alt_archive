@@ -8,7 +8,7 @@
     "Наверное, это и есть тот самый ад, которым меня столько пугали."
     "Холод, тьма и полное отсутствие воздуха."
     "И так хочется оставить всё как есть и отправить себя в бесконечное падение навстречу дну."
-    "Но сил сопротивляться уже не оставалось."
+    "Сил сопротивляться уже не оставалось."
     "Движения становились всё медленнее, всё неторопливее…"
     "Вскоре я двигался только вниз."
     window hide
@@ -3243,6 +3243,8 @@ label alt_day1_slavya_saviour:
     return
 
 label alt_day1_lena:
+    if d3:
+        $ meet('me','Я') 
     scene bg ext_square_night with dissolve
     play ambience ambience_camp_center_night fadein 6
     play music music_7dl["someone_like_you_guitar"] fadein 3
