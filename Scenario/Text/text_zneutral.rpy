@@ -1053,8 +1053,8 @@ label alt_day4_neu_mt:
     scene bg ext_polyana_day
     "Они были важными даже с виду — набранные на печатной машинке, пестрящие печатями."
     "Я хотел было окликнуть её, но в воздухе мелькнула знакомая красная книжица. И я застыл."
+    stop music fadeout 3 #Ы
     "А пламя уже пожирало отметки о прописке, военной обязанности, возрасте…"
-    stop music fadeout 3
     "Наконец, последняя бумажка улетела в костёр."
     play music music_7dl["wheres_wonderland"] fadein 3
     "Я подошёл и сел рядом."
@@ -10705,7 +10705,7 @@ label alt_day5_neu_sleepnight:
     play ambience ambience_camp_center_night fadein 1
     play music music_list["a_promise_from_distant_days_v2"] fadein 2
     "У меня было ещё немного времени, прежде чем Ольга закончит свой обход."
-    if not alt_day5_neu_sl_voyeur:
+    if alt_day5_neu_sl_voyeur: #Ы
         "И Славя донесёт про мой уход с территории."
         th "Ох, боюсь-боюсь!"
         dreamgirl "А Ульянка как же?"
@@ -12588,7 +12588,7 @@ label alt_day6_neu_loki_concert:
     me "В каком смысле?"
     show dv normal pioneer2 with dspr
     dv "Ну… Обычно же ты тормоз, нет?"
-    hide dv with fade
+    hide dv with dissolve #Ы
     "Удостоверившись в том, что я относительно пришёл в себя, Алиса направилась к столовой."
     "И ведь даже не обернулась посмотреть, иду ли я за ней!"
     window hide
