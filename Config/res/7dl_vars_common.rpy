@@ -140,6 +140,7 @@ label alt_vars:
     call alt_day4_un_7dl_vars
     call alt_day5_un_7dl_vars
     call alt_day6_un_7dl_vars
+    call alt_day7_un_7dl_vars
     call alt_day4_mi_dj_vars
     call alt_day5_mi_dj_vars
     call alt_day6_mi_dj_vars

@@ -309,6 +309,7 @@ label sdl_achvlist_main:
     else:
         $ day_time()
         $ persistent.sprite_time = "day"
+        $ make_names_known_7dl()
         $ plthr = u"Достижения"
         play ambience ambience_7dl["safe"] fadein 5
         
