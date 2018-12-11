@@ -2755,9 +2755,10 @@ label alt_day6_mt_7dl_declare:
     play music music_7dl["stilllovingyou"] fadein 3
     "Если бы не моё непонятно откуда взявшееся упрямство."
     "Глупое и ребяческое желание сделать всё хотя бы раз не так, как надо, а как кажется правильным."
-    show mt surprise dress with dspr
+    show mt normal dress with dissolve #Ы
     "Натанцевавшись в кругу своих каких-то подружек из вожатых смежных отрядов, Ольга отошла на скамеечку и совсем собралась было сесть…"
     me "Вы позволите?"
+    show mt surprise dress with dspr #Ы
     "Похоже, мне удалось материализоваться практически бесшумно."
     "Иначе с чего бы ей вздрагивать?"
     show mt sad dress with dspr
