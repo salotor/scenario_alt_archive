@@ -1828,7 +1828,7 @@ label alt_day1_supper:
     
 label alt_day1_dining_room:
     play ambience ambience_dining_hall_full fadein 3
-    scene bg int_dining_hall_people_sunset  with fade
+    scene bg int_dining_hall_people_sunset with fade #Ы
     "Что ж… Столовая как столовая."
     "Длинные столы на двенадцать человек, выстроившиеся у стен, столы чуть короче по другую сторону прохода, чтобы обслуживающий персонал с тележками мог подобраться и сервировать или убрать со стола."
     "Кафель на полу и стенах, стулья из нержавеющей стали и колонки под потолком на случай, если на улице будет дождь."
@@ -2032,7 +2032,7 @@ label alt_day1_dining_room:
     "{i}И каждому воздастся по грехам его!{/i}"
     me " {b}УЛЬЯНААААА!!!{/b}"
     stop ambience fadeout 1
-    stop music fadeout 2 #музыка ост. позже, чем надо по тексту. 
+    stop music fadeout 2 #Ы 
     $ renpy.pause(1)
     "Во внезапно опустившейся на столовую тишине мой крик раздался особенно громко."
     "И, судя по долетевшему от двери довольному хихиканью, достиг ушей адресата."
@@ -2732,7 +2732,7 @@ label alt_day1_meeting2:
     return
 
 label alt_day1_chase:
-    scene bg ext_dining_hall_near_sunset with dissolve
+    scene bg ext_dining_hall_near_sunset with dissolve #Ы
     play ambience ambience_camp_center_day fadein 2
     play sound_loop sfx_run_forest fadein 1
     play music music_list["went_fishing_caught_a_girl"] fadein 2
