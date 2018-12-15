@@ -241,9 +241,6 @@ label alt_day6_neu_begin:
     pause(1)
     call alt_day6_neu_sleeptime
     pause(1)
-    jump alt_day7_neu_begin
-
-label alt_day7_neu_begin:
     window hide
     show spill_red with dspr
     $ renpy.pause(2, hard=True)
@@ -254,22 +251,34 @@ label alt_day7_neu_begin:
     with dissolve2
     window hide
     return
+    jump alt_day7_neu_begin
+
+label alt_day7_neu_begin:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
-    $ alt_chapter(7, u"Одиночка. Утро")
-    call alt_day7_neu_start
+    $ alt_chapter(7, u"Одиночка. Сон")
+    call alt_day7_neu_sleep
     pause(1)
     $ persistent.sprite_time = "day"
     $ day_time()
-    call alt_day7_neu_packing
+    $ alt_chapter(7, u"Одиночка. Подъём")
+    call alt_day7_neu_wakeup
     pause(1)
-    $ alt_chapter(7, u"Одиночка. Отъезд")
-    call alt_day7_neu_departure
+    call alt_day7_neu_explore
+    pause(1)
+    $ alt_chapter(7, u"Одиночка. Диалог")
+    call alt_day7_neu_dialogue
     pause(1)
     $ prolog_time()
-    $ alt_chapter(7, u"Одиночка. Эпилог")
     if persistent.neu_bad:
-        call alt_day7_neu_true
+        menu:
+            "Настоящее":
+                $ alt_chapter(7, u"Одиночка. Настоящее")
+                call alt_day7_neu_bad
+            "Будущее":
+                $ alt_chapter(7, u"Одиночка. Будущее")
+                call alt_day7_neu_true
     else:
+        $ alt_chapter(7, u"Одиночка. Настоящее")
         call alt_day7_neu_bad
 return

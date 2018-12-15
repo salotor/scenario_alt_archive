@@ -1053,7 +1053,7 @@ label alt_day4_neu_mt:
     scene bg ext_polyana_day
     "Они были важными даже с виду — набранные на печатной машинке, пестрящие печатями."
     "Я хотел было окликнуть её, но в воздухе мелькнула знакомая красная книжица. И я застыл."
-    stop music fadeout 3 #Ы
+    stop music fadeout 3
     "А пламя уже пожирало отметки о прописке, военной обязанности, возрасте…"
     "Наконец, последняя бумажка улетела в костёр."
     play music music_7dl["wheres_wonderland"] fadein 3
@@ -3522,7 +3522,7 @@ label alt_day4_neu_us_guards:
     dreamgirl "Может, плюнуть, дунуть да и уходить потихоньку?"
     th "С чего бы?"
     dreamgirl "Слушай, я, конечно, не против подглядывания за пионерками неглиже и экспресс-мануального анализа топологии…"
-    dreamgirl "Но ей же лет тринадцать, она тебе зачем вообще?"
+    dreamgirl "Но ей же четырнадцать, она тебе зачем вообще?"
     th "Для начала, за ней крохотный, но должок."
     dreamgirl "Плюнь."
     th "Легко."
@@ -3942,8 +3942,7 @@ label alt_day4_neu_us_launch:
         me "Обещаю."
         "Поколебавшись, она продолжила:"
         us "Мы не первые, кто запускает здесь поисковички."
-        us "Передо мной был Миря - он меня всему научил."
-        us "Перед Мирей была Татьяна. До той ещё какая-то девушка, я не помню имени."
+        us "Передо мной был Миря, а перед ним ещё пара человек кое-кто." # так "пара человек" или "кое-кто"?
         us "Все мы ищем одно и то же."
         me "Способ сбежать из лагеря?"
         us "Идиот."
@@ -3992,7 +3991,7 @@ label alt_day4_neu_us_launch:
     th "Дело не в возрасте, дело во взрослении."
     us "А ты нет?"
     me "Нет."
-    us "Убеди меня. Сделай Огонька."
+    us "Убеди меня. Сделай Огонька." 
     me "А можно?"
     us "Почему нет?"
     "Покопавшись в карманах, Ульянка протянула мне кусок сосновой коры и ножик."
@@ -4014,7 +4013,7 @@ label alt_day4_neu_us_launch:
         me "Плохо запустили?"
     "Помолчали снова. Ульянка протянула руку:"
     us "Закончил?"
-    "Получив требуемое, она взяла кораблик  в руку и, протянув ту над водой, начала:"
+    "Получив требуемое, она взяла кораблик в руку и, протянув ту над водой, начала:"
     us "Тай-тай, налетай, ветерки-подружки! {w}Нам тропинку найти помоги наружу!"
     me "Что это?"
     "Отмахнувшись, она продолжила."
@@ -4036,7 +4035,7 @@ label alt_day4_neu_us_launch:
     "Она странно посмотрела на меня, но, поняв, что смотрит мне в глаза, смутилась, отвела взгляд в сторону."
     us "Ты сам поймёшь."
     me "А что надо, чтоб понять?"
-    us "Запусти своего Огонька."
+    us "Запусти своего Огонька. Сам, от и до."
     me "Просто запустить?"
     us "А зачем усложнять?"
     us "Зажигай свечку, читай напутствие и попроси его найти дорогу. {w}Остальное он сделает сам."
@@ -7735,6 +7734,8 @@ label alt_day5_neu_us_career:
     us "Чужой огонёк трогать нельзя."
     us "Это как крестик: чужие беды на себя возьмёшь. И свой старый использовать дважды нельзя."
     "Снизошла до объяснений девочка."
+    me "Тогда зачем ты у меня забирала первый кораблик?"
+    us "Просто показала, как правильно. Дальше ты сам."
     us "Один огонёк — один поиск."
     me "Думаешь, он заведёт нас куда-то ещё?"
     "Я скептически осмотрел получившийся пруд. Обогнуть его при желании труда не составляло."
@@ -10705,7 +10706,7 @@ label alt_day5_neu_sleepnight:
     play ambience ambience_camp_center_night fadein 1
     play music music_list["a_promise_from_distant_days_v2"] fadein 2
     "У меня было ещё немного времени, прежде чем Ольга закончит свой обход."
-    if alt_day5_neu_sl_voyeur: #Ы
+    if alt_day5_neu_sl_voyeur:
         "И Славя донесёт про мой уход с территории."
         th "Ох, боюсь-боюсь!"
         dreamgirl "А Ульянка как же?"
@@ -11250,7 +11251,7 @@ label alt_day6_neu_start:
     th "Вы ли это, Ольбатьковна?"
     mt "Голова кружится, да?"
     me "Есть такое."
-    show mt smile close with fade
+    show mt smile pioneer close with dspr
     mt "Охохонюшки."
     "Вздохнула вожатая, устраиваясь на ступеньке рядом со мной."
     mt "Горе луковое, как же ты дома живёшь? {w}Здесь хотя бы есть Виола с нужными препаратами."
@@ -12588,7 +12589,7 @@ label alt_day6_neu_loki_concert:
     me "В каком смысле?"
     show dv normal pioneer2 with dspr
     dv "Ну… Обычно же ты тормоз, нет?"
-    hide dv with dissolve #Ы
+    hide dv with dissolve
     "Удостоверившись в том, что я относительно пришёл в себя, Алиса направилась к столовой."
     "И ведь даже не обернулась посмотреть, иду ли я за ней!"
     window hide
@@ -14245,53 +14246,4 @@ label alt_day6_neu_sleeptime:
     stop music fadeout 3
     stop ambience fadeout 6
     with fade
-    return
-
-label alt_day7_neu_start:
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_neu_packing:
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-    
-label alt_day7_neu_departure:
-    window hide
-    stop music fadeout 3
-    stop ambience fadeout 6
-    with fade
-    return
-
-label alt_day7_neu_bad:
-    window hide
-    play sound sfx_7dl["aunl"]
-    if persistent.neu_bad:
-        $ persistent.neu_bad += 1
-    else:
-        $ persistent.neu_bad = 1
-    show acm_logo_neu_bad with moveinright:
-        pos (1600, 1020)
-    $ renpy.pause(7.4, hard=True)
-    call alt_7dl_titles
-    pause(1)
-    return
-
-label alt_day7_neu_true:
-    window hide
-    play sound sfx_7dl["aunl"]
-    if persistent.neu_true:
-        $ persistent.neu_true += 1
-    else:
-        $ persistent.neu_true = 1
-    show acm_logo_neu_true with moveinright:
-        pos (1600, 1020)
-    $ renpy.pause(7.4, hard=True)
-    call alt_7dl_titles
-    pause(1)
     return
