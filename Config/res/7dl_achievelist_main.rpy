@@ -340,10 +340,16 @@ screen sdl_achvlist_character(character, route_list):
     # Руты
     $ sdl_route_count = 0
     for route in route_list:
-        if sdl_achv_selected_route == route:
-            add route.get_icon_active() pos (980 + 117 * sdl_route_count, 18)
+        if sdl_route_count == 3 and len(route_list) == 4:    # для красивого отображения 4 значков
+            $ sdl_achv_x_shift = 1
+            $ sdl_achv_y_shift = sdl_route_count // 3
         else:
-            imagebutton pos (980 + 117 * sdl_route_count, 18):
+            $ sdl_achv_x_shift = sdl_route_count % 3
+            $ sdl_achv_y_shift = sdl_route_count // 3
+        if sdl_achv_selected_route == route:
+            add route.get_icon_active() pos (980 + 117 * sdl_achv_x_shift, 18 + 69 * sdl_achv_y_shift)
+        else:
+            imagebutton pos (980 + 117 * sdl_achv_x_shift, 18 + 69 * sdl_achv_y_shift):
                 hover_sound sdl_achv_click
                 idle (route.get_icon_inactive())
                 hover (route.get_icon_active())

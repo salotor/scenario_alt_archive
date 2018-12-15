@@ -674,6 +674,31 @@ init 9999 python:
         )
     ]
     
+    ## Одиночка-Сыч
+    sdl_achv_array_me_owl = [
+        sdl_achv_Achievement(    # ТруЪ
+            "acm_logo_neu_true",
+            "neu_true",
+            "sdl_achv_me_true",
+            {
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
+                    }
+                )
+            },
+            sdl_achv_Replay("alt_day7_neu_true", {"alt_replay_on" : "True"})
+        ),
+        sdl_achv_Achievement(    # Бэд
+            "acm_logo_neu_bad",
+            "neu_bad",
+            "sdl_achv_me_bad",
+            {},
+            sdl_achv_Replay("alt_day7_neu_bad", {"alt_replay_on" : "True"})
+        )
+    ]
+    
     ## Одиночка-Прочее
     sdl_achv_array_me_smt = [
         sdl_achv_Achievement(    # Ламповость
@@ -727,6 +752,7 @@ init 9999 python:
     sdl_achv_route_us_pxs = sdl_achv_Route("sdl_achv_us_pxs", "sdl_achv_xxx_route", "sdl_achv_us_px_active",  "sdl_achv_us_px_inactive", sdl_achv_array_us_pxs)
     ## Одиночка
     sdl_achv_route_me_d3r = sdl_achv_Route("sdl_achv_me_d3r", "sdl_achv_d3r_route", "sdl_achv_me_7dl_active", "sdl_achv_7dl_inactive",   [],                   completed=False)
+    sdl_achv_route_me_owl = sdl_achv_Route("sdl_achv_me_owl", "sdl_achv_7dl_route", "sdl_achv_me_ow_active",  "sdl_achv_me_ow_inactive", sdl_achv_array_me_owl)
     sdl_achv_route_me_noi = sdl_achv_Route("sdl_achv_me_noi", "sdl_achv_xxx_route", "sdl_achv_me_no_active",  "sdl_achv_me_no_inactive", [],                   completed=False)
     sdl_achv_route_me_smt = sdl_achv_Route("sdl_achv_me_smt", "sdl_achv_smt_route", "sdl_achv_me_sm_active",  "sdl_achv_me_sm_inactive", sdl_achv_array_me_smt)
     
@@ -762,6 +788,7 @@ init 9999 python:
     ]
     sdl_achv_me_routes = [
         sdl_achv_route_me_d3r,
+        sdl_achv_route_me_owl,
         sdl_achv_route_me_noi,
         sdl_achv_route_me_smt
     ]
