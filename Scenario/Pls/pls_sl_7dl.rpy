@@ -216,7 +216,7 @@ label alt_day7_sl_7dl_start:
     $ alt_chapter(7, u"Славя. 7ДЛ. Отъезд")
     call alt_day7_sl_7dl_leaving
     pause(1)
-    if routetag == "sl7dltrue" and not alt_day7_sl_7dl_freewill:
+    if alt_day7_sl_7dl_not_freewill:
         $ persistent.sprite_time = "sunset"
         $ prolog_time()
         $ alt_chapter(6, u"Славя. 7ДЛ. Истинная")

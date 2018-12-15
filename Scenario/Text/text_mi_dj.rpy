@@ -12401,7 +12401,7 @@ label alt_day7_mi_dj_good:
     return
 
 label alt_day7_mi_dj_jp_good_end:
-    scene black
+    scene bg ext_city_night_7dl
     nvl clear
     window hide
     $ renpy.pause(3)
@@ -12418,7 +12418,6 @@ label alt_day7_mi_dj_jp_good_end:
     nvl clear
     window hide
     $ renpy.pause(3)
-
     "Да, конечно, я оставил своей ненаглядной тот самый артефакт с перечнем адресов и их привязкой ко временной оси — то есть, она совершенно точно должна знать, что в 2018 я обитаю здесь, а не где-то ещё."
     "Разумеется, в том случае, если она вообще существует, моя ненаглядная."
     "Я потратил почти все сбережения на то, чтобы купить билет до Токио, остатки их ушли на дополнительные переговоры."
@@ -12432,6 +12431,7 @@ label alt_day7_mi_dj_jp_good_end:
     nvl clear
     window hide
     $ renpy.pause(3)
+    scene black
     "Поэтому у меня есть мой оранжевый корешок, загранпаспорт с глупой наклейкой на задней страничке и одобренная японская виза."
     "Я лечу в никуда, путешествие в один конец."
     "Я хочу увидеть мою Мику — но она совсем не спешит в наши северние выси, обрадовать искушённую публику своим синтезированным вокалом."
@@ -12864,6 +12864,11 @@ label alt_day7_mi_dj_rf_good_end:
     "Красивая игрушка. Для игрока, которому она не нужна."
     me "И где мне тебя искать…"
     "Шепнул я в никуда."
+    $ volume (0.0,'music')
+    #if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
+    #   $ volume (0.0,'music')
+    #else:
+    #    stop music fadeout 3
     stop sound_loop
     play sound_loop sfx_7dl["ringtone"]
     $ renpy.pause(3)
@@ -12884,7 +12889,6 @@ label alt_day7_mi_dj_rf_good_end:
     "А я вернулся за машину — у меня, кажется, появилась мысль."
     "Но кто-то свыше явно собрался сегодня не дать мне посидеть у монитора."
     play sound sfx_door_bell
-    $ volume (0.0,'music')
     "В дверь позвонили…"
     me "Да вы издеваетесь, что ли!"
     "Рявкнул я."
@@ -12902,6 +12906,10 @@ label alt_day7_mi_dj_rf_good_end:
     "Я повернулся чуть вбок, так, чтобы видеть пространство под звонком."
     "И там стояла… "
     $ volume (1.0,'music')
+    #if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
+    #    $ volume (1.0,'music')
+    #else:
+    #    play music "<from 124.4>" + music_7dl["tellyourworld"]
     show mi sad voca with dissolve
     "Она вполне заметно нервничала, дёргала в руках какой-то листок, то и дело сверяясь с ним."
     play sound sfx_door_bell

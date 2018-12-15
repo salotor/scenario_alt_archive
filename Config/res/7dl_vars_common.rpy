@@ -3,7 +3,7 @@
 init -1:
     $ alt_release_no = "0.38.a"
     $ alt_compatible_release_no = ["0.34.a", "0.34.b", "0.35.a", "0.36.a", "0.37.a", "0.38.a"]
-    $ alt_hotfix_no = "hf0"
+    $ alt_hotfix_no = "hf1"
     $ plthr = u"none"
 
 init 2:
@@ -140,6 +140,7 @@ label alt_vars:
     call alt_day4_un_7dl_vars
     call alt_day5_un_7dl_vars
     call alt_day6_un_7dl_vars
+    call alt_day7_un_7dl_vars
     call alt_day4_mi_dj_vars
     call alt_day5_mi_dj_vars
     call alt_day6_mi_dj_vars
