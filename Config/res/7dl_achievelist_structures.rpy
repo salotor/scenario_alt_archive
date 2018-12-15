@@ -79,7 +79,7 @@ init 9999 python:
                     "sdl_achv_info_end",
                     {
                         sdl_achv_Achievement("acm_logo_mi_dark_dreams", "mi_7dl_good_human", "sdl_achv_mi_good", None, None),
-                        sdl_achv_Achievement("acm_logo_mi_come", "mi_7dl_good_star", "sdl_achv_mi_good_RF", None, None)
+                        sdl_achv_Achievement("acm_logo_mi_sparkle", "mi_7dl_good_star", "sdl_achv_mi_good_RF", None, None)
                     }
                 )
             },
@@ -94,7 +94,7 @@ init 9999 python:
                     "sdl_achv_info_end",
                     {
                         sdl_achv_Achievement("acm_logo_mi_dark_dreams", "mi_7dl_good_human", "sdl_achv_mi_good", None, None),
-                        sdl_achv_Achievement("acm_logo_mi_come", "mi_7dl_good_star", "sdl_achv_mi_good_RF", None, None)
+                        sdl_achv_Achievement("acm_logo_mi_sparkle", "mi_7dl_good_star", "sdl_achv_mi_good_RF", None, None)
                     }
                 )
             },
@@ -109,7 +109,7 @@ init 9999 python:
                     "sdl_achv_info_end",
                     {
                         sdl_achv_Achievement("acm_logo_mi_dark_dreams", "mi_7dl_good_human", "sdl_achv_mi_good", None, None),
-                        sdl_achv_Achievement("acm_logo_mi_come", "mi_7dl_good_star", "sdl_achv_mi_good_RF", None, None)
+                        sdl_achv_Achievement("acm_logo_mi_sparkle", "mi_7dl_good_star", "sdl_achv_mi_good_RF", None, None)
                     }
                 )
             },
