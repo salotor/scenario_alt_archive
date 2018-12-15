@@ -968,6 +968,9 @@ init:
     image acm_logo_mt_ever_after = get_image_7dl("gui/acm/acm_logo_mt_ever_after_7dl.png")
     image acm_logo_mt_named_olga = get_image_7dl("gui/acm/acm_logo_mt_named_olga_7dl.png")
     
+    image acm_logo_neu_bad = get_image_7dl("gui/acm/acm_logo_neu_bad_7dl.png")
+    image acm_logo_neu_true = get_image_7dl("gui/acm/acm_logo_neu_true_7dl.png")
+    
     image acm_logo_sl_bad = get_image_7dl("gui/acm/acm_logo_sl_bad_7dl.png")
     image acm_logo_sl_be_ok = get_image_7dl("gui/acm/acm_logo_sl_be_ok_7dl.png")
     image acm_logo_sl_fantazm = get_image_7dl("gui/acm/acm_logo_sl_fantazm_7dl.png")
