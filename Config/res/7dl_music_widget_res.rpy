@@ -138,7 +138,6 @@ init 1:
     $ music_list_7dl["Adele - Someone Like You(Sungha Jung cover)"] = default_7dl_path+"Sound/music/someone_like_you_guitar_7dl.ogg"
     $ music_list_7dl[u"Сплин - Романс"] = default_7dl_path+"Sound/music/splin1_7dl.ogg"
     $ music_list_7dl["Scorpions - Still Loving You (Cover by Ozielzinho)"] = default_7dl_path+"Sound/music/stilllovingyou_7dl.ogg"
-    $ music_list_7dl[u"Кино - Кончится Лето (guitar cover)"] = default_7dl_path+"Sound/music/summer_ends_soon2_7dl.ogg"
 
     $ music_list_7dl["Funczion Sounds - To the world of dreams"] = default_7dl_path+"Sound/music/take_my_hand_7dl.ogg"
     $ music_list_7dl[u"Акира Ямаока - Tears of pain (Silent Hill OST)"] = default_7dl_path+"Sound/music/tears_of_7dl.ogg"
