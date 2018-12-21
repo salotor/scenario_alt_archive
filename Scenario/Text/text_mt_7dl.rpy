@@ -1670,7 +1670,7 @@ label alt_day6_mt_7dl_diary3:
 label alt_day6_mt_7dl_dinner:
     scene bg int_dining_hall_people_day with dissolve
     play ambience ambience_dining_hall_full fadein 3
-    play music music_7dl["deadman"] fadein 3
+    play music music_7dl["deadman"] fadein 3 # имхо, трек не подходит под настроение сцены из-за второй своей половины
     "Исключая наш нестройный отряд, народу в столовой была прорва."
     "И неудивительно — прощальный обед."
     "Он всегда самый запоминающийся, всегда с нарушением пары-тройки требований и норм."
