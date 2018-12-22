@@ -237,14 +237,24 @@ init -265 python:
         return im.MatrixColor(ImageReference(id), im.matrix.brightness(brightness) *  im.matrix.saturation(saturation))
         
     #Пресеты без возможности настройки
+    #Мику-матрица
     def SS_com(id):
         return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.2) * im.matrix.contrast(1.6) * im.matrix.saturation(0)* im.matrix.colorize("#0aa", "#000"))
         
+    #Алиса-матрица
+    def SS_com_o(id):
+        return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.2) * im.matrix.contrast(1.6) * im.matrix.saturation(0)* im.matrix.colorize("#eb4", "#000"))
+    #Ульяна-матрица
     def SS_com_r(id):
         return im.MatrixColor(ImageReference(id), im.matrix.brightness(-0.2) * im.matrix.contrast(1.6) * im.matrix.saturation(0)* im.matrix.colorize("#a00", "#000"))
         
     def Sepia(id):
         return im.MatrixColor(ImageReference(id), im.matrix.saturation(0.15) * im.matrix.tint(1.0, .94, .76))
+        
+    def Grayed(id):
+        return im.MatrixColor(ImageReference(id), im.matrix.saturation(0.01))
+    def Gjs(id):
+        return im.MatrixColor(ImageReference(id), im.matrix.colorize("#007", "#000"))
         
     #Тинты для разного времени суток    
     def Notch(id):
