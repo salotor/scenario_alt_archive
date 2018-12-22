@@ -241,16 +241,6 @@ label alt_day6_neu_begin:
     pause(1)
     call alt_day6_neu_sleeptime
     pause(1)
-    window hide
-    show spill_red with dspr
-    $ renpy.pause(2, hard=True)
-    show spill_gray with dspr
-    $ renpy.pause(2, hard=True)
-    show alt_credits timeskip_dev at truecenter with dissolve2
-    $ renpy.pause(4, hard=True)
-    with dissolve2
-    window hide
-    return
     jump alt_day7_neu_begin
 
 label alt_day7_neu_begin:
