@@ -14250,7 +14250,7 @@ label alt_day6_neu_sleeptime:
     stop music fadeout 3
     stop ambience fadeout 6
     with fade
-    return
+    
 
 label alt_day7_neu_sleep:
     play music music_7dl["let_me_down"] fadein 3
