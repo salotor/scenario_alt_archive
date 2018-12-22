@@ -16331,7 +16331,7 @@ label alt_day7_neu_true:
     "Дём подошёл ко мне и легонько толкнул в лоб."
     stop music fadeout 3
     window hide
-    scene Gjs("bg ext_path2_day")
+    scene expression Gjs("bg ext_path2_day")
     with dissolve
     play ambience ambience_forest_day fadein 3
     play music music_list["into_the_unknown"] fadein 3
@@ -16412,7 +16412,7 @@ label alt_day7_neu_true:
     "И по итогу всех этих событий в моей жизни появился второй ангел на смену первому."
     "Рыжий, веснушчатый, весёлый и талантливый."
     window hide
-    scene cg int_mt_sam_room_7dl
+    scene bg int_mt_sam_room_7dl
     with dissolve
     "Я не мог понять, чем она руководствовалась, спасая меня."
     "Чем она… На неё столько всего свалилось — и всё из-за меня!"
@@ -16563,7 +16563,7 @@ label alt_day7_neu_true:
     "Однажды."
     "Вдох."
     window hide
-    play sound sfx_jump_into_hole
+    play sound sfx_jump_into_hole_2
     pause(1)
     scene bg int_catacombs_entrance
     with dissolve
@@ -16809,7 +16809,7 @@ label alt_day7_neu_true:
     "Позорно и бестолково."
     me "Скажи, а я смогу отомстить стрелку?"
     show mz smile pioneer
-    show anime grain
+    show anim_grain
     with dissolve
     mz "Зачем? Ты же не убиваешь автомат за то, что тот стрелял."
     mz "Наказывай хозяина, а не орудие."
