@@ -235,7 +235,7 @@ init 1:
     $ music_list_7dl["Portishead - Roads (Instrumental Cover)"] = default_7dl_path+"Sound/music/war_to_fight_7dl.ogg"
     $ music_list_7dl["DeadPunk - Alone"] = default_7dl_path+"Sound/music/alone_7dl.ogg"
     $ music_list_7dl["DeadPunk - SaveMe"] = default_7dl_path+"Sound/music/saveme_7dl.ogg"
-    $ music_list_7dl["UNKNOWN"] = default_7dl_path+"Sound/music/let_me_down_7dl.ogg"
+    $ music_list_7dl["Nicolai Heidlas - Letting Go"] = default_7dl_path+"Sound/music/let_me_down_7dl.ogg"
     $ music_list_7dl["Natureworld1986 - Underworld"] = default_7dl_path+"Sound/music/abyss_call_7dl.ogg"
     $ music_list_7dl["Arn Andersson - Aftermath"] = default_7dl_path+"Sound/music/aftermath_7dl.ogg"
     $ music_list_7dl["Arn Andersson - Annihilation (new version)"] = default_7dl_path+"Sound/music/devastated_7dl.ogg"
