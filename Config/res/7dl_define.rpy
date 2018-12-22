@@ -560,7 +560,7 @@ init:
     image bg int_home_lift_7dl = get_image_7dl("bg/outro/int_home_lift_7dl.png")
     image bg int_hospital_corridor_7dl = get_image_7dl("bg/outro/int_hospital_corridor_7dl.jpg")
     image bg int_intro_liaz_7dl = get_image_7dl("bg/outro/int_intro_liaz_7dl.jpg")
-    image bg int_living_7dl = get_image_7dl("bg/outro/int_living_7dl.png") TODO redraw
+    image bg int_living_7dl = get_image_7dl("bg/outro/int_living_7dl.png") # TODO redraw
     image bg int_opened_door_7dl = get_image_7dl("bg/outro/int_opened_door_7dl.jpg")
     image bg int_sam_house_clean_7dl = get_image_7dl("bg/outro/int_sam_house_clean_7dl.jpg")
     image bg int_sam_room_7dl = get_image_7dl("bg/outro/int_sam_room_7dl.png")
