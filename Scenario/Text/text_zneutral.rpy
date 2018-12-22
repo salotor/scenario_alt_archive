@@ -15397,7 +15397,7 @@ label alt_day7_neu_dialogue:
     "Я остановился и, сняв с пояса свитер, поспешно его надел — не хватало ещё простыть."
     "Но пока за спиной есть отражённый све…"
     window hide
-    play sound fall_metal_door
+    play sound sfx_fall_metal_door
     pause(1)
     scene black
     "В этот момент сзади грохнуло, и я оказался в кромешной темноте."
@@ -15654,7 +15654,7 @@ label alt_day7_neu_dialogue:
         "Мне и двадцати-то нет, ну какой нервный срыв?!"
         "Просто я ещё немного посижу, отдохну, а потом поеду на Пискарёвку."
         "Она там. Я ей нужен."
-    play sound face_slap
+    play sound sfx_face_slap
     with vpunch
     am "Приди в себя!"
     me "Но… Зачем ты меня сюда притащил?!"
@@ -16200,7 +16200,7 @@ label alt_day7_neu_bad:
         "Кошмар, две стипухи!"
         "Скрипя зубами, я обернулся…"
         window hide
-        scene ext_emptiness_7dl
+        scene bg ext_emptiness_7dl
         with dissolve
         "И ошалело уставился на сложившийся автомобиль."
         "Такое ощущение, что он впечатался в бетонный стол, а не в меня."
@@ -16325,7 +16325,7 @@ label alt_day7_neu_true:
     "Дём подошёл ко мне и легонько толкнул в лоб."
     stop music fadeout 3
     window hide
-    scene Gjs("bg ext_path2_day")
+    scene expression Gjs("bg ext_path2_day")
     with dissolve
     play ambience ambience_forest_day fadein 3
     play music music_list["into_the_unknown"] fadein 3
@@ -16406,7 +16406,7 @@ label alt_day7_neu_true:
     "И по итогу всех этих событий в моей жизни появился второй ангел на смену первому."
     "Рыжий, веснушчатый, весёлый и талантливый."
     window hide
-    scene cg int_mt_sam_room_7dl
+    scene bg int_mt_sam_room_7dl
     with dissolve
     "Я не мог понять, чем она руководствовалась, спасая меня."
     "Чем она… На неё столько всего свалилось — и всё из-за меня!"
@@ -16557,7 +16557,7 @@ label alt_day7_neu_true:
     "Однажды."
     "Вдох."
     window hide
-    play sound sfx_jump_into_hole
+    play sound sfx_jump_into_hole_2
     pause(1)
     scene bg int_catacombs_entrance
     with dissolve
@@ -16803,7 +16803,7 @@ label alt_day7_neu_true:
     "Позорно и бестолково."
     me "Скажи, а я смогу отомстить стрелку?"
     show mz smile pioneer
-    show anime grain
+    show anim_grain
     with dissolve
     mz "Зачем? Ты же не убиваешь автомат за то, что тот стрелял."
     mz "Наказывай хозяина, а не орудие."
