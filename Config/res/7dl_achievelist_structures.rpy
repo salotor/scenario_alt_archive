@@ -684,16 +684,24 @@ init 9999 python:
                 sdl_achv_Prerequisite(
                     "sdl_achv_info_end",
                     {
-                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
+                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_loki_bad", "sdl_achv_me_LO_bad", None, None),
+                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_DR_bad", None, None)
                     }
                 )
             },
             sdl_achv_Replay("alt_day7_neu_true", {"alt_replay_on" : "True"})
         ),
-        sdl_achv_Achievement(    # Бэд
+        sdl_achv_Achievement(    # Локи-Бэд
+            "acm_logo_neu_bad",
+            "neu_loki_bad",
+            "sdl_achv_me_LO_bad",
+            {},
+            sdl_achv_Replay("alt_day7_neu_bad_loki", {"alt_replay_on" : "True"})
+        ),
+        sdl_achv_Achievement(    # Дрищ-Бэд
             "acm_logo_neu_bad",
             "neu_bad",
-            "sdl_achv_me_bad",
+            "sdl_achv_me_DR_bad",
             {},
             sdl_achv_Replay("alt_day7_neu_bad", {"alt_replay_on" : "True"})
         )

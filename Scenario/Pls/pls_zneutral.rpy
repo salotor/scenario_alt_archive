@@ -264,11 +264,17 @@ label alt_day7_neu_begin:
         menu:
             "Настоящее":
                 $ alt_chapter(7, u"Одиночка. Настоящее")
-                call alt_day7_neu_bad
+                if loki:
+                    call alt_day7_neu_bad_loki
+                else:
+                    call alt_day7_neu_bad
             "Будущее":
                 $ alt_chapter(7, u"Одиночка. Будущее")
                 call alt_day7_neu_true
     else:
         $ alt_chapter(7, u"Одиночка. Настоящее")
-        call alt_day7_neu_bad
+        if loki:
+            call alt_day7_neu_bad_loki
+        else:
+            call alt_day7_neu_bad
 return
