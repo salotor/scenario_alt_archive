@@ -169,7 +169,7 @@ label alt_day6_sl_7dl_start:
     pause(1)
     $ persistent.sprite_time = "night"
     $ night_time()
-    if persistent.sl_7dl_loki_good and persistent.sl_7dl_herc_good2 and persistent.sl_7dl_good2:
+    if persistent.sl_7dl_loki_good and persistent.sl_7dl_herc_good and persistent.sl_7dl_good2:
         $ routetag = "sl7dltrue"
     elif (lp_sl >= 19) and (karma > 120) and ((not loki) or (alt_day6_sl_7dl_forgive)):
         $ routetag = "sl7dlgood"
