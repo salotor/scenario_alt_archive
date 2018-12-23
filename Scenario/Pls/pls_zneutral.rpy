@@ -277,4 +277,5 @@ label alt_day7_neu_begin:
             call alt_day7_neu_bad_loki
         else:
             call alt_day7_neu_bad
-return
+    pause(1)
+    return
