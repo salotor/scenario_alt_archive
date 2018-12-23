@@ -630,12 +630,12 @@ label sdl_menu:
                             "{color=#57d7fa}Пан или пропал (Локи-реджект){/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_sl_7dl_loki_oafa
-                            "{color=#f2fa57}Единственно верный путь (Герк-гуд){/color}":
-                                stop ambience fadeout 2
-                                call alt_day7_sl_7dl_herc_right_road
                             "{color=#f2fa57}Тьма и неон (Герк-гуд){/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_sl_7dl_herc_neon
+                            "{color=#f2fa57}Единственно верный путь (Герк-нейтрал){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_herc_right_road
                             "{color=#ecf711}Не напрасно? (Дрищ-гуд){/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_sl_7dl_wasted
@@ -807,7 +807,16 @@ label sdl_menu:
                         stop ambience fadeout 2
                         jump alt_endings
                     "Одиночка":
-                        "Рут находится в разработке."
+                        menu:
+                            "{color=#ed6b6b}Человек прошлого (Локи-плохая).{/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_bad_loki
+                            "{color=#ed6b6b}Человек прошлого (Дрищ-плохая).{/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_bad
+                            "{color=#6beded}Безликие руки (истинная).{/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_true
                         $ renpy.pause(1)
                         stop ambience fadeout 2
                         jump alt_endings
