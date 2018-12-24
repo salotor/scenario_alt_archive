@@ -279,7 +279,7 @@ init 9999 python:
                 sdl_achv_Prerequisite(
                     "sdl_achv_info_end",
                     {
-                        sdl_achv_Achievement("acm_logo_sl_neon", "sl_7dl_herc_good2", "sdl_achv_sl_HE_good", None, None)
+                        sdl_achv_Achievement("acm_logo_sl_neon", "sl_7dl_herc_good", "sdl_achv_sl_HE_good", None, None)
                     }
                 ),
                 sdl_achv_Prerequisite(
@@ -328,25 +328,25 @@ init 9999 python:
             sdl_achv_Replay("alt_day7_sl_7dl_loki_oafa", {"alt_replay_on" : "True"})
         ),
         sdl_achv_Achievement(    # Герк-Гуд
-            "acm_logo_sl_right_road",
-            "sl_7dl_herc_good",
-            "sdl_achv_sl_HE_good",
-            {},
-            sdl_achv_Replay("alt_day7_sl_7dl_herc_right_road", {"alt_replay_on" : "True"})
-        ),
-        sdl_achv_Achievement(    # Герк-Гуд 2
             "acm_logo_sl_neon",
-            "sl_7dl_herc_good2",
+            "sl_7dl_herc_good",
             "sdl_achv_sl_HE_good",
             {
                 sdl_achv_Prerequisite(
                     "sdl_achv_info_end",
                     {
-                        sdl_achv_Achievement("acm_logo_sl_right_road", "sl_7dl_herc_good", "sdl_achv_sl_HE_good", None, None)
+                        sdl_achv_Achievement("acm_logo_sl_right_road", "sl_7dl_herc_neu", "sdl_achv_sl_HE_neutral", None, None)
                     }
                 )
             },
             sdl_achv_Replay("alt_day7_sl_7dl_herc_neon", {"alt_replay_on" : "True"})
+        ),
+        sdl_achv_Achievement(    # Герк-Нейтрал
+            "acm_logo_sl_right_road",
+            "sl_7dl_herc_neu",
+            "sdl_achv_sl_HE_neutral",
+            {},
+            sdl_achv_Replay("alt_day7_sl_7dl_herc_right_road", {"alt_replay_on" : "True"})
         ),
         sdl_achv_Achievement(    # Дрищ-Гуд
             "acm_logo_sl_wasted",
@@ -684,16 +684,24 @@ init 9999 python:
                 sdl_achv_Prerequisite(
                     "sdl_achv_info_end",
                     {
-                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
+                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_loki_bad", "sdl_achv_me_LO_bad", None, None),
+                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_DR_bad", None, None)
                     }
                 )
             },
             sdl_achv_Replay("alt_day7_neu_true", {"alt_replay_on" : "True"})
         ),
-        sdl_achv_Achievement(    # Бэд
+        sdl_achv_Achievement(    # Локи-Бэд
+            "acm_logo_neu_bad",
+            "neu_loki_bad",
+            "sdl_achv_me_LO_bad",
+            {},
+            sdl_achv_Replay("alt_day7_neu_bad_loki", {"alt_replay_on" : "True"})
+        ),
+        sdl_achv_Achievement(    # Дрищ-Бэд
             "acm_logo_neu_bad",
             "neu_bad",
-            "sdl_achv_me_bad",
+            "sdl_achv_me_DR_bad",
             {},
             sdl_achv_Replay("alt_day7_neu_bad", {"alt_replay_on" : "True"})
         )
