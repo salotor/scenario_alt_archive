@@ -973,6 +973,7 @@ init:
     image acm_logo_mt_named_olga = get_image_7dl("gui/acm/acm_logo_mt_named_olga_7dl.png")
     
     image acm_logo_neu_bad = get_image_7dl("gui/acm/acm_logo_neu_bad_7dl.png")
+    image acm_logo_neu_neu = get_image_7dl("gui/acm/acm_logo_neu_neu_7dl.png")
     image acm_logo_neu_true = get_image_7dl("gui/acm/acm_logo_neu_true_7dl.png")
     
     image acm_logo_sl_bad = get_image_7dl("gui/acm/acm_logo_sl_bad_7dl.png")
@@ -1197,7 +1198,7 @@ init:
     $ music_7dl["not_alone"] = get_music_7dl("not_alone_7dl.ogg")
     $ music_7dl["nowyouseeme"] = get_music_7dl("nowyouseeme_7dl.ogg")
     
-    $ music_7dl["ofrust"] = get_music_7dl("ofrust.ogg")
+    $ music_7dl["ofrust"] = get_music_7dl("ofrust_7dl.ogg")
     $ music_7dl["old_kiss"] = get_music_7dl("old_kiss_7dl.ogg")
     $ music_7dl["one_little_lone_cloud"] = get_music_7dl("one_little_lone_cloud_7dl.ogg")
     $ music_7dl["ourfirstmet"] = get_music_7dl("ourfirstmet_7dl.ogg") 
