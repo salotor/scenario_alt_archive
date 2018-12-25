@@ -684,8 +684,14 @@ init 9999 python:
                 sdl_achv_Prerequisite(
                     "sdl_achv_info_end",
                     {
-                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_loki_bad", "sdl_achv_me_LO_bad", None, None),
-                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_DR_bad", None, None)
+                        sdl_achv_Achievement("acm_logo_neu_neu", "neu_loki_neu", "sdl_achv_me_LO_neutral", None, None),
+                        sdl_achv_Achievement("acm_logo_neu_neu", "neu_neu", "sdl_achv_me_DR_neutral", None, None)
+                    }
+                ),
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
                     }
                 )
             },
@@ -695,14 +701,28 @@ init 9999 python:
             "acm_logo_neu_neu",
             "neu_loki_neu",
             "sdl_achv_me_LO_neutral",
-            {},
+            {
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
+                    }
+                )
+            },
             sdl_achv_Replay("alt_day7_neu_neu_loki", {"alt_replay_on" : "True"})
         ),
         sdl_achv_Achievement(    # Дрищ-Нейтрал
             "acm_logo_neu_neu",
             "neu_neu",
             "sdl_achv_me_DR_neutral",
-            {},
+            {
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
+                    }
+                )
+            },
             sdl_achv_Replay("alt_day7_neu_neu", {"alt_replay_on" : "True"})
         ),
         sdl_achv_Achievement(    # Бэд
