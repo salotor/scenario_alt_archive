@@ -6396,6 +6396,7 @@ label alt_day6_mi_7dl_star:
     $ day_time()
     play ambience ambience_camp_center_day fadein 3
     show mt normal pioneer with dspr
+    show anim_grain
     play music music_7dl["lazy_olga"] fadein 3
     mt "Скучаешь, Сёмыч?"
     th "Да. А теперь ты самоудалишься, и продолжу скучать дальше. Можно?"
@@ -6422,13 +6423,17 @@ label alt_day6_mi_7dl_star:
     "Бррр!"
     window hide
     play ambience ambience_camp_center_day fadein 3
-    scene bg ext_house_of_dv_day with dissolve
+    scene bg ext_house_of_dv_day
+    show anim_grain
+    with dissolve
     play sound sfx_knock_door6_closed
     pause(1)
     "Дома Двачевской не оказалось."
     th "И почему я не удивляюсь, блин?"
     window hide
-    scene bg ext_houses_day with dissolve2
+    scene bg ext_houses_day
+    show anim_grain
+    with dissolve2
     "Вернувшись на главную импровизированную улицу, я призадумался о том, куда бы могла направиться рыжая."
     "Зафилонить задачу мне почему-то и в голову не пришло."
     "Всё дело было в том, что я был крайне ленивым человеком — предпочитал делать работу сразу, чтобы не тянуть время, и на совесть — чтобы не переделывать по пятьдесят раз."
@@ -6437,7 +6442,8 @@ label alt_day6_mi_7dl_star:
     "Но я сегодня обиженный. Вот."
     stop music fadeout 3
     window hide
-    scene bg ext_house_of_el_day with dspr
+    scene bg ext_house_of_el_day
+    show anim_grain
     with fade
     "Я настолько увлёкся вхождением в роль обижуки, что чуть не упустил из виду один крайне знакомый и крайне раздражающий фактор."
     "Запах."
@@ -6475,7 +6481,9 @@ label alt_day6_mi_7dl_star:
     dv "О, новичок! Ну заходи, раз пришёл."
     "Она в несколько шагов спрыгнула вниз, зашла мне за спину и с неотвратимостью асфальтового парового катка затолкала меня, а мной —  Лену — в домик."
     window hide
-    scene bg int_extra_house_day_7dl with dissolve
+    scene bg int_extra_house_day_7dl
+    show anim_grain
+    with dissolve
     play ambience ambience_int_cabin_evening fadein 2
     play sound sfx_close_door_1
     dv "Осторожно, двери закрываются! Следующая станция — морг!"
