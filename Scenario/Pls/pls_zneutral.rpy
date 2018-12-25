@@ -259,26 +259,30 @@ label alt_day7_neu_begin:
     $ alt_chapter(7, u"Одиночка. Сон")
     call alt_day7_neu_sleep
     pause(1)
-    $ persistent.sprite_time = "day"
-    $ day_time()
-    $ alt_chapter(7, u"Одиночка. Подъём")
-    call alt_day7_neu_wakeup
-    pause(1)
-    call alt_day7_neu_explore
-    pause(1)
-    $ alt_chapter(7, u"Одиночка. Диалог")
-    call alt_day7_neu_dialogue
-    pause(1)
-    $ prolog_time()
-    if persistent.neu_bad:
-        menu:
-            "Настоящее":
-                $ alt_chapter(7, u"Одиночка. Настоящее")
-                call alt_day7_neu_bad
-            "Будущее":
-                $ alt_chapter(7, u"Одиночка. Будущее")
-                call alt_day7_neu_true
+    if persistent.neu_neu or persistent.neu_true:
+        $ persistent.sprite_time = "day"
+        $ day_time()
+        $ alt_chapter(7, u"Одиночка. Подъём")
+        call alt_day7_neu_wakeup
+        pause(1)
+        call alt_day7_neu_explore
+        pause(1)
+        $ alt_chapter(7, u"Одиночка. Диалог")
+        call alt_day7_neu_dialogue
+        pause(1)
+        $ prolog_time()
+        if persistent.neu_neu:
+            menu:
+                "Настоящее":
+                    $ alt_chapter(7, u"Одиночка. Настоящее")
+                    call alt_day7_neu_neu
+                "Будущее":
+                    $ alt_chapter(7, u"Одиночка. Будущее")
+                    call alt_day7_neu_true
+        else:
+            $ alt_chapter(7, u"Одиночка. Настоящее")
+            call alt_day7_neu_neu
     else:
-        $ alt_chapter(7, u"Одиночка. Настоящее")
+        $ alt_chapter(7, u"Одиночка. Обречённое")
         call alt_day7_neu_bad
 return
