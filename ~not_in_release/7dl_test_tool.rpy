@@ -779,28 +779,28 @@ label sdl_menu:
                         jump alt_endings
                     "Ульяна":
                         menu:
-                            "{color=#ff0000}Ульяна, хорошая концовка.{/color}":
+                            "{color=#ff0000}Ульяна, хорошая концовка{/color}":
                                 $ alt_day6_us_7dl_tr
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_reunite
-                            "{color=#aced6b}Ульяна, Концовка Мику.{/color}":
+                            "{color=#aced6b}Ульяна, Концовка Мику{/color}":
                                 $ alt_day6_us_7dl_mi_friends = 3
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_mikuforever
-                            "{color=#9894e0}Ульяна, Концовка Лены.{/color}":
+                            "{color=#9894e0}Ульяна, Концовка Лены{/color}":
                                 $ alt_day6_us_7dl_un_friends = 3
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_lenaforever
-                            "{color=#ed6b6b}Ульяна, Плохая концовка.{/color}":
+                            "{color=#ed6b6b}Ульяна, Плохая концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_bad
-                            "{color=#ffff00}Огоньки, Истинная концовка.{/color}":
+                            "{color=#ffff00}Огоньки, Истинная концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_px_fairytale
-                            "{color=#ffff11}Огоньки, Хорошая концовка.{/color}":
+                            "{color=#ffff11}Огоньки, Хорошая концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_px_dejavu
-                            "{color=#6beded}Ульяна, Истинная концовка.{/color}":
+                            "{color=#6beded}Ульяна, Истинная концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_ever_after
                         $ renpy.pause(1)
@@ -808,15 +808,18 @@ label sdl_menu:
                         jump alt_endings
                     "Одиночка":
                         menu:
-                            "{color=#ed6b6b}Человек прошлого (Локи-плохая).{/color}":
-                                stop ambience fadeout 2
-                                call alt_day7_neu_bad_loki
-                            "{color=#ed6b6b}Человек прошлого (Дрищ-плохая).{/color}":
-                                stop ambience fadeout 2
-                                call alt_day7_neu_bad
-                            "{color=#6beded}Безликие руки (истинная).{/color}":
+                            "{color=#6beded}Безликие руки (истинная){/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_neu_true
+                            "{color=#57d7fa}Человек прошлого (Локи-нейтрал){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_neu_loki
+                            "{color=#57d7fa}Человек прошлого (Дрищ-нейтрал){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_neu
+                            "{color=#ed6b6b}Неизбежность (плохая){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_bad
                         $ renpy.pause(1)
                         stop ambience fadeout 2
                         jump alt_endings
