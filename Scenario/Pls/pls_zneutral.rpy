@@ -260,22 +260,22 @@ label alt_day7_neu_begin:
     call alt_day7_neu_dialogue
     pause(1)
     $ prolog_time()
-    if persistent.neu_loki_bad or persistent.neu_bad:
+    if persistent.neu_loki_neu or persistent.neu_neu:
         menu:
             "Настоящее":
                 $ alt_chapter(7, u"Одиночка. Настоящее")
                 if loki:
-                    call alt_day7_neu_bad_loki
+                    call alt_day7_neu_neu_loki
                 else:
-                    call alt_day7_neu_bad
+                    call alt_day7_neu_neu
             "Будущее":
                 $ alt_chapter(7, u"Одиночка. Будущее")
                 call alt_day7_neu_true
     else:
         $ alt_chapter(7, u"Одиночка. Настоящее")
         if loki:
-            call alt_day7_neu_bad_loki
+            call alt_day7_neu_neu_loki
         else:
-            call alt_day7_neu_bad
+            call alt_day7_neu_neu
     pause(1)
     return
