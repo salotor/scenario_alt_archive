@@ -249,7 +249,7 @@ label alt_day7_neu_begin:
     $ alt_chapter(7, u"Одиночка. Сон")
     call alt_day7_neu_sleep
     pause(1)
-    if persistent.neu_neu or persistent.neu_true:
+    if persistent.neu_bad:
         $ persistent.sprite_time = "day"
         $ day_time()
         $ alt_chapter(7, u"Одиночка. Подъём")
