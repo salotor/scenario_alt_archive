@@ -15688,7 +15688,7 @@ label alt_day7_neu_dialogue:
     with fade
     return
 
-label alt_day7_neu_bad_loki:    # надо вначале поставить $ meet('am', 'Дём'), иначе при запуске из ачивлиста вместо Дём пишется Я
+label alt_day7_neu_neu_loki:    # надо вначале поставить $ meet('am', 'Дём'), иначе при запуске из ачивлиста вместо Дём пишется Я
     play music music_7dl["see_one_day"] fadein 3
     scene bg ext_mv2_7dl
     show prologue_dream
@@ -16079,7 +16079,7 @@ label alt_day7_neu_bad_loki:    # надо вначале поставить $ m
     pause(1)
     return
 
-label alt_day7_neu_bad:    # надо вначале поставить $ meet('am', 'Дём'), иначе при запуске из ачивлиста вместо Дём пишется Я
+label alt_day7_neu_neu:    # надо вначале поставить $ meet('am', 'Дём'), иначе при запуске из ачивлиста вместо Дём пишется Я
     play music music_7dl["see_one_day"] fadein 3
     scene expression Grayed ("bg int_d3_hideout_7dl")
     with fade
