@@ -295,8 +295,9 @@ init:
     image sdl_achv_us_bad  = Text(" Плохая\nконцовка", style="sdl_achvlistA_us_st")
     ## Одиночка расцветка
     image sdl_achv_me_true = Text("Истинная\nконцовка", style="sdl_achvlistA_me_st")
-    image sdl_achv_me_LO_bad  = Text(" Плохая\nконцовка Локи", style="sdl_achvlistA_me_st")
-    image sdl_achv_me_DR_bad  = Text(" Плохая\nконцовка Дрища", style="sdl_achvlistA_me_st")
+    image sdl_achv_me_LO_neutral  = Text(" Нейтральная\nконцовка Локи", style="sdl_achvlistA_me_st")
+    image sdl_achv_me_DR_neutral  = Text(" Нейтральная\nконцовка Дрища", style="sdl_achvlistA_me_st")
+    image sdl_achv_me_bad  = Text(" Плохая\nконцовка", style="sdl_achvlistA_me_st")
     image sdl_achv_me_kat = Text("Катапультная\n концовка", style="sdl_achvlistA_me_st")
     image sdl_achv_me_qte = Text(" Тест на реакцию\nи сообразительность", style="sdl_achvlistA_me_st")
     
