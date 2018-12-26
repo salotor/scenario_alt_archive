@@ -630,12 +630,12 @@ label sdl_menu:
                             "{color=#57d7fa}Пан или пропал (Локи-реджект){/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_sl_7dl_loki_oafa
-                            "{color=#f2fa57}Единственно верный путь (Герк-гуд){/color}":
-                                stop ambience fadeout 2
-                                call alt_day7_sl_7dl_herc_right_road
                             "{color=#f2fa57}Тьма и неон (Герк-гуд){/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_sl_7dl_herc_neon
+                            "{color=#f2fa57}Единственно верный путь (Герк-нейтрал){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_herc_right_road
                             "{color=#ecf711}Не напрасно? (Дрищ-гуд){/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_sl_7dl_wasted
@@ -779,35 +779,47 @@ label sdl_menu:
                         jump alt_endings
                     "Ульяна":
                         menu:
-                            "{color=#ff0000}Ульяна, хорошая концовка.{/color}":
+                            "{color=#ff0000}Ульяна, хорошая концовка{/color}":
                                 $ alt_day6_us_7dl_tr
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_reunite
-                            "{color=#aced6b}Ульяна, Концовка Мику.{/color}":
+                            "{color=#aced6b}Ульяна, Концовка Мику{/color}":
                                 $ alt_day6_us_7dl_mi_friends = 3
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_mikuforever
-                            "{color=#9894e0}Ульяна, Концовка Лены.{/color}":
+                            "{color=#9894e0}Ульяна, Концовка Лены{/color}":
                                 $ alt_day6_us_7dl_un_friends = 3
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_lenaforever
-                            "{color=#ed6b6b}Ульяна, Плохая концовка.{/color}":
+                            "{color=#ed6b6b}Ульяна, Плохая концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_bad
-                            "{color=#ffff00}Огоньки, Истинная концовка.{/color}":
+                            "{color=#ffff00}Огоньки, Истинная концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_px_fairytale
-                            "{color=#ffff11}Огоньки, Хорошая концовка.{/color}":
+                            "{color=#ffff11}Огоньки, Хорошая концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_px_dejavu
-                            "{color=#6beded}Ульяна, Истинная концовка.{/color}":
+                            "{color=#6beded}Ульяна, Истинная концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_ever_after
                         $ renpy.pause(1)
                         stop ambience fadeout 2
                         jump alt_endings
                     "Одиночка":
-                        "Рут находится в разработке."
+                        menu:
+                            "{color=#6beded}Безликие руки (истинная){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_true
+                            "{color=#57d7fa}Человек прошлого (Локи-нейтрал){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_neu_loki
+                            "{color=#57d7fa}Человек прошлого (Дрищ-нейтрал){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_neu
+                            "{color=#ed6b6b}Неизбежность (плохая){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_bad
                         $ renpy.pause(1)
                         stop ambience fadeout 2
                         jump alt_endings
