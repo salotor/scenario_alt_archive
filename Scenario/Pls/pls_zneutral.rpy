@@ -249,7 +249,7 @@ label alt_day7_neu_begin:
     $ alt_chapter(7, u"Одиночка. Сон")
     call alt_day7_neu_sleep
     pause(1)
-    if persistent.neu_bad:    # тут бы на все трушки проверять + neu_bad. # И по-хорошему, не помещал бы выбор, ведущий к бэду
+    if persistent.neu_bad:    # тут бы на все трушки проверять (или просто на биндер) + neu_bad. # И по-хорошему, не помещал бы выбор, ведущий к бэду
         $ persistent.sprite_time = "day"
         $ day_time()
         $ alt_chapter(7, u"Одиночка. Подъём")
