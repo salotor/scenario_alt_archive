@@ -756,6 +756,13 @@ init 9999 python:
             "sdl_achv_me_qte",
             {},
             None
+        ),
+        sdl_achv_Achievement(    # QTE victim
+            "acm_logo_me_victim",
+            "alt_victim",
+            "acm_achv_me_victim",
+            {},
+            None
         )
     ]
     

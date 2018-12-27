@@ -948,6 +948,14 @@ init:
     image acm_logo_me_deep = get_image_7dl("gui/acm/acm_logo_me_deep_7dl.png")
     image acm_logo_me_lamp = get_image_7dl("gui/acm/acm_logo_me_lamp_7dl.png")
     image acm_logo_me_qte = get_image_7dl("gui/acm/acm_logo_me_qte_7dl.png")
+    image acm_logo_me_victim:
+        get_image_7dl("gui/acm/acm_logo_me_victim_1_7dl.png")
+        0.2
+        get_image_7dl("gui/acm/acm_logo_me_victim_2_7dl.png")
+        0.2
+        get_image_7dl("gui/acm/acm_logo_me_victim_3_7dl.png")
+        0.2
+        repeat
     
     image acm_logo_mi_allyours = get_image_7dl("gui/acm/acm_logo_mi_allyours_7dl.png")
     image acm_logo_mi_namiki = get_image_7dl("gui/acm/acm_logo_mi_namiki_7dl.png")

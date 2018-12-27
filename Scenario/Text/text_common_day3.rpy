@@ -7973,29 +7973,42 @@ label alt_day3_dv_reunion:
 
 label alt_day3_leave1:
     "Я открыл глаза."
-    if persistent.d3_deep:
-        $ persistent.d3_deep += 1
-    else:
-        $ persistent.d3_deep = 1
-    $ renpy.pause(1.0, hard=True)
     window hide
-    scene black
-    show gameover
-    with gopr
+    scene gameover with gopr
+    if persistent.alt_qte_fail:    #Ы: обновлённый QTE
+        $ persistent.alt_qte_fail += 1
+        
+        if persistent.alt_qte_fail >= 5:
+            play sound sfx_7dl["aunl"]
+            if persistent.alt_victim:
+                $ persistent.alt_victim += 1
+            else:
+                $ persistent.alt_victim = 1
+            show acm_logo_me_victim with moveinright:
+                pos (1600, 1020)
+    else:
+        $ persistent.alt_qte_fail = 1
+    $ renpy.pause(3, hard=True)
     return
 
 label alt_day3_dv_stayhere1:
     $ alt_day3_dv_evening = True
-    if alt_day_binder != 1 and persistent.dv_7dl_good_ussr:
+    if persistent.alt_victim and not persistent.alt_qte:
         play sound sfx_7dl["tousche"]
         play sound2 sfx_concert_applause
+        $ persistent.alt_qte = 1
         show acm_logo_me_qte with moveinright:
             pos (1600, 1020)
         $ renpy.pause(9.4, hard=True)
-    if persistent.alt_qte:
-        $ persistent.alt_qte += 1
     else:
-        $ persistent.alt_qte = 1
+        play sound sfx_7dl["aunl"]
+        if persistent.alt_qte:
+            $ persistent.alt_qte += 1
+        else:
+            $ persistent.alt_qte = 1
+        show acm_logo_me_qte with moveinright:
+            pos (1600, 1020)
+        $ renpy.pause(3, hard=True)
     $ night_time()
     with vpunch
     stop music
@@ -11242,7 +11255,7 @@ label alt_day3_bath_voyeur:
     with dissolve
     play ambience ambience_forest_night fadein 3
     $ alt_day3_sl_bath_voy = True
-    "Найти баню оказалась несложно. Выглядела она скорее как избушка, чем как место, где можно очистить тело и мысли."
+    "Найти баню оказалось несложно. Выглядела она скорее как избушка, чем как место, где можно очистить тело и мысли."
     "В любом случае, густой дым, валящий из трубы, исключал двоякость толкований." 
     "Осталось разобраться в том, кто же там сейчас находится."
     "А то конфуза потом не оберёшься — будто мало мне глупостей, которые происходят со мной без моей воли, давайте теперь ещё и опростоволосимся, забравшись в занятую баню, да…"

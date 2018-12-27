@@ -300,6 +300,7 @@ init:
     image sdl_achv_me_bad  = Text(" Плохая\nконцовка", style="sdl_achvlistA_me_st")
     image sdl_achv_me_kat = Text("Катапультная\n концовка", style="sdl_achvlistA_me_st")
     image sdl_achv_me_qte = Text(" Тест на реакцию\nи сообразительность", style="sdl_achvlistA_me_st")
+    image acm_achv_me_victim = Text("Помянем...", style="sdl_achvlistA_me_st")
     
     ##\\\\\\\\\\\\\\\\\\\\\\\\\ЗАГЛУШКИ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # Заглушки под неполученные достижения
