@@ -326,10 +326,13 @@ screen sdl_achvlist_main:
     use sdl_achv_main_buttons("sdl_achvlist_main", None)
 
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ЭКРАН ПЕРСОНАЖА\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-label sdl_achvlist_character(character, route_list):
+label sdl_achvlist_character(character=None, route_list=None):
     call sdl_achv_reset_vars
     
-    call screen sdl_achvlist_character(character, route_list)
+    if character != None and route_list != None:
+        call screen sdl_achvlist_character(character, route_list)
+    
+    return
 
 screen sdl_achvlist_character(character, route_list):
     tag menu
