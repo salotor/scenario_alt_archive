@@ -271,7 +271,6 @@ init:
     image sdl_achv_sl_LO_neutral = Text("Нейтральная\nконцовка Локи", style="sdl_achvlistA_sl_st")
     image sdl_achv_sl_LO_rejc    = Text(" Реджект\nконцовка Локи", style="sdl_achvlistA_sl_st")
     image sdl_achv_sl_HE_good    = Text(" Хорошая \nконцовка Герка", style="sdl_achvlistA_sl_st")
-    image sdl_achv_sl_HE_neutral = Text("Нейтральная\nконцовка Герка", style="sdl_achvlistA_sl_st")
     image sdl_achv_sl_DR_good    = Text(" Хорошая \nконцовка Дрища", style="sdl_achvlistA_sl_st")
     image sdl_achv_sl_bad        = Text(" Плохая\nконцовка", style="sdl_achvlistA_sl_st")
     image sdl_achv_sl_bad_IN     = Text("  Плохая\nинт-концовка", style="sdl_achvlistA_sl_st")
