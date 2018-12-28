@@ -560,7 +560,7 @@ init:
     image bg int_home_lift_7dl = get_image_7dl("bg/outro/int_home_lift_7dl.png")
     image bg int_hospital_corridor_7dl = get_image_7dl("bg/outro/int_hospital_corridor_7dl.jpg")
     image bg int_intro_liaz_7dl = get_image_7dl("bg/outro/int_intro_liaz_7dl.jpg")
-    image bg int_living_7dl = get_image_7dl("bg/outro/int_living_7dl.png") TODO redraw
+    image bg int_living_7dl = get_image_7dl("bg/outro/int_living_7dl.png") # TODO redraw
     image bg int_opened_door_7dl = get_image_7dl("bg/outro/int_opened_door_7dl.jpg")
     image bg int_sam_house_clean_7dl = get_image_7dl("bg/outro/int_sam_house_clean_7dl.jpg")
     image bg int_sam_room_7dl = get_image_7dl("bg/outro/int_sam_room_7dl.png")
@@ -948,6 +948,14 @@ init:
     image acm_logo_me_deep = get_image_7dl("gui/acm/acm_logo_me_deep_7dl.png")
     image acm_logo_me_lamp = get_image_7dl("gui/acm/acm_logo_me_lamp_7dl.png")
     image acm_logo_me_qte = get_image_7dl("gui/acm/acm_logo_me_qte_7dl.png")
+    image acm_logo_me_victim:
+        get_image_7dl("gui/acm/acm_logo_me_victim_1_7dl.png")
+        0.2
+        get_image_7dl("gui/acm/acm_logo_me_victim_2_7dl.png")
+        0.2
+        get_image_7dl("gui/acm/acm_logo_me_victim_3_7dl.png")
+        0.2
+        repeat
     
     image acm_logo_mi_allyours = get_image_7dl("gui/acm/acm_logo_mi_allyours_7dl.png")
     image acm_logo_mi_namiki = get_image_7dl("gui/acm/acm_logo_mi_namiki_7dl.png")
@@ -1321,12 +1329,16 @@ init:
     $ sfx_7dl["brake"] = get_sfx_7dl("brake_7dl.ogg")
     $ sfx_7dl["breath"] = get_sfx_7dl("breath_7dl.ogg")
     $ sfx_7dl["blanket"] = get_sfx_7dl("blanket_7dl.ogg")
+    $ sfx_7dl["cigaret_lighter_inhale"] = get_sfx_7dl("cigaret_lighter_inhale_7dl.ogg")
+    $ sfx_7dl["car_crash"] = get_sfx_7dl("car_crash_7dl.ogg")
     $ sfx_7dl["car_passing"] = get_sfx_7dl("car_passing_7dl.ogg")
     $ sfx_7dl["deagle_shot"] = get_sfx_7dl("deagle_shot_7dl.ogg")
     $ sfx_7dl["eat_horn"] = get_sfx_7dl("eat_horn_7dl.ogg")
     $ sfx_7dl["footsteps_grass"] = get_sfx_7dl("footsteps_grass_7dl.ogg")
     $ sfx_7dl["gate_open"] = get_sfx_7dl("gate_open_7dl.ogg")
     $ sfx_7dl["ghmm"] = get_sfx_7dl("ghm_7dl.ogg")
+    $ sfx_7dl["gunfire_1"] = get_sfx_7dl("gunfire_1_7dl.ogg")
+    $ sfx_7dl["gunfire_2"] = get_sfx_7dl("gunfire_2_7dl.ogg")
     $ sfx_7dl["hedgehog"] = get_sfx_7dl("hedgehog_7dl.ogg")
     $ sfx_7dl["highfive"] = get_sfx_7dl("highfive_7dl.ogg")
     $ sfx_7dl["intro_dr"] = get_sfx_7dl("intro_dr_7dl.ogg")
@@ -1337,6 +1349,7 @@ init:
     $ sfx_7dl["miku_stomping"] = get_sfx_7dl("miku_stomping_7dl.ogg")
     $ sfx_7dl["metal_hit_on_metal"] = get_sfx_7dl("metal_hit_on_metal_7dl.ogg")
     $ sfx_7dl["mpbt"] = get_sfx_7dl("mpbt_7dl.ogg")
+    $ sfx_7dl["nade_explode"] = get_sfx_7dl("nade_explode_7dl.ogg")
     $ sfx_7dl["old_phone"] = get_sfx_7dl("old_phone_7dl.ogg")
     $ sfx_7dl["plates_broken"] = get_sfx_7dl("plates_broken_7dl.ogg")
     $ sfx_7dl["phone_feedback"] = get_sfx_7dl("phone_feedback_7dl.ogg")

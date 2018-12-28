@@ -174,6 +174,8 @@ init:
     image sdl_achv_us_px_inactive = get_image_7dl("gui/ach_list/us_px_inactive.png")
     ## Одиночка
     image sdl_achv_me_7dl_active = get_image_7dl("gui/ach_list/me_7dl_active.png")
+    image sdl_achv_me_ow_active = get_image_7dl("gui/ach_list/me_ow_active.png")
+    image sdl_achv_me_ow_inactive = get_image_7dl("gui/ach_list/me_ow_inactive.png")
     image sdl_achv_me_no_active = get_image_7dl("gui/ach_list/me_no_active.png")
     image sdl_achv_me_no_inactive = get_image_7dl("gui/ach_list/me_no_inactive.png")
     image sdl_achv_me_sm_active = get_image_7dl("gui/ach_list/me_sm_active.png")
@@ -231,7 +233,8 @@ init:
     image sdl_achv_us_7dl = Text("Основная история", style="sdl_achvlistA_us_gross")
     image sdl_achv_us_pxs = Text("Огоньки", style="sdl_achvlistA_us_gross")
     ## Одиночка-руты
-    image sdl_achv_me_d3r = Text("Основная история", style="sdl_achvlistA_me_gross")
+    image sdl_achv_me_d3r = Text("Д3", style="sdl_achvlistA_me_gross")
+    image sdl_achv_me_owl = Text("Основная история", style="sdl_achvlistA_me_gross")
     image sdl_achv_me_noi = Text("Нуар", style="sdl_achvlistA_me_gross")
     image sdl_achv_me_smt = Text("Прочее", style="sdl_achvlistA_me_gross")
     # ------------------------------------------------
@@ -290,8 +293,13 @@ init:
     image sdl_achv_us_mi   = Text("Концовка\n Мику", style="sdl_achvlistA_us_st")
     image sdl_achv_us_bad  = Text(" Плохая\nконцовка", style="sdl_achvlistA_us_st")
     ## Одиночка расцветка
+    image sdl_achv_me_true = Text("Истинная\nконцовка", style="sdl_achvlistA_me_st")
+    image sdl_achv_me_LO_neutral  = Text(" Нейтральная\nконцовка Локи", style="sdl_achvlistA_me_st")
+    image sdl_achv_me_DR_neutral  = Text(" Нейтральная\nконцовка Дрища", style="sdl_achvlistA_me_st")
+    image sdl_achv_me_bad  = Text(" Плохая\nконцовка", style="sdl_achvlistA_me_st")
     image sdl_achv_me_kat = Text("Катапультная\n концовка", style="sdl_achvlistA_me_st")
     image sdl_achv_me_qte = Text(" Тест на реакцию\nи сообразительность", style="sdl_achvlistA_me_st")
+    image acm_achv_me_victim = Text("Помянем...", style="sdl_achvlistA_me_st")
     
     ##\\\\\\\\\\\\\\\\\\\\\\\\\ЗАГЛУШКИ\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     # Заглушки под неполученные достижения
