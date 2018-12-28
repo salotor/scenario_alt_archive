@@ -633,7 +633,7 @@ label sdl_menu:
                             "{color=#f2fa57}Тьма и неон (Герк-гуд){/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_sl_7dl_herc_neon
-                            "{color=#f2fa57}Единственно верный путь (Герк-нейтрал){/color}":
+                            "{color=#f2fa57}Единственно верный путь (Герк-гуд){/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_sl_7dl_herc_right_road
                             "{color=#ecf711}Не напрасно? (Дрищ-гуд){/color}":
