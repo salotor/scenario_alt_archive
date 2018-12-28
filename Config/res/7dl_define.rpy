@@ -1376,3 +1376,6 @@ init:
     $ sfx_7dl["wakeup"] = get_sfx_7dl("wakeup_7dl.ogg")
     $ sfx_7dl["white_noise"] = get_sfx_7dl("white_noise_7dl.ogg")
     $ sfx_7dl["window_glass_break"] = get_sfx_7dl("window_glass_break_7dl.ogg")
+    
+# незадефайненные sfx из БЛ
+    $ sfx_alisa_falls_novoice = "sound/sfx/alisa_falls_novoice.ogg"
