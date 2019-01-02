@@ -202,7 +202,7 @@ init:
     
     image sdl_achv_info_or     = Text("или", style="sdl_achv_font_prereq")
     image sdl_achv_info_end    = Text("Требует прохождения\n      концовки", style="sdl_achv_font_prereq")
-    image sdl_achv_info_pst    = Text("Требует сбора\nпаззла-сердечка", style="sdl_achv_font_prereq")
+    image sdl_achv_info_pst    = Text("Требует сбора\nпазла-сердечка", style="sdl_achv_font_prereq")
     # Типология рутов
     image sdl_achv_7dl_route = Text("7ДЛ-рут", style="sdl_achv_font_small_inactive")
     image sdl_achv_clt_route = Text("Классик-рут", style="sdl_achv_font_small_inactive")
