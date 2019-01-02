@@ -201,23 +201,23 @@ init:
     $ fade_red = Fade(2, 2, 2, color="#f11")
     $ flash2_red = Fade(0.5, 0, 0.5, color="#f11")
     $ flash_pink = Fade(1, 0, 1, color="#e25")
-    
+    #кристал
     $ diam = ImageDissolve(im.Tile(get_image_7dl("gui/transit/pattern.jpg")), 1.1, 1)
     $ fdiam = ImageDissolve(im.Tile(get_image_7dl("gui/transit/pattern.jpg")), 0.4, 1)
     $ fulldiam = MultipleTransition([False,fdiam,get_image_7dl("screens/digi1.jpg"),fdiam,True])
-    
+    #поворотный переключатель
     $ gopr = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout_go.png")), 0.95, 1)
     $ swradar = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout3.jpg")), 0.95, 1)
     $ joff = MultipleTransition([False,swradar,Solid("#000"),swradar,True])
     $ swradarr = ImageDissolve(im.Tile(get_image_7dl("gui/transit/blackout32.jpg")), 0.95, 1)
     $ joffr = MultipleTransition([False,swradarr,Solid("#000"),swradarr,True])
-    
+    #жалюзи а ля KS
     $ blind_d = ImageDissolve(im.Tile(get_image_7dl("gui/transit/roof_ks.jpg")), 1.3)
     $ blinds_l = ImageDissolve(im.Tile(get_image_7dl("gui/transit/roof_ks2.jpg")), 0.6)
     $ blinds_r = ImageDissolve(im.Tile(get_image_7dl("gui/transit/roof_ks3.jpg")), 0.7)
-    
     $ blind_l = MultipleTransition([False,blinds_l,Solid("#011"),blinds_r,True])
     $ blind_r = MultipleTransition([False,blinds_r,Solid("#011"),blinds_l,True])
+    #Разное
     $ touch = ImageDissolve(im.Tile(get_image_7dl("gui/transit/pattern2.jpg")), 0.9, 1)
     $ dspq = Dissolve(0.04, alpha=True)
     $ dsps = Dissolve(3.0, alpha=True)
@@ -534,6 +534,7 @@ init:
     image bg ext_earth_7dl = get_image_7dl("bg/outro/ext_earth_7dl.jpg")
     image bg ext_emptiness_7dl = get_image_7dl("bg/outro/ext_emptiness_7dl.png")
     image bg ext_entrance_winter_7dl = get_image_7dl("bg/outro/ext_entrance_winter_7dl.jpg")
+    image bg ext_genda_7dl = get_image_7dl("bg/outro/ext_genda_7dl.png")
     image bg ext_graveyard_rain_7dl = get_image_7dl("bg/outro/ext_graveyard_rain_7dl.png")
     image bg ext_houses_snowy_day_7dl = get_image_7dl("bg/outro/ext_houses_snowy_day_7dl.jpg")
     image bg ext_house_of_mt_snowy_day_7dl = get_image_7dl("bg/outro/ext_house_of_mt_snowy_day_7dl.jpg")
@@ -541,6 +542,7 @@ init:
     image bg ext_khruschevka_night_7dl = get_image_7dl("bg/outro/ext_khruschevka_night_7dl.png")
     image bg ext_khruschevka_sunset_7dl = get_image_7dl("bg/outro/ext_khruschevka_sunset_7dl.png")
     image bg ext_khruschevka_rain_7dl = get_image_7dl("bg/outro/ext_khruschevka_rain_7dl.png")
+    image bg ext_lost_city_7dl = get_image_7dl("bg/outro/ext_lost_city_7dl.png")
     image bg ext_musclub_snowy_day_7dl = get_image_7dl("bg/outro/ext_musclub_snowy_day_7dl.jpg")
     image bg ext_mv2_7dl = get_image_7dl("bg/outro/ext_mv2_7dl.jpg")
     image bg ext_railbridge_sunset_7dl = get_image_7dl("bg/outro/ext_railbridge_sunset_7dl.png")
@@ -558,6 +560,7 @@ init:
     image bg int_home_lift_7dl = get_image_7dl("bg/outro/int_home_lift_7dl.png")
     image bg int_hospital_corridor_7dl = get_image_7dl("bg/outro/int_hospital_corridor_7dl.jpg")
     image bg int_intro_liaz_7dl = get_image_7dl("bg/outro/int_intro_liaz_7dl.jpg")
+    image bg int_living_7dl = get_image_7dl("bg/outro/int_living_7dl.png") # TODO redraw
     image bg int_opened_door_7dl = get_image_7dl("bg/outro/int_opened_door_7dl.jpg")
     image bg int_sam_house_clean_7dl = get_image_7dl("bg/outro/int_sam_house_clean_7dl.jpg")
     image bg int_sam_room_7dl = get_image_7dl("bg/outro/int_sam_room_7dl.png")
@@ -758,6 +761,7 @@ init:
     image cg d7_leaving_no_sl_sam_7dl = get_image_7dl("cg/d7_leaving_no_sl_sam_7dl.jpg")
     
     image cg d7_me_epilogue_bus_7dl = get_image_7dl("cg/d7_me_epilogue_bus_7dl.png")
+    image cg d7_me_loki_7dl = get_image_7dl("cg/d7_me_loki_7dl.png")#TODO: REDRAW
     image cg d7_me_looney_7dl = get_image_7dl("cg/d7_me_looney_7dl.png")
     
     image cg d7_mi_club27_7dl = get_image_7dl("cg/d7_mi_club27_7dl.png")
@@ -944,6 +948,14 @@ init:
     image acm_logo_me_deep = get_image_7dl("gui/acm/acm_logo_me_deep_7dl.png")
     image acm_logo_me_lamp = get_image_7dl("gui/acm/acm_logo_me_lamp_7dl.png")
     image acm_logo_me_qte = get_image_7dl("gui/acm/acm_logo_me_qte_7dl.png")
+    image acm_logo_me_victim:
+        get_image_7dl("gui/acm/acm_logo_me_victim_1_7dl.png")
+        0.2
+        get_image_7dl("gui/acm/acm_logo_me_victim_2_7dl.png")
+        0.2
+        get_image_7dl("gui/acm/acm_logo_me_victim_3_7dl.png")
+        0.2
+        repeat
     
     image acm_logo_mi_allyours = get_image_7dl("gui/acm/acm_logo_mi_allyours_7dl.png")
     image acm_logo_mi_namiki = get_image_7dl("gui/acm/acm_logo_mi_namiki_7dl.png")
@@ -969,6 +981,7 @@ init:
     image acm_logo_mt_named_olga = get_image_7dl("gui/acm/acm_logo_mt_named_olga_7dl.png")
     
     image acm_logo_neu_bad = get_image_7dl("gui/acm/acm_logo_neu_bad_7dl.png")
+    image acm_logo_neu_neu = get_image_7dl("gui/acm/acm_logo_neu_neu_7dl.png")
     image acm_logo_neu_true = get_image_7dl("gui/acm/acm_logo_neu_true_7dl.png")
     
     image acm_logo_sl_bad = get_image_7dl("gui/acm/acm_logo_sl_bad_7dl.png")
@@ -1193,7 +1206,7 @@ init:
     $ music_7dl["not_alone"] = get_music_7dl("not_alone_7dl.ogg")
     $ music_7dl["nowyouseeme"] = get_music_7dl("nowyouseeme_7dl.ogg")
     
-    $ music_7dl["ofrust"] = get_music_7dl("ofrust.ogg")
+    $ music_7dl["ofrust"] = get_music_7dl("ofrust_7dl.ogg")
     $ music_7dl["old_kiss"] = get_music_7dl("old_kiss_7dl.ogg")
     $ music_7dl["one_little_lone_cloud"] = get_music_7dl("one_little_lone_cloud_7dl.ogg")
     $ music_7dl["ourfirstmet"] = get_music_7dl("ourfirstmet_7dl.ogg") 
@@ -1316,21 +1329,27 @@ init:
     $ sfx_7dl["brake"] = get_sfx_7dl("brake_7dl.ogg")
     $ sfx_7dl["breath"] = get_sfx_7dl("breath_7dl.ogg")
     $ sfx_7dl["blanket"] = get_sfx_7dl("blanket_7dl.ogg")
+    $ sfx_7dl["cigaret_lighter_inhale"] = get_sfx_7dl("cigaret_lighter_inhale_7dl.ogg")
+    $ sfx_7dl["car_crash"] = get_sfx_7dl("car_crash_7dl.ogg")
     $ sfx_7dl["car_passing"] = get_sfx_7dl("car_passing_7dl.ogg")
     $ sfx_7dl["deagle_shot"] = get_sfx_7dl("deagle_shot_7dl.ogg")
     $ sfx_7dl["eat_horn"] = get_sfx_7dl("eat_horn_7dl.ogg")
     $ sfx_7dl["footsteps_grass"] = get_sfx_7dl("footsteps_grass_7dl.ogg")
     $ sfx_7dl["gate_open"] = get_sfx_7dl("gate_open_7dl.ogg")
     $ sfx_7dl["ghmm"] = get_sfx_7dl("ghm_7dl.ogg")
+    $ sfx_7dl["gunfire_1"] = get_sfx_7dl("gunfire_1_7dl.ogg")
+    $ sfx_7dl["gunfire_2"] = get_sfx_7dl("gunfire_2_7dl.ogg")
     $ sfx_7dl["hedgehog"] = get_sfx_7dl("hedgehog_7dl.ogg")
     $ sfx_7dl["highfive"] = get_sfx_7dl("highfive_7dl.ogg")
     $ sfx_7dl["intro_dr"] = get_sfx_7dl("intro_dr_7dl.ogg")
     $ sfx_7dl["KBtyping"] = get_sfx_7dl("KBtyping_7dl.ogg")
     $ sfx_7dl["kissing_sound"] = get_sfx_7dl("kissing_sound_7dl.ogg")
+    $ sfx_7dl["loop_cave_water"] = get_sfx_7dl("loop_cave_water_7dl.ogg")
     $ sfx_7dl["makarych"] = get_sfx_7dl("makarych_7dl.ogg")
     $ sfx_7dl["miku_stomping"] = get_sfx_7dl("miku_stomping_7dl.ogg")
     $ sfx_7dl["metal_hit_on_metal"] = get_sfx_7dl("metal_hit_on_metal_7dl.ogg")
     $ sfx_7dl["mpbt"] = get_sfx_7dl("mpbt_7dl.ogg")
+    $ sfx_7dl["nade_explode"] = get_sfx_7dl("nade_explode_7dl.ogg")
     $ sfx_7dl["old_phone"] = get_sfx_7dl("old_phone_7dl.ogg")
     $ sfx_7dl["plates_broken"] = get_sfx_7dl("plates_broken_7dl.ogg")
     $ sfx_7dl["phone_feedback"] = get_sfx_7dl("phone_feedback_7dl.ogg")
@@ -1357,3 +1376,6 @@ init:
     $ sfx_7dl["wakeup"] = get_sfx_7dl("wakeup_7dl.ogg")
     $ sfx_7dl["white_noise"] = get_sfx_7dl("white_noise_7dl.ogg")
     $ sfx_7dl["window_glass_break"] = get_sfx_7dl("window_glass_break_7dl.ogg")
+    
+# незадефайненные sfx из БЛ
+    $ sfx_alisa_falls_novoice = "sound/sfx/alisa_falls_novoice.ogg"
