@@ -14608,7 +14608,7 @@ label alt_day7_neu_sleep:
     play sound sfx_7dl["nade_explode"] fadein 1
     with vpunch
     pause(1)
-    play ambience ambience_7dl["explosive_post"] faden 3
+    play ambience ambience_7dl["explosive_post"] fadein 3
     "По ту сторону моего укрытия кто-то заголосил, качнуло стены жарким «ах», и я остался наедине со звенящей тишиной."
     "Развернулся в сторону лестницы — кабина уже прибыла!"
     window hide
