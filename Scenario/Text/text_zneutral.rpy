@@ -4649,7 +4649,7 @@ label alt_day4_neu_map_dining_hall:
             show el normal pioneer with moveinright
             "Сначала Электроник."
             hide el with moveoutleft
-            show mz normal pioneer at left
+            show mz normal glasses pioneer at left
             show sl normal pioneer at right
             with moveinright
             "За ним — удивительный и непонятный тандем из Жужелицы и Слави."
@@ -14589,15 +14589,15 @@ label alt_day7_neu_sleep:
     "Что там было написано дальше, я прочитать не успел — воздух вдруг приобрёл плотность бетона и с силой швырнул меня в потолок."
     "И меня не стало."
     window hide
-    show mz smile pioneer
+    show mz smile glasses pioneer
     with dissolve
     mz "Совсем-совсем?"
     me "Нет, но…"
-    show mz normal pioneer with dspr
+    show mz normal glasses pioneer with dspr
     mz "Ты хочешь умереть?"
     mz "На самом деле ты хочешь, чтобы тебя спасли."
     mz "Да только вот все спасатели какие-то несимпатичные, да? {w}А сам себя ты спасать не хочешь — не простил ещё."
-    show mz normal pioneer close with dissolve
+    show mz normal glasses pioneer close with dissolve
     mz "Ладно, задержи дыхание и сосчитай до пяти. Раз… Два…"
     window hide
     scene bg int_mine_halt
