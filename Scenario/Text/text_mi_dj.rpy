@@ -4037,8 +4037,8 @@ label alt_day5_mi_dj_cinema:
 label alt_day5_mi_dj_dinner:
     scene bg int_dining_hall_people_day
     show mi smile pioneer
-    play ambience ambience_dining_hall_full
     with dissolve
+    play ambience ambience_dining_hall_full fadein 5
     play music music_7dl["what_am_i_doing_here"] fadein 5
     "Великий дар, данный этой девочке — не музыкальный или организаторский."
     "А дар жить."
@@ -4076,12 +4076,15 @@ label alt_day5_mi_dj_dinner:
     "Второе мало-помалу сдалось, и, опрокинув в себя стакан с компотом, я поднялся."
     me "Пойдём, попробую что-нибудь вспомнить."
     window hide
+    stop ambience fadeout 2
+    play sound sfx_open_door_strong
+    pause(1)
     stop music fadeout 5
     $ persistent.sprite_time = "day"
     scene bg ext_dining_hall_away_day
     show mi normal pioneer with dspr
     with dissolve
-
+    play ambience ambience_camp_center_day fadein 3
     "Сразу на крыльце Мику вцепилась мне в руку."
     mi "Рассказывай!"
     me "Пошли к клубам, по дороге что-нибудь расскажу."
