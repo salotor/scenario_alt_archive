@@ -59,6 +59,7 @@ init 1 python:
 init 1:
     $ list_waifu_7dl = []
     $ persistent.waifu_7dl = 0
+    $ persistent.dont_disturb = True
     $ dlc_is_here = False # по умолчанию кошочка не в директории БЛ
     #$ time_7dl = ""
     image bg un_bg_7dl = get_image_7dl("gui/menu_main/un_bg.png")
