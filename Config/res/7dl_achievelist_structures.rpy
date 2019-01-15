@@ -11,15 +11,25 @@ init 9999 python:
     ## replay        - объект sdl_achv_Replay, использующийся для перехода к концовке
     #
     # Объект sdl_achv_Prerequisite (требование к концовке):
-    ## conditions - список названий перзистентов, удовлетворяющих условию
-    ## text       - надпись (объявляется в ресурсах), описывающая тип требования
-    ## image      - иконка концовки, удовлетворяющей выполнению требования
+    ## text         - надпись (объявляется в ресурсах), описывающая тип требования
+    ## achievements - список объектов sdl_achv_Achievement, удовлетворяющих условию (поля prerequisites и replay не обязательны)
     ###
     ### Пример: пусть для выхода на концовку стоит условие:
     ###     (persistent.us_7dl_un or persistent.us_7dl_mi) and persistent.us_px_rf_good
     ### Тогда нужно создать 2 объекта-требования
-    ###     sdl_achv_Prerequisite({"us_7dl_un", "us_7dl_mi"}, "sdl_achv_info_end", "acm_logo_us_hi")
-    ###     sdl_achv_Prerequisite({"us_px_rf_good"}, "sdl_achv_info_end", "acm_logo_us_px")
+    ###     sdl_achv_Prerequisite(
+    ###         "sdl_achv_info_end",
+    ###         {
+    ###             sdl_achv_Achievement("acm_logo_us_px", "us_px_rf_good", "sdl_achv_us_good", None, None)
+    ###         }
+    ###     ),
+    ###     sdl_achv_Prerequisite(
+    ###         "sdl_achv_info_end",
+    ###         {
+    ###             sdl_achv_Achievement("acm_logo_us_hi", "us_7dl_un", "sdl_achv_us_un", None, None),
+    ###             sdl_achv_Achievement("acm_logo_us_openup", "us_7dl_mi", "sdl_achv_us_mi", None, None)
+    ###         }
+    ###     )
     #
     # Объект sdl_achv_Replay (повтор):
     ## label - метка, к которой надо перейти для просмотра концовки
@@ -35,7 +45,14 @@ init 9999 python:
             "mi_7dl_true",
             "sdl_achv_mi_true",
             {
-                sdl_achv_Prerequisite({"mi_7dl_herc_exc", "mi_7dl_loki_exc", "mi_7dl_dr_exc"}, "sdl_achv_info_end", "acm_logo_mi_watashi")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_mi_unlike", "mi_7dl_herc_exc", "sdl_achv_mi_HE_excl", None, None),
+                        sdl_achv_Achievement("acm_logo_mi_come", "mi_7dl_loki_exc", "sdl_achv_mi_LO_excl", None, None),
+                        sdl_achv_Achievement("acm_logo_mi_watashi", "mi_7dl_dr_exc", "sdl_achv_mi_DR_excl", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_mi_7dl_thank_you", {"alt_replay_on" : "True"})
         ),
@@ -58,7 +75,13 @@ init 9999 python:
             "mi_7dl_loki_exc",
             "sdl_achv_mi_LO_excl",
             {
-                sdl_achv_Prerequisite({"mi_7dl_good_human", "mi_7dl_good_star"}, "sdl_achv_info_end", "acm_logo_mi_sparkle")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_mi_dark_dreams", "mi_7dl_good_human", "sdl_achv_mi_good", None, None),
+                        sdl_achv_Achievement("acm_logo_mi_sparkle", "mi_7dl_good_star", "sdl_achv_mi_good_RF", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_mi_7dl_sinthetic", {"alt_replay_on" : "True"})
         ),
@@ -67,7 +90,13 @@ init 9999 python:
             "mi_7dl_herc_exc",
             "sdl_achv_mi_HE_excl",
             {
-                sdl_achv_Prerequisite({"mi_7dl_good_human", "mi_7dl_good_star"}, "sdl_achv_info_end", "acm_logo_mi_sparkle")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_mi_dark_dreams", "mi_7dl_good_human", "sdl_achv_mi_good", None, None),
+                        sdl_achv_Achievement("acm_logo_mi_sparkle", "mi_7dl_good_star", "sdl_achv_mi_good_RF", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_mi_7dl_unlike", {"alt_replay_on" : "True"})
         ),
@@ -76,7 +105,13 @@ init 9999 python:
             "mi_7dl_dr_exc",
             "sdl_achv_mi_DR_excl",
             {
-                sdl_achv_Prerequisite({"mi_7dl_good_human", "mi_7dl_good_star"}, "sdl_achv_info_end", "acm_logo_mi_sparkle")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_mi_dark_dreams", "mi_7dl_good_human", "sdl_achv_mi_good", None, None),
+                        sdl_achv_Achievement("acm_logo_mi_sparkle", "mi_7dl_good_star", "sdl_achv_mi_good_RF", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_mi_7dl_come_back", {"alt_replay_on" : "True"})
         ),
@@ -113,7 +148,10 @@ init 9999 python:
             "mi_7dl_ps",
             "sdl_achv_mi_pst",
             {
-                sdl_achv_Prerequisite(None, "sdl_achv_info_alt", None)    # TODO: заменить условия на сбор сердечка?
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_pst",
+                    None
+                )
             },
             sdl_achv_Replay("alt_day7_mi_7dl_postscriptum", {"alt_replay_on" : "True"})
         )
@@ -158,7 +196,12 @@ init 9999 python:
             "dv_7dl_true",
             "sdl_achv_dv_true",
             {
-                sdl_achv_Prerequisite({"dv_7dl_good_ussr"}, "sdl_achv_info_end", "acm_logo_dv_ussr_good")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_dv_ussr_good", "dv_7dl_good_ussr", "sdl_achv_dv_good_US", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_dv_7dl_true", {"alt_replay_on" : "True"})
         ),
@@ -227,9 +270,24 @@ init 9999 python:
             "sl_7dl_true",
             "sdl_achv_sl_true",
             {
-                sdl_achv_Prerequisite({"sl_7dl_loki_good"}, "sdl_achv_info_end", "acm_logo_sl_radio"),
-                sdl_achv_Prerequisite({"sl_7dl_herc_good2"}, "sdl_achv_info_end", "acm_logo_sl_neon"),
-                sdl_achv_Prerequisite({"sl_7dl_good2"}, "sdl_achv_info_end", "acm_logo_sl_dr_un")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_sl_radio", "sl_7dl_loki_good", "sdl_achv_sl_LO_good", None, None)
+                    }
+                ),
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_sl_neon", "sl_7dl_herc_good2", "sdl_achv_sl_HE_good", None, None)
+                    }
+                ),
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_sl_dr_un", "sl_7dl_good2", "sdl_achv_sl_DR_good", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_sl_7dl_true", {"alt_replay_on" : "True"})
         ),
@@ -245,7 +303,13 @@ init 9999 python:
             "sl_7dl_loki_good",
             "sdl_achv_sl_LO_good",
             {
-                sdl_achv_Prerequisite({"sl_7dl_loki_neu", "sl_7dl_loki_rej"}, "sdl_achv_info_end", "acm_logo_sl_am_home")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_sl_am_home", "sl_7dl_loki_neu", "sdl_achv_sl_LO_neutral", None, None),
+                        sdl_achv_Achievement("acm_logo_sl_pan", "sl_7dl_loki_rej", "sdl_achv_sl_LO_rejc", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_sl_7dl_loki_radio", {"alt_replay_on" : "True"})
         ),
@@ -275,7 +339,12 @@ init 9999 python:
             "sl_7dl_herc_good2",
             "sdl_achv_sl_HE_good",
             {
-                sdl_achv_Prerequisite({"sl_7dl_herc_good"}, "sdl_achv_info_end", "acm_logo_sl_right_road")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_sl_right_road", "sl_7dl_herc_good", "sdl_achv_sl_HE_good", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_sl_7dl_herc_neon", {"alt_replay_on" : "True"})
         ),
@@ -291,7 +360,12 @@ init 9999 python:
             "sl_7dl_good2",
             "sdl_achv_sl_DR_good",
             {
-                sdl_achv_Prerequisite({"sl_7dl_good"}, "sdl_achv_info_end", "acm_logo_sl_wasted")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_sl_wasted", "sl_7dl_good", "sdl_achv_sl_DR_good", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_sl_7dl_loopback", {"alt_replay_on" : "True"})
         ),
@@ -311,7 +385,12 @@ init 9999 python:
             "sl_cl_int_ok",
             "sdl_achv_sl_true_IN",
             {
-                sdl_achv_Prerequisite({"sl_cl_int_good"}, "sdl_achv_info_end", "acm_logo_sl_fantazm")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_sl_fantazm", "sl_cl_int_good", "sdl_achv_sl_good_IN", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_sl_will", {"alt_replay_on" : "True"})
         ),
@@ -320,7 +399,14 @@ init 9999 python:
             "sl_cl_int_good",
             "sdl_achv_sl_good_IN",
             {
-                sdl_achv_Prerequisite({"sl_cl_good_rf", "sl_cl_good_rf2", "sl_cl_good_ussr"}, "sdl_achv_info_end", "acm_logo_sl_good")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_sl_good", "sl_cl_good_rf", "sdl_achv_sl_good_RF", None, None),
+                        sdl_achv_Achievement("acm_logo_sl_worth", "sl_cl_good_rf2", "sdl_achv_sl_good_RF", None, None),
+                        sdl_achv_Achievement("acm_logo_sl_good", "sl_cl_good_ussr", "sdl_achv_sl_good_US", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_sl_duty", {"alt_replay_on" : "True"})
         ),
@@ -329,7 +415,14 @@ init 9999 python:
             "sl_cl_int_bad",
             "sdl_achv_sl_bad_IN",
             {
-                sdl_achv_Prerequisite({"sl_cl_good_rf", "sl_cl_good_rf2", "sl_cl_good_ussr"}, "sdl_achv_info_end", "acm_logo_sl_good")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_sl_good", "sl_cl_good_rf", "sdl_achv_sl_good_RF", None, None),
+                        sdl_achv_Achievement("acm_logo_sl_worth", "sl_cl_good_rf2", "sdl_achv_sl_good_RF", None, None),
+                        sdl_achv_Achievement("acm_logo_sl_good", "sl_cl_good_ussr", "sdl_achv_sl_good_US", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_sl_lone", {"alt_replay_on" : "True"})
         ),
@@ -391,8 +484,18 @@ init 9999 python:
             "un_7dl_true",
             "sdl_achv_un_true",
             {
-                sdl_achv_Prerequisite({"un_7dl_good_rf"}, "sdl_achv_info_end", "acm_logo_un_good"),
-                sdl_achv_Prerequisite({"un_7dl_good_ussr"}, "sdl_achv_info_end", "acm_logo_un_good2")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_un_good", "un_7dl_good_rf", "sdl_achv_un_good_RF", None, None)
+                    }
+                ),
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_un_good2", "un_7dl_good_ussr", "sdl_achv_un_good_US", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_un_7dl_true", {"alt_replay_on" : "True"})
         ),
@@ -422,7 +525,12 @@ init 9999 python:
             "un_7dl_rej",
             "sdl_achv_un_rejc",
             {
-                sdl_achv_Prerequisite({"mt_7dl_good"}, "sdl_achv_info_end", "acm_logo_mt_named_olga")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_mt_named_olga", "mt_7dl_good", "sdl_achv_mt_good", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_un_7dl_rej", {"alt_replay_on" : "True"})
         ),
@@ -442,7 +550,12 @@ init 9999 python:
             "mt_7dl_true",
             "sdl_achv_mt_true",
             {
-                sdl_achv_Prerequisite({"mt_7dl_good"}, "sdl_achv_info_end", "acm_logo_mt_named_olga")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_mt_named_olga", "mt_7dl_good", "sdl_achv_mt_good", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_mt_7dl_true", {"alt_replay_on" : "True"})
         ),
@@ -451,7 +564,12 @@ init 9999 python:
             "mt_7dl_good",
             "sdl_achv_mt_good",
             {
-                sdl_achv_Prerequisite({"mt_7dl_bad"}, "sdl_achv_info_end", "acm_logo_mt_cause")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_mt_cause", "mt_7dl_bad", "sdl_achv_mt_bad", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_mt_7dl_good", {"alt_replay_on" : "True"})
         ),
@@ -460,7 +578,12 @@ init 9999 python:
             "mt_7dl_neutral",
             "sdl_achv_mt_neutral",
             {
-                sdl_achv_Prerequisite({"mt_7dl_good"}, "sdl_achv_info_end", "acm_logo_mt_named_olga")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_mt_named_olga", "mt_7dl_good", "sdl_achv_mt_good", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_mt_7dl_ever_after", {"alt_replay_on" : "True"})
         ),
@@ -480,8 +603,19 @@ init 9999 python:
             "us_7dl_true",
             "sdl_achv_us_true",
             {
-                sdl_achv_Prerequisite({"us_px_rf_good"}, "sdl_achv_info_end", "acm_logo_us_px"),
-                sdl_achv_Prerequisite({"us_7dl_un", "us_7dl_mi"}, "sdl_achv_info_end", "acm_logo_us_hi")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_us_px", "us_px_rf_good", "sdl_achv_us_good", None, None)
+                    }
+                ),
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_us_hi", "us_7dl_un", "sdl_achv_us_un", None, None),
+                        sdl_achv_Achievement("acm_logo_us_openup", "us_7dl_mi", "sdl_achv_us_mi", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_us_7dl_ever_after", {"alt_replay_on" : "True"})
         ),
@@ -522,7 +656,12 @@ init 9999 python:
             "us_px_true",
             "sdl_achv_us_true",
             {
-                sdl_achv_Prerequisite({"us_7dl_good"}, "sdl_achv_info_end", "acm_logo_us_semische")
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_us_semische", "us_7dl_good", "sdl_achv_us_good", None, None)
+                    }
+                )
             },
             sdl_achv_Replay("alt_day7_us_px_fairytale", {"alt_replay_on" : "True"})
         ),
@@ -532,6 +671,66 @@ init 9999 python:
             "sdl_achv_us_good",
             {},
             sdl_achv_Replay("alt_day7_us_px_dejavu", {"alt_replay_on" : "True"})
+        )
+    ]
+    
+    ## Одиночка-Сыч
+    sdl_achv_array_me_owl = [
+        sdl_achv_Achievement(    # ТруЪ
+            "acm_logo_neu_true",
+            "neu_true",
+            "sdl_achv_me_true",
+            {
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_neu_neu", "neu_loki_neu", "sdl_achv_me_LO_neutral", None, None),
+                        sdl_achv_Achievement("acm_logo_neu_neu", "neu_neu", "sdl_achv_me_DR_neutral", None, None)
+                    }
+                ),
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
+                    }
+                )
+            },
+            sdl_achv_Replay("alt_day7_neu_true", {"alt_replay_on" : "True"})
+        ),
+        sdl_achv_Achievement(    # Локи-Нейтрал
+            "acm_logo_neu_neu",
+            "neu_loki_neu",
+            "sdl_achv_me_LO_neutral",
+            {
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
+                    }
+                )
+            },
+            sdl_achv_Replay("alt_day7_neu_neu_loki", {"alt_replay_on" : "True"})
+        ),
+        sdl_achv_Achievement(    # Дрищ-Нейтрал
+            "acm_logo_neu_neu",
+            "neu_neu",
+            "sdl_achv_me_DR_neutral",
+            {
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_end",
+                    {
+                        sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
+                    }
+                )
+            },
+            sdl_achv_Replay("alt_day7_neu_neu", {"alt_replay_on" : "True"})
+        ),
+        sdl_achv_Achievement(    # Бэд
+            "acm_logo_neu_bad",
+            "neu_bad",
+            "sdl_achv_me_bad",
+            {},
+            sdl_achv_Replay("alt_day7_neu_bad", {"alt_replay_on" : "True"})
         )
     ]
     
@@ -555,6 +754,13 @@ init 9999 python:
             "acm_logo_me_qte",
             "alt_qte",
             "sdl_achv_me_qte",
+            {},
+            None
+        ),
+        sdl_achv_Achievement(    # QTE victim
+            "acm_logo_me_victim",
+            "alt_victim",
+            "acm_achv_me_victim",
             {},
             None
         )
@@ -588,6 +794,7 @@ init 9999 python:
     sdl_achv_route_us_pxs = sdl_achv_Route("sdl_achv_us_pxs", "sdl_achv_xxx_route", "sdl_achv_us_px_active",  "sdl_achv_us_px_inactive", sdl_achv_array_us_pxs)
     ## Одиночка
     sdl_achv_route_me_d3r = sdl_achv_Route("sdl_achv_me_d3r", "sdl_achv_d3r_route", "sdl_achv_me_7dl_active", "sdl_achv_7dl_inactive",   [],                   completed=False)
+    sdl_achv_route_me_owl = sdl_achv_Route("sdl_achv_me_owl", "sdl_achv_7dl_route", "sdl_achv_me_ow_active",  "sdl_achv_me_ow_inactive", sdl_achv_array_me_owl)
     sdl_achv_route_me_noi = sdl_achv_Route("sdl_achv_me_noi", "sdl_achv_xxx_route", "sdl_achv_me_no_active",  "sdl_achv_me_no_inactive", [],                   completed=False)
     sdl_achv_route_me_smt = sdl_achv_Route("sdl_achv_me_smt", "sdl_achv_smt_route", "sdl_achv_me_sm_active",  "sdl_achv_me_sm_inactive", sdl_achv_array_me_smt)
     
@@ -623,6 +830,7 @@ init 9999 python:
     ]
     sdl_achv_me_routes = [
         sdl_achv_route_me_d3r,
+        sdl_achv_route_me_owl,
         sdl_achv_route_me_noi,
         sdl_achv_route_me_smt
     ]

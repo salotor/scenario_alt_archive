@@ -10880,7 +10880,7 @@ label alt_day6_dv_7dl_love_scene:
     else:
         scene black
     with flash
-
+    play music music_7dl["iamsadiamsorry2"] fadein 3
     "Последняя фраза меня заинтересовала сильнее всего, я даже открыл рот, чтобы переспросить, но вместо этого обнаружил себя распластанным на матах, и Алису, усевшуюся мне на бёдра."
     dv "Ну…"
     "Протянула она."
@@ -13277,7 +13277,7 @@ label alt_day7_dv_7dl_rf_epilogue:
     with vpunch
     call alt_7dl_titles
     $ renpy.pause(2)
-    if (alt_day_binder == 1) or alt_day1_loop:
+    if persistent.alt_binder:
         $ prolog_time()
         play music music_7dl["herc_death"] fadein 3
         scene expression Noir("bg int_sam_house_clean_7dl", brightness = 0.1, tint_r = 0.2, tint_g = 0.9, tint_b = 0.7, saturation = 0.7)

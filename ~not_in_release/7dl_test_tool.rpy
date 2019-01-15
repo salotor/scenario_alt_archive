@@ -486,13 +486,13 @@ label sdl_menu:
                         menu:
                             "{color=#ed6b6b}С новым счастьем! (плохая){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_dj_bad_end
+                                call alt_day7_mi_dj_bad_end
                             "{color=#6beded}Моя Мику! (истинная){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_dj_true_end
+                                call alt_day7_mi_dj_true_end
                             "{color=#aced6b}Обязательно дождись! (хорошая){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_dj_jp_good_end
+                                call alt_day7_mi_dj_jp_good_end
                             "{color=#ed6b6b}И не мечтай! (хорошая-рф){/color}":
                                 menu:
                                     "С послесловием":
@@ -500,7 +500,10 @@ label sdl_menu:
                                     "Без послесловия":
                                         with fade
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_dj_rf_good_end
+                                call alt_day7_mi_dj_rf_good_end
+                        $ renpy.pause(1)
+                        stop ambience fadeout 2
+                        jump alt_endings
                     "Мику-7дл":
                         menu:
                             "Эпилог":
@@ -516,7 +519,7 @@ label sdl_menu:
                                             "Безвольный":
                                                 $ alt_spt += 1
                                         stop ambience fadeout 2
-                                        jump alt_day7_mi_7dl_start
+                                        call alt_day7_mi_7dl_start
                                         
                                     "Мику осталась":
                                         menu:
@@ -528,56 +531,60 @@ label sdl_menu:
                                             "Безвольный":
                                                 $ alt_hpt += 1
                                         stop ambience fadeout 2
-                                        jump alt_day7_mi_7dl_start
+                                        call alt_day7_mi_7dl_start
                             "{color=#ff7bac}Искорка{/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_7dl_sparkle
+                                call alt_day7_mi_7dl_sparkle
                             "{color=#dddddd}Горькая правда{/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_7dl_postscriptum
+                                call alt_day7_mi_7dl_postscriptum
                             "{color=#ee6a9b}Чёртов процессор{/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_7dl_dam_CPU
+                                call alt_day7_mi_7dl_dam_CPU
                             "{color=#dd598a}Клуб-27{/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_7dl_club27
+                                call alt_day7_mi_7dl_club27
                             "{color=#dd6666}Не похожа{/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_7dl_unlike
+                                call alt_day7_mi_7dl_unlike
                             "{color=#66dd66}Синтетическое счастье{/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_7dl_sinthetic
+                                call alt_day7_mi_7dl_sinthetic
                             "{color=#6666dd}Можно?{/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_7dl_come_back
+                                call alt_day7_mi_7dl_come_back
                             "{color=#ac7bff}Странные сны{/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_7dl_dark_dreams
+                                call alt_day7_mi_7dl_dark_dreams
                             "{color=#9b6aee}Не надоест":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_7dl_happy_again
+                                call alt_day7_mi_7dl_happy_again
                             "{color=#dd598a}Спасибо тебе…{/color}":
                                 $ alt_day5_mi_7dl_voyeur = True
                                 stop ambience fadeout 2
                                 $ alt_day5_mi_7dl_voyeur = True
                                 $ persistent.mi_7dl_dr_exc = True
-                                jump alt_day7_mi_7dl_thank_you
+                                call alt_day7_mi_7dl_thank_you
                             "{color=#8a59dd}Экземпляр":
                                 stop ambience fadeout 2
-                                jump alt_day7_mi_7dl_liar
+                                call alt_day7_mi_7dl_liar
+                        $ renpy.pause(1)
+                        stop ambience fadeout 2
+                        jump alt_endings
                     "Алиса":
                         menu:
+                            "{color=#ff0000}Обязательно найду. (истинная){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_dv_7dl_true
                             "{color=#ff0000}Тульпа (эксклюзив){/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_dv_7dl_loki
                                 pause(1)
                                 stop ambience fadeout 2
                                 call alt_day7_dv_7dl_tulpa_end
-                                pause(1)
-                                return
                             "{color=#d16bed}Meet me there (транзитная){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_dv_7dl_un_end
+                                call alt_day7_dv_7dl_un_end
                             "{color=#aaaaac}Нет пути (плохая){/color}":
                                 menu:
                                     "Пьяная-помятая…":
@@ -585,7 +592,7 @@ label sdl_menu:
                                     "Плохая концовка":
                                         with fade
                                 stop ambience fadeout 2
-                                jump alt_day7_dv_7dl_bad_end
+                                call alt_day7_dv_7dl_bad_end
                             "{color=#fca635}Больше, чем жизнь (хорошая-рф){/color}":
                                 menu:
                                     "С послесловием":
@@ -593,75 +600,131 @@ label sdl_menu:
                                     "Без послесловия":
                                         with fade
                                 stop ambience fadeout 2
-                                jump alt_day7_dv_7dl_rf_epilogue
+                                call alt_day7_dv_7dl_rf_epilogue
                             "{color=#ffb68f}Светлое настоящее (хорошая){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_dv_7dl_ussr_epilogue
+                                call alt_day7_dv_7dl_ussr_epilogue
                             "{color=#aaaaaa}До самого конца (нейтральная){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_dv_7dl_rej_ussr_end
+                                call alt_day7_dv_7dl_rej_ussr_end
                             "{color=#e37944}Я отвезу тебя домой. (нейтральная-рф){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_dv_7dl_rej_rf_end
-                    "Славя":
+                                call alt_day7_dv_7dl_rej_rf_end
+                        $ renpy.pause(1)
+                        stop ambience fadeout 2
+                        jump alt_endings
+                    "Славя-7дл":
+                        menu:
+                            "{color=#f7f723}Чудес не бывает(истинная){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_true
+                            "{color=#f2fa57}С утра до ночи (РФ-гуд){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_rf_good
+                            "{color=#d6bf3c}Радио Пустота (Локи-гуд){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_loki_radio
+                            "{color=#57a4fa}Я дома (Локи-нейтрал){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_loki_am_home
+                            "{color=#57d7fa}Пан или пропал (Локи-реджект){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_loki_oafa
+                            "{color=#f2fa57}Тьма и неон (Герк-гуд){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_herc_neon
+                            "{color=#f2fa57}Единственно верный путь (Герк-гуд){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_herc_right_road
+                            "{color=#ecf711}Не напрасно? (Дрищ-гуд){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_wasted
+                            "{color=#f7f723}То ли ещё будет! (Дрищ-гуд){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_loopback
+                            "{color=#9894e0}Промазал! (плохая){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_missed
+                            "{color=#aaaaaa}Постскриптум РФ{/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_postscriptum
+                            "{color=#aaaaaa}Постскриптум Дрища{/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_sl_7dl_loop_ps
+                        $ renpy.pause(1)
+                        stop ambience fadeout 2
+                        jump alt_endings
+                    "Славя-Классик":
                         menu:
                             "{color=#f7f723}Всё же хорошо? (истинная){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_sl_will
+                                call alt_day7_sl_will
                             "{color=#f7f723}Зови меня «дорогой» (инт){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_sl_duty
+                                call alt_day7_sl_duty
                             "{color=#d6bf3c}Твоя. Подделка (плохая){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_sl_cl_bad
+                                call alt_day7_sl_cl_bad
                             "{color=#57a4fa}На том же самом месте (нейтральная-рф){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_sl_reject_same
+                                call alt_day7_sl_reject_same
                             "{color=#57d7fa}Пора домой (нейтральная){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_sl_reject_late
+                                call alt_day7_sl_reject_late
                             "{color=#f2fa57}Что-то правильное (хорошая2-рф){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_sl_rf2
+                                call alt_day7_sl_rf2
                             "{color=#f2fa57}Сомнения (хорошая-рф){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_sl_rf_good
+                                call alt_day7_sl_rf_good
                             "{color=#ecf711}Плюс-минус полчаса (хорошая){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_sl_good
+                                call alt_day7_sl_good
                             "{color=#f7f723}Цена одиночества (плохая){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_sl_lone
+                                call alt_day7_sl_lone
                             "{color=#9894e0}Всё будет хорошо (эксклюзив){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day6_sl_cl_become_a_hero
+                                call alt_day6_sl_cl_become_a_hero
                             "{color=#aaaaaa}Postscriptum {/color}":
                                 stop ambience fadeout 2
-                                jump alt_day8_sl_postscriptum
+                                call alt_day8_sl_postscriptum
+                        $ renpy.pause(1)
+                        stop ambience fadeout 2
+                        jump alt_endings
                     "Лена":
                         menu:
                             "Хорошие":
                                 menu:
                                     "Эпилог":
                                         stop ambience fadeout 2
-                                        jump alt_day7_un_7dl_epilogue
-                                    "{color=#9894e0}Вся жизнь впереди (хорошая){/color}":
+                                        call alt_day7_un_7dl_epilogue
+                                    "{color=#9894e0}Не нужен (хорошая){/color}":
                                         stop ambience fadeout 2
-                                        jump alt_day7_un_7dl_ussr
-                                    "{color=#a6a1ff}Вся жизнь впереди-2 (хорошая-рф){/color}":
+                                        call alt_day7_un_7dl_ussr
+                                    "{color=#a6a1ff}Вся жизнь впереди (хорошая-рф){/color}":
                                         menu:
                                             "С послесловием":
                                                 $ alt_day_binder = 1
                                             "Без послесловия":
                                                 with fade
                                         stop ambience fadeout 2
-                                        jump alt_day7_un_7dl_rf
+                                        call alt_day7_un_7dl_rf
                             "{color=#ff3098}Вдоль, а не поперёк (плохая){/color}":
                                 stop ambience fadeout 2
-                                jump alt_day7_un_7dl_epilogue_bad
-                            "Дождь":
+                                call alt_day7_un_7dl_epilogue_bad
+                            "Поиски продолжаются (истинная)":
                                 stop ambience fadeout 2
-                                jump alt_day7_un_7dl_true
+                                call alt_day7_un_7dl_true
+                            "Ты пойдёшь со мной? (истинная-транзит)":
+                                stop ambience fadeout 2
+                                call alt_day7_un_7dl_transit
+                            "Когда-то здесь было тихо (реджект)":
+                                stop ambience fadeout 2
+                                call alt_day7_un_7dl_rej
+                        $ renpy.pause(1)
+                        stop ambience fadeout 2
+                        jump alt_endings
                     "Ольга":
                         menu:
                             "Сброс флагов концовок":
@@ -681,7 +744,7 @@ label sdl_menu:
                                             "Нейтральная концовка":
                                                 pass
                                         stop ambience fadeout 2
-                                        jump alt_day7_mt_7dl_loopthru
+                                        call alt_day7_mt_7dl_loopthru
                                     "{color=#33fb50}Выбор: будущее{/color}":
                                         menu:
                                             "Хорошая концовка":
@@ -693,7 +756,7 @@ label sdl_menu:
                                             "Плохая концовка":
                                                 pass
                                         stop ambience fadeout 2
-                                        jump alt_day7_mt_7dl_loopback
+                                        call alt_day7_mt_7dl_loopback
                             "{color=#3ff02b}Чудо по имени Ольга (хорошая){/color}":
                                 menu:
                                     "С послесловием":
@@ -701,47 +764,62 @@ label sdl_menu:
                                     "Без послесловия":
                                         with fade
                                 stop ambience fadeout 2
-                                jump alt_day7_mt_7dl_good
+                                call alt_day7_mt_7dl_good
                             "{color=#ffffff}Лучше не просыпаться (плохая){/color}":
-                                    stop ambience fadeout 2
-                                    jump alt_day7_mt_7dl_bad
+                                stop ambience fadeout 2
+                                call alt_day7_mt_7dl_bad
                             "{color=#f07a2b}Долго и счастливо? (нейтральная){/color}":
-                                    stop ambience fadeout 2
-                                    jump alt_day7_mt_7dl_ever_after
+                                stop ambience fadeout 2
+                                call alt_day7_mt_7dl_ever_after
                             "{color=#bf2bf0}По праву памяти (истинная){/color}":
-                                    stop ambience fadeout 2
-                                    jump alt_day7_mt_7dl_true
+                                stop ambience fadeout 2
+                                call alt_day7_mt_7dl_true
+                        $ renpy.pause(1)
+                        stop ambience fadeout 2
+                        jump alt_endings
                     "Ульяна":
                         menu:
-                            "{color=#ff0000}Ульяна, хорошая концовка.{/color}":
+                            "{color=#ff0000}Ульяна, хорошая концовка{/color}":
                                 $ alt_day6_us_7dl_tr
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_reunite
-                            "{color=#aced6b}Ульяна, Концовка Мику.{/color}":
+                            "{color=#aced6b}Ульяна, Концовка Мику{/color}":
                                 $ alt_day6_us_7dl_mi_friends = 3
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_mikuforever
-                            "{color=#9894e0}Ульяна, Концовка Лены.{/color}":
+                            "{color=#9894e0}Ульяна, Концовка Лены{/color}":
                                 $ alt_day6_us_7dl_un_friends = 3
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_lenaforever
-                            "{color=#ed6b6b}Ульяна, Плохая концовка.{/color}":
+                            "{color=#ed6b6b}Ульяна, Плохая концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_bad
-                            "{color=#ffff00}Огоньки, Истинная концовка.{/color}":
+                            "{color=#ffff00}Огоньки, Истинная концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_px_fairytale
-                            "{color=#ffff11}Огоньки, Хорошая концовка.{/color}":
+                            "{color=#ffff11}Огоньки, Хорошая концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_px_dejavu
-                            "{color=#6beded}Ульяна, Истинная концовка.{/color}":
+                            "{color=#6beded}Ульяна, Истинная концовка{/color}":
                                 stop ambience fadeout 2
                                 call alt_day7_us_7dl_ever_after
                         $ renpy.pause(1)
                         stop ambience fadeout 2
                         jump alt_endings
                     "Одиночка":
-                        "Рут находится в разработке."
+                        menu:
+                            "{color=#6beded}Безликие руки (истинная){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_true
+                            "{color=#57d7fa}Человек прошлого (Локи-нейтрал){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_neu_loki
+                            "{color=#57d7fa}Человек прошлого (Дрищ-нейтрал){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_neu
+                            "{color=#ed6b6b}Неизбежность (плохая){/color}":
+                                stop ambience fadeout 2
+                                call alt_day7_neu_bad
                         $ renpy.pause(1)
                         stop ambience fadeout 2
                         jump alt_endings

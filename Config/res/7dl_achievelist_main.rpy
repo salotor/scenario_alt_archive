@@ -16,6 +16,13 @@ label sdl_achv_reset_vars:
 
 init python:
     # Сброс перзистентов
+    def sdl_achv_clear_persistents_ask(achv_list):
+        layout.yesno_screen(
+            "Сбросить полученные концовки текущего рута?",
+            yes = [Function(sdl_achv_clear_persistents, achv_list), Play("sound", sdl_achv_clear)],
+            no  = NullAction()
+            )
+    
     def sdl_achv_clear_persistents(achv_list):
         for achv in achv_list:
             setattr(persistent, achv.get_persistent(), False)
@@ -79,24 +86,23 @@ init python:
     
     # Требование к ачивке
     class sdl_achv_Prerequisite:
-        def __init__(self, conditions, text, image):
-            self.conditions = conditions
+        def __init__(self, text, achievements):
             self.text = text
-            self.image = image
+            self.achievements = achievements
         
         def check_conditions(self):
-            if self.conditions == None:
+            if self.achievements == None:
                 return False
-            for cond in self.conditions:
-                if getattr(persistent, cond):
+            for achv in self.achievements:
+                if getattr(persistent, achv.get_persistent()):
                     return True
             return False
         
         def get_text(self):
             return self.text
         
-        def get_image(self):
-            return self.image
+        def get_achievements(self):
+            return self.achievements
     
     # Повтор
     class sdl_achv_Replay:
@@ -197,10 +203,9 @@ screen sdl_achv_route(parent_screen, achv_list):
     # Удалятор
     imagebutton pos (380, 680):
         hover_sound sdl_achv_click
-        activate_sound sdl_achv_clear
         idle ("sdl_achv_del_inactive")
         hover ("sdl_achv_del_active")
-        action [Function(sdl_achv_clear_persistents, achv_list)]
+        action [Function(sdl_achv_clear_persistents_ask, achv_list)]
     
     # Ачивки
     $ sdl_achv_count = 0
@@ -238,9 +243,9 @@ screen sdl_achv_route(parent_screen, achv_list):
                         hover_sound sdl_achv_info
                         idle ("sdl_achv_info_inactive")
                         hover ("sdl_achv_info_active")
-                        hovered [SetVariable("sdl_achv_hovered_info", prerequisite)]
+                        hovered [SetVariable("sdl_achv_hovered_info", achv.get_prerequisites())]
                         unhovered [SetVariable("sdl_achv_hovered_info", None)]
-                        action [SetVariable("sdl_achv_hovered_info", prerequisite)]
+                        action [SetVariable("sdl_achv_hovered_info", achv.get_prerequisites())]
                     $ sdl_achv_prerequisites = {}
         $ sdl_achv_count += 1
     
@@ -252,9 +257,38 @@ screen sdl_achv_route(parent_screen, achv_list):
         add "sdl_achv_jump" xcenter 700 ycenter 840
     
     if sdl_achv_hovered_info != None:
-        add sdl_achv_hovered_info.get_text() xcenter 750 ycenter 824
-        if sdl_achv_hovered_info.get_image() != None:
-            add sdl_achv_hovered_info.get_image() xcenter 750 ycenter 900
+        use sdl_achv_prerequisites(sdl_achv_hovered_info)
+
+# Экран пререквизитов
+screen sdl_achv_prerequisites(prerequisites):
+    frame xalign 0.5 yalign 0.5:
+        background Frame("sdl_achv_frame", 0, 0)
+        
+        vbox:
+            spacing 25
+            null height 25
+            for prerequisite in prerequisites:
+                if not prerequisite.check_conditions():
+                    hbox xalign 0.5:
+                        spacing 25
+                        null width 25
+                        add prerequisite.get_text() xalign 0.5
+                        null width 25
+                    if prerequisite.get_achievements() != None:
+                        hbox xalign 0.5:
+                            spacing 25
+                            null width 25
+                            $ sdl_not_first_image = False
+                            for prereq_achv in prerequisite.get_achievements():
+                                if sdl_not_first_image:
+                                    add "sdl_achv_info_or"
+                                vbox:
+                                    spacing 10
+                                    add prereq_achv.get_icon()
+                                    add prereq_achv.get_text() zoom 0.5 xalign 0.5
+                                $ sdl_not_first_image = True
+                            null width 25
+            null height 25
 
 
 
@@ -275,6 +309,7 @@ label sdl_achvlist_main:
     else:
         $ day_time()
         $ persistent.sprite_time = "day"
+        $ make_names_known_7dl()
         $ plthr = u"Достижения"
         play ambience ambience_7dl["safe"] fadein 5
         
@@ -291,10 +326,13 @@ screen sdl_achvlist_main:
     use sdl_achv_main_buttons("sdl_achvlist_main", None)
 
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ЭКРАН ПЕРСОНАЖА\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-label sdl_achvlist_character(character, route_list):
+label sdl_achvlist_character(character=None, route_list=None):
     call sdl_achv_reset_vars
     
-    call screen sdl_achvlist_character(character, route_list)
+    if character != None and route_list != None:
+        call screen sdl_achvlist_character(character, route_list)
+    
+    return
 
 screen sdl_achvlist_character(character, route_list):
     tag menu
@@ -305,10 +343,16 @@ screen sdl_achvlist_character(character, route_list):
     # Руты
     $ sdl_route_count = 0
     for route in route_list:
-        if sdl_achv_selected_route == route:
-            add route.get_icon_active() pos (980 + 117 * sdl_route_count, 18)
+        if sdl_route_count == 3 and len(route_list) == 4:    # для красивого отображения 4 значков
+            $ sdl_achv_x_shift = 1
+            $ sdl_achv_y_shift = sdl_route_count // 3
         else:
-            imagebutton pos (980 + 117 * sdl_route_count, 18):
+            $ sdl_achv_x_shift = sdl_route_count % 3
+            $ sdl_achv_y_shift = sdl_route_count // 3
+        if sdl_achv_selected_route == route:
+            add route.get_icon_active() pos (980 + 117 * sdl_achv_x_shift, 18 + 69 * sdl_achv_y_shift)
+        else:
+            imagebutton pos (980 + 117 * sdl_achv_x_shift, 18 + 69 * sdl_achv_y_shift):
                 hover_sound sdl_achv_click
                 idle (route.get_icon_inactive())
                 hover (route.get_icon_active())
