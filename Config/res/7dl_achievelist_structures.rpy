@@ -693,6 +693,10 @@ init 9999 python:
                     {
                         sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
                     }
+                ),
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_puz",
+                    None
                 )
             },
             sdl_achv_Replay("alt_day7_neu_true", {"alt_replay_on" : "True"})
@@ -707,6 +711,10 @@ init 9999 python:
                     {
                         sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
                     }
+                ),
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_puz",
+                    None
                 )
             },
             sdl_achv_Replay("alt_day7_neu_neu_loki", {"alt_replay_on" : "True"})
@@ -721,6 +729,10 @@ init 9999 python:
                     {
                         sdl_achv_Achievement("acm_logo_neu_bad", "neu_bad", "sdl_achv_me_bad", None, None)
                     }
+                ),
+                sdl_achv_Prerequisite(
+                    "sdl_achv_info_puz",
+                    None
                 )
             },
             sdl_achv_Replay("alt_day7_neu_neu", {"alt_replay_on" : "True"})
