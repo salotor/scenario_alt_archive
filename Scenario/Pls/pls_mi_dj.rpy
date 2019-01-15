@@ -182,7 +182,7 @@ label alt_day6_start_mi_dj:
     pause(1)
     call alt_day6_mi_dj_first_dance
     pause(1)
-    call alt_day6_mi_dj_second_dance 
+    call alt_day6_mi_dj_second_dance
     pause(1)
     if lp_mi >= 19 and not alt_day6_mi_dj_me_evil:
         call alt_day6_mi_dj_dance2_success
