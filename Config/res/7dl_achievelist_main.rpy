@@ -266,18 +266,18 @@ screen sdl_achv_prerequisites(prerequisites):
         
         vbox:
             spacing 25
-            null height 25
+            null height 15     #moded: null height 25
             for prerequisite in prerequisites:
                 if not prerequisite.check_conditions():
                     hbox xalign 0.5:
                         spacing 25
-                        null width 25
+                        null width 15     #moded: null width 25
                         add prerequisite.get_text() xalign 0.5
-                        null width 25
+                        null width 15     #moded: null width 25
                     if prerequisite.get_achievements() != None:
                         hbox xalign 0.5:
                             spacing 25
-                            null width 25
+                            null width 15     #moded: null width 25
                             $ sdl_not_first_image = False
                             for prereq_achv in prerequisite.get_achievements():
                                 if sdl_not_first_image:
@@ -287,8 +287,8 @@ screen sdl_achv_prerequisites(prerequisites):
                                     add prereq_achv.get_icon()
                                     add prereq_achv.get_text() zoom 0.5 xalign 0.5
                                 $ sdl_not_first_image = True
-                            null width 25
-            null height 25
+                            null width 15     #moded: null width 25
+            null height 15     #moded: null height 25
 
 
 
@@ -380,5 +380,7 @@ screen sdl_achvlist_character(character, route_list):
     if sdl_achv_selected_route != None:
         use sdl_achv_route("sdl_achvlist_character", sdl_achv_selected_route.get_achv_list())
 
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916
 # Android version created with ESTOOL-0.009 by Smalser
 # More info there https://vk.com/topic-93304648_35130916

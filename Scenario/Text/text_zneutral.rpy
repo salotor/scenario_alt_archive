@@ -1856,11 +1856,11 @@ label alt_day4_neu_curl:
     
         "Педали крутились легко, и я набрал приличную скорость."
         show ftl_anim
-        with Shake((0, 0, 0, 0), 3.0, dist=10)
+        with Shake((0, 0, 0,  0), 3.0, dist=10)     #moded: with Shake((0, 0, 0, 0), 3.0, dist=10)
         "Ветер дул в лицо, солнце светило сбоку."
-        with Shake((0, 0, 0, 0), 3.0, dist=10)
+        with Shake((0, 0, 0,  0), 3.0, dist=10)     #moded: with Shake((0, 0, 0, 0), 3.0, dist=10)
         "Настроение было отличное — то самое, какое необходимо беглецу."
-        with Shake((0, 0, 0, 0), 3.0, dist=10)
+        with Shake((0, 0, 0,  0), 3.0, dist=10)     #moded: with Shake((0, 0, 0, 0), 3.0, dist=10)
         hide ftl_anim with dspr
         show blinking
         "Правда, почему-то жутко хочется…"
@@ -14866,7 +14866,7 @@ label alt_day7_neu_bad:
     else:
         $ persistent.neu_bad = 1
     show acm_logo_neu_bad with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
@@ -16375,7 +16375,7 @@ label alt_day7_neu_neu_loki:
     else:
         $ persistent.neu_loki_neu = 1
     show acm_logo_neu_bad with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
@@ -16607,7 +16607,7 @@ label alt_day7_neu_neu:
     else:
         $ persistent.neu_neu = 1
     show acm_logo_neu_neu with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
@@ -17372,9 +17372,11 @@ label alt_day7_neu_true:
     else:
         $ persistent.neu_true = 1
     show acm_logo_neu_true with moveinright:
-        pos (1600, 1020)
+        pos (1067, 680)     #moded: pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
     pause(1)
     return# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916
+# Android version created with ESTOOL-0.009 by Smalser
 # More info there https://vk.com/topic-93304648_35130916

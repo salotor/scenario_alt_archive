@@ -7985,7 +7985,7 @@ label alt_day3_leave1:
             else:
                 $ persistent.alt_victim = 1
             show acm_logo_me_victim with moveinright:
-                pos (1600, 1020)
+                pos (1067, 680)     #moded: pos (1600, 1020)
     else:
         $ persistent.alt_qte_fail = 1
     $ renpy.pause(3, hard=True)
@@ -8007,7 +8007,7 @@ label alt_day3_dv_stayhere1:
         else:
             $ persistent.alt_qte = 1
         show acm_logo_me_qte with moveinright:
-            pos (1600, 1020)
+            pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(3, hard=True)
     $ night_time()
     with vpunch
@@ -11889,5 +11889,7 @@ label alt_day3_sleeptime:
     window hide
     with fade
     return
+# Android version created with ESTOOL-0.009 by Smalser
+# More info there https://vk.com/topic-93304648_35130916
 # Android version created with ESTOOL-0.009 by Smalser
 # More info there https://vk.com/topic-93304648_35130916
