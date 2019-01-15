@@ -16,15 +16,15 @@ label sdl_achv_reset_vars:
 
 init python:
     # Сброс перзистентов
-    def sdl_achv_clear_persistents_ask(achv_list):
+    def sdl_achv_clear_persistents_ask(achv_arr):
         layout.yesno_screen(
             "Сбросить полученные концовки текущего рута?",
-            yes = [Function(sdl_achv_clear_persistents, achv_list), Play("sound", sdl_achv_clear)],
+            yes = [Function(sdl_achv_clear_persistents, achv_arr), Play("sound", sdl_achv_clear)],
             no  = NullAction()
             )
     
-    def sdl_achv_clear_persistents(achv_list):
-        for achv in achv_list:
+    def sdl_achv_clear_persistents(achv_arr):
+        for achv in achv_arr:
             setattr(persistent, achv.get_persistent(), False)
         
         return
@@ -34,12 +34,12 @@ init python:
     # Das ist OOP!
     # Рут
     class sdl_achv_Route:
-        def __init__(self, title, typology, icon_active, icon_inactive, achv_list, completed=True):
+        def __init__(self, title, typology, icon_active, icon_inactive, achv_arr, completed=True):
             self.title = title
             self.typology = typology
             self.icon_active = icon_active
             self.icon_inactive = icon_inactive
-            self.achv_list = achv_list
+            self.achv_arr = achv_arr
             self.completed = completed
         
         def get_title(self):
@@ -54,8 +54,8 @@ init python:
         def get_icon_inactive(self):
             return self.icon_inactive
         
-        def get_achv_list(self):
-            return self.achv_list
+        def get_achv_arr(self):
+            return self.achv_arr
         
         def is_completed(self):
             return self.completed
@@ -196,7 +196,7 @@ screen sdl_achv_main_buttons(parent_screen, character):
         action [Stop("ambience"), Hide(parent_screen, transition=Dissolve(0.5)), Jump("main_menu_7dl")]
 # ------------------------------------------------------------------------------------------------
 # Экран рута
-screen sdl_achv_route(parent_screen, achv_list):
+screen sdl_achv_route(parent_screen, achv_arr):
     tag route
     modal True
     
@@ -205,11 +205,11 @@ screen sdl_achv_route(parent_screen, achv_list):
         hover_sound sdl_achv_click
         idle ("sdl_achv_del_inactive")
         hover ("sdl_achv_del_active")
-        action [Function(sdl_achv_clear_persistents_ask, achv_list)]
+        action [Function(sdl_achv_clear_persistents_ask, achv_arr)]
     
     # Ачивки
     $ sdl_achv_count = 0
-    for achv in achv_list:
+    for achv in achv_arr:
         if getattr(persistent, achv.get_persistent()):
             # Значок ачивки
             imagebutton xcenter 800 ycenter (66 + 64 * sdl_achv_count):
@@ -326,15 +326,15 @@ screen sdl_achvlist_main:
     use sdl_achv_main_buttons("sdl_achvlist_main", None)
 
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ЭКРАН ПЕРСОНАЖА\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-label sdl_achvlist_character(character=None, route_list=None):
+label sdl_achvlist_character(character=None, route_arr=None):
     call sdl_achv_reset_vars
     
-    if character != None and route_list != None:
-        call screen sdl_achvlist_character(character, route_list)
+    if character != None and route_arr != None:
+        call screen sdl_achvlist_character(character, route_arr)
     
     return
 
-screen sdl_achvlist_character(character, route_list):
+screen sdl_achvlist_character(character, route_arr):
     tag menu
     modal True
     
@@ -342,8 +342,8 @@ screen sdl_achvlist_character(character, route_list):
     
     # Руты
     $ sdl_route_count = 0
-    for route in route_list:
-        if sdl_route_count == 3 and len(route_list) == 4:    # для красивого отображения 4 значков
+    for route in route_arr:
+        if sdl_route_count == 3 and len(route_arr) == 4:    # для красивого отображения 4 значков
             $ sdl_achv_x_shift = 1
             $ sdl_achv_y_shift = sdl_route_count // 3
         else:
@@ -378,4 +378,4 @@ screen sdl_achvlist_character(character, route_list):
     
     # Выбранный рут
     if sdl_achv_selected_route != None:
-        use sdl_achv_route("sdl_achvlist_character", sdl_achv_selected_route.get_achv_list())
+        use sdl_achv_route("sdl_achvlist_character", sdl_achv_selected_route.get_achv_arr())
