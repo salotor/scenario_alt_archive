@@ -102,7 +102,7 @@
     call alt_day4_neu_sleeptime
     pause(1)
     jump alt_day5_neu_begin
-    
+
 label alt_day5_neu_begin:
     call alt_day5_neu_us_vars
     call alt_day5_mt_7dl_vars
@@ -157,8 +157,6 @@ label alt_day5_neu_begin:
         else:
             $ routetag = "us7dl_bad"
         jump alt_day6_us_7dl_start
-        pause(1)
-        return
     else:
         call alt_day5_neu_mi_estrade
         pause(1)
@@ -188,10 +186,9 @@ label alt_day5_neu_begin:
         elif us_pt >= 4:
             $ routetag = "us7dl_bad"
             jump alt_day6_us_7dl_start
-            pause(1)
-            return
-    jump alt_day6_neu_begin
-    
+        else:
+            jump alt_day6_neu_begin
+
 label alt_day6_neu_begin:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
