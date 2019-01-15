@@ -5960,7 +5960,7 @@ label alt_day6_us_7dl_disco:
         me "Не заговаривай мне зубы."
         us "А может, я не хочу отвечать!"
         me "Какая-то большая тайна? Страшно секретная?"
-        "Она так не хотела отвечать, что мне чем дальше, тем сильнее становилось любопытнее."
+        "Она так не хотела отвечать, что мне чем дальше, тем любопытнее становилось."
         "Всё правильно, чем крепче охраняют тайну, тем она интересней."
         "Ульяна же молчала как партизан, так что я немного усилил нажим:"
         me "Не хочешь — и не говори. Мне вообще не интересно."
@@ -6644,7 +6644,6 @@ label alt_day6_us_7dl_disco:
         sl "Конечно."
         window hide
         scene cg d3_sl_dance
-        with fade
         "Было что-то будоражащее в такой близости."
         "Что-то, путающее мысли и не дающее выстроить внутренний монолог."
         sl "Слышала про твои сегодняшние подвиги."
@@ -7095,7 +7094,7 @@ label alt_day6_us_7dl_sleeptime:
             "И её удивительная решимость."
             "Или это мы оба постарались?"
     elif alt_day6_us_7dl_mi_friends >= 2:
-        scene cg d3_mi_dance_close_7dl
+        scene cg d3_mi_dance_close_bordo_7dl
         show prologue_dream
         with dissolve
         "Вечер с Мику."
@@ -9305,8 +9304,8 @@ label alt_day7_us_7dl_leaving:
         with dissolve
         "Лена у самого автобуса взяла меня за руку и не хотела отпускать."
         "Даже тогда, когда мы добрались до мест, чем-то ей глянувшихся, и устроились там."
-        "Разумеется, Лена села у окна."
-        "Разумеется, я сел рядом."
+        "Разумеется, у окна сел я."    # к Лене, севшей у окна, "разумеется" было применимо. Но с фига ли с Сёмой тоже "разумеется"-то?
+        "Разумеется, Лена села рядом."
         un "У тебя такие руки холодные. Почему?"
         th "Что бы такого рассказать тебе про ВСД…"
         "Задумался я. И показал язык."
@@ -9442,7 +9441,6 @@ label alt_day7_us_7dl_leaving:
         me "Где нет вообще ничего, кроме полузабытой квартиры на седьмом этаже и экрана монитора."
         "Я ничего не хотел объяснять, потому что сейчас в этом не было нужды."
         me "А на этом мониторе — ты. Первая выдача по запросу."
-        show us smile sport with dissolve
         "Ульяна улыбнулась."
         "Её все эти глупости не беспокоили, она была рядом с тем, кому доверяет."
         "А всё остальное…"
@@ -10469,7 +10467,6 @@ label alt_day7_us_7dl_mikuforever:
         $ persistent.us_7dl_mi += 1
     else:
         $ persistent.us_7dl_mi = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_openup with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -10704,7 +10701,6 @@ label alt_day7_us_7dl_lenaforever:
         $ persistent.us_7dl_un += 1
     else:
         $ persistent.us_7dl_un = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_hi with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -10775,7 +10771,7 @@ label alt_day7_us_7dl_reunite:
     show prologue_dream
     with dissolve
     "Я не видел Ульянку целый год."
-    "Но я на каком-то уровне чувствовал, что всё там происходящее не просто так."
+    "Но я на каком-то уровне чувствовал, что всё там происходящее не просто так было."
     "Что Ульянка — это совершенно особенная девушка, которой по силам то, на что другие попросту неспособны."
     "Она сумела меня встряхнуть, сумела задержаться рядом со мной — и всё ради того, чтобы из автобуса уходить вместе."
     "Теперь вот и думаю — а автобус ли то был?"
@@ -10862,7 +10858,6 @@ label alt_day7_us_7dl_reunite:
         $ persistent.us_7dl_good += 1
     else:
         $ persistent.us_7dl_good = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_semische with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -10870,7 +10865,7 @@ label alt_day7_us_7dl_reunite:
     call alt_7dl_titles
     stop music fadeout 3
     $ renpy.pause(2)
-    if ((alt_day_binder == 1) or alt_day1_loop) and loki:
+    if persistent.alt_binder and loki:
         play music music_7dl["beasteye"] fadein 3
         window hide
         play ambience ambience_cold_wind_loop fadein 3
@@ -11674,7 +11669,6 @@ label alt_day7_us_7dl_ever_after:
         $ persistent.us_7dl_true += 1
     else:
         $ persistent.us_7dl_true = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_true with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -11862,7 +11856,6 @@ label alt_day7_us_7dl_bad:
         $ persistent.us_7dl_bad += 1
     else:
         $ persistent.us_7dl_bad = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_bad with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -11974,7 +11967,7 @@ label alt_day7_us_px_escape:
         show un normal pioneer at fleft behind us
         with dissolve
         us "Наберись терпения, скоро увидишь."
-        sl "Да я слышала про это место не раз, здесь нет ничего интересного."
+        sl "Да, я слышала про это место не раз, здесь нет ничего интересного."
         show us smile sport with dspr
         us "Это потому что ты очень скучная, ничего интересного."
         dreamgirl "Да, ни подмести тебе, ни бумажки пособирать."
@@ -12892,8 +12885,8 @@ label alt_day7_us_px_fairytale:
     window hide
     scene bg ext_railbridge_sunset_7dl
     with fade
-    "Мне уже больше не десять."
-    "Да и ей не восемнадцать."
+    "Мне уже больше не десять." # При знакомстве Ульяны и Септима ей было 15 лет, ему (вероятно) — 7.
+    "Да и ей не восемнадцать." # См. предыдущую строку.
     "Но на улице закатно-солнечно и пахнет липой, воздух вокруг почти жаркий, а мы сидим, не двигаясь, наблюдая за тем, как неторопливо отходят в сторону крашеные шаровой краской ворота, и на пороге стоит она."
     "Некрасивая, маленькая, с шрамом на скуле и неукротимым пламенем в глазах."
     "Моя. Самый дорогой человек в жизни."
@@ -12910,7 +12903,6 @@ label alt_day7_us_px_fairytale:
         $ persistent.us_px_true += 1
     else:
         $ persistent.us_px_true = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_fairytale with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)
@@ -13347,7 +13339,7 @@ label alt_day7_us_px_dejavu:
     "Я пожал плечами. Что уж тут непонятного?"
     "А она, расхохотавшись, порывисто меня обняла."
     us "Сёмище! Ура! Сёмище!"
-    "И былое кое-что ещё."
+    "И было кое-что ещё."
     "Кое-кто."
     voice "Антон."
     "Протянул мне руку парень."
@@ -13458,7 +13450,6 @@ label alt_day7_us_px_dejavu:
         $ persistent.us_px_rf_good += 1
     else:
         $ persistent.us_px_rf_good = 1
-    $ renpy.save_persistent()
     play sound sfx_7dl["aunl"]
     show acm_logo_us_px with moveinright:
         pos (1067, 680)     #moded: pos (1600, 1020)

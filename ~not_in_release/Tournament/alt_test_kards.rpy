@@ -2982,12 +2982,12 @@ label alt_day2_final_win_end_new:
         "Бац!" with vpunch
         with flash_red
         play music music_7dl["genki"] fadein 3
-        show us calml pioneer with dspr
+        show us calml pioneer with dissolve
         us "И ничего ты не выиграл!"
         "Она хмуро смотрела на меня снизу вверх."
         us "Ты играл неправильно, переигрываем!"
         me "Что это значит, «неправильно»?"
-        show us dontlike pioneer with dissolve
+        show us dontlike pioneer with dspr
         me "Я выиграл турнир! {w}Как я могу играть неправильно?"
         us "Молча! Ты жульничал!"
         "Она топнула ногой."
@@ -2997,17 +2997,19 @@ label alt_day2_final_win_end_new:
             th "Если она сейчас всем про него раcскажет, меня линчуют на ближайшей осине."
         us "Ты плохо мне поддавался."
         "А. Ну, это меняло всё дело."
+        hide us with dissolve
         "Я расхохотался и отошёл."
+        show dv smile pioneer2 with dissolve
         "А Алиса наконец поднялась со своего места и, проходя мимо меня, хлопнула по плечу."
         dv "Поздравляю!"
         "И от этих слов мне стало так радостно!"
         th "Я победил!!!"
-        window hide
         hide dv with dissolve
+        window hide
 
     elif alt_my_rival_final.take == 'sh':
         play music music_7dl["dead_silence"] fadein 3
-        show sh rage pioneer with dspr
+        show sh rage pioneer with dissolve
         sh "Значит, победил?"
         "Медленно произнёс он."
         "Он так странно стоял, что я никак не мог разглядеть его глаз из-за бликов на очках."
@@ -3036,10 +3038,12 @@ label alt_day2_final_win_end_new:
         show blinking
         scene bg int_dining_hall_sunset
         with diam
+        show sh upset pioneer with dissolve
         "Наваждение момента исчезло, Шурик из зловещей фигуры превратился обратно в обычного, чуть рассеянного, парня."
         "Серые, давящие стены уступили место красноватому свету катящегося на закат светила."
         "И самое главное — "
         "Ведь я же победитель!"
+        hide sh with dissolve
         window hide
         scene
         call show_tournament_table

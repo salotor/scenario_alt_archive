@@ -102,17 +102,7 @@
         if ('dv' in list_d2_date_7dl):
             me "Что?"
             mt "Твой забег в мокрых семейниках меня, честно, очень повеселил. Но чтобы такого больше не повторялось."
-        if not (herc or loki):
-            "Мгновенно покрывшись румянцем, я поспешил прикрыться одеялом, лежащим здесь же."
-            mt "Засмущался как красна девица."
-            "Не упустила возможности подколоть вожатая."
-            me "Ольга Дмитриевна!"
-            show mt laugh pioneer
-            "Она рассмеялась."
-            mt "Всё-всё, ухожу."
-            "За её спиной хлопнула дверь."
-            hide mt with dissolve
-        elif loki:
+        if loki:
             me "На что это вы смотрите, Ольга Дмитриевна?"
             "С интересом спросил я, не делая даже попытки прикрыться."
             show mt grin pioneer
@@ -133,6 +123,16 @@
             hide mt with dissolve
             "Как в далёком отрочестве, сдавив что есть мочи булки, отсчитал пятнадцать секунд — иначе в шорты влезть не удавалось, я оделся."
             "За спиной хлопнула дверь, а я не смог сдержать усмешки. Кто кого засмущает ещё."
+        else:
+            "Мгновенно покрывшись румянцем, я поспешил прикрыться одеялом, лежащим здесь же."
+            mt "Засмущался как красна девица."
+            "Не упустила возможности подколоть вожатая."
+            me "Ольга Дмитриевна!"
+            show mt laugh pioneer
+            "Она рассмеялась."
+            mt "Всё-всё, ухожу."
+            "За её спиной хлопнула дверь."
+            hide mt with dissolve
     hide mt with dissolve
     window hide
     with flash
@@ -151,26 +151,28 @@
         "Так как мне удалось выжить вожатую из комнаты, я, разумеется, «забыл» галстук на спинке кровати и заспешил морозить пальцы, орать и прочими способами радоваться жизни."
         "Да. Умываться."
         "Мимо сомнамбулами проплыли несколько пионеров, топающих гуськом за Шуриком, у которого, похоже, был самый умный автопилот:"
-        show dv normal pioneer at right
-        show mi normal pioneer at left
-        show un normal pioneer at center
+        show dv normal sport at right
+        show mi normal casual at left
+        show un normal sport at center
+        with dissolve
         "Алиса… Лена… Мику…"
-        hide dv with dissolve
-        hide mi with dissolve
-        hide un with dissolve
+        hide dv
+        hide mi
+        hide un
+        with dissolve
         if ('un' in list_d2_date_7dl) or ('un_loki' in list_d2_date_7dl) or ('un_herc' in list_d2_date_7dl):
             "Оп, стоять!"
             "Я догнал процессию и пошёл с ними в шаг."
             me "Псст! Эй! Привет!"
             "Шепнул я."
-            show un smile pioneer 
+            show un smile sport
             un "Д-доброе утро…"
             "Она выглядела не слишком уверенной в себе… Даже после вчерашнего. Впрочем, я её понимал."
             me "Опять плохо спала?"
             un "Что, так заметно?"
             me "Я, возможно, не самая выдающаяся личность, но думал, что хотя бы «привета» от тебя дождусь… А ты идёшь, земли под собой не чуя."
             me "Если бы первым не поздоровался, наверное, вовсе внимания бы на меня не обратила."
-            show un shy pioneer with dissolve
+            show un shy sport with dissolve
             un "П-прости, я задумалась."
             me "Ага."
             me "Надеюсь, к завтраку ты успеешь обдумать всё что хочешь."
@@ -226,12 +228,12 @@
             "Я догнал её и тронул за плечо."
             if loki or herc:
                 me "Привет, красотка! Как твоё ничего?"
-                show dv surprise pioneer with dissolve
+                show dv surprise sport with dissolve
                 dv "Чего?"
                 me "Ничего!"
                 "Рассмеялся я."
                 me "Как дела вообще?"
-                show dv normal pioneer with dspr
+                show dv normal sport with dspr
                 dv "Спать."
                 "Коротко ответила она."
                 me "Мысль хорошая. Хвалю. Пошли?"
@@ -240,7 +242,7 @@
                 dv "Да что можно-то?"
                 "Алиска начала закипать, в то время как все остальные участники кавалькады, понявшие суть, втихомолку хихикали."
                 me "Спать же! {w=.4}Будем греть друг друга, чтобы не холодно было."
-                show dv angry pioneer with dspr
+                show dv angry sport with dspr
                 "Она остановилась."
                 dv "Шёл бы ты… {w}Умываться."
                 "Она задрала нос, свысока обронив:"
@@ -248,7 +250,7 @@
                 "Здесь уже рассмеялись все. Утро, кажется, задалось."
             else:
                 dv "Привет…"
-                show dv normal pioneer with dissolve
+                show dv normal sport with dissolve
                 "Сонно буркнула она."
                 "Не выспалась. Не иначе, умаялась, мою одежду таскавши."
                 me "Угу."
@@ -264,42 +266,42 @@
                 me "До завтрака дожить нетрудно. Труднее потом не лечь спать."
                 dv "Тебе-то что за дело?"
                 me "Мне сегодня не нужны бегунки или какая-то чушь в этом духе…"
-                show dv shy pioneer with dspr
+                show dv shy sport with dspr
                 dv "Я на гитаре играть пойду. Можешь подходить, послушать."
                 me "Так и поступлю!"
                 "Я улыбнулся и, кивнув, прибавил ходу."
         elif ('mi' in list_d2_date_7dl) and not alt_day2_mi_rejected:
             "После вчерашнего к Мику подходить не хотелось. {w=.4}Что-то будто держало за руки и не пускало."
             "К несчастью, она уже заметила меня и, подойдя, схватила за руку."
-            show mi laugh pioneer
+            show mi laugh casual with dspr
             mi "Вот ты где! А я всё думала, проснулся ты или нет. Хорошо, что проснулся, утро хорошее, правда, холодное, но это ничего, правда?"
             "Девочка-пулемёт раскрутила ленточную передачу и вышла на привычный темп стрельбы."
             mi "А ты вчера так неожиданно ушёл, а я всё думала о том, что ты сказал…"
-            show mi shy pioneer
+            show mi shy casual
             extend "и что сделал."
             "Присутствующие девочки многозначительно перемигнулись."
             "Кажется, то, что вчера происходило на абсолютно безлюдном пляже, внезапно стало достоянием общественности."
             "Будто, кроме нас, там присутствовал наш отряд в полном составе."
             me "Болтун — находка для шпиона…"
             mi "Думаешь, это я им рассказала? {w=.4}Это не я, честно-честно, правда-правда, это всё…"
-            show mi serious pioneer at center with dissolve
+            show mi serious casual at center with dissolve
             "Она понизила голос."
             mi "Картинка."
             me "Картинка? Какая картинка?"
             mi "Я вчера после пляжа пришла в домик, а там Лена сидит и плачет. А на столе картинка — простая, карандашом нарисованная. А на ней ты.{w=.5} Мы. Ну, ты понял…"
             "Ничего себе. Кто-то видел нас достаточно долго для того, чтобы нарисовать? Как я этого не почуял?"
-            show mi smile pioneer with dissolve
+            show mi smile casual with dissolve
             "Ответ был прост, и продолжил тараторить."
             mi "Я хотела сказать насчёт вчерашнего — я не очень привыкла к таким знакам внимания, в Японии мужчины куда сдержаннее в проявлении эмоций, поэтому у меня кружится голова, и я не очень понимаю что делать."
             me "Мику… Это {b}ты{/b} эмоции проявила, не я…"
-            show mi serious pioneer
+            show mi serious casual
             "Она замолчала."
             if loki or herc:
                 "Я взял её за руку."
                 me "Ты вчера ругалась на одиночество. {w}На недостаток внимания."
                 me "Будем их искоренять."
                 me "И раз уж я тебе по душе — попробую составить компанию."
-                show mi laugh pioneer
+                show mi laugh casual
                 mi "Я за. А дальше?"
                 me "По обстоятельствам."
             else:
@@ -2854,7 +2856,7 @@ label alt_day3_event_estrade1:
             show dv smile pioneer2 far with dspr
             dv "Ну и что ты сидишь как бедный родственник?"
             "Она мелькнула быстрой улыбкой."
-            show dv normal pioneer2 with dspr
+            show dv normal pioneer2 far with dspr
             dv "Садись сюда, стерео лучше всего слышно именно здесь."
         show dv normal pioneer2 with dissolve
         me "Ты какая-то странная сегодня."
@@ -3024,7 +3026,7 @@ label alt_day3_dinner:
         $ persistent.sprite_time = "day"
         scene bg int_dining_hall_day with dissolve
         show us normal sport with dissolve
-        play music music_7dl["sheiscool"] fadein 3
+        play music music_7dl["one_little_lone_cloud"] fadein 3
         "Мы зашли в столовую, и тут я понял, каким образом вожатая собирается помогать!"
         "Она отошла к раздаче, переговорив о чём-то с поваром, забрала чашечку с чаем, и, усевшись за стол, отведённый под администрацию, сидела и смотрела на то, как мы работаем."
         "Ну да, как я уже и говорил, человеку свойственно наблюдать за первостихиями практически бесконечно — как течёт вода, как горит огонь… И как работают другие." 
@@ -4014,8 +4016,8 @@ label alt_day3_eventAf_clubs_ladder:
     play sound sfx_open_door_clubs
     pause(1)
     scene bg int_house_of_mt_day
-    show mt normal pioneer far at center  
-    with dissolve   
+    show mt normal pioneer far at center
+    with dissolve
     "Услышав мою просьбу, она только кивнула и протянула мне ключ:"
     mt "Она, правда, тяжелая очень. Справишься?"
     "Я пожал плечами."
@@ -4921,7 +4923,6 @@ label alt_day3_nightmare:
                     $ persistent.alt_deep += 1
                 else:
                     $ persistent.alt_deep = 1
-                $ renpy.save_persistent()
                 show acm_logo_me_deep with moveinright:
                     pos (1067, 680)     #moded: pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -4958,7 +4959,6 @@ label alt_day3_nightmare:
                     $ persistent.alt_deep += 1
                 else:
                     $ persistent.alt_deep = 1
-                $ renpy.save_persistent()
                 show acm_logo_me_deep with moveinright:
                     pos (1067, 680)     #moded: pos (1600, 1020)
                 $ renpy.pause(7.4, hard=True)
@@ -4990,7 +4990,6 @@ label alt_day3_nightmare:
                     $ persistent.alt_deep += 1
                 else:
                     $ persistent.alt_deep = 1
-                $ renpy.save_persistent()
                 show acm_logo_me_deep with moveinright:
                 pause(3)
                 scene black
@@ -5363,7 +5362,7 @@ label alt_day3_eventAf_un_mi_house1:
     mi "Только не подглядывай, а то знаю я тебя!"
     me "Да надо очень."
     "Я покраснел, так как именно об этом мысль в первую очередь и пришла."
-    "Рубашечка, юбка с вырезом — всё это ещё хранило тепло девичьего тела, и я с трудом удержался от того, чтобы вдохнуть запах."
+    "Рубашечка, юбка с вырезом — всё это ещё хранило тепло девичьего тела, и я с трудом удержался от того, чтобы не вдохнуть запах."
     "В конце концов, танцевать вместе будем. {w}Нанюхаюсь ещё."
     me "За кого ты меня принимаешь?!"
     "Открыв дверь и старательно глядя в сторону, я протянул форму куда-то в темноту."
@@ -5603,7 +5602,7 @@ label alt_day3_eventAf_un_mi_house1:
     show mi sad pioneer at center 
     with dspr
     mi "Апчхи!"
-    me "Похоже, у тебя не от пыли реакция, а аллергия на обнажённого меня."
+    me "Похоже, у тебя не на пыль реакция, а аллергия на обнажённого меня."
     "Я нашёл эту идею достаточно смешной, чтобы поделиться ей с Мику."
     "Она промолчала, а я, скосив глаза, увидел через зеркало, как она, высунув кончик язычка от усердия, что-то пишет в блокнот."
     stop music fadeout 2
@@ -5685,7 +5684,7 @@ label alt_day3_eventAf_un_mi_house1:
     th "Если нас кто-то спалил — то кто? И зачем он побежал рассказывать вожатой обо всём?"
     th "Хотя если это кто-нибудь типа Слави, тут даже вопросов о причинах не стоит. Так правильно, и всё тут."
     "Ольгу я понимал: пионер почти голый, одна штука. Пионер растрёпанный, женского пола — одна штука. Укромный закуток — в наличии."
-    dreamgirl "Наверное, они сюда залезли и разделись, чтобы гаммы разучивать."
+    dreamgirl "Наверное, они туда залезли и разделись, чтобы гаммы разучивать."
     stop ambience fadeout 2
     "Вряд ли нас как-то сурово накажут или запретят общаться. Но ситуация всё равно неприятная. Вдвойне же она неприятная оттого, что сценарий развернулся так, как я никогда бы не позволил ему развернуться в моей старой жизни."
     "Общественное и личное для меня — экстремумы социальной шкалы. Я никого не пущу в себя, и ни к кому не полезу внутрь. И если у меня приключится роман, то об этом буду знать только я да моя избранница."
@@ -7687,14 +7686,17 @@ label alt_day3_rockstar:
         "Я заколебался, глядя на неё. От Двачевской пока что без исключений мне были только одни неприятности."
         "Так может, стоит разорвать порочный круг? Сойти с поезда, пока он не разогнался?"
         th "Или?"
+        show dv normal pioneer2 with dspr
         dv "Эй!"
         me "Что?"
         dv "Не засыпай."
         me "Да я не сплю, я…"
         dv "Медитируешь с открытыми глазами. Так что, будешь пробовать?"
         me "Сыграть?"
+        show dv angry pioneer2 with dspr
         dv "Ррррр. Да, сыграть. Будешь?"
         me "Я не знаю. Но ты покажи тогда, для начала."
+        show dv normal pioneer2 with dspr
         "Она кивнула и зажала первый аккорд."
         "…"
         window hide
@@ -7752,24 +7754,21 @@ label alt_day3_rockstar:
         with dissolve
         dv "Не надорвался?"
         "Я процедил непечатное себе под нос."
+        show dv laugh pioneer with dspr
         "А Алиса, расслышав окончание тирады, от души расхохоталась."
-        show dv laugh pioneer at center 
-        with dspr
         dv "Даже не думай. Со своей гитарой такие вещи вытворять я не позволю."
         me "Ага. {w}Ты предпочитаешь куда более жуткие вещи."
         show dv smile pioneer with dspr
         dv "Да ничего же страшного. Ты оказался не так безнадёжен как я думала."
         dv "Мы ещё сделаем из тебя гитариста."
         me "Правда? О, спасибо, всю жизнь мечтал, трепещу от нетерпения."
-        show dv normal pioneer
-        with dspr
+        show dv normal pioneer with dspr
         dv "Не торопись. Тебе ещё руки выпрямить надо."
         "Похоже, Двачевская обладала встроенным иммунитетом к сарказму."
         dv "И это будет самым сложным!"
         me "Самым сложным будет заставить меня повторить этот опыт ещё раз."
         "Я поднялся и отряхнул штаны."
-        show dv laugh pioneer
-        with dspr
+        show dv laugh pioneer with dspr
         dv "Уже сдаёшься? А мне только показалось, что ты не слабак."
         "Её по-детски наивные попытки постоянно взять окружающих «на понт», похоже, были очевидны только мне."
         "И сначала они меня веселили."
@@ -7779,17 +7778,17 @@ label alt_day3_rockstar:
         show dv surprise pioneer with dspr
         dv "Что?"
         me "От потока помоев, который на меня здесь вылили."
-        show dv laugh pioneer
-        with dspr
+        show dv laugh pioneer with dspr
         dv "Ты обиделся, что ли? На себя надо обижаться за то, что руки-крюки."
         me "Если последняя фраза была заменой извинению — то крайне хреновой."
         me "Спокойной ночи. Уж лучше бы я позориться на танцы пошёл. Там надо мной хотя бы издеваться никто не собирался."
         "А что там дальше-то? Красивый жест сделан, уходя-уходи?"
         "Дальше опыт подсказывал добавить обидчика в блэк-листы и заигнорить по всем возможным каналам."
         "Жаль, в реале это невозможно. Вот уж кого я бы с удовольствием выключил из собственной жизни."
-        show dv grin pioneer
-        with dspr
+        show dv grin pioneer with dspr
         dv "Ты и правда обиделся?"
+        show dv surprise pioneer with dspr
+        dv "Серьёзно?"
         "Похоже, до неё дошло, что она и в самом деле сказала что-то не то."
         me "А как ты догадалась?"
         "Я в очередной раз скатился в сарказм — совершенно бесполезный против этой девочки."
@@ -7907,7 +7906,6 @@ label alt_day3_dv_reunion:
             $ persistent.alt_deep += 1
         else:
             $ persistent.alt_deep = 1
-        $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
             pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7938,7 +7936,6 @@ label alt_day3_dv_reunion:
             $ persistent.alt_deep += 1
         else:
             $ persistent.alt_deep = 1
-        $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
             pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7964,7 +7961,6 @@ label alt_day3_dv_reunion:
             $ persistent.alt_deep += 1
         else:
             $ persistent.alt_deep = 1
-        $ renpy.save_persistent()
         show acm_logo_me_deep with moveinright:
             pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(4.4, hard=True)
@@ -7977,31 +7973,42 @@ label alt_day3_dv_reunion:
 
 label alt_day3_leave1:
     "Я открыл глаза."
-    if persistent.d3_deep:
-        $ persistent.d3_deep += 1
-    else:
-        $ persistent.d3_deep = 1
-    $ renpy.save_persistent()
-    $ renpy.pause(1.0, hard=True)
     window hide
-    scene black
-    show gameover
-    with gopr
+    scene gameover with gopr
+    if persistent.alt_qte_fail:    #Ы: обновлённый QTE
+        $ persistent.alt_qte_fail += 1
+        
+        if persistent.alt_qte_fail >= 5:
+            play sound sfx_7dl["aunl"]
+            if persistent.alt_victim:
+                $ persistent.alt_victim += 1
+            else:
+                $ persistent.alt_victim = 1
+            show acm_logo_me_victim with moveinright:
+                pos (1600, 1020)
+    else:
+        $ persistent.alt_qte_fail = 1
+    $ renpy.pause(3, hard=True)
     return
 
 label alt_day3_dv_stayhere1:
     $ alt_day3_dv_evening = True
-    if alt_day_binder != 1 and persistent.dv_7dl_good_ussr:
+    if persistent.alt_victim and not persistent.alt_qte:
         play sound sfx_7dl["tousche"]
         play sound2 sfx_concert_applause
+        $ persistent.alt_qte = 1
         show acm_logo_me_qte with moveinright:
             pos (1067, 680)     #moded: pos (1600, 1020)
         $ renpy.pause(9.4, hard=True)
-    if persistent.alt_qte:
-        $ persistent.alt_qte += 1
     else:
-        $ persistent.alt_qte = 1
-    $ renpy.save_persistent()
+        play sound sfx_7dl["aunl"]
+        if persistent.alt_qte:
+            $ persistent.alt_qte += 1
+        else:
+            $ persistent.alt_qte = 1
+        show acm_logo_me_qte with moveinright:
+            pos (1600, 1020)
+        $ renpy.pause(3, hard=True)
     $ night_time()
     with vpunch
     stop music
@@ -8140,7 +8147,8 @@ label alt_day3_dv_stayhere1:
         me "Булочки и кефир. Уж что нашлось."
     show dv smile pioneer far at center with dissolve
     dv "Теперь я тебе ещё больше должна."
-    "Улыбнулась она, без обычного своего высокомерия — почти как тогда, на пляже."
+    if 'dv' in list_d2_date_7dl:
+        "Улыбнулась она, без обычного своего высокомерия — почти как тогда, на пляже."
     "Но уговаривать себя не заставила и подмела всё подчистую, уплетая с таким аппетитом, что и мне кусочек захотелось."
     "Не досталось — зубы клацнули в опасной близости от вытянутой руки" with vpunch
     extend ", и я поспешил спрятать конечность."
@@ -10937,7 +10945,7 @@ label alt_day3_post_strip:
     elif herc:
         me "А чего ты ещё ожидала от нашей медсестры."
         me "Молодец хоть тюбики с лубрикантом не подсунула вкупе с весёлыми видео."
-    elif not (herc or loki):
+    else:
         un "От детей, да?"
         "Я молча кивнул, чувствуя как язык снова примерзает к гортани."
         "Сестра дура. Я, конечно, понимаю, что плотские отношения — суть любви, но, блин, должно же пройти какое-то время. И не два дня!"
@@ -11247,7 +11255,7 @@ label alt_day3_bath_voyeur:
     with dissolve
     play ambience ambience_forest_night fadein 3
     $ alt_day3_sl_bath_voy = True
-    "Найти баню оказалась несложно. Выглядела она скорее как избушка, чем как место, где можно очистить тело и мысли."
+    "Найти баню оказалось несложно. Выглядела она скорее как избушка, чем как место, где можно очистить тело и мысли."
     "В любом случае, густой дым, валящий из трубы, исключал двоякость толкований." 
     "Осталось разобраться в том, кто же там сейчас находится."
     "А то конфуза потом не оберёшься — будто мало мне глупостей, которые происходят со мной без моей воли, давайте теперь ещё и опростоволосимся, забравшись в занятую баню, да…"
@@ -11746,7 +11754,7 @@ label alt_day3_sleeptime:
             "И как-то вдруг в моей жизни появился человечек, ради которого, вполне возможно, это всё и затевалось."
             "Ведь не просто же так, правда?"
             "Хотелось бы надеяться."
-            "Нас связывало что-то с самого первого дня, что-то, заставляющее ловить взгляд в столовой, ждать подле неё же, и искать, всеми правдами и неправдами её компании."
+            "Нас связывало что-то с самого первого дня, что-то, заставляющее ловить взгляд в столовой, ждать подле неё же, и искать всеми правдами и неправдами её компании."
             "И если…"
             "Моё внимание привлёк чей-то силуэт, мнущийся около входной двери."
             show sl normal pioneer with dspr

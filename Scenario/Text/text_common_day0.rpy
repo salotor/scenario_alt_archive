@@ -455,7 +455,9 @@ label alt_day0_start_h:
     with fade
     "В холодильнике было шаром покати, а из двух последних яиц, что предназначались мне на завтрак, одно оказалось тухлым."
     "Я узнал об этом, когда вылил его к первому в сковородку."
-    "Так что вместо завтрака я убирал за кошкой, наевшейся ватных палочек."
+    "Так что вместо завтрака я убирал за Махой, снова наевшейся ватных палочек и, как результат…"
+    "Маха — это моя кошка."
+    "А я — дурак."
     window hide
     scene anim intro_1 
     with fade
@@ -627,7 +629,7 @@ label alt_day0_start_h:
     stop ambience fadeout 2
     play sound_loop sfx_bus_interior_moving fadein 4
     $ volume(0.5, 'music')
-    if alt_day_binder == 1:
+    if persistent.alt_binder:
         play music music_7dl["shib_mono"] fadein 5
     else:
         play music music_list["lightness_radio_bus"] fadein 7
@@ -717,7 +719,7 @@ label alt_day0_start_l:
     scene op_back with dissolve
     play sound_loop sfx_bus_interior_moving fadein 2
     "На дворе заканчивались нулевые, а я, студент — гордый тем, что полностью создал себя — опоздал."
-    "За год подработки в кафе с живой музыкой я повидал всего, но незыблемым оставалось одно — как штык в 9-37 я стоял на остановке и поджидал свой ПАЗик."
+    "За год подработки в кафе с живой музыкой я повидал всего, но незыблемым оставалось одно — как штык в 9:37 я стоял на остановке и поджидал свой ПАЗик."
     "А здесь задержался."
     "Я помню эти лица — девочку метр с кепкой, работающую в ночную смену местного интернет-кафе, Тэш, кажется."
     "На второй остановке обычно заходила Юля — мы раньше работали вместе и до сих пор здороваемся кивками."
@@ -897,7 +899,7 @@ label alt_day0_start_l:
     "Оголодавшие хищники, рвущие жертву стаей."
     window hide
     $ volume(1.0, 'music')
-    play music music_7dl["redemption"] fadein 3
+    play music music_7dl["beth"] fadein 3
     $ renpy.pause(3)
     scene anim prolog_2 
     with fade
