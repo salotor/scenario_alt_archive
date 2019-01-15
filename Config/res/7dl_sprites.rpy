@@ -136,8 +136,8 @@ init 9999 python:
                           '3':['angry','laugh','serious']},
                     'ka':{'1':['normal','sad','smile'],
                           '2':['grin','guilty','shy','surprise'],
-                          '3':['angry','dontlike','laugh','serious']}
-                    ,'ln':{'1':['angry','normal','sad'],
+                          '3':['angry','dontlike','laugh','serious']},
+                    'ln':{'1':['angry','normal','sad'],
                           '2':['dontlike','grin','guilty'],
                           '3':['serious','smile','surprise']},
                     'mi':{'1':['cry','dontlike','laugh','scared','shocked','shy','surprise'],
