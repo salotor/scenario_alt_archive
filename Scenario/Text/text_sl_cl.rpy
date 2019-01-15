@@ -3397,7 +3397,7 @@ label alt_day5_sl_begin:
     "Хрипло спросил я, приходя в себя."
     sl "Я хочу сказать."
     window hide
-    $ persistent.sprite_time = "sunset" 
+    $ persistent.sprite_time = "sunset"
     $ sunset_time()
     scene expression Desat("bg int_house_of_sl_day") at zenterleft
     show sl happy sport at cleft
@@ -3421,7 +3421,7 @@ label alt_day5_sl_begin:
     sl "Всегда смеялась над рассказами, в которых кого-то тискают, а они и не отбиваются."
     sl "Теперь понимаю, почему."
     me "И почему же?"
-    play music music_7dl["slavyas_fantazm"]fadein 5
+    play music music_7dl["slavyas_fantazm"] fadein 5
     "Она сняла мою ладонь со своего живота и несильно сжала."
     show sl normal sport with dspr
     sl "Ты остановился. Странно."
@@ -6153,7 +6153,7 @@ label alt_day5_sl_dinner:
     "Что делать на костровой поляне, я не знал. Что вообще делают на такой поляне, кроме, собственно, разжигания костров?"
     "Не украли же дикие звери костровище? "
     "Всё ещё дурацки улыбаясь, я отправился к воротам."
-    play music music_7dl["slavyas_fantazm"]fadein 3
+    play music music_7dl["slavyas_fantazm"] fadein 3
     window hide
     scene bg ext_path_day with dissolve
     play ambience ambience_forest_day fadein 3
@@ -8781,7 +8781,7 @@ label alt_day6_sl_begin:
             show sl scared pioneer at cleft with easeinleft
             with dissolve
             me "Славя!"
-            play music music_7dl["slavyas_fantazm"]fadein 3
+            play music music_7dl["slavyas_fantazm"] fadein 3
             "Я приподнялся и помахал ей рукой."
             show sl angry pioneer with dspr
             "Увидев меня, она кивнула и бегом побежала ко мне."
