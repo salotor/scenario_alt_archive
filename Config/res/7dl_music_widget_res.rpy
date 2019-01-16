@@ -228,7 +228,7 @@ init 1:
 #0.37.a
     $ music_list_7dl["Apocalyptica - Faraway"] = default_7dl_path+"Sound/music/faraway_7dl.ogg"
     $ music_list_7dl["Secret Garden - Hymn to Hope"] = default_7dl_path+"Sound/music/last_hope_7dl.ogg"
-    $ music_list_7dl["Poets of the Fall - Carnival of Rust"] = default_7dl_path+"Sound/music/ofrust.ogg"
+    $ music_list_7dl["Poets of the Fall - Carnival of Rust"] = default_7dl_path+"Sound/music/ofrust_7dl.ogg"
     $ music_list_7dl["Hinkik - Time Leaper"] = default_7dl_path+"Sound/music/pure_energy_7dl.ogg"
     $ music_list_7dl["Acid Jazz vs. Drum'n'Bass - Jungle Radio"] = default_7dl_path+"Sound/music/radio_void_7dl.ogg"
     $ music_list_7dl["Кино - Кончится Лето"] = default_7dl_path+"Sound/music/summer_ends_soon_7dl.ogg"

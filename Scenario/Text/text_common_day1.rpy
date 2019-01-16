@@ -300,7 +300,7 @@ label alt_day1_firts_met:
     play ambience ambience_camp_entrance_day fadein 9
     "И, пребольно стукнувшись головой о дверку, открыл глаза."
     show sl shade with flash
-    play music music_7dl["slavyas_fantazm"]fadein 1
+    play music music_7dl["slavyas_fantazm"] fadein 1
     "Из-за яркого солнца, бьющего прямо в лицо, никак не удавалось разглядеть, кто со мной говорит."
     "Но хотя бы контуры фигуры — явно женской — различить удалось." 
     th "Ну что, снова подтверждаем реноме человека-неудачника?"
@@ -1038,7 +1038,7 @@ label alt_day1_dock:
     sl "Так тебе не сюда!"
     "Раздался за спиной знакомый уже голос."
     show sl smile swim with dissolve
-    play music music_7dl["slavyas_fantazm"]fadein 1
+    play music music_7dl["slavyas_fantazm"] fadein 1
     "Я обернулся. Передо мной стояла та первая девочка, которую я встретил у ворот."
     sl "Я же тебе сказала от площади на домики ориентироваться, а ты куда пошёл?"
     menu:
@@ -1506,7 +1506,7 @@ label alt_day1_elektron:
     "Мы обошли здание и приблизились к распахнутой настежь двери."
     "Через неё можно было разглядеть полутёмное помещение с трёхэтажными деревянными полками, на каждой из них лежали свёрнутые рулетом матрасы; в качестве начинки выступала подушка, обёрнутая в тонкое шерстяное одеяло."
     sl "Ой, ребята, подождите. Сейчас я выйду."
-    play music music_7dl["slavyas_fantazm"]fadein 1
+    play music music_7dl["slavyas_fantazm"] fadein 1
     window hide
     scene bg int_warehouse_day_7dl
     show sl shy sport at center 
