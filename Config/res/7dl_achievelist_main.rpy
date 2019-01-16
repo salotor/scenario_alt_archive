@@ -294,27 +294,14 @@ screen sdl_achv_prerequisites(prerequisites):
 
 ##\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\НАЧАЛЬНЫЙ ЭКРАН\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 label sdl_achvlist_main:
-    if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
-### кусок из старой версии ачивлиста
-        $ day_time()
-        $ persistent.sprite_time = "day"
-        $ plthr = u"Достижения"
-        play ambience ambience_7dl["safe"] fadein 5
-        scene bg sdl_old_ach_inactive
-        show sdl_old_achv_extB_7dl:
-            pos(380, 350)
-        $ renpy.block_rollback()
-        call screen sdl_old_achvlist_Author
-###
-    else:
-        $ day_time()
-        $ persistent.sprite_time = "day"
-        $ make_names_known_7dl()
-        $ plthr = u"Достижения"
-        play ambience ambience_7dl["safe"] fadein 5
-        
-        $ renpy.block_rollback()
-        call screen sdl_achvlist_main
+    $ day_time()
+    $ persistent.sprite_time = "day"
+    $ make_names_known_7dl()
+    $ plthr = u"Достижения"
+    play ambience ambience_7dl["safe"] fadein 5
+    
+    $ renpy.block_rollback()
+    call screen sdl_achvlist_main
         
 screen sdl_achvlist_main:
     tag menu
