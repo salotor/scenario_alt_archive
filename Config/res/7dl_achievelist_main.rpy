@@ -330,7 +330,7 @@ label sdl_achvlist_character(character=None, route_list=None):
     call sdl_achv_reset_vars
     
     if character != None and route_list != None:
-    call screen sdl_achvlist_character(character, route_list)
+        call screen sdl_achvlist_character(character, route_list)
     
     return
 
@@ -380,7 +380,5 @@ screen sdl_achvlist_character(character, route_list):
     if sdl_achv_selected_route != None:
         use sdl_achv_route("sdl_achvlist_character", sdl_achv_selected_route.get_achv_list())
 
-# Android version created with ESTOOL-0.009 by Smalser
-# More info there https://vk.com/topic-93304648_35130916
 # Android version created with ESTOOL-0.009 by Smalser
 # More info there https://vk.com/topic-93304648_35130916
