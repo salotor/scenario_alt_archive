@@ -174,7 +174,16 @@ label alt_day5_neu_begin:
         pause(1)
         call alt_day5_neu_sleepnight
         pause(1)
-        if herc:
+        if mt_pt >= 7 and alt_day5_neu_mt_voyeur != 0:
+            $ routetag = "mt7dl"
+            call alt_day5_neu_mt_selector
+            pause(1)
+            if alt_day5_neu_mt_diary:
+                call alt_day5_neu_mt_retrib
+            elif alt_day5_mt_7dl_hentai:
+                call alt_day5_neu_mt_tea_party
+            jump alt_day6_mt_7dl_start
+        elif herc:
             window hide
             show spill_red with dspr
             $ renpy.pause(2, hard=True)
@@ -185,15 +194,6 @@ label alt_day5_neu_begin:
             with dissolve2
             window hide
             return
-        elif mt_pt >= 7 and alt_day5_neu_mt_voyeur != 0:
-            $ routetag = "mt7dl"
-            call alt_day5_neu_mt_selector
-            pause(1)
-            if alt_day5_neu_mt_diary:
-                call alt_day5_neu_mt_retrib
-            elif alt_day5_mt_7dl_hentai:
-                call alt_day5_neu_mt_tea_party
-            jump alt_day6_mt_7dl_start
         elif us_pt >= 4:
             $ routetag = "us7dl_bad"
             jump alt_day6_us_7dl_start
