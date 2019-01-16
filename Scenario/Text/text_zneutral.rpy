@@ -16377,7 +16377,7 @@ label alt_day7_neu_neu_loki:
         $ persistent.neu_loki_neu += 1
     else:
         $ persistent.neu_loki_neu = 1
-    show acm_logo_neu_bad with moveinright:
+    show acm_logo_neu_neu with moveinright:
         pos (1600, 1020)
     $ renpy.pause(7.4, hard=True)
     call alt_7dl_titles
