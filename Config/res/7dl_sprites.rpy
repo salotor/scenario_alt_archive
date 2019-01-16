@@ -6,10 +6,7 @@ transform close_sprites:
     
 init 9999 python:
     alt_sprites = default_7dl_path + "Pics/sprites/"
-    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        bl_sprites = "images/1080/sprites/"
-    else:
-        bl_sprites = "images/sprites/"
+    bl_sprites = "images/sprites/"
         
     alt_body_dict = {
                     'al':{'1':['']},
@@ -136,8 +133,8 @@ init 9999 python:
                           '3':['angry','laugh','serious']},
                     'ka':{'1':['normal','sad','smile'],
                           '2':['grin','guilty','shy','surprise'],
-                          '3':['angry','dontlike','laugh','serious']}
-                    ,'ln':{'1':['angry','normal','sad'],
+                          '3':['angry','dontlike','laugh','serious']},
+                    'ln':{'1':['angry','normal','sad'],
                           '2':['dontlike','grin','guilty'],
                           '3':['serious','smile','surprise']},
                     'mi':{'1':['cry','dontlike','laugh','scared','shocked','shy','surprise'],

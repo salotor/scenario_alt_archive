@@ -32,22 +32,21 @@
     image alt_letter = ParameterizedText(style = "alt_letter", size = 70)
     
 init:
-    if not ((renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761")):
-        if renpy.mobile:
-            $ style.base_font = Style(style.default)
-            $ style.base_font.font  = get_image_7dl("fonts/calibri.ttf")
-            $ style.base_font.size = 28
-            $ style.base_font.line_spacing = 2
-            
-            $ style.chapter = Style(style.base_font)
-            $ style.chapter.font  = get_image_7dl("fonts/corbel.ttf")
-            $ style.chapter.size = 120
-            $ style.chapter.color = "#fff"
-            $ style.chapter.outlines = [ (1, "#ffdd7d", 0, 0) ]
-            
-            $ style.daynum = Style(style.chapter)
-            $ style.daynum.font  = get_image_7dl("fonts/corbel.ttf")
-            $ style.daynum.size = 45
+    if renpy.mobile:
+        $ style.base_font = Style(style.default)
+        $ style.base_font.font  = get_image_7dl("fonts/calibri.ttf")
+        $ style.base_font.size = 28
+        $ style.base_font.line_spacing = 2
+        
+        $ style.chapter = Style(style.base_font)
+        $ style.chapter.font  = get_image_7dl("fonts/corbel.ttf")
+        $ style.chapter.size = 120
+        $ style.chapter.color = "#fff"
+        $ style.chapter.outlines = [ (1, "#ffdd7d", 0, 0) ]
+        
+        $ style.daynum = Style(style.chapter)
+        $ style.daynum.font  = get_image_7dl("fonts/corbel.ttf")
+        $ style.daynum.size = 45
 
 init -66 python:
     import random
@@ -145,20 +144,18 @@ init -10 python:
             }
         
 init 3 python:
+    def meet(who, name):
+        global store
+        gl = globals()
+        gl[who + "_name"] = name
+        store.names[who] = name
 
-    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        def meet(who, name):
-            global store
-            gl = globals()
-            gl[who + "_name"] = name
-            store.names[who] = name
-
-        def save_names_known():
-            gl = globals()
-            global store
-            for x in store.names_list:
-                if not (x == 'narrator' or x == 'th'):
-                    store.names[x] = gl["%s_name"%x]
+    def save_names_known():
+        gl = globals()
+        global store
+        for x in store.names_list:
+            if not (x == 'narrator' or x == 'th'):
+                store.names[x] = gl["%s_name"%x]
 
     def make_names_unknown_7dl():
         global store
@@ -564,16 +561,12 @@ init -1001 python:
             data["map_chibi"] = None
             
 init -1000 python:
-    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        default_7dl_path = 'scenario_alt/'
-    elif (renpy.version(tuple=False) == "Ren'Py 6.18.3.761") or (persistent.nonsteam_7dl == True):
+    if persistent.nonsteam_7dl == True:
         default_7dl_path = 'mods/scenario_alt/'
+    elif renpy.mobile:
+        default_7dl_path = 'scenario_alt/'
     else:
-        if renpy.mobile:
-            default_7dl_path = 'scenario_alt/'
-        else:
-            default_7dl_path = '../441054187/scenario_alt/'
-    config_session = False
+        default_7dl_path = '../441054187/scenario_alt/'
 
 init -999 python:
     def get_image_7dl(file):

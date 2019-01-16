@@ -125,11 +125,6 @@ init -51 python:
             global_zones_alt1[name]["been_here"] += 1
             global_map_result_alt1 = name
             renpy.scene()
-            if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-                if not not_in_rollback_or_fast_forward():
-                    renpy.log("renpy.roll_forward_info()")
-                    renpy.config.skipping = False
-                    renpy.game.after_rollback = False
             ui.jumps(global_zones_alt1[name]["label"])()
         def overlay(self):
             if  store.map_enabled_alt1:
@@ -179,39 +174,36 @@ init -51 python:
 
 init 5 python:
     import renpy.store as store 
-    if  not config_session:
-
-        def disable_all_zones_alt1():
-            store.map_alt1.disable_all_zones()
-        def enable_all_zones_alt1():
-            store.map_alt1.enable_all_zones()
-        def set_zone_alt1(name,label):
-            store.map_alt1.set_zone(name,label)
-        def reset_zone_alt1(name):
-            store.map_alt1.reset_zone(name)
-        def enable_empty_zone_alt1(name):
-            store.map_alt1.enable_empty_zone(name)
-        def reset_current_zone_alt1():
-            store.map_alt1.reset_current_zone()
-        def disable_current_zone_alt1():
-            store.map_alt1.disable_current_zone()
-        def been_there_alt1():
-            return store.map_alt1.been_there()
-        def set_chibi_alt1(name,ch):
-            store.map_alt1.set_chibi(name,ch)
-        def reset_chibi_alt1(name):
-            store.map_alt1.reset_chibi(name)
-        def show_map_alt1():
-            ui.jumps("_show_map_alt1")()
-        def init_map_zones_alt1():
-            init_map_zones_realization_alt1(store.map_zones_alt1,"nothing_here")
+    def disable_all_zones_alt1():
+        store.map_alt1.disable_all_zones()
+    def enable_all_zones_alt1():
+        store.map_alt1.enable_all_zones()
+    def set_zone_alt1(name,label):
+        store.map_alt1.set_zone(name,label)
+    def reset_zone_alt1(name):
+        store.map_alt1.reset_zone(name)
+    def enable_empty_zone_alt1(name):
+        store.map_alt1.enable_empty_zone(name)
+    def reset_current_zone_alt1():
+        store.map_alt1.reset_current_zone()
+    def disable_current_zone_alt1():
+        store.map_alt1.disable_current_zone()
+    def been_there_alt1():
+        return store.map_alt1.been_there()
+    def set_chibi_alt1(name,ch):
+        store.map_alt1.set_chibi(name,ch)
+    def reset_chibi_alt1(name):
+        store.map_alt1.reset_chibi(name)
+    def show_map_alt1():
+        ui.jumps("_show_map_alt1")()
+    def init_map_zones_alt1():
+        init_map_zones_realization_alt1(store.map_zones_alt1,"nothing_here")
 
 # определяем подосновы нашей карты (widget и bg) - собственно, подоснова карты:
 
 init 5:
-    if not config_session:
-        image widget map_alt1 = get_image_7dl("gui/maps/map_bg.jpg")
-        image bg map_alt1 = get_image_7dl("gui/maps/map_bg.jpg")
+    image widget map_alt1 = get_image_7dl("gui/maps/map_bg.jpg")
+    image bg map_alt1 = get_image_7dl("gui/maps/map_bg.jpg")
 
 init 52 python:
     def disable_all_chibi_alt1():
@@ -370,11 +362,6 @@ init -51 python:
             global_zones_alt2[name]["been_here"] += 1
             global_map_result_alt2 = name
             renpy.scene()
-            if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-                if not not_in_rollback_or_fast_forward():
-                    renpy.log("renpy.roll_forward_info()")
-                    renpy.config.skipping = False
-                    renpy.game.after_rollback = False
             ui.jumps(global_zones_alt2[name]["label"])()
         def overlay(self):
             if  store.map_enabled_alt2:
@@ -425,39 +412,36 @@ init -51 python:
 
 init 5 python:
     import renpy.store as store 
-    if not config_session:
-
-        def disable_all_zones_alt2():
-            store.map_alt2.disable_all_zones()
-        def enable_all_zones_alt2():
-            store.map_alt2.enable_all_zones()
-        def set_zone_alt2(name,label):
-            store.map_alt2.set_zone(name,label)
-        def reset_zone_alt2(name):
-            store.map_alt2.reset_zone(name)
-        def enable_empty_zone_alt2(name):
-            store.map_alt2.enable_empty_zone(name)
-        def reset_current_zone_alt2():
-            store.map_alt2.reset_current_zone()
-        def disable_current_zone_alt2():
-            store.map_alt2.disable_current_zone()
-        def been_there_alt2():
-            return store.map_alt2.been_there()
-        def set_chibi_alt2(name,ch):
-            store.map_alt2.set_chibi(name,ch)
-        def reset_chibi_alt2(name):
-            store.map_alt2.reset_chibi(name)
-        def show_map_alt2():
-            ui.jumps("_show_map_alt2")()
-        def init_map_zones_alt2():
-            init_map_zones_realization_alt2(store.map_zones_alt2,"nothing_here")
+    def disable_all_zones_alt2():
+        store.map_alt2.disable_all_zones()
+    def enable_all_zones_alt2():
+        store.map_alt2.enable_all_zones()
+    def set_zone_alt2(name,label):
+        store.map_alt2.set_zone(name,label)
+    def reset_zone_alt2(name):
+        store.map_alt2.reset_zone(name)
+    def enable_empty_zone_alt2(name):
+        store.map_alt2.enable_empty_zone(name)
+    def reset_current_zone_alt2():
+        store.map_alt2.reset_current_zone()
+    def disable_current_zone_alt2():
+        store.map_alt2.disable_current_zone()
+    def been_there_alt2():
+        return store.map_alt2.been_there()
+    def set_chibi_alt2(name,ch):
+        store.map_alt2.set_chibi(name,ch)
+    def reset_chibi_alt2(name):
+        store.map_alt2.reset_chibi(name)
+    def show_map_alt2():
+        ui.jumps("_show_map_alt2")()
+    def init_map_zones_alt2():
+        init_map_zones_realization_alt2(store.map_zones_alt2,"nothing_here")
 
 # определяем подосновы нашей карты (widget и bg) - собственно, подоснова карты:
 
 init 5:
-    if not config_session:
-        image widget map_alt2 = get_image_7dl("gui/maps/7dl/7dl_bg.png")
-        image bg map_alt2 = get_image_7dl("gui/maps/7dl/7dl_bg.png")
+    image widget map_alt2 = get_image_7dl("gui/maps/7dl/7dl_bg.png")
+    image bg map_alt2 = get_image_7dl("gui/maps/7dl/7dl_bg.png")
 
 # еще раз отключаем чибиков 
 

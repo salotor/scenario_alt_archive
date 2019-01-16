@@ -102,7 +102,7 @@
     call alt_day4_neu_sleeptime
     pause(1)
     jump alt_day5_neu_begin
-    
+
 label alt_day5_neu_begin:
     call alt_day5_neu_us_vars
     call alt_day5_mt_7dl_vars
@@ -157,8 +157,6 @@ label alt_day5_neu_begin:
         else:
             $ routetag = "us7dl_bad"
         jump alt_day6_us_7dl_start
-        pause(1)
-        return
     else:
         call alt_day5_neu_mi_estrade
         pause(1)
@@ -185,13 +183,23 @@ label alt_day5_neu_begin:
             elif alt_day5_mt_7dl_hentai:
                 call alt_day5_neu_mt_tea_party
             jump alt_day6_mt_7dl_start
+        elif herc:
+            window hide
+            show spill_red with dspr
+            $ renpy.pause(2, hard=True)
+            show spill_gray with dspr
+            $ renpy.pause(2, hard=True)
+            show alt_credits timeskip_dev at truecenter with dissolve2
+            $ renpy.pause(4, hard=True)
+            with dissolve2
+            window hide
+            return
         elif us_pt >= 4:
             $ routetag = "us7dl_bad"
             jump alt_day6_us_7dl_start
-            pause(1)
-            return
-    jump alt_day6_neu_begin
-    
+        else:
+            jump alt_day6_neu_begin
+
 label alt_day6_neu_begin:
     $ persistent.sprite_time = "sunset"
     $ sunset_time()
@@ -249,35 +257,40 @@ label alt_day7_neu_begin:
     $ alt_chapter(7, u"Одиночка. Сон")
     call alt_day7_neu_sleep
     pause(1)
-    if persistent.neu_bad:    # тут бы на все трушки проверять (или просто на биндер) + neu_bad. # И по-хорошему, не помещал бы выбор, ведущий к бэду
-        $ persistent.sprite_time = "day"
-        $ day_time()
-        $ alt_chapter(7, u"Одиночка. Подъём")
-        call alt_day7_neu_wakeup
-        pause(1)
-        call alt_day7_neu_explore
-        pause(1)
-        $ alt_chapter(7, u"Одиночка. Диалог")
-        call alt_day7_neu_dialogue
-        pause(1)
-        $ prolog_time()
-        if persistent.neu_loki_neu or persistent.neu_neu:
-            menu:
-                "Настоящее":
+    if persistent.neu_bad and persistent.alt_binder:
+        menu:
+            "Проснуться!":
+                $ persistent.sprite_time = "day"
+                $ day_time()
+                $ alt_chapter(7, u"Одиночка. Подъём")
+                call alt_day7_neu_wakeup
+                pause(1)
+                call alt_day7_neu_explore
+                pause(1)
+                $ alt_chapter(7, u"Одиночка. Диалог")
+                call alt_day7_neu_dialogue
+                pause(1)
+                $ prolog_time()
+                if persistent.neu_loki_neu or persistent.neu_neu:
+                    menu:
+                        "Настоящее":
+                            $ alt_chapter(7, u"Одиночка. Настоящее")
+                            if loki:
+                                call alt_day7_neu_neu_loki
+                            else:
+                                call alt_day7_neu_neu
+                        "Будущее":
+                            $ alt_chapter(7, u"Одиночка. Будущее")
+                            call alt_day7_neu_true
+                else:
                     $ alt_chapter(7, u"Одиночка. Настоящее")
                     if loki:
                         call alt_day7_neu_neu_loki
                     else:
                         call alt_day7_neu_neu
-                "Будущее":
-                    $ alt_chapter(7, u"Одиночка. Будущее")
-                    call alt_day7_neu_true
-        else:
-            $ alt_chapter(7, u"Одиночка. Настоящее")
-            if loki:
-                call alt_day7_neu_neu_loki
-            else:
-                call alt_day7_neu_neu
+            "Спать…":
+                $ alt_chapter(7, u"Одиночка. Обречённое")
+                call alt_day7_neu_bad
     else:
         $ alt_chapter(7, u"Одиночка. Обречённое")
         call alt_day7_neu_bad
