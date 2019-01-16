@@ -121,7 +121,7 @@ label scenario__alt_sevendl:
     if not "7DL" in config.version:
         $ config.version = config.version+" + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
 # ------------------------------------------------
-    jump start_menu_7dl
+    jump main_menu_7dl
 
 init 4:
 # вызываем все переменные в init (необходимо для работы повторов)
