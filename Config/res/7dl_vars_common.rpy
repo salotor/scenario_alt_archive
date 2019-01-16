@@ -82,35 +82,34 @@ init 2:
     $ colors['we'] = {'night': (67, 23, 111, 255), 'sunset': (132, 27, 100, 255), 'day': (252, 15, 192, 255), 'prolog': (150, 50, 100, 255)}
     $ store.names_list.append('we')#Толпа
     
-    if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        $ colors['voices'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (192, 192, 192, 255), 'prolog': (192, 192, 192, 255)}
-        $ store.names_list.append('voices')
-        
-        $ colors['kids'] = {'night': (235, 120, 131, 255), 'sunset': (235, 120, 131, 255), 'day': (235, 120, 131, 255), 'prolog': (235, 120, 131, 255)}
-        $ store.names_list.append('kids')
-        
-        $ colors['dy'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (56, 90, 107, 255), 'prolog': (192, 192, 192, 255)}
-        $ store.names_list.append('dy')
-        
-        $ names['ai'] = u'Собеседник'
-        $ names['al'] = u'Сердитый мальчик'
-        $ names['am'] = u'Я'
-        $ names['ase'] = u'Девочка'
-        $ names['ba'] = u'Физрук'
-        $ names['bb'] = u'Начальник лагеря'
-        $ names['dn'] = u'Кудрявый'
-        $ names['dy'] = u'Динамики'
-        $ names['ka'] = u'Вожатая 2-го отряда'
-        $ names['kids'] = u'Дети'
-        $ names['ln'] = u'Странная девочка'
-        $ names['ml'] = u'Мальчик'
-        $ names['ml2'] = u'Мальчик'
-        $ names['ml3'] = u'Мальчик'
-        $ names['sak'] = u'Пожилой японец'
-        $ names['tn'] = u'Странный мальчик'
-        $ names['voice1'] = u'Продавщица'
-        $ names['voices'] = u'Голоса'
-        $ names['we'] = u'Хором'
+    $ colors['voices'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (192, 192, 192, 255), 'prolog': (192, 192, 192, 255)}
+    $ store.names_list.append('voices')
+    
+    $ colors['kids'] = {'night': (235, 120, 131, 255), 'sunset': (235, 120, 131, 255), 'day': (235, 120, 131, 255), 'prolog': (235, 120, 131, 255)}
+    $ store.names_list.append('kids')
+    
+    $ colors['dy'] = {'night': (192, 192, 192, 255), 'sunset': (192, 192, 192, 255), 'day': (56, 90, 107, 255), 'prolog': (192, 192, 192, 255)}
+    $ store.names_list.append('dy')
+    
+    $ names['ai'] = u'Собеседник'
+    $ names['al'] = u'Сердитый мальчик'
+    $ names['am'] = u'Я'
+    $ names['ase'] = u'Девочка'
+    $ names['ba'] = u'Физрук'
+    $ names['bb'] = u'Начальник лагеря'
+    $ names['dn'] = u'Кудрявый'
+    $ names['dy'] = u'Динамики'
+    $ names['ka'] = u'Вожатая 2-го отряда'
+    $ names['kids'] = u'Дети'
+    $ names['ln'] = u'Странная девочка'
+    $ names['ml'] = u'Мальчик'
+    $ names['ml2'] = u'Мальчик'
+    $ names['ml3'] = u'Мальчик'
+    $ names['sak'] = u'Пожилой японец'
+    $ names['tn'] = u'Странный мальчик'
+    $ names['voice1'] = u'Продавщица'
+    $ names['voices'] = u'Голоса'
+    $ names['we'] = u'Хором'
         
 label scenario__alt_sevendl:
 # только если игру начали заново - принимаем номер релиза сохранения по номеру релиза мода

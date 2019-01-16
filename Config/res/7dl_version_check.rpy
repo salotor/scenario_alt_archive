@@ -80,9 +80,9 @@ label after_load:
         # пишем версию 7дл в трейсбеках
         if not "7DL" in config.version:
             $ config.version = config.version+" + 7DL v.%s.%s" % (alt_release_no, alt_hotfix_no)
+
         # загружаем имена спикеров
-        if not renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-            $ save_names_known()
+        $ save_names_known()
 
         # Проверяем, совпадают ли версии сохранения и мода и есть ли версия сохранения в списке совместимых
         if ((alt_save_release_no not in alt_compatible_release_no) 

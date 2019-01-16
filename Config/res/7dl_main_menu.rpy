@@ -1,19 +1,4 @@
 init 1 python:
-    if (renpy.version(tuple=False) == "Ren'Py 6.16.3.502") or (renpy.version(tuple=False) == "Ren'Py 6.18.3.761"):
-        link_font = default_7dl_path + "Pics/fonts/calibri.ttf"
-        header_font = "fonts/corbel.ttf"
-        
-        style.settings_link = Style(style.base_font)
-        style.settings_link.font  = header_font
-        style.settings_link.size = 60
-        style.settings_link.kerning = 3
-        style.settings_link.color = "#909ca3"
-        style.settings_link.hover_color = "#ffffff"
-        style.settings_link.selected_color = "#909ca3"
-        style.settings_link.selected_idle_color = "#909ca3"
-        style.settings_link.selected_hover_color = "#ffffff"
-        style.settings_link.insensitive_color = "#909ca3"
-
     presentscript_font = default_7dl_path + "Pics/fonts/presentscript.ttf"
     
     style.alt_settings_textbutton = Style(style.base_font)

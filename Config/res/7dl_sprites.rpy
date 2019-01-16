@@ -6,10 +6,7 @@ transform close_sprites:
     
 init 9999 python:
     alt_sprites = default_7dl_path + "Pics/sprites/"
-    if renpy.version(tuple=False) == "Ren'Py 6.16.3.502":
-        bl_sprites = "images/1080/sprites/"
-    else:
-        bl_sprites = "images/sprites/"
+    bl_sprites = "images/sprites/"
         
     alt_body_dict = {
                     'al':{'1':['']},
