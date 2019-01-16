@@ -174,7 +174,18 @@ label alt_day5_neu_begin:
         pause(1)
         call alt_day5_neu_sleepnight
         pause(1)
-        if mt_pt >= 7 and alt_day5_neu_mt_voyeur != 0:
+        if herc:
+            window hide
+            show spill_red with dspr
+            $ renpy.pause(2, hard=True)
+            show spill_gray with dspr
+            $ renpy.pause(2, hard=True)
+            show alt_credits timeskip_dev at truecenter with dissolve2
+            $ renpy.pause(4, hard=True)
+            with dissolve2
+            window hide
+            return
+        elif mt_pt >= 7 and alt_day5_neu_mt_voyeur != 0:
             $ routetag = "mt7dl"
             call alt_day5_neu_mt_selector
             pause(1)
